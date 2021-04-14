@@ -15,7 +15,7 @@
             "name": "ارسم حاجب العين"
           },
           "draw pupil": {
-            "name": "ارسم التلميذ"
+            "name": "ارسم بؤبؤ العين"
           }
         },
         "2-3 Artist 3.4": {
@@ -28,7 +28,7 @@
         },
         "2-3 Artist 7": {
           "draw_rect": {
-            "name": "ارسم_مستطيل",
+            "name": "ارسم_مستطيلاً",
             "parameters": {
               "width": "العرض",
               "height": "الارتفاع"
@@ -37,7 +37,7 @@
         },
         "2-3 Artist Debugging 10": {
           "draw square": {
-            "name": "ارسم مربع",
+            "name": "ارسم مربعاً",
             "parameters": {
               "width": "العرض",
               "height": "الارتفاع"
@@ -53,10 +53,10 @@
             "name": "رسم دائرة"
           },
           "draw a button": {
-            "name": "ارسم زر"
+            "name": "ارسم أيقونةً"
           },
           "draw cord": {
-            "name": "ارسم حبل"
+            "name": "ارسم حبلاً"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -67,10 +67,10 @@
             "name": "ارسم الرجل اليمنى"
           },
           "draw body and arms": {
-            "name": "ارسم جسم وذراعين"
+            "name": "ارسم جسماً وذراعين"
           },
           "draw a head": {
-            "name": "ارسم رأس"
+            "name": "ارسم رأساً"
           }
         },
         "2-3 Artist Debugging 6": {
@@ -81,7 +81,7 @@
             "name": "ارسم شكل عصا جالسة"
           },
           "draw head": {
-            "name": "ارسم رأس"
+            "name": "ارسم رأساً"
           },
           "draw arms": {
             "name": "ارسم ذراعين"
@@ -1145,7 +1145,7 @@
         },
         "Robot Doodle_2018": {
           "draw head": {
-            "name": "ارسم رأس"
+            "name": "ارسم رأساً"
           }
         },
         "Standalone_Artist_7": {
@@ -1165,7 +1165,7 @@
         },
         "course1_artist_loops_challenge2": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "course3_artist_functions_challenge1": {
@@ -1310,22 +1310,22 @@
         },
         "courseB_artist_loops_challenge2": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseB_artist_loops_challenge2_2018": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseB_artist_loops_challenge2_2019": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseB_artist_loops_challenge2_2020": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseC_artist_prog3": {
@@ -2056,7 +2056,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -2067,7 +2067,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -2078,7 +2078,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -2110,7 +2110,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2121,7 +2121,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2132,7 +2132,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2143,7 +2143,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2154,7 +2154,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2165,7 +2165,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2226,7 +2226,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -2240,7 +2240,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -2254,7 +2254,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions_challenge1": {

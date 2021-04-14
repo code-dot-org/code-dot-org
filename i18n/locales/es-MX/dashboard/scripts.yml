@@ -16340,7 +16340,8 @@ es-MX:
             Programming for Entertainment:
               key: Programación para entretenimiento
               name: Programación para entretenimiento
-              description_student: "Se pide a la clase que considere los \"problemas\" del aburrimiento y la autoexpresión, y que reflexione sobre cómo aborda esos problemas en sus propias vidas. A partir de allí, explorará cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión."
+              description_student: |-
+                Se pide a la clase que considere los "problemas" del aburrimiento y la autoexpresión, y que reflexione sobre cómo aborda esos problemas en sus propias vidas. A partir de allí, explorará cómo las Ciencias de la Computación, en general, y la programación, en particular, desempeñan un papel específico como una forma de entretenimiento o como un vehículo para la autoexpresión.
               description_teacher: "**Pregunta del día: ¿Cómo se utiliza la informática en el entretenimiento?**\\r\n\\r\nSe pide a los alumnos que tengan en cuenta los \"problemas\" del aburrimiento y la autoexpresión, y que reflexionen sobre cómo abordan esos problemas en sus propias vidas. A partir de ahí, los alumnos explorarán cómo la informática en general, y la programación en particular, desempeñan un papel en una forma específica de entretenimiento o como vehículo de autoexpresión."
             Plotting Shapes:
               key: Trazar formas
@@ -16507,7 +16508,8 @@ es-MX:
               key: Análisis de diseño
               name: Análisis de diseño
               description_student: "La clase explora una variedad de diferentes diseños de teteras para tener en cuenta las opciones de diseño. A partir de ahí, los alumnos exploran la relación entre los usuarios, sus necesidades y el diseño de los objetos que utilizan.\\r\n"
-              description_teacher: Para iniciar una unidad dedicada a la resolución de problemas grupales y al desarrollo de productos para otros usuarios, los estudiantes comienzan a investigar el diseño de varias teteras. Analizan cada tetera e intentan identificar cómo las necesidades específicas de los usuarios podrían haber orientado su diseño. Al considerar estas opciones de diseño, e intentar hacer coincidir cada tetera con un usuario potencial, los estudiantes pueden comenzar a ver cómo la adopción de un enfoque centrado en el usuario para diseñar productos (tanto físicos como digitales) puede hacer que esos productos sean más útiles. Para concluir la actividad, se pide a los estudiantes que propongan cambios a una de las teteras para que sea más útil.
+              description_teacher: |-
+                Para iniciar una unidad dedicada a la resolución de problemas grupales y al desarrollo de productos para otros usuarios, los estudiantes comienzan a investigar el diseño de varias teteras. Analizan cada tetera e intentan identificar cómo las necesidades específicas de los usuarios podrían haber orientado su diseño. Al considerar estas opciones de diseño, e intentar hacer coincidir cada tetera con un usuario potencial, los estudiantes pueden comenzar a ver cómo la adopción de un enfoque centrado en el usuario para diseñar productos (tanto físicos como digitales) puede hacer que esos productos sean más útiles. Para concluir la actividad, se pide a los estudiantes que propongan cambios a una de las teteras para que sea más útil.
             Understanding Your User:
               key: Entender a tu usuario
               name: Entender a tu usuario
@@ -16670,7 +16672,8 @@ es-MX:
               key: Mantener los datos en secreto
               name: Mantener los datos en secreto
               description_student: "Los alumnos debaten sobre los diferentes niveles de seguridad que les gustaría tener para sus datos personales. Una vez que la clase ha comprendido la importancia de la privacidad, aprenden el proceso de encriptación de la información, cifrando una nota para un compañero y descifrando la nota del compañero. La clase concluye con un debate sobre la importancia de la seguridad física y digital..\\r\n"
-              description_teacher: Los estudiantes debaten sobre los diferentes niveles de seguridad que les gustaría que tuviesen los datos personales. Una vez que la clase ha comprendido la importancia de la privacidad, realiza una actividad de cifrado de una nota para un compañero y descifrado de la nota de un compañero para aprender sobre el proceso de cifrado de la información. La clase concluye con un debate sobre la importancia de la seguridad física y digital.
+              description_teacher: |-
+                Los estudiantes debaten sobre los diferentes niveles de seguridad que les gustaría que tuviesen los datos personales. Una vez que la clase ha comprendido la importancia de la privacidad, realiza una actividad de cifrado de una nota para un compañero y descifrado de la nota de un compañero para aprender sobre el proceso de cifrado de la información. La clase concluye con un debate sobre la importancia de la seguridad física y digital.
             Combining Representations:
               key: Combinar representaciones
               name: Combinar representaciones
@@ -16680,7 +16683,8 @@ es-MX:
               key: Proyecto - Crear una representación
               name: Proyecto - Crear una representación
               description_student: "La clase diseña estructuras para representar su día perfecto utilizando los sistemas de representación binaria que han aprendido en este capítulo. Después de decidir qué piezas de información debe capturar el registro, los alumnos deciden cómo se interpretará una tarjeta perforada de bytes de información para representar esas piezas de información. Después, utilizan los formatos ASCII, de números binarios y de imágenes que han aprendido para representar sus días perfectos e intentan descifrar cómo es el día perfecto de un compañero.\\r\n"
-              description_teacher: En esta lección los alumnos diseñan una estructura para representar su día perfecto utilizando los sistemas de representación binarios que han aprendido en este capítulo. En primer lugar, los alumnos escribirán una breve descripción de su día perfecto y, a continuación, analizarán con un compañero cómo identificar las piezas clave de información que creen que podría captar un ordenador. Como clase, los alumnos decidirán cómo se interpretará una tarjeta perforada de bytes de información para representar esas piezas de información. Después, los alumnos utilizarán los formatos ASCII, de números binarios y de imágenes que han aprendido para representar sus días perfectos. Finalmente, los alumnos intercambian tarjetas perforadas e intentan descifrar cómo es el día perfecto del otro alumno. La lección termina con una reflexión.
+              description_teacher: |-
+                En esta lección los alumnos diseñan una estructura para representar su día perfecto utilizando los sistemas de representación binarios que han aprendido en este capítulo. En primer lugar, los alumnos escribirán una breve descripción de su día perfecto y, a continuación, analizarán con un compañero cómo identificar las piezas clave de información que creen que podría captar un ordenador. Como clase, los alumnos decidirán cómo se interpretará una tarjeta perforada de bytes de información para representar esas piezas de información. Después, los alumnos utilizarán los formatos ASCII, de números binarios y de imágenes que han aprendido para representar sus días perfectos. Finalmente, los alumnos intercambian tarjetas perforadas e intentan descifrar cómo es el día perfecto del otro alumno. La lección termina con una reflexión.
             Problem Solving and Data:
               key: La resolución de problemas y los datos
               name: La resolución de problemas y los datos
@@ -16715,7 +16719,8 @@ es-MX:
               key: Proyecto - Hacer una Recomendación
               name: Proyecto - Hacer una Recomendación
               description_student: Para concluir esta unidad, la clase diseña formas de utilizar los datos para hacer recomendaciones o predicciones que ayuden a resolver un problema. En los primeros pasos, los alumnos hacen un intercambio de ideas, realizan una investigación sencilla y definen un problema de su elección. A continuación, deciden qué tipo de datos quieren recopilar, cómo se podrían recoger y qué uso se les podría dar, antes de intercambiar opiniones y hacer una presentación final.
-              description_teacher: Para concluir esta unidad, los estudiantes diseñan un motor de recomendación basado en los datos de sus compañeros de clase que recopilaron y analizaron. Después de ver un ejemplo de una aplicación de recomendación, los estudiantes siguen una guía de proyecto para completar esta actividad de varios días. En los primeros pasos, los estudiantes eligen qué opción quieren ayudar al usuario a elegir y qué datos necesitan para dar una recomendación, crear una encuesta y recopilar información sobre las elecciones de sus compañeros de clase. Luego, interpretan los datos y utilizan lo que han aprendido para crear el algoritmo de recomendación. Por último, usan sus algoritmos para hacer recomendaciones a algunos compañeros de clase. Los estudiantes realizan una revisión en conjunto y hacen las mejoras necesarias en sus proyectos antes de preparar una presentación para la clase.
+              description_teacher: |-
+                Para concluir esta unidad, los estudiantes diseñan un motor de recomendación basado en los datos de sus compañeros de clase que recopilaron y analizaron. Después de ver un ejemplo de una aplicación de recomendación, los estudiantes siguen una guía de proyecto para completar esta actividad de varios días. En los primeros pasos, los estudiantes eligen qué opción quieren ayudar al usuario a elegir y qué datos necesitan para dar una recomendación, crear una encuesta y recopilar información sobre las elecciones de sus compañeros de clase. Luego, interpretan los datos y utilizan lo que han aprendido para crear el algoritmo de recomendación. Por último, usan sus algoritmos para hacer recomendaciones a algunos compañeros de clase. Los estudiantes realizan una revisión en conjunto y hacen las mejoras necesarias en sus proyectos antes de preparar una presentación para la clase.
             Post-Project Test:
               key: Prueba posterior al proyecto
               name: Prueba posterior al proyecto
@@ -17561,6 +17566,8 @@ es-MX:
               name: En movimiento con eventos
               description_student: Crea tu propio juego o historia.
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar los conocimientos de programación que han aprendido para crear un juego animado. ¡Es tiempo de ponerse creativos y crear una historia en el Laboratorio de juegos!
+            lesson-1:
+              name: Proyecto de fin de curso
           lesson_groups:
             csf_digcit:
               display_name: Ciudadanía digital
@@ -17570,6 +17577,8 @@ es-MX:
               display_name: Bucles
             csf_events:
               display_name: Eventos
+            lessonGroup-5:
+              display_name: Proyecto de fin de curso
           name: Curso A - 2021
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
         courseb-2021:
@@ -17643,6 +17652,8 @@ es-MX:
               name: Una batalla real con eventos
               description_student: Usa los eventos para crear una historia o un juego interactivo.
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar los eventos en el Laboratorio de juegos y aplicar todas las habilidades de programación que aprendieron para crear un juego animado. ¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!
+            lesson-1:
+              name: Proyecto de fin de curso
           lesson_groups:
             csf_digcit:
               display_name: Ciudadanía digital
@@ -17654,6 +17665,8 @@ es-MX:
               display_name: Impactos de la computación
             csf_events:
               display_name: Eventos
+            lessonGroup-6:
+              display_name: Proyecto de fin de curso
           name: Curso B - 2021
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
         coursec-2021:
@@ -17727,7 +17740,7 @@ es-MX:
               description_teacher: Esta lección se creó originalmente para la Hora del Código, en colaboración con el equipo de Minecraft. Los estudiantes tendrán la oportunidad de practicar las ideas que han aprendido hasta este punto, ¡y también de echar un vistazo a los condicionales!
             Sticker Art with Loops:
               key: Arte con stickers y bucles
-              name: Arte con stickers y bucles
+              name: 'Arte con stickers y bucles'
               description_student: En esta lección, los bucles hacen que sea sencillo crear imágenes incluso más geniales con Artista.
               description_teacher: '¡Mira cómo se ilumina el resto de los estudiantes mientras hacen sus propios diseños maravillosos usando un pequeño número de bloques y pegatinas digitales! Esta lección se basa en la comprensión de bucles de lecciones anteriores y da a los/as estudiantes la oportunidad de ser verdaderamente creativos. Esta actividad es fantástica para producir artefactos para carpetas o para reuniones de padres/profesores.'
             'Events: The Big Event':
@@ -17742,7 +17755,7 @@ es-MX:
               description_teacher: En esta etapa especial, los estudiantes pueden crear su propio juego de Flappy Bird a través de los controladores de eventos para detectar clics del ratón y colisiones de objetos. Al final del nivel, podrán cambiar las imágenes o las reglas para personalizar su juego.
             Events in Play Lab:
               key: Eventos en Play Lab
-              name: Chase Game con Eventos
+              name: 'Chase Game con Eventos'
               description_student: '¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!'
               description_teacher: En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar eventos en el Laboratorio de juegos y aplicar todas las habilidades de programación que han aprendido para crear un juego animado. ¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!
             Picturing Data:
@@ -18189,6 +18202,15 @@ es-MX:
               name: Brote
               description_student: '¡Un virus ha llegado a Monster Town! Aprende a crear un simulador de virus y ayuda a los monstruos a volver a estar sanos.'
               description_teacher: 'En esta lección, los alumnos crearán un simulador de brote epidémico utilizando sucesos. Los alumnos estudiarán la simulación para comprender la rapidez con la que puede propagarse un virus y lo que se puede hacer para frenar el contagio. '
+            lesson-2:
+              name: El poder de las palabras
+              description_student: El acoso nunca está bien. Esta lección te enseñará qué puedes decir y qué no cuando estás conectado.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Esta lección fue creada originalmente por Common Sense Education. (https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                A medida que los niños crecen, empiezan a comunicarse más en Internet. Pero algo de lo que ven puede hacerles sentir heridos, tristes, enfadados o incluso temerosos. Ayude a sus alumnos a desarrollar la empatía con los demás y a aprender estrategias para enfrentarse al ciberacoso.
           lesson_groups:
             ramp_up:
               display_name: Avanzar
@@ -18208,6 +18230,8 @@ es-MX:
               display_name: Variables
             lessonGroup-9:
               display_name: Eliminar
+            lessonGroup-7:
+              display_name: Ciudadanía digital
           name: Curso F - 2021
           student_description: Aprende a usar diferentes tipos de bucles, eventos, funciones y condicionales. Investiga distintas técnicas de resolución de problemas y debate sobre el impacto de la computación y de Internet en la sociedad. En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir con tus amigos y familiares.
         express-2021:
@@ -18859,11 +18883,38 @@ es-MX:
               name: Bucles "while" y práctica
             lesson-7:
               name: Más con Condicionales
+            lesson-8:
+              name: Introducción a Revisiones del Código
+            lesson-9:
+              name: Herencia y Métodos
+            lesson-10:
+              name: Más Métodos, Más Funciones
+            lesson-11:
+              name: Métodos de Pintura
+            lesson-12:
+              name: PintorSpray
+            lesson-13:
+              name: PintorSellos
+            lesson-14:
+              name: Casos de Borde
+            lesson-15:
+              name: Resumen de la Ingeniería de Software
+            lesson-16:
+              name: 'Proyecto: Símbolo Personal - Día 1'
+            lesson-17:
+              name: 'Proyecto: Símbolo Personal - Día 2'
+            lesson-18:
+              name: 'Proyecto: Símbolo Personal - Día 3'
+            lesson-19:
+              name: Día FRQ
             lesson-20:
               name: 'Lección 15: día de evaluación'
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
+            lessonGroup-3:
+              display_name: '¡Demuestra lo que sabes!'
+          name: csa1-piloto
         csa2-pilot:
           lessons:
             new lesson:
@@ -18871,7 +18922,23 @@ es-MX:
           lesson_groups:
             lesson group:
               display_name: título del grupo de lecciones
+          name: csa2-piloto
+        csa3-pilot:
+          name: csa3-piloto
+        csa4-pilot:
+          name: csa4-piloto
+        csa5-pilot:
+          name: csa5-piloto
+        csa6-pilot:
+          name: csa6-piloto
+        csa7-pilot:
+          name: csa7-piloto
+        csa8-pilot:
+          name: csa8-piloto
+        csa9-pilot:
+          name: csa9-piloto
         k5-onlinepd-2021:
+          title: Aplicación y Enseñanza de los Fundamentos de las Ciencias de la Computación
           description: "¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
           student_description: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
           description_short: '¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!'
@@ -18922,8 +18989,16 @@ es-MX:
               name: Primeros pasos
             What is Code.org:
               name: Cursos de comprensión de los Fundamentos de Ciencias de la Computación
+            Addressing Implementation Approaches and Barriers:
+              name: Enfoques de Aplicación y Obstáculos
             Lesson Planning:
               name: Planificación de lecciones
+            CS Teaching and Learning Practices:
+              name: Prácticas de Enseñanza y Aprendizaje de Ciencias de la Computación
+            CS Teaching and Student Practices:
+              name: Enseñanza de Ciencias de la Computación y Prácticas de Alumnos
+            Implementation Approaches and Barriers:
+              name: Enfoques de Aplicación y Obstáculos
           lesson_groups:
             k5_getting_started_1:
               display_name: Introducción
@@ -18935,6 +19010,9 @@ es-MX:
               display_name: Próximos pasos
             Introduction:
               display_name: Introducción
+            Implementing and Teaching CS:
+              display_name: Aplicación y Enseñanza de las Ciencias de la Computación
+          name: k5-enlíneapd-2021
         haikubot-pilot:
           lessons:
             new lesson:

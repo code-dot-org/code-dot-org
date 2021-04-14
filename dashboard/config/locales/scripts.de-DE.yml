@@ -28753,6 +28753,7 @@ de:
               key: Automatisierung von Datenentscheidungen
               name: Automatisierung von Datenentscheidungen
             Project - Make a Recommendation:
+              description_student: " "
               description_teacher: Zum Abschluss dieser Lerneinheit entwerfen die
                 SchülerInnen eine „Empfehlungsmaschine“ auf der Grundlage von Daten,
                 die sie von ihren KlassenkameradInnen erheben und analysieren. Nachdem
@@ -29559,6 +29560,8 @@ de:
                 und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein
                 animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ
                 zu werden und in Play Lab eine Geschichte zu erstellen!
+            lesson-1:
+              name: Projekt am Ende des Kurses
           lesson_groups:
             csf_digcit:
               display_name: Digitalen Staatsbürgerschaft
@@ -29568,6 +29571,8 @@ de:
               display_name: Schleifen
             csf_events:
               display_name: Ereignisse
+            lessonGroup-5:
+              display_name: Projekt am Ende des Kurses
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit.
             Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des
             Kurses, die mit anderen geteilt werden kann.
@@ -29696,6 +29701,8 @@ de:
                 und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein
                 animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ
                 zu werden und in Play Lab ein Spiel zu erstellen!
+            lesson-1:
+              name: Projekt am Ende des Kurses
           lesson_groups:
             csf_digcit:
               display_name: Digitalen Staatsbürgerschaft
@@ -29707,6 +29714,8 @@ de:
               display_name: Auswirkungen der Datenverarbeitung
             csf_events:
               display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit.
             Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des
             Kurses, die mit anderen geteilt werden kann.
@@ -30614,6 +30623,10 @@ de:
               name: Einführung Sprite Lab
             lesson-8:
               name: Sprites in Aktion
+            lesson-2:
+              name: Die Macht der Worte
+              description_student: Mobbing ist nie in Ordnung. In dieser Lektion erfahren
+                Sie, was man im Internet sagen darf und was nicht.
           lesson_groups:
             ramp_up:
               display_name: Hochfahren (Ramp-Up)
@@ -30633,6 +30646,8 @@ de:
               display_name: Variablen
             lessonGroup-9:
               display_name: entfernen
+            lessonGroup-7:
+              display_name: Digitalen Staatsbürgerschaft
           student_description: Lerne die Verwendung verschiedener Arten von Schleifen,
             Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
             Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen
@@ -31836,7 +31851,6 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
-          title: " "
           description_audience: " "
           description_short: " "
           description: " "
