@@ -24,7 +24,8 @@ const defaultProps = {
   viewAs: ViewType.Teacher,
   showLockIcon: true,
   lessonIsVisible: () => true,
-  lessonLockedForSection: () => false
+  lessonLockedForSection: () => false,
+  lockableAuthorized: true
 };
 
 export default storybook => {
@@ -124,6 +125,21 @@ export default storybook => {
             status: LevelStatus.locked
           }))}
           lessonLockedForSection={() => true}
+        />
+      )
+    },
+    {
+      name: 'locked lesson as unverified teacher',
+      story: () => (
+        <ProgressLesson
+          {...defaultProps}
+          lesson={fakeLesson('Asessment Number One', 1, true)}
+          levels={fakeLevels(5, {named: false}).map(level => ({
+            ...level,
+            status: LevelStatus.locked
+          }))}
+          lessonLockedForSection={() => true}
+          lockableAuthorized={false}
         />
       )
     },

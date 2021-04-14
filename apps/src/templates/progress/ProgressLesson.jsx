@@ -206,7 +206,7 @@ class ProgressLesson extends React.Component {
           style={{
             ...styles.main,
             ...(hiddenOrLocked &&
-              teacherNotLockableAuthorized &&
+              !(viewAs === ViewType.Teacher && this.props.lockableAuthorized) &&
               styles.translucent)
           }}
         >
@@ -261,8 +261,7 @@ class ProgressLesson extends React.Component {
           </div>
           {lesson.lockable && teacherNotLockableAuthorized && (
             <div style={styles.notAuthorizedWarning}>
-              This lesson is locked. In order to be able to unlock it you must
-              become a verified teacher.
+              {i18n.verifiedTeacherLockedWarning()}
             </div>
           )}
           {!this.state.collapsed && (
