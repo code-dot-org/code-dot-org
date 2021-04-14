@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-06 21:18:42 UTC",
+    "serialized_at": "2021-04-13 18:42:16 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -178,6 +178,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.",
+        "student_overview": "As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!\n",
+        "purpose": "* Confirm that students are grouped in Code Studio (A tutorial document is available here.)\n* Seat students based on their review groups.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -193,6 +196,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "Students are introduced to inheritance by deriving a subclass of `Painter` with more commands. Students use the keyword `super` with constructors and learn how to write their own methods in the `PainterPlus` class. Students discover that methods that are called must be defined in their own class or the superclass. In future lessons, students add additional methods and subclasses of `Painter`.",
+        "student_overview": "By now, you have noticed that your `Painter` has limited commands to move around The Neighborhood. In this lesson, you create a new type of `Painter` that can do everything the `Painter` can as well as something the `Painter` can't!",
+        "preparation": "Have several sticky notes ready for the debugging wall"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -208,6 +214,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this lesson, students continue to apply the principle of inheritance in their code by further expanding the `PainterPlus` class with three additional methods: `turnAround()`, `takeAllPaint()`, and `moveFast()`. To practice Java syntax and algorithmic thinking, students construct a step-by-step process for implementing each of the methods by hand before coding it in Java. By continuing to write and use new methods, students experience the benefits of reusability.\n",
+        "student_overview": "In this lesson, you give your `PainterPlus` class new ways to move around and interact with The Neighborhood. You consider edge cases when implementing your new methods.",
+        "preparation": "* Print and cut enough copies for your class of the Java Syntax and PainterPlus Methods Cards (one set of cards per group)\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -223,6 +232,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "Students continue to expand the `PainterPlus class`, this time adding four new methods that allow the `PainterPlus` to move and paint horizontal, vertical, and diagonal lines. Students use pseudocode to write the methods, then implement them in the `PainterPlus` class in Java. Through the code review, students critique their methods and consider when it is appropriate to use methods they have written in the past by calling them in their new methods.\n",
+        "student_overview": "In this lesson, you continue to expand your `PainterPlus` class, this time adding methods to move and paint horizontal, vertical, and diagonal lines. You also participate in a code review to provide and receive feedback for improving code.",
+        "preparation": "* Print a copy of the Pseudocode Warmup Activity Guide for each student"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -667,6 +679,188 @@
       "seeding_key": {
         "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "337dee6e-1d9e-473c-899d-5f8017167016",
+      "position": 3,
+      "properties": {
+        "name": "Review Request",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "8693380e-0359-4b2a-84ae-67ec676d7131",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "47ff481c-00c6-48c9-b494-651c21b529d2",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 3
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 37
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 8
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "17865aea-b415-4582-b1be-0b5f8a15ced8",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 32
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
@@ -2213,6 +2407,767 @@
         "activity_section.key": "141f0aed-bfc5-46cd-99e0-bc311dcd5aee",
         "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef"
       }
+    },
+    {
+      "key": "2565dc89-49d2-474e-92b3-b84dcf3c77e0",
+      "position": 1,
+      "properties": {
+        "remarks": true,
+        "description": "So far, we’ve focused on writing new code, but that’s only a fraction of a software engineer's job in industry. In reality, engineers spend a lot of time reading and working with other people’s code. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2565dc89-49d2-474e-92b3-b84dcf3c77e0",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Lead students in a discussion about the visualization by clicking through the animation on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the visualization and give students a moment to process it independently.\n  * *What surprises you about this visualization? What do you want to know more about?*\n  * *Each year ~$85 billion in Global GDP is lost from developer time spent on bad code. How can software engineers work to minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the different types of programming that they do. They then identify how to minimize time spent on bad code to foreshadow the value of code reviews. Answers to the second question may include:\n* Spend more time planning/designing\n* Review your own code\n* Have someone else review the code\n* Test the code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers Share video. This video presents the value of code reviews and working together. It also normalizes the fact that everyone has bugs and code that code reviews can improve.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** In your own words, describe what a reviewer gains from a code review. How about the code author?\n\n**Discussion Goal:** This discussion is designed to help students think about both the benefits of a code review and the different roles involved in a code review."
+      },
+      "seeding_key": {
+        "activity_section.key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "Throughout this course, we are going to use code reviews as a tool for improving our coding and collaboration skills. The people you are sitting with today are your review group - you will be reviewing one another’s code and revising your code based on your peers' feedback. Today we’re going to practice this process."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk students through the four steps of the code review process that we will be using this year. Note that the video has already discussed this information - the slide is here for reference and reinforcement."
+      },
+      "seeding_key": {
+        "activity_section.key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
+      "position": 2,
+      "properties": {
+        "name": "Committing Code",
+        "duration": "7",
+        "remarks": true,
+        "description": "When software engineers commit code, they leave a short message about the current version. This process helps the engineer while programming and for anyone else who reads through the code in the future."
+      },
+      "seeding_key": {
+        "activity_section.key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of committing code. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce possible scenarios for when to commit code.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Talk students through how to commit using Code Studio. Highlight the fact that committing code is similar to hitting ‘save’ on a file or a game, but in addition to creating a checkpoint to come back to, software engineers leave short messages to help identify what makes one version different from another.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the purpose of commenting code. Make sure to touch on:\n  * Software engineers leave additional supports called comments both for themselves and for reviewers.\n  * Comments can include what they expect a code segment to do or describe how it works.\n  * Comments are indicated by // for a single-line comment or /* and */ for multi-line comments. These symbols are indicators to the computer that the text on these lines is for humans only. The computer will NOT read it as coded instructions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to add comments to their code and commit the changes. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider using the animation delay on the first slide of this sequence to let students think about when they might choose to commit or ‘save’ their code and ask them to share hypotheses.  \n\nNote that the code on Level 1 is pulled directly from the previous lesson. If students did not complete the level, they could leave comments to outline their code before committing it.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "ccef128d-659e-479f-856b-e6fa3c341352",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ccef128d-659e-479f-856b-e6fa3c341352",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
+      "position": 1,
+      "properties": {
+        "remarks": true,
+        "description": "\nAfter several commits, a developer may be ready to share their code with others to get feedback about the program. "
+      },
+      "seeding_key": {
+        "activity_section.key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of feedback requests. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of requesting feedback, focusing on the importance of writing a clear and specific message about what they are asking the reviewer to look for. Highlight the fact that this is often called a pull request in industry.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return students to Code Studio and walk them through writing a message to their group and requesting feedback.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A pull request is a little bigger than the process described here. For a more technical overview, check out: https://www.atlassian.com/git/tutorials/making-a-pull-request."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
+      "position": 3,
+      "properties": {
+        "name": "Writing Good Feedback",
+        "duration": "14",
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The next step of the code review is to review the author’s program actively. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the human who wrote it."
+      },
+      "seeding_key": {
+        "activity_section.key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Use the slides to give an overview of writing comments.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews - by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share ART - a mnemonic to help them craft their feedback statements.\n  * Ask questions\n  * Raise flags about confusing code\n  * Tag awesome code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice Activity Guide to each review group. Students are not working directly in the guide at the beginning of this activity, but having the document allows them to see the entire code segment while working with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** This activity gradually releases students to writing comments independently using the following steps:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click to display three sample feedback statements to the students asking each time whether they are valuable comments. Students should expand on their answers, explaining why or why not. If not, can they think of a better way of phrasing the information?\n  * Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n  * Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n  * Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a whole class, students share additional feedback that they may leave for the code on the screen and how that feedback is valuable to the developer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students transition to working in pairs, writing additional comments for the developer on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students review one member of their review group’s work in Code Studio, returning to Level 1.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some additional places students may give feedback in lines 1-30 include:\n* Line 3 - The constructor is initialized incorrectly\n* Lines 11-14 - Good use of a `while` loop\n* Lines 28-30 - Interesting use of paint buckets as a tool for navigating and drawing\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "df6356e7-a386-4541-a0ce-15062d79cabe",
+      "position": 5,
+      "properties": {
+        "name": "Returning Feedback",
+        "duration": "4",
+        "description": "**Do This:** Review the next three slides to discuss the process of returning feedback and the nature of code review as a process:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of returning feedback. Address both:\n  * How to return feedback on Code Studio.\n  * Before returning feedback, students should get in the habit of re-reading their review and doing a quick self-check: Are the notes true, necessary, and kind?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Returning feedback is not the end of the process!\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that code review is a process and often occurs as a cycle. Developers request and receive feedback, then implement the changes and request more feedback. This process of improving the code step by step can happen several times before completing the product. Note that they will not be revising their code today but will take a moment to read through the comments left by their reviewer. In the future, they will continue this process by revising and resubmitting their code for review.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use the agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df6356e7-a386-4541-a0ce-15062d79cabe",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students think about how they interact with feedback and write a short note to their group about the types of feedback they find most helpful.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review key vocabulary from the lesson.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
+      }
+    },
+    {
+      "key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What does ART stand for, and how can it be used to improve code reviews?\n\n**Question:** Look at the code segment on the right. Write two pieces of feedback for this author.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
+      }
+    },
+    {
+      "key": "7c3d694d-042f-4f3c-88f7-e165dbc75e75",
+      "position": 1,
+      "properties": {
+        "name": "Art",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a logo that you like. On a sticky note, draw a quick sketch of the logo. Can an object of the class Painter recreate that logo? If not, what other commands does `Painter` need?*\n\n**Discussion Goal:** Allow students time to share their logos with others and discuss the second part of the prompt. The goal is to make connections between the classroom and students’ lives by providing motivation for today’s lesson (can we recreate the art?). Students also recall prior knowledge of commands and brainstorm ideas for new commands."
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3d694d-042f-4f3c-88f7-e165dbc75e75",
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec"
+      }
+    },
+    {
+      "key": "a1d2fd84-957b-4da9-b3b4-4e26e73ed36a",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "Thanks, everyone, for sharing out your ideas! Today we will be learning how to add methods to your own class to build on the existing `Painter` class."
+      },
+      "seeding_key": {
+        "activity_section.key": "a1d2fd84-957b-4da9-b3b4-4e26e73ed36a",
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec"
+      }
+    },
+    {
+      "key": "81009920-75b3-4c7c-baa8-2793d1bb84b8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to review the `turnLeft()` command. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level is purposefully similar to previous levels. The goal here is to provide students the motivation behind the upcoming subclass `PainterPlus` and the `turnRight(`) method.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81009920-75b3-4c7c-baa8-2793d1bb84b8",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "13c776a8-fa3a-4b7d-8363-530e82537607",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the minimum number of `turnLeft()` commands needed? In order to make your code more efficient, what command would you like to add to the `Painter` class?*\n\n**Discussion Goal:** The goal is for students to notice that a `turnRight()` command would make the code more efficient and introduce the possibility that they have the ability to decide what methods are available in a class."
+      },
+      "seeding_key": {
+        "activity_section.key": "13c776a8-fa3a-4b7d-8363-530e82537607",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "73fed29c-d8a3-4b19-95c9-007a2a15de3e",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We cannot modify `Painter` because that class is protected, but we can create a type of `Painter` that can use all of the `Painter`'s methods and build new ones!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this lesson, the motivation for inheritance is to write a new class that builds on the existing `Painter` class in order to add a new method. Since students cannot modify `Painter`, they instead write a subclass that inherits all of the methods of `Painter`. In future lessons, students write subclasses that are more specialized versions of `Painter`, such as `SprayPainter`, that will build on the concept of an “is-a” relationship (a `SprayPainter` is-a `Painter`)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "73fed29c-d8a3-4b19-95c9-007a2a15de3e",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "60ef4e5a-ae03-4997-b27a-1fe4b908a851",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Inheritance and Subclasses video.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that the video does fully discuss the definitions of subclass and superclass. While it is tempting to explain these terms, the goal here is to provide enough information for students to write their own class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60ef4e5a-ae03-4997-b27a-1fe4b908a851",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "f7ae5b0d-929a-4bc2-befd-5ac84b81201e",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the slide with the self-check question. Give students time to think to themselves. Poll for responses by asking for raised hands.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the correct answer. Emphasize that for the relationship between two classes to be an inheritance hierarchy, you must be able to say that the subclass is-a superclass.\n\n**Discussion Goal:** This self-check allows students to confirm that they remember the relationship between a superclass and a subclass in an inheritance hierarchy before moving on. If they chose a different answer, they have an opportunity to address their misconception rather than re-learning this information in the future.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and feel students could use a movement break, ask students to move to a different corner of the room corresponding to their answer, where corner one corresponds to answer A, corner two corresponds to answer B, etc. Other options for polling for answers include asking students to raise one finger for answer A, two fingers for answer B, etc."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f7ae5b0d-929a-4bc2-befd-5ac84b81201e",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "4667c8e6-412d-4df2-87aa-a3becd9bf1a1",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Review the syntax for subclasses and constructors, then introduce students to the concept through The Neighborhood. Note that the video has already gone over this material; the slides are here for reference and reinforcement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for the header of a subclass using the `extends` keyword. At this point, introduce the visibility `public` as being available to any other part of the program. Later on, we will discuss when we would want to mark certain parts of the code as `private`. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for a constructor.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the call to `super` inside of a subclass’s constructor.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-4 on Code Studio, where they write the `PainterPlus` class, initialize a `PainterPlus` object, and complete the puzzle.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These levels purposefully have the same puzzle as the `Painter` puzzle. Encourage students to think about the relationship between the `PainterPlus` and the `Painter` classes (a `PainterPlus` is a `Painter`) and what commands they can call on for their `PainterPlus` object (any `Painter` command). \n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4667c8e6-412d-4df2-87aa-a3becd9bf1a1",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "2b281802-e4be-4735-8f4e-ffcad5443f00",
+      "position": 7,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` command. We’re now going to learn how to add our commands."
+      },
+      "seeding_key": {
+        "activity_section.key": "2b281802-e4be-4735-8f4e-ffcad5443f00",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "94e31fd5-229c-4de4-922d-217fcb202af1",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Methods\" video.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that the video does not go into depth on the definitions of `public` (visibility) and `void` (return type). While it is tempting to go into the details, the goal here is to provide enough information for students to write their own method."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94e31fd5-229c-4de4-922d-217fcb202af1",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "d8c81a29-cbc9-471e-96a0-7c8c95ef5e2c",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for methods. Note that the video has discussed this material; the slides are here for reference and reinforcement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 6 on Code Studio to write the `turnRight()` method. This level has the same puzzle as Level 4, but now students define and use `turnRight()`.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8c81a29-cbc9-471e-96a0-7c8c95ef5e2c",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "e80d12b2-7829-451f-b8dd-ea426576b07b",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Predict what would happen if we tried to call our new `turnRight()` method on a `Painter`, not a `PainterPlus`.\n\n**Discussion Goal:**\n* The goal is for students to notice that the `turnRight()` command made the code more efficient.\n* Students make predictions about the code. Since they haven’t seen this before, there is no expectation for student responses: encourage students to share any ideas. Don't guide students towards a correct answer - they will test out their hypotheses next.\n\n**Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e80d12b2-7829-451f-b8dd-ea426576b07b",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "6fb0765c-b71f-4810-94b8-8826ec3c74cb",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6fb0765c-b71f-4810-94b8-8826ec3c74cb",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "f6834d01-de77-4635-b04f-618ddcac8f0b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happens when you call `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Help students understand that the `Painter` object cannot `turnRight()` because that method has not been defined in the `Painter` class (or theoretically any classes the `Painter` itself inherited methods from). Currently, the only class that can use the `turnRight()` command is `PainterPlus`. In the future, students create more classes that inherit from `PainterPlus` and can themselves use `turnRight()`. \n\nDo This: Ask a student volunteer to add a sticky note to the debugging wall describing the bug that happens when an object tries to use a method that is not available to them. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f6834d01-de77-4635-b04f-618ddcac8f0b",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "ab6984a5-3901-4230-a5f0-3790634c9af4",
+      "position": 1,
+      "properties": {
+        "description": "**Discuss:** *What is one key takeaway you have from today’s lesson? What is still confusing?*\n\n**Discussion Goal:** Since this lesson introduced many new concepts, the main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information and that throughout the course, there may be times where they feel lost or confused. Ask students to share strategies for when they are confused -- what resources do they have? ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make a note of any content that students bring up as confusing, and review with smaller groups. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab6984a5-3901-4230-a5f0-3790634c9af4",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "ea1ccb67-3412-4dea-b09a-b31d463311f0",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea1ccb67-3412-4dea-b09a-b31d463311f0",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "e095da4f-3541-4197-bba6-79ade4f4676f",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Think of an example of inheritance in your own life. What is the superclass? What is the subclass? Remember that Painter was the superclass, while PainterPlus was the subclass.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e095da4f-3541-4197-bba6-79ade4f4676f",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "1ec25b59-ab5e-4503-bd3f-19f0c0e1b629",
+      "position": 1,
+      "properties": {
+        "name": "Real-World Inheritance: Telephones",
+        "remarks": true,
+        "description": "Inheritance is everywhere in real life. Tech gadgets like computers and cell phones inherit features from the previous version of the product and also add new useful features. "
+      },
+      "seeding_key": {
+        "activity_section.key": "1ec25b59-ab5e-4503-bd3f-19f0c0e1b629",
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2"
+      }
+    },
+    {
+      "key": "bc8741bd-0437-4894-81ea-ecfe6076b1ce",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Cell phones inherited the ability to make phone calls from telephones. What are some new features that cell phones have that standard telephones do not have?*\n\n**Discussion Goal:** Students give examples of features of cell phones. Guide the students towards examples such as text messaging, video calling, taking pictures, and using mobile apps. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nStudents may not have used a standard telephone before. Use examples from your own experiences of using a standard telephone to highlight similarities and differences between standard telephones and cell phones.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc8741bd-0437-4894-81ea-ecfe6076b1ce",
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2"
+      }
+    },
+    {
+      "key": "a35906be-b33d-4634-b0ad-d5f89e1c667c",
+      "position": 1,
+      "properties": {
+        "name": "More `PainterPlus` Methods",
+        "duration": "5",
+        "description": "**Do This:** Review the `PainterPlus` class by walking students through animated slides about the following ideas: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `PainterPlus` inherits from `Painter`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `PainterPlus` inherits all of the methods of the `Painter` class. In the previous lesson, students added `turnRight()`. Students are adding three more methods to the `PainterPlus` class today (click through the animation).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `turnAround()` method - instructs `PainterPlus` to turn 180 degrees. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `takeAllPaint()` method - instructs `PainterPlus` to collect all of the available paint from a paint bucket they are standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `moveFast()` method - instructs `PainterPlus` to move forward by two dots in the direction they are facing.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a35906be-b33d-4634-b0ad-d5f89e1c667c",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "f520d108-3261-4961-acf2-4cfc046ad846",
+      "position": 2,
+      "properties": {
+        "name": "Handling an Edge Case",
+        "duration": "14",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What should `PainterPlus` do if they are instructed to `moveFast()` but can only move one space forward?\n\n**Discussion Goal:** Students address this edge case by discussing alternative actions that a `PainterPlus` object should perform. Potential alternative actions could be:\n* The `PainterPlus` object will not move forward.\n* The `PainterPlus` object will move forward only one space and then stop at the barrier.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Define edge case and provide the edge case for `moveFast()` as an example."
+      },
+      "seeding_key": {
+        "activity_section.key": "f520d108-3261-4961-acf2-4cfc046ad846",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "9eea2409-59dd-4b4c-b5a0-c786b9b38322",
+      "position": 3,
+      "properties": {
+        "name": "Implementing `PainterPlus` Methods",
+        "duration": "13",
+        "description": "**Group:** Form student groups by dividing the class by a multiple of three, where each group has no more than four students.\n\n**Distribute:** Hand out a stack of the Java Syntax and PainterPlus Methods cards to each group before starting the activity. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternative ways to prepare the Java Syntax and PainterPlus Method Cards:\n1. Pass out the card sheets and scissors to each group and have the students cut their own set of cards.\n2. Make several laminated sets of cards that different sections can share.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9eea2409-59dd-4b4c-b5a0-c786b9b38322",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "6564a9f5-8cce-4a05-bcd8-5e60fdab18cf",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students implement a given `PainterPlus` method using the provided cards.\n* Assign one of the following methods to each group: `turnAround()`, `takeAllPaint()`, or `moveFast()`.\n* Show an example of the task by implementing the `turnRight()` method using the cards.\n* Instruct the students to implement their assigned method using the provided cards.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6564a9f5-8cce-4a05-bcd8-5e60fdab18cf",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "6f853b27-9ec0-4ca1-8b7a-e3fd6d98dae2",
+      "position": 5,
+      "properties": {
+        "remarks": true,
+        "description": "There are many approaches to solving a problem. When we write methods, our solutions will not always be identical."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f853b27-9ec0-4ca1-8b7a-e3fd6d98dae2",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "cd5278bc-dae4-47ab-8315-5c4f2466ac4a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students compare their solution to `turnAround()`, `takeAllPaint()`, and `moveFast()` methods to the solutions provided to them in the `PainterPlus` class on The Neighborhood."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd5278bc-dae4-47ab-8315-5c4f2466ac4a",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "ffe4b001-5f17-423a-b49c-121f1daed5c2",
+      "position": 7,
+      "properties": {
+        "name": "Using `PainterPlus` Methods",
+        "duration": "15",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work collaboratively on a puzzle on Level 1 on Code Studio in their groups. Groups work on the choice that corresponds to the PainterPlus method that they implemented in their group.\n* Choice 1: `turnAround()`\n* Choice 2: `takeAllPaint()`\n* Choice 3: `moveFast()`",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternative ways to organize students for this activity:\n1. Groups can choose a different method than the one they were assigned and complete the associated level choice.\n2. Students pair with a student from a different group. Together, they choose one of the choices to work on.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ffe4b001-5f17-423a-b49c-121f1daed5c2",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "449611e1-ecca-44bf-93de-c9422a820a81",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "449611e1-ecca-44bf-93de-c9422a820a81",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "8f6cbe45-07cb-452d-aca0-7dd415afc0e3",
+      "position": 1,
+      "properties": {
+        "name": "Review",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Move through the animated slide one command at a time. Before moving onto another command, have students share their understanding of the command.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f6cbe45-07cb-452d-aca0-7dd415afc0e3",
+        "lesson_activity.key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef"
+      }
+    },
+    {
+      "key": "211d75e7-bc69-4958-aa2f-4b2609fb01fa",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The PainterPlus class is a subclass of the Painter class. In the table below, check off which methods can be called on a Painter object and which methods can be called on a PainterPlus object.\n\n**Question:** PainterPlus understands how to turnAround() by 180 degrees by making two left turns. What sequence of commands can we use to make PainterPlus turn in a complete circle (i.e., turning 360 degrees)?\n\n**Question:** What is the purpose of writing new methods? "
+      },
+      "seeding_key": {
+        "activity_section.key": "211d75e7-bc69-4958-aa2f-4b2609fb01fa",
+        "lesson_activity.key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef"
+      }
+    },
+    {
+      "key": "05475623-0e75-4a94-b2c0-7eaac79bcb01",
+      "position": 1,
+      "properties": {
+        "name": "Pair Pseudocode",
+        "remarks": true,
+        "description": "Today we’re going to continue expanding the class `PainterPlus`, but this time we’re going to add methods that allow the `Painter` to paint as they move in The Neighborhood.\n\nTo get started, we will plan out our methods using a technique called “pseudocode.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "05475623-0e75-4a94-b2c0-7eaac79bcb01",
+        "lesson_activity.key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151"
+      }
+    },
+    {
+      "key": "b083e87c-4500-40f7-8a8f-2d25894f5eb1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the Pseudocode Warmup to each student.\n\n**Do This:** Use the slides to introduce the idea of pseudocode using `lineSegment()` as an example, then direct students to work in pairs to write pseudocode for the other three given methods. \n* Introduce the four new methods:\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share an overview of the methods that will be available in the `PainterPlus` class by the end of the lesson\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintLineSegment()` method\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintFullLine()` method\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintDiagonalSegment()` method\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintFullDiagonal()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain the role of pseudocode and how to write it in this course \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Talk students through the pseudocode for `lineSegment()`. Make sure that they are writing the example on their own Pseudocode Warmup handout.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to write pseudocode for the remaining three methods.\nCall on students to share out an example of each method in pseudocode.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students are working together to plan their methods but will write them individually in The Neighborhood. It will be helpful for all students to have a copy of the pseudocode to refer to while they are coding, so it is important for all students to complete the Pseudocode Warmup.\n\nThe purpose of this share out is simply to make sure everyone has thought through all three methods even if their group did not finish pseudocoding them. Students may also note that they had a different set of steps to get the same result. This should be a quick discussion to give time to the activity portion of the class.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b083e87c-4500-40f7-8a8f-2d25894f5eb1",
+        "lesson_activity.key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151"
+      }
+    },
+    {
+      "key": "a18fd8a2-58d6-4067-9192-f3e126634fe7",
+      "position": 1,
+      "properties": {
+        "name": "Writing Parameterized Methods",
+        "duration": "20",
+        "remarks": true,
+        "description": "Now that you’ve thought through your methods, it’s time to write them in code."
+      },
+      "seeding_key": {
+        "activity_section.key": "a18fd8a2-58d6-4067-9192-f3e126634fe7",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "0a9d2396-9c88-4b31-84b6-e7fa8ffdde8e",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Direct students to complete Levels 1-4 in Code Studio. Within the first few minutes, students realize that they need to use multiple colors to solve these puzzles, and their pseudocode does not take this into account. When this occurs, transition to the discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "0a9d2396-9c88-4b31-84b6-e7fa8ffdde8e",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "3bd8d9a5-62cc-4eb9-8e7f-fb544f7eeab9",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If no one raises the issue of multiple colors after 4-5 minutes, it is okay to pause the class anyway to talk through the steps of parameterizing their methods.\n\nStudents don't need to write all methods before this interlude; they have thought them through enough in the Warm Up to engage with the new material.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd8d9a5-62cc-4eb9-8e7f-fb544f7eeab9",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "899510df-324b-4e03-95c0-59e1a22207c5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we instruct `PainterPlus` to paint diagonal lines of multiple colors?*\n\n**Discussion Goal:** Students have already used single colors with `paint(String color)`. This discussion encourages them to connect to their prior knowledge to prepare for a discussion about parameters and arguments.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Parameters\" video.\n\n**Do This:** Review the syntax for adding parameters to methods and calling those methods with arguments. Then introduce students to the concept through The Neighborhood. Note that the video has already discussed this material; the slides are here for reference and reinforcement.\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Guide students through adding parameters to their methods by talking through the process for `paintDiagonalSegment(String color)` while clicking through the slide animations. \n  * Use the formal parameter in the signature to introduce something that changes into the method.\n  * By adding `String color` as a parameter, we can use the parameter `color` within the method to mean different things depending on how the method is called.\n  * Method calls with different arguments result in different colored lines\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Student Self Check: Display the challenge puzzle that they discussed at the beginning, ask them to write the new method header for `paintDiagonalSegment` that allows them to use it with any color. Click through the slide animations to reveal the answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Release students to continue implementing, revising, and testing their methods.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When students are confident in their methods, transition them to Level 5 on Code Studio to test all methods together. Readiness may occur at different times for different students. Each student should move on at their own pace."
+      },
+      "seeding_key": {
+        "activity_section.key": "899510df-324b-4e03-95c0-59e1a22207c5",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "8d31d8f0-5ff3-44fe-bd02-23df2a40531c",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The content introduction and practice levels should take about 20 minutes. At the end of this time, students have varying levels of progress completed on Level 5. It is okay to step back and review mid-process even if they have only done a little work on painting the mural. In addition to reviewing the code in the main method, students should review one another’s code in `PainterPlus`, completed in Level 1.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d31d8f0-5ff3-44fe-bd02-23df2a40531c",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "2979a1a4-5d1d-4e3e-ad61-542ba847762f",
+      "position": 6,
+      "properties": {
+        "name": "Code Review",
+        "duration": "12",
+        "remarks": true,
+        "description": "For the next 12 minutes, we will take a step back from writing new code to focus on reviewing and revising."
+      },
+      "seeding_key": {
+        "activity_section.key": "2979a1a4-5d1d-4e3e-ad61-542ba847762f",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "e980b872-357a-4b79-8088-9855400507d8",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pair students within a review group to review each other's methods and design in Code Studio. Students request, receive, and review feedback on their new methods.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students transition back to their own code and revise it based on at least one piece of feedback.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may not be sure what to write in their review request. Some suggestions include:\n* Comments\n* Efficient Methods\n  * Are loops and conditionals being used efficiently?\n  * Could a method be called from inside another method?\n* Errors in their code\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e980b872-357a-4b79-8088-9855400507d8",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "be63ee61-c2c1-46b4-87a4-fe986101c836",
+      "position": 1,
+      "properties": {
+        "name": "Closing the Loop",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Use this discussion to reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives. This is also a good time to identify larger group misconceptions to address before the end of the unit.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "be63ee61-c2c1-46b4-87a4-fe986101c836",
+        "lesson_activity.key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b"
+      }
+    },
+    {
+      "key": "a1860fe4-f967-4c66-b885-f362ff96a2c1",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.* \n\n**Question:** If I wanted to draw a rectangle with three colors, what would the method header look like for `drawRectangle`?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1860fe4-f967-4c66-b885-f362ff96a2c1",
+        "lesson_activity.key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b"
+      }
     }
   ],
   "script_levels": [
@@ -2228,6 +3183,9 @@
 
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -2409,10 +3367,332 @@
         "lesson.key": "lesson-7",
         "objective.key": "ba1b8d82-19de-4ec2-ad74-af3bfffa8047"
       }
+    },
+    {
+      "key": "a46c934a-0c5d-4839-85ce-2b1b60fa7efc",
+      "properties": {
+        "description": "Summarize the values of code reviews"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "a46c934a-0c5d-4839-85ce-2b1b60fa7efc"
+      }
+    },
+    {
+      "key": "435e5ddc-9b18-481b-a531-0d4965d2d279",
+      "properties": {
+        "description": "Use ART when reviewing sample code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "435e5ddc-9b18-481b-a531-0d4965d2d279"
+      }
+    },
+    {
+      "key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07",
+      "properties": {
+        "description": "Use comments within code to improve readability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07"
+      }
+    },
+    {
+      "key": "31e2755a-fc47-4b08-9f90-4cf3d473b410",
+      "properties": {
+        "description": "Explain inheritance and why it is used"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "31e2755a-fc47-4b08-9f90-4cf3d473b410"
+      }
+    },
+    {
+      "key": "275ecca7-2b94-4e6d-a272-cf8595451b75",
+      "properties": {
+        "description": "Write a subclass that extends a superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "275ecca7-2b94-4e6d-a272-cf8595451b75"
+      }
+    },
+    {
+      "key": "73521095-a123-43f9-a508-8e733ec3b582",
+      "properties": {
+        "description": "Write a constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "73521095-a123-43f9-a508-8e733ec3b582"
+      }
+    },
+    {
+      "key": "d7c14398-0068-4e7e-a022-21732806521b",
+      "properties": {
+        "description": "Write a method"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "d7c14398-0068-4e7e-a022-21732806521b"
+      }
+    },
+    {
+      "key": "6ea63757-ea2f-4056-a268-7859e8d4ef42",
+      "properties": {
+        "description": "Apply the principle of inheritance to real-world examples"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6ea63757-ea2f-4056-a268-7859e8d4ef42"
+      }
+    },
+    {
+      "key": "6200d11e-1b9d-4150-b268-9bcc01033e52",
+      "properties": {
+        "description": "Implement three new methods in the `PainterPlus` class."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6200d11e-1b9d-4150-b268-9bcc01033e52"
+      }
+    },
+    {
+      "key": "d03db6dd-0f09-48d5-98e0-49184afca8f1",
+      "properties": {
+        "description": "Account for edge cases while implementing new methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "d03db6dd-0f09-48d5-98e0-49184afca8f1"
+      }
+    },
+    {
+      "key": "bc452c8f-aba4-4464-b5a3-72c8501636a5",
+      "properties": {
+        "description": "Implement four new methods with parameters in the `PainterPlus` class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "bc452c8f-aba4-4464-b5a3-72c8501636a5"
+      }
+    },
+    {
+      "key": "af21b046-1381-4e72-895e-b27a5c2ec6c1",
+      "properties": {
+        "description": "Conduct a code review and provide constructive feedback on how to improve the given code "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "af21b046-1381-4e72-895e-b27a5c2ec6c1"
+      }
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.1"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

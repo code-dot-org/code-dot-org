@@ -60,7 +60,8 @@ class P5LabVisualizationColumn extends React.Component {
     cancelPicker: PropTypes.func.isRequired,
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
-    consoleMessages: PropTypes.array.isRequired
+    consoleMessages: PropTypes.array.isRequired,
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
@@ -160,7 +161,7 @@ class P5LabVisualizationColumn extends React.Component {
   }
 
   render() {
-    const {isResponsive, isShareView} = this.props;
+    const {isResponsive, isShareView, isRtl} = this.props;
     const divGameLabStyle = {
       touchAction: 'none',
       width: APP_WIDTH,
@@ -191,7 +192,9 @@ class P5LabVisualizationColumn extends React.Component {
             >
               <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
               <CrosshairOverlay flip={isSpritelab} />
-              <TooltipOverlay providers={[coordinatesProvider(isSpritelab)]} />
+              <TooltipOverlay
+                providers={[coordinatesProvider(isSpritelab, isRtl)]}
+              />
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
@@ -242,7 +245,8 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
-    consoleMessages: state.textConsole
+    consoleMessages: state.textConsole,
+    isRtl: state.isRtl
   }),
   dispatch => ({
     toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),

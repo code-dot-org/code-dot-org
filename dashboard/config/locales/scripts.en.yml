@@ -18604,6 +18604,8 @@ en:
               name: Module 7
             Module 8:
               name: Module 8
+            'CS Principles: Functions':
+              name: 'CS Principles: Functions'
           lesson_groups:
             lesson group:
               display_name: display name
@@ -18612,6 +18614,7 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+          name: kaitie-test-script
         vpl-csd-2020:
           lessons:
             Module 1:
@@ -19789,6 +19792,31 @@ en:
               display_name: Survey
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
+              description: |-
+                ### Unit Philosophy and Pedagogy
+
+
+                * **Establishing a Strong Classroom Culture:** This unit is designed to be hands-on, collaborative, and exploratory. A major focus of the unit is building a positive classroom culture in which students work together, explore problems, and communicate about their thinking. Most lessons either feature physical manipulatives or a digital widget, and the bulk of lesson time should be spent with students exploring these tools together to develop an understanding of the concepts they highlight. The course intentionally does not start with programming since, in many classrooms, some students have experience with programming and others do not. Choosing to begin with digital information and the internet lets you build community in the room while exploring a topic that is likely to be accessible to all students. The supportive and inclusive classroom environment built in this unit should help set a positive tone that can be carried through the school year.
+
+
+                * **Empowering "Deciders":**  An important goal of the course is not merely to teach students technical knowledge, but to put those skills to work in meaningful ways. This unit builds towards the unit project, which provides an opportunity for students to be "deciders" about the impacts of computing on modern life. Other units will emphasize empowering units as "creators."
+
+                ### Major Assessment and Projects
+
+                The unit project asks students to consider and debate issues that arise in modern society due to the digitizing of information. Students will analyze an article that addresses the intersection of digitizing information and current events. They will evaluate what data is being digitized and evaluate the benefits and harms caused by making this information digital. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+                ### AP Connections
+
+                This unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+                * DAT-1: The way a computer represents data internally is different from the way the data is interpreted and displayed for the user. Programs are used to translate data into a representation more easily understood by people.
+                * IOC-1: while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences
+
+                This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+                * 2.1 Binary Numbers
+                * 2.2 Data Compression
+                * 5.5 Legal and Ethical Concerns.
           name: csp1-2021
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
         csp2-2021:
@@ -20452,7 +20480,7 @@ en:
               key: Events in Play Lab
               name: On the Move with Events
               description_student: Create your own game or story.
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_teacher: In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             lesson-1:
               name: End of Course Project
               description_student: Tell a story with the Artist!
@@ -21108,6 +21136,10 @@ en:
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
+            lesson-11:
+              name: 'Mini-Project: User Input Programs'
+              description_student: Apply your new skills with variables to one of three open-ended projects.
+              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, then create a plan for their own project, and finally program it from scratch.
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -21831,12 +21863,26 @@ en:
               description_teacher: Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` commands they have used so far.
             lesson-8:
               name: Introduction to Code Reviews
+              description_student: 'As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!
+
+'
+              description_teacher: In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.
             lesson-9:
               name: Inheritance and Methods
+              description_student: By now, you have noticed that your `Painter` has limited commands to move around The Neighborhood. In this lesson, you create a new type of `Painter` that can do everything the `Painter` can as well as something the `Painter` can't!
+              description_teacher: Students are introduced to inheritance by deriving a subclass of `Painter` with more commands. Students use the keyword `super` with constructors and learn how to write their own methods in the `PainterPlus` class. Students discover that methods that are called must be defined in their own class or the superclass. In future lessons, students add additional methods and subclasses of `Painter`.
             lesson-10:
               name: More Methods, More Features
+              description_student: In this lesson, you give your `PainterPlus` class new ways to move around and interact with The Neighborhood. You consider edge cases when implementing your new methods.
+              description_teacher: 'In this lesson, students continue to apply the principle of inheritance in their code by further expanding the `PainterPlus` class with three additional methods: `turnAround()`, `takeAllPaint()`, and `moveFast()`. To practice Java syntax and algorithmic thinking, students construct a step-by-step process for implementing each of the methods by hand before coding it in Java. By continuing to write and use new methods, students experience the benefits of reusability.
+
+'
             lesson-11:
               name: Painting Methods
+              description_student: In this lesson, you continue to expand your `PainterPlus` class, this time adding methods to move and paint horizontal, vertical, and diagonal lines. You also participate in a code review to provide and receive feedback for improving code.
+              description_teacher: 'Students continue to expand the `PainterPlus class`, this time adding four new methods that allow the `PainterPlus` to move and paint horizontal, vertical, and diagonal lines. Students use pseudocode to write the methods, then implement them in the `PainterPlus` class in Java. Through the code review, students critique their methods and consider when it is appropriate to use methods they have written in the past by calling them in their new methods.
+
+'
             lesson-12:
               name: SprayPainter
             lesson-13:
@@ -21861,7 +21907,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
           name: csa1-pilot
-          title: ''
+          title: Object Oriented Programming
           description_audience: ''
           description_short: ''
           description: ''
@@ -22160,3 +22206,16 @@ en:
           description_short: Let's Test AI Tools!
           description: Let's Test AI Tools!
           student_description: Let's Test AI Tools!
+        poembot-springforum21:
+          lessons:
+            Programming Poem Bot:
+              name: Programming Poem Bot
+          lesson_groups:
+            lesson group:
+              display_name: Poem Bot - Spring Forum 2021
+          name: poembot-springforum21
+          title: Poem Bot for Spring Forum 2021
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

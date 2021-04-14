@@ -624,6 +624,19 @@ class User < ApplicationRecord
     )
   end
 
+  # Get information for an SSO provider.
+  # @param [String] type A credential type / provider type.
+  # @returns [AuthenticationOption|Hash|nil] Returns an AuthenticationOption for migrated
+  #   users, a Hash for non-migrated users, or nil if there is no matching credential.
+  def find_credential(type)
+    if migrated?
+      authentication_options.find_by(credential_type: type)
+    else
+      return nil unless provider == type
+      {authentication_id: uid, credential_type: provider}
+    end
+  end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
