@@ -1157,7 +1157,7 @@ StudioApp.prototype.stopLoopingAudio = function(name) {
 StudioApp.prototype.inject = function(div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
-    rtl: getStore().getState().isRtl,
+    rtl: options.isBlocklyRtl, // Set to false for RTL
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
@@ -2918,7 +2918,9 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
-    typeHints: utils.valueOr(config.level.showTypeHints, false)
+    typeHints: utils.valueOr(config.level.showTypeHints, false),
+    isBlocklyRtl:
+      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw' // disable RTL for blockly on jigsaw
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always
