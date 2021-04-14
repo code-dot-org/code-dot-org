@@ -6,22 +6,30 @@ const styles = {
   container: {
     color: color.black,
     textAlign: 'left',
-    backgroundColor: color.lightest_gray,
+    backgroundColor: color.lighter_gray,
     borderRadius: 5,
     padding: 20,
+    margin: 10,
     whiteSpace: 'normal',
     lineHeight: 1.5,
     maxHeight: 'calc(80vh - 140px)',
     overflow: 'scroll'
   },
   subPanel: {
-    backgroundColor: color.lighter_gray,
+    backgroundColor: color.lightest_gray,
     borderRadius: 5,
-    margin: 20,
-    padding: 20
+    borderColor: color.gray,
+    marginBottom: 10,
+    padding: 10
   },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif"
+  },
+  heading: {
+    fontFamily: "'Gotham 7r', sans-serif",
+    fontSize: 14,
+    marginBottom: 5,
+    textAlign: 'center'
   }
 };
 
@@ -38,59 +46,34 @@ export default class ModelCard extends React.Component {
       <div>
         {model && metadata && (
           <div style={styles.container}>
-            <div>
-              <span style={styles.bold}>Name:</span> &nbsp;
-              {metadata.name}
+            <h3 style={styles.bold}>{metadata.name}</h3>
+            <div style={{marginBottom: 10}}>
+              <span style={styles.bold}>Id: </span>
+              <span>{this.props.model.id}</span>
             </div>
-            <div>
-              <span style={styles.bold}>Columns:</span>
-              <div style={styles.subPanel}>
-                {metadata.columns &&
-                  metadata.columns.map(column => {
-                    return (
-                      <div key={column.id}>
-                        <span style={styles.bold}>{column.id}:</span> &nbsp;
-                        {column.description}
-                      </div>
-                    );
-                  })}
-              </div>
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Summary</div>
+              <p>
+                Predict {metadata.labelColumn} based on{' '}
+                {metadata.selectedFeatures?.join(', ')} with{' '}
+                {metadata.summaryStat?.stat}% accuracy.
+              </p>
             </div>
-            <div>
-              <span style={styles.bold}>How can this model be used?</span>{' '}
-              &nbsp;
-              {metadata.potentialUses}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Intended Uses</div>
+              <p>{metadata.potentialUses}</p>
             </div>
-            <div>
-              <span style={styles.bold}>
-                How can this model be potentially misused?
-              </span>{' '}
-              &nbsp;
-              {metadata.potentialMisuses}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Warnings</div>
+              <p>{metadata.potentialMisuses}</p>
             </div>
-            <div>
-              <span style={styles.bold}>
-                Has this model been trained on data that can identify a
-                subgroup?
-              </span>{' '}
-              &nbsp;
-              {metadata.identifySubgroup ? 'yes' : 'no'}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Label</div>
+              <p>{metadata.labelColumn}</p>
             </div>
-            <div>
-              <span style={styles.bold}>
-                Have we ensured the data has adequate representation of
-                subgroups?
-              </span>{' '}
-              &nbsp;
-              {metadata.representSubgroup ? 'yes' : 'no'}
-            </div>
-            <div>
-              <span style={styles.bold}>
-                Could this model be used to inform decisions central to human
-                life?
-              </span>{' '}
-              &nbsp;
-              {metadata.decisionsLife ? 'yes' : 'no'}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Features</div>
+              <p>{metadata.selectedFeatures?.join(', ')}</p>
             </div>
           </div>
         )}
