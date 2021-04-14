@@ -80,6 +80,10 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       BucketName: 'cdo-data-sharing-internal'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'aws:kms'
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         BlockPublicPolicy: true

@@ -450,6 +450,7 @@
   },
   "https://studio.code.org/s/coursee-2020/stage/6/extras?level_name=spritelab_extras_repeat": {
     "display_name": "Lots of sprites!",
+    "bubble_choice_description": "Create many matching sprites quickly using loops!",
     "long_instructions": "<img src=\"https://images.code.org/a364f402e2052a73c513e0606d658cf7-image-1593014310879.2020-06-24 11_58_08.gif\" style=\"float:right\">\n\n# Lots of sprites!\n\nYou can quickly create a busy scene by making sprites at a  [blockly block][0] and using the [blockly block][1] block.\n\nCreate lots of sprites, then get them moving with behaviors. Use at least two different types of fish.\n\n**Hint:** You only need one [blockly block][2] block to make all sprites with a matching costume start the same behavior."
   },
   "https://studio.code.org/s/coursee-2020/stage/7/puzzle/1": {

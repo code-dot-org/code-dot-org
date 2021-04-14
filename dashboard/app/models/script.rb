@@ -1508,7 +1508,7 @@ class Script < ApplicationRecord
 
   def summarize_for_lesson_show(is_student = false)
     {
-      displayName: localized_title,
+      displayName: title_for_display,
       link: link,
       lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
