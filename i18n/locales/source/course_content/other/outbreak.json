@@ -56,6 +56,7 @@
   },
   "https://studio.code.org/s/outbreak/stage/1/puzzle/6": {
     "display_name": "Modify Your Simulation",
+    "bubble_choice_description": "Change how the simulation works and make a prediction about what will happen.",
     "short_instructions": "Change the number and size of monster sprites for your simulation.",
     "long_instructions": "<img src=\"https://images.code.org/d228e4b5feb602025d5f7b5145dbece9-image-1603143852671.gif\" width=\"250\" style=\"float:right; padding-left:10px\">\n\n# More monsters\n\n_<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">New monsters are moving into Monster Town! What will this mean for the outbreak? Let's use the simulation to make predictions._ \n\n## Do This\n\n1.  Change the number of monster sprites you make by editing this block: \n    [blockly block][0]\n\n2.  Change the size of the sprites by editing this block: \n    [blockly block][1]\n\n3.  Run the new simulation 3-5 times.\n\n_Did anything happen differently?_",
     "authored_hints": {
@@ -80,6 +81,7 @@
   },
   "https://studio.code.org/s/outbreak/stage/1/puzzle/7": {
     "display_name": "Recovery",
+    "bubble_choice_description": "Help your sprites get better automatically over time!",
     "short_instructions": "Make all the sick monsters begin recovering when a healthy monster touches a sick monster.",
     "long_instructions": "# Recovery\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n_Good news: Monsters can start to feel better on their own! Sick monsters that begin recovering will automatically change back to a healthy monster after some time passes. Let's add code to the simulation to make all sick monsters gradually recover from the virus._\n\n</div>\n\nWe now have a special [blockly block][0] behavior. You can add this to your code at any point a monster gets the virus.\n\n## Do This\n\n1.  Under your `when touches` events, add more code to make the subject sprite begin the `recovering` behavior.\n    [blockly block][1]",
     "authored_hints": {
@@ -92,6 +94,7 @@
   },
   "https://studio.code.org/s/outbreak/stage/1/puzzle/8": {
     "display_name": "Random Chance",
+    "bubble_choice_description": "A virus isn't always transmitted, and masks don't stop transmission perfectly either. Improve your simulation by making infections happen with a random chance.",
     "short_instructions": "Add a percent chance for monsters to get sick whenever healthy monsters touch sick monsters. Do this for all combinations of monsters with and without masks.",
     "long_instructions": "# Chance\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n_Right now, it's impossible for monsters to give or get the virus if either of them is wearing a mask. This sounds great, but it's not really that simple. We should add a \"chance\" (or probability) for the virus to spread each time any two monsters touch. We can model the chance of getting the virus off of these notes._\n\n</div>\n\n<details open><summary><em><strong>Notes:</strong>How face masks affect the Monster Town outbreak</em></summary>\n\n<div class=\"container\" style=\"background-color:indianred; text-align:center; border-style: solid; width: 250px\">\n<img src=\"https://images.code.org/01291b1e958448f65abb46b0d135b916-image-1603206161098.png\" style=\"width:55%\">\n\n<div class=\"container\" style=\"background-color:white; text-align:center; border-style: solid; width: 220px\">\n<br>\n\n_Benefits of Face Masks_\n\n| Healthy |  Sick |     Chance    |  %  |\n| :-----: | :---: | :-----------: | :-: |\n|  [][6]  | [][7] | **Very High** | 90% |\n|  [][4]  | [][5] |    **High**   | 75% |\n|  [][2]  | [][3] |    **Low**    | 25% |\n|  [][0]  | [][1] |  **Very Low** | 10% |\n\n<br>\n</div>\n<br>\n</div>\n\n</details>\n\n## Do This\n\n1.  Add this **logic** block under the `when touches` event and set it to a very high chance:\n\n[blockly block][8]\n\n2.  Add more events that include monsters wearing masks and give each a different percent chance (probability). Click the lightbulb for a hint if you are not sure which events are needed.\n\n3.  Press **Finish** when you are ready to move on.",
     "authored_hints": {
@@ -105,6 +108,7 @@
   },
   "https://studio.code.org/s/outbreak/stage/1/puzzle/9": {
     "display_name": "Immunity and Vaccines",
+    "bubble_choice_description": "Prevent your sprites from ever getting sick by giving them immunity.",
     "short_instructions": "Create a new costume for monsters with immunity to the virus and use it in your simulation.",
     "long_instructions": "# Vaccines\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n_Vaccines can protect monsters from getting a virus. These monsters will not get sick at all!_\n\n</div>\n\nNext, you will create a new sprite costume to represent monsters who got a vaccine.\n\n<details><summary><strong>Learn how to modify a sprite costume.</strong></summary>\n\n|                                       | To modify a costume:                                                                                                                                                                                                                    |\n| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [expandable][0] <br/> (Click to view) | 1. Change to the Costumes tab in the top left corner. <br/> 2. Duplicate one of the existing costumes. <br/> 3. Choose a primary color for drawing.  <br/> 4. Click the Paint bucket tool, then click the monster's body to recolor it. |\n\n</details>\n\nOnce the new costume is ready, find a way to work it into your program. For example, you can change masked monsters into vaccinated monsters when they are clicked.",
     "authored_hints": {
@@ -133,6 +137,7 @@
   },
   "https://studio.code.org/s/outbreak/stage/1/puzzle/10": {
     "display_name": "Share a Message",
+    "bubble_choice_description": "Use your project to share a message. What do you want others to learn from this?",
     "short_instructions": "Share a message with your simulation.",
     "long_instructions": "# Share your message!\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n_You can share your creation - and your message - with the world! What have you learned from this activity? What do you hope others will learn?_\n\n</div>\n\nThe [blockly block][0] block displays text on the screen while your simulation runs. Use it to tell the user how your simulation works or to share a message.\n\nHere are some examples:\n\n[blockly block][1]\n\n[blockly block][2]",
     "behavior_names": {
@@ -160,6 +165,7 @@
     "sublevels": {
       "outbreak_freeplay_basic": {
         "display_name": "Standard Toolbox",
+        "bubble_choice_description": "Keep going with the same blocks you've already seen!",
         "short_instructions": "Make any changes or improvements to your project that you would like. ",
         "long_instructions": "# Free Play\r\n\r\n<div style=\"display:inline-block\">\r\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\r\n\r\n*Great job! You've been a huge help to all of the residents of Monster Town. We hope you will share what you've learned with others.*\r\n\r\n</div>\r\n\r\nYou finished the tutorial! Make any changes or improvements to your project that you would like. Press the \"Share\" button at the top of the page to send your project to your friends and family.\r\n",
         "behavior_names": {
@@ -181,6 +187,7 @@
       },
       "outbreak_freeplay": {
         "display_name": "Expanded Toolbox",
+        "bubble_choice_description": "Expand your project with functions, variables and more!",
         "short_instructions": "Make any changes or improvements to your project that you would like. ",
         "long_instructions": "# Free Play\r\n\r\n<div style=\"display:inline-block\">\r\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\r\n\r\n*Great job! You've been a huge help to all of the residents of Monster Town. We hope you will share what you've learned with others.*\r\n\r\n</div>\r\n\r\nYou finished the tutorial! Make any changes or improvements to your project that you would like. Press the \"Share\" button at the top of the page to send your project to your friends and family. The toolbox has been expanded greatly.\r\n\r\n",
         "behavior_names": {
