@@ -1,7 +1,9 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-// We use the UnconnectedJavalabView because shallow().dive() does not work with our version of react-redux
+// We use the UnconnectedJavalabView because calling shallow().dive().instance()
+// on the connected JavalabView does not give us to access to the methods owned by JavalabView.
+// We think this has to do with the version of reac-redux we're using (4.4.9).
 import {UnconnectedJavalabView as JavalabView} from '@cdo/apps/javalab/JavalabView';
 import color from '@cdo/apps/util/color';
 global.$ = require('jquery');
@@ -22,6 +24,8 @@ describe('Java Lab View Test', () => {
 
   describe('getButtonStyles', () => {
     it('Is cyan or orange in light mode', () => {
+      // We use shallow instead of mount because mount loads many
+      // shared DOM components which cause collisions with other tests.
       let editor = shallow(<JavalabView {...defaultProps} />);
       const notSettings = editor.instance().getButtonStyles(false);
       expect(notSettings.backgroundColor).to.equal(color.cyan);
