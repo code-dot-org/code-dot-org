@@ -55,10 +55,10 @@ class InstructionsCsfLeftCol extends React.Component {
   }
 
   /**
-   * Handle a click to the hint display bubble (lightbulb)
+   * Handle a click to the hint display lightbulb
    */
-  handleClickBubble = () => {
-    // If we don't have authored hints to display, clicking bubble shouldnt do anything
+  handleClickLightbulb = () => {
+    // If we don't have authored hints to display, clicking lightbulb shouldnt do anything
     if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
       this.props.requestHint();
     }
@@ -100,7 +100,7 @@ class InstructionsCsfLeftCol extends React.Component {
           className={classNames('prompt-icon-cell', {
             authored_hints: hasAuthoredHints
           })}
-          onClick={this.handleClickBubble}
+          onClick={this.handleClickLightbulb}
         >
           {hasAuthoredHints && <HintDisplayLightbulb />}
           {this.getAvatar() && <PromptIcon src={this.getAvatar()} />}
