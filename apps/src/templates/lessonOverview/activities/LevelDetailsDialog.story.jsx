@@ -127,76 +127,79 @@ const levelWithContainedLevel = {
 };
 
 export default storybook => {
-  storybook.storiesOf('LevelDetailsDialog', module).addStoryTable([
-    {
-      name: 'StandaloneVideo',
-      story: () => (
-        <LevelDetailsDialog
-          {...defaultProps}
-          scriptLevel={standaloneVideoScriptLevel}
-        />
-      )
-    },
-    {
-      name: 'External',
-      story: () => (
-        <LevelDetailsDialog
-          {...defaultProps}
-          scriptLevel={externalMarkdownScriptLevel}
-        />
-      )
-    },
-    {
-      name: 'LevelGroup',
-      story: () => (
-        <LevelDetailsDialog
-          {...defaultProps}
-          scriptLevel={levelGroupScriptLevel}
-        />
-      )
-    },
-    {
-      name: 'BubbleChoice',
-      story: () => (
-        <LevelDetailsDialog
-          {...defaultProps}
-          scriptLevel={bubbleChoiceScriptLevel}
-        />
-      )
-    },
-    {
-      name: 'Contained Levels',
-      story: () => (
-        <Provider store={getStore()}>
+  storybook
+    .storiesOf('LevelDetailsDialog', module)
+    .withReduxStore()
+    .addStoryTable([
+      {
+        name: 'StandaloneVideo',
+        story: () => (
           <LevelDetailsDialog
             {...defaultProps}
-            scriptLevel={levelWithContainedLevel}
+            scriptLevel={standaloneVideoScriptLevel}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'TopInstructions',
-      story: () => (
-        <Provider store={getStore()}>
+        )
+      },
+      {
+        name: 'External',
+        story: () => (
           <LevelDetailsDialog
             {...defaultProps}
-            scriptLevel={levelWithInstructions}
+            scriptLevel={externalMarkdownScriptLevel}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'TopInstructions RTL',
-      story: () => (
-        <Provider store={getStore()}>
+        )
+      },
+      {
+        name: 'LevelGroup',
+        story: () => (
           <LevelDetailsDialog
             {...defaultProps}
-            isRtl
-            scriptLevel={levelWithInstructions}
+            scriptLevel={levelGroupScriptLevel}
           />
-        </Provider>
-      )
-    }
-  ]);
+        )
+      },
+      {
+        name: 'BubbleChoice',
+        story: () => (
+          <LevelDetailsDialog
+            {...defaultProps}
+            scriptLevel={bubbleChoiceScriptLevel}
+          />
+        )
+      },
+      {
+        name: 'Contained Levels',
+        story: () => (
+          <Provider store={getStore()}>
+            <LevelDetailsDialog
+              {...defaultProps}
+              scriptLevel={levelWithContainedLevel}
+            />
+          </Provider>
+        )
+      },
+      {
+        name: 'TopInstructions',
+        story: () => (
+          <Provider store={getStore()}>
+            <LevelDetailsDialog
+              {...defaultProps}
+              scriptLevel={levelWithInstructions}
+            />
+          </Provider>
+        )
+      },
+      {
+        name: 'TopInstructions RTL',
+        story: () => (
+          <Provider store={getStore()}>
+            <LevelDetailsDialog
+              {...defaultProps}
+              isRtl
+              scriptLevel={levelWithInstructions}
+            />
+          </Provider>
+        )
+      }
+    ]);
 };

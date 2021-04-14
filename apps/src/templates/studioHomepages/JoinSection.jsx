@@ -5,9 +5,11 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
+import {connect} from 'react-redux';
 
 const styles = {
   main: {
+    display: 'flex',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
@@ -43,8 +45,13 @@ const styles = {
     borderWidth: 1,
     borderColor: 'red'
   },
+  wordBoxRTL: {
+    marginLeft: 0,
+    marginRight: 25
+  },
   actionBox: {
-    float: 'right'
+    float: 'right',
+    display: 'flex'
   },
   inputBox: {
     float: 'left',
@@ -69,11 +76,14 @@ const INITIAL_STATE = {
   sectionCode: ''
 };
 
-export default class JoinSection extends React.Component {
+class JoinSection extends React.Component {
   static propTypes = {
     enrolledInASection: PropTypes.bool.isRequired,
     updateSections: PropTypes.func.isRequired,
-    updateSectionsResult: PropTypes.func.isRequired
+    updateSectionsResult: PropTypes.func.isRequired,
+
+    // Provided by Redux
+    isRtl: PropTypes.bool
   };
 
   state = {...INITIAL_STATE};
@@ -139,7 +149,10 @@ export default class JoinSection extends React.Component {
   };
 
   render() {
-    const {enrolledInASection} = this.props;
+    const {enrolledInASection, isRtl} = this.props;
+
+    // Adjust styles for RTL
+    const wordBoxStyle = {...styles.wordBox, ...(isRtl && styles.wordBoxRTL)};
 
     return (
       <div
@@ -148,7 +161,7 @@ export default class JoinSection extends React.Component {
           ...(enrolledInASection ? styles.main : styles.mainDashed)
         }}
       >
-        <div style={styles.wordBox}>
+        <div style={wordBoxStyle}>
           <div style={styles.heading}>{i18n.joinASection()}</div>
           <div style={styles.details}>{i18n.joinSectionDescription()}</div>
         </div>
@@ -178,3 +191,9 @@ export default class JoinSection extends React.Component {
     );
   }
 }
+
+export const UnconnectedJoinSection = JoinSection;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(JoinSection);

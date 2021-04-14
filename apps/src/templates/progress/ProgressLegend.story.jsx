@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressLegend from './ProgressLegend';
+import {UnconnectedProgressLegend as ProgressLegend} from './ProgressLegend';
 
 export default storybook => {
   storybook.storiesOf('Progress/ProgressLegend', module).addStoryTable([
