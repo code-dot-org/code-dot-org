@@ -253,7 +253,6 @@ class ProgressLesson extends React.Component {
                     className="ui-test-lesson-resources"
                     href={lesson.student_lesson_plan_html_url}
                     text={i18n.lessonResources()}
-                    disabled={locked}
                     icon="file-text"
                     color="purple"
                     target="_blank"
