@@ -61,9 +61,13 @@ export default class LessonNavigationDropdown extends Component {
             endingLessonId: listItem.id
           })
         },
-        {includeUserId: true}
+        {
+          includeUserId: true,
+          callback: () => {
+            navigateToHref(linkWithQueryParams(listItem.link));
+          }
+        }
       );
-      navigateToHref(linkWithQueryParams(listItem.link));
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }
