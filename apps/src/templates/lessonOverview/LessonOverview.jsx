@@ -21,6 +21,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import LessonStandards, {ExpandMode} from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   frontPage: {
@@ -71,6 +72,20 @@ class LessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
+  recordPdfButtonClick = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'lesson-plan',
+        study_group: 'teacher-lesson-plan',
+        event: 'click-print-lesson-pdf',
+        data_json: JSON.stringify({
+          lessonId: this.props.lesson.id
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+
   render() {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
@@ -89,6 +104,7 @@ class LessonOverview extends Component {
                   __useDeprecatedTag
                   color={Button.ButtonColor.gray}
                   download
+                  onClick={this.recordPdfButtonClick}
                   href={lesson.lessonPlanPdfUrl}
                   style={{marginRight: 10}}
                   target="_blank"
