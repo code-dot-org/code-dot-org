@@ -76,7 +76,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     stageLock: {
       stagesBySectionId: {
         '11': {}
-      }
+      },
+      lockableAuthorized: false
     },
     viewAs: viewAs,
     teacherSections: {
