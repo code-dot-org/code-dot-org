@@ -55,31 +55,29 @@ describe('Java Lab Editor Test', () => {
 
     it('updates state on Rename save', () => {
       const editor = createWrapper();
+      const oldFilename = 'MyClass.java'; // default filename
+      const newFilename = 'NewFilename.java';
 
       // should have default file in redux
-      expect(store.getState().javalab.sources['MyClass.java']).to.not.be
-        .undefined;
+      expect(store.getState().javalab.sources[oldFilename]).to.not.be.undefined;
 
       const activateRenameBtn = editor.find('button').first();
       activateRenameBtn.invoke('onClick')();
 
       // first input should be file rename text input
       const renameInput = editor.find('input').first();
-      renameInput.invoke('onChange')({target: {value: 'NewFilename.java'}});
+      renameInput.invoke('onChange')({target: {value: newFilename}});
 
       // save button not clicked, should not yet have changed filename in redux
-      expect(store.getState().javalab.sources['NewFilename.java']).to.be
-        .undefined;
-      expect(store.getState().javalab.sources['MyClass.java']).to.not.be
-        .undefined;
+      expect(store.getState().javalab.sources[newFilename]).to.be.undefined;
+      expect(store.getState().javalab.sources[oldFilename]).to.not.be.undefined;
 
       // submit form, should trigger file rename
       const form = editor.find('form').first();
       // stub preventDefault function
       form.invoke('onSubmit')({preventDefault: () => {}});
-      expect(store.getState().javalab.sources['NewFilename.java']).to.not.be
-        .undefined;
-      expect(store.getState().javalab.sources['MyClass.java']).to.be.undefined;
+      expect(store.getState().javalab.sources[newFilename]).to.not.be.undefined;
+      expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
     });
   });
 });
