@@ -6,6 +6,9 @@
 class FollowersController < ApplicationController
   before_action :load_section
 
+  # Add custom flash types:
+  add_flash_types :inline_alert
+
   # GET /join/:section_code (section_code is optional)
   def student_user_new
     @user = current_user || User.new
@@ -81,6 +84,14 @@ class FollowersController < ApplicationController
     if current_user && current_user == @section.user
       redirect_to redirect_url, alert: I18n.t('follower.error.cant_join_own_section')
       return
+    end
+
+    # TODO: - Replace strings with i18n implementation
+    if @section&.restricted?
+      redirect_url = "#{root_url}join" # Keeps user on the join page.
+      # Redirect and provide an error for restricted sections. (commented)
+      redirect_to redirect_url, inline_alert: 'We couldn\'t add you to this section. Please contact your teacher for help.'
+      # redirect_to redirect_url, inline_alert: I18n.t('follower.error.restricted_section')
     end
 
     # Redirect and provide an error for provider-managed sections.
