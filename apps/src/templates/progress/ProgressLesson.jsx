@@ -92,6 +92,7 @@ class ProgressLesson extends React.Component {
 
     // redux provided
     scriptId: PropTypes.number,
+    userId: PropTypes.number,
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
@@ -179,7 +180,8 @@ class ProgressLesson extends React.Component {
     // (c) teacher is not verified and can't access lockable content
     const locked =
       lesson.lockable &&
-      (stageLocked(levels) ||
+      (!this.props.userId ||
+        stageLocked(levels) ||
         lessonLockedForSection(lesson.id) ||
         teacherNotLockableAuthorized);
 
@@ -292,6 +294,7 @@ export const UnconnectedProgressLesson = ProgressLesson;
 export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
+  userId: state.currentUser.userId,
   viewAs: state.viewAs,
   showLockIcon:
     !!state.teacherSections.selectedSectionId ||
