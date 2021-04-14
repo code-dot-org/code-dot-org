@@ -2,10 +2,12 @@ const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
+const TOGGLE_DARK_MODE = 'javalab/TOGGLE_DARK_MODE';
 
 const initialState = {
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', visible: true}}
+  sources: {'MyClass.java': {text: '', visible: true}},
+  isDarkMode: false
 };
 
 // Action Creators
@@ -35,6 +37,10 @@ export const setSource = (filename, source, isVisible = true) => ({
   filename,
   source,
   isVisible
+});
+
+export const toggleDarkMode = () => ({
+  type: TOGGLE_DARK_MODE
 });
 
 // Selectors
@@ -80,6 +86,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       sources: action.sources
+    };
+  }
+  if (action.type === TOGGLE_DARK_MODE) {
+    return {
+      ...state,
+      isDarkMode: !state.isDarkMode
     };
   }
   return state;

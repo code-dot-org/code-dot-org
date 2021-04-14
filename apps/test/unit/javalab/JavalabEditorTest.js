@@ -1,5 +1,6 @@
 import React from 'react';
 import {expect} from '../../util/reconfiguredChai';
+import sinon from 'sinon';
 import {mount} from 'enzyme';
 import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
 import {Provider} from 'react-redux';
@@ -9,7 +10,9 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import javalab from '@cdo/apps/javalab/javalabRedux';
+import {oneDark} from '@codemirror/theme-one-dark';
+import {lightMode} from '@cdo/apps/javalab/editorSetup';
+import javalab, {toggleDarkMode} from '@cdo/apps/javalab/javalabRedux';
 
 describe('Java Lab Editor Test', () => {
   let defaultProps, store, appOptions;
@@ -78,6 +81,24 @@ describe('Java Lab Editor Test', () => {
       form.invoke('onSubmit')({preventDefault: () => {}});
       expect(store.getState().javalab.sources[newFilename]).to.not.be.undefined;
       expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
+    });
+  });
+
+  describe('componentDidUpdate', () => {
+    it('toggles between light and dark modes', () => {
+      const editor = createWrapper();
+      const dispatchSpy = sinon.spy(
+        editor.find('JavalabEditor').instance().editor,
+        'dispatch'
+      );
+      store.dispatch(toggleDarkMode());
+      expect(dispatchSpy).to.have.been.calledWith({
+        reconfigure: {style: oneDark}
+      });
+      store.dispatch(toggleDarkMode());
+      expect(dispatchSpy).to.have.been.calledWith({
+        reconfigure: {style: lightMode}
+      });
     });
   });
 });

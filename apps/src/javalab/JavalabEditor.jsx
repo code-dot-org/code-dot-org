@@ -7,23 +7,24 @@ import PaneHeader, {
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
-import {editorSetup} from './editorSetup';
-import {EditorState} from '@codemirror/state';
+import {editorSetup, lightMode} from './editorSetup';
+import {EditorState, tagExtension} from '@codemirror/state';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
+import {oneDark} from '@codemirror/theme-one-dark';
+import color from '@cdo/apps/util/color';
 
 const style = {
   editor: {
     width: '100%',
-    height: 400,
-    backgroundColor: '#282c34'
+    height: 400
   },
   tabs: {
     display: 'flex'
   },
   tab: {
-    backgroundColor: '#282c34',
     textAlign: 'center',
-    padding: 10
+    padding: 10,
+    backgroundColor: color.white
   },
   button: {
     marginLeft: 10
@@ -32,6 +33,9 @@ const style = {
     marginBottom: 0,
     display: 'flex',
     alignItems: 'center'
+  },
+  darkBackground: {
+    backgroundColor: '#282c34'
   }
 };
 
@@ -42,7 +46,8 @@ class JavalabEditor extends React.Component {
     // populated by redux
     setSource: PropTypes.func,
     renameFile: PropTypes.func,
-    sources: PropTypes.object
+    sources: PropTypes.object,
+    isDarkMode: PropTypes.bool
   };
 
   constructor(props) {
@@ -62,14 +67,36 @@ class JavalabEditor extends React.Component {
     // TODO: support multi-file
     const filename = Object.keys(this.props.sources)[0];
     let doc = this.props.sources[filename].text;
+    const {isDarkMode} = this.props;
+    const extensions = [...editorSetup];
+
+    if (isDarkMode) {
+      extensions.push(tagExtension('style', oneDark));
+    } else {
+      extensions.push(tagExtension('style', lightMode));
+    }
     this.editor = new EditorView({
       state: EditorState.create({
         doc: doc,
-        extensions: editorSetup
+        extensions: extensions
       }),
       parent: this._codeMirror,
       dispatch: this.dispatchEditorChange()
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isDarkMode !== this.props.isDarkMode) {
+      if (this.props.isDarkMode) {
+        this.editor.dispatch({
+          reconfigure: {style: oneDark}
+        });
+      } else {
+        this.editor.dispatch({
+          reconfigure: {style: lightMode}
+        });
+      }
+    }
   }
 
   dispatchEditorChange = () => {
@@ -111,7 +138,12 @@ class JavalabEditor extends React.Component {
     return (
       <div style={style.tabs}>
         <form style={style.renameForm} onSubmit={this.renameFileComplete}>
-          <div style={style.tab}>
+          <div
+            style={{
+              ...style.tab,
+              ...(this.props.isDarkMode && style.darkBackground)
+            }}
+          >
             <input
               className="rename-file-input"
               type="text"
@@ -133,7 +165,14 @@ class JavalabEditor extends React.Component {
   displayFileNameAndRenameButton() {
     return (
       <div style={style.tabs}>
-        <div style={style.tab}>{Object.keys(this.props.sources)[0]}</div>
+        <div
+          style={{
+            ...style.tab,
+            ...(this.props.isDarkMode && style.darkBackground)
+          }}
+        >
+          {Object.keys(this.props.sources)[0]}
+        </div>
         <button
           type="button"
           onClick={this.activateRenameFile}
@@ -165,7 +204,13 @@ class JavalabEditor extends React.Component {
             ? this.displayFileRename()
             : this.displayFileNameAndRenameButton()}
         </div>
-        <div ref={el => (this._codeMirror = el)} style={style.editor} />
+        <div
+          ref={el => (this._codeMirror = el)}
+          style={{
+            ...style.editor,
+            ...(this.props.isDarkMode && style.darkBackground)
+          }}
+        />
       </div>
     );
   }
@@ -173,7 +218,8 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    sources: state.javalab.sources
+    sources: state.javalab.sources,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),

@@ -2692,6 +2692,8 @@ si:
               display_name: විචල්‍යන්
             lessonGroup-9:
               display_name: ඉවත් කරන්න
+            lessonGroup-7:
+              display_name: ඩිජිටල් පුරවැසිකම
         express-2021:
           lesson_groups:
             csf_loops:

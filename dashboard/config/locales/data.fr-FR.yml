@@ -855,6 +855,8 @@ fr:
         codebreak_e05: 'Code Break 5.0: Simulations & Données avec Bill Gates'
         csd_how_teamwork_works: Comment fonctionne le Travail d'Équipe
         csd_teamwork_and_disagreement: Travail d'équipe - Gérer le Désaccord
+        outbreak_mike: CodeBytes Episode 3 avec Mike - Simulateur d'épidémie
+        csd_ml_import_model: Importer un modèle IA
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
