@@ -4,7 +4,7 @@
 @media screen {
   .print-only {
     height: 0;
-    visibility: hidden;
+    display: none;
   }
 }
 

@@ -698,6 +698,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
     byGroup[lessonGroup.display_name] = {
       lessonGroup: {
         id: lessonGroup.id,
+        userFacing: lessonGroup.user_facing,
         displayName: lessonGroup.display_name,
         description: lessonGroup.description,
         bigQuestions: lessonGroup.big_questions
