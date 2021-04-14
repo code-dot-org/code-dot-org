@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:59 UTC",
+    "serialized_at": "2021-04-13 23:31:53 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -176,7 +176,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
@@ -234,7 +235,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 1",
@@ -263,7 +265,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Tell a Data Story - Part 2",
@@ -291,7 +294,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 9: Assessment Day",
@@ -2851,6 +2855,30 @@
       "seeding_key": {
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
       }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -2952,6 +2980,20 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp9-2021"
+      }
+    }
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -3605,5 +3647,8 @@
         "standard.shortcode": "3B-DA-06"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
