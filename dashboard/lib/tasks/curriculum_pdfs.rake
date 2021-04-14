@@ -17,13 +17,18 @@ namespace :curriculum_pdfs do
     any_missing_pdfs_found = false
     get_pdf_enabled_scripts.each do |script|
       pdfless_lessons = get_pdfless_lessons(script)
-      next if pdfless_lessons.empty?
+      script_overview_exists = Services::CurriculumPdfs.script_overview_pdf_exists_for?(script)
+      script_resources_exists = Services::CurriculumPdfs.script_resources_pdf_exists_for?(script)
+      no_missing_pdfs = pdfless_lessons.empty? && script_overview_exists && script_resources_exists
+      next if no_missing_pdfs
 
       any_missing_pdfs_found = true
       puts "Script #{script.name.inspect} is missing PDFs for:"
       pdfless_lessons.each do |lesson|
         puts "  #{lesson.name.inspect} (#{lesson.key})"
       end
+      puts "  Script Overview" unless script_overview_exists
+      puts "  Script Resources" unless script_resources_exists
     end
 
     puts "No missing PDFs found" unless any_missing_pdfs_found
@@ -38,6 +43,16 @@ namespace :curriculum_pdfs do
           puts "Generating missing PDF for #{lesson.key} (from #{script.name})"
           Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir)
           Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir, true)
+          any_pdf_generated = true
+        end
+
+        unless Services::CurriculumPdfs.script_overview_pdf_exists_for?(script)
+          Services::CurriculumPdfs.generate_script_overview_pdf(script, dir)
+          any_pdf_generated = true
+        end
+
+        unless Services::CurriculumPdfs.script_resources_pdf_exists_for?(script)
+          Services::CurriculumPdfs.generate_script_resources_pdf(script, dir)
           any_pdf_generated = true
         end
       end
@@ -58,14 +73,8 @@ namespace :curriculum_pdfs do
     input = STDIN.gets.strip.downcase
     next unless input == 'y'
 
-    Dir.mktmpdir("pdf_generation") do |dir|
-      get_pdf_enabled_scripts.each do |script|
-        script.lessons.select(&:has_lesson_plan).each do |lesson|
-          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir)
-          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir, true)
-        end
-      end
-      Services::CurriculumPdfs.upload_generated_pdfs_to_s3(dir)
+    get_pdf_enabled_scripts.each do |script|
+      Services::CurriculumPdfs.generate_pdfs(script)
     end
 
     puts "Generated all PDFs"
