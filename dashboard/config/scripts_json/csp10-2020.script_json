@@ -39,12 +39,19 @@
           "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
           "type": "bullhorn",
           "visibility": "Teacher-only"
+        },
+        {
+          "notice": "",
+          "details": "Are your students planning to take the AP Exam? This unit covers content that will be assessed on the exam. Check out the standards covered in this unit.",
+          "link": "https://curriculum.code.org/csp-20/unit10/standards/",
+          "type": "information",
+          "visibility": "Teacher-only"
         }
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-04-13 22:55:17 UTC",
     "seeding_key": {
       "script.name": "csp10-2020"
     }
@@ -261,11 +268,11 @@
     },
     {
       "key": "Lesson 14: Unit Assessment Day",
-      "name": "Lesson 14: Unit Assessment Day",
+      "name": "Unit Assessment Day",
       "absolute_position": 14,
       "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
+      "has_lesson_plan": true,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1263,13 +1270,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }
