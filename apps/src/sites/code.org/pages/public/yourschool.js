@@ -40,8 +40,8 @@ function showYourSchool() {
         showProfessionalLearningBanner={yourschoolElement.data(
           'parameters-show-professional-learning-banner'
         )}
-        teacherAppsClosingSoon={yourschoolElement.data(
-          'parameters-teacher-apps-closing-soon'
+        teacherApplicationMode={yourschoolElement.data(
+          'parameters-teacher-application-mode'
         )}
       />
     </Provider>,
