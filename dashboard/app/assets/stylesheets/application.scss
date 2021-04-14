@@ -329,6 +329,10 @@ img.video_thumbnail {
     margin-top: 0;
     padding-top: 4px;
     padding-left: 16px;
+
+    &:not(.user-is-tabbing) {
+      outline: none;
+    }
   }
 
   #signin_button .header_button {
