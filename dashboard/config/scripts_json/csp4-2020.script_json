@@ -49,16 +49,16 @@
         },
         {
           "notice": "EIPM Lessons",
-          "details": "In this unit, we beginning following our new programming model called EIPM. Check out this helpful video series to learn all about it! ",
+          "details": "In this unit, we begin following our new programming model called EIPM. Check out this helpful video series to learn all about it! ",
           "link": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
           "type": "information",
           "visibility": "Teacher-only"
         }
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-04-09 17:39:18 UTC",
     "seeding_key": {
       "script.name": "csp4-2020"
     }
@@ -326,11 +326,11 @@
     },
     {
       "key": "Lesson 15: Assessment Day",
-      "name": "Lesson 15: Assessment Day",
+      "name": "Assessment Day",
       "absolute_position": 15,
       "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
+      "has_lesson_plan": true,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -3631,13 +3631,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

@@ -5561,6 +5561,8 @@ nl:
               display_name: Variabelen
             lessonGroup-9:
               display_name: verwijder
+            lessonGroup-7:
+              display_name: Digitaal Burgerschap
         express-2021:
           description_audience: 'Leeftijden: 9-18'
           lessons:

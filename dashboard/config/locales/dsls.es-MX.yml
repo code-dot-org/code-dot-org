@@ -9541,7 +9541,7 @@ es-MX:
 
           Explicar cómo recrear una imagen utilizando sólo dos valores simples.
       CSD Interactive Animations and Games Post-Project Test:
-        title: Evaluación final del curso de Animaciones Interactivas y Juegos
+        title: Prueba fin de curso de Animaciones Interactivas y Juegos
       CSD Physical Computing Post-Project Test:
         title: Prueba fin de curso de Computación Física
       CSD U2 PSP Programming:
@@ -10409,3 +10409,42 @@ es-MX:
         title: "¡Encuesta rápida de CS Discoveries!"
       csd-pulse-check-survey-1-levelgroup U5Ch2:
         title: "¡Encuesta rápida de CS Discoveries!"
+      DigitalFootprint-Unplugged:
+        markdown: |-
+          # Tu huella digital
+
+          Poniendo información sobre ti en línea, crea una huella digital.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Haciendo un Loopy
+
+          Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Haciendo un Loopy
+
+          Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Muévete, muévete
+
+          Utiliza un mapa y da órdenes para llegar a la meta.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Muévete, muévete
+
+          Utiliza un mapa y da órdenes para llegar a la meta.
+      TheRightAppMarkdownLevel_2019:
+        markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
+          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
+          escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
+          que los programadores entiendan las necesidades de los demás y diseñen las
+          aplicaciones pensando en ellas!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
+          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
+          escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
+          que los programadores entiendan las necesidades de los demás y diseñen las
+          aplicaciones pensando en ellas!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

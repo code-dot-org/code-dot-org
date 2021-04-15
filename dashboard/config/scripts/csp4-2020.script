@@ -5,7 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit4/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit4/standards/"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"EIPM Lessons", "details"=>"In this unit, we beginning following our new programming model called EIPM. Check out this helpful video series to learn all about it! ", "link"=>"https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3", "type"=>"information", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"EIPM Lessons", "details"=>"In this unit, we begin following our new programming model called EIPM. Check out this helpful video series to learn all about it! ", "link"=>"https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3", "type"=>"information", "visibility"=>"Teacher-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'

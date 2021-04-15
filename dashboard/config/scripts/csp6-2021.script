@@ -8,15 +8,42 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_unit6_2020', display_name: 'Unit 6: Algorithms'
-lesson 'Algorithms Solve Problems', display_name: 'Algorithms Solve Problems', has_lesson_plan: true
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+
+* **A Break from Programming:** This unit is intentionally designed as a short respite from programming. After three units and a major hackathon project, it is a great opportunity to get away from screens for a while before the final programming push that leads to the Create PT.
+
+* **Just Enough Math:** This unit includes some mathematical concepts which enrich students\' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.
+
+
+### Major Assessment and Projects
+
+This unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+* AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.
+* CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 3.9 Developing Algorithms
+* 3.11 Binary Search
+* 3.17 Algorithmic Efficiency
+* 3.18 Undecidable Problems
+* 4.3 Parallel and Distributed Computing'
+lesson 'Algorithms Solve Problems', display_name: 'Algorithms Solve Problems', has_lesson_plan: true, unplugged: true
 level 'U6 L01 Algorithms vs Problems_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Algorithm Efficiency', display_name: 'Algorithm Efficiency', has_lesson_plan: true
+lesson 'Algorithm Efficiency', display_name: 'Algorithm Efficiency', has_lesson_plan: true, unplugged: true
 level 'CSP U6L2 Ticket Generator_2021', progression: 'Widget: Ticket Generator'
 level 'U6L2 CFU Binary Search Steps_2021', progression: 'Check For Understanding', assessment: true
 level 'U6L2 CFU Efficiency and Algorithms_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Unreasonable Time', display_name: 'Unreasonable Time', has_lesson_plan: true
+lesson 'Unreasonable Time', display_name: 'Unreasonable Time', has_lesson_plan: true, unplugged: true
 level 'U6L3 CFU Reasonable vs Unreasonable_2021', progression: 'Check For Understanding', assessment: true
 level 'U6 L03 Evaluate Reasonable or Not_2021', progression: 'Check For Understanding', assessment: true
 
@@ -26,7 +53,7 @@ level 'CSP U6L4 Random Traveling Salesman_2021', progression: 'Widget: Traveling
 level 'U6L4 CFU Reason for Heuristics_2021', progression: 'Check For Understanding', assessment: true
 level 'U6 L04 Unreasonable vs Undecidable_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Parallel and Distributed Algorithms', display_name: 'Parallel and Distributed Algorithms', has_lesson_plan: true
+lesson 'Parallel and Distributed Algorithms', display_name: 'Parallel and Distributed Algorithms', has_lesson_plan: true, unplugged: true
 level 'U6L5 CFU Calculate Speedup_2021', progression: 'Check For Understanding', assessment: true
 level 'U6 L05 Speedup Forever_2021', progression: 'Check For Understanding', assessment: true
 

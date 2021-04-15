@@ -43,6 +43,12 @@ module OmniauthCallbacksControllerTests
       follow_redirect!
     end
 
+    # The user signs in through Google, which hits the oauth callback
+    # and redirects to something else: homepage, finish_sign_up, etc.
+    def sign_in_through_google
+      sign_in_through AuthenticationOption::GOOGLE
+    end
+
     def finish_sign_up(auth_hash, user_type)
       post '/users', params: finish_sign_up_params(
         name: auth_hash[:info]&.name,

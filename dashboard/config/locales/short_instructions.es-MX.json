@@ -3101,7 +3101,15 @@
         "CourseD_EOC_artist": "¡Crea tu propio dibujo!",
         "CourseD_EOC_bounce1": "¡Crea tu propio juego de baloncesto!",
         "CourseD_EOC_dance": "¡Crea tu propio baile!",
-        "CourseD_EOC_starwars": "¡Crea tu propio juego de Star Wars!"
+        "CourseD_EOC_starwars": "¡Crea tu propio juego de Star Wars!",
+        "courseA_maze_ramp3b_2019": "Elimine el último bloque de la secuencia arrastrándolo a la caja de herramientas y haga clic en \"Ejecutar\".",
+        "courseA_maze_ramp3b_2020": "Elimine el último bloque de la secuencia arrastrándolo a la caja de herramientas y haga clic en \"Ejecutar\".",
+        "courseA_playLab_events3_2019": "Conecta el bloque \"mover a la izquierda\" con el bloque de sucesos \"cuando se va a la izquierda\" que ya está en el espacio de trabajo. Utiliza las teclas de flecha o pulsa los botones de flecha para mover a Jorge hasta la bandera y terminar el nivel.",
+        "courseA_playLab_events4_2019": "Ahora, añade otro bloque de sucesos para que Jorge se mueva a la derecha cuando se pulse el botón de la flecha derecha. Utiliza las teclas de flecha o pulsa los botones de flecha para mover a Jorge hacia ambas banderas y terminar el nivel.",
+        "courseA_playLab_events5_2019": "Añade eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se pulsen los botones `arriba` y `abajo`. ¡Haz que Jorge consiga las banderas para terminar el nivel!",
+        "courseA_playLab_events5_2020": "Añade eventos para que Jorge se mueva hacia arriba y hacia abajo cuando se pulsen los botones `arriba` y `abajo`. ¡Haz que Jorge consiga las banderas para terminar el nivel!",
+        "courseA_playLab_events6_2019": "Hazlo más interesante cambiando el fondo y reproduciendo un sonido aleatorio cuando se haga clic en Jorge. Cuando tu código esté listo, ¡haz clic en Jorge para probarlo!",
+        "courseA_playLab_events6_2020": "Hazlo más interesante cambiando el fondo y reproduciendo un sonido aleatorio cuando se haga clic en Jorge. Cuando tu código esté listo, ¡haz clic en Jorge para probarlo!"
       }
     }
   }

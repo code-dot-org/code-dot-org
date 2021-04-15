@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-31 15:09:34 UTC",
+    "serialized_at": "2021-04-12 20:38:51 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -1755,6 +1755,31 @@
     },
     {
       "chapter": 51,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "A/B Test for Following Behavior",
+        "level_keys": [
+          "avoid_follow"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "avoid_follow"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "avoid_follow"
+      ]
+    },
+    {
+      "chapter": 52,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1779,7 +1804,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1804,7 +1829,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1829,7 +1854,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1854,7 +1879,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1879,7 +1904,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1904,7 +1929,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1929,7 +1954,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1954,7 +1979,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1979,7 +2004,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2004,7 +2029,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2029,7 +2054,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2054,7 +2079,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -2079,7 +2104,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -2104,7 +2129,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -2129,7 +2154,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -2154,7 +2179,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -2179,7 +2204,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2204,7 +2229,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2229,7 +2254,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2254,7 +2279,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2279,7 +2304,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2304,7 +2329,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2882,6 +2907,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "avoid_follow",
+        "script_level.level_keys": [
+          "avoid_follow"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_events_loom_sandbox",
         "script_level.level_keys": [
           "courseF_events_loom_sandbox"
@@ -3141,6 +3177,9 @@
 
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [

@@ -4195,6 +4195,27 @@ class UserTest < ActiveSupport::TestCase
       )
   end
 
+  test 'find_credential returns matching AuthenticationOption if one exists for migrated user' do
+    user = create :user, :google_sso_provider
+    assert_equal user.authentication_options.first, user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
+  test 'find_credential returns nil if no matching AuthenticationOption for migrated user' do
+    user = create :user, :clever_sso_provider
+    assert_nil user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
+  test 'find_credential returns matching hash for non-migrated user if provider matches' do
+    user = create :user, :google_sso_provider, :demigrated
+    expected_cred = {credential_type: AuthenticationOption::GOOGLE, authentication_id: user.uid}
+    assert_equal expected_cred, user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
+  test 'find_credential returns nil for non-migrated user if provider does not match' do
+    user = create :user, :demigrated
+    assert_nil user.find_credential(AuthenticationOption::GOOGLE)
+  end
+
   test 'not depended_upon_for_login? for student' do
     student = create :student
     refute student.depended_upon_for_login?

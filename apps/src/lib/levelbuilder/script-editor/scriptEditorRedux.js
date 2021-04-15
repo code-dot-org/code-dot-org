@@ -304,7 +304,7 @@ export const mapLessonGroupDataForEditor = rawLessonGroups => {
 };
 
 // Replace ' with \'
-const escape = str => str.replace(/'/, "\\'");
+const escape = str => str.replace(/'/g, "\\'");
 
 export const getSerializedLessonGroups = (rawLessonGroups, levelKeyList) => {
   const lessonGroups = _.cloneDeep(rawLessonGroups);

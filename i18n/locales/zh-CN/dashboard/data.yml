@@ -550,6 +550,11 @@ zh-CN:
         codebreak_e12: '编程解密 12.0：跟 Aloe Blacc、Bret Taylor 和 Paula Mejia 一起学硬件'
         csf21pilot_events: '精灵图实验室：在活动的精灵图 （计算机科学基础 2021 试航）'
         csf21pilot_prompts: '精灵图实验室：精灵实验室：文本和提示 (CSF 2021 Pilot)'
+        outbreak_mike: 麦克的CodeBytes第3集-爆发模拟器
+        poembot-pilot-prompts: 俳句机器人-带选择的提示[PILOT]
+        poembot-pilot-text: 俳句机器人-存储文本[PILOT]
+        poembot-pilot-haiku: 俳句机器人-显示你的俳句[PILOT]
+        csd_ml_import_model: 导入AI模型
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

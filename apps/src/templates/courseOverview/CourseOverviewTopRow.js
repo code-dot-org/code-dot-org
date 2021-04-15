@@ -22,8 +22,10 @@ export default class CourseOverviewTopRow extends Component {
     id: PropTypes.number.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape),
     showAssignButton: PropTypes.bool,
-    useMigratedResources: PropTypes.bool.isRequired
+    useMigratedResources: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool
   };
 
   render() {
@@ -31,27 +33,40 @@ export default class CourseOverviewTopRow extends Component {
       id,
       teacherResources,
       migratedTeacherResources,
+      studentResources,
       showAssignButton,
       sectionsForDropdown,
-      useMigratedResources
+      useMigratedResources,
+      isTeacher
     } = this.props;
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {((useMigratedResources && migratedTeacherResources.length > 0) ||
-          (!useMigratedResources && teacherResources.length > 0)) && (
-          <ResourcesDropdown
-            resources={teacherResources}
-            migratedResources={migratedTeacherResources}
-            unitGroupId={id}
-            useMigratedResources={useMigratedResources}
+        {isTeacher &&
+          ((useMigratedResources && migratedTeacherResources.length > 0) ||
+            (!useMigratedResources && teacherResources.length > 0)) && (
+            <ResourcesDropdown
+              resources={teacherResources}
+              migratedResources={migratedTeacherResources}
+              unitGroupId={id}
+              useMigratedResources={useMigratedResources}
+            />
+          )}
+        {isTeacher && (
+          <SectionAssigner
+            sections={sectionsForDropdown}
+            showAssignButton={showAssignButton}
+            courseId={id}
           />
         )}
-        <SectionAssigner
-          sections={sectionsForDropdown}
-          showAssignButton={showAssignButton}
-          courseId={id}
-        />
+        {!isTeacher && studentResources && studentResources.length > 0 && (
+          <ResourcesDropdown
+            migratedResources={studentResources}
+            unitGroupId={id}
+            useMigratedResources
+            studentFacing
+          />
+        )}
       </div>
     );
   }

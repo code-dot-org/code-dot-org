@@ -347,6 +347,7 @@ es-MX:
       help_us: "Ayúdanos"
       teach: "Enseñar"
       about: "Acerca de"
+      legal: "Privacidad y Legalidad"
       legal_privacy: "Política de privacidad"
       legal_tos: "Términos de uso"
     user:
@@ -549,6 +550,7 @@ es-MX:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados. Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados. La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados. Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados. El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Impulsado por Amazon Web Services'
+    built_on_github: 'Creado en GitHub de Microsoft'
     google_copyright: '&copy; Google Inc. utilizado con permiso. Google Classroom es una marca comercial de Google Inc.'
     trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de Hora de Código ® son marcas registradas de Code.org.'
     copyright: 'Derechos de autor'
@@ -560,6 +562,7 @@ es-MX:
     tos_short: 'Términos'
     tos: 'Términos de uso'
     privacy: 'Política de privacidad'
+    privacy_updated: 'Política de privacidad (actualizada)'
     secure: 'Versión segura'
     report_abuse: 'Reportar Abuso'
     built_on_code_studio: 'Desarrolla en Code Studio'

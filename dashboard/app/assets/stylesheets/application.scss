@@ -329,6 +329,10 @@ img.video_thumbnail {
     margin-top: 0;
     padding-top: 4px;
     padding-left: 16px;
+
+    &:not(.user-is-tabbing) {
+      outline: none;
+    }
   }
 
   #signin_button .header_button {
@@ -2919,6 +2923,19 @@ $modal-no-icon-gap: 22px;
 
 .instructions-markdown {
   padding-top: 19px;
+
+  .instructor-image {
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+html[dir="rtl"] .instructions-markdown {
+  .instructor-image {
+    float: right;
+    padding-left: 10px;
+    padding-right: 0;
+  }
 }
 
 .markdown-level-header-text {

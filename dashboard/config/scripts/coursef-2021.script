@@ -62,6 +62,8 @@ level 'courseF_text_answer', progression: 'Skill Building'
 level 'courseF_text_concat', progression: 'Skill Building'
 level 'courseF_text_practice', progression: 'Practice'
 
+lesson 'lesson-11', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: true
+
 lesson 'Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2021', progression: 'Video: Artist Intro with JR Hildebrande'
 level 'courseC_artist_prog1_2021', progression: 'Skill Building'

@@ -98,6 +98,7 @@ function showCourseOverview() {
         sectionsInfo={scriptData.sections}
         teacherResources={teacherResources}
         migratedTeacherResources={courseSummary.migrated_teacher_resources}
+        studentResources={courseSummary.student_resources}
         isTeacher={isTeacher}
         viewAs={ViewType.Teacher}
         scripts={courseSummary.scripts}

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-09 15:41:04 UTC",
+    "serialized_at": "2021-04-09 21:34:46 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -558,7 +558,7 @@
       "position": 4,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "b58f7f0f-78a4-4965-8f0d-9512076d5e0f",
@@ -5737,11 +5737,11 @@
   "resources": [
     {
       "name": "Aluminum Boats",
-      "url": "https://studio.code.org/s/csd1-2021/stage/1/puzzle/1",
+      "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
       "key": "aluminum-boats-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "aluminum-boats-exemplar-2020"
@@ -6375,46 +6375,6 @@
       "seeding_key": {
         "resource.key": "teacher_forum"
       }
-    },
-    {
-      "name": "All Code",
-      "url": "/courses/csd1-2021/code",
-      "key": "all_code",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "all_code"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/courses/csd1-2021/resources",
-      "key": "all_resources",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "all_resources"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/courses/csd1-2021/standards",
-      "key": "all_standards",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "all_standards"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/courses/csd1-2021/vocab",
-      "key": "all_vocabulary",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary"
-      }
     }
   ],
   "lessons_resources": [
@@ -6741,30 +6701,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_code",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary",
         "script.name": "csd1-2021"
       }
     }

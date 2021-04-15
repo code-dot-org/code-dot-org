@@ -286,11 +286,7 @@ class Blockly < Level
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
         set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
 
-        if script && !script.localize_long_instructions?
-          level_options.delete('longInstructions')
-        else
-          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
-        end
+        set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
         # Unintuitively, it is completely possible for a Blockly level to use

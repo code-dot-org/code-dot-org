@@ -16,7 +16,7 @@ import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
-  overwriteProgress,
+  overwriteResults,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
@@ -146,8 +146,8 @@ function populateProgress(store, signedIn, progressData, scriptName) {
       clientState.clearProgress();
     }
 
-    if (data.progress) {
-      store.dispatch(overwriteProgress(data.progress));
+    if (data.levelResults) {
+      store.dispatch(overwriteResults(data.levelResults));
     }
 
     if (data.isVerifiedTeacher) {
@@ -163,7 +163,7 @@ function populateProgress(store, signedIn, progressData, scriptName) {
 /**
  * Returns a promise that, when resolved, returns an object with two properties:
  * - usingDbProgress: indicates if level progress came from the database
- * - progress: map from level id to result
+ * - levelResults: map from level id to result
  *
  * This function contains logic that determines whether progress data should
  * come from the data embedded in the html page (passed in as progressData),
@@ -182,14 +182,14 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       // User is signed in, return a resolved promise with the given progress data
       return Promise.resolve({
         usingDbProgress: true,
-        progress: extractLevelResults(progressData)
+        levelResults: extractLevelResults(progressData)
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
       // retrieved from session storage
       return Promise.resolve({
         usingDbProgress: false,
-        progress: clientState.levelProgress(scriptName)
+        levelResults: clientState.levelProgress(scriptName)
       });
     case null:
       // We do not know if user is signed in or not, send a request to the server
@@ -199,12 +199,12 @@ function getLevelProgress(signedIn, progressData, scriptName) {
           if (data.signedIn) {
             return {
               usingDbProgress: true,
-              progress: extractLevelResults(data)
+              levelResults: extractLevelResults(data)
             };
           } else {
             return {
               usingDbProgress: false,
-              progress: clientState.levelProgress(scriptName)
+              levelResults: clientState.levelProgress(scriptName)
             };
           }
         })
@@ -277,6 +277,7 @@ progress.renderCourseProgress = function(scriptData) {
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
         migratedTeacherResources={scriptData.migrated_teacher_resources}
+        studentResources={scriptData.student_resources || []}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning
         }
@@ -343,7 +344,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     // to reduxQueryUserProgress above.)
     if (!data.signedIn) {
       store.dispatch(
-        overwriteProgress(clientState.levelProgress(scriptData.name))
+        overwriteResults(clientState.levelProgress(scriptData.name))
       );
     }
 

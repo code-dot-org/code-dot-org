@@ -11,7 +11,7 @@ import {
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
@@ -37,7 +37,7 @@ describe('LessonEditor', () => {
     stubRedux();
     registerReducers({
       ...reducers,
-      resources: resourcesEditor,
+      resources: createResourcesReducer('lessonResource'),
       vocabularies: vocabulariesEditor,
       programmingExpressions: programmingExpressionsEditor,
       standards: createStandardsReducer('standard'),
@@ -70,7 +70,8 @@ describe('LessonEditor', () => {
         courseVersionId: 1,
         scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        scriptIsVisible: false
+        scriptIsVisible: false,
+        frameworks: []
       }
     };
   });
