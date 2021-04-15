@@ -490,7 +490,7 @@
         "courseA_video_Stevie": "Stevie 和 Big Project",
         "courseA_video_Stevie_2018": "Stevie 和 Big Project",
         "courseB_video_Unspotted": "沒被發現的程式的錯誤（Bug）",
-        "courseB_video_Unspotted_2018": "沒被發現的蟲蟲",
+        "courseB_video_Unspotted_2018": "沒被發現的程式的錯誤（Bug）",
         "courseE_Dogger_2": "小狗示例\n",
         "courseF_artist_for1": "計次迴圈自由發揮（初級）",
         "courseF_artist_for1_2018": "計次迴圈自由發揮（初級）",
@@ -620,7 +620,17 @@
         "outbreak8": "分享資訊",
         "outbreak1": "病毒模擬",
         "outbreak2": "病毒模擬",
-        "outbreak3": "病毒模擬"
+        "outbreak3": "病毒模擬",
+        "Course E: Artist Project_2020": "建立藝術家專案",
+        "Course E: Frozen Project_2020": "建立冰雪奇緣專案",
+        "Course F: Artist Project_2020": "建立藝術家專案",
+        "CourseD_EOC_artist": "創作一幅畫",
+        "CourseD_EOC_bounce1": "製作一個籃球遊戲",
+        "CourseD_EOC_dance": "創作舞蹈",
+        "CourseD_EOC_starwars": "製作星球大戰遊戲",
+        "CourseE_Project_SpriteLab_2020": "建立 Sprite Lab 專案",
+        "CourseF_Project_SpriteLab_2020": "建立 Sprite Lab 專案",
+        "outbreak5": "恢復"
       }
     }
   }

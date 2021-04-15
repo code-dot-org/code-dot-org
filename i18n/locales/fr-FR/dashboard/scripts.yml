@@ -12143,7 +12143,7 @@ fr:
             Exploring Web Pages:
               name: Explorer des Pages Web
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Searching and Research:
               name: Être à la Recherche et Rechercher
             Sources and Research:
@@ -13403,7 +13403,7 @@ fr:
             Sources and Research:
               name: Les Sources et la Recherche
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               name: Planifier un Site Web Multi-Pages
             Linking and Navigation:
@@ -14736,7 +14736,7 @@ fr:
             Sources and Research:
               name: Les Sources et la Recherche
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               name: Planifier un Site Web Multi-Pages
             Linking and Navigation:
@@ -15181,8 +15181,8 @@ fr:
               key: Les Sources et la Recherche
               name: Les Sources et la Recherche
             CSS Classes:
-              key: Classes CSS
-              name: Classes CSS
+              key: Les classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               key: Planifier un Site Web Multi-Pages
               name: Planifier un Site Web Multi-Pages
@@ -15213,7 +15213,8 @@ fr:
             Programming for Entertainment:
               key: Programmer pour le Divertissement
               name: Programmer pour le Divertissement
-              description_student: "La classe est invitée à considérer les « problèmes » d'ennui et d'expression de soi, et à réfléchir à la façon dont elle aborde ces problèmes dans sa propre vie. À partir de là, elle explorera comment l'informatique, en général, et la programmation, en particulier, jouent un rôle dans une forme spécifique de divertissement ou comme véhicule d'expression de soi."
+              description_student: |-
+                La classe est invitée à considérer les « problèmes » d'ennui et d'expression de soi, et à réfléchir à la façon dont elle aborde ces problèmes dans sa propre vie. À partir de là, elle explorera comment l'informatique, en général, et la programmation, en particulier, jouent un rôle dans une forme spécifique de divertissement ou comme véhicule d'expression de soi.
             Plotting Shapes:
               key: Tracer Des Formes
               name: Tracer Des Formes
@@ -15303,7 +15304,8 @@ fr:
             Analysis of Design:
               key: L'Analyse de la Conception
               name: L'Analyse de la Conception
-              description_teacher: Pour lancer une unité consacrée à la résolution de problèmes, en groupe, et au développement de produits pour d'autres utilisateurs, les étudiants commencent par étudier la conception de diverses théières. Les étudiants analysent chaque théière, en essayant d'identifier comment les besoins spécifiques des utilisateurs ont pu éclairer sa conception. En considérant ces choix de conception et en essayant de faire correspondre chaque théière avec un utilisateur potentiel, les étudiants peuvent commencer à voir comment adopter une approche centrée sur l'utilisateur, pour concevoir des produits (physiques et numériques), peut rendre ces produits plus utiles et utilisables. En conclusion de cette activité, les étudiants sont invités à proposer quelques changements à l'une des théières qui le rendrait plus utile ou utilisable.
+              description_teacher: |-
+                Pour lancer une unité consacrée à la résolution de problèmes, en groupe, et au développement de produits pour d'autres utilisateurs, les étudiants commencent par étudier la conception de diverses théières. Les étudiants analysent chaque théière, en essayant d'identifier comment les besoins spécifiques des utilisateurs ont pu éclairer sa conception. En considérant ces choix de conception et en essayant de faire correspondre chaque théière avec un utilisateur potentiel, les étudiants peuvent commencer à voir comment adopter une approche centrée sur l'utilisateur, pour concevoir des produits (physiques et numériques), peut rendre ces produits plus utiles et utilisables. En conclusion de cette activité, les étudiants sont invités à proposer quelques changements à l'une des théières qui le rendrait plus utile ou utilisable.
             Understanding Your User:
               key: Comprendre Votre Utilisateur
               name: Comprendre Votre Utilisateur
@@ -15404,7 +15406,8 @@ fr:
             Keeping Data Secret:
               key: Garder les Données Secrètes
               name: Garder les Données Secrètes
-              description_teacher: Les élèves discutent des différents niveaux de sécurité qu'ils souhaitent pour les données personnelles. Une fois que la classe a développé une compréhension de l'importance de la confidentialité, ils apprennent le processus de cryptage de l'information en chiffrant une note pour un partenaire et en déchiffrant la note du partenaire. Le cours se termine par une discussion sur l'importance de la sécurité physique et numérique.
+              description_teacher: |-
+                Les élèves discutent des différents niveaux de sécurité qu'ils souhaitent pour les données personnelles. Une fois que la classe a développé une compréhension de l'importance de la confidentialité, ils apprennent le processus de cryptage de l'information en chiffrant une note pour un partenaire et en déchiffrant la note du partenaire. Le cours se termine par une discussion sur l'importance de la sécurité physique et numérique.
             Combining Representations:
               key: Combiner des Représentations
               name: Combiner des Représentations
@@ -15430,7 +15433,8 @@ fr:
               key: Automatiser les Décisions Relatives Aux Données
               name: Automatiser les Décisions Relatives Aux Données
             Project - Make a Recommendation:
-              description_teacher: Pour conclure cette unité, les élèves conçoivent un moteur de recommandation, basé sur les données, qu'ils collectent et analysent auprès de leurs camarades de classe. Après avoir examiné un exemple d'application de recommandation, les élèves suivent un guide de projet pour terminer cette activité de plusieurs jours. Au cours des premières étapes, les élèves CHOISISSENT LE CHOIX QU'ILS VEULENT ... TYPOS, les données dont ils ont besoin pour formuler la recommandation, créer ue une enquête, et recueillir des informations sur les choix de leurs camarades de classe. Ils interprètent ensuite les données et utilisent ce qu'ils ont appris pour créer l'algorithme de recommandation. Enfin, ils utilisent leurs algorithmes pour faire des recommandations à quelques camarades de classe. Les élèves procèdent à un examen par leurs pairs et apportent les mises à jour nécessaires à leurs projets avant de préparer une présentation à la classe.
+              description_teacher: |-
+                Pour conclure cette unité, les élèves conçoivent un moteur de recommandation, basé sur les données, qu'ils collectent et analysent auprès de leurs camarades de classe. Après avoir examiné un exemple d'application de recommandation, les élèves suivent un guide de projet pour terminer cette activité de plusieurs jours. Au cours des premières étapes, les élèves CHOISISSENT LE CHOIX QU'ILS VEULENT ... TYPOS, les données dont ils ont besoin pour formuler la recommandation, créer ue une enquête, et recueillir des informations sur les choix de leurs camarades de classe. Ils interprètent ensuite les données et utilisent ce qu'ils ont appris pour créer l'algorithme de recommandation. Enfin, ils utilisent leurs algorithmes pour faire des recommandations à quelques camarades de classe. Les élèves procèdent à un examen par leurs pairs et apportent les mises à jour nécessaires à leurs projets avant de préparer une présentation à la classe.
             Post-Project Test:
               key: Test Post-Projet
               name: Test Post-Projet
@@ -16101,7 +16105,7 @@ fr:
               description_teacher: Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !
             Sticker Art with Loops:
               key: L'Art de l'Autocollant avec les Boucles
-              name: L'Art de l'Autocollant avec les Boucles
+              name: 'L''Art de l''Autocollant avec les Boucles'
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
               description_teacher: Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.
             'Events: The Big Event':
@@ -16116,7 +16120,7 @@ fr:
               description_teacher: Dans cette étape spéciale, les élèves peuvent créer leur propre jeu d'Oiseaux Flappy en utilisant des gestionnaires d'événements pour détecter les clics de souris et les collisions d'objets. À la fin du niveau, les élèves seront capables de personnaliser leur jeu en changeant les visuels ou les règles.
             Events in Play Lab:
               key: Événements dans le Labo du Jeu
-              name: Jeu de Poursuite avec des Événements
+              name: 'Jeu de Poursuite avec des Événements'
               description_student: Il est temps de faire preuve de créativité et de créer un jeu dans le Labo du Jeu !
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
             Picturing Data:
@@ -16457,6 +16461,9 @@ fr:
               name: Introduction au Labo des Lutins
             lesson-8:
               name: Les Lutins en Action
+            lesson-2:
+              name: Le Pouvoir des Mots
+              description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
           lesson_groups:
             ramp_up:
               display_name: Progression
@@ -16472,6 +16479,8 @@ fr:
               display_name: variables
             lessonGroup-9:
               display_name: supprimer
+            lessonGroup-7:
+              display_name: Citoyenneté Numérique
           student_description: Apprends à utiliser différents types de boucles, d'événements, de fonctions et de conditions. Étudie différentes techniques de résolution de problèmes et discute des impacts sociétaux de l'informatique et d'Internet. Dans la deuxième partie de ce cours, conçois et crée un projet de synthèse que tu peux partager avec tes amis et ta famille.
         express-2021:
           title: Cours Express (2020)

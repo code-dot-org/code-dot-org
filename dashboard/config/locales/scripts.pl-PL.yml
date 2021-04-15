@@ -26443,7 +26443,7 @@ pl:
             Analysis of Design:
               key: Analiza Projektu
               name: Analiza Projektu
-              description_teacher: Aby wystartować z realizacją działu poświęconego
+              description_teacher: 'Aby wystartować z realizacją działu poświęconego
                 rozwiązywaniu problemów grupowych oraz opracowywaniu produktów dla
                 innych użytkowników, uczniowie rozpoczynają od zbadania wzornictwa
                 różnych czajniczków do herbaty. Uczniowie analizują każdy czajniczek
@@ -26456,7 +26456,7 @@ pl:
                 użyteczność i przydatność użytkową tych produktów. Przy podsumowaniu
                 zajęć uczniowie zostaną poproszeni o zaproponowanie kilku zmian do
                 jednego z czajniczków, które zwiększyłyby ich użyteczność i przydatność
-                użytkową.
+                użytkową. '
             Understanding Your User:
               key: Zrozumienie twojego użytkownika
               name: Zrozumienie twojego użytkownika
@@ -27522,6 +27522,8 @@ pl:
                 okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
                 wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną
                 grę. Czas na kreatywność i utworzenie historyjki w Play Lab!
+            lesson-1:
+              name: Koniec projektu kursu
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -27531,6 +27533,8 @@ pl:
               display_name: Pętle
             csf_events:
               display_name: Zdarzenia
+            lessonGroup-5:
+              display_name: Koniec projektu kursu
           name: coursea-2021
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
             Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
@@ -27650,6 +27654,8 @@ pl:
                 okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
                 wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną
                 grę. Czas na kreatywność i utworzenie gry w Play Lab!
+            lesson-1:
+              name: Koniec projektu kursu
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -27661,6 +27667,8 @@ pl:
               display_name: Wplywy informatyki
             csf_events:
               display_name: Zdarzenia
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
           name: courseb-2021
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
             Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
@@ -28613,6 +28621,11 @@ pl:
                 przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak
                 szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić
                 zarażanie. '
+            lesson-2:
+              name: Moc słów
+              description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma
+                Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy,
+                które mówi się w Internecie.
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -28630,6 +28643,8 @@ pl:
               display_name: Zmienne
             lessonGroup-9:
               display_name: usuń
+            lessonGroup-7:
+              display_name: Cyfrowe obywatelstwo
           name: coursef-2021
           student_description: Naucz się używać różnych rodzajów pętli, wydarzeń,
             funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów

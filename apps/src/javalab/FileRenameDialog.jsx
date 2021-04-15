@@ -27,18 +27,15 @@ export default class FileRenameDialog extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      filename: props.filename
+    this.textInput = null;
+
+    this.setTextInputRef = element => {
+      this.textInput = element;
     };
   }
 
-  static getDerivedStateFromProps(nextProps) {
-    return {filename: nextProps.filename};
-  }
-
   render() {
-    const {isOpen, handleClose, handleRename} = this.props;
-    const {filename} = this.state;
+    const {isOpen, handleClose, handleRename, filename} = this.props;
     return (
       <BaseDialog
         isOpen={isOpen}
@@ -48,15 +45,11 @@ export default class FileRenameDialog extends Component {
         hideCloseButton
       >
         <div>Rename the file</div>
-        <input
-          type="text"
-          value={filename}
-          onChange={event => this.setState({filename: event.target.value})}
-        />
+        <input type="text" defaultValue={filename} ref={this.setTextInputRef} />
         <Button
           style={styles.button}
           text="Rename"
-          onClick={() => handleRename(this.state.filename)}
+          onClick={() => handleRename(this.textInput.value)}
           color={Button.ButtonColor.blue}
         />
         <Button

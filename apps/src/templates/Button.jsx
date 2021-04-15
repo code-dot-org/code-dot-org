@@ -55,7 +55,12 @@ const styles = {
   },
   updated: {lineHeight: '12px'},
   icon: {
-    marginRight: 5
+    marginRight: 2.5,
+    marginLeft: 2.5
+  },
+  textSpan: {
+    marginRight: 2.5,
+    marginLeft: 2.5
   },
   colors: {
     [ButtonColor.orange]: {
@@ -294,7 +299,7 @@ class Button extends React.Component {
               <FontAwesome icon="spinner" className="fa-spin" />
             </span>
           )}
-          {!isPending && text}
+          <span style={styles.textSpan}>{!isPending && text}</span>
         </div>
       </Tag>
     );

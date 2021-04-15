@@ -3722,6 +3722,8 @@ bg:
               display_name: Променливи
             lessonGroup-9:
               display_name: изтрива
+            lessonGroup-7:
+              display_name: Цифрови граждани
         express-2021:
           lesson_groups:
             csf_loops:

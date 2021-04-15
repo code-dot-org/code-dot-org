@@ -624,6 +624,29 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
   end
 
+  test 'updates migrated student resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, hidden: true, is_migrated: true
+    stub_file_writes(script.name)
+
+    course_version = create :course_version, content_root: script
+    student_resources = [
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version)
+    ]
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      studentResourceIds: student_resources.map(&:id),
+      is_migrated: true
+    }
+    assert_equal student_resources.map(&:key), Script.find_by_name(script.name).student_resources.map {|r| r[:key]}
+  end
+
   test 'updates pilot_experiment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -966,6 +989,22 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test "view all instructions page for migrated script" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    get :instructions, params: {id: @migrated_script.name}
+    assert_response :success
+  end
+
+  test "view all instructions page for unmigrated script" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    get :instructions, params: {id: @unmigrated_script.name}
+    assert_response :success
+  end
 
   def stub_file_writes(script_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]

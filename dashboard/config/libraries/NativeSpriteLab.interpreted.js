@@ -69,6 +69,10 @@ function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
 }
 
+function avoidingTargets() {
+  return {func: avoidingTargetsFunc(), name: 'avoiding targets'};
+}
+
 function followingTargets() {
   return {func: followingTargetsFunc(), name: 'following targets'};
 }

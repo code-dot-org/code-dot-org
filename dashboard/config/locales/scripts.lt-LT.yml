@@ -2773,6 +2773,8 @@ lt:
               display_name: Kintamieji
             lessonGroup-9:
               display_name: ištrink
+            lessonGroup-7:
+              display_name: Virtuali pilietybė
         express-2021:
           lesson_groups:
             csf_loops:

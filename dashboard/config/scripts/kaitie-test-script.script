@@ -94,3 +94,6 @@ level 'CSP-PL M8 - Exam 2', progression: 'Preparing students for the AP multiple
 level 'CSP-PL M8 - Exam 3', progression: 'Preparing students for the AP multiple choice exam (~60 minutes)'
 level 'CSP - Module 8 Wrap Up', progression: 'Module 8 asynchronous wrap-up (~10 minutes)'
 
+lesson 'CS Principles: Functions', display_name: 'CS Principles: Functions', has_lesson_plan: false
+level 'CS Principles: Functions', progression: 'CS Principles: Functions'
+
