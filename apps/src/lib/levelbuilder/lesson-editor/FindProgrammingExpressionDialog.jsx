@@ -167,7 +167,15 @@ export class FindProgrammingExpressionDialog extends Component {
       params.programmingEnvironmentName = this.state.filteredProgrammingEnvironment;
     }
 
-    fetch('/programming_expressions/search?' + new URLSearchParams(params))
+    // Convert params object to a URL-safe query string
+    const urlParams = Object.entries(params)
+      .map(
+        ([key, value]) =>
+          `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+      )
+      .join('&');
+
+    fetch('/programming_expressions/search?' + urlParams)
       .then(response => response.json())
       .then(data => {
         this.setState({
