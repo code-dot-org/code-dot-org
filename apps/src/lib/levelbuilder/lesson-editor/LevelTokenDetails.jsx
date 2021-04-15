@@ -37,7 +37,10 @@ const tooltipText = {
   challenge: 'Show students the Challenge dialog when viewing this level.'
 };
 
-const disabledBonusTooltipText = 'You must enable lesson extras for script.';
+const disabledBonusTooltipText =
+  'You must enable lesson extras for script to set levels as bonus.';
+const bonusAlreadySelectedTooltipText =
+  'In order for bonus levels to show up for users you must enable lesson extras for the script.';
 
 const ArrowRenderer = ({onMouseDown}) => {
   return <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />;
@@ -90,6 +93,7 @@ class LevelTokenDetails extends Component {
                 onChange={this.handleCheckboxChange.bind(this, option)}
                 disabled={
                   option === 'bonus' &&
+                  !this.props.scriptLevel[option] &&
                   !this.props.lessonExtrasAvailableForScript
                 }
               />
@@ -99,7 +103,9 @@ class LevelTokenDetails extends Component {
                 <div style={styles.tooltip}>
                   {option === 'bonus' &&
                   !this.props.lessonExtrasAvailableForScript
-                    ? disabledBonusTooltipText
+                    ? !this.props.scriptLevel[option]
+                      ? bonusAlreadySelectedTooltipText
+                      : disabledBonusTooltipText
                     : tooltipText[option]}
                 </div>
               </ReactTooltip>
