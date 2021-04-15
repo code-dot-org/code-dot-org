@@ -164,23 +164,27 @@ class ScriptsController < ApplicationController
   end
 
   def add_rollup_resources
-    puts 'hi!'
-    @script = Script.find_by_name('csd1-2021')
+    @script = Script.get_from_cache(params[:id])
     course_version = @script.get_course_version
     rollup_pages = []
     if @script.lessons.any? {|l| !l.programming_expressions.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(@script), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(@script), course_version_id: course_version.id))
     end
     if @script.lessons.any? {|l| !l.resources.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_course_path(@script), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(@script), course_version_id: course_version.id))
     end
     if @script.lessons.any? {|l| !l.standards.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_course_path(@script), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(@script), course_version_id: course_version.id))
     end
     if @script.lessons.any? {|l| !l.vocabularies.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_course_path(@script), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(@script), course_version_id: course_version.id))
     end
-    render json: rollup_pages.map(&:summarize_for_teacher_resources_dropdown).to_json
+    rollup_pages.each do |r|
+      r.is_rollup = true
+      r.save! if r.changed?
+    end
+    puts rollup_pages.inspect
+    render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
   end
 
   private

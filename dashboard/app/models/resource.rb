@@ -47,6 +47,7 @@ class Resource < ApplicationRecord
     audience
     download_url
     include_in_pdf
+    is_rollup
   )
 
   def generate_key
@@ -93,7 +94,8 @@ class Resource < ApplicationRecord
       audience: audience || '',
       type: type || '',
       assessment: assessment || false,
-      includeInPdf: include_in_pdf || false
+      includeInPdf: include_in_pdf || false,
+      isRollup: is_rollup
     }
   end
 
