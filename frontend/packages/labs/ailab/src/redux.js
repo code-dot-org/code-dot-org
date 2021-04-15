@@ -751,7 +751,7 @@ export function getSelectedColumnDescriptions(state) {
 }
 
 export function getColumnDescription(state, column) {
-  if (!state.metadata || !state.metadata.fields) {
+  if (!state.metadata || !state.metadata.fields || !column) {
     return null;
   }
 
@@ -995,6 +995,27 @@ function getDatasetDetails(state) {
   return datasetDetails;
 }
 
+function getColumnDataToSave(state, column) {
+  const columnData = {};
+  columnData.id = column;
+  columnData.description = getColumnDescription(state, column);
+  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+    columnData.values = getUniqueOptions(state, column)
+  } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
+    const maxMin = getRange(state, column, false);
+    columnData.max = maxMin.max;
+    columnData.min = maxMin.min;
+  }
+  return columnData;
+}
+
+function getFeaturesToSave(state) {
+  const features = state.selectedFeatures.map(feature =>
+    getColumnDataToSave(state, feature)
+  )
+  return features;
+}
+
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
 
@@ -1002,7 +1023,7 @@ export function getTrainedModelDataToSave(state) {
 
   // If the first column has a description, assume descriptions are in the
   // metadata for that dataset and use them; otherwise, use manually entered
-  // column desscriptions.
+  // column descriptions.
   if (
     state.metadata &&
     state.metadata.fields &&
@@ -1028,6 +1049,8 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.extremumsByColumn = getExtremumsByColumn(state);
   dataToSave.labelColumn = state.labelColumn;
+  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
+  dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
 
