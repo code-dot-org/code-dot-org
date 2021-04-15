@@ -8,6 +8,40 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_unit3_2020', display_name: 'Unit 3: Intro to App Design'
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+
+* **New Topics, Same Classroom Culture:** This unit is students\' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. 
+
+* **Emphasizing Skills:** Since this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. 
+
+* **Empowering "Creators":** This unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.
+
+### Major Assessment and Projects
+
+The unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project\'s goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.
+* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.
+* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 1.1 Collaboration
+* 1.2 Program Function and Purpose
+* 1.3 Program Design and Development
+
+The College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.
+
+* 3.a.i.
+* 3.a.ii.
+* 3.a.iii
+'
 lesson 'Introduction to Apps', display_name: 'Introduction to Apps', has_lesson_plan: true
 level 'CSP U3 Water Conservation Sample App_2021', progression: 'App Exploration'
 level 'CSP U3 Bird Quiz App_2021', progression: 'App Exploration'

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 23:11:16 UTC",
+    "serialized_at": "2021-04-15 18:09:55 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -1089,7 +1089,8 @@
       "key": "4909dde8-c244-4985-8482-1d23fbca66ea",
       "position": 1,
       "properties": {
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "duration": 2
       },
       "seeding_key": {
         "lesson_activity.key": "4909dde8-c244-4985-8482-1d23fbca66ea",
@@ -1103,7 +1104,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 35
+        "duration": 38
       },
       "seeding_key": {
         "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888",
@@ -1145,7 +1146,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 38
       },
       "seeding_key": {
         "lesson_activity.key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53",
@@ -5006,7 +5007,7 @@
       "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
@@ -5032,7 +5033,7 @@
       "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
@@ -5058,7 +5059,7 @@
       "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
@@ -5084,7 +5085,7 @@
       "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Reduce and Filter Practice",
         "level_keys": [
@@ -5110,7 +5111,7 @@
       "chapter": 56,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Reduce and Filter Practice",
         "level_keys": [
@@ -5136,7 +5137,7 @@
       "chapter": 57,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Reduce and Filter Practice",
         "level_keys": [
@@ -5162,7 +5163,7 @@
       "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App Practice",
         "level_keys": [
@@ -5214,7 +5215,7 @@
       "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Try the Random Forecaster App",
         "level_keys": [
