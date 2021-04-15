@@ -90,6 +90,9 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     }),
     progress: {
       showTeacherInfo: false
+    },
+    currentUser: {
+      userId: 1
     }
   });
 };
