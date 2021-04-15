@@ -45,29 +45,26 @@ class DataCard extends Component {
                     &nbsp;
                     {dataLength}
                   </div>
-                  <div style={styles.cardRow}>
-                    <span style={styles.bold}>Last updated:</span>
-                    &nbsp;
-                    {metadata.card.lastUpdated}
-                  </div>
+                  {metadata.card.lastUpdated && (
+                    <div style={styles.cardRow}>
+                      <span style={styles.bold}>Last updated:</span>
+                      &nbsp;
+                      {metadata.card.lastUpdated}
+                    </div>
+                  )}
 
-                  <div style={styles.cardRow}>
-                    This data has been cleaned & prepared beforehand.
-                  </div>
-                  <div style={styles.cardRow}>
-                    This Data contains columns that can be used to identify a
-                    subgroup of people (for example: by age, by race, by gender,
-                    etc):
-                  </div>
-
-                  <div style={styles.cardRow}>
-                    <div style={styles.bold}>Potential uses:</div>
-                    {metadata.card.context.potentialUses}
-                  </div>
-                  <div style={styles.cardRow}>
-                    <div style={styles.bold}>Potential misuses:</div>
-                    {metadata.card.context.potentialMisuses}
-                  </div>
+                  {metadata.card.context.potentialUses && (
+                    <div style={styles.cardRow}>
+                      <div style={styles.bold}>Potential uses:</div>
+                      {metadata.card.context.potentialUses}
+                    </div>
+                  )}
+                  {metadata.card.context.potentialMisuses && (
+                    <div style={styles.cardRow}>
+                      <div style={styles.bold}>Potential misuses:</div>
+                      {metadata.card.context.potentialMisuses}
+                    </div>
+                  )}
 
                   <div style={styles.bold}>Columns:</div>
                   <div style={styles.contents}>

@@ -2,11 +2,11 @@
   "card": {
     "description": "A dataset of test results for heart disease patients, used to predict whether or not someone may have heart disease.",
     "source": "UCI (http://archive.ics.uci.edu/ml/datasets/Heart+Disease)",
-    "last_updated": "1988",
+    "lastUpdated": "1988",
     "context": {
-      "created_by": "1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D., University Hospital, Zurich, Switzerland: William Steinbrunn, M.D., University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D., V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.",
-      "potential_uses": "Diagnose whether someone may be at risk for heart disease based on various factors.",
-      "potential_misuses": ""
+      "createdBy": "1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D., University Hospital, Zurich, Switzerland: William Steinbrunn, M.D., University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D., V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.",
+      "potentialUses": "Diagnose whether someone may be at risk for heart disease based on various factors.",
+      "potentialMisuses": ""
     }
   },
   "fields": [
