@@ -17,6 +17,7 @@ import _ from 'lodash';
 import styleConstants from '@cdo/apps/styleConstants';
 import {connect} from 'react-redux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {windowOpen} from '@cdo/apps/utils';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
@@ -206,7 +207,7 @@ class LevelDetailsDialog extends Component {
     }
   }
 
-  recordSeeFullLevelClick = level => {
+  recordSeeFullLevelClick = (level, scriptLevel) => {
     firehoseClient.putRecord(
       {
         study: 'lesson-plan',
@@ -216,7 +217,12 @@ class LevelDetailsDialog extends Component {
           levelId: level.id
         })
       },
-      {includeUserId: true}
+      {
+        includeUserId: true,
+        callback: () => {
+          windowOpen(level.url || scriptLevel.url);
+        }
+      }
     );
   };
 
@@ -299,10 +305,8 @@ class LevelDetailsDialog extends Component {
             style={{margin: 5}}
           />
           <Button
-            href={level.url || scriptLevel.url}
-            target={'_blank'}
             onClick={() => {
-              this.recordSeeFullLevelClick(level);
+              this.recordSeeFullLevelClick(level, scriptLevel);
             }}
             text={i18n.seeFullLevel()}
             color={'orange'}
