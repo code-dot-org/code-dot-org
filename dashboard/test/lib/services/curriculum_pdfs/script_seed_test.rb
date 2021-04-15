@@ -3,7 +3,7 @@ require 'pdf/conversion'
 
 class Services::CurriculumPdfs::ScriptSeedTest < ActiveSupport::TestCase
   setup do
-    PDF.stubs(:generate_from_url)
+    PDF.stubs(:invoke_generation_script)
   end
 
   test 'wraps ScriptSeed with PDF generation logic' do
