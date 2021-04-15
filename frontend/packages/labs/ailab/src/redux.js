@@ -33,7 +33,6 @@ const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
-const SET_K_VALUE = "SET_K_VALUE";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
@@ -90,10 +89,6 @@ export function setImportedMetadata(metadata) {
 
 export function setSelectedTrainer(selectedTrainer) {
   return { type: SET_SELECTED_TRAINER, selectedTrainer };
-}
-
-export function setKValue(kValue) {
-  return { type: SET_K_VALUE, kValue };
 }
 
 export const setColumnsByDataType = (column, dataType) => ({
@@ -232,7 +227,6 @@ const initialState = {
   data: [],
   metadata: undefined,
   selectedTrainer: undefined,
-  kValue: undefined,
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -312,12 +306,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       selectedTrainer: action.selectedTrainer
-    };
-  }
-  if (action.type === SET_K_VALUE) {
-    return {
-      ...state,
-      kValue: action.kValue
     };
   }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
@@ -751,7 +739,7 @@ export function getSelectedColumnDescriptions(state) {
 }
 
 export function getColumnDescription(state, column) {
-  if (!state.metadata || !state.metadata.fields) {
+  if (!state.metadata || !state.metadata.fields || !column) {
     return null;
   }
 
@@ -971,6 +959,51 @@ export function getEmptyCellDetails(state) {
   return emptyCellLocations;
 }
 
+export function getDataDescription(state) {
+  // If this a dataset from the internal collection that already has a description, use that.
+  if (
+    state.metadata
+    && state.metadata.card
+    && state.metadata.card.description
+  ) {
+    return state.metadata.card.description;
+  } else if (
+    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+  ) {
+    return state.trainedModelDetails.datasetDescription;
+  } else {
+    return undefined;
+  }
+}
+
+function getDatasetDetails(state) {
+  const datasetDetails = {}
+  datasetDetails.description = getDataDescription(state);
+  datasetDetails.numRows = state.data.length;
+  return datasetDetails;
+}
+
+function getColumnDataToSave(state, column) {
+  const columnData = {};
+  columnData.id = column;
+  columnData.description = getColumnDescription(state, column);
+  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+    columnData.values = getUniqueOptions(state, column)
+  } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
+    const maxMin = getRange(state, column, false);
+    columnData.max = maxMin.max;
+    columnData.min = maxMin.min;
+  }
+  return columnData;
+}
+
+function getFeaturesToSave(state) {
+  const features = state.selectedFeatures.map(feature =>
+    getColumnDataToSave(state, feature)
+  )
+  return features;
+}
+
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
 
@@ -995,18 +1028,17 @@ export function getTrainedModelDataToSave(state) {
     dataToSave.columns = state.trainedModelDetails.columns;
   }
 
+  dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-
-  dataToSave.identifySubgroup = !!state.trainedModelDetails.identifySubgroup;
-  dataToSave.representSubgroup = !!state.trainedModelDetails.representSubgroup;
-  dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
   dataToSave.selectedTrainer = getSelectedTrainer(state);
   dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.extremumsByColumn = getExtremumsByColumn(state);
   dataToSave.labelColumn = state.labelColumn;
+  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
+  dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
 
