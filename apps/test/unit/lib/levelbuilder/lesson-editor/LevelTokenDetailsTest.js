@@ -3,6 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
+import _ from 'lodash';
 
 const defaultScriptLevel = {
   id: '10',
@@ -65,7 +66,16 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'challenge', false);
   });
 
-  it('bonus is disabled if lesson extras are not available for script', () => {
+  it('bonus is enabled if lesson extras are not available for script but bonus was already selected', () => {
+    let scriptLevel = _.cloneDeep(defaultScriptLevel);
+    scriptLevel.bonus = true;
+    const wrapper = shallow(
+      <LevelTokenDetails {...defaultProps} scriptLevel={scriptLevel} />
+    );
+    assertDisabled(wrapper, 'bonus', false);
+  });
+
+  it('bonus is disabled if lesson extras are not available for script and bonus was not selected', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
     assertDisabled(wrapper, 'bonus', true);
   });
