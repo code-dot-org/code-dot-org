@@ -12,14 +12,14 @@ function generateCodeDesignElements(modelId, modelData) {
     modelData.features.forEach(feature => {
       y = y + SPACER_PIXELS;
       var label = designMode.createElement('LABEL', x, y);
-      var alphaNumFeature = stripSpaceAndSpecial(feature);
+      var alphaNumFeature = stripSpaceAndSpecial(feature.id);
       let fieldId;
       label.id = 'design_' + alphaNumFeature + '_label';
       label.style.width = '300px';
       y = y + SPACER_PIXELS;
       if (feature.values) {
         // Create dropdown menu for each categorical feature.
-        label.textContent = feature + ':';
+        label.textContent = feature.id + ':';
         fieldId = alphaNumFeature + '_dropdown';
         var select = designMode.createElement('DROPDOWN', x, y);
         select.id = 'design_' + fieldId;
@@ -34,7 +34,7 @@ function generateCodeDesignElements(modelId, modelData) {
         y = y + SPACER_PIXELS;
       } else {
         // Create text input field for each continuous feature.
-        label.textContent = feature;
+        label.textContent = feature.id;
         var labelMinMax = designMode.createElement('LABEL', x, y);
         var min = feature.min.toFixed(2);
         var max = feature.max.toFixed(2);
