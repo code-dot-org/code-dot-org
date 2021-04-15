@@ -256,29 +256,14 @@ class ScriptLevelsController < ApplicationController
     @script = @stage.script
     script_bonus_levels_by_stage = @script.get_bonus_script_levels(@stage)
 
-    # bonus level summaries are cached, so explicitly don't contain any
-    # user-specific data. hence we need to merge the user's progress and
-    # localized level display name and description into the cached data.
+    # bonus level summaries explicitly don't contain any user-specific data,
+    # so we need to merge in the user's progress.
     script_bonus_levels_by_stage.each do |stage|
       stage[:levels].each do |level_summary|
         ul = UserLevel.find_by(
           level_id: level_summary[:level_id], user_id: user.id, script: @script
         )
         level_summary[:perfect] = ul&.perfect?
-
-        level = Level.find(level_summary[:level_id])
-        localized_level_description = I18n.t(
-          level.name,
-          scope: [:data, :bubble_choice_description],
-          default: level.bubble_choice_description
-        )
-        localized_level_display_name = I18n.t(
-          level.name,
-          scope: [:data, :display_name],
-          default: level.display_name
-        ) || I18n.t('lesson_extras.bonus_level')
-        level_summary[:description] = localized_level_description
-        level_summary[:display_name] = localized_level_display_name
       end
     end
 
