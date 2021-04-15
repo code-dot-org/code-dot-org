@@ -46,6 +46,12 @@ const styles = {
   },
   resourcesRow: {
     display: 'flex'
+  },
+  buttonMarginLTR: {
+    marginLeft: 5
+  },
+  buttonMarginRTL: {
+    marginRight: 5
   }
 };
 
@@ -64,6 +70,7 @@ class ScriptOverviewTopRow extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -85,6 +92,7 @@ class ScriptOverviewTopRow extends React.Component {
       isRtl,
       teacherResources,
       migratedTeacherResources,
+      studentResources,
       showAssignButton,
       assignedSectionId,
       showCalendar,
@@ -92,6 +100,12 @@ class ScriptOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       isMigrated
     } = this.props;
+
+    // Adjust styles if locale is RTL
+    const hasButtonMargin = studentResources.length > 0;
+    const buttonMarginStyle = isRtl
+      ? styles.buttonMarginRTL
+      : styles.buttonMarginLTR;
 
     return (
       <div style={styles.buttonRow} className="script-overview-top-row">
@@ -102,14 +116,23 @@ class ScriptOverviewTopRow extends React.Component {
               href={`/s/${scriptName}/next`}
               text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
+              style={{marginRight: 10}}
             />
+            {studentResources.length > 0 && (
+              <ResourcesDropdown
+                migratedResources={studentResources}
+                unitId={scriptId}
+                useMigratedResources={true}
+                studentFacing
+              />
+            )}
             <Button
               __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
               size={Button.ButtonSize.large}
-              style={{marginLeft: 10}}
+              style={hasButtonMargin ? buttonMarginStyle : {}}
             />
             {assignedSectionId && <Assigned />}
           </div>

@@ -56,14 +56,14 @@ describe('ProgressTableDetailCell', () => {
     const wrapper = setUp();
     const levelBubble3 = wrapper.findWhere(node => node.key() === '999_3');
     const progressBubble = levelBubble3.find(ProgressTableLevelBubble);
-    expect(progressBubble.props().disabled).to.be.true;
+    expect(progressBubble.props().isDisabled).to.be.true;
   });
 
   it('disable is false for progress bubble if there is a bonus and stageExtrasEnabled is true', () => {
     const wrapper = setUp({stageExtrasEnabled: true});
     const levelBubble3 = wrapper.findWhere(node => node.key() === '999_3');
     const progressBubble = levelBubble3.find(ProgressTableLevelBubble);
-    expect(progressBubble.props().disabled).to.be.false;
+    expect(progressBubble.props().isDisabled).to.be.false;
   });
 
   it('generates the right url for level bubble', () => {

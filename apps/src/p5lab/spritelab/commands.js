@@ -35,8 +35,8 @@ export const commands = {
   },
 
   // Action commands
-  addTarget(spriteArg, targetArg) {
-    actionCommands.addTarget(spriteArg, targetArg);
+  addTarget(spriteArg, targetArg, targetType) {
+    actionCommands.addTarget(spriteArg, targetArg, targetType);
   },
 
   bounceOff(spriteArg, targetArg) {
@@ -133,6 +133,10 @@ export const commands = {
   // Behavior commands
   addBehaviorSimple(spriteArg, behavior) {
     behaviorCommands.addBehavior(spriteArg, behavior);
+  },
+
+  avoidingTargetsFunc(spriteArg) {
+    return behaviorCommands.avoidingTargetsFunc(this);
   },
 
   Behavior(callback) {

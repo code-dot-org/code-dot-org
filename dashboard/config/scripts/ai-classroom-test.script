@@ -1,16 +1,6 @@
 login_required true
 
 lesson 'ailab-explore', display_name: 'Explore AI Lab', has_lesson_plan: false
-level 'ml-classroom vocab-1', progression: 'Introduction to AI Lab'
 level 'ml-class test-ai lab 1', progression: 'Explore AI Lab'
-level 'ml-class test-ai lab 2', progression: 'Explore AI Lab'
 level 'ml-class test-app lab 1', progression: 'Importing into App Lab'
-level 'ml-class test-exit ticket', progression: 'Exit Ticket'
-
-lesson 'introai', display_name: 'Introduction to AI', has_lesson_plan: false
-level 'ml-models-shoes random', progression: 'Shoe Recommender'
-level 'ml-models-shoes decision tree', progression: 'Improved Shoe Recommender'
-level 'ml-models-shoes data', progression: 'Ultimate Shoe Recommender'
-level 'ml-models-shoes points', progression: 'Ultimate Shoe Recommender'
-level 'ml-class test-app lab 2', progression: 'Explore AI Lab 2: More Datasets!'
 

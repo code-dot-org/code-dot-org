@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-26 23:10:49 UTC",
+    "serialized_at": "2021-04-13 23:11:15 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -118,7 +118,9 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true,
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 1",
@@ -146,7 +148,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
@@ -175,7 +178,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "The Need for Programming Languages",
@@ -262,7 +266,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
@@ -291,7 +296,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 4",
@@ -320,7 +326,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
@@ -340,7 +347,8 @@
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app.",
         "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
         "preparation": "* Make sure students have access to their App Development Planning Guides",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
@@ -2890,7 +2898,7 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Prototype",
         "level_keys": [
@@ -2916,7 +2924,7 @@
       "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build Your Screens",
         "level_keys": [
@@ -3332,7 +3340,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pair Programming",
         "level_keys": [
@@ -3358,7 +3366,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Add Code",
         "level_keys": [
@@ -3384,7 +3392,7 @@
       "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Add More Code",
         "level_keys": [
@@ -4002,6 +4010,54 @@
       "seeding_key": {
         "resource.key": "app_development_planning_guide"
       }
+    },
+    {
+      "name": "How To Debug",
+      "url": "https://youtu.be/auv10y-dN4s",
+      "key": "how_to_debug",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_debug"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://youtu.be/q7d_JtyCq1A",
+      "key": "pair_programming",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -4067,6 +4123,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "how_to_debug"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "csp-unit-3-intro-to-app-design"
       }
@@ -4075,6 +4137,12 @@
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 3",
+        "resource.key": "pair_programming"
       }
     },
     {
@@ -4115,6 +4183,20 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp3-2021"
+      }
+    }
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -4894,5 +4976,8 @@
         "standard.shortcode": "3A-AP-23"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

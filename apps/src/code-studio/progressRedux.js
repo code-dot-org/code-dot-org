@@ -17,8 +17,8 @@ import {authorizeLockable} from './stageLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
-const CLEAR_PROGRESS = 'progress/CLEAR_PROGRESS';
-const MERGE_PROGRESS = 'progress/MERGE_PROGRESS';
+const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
+const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
@@ -32,7 +32,7 @@ const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
 const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
-const OVERWRITE_PROGRESS = 'progress/OVERWRITE_PROGRESS';
+const OVERWRITE_RESULTS = 'progress/OVERWRITE_RESULTS';
 
 const PEER_REVIEW_ID = -1;
 
@@ -53,7 +53,7 @@ const initialState = {
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
-  levelProgress: {},
+  levelResults: {},
   focusAreaStageIds: [],
   peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
@@ -113,36 +113,36 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === CLEAR_PROGRESS) {
+  if (action.type === CLEAR_RESULTS) {
     return {
       ...state,
-      levelProgress: initialState.levelProgress
+      levelResults: initialState.levelResults
     };
   }
 
-  if (action.type === OVERWRITE_PROGRESS) {
+  if (action.type === OVERWRITE_RESULTS) {
     return {
       ...state,
-      levelProgress: action.levelProgress
+      levelResults: action.levelResults
     };
   }
 
-  if (action.type === MERGE_PROGRESS) {
-    let newLevelProgress = {};
+  if (action.type === MERGE_RESULTS) {
+    let newLevelResults = {};
     const combinedLevels = Object.keys({
-      ...state.levelProgress,
-      ...action.levelProgress
+      ...state.levelResults,
+      ...action.levelResults
     });
     combinedLevels.forEach(key => {
-      newLevelProgress[key] = mergeActivityResult(
-        state.levelProgress[key],
-        action.levelProgress[key]
+      newLevelResults[key] = mergeActivityResult(
+        state.levelResults[key],
+        action.levelResults[key]
       );
     });
 
     return {
       ...state,
-      levelProgress: newLevelProgress
+      levelResults: newLevelResults
     };
   }
 
@@ -316,7 +316,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
   // If we have a userId, we can clear any progress in redux and request all progress
   // from the server.
   if (userId) {
-    dispatch(clearProgress());
+    dispatch(clearResults());
   }
 
   return $.ajax({
@@ -359,8 +359,8 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
     // Merge progress from server
     if (data.progress) {
-      const levelProgress = _.mapValues(data.progress, getLevelResult);
-      dispatch(mergeProgress(levelProgress));
+      const levelResults = _.mapValues(data.progress, getLevelResult);
+      dispatch(mergeResults(levelResults));
 
       if (data.peerReviewsPerformed) {
         dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
@@ -411,22 +411,22 @@ export const initProgress = ({
   currentPageNumber
 });
 
-export const clearProgress = () => ({
-  type: CLEAR_PROGRESS
+export const clearResults = () => ({
+  type: CLEAR_RESULTS
 });
 
 export const useDbProgress = () => ({
   type: USE_DB_PROGRESS
 });
 
-export const mergeProgress = levelProgress => ({
-  type: MERGE_PROGRESS,
-  levelProgress
+export const mergeResults = levelResults => ({
+  type: MERGE_RESULTS,
+  levelResults: levelResults
 });
 
-export const overwriteProgress = levelProgress => ({
-  type: OVERWRITE_PROGRESS,
-  levelProgress
+export const overwriteResults = levelResults => ({
+  type: OVERWRITE_RESULTS,
+  levelResults: levelResults
 });
 
 export const mergePeerReviewProgress = peerReviewsPerformed => ({
@@ -525,7 +525,7 @@ const peerReviewLesson = state => ({
  */
 const peerReviewLevels = state =>
   state.peerReviewLessonInfo.levels.map((level, index) => ({
-    // These aren't true levels (i.e. we won't have an entry in levelProgress),
+    // These aren't true levels (i.e. we won't have an entry in levelResults),
     // so always use a specific id that won't collide with real levels
     id: PEER_REVIEW_ID,
     status: level.locked ? LevelStatus.locked : level.status,
@@ -550,10 +550,10 @@ const isCurrentLevel = (currentLevelId, level) => {
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of
- * state.levelProgress
+ * state.levelResults
  */
 const levelWithStatus = (
-  {levelProgress, levelPairing = {}, currentLevelId, isSublevel = false},
+  {levelResults, levelPairing = {}, currentLevelId, isSublevel = false},
   level
 ) => {
   if (level.kind !== LevelKind.unplugged && !isSublevel) {
@@ -566,7 +566,7 @@ const levelWithStatus = (
   const normalizedLevel = processedLevel(level);
   return {
     ...normalizedLevel,
-    status: statusForLevel(level, levelProgress),
+    status: statusForLevel(level, levelResults),
     isCurrentLevel: isCurrentLevel(currentLevelId, normalizedLevel),
     paired: levelPairing[level.activeId],
     readonlyAnswers: level.readonly_answers
@@ -578,20 +578,20 @@ const levelWithStatus = (
  */
 export const levelsByLesson = ({
   stages,
-  levelProgress,
+  levelResults,
   levelPairing,
   currentLevelId
 }) =>
   stages.map(stage =>
     stage.levels.map(level => {
       let statusLevel = levelWithStatus(
-        {levelProgress, levelPairing, currentLevelId},
+        {levelResults, levelPairing, currentLevelId},
         level
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
           levelWithStatus(
-            {levelProgress, levelPairing, currentLevelId, isSublevel: true},
+            {levelResults, levelPairing, currentLevelId, isSublevel: true},
             sublevel
           )
         );
@@ -614,8 +614,8 @@ export const lessonExtrasUrl = (state, stageId) =>
     : '';
 
 export const isPerfect = (state, levelId) =>
-  !!state.levelProgress &&
-  state.levelProgress[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT;
+  !!state.levelResults &&
+  state.levelResults[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT;
 
 export const getPercentPerfect = levels => {
   const puzzleLevels = levels.filter(level => !level.isConceptLevel);
@@ -632,13 +632,13 @@ export const getPercentPerfect = levels => {
 };
 
 /**
- * Given a level and levelProgress (both from our redux store state), determine
+ * Given a level and levelResults (both from our redux store state), determine
  * the status for that level.
  * @param {object} level - Level object from state.stages.levels
- * @param {object<number, TestResult>} levelProgress - Mapping from levelId to
+ * @param {object<number, TestResult>} levelResults - Mapping from levelId to
  *   TestResult
  */
-export function statusForLevel(level, levelProgress) {
+export function statusForLevel(level, levelResults) {
   // Peer Reviews use a level object to track their state, but have some subtle
   // differences from regular levels (such as a separate id namespace). Unlike
   // levels, Peer Reviews store status on the level object (for the time being)
@@ -658,11 +658,11 @@ export function statusForLevel(level, levelProgress) {
   // Worth noting that in the majority of cases, ids will be a single
   // id here
   const id =
-    level.uid || level.level_id || bestResultLevelId(level.ids, levelProgress);
-  let status = activityCssClass(levelProgress[id]);
+    level.uid || level.level_id || bestResultLevelId(level.ids, levelResults);
+  let status = activityCssClass(levelResults[id]);
   if (
     level.uid &&
-    level.ids.every(id => levelProgress[id] === TestResults.LOCKED_RESULT)
+    level.ids.every(id => levelResults[id] === TestResults.LOCKED_RESULT)
   ) {
     status = LevelStatus.locked;
   }
@@ -698,6 +698,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
     byGroup[lessonGroup.display_name] = {
       lessonGroup: {
         id: lessonGroup.id,
+        userFacing: lessonGroup.user_facing,
         displayName: lessonGroup.display_name,
         description: lessonGroup.description,
         bigQuestions: lessonGroup.big_questions
