@@ -7,14 +7,13 @@ require 'pdf/conversion'
 
 class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   setup do
-    PDF.stubs(:generate_from_url)
+    PDF.stubs(:invoke_generation_script)
     PDF.stubs(:merge_local_pdfs)
+    Services::CurriculumPdfs.stubs(:export_from_google)
 
     # mock some file operations for the 'download PDF from url' case
     IO.stubs(:copy_stream)
     URI.stubs(:open).returns(StringIO.new)
-
-    Services::CurriculumPdfs.stubs(:export_from_google)
   end
 
   test 'script resources PDF includes resources from all lessons' do
