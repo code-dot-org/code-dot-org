@@ -1,4 +1,15 @@
 {
+  "card": {
+    "description": "Daily rental data from Washington, D.C.'s Capital Bikeshare system from 2011 and 2012, along with weather data for those days.",
+    "source": "UCI Machine Learning (https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset)",
+    "lastUpdated": "1994",
+    "context": {
+      "createdBy": "Hadi Fanaee, University of Porto",
+      "potentialUses": "Predict how many bikes will be rented based on weather conditions, or time of year.",
+      "potentialMisuses": ""
+    }
+  },
+  "defaultLabelColumn": "Total Users",
   "fields": [
     {
       "type": "numerical",
@@ -80,20 +91,5 @@
       "id": "Total Users",
       "description": "Total number of users"
     }
-  ],
-  "defaultLabelColumn": "Total Users",
-  "card": {
-    "description": "Daily rental data from Washington, D.C.'s Capital Bikeshare system from 2011 and 2012, along with weather data for those days.",
-    "source": "UCI Machine Learning (https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset)",
-    "lastUpdated": "1994",
-    "context": {
-      "createdBy": "Hadi Fanaee, University of Porto",
-      "preparation": true,
-      "confidentiality": false,
-      "subgroupIdentifiers": false,
-	    "representative": false,
-      "potentialUses": "Predict how many bikes will be rented based on weather conditions, or time of year.",
-      "potentialMisuses": ""
-    }
-  }
+  ]
 }
