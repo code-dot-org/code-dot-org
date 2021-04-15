@@ -38,6 +38,7 @@ const styles = {
   },
   wordBox: {
     width: styleConstants['content-width'] - 475,
+    flexGrow: 1,
     marginLeft: 25,
     marginTop: 25,
     marginBottom: 25,
