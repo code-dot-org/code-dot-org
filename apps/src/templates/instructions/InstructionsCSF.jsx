@@ -8,6 +8,7 @@ import ThreeColumns from './ThreeColumns';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import {levenshtein} from '../../utils';
 import {getOuterHeight} from './utils';
+import debounce from 'lodash/debounce';
 import styleConstants from '../../styleConstants';
 import InstructionsCsfLeftCol from './InstructionsCsfLeftCol';
 import InstructionsCsfRightCol from './InstructionsCsfRightCol';
@@ -114,15 +115,23 @@ class InstructionsCSF extends React.Component {
     noVisualization: false
   };
 
-  state = {
-    rightColWidth: 0,
-    rightColHeight: 0,
-    leftColWidth: 0,
-    leftColHeight: 0,
-    middleColHeight: 0,
-    promptForHint: false,
-    displayScrollButtons: true
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      rightColWidth: 0,
+      rightColHeight: 0,
+      leftColWidth: 0,
+      leftColHeight: 0,
+      promptForHint: false,
+      displayScrollButtons: true
+    };
+
+    this.debouncedCalculateRenderedHeight = debounce(
+      this.calculateRenderedHeight,
+      300
+    );
+  }
 
   /**
    * Calculate our initial height (based off of rendered height of instructions)
@@ -179,7 +188,7 @@ class InstructionsCSF extends React.Component {
 
   componentDidUpdate() {
     this.setCanScrollInstructions();
-    this.calculateRenderedHeight();
+    this.debouncedCalculateRenderedHeight();
     this.props.adjustMaxNeededHeight();
   }
 
