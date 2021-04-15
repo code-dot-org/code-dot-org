@@ -17,7 +17,7 @@ if (envConstants.COVERAGE) {
 process.env.BABEL_ENV = 'test';
 
 module.exports = function(config) {
-  var browser = envConstants.BROWSER || 'ChromeHeadless';
+  var browser = 'ChromeHeadless';
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
