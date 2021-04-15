@@ -146,7 +146,7 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
-  runCode();
+  runCode(this.level.javabuilderUrl);
 };
 
 // Called by the Javalab app when it wants to go to the next level.
