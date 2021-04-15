@@ -214,7 +214,7 @@ class LevelDetailsDialog extends Component {
         study_group: 'teacher-lesson-plan',
         event: 'click-see-full-level',
         data_json: JSON.stringify({
-          levelId: level.id
+          scriptLevelId: scriptLevel.id
         })
       },
       {

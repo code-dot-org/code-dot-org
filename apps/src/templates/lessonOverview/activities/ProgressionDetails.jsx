@@ -30,9 +30,9 @@ export default class ProgressionDetails extends Component {
       {
         study: 'lesson-plan',
         study_group: 'teacher-lesson-plan',
-        event: 'click-level',
+        event: 'click-level-preview',
         data_json: JSON.stringify({
-          levelId: level.id
+          scriptLevelId: level.id
         })
       },
       {includeUserId: true}
