@@ -150,5 +150,7 @@ describe('FindProgrammingExpressionDialog', () => {
     expect(fetchStub.lastCall.args).to.eql([
       '/programming_expressions/search?page=1&query=foo&programmingEnvironmentName=bar'
     ]);
+
+    fetchStub.restore();
   });
 });
