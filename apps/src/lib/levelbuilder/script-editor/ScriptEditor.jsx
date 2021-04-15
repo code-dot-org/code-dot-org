@@ -106,6 +106,7 @@ class ScriptEditor extends React.Component {
     levelKeyList: PropTypes.object.isRequired,
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
       .isRequired,
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
@@ -306,6 +307,9 @@ class ScriptEditor extends React.Component {
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
       resourceIds: this.props.migratedTeacherResources.map(
+        resource => resource.id
+      ),
+      studentResourceIds: this.props.studentResources.map(
         resource => resource.id
       ),
       is_migrated: this.props.isMigrated,
@@ -807,7 +811,7 @@ class ScriptEditor extends React.Component {
           )}
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Teacher Resources Settings">
+        <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
             Has Resources for Verified Teachers
             <input
@@ -827,13 +831,12 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
+          Select the resources you'd like to have show up in the dropdown at the
+          top of the script overview page:
           <div>
             <h4>Teacher Resources</h4>
             <div>
-              <div>
-                Select the Teacher Resources buttons you'd like to have show up
-                on the top of the script overview page
-              </div>
+              <div />
               <ResourcesEditor
                 inputStyle={styles.input}
                 resources={this.state.teacherResources}
@@ -845,6 +848,22 @@ class ScriptEditor extends React.Component {
                 migratedResources={this.props.migratedTeacherResources}
               />
             </div>
+            {this.props.isMigrated && (
+              <div>
+                <h4>Student Resources</h4>
+                <div>
+                  Select the Student Resources buttons you'd like to have show
+                  up on the top of the script overview page
+                </div>
+                <ResourcesEditor
+                  inputStyle={styles.input}
+                  useMigratedResources
+                  courseVersionId={this.props.initialCourseVersionId}
+                  migratedResources={this.props.studentResources}
+                  studentFacing
+                />
+              </div>
+            )}
           </div>
         </CollapsibleEditorSection>
         {this.props.isMigrated && (
@@ -957,7 +976,8 @@ export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
     levelKeyList: state.levelKeyList,
-    migratedTeacherResources: state.resources
+    migratedTeacherResources: state.resources,
+    studentResources: state.studentResources
   }),
   {
     init

@@ -26,6 +26,7 @@ export default function initPage(scriptEditorData) {
   registerReducers({
     ...reducers,
     resources: createResourcesReducer('teacherResource'),
+    studentResources: createResourcesReducer('studentResource'),
     isRtl
   });
   const store = getStore();
@@ -40,7 +41,8 @@ export default function initPage(scriptEditorData) {
     initResources(
       'teacherResource',
       scriptData.migrated_teacher_resources || []
-    )
+    ),
+    initResources('studentResource', scriptData.student_resources || [])
   );
 
   let announcements = scriptData.announcements || [];
