@@ -1,5 +1,4 @@
 import {
-  getOptionFrequenciesByColumn,
   getRange,
   getAccuracyRegression
 } from "../../src/redux.js";
@@ -93,16 +92,6 @@ const resultsState = {
 };
 
 describe("redux functions", () => {
-  test("getOptionFrequenciesByColumn", async () => {
-    const frequencies = getOptionFrequenciesByColumn(initialState);
-    expect(frequencies["chocolate"]["yes"]).toBe(4);
-    expect(frequencies["chocolate"]["no"]).toBe(2);
-    expect(frequencies["nuts"]["yes"]).toBe(3);
-    expect(frequencies["nuts"]["no"]).toBe(3);
-    expect(frequencies["delicious"]["yes"]).toBe(5);
-    expect(frequencies["delicious"]["no"]).toBe(1);
-  });
-
   test("getAccuracyRegression", async () => {
     const maxMin = getRange(resultsState, resultsState.labelColumn);
     const range = Math.abs(maxMin.max - maxMin.min);
