@@ -8,7 +8,7 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_variables', display_name: 'Variables'
-lesson 'Variables Explore', display_name: 'Variables Explore', has_lesson_plan: true
+lesson 'Variables Explore', display_name: 'Variables Explore', has_lesson_plan: true, unplugged: true
 level 'CSP U4 My Pet Rock Example App_2021', progression: 'Sample Apps'
 level 'U4 L01 Poetry App_2021', progression: 'Sample Apps'
 level 'U4 L01 Thermostat App_2021', progression: 'Sample Apps'
@@ -41,7 +41,7 @@ level 'U4 L04 Variables Make Project_2021', progression: 'Try the Photo Liker ap
 level 'U4 L04 Variables Make Project Submit_2021', progression: 'Make the Photo Liker app', assessment: true
 
 lesson_group 'csp_conditionals', display_name: 'Conditionals'
-lesson 'Conditionals Explore', display_name: 'Conditionals Explore', has_lesson_plan: true
+lesson 'Conditionals Explore', display_name: 'Conditionals Explore', has_lesson_plan: true, unplugged: true
 level 'U4 L06 Introduction to Conditionals: Boolean Expressions_2021', progression: 'Conditionals: Boolean Expressions'
 level 'U4 L05 CYU Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 

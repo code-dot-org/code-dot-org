@@ -4,6 +4,7 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/templates/Button';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -78,7 +79,8 @@ describe('LessonOverview', () => {
           }
         ],
         standards: [],
-        opportunityStandards: []
+        opportunityStandards: [],
+        courseVersionStandardsUrl: 'standards/url'
       },
       activities: [],
       announcements: [],
@@ -216,7 +218,7 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
   });
 
-  it('renders standards header when standards are present', () => {
+  it('renders standards header with standards alignment button when standards are present', () => {
     const standards = [
       {
         frameworkName: 'ngss',
@@ -238,6 +240,14 @@ describe('LessonOverview', () => {
     );
 
     expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href={lesson.courseVersionStandardsUrl}
+          text="Full Course Alignment"
+        />
+      )
+    ).to.be.true;
     expect(
       wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
     ).to.be.false;

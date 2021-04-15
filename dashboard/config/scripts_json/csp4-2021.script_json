@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-10 20:18:56 UTC",
+    "serialized_at": "2021-04-14 17:45:24 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -417,7 +417,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 1",
@@ -446,7 +447,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 2",
@@ -475,7 +477,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 3",
@@ -503,7 +506,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 15: Assessment Day",
@@ -514,8 +518,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "e24c8de8-865e-4df1-8b46-e8121a3d5fb3",
+      "key": "5be26a3f-83ff-4fbd-a7a7-902a487bad2b",
       "position": 1,
+      "properties": {
+        "name": "Set Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5be26a3f-83ff-4fbd-a7a7-902a487bad2b",
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "e24c8de8-865e-4df1-8b46-e8121a3d5fb3",
+      "position": 2,
       "properties": {
         "name": "Warm Up",
         "duration": 5
@@ -529,7 +546,7 @@
     },
     {
       "key": "0c8d3a4a-a901-437d-b8b8-77ab80dda331",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Activity",
         "duration": 30
@@ -543,7 +560,7 @@
     },
     {
       "key": "cee0dcb2-21af-48b5-822f-15617dfe0bad",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 10
@@ -556,21 +573,21 @@
       }
     },
     {
-      "key": "f11c21d8-b12a-48d6-8fe7-868cbe66681d",
-      "position": 4,
+      "key": "d57d320f-5c79-4a87-ba41-65cf718aca07",
+      "position": 1,
       "properties": {
-        "name": "Tess figuring out expandable images"
+        "name": "Set Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "f11c21d8-b12a-48d6-8fe7-868cbe66681d",
-        "lesson.key": "Variables Explore",
+        "lesson_activity.key": "d57d320f-5c79-4a87-ba41-65cf718aca07",
+        "lesson.key": "Variables Investigate",
         "lesson_group.key": "csp_variables",
         "script.name": "csp4-2021"
       }
     },
     {
       "key": "91e27497-7900-458f-80f0-c68bf658df07",
-      "position": 1,
+      "position": 2,
       "properties": {
         "name": "Warm Up",
         "duration": 5
@@ -584,7 +601,7 @@
     },
     {
       "key": "c4eb36e1-32dc-4590-8ad2-5121bb841814",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Activity",
         "duration": 35
@@ -598,7 +615,7 @@
     },
     {
       "key": "9817079b-6797-4c6b-bbe7-3e07da6a2ec2",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -611,8 +628,21 @@
       }
     },
     {
-      "key": "130f1637-d1ce-4908-956c-6a65fc45f7b4",
+      "key": "1574cc09-a15a-4a9a-98f4-54f398cae46c",
       "position": 1,
+      "properties": {
+        "name": "Set Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1574cc09-a15a-4a9a-98f4-54f398cae46c",
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "130f1637-d1ce-4908-956c-6a65fc45f7b4",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -625,7 +655,7 @@
     },
     {
       "key": "b3c72085-c8f0-4971-beef-af3066cee04a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Activity",
         "duration": 40
@@ -639,7 +669,7 @@
     },
     {
       "key": "f48aba60-09c2-4164-90d7-9c92b1f0567a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -652,8 +682,21 @@
       }
     },
     {
-      "key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a",
+      "key": "40e01863-1d6d-4d3e-890b-95aab90989e3",
       "position": 1,
+      "properties": {
+        "name": "Set Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40e01863-1d6d-4d3e-890b-95aab90989e3",
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a",
+      "position": 2,
       "properties": {
         "name": "Warm Up",
         "duration": 2
@@ -667,7 +710,7 @@
     },
     {
       "key": "04056784-fb56-42db-879e-b5cb252a2819",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Activity",
         "duration": 38
@@ -681,7 +724,7 @@
     },
     {
       "key": "43b11cca-1150-45fd-96b9-8fce6090e6ec",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -1191,16 +1234,21 @@
   ],
   "activity_sections": [
     {
+      "key": "afdf36c2-b180-419d-840f-649c28ee5ff2",
+      "position": 1,
+      "properties": {
+        "description": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](\thttps://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with the support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "afdf36c2-b180-419d-840f-649c28ee5ff2",
+        "lesson_activity.key": "5be26a3f-83ff-4fbd-a7a7-902a487bad2b"
+      }
+    },
+    {
       "key": "0cd5039b-47f7-44e8-b5c7-f6f97cb51784",
       "position": 1,
       "properties": {
         "description": "**Group:** Place students in pairs",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This is the first official \"Explore\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](\thttps://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Explore Lessons:\n**Overview:** Students explore the new concept through a teacher-led hands-on group activity.\n\n* Typically uses physical manipulatives\n* Teacher leads with support of slides and activity guides\n\n**Goal:** Students begin to develop a shared mental model and understand the main ideas of the new concept. \n\n![](https://curriculum.code.org/media/uploads/explore.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Explore Lessons](https://www.youtube.com/watch?v=mzm-xqXH8BQ)\n"
-          }
-        ],
         "name": "Explore Sample Apps"
       },
       "seeding_key": {
@@ -1360,15 +1408,14 @@
       }
     },
     {
-      "key": "5c6adbb9-9338-4745-b5aa-5d20045b2a71",
+      "key": "d0d6d8ca-10b3-4be5-b27d-6d7513fc9b2f",
       "position": 1,
       "properties": {
-        "name": "To be deleted",
-        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://images.code.org/bdab647a379b05779e8a662940d4d167-U4L1_1.svg.png) |**Say:** Today we are going to explore Variables. |\n|![](https://images.code.org/d5af0c72098512bf185ed473761bcdc7-CSPVariables2.svg.png) |**Say:** We're going to be thinking about how computers work with information. We're going to call one \"piece\" of information a \"value\". Right now there are two different types of values: numbers and strings. There are a few ways to tell them apart. Numbers work the way you normally think of numbers. They are made of the digits 0 through 9. We are going to put numbers on yellow sticky notes. When we write numbers you don't need quotes. Strings are made of any characters you can see on the keyboard which means all these examples count as strings. Strings go inside double quotes. You can see how it would be important to tell the number 123 apart from the string \"123\".  <br><br> **Do This:** Make one string and one number and hold it up at your table. |\n|![](https://images.code.org/cfa94f5d1dbe63a048fc36a273cdd86e-CSPVariables3.svg.png) | **Say:** Operator is just a fancy name for the plus, minus, multiply, and divide symbols. An expression is a combination of two sticky notes and an operator. When I ask you \"what's 2 plus 3\" you say \"5\"! You just \"evaluated\" the expression 2+3, or figure out what the value is. Since 5 is a number, we put it on a yellow sticky. When evaluating an expression, we follow order of operations - just like in math class. <br><br> **Do This:** Evaluate the expression 5-1 and make a sticky note. Make sure you pick the correct color and decide if you need quotes or not!   |\n|![](https://curriculum.code.org/media/uploads/CSPVariables4.svg) | **Say:** This table shows the different ways we can create expressions. We can use all four operators with numbers the normal way. When you want to use strings, you can only use the + operator and it connects the two words together. If you're connecting a number and a string, the number first gets converted to a string. <br><br> **Do This:** With your partner make a sticky note for each of these 5 expressions and we'll share as a class. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through to see the answers. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables5.svg) | **Say:** We're going to call the plastic baggies on your table \"variables\". Variables can hold at most one value, or sticky note. They have names that use no quotes, include no spaces, and must start with a letter. For now just practice making a variable with your partner. <br><br> **Do This:** Make one variable with any name you like. Share it with another group. Make sure you use a whiteboard marker so we can reuse the baggies later.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables6.svg) | **Say:** We can evaluate expressions that include variable names. To do that, first make a copy of the sticky note inside the variable. Then evaluate the expression the way you normally would. These two examples show you how. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables7.svg) | **Do This:** Evaluate these expressions. Make sure to pay attention to whether it evaluates to a string or a number. <br><br> **Note:** Have students share their answers by holding up the sticky notes for each solution. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. | \n|![](https://curriculum.code.org/media/uploads/CSPVariables8.svg) | **Say:** Now let's write programs. We're going to stop using sticky notes, but will highlight strings and numbers to help you remember the difference. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables9.svg) | **Say:** Here's what a program looks like. The var command tells the computer to create a variable. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables10.svg) | **Say:** The left arrow is called the \"assignment operator\". That's just a fancy word for \"put this value in the baggy\". If we wanted to read line 01 we would say \"pow gets 3\". We know that variables can only hold one sticky note or value. So if we try to assign a variable that already has a value in it, we just throw the old one away. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. <br><br> **Say:** In a computer you don't actually put the old number in a trash can, it's totally deleted! The numbers are stored as electrical charges somewhere in your computer's memory. When you assign a new number to a variable it actually erases the old number, and stores  the new number in its place. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables11.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are following the rules correctly.  No baggies should have more than one sticky note in them. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables12.svg) | **Say:** Now let's combine what we've learned. You can use assignment with expressions. In order for this to work you need to evaluate first, then assign. This makes sense because we know we can only put one sticky note in the variable baggy. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables13.svg) | **Do This:** Run the program. Compare your results with another group. <br><br> **Note:** Walk around the room making sure students are evaluating before they assign. Reinforce the language \"gets\" for the assignment operator. For example, line 02 would read \"fly gets two plus day\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables14.svg) | **Say:** We're not going to highlight our strings and numbers anymore. We can just use double quotes around the strings to tell the difference.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables15.svg) | **Do This:** Run through this program together as a class. <br><br> **Note:** Reinforce: <br><br> Evaluate,  then assign <br><br> As shown on line 04, there's no special \"connection\" made between variables. All we're doing is moving information around. <br><br> Variables only hold one value, the old one is \"thrown away\" (again, what's happening is that assignment replaces the electric charges somewhere inside the computer so the old value is actually \"erased\" or \"deleted\") <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions_slide22.svg) | **Do This:** Run this program. Compare your results with another group. <br><br> **Note:** Have students hold up their two baggies when they're done. Make sure students are evaluating and then assigning. Call out that last three lines which can be a little nutty to think about. You're using a variable's value as part of the assignment. This lets it \"count up by one\". <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables17.svg) | **Do This:** Review the key takeaways with students. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables18.svg) | **Say:** In some programming languages the assignment operator is not written with an arrow but is written as an equal sign. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables19.svg) | **Say:** Here's how the assignment operator looks in Javascript. We'll see more of this in the next lesson! <br><br> **Note:** In math = means \"are equal forever\". In programming = means \"put this value in this variable\".|\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |**Say:** Here's how the assignment operator looks in Javascript. We'll see more of this in the next lesson! <br><br> **Note:** In math = means \"are equal forever\". In programming = means \"put this value in this variable\".|\n\n\n\n\n\n\n\n\n"
+        "description": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://images.code.org/0f42442e0f78f7f39028ce253620efbd-investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
       },
       "seeding_key": {
-        "activity_section.key": "5c6adbb9-9338-4745-b5aa-5d20045b2a71",
-        "lesson_activity.key": "f11c21d8-b12a-48d6-8fe7-868cbe66681d"
+        "activity_section.key": "d0d6d8ca-10b3-4be5-b27d-6d7513fc9b2f",
+        "lesson_activity.key": "d57d320f-5c79-4a87-ba41-65cf718aca07"
       }
     },
     {
@@ -1377,13 +1424,7 @@
       "properties": {
         "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.\n\n",
         "remarks": true,
-        "name": "Preview the Lesson",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This is the first official \"Investigate\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Investigate Lessons:\n\n**Overview:** Students investigate two or three sample programs that use the new concept.\n\n* Close-reading of working programs\n* Teacher-led discussions\n* Tasks to modify apps\n\n**Goal:** Students become comfortable reading and modifying programs that use the new concept. \n\n![](https://images.code.org/0f42442e0f78f7f39028ce253620efbd-investigate.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Investigate Lessons](https://www.youtube.com/watch?v=jC85CeXs3ds)\n"
-          }
-        ]
+        "name": "Preview the Lesson"
       },
       "seeding_key": {
         "activity_section.key": "a1a44fc5-5b83-45fb-a0c6-ceefaac44f03",
@@ -1635,15 +1676,22 @@
       }
     },
     {
+      "key": "8cdfdf0c-b3ce-472e-83af-da05e9491fcc",
+      "position": 1,
+      "properties": {
+        "description": "This is the first official \"Practice\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://images.code.org/58afef806d6c4a8b61387df746d1291e-practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cdfdf0c-b3ce-472e-83af-da05e9491fcc",
+        "lesson_activity.key": "1574cc09-a15a-4a9a-98f4-54f398cae46c"
+      }
+    },
+    {
       "key": "4c1abb58-c15b-4ffb-8e35-59c06fe8f43a",
       "position": 1,
       "properties": {
         "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
         "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This is the first official \"Practice\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing).\n\n### Practice Lessons:\n**Overview:** Students practice using the new concept through a scaffolded series of programming activities.\n\n* Students work independently or in pairs\n* Teacher introduces debugging practices that the beginning of the Activity and circulates the room during the lesson to provide targeted support.\n\n**Goal:** Students gain confidence in writing and debugging programs that use the new concept.  \n\n![](https://images.code.org/58afef806d6c4a8b61387df746d1291e-practice.png)\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Practice Lessons](https://www.youtube.com/watch?v=Aad0UJXGcR4)\n\n"
-          },
           {
             "type": "teachingTip",
             "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code."
@@ -1827,24 +1875,19 @@
       }
     },
     {
-      "key": "39a12802-8d08-48cf-93a9-9ea2863ccb9c",
+      "key": "4319287d-0502-4056-b18d-9f827e644b2d",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This is the first official \"Make\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit).\n\n### Make Lessons:\n\n[pull-right]\n\n![](https://curriculum.code.org/media/uploads/make.png)\n\n[/pull-right]\n\n**Overview:** Students make a target app for which they are given the screen elements but little to no starter code. \n\n* Students are provided high-level steps to break down the project\n* Teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.\n\n**Goal:** Students are able to independently decide when and how to use the new concept in the context of a larger project.\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Make Lessons](https://www.youtube.com/watch?v=d5IK3kUlXW4)\n\n    "
-          }
-        ]
+        "description": "This is the first official \"Make\" lesson in the EIPM model. Review the EIPM model in the [EIPM One Pager](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit).\n\n### Make Lessons:\n\n[pull-right]\n\n![](https://curriculum.code.org/media/uploads/make.png)\n\n[/pull-right]\n\n**Overview:** Students make a target app for which they are given the screen elements but little to no starter code. \n\n* Students are provided high-level steps to break down the project\n* Teacher supports students by directing them towards notes, previous work, and debugging strategies practiced in earlier lessons.\n\n**Goal:** Students can independently decide when and how to use the new concept in the context of a larger project.\n\nWatch the following videos:\n\n* [Guide to EIPM Lessons](https://www.youtube.com/watch?v=OTvi0XRTIjA)\n* [Guide to Make Lessons](https://www.youtube.com/watch?v=d5IK3kUlXW4)\n\n    "
       },
       "seeding_key": {
-        "activity_section.key": "39a12802-8d08-48cf-93a9-9ea2863ccb9c",
-        "lesson_activity.key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a"
+        "activity_section.key": "4319287d-0502-4056-b18d-9f827e644b2d",
+        "lesson_activity.key": "40e01863-1d6d-4d3e-890b-95aab90989e3"
       }
     },
     {
       "key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "For the past few days, we've learned a lot about storing and updating information in variables. Today you are going to have an opportunity to demonstrate your learning by making an app.",
         "remarks": true,
@@ -1857,7 +1900,7 @@
     },
     {
       "key": "544fac45-c29a-4fb1-93ff-5750d9c91cb6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "tips": [
           {
@@ -3714,7 +3757,7 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
@@ -3740,7 +3783,7 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
@@ -3766,7 +3809,7 @@
       "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
         "level_keys": [
@@ -3792,7 +3835,7 @@
       "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
@@ -3818,7 +3861,7 @@
       "chapter": 9,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
@@ -4182,7 +4225,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Try the Photo Liker app",
         "level_keys": [
@@ -4234,7 +4277,7 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Conditionals: Boolean Expressions",
         "level_keys": [
@@ -5040,7 +5083,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5066,7 +5109,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5092,7 +5135,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5118,7 +5161,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5144,7 +5187,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5170,7 +5213,7 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5196,7 +5239,7 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5222,7 +5265,7 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -5248,7 +5291,7 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -6540,7 +6583,8 @@
       "key": "eipm_a_short_introduction",
       "properties": {
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "eipm_a_short_introduction"
@@ -6706,6 +6750,30 @@
       },
       "seeding_key": {
         "resource.key": "csp_u4_practice_pt_planning_guide"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
       }
     }
   ],
@@ -7012,7 +7080,30 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_eipm_lessons",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "eipm_a_short_introduction",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp4-2021"
+      }
+    }
   ],
   "scripts_student_resources": [
 
