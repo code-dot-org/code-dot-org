@@ -87,7 +87,9 @@ export default class SummaryProgressRow extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     lockedForSection: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
+    userId: PropTypes.number,
+    lockableAuthorized: PropTypes.bool.isRequired
   };
 
   render() {
@@ -99,6 +101,9 @@ export default class SummaryProgressRow extends React.Component {
       lessonIsVisible,
       viewAs
     } = this.props;
+
+    const teacherNotLockableAuthorized =
+      !this.props.lockableAuthorized && viewAs === ViewType.Teacher;
 
     // Is this lesson hidden for whomever we're currently viewing as
     if (!lessonIsVisible(lesson, viewAs)) {
@@ -115,6 +120,8 @@ export default class SummaryProgressRow extends React.Component {
     const locked =
       lockedForSection ||
       levels.every(level => level.status === LevelStatus.locked) ||
+      (lesson.lockable &&
+        (teacherNotLockableAuthorized || !this.props.userId)) ||
       (lesson.lockable && stageLocked(levels));
 
     const titleTooltipId = _.uniqueId();
@@ -132,9 +139,7 @@ export default class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col1,
-            ...((hiddenForStudents || locked) &&
-              viewAs === ViewType.Student &&
-              styles.fadedCol)
+            ...((hiddenForStudents || locked) && styles.fadedCol)
           }}
         >
           <div style={styles.colText}>
@@ -182,9 +187,7 @@ export default class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col2,
-            ...((hiddenForStudents || locked) &&
-              viewAs === ViewType.Student &&
-              styles.fadedCol)
+            ...((hiddenForStudents || locked) && styles.fadedCol)
           }}
         >
           {levels.length === 0 ? (
@@ -192,7 +195,7 @@ export default class SummaryProgressRow extends React.Component {
           ) : (
             <ProgressBubbleSet
               levels={levels}
-              disabled={locked && viewAs !== ViewType.Teacher}
+              disabled={locked}
               style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
             />
           )}

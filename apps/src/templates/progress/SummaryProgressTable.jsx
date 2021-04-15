@@ -31,7 +31,9 @@ class SummaryProgressTable extends React.Component {
     // redux provided
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonLockedForSection: PropTypes.func.isRequired,
-    lessonIsVisible: PropTypes.func.isRequired
+    lessonIsVisible: PropTypes.func.isRequired,
+    userId: PropTypes.number,
+    lockableAuthorized: PropTypes.bool.isRequired
   };
 
   render() {
@@ -72,6 +74,8 @@ class SummaryProgressTable extends React.Component {
                 )}
                 viewAs={viewAs}
                 lessonIsVisible={this.props.lessonIsVisible}
+                userId={this.props.userId}
+                lockableAuthorized={this.props.lockableAuthorized}
               />
             ))}
         </tbody>
@@ -85,5 +89,7 @@ export default connect(state => ({
   viewAs: state.viewAs,
   lessonLockedForSection: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
-  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
+  lockableAuthorized: state.stageLock.lockableAuthorized,
+  userId: state.currentUser.userId
 }))(SummaryProgressTable);
