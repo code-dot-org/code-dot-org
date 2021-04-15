@@ -2,9 +2,17 @@
 import PropTypes from 'prop-types';
 
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ToggleButton from './ToggleButton';
 
-export default class ToggleGroup extends Component {
+const styles = {
+  buttonReverse: {
+    display: 'flex',
+    flexDirection: 'row-reverse'
+  }
+};
+
+class ToggleGroup extends Component {
   static propTypes = {
     selected: PropTypes.string,
     activeColor: PropTypes.string,
@@ -30,7 +38,9 @@ export default class ToggleGroup extends Component {
         }
       });
       return error;
-    }
+    },
+    // Redux
+    isRtl: PropTypes.bool
   };
 
   setSelected(selected) {
@@ -38,7 +48,11 @@ export default class ToggleGroup extends Component {
   }
 
   render() {
-    return <span>{this.renderChildren()}</span>;
+    // Reverse children order if locale is RTL
+    const {isRtl} = this.props;
+    const spanStyle = isRtl ? styles.buttonReverse : null;
+
+    return <span style={spanStyle}>{this.renderChildren()}</span>;
   }
 
   renderChildren() {
@@ -71,3 +85,9 @@ export default class ToggleGroup extends Component {
     });
   }
 }
+
+export const UnconnectedToggleGroup = ToggleGroup;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(ToggleGroup);

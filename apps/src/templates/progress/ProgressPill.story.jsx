@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressPill from './ProgressPill';
+import {UnconnectedProgressPill as ProgressPill} from './ProgressPill';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
