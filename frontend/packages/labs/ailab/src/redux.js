@@ -33,7 +33,6 @@ const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
-const SET_K_VALUE = "SET_K_VALUE";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
@@ -208,7 +207,6 @@ const initialState = {
   data: [],
   metadata: undefined,
   selectedTrainer: undefined,
-  kValue: undefined,
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -288,12 +286,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       selectedTrainer: action.selectedTrainer
-    };
-  }
-  if (action.type === SET_K_VALUE) {
-    return {
-      ...state,
-      kValue: action.kValue
     };
   }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
@@ -690,7 +682,7 @@ export function getSelectedColumnDescriptions(state) {
 }
 
 export function getColumnDescription(state, column) {
-  if (!state.metadata || !state.metadata.fields) {
+  if (!state.metadata || !state.metadata.fields || !column) {
     return null;
   }
 
@@ -934,6 +926,27 @@ function getDatasetDetails(state) {
   return datasetDetails;
 }
 
+function getColumnDataToSave(state, column) {
+  const columnData = {};
+  columnData.id = column;
+  columnData.description = getColumnDescription(state, column);
+  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+    columnData.values = getUniqueOptions(state, column)
+  } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
+    const maxMin = getRange(state, column, false);
+    columnData.max = maxMin.max;
+    columnData.min = maxMin.min;
+  }
+  return columnData;
+}
+
+function getFeaturesToSave(state) {
+  const features = state.selectedFeatures.map(feature =>
+    getColumnDataToSave(state, feature)
+  )
+  return features;
+}
+
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
 
@@ -941,7 +954,7 @@ export function getTrainedModelDataToSave(state) {
 
   // If the first column has a description, assume descriptions are in the
   // metadata for that dataset and use them; otherwise, use manually entered
-  // column desscriptions.
+  // column descriptions.
   if (
     state.metadata &&
     state.metadata.fields &&
@@ -967,6 +980,8 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.extremumsByColumn = getExtremumsByColumn(state);
   dataToSave.labelColumn = state.labelColumn;
+  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
+  dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
 
