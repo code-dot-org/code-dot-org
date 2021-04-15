@@ -17,7 +17,8 @@ const styles = {
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
-    session_dates: PropTypes.arrayOf(PropTypes.string)
+    session_dates: PropTypes.arrayOf(PropTypes.string),
+    hide_virtual_location: PropTypes.bool
   };
 
   workshopCourse() {
@@ -60,8 +61,12 @@ export default class WorkshopDetails extends React.Component {
         </div>
         <div className="span2">
           {this.props.workshop.location_name}
-          <br />
-          {this.props.workshop.location_address}
+          {this.props.workshop.location_address && (
+            <>
+              <br />
+              {this.props.workshop.location_address}
+            </>
+          )}
         </div>
       </div>
     );
@@ -143,7 +148,9 @@ export default class WorkshopDetails extends React.Component {
           </div>
         </div>
         {this.sessionDates()}
-        {this.location()}
+        {this.props.hide_virtual_location && this.props.workshop.virtual
+          ? null
+          : this.location()}
         {this.courseAndSubject()}
         {this.fee()}
         {this.regionalPartner()}

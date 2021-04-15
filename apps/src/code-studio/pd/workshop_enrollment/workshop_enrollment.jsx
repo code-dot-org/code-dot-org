@@ -188,6 +188,7 @@ export default class WorkshopEnrollment extends React.Component {
                   <WorkshopDetails
                     workshop={this.props.workshop}
                     session_dates={this.props.session_dates}
+                    hide_virtual_location={true}
                   />
                   <h2>Facilitators</h2>
                   {this.props.facilitators.map(facilitator => (
