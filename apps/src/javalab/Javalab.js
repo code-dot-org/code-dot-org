@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getStore, registerReducers} from '../redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import JavalabView from './JavalabView';
-import javalab from './javalabRedux';
+import javalab, {getSources, setAllSources} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {onSave} from './JavalabFileManagement';
 import runCode from './javalabRunner';
+import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -62,15 +61,10 @@ Javalab.prototype.init = function(config) {
 
   config.pinWorkspaceToBottom = true;
 
-  config.useFilesApi = true;
-
-  config.getCodeAsync = this.getCodeAsync.bind(this);
+  config.getCode = this.getCode.bind(this);
   const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
-
-  // if a version is provided in the url, use that version for files.
-  const suppliedFilesVersionId = queryParams('version');
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
@@ -103,6 +97,24 @@ Javalab.prototype.init = function(config) {
   });
 
   registerReducers({javalab});
+  // If we're in editBlock mode (for editing start_sources) we set up the save button to save
+  // the project file information into start_sources on the level.
+  if (config.level.editBlocks) {
+    config.level.lastAttempt = '';
+    showLevelBuilderSaveButton(() => ({
+      start_sources: getSources(getStore().getState())
+    }));
+  }
+
+  const startSources = config.level.lastAttempt || config.level.startSources;
+  // if startSources exists and contains at least one key, use startSources
+  if (
+    startSources &&
+    typeof startSources === 'object' &&
+    Object.keys(startSources).length > 0
+  ) {
+    getStore().dispatch(setAllSources(startSources));
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -111,7 +123,6 @@ Javalab.prototype.init = function(config) {
         onRun={onRun}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
-        suppliedFilesVersionId={suppliedFilesVersionId}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -156,19 +167,9 @@ Javalab.prototype.onContinue = function() {
   });
 };
 
-Javalab.prototype.getCodeAsync = function() {
-  return new Promise((resolve, reject) => {
-    onSave(
-      /* success */
-      () => resolve(this.getCurrentFilesVersionId() || ''),
-      /* failure - couldn't save files, don't try to overwrite any sources */
-      reject
-    );
-  });
-};
-
-Javalab.prototype.getCurrentFilesVersionId = function() {
-  return project.filesVersionId;
+Javalab.prototype.getCode = function() {
+  const storeState = getStore().getState();
+  return getSources(storeState);
 };
 
 Javalab.prototype.onCommitCode = function() {

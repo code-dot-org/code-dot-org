@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-09 23:43:08 UTC",
+    "serialized_at": "2021-04-13 23:11:14 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -41,7 +41,8 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Unit 1: Digital Information"
+        "display_name": "Unit 1: Digital Information",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **Establishing a Strong Classroom Culture:** This unit is designed to be hands-on, collaborative, and exploratory. A major focus of the unit is building a positive classroom culture in which students work together, explore problems, and communicate about their thinking. Most lessons either feature physical manipulatives or a digital widget, and the bulk of lesson time should be spent with students exploring these tools together to develop an understanding of the concepts they highlight. The course intentionally does not start with programming since, in many classrooms, some students have experience with programming and others do not. Choosing to begin with digital information and the internet lets you build community in the room while exploring a topic that is likely to be accessible to all students. The supportive and inclusive classroom environment built in this unit should help set a positive tone that can be carried through the school year.\n\n\n* **Empowering \"Deciders\":**  An important goal of the course is not merely to teach students technical knowledge, but to put those skills to work in meaningful ways. This unit builds towards the unit project, which provides an opportunity for students to be \"deciders\" about the impacts of computing on modern life. Other units will emphasize empowering units as \"creators.\"\n\n### Major Assessment and Projects\n\nThe unit project asks students to consider and debate issues that arise in modern society due to the digitizing of information. Students will analyze an article that addresses the intersection of digitizing information and current events. They will evaluate what data is being digitized and evaluate the benefits and harms caused by making this information digital. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* DAT-1: The way a computer represents data internally is different from the way the data is interpreted and displayed for the user. Programs are used to translate data into a representation more easily understood by people.\n* IOC-1: while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 2.1 Binary Numbers\n* 2.2 Data Compression\n* 5.5 Legal and Ethical Concerns."
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit1_2020",
@@ -4410,7 +4411,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Computer Science is Changing Everything",
         "level_keys": [
@@ -4592,7 +4593,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Odometer Activity",
         "level_keys": [
@@ -4930,7 +4931,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "RGB Color",
         "level_keys": [
@@ -4956,7 +4957,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -4982,7 +4983,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "More Shades of Color",
         "level_keys": [
@@ -5008,7 +5009,7 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5034,7 +5035,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5060,7 +5061,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Color Sampling Widget",
         "level_keys": [
@@ -5068,7 +5069,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 Sampling Widget"
@@ -5086,7 +5087,7 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -6310,6 +6311,18 @@
       "seeding_key": {
         "resource.key": "curriculum"
       }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
     }
   ],
   "lessons_resources": [
@@ -6552,6 +6565,12 @@
     {
       "seeding_key": {
         "resource.key": "curriculum",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
         "script.name": "csp1-2021"
       }
     }

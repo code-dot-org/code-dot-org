@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-09 17:00:13 UTC",
+    "serialized_at": "2021-04-14 16:46:47 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -196,6 +196,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "Students are introduced to inheritance by deriving a subclass of `Painter` with more commands. Students use the keyword `super` with constructors and learn how to write their own methods in the `PainterPlus` class. Students discover that methods that are called must be defined in their own class or the superclass. In future lessons, students add additional methods and subclasses of `Painter`.",
+        "student_overview": "By now, you have noticed that your `Painter` has limited commands to move around The Neighborhood. In this lesson, you create a new type of `Painter` that can do everything the `Painter` can as well as something the `Painter` can't!",
+        "preparation": "Have several sticky notes ready for the debugging wall"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -211,6 +214,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this lesson, students continue to apply the principle of inheritance in their code by further expanding the `PainterPlus` class with three additional methods: `turnAround()`, `takeAllPaint()`, and `moveFast()`. To practice Java syntax and algorithmic thinking, students construct a step-by-step process for implementing each of the methods by hand before coding it in Java. By continuing to write and use new methods, students experience the benefits of reusability.\n",
+        "student_overview": "In this lesson, you give your `PainterPlus` class new ways to move around and interact with The Neighborhood. You consider edge cases when implementing your new methods.",
+        "preparation": "* Print and cut enough copies for your class of the Java Syntax and PainterPlus Methods Cards (one set of cards per group)\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -226,6 +232,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "Students continue to expand the `PainterPlus class`, this time adding four new methods that allow the `PainterPlus` to move and paint horizontal, vertical, and diagonal lines. Students use pseudocode to write the methods, then implement them in the `PainterPlus` class in Java. Through the code review, students critique their methods and consider when it is appropriate to use methods they have written in the past by calling them in their new methods.\n",
+        "student_overview": "In this lesson, you continue to expand your `PainterPlus` class, this time adding methods to move and paint horizontal, vertical, and diagonal lines. You also participate in a code review to provide and receive feedback for improving code.",
+        "preparation": "* Print a copy of the Pseudocode Warmup Activity Guide for each student"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -241,6 +250,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "In this lesson, students apply their knowledge of methods and classes to write a new type of `Painter`, the `SprayPainter`, from scratch, including writing a new method with parameters: `sprayPaint(String color1, String color 2)`. The new `SprayPainter` class is implemented to create an abstract mural.",
+        "student_overview": "Your `PainterPlus` has several ways to move around and interact with The Neighborhood. In this lesson, you develop a new type of `Painter` called `SprayPainter` with a `sprayPaint` method. With the `SprayPainter`, you create a mural and more interesting artwork in The Neighborhood.",
+        "preparation": "* Print a copy of the SprayPainter Activity Guide for each student\n* Gather colored pencils or markers so that each student has access to two different colors\n* Prepare sticky notes for students\n* If time permits, think through different potential `SprayPainter` algorithms"
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -256,6 +268,9 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "In this lesson, students continue to apply the principle of inheritance in their code by implementing the `StampPainter` class -- an extension of the `PainterPlus` class that paints customized shapes and images. This lesson serves as reinforcement to the previous lesson on inheritance. Students continue to practice deriving a new class based on an existing class, only adding new methods.",
+        "student_overview": "You now have a `PainterPlus` and a `SprayPainter` that can be used to create artwork in The Neighborhood. In this lesson, you learn about pixel art and explore the opportunities of using technology in art and design. You develop a new type of `Painter` called the `StampPainter` that can paint custom shapes.",
+        "preparation": "* Colored pencils (at least two colors per student)\n* Print and make the Pixel Picture Puzzle activity guide digitally available.\n* Preview slides\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -271,6 +286,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "overview": "Before, students were given the starting Neighborhood; now, students design their own Neighborhood. The focus of the lesson is answering questions that do not have a single correct answer. Students discover the trade-offs in design decisions and practice justifying their decisions.",
+        "student_overview": "In this lesson, you expand your software engineering skills to perform test-driven development. You explore new edge cases in The Neighborhood and make decisions about how you solve these problems. You discover that there is not always a single correct answer to solving problems – sometimes you have to make your own decisions about how you choose to handle edge cases!",
+        "preparation": "* Print a copy of Design The Neighborhood Guide, which includes rules and pieces, for each group of students\n* (Optional) Cut out the pieces before class\n* Pair of scissors if not pre-cutting pieces\n* Label three corners of the room with the numbers 1, 2, and 3"
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -286,6 +304,9 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "overview": "In this lesson, students examine open-source code and connect real-world applications and the concepts they have learned in this unit. Students review the core values of software engineering and reflect on how they used them. Through discovery, students affirm the core values of software engineering.\n",
+        "student_overview": "You have learned a lot about being a software engineer! You revisit the core values of software engineering and reflect on how you used these throughout the unit. You also explore open source code and discover how much you now know about programming and software engineering.\n",
+        "preparation": "* Prepare sticky notes for each student\n* Enter words/phrases from Lesson 1 onto Lesson 15 slide\n* Preview Open-Source code options\n* Print a copy of the Unit 1 Guide for each student"
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -726,6 +747,300 @@
       "seeding_key": {
         "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
         "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "8693380e-0359-4b2a-84ae-67ec676d7131",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "47ff481c-00c6-48c9-b494-651c21b529d2",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 3
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 37
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 8
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "17865aea-b415-4582-b1be-0b5f8a15ced8",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 32
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "81e899c6-f5c5-46b6-8560-253dea85c36a",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81e899c6-f5c5-46b6-8560-253dea85c36a",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "ac0cabca-dc89-4412-a62c-4869b2df55ff",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac0cabca-dc89-4412-a62c-4869b2df55ff",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c65907ce-5c88-4c34-88fe-f7f2cc1a1341",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c65907ce-5c88-4c34-88fe-f7f2cc1a1341",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "8c3d98a8-f8ae-47c4-9bc7-18e771d381fd",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 7
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c3d98a8-f8ae-47c4-9bc7-18e771d381fd",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "3ffd4c6a-56a6-44b4-8e79-36c01d50c108",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 28
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ffd4c6a-56a6-44b4-8e79-36c01d50c108",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "9f122d32-e2a5-4b57-9e55-210bf32c6022",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f122d32-e2a5-4b57-9e55-210bf32c6022",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "6cd2ec3b-60da-44b8-b6c3-cb2e0c01d8b9",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6cd2ec3b-60da-44b8-b6c3-cb2e0c01d8b9",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c1156172-1549-40ea-b899-47de00ce00b3",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "0a424029-f0af-4786-a467-f61ec374a918",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a424029-f0af-4786-a467-f61ec374a918",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "d9c7d873-2de7-4d17-8ce2-8751f028e755",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7",
+        "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
@@ -2467,6 +2782,1306 @@
         "activity_section.key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
         "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
       }
+    },
+    {
+      "key": "7c3d694d-042f-4f3c-88f7-e165dbc75e75",
+      "position": 1,
+      "properties": {
+        "name": "Art",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a logo that you like. On a sticky note, draw a quick sketch of the logo. Can an object of the class Painter recreate that logo? If not, what other commands does `Painter` need?*\n\n**Discussion Goal:** Allow students time to share their logos with others and discuss the second part of the prompt. The goal is to make connections between the classroom and students’ lives by providing motivation for today’s lesson (can we recreate the art?). Students also recall prior knowledge of commands and brainstorm ideas for new commands."
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3d694d-042f-4f3c-88f7-e165dbc75e75",
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec"
+      }
+    },
+    {
+      "key": "a1d2fd84-957b-4da9-b3b4-4e26e73ed36a",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "Thanks, everyone, for sharing out your ideas! Today we will be learning how to add methods to your own class to build on the existing `Painter` class."
+      },
+      "seeding_key": {
+        "activity_section.key": "a1d2fd84-957b-4da9-b3b4-4e26e73ed36a",
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec"
+      }
+    },
+    {
+      "key": "81009920-75b3-4c7c-baa8-2793d1bb84b8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to review the `turnLeft()` command. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level is purposefully similar to previous levels. The goal here is to provide students the motivation behind the upcoming subclass `PainterPlus` and the `turnRight(`) method.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81009920-75b3-4c7c-baa8-2793d1bb84b8",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "13c776a8-fa3a-4b7d-8363-530e82537607",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the minimum number of `turnLeft()` commands needed? In order to make your code more efficient, what command would you like to add to the `Painter` class?*\n\n**Discussion Goal:** The goal is for students to notice that a `turnRight()` command would make the code more efficient and introduce the possibility that they have the ability to decide what methods are available in a class."
+      },
+      "seeding_key": {
+        "activity_section.key": "13c776a8-fa3a-4b7d-8363-530e82537607",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "73fed29c-d8a3-4b19-95c9-007a2a15de3e",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We cannot modify `Painter` because that class is protected, but we can create a type of `Painter` that can use all of the `Painter`'s methods and build new ones!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this lesson, the motivation for inheritance is to write a new class that builds on the existing `Painter` class in order to add a new method. Since students cannot modify `Painter`, they instead write a subclass that inherits all of the methods of `Painter`. In future lessons, students write subclasses that are more specialized versions of `Painter`, such as `SprayPainter`, that will build on the concept of an “is-a” relationship (a `SprayPainter` is-a `Painter`)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "73fed29c-d8a3-4b19-95c9-007a2a15de3e",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "60ef4e5a-ae03-4997-b27a-1fe4b908a851",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Inheritance and Subclasses video.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that the video does fully discuss the definitions of subclass and superclass. While it is tempting to explain these terms, the goal here is to provide enough information for students to write their own class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60ef4e5a-ae03-4997-b27a-1fe4b908a851",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "f7ae5b0d-929a-4bc2-befd-5ac84b81201e",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the slide with the self-check question. Give students time to think to themselves. Poll for responses by asking for raised hands.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the correct answer. Emphasize that for the relationship between two classes to be an inheritance hierarchy, you must be able to say that the subclass is-a superclass.\n\n**Discussion Goal:** This self-check allows students to confirm that they remember the relationship between a superclass and a subclass in an inheritance hierarchy before moving on. If they chose a different answer, they have an opportunity to address their misconception rather than re-learning this information in the future.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and feel students could use a movement break, ask students to move to a different corner of the room corresponding to their answer, where corner one corresponds to answer A, corner two corresponds to answer B, etc. Other options for polling for answers include asking students to raise one finger for answer A, two fingers for answer B, etc."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f7ae5b0d-929a-4bc2-befd-5ac84b81201e",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "4667c8e6-412d-4df2-87aa-a3becd9bf1a1",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Review the syntax for subclasses and constructors, then introduce students to the concept through The Neighborhood. Note that the video has already gone over this material; the slides are here for reference and reinforcement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for the header of a subclass using the `extends` keyword. At this point, introduce the visibility `public` as being available to any other part of the program. Later on, we will discuss when we would want to mark certain parts of the code as `private`. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for a constructor.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the call to `super` inside of a subclass’s constructor.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-4 on Code Studio, where they write the `PainterPlus` class, initialize a `PainterPlus` object, and complete the puzzle.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These levels purposefully have the same puzzle as the `Painter` puzzle. Encourage students to think about the relationship between the `PainterPlus` and the `Painter` classes (a `PainterPlus` is a `Painter`) and what commands they can call on for their `PainterPlus` object (any `Painter` command). \n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4667c8e6-412d-4df2-87aa-a3becd9bf1a1",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "2b281802-e4be-4735-8f4e-ffcad5443f00",
+      "position": 7,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` command. We’re now going to learn how to add our commands."
+      },
+      "seeding_key": {
+        "activity_section.key": "2b281802-e4be-4735-8f4e-ffcad5443f00",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "94e31fd5-229c-4de4-922d-217fcb202af1",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Methods\" video.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that the video does not go into depth on the definitions of `public` (visibility) and `void` (return type). While it is tempting to go into the details, the goal here is to provide enough information for students to write their own method."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94e31fd5-229c-4de4-922d-217fcb202af1",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "d8c81a29-cbc9-471e-96a0-7c8c95ef5e2c",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for methods. Note that the video has discussed this material; the slides are here for reference and reinforcement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 6 on Code Studio to write the `turnRight()` method. This level has the same puzzle as Level 4, but now students define and use `turnRight()`.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8c81a29-cbc9-471e-96a0-7c8c95ef5e2c",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "e80d12b2-7829-451f-b8dd-ea426576b07b",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Predict what would happen if we tried to call our new `turnRight()` method on a `Painter`, not a `PainterPlus`.\n\n**Discussion Goal:**\n* The goal is for students to notice that the `turnRight()` command made the code more efficient.\n* Students make predictions about the code. Since they haven’t seen this before, there is no expectation for student responses: encourage students to share any ideas. Don't guide students towards a correct answer - they will test out their hypotheses next.\n\n**Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e80d12b2-7829-451f-b8dd-ea426576b07b",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "6fb0765c-b71f-4810-94b8-8826ec3c74cb",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6fb0765c-b71f-4810-94b8-8826ec3c74cb",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "f6834d01-de77-4635-b04f-618ddcac8f0b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happens when you call `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Help students understand that the `Painter` object cannot `turnRight()` because that method has not been defined in the `Painter` class (or theoretically any classes the `Painter` itself inherited methods from). Currently, the only class that can use the `turnRight()` command is `PainterPlus`. In the future, students create more classes that inherit from `PainterPlus` and can themselves use `turnRight()`. \n\nDo This: Ask a student volunteer to add a sticky note to the debugging wall describing the bug that happens when an object tries to use a method that is not available to them. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f6834d01-de77-4635-b04f-618ddcac8f0b",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "ab6984a5-3901-4230-a5f0-3790634c9af4",
+      "position": 1,
+      "properties": {
+        "description": "**Discuss:** *What is one key takeaway you have from today’s lesson? What is still confusing?*\n\n**Discussion Goal:** Since this lesson introduced many new concepts, the main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information and that throughout the course, there may be times where they feel lost or confused. Ask students to share strategies for when they are confused -- what resources do they have? ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make a note of any content that students bring up as confusing, and review with smaller groups. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab6984a5-3901-4230-a5f0-3790634c9af4",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "ea1ccb67-3412-4dea-b09a-b31d463311f0",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea1ccb67-3412-4dea-b09a-b31d463311f0",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "e095da4f-3541-4197-bba6-79ade4f4676f",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Think of an example of inheritance in your own life. What is the superclass? What is the subclass? Remember that Painter was the superclass, while PainterPlus was the subclass.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e095da4f-3541-4197-bba6-79ade4f4676f",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "1ec25b59-ab5e-4503-bd3f-19f0c0e1b629",
+      "position": 1,
+      "properties": {
+        "name": "Real-World Inheritance: Telephones",
+        "remarks": true,
+        "description": "Inheritance is everywhere in real life. Tech gadgets like computers and cell phones inherit features from the previous version of the product and also add new useful features. "
+      },
+      "seeding_key": {
+        "activity_section.key": "1ec25b59-ab5e-4503-bd3f-19f0c0e1b629",
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2"
+      }
+    },
+    {
+      "key": "bc8741bd-0437-4894-81ea-ecfe6076b1ce",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Cell phones inherited the ability to make phone calls from telephones. What are some new features that cell phones have that standard telephones do not have?*\n\n**Discussion Goal:** Students give examples of features of cell phones. Guide the students towards examples such as text messaging, video calling, taking pictures, and using mobile apps. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nStudents may not have used a standard telephone before. Use examples from your own experiences of using a standard telephone to highlight similarities and differences between standard telephones and cell phones.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc8741bd-0437-4894-81ea-ecfe6076b1ce",
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2"
+      }
+    },
+    {
+      "key": "a35906be-b33d-4634-b0ad-d5f89e1c667c",
+      "position": 1,
+      "properties": {
+        "name": "More `PainterPlus` Methods",
+        "duration": "5",
+        "description": "**Do This:** Review the `PainterPlus` class by walking students through animated slides about the following ideas: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `PainterPlus` inherits from `Painter`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `PainterPlus` inherits all of the methods of the `Painter` class. In the previous lesson, students added `turnRight()`. Students are adding three more methods to the `PainterPlus` class today (click through the animation).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `turnAround()` method - instructs `PainterPlus` to turn 180 degrees. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `takeAllPaint()` method - instructs `PainterPlus` to collect all of the available paint from a paint bucket they are standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `moveFast()` method - instructs `PainterPlus` to move forward by two dots in the direction they are facing.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a35906be-b33d-4634-b0ad-d5f89e1c667c",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "f520d108-3261-4961-acf2-4cfc046ad846",
+      "position": 2,
+      "properties": {
+        "name": "Handling an Edge Case",
+        "duration": "14",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What should `PainterPlus` do if they are instructed to `moveFast()` but can only move one space forward?\n\n**Discussion Goal:** Students address this edge case by discussing alternative actions that a `PainterPlus` object should perform. Potential alternative actions could be:\n* The `PainterPlus` object will not move forward.\n* The `PainterPlus` object will move forward only one space and then stop at the barrier.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Define edge case and provide the edge case for `moveFast()` as an example."
+      },
+      "seeding_key": {
+        "activity_section.key": "f520d108-3261-4961-acf2-4cfc046ad846",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "9eea2409-59dd-4b4c-b5a0-c786b9b38322",
+      "position": 3,
+      "properties": {
+        "name": "Implementing `PainterPlus` Methods",
+        "duration": "13",
+        "description": "**Group:** Form student groups by dividing the class by a multiple of three, where each group has no more than four students.\n\n**Distribute:** Hand out a stack of the Java Syntax and PainterPlus Methods cards to each group before starting the activity. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternative ways to prepare the Java Syntax and PainterPlus Method Cards:\n1. Pass out the card sheets and scissors to each group and have the students cut their own set of cards.\n2. Make several laminated sets of cards that different sections can share.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9eea2409-59dd-4b4c-b5a0-c786b9b38322",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "6564a9f5-8cce-4a05-bcd8-5e60fdab18cf",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students implement a given `PainterPlus` method using the provided cards.\n* Assign one of the following methods to each group: `turnAround()`, `takeAllPaint()`, or `moveFast()`.\n* Show an example of the task by implementing the `turnRight()` method using the cards.\n* Instruct the students to implement their assigned method using the provided cards.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6564a9f5-8cce-4a05-bcd8-5e60fdab18cf",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "6f853b27-9ec0-4ca1-8b7a-e3fd6d98dae2",
+      "position": 5,
+      "properties": {
+        "remarks": true,
+        "description": "There are many approaches to solving a problem. When we write methods, our solutions will not always be identical."
+      },
+      "seeding_key": {
+        "activity_section.key": "6f853b27-9ec0-4ca1-8b7a-e3fd6d98dae2",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "cd5278bc-dae4-47ab-8315-5c4f2466ac4a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students compare their solution to `turnAround()`, `takeAllPaint()`, and `moveFast()` methods to the solutions provided to them in the `PainterPlus` class on The Neighborhood."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd5278bc-dae4-47ab-8315-5c4f2466ac4a",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "ffe4b001-5f17-423a-b49c-121f1daed5c2",
+      "position": 7,
+      "properties": {
+        "name": "Using `PainterPlus` Methods",
+        "duration": "15",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work collaboratively on a puzzle on Level 1 on Code Studio in their groups. Groups work on the choice that corresponds to the PainterPlus method that they implemented in their group.\n* Choice 1: `turnAround()`\n* Choice 2: `takeAllPaint()`\n* Choice 3: `moveFast()`",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternative ways to organize students for this activity:\n1. Groups can choose a different method than the one they were assigned and complete the associated level choice.\n2. Students pair with a student from a different group. Together, they choose one of the choices to work on.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ffe4b001-5f17-423a-b49c-121f1daed5c2",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "449611e1-ecca-44bf-93de-c9422a820a81",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "449611e1-ecca-44bf-93de-c9422a820a81",
+        "lesson_activity.key": "6ceeb15e-f2b8-4197-b762-d1d3625c6e16"
+      }
+    },
+    {
+      "key": "8f6cbe45-07cb-452d-aca0-7dd415afc0e3",
+      "position": 1,
+      "properties": {
+        "name": "Review",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Move through the animated slide one command at a time. Before moving onto another command, have students share their understanding of the command.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f6cbe45-07cb-452d-aca0-7dd415afc0e3",
+        "lesson_activity.key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef"
+      }
+    },
+    {
+      "key": "211d75e7-bc69-4958-aa2f-4b2609fb01fa",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The PainterPlus class is a subclass of the Painter class. In the table below, check off which methods can be called on a Painter object and which methods can be called on a PainterPlus object.\n\n**Question:** PainterPlus understands how to turnAround() by 180 degrees by making two left turns. What sequence of commands can we use to make PainterPlus turn in a complete circle (i.e., turning 360 degrees)?\n\n**Question:** What is the purpose of writing new methods? "
+      },
+      "seeding_key": {
+        "activity_section.key": "211d75e7-bc69-4958-aa2f-4b2609fb01fa",
+        "lesson_activity.key": "554bbbc1-f6fc-4783-ac82-a139b3ba75ef"
+      }
+    },
+    {
+      "key": "05475623-0e75-4a94-b2c0-7eaac79bcb01",
+      "position": 1,
+      "properties": {
+        "name": "Pair Pseudocode",
+        "remarks": true,
+        "description": "Today we’re going to continue expanding the class `PainterPlus`, but this time we’re going to add methods that allow the `Painter` to paint as they move in The Neighborhood.\n\nTo get started, we will plan out our methods using a technique called “pseudocode.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "05475623-0e75-4a94-b2c0-7eaac79bcb01",
+        "lesson_activity.key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151"
+      }
+    },
+    {
+      "key": "b083e87c-4500-40f7-8a8f-2d25894f5eb1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the Pseudocode Warmup to each student.\n\n**Do This:** Use the slides to introduce the idea of pseudocode using `lineSegment()` as an example, then direct students to work in pairs to write pseudocode for the other three given methods. \n* Introduce the four new methods:\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share an overview of the methods that will be available in the `PainterPlus` class by the end of the lesson\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintLineSegment()` method\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintFullLine()` method\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintDiagonalSegment()` method\n  * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paintFullDiagonal()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain the role of pseudocode and how to write it in this course \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Talk students through the pseudocode for `lineSegment()`. Make sure that they are writing the example on their own Pseudocode Warmup handout.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to write pseudocode for the remaining three methods.\nCall on students to share out an example of each method in pseudocode.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students are working together to plan their methods but will write them individually in The Neighborhood. It will be helpful for all students to have a copy of the pseudocode to refer to while they are coding, so it is important for all students to complete the Pseudocode Warmup.\n\nThe purpose of this share out is simply to make sure everyone has thought through all three methods even if their group did not finish pseudocoding them. Students may also note that they had a different set of steps to get the same result. This should be a quick discussion to give time to the activity portion of the class.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b083e87c-4500-40f7-8a8f-2d25894f5eb1",
+        "lesson_activity.key": "7b0d38ba-abf4-4ad5-b274-5f3b7b5d0151"
+      }
+    },
+    {
+      "key": "a18fd8a2-58d6-4067-9192-f3e126634fe7",
+      "position": 1,
+      "properties": {
+        "name": "Writing Parameterized Methods",
+        "duration": "20",
+        "remarks": true,
+        "description": "Now that you’ve thought through your methods, it’s time to write them in code."
+      },
+      "seeding_key": {
+        "activity_section.key": "a18fd8a2-58d6-4067-9192-f3e126634fe7",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "0a9d2396-9c88-4b31-84b6-e7fa8ffdde8e",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Direct students to complete Levels 1-4 in Code Studio. Within the first few minutes, students realize that they need to use multiple colors to solve these puzzles, and their pseudocode does not take this into account. When this occurs, transition to the discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "0a9d2396-9c88-4b31-84b6-e7fa8ffdde8e",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "3bd8d9a5-62cc-4eb9-8e7f-fb544f7eeab9",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If no one raises the issue of multiple colors after 4-5 minutes, it is okay to pause the class anyway to talk through the steps of parameterizing their methods.\n\nStudents don't need to write all methods before this interlude; they have thought them through enough in the Warm Up to engage with the new material.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd8d9a5-62cc-4eb9-8e7f-fb544f7eeab9",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "899510df-324b-4e03-95c0-59e1a22207c5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we instruct `PainterPlus` to paint diagonal lines of multiple colors?*\n\n**Discussion Goal:** Students have already used single colors with `paint(String color)`. This discussion encourages them to connect to their prior knowledge to prepare for a discussion about parameters and arguments.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Parameters\" video.\n\n**Do This:** Review the syntax for adding parameters to methods and calling those methods with arguments. Then introduce students to the concept through The Neighborhood. Note that the video has already discussed this material; the slides are here for reference and reinforcement.\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Guide students through adding parameters to their methods by talking through the process for `paintDiagonalSegment(String color)` while clicking through the slide animations. \n  * Use the formal parameter in the signature to introduce something that changes into the method.\n  * By adding `String color` as a parameter, we can use the parameter `color` within the method to mean different things depending on how the method is called.\n  * Method calls with different arguments result in different colored lines\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Student Self Check: Display the challenge puzzle that they discussed at the beginning, ask them to write the new method header for `paintDiagonalSegment` that allows them to use it with any color. Click through the slide animations to reveal the answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Release students to continue implementing, revising, and testing their methods.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When students are confident in their methods, transition them to Level 5 on Code Studio to test all methods together. Readiness may occur at different times for different students. Each student should move on at their own pace."
+      },
+      "seeding_key": {
+        "activity_section.key": "899510df-324b-4e03-95c0-59e1a22207c5",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "8d31d8f0-5ff3-44fe-bd02-23df2a40531c",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The content introduction and practice levels should take about 20 minutes. At the end of this time, students have varying levels of progress completed on Level 5. It is okay to step back and review mid-process even if they have only done a little work on painting the mural. In addition to reviewing the code in the main method, students should review one another’s code in `PainterPlus`, completed in Level 1.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d31d8f0-5ff3-44fe-bd02-23df2a40531c",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "2979a1a4-5d1d-4e3e-ad61-542ba847762f",
+      "position": 6,
+      "properties": {
+        "name": "Code Review",
+        "duration": "12",
+        "remarks": true,
+        "description": "For the next 12 minutes, we will take a step back from writing new code to focus on reviewing and revising."
+      },
+      "seeding_key": {
+        "activity_section.key": "2979a1a4-5d1d-4e3e-ad61-542ba847762f",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "e980b872-357a-4b79-8088-9855400507d8",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pair students within a review group to review each other's methods and design in Code Studio. Students request, receive, and review feedback on their new methods.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students transition back to their own code and revise it based on at least one piece of feedback.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may not be sure what to write in their review request. Some suggestions include:\n* Comments\n* Efficient Methods\n  * Are loops and conditionals being used efficiently?\n  * Could a method be called from inside another method?\n* Errors in their code\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e980b872-357a-4b79-8088-9855400507d8",
+        "lesson_activity.key": "17865aea-b415-4582-b1be-0b5f8a15ced8"
+      }
+    },
+    {
+      "key": "be63ee61-c2c1-46b4-87a4-fe986101c836",
+      "position": 1,
+      "properties": {
+        "name": "Closing the Loop",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Use this discussion to reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives. This is also a good time to identify larger group misconceptions to address before the end of the unit.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "be63ee61-c2c1-46b4-87a4-fe986101c836",
+        "lesson_activity.key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b"
+      }
+    },
+    {
+      "key": "a1860fe4-f967-4c66-b885-f362ff96a2c1",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.* \n\n**Question:** If I wanted to draw a rectangle with three colors, what would the method header look like for `drawRectangle`?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1860fe4-f967-4c66-b885-f362ff96a2c1",
+        "lesson_activity.key": "d4b0bc99-f47a-44df-89bd-c82f25a44c2b"
+      }
+    },
+    {
+      "key": "c85041eb-af8d-4d30-93cb-20051c7c1924",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *The image to the right shows a `SprayPainter` object after executing `sprayPaint(“red”, “blue”);`. Discuss with a partner: What do you notice? What do you wonder?*\n\n**Discussion Goal:** Familiarize students with the concept of a `SprayPainter` object and what it does with one additional method: `sprayPaint(“color1”, “color2”)`. Begin by asking students to explain what `sprayPainter` does, and then share how they think the method might work. Answers will vary, but students should take away a few key points: \n* `SprayPainter` is a new type of object.\n* `sprayPaint` creates a circle-esque pattern of two different colors.\n* The `sprayPaint` method takes two parameters, which correspond to the colors included in the spray."
+      },
+      "seeding_key": {
+        "activity_section.key": "c85041eb-af8d-4d30-93cb-20051c7c1924",
+        "lesson_activity.key": "81e899c6-f5c5-46b6-8560-253dea85c36a"
+      }
+    },
+    {
+      "key": "04255d74-0745-483f-bf0b-8ff9516af1d0",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "Today, you will create your own `SprayPainter` class from scratch! Your `SprayPainter` will create a similar, but not the same, spray pattern as the example we saw in our warm-up."
+      },
+      "seeding_key": {
+        "activity_section.key": "04255d74-0745-483f-bf0b-8ff9516af1d0",
+        "lesson_activity.key": "81e899c6-f5c5-46b6-8560-253dea85c36a"
+      }
+    },
+    {
+      "key": "592ff1a0-574a-44eb-8672-93b8c3156e45",
+      "position": 1,
+      "properties": {
+        "name": "Planning our `SprayPainter`",
+        "duration": "10",
+        "description": "**Do This:** Use the slides to introduce the SprayPainter class to students\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that `SprayPainter` extends `PainterPlus`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This slide includes the same image students reviewed as part of the Warm Up. Share that students will write the method `sprayPaint` as part of their `SprayPainter` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is the method header for `sprayPaint(String color1, String color2)` similar to the method header for `paintFullLine(String color)`? How are they different?*\n\n**Discussion Goal:** Draw attention to the fact that both methods use parameters. Students implemented multiple methods with parameters in the previous lesson. The big difference here is that `sprayPaint` takes two parameters. Ask students to recall how they used parameters in the method body in the last lesson. You may also ask students whether they think `sprayPainter` could take two of the same parameters (for example, could we pass the color blue to the `sprayPainter` twice through the `sprayPaint` method?). Students might disagree, but don’t give them the answer! Instead, encourage them to test it out when they work with their `sprayPainter` in Code Studio later in the lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of the `SprayPainter` Activity Guide and two colored pencils or markers to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Planning section of the SprayPainter Activity Guide. Tell students that they will be planning their `sprayPaint` method. Highlight the requirements of the method, as seen on the slide and in their guide. Throughout this unplugged activity time, circulate the room to support and answer any questions students may have.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should reference the `PainterPlus` class as they’re writing their pseudocode. Questions you can ask to scaffold this assignment for students include:\n* How will the `Painter` make one paint spot?\n* Could you use `while` loops to make your code more efficient?\n* How will the `SprayPainter` use each of the parameters in the `sprayPaint` method?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "592ff1a0-574a-44eb-8672-93b8c3156e45",
+        "lesson_activity.key": "ac0cabca-dc89-4412-a62c-4869b2df55ff"
+      }
+    },
+    {
+      "key": "7526138d-27e5-4263-8993-d2e86800390f",
+      "position": 2,
+      "properties": {
+        "name": "Writing the `SprayPainter` Class",
+        "duration": "10",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Next, you will be writing `SprayPainter` from scratch. What different parts of a class will you need to write for the class to be complete?*\n\n**Discussion Goal:** Students are about to embark on writing their first class from scratch! This discussion should draw out the following:\n* `SprayPainter` extends `PainterPlus`\n* Constructor: should be parameterized and call to `super`\n* Methods: write the `sprayPaint` method\n\n**Group:** Group students into pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Instruct students to write their `SprayPainter` class. As they finish, encourage them to test their class in Level 2 and debug their code in Level 1 as needed. During the debugging process, there should be a focus on whether their `sprayPaint` method does what they intended/planned during the unplugged activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "7526138d-27e5-4263-8993-d2e86800390f",
+        "lesson_activity.key": "ac0cabca-dc89-4412-a62c-4869b2df55ff"
+      }
+    },
+    {
+      "key": "5ad8278c-e60e-4749-bb43-90cd9dbca0f7",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5ad8278c-e60e-4749-bb43-90cd9dbca0f7",
+        "lesson_activity.key": "ac0cabca-dc89-4412-a62c-4869b2df55ff"
+      }
+    },
+    {
+      "key": "a1c8b66a-3c10-4775-ae03-4c7d89bc9b6f",
+      "position": 4,
+      "properties": {
+        "name": "`SprayPainter` Mural Creation",
+        "duration": "10",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students implement their newly written class by creating a mural showcasing all of `SprayPainter`’s methods."
+      },
+      "seeding_key": {
+        "activity_section.key": "a1c8b66a-3c10-4775-ae03-4c7d89bc9b6f",
+        "lesson_activity.key": "ac0cabca-dc89-4412-a62c-4869b2df55ff"
+      }
+    },
+    {
+      "key": "be2166cf-161d-4b87-a84d-089a8ef12f85",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity is open-ended, and students may feel like they are “done” quickly. For students who finish the assignment early, encourage them to take their mural to the next level through the following extension opportunities:\n* Is there anywhere in your mural program where you can incorporate `while` loops or `if-else` statements?\n* What happens if you call the `sprayPaint` methods multiple times with different parameters?\n* Could you use two different `SprayPainter` objects to create a more complex design?\n* Try writing another new method for the `SprayPainter`. Call it once you’ve written it!\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be2166cf-161d-4b87-a84d-089a8ef12f85",
+        "lesson_activity.key": "ac0cabca-dc89-4412-a62c-4869b2df55ff"
+      }
+    },
+    {
+      "key": "aae0ce51-3b6f-4484-b720-e311a2b4914f",
+      "position": 1,
+      "properties": {
+        "name": "Gallery Walk",
+        "description": "**Distribute:** Distribute sticky notes to students.\n\nDo This: Direct students to open their final SprayPainter mural on their computer screen. Students participate in a gallery walk and view their classmates’ murals. They use sticky notes to leave quick feedback on other students’ murals in the form of Glows, Grows, and Want-to-Knows. Encourage students to focus feedback on the code rather than just the appearance of the mural. After the gallery walk, invite students to read through their feedback and share about the murals they viewed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to open their final `SprayPainter` mural on their computer screen. Students participate in a gallery walk and view their classmates’ murals. They use sticky notes to leave quick feedback on other students’ murals in the form of Glows, Grows, and Want-to-Knows. Encourage students to focus feedback on the code rather than just the appearance of the mural. After the gallery walk, invite students to read through their feedback and share about the murals they viewed.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "aae0ce51-3b6f-4484-b720-e311a2b4914f",
+        "lesson_activity.key": "c65907ce-5c88-4c34-88fe-f7f2cc1a1341"
+      }
+    },
+    {
+      "key": "947b74ed-1b2d-42b9-b735-2d61986c6960",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Which of the following methods does the PainterPlus class have access to?\n\nI. paint(String color1)\n\nII. moveFast()\n\nIII. paintFullLine()\n\nIV. sprayPaint(String color1, String color2)\n\n  * II and III only\n  * I, II, and III only\n  * III and IV only\n  * I, II, III, and IV\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "947b74ed-1b2d-42b9-b735-2d61986c6960",
+        "lesson_activity.key": "c65907ce-5c88-4c34-88fe-f7f2cc1a1341"
+      }
+    },
+    {
+      "key": "240be3dd-9976-49fc-86f5-8020f435c41a",
+      "position": 1,
+      "properties": {
+        "name": "What is a Pixel",
+        "duration": "2",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce computer graphics by moving through an animated slide about the following ideas:\n* Computer graphics involves using computers to generate digital images.\n* Define pixel and explain how code can instruct computers which pixels to fill to display an image.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "240be3dd-9976-49fc-86f5-8020f435c41a",
+        "lesson_activity.key": "8c3d98a8-f8ae-47c4-9bc7-18e771d381fd"
+      }
+    },
+    {
+      "key": "79a2dec7-5d9e-4a63-bc25-e67f36681a52",
+      "position": 2,
+      "properties": {
+        "name": "Pixel Picture Puzzle",
+        "duration": "5",
+        "description": "**Distribute:** Hand out the Pixel Picture Puzzle.\n\n**Do This:** Students complete the Pixel Picture Puzzle. "
+      },
+      "seeding_key": {
+        "activity_section.key": "79a2dec7-5d9e-4a63-bc25-e67f36681a52",
+        "lesson_activity.key": "8c3d98a8-f8ae-47c4-9bc7-18e771d381fd"
+      }
+    },
+    {
+      "key": "fd5293a3-53cd-494e-832a-5b1ef176cf97",
+      "position": 1,
+      "properties": {
+        "name": "Create `StampPainter`",
+        "duration": "10",
+        "description": "**Do This:** Introduce the `StampPainter` class by walking students through slides about the following ideas: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `StampPainter` inherits from `PainterPlus` and can paint stamps of different shapes and images.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Methods in the `StampPainter` class instruct the `StampPainter` to paint customized stamps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in pairs on Level 1 on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "fd5293a3-53cd-494e-832a-5b1ef176cf97",
+        "lesson_activity.key": "3ffd4c6a-56a6-44b4-8e79-36c01d50c108"
+      }
+    },
+    {
+      "key": "b3ac8ac5-3318-4487-894a-64b8a214202b",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b3ac8ac5-3318-4487-894a-64b8a214202b",
+        "lesson_activity.key": "3ffd4c6a-56a6-44b4-8e79-36c01d50c108"
+      }
+    },
+    {
+      "key": "47e7856b-b8e8-404c-b475-56a060181f5a",
+      "position": 3,
+      "properties": {
+        "name": "Create Your Stamp",
+        "duration": "18",
+        "remarks": true,
+        "description": "Like the `paintSquares()` method, we can build other methods to instruct `StampPainter` to create our favorite shapes and designs. "
+      },
+      "seeding_key": {
+        "activity_section.key": "47e7856b-b8e8-404c-b475-56a060181f5a",
+        "lesson_activity.key": "3ffd4c6a-56a6-44b4-8e79-36c01d50c108"
+      }
+    },
+    {
+      "key": "4228dd0b-2ffc-4b97-aa4f-f1ded7bf82db",
+      "position": 4,
+      "properties": {
+        "description": "**Distribute:** Hand out the Create Your Stamp sheet and two colored pencils to each student. \n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students design their own stamp on the Create Your Stamp handout. Walk around the classroom, ask students about their designs, and help students come up with ideas for their designs.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to work independently to create a method for their design on Level 2 on Code Studio. "
+      },
+      "seeding_key": {
+        "activity_section.key": "4228dd0b-2ffc-4b97-aa4f-f1ded7bf82db",
+        "lesson_activity.key": "3ffd4c6a-56a6-44b4-8e79-36c01d50c108"
+      }
+    },
+    {
+      "key": "d3de9dec-ad4a-4c15-a3eb-2d4ba9bc7812",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d3de9dec-ad4a-4c15-a3eb-2d4ba9bc7812",
+        "lesson_activity.key": "3ffd4c6a-56a6-44b4-8e79-36c01d50c108"
+      }
+    },
+    {
+      "key": "08030ded-dd0f-47f3-901e-a5626e38566b",
+      "position": 1,
+      "properties": {
+        "name": "Guess My Stamp",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play a game of Guess My Stamp, where student volunteers run their code in front of the class, and the class tries to depict the drawing before the code finishes running. Allow each presenter to explain their design afterward.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If possible, allow students to share their screens to the projector. Otherwise, have students move around the classroom and present one at a time at their stations. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "08030ded-dd0f-47f3-901e-a5626e38566b",
+        "lesson_activity.key": "9f122d32-e2a5-4b57-9e55-210bf32c6022"
+      }
+    },
+    {
+      "key": "55b81395-0ba8-4be7-b7bd-4e8635fb24f2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "55b81395-0ba8-4be7-b7bd-4e8635fb24f2",
+        "lesson_activity.key": "9f122d32-e2a5-4b57-9e55-210bf32c6022"
+      }
+    },
+    {
+      "key": "6cdbcce2-dffc-4c0e-9191-3b604158fb8d",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** True or False – The `StampPainter` class is a subclass of the `SprayPainter` class.\n\n**Question:** Which of the following classes inherit from the `PainterPlus` class?\n* The StampPainter class.\n* The SprayPainter class.\n* The Painter class.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cdbcce2-dffc-4c0e-9191-3b604158fb8d",
+        "lesson_activity.key": "9f122d32-e2a5-4b57-9e55-210bf32c6022"
+      }
+    },
+    {
+      "key": "6ad1d341-6fbb-4422-9647-9364a40f26af",
+      "position": 1,
+      "properties": {
+        "name": "Which One Doesn't Belong",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which one doesn’t belong? Why?*\n\n**Discussion Goal:** Students think which one of the four classes (`Painter`, `PainterPlus`, `SprayPainter`, `StampPainter`) does not belong and share out why. There are no correct or incorrect answers. Rather, the goal is for students to make connections between the classes and subclasses and think of their similarities and differences.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The “Which One Doesn’t Belong” activity allows students to share ideas when there is no single correct answer. Any of the quadrants might not belong, but the goal is for students to explain their reasoning rather than focusing on being correct. \n\nPossible student responses include: \n* `Painter` because it’s the only one that’s not a subclass\n* `StampPainter` because students wrote their own methods with a different name\n* `SprayPainter` because students wrote their own version of a method with the same name `sprayPaint(String color1, String color 2)`\n* `PainterPlus` because students'  implementation of the subclass does the same thing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6ad1d341-6fbb-4422-9647-9364a40f26af",
+        "lesson_activity.key": "6cd2ec3b-60da-44b8-b6c3-cb2e0c01d8b9"
+      }
+    },
+    {
+      "key": "1e810b4a-ca77-49cc-b749-de70882f4fd1",
+      "position": 1,
+      "properties": {
+        "name": "Vocabulary Recall",
+        "duration": "2",
+        "remarks": true,
+        "description": "Remember when we were learning about `moveFast()`, we had to handle an edge case. Can anyone remember the definition of an edge case?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the definition of edge case? It’s okay to put it in your own words!*\n\n**Discussion Goal:** Students recall that an edge case is a “situation in a program that produces a different outcome and requires special error handling.” Click through the slide animation to see the answer for the definition."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e810b4a-ca77-49cc-b749-de70882f4fd1",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "f7cddc56-1cac-4be1-8730-abc00969b9ee",
+      "position": 2,
+      "properties": {
+        "name": "Design The Neighborhood Activity",
+        "duration": "10",
+        "remarks": true,
+        "description": "So far, you’ve been given Neighborhoods, but today we’re going to design our own! We’re going to design a Neighborhood that creates an edge case for a `SprayPainter` and a Neighborhood that creates an edge case for a `StampPainter`."
+      },
+      "seeding_key": {
+        "activity_section.key": "f7cddc56-1cac-4be1-8730-abc00969b9ee",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "49d600b9-2254-44ee-bc10-890cb4fe83e4",
+      "position": 3,
+      "properties": {
+        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Design The Neighborhood handout, which includes the rules and a set of pieces. Distribute a pair of scissors. Instruct students to cut out the pieces.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students design two Neighborhoods: one that creates an edge case for `SprayPainter` and one that creates an edge case for `StampPainter`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students share their best Neighborhood designs with the class through a class gallery walk, then share out what they noticed.\n\n**Discussion Goal:** Students notice that Neighborhoods have:\n* `Painter`s that start near the edge\n* `Painter`s that start near a wall\n* Walls blocking the path of the `Painter`s painting",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To save time in class, you can choose to cut out the pieces for each group. After the gallery walk, you can collect the pieces if they will be distracting.\n\nFor students who finish all of the activity challenges, ask them to write a challenge of their own. If multiple groups finish early, they can trade prompts and attempt each other’s challenges."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "49d600b9-2254-44ee-bc10-890cb4fe83e4",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "c46efcb8-fc62-4c6d-8b1c-876177f6c0d5",
+      "position": 4,
+      "properties": {
+        "name": "Edge Cases",
+        "duration": "8",
+        "remarks": true,
+        "description": "Now that we have designed Neighborhoods that create edge cases for our `Painter`s let’s think about what we could and should do in an edge case. We’re first going to use an analogy from school."
+      },
+      "seeding_key": {
+        "activity_section.key": "c46efcb8-fc62-4c6d-8b1c-876177f6c0d5",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "3c9d024d-93a6-41ca-9adb-36fc953cd84d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In one of your classes, a teacher assigns this impossible homework: “Do these ten problems: the even-numbered problems from #1-10.” Think of as many possibilities for which problems you would do.*\n\n**Discussion Goal:** Students think through how to handle this edge case. As written, the prompt is impossible, just like how students created Neighborhoods that are impossible for the `Painter`s. The three scenarios you’re looking for are:\n1. Do zero problems: The task is impossible, so do not try.\n2. Do the even-numbered problems: Complete the task until the point that it is impossible and only complete five problems.\n3. Do all of #1-10: Complete part of the task by doing ten problems, even though we’re unsure of what exactly to do.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students do not volunteer all three scenarios, ask them questions to lead them to the scenarios. Possible questions for each scenario include:\n1. “Let’s pretend you’re really busy (as we all are) and don’t want to waste time doing work if the teacher is going to update the assignment later. What would you do?”\n2. “Let’s pretend the typo is where the teacher said ‘ten problems.’ Which problems would you do then?”\n3. “Let’s pretend that you’re sure you need to do ten problems. Which ones would you do?”\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3c9d024d-93a6-41ca-9adb-36fc953cd84d",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "3fa1e8b0-0a9f-45ab-8f2a-a15f3a981c64",
+      "position": 6,
+      "properties": {
+        "remarks": true,
+        "description": "Now let’s think about our Neighborhood and the Neighborhoods you designed. What should a `Painter` do when it hits an edge case?"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fa1e8b0-0a9f-45ab-8f2a-a15f3a981c64",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "f2d60710-93dd-49e6-b487-785ab5e00e44",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** A `StampPainter` object starts at (2, 6). Think of as many possibilities for what the stamp() method should do.\n\n**Discussion Goal:** Students make connections between the previous discussion and this one. The three scenarios you’re looking for are:\n1. Draw nothing: it’s impossible to draw a full stamp, so do not try.\n2. Draw part of the stamp: draw until you hit the edge of The Neighborhood, then stop, only drawing a partial stamp.\n3. Draw the stamp but move along the edge: draw the same amount of paint as a full stamp, but the shape will not be a stamp.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Be sure to give students enough time to think to themselves. Encourage students to draw the scenario."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f2d60710-93dd-49e6-b487-785ab5e00e44",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "0c9ad5cf-a633-4c28-8025-978f513a6f74",
+      "position": 8,
+      "properties": {
+        "name": "Edge Case Debate",
+        "duration": "8",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation. Students move to a corner of the room labeled with the scenario number that they believe is the best solution. They discuss within their corner why they chose that scenario. Groups rotate sharing out, starting from corner one. Each group shares one reason why they believe their solution is the best. Continue rotating until no more groups have anything to share.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Like the Warm Up “Which One Doesn’t Belong” routine, there is no single best scenario, as each has its pros and cons. The focus for students is explaining and justifying their reasoning rather than correctness.\n\nNote that students cannot implement all of these scenarios yet, given what they have learned so far. Implementation is not a focus of this debate; encourage students to imagine that they have all the tools necessary to build their solution.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0c9ad5cf-a633-4c28-8025-978f513a6f74",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "64c3e92d-940a-4909-8076-ec50b154b505",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:** Students return to their seats."
+      },
+      "seeding_key": {
+        "activity_section.key": "64c3e92d-940a-4909-8076-ec50b154b505",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "106b304f-f337-4906-a992-e24ef3549fe0",
+      "position": 10,
+      "properties": {
+        "name": "Update the Code",
+        "duration": "7",
+        "remarks": true,
+        "description": "Thanks, everyone, for sharing out! In the future, we will learn the skill and tools necessary to implement scenarios one and two. For now, we will focus on scenario three."
+      },
+      "seeding_key": {
+        "activity_section.key": "106b304f-f337-4906-a992-e24ef3549fe0",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "ca173d9a-979a-43a7-97ef-8c2657a83a82",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What changes do we need to make to the code to implement scenario three?*\n\n**Discussion Goal:** Students note that `if` statements need to be added to check `canMove()` before attempting to `move()`.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson is unplugged so students focus on problem-solving without code. Although students can write the code for the edge case, this lesson focuses on the discussions, including explaining and justifying their reasoning.\n\nTo help students understand that `if` statements need to be added, ask students to walk through the example with the physical activity pieces. You can also ask students, “Pretend you are the `StampPainter`. What question do you need to ask yourself before you move and paint to ensure you don’t run into a wall or go out of bounds?”"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ca173d9a-979a-43a7-97ef-8c2657a83a82",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "ca5619d7-fdc5-4eb4-93d0-716c5b8c0816",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca5619d7-fdc5-4eb4-93d0-716c5b8c0816",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "1c664172-cfa9-40b8-8dca-e6f70822122e",
+      "position": 13,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Great job, everyone! Here’s what the start of our code could look like."
+      },
+      "seeding_key": {
+        "activity_section.key": "1c664172-cfa9-40b8-8dca-e6f70822122e",
+        "lesson_activity.key": "c1156172-1549-40ea-b899-47de00ce00b3"
+      }
+    },
+    {
+      "key": "2ef9aaf8-95b7-42a8-aaea-ca77a72c46bb",
+      "position": 1,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today, you used a software engineering process called test-driven development. Test-driven development, or TDD, means that we first created the test; in our case, we designed The Neighborhood. Then, we brainstormed code to make the test pass; we discussed how to update our `Painter` to handle the edge case."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ef9aaf8-95b7-42a8-aaea-ca77a72c46bb",
+        "lesson_activity.key": "0a424029-f0af-4786-a467-f61ec374a918"
+      }
+    },
+    {
+      "key": "4050c9c9-538c-499c-93c3-ae5fa91e065f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is something you learned about edge cases and test-driven development today? What is something you want to learn more about?*\n\n**Discussion Goal:** Students summarize their learnings and listen to what their classmates have learned. They also share what else they want to know more about. While listening to the discussion, students expand their curiosity and desire to learn more about TDD.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that you do not need to be fluent in test-driven development (TDD) to lead this discussion, nor do you need to have the answers to all the students' questions. There are many resources to learn more about TDD, and the goal is for students to become more interested and want to learn more on their own."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4050c9c9-538c-499c-93c3-ae5fa91e065f",
+        "lesson_activity.key": "0a424029-f0af-4786-a467-f61ec374a918"
+      }
+    },
+    {
+      "key": "46a1b709-519f-488a-a4ec-b0cfa45a717e",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "46a1b709-519f-488a-a4ec-b0cfa45a717e",
+        "lesson_activity.key": "0a424029-f0af-4786-a467-f61ec374a918"
+      }
+    },
+    {
+      "key": "de3b27ae-10cc-4e5d-977b-442deac4454e",
+      "position": 4,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** In your own words, what are different ways to handle an edge case in code? Remember the different ways we handled the edge cases for `Painter`."
+      },
+      "seeding_key": {
+        "activity_section.key": "de3b27ae-10cc-4e5d-977b-442deac4454e",
+        "lesson_activity.key": "0a424029-f0af-4786-a467-f61ec374a918"
+      }
+    },
+    {
+      "key": "a0ab2dad-7ce5-42fa-8dfb-a5f40e522756",
+      "position": 1,
+      "properties": {
+        "name": "Software Engineering Discussion",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display: Upon entering the classroom, students should see the inspirational quote. Read the quote to your students.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0ab2dad-7ce5-42fa-8dfb-a5f40e522756",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "110b0e39-447f-41cf-8ce7-c9253ae1d929",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "“I became a sponge. A new chapter began in my own education, and I majored in software development in the real world.” \n\nJust like Erik, at this point, you have become a sponge and started a new chapter in AP Computer Science A. In class today, you will reflect on the software engineering values you learned from Lesson 1. "
+      },
+      "seeding_key": {
+        "activity_section.key": "110b0e39-447f-41cf-8ce7-c9253ae1d929",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "b7299445-2504-4f7d-9785-f290a2d7a0a7",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute:** Hand out at least three sticky notes to each student.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Ask a student to read the question on the slide out loud for the class. Students write down three words/phrases on the sticky note about the phrase “software engineering.” (2 min) \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Ask a student to read the definition of a software engineer out loud for the class.\n\n**Group:** Divide students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask groups to share their words/phrases from their sticky notes and record on the slide common themes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Give students times to think about their words/phrases before writing them down. Then let everyone share their answers in smaller groups. Then have groups share out those common words/phrases. As groups share out their responses, type common words/phrases on the slide.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7299445-2504-4f7d-9785-f290a2d7a0a7",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "2dc6da19-ca84-4cc7-88f8-c95d71a8116f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What has changed? What values are important for software engineering?\n\n**Discussion Goal:** Discuss the prompts as a class. This discussion provides an opportunity for students to reflect and see the growth in their responses from lesson one to lesson fifteen. As students discuss software engineering values, guide students towards growth mindset values they have developed over Unit 1. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2dc6da19-ca84-4cc7-88f8-c95d71a8116f",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "44f4d30c-14f8-4230-bcb7-cec708c7baad",
+      "position": 1,
+      "properties": {
+        "name": "Open-Source Code",
+        "duration": "5",
+        "remarks": true,
+        "description": "So far in class, you have been writing code on Code Studio to navigate your Painter through The Neighborhood. In today’s lesson, we will look at open-source code. Open-source code is code that anyone can inspect, modify, and enhance. Here is an example of open-source code on the slide."
+      },
+      "seeding_key": {
+        "activity_section.key": "44f4d30c-14f8-4230-bcb7-cec708c7baad",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "3d1cec41-86f5-4968-9d88-addf4118d7d9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show students open-source code and have them share with a partner the parts of the code that look familiar.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students look at the open-source code and discuss with a partner the keywords or coding segments that look familiar.  Do not explain to students what the code does. \n\nIdeas of what partners could discuss: class, control structure, while loop, and curly braces."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3d1cec41-86f5-4968-9d88-addf4118d7d9",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "54a5b9b9-ef1e-4e90-ac3a-b007e3ff56ab",
+      "position": 3,
+      "properties": {
+        "name": "Open-Source Activity Guide",
+        "duration": "20",
+        "description": "**Group:** Divide students into groups of four. Divide the four code options evenly among the groups.\n\n**Distribute:** Give each group one of the four Activity Guide options. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions on how groups should work together to complete the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Slide shows a visual representation of each open-source code option.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Review the instructions on the activity guide as a whole class. Remind students they will annotate the code. \n\nThere are four open source code options. Each option offers differentiation based on student interest or ability. \n\nGive each group one paper. The group chooses one recorder and one speaker to share their results.  \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "54a5b9b9-ef1e-4e90-ac3a-b007e3ff56ab",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "81667af6-13a0-4048-960c-bfee9457f18f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students share out information about the code they investigated, focusing on:\n* Vocab words from previous lessons\n* What is happening in the program\n* What they would say in a code review\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have multiple groups with the same code, then have each group from that option only share one question from their activity guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81667af6-13a0-4048-960c-bfee9457f18f",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "d6ecd1e3-ed77-4d5d-a329-d1b6428bc311",
+      "position": 5,
+      "properties": {
+        "name": "Real-World Code Discussion",
+        "duration": "5",
+        "remarks": true,
+        "description": "Looking at open source code helps people become better programmers. Because open-source code is public, you can study it to learn to make better software."
+      },
+      "seeding_key": {
+        "activity_section.key": "d6ecd1e3-ed77-4d5d-a329-d1b6428bc311",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "3013960d-4250-4280-8262-884ffd654e7a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What connections can you make from the open-source code to the code you have written in this unit?*\n\n**Discussion Goal:** Students should make a connection to how code looks in real-world programs. The code used in their Neighborhood programs are similar to the open-source code:\n* Conditional statements\n* Boolean expressions\n* Class and objects\n* Methods and commands  \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3013960d-4250-4280-8262-884ffd654e7a",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "1860caec-bfea-40fe-ad3f-33b889d5bbaa",
+      "position": 1,
+      "properties": {
+        "name": "Exit Ticket",
+        "remarks": true,
+        "description": "In Lesson 1, we affirmed our software identities together. Now that you have the mindset of a software engineer let's reaffirm these identities again. \n\n\nWhen I say, “I am a,” you say, “problem solver.”\n\n“I am a...”\n\nWhen I say “I am,” you say “creative.”\n\n“I am...”\n\nWhen I say “I am a,” you say “collaborator.”\n\n“I am a...”\n\nWhen I say “I am a,” you say “learner.”\n\n“I am a...”\n\nWhen I say “I am a,” you say “software engineer.”\n\n“I am a...” \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1860caec-bfea-40fe-ad3f-33b889d5bbaa",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "cce64166-6516-449a-84e8-fe9a08375b3f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On a sticky note, students write their name and one of the software engineering values they most identify with.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students need to write their names on sticky notes. Save these sticky notes and place them on the students' desk as an affirmation when they return to start day one of the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cce64166-6516-449a-84e8-fe9a08375b3f",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "af9350bd-b0e1-4ed2-a274-d2ed5a31e97b",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "Tomorrow we will begin our unit project. You will be creating a personal symbol using the classes and methods we have made throughout this unit that represents something meaningful and interesting to you. Your symbol can represent a hobby, a favorite item or concept, or an abstract idea. Start thinking about what you might want to make for your project!"
+      },
+      "seeding_key": {
+        "activity_section.key": "af9350bd-b0e1-4ed2-a274-d2ed5a31e97b",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "306769c6-c7a6-478f-aa06-d6123730addf",
+      "position": 4,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 1 Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "306769c6-c7a6-478f-aa06-d6123730addf",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "5838bd4d-f552-45e8-9516-8839d4c86434",
+      "position": 5,
+      "properties": {
+        "remarks": true,
+        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then we will spend a day practicing how to answer AP-style free-response questions, and we will wrap up the unit with a multiple-choice assessment. You've learned so much this unit, and now you're ready to show it off! \n\nThe Unit 1 Guide will help you remember all you've learned so far. Go over all of the lessons and think to yourself if you can truly say \"I can..\" with each lesson objective. Review the vocabulary. Look over the reference section for code. You don't need to memorize Painter commands for the assessments, but it's helpful to remember how everything works together. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The unit guide provides a review of the objectives, vocabulary, and programming concepts to help students prepare for the assessment. If time permits, you can choose to quickly review any parts of the unit that are still confusing for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5838bd4d-f552-45e8-9516-8839d4c86434",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
     }
   ],
   "script_levels": [
@@ -2696,10 +4311,444 @@
         "lesson.key": "lesson-8",
         "objective.key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07"
       }
+    },
+    {
+      "key": "31e2755a-fc47-4b08-9f90-4cf3d473b410",
+      "properties": {
+        "description": "Explain inheritance and why it is used"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "31e2755a-fc47-4b08-9f90-4cf3d473b410"
+      }
+    },
+    {
+      "key": "275ecca7-2b94-4e6d-a272-cf8595451b75",
+      "properties": {
+        "description": "Write a subclass that extends a superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "275ecca7-2b94-4e6d-a272-cf8595451b75"
+      }
+    },
+    {
+      "key": "73521095-a123-43f9-a508-8e733ec3b582",
+      "properties": {
+        "description": "Write a constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "73521095-a123-43f9-a508-8e733ec3b582"
+      }
+    },
+    {
+      "key": "d7c14398-0068-4e7e-a022-21732806521b",
+      "properties": {
+        "description": "Write a method"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "d7c14398-0068-4e7e-a022-21732806521b"
+      }
+    },
+    {
+      "key": "6ea63757-ea2f-4056-a268-7859e8d4ef42",
+      "properties": {
+        "description": "Apply the principle of inheritance to real-world examples"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6ea63757-ea2f-4056-a268-7859e8d4ef42"
+      }
+    },
+    {
+      "key": "6200d11e-1b9d-4150-b268-9bcc01033e52",
+      "properties": {
+        "description": "Implement three new methods in the `PainterPlus` class."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6200d11e-1b9d-4150-b268-9bcc01033e52"
+      }
+    },
+    {
+      "key": "d03db6dd-0f09-48d5-98e0-49184afca8f1",
+      "properties": {
+        "description": "Account for edge cases while implementing new methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "d03db6dd-0f09-48d5-98e0-49184afca8f1"
+      }
+    },
+    {
+      "key": "bc452c8f-aba4-4464-b5a3-72c8501636a5",
+      "properties": {
+        "description": "Implement four new methods with parameters in the `PainterPlus` class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "bc452c8f-aba4-4464-b5a3-72c8501636a5"
+      }
+    },
+    {
+      "key": "af21b046-1381-4e72-895e-b27a5c2ec6c1",
+      "properties": {
+        "description": "Conduct a code review and provide constructive feedback on how to improve the given code "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "af21b046-1381-4e72-895e-b27a5c2ec6c1"
+      }
+    },
+    {
+      "key": "6e26082e-4f79-47dc-8a15-e315bba5b6f4",
+      "properties": {
+        "description": "Write a class that includes a method with parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "6e26082e-4f79-47dc-8a15-e315bba5b6f4"
+      }
+    },
+    {
+      "key": "06203e16-b4a6-41c5-8f6c-5a84a83091ff",
+      "properties": {
+        "description": "Create a mural by implementing the `SprayPainter` class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "06203e16-b4a6-41c5-8f6c-5a84a83091ff"
+      }
+    },
+    {
+      "key": "0dd860e4-090b-4dfc-b53d-a7873c3f6acb",
+      "properties": {
+        "description": "Examine how images shown by computers are made up of pixels"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "0dd860e4-090b-4dfc-b53d-a7873c3f6acb"
+      }
+    },
+    {
+      "key": "f073a470-5647-4e17-af2d-18a4b2124440",
+      "properties": {
+        "description": "Implement a subclass of the `PainterPlus` class called `StampPainter`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "f073a470-5647-4e17-af2d-18a4b2124440"
+      }
+    },
+    {
+      "key": "9ccdb285-bff4-47b6-a436-c86879f2edc4",
+      "properties": {
+        "description": "Implement methods to create images "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "9ccdb285-bff4-47b6-a436-c86879f2edc4"
+      }
+    },
+    {
+      "key": "ab6e2f52-5442-42bb-b910-c6eb5dc9a817",
+      "properties": {
+        "description": "Identify edge cases in code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "ab6e2f52-5442-42bb-b910-c6eb5dc9a817"
+      }
+    },
+    {
+      "key": "d6012912-fa41-4069-b96f-29d1ea0248cf",
+      "properties": {
+        "description": "Design tests for edge cases"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "d6012912-fa41-4069-b96f-29d1ea0248cf"
+      }
+    },
+    {
+      "key": "2f740223-bbca-40a6-8dcc-93d2bf29ac25",
+      "properties": {
+        "description": "Justify decisions for handling edge cases"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "2f740223-bbca-40a6-8dcc-93d2bf29ac25"
+      }
+    },
+    {
+      "key": "63c88531-7d2e-4628-a2dc-18cc1c02f851",
+      "properties": {
+        "description": "Examine open source code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "63c88531-7d2e-4628-a2dc-18cc1c02f851"
+      }
+    },
+    {
+      "key": "f151a0f3-96dd-40bb-ba0e-50b5a859059c",
+      "properties": {
+        "description": "Affirm the core values of software engineering"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "f151a0f3-96dd-40bb-ba0e-50b5a859059c"
+      }
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.1"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

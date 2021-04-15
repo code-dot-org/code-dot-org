@@ -41,41 +41,44 @@ const defaultProps = {
 };
 
 export default storybook => {
-  storybook.storiesOf('CourseScript', module).addStoryTable([
-    {
-      name: 'Plain CourseScript',
-      story: () => <CourseScript {...defaultProps} />
-    },
-    {
-      name: 'With teacher info',
-      story: () => (
-        <CourseScript
-          {...defaultProps}
-          selectedSectionId={sectionId}
-          hasNoSections={false}
-        />
-      )
-    },
-    {
-      name: 'hidden as teacher',
-      story: () => (
-        <CourseScript
-          {...defaultProps}
-          selectedSectionId={sectionId}
-          hasNoSections={false}
-          hiddenStageState={hiddenState}
-        />
-      )
-    },
-    {
-      name: 'no section selected',
-      story: () => (
-        <CourseScript
-          {...defaultProps}
-          hasNoSections={false}
-          hiddenStageState={hiddenState}
-        />
-      )
-    }
-  ]);
+  storybook
+    .storiesOf('CourseScript', module)
+    .withReduxStore()
+    .addStoryTable([
+      {
+        name: 'Plain CourseScript',
+        story: () => <CourseScript {...defaultProps} />
+      },
+      {
+        name: 'With teacher info',
+        story: () => (
+          <CourseScript
+            {...defaultProps}
+            selectedSectionId={sectionId}
+            hasNoSections={false}
+          />
+        )
+      },
+      {
+        name: 'hidden as teacher',
+        story: () => (
+          <CourseScript
+            {...defaultProps}
+            selectedSectionId={sectionId}
+            hasNoSections={false}
+            hiddenStageState={hiddenState}
+          />
+        )
+      },
+      {
+        name: 'no section selected',
+        story: () => (
+          <CourseScript
+            {...defaultProps}
+            hasNoSections={false}
+            hiddenStageState={hiddenState}
+          />
+        )
+      }
+    ]);
 };

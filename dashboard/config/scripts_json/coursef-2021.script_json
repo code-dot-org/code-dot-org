@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-09 21:32:26 UTC",
+    "serialized_at": "2021-04-13 21:04:39 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -249,12 +249,29 @@
       }
     },
     {
-      "key": "Loops with the Artist",
-      "name": "Drawing with Loops",
+      "key": "lesson-11",
+      "name": "Mini-Project: User Input Programs",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
+      "properties": {
+        "overview": "Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, then create a plan for their own project, and finally program it from scratch.",
+        "student_overview": "Apply your new skills with variables to one of three open-ended projects."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "Loops with the Artist",
+      "name": "Drawing with Loops",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
       "properties": {
         "overview": "This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the course.  ",
         "student_overview": "In this lesson, **loops** make it easy to make cool images with Artist!",
@@ -271,10 +288,10 @@
     {
       "key": "Variables that Change in Artist",
       "name": "Using Variables with the Artist",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
         "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs.",
@@ -291,10 +308,10 @@
     {
       "key": "Nested Loops in the Maze",
       "name": "Programming with the Bee",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "In this **skill-building** lesson, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.",
         "student_overview": "This lesson will teach you what happens when you place a loop inside another loop.",
@@ -311,10 +328,10 @@
     {
       "key": "Variables that Change in Bee",
       "name": "Variables with the Bee",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "overview": "This **skill-building** lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. ",
         "student_overview": "This bee loves variables!",
@@ -331,10 +348,10 @@
     {
       "key": "For Loop Fun",
       "name": "For Loop Fun",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "overview": "In this **skill-building** lessons, students will use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. ",
         "student_overview": "You're going to have loads of fun learning about `for` loops!",
@@ -352,10 +369,10 @@
     {
       "key": "For Loops in Bee",
       "name": "For Loops with Bee",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "overview": "This **skill-building** lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
         "student_overview": "In these puzzles you will be guiding a bee to nectar and honey using `for` loops!",
@@ -372,10 +389,10 @@
     {
       "key": "For Loops in Artist",
       "name": "For Loops with Artist",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "overview": "In this **skill-building** lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a free play level.",
         "student_overview": "Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.",
@@ -392,10 +409,10 @@
     {
       "key": "Simulating Experiments",
       "name": "Simulating Experiments",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "overview": "In this **context-setting** lessons, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.",
         "student_overview": "Run simulations on the computer and experiment by changing variables.",
@@ -412,10 +429,10 @@
     {
       "key": "lesson-5",
       "name": "Outbreak",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "overview": "In this **skill-building** lesson, students will create an outbreak simulator. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow a contagion down. ",
         "student_overview": "A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy."
@@ -429,10 +446,10 @@
     {
       "key": "AI for Oceans",
       "name": "AI For Oceans",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "overview": "In this **exploratory** lesson, students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
         "student_overview": "Classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
@@ -448,10 +465,10 @@
     {
       "key": "Internet",
       "name": "The Internet",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "overview": "In this **exploratory** lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.",
         "student_overview": "Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.",
@@ -469,10 +486,10 @@
     {
       "key": "lesson-1",
       "name": "Designing for Accessibility",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
         "overview": "In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
         "student_overview": "In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
@@ -489,10 +506,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
         "overview": "This longer **project** lesson provide an opportunity for students to put their coding skills to use in a capstone project. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. ",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
@@ -863,6 +880,45 @@
       "seeding_key": {
         "lesson_activity.key": "6d9977ca-4924-456e-bb2e-ec1ea79a1d81",
         "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "dd059082-7eee-4f7a-a287-a79748174d64",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd059082-7eee-4f7a-a287-a79748174d64",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "0fdc25c1-5137-42cf-8c8d-470a1cddc96f",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fdc25c1-5137-42cf-8c8d-470a1cddc96f",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021"
       }
@@ -2421,6 +2477,60 @@
       "seeding_key": {
         "activity_section.key": "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9",
         "lesson_activity.key": "6d9977ca-4924-456e-bb2e-ec1ea79a1d81"
+      }
+    },
+    {
+      "key": "20919642-5201-4796-9e45-ee76e368614d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "20919642-5201-4796-9e45-ee76e368614d",
+        "lesson_activity.key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae"
+      }
+    },
+    {
+      "key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Exploration: Sample Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2",
+        "lesson_activity.key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae"
+      }
+    },
+    {
+      "key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5",
+        "lesson_activity.key": "dd059082-7eee-4f7a-a287-a79748174d64"
+      }
+    },
+    {
+      "key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea",
+      "position": 2,
+      "properties": {
+        "progression_name": "Mini-Project: User Input Programs"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea",
+        "lesson_activity.key": "dd059082-7eee-4f7a-a287-a79748174d64"
+      }
+    },
+    {
+      "key": "d5bf3b23-128d-4078-bdb2-a806a59a2db1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d5bf3b23-128d-4078-bdb2-a806a59a2db1",
+        "lesson_activity.key": "0fdc25c1-5137-42cf-8c8d-470a1cddc96f"
       }
     },
     {
@@ -4500,7 +4610,7 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Power of Words - Unplugged Activity",
         "level_keys": [
@@ -4786,6 +4896,98 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_label_predict"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "20919642-5201-4796-9e45-ee76e368614d"
+      },
+      "level_keys": [
+        "courseF_label_predict"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration: Sample Apps"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2"
+      },
+      "level_keys": [
+        "courseF_variables_samples"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Planning"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5"
+      },
+      "level_keys": [
+        "courseF_variables_stop"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: User Input Programs"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea"
+      },
+      "level_keys": [
+        "courseF_variables_projects"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": null,
       "properties": {
         "progression": "Video: Artist Intro with JR Hildebrande",
@@ -4809,7 +5011,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -4835,7 +5037,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -4861,7 +5063,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -4887,7 +5089,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -4913,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -4939,7 +5141,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -4965,7 +5167,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -4991,7 +5193,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5017,7 +5219,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5043,7 +5245,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -5069,7 +5271,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -5095,7 +5297,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -5121,7 +5323,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -5147,7 +5349,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5173,7 +5375,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5199,7 +5401,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5225,7 +5427,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5251,7 +5453,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -5277,7 +5479,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5303,7 +5505,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5329,7 +5531,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -5355,7 +5557,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -5381,7 +5583,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -5407,7 +5609,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -5433,7 +5635,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -5459,7 +5661,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 68,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -5485,7 +5687,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5511,7 +5713,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5537,7 +5739,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5563,7 +5765,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5589,7 +5791,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5615,7 +5817,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -5641,7 +5843,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -5667,7 +5869,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 2,
       "assessment": null,
@@ -5693,7 +5895,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 3,
       "assessment": null,
@@ -5719,7 +5921,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -5745,7 +5947,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 79,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -5771,7 +5973,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 80,
       "position": 11,
       "activity_section_position": 2,
       "assessment": null,
@@ -5797,7 +5999,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5823,7 +6025,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5849,7 +6051,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -5875,7 +6077,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -5901,7 +6103,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -5927,7 +6129,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -5953,7 +6155,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 87,
       "position": 7,
       "activity_section_position": 5,
       "assessment": null,
@@ -5979,7 +6181,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 88,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6005,7 +6207,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 89,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -6031,7 +6233,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 90,
       "position": 10,
       "activity_section_position": 2,
       "assessment": null,
@@ -6057,7 +6259,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6083,7 +6285,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 92,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6109,7 +6311,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 93,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6135,7 +6337,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6161,7 +6363,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -6187,7 +6389,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 96,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -6213,7 +6415,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 97,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -6239,7 +6441,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 98,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -6265,7 +6467,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 99,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -6291,7 +6493,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 100,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -6317,7 +6519,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 101,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -6343,7 +6545,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 102,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -6369,7 +6571,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6395,7 +6597,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 104,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6421,7 +6623,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 105,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6447,7 +6649,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 106,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6473,7 +6675,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 107,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6499,7 +6701,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 108,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6525,7 +6727,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 109,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -6551,7 +6753,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 110,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6577,7 +6779,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6603,7 +6805,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6629,7 +6831,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6655,7 +6857,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7124,6 +7326,54 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021",
         "activity_section.key": "472a5254-b0e4-4069-a6f4-940ed9fda07a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_label_predict",
+        "script_level.level_keys": [
+          "courseF_label_predict"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "20919642-5201-4796-9e45-ee76e368614d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_samples",
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_stop",
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_projects",
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea"
       }
     },
     {
