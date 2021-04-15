@@ -93,7 +93,7 @@ module Services
             begin
               export_from_google(resource.url, path)
               return path
-            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error, URI::InvalidURIError => e
               ChatClient.log(
                 "error from Google when trying to fetch PDF for resource #{resource.key.inspect}: #{e}",
                 color: 'red'
