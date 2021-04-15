@@ -122,7 +122,7 @@ class Karel < Maze
     <category name="Bee">
       <block type="maze_nectar"></block>
       <block type="maze_honey"></block>
-      <block type="bee_n_honey"></block>
+      <block type="bee_n_nectar"></block>
       <block type="bee_n_honey"></block>
       <block type="bee_n_forward"></block>
       <block type="bee_ifNectarAmount"></block>
