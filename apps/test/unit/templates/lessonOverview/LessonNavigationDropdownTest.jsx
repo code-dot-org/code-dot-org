@@ -5,6 +5,7 @@ import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonN
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const shortLessonList = [
   {
@@ -117,6 +118,7 @@ describe('LessonNavigationDropdown', () => {
   });
 
   it('navigates when click lesson', () => {
+    sinon.stub(firehoseClient, 'putRecord');
     sinon.stub(utils, 'navigateToHref');
 
     lesson.unit.lessons = longLessonList;
@@ -131,7 +133,9 @@ describe('LessonNavigationDropdown', () => {
     ).to.be.true;
     lesson1.simulate('click');
 
+    expect(firehoseClient.putRecord).to.have.been.calledOnce;
     expect(utils.navigateToHref).to.have.been.calledOnce;
     utils.navigateToHref.restore();
+    firehoseClient.putRecord.restore();
   });
 });
