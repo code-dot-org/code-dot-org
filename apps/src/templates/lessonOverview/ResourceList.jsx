@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {navigateToHref} from '@cdo/apps/utils';
 
 export default class ResourceList extends Component {
   static propTypes = {
@@ -22,7 +23,7 @@ export default class ResourceList extends Component {
     }
   };
 
-  recordResourceDownload = resource => {
+  downloadResource = resource => {
     firehoseClient.putRecord(
       {
         study:
@@ -35,11 +36,16 @@ export default class ResourceList extends Component {
           resourceId: resource.id
         })
       },
-      {includeUserId: true}
+      {
+        includeUserId: true,
+        callback: () => {
+          navigateToHref(this.normalizeUrl(resource.download_url));
+        }
+      }
     );
   };
 
-  recordResourceOpened = resource => {
+  openResource = resource => {
     firehoseClient.putRecord(
       {
         study:
@@ -52,16 +58,20 @@ export default class ResourceList extends Component {
           resourceId: resource.id
         })
       },
-      {includeUserId: true}
+      {
+        includeUserId: true,
+        callback: () => {
+          navigateToHref(this.normalizeUrl(resource.url));
+        }
+      }
     );
   };
 
   createResourceListItem = resource => (
     <li key={resource.key}>
       <a
-        href={this.normalizeUrl(resource.url)}
         onClick={() => {
-          this.recordResourceOpened(resource);
+          this.openResource(resource);
         }}
         target="_blank"
         rel="noopener noreferrer"
@@ -73,9 +83,8 @@ export default class ResourceList extends Component {
         <span>
           {' ('}
           <a
-            href={this.normalizeUrl(resource.download_url)}
             onClick={() => {
-              this.recordResourceDownload(resource);
+              this.downloadResource(resource);
             }}
             target="_blank"
             rel="noopener noreferrer"
