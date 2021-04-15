@@ -963,7 +963,9 @@ export class WorkshopForm extends React.Component {
           <Row>
             <Col sm={4}>
               <FormGroup validationState={validation.style.location_name}>
-                <ControlLabel>Location Name</ControlLabel>
+                <ControlLabel>
+                  {this.state.virtual ? 'Link to Join' : 'Location Name'}
+                </ControlLabel>
                 <FormControl
                   type="text"
                   value={this.state.location_name || ''}
@@ -977,19 +979,21 @@ export class WorkshopForm extends React.Component {
                 <HelpBlock>{validation.help.location_name}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={6}>
-              <FormGroup>
-                <ControlLabel>Location Address (optional)</ControlLabel>
-                <MapboxLocationSearchField
-                  placeholder="Enter a location"
-                  onChange={this.handleLocationChange}
-                  value={this.state.location_address || ''}
-                  readOnly={this.props.readOnly}
-                  style={this.getInputStyle()}
-                  className={'form-control'}
-                />
-              </FormGroup>
-            </Col>
+            {!this.state.virtual && (
+              <Col sm={6}>
+                <FormGroup>
+                  <ControlLabel>Location Address (optional)</ControlLabel>
+                  <MapboxLocationSearchField
+                    placeholder="Enter a location"
+                    onChange={this.handleLocationChange}
+                    value={this.state.location_address || ''}
+                    readOnly={this.props.readOnly}
+                    style={this.getInputStyle()}
+                    className={'form-control'}
+                  />
+                </FormGroup>
+              </Col>
+            )}
           </Row>
           <Row>
             <Col sm={2}>
