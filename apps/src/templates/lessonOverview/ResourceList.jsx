@@ -32,6 +32,7 @@ export default class ResourceList extends Component {
             : 'lesson-plan',
         study_group: this.props.pageType,
         event: 'download-resource',
+        data_int: resource.id,
         data_json: JSON.stringify({
           resourceId: resource.id
         })
@@ -54,6 +55,7 @@ export default class ResourceList extends Component {
             : 'lesson-plan',
         study_group: this.props.pageType,
         event: 'open-resource',
+        data_int: resource.id,
         data_json: JSON.stringify({
           resourceId: resource.id
         })
