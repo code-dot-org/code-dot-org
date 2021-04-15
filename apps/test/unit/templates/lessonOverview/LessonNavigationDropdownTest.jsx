@@ -8,12 +8,14 @@ import * as utils from '@cdo/apps/utils';
 
 const shortLessonList = [
   {
+    id: 1,
     key: 'lesson-1',
     position: 1,
     displayName: 'Lesson 1',
     link: '/lessons/1'
   },
   {
+    id: 2,
     key: 'lesson-2',
     position: 2,
     displayName: 'Lesson 2',
@@ -24,6 +26,7 @@ const shortLessonList = [
 let longLessonList = [];
 for (let i = 1; i <= 15; i++) {
   longLessonList.push({
+    id: i,
     key: `lesson-${i}`,
     position: i,
     displayName: `Lesson ${i}`,
@@ -37,6 +40,7 @@ let lesson = {
     link: '/s/unit-1',
     lessons: []
   },
+  id: 3,
   key: 'lesson-1',
   position: 1,
   resources: {},
