@@ -5,9 +5,6 @@
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "preparation": true,
-      "subgroupIdentifiers": false,
-      "representative": false,
       "potentialUses": "A fun and silly quiz",
       "potentialMisuses": "Anything serious"
     }

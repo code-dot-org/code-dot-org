@@ -63,10 +63,6 @@
     "lastUpdated": "2019",
     "context": {
       "createdBy": "United Nations",
-      "preparation": true,
-      "confidentiality": false,
-      "subgroupIdentifiers": false,
-	  "representative": false,
       "potentialUses": "Predict a country's happiness score based on other features like GDP per capita and freedom to make life choices.",
       "potentialMisuses": "Predicting rank is difficult. This also shouldn't be used as an objective metric for which countries are 'best' - what factors might contribute to these scores that aren't covered by the data?"
     }

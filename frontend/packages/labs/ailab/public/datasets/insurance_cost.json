@@ -43,10 +43,6 @@
     "lastUpdated": "Unknown",
     "context": {
       "createdBy": "Unknown",
-      "preparation": true,
-      "confidentiality": false,
-      "subgroupIdentifiers": true,
-      "representative": false,
       "potentialUses": "",
       "potentialMisuses": ""
     }

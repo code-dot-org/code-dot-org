@@ -98,9 +98,6 @@
     "lastUpdated": "2016",
     "context": {
       "createdBy": "Richard Forsyth",
-      "preparation": true,
-      "confidentiality": false,
-      "subgroupIdentifiers": false,
       "potentialUses": "There are lots of potential labels here, but one easy investigation to get you started is to try and find which features tend to relate to an animal being venomous.",
       "potentialMisuses": "This is a dataset of only 100 animals, so there may be lots of animals that aren't reflected by the data. Take it with a grain of salt!"
     }

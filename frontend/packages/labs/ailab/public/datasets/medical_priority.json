@@ -48,10 +48,6 @@
     "lastUpdated": "2020",
     "context": {
       "createdBy": "Code.org",
-      "preparation": "Yes",
-      "confidentiality": "No",
-      "subgroupIdentifiers": "Yes",
-      "representative": "No",
       "potentialUses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
       "potentialMisuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
     }

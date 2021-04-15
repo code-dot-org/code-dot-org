@@ -5,9 +5,6 @@
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "preparation": true,
-      "subgroupIdentifiers": false,
-      "representative": false,
       "potentialUses": "Can be used to determine the best times to visit the safari to make sure you see the most amount of wildlife",
       "potentialMisuses": "Only certain types of animals are tracked, so avoid jumping to conclusions on animals that are not a part of this set (like zebras or hippopotamus)"
     }

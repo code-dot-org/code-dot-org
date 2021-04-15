@@ -88,10 +88,6 @@
     "lastUpdated": "1994",
     "context": {
       "createdBy": "Hadi Fanaee, University of Porto",
-      "preparation": true,
-      "confidentiality": false,
-      "subgroupIdentifiers": false,
-	    "representative": false,
       "potentialUses": "Predict how many bikes will be rented based on weather conditions, or time of year.",
       "potentialMisuses": ""
     }

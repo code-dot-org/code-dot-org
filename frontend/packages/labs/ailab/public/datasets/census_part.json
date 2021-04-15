@@ -78,10 +78,6 @@
     "lastUpdated": "1994",
     "context": {
       "created_by": "Barry Becker",
-      "preparation": true,
-      "confidentiality": true,
-      "subgroupIdentifiers": true,
-	    "representative": true,
       "potentialUses": "Predict whether a person's income is over or under $50,000, based on their education level and age. Demonstrate racial and gender-based income inequality.",
       "potentialMisuses": "Using this for something like determining whether or not to give someone a loan could be deeply unfair."
     }

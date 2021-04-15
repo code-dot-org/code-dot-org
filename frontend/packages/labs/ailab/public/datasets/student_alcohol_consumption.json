@@ -173,9 +173,6 @@
     "last_updated": "2016",
     "context": {
       "created_by": "P. Cortez and A. Silva",
-      "preparation": true,
-      "confidentiality": true,
-      "subgroup_identifiers": true,
       "potential_uses": "",
       "potential_misuses": ""
     }

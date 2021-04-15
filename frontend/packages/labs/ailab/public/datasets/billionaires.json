@@ -93,10 +93,6 @@
     "lastUpdated": "2016",
     "context": {
       "createdBy": "Ryan Whitcomb",
-      "preparation": true,
-      "confidentiality": true,
-      "subgroupIdentifiers": true,
-	    "representative": false,
       "potentialUses": "Predict the type of a billionare's wealth based on other features.",
       "potentialMisuses": "For example, determining whether men are 'better' at becoming billionaires than women. Women are underrepresented among billionaires, but there are a lot of reasons for that the data doesn't reflect."
     }
