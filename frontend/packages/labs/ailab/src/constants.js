@@ -209,6 +209,13 @@ export const styles = {
     marginTop: 10
   },
 
+  uploadButton: {
+    fontSize: 13.33,
+    padding: "2px 6px",
+    margin: 0,
+    border: "none",
+  },
+
   specifyColumnsItem: {
     display: "inline-block",
     width: "20%"
