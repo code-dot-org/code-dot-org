@@ -496,5 +496,12 @@ export const styles = {
 
   saveInputsWidth: {
     width: "95%"
+  },
+
+  modelCardContainer: {
+    backgroundColor: "grey",
+    height: "70%",
+    width: "30%",
+    overflow: "scroll"
   }
 };
