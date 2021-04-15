@@ -129,7 +129,6 @@ export default storybook => {
               status: LevelStatus.locked
             }))}
             lessonLockedForSection={() => true}
-            lockableAuthorized={true}
           />
         )
       },
@@ -189,7 +188,6 @@ export default storybook => {
               ...level,
               status: LevelStatus.attempted
             }))}
-            lockableAuthorized={true}
           />
         )
       }
