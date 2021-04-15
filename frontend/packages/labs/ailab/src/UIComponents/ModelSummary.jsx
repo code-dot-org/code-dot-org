@@ -2,7 +2,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Statement from "./Statement";
 import { saveMessages, styles } from "../constants";
 import { getSummaryStat } from "../redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -51,31 +50,47 @@ class ModelSummary extends Component {
 
     return (
       <div style={styles.panel}>
-        <Statement />
         <div style={styles.modelCardContainer}>
-          <h3 style={styles.bold}>{trainedModelDetails.name}</h3>
-          <span style={styles.bold}>Id: </span>
-          <div>Summary</div>
-          <p>
-            Predict {metadata.labelColumn} based on{" "}
-            {selectedFeatures.length > 0 && (
-              <span>
-                {selectedFeatures.join(", ")} with {summaryStat.stat}% accuracy.
-              </span>
-            )}
-          </p>
+          <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
+          <h5 style={styles.modelCardContent}>Id: </h5>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>Summary</h5>
+            <p style={styles.modelCardContent}>
+              Predict {metadata.labelColumn} based on{" "}
+              {selectedFeatures.length > 0 && (
+                <span>
+                  {selectedFeatures.join(", ")} with {summaryStat.stat}%
+                  accuracy.
+                </span>
+              )}
+            </p>
+          </div>
           {console.log(metadata)}
           {console.log(summaryStat)}
-          <div>About the Data</div>
-          <p>{metadata.card.description}</p>
-          <div>Intended Uses</div>
-          <p>{trainedModelDetails.potentialUses} </p>
-          <div>Warnings</div>
-          <p>{trainedModelDetails.potentialMisuses}</p>
-          <div>Label</div>
-          <p>{labelColumn}</p>
-          <div>Features</div>
-          <p>{selectedFeatures.join(", ")}</p>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>About the Data </h5>
+            <p style={styles.modelCardContent}>{metadata.card.description}</p>
+          </div>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>Intended Uses</h5>
+            <p style={styles.modelCardContent}>
+              {trainedModelDetails.potentialUses}{" "}
+            </p>
+          </div>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>Warnings</h5>
+            <p style={styles.modelCardContent}>
+              {trainedModelDetails.potentialMisuses}
+            </p>
+          </div>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>Label</h5>
+            <p style={styles.modelCardContent}>{labelColumn}</p>
+          </div>
+          <div style={styles.modelCardSubpanel}>
+            <h5 style={styles.modelCardHeading}>Features</h5>
+            <p style={styles.modelCardContent}>{selectedFeatures.join(", ")}</p>
+          </div>
           <div>
             {saveStatus === "success" && (
               <div style={{ position: "absolute", bottom: 0 }}>

@@ -19,6 +19,7 @@ import {
   validationMessages,
   getTrainedModelDataToSave
 } from "./redux";
+import Statement from "./UIComponents/Statement";
 
 class PanelButtons extends Component {
   static propTypes = {
@@ -229,9 +230,15 @@ class App extends Component {
 
         {currentPanel === "modelSummary" && (
           <BodyContainer>
-            <ContainerFullWidth>
+            {/* <ContainerFullWidth>
               <ModelSummary />
-            </ContainerFullWidth>
+            </ContainerFullWidth> */}
+            <ContainerLeft>
+              <Statement />
+            </ContainerLeft>
+            <ContainerRight>
+              <ModelSummary />
+            </ContainerRight>
           </BodyContainer>
         )}
 

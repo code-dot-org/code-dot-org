@@ -499,9 +499,37 @@ export const styles = {
   },
 
   modelCardContainer: {
-    backgroundColor: "grey",
+    backgroundColor: "rgb(198, 202, 205)",
     height: "70%",
-    width: "30%",
-    overflow: "scroll"
+    // width: "30%",
+    borderRadius: "5px",
+    padding: "20px",
+    overflow: "scroll",
+    whiteSpace: "normal"
+  },
+
+  modelCardHeader: {
+    marginBottom: "10px",
+    marginTop: 0,
+  },
+
+  modelCardHeading: {
+    fontSize: 14,
+    marginTop: 0,
+    marginBottom: 5,
+    textAlign: "center"
+  },
+
+  modelCardContent: {
+    fontSize: 13,
+    marginBottom: 0,
+    marginTop: 0
+  },
+
+  modelCardSubpanel: {
+    backgroundColor: "rgb(231, 232, 234)",
+    borderRadius: "5px",
+    marginBottom: "10px",
+    padding: "10px"
   }
 };
