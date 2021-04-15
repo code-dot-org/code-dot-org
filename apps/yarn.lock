@@ -3755,10 +3755,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-blockly@4.20201217.0:
-  version "4.20201217.0"
-  resolved "https://registry.yarnpkg.com/blockly/-/blockly-4.20201217.0.tgz#2031f42ff84d34a0fb35b1e69b0064466a1e0346"
-  integrity sha512-kQjP0TydnMIkH8pbJ0qpC1bhqATijCwFMi1UFP3SjULWTR44JpHC4g8c2K+ATUexg9p5/nioslQDNL8dBi3nvw==
+blockly@5.20210325.1:
+  version "5.20210325.1"
+  resolved "https://registry.yarnpkg.com/blockly/-/blockly-5.20210325.1.tgz#c0a73174318dc61f4de116548ace2b2970dd4a58"
+  integrity sha512-qrilYPovJeDfxKDWm1YBUCPVNElh/iyC1szaHTIPZHj9C9YPpSzZOeFyyrPBbYRudzbo8kjBOWMtHnN1bLjkoQ==
   dependencies:
     jsdom "15.2.1"
 
