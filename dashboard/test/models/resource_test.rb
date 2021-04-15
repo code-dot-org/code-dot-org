@@ -71,7 +71,7 @@ class ResourceTest < ActiveSupport::TestCase
   test "summarize for lesson plan" do
     resource = create :resource, key: 'my_key', name: 'test resource', url: 'test.url',  audience: 'Teacher', type: 'Activity Guide'
     assert_equal(
-      {key: 'my_key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
+      {id: resource.id, key: 'my_key', name: 'test resource', url: 'test.url', download_url: nil, audience: 'Teacher', type: 'Activity Guide'},
       resource.summarize_for_lesson_plan
     )
   end
