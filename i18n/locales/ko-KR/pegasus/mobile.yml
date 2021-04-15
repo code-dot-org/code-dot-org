@@ -1069,6 +1069,12 @@
   coursed-2019_gradelevel: 8 학년 이상
   coursee-2019_gradelevel: 나이 8세-12세
   coursef-2019_gradelevel: 9-13 세
+  coursea-2020_gradelevel: 4-7 세
+  courseb-2020_gradelevel: 5-8 세
+  coursec-2020_gradelevel: 6-10 세
+  coursed-2020_gradelevel: 8 학년 이상
+  coursee-2020_gradelevel: 나이 8세-12세
+  coursef-2020_gradelevel: 9-13 세
   accelerated_gradelevel: "나이 10세-13세"
   codeorg_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   codeintl_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"

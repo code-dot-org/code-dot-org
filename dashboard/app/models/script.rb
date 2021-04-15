@@ -837,19 +837,6 @@ class Script < ApplicationRecord
     ].include?(name)
   end
 
-  def localize_long_instructions?
-    # Don't ever show non-English markdown instructions for Course 1 - 4, the
-    # 20-hour course, or the pre-2017 minecraft courses.
-    !(
-      csf_international? ||
-      twenty_hour? ||
-      [
-        ScriptConstants::MINECRAFT_NAME,
-        ScriptConstants::MINECRAFT_DESIGNER_NAME
-      ].include?(name)
-    )
-  end
-
   def beta?
     Script.beta? name
   end
@@ -1257,6 +1244,7 @@ class Script < ApplicationRecord
     end
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
     update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
+    update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
     begin
       if Rails.application.config.levelbuilder_mode
         script = Script.find_by_name(script_name)
@@ -1302,6 +1290,10 @@ class Script < ApplicationRecord
   def update_migrated_teacher_resources(resource_ids)
     teacher_resources = (resource_ids || []).map {|id| Resource.find(id)}
     self.resources = teacher_resources
+  end
+
+  def update_student_resources(resource_ids)
+    self.student_resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
 
   def self.rake
@@ -1521,7 +1513,7 @@ class Script < ApplicationRecord
 
   def summarize_for_lesson_show(is_student = false)
     {
-      displayName: localized_title,
+      displayName: title_for_display,
       link: link,
       lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }

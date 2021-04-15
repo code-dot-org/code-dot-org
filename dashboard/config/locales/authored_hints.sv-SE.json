@@ -33,7 +33,7 @@
           "4-5_Nested_Loops_12_a": "**360 / 36 = ?**"
         },
         "CourseD_Dance_2020_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
           "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare."
         },
         "CourseD_Dance_2020_02": {
@@ -45,10 +45,10 @@
           "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 åtgärder.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_2020_05": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.\n\n_Denna nivå slutar efter 12 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._",
           "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg."
         },
         "CourseD_Dance_2020_06": {
@@ -72,38 +72,38 @@
           "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
         },
         "CourseD_Dance_Party_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
           "challenges": "**Valfria utmaningar**\n\n-   Välj en annan sång att spela.\n-   Välj en annan som ser ut som en älg!\n-   Byt namn på din dansare."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 åtgärder.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_Party_03": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.\n\n_Denna nivå slutar efter 12 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.\n\n_Denna nivå slutar efter 10 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde takten av låten.\n\n_Denna nivå slutar efter 9 takter._",
           "challenges": "**Valfri utmaning**\n\nÄndra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> händelserna."
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 6 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 5 takter._",
           "challenges": "**Valfri utmaning**\n\n-   Lägg till en tredje dansare (eller så många du vill!)\n-   Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 6 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 5 takter._",
           "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)"
         },
         "CourseD_Dance_Party_09": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_Party_10": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_Party_11": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_Party_11b": {
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.\n\n_Denna nivå slutar efter 8 åtgärder._"
@@ -121,7 +121,7 @@
           "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
         },
         "Dance_2019_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
           "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare."
         },
         "Dance_2019_02": {
@@ -133,10 +133,10 @@
           "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent."
         },
         "Dance_2019_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 åtgärder.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "Dance_2019_05": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.\n\n_Denna nivå slutar efter 12 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._",
           "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg."
         },
         "Dance_2019_06": {
@@ -157,44 +157,44 @@
           "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>"
         },
         "Dance_Party_01": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._",
           "challenges": "**Valfria utmaningar**\n\n-   Välj en annan sång att spela.\n-   Välj en annan som ser ut som en älg!\n-   Byt namn på din dansare."
         },
         "Dance_Party_02": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 åtgärder.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "Dance_Party_03": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 åtgärder måste din dansare göra en annan dans än den som gjordes efter 4 åtgärder.\n\n_Denna nivå slutar efter 12 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
         },
         "Dance_Party_04": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde åtgärden av låten.\n\n_Denna nivå slutar efter 10 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste göra så att bakgrundseffekten ändras någon gång under den sjunde takten av låten.\n\n_Denna nivå slutar efter 9 takter._",
           "challenges": "**Valfri utmaning**\n\nÄndra bakgrundseffekten vid olika tidpunkter under låten genom att koppla samman det nya blocket under <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> händelserna."
         },
         "Dance_Party_05": {
           "validation": "**Hur klarar jag denna nivå?** \n\n-   Din dansare behöver cykla genom åtminstone 4 olika danssteg innan nivån slutar. \n\n_Denna nivå slutar efter 12 takter._"
         },
         "Dance_Party_06": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 6 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Du måste ha minst två dansare.\n\n_Denna nivå slutar efter 5 takter._",
           "challenges": "**Valfri utmaning**\n\n-   Lägg till en tredje dansare (eller så många du vill!)\n-   Gör så att alla dina dansare utför olika rörelser vid olika tidpunkter i låten."
         },
         "Dance_Party_08": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 6 åtgärder._",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Två dansare måste ha en annan storlek än 100.\n\n_Denna nivå slutar efter 5 takter._",
           "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.)"
         },
         "Dance_Party_09": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Ändra färgtonen på minst en dansare.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "Dance_Party_10": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Egenskaper för två eller flera dansare måste ändras.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "Dance_Party_11": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
         },
         "Dance_Party_11_5": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Var bara kreativ!\n\n_Denna nivå slutar efter 7 takter._"
         },
         "Dance_Party_11b": {
-          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.\n\n_Denna nivå slutar efter 8 åtgärder._"
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Använd blocket ”när vänsterpilen är intryckt” för att få roboten att göra en dansrörelse när du trycker på den.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "Dance_Party_extras_alternate_2019": {
           "alternate": "Alternate blocket finns i \"Dansare\" kategorin."

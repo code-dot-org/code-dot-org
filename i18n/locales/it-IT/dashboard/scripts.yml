@@ -7816,6 +7816,8 @@ it:
               key: 'Laboratorio: Eventi'
               name: In movimento con gli eventi
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!
+            lesson-1:
+              name: Progetto di fine corso
           lesson_groups:
             csf_digcit:
               display_name: Cittadinanza digitale
@@ -7825,6 +7827,8 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+            lessonGroup-5:
+              display_name: Progetto di fine corso
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         courseb-2021:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -7867,6 +7871,8 @@ it:
               key: 'Laboratorio: Eventi'
               name: Una battaglia con gli eventi
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
+            lesson-1:
+              name: Progetto di fine corso
           lesson_groups:
             csf_digcit:
               display_name: Cittadinanza digitale
@@ -7876,6 +7882,8 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+            lessonGroup-6:
+              display_name: Progetto di fine corso
           student_description: 'Impara le basi dell''informatica e della sicurezza su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         coursec-2021:
           description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine del corso, puoi creare e condividere un gioco interattivo o una storia animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
@@ -7914,7 +7922,7 @@ it:
               name: Uno sguardo avanti con Minecraft
             Sticker Art with Loops:
               key: Cicli con l'artista
-              name: Cicli con l'artista
+              name: 'Cicli con l''artista'
             'Events: The Big Event':
               key: 'Il grande evento'
               name: Il grande evento
@@ -7923,7 +7931,7 @@ it:
               name: Realizzare un gioco Flappy
             Events in Play Lab:
               key: 'Laboratorio: Eventi'
-              name: Giocare con gli eventi
+              name: 'Giocare con gli eventi'
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
@@ -8170,6 +8178,9 @@ it:
               name: Personaggi in azione
             lesson-5:
               name: Epidemia
+            lesson-2:
+              name: Cittadinanza digitale - Il potere delle parole
+              description_student: Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato.
           lesson_groups:
             ramp_up:
               display_name: Introduzione
@@ -8185,6 +8196,8 @@ it:
               display_name: Variabili
             lessonGroup-9:
               display_name: rimuovi
+            lessonGroup-7:
+              display_name: Cittadinanza digitale
           student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione dei problemi e discuti sull''impatto sociale dell''informatica e di Internet. Nella seconda parte di questo corso, pianifica e crea un progetto di fine corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata in italiano ==>'
         express-2021:
           title: Corso Rapido (2017)

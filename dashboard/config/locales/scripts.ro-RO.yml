@@ -11937,6 +11937,8 @@ ro:
         csd5-2021:
           description_audience: "[șir gol]"
           lessons:
+            Project - Make a Recommendation:
+              description_student: "[șir gol]"
             Post-Project Test:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
@@ -12136,6 +12138,8 @@ ro:
                 să aplice toate abilitățile de scriere de cod pe care le-au dobândit
                 pentru a crea un joc animat. A venit timpul să fiți creativi și să
                 creați o poveste în Laboratorul de Joacă!
+            lesson-1:
+              name: Proiect de final de curs
           lesson_groups:
             csf_digcit:
               display_name: Cetățenia Digitală
@@ -12145,6 +12149,8 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+            lessonGroup-5:
+              display_name: Proiect de final de curs
           name: coursea-2021
           student_description: Învață noțiunile de bază ale științei calculatoarelor
             și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul
@@ -12264,6 +12270,8 @@ ro:
                 să aplice toate abilitățile de scriere de cod pe care le-au dobândit
                 pentru a crea un joc animat. A venit timpul să fiți creativi și să
                 creați un joc în Laboratorul de Joacă!
+            lesson-1:
+              name: Proiect de final de curs
           lesson_groups:
             csf_digcit:
               display_name: Cetățenia Digitală
@@ -12275,6 +12283,8 @@ ro:
               display_name: Impactul computerelor
             csf_events:
               display_name: Evenimente
+            lessonGroup-6:
+              display_name: Proiect de final de curs
           name: courseb-2021
           student_description: Învață noțiunile de bază ale științei calculatoarelor
             și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul
@@ -13071,6 +13081,18 @@ ro:
               name: Prezentând Laboratorul de Desen
             lesson-8:
               name: Spiriduși în acțiune
+            lesson-2:
+              name: Puterea cuvintelor
+              description_student: Hărțuirea („bullying”) nu este niciodată acceptabilă.
+                În această lecție vei învăța ce poți spune și ce nu poți spune online.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)Această
+                lecție a fost concepută inițial de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).Pe
+                măsură ce copiii cresc, aceștia vor începe, în mod firesc, să comunice
+                mai mult online. Dar o parte din ceea ce văd online îi poate face
+                să se simtă răniți, triști, furioși sau chiar să îi sperie. Ajutați-vă
+                elevii să dea dovadă de empatie în relațiile cu cei din jur și să
+                învețe strategii pe care trebuie să le utilizeze atunci când se confruntă
+                cu fenomenul „cyberbullying”."
           lesson_groups:
             ramp_up:
               display_name: Avansare
@@ -13088,6 +13110,8 @@ ro:
               display_name: Variabile
             lessonGroup-9:
               display_name: elimină
+            lessonGroup-7:
+              display_name: Cetățenia Digitală
           name: coursef-2021
           student_description: Învață să folosești diferite tipuri de bucle, evenimente,
             funcții și relații de condiționalitate. Analizează diverse tehnici de
@@ -13527,7 +13551,6 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
-          title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
           description: "[șir gol]"

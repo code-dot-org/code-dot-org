@@ -61,7 +61,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow {...baseProps} lockedForSection={true} />
     );
     assert.strictEqual(
-      wrapper.find('ProgressBubbleSet').props().disabled,
+      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
       true
     );
   });
@@ -77,7 +77,7 @@ describe('SummaryProgressRow', () => {
       />
     );
     assert.strictEqual(
-      wrapper.find('ProgressBubbleSet').props().disabled,
+      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
       true
     );
   });

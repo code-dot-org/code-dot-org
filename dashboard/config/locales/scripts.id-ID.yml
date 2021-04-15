@@ -26453,6 +26453,8 @@ id:
                 mempelajari cara menggunakan event di Play Lab dan menerapkan semua
                 keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan
                 animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!
+            lesson-1:
+              name: Proyek Akhir Kursus
           lesson_groups:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
@@ -26462,6 +26464,8 @@ id:
               display_name: Loop
             csf_events:
               display_name: kegiatan
+            lessonGroup-5:
+              display_name: Proyek Akhir Kursus
           student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet.
             Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
         courseb-2021:
@@ -26583,6 +26587,8 @@ id:
                 mempelajari cara menggunakan event di Play Lab dan menerapkan semua
                 keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan
                 animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
+            lesson-1:
+              name: Proyek Akhir Kursus
           lesson_groups:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
@@ -26594,6 +26600,8 @@ id:
               display_name: Dampak dari Komputasi
             csf_events:
               display_name: kegiatan
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
           student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet.
             Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
         coursec-2021:
@@ -27453,6 +27461,11 @@ id:
               name: Memperkenalkan Sprite Lab
             lesson-8:
               name: Sprite tengah Beraksi
+            lesson-2:
+              name: Kekuatan kata-Kata
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran
+                ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa
+                untuk mengatakan secara online.
           lesson_groups:
             ramp_up:
               display_name: Jalan-Naik
@@ -27470,6 +27483,8 @@ id:
               display_name: variabel
             lessonGroup-9:
               display_name: Hapus
+            lessonGroup-7:
+              display_name: Kewarganegaraaan Digital
           student_description: Pelajari cara menggunakan berbagai jenis loop, event,
             function, dan conditional. Selidiki berbagai teknik pemecahan masalah
             dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di

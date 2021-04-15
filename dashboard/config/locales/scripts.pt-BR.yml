@@ -25990,6 +25990,10 @@ pt:
               name: Introdução ao Sprite Lab
             lesson-8:
               name: Sprites em Ação
+            lesson-2:
+              name: O poder das palavras
+              description_student: Bullying nunca é bom. Esta lição ensinará sobre
+                o que é e o que não é bom dizer on-line.
           lesson_groups:
             ramp_up:
               display_name: Treinamento
@@ -26005,6 +26009,8 @@ pt:
               display_name: variáveis
             lessonGroup-9:
               display_name: remover
+            lessonGroup-7:
+              display_name: Cidadania digital
           student_description: Aprenda a usar diferentes tipos de loops, eventos,
             funções e condicionais. Investigue diferentes técnicas de solução de problemas
             e discuta os impactos sociais da computação e da Internet. Na segunda
