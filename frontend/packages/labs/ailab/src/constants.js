@@ -48,6 +48,10 @@ export const styles = {
     fontFamily: '"Gotham 5r", sans-serif'
   },
 
+  italic: {
+    fontFamily: '"Gotham 4i", sans-serif'
+  },
+
   error: {
     color: "#e51f68"
   },
@@ -425,7 +429,7 @@ export const styles = {
   },
 
   cardRow: {
-    marginTop: 5,
+    marginTop: 11,
     marginBottom: 11
   },
 

@@ -32,37 +32,42 @@ class DataCard extends Component {
             <div style={styles.scrollingContents}>
               {card && (
                 <div>
-                  <div style={styles.cardRow}>
-                    {metadata.card.description}
+                  <div style={styles.cardRow}>{metadata.card.description}</div>
+                  <div>
+                    <span style={styles.italic}>
+                      Source: &nbsp;
+                      {metadata.card.source}
+                    </span>
                   </div>
-                  <div style={styles.cardRow}>
-                    <span style={styles.bold}>Source:</span>
-                    &nbsp;
-                    {metadata.card.source}
-                  </div>
-                  <div style={styles.cardRow}>
-                    <span style={styles.bold}>Rows of data:</span>
-                    &nbsp;
-                    {dataLength}
+                  <div>
+                    <span style={styles.italic}>
+                      Rows of data: &nbsp;
+                      {dataLength}
+                    </span>
                   </div>
                   {metadata.card.lastUpdated && (
-                    <div style={styles.cardRow}>
-                      <span style={styles.bold}>Last updated:</span>
-                      &nbsp;
-                      {metadata.card.lastUpdated}
+                    <div>
+                      <span style={styles.italic}>
+                        Last updated: &nbsp;
+                        {metadata.card.lastUpdated}
+                      </span>
                     </div>
                   )}
 
                   {metadata.card.context.potentialUses && (
                     <div style={styles.cardRow}>
                       <div style={styles.bold}>Potential uses:</div>
-                      {metadata.card.context.potentialUses}
+                      <div style={styles.italic}>
+                        {metadata.card.context.potentialUses}
+                      </div>
                     </div>
                   )}
                   {metadata.card.context.potentialMisuses && (
                     <div style={styles.cardRow}>
                       <div style={styles.bold}>Potential misuses:</div>
-                      {metadata.card.context.potentialMisuses}
+                      <div style={styles.italic}>
+                        {metadata.card.context.potentialMisuses}
+                      </div>
                     </div>
                   )}
 
