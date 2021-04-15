@@ -62,6 +62,7 @@ const style = {
 class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
+    onRun: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
@@ -87,27 +88,27 @@ class JavalabView extends React.Component {
       () => this.setState({loading: false, loadSuccess: false}),
       this.props.suppliedFilesVersionId
     );
-    this.getToken();
+    // this.getToken();
   }
 
-  getToken = () => {
-    // TODO: Use token to connect to Java Builder
-    $.ajax({
-      url: '/javabuilder/access_token',
-      type: 'get',
-      data: {
-        channelId: this.props.channelId,
-        projectVersion: project.getCurrentSourceVersionId()
-      }
-    })
-      .done()
-      .fail();
-  };
+  // getToken = () => {
+  //   // TODO: Use token to connect to Java Builder
+  //   $.ajax({
+  //     url: '/javabuilder/access_token',
+  //     type: 'get',
+  //     data: {
+  //       channelId: this.props.channelId,
+  //       projectVersion: project.getCurrentSourceVersionId()
+  //     }
+  //   })
+  //     .done()
+  //     .fail();
+  // };
 
-  run = () => {
-    this.props.appendOutputLog('Running program...');
-    this.props.appendOutputLog('Hello world!');
-  };
+  // run = () => {
+  //   this.props.appendOutputLog('Running program...');
+  //   this.props.appendOutputLog('Hello world!');
+  // };
 
   compile = () => {
     this.props.appendOutputLog('Compiling program...');
@@ -163,7 +164,7 @@ class JavalabView extends React.Component {
                 <button
                   type="button"
                   style={style.singleButton}
-                  onClick={this.run}
+                  onClick={this.props.onRun}
                 >
                   <FontAwesome icon="play" className="fa-2x" />
                   <br />

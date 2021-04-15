@@ -6,6 +6,7 @@ import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
 import color from '@cdo/apps/util/color';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
+import {sendMessage} from './javalabRunner';
 
 const style = {
   consoleStyle: {
@@ -111,8 +112,9 @@ class JavalabConsole extends React.Component {
     if (e.keyCode === KeyCodes.ENTER) {
       e.preventDefault();
       e.target.value = '';
-      this.state.commandHistory.push(input);
+      this.state.commandHistory.push(input + '\n');
       this.props.appendInputLog(input);
+      sendMessage(input);
     } else if (e.keyCode === KeyCodes.UP) {
       e.target.value = this.state.commandHistory.goBack(input);
       moveCaretToEndOfDiv(e.target);

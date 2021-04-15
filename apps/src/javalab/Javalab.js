@@ -8,6 +8,7 @@ import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {onSave} from './JavalabFileManagement';
+import runCode from './javalabRunner';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -64,6 +65,7 @@ Javalab.prototype.init = function(config) {
   config.useFilesApi = true;
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
+  const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
 
@@ -106,6 +108,7 @@ Javalab.prototype.init = function(config) {
     <Provider store={getStore()}>
       <JavalabView
         onMount={onMount}
+        onRun={onRun}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         suppliedFilesVersionId={suppliedFilesVersionId}
@@ -128,6 +131,11 @@ Javalab.prototype.beforeUnload = function(event) {
   } else {
     delete event.returnValue;
   }
+};
+
+// Called by the Javalab app when it wants execute student code.
+Javalab.prototype.onRun = function() {
+  runCode();
 };
 
 // Called by the Javalab app when it wants to go to the next level.
