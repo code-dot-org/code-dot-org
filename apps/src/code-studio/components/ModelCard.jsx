@@ -6,7 +6,7 @@ const styles = {
   container: {
     color: color.black,
     textAlign: 'left',
-    backgroundColor: color.lightest_gray,
+    backgroundColor: color.lighter_gray,
     borderRadius: 5,
     padding: 20,
     whiteSpace: 'normal',
@@ -15,13 +15,28 @@ const styles = {
     overflow: 'scroll'
   },
   subPanel: {
-    backgroundColor: color.lighter_gray,
+    backgroundColor: color.lightest_gray,
     borderRadius: 5,
-    margin: 20,
-    padding: 20
+    borderColor: color.gray,
+    marginBottom: 10,
+    padding: 10
   },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif"
+  },
+  header: {
+    fontFamily: "'Gotham 7r', sans-serif",
+    marginTop: 0,
+    lineHeight: '20px'
+  },
+  heading: {
+    fontFamily: "'Gotham 7r', sans-serif",
+    fontSize: 14,
+    marginBottom: 5,
+    textAlign: 'center'
+  },
+  details: {
+    marginBottom: 0
   }
 };
 
@@ -38,59 +53,49 @@ export default class ModelCard extends React.Component {
       <div>
         {model && metadata && (
           <div style={styles.container}>
+            <h3 style={styles.header}>{metadata.name}</h3>
             <div>
-              <span style={styles.bold}>Name:</span> &nbsp;
-              {metadata.name}
+              <span style={styles.bold}>Id: </span>
+              <span>{this.props.model.id}</span>
             </div>
-            <div>
-              <span style={styles.bold}>Columns:</span>
-              <div style={styles.subPanel}>
-                {metadata.columns &&
-                  metadata.columns.map(column => {
-                    return (
-                      <div key={column.id}>
-                        <span style={styles.bold}>{column.id}:</span> &nbsp;
-                        {column.description}
-                      </div>
-                    );
-                  })}
-              </div>
+            <br />
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Summary</div>
+              <p style={styles.details}>
+                Predict {metadata.labelColumn} based on{' '}
+                {metadata.selectedFeatures?.join(', ')} with{' '}
+                {metadata.summaryStat?.stat}% accuracy.
+              </p>
             </div>
-            <div>
-              <span style={styles.bold}>How can this model be used?</span>{' '}
-              &nbsp;
-              {metadata.potentialUses}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>About the Data</div>
+              <p style={styles.details}>
+                {metadata.datasetDetails?.description}
+              </p>
+              <br />
+              {metadata.datasetDetails?.numRows && (
+                <p style={styles.details}>
+                  Dataset size: {metadata.datasetDetails?.numRows} rows
+                </p>
+              )}
             </div>
-            <div>
-              <span style={styles.bold}>
-                How can this model be potentially misused?
-              </span>{' '}
-              &nbsp;
-              {metadata.potentialMisuses}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Intended Uses</div>
+              <p style={styles.details}>{metadata.potentialUses}</p>
             </div>
-            <div>
-              <span style={styles.bold}>
-                Has this model been trained on data that can identify a
-                subgroup?
-              </span>{' '}
-              &nbsp;
-              {metadata.identifySubgroup ? 'yes' : 'no'}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Warnings</div>
+              <p style={styles.details}>{metadata.potentialMisuses}</p>
             </div>
-            <div>
-              <span style={styles.bold}>
-                Have we ensured the data has adequate representation of
-                subgroups?
-              </span>{' '}
-              &nbsp;
-              {metadata.representSubgroup ? 'yes' : 'no'}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Label</div>
+              <p style={styles.details}>{metadata.labelColumn}</p>
             </div>
-            <div>
-              <span style={styles.bold}>
-                Could this model be used to inform decisions central to human
-                life?
-              </span>{' '}
-              &nbsp;
-              {metadata.decisionsLife ? 'yes' : 'no'}
+            <div style={styles.subPanel}>
+              <div style={styles.heading}>Features</div>
+              <p style={styles.details}>
+                {metadata.selectedFeatures?.join(', ')}
+              </p>
             </div>
           </div>
         )}

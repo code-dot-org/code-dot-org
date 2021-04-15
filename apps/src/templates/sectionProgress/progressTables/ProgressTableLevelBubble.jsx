@@ -3,146 +3,181 @@ import Radium from 'radium';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
+import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {
-  bubbleStyles,
-  BubbleSize,
-  BubbleShape,
-  mainBubbleStyle,
-  diamondContainerStyle,
-  getProgressStyle
-} from '@cdo/apps/templates/progress/progressStyles';
 
-/**
- * Top-level bubble component responsible for configuring BasicBubble based on
- * properties of a level and student progress.
- */
-class ProgressTableLevelBubble extends React.PureComponent {
-  static propTypes = {
-    levelStatus: PropTypes.string,
-    levelKind: PropTypes.string,
-    isDisabled: PropTypes.bool,
-    isUnplugged: PropTypes.bool,
-    isConcept: PropTypes.bool,
-    isBonus: PropTypes.bool,
-    isPaired: PropTypes.bool,
-    bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
-    title: PropTypes.string,
-    url: PropTypes.string
-  };
-
-  static defaultProps = {
-    bubbleSize: BubbleSize.full
-  };
-
-  renderContent() {
-    const {
-      levelStatus,
-      isUnplugged,
-      isBonus,
-      isPaired,
-      title,
-      bubbleSize
-    } = this.props;
-    if (bubbleSize === BubbleSize.dot) {
-      // dot-sized bubbles are too small for content
-      return null;
-    }
-    const isLocked = levelStatus === LevelStatus.locked;
-    return isUnplugged ? (
-      <span>{i18n.unpluggedActivity()}</span>
-    ) : isLocked ? (
-      <FontAwesome icon="lock" />
-    ) : isPaired ? (
-      <FontAwesome icon="users" />
-    ) : isBonus ? (
-      <FontAwesome icon="flag-checkered" />
-    ) : title ? (
-      <span>{title}</span>
-    ) : null;
+const styles = {
+  container: {
+    ...progressStyles.flex,
+    width: progressStyles.BUBBLE_CONTAINER_WIDTH
+  },
+  main: {
+    ...progressStyles.font,
+    boxSizing: 'content-box',
+    letterSpacing: -0.11,
+    position: 'relative',
+    margin: '3px 0px'
+  },
+  large: {
+    ...progressStyles.flex,
+    fontSize: 16
+  },
+  largeCircle: {
+    width: progressStyles.DOT_SIZE,
+    height: progressStyles.DOT_SIZE,
+    borderRadius: progressStyles.DOT_SIZE
+  },
+  largeDiamond: {
+    width: progressStyles.DIAMOND_DOT_SIZE,
+    height: progressStyles.DIAMOND_DOT_SIZE,
+    borderRadius: 4,
+    transform: 'rotate(45deg)',
+    margin: '6px 0px'
+  },
+  smallCircle: {
+    ...progressStyles.flex,
+    width: progressStyles.LETTER_BUBBLE_SIZE,
+    height: progressStyles.LETTER_BUBBLE_SIZE,
+    borderRadius: progressStyles.LETTER_BUBBLE_SIZE,
+    lineHeight: '12px',
+    fontSize: 12,
+    margin: progressStyles.LETTER_BUBBLE_MARGIN
+  },
+  contents: {
+    whiteSpace: 'nowrap',
+    lineHeight: '16px'
+  },
+  diamondContents: {
+    // undo the rotation from the parent
+    transform: 'rotate(-45deg)'
+  },
+  bonusDisabled: {
+    backgroundColor: color.lighter_gray,
+    color: color.white
+  },
+  unplugged: {
+    ...progressStyles.flex,
+    borderRadius: 20,
+    padding: '6px 10px',
+    fontSize: 12,
+    whiteSpace: 'nowrap'
   }
-
-  render() {
-    const {isUnplugged, isConcept, isDisabled, bubbleSize} = this.props;
-    const bubbleShape = isUnplugged
-      ? BubbleShape.pill
-      : isConcept
-      ? BubbleShape.diamond
-      : BubbleShape.circle;
-
-    const bubble = (
-      <BasicBubble
-        shape={bubbleShape}
-        size={bubbleSize}
-        progressStyle={getProgressStyle(this.props)}
-      >
-        {this.renderContent()}
-      </BasicBubble>
-    );
-
-    if (isDisabled) {
-      return bubble;
-    }
-    return <LinkWrapper {...this.props}>{bubble}</LinkWrapper>;
-  }
-}
-
-/**
- * Base bubble component defined in terms of shape, size, and style, as opposed
- * to level-related properties. This component is itself only an empty styled
- * container, and expects the bubble content (e.g. level number, icon, text) to
- * be passed in as its children.
- * @param {BubbleShape} shape
- * @param {BubbleSize} size
- * @param {object} progressStyle contains border and background colors
- * @param {node} children the content to render inside the bubble
- */
-function BasicBubble({shape, size, progressStyle, children}) {
-  const bubbleStyle = mainBubbleStyle(shape, size, progressStyle);
-  if (shape === BubbleShape.diamond) {
-    return (
-      <DiamondContainer size={size} bubbleStyle={bubbleStyle}>
-        {children}
-      </DiamondContainer>
-    );
-  }
-  return <div style={bubbleStyle}>{children}</div>;
-}
-BasicBubble.propTypes = {
-  shape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired,
-  size: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
-  progressStyle: PropTypes.object,
-  children: PropTypes.node
 };
 
-/**
- * Container applying rotation transforms and forcing diamond bubbles to have
- * the same size as circles.
- * @param {BubbleSize} size
- * @param {object} bubbleStyle contains rotation transform and progress style
- * @param {node} children
- */
-function DiamondContainer({size, bubbleStyle, children}) {
+function levelStyle(props) {
+  const {levelStatus, levelKind, disabled} = props;
+  return {
+    ...(!disabled && progressStyles.hoverStyle),
+    ...progressStyles.levelProgressStyle(levelStatus, levelKind, disabled)
+  };
+}
+
+function mainStyle(props) {
+  return {
+    ...styles.main,
+    ...levelStyle(props)
+  };
+}
+
+function largeStyle(props) {
+  const {disabled, bonus} = props;
+  return {
+    ...mainStyle(props),
+    ...styles.large,
+    ...(disabled && bonus && styles.bonusDisabled)
+  };
+}
+
+function largeContentStyle(props) {
+  const {bonus, paired} = props;
+  return {
+    ...progressStyles.flex,
+    ...styles.contents,
+    fontSize: paired || bonus ? 14 : 16
+  };
+}
+
+function UnpluggedBubble(props) {
   return (
-    /* Constrain size */
-    <div style={diamondContainerStyle(size)}>
-      {/* Apply rotation transform and progress style */}
-      <div style={bubbleStyle}>
-        {/* Undo the rotation from the parent */}
-        <div style={bubbleStyles.diamondContentTransform}>{children}</div>
+    <div
+      style={{
+        ...styles.main,
+        ...styles.unplugged,
+        ...levelStyle(props)
+      }}
+    >
+      <Content {...props} />
+    </div>
+  );
+}
+
+function SmallCircle(props) {
+  return (
+    <div style={{...mainStyle(props), ...styles.smallCircle}}>
+      <Content {...props} />
+    </div>
+  );
+}
+
+function LargeBubble(props) {
+  const BubbleType = props.concept ? LargeDiamond : LargeCircle;
+  return (
+    <div style={styles.container}>
+      <BubbleType {...props} />
+    </div>
+  );
+}
+LargeBubble.propTypes = {
+  concept: PropTypes.bool
+};
+
+function LargeCircle(props) {
+  return (
+    <div style={{...largeStyle(props), ...styles.largeCircle}}>
+      <div style={largeContentStyle(props)}>
+        <Content {...props} />
       </div>
     </div>
   );
 }
-DiamondContainer.propTypes = {
-  size: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
-  bubbleStyle: PropTypes.object,
-  children: PropTypes.node
+
+function LargeDiamond(props) {
+  return (
+    <div style={{...largeStyle(props), ...styles.largeDiamond}}>
+      <div style={{...largeContentStyle(props), ...styles.diamondContents}}>
+        <Content {...props} />
+      </div>
+    </div>
+  );
+}
+
+function Content(props) {
+  const {levelStatus, unplugged, bonus, paired, title} = props;
+  const locked = levelStatus === LevelStatus.locked;
+  return unplugged ? (
+    <span>{i18n.unpluggedActivity()}</span>
+  ) : locked ? (
+    <FontAwesome icon="lock" />
+  ) : paired ? (
+    <FontAwesome icon="users" />
+  ) : bonus ? (
+    <FontAwesome icon="flag-checkered" />
+  ) : title ? (
+    <span>{title}</span>
+  ) : null;
+}
+Content.propTypes = {
+  levelStatus: PropTypes.string,
+  unplugged: PropTypes.bool,
+  bonus: PropTypes.bool,
+  paired: PropTypes.bool,
+  title: PropTypes.string
 };
 
 function LinkWrapper(props) {
   return (
-    <a href={props.url} style={bubbleStyles.link}>
+    <a href={props.url} style={progressStyles.link}>
       {props.children}
     </a>
   );
@@ -152,10 +187,43 @@ LinkWrapper.propTypes = {
   children: PropTypes.element.isRequired
 };
 
+class ProgressTableLevelBubble extends React.PureComponent {
+  static propTypes = {
+    levelStatus: PropTypes.string,
+    levelKind: PropTypes.string,
+    disabled: PropTypes.bool.isRequired,
+    unplugged: PropTypes.bool,
+    smallBubble: PropTypes.bool,
+    bonus: PropTypes.bool,
+    paired: PropTypes.bool,
+    concept: PropTypes.bool,
+    title: PropTypes.string,
+    url: PropTypes.string.isRequired
+  };
+
+  render() {
+    const BubbleType = this.props.smallBubble
+      ? SmallCircle
+      : this.props.unplugged
+      ? UnpluggedBubble
+      : LargeBubble;
+
+    const bubble = <BubbleType {...this.props} />;
+
+    if (this.props.disabled) {
+      return bubble;
+    }
+    return <LinkWrapper {...this.props}>{bubble}</LinkWrapper>;
+  }
+}
+
 export default Radium(ProgressTableLevelBubble);
 
 export const unitTestExports = {
-  DiamondContainer,
-  BasicBubble,
+  UnpluggedBubble,
+  SmallCircle,
+  LargeCircle,
+  LargeDiamond,
+  Content,
   LinkWrapper
 };

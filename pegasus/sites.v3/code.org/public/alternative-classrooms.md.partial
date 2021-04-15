@@ -3,13 +3,14 @@ title: Resources for Virtual and Socially-Distanced Classrooms
 video_player: true
 theme: responsive
 social:
-    "og:title": "Resources for Virtual and Socially-Distanced Classrooms"
-    "og:description": "An overview of resources that teachers can use in alternative classroom environments"
-    "og:image": "http://code.org/images/athome/alt-classrooms.jpg"
-    "og:image:width": 850
-    "og:image:height": 502
+  "og:title": "Resources for Virtual and Socially-Distanced Classrooms"
+  "og:description": "An overview of resources that teachers can use in alternative classroom environments"
+  "og:image": "http://code.org/images/athome/alt-classrooms.jpg"
+  "og:image:width": 850
+  "og:image:height": 502
 ---
-{{ professional_learning_apply_banner }}
+
+{{ alternative_classrooms_professional_learning_banner }}
 
 # Resources for Teaching in Virtual and Socially-Distanced Classrooms
 
