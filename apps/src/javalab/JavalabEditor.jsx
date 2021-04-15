@@ -10,7 +10,9 @@ import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState} from '@codemirror/state';
 import {renameProjectFile, onProjectChanged} from './JavalabFileManagement';
+import FileRenameDialog from './FileRenameDialog';
 import {Tabs, Tab} from 'react-draggable-tab';
+import color from '@cdo/apps/util/color';
 
 const style = {
   editor: {
@@ -18,21 +20,22 @@ const style = {
     height: 400,
     backgroundColor: '#282c34'
   },
-  tabs: {
-    display: 'flex'
+  anchor: {
+    padding: 10,
+    color: color.charcoal,
+    backgroundColor: color.white,
+    fontFamily: '"Gotham 5r", sans-serif',
+    display: 'block',
+    textDecoration: 'none',
+    lineHeight: '20px',
+    transition: 'background-color .2s ease-out',
+    ':hover': {
+      backgroundColor: color.lightest_gray,
+      cursor: 'pointer'
+    }
   },
-  tab: {
-    backgroundColor: '#282c34',
-    textAlign: 'center',
-    padding: 10
-  },
-  button: {
-    marginLeft: 10
-  },
-  renameForm: {
-    marginBottom: 0,
-    display: 'flex',
-    alignItems: 'center'
+  nonFirstAnchor: {
+    borderTop: `1px solid ${color.charcoal}`
   }
 };
 
@@ -50,7 +53,6 @@ class JavalabEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    this.activateRenameFile = this.activateRenameFile.bind(this);
     this.renameFileComplete = this.renameFileComplete.bind(this);
     this.onProjectChanged = onProjectChanged.bind(this);
 
@@ -61,9 +63,15 @@ class JavalabEditor extends React.Component {
       tabs: [
         {
           filename: props.filename,
-          key: props.filename
+          key: props.filename,
+          // TODO: remove this once we have multifile
+          isOriginal: true
         }
-      ]
+      ],
+      showMenu: false,
+      contextTarget: null,
+      dialogOpen: false,
+      menuPosition: {}
     };
   }
 
@@ -81,8 +89,10 @@ class JavalabEditor extends React.Component {
   makeListeners(key) {
     return {
       onDoubleClick: e => {
-        console.log('onDoubleClick', key, e);
         this.handleTabDoubleClick(key, e);
+      },
+      onContextMenu: e => {
+        this.handleTabContextMenu(key, e);
       }
     };
   }
@@ -122,7 +132,9 @@ class JavalabEditor extends React.Component {
     const key = 'newTab_' + Date.now();
     let newTab = {
       key,
-      filename: 'untitled'
+      filename: 'untitled',
+      // TODO: remove this once we have multifile
+      isOriginal: false
     };
     const tabs = currentTabs.map(tab => {
       return {
@@ -139,15 +151,54 @@ class JavalabEditor extends React.Component {
   }
 
   handleTabDoubleClick(key) {
+    let filename;
+    this.state.tabs.forEach(tab => {
+      if (tab.key === key) {
+        filename = tab.filename;
+      }
+    });
     this.setState({
       editTabKey: key,
+      editTabFilename: filename,
       dialogOpen: true
     });
   }
 
-  shouldTabClose(e, key) {
-    console.log('should tab close', e, key);
-    return window.confirm('close?');
+  handleTabContextMenu(key, e) {
+    e.preventDefault();
+    const boundingRect = e.target.getBoundingClientRect();
+    this.setState({
+      showMenu: true,
+      contextTarget: key,
+      menuPosition: {
+        // Add 10 to offset the 10px padding on the tab title element.
+        top: `${boundingRect.bottom + 10}px`,
+        left: `${boundingRect.left}px`
+      }
+    });
+  }
+
+  renameFromContextMenu() {
+    let filename;
+    this.state.tabs.forEach(tab => {
+      if (tab.key === this.state.contextTarget) {
+        filename = tab.filename;
+      }
+    });
+    this.setState({
+      showMenu: false,
+      contextTarget: null,
+      editTabKey: this.state.contextTarget,
+      editTabFilename: filename,
+      dialogOpen: true
+    });
+  }
+
+  cancelContextMenu() {
+    this.setState({
+      showMenu: false,
+      contextTarget: null
+    });
   }
 
   dispatchEditorChange = () => {
@@ -165,6 +216,26 @@ class JavalabEditor extends React.Component {
     };
   };
 
+  onRenameFile(newFilename) {
+    let updatedTab;
+    const newTabs = this.state.tabs.map(tab => {
+      if (tab.key === this.state.editTabKey) {
+        tab.filename = newFilename;
+        updatedTab = tab;
+      }
+      return tab;
+    });
+
+    // TODO: make this work for multifile
+    if (updatedTab.isOriginal) {
+      const {filename, setFilename} = this.props;
+      renameProjectFile(filename, newFilename);
+      setFilename(newFilename);
+      this.onProjectChanged();
+    }
+    this.setState({tabs: newTabs, dialogOpen: false});
+  }
+
   renameFileComplete(e) {
     e.preventDefault();
     const {filename, setFilename} = this.props;
@@ -175,51 +246,15 @@ class JavalabEditor extends React.Component {
     this.setState({renameFileActive: false});
   }
 
-  activateRenameFile() {
-    this.setState({newFilename: this.props.filename, renameFileActive: true});
-  }
-
-  displayFileRename() {
-    return (
-      <div style={style.tabs}>
-        <form style={style.renameForm} onSubmit={this.renameFileComplete}>
-          <div style={style.tab}>
-            <input
-              className="rename-file-input"
-              type="text"
-              value={this.state.newFilename}
-              onChange={e => this.setState({newFilename: e.target.value})}
-            />
-          </div>
-          <input
-            className="btn btn-default btn-sm"
-            style={style.button}
-            type="submit"
-            value="Save"
-          />
-        </form>
-      </div>
-    );
-  }
-
-  displayFileNameAndRenameButton() {
-    return (
-      <div style={style.tabs}>
-        <div style={style.tab}>{this.props.filename}</div>
-        <button
-          type="button"
-          onClick={this.activateRenameFile}
-          className="btn btn-default btn-sm"
-          style={style.button}
-        >
-          Rename
-        </button>
-      </div>
-    );
-  }
-
   render() {
-    const {tabs} = this.state;
+    const {tabs, editTabFilename} = this.state;
+    let menuStyle = {
+      display: this.state.showMenu ? 'block' : 'none',
+      position: 'fixed',
+      top: this.state.menuPosition.top,
+      left: this.state.menuPosition.left,
+      backgroundColor: '#F0F0F0'
+    };
     return (
       <div style={this.props.style}>
         <PaneHeader hasFocus={true}>
@@ -262,6 +297,28 @@ class JavalabEditor extends React.Component {
             moveLeft: ['shift+alt+command+tab', 'shift+alt+ctrl+tab']
           }}
           keepSelectedTab={true}
+        />
+        <div style={menuStyle}>
+          <a
+            key="rename"
+            onClick={this.renameFromContextMenu.bind(this)}
+            style={style.anchor}
+          >
+            Rename
+          </a>
+          <a
+            key="cancel"
+            onClick={this.cancelContextMenu.bind(this)}
+            style={{...style.nonFirstAnchor, ...style.anchor}}
+          >
+            Cancel
+          </a>
+        </div>
+        <FileRenameDialog
+          isOpen={this.state.dialogOpen}
+          handleClose={() => this.setState({dialogOpen: false})}
+          filename={editTabFilename}
+          handleRename={this.onRenameFile.bind(this)}
         />
       </div>
     );
