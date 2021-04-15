@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-04-07 17:19:39 UTC",
+    "serialized_at": "2021-04-15 13:59:54 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -87,9 +87,21 @@
       }
     },
     {
-      "key": "end_of_course_project",
+      "key": "lessonGroup-7",
       "user_facing": true,
       "position": 6,
+      "properties": {
+        "display_name": "Impacts of Computing"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "end_of_course_project",
+      "user_facing": true,
+      "position": 7,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -426,12 +438,31 @@
       }
     },
     {
-      "key": "End of Course Project",
-      "name": "End of Course Project",
+      "key": "lesson-1",
+      "name": "Designing for Accessibility",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
+      "properties": {
+        "overview": "In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
+        "student_overview": "Learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
+        "purpose": "Through learning about accessibility, students recognize the impacts of computing beyond their own lives. Accessibility might not seem like a relevant CS topic, but creating technology that is accessible for underserved users helps make tech better for everyone else as well. ",
+        "preparation": "* For context, read about the ***types of disabilities**. \n* Read through the speaker notes in the ***slide deck**.\n* Prepare enough sketching/drawing supplies for all students."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
       "properties": {
         "overview": "This longer lesson provides an opportunity for students to put their coding skills to use in a capstone project. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. ",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
@@ -1402,6 +1433,48 @@
         "lesson_activity.key": "ba1bc1f7-f9be-4735-8bcb-de57cc5c2d4a",
         "lesson.key": "Functions in Harvester",
         "lesson_group.key": "csf_nested_loops",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "0118e81c-812d-4001-976a-ad2dd2a8dd77",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0118e81c-812d-4001-976a-ad2dd2a8dd77",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "c79703f5-9051-4665-95b6-cfae7c304f6d",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c79703f5-9051-4665-95b6-cfae7c304f6d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "key": "b2227118-727d-4eff-be1c-fafe331297fd",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2227118-727d-4eff-be1c-fafe331297fd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "coursee-2021"
       }
     },
@@ -3352,6 +3425,53 @@
       "seeding_key": {
         "activity_section.key": "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1",
         "lesson_activity.key": "ba1bc1f7-f9be-4735-8bcb-de57cc5c2d4a"
+      }
+    },
+    {
+      "key": "86067d99-75b5-4f21-ac53-cae3f71ab968",
+      "position": 1,
+      "properties": {
+        "name": "Context-Setting",
+        "description": "**Discuss**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_ \n * _What kinds of apps are there?_ \n * _Where do we use apps?_\n\n While discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\n**Say**: (Ensure that all students are on the same page regarding this topic by introducing key terms and concepts.) \n\n- *In this course, we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\n**Discuss**: Apps are everywhere! Ask students why they think apps have become so popular. Here are some example explanations:\n\n- Many people can more easily access or afford a mobile device (e.g., smartphone) than a larger computer with a keyboard, mouse, and so forth. \n- Apps can address a variety of needs. For example, if I need a ride somewhere, I might try a ride-sharing app and get there quickly. If I want to know what movies I should watch, there's probably an app that can help me decide. And of course, if I want to call or text someone on my phone, I use apps for those as well! \n\nIntroduce accessibility with the remarks below.\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who are just like them even though they have disabilities."
+      },
+      "seeding_key": {
+        "activity_section.key": "86067d99-75b5-4f21-ac53-cae3f71ab968",
+        "lesson_activity.key": "0118e81c-812d-4001-976a-ad2dd2a8dd77"
+      }
+    },
+    {
+      "key": "8873d7fd-15b6-4da5-9e83-156d6a9516d0",
+      "position": 1,
+      "properties": {
+        "name": "Designing for Accessibility",
+        "progression_name": "Designing for Accessibility"
+      },
+      "seeding_key": {
+        "activity_section.key": "8873d7fd-15b6-4da5-9e83-156d6a9516d0",
+        "lesson_activity.key": "c79703f5-9051-4665-95b6-cfae7c304f6d"
+      }
+    },
+    {
+      "key": "e5e488aa-2089-4803-8d69-3d40bac03f12",
+      "position": 2,
+      "properties": {
+        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the ***Designing for Accessibility Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n[slides]\n\n#### Designing for Accessibility Scenarios\n\n*Slide 1: Meet Wei*\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n*Slide 2: Introducing Grammaphone!*\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n* Here is a screenshot of the home screen. What do you think about it? How do you think this app works? \n\n*Slide 3: Wei’s Problem*\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music-sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n*Slide 4: Meet Roger*\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. A few years ago, Roger’s hand had to be “amputated” (surgically removed) due to an accident. \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand,” which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n*Slide 5: Introducing Football Frenzy!*\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n* Here’s a screenshot of the game in action. Based on the interface, how do you think this game is played? \n\n*Slide 6: Roger’s Problem*\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so that you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n*Slide 7: I Wish...* \n\n* Neither of these apps was designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s make their wishes come true by redesigning these apps! \n\n[/slides]\n\n####App Redesign Activity (25 min)\n\nThe final scenario allows students to sketch a redesign of one app from the scenarios (\"Grammaphone\" for Wei or \"Football Frenzy\" for Roger). \n\nStudents should primarily focus their efforts on making their redesigned app more accessible for either of them, along with any other accessibility features they can think of. Students can design as many screens for the app as they wish, and they do not need to make their app look anything like the original examples.\n\nIf there is time, students may redesign apps for both characters.\n\n**Distribute**: Pass out crayons/pencils/etc. to each student as they open their reflection journals. \n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design addresses the need of the user in question."
+      },
+      "seeding_key": {
+        "activity_section.key": "e5e488aa-2089-4803-8d69-3d40bac03f12",
+        "lesson_activity.key": "c79703f5-9051-4665-95b6-cfae7c304f6d"
+      }
+    },
+    {
+      "key": "365538ed-acdc-4054-9f6c-fb4085cced76",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "description": "**Discuss**: Discuss real-world examples of how apps and other technology can be made more accessible. Ask students how they think making something more accessible can also make it better for others. One example is wheelchair ramps near building entrances. These were originally made for people with wheelchairs, but they are also convenient for people with baby strollers, dollies, and other wheeled equipment."
+      },
+      "seeding_key": {
+        "activity_section.key": "365538ed-acdc-4054-9f6c-fb4085cced76",
+        "lesson_activity.key": "b2227118-727d-4eff-be1c-fafe331297fd"
       }
     },
     {
@@ -7247,6 +7367,29 @@
       "chapter": 143,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Designing for Accessibility"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2021",
+        "activity_section.key": "8873d7fd-15b6-4da5-9e83-156d6a9516d0"
+      },
+      "level_keys": [
+        "DesigningForAccessibilityMarkdownLevel_2021"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": null,
       "properties": {
         "progression": "Example Projects",
@@ -7270,7 +7413,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 145,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -9003,6 +9146,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "DesigningForAccessibilityMarkdownLevel_2021",
+        "script_level.level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2021",
+        "activity_section.key": "8873d7fd-15b6-4da5-9e83-156d6a9516d0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseE_EOC_examples_2021",
         "script_level.level_keys": [
           "courseE_EOC_examples_2021"
@@ -9297,6 +9452,30 @@
       }
     },
     {
+      "name": "Designing for Accessibility",
+      "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
+      "key": "designing_for_accessibility_1",
+      "properties": {
+        "type": "Slides",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "designing_for_accessibility_1"
+      }
+    },
+    {
+      "name": "Types of Disabilities",
+      "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
+      "key": "types_of_disabilities",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "types_of_disabilities"
+      }
+    },
+    {
       "name": "End of Course Project Guide",
       "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit",
       "key": "end-of-course-project-guide",
@@ -9545,6 +9724,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "designing_for_accessibility_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "types_of_disabilities"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "end-of-course-project-guide"
       }
@@ -9587,6 +9778,9 @@
         "script.name": "coursee-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {
@@ -10343,6 +10537,36 @@
       }
     },
     {
+      "key": "87094122-056f-4fa4-83b7-e3d6abb52e67",
+      "properties": {
+        "description": "Describe the impact of mobile apps on the modern world."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "87094122-056f-4fa4-83b7-e3d6abb52e67"
+      }
+    },
+    {
+      "key": "b672db1b-ee05-44b3-9f82-73b1b1f94e1a",
+      "properties": {
+        "description": "Explain why accessibility is an important part of designing an app for users."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b672db1b-ee05-44b3-9f82-73b1b1f94e1a"
+      }
+    },
+    {
+      "key": "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe",
+      "properties": {
+        "description": "Improve upon an existing app design by addressing the accessibility needs of users."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe"
+      }
+    },
+    {
       "key": "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc",
       "properties": {
         "description": "Learn to plan in advance for an ongoing assignment."
@@ -10546,6 +10770,48 @@
         "lesson.key": "Functions in Harvester",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
       }
     },
     {
