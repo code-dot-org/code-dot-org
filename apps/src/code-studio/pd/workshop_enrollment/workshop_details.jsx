@@ -57,16 +57,19 @@ export default class WorkshopDetails extends React.Component {
     return (
       <div className="row">
         <div className="span2" style={styles.label}>
-          <strong>Location:</strong>
+          <strong>
+            {this.props.workshop.virtual ? 'Link to join:' : 'Location:'}
+          </strong>
         </div>
         <div className="span2">
           {this.props.workshop.location_name}
-          {this.props.workshop.location_address && (
-            <>
-              <br />
-              {this.props.workshop.location_address}
-            </>
-          )}
+          {!this.props.workshop.virtual &&
+            this.props.workshop.location_address && (
+              <>
+                <br />
+                {this.props.workshop.location_address}
+              </>
+            )}
         </div>
       </div>
     );
