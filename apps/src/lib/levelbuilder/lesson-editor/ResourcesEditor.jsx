@@ -60,6 +60,9 @@ class ResourcesEditor extends Component {
     resourceContext: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
 
+    addRollupsType: PropTypes.oneOf('course', 'script'),
+    addRollupsId: PropTypes.string,
+
     // Provided by redux
     addResource: PropTypes.func.isRequired,
     editResource: PropTypes.func.isRequired,
@@ -255,17 +258,31 @@ class ResourcesEditor extends Component {
   };
 
   addRollupPages = () => {
+    const urlPrefix = this.props.addRollupsType === 'course' ? 'course' : 's';
     $.ajax({
-      url: '/s/csd1-2021/add_rollup_resources',
+      url: `/${urlPrefix}/${this.props.addRollupsId}/add_rollup_resources`,
       method: 'POST',
       contentType: 'application/json;charset=UTF-8'
     })
       .done(data => {
-        const resourceKeys = this.props.resources.map(resource => resource.key);
+        const existingRollupResourceKeys = this.props.resources
+          .filter(resource => resource.isRollup)
+          .map(resource => resource.key);
+        const addedRollupResourceKeys = data
+          .filter(resource => resource.isRollup)
+          .map(resource => resource.key);
         const resourcesAdded = data.filter(
-          r => resourceKeys.indexOf(r.key) === -1
+          r => existingRollupResourceKeys.indexOf(r.key) === -1
         );
-        resourcesAdded.forEach(resource => this.props.addResource(resource));
+        const resourcesRemoved = existingRollupResourceKeys.filter(
+          r => !addedRollupResourceKeys.includes(r.key)
+        );
+        resourcesRemoved.forEach(resource =>
+          this.props.removeResource(this.props.resourceContext, resource)
+        );
+        resourcesAdded.forEach(resource =>
+          this.props.addResource(this.props.resourceContext, resource)
+        );
       })
       .fail(error => {
         console.log('whomp whomp');
@@ -329,13 +346,15 @@ class ResourcesEditor extends Component {
             <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
             Resource
           </button>
-          <button
-            onClick={this.addRollupPages}
-            style={styles.addButton}
-            type="button"
-          >
-            Add rollup pages
-          </button>
+          {this.props.addRollupsType && this.props.addRollupsId && (
+            <button
+              onClick={this.addRollupPages}
+              style={styles.addButton}
+              type="button"
+            >
+              Add rollup pages
+            </button>
+          )}
         </div>
       </div>
     );
