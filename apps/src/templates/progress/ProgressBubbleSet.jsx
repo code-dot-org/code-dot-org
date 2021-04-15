@@ -8,6 +8,7 @@ import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
 import {levelType} from './progressTypes';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
+import {connect} from 'react-redux';
 
 const styles = {
   main: {
@@ -78,7 +79,9 @@ class ProgressBubbleSet extends React.Component {
     stageExtrasEnabled: PropTypes.bool,
     hideAssessmentIcon: PropTypes.bool,
     showSublevels: PropTypes.bool,
-    onBubbleClick: PropTypes.func
+    onBubbleClick: PropTypes.func,
+    // Redux
+    isRtl: PropTypes.bool
   };
 
   bubbleDisabled = level => {
@@ -97,31 +100,40 @@ class ProgressBubbleSet extends React.Component {
       levels,
       selectedSectionId,
       selectedStudentId,
-      hideAssessmentIcon
+      hideAssessmentIcon,
+      isRtl
     } = this.props;
+
+    // Adjust background styles if locale is RTL
+    const backgroundFirstStyle = isRtl
+      ? styles.backgroundLast
+      : styles.backgroundFirst;
+    const backgroundLastStyle = isRtl
+      ? styles.backgroundFirst
+      : styles.backgroundLast;
+
+    const backgroundStyleProp = {
+      ...styles.background,
+      ...(level.isConceptLevel && styles.backgroundDiamond),
+      ...(isSublevel && styles.backgroundSublevel),
+      ...(level.isUnplugged && styles.backgroundPill),
+      ...(!isSublevel && index === 0 && backgroundFirstStyle),
+      ...(!isSublevel &&
+        !level.sublevels &&
+        index === levels.length - 1 &&
+        backgroundLastStyle)
+    };
+
+    const containerStyleProp = {
+      ...styles.container,
+      ...(level.isUnplugged && styles.pillContainer),
+      ...(level.isConceptLevel && styles.diamondContainer)
+    };
 
     return (
       <div style={styles.withBackground} key={index}>
-        <div
-          style={[
-            styles.background,
-            level.isConceptLevel && styles.backgroundDiamond,
-            isSublevel && styles.backgroundSublevel,
-            level.isUnplugged && styles.backgroundPill,
-            !isSublevel && index === 0 && styles.backgroundFirst,
-            !isSublevel &&
-              !level.sublevels &&
-              index === levels.length - 1 &&
-              styles.backgroundLast
-          ]}
-        />
-        <div
-          style={[
-            styles.container,
-            level.isUnplugged && styles.pillContainer,
-            level.isConceptLevel && styles.diamondContainer
-          ]}
-        >
+        <div style={backgroundStyleProp} />
+        <div style={containerStyleProp}>
           <ProgressBubble
             level={level}
             disabled={this.bubbleDisabled(level)}
@@ -163,4 +175,8 @@ class ProgressBubbleSet extends React.Component {
   }
 }
 
-export default Radium(ProgressBubbleSet);
+export const UnconnectedProgressBubbleSet = ProgressBubbleSet;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(ProgressBubbleSet));

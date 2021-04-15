@@ -48,7 +48,8 @@ level 'courseF_text_concat', progression: 'Skill Building'
 level 'courseF_text_practice', progression: 'Practice'
 
 lesson 'user-input-programs', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: false
+level 'courseF_label_predict', progression: 'Prediction'
 level 'courseF_variables_samples', progression: 'Exploration: Sample Programs'
-level 'courseF_variables_stop', progression: 'Prepare Your Plan'
-level 'courseF_variables_projects', progression: 'Application: Create Your Project'
+level 'courseF_variables_stop', progression: 'Planning'
+level 'courseF_variables_projects', progression: 'Mini-Project: User Input Programs'
 
