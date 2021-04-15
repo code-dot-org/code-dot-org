@@ -118,6 +118,18 @@ module Cdo
       site_url('hourofcode.com', path, scheme)
     end
 
+    def javabuilder_url(path = '', scheme = '')
+      if (rack_env?(:development))
+        # Since pegasus and dashboard share the same port, we have a Route53
+        # DNS record that redirects requests to localhost. Javabuilder, as a
+        # separate service, uses a different port. Therefore, we can access the
+        # the service directly.
+        'ws://localhost:8080/javabuilder'
+      else
+        site_url('javabuilder.code.org', '', 'wss')
+      end
+    end
+
     # Get a list of all languages for which we want to link to a localized
     # version of CurriculumBuilder. This list is distinct from the list of
     # languages officially supported by CurriculumBuilder in that there are

@@ -2,7 +2,10 @@ import {getStore} from '../redux';
 import {appendOutputLog} from './javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 // import {getCurrentSourceVersionId} from '@cdo/apps/code-studio/initApp/project';
-export default function connectAndRunCode() {
+
+let url;
+export default function connectAndRunCode(inputUrl) {
+  url = inputUrl;
   // getStore().dispatch(appendOutputLog("Hello from the runner!"))
   getToken();
 }
@@ -37,7 +40,8 @@ function onFail(error) {
 
 let socket;
 function openWebsocket() {
-  socket = new WebSocket("ws://localhost:8080/javabuilder");
+  // debugger;
+  socket = new WebSocket(url);
   socket.onopen = function(e) {
     console.log("[open] Connection established");
     console.log("Sending to server");
