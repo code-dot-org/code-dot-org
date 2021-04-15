@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything serious"
     }
   },
+  "defaultLabelColumn": "workout",
   "fields": [
     {
       "id": "snack",
@@ -35,6 +36,5 @@
       "type": "categorical",
       "description": "Ideal workout"
     }
-  ],
-  "defaultLabelColumn": "workout"
+  ]
 }

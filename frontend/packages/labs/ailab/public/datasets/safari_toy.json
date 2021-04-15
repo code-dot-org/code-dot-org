@@ -9,6 +9,7 @@
       "potentialMisuses": "Only certain types of animals are tracked, so avoid jumping to conclusions on animals that are not a part of this set (like zebras or hippopotamus)"
     }
   },
+  "defaultLabelColumn": "lions",
   "fields": [
     {
       "id": "lions",
@@ -70,6 +71,5 @@
       "type": "numerical",
       "description": "Percent of the land that has grass and bushes and shrubbery during a visit"
     }
-  ],
-  "defaultLabelColumn": "lions"
+  ]
 }

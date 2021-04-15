@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything other than recommendations"
     }
   },
+  "defaultLabelColumn": "preference",
   "fields": [
     {
       "id": "pecan",
@@ -55,6 +56,5 @@
       "type": "categorical",
       "description": "Do you like or dislike the raspado?"
     }
-  ],
-  "defaultLabelColumn": "preference"
+  ]
 }

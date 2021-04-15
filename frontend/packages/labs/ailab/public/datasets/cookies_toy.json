@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything other than cookie recommendations"
     }
   },
+  "defaultLabelColumn": "preference",
   "fields": [
     {
       "id": "chocolate chips",
@@ -45,6 +46,5 @@
       "type": "categorical",
       "description": "Do you like or dislike the cookie?"
     }
-  ],
-  "defaultLabelColumn": "preference"
+  ]
 }

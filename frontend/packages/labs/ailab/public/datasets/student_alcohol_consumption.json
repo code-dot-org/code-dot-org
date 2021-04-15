@@ -1,4 +1,15 @@
 {
+  "card": {
+    "description": "Contains individual responses to a social survey of Portuguese secondary school students, tracking social, gender, and study information.",
+    "source": "Kaggle (https://www.kaggle.com/uciml/student-alcohol-consumption)",
+    "last_updated": "2016",
+    "context": {
+      "created_by": "P. Cortez and A. Silva",
+      "potential_uses": "",
+      "potential_misuses": ""
+    }
+  },
+  "defaultLabelColumn": "health",
   "fields": [
     {
       "type": "categorical",
@@ -165,16 +176,5 @@
       "id": "G3",
       "description": "Final grade"
     }
-  ],
-  "defaultLabelColumn": "health",
-  "card": {
-    "description": "Contains individual responses to a social survey of Portuguese secondary school students, tracking social, gender, and study information.",
-    "source": "Kaggle (https://www.kaggle.com/uciml/student-alcohol-consumption)",
-    "last_updated": "2016",
-    "context": {
-      "created_by": "P. Cortez and A. Silva",
-      "potential_uses": "",
-      "potential_misuses": ""
-    }
-  }
+  ]
 }

@@ -1,4 +1,15 @@
 {
+  "card": {
+    "description": "Insurance costs along with factors like number of children, location, smoker/nonsmoker status, age, sex, BMI",
+    "source": "https://www.kaggle.com/mirichoi0218/insurance",
+    "lastUpdated": "Unknown",
+    "context": {
+      "createdBy": "Unknown",
+      "potentialUses": "",
+      "potentialMisuses": ""
+    }
+  },
+  "defaultLabelColumn": "smoker",
   "fields": [
     {
       "type": "numerical",
@@ -35,21 +46,5 @@
       "id": "charges",
       "description": "Individual medical costs billed by health insurance"
     }
-  ],
-  "defaultLabelColumn": "smoker",
-  "card": {
-    "description": "Insurance costs along with factors like number of children, location, smoker/nonsmoker status, age, sex, BMI",
-    "source": "https://www.kaggle.com/mirichoi0218/insurance",
-    "lastUpdated": "Unknown",
-    "context": {
-      "createdBy": "Unknown",
-      "potentialUses": "",
-      "potentialMisuses": ""
-    }
-  },
-  "recommended_features": [
-    "bmi",
-    "charges"
-  ],
-  "recommended_label": "smoker"
+  ]
 }

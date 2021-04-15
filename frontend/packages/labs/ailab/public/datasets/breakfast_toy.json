@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything serious"
     }
   },
+  "defaultLabelColumn": "breakfast",
   "fields": [
     {
       "id": "pet",
@@ -35,6 +36,5 @@
       "type": "categorical",
       "description": "Your favorite breakfast meal"
     }
-  ],
-  "defaultLabelColumn": "breakfast"
+  ]
 }

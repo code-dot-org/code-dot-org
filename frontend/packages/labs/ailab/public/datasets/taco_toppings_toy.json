@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything other than taco recommendations"
     }
   },
+  "defaultLabelColumn": "Preference",
   "fields": [
     {
       "id": "Ground Beef",
@@ -40,6 +41,5 @@
       "type": "categorical",
       "description": "Did you like the taco?"
     }
-  ],
-  "defaultLabelColumn": "Preference"
+  ]
 }

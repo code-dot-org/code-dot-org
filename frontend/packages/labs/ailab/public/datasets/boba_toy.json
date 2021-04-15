@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything other than bubble tea recommendations"
     }
   },
+  "defaultLabelColumn": "preference",
   "fields": [
     {
       "id": "mango jelly",
@@ -60,6 +61,5 @@
       "type": "categorical",
       "description": "Did you like it or dislike it?"
     }
-  ],
-  "defaultLabelColumn": "preference"
+  ]
 }

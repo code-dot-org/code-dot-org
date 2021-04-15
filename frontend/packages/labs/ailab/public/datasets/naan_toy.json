@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything other than recommendations"
     }
   },
+  "defaultLabelColumn": "preference",
   "fields": [
     {
       "id": "chicken",
@@ -60,6 +61,5 @@
       "type": "categorical",
       "description": "Do you like or dislike the naan?"
     }
-  ],
-  "defaultLabelColumn": "preference"
+  ]
 }

@@ -1,4 +1,15 @@
 {
+  "card": {
+    "description": "Data from the 1994 US census, with income, personal, and job data. Used to predict whether a person's income is over $50,000",
+    "source": "UCI Machine Learning (https://archive.ics.uci.edu/ml/datasets/Adult)",
+    "lastUpdated": "1994",
+    "context": {
+      "created_by": "Barry Becker",
+      "potentialUses": "Predict whether a person's income is over or under $50,000, based on their education level and age. Demonstrate racial and gender-based income inequality.",
+      "potentialMisuses": "Using this for something like determining whether or not to give someone a loan could be deeply unfair."
+    }
+  },
+  "defaultLabelColumn": "income",
   "fields": [
     {
       "type": "numerical",
@@ -70,16 +81,5 @@
       "id": "income",
       "description": "Their income: binary for greater than or less than $50,000 "
     }
-  ],
-  "defaultLabelColumn": "income",
-  "card": {
-    "description": "Data from the 1994 US census, with income, personal, and job data. Used to predict whether a person's income is over $50,000",
-    "source": "UCI Machine Learning (https://archive.ics.uci.edu/ml/datasets/Adult)",
-    "lastUpdated": "1994",
-    "context": {
-      "created_by": "Barry Becker",
-      "potentialUses": "Predict whether a person's income is over or under $50,000, based on their education level and age. Demonstrate racial and gender-based income inequality.",
-      "potentialMisuses": "Using this for something like determining whether or not to give someone a loan could be deeply unfair."
-    }
-  }
+  ]
 }

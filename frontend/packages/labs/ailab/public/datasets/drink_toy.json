@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything serious"
     }
   },
+  "defaultLabelColumn": "drink",
   "fields": [
     {
       "id": "color",
@@ -35,6 +36,5 @@
       "type": "categorical",
       "description": "Your favorite drink"
     }
-  ],
-  "defaultLabelColumn": "drink"
+  ]
 }

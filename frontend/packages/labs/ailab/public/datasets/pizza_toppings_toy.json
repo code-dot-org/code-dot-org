@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything other than pizza recommendations"
     }
   },
+  "defaultLabelColumn": "Preference",
   "fields": [
     {
       "id": "Pepperoni",
@@ -22,7 +23,7 @@
     },
     {
       "id": "Broccoli",
-	  "type": "categorical",
+      "type": "categorical",
       "description": "Did the pizza have broccoli?"
     },
     {
@@ -65,6 +66,5 @@
       "type": "categorical",
       "description": "How did you like the pizza?"
     }
-  ],
-  "defaultLabelColumn": "Preference"
+  ]
 }

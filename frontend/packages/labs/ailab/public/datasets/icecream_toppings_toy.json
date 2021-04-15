@@ -9,6 +9,7 @@
       "potentialMisuses": "Anything other than ice cream recommendations"
     }
   },
+  "defaultLabelColumn": "Preference",
   "fields": [
     {
       "id": "Hot Fudge",
@@ -40,6 +41,5 @@
       "type": "categorical",
       "description": "Did you like the ice cream cone?"
     }
-  ],
-  "defaultLabelColumn": "Preference"
+  ]
 }

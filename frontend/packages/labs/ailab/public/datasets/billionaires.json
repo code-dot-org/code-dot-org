@@ -1,4 +1,15 @@
 {
+  "card": {
+    "description": "Multi-decade data on individual billionaires, ranked for each year, with features like age, industry, family wealth, and wealth type (e.g. company founder in the finance industry).",
+    "source": "CORGIS Dataset Project https://corgis-edu.github.io/corgis/csv/billionaires/()",
+    "lastUpdated": "2016",
+    "context": {
+      "createdBy": "Ryan Whitcomb",
+      "potentialUses": "Predict the type of a billionare's wealth based on other features.",
+      "potentialMisuses": "For example, determining whether men are 'better' at becoming billionaires than women. Women are underrepresented among billionaires, but there are a lot of reasons for that the data doesn't reflect."
+    }
+  },
+  "defaultLabelColumn": "Wealth Inherited",
   "fields": [
     {
       "type": "numerical",
@@ -85,16 +96,5 @@
       "id": "Wealth Inherited",
       "description": "Whether their wealth was inherited and where from, e.g. 'not inherited', 'father', '3rd generation'"
     }
-  ],
-  "defaultLabelColumn": "Wealth Inherited",
-  "card": {
-    "description": "Multi-decade data on individual billionaires, ranked for each year, with features like age, industry, family wealth, and wealth type (e.g. company founder in the finance industry).",
-    "source": "CORGIS Dataset Project https://corgis-edu.github.io/corgis/csv/billionaires/()",
-    "lastUpdated": "2016",
-    "context": {
-      "createdBy": "Ryan Whitcomb",
-      "potentialUses": "Predict the type of a billionare's wealth based on other features.",
-      "potentialMisuses": "For example, determining whether men are 'better' at becoming billionaires than women. Women are underrepresented among billionaires, but there are a lot of reasons for that the data doesn't reflect."
-    }
-  }
+  ]
 }
