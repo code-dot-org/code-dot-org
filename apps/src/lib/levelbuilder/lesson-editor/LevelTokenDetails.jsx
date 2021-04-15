@@ -38,9 +38,9 @@ const tooltipText = {
 };
 
 const disabledBonusTooltipText =
-  'You must enable lesson extras for script to set levels as bonus.';
+  'You must enable lesson extras for unit to set levels as bonus.';
 const bonusAlreadySelectedTooltipText =
-  'In order for bonus levels to show up for users you must enable lesson extras for the script.';
+  'In order for bonus levels to show up for users you must enable lesson extras for the unit.';
 
 const ArrowRenderer = ({onMouseDown}) => {
   return <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />;
@@ -104,8 +104,8 @@ class LevelTokenDetails extends Component {
                   {option === 'bonus' &&
                   !this.props.lessonExtrasAvailableForScript
                     ? !this.props.scriptLevel[option]
-                      ? bonusAlreadySelectedTooltipText
-                      : disabledBonusTooltipText
+                      ? disabledBonusTooltipText
+                      : bonusAlreadySelectedTooltipText
                     : tooltipText[option]}
                 </div>
               </ReactTooltip>
