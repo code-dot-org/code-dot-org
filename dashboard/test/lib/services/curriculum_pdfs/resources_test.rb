@@ -53,7 +53,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   test 'resources that are google forms will be ignored' do
     resource = create(:resource, url: "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/view")
     Services::CurriculumPdfs.expects(:export_from_google).never
-    assert Services::CurriculumPdfs.fetch_resource_pdf(resource)
+    assert_nil Services::CurriculumPdfs.fetch_resource_pdf(resource)
   end
 
   test 'resources that are externally-hosted PDFs can be downloaded' do
