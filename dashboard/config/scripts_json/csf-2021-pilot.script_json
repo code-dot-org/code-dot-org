@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 20:10:44 UTC",
+    "serialized_at": "2021-04-13 21:03:28 UTC",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }
@@ -889,6 +889,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Prediction",
+        "level_keys": [
+          "courseF_label_predict"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_label_predict"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_label_predict"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Exploration: Sample Programs",
         "level_keys": [
           "courseF_variables_samples"
@@ -909,12 +934,12 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 2,
+      "chapter": 32,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare Your Plan",
+        "progression": "Planning",
         "level_keys": [
           "courseF_variables_stop"
         ]
@@ -934,12 +959,12 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 3,
+      "chapter": 33,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Application: Create Your Project",
+        "progression": "Mini-Project: User Input Programs",
         "level_keys": [
           "courseF_variables_projects"
         ]
@@ -1281,6 +1306,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseF_label_predict",
+        "script_level.level_keys": [
+          "courseF_label_predict"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_variables_samples",
         "script_level.level_keys": [
           "courseF_variables_samples"
@@ -1319,6 +1355,12 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
@@ -1329,6 +1371,12 @@
 
   ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

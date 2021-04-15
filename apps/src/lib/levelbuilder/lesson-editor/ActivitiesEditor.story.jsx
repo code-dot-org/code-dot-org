@@ -4,7 +4,7 @@ import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
@@ -17,6 +17,8 @@ import {
   searchOptions
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
+const resourcesEditor = createResourcesReducer('lessonResource');
+
 const createStoreWithLessonPlan = () => {
   registerReducers({
     ...reducers,
@@ -25,7 +27,7 @@ const createStoreWithLessonPlan = () => {
   });
   const store = createStoreWithReducers();
   store.dispatch(init(sampleActivities, searchOptions, []));
-  store.dispatch(initResources([]));
+  store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
   return store;
 };
@@ -40,7 +42,7 @@ const createStoreWithoutLessonPlan = () => {
   store.dispatch(
     init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [])
   );
-  store.dispatch(initResources([]));
+  store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
   return store;
 };

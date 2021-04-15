@@ -2,6 +2,7 @@ import React from 'react';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
+import {BubbleSize} from '@cdo/apps/templates/progress/progressStyles';
 
 const statuses = [
   LevelStatus.locked,
@@ -51,7 +52,7 @@ export default storybook => {
               <ProgressTableLevelBubble
                 levelStatus={LevelStatus.not_tried}
                 levelKind={LevelKind.level}
-                disabled={true}
+                isDisabled={true}
                 title={'3'}
                 url={'/foo/bar'}
               />
@@ -66,7 +67,6 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  disabled={false}
                   title={'3'}
                   url={'/foo/bar'}
                 />
@@ -81,10 +81,10 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  disabled={status === LevelStatus.locked}
+                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
-                  concept={true}
+                  isConcept={true}
                 />
               )
           }))
@@ -97,7 +97,7 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.assessment}
-                  disabled={status === LevelStatus.locked}
+                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
                 />
@@ -112,10 +112,10 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  disabled={status === LevelStatus.locked}
+                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
-                  paired={true}
+                  isPaired={true}
                 />
               )
           }))
@@ -128,10 +128,10 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  disabled={status === LevelStatus.locked}
+                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
-                  bonus={true}
+                  isBonus={true}
                 />
               )
           }))
@@ -144,39 +144,72 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  disabled={status === LevelStatus.locked}
+                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
-                  unplugged={true}
+                  isUnplugged={true}
                 />
               )
           }))
         )
         .concat([
           {
-            name: 'small bubbles',
+            name: 'letter bubbles',
             story: () =>
               wrapMultiple([
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.perfect}
-                  disabled={false}
-                  smallBubble={true}
+                  isDisabled={false}
+                  bubbleSize={BubbleSize.letter}
                   title={'a'}
                   url={'/foo/bar'}
                   key={1}
                 />,
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.attempted}
-                  disabled={false}
-                  smallBubble={true}
+                  isDisabled={false}
+                  bubbleSize={BubbleSize.letter}
                   title={'b'}
                   url={'/foo/bar'}
                   key={2}
                 />,
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.not_tried}
-                  disabled={false}
-                  smallBubble={true}
+                  isDisabled={false}
+                  bubbleSize={BubbleSize.letter}
+                  title={'c'}
+                  url={'/foo/bar'}
+                  key={3}
+                />
+              ])
+          }
+        ])
+        .concat([
+          {
+            name: 'dot bubbles',
+            story: () =>
+              wrapMultiple([
+                <ProgressTableLevelBubble
+                  levelStatus={LevelStatus.perfect}
+                  isDisabled={false}
+                  isConcept={true}
+                  bubbleSize={BubbleSize.dot}
+                  title={'a'}
+                  url={'/foo/bar'}
+                  key={1}
+                />,
+                <ProgressTableLevelBubble
+                  levelStatus={LevelStatus.attempted}
+                  isDisabled={false}
+                  bubbleSize={BubbleSize.dot}
+                  title={'b'}
+                  url={'/foo/bar'}
+                  key={2}
+                />,
+                <ProgressTableLevelBubble
+                  levelStatus={LevelStatus.not_tried}
+                  isDisabled={false}
+                  bubbleSize={BubbleSize.dot}
                   title={'c'}
                   url={'/foo/bar'}
                   key={3}

@@ -1,24 +1,24 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setEditorText, setFileName} from './javalabRedux';
+import {setSource, renameFile} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
-import {editorSetup} from './editorSetup';
-import {EditorState} from '@codemirror/state';
-import {renameProjectFile, onProjectChanged} from './JavalabFileManagement';
+import {editorSetup, lightMode} from './editorSetup';
+import {EditorState, tagExtension} from '@codemirror/state';
 import FileRenameDialog from './FileRenameDialog';
 import {Tabs, Tab} from 'react-draggable-tab';
+import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
+import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 
 const style = {
   editor: {
     width: '100%',
-    height: 400,
-    backgroundColor: '#282c34'
+    height: 400
   },
   anchor: {
     padding: 10,
@@ -36,6 +36,22 @@ const style = {
   },
   nonFirstAnchor: {
     borderTop: `1px solid ${color.charcoal}`
+  },
+  tab: {
+    textAlign: 'center',
+    padding: 10,
+    backgroundColor: color.white
+  },
+  button: {
+    marginLeft: 10
+  },
+  renameForm: {
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  darkBackground: {
+    backgroundColor: '#282c34'
   }
 };
 
@@ -44,30 +60,28 @@ class JavalabEditor extends React.Component {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
     // populated by redux
-    setEditorText: PropTypes.func,
-    setFilename: PropTypes.func,
-    filename: PropTypes.string,
-    editorText: PropTypes.string
+    setSource: PropTypes.func,
+    renameFile: PropTypes.func,
+    sources: PropTypes.object,
+    isDarkMode: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
-    this.renameFileComplete = this.renameFileComplete.bind(this);
-    this.onProjectChanged = onProjectChanged.bind(this);
-
+    //this.renameFileComplete = this.renameFileComplete.bind(this);
+    let tabs = [];
+    Object.keys(props.sources).forEach((file, index) => {
+      tabs.push({
+        filename: file,
+        key: `file-${index}`
+      });
+    });
     this.state = {
       renameFileActive: false,
       showFileManagementPanel: false,
       newFilename: null,
-      tabs: [
-        {
-          filename: props.filename,
-          key: props.filename,
-          // TODO: remove this once we have multifile
-          isOriginal: true
-        }
-      ],
+      tabs,
       showMenu: false,
       contextTarget: null,
       dialogOpen: false,
@@ -76,10 +90,21 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidMount() {
+    // TODO: support multi-file
+    const filename = Object.keys(this.props.sources)[0];
+    let doc = this.props.sources[filename].text;
+    const {isDarkMode} = this.props;
+    const extensions = [...editorSetup];
+
+    if (isDarkMode) {
+      extensions.push(tagExtension('style', oneDark));
+    } else {
+      extensions.push(tagExtension('style', lightMode));
+    }
     this.editor = new EditorView({
       state: EditorState.create({
-        doc: this.props.editorText,
-        extensions: editorSetup
+        doc: doc,
+        extensions: extensions
       }),
       parent: this._codeMirror,
       dispatch: this.dispatchEditorChange()
@@ -132,9 +157,7 @@ class JavalabEditor extends React.Component {
     const key = 'newTab_' + Date.now();
     let newTab = {
       key,
-      filename: 'untitled',
-      // TODO: remove this once we have multifile
-      isOriginal: false
+      filename: 'untitled'
     };
     const tabs = currentTabs.map(tab => {
       return {
@@ -185,6 +208,7 @@ class JavalabEditor extends React.Component {
         filename = tab.filename;
       }
     });
+
     this.setState({
       showMenu: false,
       contextTarget: null,
@@ -200,6 +224,19 @@ class JavalabEditor extends React.Component {
       contextTarget: null
     });
   }
+  componentDidUpdate(prevProps) {
+    if (prevProps.isDarkMode !== this.props.isDarkMode) {
+      if (this.props.isDarkMode) {
+        this.editor.dispatch({
+          reconfigure: {style: oneDark}
+        });
+      } else {
+        this.editor.dispatch({
+          reconfigure: {style: lightMode}
+        });
+      }
+    }
+  }
 
   dispatchEditorChange = () => {
     // tr is a code mirror transaction
@@ -210,44 +247,32 @@ class JavalabEditor extends React.Component {
       this.editor.update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        this.props.setEditorText(tr.newDoc.toString());
-        this.onProjectChanged();
+        this.props.setSource(
+          Object.keys(this.props.sources)[0],
+          tr.newDoc.toString()
+        );
+        projectChanged();
       }
     };
   };
 
   onRenameFile(newFilename) {
-    let updatedTab;
     const newTabs = this.state.tabs.map(tab => {
       if (tab.key === this.state.editTabKey) {
         tab.filename = newFilename;
-        updatedTab = tab;
       }
       return tab;
     });
-
-    // TODO: make this work for multifile
-    if (updatedTab.isOriginal) {
-      const {filename, setFilename} = this.props;
-      renameProjectFile(filename, newFilename);
-      setFilename(newFilename);
-      this.onProjectChanged();
-    }
+    const {sources, renameFile} = this.props;
+    const filename = Object.keys(sources)[0];
+    renameFile(filename, newFilename);
+    projectChanged();
     this.setState({tabs: newTabs, dialogOpen: false});
-  }
-
-  renameFileComplete(e) {
-    e.preventDefault();
-    const {filename, setFilename} = this.props;
-    const {newFilename} = this.state;
-    renameProjectFile(filename, newFilename);
-    setFilename(newFilename);
-    this.onProjectChanged();
-    this.setState({renameFileActive: false});
   }
 
   render() {
     const {tabs, editTabFilename} = this.state;
+
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
       position: 'fixed',
@@ -286,7 +311,13 @@ class JavalabEditor extends React.Component {
               disableClose
               {...this.makeListeners(tab.key)}
             >
-              <div ref={el => (this._codeMirror = el)} style={style.editor} />
+              <div
+                ref={el => (this._codeMirror = el)}
+                style={{
+                  ...style.editor,
+                  ...(this.props.isDarkMode && style.darkBackground)
+                }}
+              />
               {/*TODO: We'll want to make a separate editor for each file*/}
             </Tab>
           ))}
@@ -327,11 +358,12 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    filename: state.javalab.filename,
-    editorText: state.javalab.editorText
+    sources: state.javalab.sources,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
-    setFilename: filename => dispatch(setFileName(filename)),
-    setEditorText: editorText => dispatch(setEditorText(editorText))
+    setSource: (filename, source) => dispatch(setSource(filename, source)),
+    renameFile: (oldFilename, newFilename) =>
+      dispatch(renameFile(oldFilename, newFilename))
   })
 )(JavalabEditor);

@@ -17,7 +17,7 @@ level 'U10 L02 CFU innovations part 2_2021', progression: 'Check For Understandi
 lesson 'Data Policies and Privacy', display_name: 'Data Policies and Privacy', has_lesson_plan: true
 level 'U10L3 CFU Why Collect PII_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'The Value of Privacy', display_name: 'The Value of Privacy', has_lesson_plan: true
+lesson 'The Value of Privacy', display_name: 'The Value of Privacy', has_lesson_plan: true, unplugged: true
 
 lesson 'Project - Innovation Simulation Part 3', display_name: 'Project   Innovation Simulation Part 3', has_lesson_plan: true
 
@@ -27,7 +27,7 @@ level 'CSP 20-21 Phishing_2021'
 level 'CSP 20-21 Rogue Access Points_2021', progression: 'Malware'
 level 'U10 L07 CFU security risks_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Security Risks Part 2', display_name: 'Security Risks Part 2', has_lesson_plan: true
+lesson 'Security Risks Part 2', display_name: 'Security Risks Part 2', has_lesson_plan: true, unplugged: true
 level 'U10 L08 CFU security risks_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Project: Innovation Simulation Part 4', display_name: 'Project   Innovation Simulation Part 4', has_lesson_plan: true
@@ -37,7 +37,7 @@ level 'Crack a Caesar Cipher_2021', progression: 'Encryption Widgets'
 level 'Crack Random Substitution_2021', progression: 'Encryption Widgets'
 level 'U10L9 CFU public key_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Protecting Data Part 2', display_name: 'Protecting Data Part 2', has_lesson_plan: true
+lesson 'Protecting Data Part 2', display_name: 'Protecting Data Part 2', has_lesson_plan: true, unplugged: true
 level 'U10L10 CFU MFA_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Project: Innovation Simulation Part 5', display_name: 'Project   Innovation Simulation Part 5', has_lesson_plan: true

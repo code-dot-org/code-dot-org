@@ -423,6 +423,14 @@ If you run into error messages about `implicit declaration of function thin_xxx`
 
 (More info [here](https://github.com/macournoyer/thin/pull/364))
 
+#### mimemagic
+
+If you run into an error message about `Could not find MIME type database in the following locations...` while installing the `mimemagic` gem, try:
+
+- `brew install shared-mime-info`
+
+(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
+
 #### Xcode Set Up
 
 OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
