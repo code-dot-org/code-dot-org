@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {navigateToHref} from '@cdo/apps/utils';
+import {windowOpen} from '@cdo/apps/utils';
 
 export default class ResourceList extends Component {
   static propTypes = {
@@ -40,7 +40,7 @@ export default class ResourceList extends Component {
       {
         includeUserId: true,
         callback: () => {
-          navigateToHref(this.normalizeUrl(resource.download_url));
+          windowOpen(this.normalizeUrl(resource.download_url));
         }
       }
     );
@@ -63,7 +63,7 @@ export default class ResourceList extends Component {
       {
         includeUserId: true,
         callback: () => {
-          navigateToHref(this.normalizeUrl(resource.url));
+          windowOpen(this.normalizeUrl(resource.url));
         }
       }
     );
@@ -75,7 +75,6 @@ export default class ResourceList extends Component {
         onClick={() => {
           this.openResource(resource);
         }}
-        target="_blank"
         rel="noopener noreferrer"
       >
         {resource.name}
@@ -88,7 +87,6 @@ export default class ResourceList extends Component {
             onClick={() => {
               this.downloadResource(resource);
             }}
-            target="_blank"
             rel="noopener noreferrer"
           >{`${i18n.download()}`}</a>
           {')'}
