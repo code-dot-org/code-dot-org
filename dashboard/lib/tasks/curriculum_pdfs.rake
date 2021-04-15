@@ -41,7 +41,7 @@ namespace :curriculum_pdfs do
         any_pdf_generated = false
 
         get_pdfless_lessons(script).each do |lesson|
-          puts "Generating missing PDF for #{lesson.key} (from #{script.name})"
+          puts "Generating missing PDFs for #{lesson.key} (from #{script.name})"
           Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir)
           Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir, true)
           any_pdf_generated = true
@@ -60,7 +60,7 @@ namespace :curriculum_pdfs do
         end
 
         if any_pdf_generated
-          puts "Generated all missing PDFs for #{script.name}, uploading results to S3"
+          puts "Generated all missing PDFs for #{script.name}; uploading results to S3"
           Services::CurriculumPdfs.upload_generated_pdfs_to_s3(dir)
         end
       end
