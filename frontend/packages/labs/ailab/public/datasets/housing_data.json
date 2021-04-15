@@ -1,4 +1,15 @@
 {
+  "card": {
+    "description": "A widely used, small dataset on housing in the Boston, Masachusetts area.",
+    "source": "University of Toronto (https://www.cs.toronto.edu/~delve/data/boston/desc.html)",
+    "lastUpdated": "1978",
+    "context": {
+      "createdBy": "US Census Service",
+      "potentialUses": "Predict median home value based on Black population and parent teacher ratio.",
+      "potentialMisuses": "This is an old dataset, so it's unlikely to reflect contemporary home values. This is also a dataset that reflects racial and economic biases: is it right or fair that home values tended to be higher in areas where the population was more wealthy, or less Black?"
+    }
+  },
+  "defaultLabelColumn": "Median home value",
   "fields": [
     {
       "type": "numerical",
@@ -70,26 +81,5 @@
       "id": "Median home value",
       "description": "Median home value in $1000s."
     }
-  ],
-  "defaultLabelColumn": "Median home value",
-  "card": {
-    "description": "A widely used, small dataset on housing in the Boston, Masachusetts area.",
-    "source": "University of Toronto (https://www.cs.toronto.edu/~delve/data/boston/desc.html)",
-    "lastUpdated": "1978",
-    "context": {
-      "created_by": "US Census Service",
-      "preparation": true,
-      "confidentiality": false,
-      "subgroup_identifiers": false,
-	  "representative": false,
-      "potentialUses": "Predict median home value based on Black population and parent teacher ratio.",
-      "potentialMisuses": "This is an old dataset, so it's unlikely to reflect contemporary home values. This is also a dataset that reflects racial and economic biases: is it right or fair that home values tended to be higher in areas where the population was more wealthy, or less Black?"
-    }
-  },
-  "recommendedFeatures": [
-    "GDP per capita",
-    "Student-teacher ratio",
-    "Lower status population"
-  ],
-  "recommendedLabel": "Median home value"
+  ]
 }

@@ -5,13 +5,11 @@
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "preparation": true,
-      "subgroupIdentifiers": false,
-      "representative": false,
       "potentialUses": "Help make recommendations for what kind of salad a new customer should order",
       "potentialMisuses": "Anything other than recommendations"
     }
   },
+  "defaultLabelColumn": "preference",
   "fields": [
     {
       "id": "tomato",
@@ -63,6 +61,5 @@
       "type": "categorical",
       "description": "Do you like or dislike the salad?"
     }
-  ],
-  "defaultLabelColumn": "preference"
+  ]
 }

@@ -5,13 +5,11 @@
     "lastUpdated": "2021",
     "context": {
       "createdBy": "Code.org",
-      "preparation": true,
-      "subgroupIdentifiers": false,
-      "representative": false,
       "potentialUses": "Silly and fun app",
       "potentialMisuses": "Anything serious"
     }
   },
+  "defaultLabelColumn": "workout",
   "fields": [
     {
       "id": "snack",
@@ -38,6 +36,5 @@
       "type": "categorical",
       "description": "Ideal workout"
     }
-  ],
-  "defaultLabelColumn": "workout"
+  ]
 }
