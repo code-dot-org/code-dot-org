@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 23:31:53 UTC",
+    "serialized_at": "2021-04-15 18:37:45 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -30,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 9: Data"
+        "display_name": "Unit 9: Data",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **The Data Analysis Process:** This unit is built around a data analysis process that helps students break down how data is turned into new information about the world. Some lessons are designed around different steps of this process, like cleaning data or building visualizations. Other lessons focus on ways this process is applied in real-world contexts like citizen science or machine learning. The data analysis process helps provide a consistent reference point as students explore the importance of data analysis in computing. \n\n* **Exploring Data with the Data Visualizer:** The Data Visualizer is a tool built into App Lab that allows students to quickly create visualizations of the data they've added to their projects. The set of possible visualizations is intentionally limited to a few ways to change or modify the chart. This tool aims to encourage exploring the different kinds of questions that can be answered with data visualizations, with a greater emphasis on students' ability to create a variety of visualizations quickly.\n\n\n### Major Assessment and Projects\n\nStudents use the data visualizer to find and present a data story. Using what they've learned about the data analysis process, students either choose a dataset inside the data library or upload one of their own and create visualizations that find interesting patterns that may reveal new insights and knowledge. Students complete an activity guide describing their findings and the process they used in identifying them. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* DAT-2: Programs can be used to process data, which allows users to discover information and create new knowledge.\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 2.3 Extracting Information from Data\n* 2.4 Using Programs with Data\n* 5.3 Computing Bias\n* 5.4 Crowdsourcing"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit9_2020",
@@ -540,7 +541,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "0dc73a48-c036-40ca-aa9f-bcd3bd7a7989",
@@ -703,7 +704,8 @@
       "key": "35d6ee41-93ec-4ab7-81a9-e49a2d163a90",
       "position": 1,
       "properties": {
-        "name": "Assessment (25 mins)"
+        "name": "Assessment",
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "35d6ee41-93ec-4ab7-81a9-e49a2d163a90",
@@ -721,18 +723,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2",
-        "lesson.key": "Lesson 9: Assessment Day",
-        "lesson_group.key": "csp_unit9_2020",
-        "script.name": "csp9-2021"
-      }
-    },
-    {
-      "key": "154709b5-5080-4438-be50-703000560091",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "154709b5-5080-4438-be50-703000560091",
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021"
@@ -1952,17 +1942,6 @@
         "activity_section.key": "86943e09-9f9c-4d9a-8a72-2b1d222ea784",
         "lesson_activity.key": "5d7a4065-cee8-449f-b1b6-4c6bab3780c2"
       }
-    },
-    {
-      "key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",
-      "position": 1,
-      "properties": {
-        "progression_name": "Unit 9 Exam"
-      },
-      "seeding_key": {
-        "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8",
-        "lesson_activity.key": "154709b5-5080-4438-be50-703000560091"
-      }
     }
   ],
   "script_levels": [
@@ -2491,10 +2470,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 9 Exam",
-        "level_keys": [
-          "CSP Unit 9 AP-Style Assessment _2021"
-        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2505,7 +2480,7 @@
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8"
+        "activity_section.key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc"
       },
       "level_keys": [
         "CSP Unit 9 AP-Style Assessment _2021"
@@ -2762,7 +2737,7 @@
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
-        "activity_section.key": "4d1642f0-5cbb-49d7-bded-8276110ed0b8"
+        "activity_section.key": "93c15cc1-b99c-493f-aa20-05ba7a7da8bc"
       }
     }
   ],
