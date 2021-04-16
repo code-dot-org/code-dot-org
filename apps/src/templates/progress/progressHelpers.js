@@ -70,11 +70,7 @@ export function stageLocked(levels) {
   // an identical locked/unlocked state.
   // Given this, we should be able to look at the last level in our collection
   // to determine whether the LG (and thus the stage) should be considered locked.
-  const level = levels[levels.length - 1];
-  return (
-    level.status === LevelStatus.locked ||
-    (level.kind === 'assessment' && level.status === 'submitted')
-  );
+  return levels[levels.length - 1].locked;
 }
 
 /**
