@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:16:12 UTC",
+    "serialized_at": "2021-04-15 23:15:20 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -1942,7 +1942,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Traveling Salesman",
         "level_keys": [
@@ -1968,7 +1968,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [
@@ -2306,6 +2306,30 @@
       }
     },
     {
+      "name": "The Halting Problem: The Unsolvable Problem",
+      "url": "https://youtu.be/VyHbd6sx5Po",
+      "key": "the_halting_problem_the_unsolvable_problem",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "name": "Folding@home Supercomputing Project",
+      "url": "https://youtu.be/RGGzMQ2oFrA",
+      "key": "folding_home_supercomputing_project",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
@@ -2363,8 +2387,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "folding_home_supercomputing_project"
       }
     },
     {
