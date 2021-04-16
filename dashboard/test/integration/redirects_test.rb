@@ -95,6 +95,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
     get '/s/test-script/lockable/1/puzzle/1'
     assert_redirected_to '/s/test-script/lockable/1/levels/1'
+
+    get '/s/test-script/lockable/1/puzzle/1/page/1'
+    assert_redirected_to '/s/test-script/lockable/1/levels/1/page/1'
   end
 
   test 'old script id paths redirect to named paths' do
