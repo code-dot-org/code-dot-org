@@ -128,6 +128,20 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal(expected, flash[:alert])
   end
 
+  test 'student_user_new errors when joining a restricted section' do
+    sign_in @student
+    section = create(:section, login_type: 'email', restrict_section: true)
+
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/join'
+    # TODO: - Replace strings with i18n implementation
+    expected = 'We couldn\'t add you to this section. Please contact your teacher for help.'
+    assert_equal(expected, flash[:inline_alert])
+  end
+
   test "student_user_new does not allow joining your own section" do
     sign_in @chris
 
