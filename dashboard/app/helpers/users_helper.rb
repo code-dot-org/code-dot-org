@@ -160,6 +160,8 @@ module UsersHelper
   #   this in advance for many users in some use cases.
   # @param [Enumerable<Integer>] paired_user_levels
   #   A collection of UserLevel ids where the user was pairing.
+  # @param [Boolean] include_timestamp
+  #   Whether time_spent should be included in progress summary for a level
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
   private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:, include_timestamp: false)
@@ -170,19 +172,8 @@ module UsersHelper
         level = Level.cache_find(level_id)
 
         if level.is_a?(BubbleChoice) # we have a parent level
-          sum_time_spent = 0
-
-          # get progress for sublevels to save in levels hash
-          level.sublevels.each do |sublevel|
-            ul = user_levels_by_level.try(:[], sublevel.id)
-            sublevel_progress = get_level_progress(ul, sl, paired_user_levels, include_timestamp)
-            progress[sublevel.id] = sublevel_progress.compact
-            sum_time_spent += sublevel_progress[:time_spent] || 0
-          end
-
-          best_sublevel_id = level.best_result_sublevel(user)&.id
-          progress[level_id] = progress[best_sublevel_id].clone
-          progress[:time_spent] = sum_time_spent
+          bubble_choice_progress = get_bubble_choice_progress(level, user, sl, paired_user_levels, include_timestamp)
+          progress.merge(bubble_choice_progress.compact)
           next
         end
 
@@ -223,6 +214,29 @@ module UsersHelper
     progress
   end
 
+  # Summarizes a user's level progress for bubble choice level (parent level and sublevels)
+  private def get_bubble_choice_progress(level, user, script_level, paired_user_levels, include_timestamp)
+    progress = {}
+
+    best_sublevel_id = level.best_result_sublevel(user)&.id
+    return progress if best_sublevel_id.nil?
+
+    sum_time_spent = 0
+
+    # get progress for sublevels to save in levels hash
+    level.sublevels.each do |sublevel|
+      ul = user_levels_by_level.try(:[], sublevel.id)
+      sublevel_progress = get_level_progress(ul, script_level, paired_user_levels, include_timestamp)
+      progress[sublevel.id] = sublevel_progress.compact
+      sum_time_spent += sublevel_progress[:time_spent] || 0
+    end
+
+    progress[level_id] = progress[best_sublevel_id].clone
+    progress[level_id][:time_spent] = sum_time_spent
+    progress
+  end
+
+  # Summarizes a user's progress on a particular level
   private def get_level_progress(user_level, script_level, paired_user_levels, include_timestamp)
     completion_status = activity_css_class(user_level)
     locked = user_level.try(:show_as_locked?, script_level.lesson) || script_level.lesson.lockable? && !user_level
