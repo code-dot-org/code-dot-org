@@ -124,9 +124,7 @@ export default storybook => {
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={(lesson, levels, viewAs) => {
-              return true;
-            }}
+            lessonIsLockedForUser={() => true}
           />
         )
       },
@@ -147,9 +145,7 @@ export default storybook => {
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={(lesson, levels, viewAs) => {
-              return true;
-            }}
+            lessonIsLockedForUser={() => true}
             lockableAuthorized={false}
           />
         )
@@ -162,9 +158,7 @@ export default storybook => {
             viewAs={ViewType.Student}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={(lesson, levels, viewAs) => {
-              return true;
-            }}
+            lessonIsLockedForUser={() => true}
           />
         )
       },
@@ -179,9 +173,7 @@ export default storybook => {
               ...level,
               status: LevelStatus.locked
             }))}
-            lessonIsLockedForUser={(lesson, levels, viewAs) => {
-              return true;
-            }}
+            lessonIsLockedForUser={() => true}
           />
         )
       },
