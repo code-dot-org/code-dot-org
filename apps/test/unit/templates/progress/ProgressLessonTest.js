@@ -24,9 +24,8 @@ describe('ProgressLesson', () => {
     viewAs: ViewType.Teacher,
     showLockIcon: true,
     lessonIsVisible: () => true,
-    lessonLockedForSection: () => false,
-    lockableAuthorized: true,
-    userId: 1
+    lessonIsLockedForUser: () => false,
+    lockableAuthorized: true
   };
 
   it('renders with gray background when not hidden', () => {
@@ -58,12 +57,14 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('renders with dashed border when section is locked', () => {
+  it('renders with dashed border when locked', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => true}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -71,75 +72,56 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('disables bubbles when section is locked', () => {
+  it('disables bubbles when locked as student', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         viewAs={ViewType.Student}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => true}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
   });
 
-  it('disables bubbles when teacher is not verified', () => {
+  it('disables bubbles for locked lesson when teacher is not verified', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorized={false}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
   });
 
-  it('disables bubbles when signed out', () => {
+  it('renders with gray background when lesson is lockable but unlocked', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        userId={null}
-      />
-    );
-    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
-  });
-
-  it('renders with dashbed border when locked for individual student', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => false}
-        levels={defaultProps.levels.map(level => ({
-          ...level,
-          status: LevelStatus.locked
-        }))}
-      />
-    );
-    assert.equal(wrapper.props().style.background, color.lightest_gray);
-    assert.equal(wrapper.props().style.borderWidth, 4);
-    assert.equal(wrapper.props().style.borderStyle, 'dashed');
-  });
-
-  it('renders with gray background when section is lockable but unlocked', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => false}
+        lessonIsLockedForUser={() => {
+          return false;
+        }}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
   });
 
-  it('has an unlocked icon when section is lockable but unlocked', () => {
+  it('has an unlocked icon when lesson is lockable but unlocked', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => false}
+        lessonIsLockedForUser={() => {
+          return false;
+        }}
       />
     );
     assert.equal(
@@ -158,12 +140,15 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('has a locked icon when section is lockable and locked', () => {
+  it('has a locked icon when lesson is lockable and locked', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
+        viewAs={ViewType.Student}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonLockedForSection={() => true}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(
@@ -189,6 +174,9 @@ describe('ProgressLesson', () => {
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorized={false}
         viewAs={ViewType.Teacher}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(
@@ -207,37 +195,15 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('has a locked icon when signed out', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        userId={null}
-      />
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon,
-      'caret-down'
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .props().icon,
-      'lock'
-    );
-  });
-
-  it('has both a hidden and a locked icon when section is lockable and locked and hidden', () => {
+  it('has both a hidden and a locked icon for teacher when lesson is lockable and locked and hidden', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
         lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
-        lessonLockedForSection={() => true}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(
@@ -281,7 +247,7 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('starts collapsed for student if it is not the current stage', () => {
+  it('starts collapsed for student if it is not the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -292,7 +258,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), true);
   });
 
-  it('starts uncollapsed for teacher even if not the current stage', () => {
+  it('starts uncollapsed for teacher even if not the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -303,14 +269,14 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('starts uncollapsed for student if it is the current stage', () => {
+  it('starts uncollapsed for student if it is the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('starts uncollapsed for teacher if it is the current stage', () => {
+  it('starts uncollapsed for teacher if it is the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Teacher} />
     );
@@ -372,6 +338,9 @@ describe('ProgressLesson', () => {
         viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorized={false}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(
@@ -427,13 +396,12 @@ describe('ProgressLesson', () => {
     delete myLesson.student_lesson_plan_html_url;
   });
 
-  it('does not lock non-lockable stages, such as peer reviews', () => {
+  it('does not lock non-lockable lessons, such as peer reviews', () => {
     // Simulate a peer review section, where the levels may be locked, but the lesson
     // itself is not lockable
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        lessonLockedForSection={() => true}
         levels={defaultProps.levels.map(level => ({
           ...level,
           status: LevelStatus.locked
