@@ -17,18 +17,21 @@ function getToken() {
     url: '/javabuilder/access_token',
     type: 'get',
     data: {
+      projectUrl: "https://studio.code.org/v3/sources/gzxs-3qIKTXinR4rYchhJKh3a4VzfuDYO0AOhuAnSKc", // dashboard.project.getProjectSourcesUrl(),
       channelId: getStore().getState().pageConstants.channelId,
-      projectVersion: project.getCurrentSourceVersionId()
+      projectVersion: dashboard.project.getCurrentSourceVersionId()
     }
   })
     .done(result => onSuccess(result))
     .fail(result => onFail(result));
 };
 
-function onSuccess(token) {
-  // debugger;
-  console.log(token)
-  openWebsocket();
+function onSuccess(result) {
+  debugger;
+  let shareUrl = dashboard.project.getProjectSourcesUrl();
+  console.log(result)
+  console.log(result.token)
+  openWebsocket(result.token);
   // getStore().dispatch(appendOutputLog(token));
 }
 
@@ -39,9 +42,11 @@ function onFail(error) {
 }
 
 let socket;
-function openWebsocket() {
+function openWebsocket(token) {
   // debugger;
-  socket = new WebSocket(url);
+  url = "wss://nsgeezjyul.execute-api.us-east-1.amazonaws.com/development/"
+  console.log(`${url}?projectUrl=${dashboard.project.getProjectSourcesUrl()}&Authorization=${token}`)
+  socket = new WebSocket(`${url}?Authorization=${token}`);
   socket.onopen = function(e) {
     console.log("[open] Connection established");
     console.log("Sending to server");
