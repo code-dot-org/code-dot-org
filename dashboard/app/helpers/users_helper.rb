@@ -168,32 +168,26 @@ module UsersHelper
       sl.level_ids.each do |level_id|
         # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
-        sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
 
         if level.is_a?(BubbleChoice) # we have a parent level
+          sum_time_spent = 0
+
           # get progress for sublevels to save in levels hash
           level.sublevels.each do |sublevel|
             ul = user_levels_by_level.try(:[], sublevel.id)
             sublevel_progress = get_level_progress(ul, sl, paired_user_levels, include_timestamp)
-
-            if sublevel_progress[:status] == LEVEL_STATUS.not_tried
-              # for now, we don't allow authorized teachers to be "locked"
-              if sublevel_progress[:locked] && !user.authorized_teacher?
-                progress[level_id] = {
-                  # TODO: Stop sending status here when front-end stops using LEVEL_STATUS.locked (LP-1865)
-                  status: LEVEL_STATUS.locked,
-                  locked: true
-                }
-              end
-              next
-            end
-
             progress[sublevel.id] = sublevel_progress.compact
+            sum_time_spent += sublevel_progress[:time_spent] || 0
           end
+
+          best_sublevel_id = level.best_result_sublevel(user)&.id
+          progress[level_id] = progress[best_sublevel_id].clone
+          progress[:time_spent] = sum_time_spent
+          next
         end
 
         contained_level_id = level.contained_levels.try(:first).try(:id)
-        ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)
+        ul = user_levels_by_level.try(:[], contained_level_id || level_id)
         level_progress = get_level_progress(ul, sl, paired_user_levels, include_timestamp)
 
         if level_progress[:status] == LEVEL_STATUS.not_tried
