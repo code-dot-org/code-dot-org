@@ -7,7 +7,6 @@ import {
   fakeLesson,
   fakeLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('SummaryProgressRow', () => {
   const baseProps = {
@@ -15,18 +14,10 @@ describe('SummaryProgressRow', () => {
     lesson: fakeLesson('Maze', 1),
     lessonNumber: 3,
     levels: fakeLevels(4),
-    lockedForSection: false,
     lessonIsVisible: () => true,
-    userId: 1,
+    lessonIsLockedForUser: () => false,
     lockableAuthorized: false
   };
-
-  it('does not render when lessonIsVisible is false', () => {
-    const wrapper = shallow(
-      <SummaryProgressRow {...baseProps} lessonIsVisible={() => false} />
-    );
-    assert.equal(wrapper.html(), null);
-  });
 
   it('renders with dashed border when lessonIsVisible for teachers only', () => {
     const wrapper = shallow(
@@ -38,21 +29,14 @@ describe('SummaryProgressRow', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('renders with dashed border when locked for section', () => {
-    const wrapper = shallow(
-      <SummaryProgressRow {...baseProps} lockedForSection={true} />
-    );
-    assert.equal(wrapper.props().style.borderStyle, 'dashed');
-  });
-
-  it('renders with dashed border when locked for particular student', () => {
+  it('renders with dashed border when locked as student', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        levels={baseProps.levels.map(level => ({
-          ...level,
-          status: LevelStatus.locked
-        }))}
+        viewAs={ViewType.Student}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
@@ -65,40 +49,21 @@ describe('SummaryProgressRow', () => {
         lesson={fakeLesson('Maze', 1, true)}
         viewAs={ViewType.Teacher}
         lockableAuthorized={false}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('renders with dashed border when lockable lesson for signed out user', () => {
+  it('disables bubbles when locked for student', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lesson={fakeLesson('Maze', 1, true)}
-        userId={null}
-      />
-    );
-    assert.equal(wrapper.props().style.borderStyle, 'dashed');
-  });
-
-  it('disables bubbles when locked for section', () => {
-    const wrapper = shallow(
-      <SummaryProgressRow {...baseProps} lockedForSection={true} />
-    );
-    assert.strictEqual(
-      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
-      true
-    );
-  });
-
-  it('disables bubbles when locked for particular student', () => {
-    const wrapper = shallow(
-      <SummaryProgressRow
-        {...baseProps}
-        levels={baseProps.levels.map(level => ({
-          ...level,
-          status: LevelStatus.locked
-        }))}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.strictEqual(
@@ -114,20 +79,9 @@ describe('SummaryProgressRow', () => {
         lesson={fakeLesson('Maze', 1, true)}
         viewAs={ViewType.Teacher}
         lockableAuthorized={false}
-      />
-    );
-    assert.strictEqual(
-      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
-      true
-    );
-  });
-
-  it('disables bubbles when lockable lesson and signed out user', () => {
-    const wrapper = shallow(
-      <SummaryProgressRow
-        {...baseProps}
-        lesson={fakeLesson('Maze', 1, true)}
-        userId={null}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.strictEqual(
@@ -158,7 +112,9 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        lockedForSection={true}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(
@@ -172,11 +128,7 @@ describe('SummaryProgressRow', () => {
 
   it('has an unlock icon when lockable and unlocked', () => {
     const wrapper = shallow(
-      <SummaryProgressRow
-        {...baseProps}
-        lesson={fakeLesson('Maze', 1, true)}
-        lockedForSection={false}
-      />
+      <SummaryProgressRow {...baseProps} lesson={fakeLesson('Maze', 1, true)} />
     );
     assert.equal(
       wrapper
@@ -192,8 +144,10 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        lockedForSection={true}
         lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsLockedForUser={() => {
+          return true;
+        }}
       />
     );
     assert.equal(
