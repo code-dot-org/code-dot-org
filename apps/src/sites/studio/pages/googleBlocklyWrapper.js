@@ -111,6 +111,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Msg');
   blocklyWrapper.wrapReadOnlyProperty('Names');
   blocklyWrapper.wrapReadOnlyProperty('netsim_locale');
+  blocklyWrapper.wrapReadOnlyProperty('PluginManager');
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('registry');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
