@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import Radium from 'radium';
 import {setSource, renameFile} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
@@ -18,7 +19,8 @@ import color from '@cdo/apps/util/color';
 const style = {
   editor: {
     width: '100%',
-    height: 400
+    height: 400,
+    backgroundColor: color.white
   },
   anchor: {
     padding: 10,
@@ -32,10 +34,11 @@ const style = {
     ':hover': {
       backgroundColor: color.lightest_gray,
       cursor: 'pointer'
-    }
+    },
+    border: `1px solid ${color.charcoal}`
   },
   nonFirstAnchor: {
-    borderTop: `1px solid ${color.charcoal}`
+    borderTopWidth: 0
   },
   tab: {
     textAlign: 'center',
@@ -55,6 +58,59 @@ const style = {
   }
 };
 
+const darkTabsStyles = {
+  tabWrapper: {marginTop: '10px'},
+  tabBarAfter: {
+    height: '0px',
+    borderBottom: '0px'
+  }
+};
+
+const lightTabsStyles = {
+  tabWrapper: {marginTop: '10px'},
+  tab: {
+    backgroundImage: '',
+    backgroundColor: color.lightest_gray,
+    color: color.dark_charcoal,
+    boxShadow: 'rgb(72 72 72) 1px 1px 0px inset, rgb(0 0 0 / 10%) -4px 0px 4px'
+  },
+  tabBefore: {
+    backgroundImage: '',
+    backgroundColor: color.lightest_gray
+  },
+  tabAfter: {
+    backgroundImage: '',
+    backgroundColor: color.lightest_gray
+  },
+  tabTitle: {
+    color: color.dark_charcoal
+  },
+  tabTitleActive: {
+    color: color.black
+  },
+  tabOnHover: {backgroundImage: ''},
+  tabBeforeOnHover: {backgroundImage: ''},
+  tabAfterOnHover: {backgroundImage: ''},
+  tabActive: {
+    backgroundImage: '',
+    backgroundColor: color.white,
+    color: color.black,
+    boxShadow: 'rgb(72 72 72) 1px 1px 0px inset, rgb(0 0 0 / 10%) -4px 0px 4px'
+  },
+  tabBeforeActive: {
+    backgroundImage: '',
+    backgroundColor: color.white
+  },
+  tabAfterActive: {
+    backgroundImage: '',
+    backgroundColor: color.white
+  },
+  tabBarAfter: {
+    height: '0px',
+    borderBottom: '0px'
+  }
+};
+
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
@@ -69,7 +125,12 @@ class JavalabEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    //this.renameFileComplete = this.renameFileComplete.bind(this);
+    this.handleTabSelect = this.handleTabSelect.bind(this);
+    this.handleTabAddButtonClick = this.handleTabAddButtonClick.bind(this);
+    this.handleTabPositionChange = this.handleTabPositionChange.bind(this);
+    this.renameFromContextMenu = this.renameFromContextMenu.bind(this);
+    this.cancelContextMenu = this.cancelContextMenu.bind(this);
+    this.onRenameFile = this.onRenameFile.bind(this);
     let tabs = [];
     Object.keys(props.sources).forEach((file, index) => {
       tabs.push({
@@ -113,9 +174,6 @@ class JavalabEditor extends React.Component {
 
   makeListeners(key) {
     return {
-      onDoubleClick: e => {
-        this.handleTabDoubleClick(key, e);
-      },
       onContextMenu: e => {
         this.handleTabContextMenu(key, e);
       }
@@ -173,20 +231,6 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  handleTabDoubleClick(key) {
-    let filename;
-    this.state.tabs.forEach(tab => {
-      if (tab.key === key) {
-        filename = tab.filename;
-      }
-    });
-    this.setState({
-      editTabKey: key,
-      editTabFilename: filename,
-      dialogOpen: true
-    });
-  }
-
   handleTabContextMenu(key, e) {
     e.preventDefault();
     const boundingRect = e.target.getBoundingClientRect();
@@ -194,8 +238,8 @@ class JavalabEditor extends React.Component {
       showMenu: true,
       contextTarget: key,
       menuPosition: {
-        // Add 10 to offset the 10px padding on the tab title element.
-        top: `${boundingRect.bottom + 10}px`,
+        // Add 3 to offset the 3px padding on the tab title element.
+        top: `${boundingRect.bottom + 3}px`,
         left: `${boundingRect.left}px`
       }
     });
@@ -224,6 +268,7 @@ class JavalabEditor extends React.Component {
       contextTarget: null
     });
   }
+
   componentDidUpdate(prevProps) {
     if (prevProps.isDarkMode !== this.props.isDarkMode) {
       if (this.props.isDarkMode) {
@@ -294,6 +339,7 @@ class JavalabEditor extends React.Component {
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <Tabs
+          tabsStyles={this.props.isDarkMode ? darkTabsStyles : lightTabsStyles}
           selectedTab={
             this.state.selectedTab
               ? this.state.selectedTab
@@ -301,9 +347,9 @@ class JavalabEditor extends React.Component {
               ? tabs[0].key
               : ''
           }
-          onTabSelect={this.handleTabSelect.bind(this)}
-          onTabAddButtonClick={this.handleTabAddButtonClick.bind(this)}
-          onTabPositionChange={this.handleTabPositionChange.bind(this)}
+          onTabSelect={this.handleTabSelect}
+          onTabAddButtonClick={this.handleTabAddButtonClick}
+          onTabPositionChange={this.handleTabPositionChange}
           tabs={tabs.map(tab => (
             <Tab
               key={tab.key}
@@ -332,14 +378,14 @@ class JavalabEditor extends React.Component {
         <div style={menuStyle}>
           <a
             key="rename"
-            onClick={this.renameFromContextMenu.bind(this)}
+            onClick={this.renameFromContextMenu}
             style={style.anchor}
           >
             Rename
           </a>
           <a
             key="cancel"
-            onClick={this.cancelContextMenu.bind(this)}
+            onClick={this.cancelContextMenu}
             style={{...style.nonFirstAnchor, ...style.anchor}}
           >
             Cancel
@@ -349,7 +395,8 @@ class JavalabEditor extends React.Component {
           isOpen={this.state.dialogOpen}
           handleClose={() => this.setState({dialogOpen: false})}
           filename={editTabFilename}
-          handleRename={this.onRenameFile.bind(this)}
+          handleRename={this.onRenameFile}
+          isDarkMode={this.props.isDarkMode}
         />
       </div>
     );
@@ -366,4 +413,4 @@ export default connect(
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename))
   })
-)(JavalabEditor);
+)(Radium(JavalabEditor));

@@ -1,19 +1,47 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   dialog: {
     textAlign: 'left',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    color: 'black'
+    padding: 20,
+    color: color.black,
+    width: 500
+  },
+  darkDialog: {
+    backgroundColor: '#282c34',
+    color: color.white
+  },
+  dialogContent: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  dialogInput: {
+    margin: 0
+  },
+  darkDialogInput: {
+    color: 'white',
+    backgroundColor: '#282c34'
   },
   button: {
-    float: 'right',
-    marginTop: 30
+    width: 100,
+    textAlign: 'center',
+    padding: 6
+  },
+  darkButton: {
+    backgroundColor: '#272822',
+    color: 'white'
+  },
+  lightRename: {
+    backgroundColor: color.cyan,
+    color: color.white
+  },
+  lightCancel: {
+    backgroundColor: color.light_gray,
+    color: color.black
   }
 };
 
@@ -22,7 +50,8 @@ export default class FileRenameDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
     filename: PropTypes.string,
-    handleRename: PropTypes.func.isRequired
+    handleRename: PropTypes.func.isRequired,
+    isDarkMode: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -35,29 +64,63 @@ export default class FileRenameDialog extends Component {
   }
 
   render() {
-    const {isOpen, handleClose, handleRename, filename} = this.props;
+    const {
+      isOpen,
+      handleClose,
+      handleRename,
+      filename,
+      isDarkMode
+    } = this.props;
     return (
       <BaseDialog
         isOpen={isOpen}
         handleClose={handleClose}
-        style={styles.dialog}
+        style={{
+          ...styles.dialog,
+          ...(isDarkMode && styles.darkDialog)
+        }}
         useUpdatedStyles
         hideCloseButton
       >
-        <div>Rename the file</div>
-        <input type="text" defaultValue={filename} ref={this.setTextInputRef} />
-        <Button
-          style={styles.button}
-          text="Rename"
-          onClick={() => handleRename(this.textInput.value)}
-          color={Button.ButtonColor.blue}
-        />
-        <Button
-          style={styles.button}
-          text="Cancel"
-          onClick={handleClose}
-          color={Button.ButtonColor.gray}
-        />
+        <div style={isDarkMode ? styles.darkDialog : {}}>Rename the file</div>
+        <div
+          style={{
+            ...styles.dialogContent,
+            ...(isDarkMode && styles.darkDialog)
+          }}
+        >
+          <input
+            type="text"
+            defaultValue={filename}
+            ref={this.setTextInputRef}
+            style={{
+              ...styles.dialogInput,
+              ...(isDarkMode && styles.darkDialogInput)
+            }}
+          />
+          <div>
+            <button
+              type="button"
+              style={{
+                ...styles.button,
+                ...(isDarkMode ? styles.darkButton : styles.lightRename)
+              }}
+              onClick={() => handleRename(this.textInput.value)}
+            >
+              Rename
+            </button>
+            <button
+              type="button"
+              style={{
+                ...styles.button,
+                ...(isDarkMode ? styles.darkButton : styles.lightCancel)
+              }}
+              onClick={handleClose}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
       </BaseDialog>
     );
   }
