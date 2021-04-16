@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {appendOutputLog} from './javalabRedux';
 import JavalabView from './JavalabView';
 import javalab, {getSources, setAllSources} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import runCode from './javalabRunner';
+import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 
 /**
@@ -65,6 +66,7 @@ Javalab.prototype.init = function(config) {
   const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
+  const onInputMessage = this.onInputMessage.bind(this);
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
@@ -123,6 +125,7 @@ Javalab.prototype.init = function(config) {
         onRun={onRun}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
+        onInputMessage={onInputMessage}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -146,8 +149,14 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
-  runCode(this.level.javabuilderUrl);
+  this.javabuilderConnection = new JavabuilderConnection(this.level.javabuilderUrl, message => getStore().dispatch(appendOutputLog(message)))
+  this.javabuilderConnection.connectJavabuilder();
+  // runCode(this.level.javabuilderUrl);
 };
+
+Javalab.prototype.onInputMessage = function(message) {
+  this.javabuilderConnection.sendMessage(message);
+}
 
 // Called by the Javalab app when it wants to go to the next level.
 Javalab.prototype.onContinue = function() {

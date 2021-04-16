@@ -10,7 +10,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-import project from '@cdo/apps/code-studio/initApp/project';
 
 const style = {
   instructionsAndPreview: {
@@ -64,6 +63,7 @@ class JavalabView extends React.Component {
     onRun: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
+    onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
@@ -77,27 +77,7 @@ class JavalabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
-    // this.getToken();
   }
-
-  // getToken = () => {
-  //   // TODO: Use token to connect to Java Builder
-  //   $.ajax({
-  //     url: '/javabuilder/access_token',
-  //     type: 'get',
-  //     data: {
-  //       channelId: this.props.channelId,
-  //       projectVersion: project.getCurrentSourceVersionId()
-  //     }
-  //   })
-  //     .done()
-  //     .fail();
-  // };
-
-  // run = () => {
-  //   this.props.appendOutputLog('Running program...');
-  //   this.props.appendOutputLog('Hello world!');
-  // };
 
   compile = () => {
     this.props.appendOutputLog('Compiling program...');
@@ -188,7 +168,9 @@ class JavalabView extends React.Component {
                 </button>
               </div>
               <div style={style.consoleStyle}>
-                <JavalabConsole />
+                <JavalabConsole
+                  onInputMessage={this.props.onInputMessage}
+                />
               </div>
             </div>
           </div>

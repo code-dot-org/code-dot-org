@@ -59,7 +59,6 @@ var base = {
    *        url as a query string.
    */
   create: function(value, callback, queryParams) {
-    debugger;
     $.ajax({
       url: this.api_base_url + stringifyQueryParams(queryParams),
       type: 'post',
