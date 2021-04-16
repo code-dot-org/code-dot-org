@@ -30,14 +30,25 @@ module Services
           end
 
           # Merge all gathered PDFs
-          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
-          subdirectory = File.dirname(get_script_overview_pathname(script))
-          destination = File.join(directory, subdirectory, filename)
+          destination = File.join(directory, get_script_resources_pdf_pathname(script))
           FileUtils.mkdir_p(File.dirname(destination))
           PDF.merge_local_pdfs(destination, *pdfs)
           FileUtils.remove_entry_secure(pdfs_dir)
 
           return destination
+        end
+
+        def get_script_resources_pdf_pathname(script)
+          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
+          subdirectory = File.dirname(get_script_overview_pathname(script))
+          return Pathname.new(File.join(subdirectory, filename))
+        end
+
+        def script_resources_pdf_exists_for?(script)
+          AWS::S3.cached_exists_in_bucket?(
+            S3_BUCKET,
+            get_script_resources_pdf_pathname(script).to_s
+          )
         end
 
         def generate_lesson_resources_title_page(lesson, directory="/tmp/")
@@ -88,7 +99,7 @@ module Services
             begin
               export_from_google(resource.url, path)
               return path
-            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error, URI::InvalidURIError => e
               ChatClient.log(
                 "error from Google when trying to fetch PDF for resource #{resource.key.inspect}: #{e}",
                 color: 'red'
