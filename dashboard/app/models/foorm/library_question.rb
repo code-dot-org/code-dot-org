@@ -24,6 +24,7 @@ class Foorm::LibraryQuestion < ApplicationRecord
   belongs_to :library, primary_key: [:name, :version], foreign_key: [:library_name, :library_version], required: true
 
   validate :validate_library_question
+  validate :question_name_must_match
   validates :question_name, :question, presence: true
   validates_uniqueness_of :question_name, scope: [:library_name, :library_version]
 
@@ -46,14 +47,16 @@ class Foorm::LibraryQuestion < ApplicationRecord
   end
 
   def validate_library_question
+    Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
+  rescue StandardError => e
+    errors.add(:question, e.message)
+  end
+
+  def question_name_must_match
     # Keep question name stored in the question JSON field in sync with what's in the database
     if JSON.parse(question)['name'] != question_name
       raise InvalidFoormConfigurationError, 'library question name in question JSON must match name of library question name in database'
     end
-
-    Foorm::Form.validate_element(JSON.parse(question).deep_symbolize_keys, Set.new)
-  rescue StandardError => e
-    errors.add(:question, e.message)
   end
 
   def write_to_file
