@@ -105,7 +105,13 @@ class JavalabView extends React.Component {
   };
 
   render() {
-    const {isDarkMode} = this.props;
+    const {
+      isDarkMode,
+      onCommitCode,
+      onContinue,
+      onRun,
+      onInputMessage
+    } = this.props;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
     } else {
@@ -129,7 +135,7 @@ class JavalabView extends React.Component {
               color: isDarkMode ? color.white : color.black
             }}
           >
-            <JavalabEditor onCommitCode={this.props.onCommitCode} />
+            <JavalabEditor onCommitCode={onCommitCode} />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
                 <button
@@ -144,7 +150,7 @@ class JavalabView extends React.Component {
                 <button
                   type="button"
                   style={this.getButtonStyles(false)}
-                  onClick={this.props.onContinue}
+                  onClick={onContinue}
                 >
                   <FontAwesome icon="check" className="fa-2x" />
                   <br />
@@ -160,7 +166,7 @@ class JavalabView extends React.Component {
                 <button
                   type="button"
                   style={this.getButtonStyles(false)}
-                  onClick={this.props.onRun}
+                  onClick={onRun}
                 >
                   <FontAwesome icon="play" className="fa-2x" />
                   <br />
@@ -168,9 +174,7 @@ class JavalabView extends React.Component {
                 </button>
               </div>
               <div style={style.consoleStyle}>
-                <JavalabConsole
-                  onInputMessage={this.props.onInputMessage}
-                />
+                <JavalabConsole onInputMessage={onInputMessage} />
               </div>
             </div>
           </div>
