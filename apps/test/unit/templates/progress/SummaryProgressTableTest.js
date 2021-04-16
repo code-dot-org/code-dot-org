@@ -30,6 +30,8 @@ describe('SummaryProgressTable', () => {
         levelsByLesson={levelsByLesson}
         lessonIsVisible={() => true}
         lessonLockedForSection={() => false}
+        userId={1}
+        lockableAuthorized={false}
       />
     );
     const rows = wrapper.find('tbody').props().children;
@@ -52,6 +54,8 @@ describe('SummaryProgressTable', () => {
           lesson.id !== 2 || viewAs === ViewType.Teacher
         }
         lessonLockedForSection={() => false}
+        userId={1}
+        lockableAuthorized={false}
       />
     );
 
@@ -71,6 +75,8 @@ describe('SummaryProgressTable', () => {
           lesson.id !== 2 || viewAs !== ViewType.Student
         }
         lessonLockedForSection={() => false}
+        userId={1}
+        lockableAuthorized={false}
       />
     );
 

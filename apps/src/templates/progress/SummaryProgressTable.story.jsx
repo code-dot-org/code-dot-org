@@ -33,7 +33,9 @@ const defaultProps = {
   viewAs: ViewType.Student,
 
   lessonIsVisible: () => true,
-  lessonLockedForSection: () => false
+  lessonLockedForSection: () => false,
+  userId: 1,
+  lockableAuthorized: false
 };
 
 export default storybook => {
@@ -154,7 +156,7 @@ export default storybook => {
         )
       },
       {
-        name: 'locked lesson in current section as teacher',
+        name: 'locked lesson in current section as verified teacher',
         story: () => (
           <SummaryProgressTable
             {...defaultProps}
@@ -165,7 +167,23 @@ export default storybook => {
             ]}
             levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
             viewAs={ViewType.Teacher}
-            lessonLockedForSection={lessonId => lessonId === 2}
+            lockableAuthorized={true}
+          />
+        )
+      },
+      {
+        name: 'locked lesson in current section as non-verified teacher',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2)
+            ]}
+            levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
+            viewAs={ViewType.Teacher}
+            lockableAuthorized={false}
           />
         )
       },
@@ -188,6 +206,21 @@ export default storybook => {
               fakeLevels(2)
             ]}
             lessonLockedForSection={() => false}
+          />
+        )
+      },
+      {
+        name: 'locked lesson as signed out user',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2)
+            ]}
+            levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
+            userId={null}
           />
         )
       },
