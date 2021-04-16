@@ -500,8 +500,6 @@ export const styles = {
 
   modelCardContainer: {
     backgroundColor: "rgb(198, 202, 205)",
-    height: "70%",
-    // width: "30%",
     borderRadius: "5px",
     padding: "20px",
     overflow: "scroll",
@@ -511,6 +509,7 @@ export const styles = {
   modelCardHeader: {
     marginBottom: "10px",
     marginTop: 0,
+    fontSize: 18
   },
 
   modelCardHeading: {
@@ -531,5 +530,10 @@ export const styles = {
     borderRadius: "5px",
     marginBottom: "10px",
     padding: "10px"
+  },
+
+  botTextContainer: {
+    textAlign: "center",
+    padding: "0px 50px"
   }
 };

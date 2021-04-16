@@ -11,6 +11,7 @@ import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import ModelSummary from "./UIComponents/ModelSummary";
+import ModelCard from "./UIComponents/ModelCard";
 import { styles } from "./constants";
 import { connect } from "react-redux";
 import {
@@ -19,7 +20,6 @@ import {
   validationMessages,
   getTrainedModelDataToSave
 } from "./redux";
-import Statement from "./UIComponents/Statement";
 
 class PanelButtons extends Component {
   static propTypes = {
@@ -230,14 +230,11 @@ class App extends Component {
 
         {currentPanel === "modelSummary" && (
           <BodyContainer>
-            {/* <ContainerFullWidth>
-              <ModelSummary />
-            </ContainerFullWidth> */}
             <ContainerLeft>
-              <Statement />
+              <ModelSummary />
             </ContainerLeft>
             <ContainerRight>
-              <ModelSummary />
+              <ModelCard />
             </ContainerRight>
           </BodyContainer>
         )}

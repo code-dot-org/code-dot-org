@@ -1,19 +1,19 @@
-/* React component to handle displaying the model summary. */
+/* React component to handle displaying a model summary. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { saveMessages, styles } from "../constants";
 import { getSummaryStat } from "../redux";
+import { saveMessages, styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
+import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 
 class ModelSummary extends Component {
   static propTypes = {
-    trainedModelDetails: PropTypes.object,
     saveStatus: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
-    metadata: PropTypes.object,
     summaryStat: PropTypes.object
   };
 
@@ -25,22 +25,39 @@ class ModelSummary extends Component {
     };
   }
 
-  // Add a timer to simulate loading when saving a model.
+  // Display text with a typewritter effect.
+  typeWriter(text, htmlID) {
+    let i = 0;
+    const msDelay = 65;
+
+    let typeWriterHelper = () => {
+      if (i >= text.length) {
+        return;
+      }
+
+      document.getElementById(htmlID).innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriterHelper, msDelay);
+    };
+
+    typeWriterHelper();
+  }
+
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ isLoading: false });
-    }, 2000);
+    // Add a timer to simulate loading when saving a model.
+    let loadSpinner = () => this.setState({ isLoading: false });
+    setTimeout(loadSpinner, 2000);
+
+    const text = `A.I. predicted ${
+      this.props.labelColumn
+    } based on ${this.props.selectedFeatures.join(", ")} with ${
+      this.props.summaryStat.stat
+    }% accuracy.`;
+    this.typeWriter(text, "bot-text");
   }
 
   render() {
-    const {
-      trainedModelDetails,
-      saveStatus,
-      labelColumn,
-      selectedFeatures,
-      metadata,
-      summaryStat
-    } = this.props;
+    const { saveStatus } = this.props;
 
     let loadStatus = this.state.isLoading ? (
       <FontAwesomeIcon icon={faSpinner} />
@@ -50,64 +67,33 @@ class ModelSummary extends Component {
 
     return (
       <div style={styles.panel}>
-        <div style={styles.modelCardContainer}>
-          <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
-          <h5 style={styles.modelCardContent}>Id: </h5>
-          <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Summary</h5>
-            <p style={styles.modelCardContent}>
-              Predict {metadata.labelColumn} based on{" "}
-              {selectedFeatures.length > 0 && (
-                <span>
-                  {selectedFeatures.join(", ")} with {summaryStat.stat}%
-                  accuracy.
-                </span>
-              )}
-            </p>
-          </div>
-          {console.log(metadata)}
-          {console.log(summaryStat)}
-          <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>About the Data </h5>
-            <p style={styles.modelCardContent}>{metadata.card.description}</p>
-          </div>
-          <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Intended Uses</h5>
-            <p style={styles.modelCardContent}>
-              {trainedModelDetails.potentialUses}{" "}
-            </p>
-          </div>
-          <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Warnings</h5>
-            <p style={styles.modelCardContent}>
-              {trainedModelDetails.potentialMisuses}
-            </p>
-          </div>
-          <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Label</h5>
-            <p style={styles.modelCardContent}>{labelColumn}</p>
-          </div>
-          <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Features</h5>
-            <p style={styles.modelCardContent}>{selectedFeatures.join(", ")}</p>
-          </div>
-          <div>
-            {saveStatus === "success" && (
-              <div style={{ position: "absolute", bottom: 0 }}>
-                {loadStatus}
-              </div>
-            )}
-          </div>
+        <div style={{ ...styles.trainBot, margin: "0 auto" }}>
+          <img
+            src={aiBotHead}
+            style={{
+              ...styles.trainBotHead,
+              ...(false && styles.trainBotOpen)
+            }}
+          />
+          <img src={aiBotBody} style={styles.trainBotBody} />
+        </div>
+        <p
+          id="bot-text"
+          style={{ ...styles.statement, ...styles.botTextContainer }}
+        />
+        <div>
+          {saveStatus === "success" && (
+            <div style={{ position: "absolute", bottom: 0 }}>{loadStatus}</div>
+          )}
         </div>
       </div>
     );
   }
 }
+
 export default connect(state => ({
-  trainedModelDetails: state.trainedModelDetails,
   saveStatus: state.saveStatus,
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,
-  metadata: state.metadata,
   summaryStat: getSummaryStat(state)
 }))(ModelSummary);
