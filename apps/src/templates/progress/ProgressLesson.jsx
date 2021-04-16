@@ -8,11 +8,7 @@ import {levelType, lessonType} from './progressTypes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
-import {
-  lessonIsVisible,
-  lessonIsLockedForAllStudents,
-  stageLocked
-} from './progressHelpers';
+import {lessonIsVisible, lessonIsLockedForUser} from './progressHelpers';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
@@ -95,13 +91,12 @@ class ProgressLesson extends React.Component {
 
     // redux provided
     scriptId: PropTypes.number,
-    userId: PropTypes.number,
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
-    lessonLockedForSection: PropTypes.func.isRequired,
+    lessonIsLockedForUser: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.string,
     lockableAuthorized: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool
@@ -157,7 +152,7 @@ class ProgressLesson extends React.Component {
       viewAs,
       showLockIcon,
       lessonIsVisible,
-      lessonLockedForSection,
+      lessonIsLockedForUser,
       selectedSectionId,
       isRtl
     } = this.props;
@@ -166,34 +161,22 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
-    // Adjust caret style if locale is RTL
-    const caretStyle = isRtl ? styles.caretRTL : styles.caret;
-
     // Is this a hidden stage that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    const locked = lessonIsLockedForUser(lesson, levels, viewAs);
+    const hiddenOrLocked = hiddenForStudents || locked;
+
     const title = lesson.stageNumber
       ? i18n.lessonNumbered({
           lessonNumber: lesson.stageNumber,
           lessonName: lesson.name
         })
       : lesson.name;
+
+    // Adjust caret style if locale is RTL
+    const caretStyle = isRtl ? styles.caretRTL : styles.caret;
     const caret = this.state.collapsed ? 'caret-right' : 'caret-down';
 
-    const teacherNotLockableAuthorized =
-      !this.props.lockableAuthorized && viewAs === ViewType.Teacher;
-
-    // Treat the stage as locked if either
-    // (a) it is locked for this user (in the case of a student)
-    // (b) it is locked for all students in the section (in the case of a teacher)
-    // (c) teacher is not verified and can't access lockable content
-    const locked =
-      lesson.lockable &&
-      (!this.props.userId ||
-        stageLocked(levels) ||
-        lessonLockedForSection(lesson.id) ||
-        teacherNotLockableAuthorized);
-
-    const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();
 
     const description =
@@ -269,11 +252,13 @@ class ProgressLesson extends React.Component {
                 </span>
               )}
           </div>
-          {lesson.lockable && teacherNotLockableAuthorized && (
-            <div style={styles.notAuthorizedWarning}>
-              <SafeMarkdown markdown={i18n.verifiedTeacherLockedWarning()} />
-            </div>
-          )}
+          {lesson.lockable &&
+            !this.props.lockableAuthorized &&
+            viewAs === ViewType.Teacher && (
+              <div style={styles.notAuthorizedWarning}>
+                <SafeMarkdown markdown={i18n.verifiedTeacherLockedWarning()} />
+              </div>
+            )}
           {!this.state.collapsed && (
             <ProgressLessonContent
               description={description}
@@ -301,7 +286,6 @@ export const UnconnectedProgressLesson = ProgressLesson;
 export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
-  userId: state.currentUser.userId,
   viewAs: state.viewAs,
   showLockIcon:
     !!state.teacherSections.selectedSectionId ||
@@ -309,9 +293,9 @@ export default connect(state => ({
       !state.stageLock.lockableAuthorized) ||
     state.viewAs === ViewType.Student,
   lockableAuthorized: state.stageLock.lockableAuthorized,
-  lessonLockedForSection: lessonId =>
-    lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
+  lessonIsLockedForUser: (lesson, levels, viewAs) =>
+    lessonIsLockedForUser(lesson, levels, state, viewAs),
   selectedSectionId: state.teacherSections.selectedSectionId.toString(),
   scriptId: state.progress.scriptId,
   isRtl: state.isRtl

@@ -37,6 +37,32 @@ export function lessonIsVisible(lesson, state, viewAs) {
 }
 
 /**
+ * Treat the lesson as locked if either
+ * (a) it is locked for this user (in the case of a student)
+ * (b) it is locked for all students in the section (in the case of a teacher)
+ * (c) non-verified teacher or signed out user
+ * @param {number} lesson - the lesson we're querying
+ * @param {object} state - State of our entire redux store
+ * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
+ *   for students or teachers
+ * @returns {boolean} True if the provided lesson is visible
+ */
+export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
+  if (!lesson.lockable) {
+    return false;
+  }
+  // Signed out user
+  if (!state.currentUser.userId) {
+    return true;
+  }
+  // non-verified teacher
+  if (viewAs === ViewType.Teacher && !state.stageLock.lockableAuthorized) {
+    return true;
+  }
+  return stageLocked(levels) || lessonIsLockedForAllStudents(lesson.id, state);
+}
+
+/**
  * Check to see if a stage/lesson is locked for all stages in the current section
  * or not. If called as a student, this should always return false since they
  * don't have a selected section.
