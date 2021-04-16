@@ -16,7 +16,9 @@ describe('SummaryProgressRow', () => {
     lessonNumber: 3,
     levels: fakeLevels(4),
     lockedForSection: false,
-    lessonIsVisible: () => true
+    lessonIsVisible: () => true,
+    userId: 1,
+    lockableAuthorized: false
   };
 
   it('does not render when lessonIsVisible is false', () => {
@@ -56,6 +58,29 @@ describe('SummaryProgressRow', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
+  it('renders with dashed border when lockable lesson and teacher is not verified', () => {
+    const wrapper = shallow(
+      <SummaryProgressRow
+        {...baseProps}
+        lesson={fakeLesson('Maze', 1, true)}
+        viewAs={ViewType.Teacher}
+        lockableAuthorized={false}
+      />
+    );
+    assert.equal(wrapper.props().style.borderStyle, 'dashed');
+  });
+
+  it('renders with dashed border when lockable lesson for signed out user', () => {
+    const wrapper = shallow(
+      <SummaryProgressRow
+        {...baseProps}
+        lesson={fakeLesson('Maze', 1, true)}
+        userId={null}
+      />
+    );
+    assert.equal(wrapper.props().style.borderStyle, 'dashed');
+  });
+
   it('disables bubbles when locked for section', () => {
     const wrapper = shallow(
       <SummaryProgressRow {...baseProps} lockedForSection={true} />
@@ -74,6 +99,35 @@ describe('SummaryProgressRow', () => {
           ...level,
           status: LevelStatus.locked
         }))}
+      />
+    );
+    assert.strictEqual(
+      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
+      true
+    );
+  });
+
+  it('disables bubbles when lockable lesson and teacher not verified', () => {
+    const wrapper = shallow(
+      <SummaryProgressRow
+        {...baseProps}
+        lesson={fakeLesson('Maze', 1, true)}
+        viewAs={ViewType.Teacher}
+        lockableAuthorized={false}
+      />
+    );
+    assert.strictEqual(
+      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
+      true
+    );
+  });
+
+  it('disables bubbles when lockable lesson and signed out user', () => {
+    const wrapper = shallow(
+      <SummaryProgressRow
+        {...baseProps}
+        lesson={fakeLesson('Maze', 1, true)}
+        userId={null}
       />
     );
     assert.strictEqual(
