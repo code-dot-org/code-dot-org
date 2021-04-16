@@ -6,11 +6,9 @@ import ProgressBubbleSet from './ProgressBubbleSet';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelType, lessonType} from './progressTypes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {stageLocked} from './progressHelpers';
 
 export const styles = {
   lightRow: {
@@ -85,11 +83,9 @@ export default class SummaryProgressRow extends React.Component {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    lockedForSection: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonIsVisible: PropTypes.func.isRequired,
-    userId: PropTypes.number,
-    lockableAuthorized: PropTypes.bool.isRequired
+    lessonIsLockedForUser: PropTypes.func.isRequired
   };
 
   render() {
@@ -97,32 +93,20 @@ export default class SummaryProgressRow extends React.Component {
       dark,
       lesson,
       levels,
-      lockedForSection,
       lessonIsVisible,
+      lessonIsLockedForUser,
       viewAs
     } = this.props;
 
-    const teacherNotLockableAuthorized =
-      !this.props.lockableAuthorized && viewAs === ViewType.Teacher;
-
-    // Is this lesson hidden for whomever we're currently viewing as
-    if (!lessonIsVisible(lesson, viewAs)) {
-      return null;
-    }
-
-    // Would this stage be hidden if we were a student?
+    // Would this lesson be hidden if we were a student?
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    const locked = lessonIsLockedForUser(lesson, levels, viewAs);
+    const hiddenOrLocked = hiddenForStudents || locked;
+
     let lessonTitle = lesson.name;
     if (lesson.stageNumber) {
       lessonTitle = lesson.stageNumber + '. ' + lessonTitle;
     }
-
-    const locked =
-      lockedForSection ||
-      levels.every(level => level.status === LevelStatus.locked) ||
-      (lesson.lockable &&
-        (teacherNotLockableAuthorized || !this.props.userId)) ||
-      (lesson.lockable && stageLocked(levels));
 
     const titleTooltipId = _.uniqueId();
     const lockedTooltipId = _.uniqueId();
@@ -139,7 +123,7 @@ export default class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col1,
-            ...((hiddenForStudents || locked) && styles.fadedCol)
+            ...(hiddenOrLocked && styles.fadedCol)
           }}
         >
           <div style={styles.colText}>
@@ -187,7 +171,7 @@ export default class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col2,
-            ...((hiddenForStudents || locked) && styles.fadedCol)
+            ...(hiddenOrLocked && styles.fadedCol)
           }}
         >
           {levels.length === 0 ? (
