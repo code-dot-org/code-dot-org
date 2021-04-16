@@ -491,6 +491,14 @@ When /^I click "([^"]*)"( once it exists)?(?: to load a new (page|tab))?$/ do |s
   page_load(load) {element.click}
 end
 
+When /^I click "([^"]*)" if it is visible$/ do |selector|
+  if @browser.execute_script(jquery_is_element_visible(selector))
+    find = -> {@browser.find_element(:css, selector)}
+    element = find.call
+    element.click
+  end
+end
+
 When /^I select the end of "([^"]*)"$/ do |selector|
   @browser.execute_script("document.querySelector(\"#{selector}\").setSelectionRange(9999, 9999);")
 end

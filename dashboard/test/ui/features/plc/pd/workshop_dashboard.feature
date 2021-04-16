@@ -9,8 +9,6 @@ Scenario: New workshop: CSF intro
 
   And I press keys "Code.org Office" for element "input#location_name"
   And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
-  # Wait for Mapbox to respond
-  And I wait until element "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul" is visible
   And I press keys "25" for element "input#capacity"
   And I select the "CS Fundamentals" option in dropdown "course"
   And I select the "Intro" option in dropdown "subject"
@@ -24,6 +22,11 @@ Scenario: New workshop: CSF intro
 
   And I press keys "These are my CSF notes" for element "textarea#notes"
   And I select the "Test CSF Facilitator" facilitator at index 0
+
+  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
+  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
+  # and cause the eyes check to fail.
+  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
 
   And I see no difference for "new workshop details: CSF"
 
@@ -43,8 +46,6 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
 
   And I press keys "Code.org Office" for element "input#location_name"
   And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
-  # Wait for Mapbox to respond
-  And I wait until element "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul" is visible
   And I press keys "25" for element "input#capacity"
   And I select the "CS Discoveries" option in dropdown "course"
   And I select the "Academic Year Workshop 1" option in dropdown "subject"
@@ -59,6 +60,11 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
   And I select the "Test CSD Facilitator 1" facilitator at index 0
   And I press the first "#add-facilitator-btn" element
   And I select the "Test CSD Facilitator 2" facilitator at index 1
+
+  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
+  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
+  # and cause the eyes check to fail.
+  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
 
   And I see no difference for "new workshop details: CSD"
 
@@ -77,8 +83,6 @@ Scenario: New workshop: CSP local summer with 1 facilitator
 
   And I press keys "Code.org Office" for element "input#location_name"
   And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
-  # Wait for Mapbox to respond
-  And I wait until element "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul" is visible
   And I press keys "25" for element "input#capacity"
   And I select the "CS Principles" option in dropdown "course"
   And I select the "5-day Summer" option in dropdown "subject"
@@ -90,6 +94,11 @@ Scenario: New workshop: CSP local summer with 1 facilitator
 
   And I press keys "These are my CSP notes" for element "textarea#notes"
   And I select the "Test CSP Facilitator" facilitator at index 0
+
+  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
+  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
+  # and cause the eyes check to fail.
+  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
 
   And I see no difference for "new workshop details: CSP"
 
