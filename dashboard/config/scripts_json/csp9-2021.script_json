@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:37:45 UTC",
+    "serialized_at": "2021-04-15 22:04:52 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -1194,7 +1194,7 @@
       "key": "02e6793e-4a3f-4316-a6ed-34e0c5b11daf",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with low shedding.*\n\nDiscussion Goal: We are building towards the idea of filtering data. Students filtered programmatically in previous units, but don't yet know how to use the Data Visualizer tool to accomplish the same goal. \n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with long lifespans.*\n\nDiscussion Goal: We are building towards the idea of filtering data. Students filtered programmatically in previous units, but don't yet know how to use the Data Visualizer tool to accomplish the same goal. \n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
       },
       "seeding_key": {
         "activity_section.key": "02e6793e-4a3f-4316-a6ed-34e0c5b11daf",
@@ -1218,7 +1218,8 @@
       "key": "aceacc82-c532-439d-a85f-55c0e04a63df",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to filter data for the class. \n\n1. Open up Level 2.\n2. Discuss that you want to find out about the peak level of female representation in your states legislature. What will you filter by? Percentage of Females in Legislature or State? \n3. We will filter by state. This means the data for female state legislators who are from your home state are the only data that will be shown. \n4. Select \"Bar Chart\" and \"Percentage of Females in Legislators\" from the dropdowns. \n5. Discuss what the chart displays: the bar farthest to the right represents the year(s) when female representation in the legislature was at its highest in your states history."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to filter data for the class. \n\n1. Open up Level 2.\n2. Discuss that you want to find out about the peak level of female representation in your state's legislature. What will you filter by? Percentage of Females in Legislature or State? \n3. We will filter by state. This means the data for female state legislators who are from your home state are the only data that will be shown. \n4. Select \"Bar Chart\" and \"Percentage of Females in Legislators\" from the dropdowns. \n5. Discuss what the chart displays: the bar farthest to the right represents the year(s) when female representation in the legislature was at its highest in your state's history.",
+        "progression_name": "Filtering Data"
       },
       "seeding_key": {
         "activity_section.key": "aceacc82-c532-439d-a85f-55c0e04a63df",
@@ -1229,7 +1230,7 @@
       "key": "07d0bc61-4546-421b-8478-d4c4055baec4",
       "position": 10,
       "properties": {
-        "description": "When filtering, the most challenging part is deciding what value you will filter by. Think to yourself: what's the limiting factor? What do I want to make sure all cats, dogs, etc. have to be included in this subset?\n\nIt's time for you to play around in the tool yourself!",
+        "description": "When filtering, the most challenging part is deciding what value you will filter by. Think to yourself: what's the limiting factor? What do I want to make sure all these percentages have in common to be included in this subset?\n\nIt's time for you to play around in the tool yourself!",
         "remarks": true
       },
       "seeding_key": {
@@ -2053,7 +2054,7 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Cleaning Data",
         "level_keys": [
@@ -2079,11 +2080,12 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CSP U9L3 Data Filtering_2021"
-        ]
+        ],
+        "progression": "Filtering Data"
       },
       "named_level": null,
       "bonus": null,
