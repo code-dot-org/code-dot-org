@@ -3,7 +3,7 @@ require 'pdf/conversion'
 
 class Services::CurriculumPdfs::LessonPlansTest < ActiveSupport::TestCase
   setup do
-    PDF.stubs(:generate_from_url)
+    PDF.stubs(:invoke_generation_script)
   end
 
   test 'PDF paths (and urls) are versioned' do
