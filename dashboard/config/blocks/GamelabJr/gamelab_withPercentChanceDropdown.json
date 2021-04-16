@@ -2,30 +2,30 @@
   "category": "Control",
   "config": {
     "func": "withPercentChanceDropdown",
-    "blockText": "with {NUM} chance\n{STATEMENT}",
+    "blockText": " {NUM} chance\n {STATEMENT}",
     "args": [
       {
         "name": "NUM",
         "options": [
           [
             "very high",
-            90
+            "90"
           ],
           [
             "high",
-            75
+            "75"
           ],
           [
             "50/50",
-            50
+            "50"
           ],
           [
             "low",
-            25
+            "25"
           ],
           [
             "very low",
-            10
+            "10"
           ]
         ]
       },
