@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 23:04:02 UTC",
+    "serialized_at": "2021-04-15 23:15:20 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -1942,7 +1942,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Traveling Salesman",
         "level_keys": [
@@ -1968,7 +1968,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [
@@ -2304,6 +2304,54 @@
       "seeding_key": {
         "resource.key": "unreasonable-time-activity-guide"
       }
+    },
+    {
+      "name": "The Halting Problem: The Unsolvable Problem",
+      "url": "https://youtu.be/VyHbd6sx5Po",
+      "key": "the_halting_problem_the_unsolvable_problem",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "name": "Folding@home Supercomputing Project",
+      "url": "https://youtu.be/RGGzMQ2oFrA",
+      "key": "folding_home_supercomputing_project",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -2339,8 +2387,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "folding_home_supercomputing_project"
       }
     },
     {
@@ -2351,7 +2411,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp6-2021"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:57 UTC",
+    "serialized_at": "2021-04-15 18:56:52 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -110,21 +110,8 @@
   ],
   "lesson_activities": [
     {
-      "key": "4c929c15-de18-4488-b022-0d8418fd9704",
-      "position": 1,
-      "properties": {
-        "name": "Lessom Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4c929c15-de18-4488-b022-0d8418fd9704",
-        "lesson.key": "Create PT - Review the Task",
-        "lesson_group.key": "",
-        "script.name": "csp8-2021"
-      }
-    },
-    {
       "key": "504c2d5f-fc17-4fe8-bc19-815d98352fea",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Warm Up",
         "duration": 10
@@ -138,7 +125,7 @@
     },
     {
       "key": "14d8bd81-4fab-494f-93a3-5dc58a2f6639",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Activity",
         "duration": 25
@@ -152,7 +139,7 @@
     },
     {
       "key": "8bb6a656-e228-4bf1-86f2-eca2630cc837",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Wrap Up",
         "duration": 10
@@ -168,7 +155,7 @@
       "key": "6e25a224-243e-456f-97bc-7522985d375e",
       "position": 1,
       "properties": {
-        "name": "Getting Started",
+        "name": "Warm Up",
         "duration": 5
       },
       "seeding_key": {
@@ -274,17 +261,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "b72a4fb7-2990-49bb-8929-1ac849f549e2",
-      "position": 1,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/image_6UvOK1t.png)\r\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1AduaaUdKIe4BOd3tYhQdIYCZZRTNYWjuLvvvUZx5ah0/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "b72a4fb7-2990-49bb-8929-1ac849f549e2",
-        "lesson_activity.key": "4c929c15-de18-4488-b022-0d8418fd9704"
-      }
-    },
     {
       "key": "e59b50bc-582b-42f5-a27b-2dcd30a94064",
       "position": 1,
@@ -800,7 +776,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Tech Setup and Tools for Create PT",
         "level_keys": [
@@ -826,7 +802,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create PT Coding Workspace",
         "level_keys": [
@@ -1222,6 +1198,9 @@
   "scripts_resources": [
 
   ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
@@ -1356,5 +1335,8 @@
         "standard.shortcode": "3B-AP-14"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
