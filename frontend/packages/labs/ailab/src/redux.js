@@ -34,13 +34,11 @@ const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
-const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
 const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
-const SET_RESERVE_LOCATION = "SET_RESERVE_LOCATION";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
 const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
 const SET_ACCURACY_CHECK_PREDICTED_LABELS =
@@ -51,7 +49,6 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
-const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
@@ -60,7 +57,6 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
-const SET_COLUMN_REF = "SET_COLUMN_REF";
 
 // Action creators
 export function setMode(mode) {
@@ -97,10 +93,6 @@ export const setColumnsByDataType = (column, dataType) => ({
   dataType
 });
 
-export function setSelectedFeatures(selectedFeatures) {
-  return { type: SET_SELECTED_FEATURES, selectedFeatures };
-}
-
 export function addSelectedFeature(selectedFeature) {
   return { type: ADD_SELECTED_FEATURE, selectedFeature };
 }
@@ -134,10 +126,6 @@ export function setFeatureNumberKey(featureNumberKey) {
 
 export function setPercentDataToReserve(percentDataToReserve) {
   return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
-}
-
-export function setReserveLocation(reserveLocation) {
-  return { type: SET_RESERVE_LOCATION, reserveLocation };
 }
 
 export function setAccuracyCheckExamples(accuracyCheckExamples) {
@@ -180,10 +168,6 @@ export function setTrainedModel(trainedModel) {
   return { type: SET_TRAINED_MODEL, trainedModel };
 }
 
-export function setTrainedModelDetails(trainedModelDetails) {
-  return { type: SET_TRAINED_MODEL_DETAILS, trainedModelDetails };
-}
-
 export function setTrainedModelDetail(field, value, isColumn) {
   return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
@@ -214,10 +198,6 @@ export function setResultsPhase(phase) {
 
 export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
-}
-
-export function setColumnRef(columnId, ref) {
-  return { type: SET_COLUMN_REF, columnId, ref };
 }
 
 const initialState = {
@@ -317,12 +297,6 @@ export default function rootReducer(state = initialState, action) {
       }
     };
   }
-  if (action.type === SET_SELECTED_FEATURES) {
-    return {
-      ...state,
-      selectedFeatures: action.selectedFeatures
-    };
-  }
 
   if (action.type === ADD_SELECTED_FEATURE) {
     if (!state.selectedFeatures.includes(action.selectedFeature)) {
@@ -374,12 +348,6 @@ export default function rootReducer(state = initialState, action) {
       percentDataToReserve: action.percentDataToReserve
     };
   }
-  if (action.type === SET_RESERVE_LOCATION) {
-    return {
-      ...state,
-      reserveLocation: action.reserveLocation
-    };
-  }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
     return {
       ...state,
@@ -429,12 +397,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       trainedModel: action.trainedModel
-    };
-  }
-  if (action.type === SET_TRAINED_MODEL_DETAILS) {
-    return {
-      ...state,
-      trainedModelDetails: action.trainedModelDetails
     };
   }
   if (action.type === SET_TRAINED_MODEL_DETAIL) {
@@ -561,16 +523,6 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
-  if (action.type === SET_COLUMN_REF) {
-    return {
-      ...state,
-      columnRefs: {
-        ...state.columnRefs,
-        action: action.columnId,
-        ref: action.ref
-      }
-    };
-  }
   return state;
 }
 
@@ -682,15 +634,6 @@ export function getOptionFrequencies(state, column) {
     }
   }
   return optionFrequencies;
-}
-
-export function getOptionFrequenciesByColumn(state) {
-  let optionFrequenciesByColumn = {};
-  getSelectedCategoricalColumns(state).map(
-    column =>
-      (optionFrequenciesByColumn[column] = getOptionFrequencies(state, column))
-  );
-  return optionFrequenciesByColumn;
 }
 
 export function getUniqueOptionsByColumn(state) {
@@ -1045,13 +988,6 @@ export function getTrainedModelDataToSave(state) {
   return dataToSave;
 }
 
-export function getShowSelectLabels(state) {
-  return (
-    !(state.mode && state.mode.hideSelectLabel) &&
-    getSelectableLabels(state).length > 0
-  );
-}
-
 export function getSpecifiedDatasets(state) {
   return state.mode && state.mode.datasets;
 }
@@ -1062,10 +998,6 @@ export function getShowColumnClicking(state) {
 
 export function getShowChooseReserve(state) {
   return !(state.mode && state.mode.hideChooseReserve);
-}
-
-export function getShowSelectTrainer(state) {
-  return !(state.mode && state.mode.hideSelectTrainer);
 }
 
 export function getPredictAvailable(state) {
