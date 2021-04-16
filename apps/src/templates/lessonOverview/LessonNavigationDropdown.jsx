@@ -56,6 +56,7 @@ export default class LessonNavigationDropdown extends Component {
             ? 'student-lesson-plan'
             : 'teacher-lesson-plan',
           event: 'navigate-between-lessons',
+          data_int: this.props.lesson.id,
           data_json: JSON.stringify({
             startingLessonId: this.props.lesson.id,
             endingLessonId: listItem.id
