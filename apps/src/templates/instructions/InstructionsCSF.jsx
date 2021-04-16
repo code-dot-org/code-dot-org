@@ -359,7 +359,6 @@ class InstructionsCSF extends React.Component {
             requestHint={this.requestHint}
             setColWidth={this.setLeftColWidth}
             setColHeight={this.setLeftColHeight}
-            onIconLoad={this.onIconLoad}
           />
           <InstructionsCsfMiddleCol
             ref={instructions =>
