@@ -51,11 +51,7 @@ export default class SetupGuide extends React.Component {
     );
 
     if (isCodeOrgBrowser() || isChromeOS()) {
-      return (
-        <Provider store={store}>
-          <SetupChecklist setupChecker={this.setupChecker} />;
-        </Provider>
-      );
+      return <SetupChecklist setupChecker={this.setupChecker} />;
     }
     return (
       <Provider store={store}>
