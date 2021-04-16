@@ -375,7 +375,8 @@ class Lesson < ApplicationRecord
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
-      lessonPath: script_lesson_path(script, self)
+      lessonPath: script_lesson_path(script, self),
+      lessonExtrasAvailableForScript: script.lesson_extras_available
     }
   end
 

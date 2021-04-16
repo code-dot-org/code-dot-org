@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-14 17:45:24 UTC",
+    "serialized_at": "2021-04-15 18:06:33 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -30,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Variables"
+        "display_name": "Variables",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **Intro to EIPM:** This unit is students' first experience with the Explore, Investigate, Practice, Make lesson sequence, or EIPM. This structured approach to teaching programming is covered in detail in the curriculum guide. We highly recommend watching the [accompanying video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3) to better understand what EIPM should look like in the classroom. When used effectively, it supports deep learning of content and helps maintain a collaborative classroom culture, even as you move into more complex programming concepts.\n\n* **Scaffolding Towards Independent Projects:** A major goal of this course is to empower students to design and build projects independently. The Create PT in Unit 8 offers students enormous freedom to scope and build projects, and even this unit begins scaffolding towards that goal. Individual EIPM sequences of lessons gradually prepare students for scoped, independent Make projects. The unit project has a few requirements, but students are largely free to choose the design, topic, and implementation of their ideas. As you teach the unit, look for the opportunities to scaffold the skills and knowledge students will need to creatively and independently tackle the unit project.\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to design an app that makes a recommendation based on information from user input. Students are given a great deal of freedom to choose their topic, design their user interface, and decide how to actually program their app's behavior. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 1.4 Identifying and Correcting Errors\n* 3.1 Variables and Assignment\n* 3.3 Mathematical Expressions\n* 3.5 Boolean Expressions\n* 3.6 Conditionals\n* 3.7 Nested Conditionals\n* 3.15 Random Values\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii"
       },
       "seeding_key": {
         "lesson_group.key": "csp_variables",
@@ -1180,7 +1181,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 38
+        "duration": 33
       },
       "seeding_key": {
         "lesson_activity.key": "06f628a3-f41e-4b21-8c46-18a6f2902aa7",
@@ -3653,7 +3654,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -3679,7 +3680,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -3705,7 +3706,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -3757,7 +3758,7 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
@@ -3783,7 +3784,7 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
@@ -3809,7 +3810,7 @@
       "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
         "level_keys": [
@@ -3835,7 +3836,7 @@
       "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
@@ -3861,7 +3862,7 @@
       "chapter": 9,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
@@ -3913,7 +3914,7 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3939,7 +3940,7 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3965,7 +3966,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3991,7 +3992,7 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4017,7 +4018,7 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4043,7 +4044,7 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4069,7 +4070,7 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4095,7 +4096,7 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4121,7 +4122,7 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4147,7 +4148,7 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Putting it Together",
         "level_keys": [
@@ -4225,7 +4226,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Try the Photo Liker app",
         "level_keys": [
@@ -5551,7 +5552,7 @@
       "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Test Your Decision Maker App",
         "level_keys": [
