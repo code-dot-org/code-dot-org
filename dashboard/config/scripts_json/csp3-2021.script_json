@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-09 23:33:09 UTC",
+    "serialized_at": "2021-04-15 18:28:45 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -30,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 3: Intro to App Design"
+        "display_name": "Unit 3: Intro to App Design",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **New Topics, Same Classroom Culture:** This unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n* **Emphasizing Skills:** Since this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n* **Empowering \"Creators\":** This unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n### Major Assessment and Projects\n\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit3_2020",
@@ -118,7 +119,9 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true,
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 1",
@@ -146,7 +149,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
@@ -175,7 +179,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "The Need for Programming Languages",
@@ -262,7 +267,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
@@ -291,7 +297,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 4",
@@ -320,7 +327,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
@@ -340,7 +348,17 @@
         "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app.",
         "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
         "preparation": "* Make sure students have access to their App Development Planning Guides",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "assessment": true,
+        "announcements": [
+          {
+            "notice": "Lesson Modifications",
+            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
+            "link": "https://docs.google.com/document/d/1tQkjsKkaLeKKMfbTi5jUsI3ew3N02NyPb5r2lyzkw38/edit?usp=sharing",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ]
       },
       "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
@@ -830,24 +848,10 @@
       }
     },
     {
-      "key": "aad3b12f-b997-4886-900e-04c0cd02e7f1",
+      "key": "cab51909-149f-4a96-839e-ea0425187e17",
       "position": 1,
       "properties": {
-        "name": "Lesson Modfications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "aad3b12f-b997-4886-900e-04c0cd02e7f1",
-        "lesson.key": "Lesson 11: Assessment Day",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "key": "cab51909-149f-4a96-839e-ea0425187e17",
-      "position": 2,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cab51909-149f-4a96-839e-ea0425187e17",
@@ -858,10 +862,10 @@
     },
     {
       "key": "2ef4fa0d-6feb-4088-b698-1370efe31599",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "2ef4fa0d-6feb-4088-b698-1370efe31599",
@@ -872,7 +876,7 @@
     },
     {
       "key": "b55eb866-7103-4452-ba05-dfc6804486ee",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Wrap Up",
         "duration": 10
@@ -886,7 +890,7 @@
     },
     {
       "key": "dfe0d8f3-2557-48ff-9640-27d04121e52a",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -2283,17 +2287,6 @@
       }
     },
     {
-      "key": "14da987e-33e1-45c9-8a93-723be6d832ac",
-      "position": 1,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/image_6UvOK1t.png)\r\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1tQkjsKkaLeKKMfbTi5jUsI3ew3N02NyPb5r2lyzkw38/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "14da987e-33e1-45c9-8a93-723be6d832ac",
-        "lesson_activity.key": "aad3b12f-b997-4886-900e-04c0cd02e7f1"
-      }
-    },
-    {
       "key": "1611bc9c-d33d-449a-8ff7-bde56ff7f4b5",
       "position": 1,
       "properties": {
@@ -2310,7 +2303,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
-        "name": "Unit Assessment - 25 mins\r"
+        "name": "Unit Assessment",
+        "duration": "25"
       },
       "seeding_key": {
         "activity_section.key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b",
@@ -2322,7 +2316,8 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** One student per group displays their app on the computer. Groups rotate around the room running the different apps. Students can leave comments on sticky notes at each station.",
-        "name": "Gallery Walk - 10 mins\r"
+        "name": "Gallery Walk",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "42721b5f-7a1b-4bc8-8a79-9cdb8fde6dc2",
@@ -2890,7 +2885,7 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample Prototype",
         "level_keys": [
@@ -2916,7 +2911,7 @@
       "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build Your Screens",
         "level_keys": [
@@ -3124,7 +3119,7 @@
       "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3150,7 +3145,7 @@
       "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3176,7 +3171,7 @@
       "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3202,7 +3197,7 @@
       "chapter": 33,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3228,7 +3223,7 @@
       "chapter": 34,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3254,7 +3249,7 @@
       "chapter": 35,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3280,7 +3275,7 @@
       "chapter": 36,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3332,7 +3327,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Pair Programming",
         "level_keys": [
@@ -3358,7 +3353,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Add Code",
         "level_keys": [
@@ -3384,7 +3379,7 @@
       "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Add More Code",
         "level_keys": [
@@ -3438,10 +3433,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 3 Exam",
-        "level_keys": [
-          "CSP Unit 3 MC Assessment _2021"
-        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3452,7 +3443,7 @@
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f"
+        "activity_section.key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b"
       },
       "level_keys": [
         "CSP Unit 3 MC Assessment _2021"
@@ -3961,7 +3952,7 @@
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f"
+        "activity_section.key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b"
       }
     }
   ],
@@ -4025,6 +4016,30 @@
       },
       "seeding_key": {
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
       }
     }
   ],
@@ -4151,7 +4166,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp3-2021"
+      }
+    }
   ],
   "scripts_student_resources": [
 

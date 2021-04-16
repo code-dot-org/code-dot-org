@@ -84,10 +84,10 @@ export default class ProgressTableDetailCell extends React.Component {
             >
               <ProgressTableLevelBubble
                 levelStatus={subStatus}
-                isDisabled={!!level.bonus && !this.props.stageExtrasEnabled}
-                bubbleSize={progressStyles.BubbleSize.letter}
-                isBonus={sublevel.bonus}
-                isConcept={sublevel.isConceptLevel}
+                disabled={!!level.bonus && !this.props.stageExtrasEnabled}
+                smallBubble={true}
+                bonus={sublevel.bonus}
+                concept={sublevel.isConceptLevel}
                 title={sublevel.bubbleText}
                 url={this.buildBubbleUrl(sublevel)}
               />
@@ -111,11 +111,11 @@ export default class ProgressTableDetailCell extends React.Component {
           <ProgressTableLevelBubble
             levelStatus={status}
             levelKind={level.kind}
-            isDisabled={!!level.bonus && !stageExtrasEnabled}
-            isUnplugged={level.isUnplugged}
-            isBonus={level.bonus}
-            isPaired={paired}
-            isConcept={level.isConceptLevel}
+            disabled={!!level.bonus && !stageExtrasEnabled}
+            unplugged={level.isUnplugged}
+            bonus={level.bonus}
+            paired={paired}
+            concept={level.isConceptLevel}
             title={level.bubbleText}
             url={url}
           />

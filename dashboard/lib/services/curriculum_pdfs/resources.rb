@@ -30,14 +30,25 @@ module Services
           end
 
           # Merge all gathered PDFs
-          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
-          subdirectory = File.dirname(get_script_overview_pathname(script))
-          destination = File.join(directory, subdirectory, filename)
+          destination = File.join(directory, get_script_resources_pdf_pathname(script))
           FileUtils.mkdir_p(File.dirname(destination))
           PDF.merge_local_pdfs(destination, *pdfs)
           FileUtils.remove_entry_secure(pdfs_dir)
 
           return destination
+        end
+
+        def get_script_resources_pdf_pathname(script)
+          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
+          subdirectory = File.dirname(get_script_overview_pathname(script))
+          return Pathname.new(File.join(subdirectory, filename))
+        end
+
+        def script_resources_pdf_exists_for?(script)
+          AWS::S3.cached_exists_in_bucket?(
+            S3_BUCKET,
+            get_script_resources_pdf_pathname(script).to_s
+          )
         end
 
         def generate_lesson_resources_title_page(lesson, directory="/tmp/")
@@ -69,7 +80,11 @@ module Services
           if file.available_content_types.include? "appliction/pdf"
             file.download_to_file(path)
           else
-            file.export_as_file(path)
+            # The intuitive option here would be to use
+            # file.export_as_file(path, "application/pdf"); unfortunately, that
+            # method applies some restrictive file size limits that for
+            # whatever reason hitting the URI directly does not.
+            IO.copy_stream(URI.open("https://docs.google.com/document/d/#{file.id}/export?format=pdf"), path)
           end
         end
 
@@ -79,10 +94,12 @@ module Services
           return path if File.exist?(path)
 
           if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
+            # We don't want to export forms
+            return nil if resource.url.start_with?("https://docs.google.com/forms")
             begin
               export_from_google(resource.url, path)
               return path
-            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error, URI::InvalidURIError => e
               ChatClient.log(
                 "error from Google when trying to fetch PDF for resource #{resource.key.inspect}: #{e}",
                 color: 'red'

@@ -1,7 +1,7 @@
 import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
+import {UnconnectedProgressBubbleSet as ProgressBubbleSet} from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
 const defaultProps = {
