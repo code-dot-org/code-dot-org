@@ -9,8 +9,7 @@ const styles = {
   },
   node: {
     ...progressStyles.inlineBlock,
-    minWidth:
-      progressStyles.bubbleContainerWidths[progressStyles.BubbleSize.full],
+    minWidth: progressStyles.BUBBLE_CONTAINER_WIDTH,
     textAlign: 'center'
   }
 };
@@ -25,9 +24,7 @@ function SublevelSpacer({sublevelCount}) {
   return (
     <span
       style={{
-        width:
-          sublevelCount *
-          progressStyles.bubbleContainerWidths[progressStyles.BubbleSize.letter]
+        width: sublevelCount * progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH
       }}
     />
   );
