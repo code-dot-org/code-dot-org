@@ -29,8 +29,7 @@ describe('SummaryProgressTable', () => {
         lessons={lessons}
         levelsByLesson={levelsByLesson}
         lessonIsVisible={() => true}
-        lessonLockedForSection={() => false}
-        userId={1}
+        lessonIsLockedForUser={() => false}
         lockableAuthorized={false}
       />
     );
@@ -53,8 +52,7 @@ describe('SummaryProgressTable', () => {
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs === ViewType.Teacher
         }
-        lessonLockedForSection={() => false}
-        userId={1}
+        lessonIsLockedForUser={() => false}
         lockableAuthorized={false}
       />
     );
@@ -74,8 +72,7 @@ describe('SummaryProgressTable', () => {
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs !== ViewType.Student
         }
-        lessonLockedForSection={() => false}
-        userId={1}
+        lessonIsLockedForUser={() => false}
         lockableAuthorized={false}
       />
     );
