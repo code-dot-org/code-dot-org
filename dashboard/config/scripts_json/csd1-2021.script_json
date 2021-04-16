@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-09 21:34:46 UTC",
+    "serialized_at": "2021-04-14 23:01:57 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -2886,7 +2886,6 @@
       "key": "00405d7e-34d2-4784-8f34-67a211b9e112",
       "position": 1,
       "properties": {
-        "name": "App: Is It Your Birthday?",
         "progression_name": "App: Is It Your Birthday?"
       },
       "seeding_key": {
@@ -2898,7 +2897,6 @@
       "key": "d077e275-c2db-421d-962e-c684e04ae6fe",
       "position": 2,
       "properties": {
-        "name": "App: National Park Quiz",
         "progression_name": "App: National Park Quiz"
       },
       "seeding_key": {
@@ -2910,7 +2908,6 @@
       "key": "ef32a9d1-71ed-4d37-948e-6fac69e3abcc",
       "position": 3,
       "properties": {
-        "name": "App: How Many Countries...",
         "progression_name": "App: How Many Countries..."
       },
       "seeding_key": {
@@ -2922,7 +2919,6 @@
       "key": "416ac7dd-a043-4936-8f5c-3c55d0bd0a0a",
       "position": 4,
       "properties": {
-        "name": "App: My Famous Birthday",
         "progression_name": "App: My Famous Birthday"
       },
       "seeding_key": {
@@ -2934,7 +2930,6 @@
       "key": "9642adce-4c71-457e-a276-cc67ff166a2f",
       "position": 5,
       "properties": {
-        "name": "App: Stamp Notebook",
         "progression_name": "App: Stamp Notebook"
       },
       "seeding_key": {
@@ -2946,7 +2941,6 @@
       "key": "98ce89ea-461e-49e4-845d-521a80a2a550",
       "position": 6,
       "properties": {
-        "name": "App: The Fastest Finger",
         "progression_name": "App: The Fastest Finger"
       },
       "seeding_key": {
@@ -2958,7 +2952,6 @@
       "key": "2d8ce6da-027e-4a1c-944a-ce82c02f5f49",
       "position": 7,
       "properties": {
-        "name": "App: Guess the Number",
         "progression_name": "App: Guess the Number"
       },
       "seeding_key": {
@@ -2970,7 +2963,6 @@
       "key": "9df0efaf-11d3-4c55-81ff-e928ed7838c7",
       "position": 8,
       "properties": {
-        "name": "App: Where Should I Live?",
         "progression_name": "App: Where Should I Live?"
       },
       "seeding_key": {
@@ -5132,7 +5124,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Is It Your Birthday?",
         "level_keys": [
@@ -5158,7 +5150,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: National Park Quiz",
         "level_keys": [
@@ -5184,7 +5176,7 @@
       "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: How Many Countries...",
         "level_keys": [
@@ -5210,7 +5202,7 @@
       "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: My Famous Birthday",
         "level_keys": [
@@ -5236,7 +5228,7 @@
       "chapter": 11,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Stamp Notebook",
         "level_keys": [
@@ -5262,7 +5254,7 @@
       "chapter": 12,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: The Fastest Finger",
         "level_keys": [
@@ -5288,7 +5280,7 @@
       "chapter": 13,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Guess the Number",
         "level_keys": [
@@ -5314,7 +5306,7 @@
       "chapter": 14,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Where Should I Live?",
         "level_keys": [

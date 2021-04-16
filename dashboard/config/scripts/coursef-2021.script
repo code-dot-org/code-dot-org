@@ -63,6 +63,10 @@ level 'courseF_text_concat', progression: 'Skill Building'
 level 'courseF_text_practice', progression: 'Practice'
 
 lesson 'lesson-11', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: true
+level 'courseF_label_predict', progression: 'Prediction'
+level 'courseF_variables_samples', progression: 'Exploration: Sample Apps'
+level 'courseF_variables_stop', progression: 'Planning'
+level 'courseF_variables_projects', progression: 'Mini-Project: User Input Programs'
 
 lesson 'Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2021', progression: 'Video: Artist Intro with JR Hildebrande'
@@ -157,10 +161,6 @@ level 'CourseF_Oceans_Long_2021', progression: 'Teach A.I. a new word'
 
 lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet-Unplugged_2021', progression: 'The Internet - Unplugged Activity'
-
-lesson_group 'csf_sprites', display_name: 'Impacts of Computing'
-lesson 'lesson-1', display_name: 'Designing for Accessibility', has_lesson_plan: true, unplugged: true
-level 'DesigningForAccessibilityMarkdownLevel_2021', progression: 'Designing for Accessibility - Unplugged Activity'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
