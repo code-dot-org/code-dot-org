@@ -277,7 +277,7 @@ var projects = (module.exports = {
     }
   },
 
-    /**
+  /**
    * Returns the project URL for the current project.
    *
    * This URL accesses the dashboard API for the sources S3 bucket where
@@ -286,10 +286,10 @@ var projects = (module.exports = {
    * This function depends on the document location to determine the current
    * application environment.
    *
-   * @returns {string} Fully-qualified share URL for the current project.
+   * @returns {string} Fully-qualified sources URL for the current project.
    */
   getProjectSourcesUrl() {
-    return `${this.getLocation().origin}/v3/sources/${this.getCurrentId()}`
+    return `${this.getLocation().origin}/v3/sources/${this.getCurrentId()}`;
   },
 
   getCurrentTimestamp() {

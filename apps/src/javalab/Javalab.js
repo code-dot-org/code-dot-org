@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {appendOutputLog} from './javalabRedux';
 import JavalabView from './JavalabView';
-import javalab, {getSources, setAllSources} from './javalabRedux';
+import javalab, {
+  getSources,
+  setAllSources,
+  appendOutputLog
+} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './javabuilderConnection';
@@ -23,6 +26,7 @@ const MOBILE_PORTRAIT_WIDTH = 600;
 const Javalab = function() {
   this.skin = null;
   this.level = null;
+  this.channelId = null;
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -45,6 +49,7 @@ Javalab.prototype.init = function(config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.channelId = config.channel;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -149,14 +154,18 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
-  this.javabuilderConnection = new JavabuilderConnection(this.level.javabuilderUrl, message => getStore().dispatch(appendOutputLog(message)))
+  this.javabuilderConnection = new JavabuilderConnection(
+    this.channelId,
+    this.level.javabuilderUrl,
+    message => getStore().dispatch(appendOutputLog(message))
+  );
   this.javabuilderConnection.connectJavabuilder();
-  // runCode(this.level.javabuilderUrl);
 };
 
+// Called by Javalab console to send a message to Javabuilder.
 Javalab.prototype.onInputMessage = function(message) {
   this.javabuilderConnection.sendMessage(message);
-}
+};
 
 // Called by the Javalab app when it wants to go to the next level.
 Javalab.prototype.onContinue = function() {
