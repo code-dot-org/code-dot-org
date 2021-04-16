@@ -163,21 +163,21 @@ class ScriptsController < ApplicationController
     @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
-  def add_rollup_resources
-    @script = Script.get_from_cache(params[:id])
-    course_version = @script.get_course_version
+  def get_rollup_resources
+    script = Script.get_from_cache(params[:id])
+    course_version = script.get_course_version
     rollup_pages = []
-    if @script.lessons.any? {|l| !l.programming_expressions.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(@script), course_version_id: course_version.id))
+    if script.lessons.any? {|l| !l.programming_expressions.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(script), course_version_id: course_version.id))
     end
-    if @script.lessons.any? {|l| !l.resources.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(@script), course_version_id: course_version.id))
+    if script.lessons.any? {|l| !l.resources.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(script), course_version_id: course_version.id))
     end
-    if @script.lessons.any? {|l| !l.standards.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(@script), course_version_id: course_version.id))
+    if script.lessons.any? {|l| !l.standards.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(script), course_version_id: course_version.id))
     end
-    if @script.lessons.any? {|l| !l.vocabularies.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(@script), course_version_id: course_version.id))
+    if script.lessons.any? {|l| !l.vocabularies.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(script), course_version_id: course_version.id))
     end
     rollup_pages.each do |r|
       r.is_rollup = true

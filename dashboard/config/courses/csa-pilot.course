@@ -17,7 +17,17 @@
     "family_name": "csa"
   },
   "resources": [
-
+    {
+      "name": "All Standards",
+      "url": "/courses/csa-pilot/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    }
   ],
   "student_resources": [
 

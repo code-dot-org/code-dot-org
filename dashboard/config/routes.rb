@@ -280,6 +280,7 @@ Dashboard::Application.routes.draw do
       get 'resources'
       get 'code'
       get 'standards'
+      get 'get_rollup_resources'
     end
   end
 
@@ -333,7 +334,7 @@ Dashboard::Application.routes.draw do
       get 'code'
       get 'standards'
       get 'instructions'
-      post 'add_rollup_resources'
+      get 'get_rollup_resources'
     end
 
     ## TODO: Once we move levels over to /lessons as well combine the routing rules

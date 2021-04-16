@@ -60,7 +60,7 @@ class ResourcesEditor extends Component {
     resourceContext: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
 
-    addRollupsType: PropTypes.oneOf('course', 'script'),
+    addRollupsType: PropTypes.oneOf(['course', 'script']),
     addRollupsId: PropTypes.string,
 
     // Provided by redux
@@ -76,7 +76,8 @@ class ResourcesEditor extends Component {
       resourceInput: '',
       searchValue: '',
       newResourceDialogOpen: false,
-      confirmRemovalDialogOpen: false
+      confirmRemovalDialogOpen: false,
+      error: ''
     };
   }
 
@@ -258,34 +259,24 @@ class ResourcesEditor extends Component {
   };
 
   addRollupPages = () => {
-    const urlPrefix = this.props.addRollupsType === 'course' ? 'course' : 's';
+    const urlPrefix = this.props.addRollupsType === 'course' ? 'courses' : 's';
     $.ajax({
-      url: `/${urlPrefix}/${this.props.addRollupsId}/add_rollup_resources`,
-      method: 'POST',
+      url: `/${urlPrefix}/${this.props.addRollupsId}/get_rollup_resources`,
+      method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     })
       .done(data => {
-        const existingRollupResourceKeys = this.props.resources
+        this.props.resources
           .filter(resource => resource.isRollup)
-          .map(resource => resource.key);
-        const addedRollupResourceKeys = data
-          .filter(resource => resource.isRollup)
-          .map(resource => resource.key);
-        const resourcesAdded = data.filter(
-          r => existingRollupResourceKeys.indexOf(r.key) === -1
-        );
-        const resourcesRemoved = existingRollupResourceKeys.filter(
-          r => !addedRollupResourceKeys.includes(r.key)
-        );
-        resourcesRemoved.forEach(resource =>
-          this.props.removeResource(this.props.resourceContext, resource)
-        );
-        resourcesAdded.forEach(resource =>
+          .forEach(resource =>
+            this.props.removeResource(this.props.resourceContext, resource)
+          );
+        data.forEach(resource =>
           this.props.addResource(this.props.resourceContext, resource)
         );
       })
       .fail(error => {
-        console.log('whomp whomp');
+        this.setState({error: 'Could not add rollup resources'});
       });
   };
 
@@ -355,6 +346,7 @@ class ResourcesEditor extends Component {
               Add rollup pages
             </button>
           )}
+          {this.state.error && <h3>{this.state.error}</h3>}
         </div>
       </div>
     );
