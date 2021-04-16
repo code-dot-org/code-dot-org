@@ -1154,7 +1154,7 @@ function isPanelEnabled(state, panelId) {
 }
 
 // Is a panel available to be shown?  This determines what panels
-// can possible be visited in the app.
+// can possibly be visited in the app.
 function isPanelAvailable(state, panelId) {
   const mode = state.mode;
 
