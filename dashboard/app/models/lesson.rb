@@ -710,8 +710,7 @@ class Lesson < ApplicationRecord
   end
 
   def lesson_plan_has_verified_resources
-    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
-    grouped_resources.key?('Verified Teacher')
+    resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
   private

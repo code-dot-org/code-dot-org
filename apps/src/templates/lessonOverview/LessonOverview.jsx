@@ -89,7 +89,7 @@ class LessonOverview extends Component {
       hasVerifiedResources
     } = this.props;
 
-    const displayVerifiedResources =
+    const displayVerifiedResourcesNotification =
       viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     return (
@@ -125,7 +125,7 @@ class LessonOverview extends Component {
             viewAs={viewAs}
           />
         )}
-        {displayVerifiedResources && (
+        {displayVerifiedResourcesNotification && (
           <VerifiedResourcesNotification
             width={styleConstants['content-width']}
             inLesson={true}
