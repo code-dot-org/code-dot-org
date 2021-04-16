@@ -40,40 +40,25 @@ class SelectDataset extends Component {
   handleDatasetClick = id => {
     const assetPath = global.__ml_playground_asset_public_path__;
     const dataset = allDatasets.find(dataset => dataset.id === id);
-    const csvPath = assetPath + dataset.path;
-    const jsonPath = assetPath + dataset.metadataPath;
 
-    this.props.resetState();
-    this.props.setSelectedName(dataset.name);
-    this.props.setSelectedCSV(csvPath);
-    this.props.setSelectedJSON(jsonPath);
-    this.setState({
-      download: true
-    });
+    // Don't process the click if we're just clicking the current
+    // dataset again.
+    if (dataset.name !== this.props.name) {
+      const csvPath = assetPath + dataset.path;
+      const jsonPath = assetPath + dataset.metadataPath;
 
-    parseCSV(csvPath, true, false);
+      this.props.resetState();
+      this.props.setSelectedName(dataset.name);
+      this.props.setSelectedCSV(csvPath);
+      this.props.setSelectedJSON(jsonPath);
+      this.setState({
+        download: true
+      });
 
-    parseJSON(jsonPath);
-  };
+      parseCSV(csvPath, true, false);
 
-  handleDatasetSelect = event => {
-    const assetPath = global.__ml_playground_asset_public_path__;
-    const dataset = allDatasets.find(
-      dataset => dataset.id === event.target.value
-    );
-    const csvPath = assetPath + dataset.path;
-    const jsonPath = assetPath + dataset.metadataPath;
-
-    this.props.resetState();
-    this.props.setSelectedCSV(csvPath);
-    this.props.setSelectedJSON(jsonPath);
-    this.setState({
-      download: true
-    });
-
-    parseCSV(csvPath, true, false);
-
-    parseJSON(jsonPath);
+      parseJSON(jsonPath);
+    }
   };
 
   handleUploadSelect = event => {
@@ -128,22 +113,35 @@ class SelectDataset extends Component {
         </div>
         {!specifiedDatasets && (
           <div style={{ ...styles.contents, marginTop: 20 }}>
-            <div>or import a CSV File</div>
-            <input
-              className="csv-input"
-              type="file"
-              accept=".csv,.xls,.xlsx"
-              ref={input => {
-                this.filesInput = input;
-              }}
-              name="file"
-              placeholder={null}
-              onChange={this.handleUploadSelect}
-            />
-            <p />
-            <button type="button" onClick={this.handleUpload}>
-              Upload
-            </button>
+            <div style={{ float: "left", width: "33.33%" }}>
+              <div style={{ fontSize: 13.33, paddingTop: 4 }}>
+                Or import a CSV file
+              </div>
+            </div>
+            <div
+              style={{ float: "left", width: "33.33%", textAlign: "center" }}
+            >
+              <input
+                className="csv-input"
+                type="file"
+                accept=".csv,.xls,.xlsx"
+                ref={input => {
+                  this.filesInput = input;
+                }}
+                name="file"
+                placeholder={null}
+                onChange={this.handleUploadSelect}
+              />
+            </div>
+            <div style={{ float: "left", width: "33.33%", textAlign: "right" }}>
+              <button
+                type="button"
+                onClick={this.handleUpload}
+                style={styles.uploadButton}
+              >
+                Upload
+              </button>
+            </div>
           </div>
         )}
       </div>

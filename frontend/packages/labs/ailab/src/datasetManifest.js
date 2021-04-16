@@ -21,10 +21,10 @@ export const allDatasets = [
     imagePath: "datasets/billionaires.jpg"
   },
   {
-    id: "census_svm",
+    id: "census",
     name: "Partial Census Data",
-    path: "datasets/census_part_for_svm.csv",
-    metadataPath: "datasets/census_part_for_svm.json",
+    path: "datasets/census_part.csv",
+    metadataPath: "datasets/census_part.json",
     imagePath: "datasets/census.jpg"
   },
   {
@@ -122,7 +122,7 @@ export const allDatasets = [
     name: "Poke",
     path: "datasets/poke_toy.csv",
     metadataPath: "datasets/poke_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/poke_toy.jpg",
     isToy: true
   },
   {
@@ -178,7 +178,7 @@ export const allDatasets = [
     name: "Workout Quiz",
     path: "datasets/workout_toy.csv",
     metadataPath: "datasets/workout_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/workout_toy.jpg",
     isToy: true
   },
   {
@@ -186,7 +186,7 @@ export const allDatasets = [
     name: "Safari",
     path: "datasets/safari_toy.csv",
     metadataPath: "datasets/safari_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/safari_toy.jpg",
     isToy: true
   },
   {
@@ -194,7 +194,7 @@ export const allDatasets = [
     name: "Medical Priority",
     path: "datasets/medical_priority.csv",
     metadataPath: "datasets/medical_priority.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/medical_priority.jpg",
     isToy: true
   },
   {
@@ -221,16 +221,16 @@ export const allDatasets = [
   {
     id: "auto-mpg",
     name: "Car MPG",
-    path: "datasets/auto-mpg.csv",
-    metadataPath: "datasets/auto-mpg.json",
-    imagePath: "datasets/temp.jpg"
+    path: "datasets/auto_mpg.csv",
+    metadataPath: "datasets/auto_mpg.json",
+    imagePath: "datasets/auto_mpg.jpg"
   },
   {
     id: "movies",
     name: "Movie Stats",
     path: "datasets/movies.csv",
     metadataPath: "datasets/movies.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/movies.jpg"
   },
   {
     id: "car_evaluation",

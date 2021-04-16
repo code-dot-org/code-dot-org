@@ -1,7 +1,4 @@
 import {
-  availableTrainers,
-  getRegressionTrainers,
-  getClassificationTrainers,
   getMLType,
   defaultRegressionTrainer,
   defaultClassificationTrainer
@@ -17,8 +14,6 @@ import {
   uniqLabelFeaturesSelected,
   selectedColumnsHaveDatatype,
   numericalColumnsHaveOnlyNumbers,
-  trainerSelected,
-  compatibleLabelAndTrainer,
   namedModel
 } from "./validate.js";
 
@@ -38,7 +33,6 @@ const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
-const SET_K_VALUE = "SET_K_VALUE";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
@@ -95,10 +89,6 @@ export function setImportedMetadata(metadata) {
 
 export function setSelectedTrainer(selectedTrainer) {
   return { type: SET_SELECTED_TRAINER, selectedTrainer };
-}
-
-export function setKValue(kValue) {
-  return { type: SET_K_VALUE, kValue };
 }
 
 export const setColumnsByDataType = (column, dataType) => ({
@@ -237,7 +227,6 @@ const initialState = {
   data: [],
   metadata: undefined,
   selectedTrainer: undefined,
-  kValue: undefined,
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -317,12 +306,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       selectedTrainer: action.selectedTrainer
-    };
-  }
-  if (action.type === SET_K_VALUE) {
-    return {
-      ...state,
-      kValue: action.kValue
     };
   }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
@@ -756,7 +739,7 @@ export function getSelectedColumnDescriptions(state) {
 }
 
 export function getColumnDescription(state, column) {
-  if (!state.metadata || !state.metadata.fields) {
+  if (!state.metadata || !state.metadata.fields || !column) {
     return null;
   }
 
@@ -821,21 +804,6 @@ export function getConvertedPredictedLabel(state) {
 
 export function getConvertedLabels(state, rawLabels) {
   return rawLabels.map(label => getConvertedLabel(state, label));
-}
-
-export function getCompatibleTrainers(state) {
-  let compatibleTrainers;
-  switch (true) {
-    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CATEGORICAL:
-      compatibleTrainers = getClassificationTrainers();
-      break;
-    case state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL:
-      compatibleTrainers = getRegressionTrainers();
-      break;
-    default:
-      compatibleTrainers = availableTrainers;
-  }
-  return compatibleTrainers;
 }
 
 export function isRegression(state) {
@@ -967,19 +935,6 @@ export function validationMessages(state) {
     errorString: "Numerical columns should contain only numbers.",
     successString: "Numerical columns contain only numbers."
   };
-  validationMessages["training"] = {
-    panel: "selectTrainer",
-    readyToTrain: trainerSelected(state),
-    errorString: "Please select a training algorithm.",
-    successString: "Training algorithm selected."
-  };
-  validationMessages["compatibleLabel"] = {
-    panel: "selectTrainer",
-    readyToTrain: compatibleLabelAndTrainer(state),
-    errorString:
-      "The label datatype must be compatible with the training algorithm.",
-    successString: "The label datatype and training algorithm are compatible."
-  };
   validationMessages["nameModel"] = {
     panel: "saveModel",
     readyToTrain: namedModel(state),
@@ -1004,6 +959,51 @@ export function getEmptyCellDetails(state) {
   return emptyCellLocations;
 }
 
+export function getDataDescription(state) {
+  // If this a dataset from the internal collection that already has a description, use that.
+  if (
+    state.metadata
+    && state.metadata.card
+    && state.metadata.card.description
+  ) {
+    return state.metadata.card.description;
+  } else if (
+    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+  ) {
+    return state.trainedModelDetails.datasetDescription;
+  } else {
+    return undefined;
+  }
+}
+
+function getDatasetDetails(state) {
+  const datasetDetails = {}
+  datasetDetails.description = getDataDescription(state);
+  datasetDetails.numRows = state.data.length;
+  return datasetDetails;
+}
+
+function getColumnDataToSave(state, column) {
+  const columnData = {};
+  columnData.id = column;
+  columnData.description = getColumnDescription(state, column);
+  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+    columnData.values = getUniqueOptions(state, column)
+  } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
+    const maxMin = getRange(state, column, false);
+    columnData.max = maxMin.max;
+    columnData.min = maxMin.min;
+  }
+  return columnData;
+}
+
+function getFeaturesToSave(state) {
+  const features = state.selectedFeatures.map(feature =>
+    getColumnDataToSave(state, feature)
+  )
+  return features;
+}
+
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
 
@@ -1011,7 +1011,7 @@ export function getTrainedModelDataToSave(state) {
 
   // If the first column has a description, assume descriptions are in the
   // metadata for that dataset and use them; otherwise, use manually entered
-  // column desscriptions.
+  // column descriptions.
   if (
     state.metadata &&
     state.metadata.fields &&
@@ -1028,18 +1028,17 @@ export function getTrainedModelDataToSave(state) {
     dataToSave.columns = state.trainedModelDetails.columns;
   }
 
+  dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-
-  dataToSave.identifySubgroup = !!state.trainedModelDetails.identifySubgroup;
-  dataToSave.representSubgroup = !!state.trainedModelDetails.representSubgroup;
-  dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
   dataToSave.selectedTrainer = getSelectedTrainer(state);
   dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.extremumsByColumn = getExtremumsByColumn(state);
   dataToSave.labelColumn = state.labelColumn;
+  dataToSave.label = getColumnDataToSave(state, state.labelColumn);
+  dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
 
@@ -1083,7 +1082,7 @@ const panelList = [
   { id: "specifyColumns", label: "Columns" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
-  { id: "selectTrainer", label: "Trainer" },
+  { id: "trainingSettings", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
@@ -1122,7 +1121,7 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  if (panelId === "selectTrainer") {
+  if (panelId === "trainingSettings") {
     if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
@@ -1167,7 +1166,7 @@ function isPanelAvailable(state, panelId) {
     }
   }
 
-  if (panelId === "selectTrainer") {
+  if (panelId === "trainingSettings") {
     if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
       return false;
     }
@@ -1204,12 +1203,12 @@ export function getPanelButtons(state) {
     prev = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Back" }
       : null;
-    next = isPanelAvailable(state, "selectTrainer")
-      ? { panel: "selectTrainer", text: "Continue" }
+    next = isPanelAvailable(state, "trainingSettings")
+      ? { panel: "trainingSettings", text: "Continue" }
       : isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
-  } else if (state.currentPanel === "selectTrainer") {
+  } else if (state.currentPanel === "trainingSettings") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }

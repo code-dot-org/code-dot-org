@@ -186,7 +186,7 @@ class App extends Component {
           </BodyContainer>
         )}
 
-        {currentPanel === "selectTrainer" && (
+        {currentPanel === "trainingSettings" && (
           <BodyContainer>
             <ContainerFullWidth>
               <TrainingSettings />

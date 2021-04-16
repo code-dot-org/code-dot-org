@@ -48,6 +48,10 @@ export const styles = {
     fontFamily: '"Gotham 5r", sans-serif'
   },
 
+  italic: {
+    fontFamily: '"Gotham 4i", sans-serif'
+  },
+
   error: {
     color: "#e51f68"
   },
@@ -188,7 +192,8 @@ export const styles = {
     boxSizing: "border-box",
     border: "solid 4px rgba(0,0,0,0)",
     borderRadius: 0,
-    height: 220
+    height: 220,
+    cursor: "pointer"
   },
 
   selectDatasetItemHighlighted: {
@@ -206,6 +211,13 @@ export const styles = {
   selectDatasetText: {
     fontSize: 14,
     marginTop: 10
+  },
+
+  uploadButton: {
+    fontSize: 13.33,
+    padding: "2px 6px",
+    margin: 0,
+    border: "none",
   },
 
   specifyColumnsItem: {
@@ -430,8 +442,8 @@ export const styles = {
   },
 
   cardRow: {
-    marginTop: 5,
-    marginBottom: 5
+    marginTop: 11,
+    marginBottom: 11
   },
 
   disabledButton: {
