@@ -1,0 +1,107 @@
+{
+  "title": "CSP/CSD ",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "multipletext",
+          "name": "question1",
+          "title": "Your Name",
+          "titleLocation": "top",
+          "isRequired": true,
+          "items": [
+            {
+              "name": "text1",
+              "title": "First Name"
+            },
+            {
+              "name": "text2",
+              "title": "Last Name"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "question2",
+          "title": "Email",
+          "isRequired": true,
+          "inputType": "email"
+        },
+        {
+          "type": "text",
+          "name": "question3",
+          "title": "Phone Number",
+          "inputType": "tel"
+        },
+        {
+          "type": "text",
+          "name": "question4",
+          "title": "Workshop Start Date",
+          "inputType": "datetime"
+        },
+        {
+          "type": "checkbox",
+          "name": "question5",
+          "title": "Course (select both if applicable)",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "CSD"
+            },
+            {
+              "value": "item2",
+              "text": "CSP"
+            }
+          ]
+        },
+        {
+          "type": "multipletext",
+          "name": "question6",
+          "title": "Address (Include your unit # if applicable) - **No P.O.Box**",
+          "titleLocation": "top",
+          "isRequired": true,
+          "items": [
+            {
+              "name": "text1",
+              "isRequired": true,
+              "title": "Street Address"
+            },
+            {
+              "name": "text2",
+              "title": "Street Address Line 2"
+            },
+            {
+              "name": "text3",
+              "isRequired": true,
+              "title": "City"
+            },
+            {
+              "name": "text4",
+              "isRequired": true,
+              "title": "State/Province"
+            },
+            {
+              "name": "text5",
+              "isRequired": true,
+              "title": "Postal/ Zip Code"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "question7",
+          "title": "I confirm above is a current, NON-P.O.BOX mailing address (We are unable to reroute the package.)",
+          "choices": [
+            {
+              "value": "item1",
+              "text": "yes"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "published": false
+}
