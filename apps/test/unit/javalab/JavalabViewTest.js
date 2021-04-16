@@ -16,6 +16,7 @@ describe('Java Lab View Test', () => {
       onMount: () => {},
       onContinue: () => {},
       onCommitCode: () => {},
+      onInputMessage: () => {},
       isProjectLevel: false,
       isReadOnlyWorkspace: false,
       isDarkMode: false
