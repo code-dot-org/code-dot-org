@@ -169,19 +169,16 @@ module UsersHelper
         # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
         sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
+
         if level.is_a?(BubbleChoice) # we have a parent level
           # get progress for sublevels to save in levels hash
           level.sublevels.each do |sublevel|
             ul = user_levels_by_level.try(:[], sublevel.id)
-            completion_status = activity_css_class(ul)
-            # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-            submitted = !!ul.try(:submitted) &&
-              !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
-            readonly_answers = !!ul.try(:readonly_answers)
-            locked = ul.try(:show_as_locked?, sl.lesson) || sl.lesson.lockable? && !ul
-            if completion_status == LEVEL_STATUS.not_tried
+            sublevel_progress = get_level_progress(ul, sl, paired_user_levels, include_timestamp)
+
+            if sublevel_progress[:status] == LEVEL_STATUS.not_tried
               # for now, we don't allow authorized teachers to be "locked"
-              if locked && !user.authorized_teacher?
+              if sublevel_progress[:locked] && !user.authorized_teacher?
                 progress[level_id] = {
                   # TODO: Stop sending status here when front-end stops using LEVEL_STATUS.locked (LP-1865)
                   status: LEVEL_STATUS.locked,
@@ -190,31 +187,18 @@ module UsersHelper
               end
               next
             end
-            progress[sublevel.id] = {
-              status: completion_status,
-              result: ul.try(:best_result) || 0,
-              submitted: submitted ? true : nil,
-              readonly_answers: readonly_answers ? true : nil,
-              paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
-              locked: locked ? true : nil,
-              last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
-              time_spent: ul&.time_spent&.to_i
-            }.compact
+
+            progress[sublevel.id] = sublevel_progress.compact
           end
         end
+
         contained_level_id = level.contained_levels.try(:first).try(:id)
-
         ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)
-        completion_status = activity_css_class(ul)
-        # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-        submitted = !!ul.try(:submitted) &&
-          !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
-        readonly_answers = !!ul.try(:readonly_answers)
-        locked = ul.try(:show_as_locked?, sl.lesson) || sl.lesson.lockable? && !ul
+        level_progress = get_level_progress(ul, sl, paired_user_levels, include_timestamp)
 
-        if completion_status == LEVEL_STATUS.not_tried
+        if level_progress[:status] == LEVEL_STATUS.not_tried
           # for now, we don't allow authorized teachers to be "locked"
-          if locked && !user.authorized_teacher?
+          if level_progress[:locked] && !user.authorized_teacher?
             progress[level_id] = {
               # TODO: Stop sending status here when front-end stops using LEVEL_STATUS.locked (LP-1865)
               status: LEVEL_STATUS.locked,
@@ -224,16 +208,7 @@ module UsersHelper
           next
         end
 
-        progress[level_id] = {
-          status: completion_status,
-          result: ul.try(:best_result) || 0,
-          submitted: submitted ? true : nil,
-          readonly_answers: readonly_answers ? true : nil,
-          paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
-          locked: locked ? true : nil,
-          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
-          time_spent: ul&.time_spent&.to_i
-        }.compact
+        progress[level_id] = level_progress.compact
 
         # Just in case this level has multiple pages, in which case we add an additional
         # array of booleans indicating which pages have been completed.
@@ -245,13 +220,41 @@ module UsersHelper
         pages_completed.each_with_index do |result, index|
           progress["#{level_id}_#{index}"] = {
             result: result,
-            submitted: submitted ? true : nil,
-            readonly_answers: readonly_answers ? true : nil
+            submitted: level_progress[:submitted],
+            readonly_answers: level_progress[:readonly_answers]
           }.compact
         end
       end
     end
     progress
+  end
+
+  private def get_level_progress(user_level, script_level, paired_user_levels, include_timestamp)
+    completion_status = activity_css_class(user_level)
+    locked = user_level.try(:show_as_locked?, script_level.lesson) || script_level.lesson.lockable? && !user_level
+
+    # if the level has not been tried, less progress data is necessary
+    if completion_status == LEVEL_STATUS.not_tried
+      return {
+        status: completion_status,
+        locked: locked || nil
+      }
+    end
+
+    # a user_level is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
+    submitted = !!user_level.try(:submitted) &&
+      !(user_level.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(user_level.best_result))
+
+    return {
+      status: completion_status,
+      locked: locked || nil,
+      result: user_level.try(:best_result) || 0,
+      submitted: submitted || nil,
+      readonly_answers: !!user_level.try(:readonly_answers) || nil,
+      paired: (paired_user_levels.include? user_level.try(:id)) || nil,
+      last_progress_at: include_timestamp ? user_level&.updated_at&.to_i : nil,
+      time_spent: user_level&.time_spent&.to_i
+    }
   end
 
   # Given a user and a script-level, returns a nil if there is only one page, or an array of
