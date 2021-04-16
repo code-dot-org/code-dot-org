@@ -9,6 +9,8 @@ is_migrated true
 
 lesson 'Create PT - Review the Task', display_name: 'Create PT   Review the Task', has_lesson_plan: true
 
+lesson 'lesson-4', display_name: 'Create PT Deep Dive', has_lesson_plan: true
+
 lesson 'Create PT - Make a Plan', display_name: 'Create PT   Make a Plan', has_lesson_plan: true
 
 lesson 'Create PT - Complete the Task', display_name: 'Create PT - Complete the Task (12 hrs)', has_lesson_plan: true
