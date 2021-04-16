@@ -164,7 +164,6 @@ class CoursesController < ApplicationController
       r.is_rollup = true
       r.save! if r.changed?
     end
-    puts rollup_pages.inspect
     render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
   end
 

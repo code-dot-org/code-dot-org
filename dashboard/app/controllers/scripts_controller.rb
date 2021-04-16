@@ -166,6 +166,7 @@ class ScriptsController < ApplicationController
   def get_rollup_resources
     script = Script.get_from_cache(params[:id])
     course_version = script.get_course_version
+    return unless course_version
     rollup_pages = []
     if script.lessons.any? {|l| !l.programming_expressions.empty?}
       rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(script), course_version_id: course_version.id))
@@ -183,7 +184,6 @@ class ScriptsController < ApplicationController
       r.is_rollup = true
       r.save! if r.changed?
     end
-    puts rollup_pages.inspect
     render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
   end
 
