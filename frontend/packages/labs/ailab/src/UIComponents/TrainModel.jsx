@@ -69,7 +69,7 @@ class TrainModel extends Component {
 
   render() {
     const translateX = 15 + this.getAnimationProgess() * (100 - 15);
-    const translateY = 50 - Math.sin(this.getAnimationProgess() * Math.PI) * 30;
+    const translateY = 80 - Math.sin(this.getAnimationProgess() * Math.PI) * 30;
     const rotateZ = this.getAnimationProgess() * 60;
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
 

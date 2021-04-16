@@ -117,7 +117,8 @@ export const styles = {
     height: "100%",
     boxSizing: "border-box",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    position: "relative"
   },
 
   popupPanel: {
@@ -393,10 +394,12 @@ export const styles = {
   },
 
   trainModelContainer: {
-    position: "relative",
+    position: "absolute",
     overflow: "hidden",
     paddingTop: 20,
-    width: "50%"
+    width: "calc(50% + 52px)",
+    height: "calc(50% + 66px)",
+    top: 0
   },
   trainModelDataTable: {
     width: "30%",
