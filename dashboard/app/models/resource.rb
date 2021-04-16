@@ -95,7 +95,7 @@ class Resource < ApplicationRecord
       type: type || '',
       assessment: assessment || false,
       includeInPdf: include_in_pdf || false,
-      isRollup: is_rollup
+      isRollup: !!is_rollup
     }
   end
 
