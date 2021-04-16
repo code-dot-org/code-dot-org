@@ -11,7 +11,7 @@ export default class ResourceList extends Component {
       'student-lesson-plan',
       'teacher-lesson-plan',
       'resources-rollup'
-    ])
+    ]).isRequired
   };
 
   normalizeUrl = url => {
@@ -28,7 +28,7 @@ export default class ResourceList extends Component {
       {
         study:
           this.props.pageType === 'resources-rollup'
-            ? 'rollup-pages'
+            ? 'course-rollup-pages'
             : 'lesson-plan',
         study_group: this.props.pageType,
         event: 'download-resource',
