@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import classNames from 'classnames';
@@ -36,6 +37,12 @@ class InstructionsCsfLeftCol extends React.Component {
 
   componentDidMount() {
     this.updateDimensions();
+
+    // Might want to increase the size of our instructions after our icon image
+    // has loaded, to make sure the image fits
+    $(ReactDOM.findDOMNode(this.icon)).load(() => {
+      this.updateDimensions();
+    });
   }
 
   componentDidUpdate() {
@@ -96,7 +103,14 @@ class InstructionsCsfLeftCol extends React.Component {
           onClick={this.handleClickLightbulb}
         >
           {hasAuthoredHints && <HintDisplayLightbulb />}
-          {this.getAvatar() && <PromptIcon src={this.getAvatar()} />}
+          {this.getAvatar() && (
+            <PromptIcon
+              src={this.getAvatar()}
+              ref={icon => {
+                this.icon = icon;
+              }}
+            />
+          )}
         </div>
       </div>
     );
