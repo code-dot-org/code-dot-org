@@ -6,7 +6,6 @@ import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
 import color from '@cdo/apps/util/color';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {sendMessage} from './javalabRunner';
 
 const style = {
   darkMode: {
@@ -70,6 +69,7 @@ function moveCaretToEndOfDiv(element) {
 
 class JavalabConsole extends React.Component {
   static propTypes = {
+    onInputMessage: PropTypes.func.isRequired,
     // populated by redux
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
@@ -119,7 +119,7 @@ class JavalabConsole extends React.Component {
       e.target.value = '';
       this.state.commandHistory.push(input + '\n');
       this.props.appendInputLog(input);
-      sendMessage(input);
+      this.props.onInputMessage(input);
     } else if (e.keyCode === KeyCodes.UP) {
       e.target.value = this.state.commandHistory.goBack(input);
       moveCaretToEndOfDiv(e.target);

@@ -277,19 +277,19 @@ var projects = (module.exports = {
     }
   },
 
+    /**
+   * Returns the project URL for the current project.
+   *
+   * This URL accesses the dashboard API for the sources S3 bucket where
+   * the main.json is generally stored.
+   *
+   * This function depends on the document location to determine the current
+   * application environment.
+   *
+   * @returns {string} Fully-qualified share URL for the current project.
+   */
   getProjectSourcesUrl() {
     return `${this.getLocation().origin}/v3/sources/${this.getCurrentId()}`
-    if (this.isWebLab()) {
-      const re = /([-.]?studio)?\.?code.org/i;
-      const environmentKey = location.hostname.replace(re, '');
-      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-      return `${
-        location.protocol
-      }//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
-    } else {
-      return location.origin + this.getPathName();
-    }
   },
 
   getCurrentTimestamp() {
