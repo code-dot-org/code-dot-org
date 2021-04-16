@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-12 20:42:15 UTC",
+    "serialized_at": "2021-04-14 19:43:10 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -137,7 +137,7 @@
         "overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\r\n\r\nStudents are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.",
         "student_overview": "**Question of the Day: How can we communicate to a computer how to draw shapes on the screen?**\r\n\r\nThe class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. The lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.",
         "purpose": "The main purpose of this lesson is to give students a chance to get used to the programming environment, as well as the basic sequencing and debugging that they will use throughout the unit. Students begin with an introduction to the GameLab interactive development environment (IDE), then learn the three commands ([`rect`(#4dd0e1)](/docs/gamelab/rect/), [`ellipse`(#4dd0e1)](/docs/gamelab/ellipse/), and [`fill`(#4dd0e1)](/docs/gamelab/fill/)) that they will need to code the same types of images that they created on paper in the previous lesson.  Challenge levels provide a chance for students who have more programming experience to further explore Game Lab.",
-        "preparation": "* Read the Forum\r\n* Prepare projector or other means of showing videos if you wish to watch as a class",
+        "preparation": "* Read the Forum\n* Prepare projector or other means of showing videos if you wish to watch as a class",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "1. **Use a coordinate system to place elements on the screen.**\n\n\tSee level 9 in Code Studio, in particular the placement of the square in the picture.\n\n2. **Sequence code correctly to overlay shapes.**\n\n\tSee level 9 in Code Studio, in particular that the square is displayed in front of the circles.\n",
         "announcements": [

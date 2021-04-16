@@ -52,6 +52,21 @@ export default storybook => {
             scriptLevel={defaultLevel}
             activitySectionPosition={1}
             activityPosition={1}
+            lessonExtrasAvailableForScript={true}
+          />
+        </div>
+      )
+    },
+    {
+      name: 'level token details with bonus disabled',
+      story: () => (
+        <div style={{width: 800}}>
+          <LevelTokenDetails
+            setScriptLevelField={action('setScriptLevelField')}
+            scriptLevel={defaultLevel}
+            activitySectionPosition={1}
+            activityPosition={1}
+            lessonExtrasAvailableForScript={false}
           />
         </div>
       )
@@ -65,6 +80,7 @@ export default storybook => {
             scriptLevel={blocklyLevel}
             activitySectionPosition={1}
             activityPosition={1}
+            lessonExtrasAvailableForScript={true}
           />
         </div>
       )
