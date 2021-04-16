@@ -85,7 +85,9 @@ describe('LessonOverview', () => {
       activities: [],
       announcements: [],
       viewAs: ViewType.Teacher,
-      isSignedIn: true
+      isSignedIn: true,
+      hasVerifiedResources: false,
+      isVerifiedTeacher: false
     };
   });
 
@@ -150,6 +152,39 @@ describe('LessonOverview', () => {
       />
     );
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+  });
+
+  it('shows verified resources warning if teacher is not verified and lesson has verified resources', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={false}
+        hasVerifiedResources={true}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+  });
+
+  it('does not show verified resources warning if teacher is verified', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={true}
+        hasVerifiedResources={true}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+  });
+
+  it('does not show verified resources warning if lesson does not have verified resources', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={false}
+        hasVerifiedResources={false}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
   });
 
   it('has student announcement if viewing as student', () => {
