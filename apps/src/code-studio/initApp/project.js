@@ -277,6 +277,21 @@ var projects = (module.exports = {
     }
   },
 
+  getProjectSourcesUrl() {
+    return `${this.getLocation().origin}/v3/sources/${this.getCurrentId()}`
+    if (this.isWebLab()) {
+      const re = /([-.]?studio)?\.?code.org/i;
+      const environmentKey = location.hostname.replace(re, '');
+      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
+      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+      return `${
+        location.protocol
+      }//${subdomain}codeprojects.org${port}/${this.getCurrentId()}`;
+    } else {
+      return location.origin + this.getPathName();
+    }
+  },
+
   getCurrentTimestamp() {
     if (!current) {
       return;
