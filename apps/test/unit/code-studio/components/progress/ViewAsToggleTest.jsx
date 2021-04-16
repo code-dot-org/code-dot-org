@@ -13,7 +13,7 @@ describe('ViewAsToggle', () => {
     );
     expect(spy).not.to.have.been.called;
 
-    wrapper.find('ToggleGroup').prop('onChange')(ViewType.Teacher);
+    wrapper.find('Connect(ToggleGroup)').prop('onChange')(ViewType.Teacher);
     expect(spy).to.have.been.calledOnce.and.calledWith(ViewType.Teacher);
   });
 });

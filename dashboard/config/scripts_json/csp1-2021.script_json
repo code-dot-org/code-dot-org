@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 16:22:15 UTC",
+    "serialized_at": "2021-04-13 23:11:14 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -6313,7 +6313,7 @@
       }
     },
     {
-      "name": "Course Master Vocabulary",
+      "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {

@@ -1,29 +1,30 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setEditorText, setFileName} from './javalabRedux';
+import {setSource, renameFile} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
-import {editorSetup} from './editorSetup';
-import {EditorState} from '@codemirror/state';
-import {renameProjectFile, onProjectChanged} from './JavalabFileManagement';
+import {editorSetup, lightMode} from './editorSetup';
+import {EditorState, tagExtension} from '@codemirror/state';
+import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
+import {oneDark} from '@codemirror/theme-one-dark';
+import color from '@cdo/apps/util/color';
 
 const style = {
   editor: {
     width: '100%',
-    height: 400,
-    backgroundColor: '#282c34'
+    height: 400
   },
   tabs: {
     display: 'flex'
   },
   tab: {
-    backgroundColor: '#282c34',
     textAlign: 'center',
-    padding: 10
+    padding: 10,
+    backgroundColor: color.white
   },
   button: {
     marginLeft: 10
@@ -32,6 +33,9 @@ const style = {
     marginBottom: 0,
     display: 'flex',
     alignItems: 'center'
+  },
+  darkBackground: {
+    backgroundColor: '#282c34'
   }
 };
 
@@ -40,10 +44,10 @@ class JavalabEditor extends React.Component {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
     // populated by redux
-    setEditorText: PropTypes.func,
-    setFilename: PropTypes.func,
-    filename: PropTypes.string,
-    editorText: PropTypes.string
+    setSource: PropTypes.func,
+    renameFile: PropTypes.func,
+    sources: PropTypes.object,
+    isDarkMode: PropTypes.bool
   };
 
   constructor(props) {
@@ -51,7 +55,6 @@ class JavalabEditor extends React.Component {
 
     this.activateRenameFile = this.activateRenameFile.bind(this);
     this.renameFileComplete = this.renameFileComplete.bind(this);
-    this.onProjectChanged = onProjectChanged.bind(this);
 
     this.state = {
       renameFileActive: false,
@@ -61,14 +64,39 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidMount() {
+    // TODO: support multi-file
+    const filename = Object.keys(this.props.sources)[0];
+    let doc = this.props.sources[filename].text;
+    const {isDarkMode} = this.props;
+    const extensions = [...editorSetup];
+
+    if (isDarkMode) {
+      extensions.push(tagExtension('style', oneDark));
+    } else {
+      extensions.push(tagExtension('style', lightMode));
+    }
     this.editor = new EditorView({
       state: EditorState.create({
-        doc: this.props.editorText,
-        extensions: editorSetup
+        doc: doc,
+        extensions: extensions
       }),
       parent: this._codeMirror,
       dispatch: this.dispatchEditorChange()
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isDarkMode !== this.props.isDarkMode) {
+      if (this.props.isDarkMode) {
+        this.editor.dispatch({
+          reconfigure: {style: oneDark}
+        });
+      } else {
+        this.editor.dispatch({
+          reconfigure: {style: lightMode}
+        });
+      }
+    }
   }
 
   dispatchEditorChange = () => {
@@ -80,34 +108,42 @@ class JavalabEditor extends React.Component {
       this.editor.update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        this.props.setEditorText(tr.newDoc.toString());
-        this.onProjectChanged();
+        this.props.setSource(
+          Object.keys(this.props.sources)[0],
+          tr.newDoc.toString()
+        );
+        projectChanged();
       }
     };
   };
 
   renameFileComplete(e) {
     e.preventDefault();
-    const {filename, setFilename} = this.props;
+    const {sources, renameFile} = this.props;
     const {newFilename} = this.state;
-    // We don't want to actually save the file if we're editing startSources.
-    if (!window.appOptions.level.editBlocks) {
-      renameProjectFile(filename, newFilename);
-    }
-    setFilename(newFilename);
-    this.onProjectChanged();
+    const filename = Object.keys(sources)[0];
+    renameFile(filename, newFilename);
+    projectChanged();
     this.setState({renameFileActive: false});
   }
 
   activateRenameFile() {
-    this.setState({newFilename: this.props.filename, renameFileActive: true});
+    this.setState({
+      newFilename: Object.keys(this.props.sources)[0],
+      renameFileActive: true
+    });
   }
 
   displayFileRename() {
     return (
       <div style={style.tabs}>
         <form style={style.renameForm} onSubmit={this.renameFileComplete}>
-          <div style={style.tab}>
+          <div
+            style={{
+              ...style.tab,
+              ...(this.props.isDarkMode && style.darkBackground)
+            }}
+          >
             <input
               className="rename-file-input"
               type="text"
@@ -129,7 +165,14 @@ class JavalabEditor extends React.Component {
   displayFileNameAndRenameButton() {
     return (
       <div style={style.tabs}>
-        <div style={style.tab}>{this.props.filename}</div>
+        <div
+          style={{
+            ...style.tab,
+            ...(this.props.isDarkMode && style.darkBackground)
+          }}
+        >
+          {Object.keys(this.props.sources)[0]}
+        </div>
         <button
           type="button"
           onClick={this.activateRenameFile}
@@ -161,7 +204,13 @@ class JavalabEditor extends React.Component {
             ? this.displayFileRename()
             : this.displayFileNameAndRenameButton()}
         </div>
-        <div ref={el => (this._codeMirror = el)} style={style.editor} />
+        <div
+          ref={el => (this._codeMirror = el)}
+          style={{
+            ...style.editor,
+            ...(this.props.isDarkMode && style.darkBackground)
+          }}
+        />
       </div>
     );
   }
@@ -169,11 +218,12 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    filename: state.javalab.filename,
-    editorText: state.javalab.editorText
+    sources: state.javalab.sources,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
-    setFilename: filename => dispatch(setFileName(filename)),
-    setEditorText: editorText => dispatch(setEditorText(editorText))
+    setSource: (filename, source) => dispatch(setSource(filename, source)),
+    renameFile: (oldFilename, newFilename) =>
+      dispatch(renameFile(oldFilename, newFilename))
   })
 )(JavalabEditor);
