@@ -1,6 +1,4 @@
-import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
@@ -141,17 +139,6 @@ class InstructionsCSF extends React.Component {
     if (this.props.teacherViewingStudentWork) {
       this.props.hideOverlay();
     }
-
-    // Might want to increase the size of our instructions after our icon image
-    // has loaded, to make sure the image fits
-    $(ReactDOM.findDOMNode(this.icon)).load(
-      function() {
-        const minHeight = this.getMinHeight();
-        if (this.props.height < minHeight) {
-          this.props.setInstructionsRenderedHeight(minHeight);
-        }
-      }.bind(this)
-    );
   }
 
   /**
