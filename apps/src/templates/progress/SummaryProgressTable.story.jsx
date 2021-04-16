@@ -30,12 +30,10 @@ const defaultProps = {
     fakeLevels(2),
     fakeLevels(2)
   ],
-  viewAs: ViewType.Student,
-
   lessonIsVisible: () => true,
-  lessonLockedForSection: () => false,
-  userId: 1,
-  lockableAuthorized: false
+  lessonIsLockedForUser: () => false,
+  lockableAuthorized: false,
+  viewAs: ViewType.Student
 };
 
 export default storybook => {
@@ -60,7 +58,6 @@ export default storybook => {
               index === 1 ? fakeLevels(8) : levels
             )}
             lessonIsVisible={() => true}
-            lessonLockedForSection={() => false}
           />
         )
       },
@@ -103,7 +100,8 @@ export default storybook => {
               ]
             ]}
             lessonIsVisible={() => true}
-            lessonLockedForSection={() => false}
+            lessonIsLockedForUser={() => false}
+            lockableAuthorized={false}
           />
         )
       },
@@ -156,7 +154,7 @@ export default storybook => {
         )
       },
       {
-        name: 'locked lesson in current section as verified teacher',
+        name: 'lockable lesson locked for section as verified teacher',
         story: () => (
           <SummaryProgressTable
             {...defaultProps}
@@ -167,12 +165,13 @@ export default storybook => {
             ]}
             levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
             viewAs={ViewType.Teacher}
+            lessonIsLockedForUser={lesson => lesson.lockable}
             lockableAuthorized={true}
           />
         )
       },
       {
-        name: 'locked lesson in current section as non-verified teacher',
+        name: 'lockable lesson unlocked for section as verified teacher',
         story: () => (
           <SummaryProgressTable
             {...defaultProps}
@@ -183,7 +182,24 @@ export default storybook => {
             ]}
             levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
             viewAs={ViewType.Teacher}
-            lockableAuthorized={false}
+            lessonIsLockedForUser={() => false}
+            lockableAuthorized={true}
+          />
+        )
+      },
+      {
+        name: 'lockable lesson as non-verified teacher',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2)
+            ]}
+            levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
+            viewAs={ViewType.Teacher}
+            lessonIsLockedForUser={lesson => lesson.lockable}
           />
         )
       },
@@ -205,7 +221,8 @@ export default storybook => {
               })),
               fakeLevels(2)
             ]}
-            lessonLockedForSection={() => false}
+            lessonIsLockedForUser={lesson => lesson.lockable}
+            lockableAuthorized={false}
           />
         )
       },
@@ -220,7 +237,8 @@ export default storybook => {
               fakeLesson('Artist', 3, false, 2)
             ]}
             levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
-            userId={null}
+            lessonIsLockedForUser={lesson => lesson.lockable}
+            lockableAuthorized={false}
           />
         )
       },
@@ -237,12 +255,11 @@ export default storybook => {
             levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
             viewAs={ViewType.Teacher}
             lessonIsVisible={() => true}
-            lessonLockedForSection={() => false}
           />
         )
       },
       {
-        name: 'locked, hidden lesson as teacher',
+        name: 'locked, hidden lesson as verified teacher',
         story: () => (
           <SummaryProgressTable
             {...defaultProps}
@@ -256,7 +273,28 @@ export default storybook => {
             lessonIsVisible={(lesson, viewAs) =>
               lesson.id !== 2 || viewAs === ViewType.Teacher
             }
-            lessonLockedForSection={lessonId => lessonId === 2}
+            lessonIsLockedForUser={lesson => lesson.lockable}
+            lockableAuthorized={true}
+          />
+        )
+      },
+      {
+        name: 'locked, hidden lesson as non-verified teacher',
+        story: () => (
+          <SummaryProgressTable
+            {...defaultProps}
+            lessons={[
+              fakeLesson('Jigsaw', 1, false, 1),
+              fakeLesson('Assessment One', 2, true),
+              fakeLesson('Artist', 3, false, 2)
+            ]}
+            levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
+            viewAs={ViewType.Teacher}
+            lessonIsVisible={(lesson, viewAs) =>
+              lesson.id !== 2 || viewAs === ViewType.Teacher
+            }
+            lessonIsLockedForUser={lesson => lesson.lockable}
+            lockableAuthorized={false}
           />
         )
       },

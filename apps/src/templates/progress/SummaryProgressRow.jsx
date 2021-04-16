@@ -85,7 +85,8 @@ export default class SummaryProgressRow extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonIsVisible: PropTypes.func.isRequired,
-    lessonIsLockedForUser: PropTypes.func.isRequired
+    lessonIsLockedForUser: PropTypes.func.isRequired,
+    lockableAuthorized: PropTypes.bool.isRequired
   };
 
   render() {
@@ -95,6 +96,7 @@ export default class SummaryProgressRow extends React.Component {
       levels,
       lessonIsVisible,
       lessonIsLockedForUser,
+      lockableAuthorized,
       viewAs
     } = this.props;
 
@@ -123,7 +125,9 @@ export default class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col1,
-            ...(hiddenOrLocked && styles.fadedCol)
+            ...(hiddenOrLocked &&
+              !(viewAs === ViewType.Teacher && lockableAuthorized) &&
+              styles.fadedCol)
           }}
         >
           <div style={styles.colText}>
@@ -171,7 +175,9 @@ export default class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col2,
-            ...(hiddenOrLocked && styles.fadedCol)
+            ...(hiddenOrLocked &&
+              !(viewAs === ViewType.Teacher && lockableAuthorized) &&
+              styles.fadedCol)
           }}
         >
           {levels.length === 0 ? (
