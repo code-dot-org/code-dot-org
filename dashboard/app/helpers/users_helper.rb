@@ -172,8 +172,8 @@ module UsersHelper
         level = Level.cache_find(level_id)
 
         if level.is_a?(BubbleChoice) # we have a parent level
-          bubble_choice_progress = get_bubble_choice_progress(level, user, sl, paired_user_levels, include_timestamp)
-          progress.merge(bubble_choice_progress.compact)
+          bubble_choice_progress = get_bubble_choice_progress(level, user, user_levels_by_level, sl, paired_user_levels, include_timestamp)
+          progress.merge!(bubble_choice_progress.compact)
           next
         end
 
@@ -193,7 +193,7 @@ module UsersHelper
           next
         end
 
-        progress[level_id] = level_progress.compact
+        progress[level_id] = level_progress
 
         # Just in case this level has multiple pages, in which case we add an additional
         # array of booleans indicating which pages have been completed.
@@ -215,7 +215,7 @@ module UsersHelper
   end
 
   # Summarizes a user's level progress for bubble choice level (parent level and sublevels)
-  private def get_bubble_choice_progress(level, user, script_level, paired_user_levels, include_timestamp)
+  private def get_bubble_choice_progress(level, user, user_levels_by_level, script_level, paired_user_levels, include_timestamp)
     progress = {}
 
     best_sublevel_id = level.best_result_sublevel(user)&.id
@@ -227,12 +227,12 @@ module UsersHelper
     level.sublevels.each do |sublevel|
       ul = user_levels_by_level.try(:[], sublevel.id)
       sublevel_progress = get_level_progress(ul, script_level, paired_user_levels, include_timestamp)
-      progress[sublevel.id] = sublevel_progress.compact
+      progress[sublevel.id] = sublevel_progress
       sum_time_spent += sublevel_progress[:time_spent] || 0
     end
 
-    progress[level_id] = progress[best_sublevel_id].clone
-    progress[level_id][:time_spent] = sum_time_spent
+    progress[level.id] = progress[best_sublevel_id].clone
+    progress[level.id][:time_spent] = sum_time_spent if sum_time_spent > 0
     progress
   end
 
@@ -262,7 +262,7 @@ module UsersHelper
       paired: (paired_user_levels.include? user_level.try(:id)) || nil,
       last_progress_at: include_timestamp ? user_level&.updated_at&.to_i : nil,
       time_spent: user_level&.time_spent&.to_i
-    }
+    }.compact
   end
 
   # Given a user and a script-level, returns a nil if there is only one page, or an array of

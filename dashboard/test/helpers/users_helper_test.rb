@@ -313,6 +313,51 @@ class UsersHelperTest < ActionView::TestCase
     )
   end
 
+  def test_merge_user_progress_by_level
+    user = create :user, total_lines: 150
+    script = create :script
+
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    # Create BubbleChoice level with sublevels, script_level, and user_levels.
+    sublevel1 = create :level, name: 'choice_1'
+    sublevel2 = create :level, name: 'choice_2'
+    level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
+    create :script_level, script: script, levels: [level], lesson: lesson
+    create :user_level, user: user, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
+    create :user_level, user: user, level: sublevel2, script: script, best_result: 20, time_spent: 300
+
+    user_levels_by_level = user.user_levels_by_level(script)
+    paired_user_levels = PairedUserLevel.pairs(user_levels_by_level.values.map(&:id))
+
+    progress = {
+      # BubbleChoice levels return status/result using the sublevel with the highest best_result.
+      level.id => {
+        status: LEVEL_STATUS.perfect,
+        result: ActivityConstants::BEST_PASS_RESULT,
+        time_spent: 480
+      },
+      sublevel1.id => {
+        status: LEVEL_STATUS.perfect,
+        result: ActivityConstants::BEST_PASS_RESULT,
+        time_spent: 180
+      },
+      sublevel2.id => {
+        status: LEVEL_STATUS.passed,
+        result: 20,
+        time_spent: 300
+      }
+    }
+
+    assert_equal progress, merge_user_progress_by_level(
+      script: script,
+      user: user,
+      user_levels_by_level: user_levels_by_level,
+      paired_user_levels: paired_user_levels
+    )
+  end
+
   def test_level_with_best_progress_one_level
     assert_equal(101, level_with_best_progress([101], {}))
   end
