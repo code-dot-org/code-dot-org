@@ -14,6 +14,7 @@ describe('Java Lab View Test', () => {
   beforeEach(() => {
     defaultProps = {
       onMount: () => {},
+      onRun: () => {},
       onContinue: () => {},
       onCommitCode: () => {},
       onInputMessage: () => {},
