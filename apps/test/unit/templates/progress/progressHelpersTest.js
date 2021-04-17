@@ -155,41 +155,6 @@ describe('progressHelpers', () => {
         true
       );
     });
-
-    it('returns true for lockable lesson for lessonIsLockedForAllStudents', () => {
-      const localState = {
-        ...state,
-        teacherSections: {
-          selectedSectionId: 11
-        },
-        stageLock: {
-          lockableAuthorized: true,
-          stagesBySectionId: {
-            11: {
-              [4]: [
-                {
-                  locked: true,
-                  name: 'student1'
-                },
-                {
-                  locked: true,
-                  name: 'student2'
-                }
-              ]
-            }
-          }
-        }
-      };
-      assert.strictEqual(
-        lessonIsLockedForUser(
-          lockableLesson,
-          unlockedLevels,
-          localState,
-          ViewType.Teacher
-        ),
-        true
-      );
-    });
   });
 
   describe('lessonIsLockedForAllStudents', () => {
