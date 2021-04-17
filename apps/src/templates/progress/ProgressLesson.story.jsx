@@ -22,9 +22,9 @@ const defaultProps = {
   ],
   showTeacherInfo: false,
   viewAs: ViewType.Teacher,
-  showLockIcon: true,
   lessonIsVisible: () => true,
   lessonIsLockedForUser: () => false,
+  lessonIsLockedForAllStudents: () => false,
   lockableAuthorized: true
 };
 
@@ -118,23 +118,24 @@ export default storybook => {
         )
       },
       {
-        name: 'locked lesson as teacher',
+        name: 'locked lesson as verified teacher',
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lesson={fakeLesson('Asessment Number One', 1, true)}
+            lesson={fakeLesson('Assessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={() => true}
+            lessonIsLockedForAllStudents={() => true}
           />
         )
       },
       {
-        name: 'unlocked lesson as teacher',
+        name: 'unlocked lesson as verified teacher',
         story: () => (
           <ProgressLesson
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false})}
+            lessonIsLockedForAllStudents={() => false}
           />
         )
       },
