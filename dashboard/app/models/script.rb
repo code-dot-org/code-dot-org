@@ -1100,7 +1100,7 @@ class Script < ApplicationRecord
   # values of position and chapter on all script levels in the script.
   def fix_script_level_positions
     reload
-    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
+    #raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
     prevent_legacy_script_levels_in_migrated_scripts
 
     chapter = 0

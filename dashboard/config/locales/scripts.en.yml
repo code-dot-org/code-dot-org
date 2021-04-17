@@ -22449,3 +22449,148 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csp-summer-2020:
+          lessons:
+            session-1:
+              name: Welcome to the Workshop!
+            session-2:
+              name: Intro to CS Principles
+            session-3:
+              name: Break
+              description_student: Break
+              description_teacher: 
+            session-4:
+              name: Welcome to the Course and Exam Description
+            session-5:
+              name: Previously on... Unit 1 Lesson 1
+            session-6:
+              name: 'Model Lesson #1  U1L2   Representing Information '
+            session-7:
+              name: Lunch
+            session-8:
+              name: 'Model Lesson #2  U1L3   Circle/Square Patterns'
+            session-9:
+              name: Break
+            session-10:
+              name: Where this is going  Binary Number Systems
+            session-11:
+              name: Lesson types  Plugged and Unplugged
+            session-12:
+              name: Lesson Planning  Understanding the Lesson
+            session-13:
+              name: Monday Wrap up
+            session-14:
+              name: The Teachers Role in the Classroom
+              description_student: 'Room Setup:'
+              description_teacher: 
+            session-15:
+              name: The Teachers Role in Formative Assessment
+              description_student: 'Room Setup:'
+              description_teacher: 
+            session-16:
+              name: Break
+            session-17:
+              name: Lesson Planning  Implementation Plan
+            session-18:
+              name: 'TLO #1  U1L7   Black and White Images'
+            session-19:
+              name: Lunch
+            session-20:
+              name: Previously on... Unit 1 Lesson 8
+            session-21:
+              name: 'TLO #2  U1L9   Lossless Compression'
+            session-22:
+              name: Break
+            session-23:
+              name: 'TLO #3  U1L10   Lossy Compression'
+            session-24:
+              name: Unit 1 Connections and Conclusions
+            session-25:
+              name: Assessment in Unit 1
+            session-26:
+              name: Tuesday Wrap up
+            session-27:
+              name: Structural Barriers to Accessing CS Education
+            session-28:
+              name: Break
+            session-29:
+              name: Previously, On... Unit 2
+            session-30:
+              name: 'TLO #4  U2L2   Building a network'
+            session-31:
+              name: 'TLO #5  U2L3   The Need for Addressing'
+            session-32:
+              name: Lunch
+            session-33:
+              name: 'TLO #6  U2L4   Routers and Redundancy'
+            session-34:
+              name: Break
+            session-35:
+              name: 'TLO #7   U2L5   Packets'
+            session-36:
+              name: Unit 2 Connections and Conclusions
+            session-37:
+              name: Curriculum as a (potential) Barrier to CS
+            session-38:
+              name: Wednesday Wrap up
+            session-39:
+              name: Who "belongs" in CSP?
+            session-40:
+              name: Break
+            session-41:
+              name: Previously, On Unit 3...
+            session-42:
+              name: 'TLO #8  U3L2   Introduction to Design Mode'
+            session-43:
+              name: Previously, on... U3L3   4 --- Developing Your Project Idea
+            session-44:
+              name: Lunch
+            session-45:
+              name: 'Model lesson #3  U3L6   Intro to Programming'
+            session-46:
+              name: Break
+            session-47:
+              name: Previously on... U3L7   Debugging
+            session-48:
+              name: 'Model Lesson #4  U3L8    Designing an App (part 3) '
+            session-49:
+              name: Unit 3 Connections and Conclusions
+            session-50:
+              name: Belonging and Differentiation in Unit 3
+            session-51:
+              name: Thursday Wrap up
+            session-52:
+              name: Connecting Values and Assessment in CSP
+            session-53:
+              name: Creating Your Assessment Approach for Units 1 3
+            session-54:
+              name: Break
+            session-55:
+              name: Guided Tour of the Code.org Platform
+            session-56:
+              name: Unconference
+            session-57:
+              name: Lunch
+            session-58:
+              name: 'AP Scavenger Hunt '
+            session-59:
+              name: Planning your Year
+            session-60:
+              name: Closing Ceremonies
+          lesson_groups:
+            day-1:
+              display_name: Day 1
+            day-2:
+              display_name: Day 2
+            day-3:
+              display_name: Day 3
+            day-4:
+              display_name: Day 4
+            day-5:
+              display_name: Day 5
+          name: csp-summer-2020
+          title: CS Principles Summer Workshop 2020
+          description_audience: ''
+          description_short: ''
+          description: This is the detailed facilitator agenda for Local Summer Workshops 2020. This agenda is intended for Local Summer Workshops which are 5-day in person trainings to prepare teachers to start teaching CS Principles. It focuses on the first three units of the course.
+          student_description: ''

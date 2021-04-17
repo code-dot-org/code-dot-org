@@ -1,0 +1,127 @@
+is_migrated true
+
+lesson_group 'day-1', display_name: 'Day 1'
+lesson 'session-1', display_name: 'Welcome to the Workshop!', has_lesson_plan: true
+
+lesson 'session-2', display_name: 'Intro to CS Principles', has_lesson_plan: true
+
+lesson 'session-3', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-4', display_name: 'Welcome to the Course and Exam Description', has_lesson_plan: true
+
+lesson 'session-5', display_name: 'Previously on... Unit 1 Lesson 1', has_lesson_plan: true
+
+lesson 'session-6', display_name: 'Model Lesson #1  U1L2   Representing Information ', has_lesson_plan: true
+
+lesson 'session-7', display_name: 'Lunch', has_lesson_plan: true
+
+lesson 'session-8', display_name: 'Model Lesson #2  U1L3   Circle/Square Patterns', has_lesson_plan: true
+
+lesson 'session-9', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-10', display_name: 'Where this is going  Binary Number Systems', has_lesson_plan: true
+
+lesson 'session-11', display_name: 'Lesson types  Plugged and Unplugged', has_lesson_plan: true
+
+lesson 'session-12', display_name: 'Lesson Planning  Understanding the Lesson', has_lesson_plan: true
+
+lesson 'session-13', display_name: 'Monday Wrap up', has_lesson_plan: true
+
+lesson_group 'day-2', display_name: 'Day 2'
+lesson 'session-14', display_name: 'The Teachers Role in the Classroom', has_lesson_plan: true
+
+lesson 'session-15', display_name: 'The Teachers Role in Formative Assessment', has_lesson_plan: true
+
+lesson 'session-16', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-17', display_name: 'Lesson Planning  Implementation Plan', has_lesson_plan: true
+
+lesson 'session-18', display_name: 'TLO #1  U1L7   Black and White Images', has_lesson_plan: true
+
+lesson 'session-19', display_name: 'Lunch', has_lesson_plan: true
+
+lesson 'session-20', display_name: 'Previously on... Unit 1 Lesson 8', has_lesson_plan: true
+
+lesson 'session-21', display_name: 'TLO #2  U1L9   Lossless Compression', has_lesson_plan: true
+
+lesson 'session-22', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-23', display_name: 'TLO #3  U1L10   Lossy Compression', has_lesson_plan: true
+
+lesson 'session-24', display_name: 'Unit 1 Connections and Conclusions', has_lesson_plan: true
+
+lesson 'session-25', display_name: 'Assessment in Unit 1', has_lesson_plan: true
+
+lesson 'session-26', display_name: 'Tuesday Wrap up', has_lesson_plan: true
+
+lesson_group 'day-3', display_name: 'Day 3'
+lesson 'session-27', display_name: 'Structural Barriers to Accessing CS Education', has_lesson_plan: true
+
+lesson 'session-28', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-29', display_name: 'Previously, On... Unit 2', has_lesson_plan: true
+
+lesson 'session-30', display_name: 'TLO #4  U2L2   Building a network', has_lesson_plan: true
+
+lesson 'session-31', display_name: 'TLO #5  U2L3   The Need for Addressing', has_lesson_plan: true
+
+lesson 'session-32', display_name: 'Lunch', has_lesson_plan: true
+
+lesson 'session-33', display_name: 'TLO #6  U2L4   Routers and Redundancy', has_lesson_plan: true
+
+lesson 'session-34', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-35', display_name: 'TLO #7   U2L5   Packets', has_lesson_plan: true
+
+lesson 'session-36', display_name: 'Unit 2 Connections and Conclusions', has_lesson_plan: true
+
+lesson 'session-37', display_name: 'Curriculum as a (potential) Barrier to CS', has_lesson_plan: true
+
+lesson 'session-38', display_name: 'Wednesday Wrap up', has_lesson_plan: true
+
+lesson_group 'day-4', display_name: 'Day 4'
+lesson 'session-39', display_name: 'Who "belongs" in CSP?', has_lesson_plan: true
+
+lesson 'session-40', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-41', display_name: 'Previously, On Unit 3...', has_lesson_plan: true
+
+lesson 'session-42', display_name: 'TLO #8  U3L2   Introduction to Design Mode', has_lesson_plan: true
+
+lesson 'session-43', display_name: 'Previously, on... U3L3   4 --- Developing Your Project Idea', has_lesson_plan: true
+
+lesson 'session-44', display_name: 'Lunch', has_lesson_plan: true
+
+lesson 'session-45', display_name: 'Model lesson #3  U3L6   Intro to Programming', has_lesson_plan: true
+
+lesson 'session-46', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-47', display_name: 'Previously on... U3L7   Debugging', has_lesson_plan: true
+
+lesson 'session-48', display_name: 'Model Lesson #4  U3L8    Designing an App (part 3) ', has_lesson_plan: true
+
+lesson 'session-49', display_name: 'Unit 3 Connections and Conclusions', has_lesson_plan: true
+
+lesson 'session-50', display_name: 'Belonging and Differentiation in Unit 3', has_lesson_plan: true
+
+lesson 'session-51', display_name: 'Thursday Wrap up', has_lesson_plan: true
+
+lesson_group 'day-5', display_name: 'Day 5'
+lesson 'session-52', display_name: 'Connecting Values and Assessment in CSP', has_lesson_plan: true
+
+lesson 'session-53', display_name: 'Creating Your Assessment Approach for Units 1 3', has_lesson_plan: true
+
+lesson 'session-54', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-55', display_name: 'Guided Tour of the Code.org Platform', has_lesson_plan: true
+
+lesson 'session-56', display_name: 'Unconference', has_lesson_plan: true
+
+lesson 'session-57', display_name: 'Lunch', has_lesson_plan: true
+
+lesson 'session-58', display_name: 'AP Scavenger Hunt ', has_lesson_plan: true
+
+lesson 'session-59', display_name: 'Planning your Year', has_lesson_plan: true
+
+lesson 'session-60', display_name: 'Closing Ceremonies', has_lesson_plan: true
+
