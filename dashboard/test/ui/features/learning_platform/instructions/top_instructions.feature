@@ -11,10 +11,8 @@ Scenario: CSF Top Instructions
   And I am on "http://studio.code.org/s/course4/stage/3/puzzle/5?noautoplay=true"
   And I wait for the page to fully load
   And I see no difference for "artist long instructions"
-  Then I click selector ".fa-chevron-circle-up"
-  And I see no difference for "artist long instructions collapsed"
-  Then I click selector ".fa-chevron-circle-down"
-  And I see no difference for "artist long instructions uncollapsed"
+  Then I click selector ".uitest-scroll-button-down"
+  And I see no difference for "artist long instructions"
 
   Then I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/7?noautoplay=true"
   And I wait for the page to fully load

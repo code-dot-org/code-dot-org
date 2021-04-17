@@ -6,7 +6,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {PostMilestoneMode} from '@cdo/apps/util/sharedConstants';
 import {getContainedLevelId} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {getStore} from '@cdo/apps/redux';
-import {mergeProgress} from '@cdo/apps/code-studio/progressRedux';
+import {mergeResults} from '@cdo/apps/code-studio/progressRedux';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
@@ -250,9 +250,7 @@ reporting.sendReport = function(report) {
 
   // Update Redux
   const store = getStore();
-  store.dispatch(
-    mergeProgress({[appOptions.serverLevelId]: report.testResult})
-  );
+  store.dispatch(mergeResults({[appOptions.serverLevelId]: report.testResult}));
 
   // If progress is not being saved in the database, save it locally.
   // (Note: Either way, we still send a milestone report to the server so we can
