@@ -98,7 +98,6 @@ class ProgressLesson extends React.Component {
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonIsLockedForUser: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.string,
@@ -155,7 +154,6 @@ class ProgressLesson extends React.Component {
       levels,
       showTeacherInfo,
       viewAs,
-      showLockIcon,
       lessonIsVisible,
       lessonIsLockedForUser,
       lessonIsLockedForAllStudents,
@@ -183,7 +181,7 @@ class ProgressLesson extends React.Component {
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
     const caret = this.state.collapsed ? 'caret-right' : 'caret-down';
 
-    const tooltipId = _.uniqueId();
+    const lockedTooltipId = _.uniqueId();
 
     const description =
       viewAs === ViewType.Teacher
@@ -215,25 +213,22 @@ class ProgressLesson extends React.Component {
               {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
               )}
-              {showLockIcon &&
-                lesson.lockable &&
-                (isLockedForSection || isLockedForUser) && (
-                  <FontAwesome icon="lock" style={styles.icon} />
-                )}
-              {showLockIcon &&
-                lesson.lockable &&
-                !(isLockedForSection || isLockedForUser) && (
-                  <span data-tip data-for={tooltipId}>
-                    <FontAwesome
-                      icon="unlock"
-                      style={{
-                        ...styles.icon,
-                        ...styles.unlockedIcon
-                      }}
-                    />
-                    {viewAs === ViewType.Teacher && (
+              {lesson.lockable && (
+                <span data-tip data-for={lockedTooltipId}>
+                  <FontAwesome
+                    icon={
+                      isLockedForSection || isLockedForUser ? 'lock' : 'unlock'
+                    }
+                    style={{
+                      ...styles.icon,
+                      ...(!(isLockedForSection || isLockedForUser) &&
+                        styles.unlockedIcon)
+                    }}
+                  />
+                  {!(isLockedForSection || isLockedForUser) &&
+                    viewAs === ViewType.Teacher && (
                       <ReactTooltip
-                        id={tooltipId}
+                        id={lockedTooltipId}
                         role="tooltip"
                         wrapper="span"
                         effect="solid"
@@ -241,8 +236,8 @@ class ProgressLesson extends React.Component {
                         {i18n.lockAssessmentLong()}
                       </ReactTooltip>
                     )}
-                  </span>
-                )}
+                </span>
+              )}
               <span>{title}</span>
             </div>
             {viewAs === ViewType.Student &&
@@ -296,11 +291,6 @@ export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
-  showLockIcon:
-    !!state.teacherSections.selectedSectionId ||
-    (state.viewAs === ViewType.Teacher &&
-      !state.stageLock.lockableAuthorized) ||
-    state.viewAs === ViewType.Student,
   lockableAuthorized: state.stageLock.lockableAuthorized,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
