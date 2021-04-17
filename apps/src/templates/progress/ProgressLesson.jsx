@@ -18,7 +18,6 @@ import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   outer: {
@@ -85,6 +84,9 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     fontStyle: 'italic',
     marginTop: 10
+  },
+  learnMoreLink: {
+    marginLeft: 5
   }
 };
 
@@ -260,7 +262,13 @@ class ProgressLesson extends React.Component {
             !this.props.lockableAuthorized &&
             viewAs === ViewType.Teacher && (
               <div style={styles.notAuthorizedWarning}>
-                <SafeMarkdown markdown={i18n.verifiedTeacherLockedWarning()} />
+                {i18n.unverifiedTeacherLockWarning()}
+                <a
+                  style={styles.learnMoreLink}
+                  href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
+                >
+                  {i18n.learnMoreWithPeriod()}
+                </a>
               </div>
             )}
           {!this.state.collapsed && (
