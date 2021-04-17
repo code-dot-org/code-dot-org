@@ -8,9 +8,15 @@ import color from '@cdo/apps/util/color';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 
 const style = {
-  consoleStyle: {
+  darkMode: {
     backgroundColor: color.black,
-    color: color.white,
+    color: color.white
+  },
+  lightMode: {
+    backgroundColor: color.white,
+    color: color.black
+  },
+  consoleStyle: {
     height: '200px',
     overflowY: 'auto',
     padding: 5
@@ -37,8 +43,6 @@ const style = {
     flexGrow: 1,
     marginBottom: 0,
     boxShadow: 'none',
-    backgroundColor: color.black,
-    color: color.white,
     border: 'none'
   }
 };
@@ -67,7 +71,8 @@ class JavalabConsole extends React.Component {
   static propTypes = {
     // populated by redux
     consoleLogs: PropTypes.array,
-    appendInputLog: PropTypes.func
+    appendInputLog: PropTypes.func,
+    isDarkMode: PropTypes.bool
   };
 
   constructor(props) {
@@ -130,7 +135,14 @@ class JavalabConsole extends React.Component {
         <PaneHeader hasFocus={true}>
           <PaneSection>Console</PaneSection>
         </PaneHeader>
-        <div style={style.consoleStyle} ref={el => (this._consoleLogs = el)}>
+        <div
+          style={{
+            ...style.consoleStyle,
+            ...(this.props.isDarkMode ? style.darkMode : style.lightMode)
+          }}
+          ref={el => (this._consoleLogs = el)}
+          className="javalab-console"
+        >
           <div style={style.consoleLogs}>{this.displayConsoleLogs()}</div>
           <div style={style.consoleInputWrapper}>
             <span style={style.consoleInputPrompt} onClick={this.focus}>
@@ -139,7 +151,10 @@ class JavalabConsole extends React.Component {
             <input
               type="text"
               spellCheck="false"
-              style={style.consoleInput}
+              style={{
+                ...style.consoleInput,
+                ...(this.props.isDarkMode ? style.darkMode : style.lightMode)
+              }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
             />
@@ -152,7 +167,8 @@ class JavalabConsole extends React.Component {
 
 export default connect(
   state => ({
-    consoleLogs: state.javalab.consoleLogs
+    consoleLogs: state.javalab.consoleLogs,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log))
