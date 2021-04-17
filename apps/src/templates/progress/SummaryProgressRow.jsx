@@ -9,6 +9,12 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
+import {connect} from 'react-redux';
+import {
+  lessonIsLockedForAllStudents,
+  lessonIsLockedForUser,
+  lessonIsVisible
+} from './progressHelpers';
 
 export const styles = {
   lightRow: {
@@ -17,11 +23,9 @@ export const styles = {
   darkRow: {
     backgroundColor: color.table_dark_row
   },
-  hiddenRow: {
+  dashedBorder: {
     borderStyle: 'dashed',
-    borderWidth: 2,
-    borderColor: color.border_gray,
-    backgroundColor: color.table_light_row
+    borderWidth: 2
   },
   col1: {
     width: 200,
@@ -61,10 +65,6 @@ export const styles = {
     fontSize: 12,
     color: color.cyan
   },
-  locked: {
-    borderStyle: 'dashed',
-    borderWidth: 2
-  },
   unlockedIcon: {
     color: color.orange
   },
@@ -78,15 +78,17 @@ export const styles = {
   }
 };
 
-export default class SummaryProgressRow extends React.Component {
+class SummaryProgressRow extends React.Component {
   static propTypes = {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
+
+    // from redux
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     lessonIsVisible: PropTypes.func.isRequired,
     lessonIsLockedForUser: PropTypes.func.isRequired,
-    lockableAuthorized: PropTypes.bool.isRequired
+    lessonIsLockedForAllStudents: PropTypes.func.isRequired
   };
 
   render() {
@@ -96,14 +98,14 @@ export default class SummaryProgressRow extends React.Component {
       levels,
       lessonIsVisible,
       lessonIsLockedForUser,
-      lockableAuthorized,
+      lessonIsLockedForAllStudents,
       viewAs
     } = this.props;
 
     // Would this lesson be hidden if we were a student?
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
-    const locked = lessonIsLockedForUser(lesson, levels, viewAs);
-    const hiddenOrLocked = hiddenForStudents || locked;
+    const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
+    const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
 
     let lessonTitle = lesson.name;
     if (lesson.stageNumber) {
@@ -117,17 +119,14 @@ export default class SummaryProgressRow extends React.Component {
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
-          ...(hiddenForStudents && styles.hiddenRow),
-          ...(locked && styles.locked),
-          ...(viewAs === ViewType.Teacher && styles.opaque)
+          ...((hiddenForStudents || isLockedForSection || isLockedForUser) &&
+            styles.dashedBorder)
         }}
       >
         <td
           style={{
             ...styles.col1,
-            ...(hiddenOrLocked &&
-              !(viewAs === ViewType.Teacher && lockableAuthorized) &&
-              styles.fadedCol)
+            ...((hiddenForStudents || isLockedForUser) && styles.fadedCol)
           }}
         >
           <div style={styles.colText}>
@@ -137,22 +136,26 @@ export default class SummaryProgressRow extends React.Component {
             {lesson.lockable && (
               <span data-tip data-for={lockedTooltipId}>
                 <FontAwesome
-                  icon={locked ? 'lock' : 'unlock'}
+                  icon={
+                    isLockedForSection || isLockedForUser ? 'lock' : 'unlock'
+                  }
                   style={{
                     ...styles.icon,
-                    ...(!locked && styles.unlockedIcon)
+                    ...(!(isLockedForSection || isLockedForUser) &&
+                      styles.unlockedIcon)
                   }}
                 />
-                {!locked && viewAs === ViewType.Teacher && (
-                  <ReactTooltip
-                    id={lockedTooltipId}
-                    role="tooltip"
-                    wrapper="span"
-                    effect="solid"
-                  >
-                    {i18n.lockAssessmentLong()}
-                  </ReactTooltip>
-                )}
+                {!(isLockedForSection || isLockedForUser) &&
+                  viewAs === ViewType.Teacher && (
+                    <ReactTooltip
+                      id={lockedTooltipId}
+                      role="tooltip"
+                      wrapper="span"
+                      effect="solid"
+                    >
+                      {i18n.lockAssessmentLong()}
+                    </ReactTooltip>
+                  )}
               </span>
             )}
             <span
@@ -175,9 +178,7 @@ export default class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col2,
-            ...(hiddenOrLocked &&
-              !(viewAs === ViewType.Teacher && lockableAuthorized) &&
-              styles.fadedCol)
+            ...((hiddenForStudents || isLockedForUser) && styles.fadedCol)
           }}
         >
           {levels.length === 0 ? (
@@ -185,7 +186,7 @@ export default class SummaryProgressRow extends React.Component {
           ) : (
             <ProgressBubbleSet
               levels={levels}
-              disabled={locked}
+              disabled={isLockedForUser}
               style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
             />
           )}
@@ -195,3 +196,13 @@ export default class SummaryProgressRow extends React.Component {
     );
   }
 }
+
+export const UnconnectedSummaryProgressRow = SummaryProgressRow;
+export default connect(state => ({
+  viewAs: state.viewAs,
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
+  lessonIsLockedForUser: (lesson, levels, viewAs) =>
+    lessonIsLockedForUser(lesson, levels, state, viewAs),
+  lessonIsLockedForAllStudents: lessonId =>
+    lessonIsLockedForAllStudents(lessonId, state)
+}))(SummaryProgressRow);
