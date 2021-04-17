@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {levelType, lessonType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
-import {lessonIsVisible, lessonIsLockedForUser} from './progressHelpers';
+import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const styles = {
@@ -30,9 +30,7 @@ class SummaryProgressTable extends React.Component {
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
-    lessonIsVisible: PropTypes.func.isRequired,
-    lessonIsLockedForUser: PropTypes.func.isRequired,
-    lockableAuthorized: PropTypes.bool.isRequired
+    lessonIsVisible: PropTypes.func.isRequired
   };
 
   render() {
@@ -68,10 +66,6 @@ class SummaryProgressTable extends React.Component {
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
-                viewAs={viewAs}
-                lessonIsVisible={this.props.lessonIsVisible}
-                lessonIsLockedForUser={this.props.lessonIsLockedForUser}
-                lockableAuthorized={this.props.lockableAuthorized}
               />
             ))}
         </tbody>
@@ -83,8 +77,5 @@ class SummaryProgressTable extends React.Component {
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({
   viewAs: state.viewAs,
-  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
-  lessonIsLockedForUser: (lesson, levels, viewAs) =>
-    lessonIsLockedForUser(lesson, levels, state, viewAs),
-  lockableAuthorized: state.stageLock.lockableAuthorized
+  lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);
