@@ -1,4 +1,4 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/progress/ProgressLesson';
@@ -22,9 +22,9 @@ describe('ProgressLesson', () => {
     lessonNumber: 3,
     showTeacherInfo: false,
     viewAs: ViewType.Teacher,
-    showLockIcon: true,
     lessonIsVisible: () => true,
     lessonIsLockedForUser: () => false,
+    lessonIsLockedForAllStudents: () => false,
     lockableAuthorized: true
   };
 
@@ -45,7 +45,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.html(), null);
   });
 
-  it('renders with dashed border when only visible for teachers', () => {
+  it('renders with dashed border when viewing a hidden lesson as a teacher', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -57,14 +57,12 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('renders with dashed border when locked', () => {
+  it('renders with dashed border when locked for user', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => {
-          return true;
-        }}
+        lessonIsLockedForUser={() => true}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -72,30 +70,25 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('disables bubbles when locked as student', () => {
+  it('renders with dashed border when locked for section', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Student}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => {
-          return true;
-        }}
+        lessonIsLockedForAllStudents={() => true}
       />
     );
-    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
+    assert.equal(wrapper.props().style.background, color.lightest_gray);
+    assert.equal(wrapper.props().style.borderWidth, 4);
+    assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('disables bubbles for locked lesson when teacher is not verified', () => {
+  it('disables bubbles when locked for user', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
-        lockableAuthorized={false}
-        lessonIsLockedForUser={() => {
-          return true;
-        }}
+        lessonIsLockedForUser={() => true}
       />
     );
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
@@ -106,9 +99,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => {
-          return false;
-        }}
+        lessonIsLockedForUser={() => false}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -119,9 +110,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => {
-          return false;
-        }}
+        lessonIsLockedForUser={() => false}
       />
     );
     assert.equal(
@@ -144,39 +133,8 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Student}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsLockedForUser={() => {
-          return true;
-        }}
-      />
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon,
-      'caret-down'
-    );
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .props().icon,
-      'lock'
-    );
-  });
-
-  it('has a locked icon when teacher is not verified', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        lesson={fakeLesson('lesson1', 1, true)}
-        lockableAuthorized={false}
-        viewAs={ViewType.Teacher}
-        lessonIsLockedForUser={() => {
-          return true;
-        }}
+        lessonIsLockedForUser={() => true}
       />
     );
     assert.equal(
@@ -201,9 +159,7 @@ describe('ProgressLesson', () => {
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
         lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
-        lessonIsLockedForUser={() => {
-          return true;
-        }}
+        lessonIsLockedForUser={() => true}
       />
     );
     assert.equal(
@@ -226,24 +182,6 @@ describe('ProgressLesson', () => {
         .at(2)
         .props().icon,
       'lock'
-    );
-  });
-
-  it('does not have an unlocked icon if showLockIcon=false', () => {
-    const wrapper = shallow(
-      <ProgressLesson
-        {...defaultProps}
-        showLockIcon={false}
-        lesson={fakeLesson('lesson1', 1, true)}
-      />
-    );
-    assert.equal(wrapper.find('FontAwesome').length, 1);
-    assert.equal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .props().icon,
-      'caret-down'
     );
   });
 
@@ -338,14 +276,11 @@ describe('ProgressLesson', () => {
         viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorized={false}
-        lessonIsLockedForUser={() => {
-          return true;
-        }}
+        lessonIsLockedForUser={() => true}
       />
     );
-    assert.equal(
-      wrapper.find('SafeMarkdown').props().markdown,
-      'This lesson is locked - you need to become a verified teacher to unlock it. [Learn more.](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-)'
+    expect(wrapper.text()).to.include(
+      'This lesson is locked - you need to become a verified teacher to unlock it.'
     );
   });
 
@@ -358,7 +293,9 @@ describe('ProgressLesson', () => {
         lockableAuthorized={true}
       />
     );
-    assert.equal(wrapper.find('SafeMarkdown').length, 0);
+    expect(wrapper.text()).to.not.include(
+      'This lesson is locked - you need to become a verified teacher to unlock it.'
+    );
   });
 
   it('shows Lesson Resources button when viewing as a student and student_lesson_plan_html_url is not null', () => {
