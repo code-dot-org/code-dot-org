@@ -6,6 +6,7 @@ var userInputEventCallbacks = {};
 var newSprites = {};
 var totalPauseTime = 0;
 var currentPauseStartTime = 0;
+var numActivePrompts = 0;
 
 export var background;
 export var screenText = {};
@@ -27,6 +28,7 @@ export function reset() {
   promptVars = {};
   screenText = {};
   eventLog = [];
+  numActivePrompts = 0;
 }
 
 export function startPause(time) {
@@ -186,6 +188,7 @@ export function deleteSprite(spriteId) {
 }
 
 export function registerPrompt(promptText, variableName, setterCallback) {
+  numActivePrompts++;
   if (!variableName) {
     return;
   }
@@ -218,6 +221,7 @@ export function registerPromptAnswerCallback(variableName, userCallback) {
 }
 
 export function onPromptAnswer(variableName, userInput) {
+  numActivePrompts--;
   promptVars[variableName] = userInput;
   const callbacks = userInputEventCallbacks[variableName];
   if (callbacks) {
@@ -420,6 +424,17 @@ function whenSpriteCreatedEvent(inputEvent, p5Inst) {
   return callbackArgList;
 }
 
+function whenAllPromptsAnswered(inputEvent, p5Inst) {
+  const previous = inputEvent.previous;
+  inputEvent.previous = numActivePrompts;
+  if (previous !== numActivePrompts && numActivePrompts === 0) {
+    // Call callback with no extra args
+    return [{}];
+  }
+  // Don't call callback.
+  return [];
+}
+
 /**
  * @param {Object} inputEvent
  * @param p5Inst - the running P5 instance
@@ -451,6 +466,8 @@ function getCallbackArgListForEvent(inputEvent, p5Inst) {
       return whileClickEvent(inputEvent, p5Inst);
     case 'whenSpriteCreated':
       return whenSpriteCreatedEvent(inputEvent, p5Inst);
+    case 'whenAllPromptsAnswered':
+      return whenAllPromptsAnswered(inputEvent, p5Inst);
   }
 }
 

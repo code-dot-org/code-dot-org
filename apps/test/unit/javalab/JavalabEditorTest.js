@@ -1,9 +1,8 @@
 import React from 'react';
-import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
+import sinon from 'sinon';
 import {mount} from 'enzyme';
 import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
-import JavalabFileManagement from '@cdo/apps/javalab/JavalabFileManagement';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -11,7 +10,9 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import javalab from '@cdo/apps/javalab/javalabRedux';
+import {oneDark} from '@codemirror/theme-one-dark';
+import {lightMode} from '@cdo/apps/javalab/editorSetup';
+import javalab, {toggleDarkMode} from '@cdo/apps/javalab/javalabRedux';
 
 describe('Java Lab Editor Test', () => {
   let defaultProps, store, appOptions;
@@ -20,8 +21,6 @@ describe('Java Lab Editor Test', () => {
     stubRedux();
     registerReducers({javalab});
     store = getStore();
-    sinon.stub(JavalabFileManagement, 'renameProjectFile');
-    sinon.stub(JavalabFileManagement, 'onProjectChanged');
     defaultProps = {
       onCommitCode: () => {}
     };
@@ -31,8 +30,6 @@ describe('Java Lab Editor Test', () => {
 
   afterEach(() => {
     restoreRedux();
-    JavalabFileManagement.renameProjectFile.restore();
-    JavalabFileManagement.onProjectChanged.restore();
     window.appOptions = appOptions;
   });
 
@@ -59,53 +56,49 @@ describe('Java Lab Editor Test', () => {
       expect(submitBtn.prop('value')).to.equal('Save');
     });
 
-    it('calls JavalabFileManagement functions and updates state on Rename save', () => {
+    it('updates state on rename save', () => {
       const editor = createWrapper();
+      const oldFilename = 'MyClass.java'; // default filename
+      const newFilename = 'NewFilename.java';
+
+      // should have default file in redux
+      expect(store.getState().javalab.sources[oldFilename]).to.not.be.undefined;
 
       const activateRenameBtn = editor.find('button').first();
       activateRenameBtn.invoke('onClick')();
 
       // first input should be file rename text input
       const renameInput = editor.find('input').first();
-      renameInput.invoke('onChange')({target: {value: 'NewFilename.java'}});
+      renameInput.invoke('onChange')({target: {value: newFilename}});
 
-      // save button not clicked, should not yet have set project changed
-      // or change filename in redux
-      expect(JavalabFileManagement.onProjectChanged).to.not.have.been.called;
-      expect(store.getState().javalab.filename).to.not.equal(
-        'NewFilename.java'
-      );
+      // save button not clicked, should not yet have changed filename in redux
+      expect(store.getState().javalab.sources[newFilename]).to.be.undefined;
+      expect(store.getState().javalab.sources[oldFilename]).to.not.be.undefined;
 
       // submit form, should trigger file rename
       const form = editor.find('form').first();
       // stub preventDefault function
       form.invoke('onSubmit')({preventDefault: () => {}});
-      expect(JavalabFileManagement.renameProjectFile).to.have.been.calledOnce;
-      // should have called project changed and updated redux
-      expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
-      expect(store.getState().javalab.filename).to.equal('NewFilename.java');
+      expect(store.getState().javalab.sources[newFilename]).to.not.be.undefined;
+      expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
     });
+  });
 
-    it('updates state on Rename save and does not call JavalabFileManagement functions when in editBlocks mode', () => {
+  describe('componentDidUpdate', () => {
+    it('toggles between light and dark modes', () => {
       const editor = createWrapper();
-      window.appOptions.level.editBlocks = 'start_sources';
-      editor
-        .find('JavalabEditor')
-        .instance()
-        .setState({
-          newFilename: 'NewFilename.java',
-          renameFileActive: true
-        });
-      const e = {preventDefault: sinon.stub()};
-      editor
-        .find('JavalabEditor')
-        .instance()
-        .renameFileComplete(e);
-      expect(JavalabFileManagement.renameProjectFile).to.not.have.been.called;
-      // should have called project changed and updated redux
-      expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
-      expect(store.getState().javalab.filename).to.equal('NewFilename.java');
-      window.appOptions.level.editBlocks = null;
+      const dispatchSpy = sinon.spy(
+        editor.find('JavalabEditor').instance().editor,
+        'dispatch'
+      );
+      store.dispatch(toggleDarkMode());
+      expect(dispatchSpy).to.have.been.calledWith({
+        reconfigure: {style: oneDark}
+      });
+      store.dispatch(toggleDarkMode());
+      expect(dispatchSpy).to.have.been.calledWith({
+        reconfigure: {style: lightMode}
+      });
     });
   });
 });

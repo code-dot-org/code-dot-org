@@ -3,7 +3,7 @@ editor_experiment ''
 wrong 'Pens are a better writing tool than pencils'
 wrong 'More people use pens than pencils'
 wrong 'The number of pens sold has increased slowly over time'
-right 'At any point in time there are typically more people searching for the word \"pen\" than \"pencil\"'
+right 'At any point in time there are typically more people searching for the word "pen" than "pencil"'
 
 
 
