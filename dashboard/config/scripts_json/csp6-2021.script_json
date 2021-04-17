@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:53 UTC",
+    "serialized_at": "2021-04-15 23:15:20 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -30,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 6: Algorithms"
+        "display_name": "Unit 6: Algorithms",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **A Break from Programming:** This unit is intentionally designed as a short respite from programming. After three units and a major hackathon project, it is a great opportunity to get away from screens for a while before the final programming push that leads to the Create PT.\n\n* **Just Enough Math:** This unit includes some mathematical concepts which enrich students' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.\n\n\n### Major Assessment and Projects\n\nThis unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.\n* CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.9 Developing Algorithms\n* 3.11 Binary Search\n* 3.17 Algorithmic Efficiency\n* 3.18 Undecidable Problems\n* 4.3 Parallel and Distributed Computing"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit6_2020",
@@ -60,7 +61,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
@@ -89,7 +91,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
@@ -118,7 +121,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
@@ -176,7 +180,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
@@ -204,7 +209,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 6: Assessment Day",
@@ -1936,7 +1942,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Traveling Salesman",
         "level_keys": [
@@ -1962,7 +1968,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [
@@ -2298,6 +2304,54 @@
       "seeding_key": {
         "resource.key": "unreasonable-time-activity-guide"
       }
+    },
+    {
+      "name": "The Halting Problem: The Unsolvable Problem",
+      "url": "https://youtu.be/VyHbd6sx5Po",
+      "key": "the_halting_problem_the_unsolvable_problem",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "name": "Folding@home Supercomputing Project",
+      "url": "https://youtu.be/RGGzMQ2oFrA",
+      "key": "folding_home_supercomputing_project",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -2333,8 +2387,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "folding_home_supercomputing_project"
       }
     },
     {
@@ -2345,6 +2411,20 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp6-2021"
+      }
+    }
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -2824,5 +2904,8 @@
         "standard.shortcode": "CSN-2.B.5"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -231,6 +231,7 @@ class ScriptsController < ApplicationController
       resourceTypes: [],
       resourceLinks: [],
       resourceIds: [],
+      studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h

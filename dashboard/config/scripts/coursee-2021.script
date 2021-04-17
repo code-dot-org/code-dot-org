@@ -187,6 +187,9 @@ level 'courseE_farmer_functions10a1_2021', progression: 'Challenge', challenge: 
 level 'courseE_farmer_functions13_2021', progression: 'Practice'
 level 'courseE_farmer_functions11_predict_2021', progression: 'Prediction'
 
+lesson_group 'lessonGroup-7', display_name: 'Impacts of Computing'
+lesson 'lesson-1', display_name: 'Designing for Accessibility', has_lesson_plan: true
+
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
 level 'courseE_EOC_examples_2021', progression: 'Example Projects'
