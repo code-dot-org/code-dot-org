@@ -39,6 +39,10 @@ export const commands = {
     }
   },
 
+  whenAllPromptsAnswered(callback) {
+    coreLibrary.addEvent('whenAllPromptsAnswered', {}, callback);
+  },
+
   whenSpriteCreated(spriteArg, callback) {
     if (spriteArg && spriteArg.costume) {
       coreLibrary.addEvent(

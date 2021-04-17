@@ -4,6 +4,7 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/templates/Button';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -78,12 +79,15 @@ describe('LessonOverview', () => {
           }
         ],
         standards: [],
-        opportunityStandards: []
+        opportunityStandards: [],
+        courseVersionStandardsUrl: 'standards/url'
       },
       activities: [],
       announcements: [],
       viewAs: ViewType.Teacher,
-      isSignedIn: true
+      isSignedIn: true,
+      hasVerifiedResources: false,
+      isVerifiedTeacher: false
     };
   });
 
@@ -150,6 +154,39 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
   });
 
+  it('shows verified resources warning if teacher is not verified and lesson has verified resources', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={false}
+        hasVerifiedResources={true}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+  });
+
+  it('does not show verified resources warning if teacher is verified', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={true}
+        hasVerifiedResources={true}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+  });
+
+  it('does not show verified resources warning if lesson does not have verified resources', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={false}
+        hasVerifiedResources={false}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+  });
+
   it('has student announcement if viewing as student', () => {
     const wrapper = shallow(
       <LessonOverview
@@ -181,7 +218,7 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
   });
 
-  it('renders standards header when standards are present', () => {
+  it('renders standards header with standards alignment button when standards are present', () => {
     const standards = [
       {
         frameworkName: 'ngss',
@@ -203,6 +240,14 @@ describe('LessonOverview', () => {
     );
 
     expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href={lesson.courseVersionStandardsUrl}
+          text="Full Course Alignment"
+        />
+      )
+    ).to.be.true;
     expect(
       wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
     ).to.be.false;
