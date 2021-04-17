@@ -21,6 +21,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import LessonStandards, {ExpandMode} from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const styles = {
   frontPage: {
@@ -57,6 +58,11 @@ const styles = {
   },
   titleNoTopMargin: {
     marginTop: 0
+  },
+  standardsHeaderAndButton: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 };
 
@@ -68,11 +74,24 @@ class LessonOverview extends Component {
     // from redux
     announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired
   };
 
   render() {
-    const {lesson, announcements, isSignedIn, viewAs} = this.props;
+    const {
+      lesson,
+      announcements,
+      isSignedIn,
+      viewAs,
+      isVerifiedTeacher,
+      hasVerifiedResources
+    } = this.props;
+
+    const displayVerifiedResourcesNotification =
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
+
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
@@ -104,6 +123,12 @@ class LessonOverview extends Component {
             announcements={announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
+          />
+        )}
+        {displayVerifiedResourcesNotification && (
+          <VerifiedResourcesNotification
+            width={styleConstants['content-width']}
+            inLesson={true}
           />
         )}
         <h1>
@@ -144,11 +169,22 @@ class LessonOverview extends Component {
             )}
             {lesson.standards.length > 0 && (
               <div>
-                <h2>{i18n.standards()}</h2>
+                <div style={styles.standardsHeaderAndButton}>
+                  <h2>{i18n.standards()}</h2>
+                  {lesson.courseVersionStandardsUrl && (
+                    <Button
+                      __useDeprecatedTag
+                      color={Button.ButtonColor.gray}
+                      href={lesson.courseVersionStandardsUrl}
+                      style={{marginLeft: 50}}
+                      target="_blank"
+                      text={i18n.fullCourseAlignment()}
+                    />
+                  )}
+                </div>
                 <LessonStandards
                   standards={lesson.standards}
                   expandMode={ExpandMode.FIRST}
-                  courseVersionStandardsUrl={lesson.courseVersionStandardsUrl}
                 />
               </div>
             )}
@@ -254,5 +290,7 @@ export const UnconnectedLessonOverview = LessonOverview;
 export default connect(state => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
 }))(LessonOverview);

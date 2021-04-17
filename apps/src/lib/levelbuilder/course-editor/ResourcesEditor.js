@@ -41,6 +41,7 @@ export default class ResourcesEditor extends Component {
     resources: PropTypes.array,
     migratedResources: PropTypes.arrayOf(migratedResourceShape),
     useMigratedResources: PropTypes.bool.isRequired,
+    studentFacing: PropTypes.bool,
     updateResources: PropTypes.func,
     courseVersionId: PropTypes.number
   };
@@ -98,7 +99,10 @@ export default class ResourcesEditor extends Component {
         {useMigratedResources ? (
           <MigratedResourceEditor
             courseVersionId={this.props.courseVersionId}
-            resourceContext="teacherResource"
+            resourceContext={
+              this.props.studentFacing ? 'studentResource' : 'teacherResource'
+            }
+            resources={this.props.migratedResources}
           />
         ) : (
           resources
@@ -122,6 +126,7 @@ export default class ResourcesEditor extends Component {
             resources={(resources || []).filter(x => !!x.type)}
             migratedResources={this.props.migratedResources}
             useMigratedResources={this.props.useMigratedResources}
+            studentFacing={this.props.studentFacing}
           />
         </div>
       </div>

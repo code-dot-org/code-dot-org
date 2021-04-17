@@ -41,7 +41,8 @@ describe('CourseEditor', () => {
     stubRedux();
     registerReducers({
       teacherSections,
-      resources: createResourcesReducer('teacherResource')
+      resources: createResourcesReducer('teacherResource'),
+      studentResources: createResourcesReducer('studentResource')
     });
   });
 
@@ -108,9 +109,12 @@ describe('CourseEditor', () => {
           ]}
         />
       );
-      expect(wrapper.find('ResourcesEditor').length).to.equal(1);
-      expect(wrapper.find('ResourcesEditor').props().useMigratedResources).to.be
-        .true;
+      expect(
+        wrapper
+          .find('ResourcesEditor')
+          .first()
+          .props().useMigratedResources
+      ).to.be.true;
     });
   });
 

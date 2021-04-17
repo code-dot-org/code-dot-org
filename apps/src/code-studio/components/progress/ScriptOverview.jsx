@@ -56,7 +56,7 @@ class ScriptOverview extends React.Component {
     isMigrated: PropTypes.bool,
 
     // redux provided
-    perLevelProgress: PropTypes.object.isRequired,
+    perLevelResults: PropTypes.object.isRequired,
     scriptCompleted: PropTypes.bool.isRequired,
     scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
@@ -94,7 +94,7 @@ class ScriptOverview extends React.Component {
       teacherResources,
       migratedTeacherResources,
       studentResources,
-      perLevelProgress,
+      perLevelResults,
       scriptCompleted,
       scriptId,
       scriptName,
@@ -128,7 +128,7 @@ class ScriptOverview extends React.Component {
     let scriptProgress = NOT_STARTED;
     if (scriptCompleted) {
       scriptProgress = COMPLETED;
-    } else if (Object.keys(perLevelProgress).length > 0) {
+    } else if (Object.keys(perLevelResults).length > 0) {
       scriptProgress = IN_PROGRESS;
     }
 
@@ -203,7 +203,7 @@ class ScriptOverview extends React.Component {
 
 export const UnconnectedScriptOverview = Radium(ScriptOverview);
 export default connect((state, ownProps) => ({
-  perLevelProgress: state.progress.levelProgress,
+  perLevelResults: state.progress.levelResults,
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,

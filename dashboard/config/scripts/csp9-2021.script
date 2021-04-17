@@ -8,6 +8,32 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_unit9_2020', display_name: 'Unit 9: Data'
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+
+* **The Data Analysis Process:** This unit is built around a data analysis process that helps students break down how data is turned into new information about the world. Some lessons are designed around different steps of this process, like cleaning data or building visualizations. Other lessons focus on ways this process is applied in real-world contexts like citizen science or machine learning. The data analysis process helps provide a consistent reference point as students explore the importance of data analysis in computing. 
+
+* **Exploring Data with the Data Visualizer:** The Data Visualizer is a tool built into App Lab that allows students to quickly create visualizations of the data they\'ve added to their projects. The set of possible visualizations is intentionally limited to a few ways to change or modify the chart. This tool aims to encourage exploring the different kinds of questions that can be answered with data visualizations, with a greater emphasis on students\' ability to create a variety of visualizations quickly.
+
+
+### Major Assessment and Projects
+
+Students use the data visualizer to find and present a data story. Using what they\'ve learned about the data analysis process, students either choose a dataset inside the data library or upload one of their own and create visualizations that find interesting patterns that may reveal new insights and knowledge. Students complete an activity guide describing their findings and the process they used in identifying them. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the "Standards" page for this unit.
+
+* DAT-2: Programs can be used to process data, which allows users to discover information and create new knowledge.
+* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.
+
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 2.3 Extracting Information from Data
+* 2.4 Using Programs with Data
+* 5.3 Computing Bias
+* 5.4 Crowdsourcing'
 lesson 'Learning From Data', display_name: 'Learning from Data', has_lesson_plan: true
 level 'CSP U9L1 Metadata_2021', progression: 'Exploring Metadata'
 level 'U9L1 google trends CFU_2021', progression: 'Check For Understanding', assessment: true
@@ -26,7 +52,7 @@ level 'CSP U9L4 Making Crosstabs and Scatter Plots_2021', progression: 'Crosstab
 level 'Which Type of Chart_2021', progression: 'What Type of Chart?'
 level 'U9L4 CFU Two Column vs One_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Big Data, Crowdsourcing, and Machine Learning', display_name: 'Big, Open, and Crowdsourced Data', has_lesson_plan: true
+lesson 'Big Data, Crowdsourcing, and Machine Learning', display_name: 'Big, Open, and Crowdsourced Data', has_lesson_plan: true, unplugged: true
 
 lesson 'Machine Learning and Bias', display_name: 'Machine Learning and Bias', has_lesson_plan: true
 level 'Oceans_Video_Machine_Learning_2021', progression: 'AI for Oceans - Machine Learning'
