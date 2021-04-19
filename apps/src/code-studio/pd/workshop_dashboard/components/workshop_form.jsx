@@ -578,7 +578,7 @@ export class WorkshopForm extends React.Component {
   }
 
   getInputStyle() {
-    return this.props.readOnly && styles.readOnlyInput;
+    return (this.props.readOnly && styles.readOnlyInput) || null;
   }
 
   handleErrorClick = i => {
