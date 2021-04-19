@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 15:53:18 UTC",
+    "serialized_at": "2021-04-16 21:09:48 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -690,7 +690,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 35
+        "duration": 39
       },
       "seeding_key": {
         "lesson_activity.key": "df5a4291-73f7-48bf-bd23-cb57af091bf0",
