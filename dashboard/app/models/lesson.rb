@@ -406,8 +406,10 @@ class Lesson < ApplicationRecord
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
-      scriptResourcesPdfUrl: script_resource_pdf_url,
-      courseVersionStandardsUrl: course_version_standards_url
+      courseVersionStandardsUrl: course_version_standards_url,
+      isVerifiedTeacher: user&.authorized_teacher?,
+      hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
+      scriptResourcesPdfUrl: script_resource_pdf_url
     }
   end
 
@@ -712,6 +714,10 @@ class Lesson < ApplicationRecord
     end
     grouped_resources.delete('Verified Teacher')
     grouped_resources
+  end
+
+  def lesson_plan_has_verified_resources
+    resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
   private

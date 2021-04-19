@@ -107,22 +107,30 @@ module Services
           path = File.join(directory, filename)
           return path if File.exist?(path)
 
-          if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
-            # We don't want to export forms
-            return nil if resource.url.start_with?("https://docs.google.com/forms")
-            begin
-              export_from_google(resource.url, path)
+          begin
+            if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
+              # We don't want to export forms
+              return nil if resource.url.start_with?("https://docs.google.com/forms")
+              begin
+                export_from_google(resource.url, path)
+                return path
+              rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+                ChatClient.log(
+                  "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+                  color: 'red'
+                )
+                return nil
+              end
+            elsif resource.url.end_with?(".pdf")
+              IO.copy_stream(URI.open(resource.url), path)
               return path
-            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error, URI::InvalidURIError => e
-              ChatClient.log(
-                "error from Google when trying to fetch PDF for resource #{resource.key.inspect}: #{e}",
-                color: 'red'
-              )
-              return nil
             end
-          elsif resource.url.end_with?(".pdf")
-            IO.copy_stream(URI.open(resource.url), path)
-            return path
+          rescue URI::InvalidURIError, OpenURI::HTTPError => e
+            ChatClient.log(
+              "URI error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+              color: 'red'
+            )
+            return nil
           end
         end
       end
