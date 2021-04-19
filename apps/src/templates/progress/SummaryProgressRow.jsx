@@ -106,6 +106,7 @@ class SummaryProgressRow extends React.Component {
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
+    const showAsLocked = isLockedForUser || isLockedForSection;
 
     let lessonTitle = lesson.name;
     if (lesson.stageNumber) {
@@ -119,8 +120,7 @@ class SummaryProgressRow extends React.Component {
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
-          ...((hiddenForStudents || isLockedForSection || isLockedForUser) &&
-            styles.dashedBorder)
+          ...((hiddenForStudents || showAsLocked) && styles.dashedBorder)
         }}
       >
         <td
@@ -136,26 +136,22 @@ class SummaryProgressRow extends React.Component {
             {lesson.lockable && (
               <span data-tip data-for={lockedTooltipId}>
                 <FontAwesome
-                  icon={
-                    isLockedForSection || isLockedForUser ? 'lock' : 'unlock'
-                  }
+                  icon={showAsLocked ? 'lock' : 'unlock'}
                   style={{
                     ...styles.icon,
-                    ...(!(isLockedForSection || isLockedForUser) &&
-                      styles.unlockedIcon)
+                    ...(!showAsLocked && styles.unlockedIcon)
                   }}
                 />
-                {!(isLockedForSection || isLockedForUser) &&
-                  viewAs === ViewType.Teacher && (
-                    <ReactTooltip
-                      id={lockedTooltipId}
-                      role="tooltip"
-                      wrapper="span"
-                      effect="solid"
-                    >
-                      {i18n.lockAssessmentLong()}
-                    </ReactTooltip>
-                  )}
+                {!showAsLocked && viewAs === ViewType.Teacher && (
+                  <ReactTooltip
+                    id={lockedTooltipId}
+                    role="tooltip"
+                    wrapper="span"
+                    effect="solid"
+                  >
+                    {i18n.lockAssessmentLong()}
+                  </ReactTooltip>
+                )}
               </span>
             )}
             <span
