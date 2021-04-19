@@ -287,6 +287,27 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal script.summarize_for_lesson_show(true), summary[:unit]
   end
 
+  test 'lesson_plan_has_verified_resources is true for lesson with verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    assert lesson.lesson_plan_has_verified_resources
+  end
+
+  test 'lesson_plan_has_verified_resources is false for lesson without verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    refute lesson.lesson_plan_has_verified_resources
+  end
+
   test 'summarize lesson for student lesson plan combines student and for all resources' do
     script = create :script
     lesson_group = create :lesson_group, script: script

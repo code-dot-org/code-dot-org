@@ -22,6 +22,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import LessonStandards, {ExpandMode} from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const styles = {
   frontPage: {
@@ -78,7 +79,9 @@ class LessonOverview extends Component {
     // from redux
     announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired
   };
 
   compilePdfDropdownOptions = () => {
@@ -102,8 +105,20 @@ class LessonOverview extends Component {
   };
 
   render() {
-    const {lesson, announcements, isSignedIn, viewAs} = this.props;
+    const {
+      lesson,
+      announcements,
+      isSignedIn,
+      viewAs,
+      isVerifiedTeacher,
+      hasVerifiedResources
+    } = this.props;
+
+    const displayVerifiedResourcesNotification =
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
+
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
+
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
@@ -140,6 +155,12 @@ class LessonOverview extends Component {
             announcements={announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
+          />
+        )}
+        {displayVerifiedResourcesNotification && (
+          <VerifiedResourcesNotification
+            width={styleConstants['content-width']}
+            inLesson={true}
           />
         )}
         <h1>
@@ -301,5 +322,7 @@ export const UnconnectedLessonOverview = LessonOverview;
 export default connect(state => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
 }))(LessonOverview);
