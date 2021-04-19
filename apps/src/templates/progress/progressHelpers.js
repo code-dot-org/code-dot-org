@@ -51,15 +51,15 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
   if (!lesson.lockable) {
     return false;
   }
-  // Signed out user
+
   if (!state.currentUser.userId) {
+    // Signed out user
     return true;
+  } else if (viewAs === ViewType.Teacher) {
+    return !state.stageLock.lockableAuthorized;
+  } else if (viewAs === ViewType.Student) {
+    return stageLocked(levels);
   }
-  // non-verified teacher
-  if (viewAs === ViewType.Teacher && !state.stageLock.lockableAuthorized) {
-    return true;
-  }
-  return stageLocked(levels);
 }
 
 /**
