@@ -60,6 +60,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
   } else if (viewAs === ViewType.Student) {
     return stageLocked(levels);
   }
+  return true;
 }
 
 /**
