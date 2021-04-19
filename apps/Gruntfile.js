@@ -629,7 +629,9 @@ describe('entry tests', () => {
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
     'shared_blockly_functions/edit':
-      './src/sites/studio/pages/shared_blockly_functions/edit.js'
+      './src/sites/studio/pages/shared_blockly_functions/edit.js',
+    'sprite_management/sprite_upload':
+      './src/sites/studio/pages/sprite_management/sprite_upload.js'
   };
 
   var pegasusEntries = {
