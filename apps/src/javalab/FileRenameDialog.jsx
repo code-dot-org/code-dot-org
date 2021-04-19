@@ -57,7 +57,6 @@ export default class FileRenameDialog extends Component {
   constructor(props) {
     super(props);
     this.textInput = null;
-
     this.setTextInputRef = element => {
       this.textInput = element;
     };

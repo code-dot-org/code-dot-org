@@ -61,15 +61,13 @@ class JavalabEditor extends React.Component {
       isOriginal: false
     });
     this.state = {
-      renameFileActive: false,
-      showFileManagementPanel: false,
-      newFilename: null,
       tabs,
       showMenu: false,
       contextTarget: null,
       dialogOpen: false,
       menuPosition: {},
-      activeIndex: 0
+      editTabKey: null,
+      editTabFilename: null
     };
   }
 
