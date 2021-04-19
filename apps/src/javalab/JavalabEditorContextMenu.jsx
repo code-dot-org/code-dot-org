@@ -26,8 +26,8 @@ const styles = {
 };
 
 /**
- * A button that drops down to a set of clickable links, and closes itself if
- * you click on the button, or outside of the dropdown.
+ * A menu with a set of clickable links that calls the cancel handler if you
+ * click outside the menu or the cancel button.
  */
 export const JavalabContextMenu = class JavalabContextMenuComponent extends Component {
   static propTypes = {
@@ -45,7 +45,6 @@ export const JavalabContextMenu = class JavalabContextMenuComponent extends Comp
 
   render() {
     const {renameFromContextMenu, cancelContextMenu} = this.props;
-
     return (
       <div>
         <a key="rename" onClick={renameFromContextMenu} style={styles.anchor}>
