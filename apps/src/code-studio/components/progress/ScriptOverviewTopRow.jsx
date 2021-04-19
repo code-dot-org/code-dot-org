@@ -15,6 +15,8 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {windowOpen} from '@cdo/apps/utils';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -79,6 +81,26 @@ class ScriptOverviewTopRow extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string
+  };
+
+  recordAndNavigateToPdf = (firehoseKey, url) => {
+    firehoseClient.putRecord(
+      {
+        study: 'pdf-click',
+        study_group: 'script',
+        event: 'open-pdf',
+        data_json: JSON.stringify({
+          name: this.props.scriptName,
+          pdfType: firehoseKey
+        })
+      },
+      {
+        includeUserId: true,
+        callback: () => {
+          windowOpen(url);
+        }
+      }
+    );
   };
 
   compilePdfDropdownOptions = () => {
@@ -182,7 +204,12 @@ class ScriptOverviewTopRow extends React.Component {
                 color={Button.ButtonColor.blue}
               >
                 {pdfDropdownOptions.map(option => (
-                  <a key={option.key} href={option.url}>
+                  <a
+                    key={option.key}
+                    onClick={() =>
+                      this.recordAndNavigateToPdf(option.key, option.url)
+                    }
+                  >
                     {option.name}
                   </a>
                 ))}
