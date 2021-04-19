@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-04-19 18:43:27 UTC",
+    "serialized_at": "2021-04-19 20:45:21 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -73,10 +73,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
+        "overview": "This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
         "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
         "preparation": "- Create your own class section on Code.org and make sure every student has a card with their **passcode** on it.\r\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\r\n- Have the school IT person add a quick link for your class section to the computer desktop.\r\n- Review the Common Sense Education website for more online safety content.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Click and drag to finish the puzzles."
       },
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
@@ -92,10 +93,11 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
+        "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Watch the [r class-section-video/pre-express/2021]. Create a class section and make sure every student has a card with their passcode on it\r\n - Have the school IT person add a quick link for your class section to the computer desktop\r\n - Make sure each student has a [r think-spot-journal/pre-express/2021]",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "preparation": " - Watch the ***How to Make a Class Section** video. Create a class section and make sure every student has a card with their passcode on it.\n - Have the school IT person add a quick link for your class section to the computer desktop\n - Make sure each student has a Reflection Journal.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Program Scrat to reach the acorn."
       },
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
@@ -401,8 +403,21 @@
       }
     },
     {
-      "key": "514be718-37b6-4bca-9bea-138eac8ae77c",
+      "key": "9162802e-1cab-426a-a0db-4f98de77f3eb",
       "position": 4,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9162802e-1cab-426a-a0db-4f98de77f3eb",
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "pre-express-2021"
+      }
+    },
+    {
+      "key": "514be718-37b6-4bca-9bea-138eac8ae77c",
+      "position": 5,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -416,26 +431,12 @@
     },
     {
       "key": "80d38f1c-ff9b-4393-9266-9d4fbee74acc",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "name": "Extension Activities",
-        "duration": 0
+        "name": "Extension Activities"
       },
       "seeding_key": {
         "lesson_activity.key": "80d38f1c-ff9b-4393-9266-9d4fbee74acc",
-        "lesson.key": "Sequencing with Scrat",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
-      "key": "9162802e-1cab-426a-a0db-4f98de77f3eb",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9162802e-1cab-426a-a0db-4f98de77f3eb",
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021"
@@ -1047,7 +1048,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": " - Use calm bodies in the lab\r\n - Remember not to chew gum or candy\r\n - Sanitize your hands\r\n - Sit with your partner at one computer\r\n - Make sure that the first \"driver\" can reach the mouse\r\n - When you get frustrated, don't hit or shake the computer or monitor\r\n - Follow the [r 202020/pre-express/2021] rule\r\n - How to deal with the [r wiggles/pre-express/2021] every 20-30 minutes (requires a free login on GoNoodle)\r\n - Ask your partner before you ask the teacher\r\n - Keep volume down so everyone else can hear their partners\r\n - Use your journal for keeping track of feelings and solutions\r\n\r\n"
+            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the ***20/20/20 Rule.**\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n\n"
           }
         ]
       },
@@ -1186,9 +1187,8 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": " - Use calm bodies in the lab\r\n - Remember not to chew gum or candy\r\n - Sanitize your hands\r\n - Sit with your partner at one computer\r\n - Make sure that the first \"driver\" can reach the mouse\r\n - When you get frustrated, don't hit or shake the computer or monitor\r\n - Follow the [r 202020/pre-express/2021] rule\r\n - How to deal with the [r wiggles/pre-express/2021] every 20-30 minutes (requires a free login on GoNoodle)\r\n - Ask your partner before you ask the teacher\r\n - Keep volume down so everyone else can hear their partners\r\n - Use your journal for keeping track of feelings and solutions\r\n"
+            "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the ***20/20/20 rule**.\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n"
           }
         ]
       },
@@ -1216,7 +1216,6 @@
         "description": "Project a puzzle from the lesson. Show the class how to click on a block and place it in the correct spot by dragging and dropping. Purposely make mistakes such as clicking the background or dropping the image before it's at the right spot. Ask for help from volunteers in the class when you run into these problems, and help them use the skills that they developed in the last unplugged lesson to make things right.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "### Teaching this course as a class?\r\nOur grade-aligned CS Fundamentals courses use unplugged lessons to build community and introduce tricky computer science concepts, including **sequencing**. Check out the lesson [Happy Maps](https://curriculum.code.org/csf-19/coursea/3/) from [Course A](https://curriculum.code.org/csf-19/coursea/) or [Move It, Move It!](https://curriculum.code.org/csf-19/courseb/2/) from [Course B](https://curriculum.code.org/csf-19/courseb/)!\r\n"
           }
@@ -1233,7 +1232,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch  the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
           }
@@ -1248,7 +1246,7 @@
       "key": "20e998a3-d920-48f1-9d92-ec4102990042",
       "position": 2,
       "properties": {
-        "description": "This will teach students how to use Code.org to complete online puzzles.\r\n\r\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.\r\n\r\nThe vocabulary introduced in this lesson becomes relevant during this activity.  Take some time to explicitly teach how to click, double-click, drag, and drop.  It might work better for you to cover these words in the classroom environment where you can lead by example -- or it might make more sense to teach the words individually as students work on their puzzles in the lab.  You will need to decide what you believe is best for your class.\r\n\r\nWatch the [r pair-programming-vid/pre-express/2021] with your students, then assign them to pairs.  This should help students start off in the right direction.\r\n\r\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize pair programming whenever possible during the activity.\r\n - Encourage students with questions/challenges to start by asking their partner.\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.",
+        "description": "This will teach students how to use Code.org to complete online puzzles.\n\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.\n\nThe vocabulary introduced in this lesson becomes relevant during this activity.  Take some time to explicitly teach how to click, double-click, drag, and drop.  It might work better for you to cover these words in the classroom environment where you can lead by example -- or it might make more sense to teach the words individually as students work on their puzzles in the lab.  You will need to decide what you believe is best for your class.\n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.",
         "name": "Online Puzzles\r"
       },
       "seeding_key": {
@@ -1257,11 +1255,21 @@
       }
     },
     {
+      "key": "0394c5d4-246e-42bc-aca2-97d7bd159173",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0394c5d4-246e-42bc-aca2-97d7bd159173",
+        "lesson_activity.key": "9162802e-1cab-426a-a0db-4f98de77f3eb"
+      }
+    },
+    {
       "key": "51b1c494-c02c-43d8-bf3d-543f6634f474",
       "position": 1,
       "properties": {
-        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day.\r\n\r\n#### Journal Prompts:\r\n\r\n - Can you draw a sequence for getting ready to go to the computer lab?\r\n - Draw a computer lab \"Do\" and a \"Don't\"\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.",
-        "name": "Journaling\r"
+        "description": "###Journaling:\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n### Journal Prompts:\n\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n - Draw one of the ***Feeling Faces**  that shows how you felt about today's lesson in the corner of your journal page.",
+        "name": "Reflections"
       },
       "seeding_key": {
         "activity_section.key": "51b1c494-c02c-43d8-bf3d-543f6634f474",
@@ -1277,16 +1285,6 @@
       "seeding_key": {
         "activity_section.key": "f810e0b8-71b7-4b54-8c8b-4205a471ca3b",
         "lesson_activity.key": "80d38f1c-ff9b-4393-9266-9d4fbee74acc"
-      }
-    },
-    {
-      "key": "0394c5d4-246e-42bc-aca2-97d7bd159173",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0394c5d4-246e-42bc-aca2-97d7bd159173",
-        "lesson_activity.key": "9162802e-1cab-426a-a0db-4f98de77f3eb"
       }
     },
     {
@@ -2278,7 +2276,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseAB_video_NewIntro_2021"
@@ -2303,7 +2301,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp1_2021"
@@ -2328,7 +2326,7 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp2_2021"
@@ -2353,7 +2351,7 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp3a_2021"
@@ -2378,7 +2376,7 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp3b_2021"
@@ -2403,7 +2401,7 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp4a_2021"
@@ -2428,7 +2426,7 @@
       "chapter": 19,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp5a_2021"
@@ -6981,6 +6979,42 @@
       }
     },
     {
+      "name": "20/20/20 Rule",
+      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+      "key": "20_20_20_rule",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "name": "Wiggles - Go Noodle",
+      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+      "key": "wiggles_-_go_noodle",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "wiggles_-_go_noodle"
+      }
+    },
+    {
+      "name": "How to Make a Class Section",
+      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "key": "how_to_make_a_class_section",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_make_a_class_section"
+      }
+    },
+    {
       "name": "Think Spot Journal",
       "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/edit",
       "key": "think-spot-journal",
@@ -7038,8 +7072,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "think-spot-journal"
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "wiggles_-_go_noodle"
       }
     },
     {
@@ -7052,6 +7092,24 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "wiggles_-_go_noodle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "resource.key": "how_to_make_a_class_section"
       }
     },
     {
