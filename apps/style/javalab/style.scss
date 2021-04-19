@@ -24,3 +24,26 @@
 #codeWorkspace {
   border: none !important;
 }
+
+.nav {
+  margin-bottom: 0px;
+}
+
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  border-color: darkgrey;
+  border-bottom-color: transparent;
+}
+
+.darkmode {
+  .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    border-color: darkgrey;
+    background-color: rgb(40, 44, 52);
+    color: white;
+  }
+  ul > li > a {
+    color: darkgrey;
+  }
+  ul > li > a:hover {
+    background-color: black;
+  }
+}

@@ -11,10 +11,11 @@ import {EditorView} from '@codemirror/view';
 import {editorSetup, lightMode} from './editorSetup';
 import {EditorState, tagExtension} from '@codemirror/state';
 import FileRenameDialog from './FileRenameDialog';
-import {Tabs, Tab} from 'react-draggable-tab';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
+import {Tab, Nav, NavItem} from 'react-bootstrap';
+import JavalabEditorContextMenu from './JavalabEditorContextMenu';
 
 const style = {
   editor: {
@@ -22,92 +23,8 @@ const style = {
     height: 400,
     backgroundColor: color.white
   },
-  anchor: {
-    padding: 10,
-    color: color.charcoal,
-    backgroundColor: color.white,
-    fontFamily: '"Gotham 5r", sans-serif',
-    display: 'block',
-    textDecoration: 'none',
-    lineHeight: '20px',
-    transition: 'background-color .2s ease-out',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-      cursor: 'pointer'
-    },
-    border: `1px solid ${color.charcoal}`
-  },
-  nonFirstAnchor: {
-    borderTopWidth: 0
-  },
-  tab: {
-    textAlign: 'center',
-    padding: 10,
-    backgroundColor: color.white
-  },
-  button: {
-    marginLeft: 10
-  },
-  renameForm: {
-    marginBottom: 0,
-    display: 'flex',
-    alignItems: 'center'
-  },
   darkBackground: {
     backgroundColor: '#282c34'
-  }
-};
-
-const darkTabsStyles = {
-  tabWrapper: {marginTop: '10px'},
-  tabBarAfter: {
-    height: '0px',
-    borderBottom: '0px'
-  }
-};
-
-const lightTabsStyles = {
-  tabWrapper: {marginTop: '10px'},
-  tab: {
-    backgroundImage: '',
-    backgroundColor: color.lightest_gray,
-    color: color.dark_charcoal,
-    boxShadow: 'rgb(72 72 72) 1px 1px 0px inset, rgb(0 0 0 / 10%) -4px 0px 4px'
-  },
-  tabBefore: {
-    backgroundImage: '',
-    backgroundColor: color.lightest_gray
-  },
-  tabAfter: {
-    backgroundImage: '',
-    backgroundColor: color.lightest_gray
-  },
-  tabTitle: {
-    color: color.dark_charcoal
-  },
-  tabTitleActive: {
-    color: color.black
-  },
-  tabOnHover: {backgroundImage: ''},
-  tabBeforeOnHover: {backgroundImage: ''},
-  tabAfterOnHover: {backgroundImage: ''},
-  tabActive: {
-    backgroundImage: '',
-    backgroundColor: color.white,
-    color: color.black,
-    boxShadow: 'rgb(72 72 72) 1px 1px 0px inset, rgb(0 0 0 / 10%) -4px 0px 4px'
-  },
-  tabBeforeActive: {
-    backgroundImage: '',
-    backgroundColor: color.white
-  },
-  tabAfterActive: {
-    backgroundImage: '',
-    backgroundColor: color.white
-  },
-  tabBarAfter: {
-    height: '0px',
-    borderBottom: '0px'
   }
 };
 
@@ -125,18 +42,23 @@ class JavalabEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleTabSelect = this.handleTabSelect.bind(this);
-    this.handleTabAddButtonClick = this.handleTabAddButtonClick.bind(this);
-    this.handleTabPositionChange = this.handleTabPositionChange.bind(this);
     this.renameFromContextMenu = this.renameFromContextMenu.bind(this);
     this.cancelContextMenu = this.cancelContextMenu.bind(this);
     this.onRenameFile = this.onRenameFile.bind(this);
+
     let tabs = [];
+    // TODO: remove isOriginal once we have editors for each file
     Object.keys(props.sources).forEach((file, index) => {
       tabs.push({
         filename: file,
-        key: `file-${index}`
+        key: `file-${index}`,
+        isOriginal: true
       });
+    });
+    tabs.push({
+      filename: 'FakeFile.java',
+      key: 'file-1',
+      isOriginal: false
     });
     this.state = {
       renameFileActive: false,
@@ -146,7 +68,8 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null,
       dialogOpen: false,
-      menuPosition: {}
+      menuPosition: {},
+      activeIndex: 0
     };
   }
 
@@ -180,57 +103,6 @@ class JavalabEditor extends React.Component {
     };
   }
 
-  handleTabSelect(e, key, currentTabs) {
-    const tabs = currentTabs.map(tab => {
-      return {
-        key: tab.key,
-        filename: tab.props.title
-      };
-    });
-    this.setState({selectedTab: key, tabs});
-  }
-
-  handleTabClose(e, key, currentTabs) {
-    const tabs = currentTabs.map(tab => {
-      return {
-        key: tab.key,
-        filename: tab.props.title
-      };
-    });
-    this.setState({tabs});
-  }
-
-  handleTabPositionChange(e, key, currentTabs) {
-    const tabs = currentTabs.map(tab => {
-      return {
-        key: tab.key,
-        filename: tab.props.title
-      };
-    });
-    this.setState({tabs});
-  }
-
-  handleTabAddButtonClick(e, currentTabs) {
-    // key must be unique
-    const key = 'newTab_' + Date.now();
-    let newTab = {
-      key,
-      filename: 'untitled'
-    };
-    const tabs = currentTabs.map(tab => {
-      return {
-        key: tab.key,
-        filename: tab.props.title
-      };
-    });
-    let newTabs = tabs.concat([newTab]);
-
-    this.setState({
-      tabs: newTabs,
-      selectedTab: key
-    });
-  }
-
   handleTabContextMenu(key, e) {
     e.preventDefault();
     const boundingRect = e.target.getBoundingClientRect();
@@ -238,8 +110,7 @@ class JavalabEditor extends React.Component {
       showMenu: true,
       contextTarget: key,
       menuPosition: {
-        // Add 3 to offset the 3px padding on the tab title element.
-        top: `${boundingRect.bottom + 3}px`,
+        top: `${boundingRect.bottom}px`,
         left: `${boundingRect.left}px`
       }
     });
@@ -338,58 +209,59 @@ class JavalabEditor extends React.Component {
           />
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
-        <Tabs
-          tabsStyles={this.props.isDarkMode ? darkTabsStyles : lightTabsStyles}
-          selectedTab={
-            this.state.selectedTab
-              ? this.state.selectedTab
-              : tabs
-              ? tabs[0].key
-              : ''
-          }
-          onTabSelect={this.handleTabSelect}
-          onTabAddButtonClick={this.handleTabAddButtonClick}
-          onTabPositionChange={this.handleTabPositionChange}
-          tabs={tabs.map(tab => (
-            <Tab
-              key={tab.key}
-              title={tab.filename}
-              disableClose
-              {...this.makeListeners(tab.key)}
-            >
-              <div
-                ref={el => (this._codeMirror = el)}
-                style={{
-                  ...style.editor,
-                  ...(this.props.isDarkMode && style.darkBackground)
-                }}
-              />
-              {/*TODO: We'll want to make a separate editor for each file*/}
-            </Tab>
-          ))}
-          shortCutKeys={{
-            close: ['alt+command+w', 'alt+ctrl+w'],
-            create: ['alt+command+t', 'alt+ctrl+t'],
-            moveRight: ['alt+command+tab', 'alt+ctrl+tab'],
-            moveLeft: ['shift+alt+command+tab', 'shift+alt+ctrl+tab']
-          }}
-          keepSelectedTab={true}
-        />
+        <Tab.Container
+          defaultActiveKey="file-0"
+          style={{marginTop: 10}}
+          id="javalab-editor-tabs"
+          className={this.props.isDarkMode ? 'darkmode' : ''}
+        >
+          <div>
+            <Nav bsStyle="tabs" style={{marginBottom: 0}}>
+              {tabs.map(tab => {
+                return (
+                  <NavItem
+                    eventKey={tab.key}
+                    key={`${tab.key}-tab`}
+                    {...this.makeListeners(tab.key)}
+                  >
+                    {tab.filename}
+                  </NavItem>
+                );
+              })}
+            </Nav>
+            <Tab.Content animation={false}>
+              {tabs.map(tab => {
+                return (
+                  <Tab.Pane eventKey={tab.key} key={`${tab.key}-content`}>
+                    {tab.isOriginal ? ( // TODO: remove isOriginal once we have editors for each file
+                      <div
+                        ref={el => (this._codeMirror = el)}
+                        style={{
+                          ...style.editor,
+                          ...(this.props.isDarkMode && style.darkBackground)
+                        }}
+                      />
+                    ) : (
+                      <div
+                        style={{
+                          ...style.editor,
+                          ...(this.props.isDarkMode && style.darkBackground)
+                        }}
+                      >
+                        Content {tab.filename}
+                      </div>
+                    )}
+                  </Tab.Pane>
+                );
+              })}
+            </Tab.Content>
+          </div>
+        </Tab.Container>
         <div style={menuStyle}>
-          <a
-            key="rename"
-            onClick={this.renameFromContextMenu}
-            style={style.anchor}
-          >
-            Rename
-          </a>
-          <a
-            key="cancel"
-            onClick={this.cancelContextMenu}
-            style={{...style.nonFirstAnchor, ...style.anchor}}
-          >
-            Cancel
-          </a>
+          <JavalabEditorContextMenu
+            cancelContextMenu={this.cancelContextMenu}
+            renameFromContextMenu={this.renameFromContextMenu}
+          />
         </div>
         <FileRenameDialog
           isOpen={this.state.dialogOpen}
