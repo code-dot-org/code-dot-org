@@ -18,6 +18,7 @@ export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
+    /* hides the location field in places we might not want to show it */
     hide_virtual_location: PropTypes.bool
   };
 
