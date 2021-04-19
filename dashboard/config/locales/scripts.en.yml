@@ -18867,7 +18867,7 @@ en:
             lesson-3:
               name: 'Mini-Project: User Input Programs'
             lesson-4:
-              name: Counting with Variables
+              name: Debugging Prototypes
             lesson-5:
               name: Groups of Sprites
             lesson-6:
@@ -18929,6 +18929,8 @@ en:
               display_name: Haiku Bot
             AB EOC:
               display_name: Course A and B EOC Project
+            debugging:
+              display_name: Debugging
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -21504,13 +21506,13 @@ en:
             Learn to Drag and Drop:
               key: Learn to Drag and Drop
               name: Learn to Drag and Drop
-              description_student: 
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             Sequencing with Scrat:
               key: Sequencing with Scrat
               name: Sequencing with Scrat
-              description_student: 
-              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_student: Program Scrat to reach the acorn.
+              description_teacher: In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in with Angry Birds:
               key: Programming in with Angry Birds
               name: Programming with Angry Birds
