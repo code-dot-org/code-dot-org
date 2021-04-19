@@ -71,6 +71,9 @@ class Javalab < Level
       # set it to nil here and let other code put it in app_options
       level_prop['teacherMarkdown'] = nil
 
+      # Set the javabuilder url
+      level_prop['javabuilderUrl'] = CDO.javabuilder_url
+
       # Don't set nil values
       level_prop.reject! {|_, value| value.nil?}
     end
