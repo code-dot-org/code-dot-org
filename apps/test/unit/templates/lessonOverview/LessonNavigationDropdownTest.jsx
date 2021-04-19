@@ -134,6 +134,7 @@ describe('LessonNavigationDropdown', () => {
     lesson1.simulate('click');
 
     expect(firehoseClient.putRecord).to.have.been.calledOnce;
+    firehoseClient.putRecord.yieldTo('callback');
     expect(utils.navigateToHref).to.have.been.calledOnce;
     utils.navigateToHref.restore();
     firehoseClient.putRecord.restore();
