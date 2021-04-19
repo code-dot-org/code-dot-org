@@ -119,7 +119,7 @@ module Cdo
     end
 
     def javabuilder_url(path = '', scheme = '')
-      if (rack_env?(:development))
+      if rack_env?(:development)
         # Since pegasus and dashboard share the same port, we have a Route53
         # DNS record that redirects requests to localhost. Javabuilder, as a
         # separate service, uses a different port. Therefore, we can access the
