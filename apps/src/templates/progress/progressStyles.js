@@ -102,19 +102,33 @@ const bubbleSizes = {
   [BubbleShape.circle]: {
     [BubbleSize.dot]: 13,
     [BubbleSize.letter]: 20,
-    [BubbleSize.full]: 30
+    [BubbleSize.full]: 34
   },
   [BubbleShape.diamond]: {
     [BubbleSize.dot]: 10,
-    [BubbleSize.full]: 23
+    [BubbleSize.full]: 26
   },
   [BubbleShape.pill]: {}
 };
 
-const bubbleMargins = {
+const circleMargins = {
   [BubbleSize.dot]: 3,
   [BubbleSize.letter]: 3,
   [BubbleSize.full]: 2
+};
+
+const bubbleBorderRadii = {
+  [BubbleShape.circle]: {
+    [BubbleSize.dot]: bubbleSizes[BubbleShape.circle][BubbleSize.dot],
+    [BubbleSize.letter]: bubbleSizes[BubbleShape.circle][BubbleSize.letter],
+    [BubbleSize.full]: bubbleSizes[BubbleShape.circle][BubbleSize.full]
+  },
+  [BubbleShape.diamond]: {
+    [BubbleSize.dot]: 2,
+    [BubbleSize.letter]: 2,
+    [BubbleSize.full]: 4
+  },
+  [BubbleShape.pill]: {}
 };
 
 /**
@@ -126,23 +140,18 @@ const bubbleMargins = {
 export const bubbleContainerWidths = {
   [BubbleSize.dot]:
     bubbleSizes[BubbleShape.circle][BubbleSize.dot] +
-    2 * bubbleMargins[BubbleSize.dot],
+    2 * circleMargins[BubbleSize.dot],
   [BubbleSize.letter]:
     bubbleSizes[BubbleShape.circle][BubbleSize.letter] +
-    2 * bubbleMargins[BubbleSize.letter],
+    2 * circleMargins[BubbleSize.letter],
   [BubbleSize.full]:
     bubbleSizes[BubbleShape.circle][BubbleSize.full] +
-    2 * bubbleMargins[BubbleSize.full]
+    2 * circleMargins[BubbleSize.full]
 };
 
 const fontSizes = {
-  [BubbleShape.circle]: {
-    [BubbleSize.letter]: SMALL_FONT,
-    [BubbleSize.full]: LARGE_FONT
-  },
-  [BubbleShape.diamond]: {
-    [BubbleSize.full]: LARGE_FONT
-  }
+  [BubbleSize.letter]: SMALL_FONT,
+  [BubbleSize.full]: LARGE_FONT
 };
 
 export const bubbleStyles = {
@@ -199,38 +208,28 @@ export function diamondContainerStyle(size) {
   };
 }
 
-function circleStyle(size) {
-  const bubbleSize = bubbleSizes[BubbleShape.circle][size];
-  const fontSize = fontSizes[BubbleShape.circle][size];
-  const horizontalMargin = marginLeftRight(bubbleMargins[size]);
-  return {
-    ...tightlyConstrainedSizeStyle(bubbleSize),
-    borderRadius: bubbleSize,
-    fontSize: fontSize,
-    lineHeight: fontSize,
-    ...horizontalMargin
-  };
-}
-
-function diamondStyle(size) {
-  const bubbleSize = bubbleSizes[BubbleShape.diamond][size];
-  const fontSize = fontSizes[BubbleShape.diamond][size];
-  return {
-    ...bubbleStyles.diamond,
-    ...tightlyConstrainedSizeStyle(bubbleSize),
-    borderRadius: size === BubbleSize.full ? 4 : 2,
-    fontSize: fontSize,
-    lineHeight: fontSize
-  };
-}
-
 function shapeSizeStyle(shape, size) {
-  return shape === BubbleShape.pill
-    ? bubbleStyles.pill
-    : shape === BubbleShape.diamond
-    ? diamondStyle(size)
-    : circleStyle(size);
+  if (shape === BubbleShape.pill) {
+    return bubbleStyles.pill;
+  }
+
+  const bubbleSize = bubbleSizes[shape][size];
+  const fontSize = fontSizes[size];
+  return {
+    ...tightlyConstrainedSizeStyle(bubbleSize),
+    borderRadius: bubbleBorderRadii[shape][size],
+    fontSize: fontSize,
+    lineHeight: `${fontSize}px`,
+    ...(shape === BubbleShape.circle && marginLeftRight(circleMargins[size])),
+    ...(shape === BubbleShape.diamond && bubbleStyles.diamond)
+  };
 }
+
+/**
+ * ======================================
+ * Progress styles
+ * ======================================
+ */
 
 /**
  * Get border and background styling based on level and student progress.
