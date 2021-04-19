@@ -123,6 +123,41 @@ module UsersHelper
     user_data
   end
 
+  # Get level progress for a set of users within this script.
+  # @param [Enumerable<User>] users
+  # @param [Script] script
+  # @return [Hash]
+  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
+  #   {
+  #     "1": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     },
+  #     "2": {
+  #       "135": {"status": "perfect", "result": 100}
+  #       "136": {"status": "perfect", "result": 100}
+  #     }
+  #   }
+  def script_progress_for_users(users, script)
+    user_levels = User.user_levels_by_user_by_level(users, script)
+    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
+    progress_by_user = users.inject({}) do |progress, user|
+      progress[user.id] = merge_user_progress_by_level(
+        script: script,
+        user: user,
+        user_levels_by_level: user_levels[user.id],
+        paired_user_levels: paired_user_levels_by_user[user.id],
+        include_timestamp: true
+      )
+      progress
+    end
+    timestamp_by_user = progress_by_user.transform_values do |user|
+      user.values.map {|level| level[:last_progress_at]}.compact.max
+    end
+
+    [progress_by_user, timestamp_by_user]
+  end
+
   # Merge the progress for the specified script and user into the user_data result hash.
   private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     return user_data unless user
