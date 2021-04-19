@@ -94,7 +94,7 @@ export default class UnitCalendar extends React.Component {
             lessonClone.isStart = true;
           }
           lessonClone.duration = weeklyInstructionalMinutes - currMinutes;
-          if (lesson.duration - lessonClone.duration < lessonClone.duration) {
+          if (lesson.duration - lessonClone.duration <= lessonClone.duration) {
             lessonClone.isMajority = true;
           }
           currWeek.push(lessonClone);
