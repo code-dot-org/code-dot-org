@@ -4,6 +4,8 @@ import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
+import * as utils from '@cdo/apps/utils';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, loadVideoSpy, defaultProps;
@@ -41,6 +43,9 @@ describe('LevelDetailsDialogTest', () => {
   });
 
   it('links to level url', () => {
+    sinon.stub(firehoseClient, 'putRecord');
+    sinon.stub(utils, 'windowOpen');
+
     const wrapper = shallow(
       <LevelDetailsDialog
         {...defaultProps}
@@ -54,7 +59,13 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     const levelLink = wrapper.find('Button').at(1);
-    expect(levelLink.props().href).to.equal('level.url');
+    levelLink.simulate('click');
+    expect(firehoseClient.putRecord).to.have.been.calledOnce;
+    firehoseClient.putRecord.yieldTo('callback');
+    expect(utils.windowOpen).to.have.been.calledWith('level.url');
+
+    utils.windowOpen.restore();
+    firehoseClient.putRecord.restore();
   });
 
   it('can display an external markdown level', () => {
