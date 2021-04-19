@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import JavalabView from './JavalabView';
-import javalab, {getSources, setAllSources} from './javalabRedux';
+import javalab, {
+  getSources,
+  setAllSources,
+  appendOutputLog
+} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
+import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 
 /**
@@ -21,6 +26,7 @@ const MOBILE_PORTRAIT_WIDTH = 600;
 const Javalab = function() {
   this.skin = null;
   this.level = null;
+  this.channelId = null;
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
@@ -43,6 +49,7 @@ Javalab.prototype.init = function(config) {
 
   this.skin = config.skin;
   this.level = config.level;
+  this.channelId = config.channel;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -61,8 +68,10 @@ Javalab.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
 
   config.getCode = this.getCode.bind(this);
+  const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
+  const onInputMessage = this.onInputMessage.bind(this);
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
@@ -118,8 +127,10 @@ Javalab.prototype.init = function(config) {
     <Provider store={getStore()}>
       <JavalabView
         onMount={onMount}
+        onRun={onRun}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
+        onInputMessage={onInputMessage}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -139,6 +150,21 @@ Javalab.prototype.beforeUnload = function(event) {
   } else {
     delete event.returnValue;
   }
+};
+
+// Called by the Javalab app when it wants execute student code.
+Javalab.prototype.onRun = function() {
+  this.javabuilderConnection = new JavabuilderConnection(
+    this.channelId,
+    this.level.javabuilderUrl,
+    message => getStore().dispatch(appendOutputLog(message))
+  );
+  this.javabuilderConnection.connectJavabuilder();
+};
+
+// Called by Javalab console to send a message to Javabuilder.
+Javalab.prototype.onInputMessage = function(message) {
+  this.javabuilderConnection.sendMessage(message);
 };
 
 // Called by the Javalab app when it wants to go to the next level.
