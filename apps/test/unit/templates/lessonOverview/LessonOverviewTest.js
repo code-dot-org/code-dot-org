@@ -5,6 +5,7 @@ import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/l
 import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -278,5 +279,29 @@ describe('LessonOverview', () => {
     expect(
       wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
     ).to.be.true;
+  });
+
+  it('renders dropdown button with links to printing options', () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/lesson_plan.pdf',
+      '/link/to/script_resources.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plan',
+      'Print Handouts'
+    ]);
   });
 });
