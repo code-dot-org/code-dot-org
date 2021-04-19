@@ -239,6 +239,12 @@ class Lesson < ApplicationRecord
     end
   end
 
+  def script_resource_pdf_url
+    if script.is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(script)
+    end
+  end
+
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -277,7 +283,6 @@ class Lesson < ApplicationRecord
         unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
-
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
@@ -401,7 +406,10 @@ class Lesson < ApplicationRecord
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
-      courseVersionStandardsUrl: course_version_standards_url
+      courseVersionStandardsUrl: course_version_standards_url,
+      isVerifiedTeacher: user&.authorized_teacher?,
+      hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
+      scriptResourcesPdfUrl: script_resource_pdf_url
     }
   end
 
@@ -706,6 +714,10 @@ class Lesson < ApplicationRecord
     end
     grouped_resources.delete('Verified Teacher')
     grouped_resources
+  end
+
+  def lesson_plan_has_verified_resources
+    resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
   private

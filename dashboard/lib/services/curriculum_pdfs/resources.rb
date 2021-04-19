@@ -10,6 +10,20 @@ module Services
     module Resources
       extend ActiveSupport::Concern
       class_methods do
+        def get_script_resources_pathname(script)
+          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
+          script_overview_pathname = get_script_overview_pathname(script)
+          return nil unless script_overview_pathname
+          subdirectory = File.dirname(script_overview_pathname)
+          return Pathname.new(File.join(subdirectory, filename))
+        end
+
+        def get_script_resources_url(script)
+          pathname = get_script_resources_pathname(script)
+          return nil unless pathname.present?
+          File.join(get_base_url, pathname)
+        end
+
         def generate_script_resources_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
@@ -93,22 +107,30 @@ module Services
           path = File.join(directory, filename)
           return path if File.exist?(path)
 
-          if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
-            # We don't want to export forms
-            return nil if resource.url.start_with?("https://docs.google.com/forms")
-            begin
-              export_from_google(resource.url, path)
+          begin
+            if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
+              # We don't want to export forms
+              return nil if resource.url.start_with?("https://docs.google.com/forms")
+              begin
+                export_from_google(resource.url, path)
+                return path
+              rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+                ChatClient.log(
+                  "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+                  color: 'red'
+                )
+                return nil
+              end
+            elsif resource.url.end_with?(".pdf")
+              IO.copy_stream(URI.open(resource.url), path)
               return path
-            rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error, URI::InvalidURIError => e
-              ChatClient.log(
-                "error from Google when trying to fetch PDF for resource #{resource.key.inspect}: #{e}",
-                color: 'red'
-              )
-              return nil
             end
-          elsif resource.url.end_with?(".pdf")
-            IO.copy_stream(URI.open(resource.url), path)
-            return path
+          rescue URI::InvalidURIError, OpenURI::HTTPError => e
+            ChatClient.log(
+              "URI error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+              color: 'red'
+            )
+            return nil
           end
         end
       end

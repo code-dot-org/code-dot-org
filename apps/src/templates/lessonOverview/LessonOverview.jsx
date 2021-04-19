@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
@@ -21,6 +22,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import LessonStandards, {ExpandMode} from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 const styles = {
   frontPage: {
@@ -58,6 +60,10 @@ const styles = {
   titleNoTopMargin: {
     marginTop: 0
   },
+  dropdowns: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
   standardsHeaderAndButton: {
     display: 'flex',
     flexDirection: 'row',
@@ -73,11 +79,46 @@ class LessonOverview extends Component {
     // from redux
     announcements: PropTypes.arrayOf(announcementShape),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
+    isVerifiedTeacher: PropTypes.bool.isRequired,
+    hasVerifiedResources: PropTypes.bool.isRequired
+  };
+
+  compilePdfDropdownOptions = () => {
+    const {lessonPlanPdfUrl, scriptResourcesPdfUrl} = this.props.lesson;
+    const options = [];
+    if (lessonPlanPdfUrl) {
+      options.push({
+        key: 'lessonPlan',
+        name: i18n.printLessonPlan(),
+        url: lessonPlanPdfUrl
+      });
+    }
+    if (scriptResourcesPdfUrl) {
+      options.push({
+        key: 'scriptResource',
+        name: i18n.printHandouts(),
+        url: scriptResourcesPdfUrl
+      });
+    }
+    return options;
   };
 
   render() {
-    const {lesson, announcements, isSignedIn, viewAs} = this.props;
+    const {
+      lesson,
+      announcements,
+      isSignedIn,
+      viewAs,
+      isVerifiedTeacher,
+      hasVerifiedResources
+    } = this.props;
+
+    const displayVerifiedResourcesNotification =
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
+
+    const pdfDropdownOptions = this.compilePdfDropdownOptions();
+
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
@@ -88,17 +129,22 @@ class LessonOverview extends Component {
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <div>
-              {lesson.lessonPlanPdfUrl && (
-                <Button
-                  __useDeprecatedTag
-                  color={Button.ButtonColor.gray}
-                  download
-                  href={lesson.lessonPlanPdfUrl}
-                  style={{marginRight: 10}}
-                  target="_blank"
-                  text={i18n.printLessonPlan()}
-                />
+            <div style={styles.dropdowns}>
+              {pdfDropdownOptions.length > 0 && (
+                <div style={{marginRight: 5}}>
+                  <DropdownButton
+                    color={Button.ButtonColor.gray}
+                    href={lesson.lessonPlanPdfUrl}
+                    target="_blank"
+                    text={i18n.printingOptions()}
+                  >
+                    {pdfDropdownOptions.map(option => (
+                      <a key={option.key} href={option.url}>
+                        {option.name}
+                      </a>
+                    ))}
+                  </DropdownButton>
+                </div>
               )}
               <LessonNavigationDropdown lesson={lesson} />
             </div>
@@ -109,6 +155,12 @@ class LessonOverview extends Component {
             announcements={announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
+          />
+        )}
+        {displayVerifiedResourcesNotification && (
+          <VerifiedResourcesNotification
+            width={styleConstants['content-width']}
+            inLesson={true}
           />
         )}
         <h1>
@@ -270,5 +322,7 @@ export const UnconnectedLessonOverview = LessonOverview;
 export default connect(state => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  isVerifiedTeacher: state.verifiedTeacher.isVerified,
+  hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources
 }))(LessonOverview);
