@@ -287,6 +287,27 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal script.summarize_for_lesson_show(true), summary[:unit]
   end
 
+  test 'lesson_plan_has_verified_resources is true for lesson with verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    assert lesson.lesson_plan_has_verified_resources
+  end
+
+  test 'lesson_plan_has_verified_resources is false for lesson without verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    refute lesson.lesson_plan_has_verified_resources
+  end
+
   test 'summarize lesson for student lesson plan combines student and for all resources' do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -817,6 +838,25 @@ class LessonTest < ActiveSupport::TestCase
       new_lesson.student_lesson_plan_pdf_url,
       "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
     )
+  end
+
+  test 'script_resource_pdf_url gets url to script resources pdf for migrated script' do
+    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_equal(
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name} - Resources.pdf",
+      lesson.script_resource_pdf_url
+    )
+  end
+
+  test 'script_resource_pdf_url is nil for non-migrated script' do
+    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_nil lesson.script_resource_pdf_url
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
