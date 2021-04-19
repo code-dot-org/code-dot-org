@@ -28,7 +28,7 @@ class ModelSummary extends Component {
   // Display text with a typewritter effect.
   typeWriter(text, htmlID) {
     let i = 0;
-    const msDelay = 65;
+    const msDelay = 75;
 
     let typeWriterHelper = () => {
       if (i >= text.length) {
