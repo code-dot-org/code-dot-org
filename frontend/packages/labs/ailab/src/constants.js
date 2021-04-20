@@ -508,14 +508,16 @@ export const styles = {
   modelCardHeader: {
     marginBottom: "10px",
     marginTop: 0,
-    fontSize: 18
+    fontSize: 18,
+    fontFamily: '"Gotham 5r", sans-serif'
   },
 
   modelCardHeading: {
     fontSize: 14,
     marginTop: 0,
     marginBottom: 5,
-    textAlign: "center"
+    textAlign: "center",
+    fontFamily: '"Gotham 5r", sans-serif'
   },
 
   modelCardContent: {
