@@ -5,6 +5,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const DEFAULT_MARGIN = 7;
 
@@ -71,6 +72,7 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   getModelList = () => {
+    this.setState({isModelListPending: true});
     $.ajax({
       url: '/api/v1/ml_models/names',
       method: 'GET'
@@ -157,6 +159,7 @@ export default class ModelManagerDialog extends React.Component {
           style={styles.dialog}
         >
           <h1 style={styles.header}>AI Trained Models</h1>
+          {this.state.isModelListPending && <Spinner />}
           <div style={styles.left}>
             <select
               name="model"
