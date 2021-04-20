@@ -160,47 +160,51 @@ export default class ModelManagerDialog extends React.Component {
         >
           <h1 style={styles.header}>AI Trained Models</h1>
           {this.state.isModelListPending && <Spinner />}
-          <div style={styles.left}>
-            <select
-              name="model"
-              ref={element => (this.root = element)}
-              onChange={this.handleChange}
-              style={{marginBottom: 0}}
-            >
-              {this.state.models.map(model => (
-                <option key={model.id} value={model.id}>
-                  {model.name}
-                </option>
-              ))}
-            </select>
-            {noModels && (
-              <div style={styles.message}>
-                You have not trained any AI models yet.
+          {!this.state.isModelListPending && (
+            <div>
+              <div style={styles.left}>
+                <select
+                  name="model"
+                  ref={element => (this.root = element)}
+                  onChange={this.handleChange}
+                  style={{marginBottom: 0}}
+                >
+                  {this.state.models.map(model => (
+                    <option key={model.id} value={model.id}>
+                      {model.name}
+                    </option>
+                  ))}
+                </select>
+                {noModels && (
+                  <div style={styles.message}>
+                    You have not trained any AI models yet.
+                  </div>
+                )}
+                <br />
+                <Button
+                  text={'Import'}
+                  color={Button.ButtonColor.orange}
+                  onClick={this.importMLModel}
+                  disabled={noModels}
+                  isPending={this.state.isImportPending}
+                  pendingText={'Importing...'}
+                />
+                {showDeleteButton && (
+                  <Button
+                    text={'Delete'}
+                    color={Button.ButtonColor.red}
+                    onClick={this.showDeleteConfirmation}
+                    disabled={noModels}
+                    icon={'trash'}
+                    iconClassName={'fa-trash'}
+                  />
+                )}
               </div>
-            )}
-            <br />
-            <Button
-              text={'Import'}
-              color={Button.ButtonColor.orange}
-              onClick={this.importMLModel}
-              disabled={noModels}
-              isPending={this.state.isImportPending}
-              pendingText={'Importing...'}
-            />
-            {showDeleteButton && (
-              <Button
-                text={'Delete'}
-                color={Button.ButtonColor.red}
-                onClick={this.showDeleteConfirmation}
-                disabled={noModels}
-                icon={'trash'}
-                iconClassName={'fa-trash'}
-              />
-            )}
-          </div>
-          <div style={styles.right}>
-            <ModelCard model={this.state.selectedModel} />
-          </div>
+              <div style={styles.right}>
+                <ModelCard model={this.state.selectedModel} />
+              </div>
+            </div>
+          )}
         </BaseDialog>
         <BaseDialog
           isOpen={this.state.confirmDialogOpen}
