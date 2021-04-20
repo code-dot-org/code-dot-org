@@ -1,0 +1,56 @@
+---
+title: CS-focused Scholarships
+video_player: true
+theme: responsive
+---
+<a id="top"></a>
+<h1>CS-focused Scholarships</h1>
+<p>xxxxxxxxxxx..................</p>
+
+<br>
+
+<p style="text-align:center"><a href="#featured">Featured scholarships</a> | <a href="#search">Search for scholarships</a></p>
+
+<a id="featured"></a>
+<h2>Featured scholarships for students from underrepresented groups:</h2>
+<div class="col-33" style="border:20px solid white">
+  <a href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank">
+    <img src="/images/avatars/microsoft.jpg" style="width:90%; text-align:center" alt="Microsoft logo">
+  </a>
+  <a href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank"><h3 style="color:#7665a0"><strong>Blacks at Microsoft Scholarship</strong></h3></a>
+  <p>The Blacks at Microsoft (BAM) group offers a number of scholarships to high school students of African descent planning on majoring in engineering, computer science, or business.</p>
+  <p><i>Application period: November-March</i></p>
+</div>
+<div class="col-33" style="border:20px solid white">
+  <a href="https://edgepathways.com/scholarship/" target="_blank">
+    <img src="/images/beyond/edge-pathways.png" style="width:90%; text-align:center" alt="Edge Pathways logo">
+  </a>
+  <a href="https://edgepathways.com/scholarship/" target="_blank"><h3 style="color:#7665a0"><strong>Edge Pathways Edge Scholars</strong></h3></a>
+  <p>Edge Pathways, in partnership with University of New Haven (CT), offers full scholarships (worth $25,000) to high school students from underserved communities planning on majoring in a STEM subject.</p>
+  <p><i>Application period: April-June</i></p>
+</div>
+<div class="col-33" style="border:20px solid white">
+  <a href="https://buildyourfuture.withgoogle.com/scholarships/" target="_blank">
+    <img src="/images/avatars/google.png" style="width:90%; text-align:center" alt="Google logo">
+  </a>
+  <a href="https://buildyourfuture.withgoogle.com/scholarships/" target="_blank"><h3 style="color:#7665a0"><strong>Scholarships+ from Google</strong></h3></a>
+  <p>Google offers a number of scholarships to students that identify with groups historically excluded from the technology industry.</p>
+  <p><i>Application period: varies</i></p>
+</div>
+
+<div style="clear: both"></div>
+
+<a id="search"></a>
+<h2>Search for scholarships:</h2>
+
+<a href="https://www.careeronestop.org/toolkit/training/find-scholarships.aspx" target="_blank"><h3 style="color:#7665a0"><strong>CareerOneStop’s scholarship finder</strong></h3></a>
+<p>Searchable database of college scholarships from the U.S. Department of Labor. Use keywords to search, or sort using filters.</p>
+
+<a href="https://www.niche.com/colleges/scholarships/" target="_blank"><h3 style="color:#7665a0"><strong>Niche’s scholarship finder</strong></h3></a>
+<p>Searchable database of college scholarships from Niche. Sort using filters.</p>
+
+<a href="http://www.collegescholarships.org/financial-aid/" target="_blank"><h3 style="color:#7665a0"><strong>CollegeScholarships.org</strong></h3></a>
+<p>Searchable database of college scholarships. Use keywords to search, or sort using filters.</p>
+
+<a href="https://www.computerscience.org/scholarships-overview/" target="_blank"><h3 style="color:#7665a0"><strong>ComputerScience.org</strong></h3></a>
+<p>Curated list of computer science scholarships.</p>

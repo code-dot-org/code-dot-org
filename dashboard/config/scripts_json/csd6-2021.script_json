@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-03-26 15:41:24 UTC",
+    "serialized_at": "2021-04-20 17:48:09 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -164,9 +164,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
+        "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
         "student_overview": "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n",
-        "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The `onBoardEvent()` block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
+        "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "1. **Attach an event handler to a hardware input**\n\n\tCode Studio: See rubric on bubble 3.\n\n2. **Choose the appropriate event for a given scenario**\n\n\tWrap Up: Students should describe different scenarios that would be more appropriate for different events."
       },
@@ -1711,7 +1711,7 @@
       "key": "5f73a5a3-c6bd-424f-b8a8-89fa0bc9ca56",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\r\n\r\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\r\n\r\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.",
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -2852,7 +2852,7 @@
       "key": "61efbeb1-5fcd-4dec-9265-4628f24745de",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**  When you needed to access the pitch and roll of the accelerometer in the last lesson, you used the block `accelerometer.getOrientation`, and you chose whether to get the pitch or the roll.  Why do you think the creators make the program work that way, rather than having two blocks, one for the pitch and one for the roll?",
+        "description": "**Prompt:**  When you needed to access the pitch and roll of the accelerometer in the last lesson, you used the block [`accelerometer.getOrientation`(#f78183)](/docs/applab/accelerometer.getOrientation/), and you chose whether to get the pitch or the roll.  Why do you think the creators make the program work that way, rather than having two blocks, one for the pitch and one for the roll?",
         "tips": [
           {
             "type": "discussionGoal",
@@ -4153,7 +4153,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Events",
         "level_keys": [
@@ -4179,7 +4179,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Events",
         "level_keys": [
@@ -4231,7 +4231,7 @@
       "chapter": 31,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4257,7 +4257,7 @@
       "chapter": 32,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4283,7 +4283,7 @@
       "chapter": 33,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4309,7 +4309,7 @@
       "chapter": 34,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4335,7 +4335,7 @@
       "chapter": 35,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4361,7 +4361,7 @@
       "chapter": 36,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4387,7 +4387,7 @@
       "chapter": 37,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Extra Challenge: Sound Board",
         "level_keys": [
@@ -6935,7 +6935,7 @@
       "chapter": 135,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -6961,7 +6961,7 @@
       "chapter": 136,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -6987,7 +6987,7 @@
       "chapter": 137,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7013,7 +7013,7 @@
       "chapter": 138,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7039,7 +7039,7 @@
       "chapter": 139,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7065,7 +7065,7 @@
       "chapter": 140,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7091,7 +7091,7 @@
       "chapter": 141,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7117,7 +7117,7 @@
       "chapter": 142,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7143,7 +7143,7 @@
       "chapter": 143,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7169,7 +7169,7 @@
       "chapter": 144,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7195,7 +7195,7 @@
       "chapter": 145,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7221,7 +7221,7 @@
       "chapter": 146,
       "position": 12,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7247,7 +7247,7 @@
       "chapter": 147,
       "position": 13,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7299,7 +7299,7 @@
       "chapter": 149,
       "position": 15,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7325,7 +7325,7 @@
       "chapter": 150,
       "position": 16,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -10312,6 +10312,9 @@
       }
     }
   ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
     {
       "key": "innovation",
@@ -11667,5 +11670,8 @@
         "standard.shortcode": "2-CS-03"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -477,7 +477,9 @@ StudioApp.prototype.init = function(config) {
   if (config.locale !== 'en_us' && config.skinId === 'letters') {
     this.displayWorkspaceAlert(
       'error',
-      <div>{msg.englishOnlyWarning({nextStage: config.stagePosition + 1})}</div>
+      <div>
+        {msg.englishOnlyWarning({nextStage: config.lessonPosition + 1})}
+      </div>
     );
   }
 

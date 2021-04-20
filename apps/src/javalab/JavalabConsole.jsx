@@ -69,6 +69,7 @@ function moveCaretToEndOfDiv(element) {
 
 class JavalabConsole extends React.Component {
   static propTypes = {
+    onInputMessage: PropTypes.func.isRequired,
     // populated by redux
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
@@ -112,12 +113,15 @@ class JavalabConsole extends React.Component {
   }
 
   onInputKeyDown = e => {
+    const {appendInputLog, onInputMessage} = this.props;
     const input = e.target.value;
     if (e.keyCode === KeyCodes.ENTER) {
       e.preventDefault();
       e.target.value = '';
-      this.state.commandHistory.push(input);
-      this.props.appendInputLog(input);
+      // Add a newline to maintain consistency with Java command line input.
+      this.state.commandHistory.push(input + '\n');
+      appendInputLog(input);
+      onInputMessage(input);
     } else if (e.keyCode === KeyCodes.UP) {
       e.target.value = this.state.commandHistory.goBack(input);
       moveCaretToEndOfDiv(e.target);
