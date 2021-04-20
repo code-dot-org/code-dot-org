@@ -502,7 +502,6 @@ export const styles = {
     backgroundColor: "rgb(198, 202, 205)",
     borderRadius: "5px",
     padding: "20px",
-    overflow: "scroll",
     whiteSpace: "normal"
   },
 
@@ -531,9 +530,4 @@ export const styles = {
     marginBottom: "10px",
     padding: "10px"
   },
-
-  botTextContainer: {
-    textAlign: "center",
-    padding: "0px 50px"
-  }
 };
