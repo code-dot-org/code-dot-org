@@ -69,14 +69,19 @@ export const activityShape = PropTypes.shape({
 
 export const lessonShape = PropTypes.shape({
   unit: PropTypes.shape({
-    displayName: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    lessons: PropTypes.arrayOf(
+    lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
-        position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       })
     ).isRequired
   }).isRequired,
@@ -97,14 +102,19 @@ export const lessonShape = PropTypes.shape({
 
 export const studentLessonShape = PropTypes.shape({
   unit: PropTypes.shape({
-    displayName: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    lessons: PropTypes.arrayOf(
+    lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
-        position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       })
     ).isRequired
   }).isRequired,
@@ -119,11 +129,13 @@ export const studentLessonShape = PropTypes.shape({
 });
 
 export const navigationLessonShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
   unit: PropTypes.shape({
     lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
         displayName: PropTypes.string.isRequired,
+        userFacing: PropTypes.bool.isRequired,
         lessons: PropTypes.arrayOf(
           PropTypes.shape({
             key: PropTypes.string.isRequired,

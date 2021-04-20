@@ -155,8 +155,8 @@ class LessonGroup < ApplicationRecord
   def summarize_for_lesson_dropdown(is_student = false)
     {
       key: key,
-      display_name: localized_display_name,
-      user_facing: user_facing,
+      displayName: localized_display_name,
+      userFacing: user_facing,
       lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
   end
