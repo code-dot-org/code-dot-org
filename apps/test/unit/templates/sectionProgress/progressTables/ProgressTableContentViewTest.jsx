@@ -10,6 +10,10 @@ import {
   fakeStudents,
   fakeStudentLevelProgress
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import {
+  fakeRowsForStudents,
+  fakeDetailRowsForStudent
+} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 import sinon from 'sinon';
 
 const STUDENTS = fakeStudents(3);
@@ -21,8 +25,13 @@ const LESSON_3 = fakeLessonWithLevels({
 });
 const LESSONS = [LESSON_1, LESSON_2, LESSON_3];
 
+const STUDENT_ROWS = fakeRowsForStudents(STUDENTS);
+
+const FORMATTERS = [sinon.stub(), sinon.stub(), sinon.stub()];
+
 const DEFAULT_PROPS = {
-  section: {id: 1, students: STUDENTS},
+  rows: STUDENT_ROWS,
+  onRow: () => {},
   scriptData: {
     id: 1,
     name: 'csd1-2020',
@@ -33,7 +42,7 @@ const DEFAULT_PROPS = {
   levelProgressByStudent: fakeStudentLevelProgress(LESSON_1.levels, STUDENTS),
   onClickLesson: () => {},
   columnWidths: [50, 100, 75, 50],
-  lessonCellFormatter: () => {},
+  lessonCellFormatters: FORMATTERS,
   extraHeaderFormatters: [],
   needsGutter: false,
   onScroll: () => {},
@@ -46,6 +55,12 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('ProgressTableContentView', () => {
+  afterEach(() => {
+    FORMATTERS.forEach(formatter => {
+      formatter.resetHistory();
+    });
+  });
+
   it('displays lesson number as a ProgressTableLessonNumber', () => {
     const wrapper = setUp();
     // one for each of the 3 lessons
@@ -93,10 +108,20 @@ describe('ProgressTableContentView', () => {
     expect(onScrollSpy).to.have.been.called;
   });
 
-  it('calls lessonCellFormatter for each cell in the body', () => {
-    const lessonCellFormatterSpy = sinon.spy();
-    setUp({lessonCellFormatter: lessonCellFormatterSpy});
-    const expectedFormatCallCount = STUDENTS.length * LESSONS.length;
-    expect(lessonCellFormatterSpy.callCount).to.equal(expectedFormatCallCount);
+  it('calls primary lessonCellFormatter for each cell in the body', () => {
+    setUp();
+    const expectedCallCount = STUDENTS.length * LESSONS.length;
+    expect(FORMATTERS[0].callCount).to.equal(expectedCallCount);
+  });
+
+  it('calls each lessonCellFormatter when detail rows are passed in', () => {
+    // reactabular initially only renders three rows, so we use a single
+    // student to avoid needing to workaround that.
+    const detailRows = fakeDetailRowsForStudent(STUDENTS[0]);
+    setUp({rows: [STUDENT_ROWS[0], ...detailRows]});
+    const expectedCallCount = LESSONS.length;
+    expect(FORMATTERS[0].callCount).to.equal(expectedCallCount);
+    expect(FORMATTERS[1].callCount).to.equal(expectedCallCount);
+    expect(FORMATTERS[2].callCount).to.equal(expectedCallCount);
   });
 });

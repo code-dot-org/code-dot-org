@@ -1,9 +1,15 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
+import sinon from 'sinon';
+import i18n from '@cdo/locale';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
+import {
+  fakeRowsForStudents,
+  fakeDetailRowsForStudent
+} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 
 const TEST_STUDENT_1 = {
   id: 1,
@@ -15,19 +21,20 @@ const TEST_STUDENT_2 = {
   name: 'Jamie'
 };
 
+const STUDENT_ROWS = fakeRowsForStudents([TEST_STUDENT_1, TEST_STUDENT_2]);
+const DETAIL_ROWS = fakeDetailRowsForStudent(TEST_STUDENT_1);
+
 const DEFAULT_PROPS = {
-  section: {
-    id: 1,
-    students: [TEST_STUDENT_1, TEST_STUDENT_2]
-  },
+  sectionId: 1,
   scriptData: {
     id: 144,
     name: 'csd1'
   },
+  rows: STUDENT_ROWS,
+  onRow: () => {},
   headers: ['Lesson'],
   studentTimestamps: {3: 1610435096000, 4: 0},
-  localeCode: 'en-US',
-  needsGutter: false
+  onToggleRow: () => {}
 };
 
 const setUp = (overrideProps = {}) => {
@@ -48,13 +55,28 @@ describe('ProgressTableStudentList', () => {
     const wrapper = setUp();
     const studentRows = wrapper.find(Virtualized.Body).props().rows;
     expect(studentRows).to.have.length(2);
-    expect(studentRows.includes(TEST_STUDENT_1)).to.be.true;
-    expect(studentRows.includes(TEST_STUDENT_2)).to.be.true;
+    expect(studentRows.includes(STUDENT_ROWS[0])).to.be.true;
+    expect(studentRows.includes(STUDENT_ROWS[1])).to.be.true;
   });
 
-  it('displays body with overflow scroll if needsGutter is true', () => {
-    const wrapper = setUp({needsGutter: true});
-    const virtualizedBodyComponent = wrapper.find(Virtualized.Body);
-    expect(virtualizedBodyComponent.props().style.overflowX).to.equal('scroll');
+  it('displays detail labels if detail rows are passed in', () => {
+    // ProgressTableStudentName is a connected component so we need to stub
+    // the student name formatter to avoid setting up a store
+    sinon
+      .stub(ProgressTableStudentList.prototype, 'studentNameFormatter')
+      .callsFake(_ => <div />);
+
+    // reactabular initially only renders three rows, so we use a single
+    // student to avoid needing to workaround that.
+    const rows = [STUDENT_ROWS[0], ...DETAIL_ROWS];
+
+    // we need to use mount for the rows to actually be rendered
+    const wrapper = mount(
+      <ProgressTableStudentList {...DEFAULT_PROPS} rows={rows} />
+    );
+    expect(wrapper.contains(i18n.timeSpentMins())).to.be.true;
+    expect(wrapper.contains(i18n.lastUpdatedTitle())).to.be.true;
+
+    sinon.restore();
   });
 });

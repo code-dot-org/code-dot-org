@@ -18,5 +18,11 @@
     "has_verified_resources": true,
     "visible": true,
     "is_stable": true
-  }
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
 }

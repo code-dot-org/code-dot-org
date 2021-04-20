@@ -1,6 +1,12 @@
 class ProgrammingExpressionsController < ApplicationController
-  # GET /programmingexpressionsearch
+  # GET /programming_expressions/search
   def search
-    render json: ProgrammingExpressionAutocomplete.get_search_matches(params[:query], params[:limit], params[:programmingEnvironmentId])
+    programming_environment =
+      if params.key? :programmingEnvironmentId
+        ProgrammingEnvironment.find(params[:programmingEnvironmentId])
+      elsif params.key? :programmingEnvironmentName
+        ProgrammingEnvironment.find_by(name: params[:programmingEnvironmentName])
+      end
+    render json: ProgrammingExpressionAutocomplete.get_search_matches(params[:page], params[:query], programming_environment)
   end
 end

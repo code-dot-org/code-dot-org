@@ -11,7 +11,7 @@ class AbilityTest < ActiveSupport::TestCase
       @login_required_script_level = create(:script_level, script: script)
     end
 
-    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, hidden: true).tap do |script|
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true).tap do |script|
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true)
     end
   end
@@ -29,11 +29,11 @@ class AbilityTest < ActiveSupport::TestCase
 
     refute ability.can?(:read, Section)
 
-    refute ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
     assert ability.can?(:read, @public_script)
-    refute ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @login_required_script)
 
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)

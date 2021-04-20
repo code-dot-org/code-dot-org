@@ -286,11 +286,7 @@ class Blockly < Level
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
         set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
 
-        if script && !script.localize_long_instructions?
-          level_options.delete('longInstructions')
-        else
-          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
-        end
+        set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
         # Unintuitively, it is completely possible for a Blockly level to use
@@ -599,7 +595,10 @@ class Blockly < Level
     return nil if blocks.nil?
 
     block_xml = Nokogiri::XML(blocks, &:noblanks)
-    block_xml.xpath("//block[@type=\"variables_get\"]").each do |variable|
+    variables_get = block_xml.xpath("//block[@type=\"variables_get\"]")
+    variables_set = block_xml.xpath("//block[@type=\"variables_set\"]")
+    variables = variables_get + variables_set
+    variables.each do |variable|
       variable_name = variable.at_xpath('./title[@name="VAR"]')
       next unless variable_name
       localized_name = I18n.t(
@@ -790,5 +789,15 @@ class Blockly < Level
     if goal_override&.is_a?(String)
       self.goal_override = JSON.parse(goal_override)
     end
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        longInstructions: localized_long_instructions || long_instructions,
+        shortInstructions: localized_short_instructions || short_instructions,
+        skin: skin
+      }
+    )
   end
 end
