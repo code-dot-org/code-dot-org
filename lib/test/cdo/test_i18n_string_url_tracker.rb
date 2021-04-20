@@ -133,7 +133,7 @@ class TestI18nStringUrlTracker < Minitest::Test
   end
 
   def test_log_given_studio_script_url_should_only_log_the_script_name
-    test_record = {string_key: 'string.key', url: 'https://studio.code.org/s/dance-2019/stage/1/puzzle/1', source: 'test'}
+    test_record = {string_key: 'string.key', url: 'https://studio.code.org/s/dance-2019/lessons/1/levels/1', source: 'test'}
     expected_record = {string_key: 'string.key', url: 'https://studio.code.org/s/dance-2019', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)

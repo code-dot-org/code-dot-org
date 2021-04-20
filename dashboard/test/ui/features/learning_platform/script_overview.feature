@@ -4,7 +4,7 @@ Feature: Script overview page
     Given I create an authorized teacher-associated student named "Sally"
 
     # Make progress as student
-    And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     # Verify progress as student on script overview page
     And I am on "http://studio.code.org/s/allthethings"
@@ -17,7 +17,7 @@ Feature: Script overview page
 
     # Verify progress as teacher viewing themself and student on script overview page
     When I sign in as "Teacher_Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/stage/29/puzzle/4?level_name=2-3 Artist 1 new"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/s/allthethings"
     And I wait until element ".teacher-panel" is visible
     Then I verify progress for stage 29 level 4 is "perfect"

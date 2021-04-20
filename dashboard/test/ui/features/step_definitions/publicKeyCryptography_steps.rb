@@ -6,7 +6,7 @@ PUBLIC_KEY_CRYPTOGRAPHY_ALLTHETHINGS_STAGE = 31
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Public Key Cryptography test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/#{PUBLIC_KEY_CRYPTOGRAPHY_ALLTHETHINGS_STAGE}/puzzle/#{level_index}"
+    And I am on "http://studio.code.org/s/allthethings/lessons/#{PUBLIC_KEY_CRYPTOGRAPHY_ALLTHETHINGS_STAGE}/levels/#{level_index}"
     And I rotate to landscape
   STEPS
 end
