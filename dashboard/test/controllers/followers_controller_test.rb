@@ -137,8 +137,7 @@ class FollowersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to '/join'
-    # TODO: - Replace strings with i18n implementation
-    expected = 'We couldn\'t add you to this section. Please contact your teacher for help.'
+    expected = I18n.t('follower.error.restricted_section')
     assert_equal(expected, flash[:inline_alert])
   end
 
