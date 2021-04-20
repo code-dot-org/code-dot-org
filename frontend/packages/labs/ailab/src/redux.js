@@ -1150,12 +1150,6 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  if (panelId === "saveModel") {
-    if (![undefined, ""].includes(state.trainedModelDetails.name)) {
-      return false;
-    }
-  }
-
   if (panelId === "finish") {
     if (state.saveStatus !== "success") {
       return false;
@@ -1245,11 +1239,11 @@ export function getPanelButtons(state) {
       ? { panel: "modelSummary", text: "Save" }
       : null;
   } else if (state.currentPanel === "modelSummary") {
-  prev = { panel: "saveModel", text: "Back" };
-  next = isPanelAvailable(state, "finish")
-    ? { panel: "finish", text: "Finish" }
-    : null;
-}
+    prev = { panel: "saveModel", text: "Back" };
+    next = isPanelAvailable(state, "finish")
+      ? { panel: "finish", text: "Finish" }
+      : null;
+  }
 
   if (prev) {
     prev.enabled = isPanelEnabled(state, prev.panel);

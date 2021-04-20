@@ -22,7 +22,7 @@ class ModelSummary extends Component {
   componentDidMount() {
     // Add a timer to simulate loading when saving a model.
     let loadSpinner = () => this.setState({ isLoading: false });
-    setTimeout(loadSpinner, 2000);
+    setTimeout(loadSpinner, 1500);
   }
 
   render() {

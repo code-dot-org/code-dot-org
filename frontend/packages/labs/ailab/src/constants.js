@@ -502,7 +502,8 @@ export const styles = {
     backgroundColor: "rgb(198, 202, 205)",
     borderRadius: "5px",
     padding: "20px",
-    whiteSpace: "normal"
+    whiteSpace: "normal",
+    overflowY: "scroll"
   },
 
   modelCardHeader: {
