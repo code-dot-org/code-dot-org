@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-04-19 22:55:59 UTC",
+    "serialized_at": "2021-04-20 21:39:55 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -242,7 +242,7 @@
         "overview": "In this **skill-building** lesson, students will practice the concept of loops in programming puzzles where the goal is to help the squirrel reach the acorn.",
         "student_overview": "Help Scrat cover more ground using loops.",
         "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be repeated.",
-        "preparation": " - Review the previous unplugged lesson and develop questions to remind students why loops are used.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Gather supplies from previous Happy Loops to reuse for warm up\r\n - Make sure each student has a journal.",
+        "preparation": " - Review the previous unplugged lesson and develop questions to remind students why loops are used.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Gather supplies from previous Happy Loops to reuse for warm up\n - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1748,7 +1748,7 @@
       "key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming  - student video whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own"
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming**  - student video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
@@ -2010,7 +2010,7 @@
       "key": "62d22669-d8bd-4e18-a767-8269aa7322f8",
       "position": 3,
       "properties": {
-        "description": "Pull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows from the ***Game Pieces**  and ***Bonus Pack**, have students lay out a pattern that they think will get the Harvester to pick all the corn. Ask the students to share. See how many other students had the same answer!",
+        "description": "Pull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows, have students lay out a pattern that they think will get *Scrat* to the acorn. Ask the students to share. See how many other students had the same answer!",
         "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
@@ -2034,8 +2034,7 @@
       "key": "bfc26aa9-b856-47f4-86c0-36818d4d9c87",
       "position": 2,
       "properties": {
-        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop.",
-        "name": "Loops with Scrat"
+        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop."
       },
       "seeding_key": {
         "activity_section.key": "bfc26aa9-b856-47f4-86c0-36818d4d9c87",
@@ -2046,7 +2045,7 @@
       "key": "595fbc1f-baf6-446c-97dd-c89fa67a6baf",
       "position": 3,
       "properties": {
-        "progression_name": "Skill Buildingg"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "595fbc1f-baf6-446c-97dd-c89fa67a6baf",
@@ -3381,7 +3380,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Pair Programming ",
         "level_keys": [
@@ -3407,7 +3406,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3433,7 +3432,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3459,7 +3458,7 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3485,7 +3484,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3511,7 +3510,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Debugging with the Step Button",
         "level_keys": [
@@ -3537,7 +3536,7 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3563,7 +3562,7 @@
       "chapter": 29,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3589,7 +3588,7 @@
       "chapter": 30,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3616,7 +3615,7 @@
       "chapter": 31,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3642,7 +3641,7 @@
       "chapter": 32,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3668,7 +3667,7 @@
       "chapter": 33,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3694,7 +3693,7 @@
       "chapter": 34,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -3720,7 +3719,7 @@
       "chapter": 35,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4085,9 +4084,9 @@
       "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Buildingg",
+        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops1_2021"
         ]
@@ -4111,9 +4110,9 @@
       "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Buildingg",
+        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops2_2021"
         ]
@@ -4137,7 +4136,7 @@
       "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Ice Age Loops",
         "level_keys": [
@@ -4163,7 +4162,7 @@
       "chapter": 52,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4189,7 +4188,7 @@
       "chapter": 53,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4215,7 +4214,7 @@
       "chapter": 54,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4241,7 +4240,7 @@
       "chapter": 55,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4267,7 +4266,7 @@
       "chapter": 56,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4293,7 +4292,7 @@
       "chapter": 57,
       "position": 9,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4319,7 +4318,7 @@
       "chapter": 58,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4346,7 +4345,7 @@
       "chapter": 59,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4372,7 +4371,7 @@
       "chapter": 60,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [

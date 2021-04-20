@@ -20688,7 +20688,7 @@ en:
               key: Programming in Harvester
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
-              description_teacher: 'In this *skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. '
+              description_teacher: 'In this **skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             'Loops: Getting Loopy':
               key: 'Loops: Getting Loopy'
               name: Getting Loopy
@@ -21522,17 +21522,17 @@ en:
               key: Programming with Rey and BB-8
               name: Programming with Rey and BB-8
               description_student: 
-              description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
+              description_teacher: In this **skill-building** lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
             Programming in Harvester:
               key: Programming in Harvester
               name: Programming with Harvester
-              description_student: 
-              description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
+              description_student: Help the Harvester collect vegetables along a path.
+              description_teacher: 'In this **skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             Loops with Scrat:
               key: Loops with Scrat
               name: Loops with Scrat
-              description_student: 
-              description_teacher: Building on the concept of repeating instructions from "My Loopy Robotic Friends," this stage will have students using loops to get to the acorn more efficiently on Code.org.
+              description_student: Help Scrat cover more ground using loops.
+              description_teacher: In this **skill-building** lesson, students will practice the concept of loops in programming puzzles where the goal is to help the squirrel reach the acorn.
             Loops with Laurel:
               key: Loops with Laurel
               name: Loops with Laurel

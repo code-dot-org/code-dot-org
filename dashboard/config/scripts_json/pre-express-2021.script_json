@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-04-20 18:52:59 UTC",
+    "serialized_at": "2021-04-20 20:13:34 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -132,9 +132,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.",
+        "overview": "In this **skill-building** lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.",
         "purpose": "With transfer of knowledge in mind, this lesson gives students a new environment to practice the skills that they have been cultivating. Star Wars fans will jump for joy when they see these puzzles. Each puzzle in this series has been added to provide a deeper understanding of the basic concepts that they will be using throughout the rest of this course.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -151,10 +151,11 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
+        "overview": "In this **skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
         "purpose": "In this lesson, students will develop debugging skills and will continue developing their programming skills.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class\r\n - Locate or reprint supplies for Happy Maps\r\n - Make sure each student has a [r think-spot-journal/pre-express/2021]",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class\n - Make sure each student has a Reflection Journal.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Help the Harvester collect vegetables along a path."
       },
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
@@ -170,10 +171,11 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "Building on the concept of repeating instructions from \"My Loopy Robotic Friends,\" this stage will have students using loops to get to the acorn more efficiently on Code.org.",
+        "overview": "In this **skill-building** lesson, students will practice the concept of loops in programming puzzles where the goal is to help the squirrel reach the acorn.",
         "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using _loops_ is an important skill in programming because manually repeating commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be repeated.",
-        "preparation": " - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Make sure each student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "preparation": " - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a Reflection Journal.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Help Scrat cover more ground using loops."
       },
       "seeding_key": {
         "lesson.key": "Loops with Scrat",
@@ -520,11 +522,23 @@
       }
     },
     {
-      "key": "d23b7153-d73d-460a-8d97-9668e01bdabf",
+      "key": "b9c2620d-f076-4551-a849-08ba4ad04850",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9c2620d-f076-4551-a849-08ba4ad04850",
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "pre-express-2021"
+      }
+    },
+    {
+      "key": "d23b7153-d73d-460a-8d97-9668e01bdabf",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "d23b7153-d73d-460a-8d97-9668e01bdabf",
@@ -535,7 +549,7 @@
     },
     {
       "key": "0e6c0fdb-f006-457d-9ded-d3719ac7180e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 15
@@ -548,21 +562,22 @@
       }
     },
     {
-      "key": "b9c2620d-f076-4551-a849-08ba4ad04850",
-      "position": 4,
+      "key": "a653b35f-9c27-4961-a91a-578072f1ae35",
+      "position": 1,
       "properties": {
-        "name": "Levels"
+        "name": "Warm Up",
+        "duration": 5
       },
       "seeding_key": {
-        "lesson_activity.key": "b9c2620d-f076-4551-a849-08ba4ad04850",
-        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_activity.key": "a653b35f-9c27-4961-a91a-578072f1ae35",
+        "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021"
       }
     },
     {
       "key": "077ed20b-2456-412f-b744-33221b7412ac",
-      "position": 1,
+      "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 30
@@ -576,7 +591,7 @@
     },
     {
       "key": "3ca1441d-2369-43e8-b182-8fde56916045",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -589,24 +604,10 @@
       }
     },
     {
-      "key": "e041f274-e38d-49f8-86d2-2e32053288f4",
-      "position": 3,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e041f274-e38d-49f8-86d2-2e32053288f4",
-        "lesson.key": "Programming in Harvester",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
       "key": "65eecebd-7353-4fca-9e51-e34aa5e14a8e",
       "position": 1,
       "properties": {
-        "name": "Online Foundation: Preview Loops in Ice Age",
-        "duration": 0
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "65eecebd-7353-4fca-9e51-e34aa5e14a8e",
@@ -647,24 +648,10 @@
       "key": "5457f30a-9f1f-45f7-a772-81f44f1189ae",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "5457f30a-9f1f-45f7-a772-81f44f1189ae",
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
-      "key": "1b2d71f2-cd36-476c-a570-773e5dce43f2",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1b2d71f2-cd36-476c-a570-773e5dce43f2",
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021"
@@ -1404,7 +1391,7 @@
       "key": "5990c610-f353-48fd-9d5f-a813486a237f",
       "position": 1,
       "properties": {
-        "description": "Ask the students how they felt about the last lesson. \r\n\r\n - Which puzzles were too hard or too easy? \r\n - Which puzzles were frustrating or a lot of fun?\r\n - If they were to teach the lesson to a friend, which part of the lesson would they want to review?\r\n\r\nUse these questions to form a brief review of programming and debugging. If you think the class could benefit from it, you can go over the vocabulary words and definitions from the last lesson.\r\n\r\nIf you feel comfortable, also give a brief introduction to BB-8 from Star Wars. Many students may already be familiar with the lovable robot, but the introduction will surely build excitement.",
+        "description": "\nUse these questions about the last lesson,  \"Programming with Angry Birds\", to form a brief review of programming and debugging. \n\n - Which puzzles were too hard or too easy? \n - Which puzzles were frustrating or a lot of fun?\n - If they were to teach the lesson to a friend, which part of the lesson would they want to review?\n\nIf you feel comfortable, give a brief introduction to *BB-8* from *Star Wars*. Many students may already be familiar with the lovable robot, but the introduction will surely build excitement.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1413,11 +1400,55 @@
       }
     },
     {
+      "key": "5ff6bd4a-2e05-4098-80a6-5e011fa70518",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: Programming with Rey and BB-8",
+        "name": "Programming with Rey and BB-8"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ff6bd4a-2e05-4098-80a6-5e011fa70518",
+        "lesson_activity.key": "b9c2620d-f076-4551-a849-08ba4ad04850"
+      }
+    },
+    {
+      "key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2",
+        "lesson_activity.key": "b9c2620d-f076-4551-a849-08ba4ad04850"
+      }
+    },
+    {
+      "key": "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa",
+      "position": 3,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa",
+        "lesson_activity.key": "b9c2620d-f076-4551-a849-08ba4ad04850"
+      }
+    },
+    {
+      "key": "8a743287-1638-4c96-8c21-387ebf05d760",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760",
+        "lesson_activity.key": "b9c2620d-f076-4551-a849-08ba4ad04850"
+      }
+    },
+    {
       "key": "720aa090-bf1d-4934-9c4f-f8cad6b511ac",
       "position": 1,
       "properties": {
-        "description": "As we mentioned in the last lesson, we highly recommend viewing and using [r pair-programming-vid/pre-express/2021] as a class. Pair programming stimulates a discussion that can answer questions, review basic concepts, and build confidence with the subject.",
-        "name": "Online Puzzles\r"
+        "description": "We highly recommend viewing and using ***Pair Programming** video as a class. Pair programming stimulates a discussion that can answer questions, review basic concepts, and build confidence with the subject."
       },
       "seeding_key": {
         "activity_section.key": "720aa090-bf1d-4934-9c4f-f8cad6b511ac",
@@ -1428,8 +1459,8 @@
       "key": "4f8c5eb5-a782-4698-a471-19808d1dbbc4",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw a picture of BB-8 you guided through the maze today and add a list of the commands that you used.",
-        "name": "Journaling\r"
+        "description": "###Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a picture of BB-8 you guided through the maze today and add a list of the commands that you used.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "4f8c5eb5-a782-4698-a471-19808d1dbbc4",
@@ -1437,13 +1468,15 @@
       }
     },
     {
-      "key": "8a743287-1638-4c96-8c21-387ebf05d760",
+      "key": "6b656efc-0576-4c50-856b-5c9bc433e5b3",
       "position": 1,
       "properties": {
+        "name": "Introduction",
+        "description": "####Debugging, Persistence, and Frustration\n\n**Discuss:** Prepare students for today's online exercises by asking them what they would do if they thought they had a bug in their code. More specifically, what would they ask themselves? \n\n- Was everything in the first step right?\n- How about the second? Third?\n- Where did my program go wrong?\n- What does that tell me?\n    \n**Prompt**: **Debugging** can be frustrating! But persistence can help us get through it. What are some things we can do to persist through frustration? \n\nExample responses:\n\n- Count to 10\n- Take deep breaths\n- Journal about bugs we've found\n- Talk to a partner about bugs\n- Ask for help\n\n**Transition:** Let your students know that frustration is part of coding. Everyone gets bugs! It's okay if they think they have a bug but they can't find or fix it right away. Using strategies like those listed above can help them persist through frustration and solve any problem!"
       },
       "seeding_key": {
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760",
-        "lesson_activity.key": "b9c2620d-f076-4551-a849-08ba4ad04850"
+        "activity_section.key": "6b656efc-0576-4c50-856b-5c9bc433e5b3",
+        "lesson_activity.key": "a653b35f-9c27-4961-a91a-578072f1ae35"
       }
     },
     {
@@ -1451,7 +1484,7 @@
       "position": 1,
       "properties": {
         "description": "At this point, students should already be familiar with the programming environment. Some new things to look out for in this lesson are confusion about the debugging process or not remembering to use the `pick corn` block when the harvester reaches corn.",
-        "name": "Online Puzzles\r"
+        "name": "Programming with Harvester"
       },
       "seeding_key": {
         "activity_section.key": "0684b025-9c16-437c-936c-d9743cad2d94",
@@ -1464,7 +1497,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the *right* way to help classmates by:\r\n\r\n - Don't sit in their chair\r\n - Don't use their keyboard\r\n - Don't touch their mouse\r\n - Make sure the classmate can describe the solution before you walk away\r\n"
           }
@@ -1476,8 +1508,74 @@
       }
     },
     {
-      "key": "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1",
+      "key": "45d59019-4dd4-4a32-b08c-fd79528eab76",
       "position": 3,
+      "properties": {
+        "progression_name": "Video: The Harvester"
+      },
+      "seeding_key": {
+        "activity_section.key": "45d59019-4dd4-4a32-b08c-fd79528eab76",
+        "lesson_activity.key": "077ed20b-2456-412f-b744-33221b7412ac"
+      }
+    },
+    {
+      "key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407",
+        "lesson_activity.key": "077ed20b-2456-412f-b744-33221b7412ac"
+      }
+    },
+    {
+      "key": "629aedef-bd99-44af-a6bc-9ee890a1c7c8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Video: Debugging with the Step Button"
+      },
+      "seeding_key": {
+        "activity_section.key": "629aedef-bd99-44af-a6bc-9ee890a1c7c8",
+        "lesson_activity.key": "077ed20b-2456-412f-b744-33221b7412ac"
+      }
+    },
+    {
+      "key": "1dae474b-e6aa-4934-b8f8-e8521eadb593",
+      "position": 6,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593",
+        "lesson_activity.key": "077ed20b-2456-412f-b744-33221b7412ac"
+      }
+    },
+    {
+      "key": "fc22082b-67fd-47ec-8353-11c902f9ab4c",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc22082b-67fd-47ec-8353-11c902f9ab4c",
+        "lesson_activity.key": "077ed20b-2456-412f-b744-33221b7412ac"
+      }
+    },
+    {
+      "key": "6f0b2804-a745-47e0-8211-45bfc553e106",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f0b2804-a745-47e0-8211-45bfc553e106",
+        "lesson_activity.key": "077ed20b-2456-412f-b744-33221b7412ac"
+      }
+    },
+    {
+      "key": "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1",
+      "position": 9,
       "properties": {
         "description": "**Circulate:** During online activities, the role of the teacher is primarily one of encouragement and support. In addition to the ideas listed in the last lesson, some more ideas on how to do this are: \r\n\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\r\n\r\n**Transition:** Have students grab their Thinkspot Journals and take a moment to leave lessons for themselves."
       },
@@ -1490,8 +1588,8 @@
       "key": "94b18069-db8a-43d7-bbf0-8912ac563349",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw a time you found a bug in your code.",
-        "name": "Journaling\r"
+        "description": "###Journaling:\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a time you found a bug in your code.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "94b18069-db8a-43d7-bbf0-8912ac563349",
@@ -1499,20 +1597,11 @@
       }
     },
     {
-      "key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7",
-        "lesson_activity.key": "e041f274-e38d-49f8-86d2-2e32053288f4"
-      }
-    },
-    {
       "key": "f6ac49ff-86ee-444b-9e56-62de0b794363",
       "position": 1,
       "properties": {
-        "description": "To finish the connection, preview an online puzzle (or two) as a class."
+        "description": "To finish the connection, preview an online puzzle (or two) as a class.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "f6ac49ff-86ee-444b-9e56-62de0b794363",
@@ -1526,8 +1615,7 @@
         "description": "**Model:** Reveal an entire online puzzle from the progression to come. Work with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. Make sure to highlight the use of repeat blocks.",
         "tips": [
           {
-            "key": "content",
-            "type": "contentCorner",
+            "type": "teachingTip",
             "markdown": "### Teaching this course as a class?\r\nOur grade-aligned CS Fundamentals courses use unplugged lessons to build community and introduce tricky computer science concepts, including **loops**. Check out the lesson [Happy Loops](https://curriculum.code.org/csf-19/coursea/7/) from [Course A](https://curriculum.code.org/csf-19/coursea/) and [Getting Loopy](https://curriculum.code.org/csf-19/courseb/6/) from [Course B](https://curriculum.code.org/csf-19/courseb/)!\r\n"
           }
         ]
@@ -1565,7 +1653,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the *right* way to help classmates by:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
           }
@@ -1577,11 +1664,65 @@
       }
     },
     {
-      "key": "9a875694-a4f4-4cd2-8bf8-31f8441d4a50",
+      "key": "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574",
       "position": 3,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize [r pair-programming-vid/pre-express/2021] whenever possible\r\n - Encourage students with questions/challenges to start by asking their partner\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\r\n - Remind students to use the debugging process before you approach\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.",
-        "name": "Online Puzzles\r"
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574",
+        "lesson_activity.key": "0a77a438-3684-4874-b963-e5a75723888a"
+      }
+    },
+    {
+      "key": "eb340c7e-d71e-49fb-aaf8-73205f85d432",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: Ice Age Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb340c7e-d71e-49fb-aaf8-73205f85d432",
+        "lesson_activity.key": "0a77a438-3684-4874-b963-e5a75723888a"
+      }
+    },
+    {
+      "key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b",
+        "lesson_activity.key": "0a77a438-3684-4874-b963-e5a75723888a"
+      }
+    },
+    {
+      "key": "0a8a7f79-b1b7-436e-8a45-b6190c180164",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a8a7f79-b1b7-436e-8a45-b6190c180164",
+        "lesson_activity.key": "0a77a438-3684-4874-b963-e5a75723888a"
+      }
+    },
+    {
+      "key": "01ea78e0-acb4-4a08-8295-6257c3d3aa29",
+      "position": 7,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "01ea78e0-acb4-4a08-8295-6257c3d3aa29",
+        "lesson_activity.key": "0a77a438-3684-4874-b963-e5a75723888a"
+      }
+    },
+    {
+      "key": "9a875694-a4f4-4cd2-8bf8-31f8441d4a50",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming** video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "9a875694-a4f4-4cd2-8bf8-31f8441d4a50",
@@ -1592,8 +1733,8 @@
       "key": "0366b799-b555-4aef-b6c7-741c035590aa",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw Scrat and an acorn.\r\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
-        "name": "Journaling\r"
+        "description": "###Journaling:\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw *Scrat* and an acorn.\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "0366b799-b555-4aef-b6c7-741c035590aa",
@@ -1604,21 +1745,11 @@
       "key": "efb62b8a-4d4e-446b-aa68-1f20c45fc7a3",
       "position": 1,
       "properties": {
-        "description": "**So Moving**\r\n\r\n- Give the students pictures of actions or dance moves that they can do.\r\n\t- Have students arrange moves and add loops to choreograph their own dance.\r\n- Share the dances with the rest of the class.\r\n\r\n**Connect It Back**\r\n\r\n- Find some YouTube videos of popular dances that repeat themselves.\r\n- Can your class find the loops?\r\n- Try the same thing with songs!"
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n**So Moving**\n\n- Give the students pictures of actions or dance moves that they can do.\n\t- Have students arrange moves and add loops to choreograph their own dance.\n- Share the dances with the rest of the class.\n\n**Connect It Back**\n\n- Find some YouTube videos of popular dances that repeat themselves.\n- Can your class find the loops?\n- Try the same thing with songs!"
       },
       "seeding_key": {
         "activity_section.key": "efb62b8a-4d4e-446b-aa68-1f20c45fc7a3",
         "lesson_activity.key": "5457f30a-9f1f-45f7-a772-81f44f1189ae"
-      }
-    },
-    {
-      "key": "421468fa-947b-4961-8407-7bab7b345c6a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a",
-        "lesson_activity.key": "1b2d71f2-cd36-476c-a570-773e5dce43f2"
       }
     },
     {
@@ -2790,11 +2921,9 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "bb8_skinOverview_K-1_video_2021"
-        ]
+        "progression": "Video: Programming with Rey and BB-8"
       },
       "named_level": null,
       "bonus": null,
@@ -2805,7 +2934,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "5ff6bd4a-2e05-4098-80a6-5e011fa70518"
       },
       "level_keys": [
         "bb8_skinOverview_K-1_video_2021"
@@ -2814,12 +2943,10 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_starWars_prog1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2830,7 +2957,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       },
       "level_keys": [
         "courseB_starWars_prog1_2021"
@@ -2839,12 +2966,10 @@
     {
       "chapter": 34,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_starWars_prog2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2855,7 +2980,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       },
       "level_keys": [
         "courseB_starWars_prog2_2021"
@@ -2864,12 +2989,10 @@
     {
       "chapter": 35,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_starWars_prog3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2880,7 +3003,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       },
       "level_keys": [
         "courseB_starWars_prog3_2021"
@@ -2889,12 +3012,10 @@
     {
       "chapter": 36,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_starWars_prog4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2905,7 +3026,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       },
       "level_keys": [
         "courseB_starWars_prog4_2021"
@@ -2914,12 +3035,10 @@
     {
       "chapter": 37,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_starWars_prog5_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2930,7 +3049,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       },
       "level_keys": [
         "courseB_starWars_prog5_2021"
@@ -2939,12 +3058,10 @@
     {
       "chapter": 38,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_starWars_prog6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2955,7 +3072,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       },
       "level_keys": [
         "courseB_starWars_prog6_2021"
@@ -2964,12 +3081,10 @@
     {
       "chapter": 39,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_starWars_prog7_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2980,7 +3095,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       },
       "level_keys": [
         "courseB_starWars_prog7_2021"
@@ -2989,13 +3104,11 @@
     {
       "chapter": 40,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseB_starWars_prog8_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -3006,7 +3119,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa"
       },
       "level_keys": [
         "courseB_starWars_prog8_2021"
@@ -3015,12 +3128,13 @@
     {
       "chapter": 41,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_starWars_prog9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3040,12 +3154,13 @@
     {
       "chapter": 42,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_starWars_prog10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3065,12 +3180,13 @@
     {
       "chapter": 43,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_starWars_prog11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3091,11 +3207,9 @@
       "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_intro_2021"
-        ]
+        "progression": "Video: The Harvester"
       },
       "named_level": null,
       "bonus": null,
@@ -3106,7 +3220,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "45d59019-4dd4-4a32-b08c-fd79528eab76"
       },
       "level_keys": [
         "courseA_harvester_intro_2021"
@@ -3115,12 +3229,10 @@
     {
       "chapter": 45,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3131,7 +3243,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407"
       },
       "level_keys": [
         "courseA_harvester_seq1_2021"
@@ -3140,12 +3252,10 @@
     {
       "chapter": 46,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3156,7 +3266,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407"
       },
       "level_keys": [
         "courseA_harvester_seq2_2021"
@@ -3165,12 +3275,10 @@
     {
       "chapter": 47,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3181,7 +3289,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407"
       },
       "level_keys": [
         "courseA_harvester_seq3_2021"
@@ -3190,12 +3298,10 @@
     {
       "chapter": 48,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseAB_video_debugging_2021"
-        ]
+        "progression": "Video: Debugging with the Step Button"
       },
       "named_level": null,
       "bonus": null,
@@ -3206,7 +3312,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "629aedef-bd99-44af-a6bc-9ee890a1c7c8"
       },
       "level_keys": [
         "courseAB_video_debugging_2021"
@@ -3215,12 +3321,10 @@
     {
       "chapter": 49,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3231,7 +3335,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       },
       "level_keys": [
         "courseA_harvester_seq4_2021"
@@ -3240,12 +3344,10 @@
     {
       "chapter": 50,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq5_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3256,7 +3358,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       },
       "level_keys": [
         "courseA_harvester_seq5_2021"
@@ -3265,12 +3367,10 @@
     {
       "chapter": 51,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3281,7 +3381,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       },
       "level_keys": [
         "courseA_harvester_seq6_2021"
@@ -3290,12 +3390,10 @@
     {
       "chapter": 52,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq7_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3306,7 +3404,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       },
       "level_keys": [
         "courseA_harvester_seq7_2021"
@@ -3315,12 +3413,10 @@
     {
       "chapter": 53,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq8_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3331,7 +3427,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       },
       "level_keys": [
         "courseA_harvester_seq8_2021"
@@ -3340,12 +3436,10 @@
     {
       "chapter": 54,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq9_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3356,7 +3450,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       },
       "level_keys": [
         "courseA_harvester_seq9_2021"
@@ -3365,13 +3459,11 @@
     {
       "chapter": 55,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseA_harvester_seq10_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -3382,7 +3474,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "fc22082b-67fd-47ec-8353-11c902f9ab4c"
       },
       "level_keys": [
         "courseA_harvester_seq10_2021"
@@ -3391,12 +3483,10 @@
     {
       "chapter": 56,
       "position": 13,
-      "activity_section_position": 13,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq12_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3407,7 +3497,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "6f0b2804-a745-47e0-8211-45bfc553e106"
       },
       "level_keys": [
         "courseA_harvester_seq12_2021"
@@ -3416,12 +3506,10 @@
     {
       "chapter": 57,
       "position": 14,
-      "activity_section_position": 14,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq11_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3432,7 +3520,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "6f0b2804-a745-47e0-8211-45bfc553e106"
       },
       "level_keys": [
         "courseA_harvester_seq11_2021"
@@ -3441,12 +3529,10 @@
     {
       "chapter": 58,
       "position": 15,
-      "activity_section_position": 15,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_harvester_seq13_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3457,7 +3543,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "6f0b2804-a745-47e0-8211-45bfc553e106"
       },
       "level_keys": [
         "courseA_harvester_seq13_2021"
@@ -3467,11 +3553,9 @@
       "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3482,7 +3566,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574"
       },
       "level_keys": [
         "courseB_iceage_loops1_2021"
@@ -3492,11 +3576,9 @@
       "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3507,7 +3589,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574"
       },
       "level_keys": [
         "courseB_iceage_loops2_2021"
@@ -3516,12 +3598,10 @@
     {
       "chapter": 61,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops_video_2021"
-        ]
+        "progression": "Video: Ice Age Loops"
       },
       "named_level": null,
       "bonus": null,
@@ -3532,7 +3612,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "eb340c7e-d71e-49fb-aaf8-73205f85d432"
       },
       "level_keys": [
         "courseB_iceage_loops_video_2021"
@@ -3541,12 +3621,10 @@
     {
       "chapter": 62,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3557,7 +3635,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       },
       "level_keys": [
         "courseB_iceage_loops3_2021"
@@ -3566,12 +3644,10 @@
     {
       "chapter": 63,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3582,7 +3658,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       },
       "level_keys": [
         "courseB_iceage_loops4_2021"
@@ -3591,12 +3667,10 @@
     {
       "chapter": 64,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3607,7 +3681,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       },
       "level_keys": [
         "courseB_iceage_loops6_2021"
@@ -3616,12 +3690,10 @@
     {
       "chapter": 65,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops7_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3632,7 +3704,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       },
       "level_keys": [
         "courseB_iceage_loops7_2021"
@@ -3641,12 +3713,10 @@
     {
       "chapter": 66,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops8_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3657,7 +3727,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       },
       "level_keys": [
         "courseB_iceage_loops8_2021"
@@ -3666,12 +3736,10 @@
     {
       "chapter": 67,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops9_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3682,7 +3750,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       },
       "level_keys": [
         "courseB_iceage_loops9_2021"
@@ -3691,13 +3759,11 @@
     {
       "chapter": 68,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseB_iceage_loops10_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -3708,7 +3774,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "0a8a7f79-b1b7-436e-8a45-b6190c180164"
       },
       "level_keys": [
         "courseB_iceage_loops10_2021"
@@ -3717,12 +3783,10 @@
     {
       "chapter": 69,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops11_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3733,7 +3797,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "01ea78e0-acb4-4a08-8295-6257c3d3aa29"
       },
       "level_keys": [
         "courseB_iceage_loops11_2021"
@@ -3742,12 +3806,10 @@
     {
       "chapter": 70,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_iceage_loops12_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -3758,7 +3820,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "01ea78e0-acb4-4a08-8295-6257c3d3aa29"
       },
       "level_keys": [
         "courseB_iceage_loops12_2021"
@@ -5750,7 +5812,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "5ff6bd4a-2e05-4098-80a6-5e011fa70518"
       }
     },
     {
@@ -5762,7 +5824,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       }
     },
     {
@@ -5774,7 +5836,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       }
     },
     {
@@ -5786,7 +5848,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       }
     },
     {
@@ -5798,7 +5860,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       }
     },
     {
@@ -5810,7 +5872,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       }
     },
     {
@@ -5822,7 +5884,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       }
     },
     {
@@ -5834,7 +5896,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "3ea0d264-5395-49ba-8d4a-822734bcc3e2"
       }
     },
     {
@@ -5846,7 +5908,7 @@
         "lesson.key": "Programming with Rey and BB-8",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "8a743287-1638-4c96-8c21-387ebf05d760"
+        "activity_section.key": "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa"
       }
     },
     {
@@ -5894,7 +5956,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "45d59019-4dd4-4a32-b08c-fd79528eab76"
       }
     },
     {
@@ -5906,7 +5968,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407"
       }
     },
     {
@@ -5918,7 +5980,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407"
       }
     },
     {
@@ -5930,7 +5992,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "7675abfe-e572-4b1b-9203-ac0c1e6c3407"
       }
     },
     {
@@ -5942,7 +6004,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "629aedef-bd99-44af-a6bc-9ee890a1c7c8"
       }
     },
     {
@@ -5954,7 +6016,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       }
     },
     {
@@ -5966,7 +6028,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       }
     },
     {
@@ -5978,7 +6040,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       }
     },
     {
@@ -5990,7 +6052,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       }
     },
     {
@@ -6002,7 +6064,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       }
     },
     {
@@ -6014,7 +6076,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "1dae474b-e6aa-4934-b8f8-e8521eadb593"
       }
     },
     {
@@ -6026,7 +6088,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "fc22082b-67fd-47ec-8353-11c902f9ab4c"
       }
     },
     {
@@ -6038,7 +6100,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "6f0b2804-a745-47e0-8211-45bfc553e106"
       }
     },
     {
@@ -6050,7 +6112,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "6f0b2804-a745-47e0-8211-45bfc553e106"
       }
     },
     {
@@ -6062,7 +6124,7 @@
         "lesson.key": "Programming in Harvester",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "5e08c2e3-d342-47df-b4fe-bdeacb4a23e7"
+        "activity_section.key": "6f0b2804-a745-47e0-8211-45bfc553e106"
       }
     },
     {
@@ -6074,7 +6136,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574"
       }
     },
     {
@@ -6086,7 +6148,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574"
       }
     },
     {
@@ -6098,7 +6160,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "eb340c7e-d71e-49fb-aaf8-73205f85d432"
       }
     },
     {
@@ -6110,7 +6172,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       }
     },
     {
@@ -6122,7 +6184,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       }
     },
     {
@@ -6134,7 +6196,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       }
     },
     {
@@ -6146,7 +6208,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       }
     },
     {
@@ -6158,7 +6220,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       }
     },
     {
@@ -6170,7 +6232,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "ff9ff779-b617-4ae3-80c1-db23e1b9c27b"
       }
     },
     {
@@ -6182,7 +6244,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "0a8a7f79-b1b7-436e-8a45-b6190c180164"
       }
     },
     {
@@ -6194,7 +6256,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "01ea78e0-acb4-4a08-8295-6257c3d3aa29"
       }
     },
     {
@@ -6206,7 +6268,7 @@
         "lesson.key": "Loops with Scrat",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "421468fa-947b-4961-8407-7bab7b345c6a"
+        "activity_section.key": "01ea78e0-acb4-4a08-8295-6257c3d3aa29"
       }
     },
     {
@@ -7147,7 +7209,7 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
-        "resource.key": "think-spot-journal"
+        "resource.key": "pair-programming-vid"
       }
     },
     {
@@ -7159,19 +7221,7 @@
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
         "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Scrat",
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -7450,6 +7500,16 @@
       }
     },
     {
+      "key": "persistence",
+      "word": "Persistence",
+      "definition": "Trying again and again, even when something is very hard.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "persistence"
+      }
+    },
+    {
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
@@ -7653,6 +7713,12 @@
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
         "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "persistence"
       }
     },
     {
