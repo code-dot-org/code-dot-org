@@ -67,7 +67,10 @@ class StudentLessonOverview extends Component {
                   text={i18n.print()}
                 />
               )}
-              <LessonNavigationDropdown lesson={lesson} />
+              <LessonNavigationDropdown
+                lesson={lesson}
+                isStudentLessonPlan={true}
+              />
             </div>
           </div>
         </div>
