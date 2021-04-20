@@ -45,7 +45,11 @@ export function predict(modelData) {
     // Re-instantiate the trained model.
     const model = KNN.load(modelData.trainedModel);
     // Prepare test data.
-    const testValues = modelData.selectedFeatures.map(feature =>
+    const features = modelData.features
+      ? modelData.features.map(feature => feature.id)
+      : modelData.selectedFeatures;
+
+    const testValues = features.map(feature =>
       convertTestValue(
         modelData.featureNumberKey,
         feature,
@@ -55,13 +59,11 @@ export function predict(modelData) {
     // Make a prediction.
     const rawPrediction = model.predict(testValues);
     // Convert prediction to human readable (if needed)
-    const prediction = Object.keys(modelData.featureNumberKey).includes(
-      modelData.labelColumn
-    )
-      ? getKeyByValue(
-          modelData.featureNumberKey[modelData.labelColumn],
-          rawPrediction
-        )
+
+    const label = modelData.label ? modelData.label.id : model.labelColumn;
+
+    const prediction = Object.keys(modelData.featureNumberKey).includes(label)
+      ? getKeyByValue(modelData.featureNumberKey[label], rawPrediction)
       : parseFloat(rawPrediction);
     return prediction;
   } else {

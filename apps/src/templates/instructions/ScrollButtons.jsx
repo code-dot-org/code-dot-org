@@ -132,7 +132,8 @@ class ScrollButtons extends React.Component {
   render() {
     const upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: this.getMargin()
+      top: this.getMargin(),
+      margin: '0 0 3px 0'
     };
 
     const downStyle = {
@@ -186,6 +187,7 @@ class ScrollButtons extends React.Component {
         ref={c => {
           this.scrollDown = c;
         }}
+        className="uitest-scroll-button-down"
         key="scrollDown"
         onMouseDown={this.scrollStartDown}
         style={[styles.all, styles.arrow, styles.arrowDown, downStyle]}
