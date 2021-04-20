@@ -85,6 +85,7 @@ export const lessonShape = PropTypes.shape({
       })
     ).isRequired
   }).isRequired,
+  id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
@@ -118,6 +119,7 @@ export const studentLessonShape = PropTypes.shape({
       })
     ).isRequired
   }).isRequired,
+  id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
@@ -129,6 +131,7 @@ export const studentLessonShape = PropTypes.shape({
 });
 
 export const navigationLessonShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   unit: PropTypes.shape({
     lessonGroups: PropTypes.arrayOf(
