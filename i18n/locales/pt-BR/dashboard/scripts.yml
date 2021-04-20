@@ -15419,7 +15419,8 @@ pt:
             Programming for Entertainment:
               key: Programação para entretenimento
               name: Programação para entretenimento
-              description_student: "Solicita-se à classe que considere \"problemas\" como tédio e autoexpressão, e que reflita sobre como eles abordam esses problemas em suas próprias vidas. A partir daí, eles irão explorar como a Ciência da Computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a autoexpressão."
+              description_student: |-
+                Solicita-se à classe que considere "problemas" como tédio e autoexpressão, e que reflita sobre como eles abordam esses problemas em suas próprias vidas. A partir daí, eles irão explorar como a Ciência da Computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a autoexpressão.
             Plotting Shapes:
               key: Formas de plotagem
               name: Formas de plotagem
@@ -15509,7 +15510,8 @@ pt:
             Analysis of Design:
               key: Análise de Design
               name: Análise de Design
-              description_teacher: Para iniciar uma unidade dedicada à solução de problemas em grupo e ao desenvolvimento de produtos para outros usuários, os alunos começam investigando o design de vários bules. Os alunos analisam cada bule de chá, tentando identificar como as necessidades específicas do usuário podem ter informado seu design. Ao considerar essas opções de design e tentar combinar cada bule com um usuário em potencial, os alunos podem começar a ver como uma abordagem centrada no usuário para projetar produtos (físicos e digitais) pode torná-los mais úteis e utilizáveis. Para concluir a atividade, os alunos são solicitados a propor algumas alterações em um dos bules que a tornariam mais útil ou utilizável.
+              description_teacher: |-
+                Para iniciar uma unidade dedicada à solução de problemas em grupo e ao desenvolvimento de produtos para outros usuários, os alunos começam investigando o design de vários bules. Os alunos analisam cada bule de chá, tentando identificar como as necessidades específicas do usuário podem ter informado seu design. Ao considerar essas opções de design e tentar combinar cada bule com um usuário em potencial, os alunos podem começar a ver como uma abordagem centrada no usuário para projetar produtos (físicos e digitais) pode torná-los mais úteis e utilizáveis. Para concluir a atividade, os alunos são solicitados a propor algumas alterações em um dos bules que a tornariam mais útil ou utilizável.
             Understanding Your User:
               key: Entendendo seu usuário
               name: Entendendo seu usuário
@@ -15610,7 +15612,8 @@ pt:
             Keeping Data Secret:
               key: Mantendo o segredo dos dados
               name: Mantendo o segredo dos dados
-              description_teacher: Os alunos discutem os diferentes níveis de segurança que desejam para dados pessoais. Depois que a classe desenvolve um entendimento da importância da privacidade, ela aprende sobre o processo de criptografia de informações, criptografando uma nota para um parceiro e decifrando a nota do parceiro. A turma termina com uma discussão sobre a importância da segurança física e digital.
+              description_teacher: |-
+                Os alunos discutem os diferentes níveis de segurança que desejam para dados pessoais. Depois que a classe desenvolve um entendimento da importância da privacidade, ela aprende sobre o processo de criptografia de informações, criptografando uma nota para um parceiro e decifrando a nota do parceiro. A turma termina com uma discussão sobre a importância da segurança física e digital.
             Combining Representations:
               key: Combinando Representações
               name: Combinando Representações
@@ -15636,7 +15639,8 @@ pt:
               key: Automatizando decisões de dados
               name: Automatizando decisões de dados
             Project - Make a Recommendation:
-              description_teacher: Para concluir esta unidade, os alunos projetam um mecanismo de recomendação com base nos dados que eles coletam e analisam de seus colegas de classe. Depois de observar um exemplo de aplicativo de recomendação, os alunos seguem um guia do projeto para concluir esta atividade de vários dias. Nas primeiras etapas, os alunos escolhem a escolha que desejam ajudar o usuário a fazer, quais dados precisam dar à recomendação, criam uma pesquisa e coletam informações sobre as escolhas de seus colegas de classe. Eles então interpretam os dados e usam o que aprenderam para criar o algoritmo de recomendação. Por fim, eles usam seus algoritmos para fazer recomendações a alguns colegas de classe. Os alunos realizam uma revisão por pares e fazem as atualizações necessárias em seus projetos antes de preparar uma apresentação para a classe.
+              description_teacher: |-
+                Para concluir esta unidade, os alunos projetam um mecanismo de recomendação com base nos dados que eles coletam e analisam de seus colegas de classe. Depois de observar um exemplo de aplicativo de recomendação, os alunos seguem um guia do projeto para concluir esta atividade de vários dias. Nas primeiras etapas, os alunos escolhem a escolha que desejam ajudar o usuário a fazer, quais dados precisam dar à recomendação, criam uma pesquisa e coletam informações sobre as escolhas de seus colegas de classe. Eles então interpretam os dados e usam o que aprenderam para criar o algoritmo de recomendação. Por fim, eles usam seus algoritmos para fazer recomendações a alguns colegas de classe. Os alunos realizam uma revisão por pares e fazem as atualizações necessárias em seus projetos antes de preparar uma apresentação para a classe.
             Post-Project Test:
               key: Teste pós-projeto
               name: Teste pós-projeto
@@ -16251,7 +16255,7 @@ pt:
               key: Laços em coletor
               name: Repetições com Laurel
               description_student: Programe Laurel, o aventureiro, para coletar tesouros em uma caverna aberta.
-              description_teacher: Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.
+              description_teacher: 'Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.'
             Loops in Artist:
               key: Laços no Artista
               name: Desenho jardins com repetições
@@ -16304,7 +16308,7 @@ pt:
               key: Depurando no Labirinto
               name: Depurando no Labirinto
               description_student: Encontre problemas em quebra-cabeças e pratique suas habilidades de depuração.
-              description_teacher: "A depuração é um elemento essencial para aprender a programar. Nesta lição, os alunos encontrarão quebra-cabeças que foram resolvidos incorretamente. Eles precisarão percorrer o código existente para identificar erros, incluindo loops incorretos, blocos ausentes, blocos extras e blocos fora de ordem."
+              description_teacher: A depuração é um elemento essencial para aprender a programar. Nesta lição, os alunos encontrarão quebra-cabeças que foram resolvidos incorretamente. Eles precisarão percorrer o código existente para identificar erros, incluindo loops incorretos, blocos ausentes, blocos extras e blocos fora de ordem.
             Programming in Collector:
               key: Programação com coletor
               name: Coletando tesouros com Laurel
@@ -16319,7 +16323,7 @@ pt:
               key: Pulseiras binárias
               name: Pulseiras binárias
               description_student: Crie sua própria pulseira binária e aprenda como os computadores lembram informações!
-              description_teacher: "Binário é extremamente importante no mundo dos computadores. Atualmente, a maioria dos computadores armazena todos os tipos de informações em formato binário. Esta lição ajuda a demonstrar como é possível tirar algo da vida real e traduzi-lo em uma série de prós e contras."
+              description_teacher: Binário é extremamente importante no mundo dos computadores. Atualmente, a maioria dos computadores armazena todos os tipos de informações em formato binário. Esta lição ajuda a demonstrar como é possível tirar algo da vida real e traduzi-lo em uma série de prós e contras.
             'Loops: My Loopy Robotic Friends':
               key: 'Repetições: Meus amigos robôs esquisitos'
               name: Meus Amigos Robôs Malucos Jr.
@@ -16341,7 +16345,7 @@ pt:
               description_teacher: Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!
             Sticker Art with Loops:
               key: Adesivo de arte com loops
-              name: Adesivo de arte com loops
+              name: 'Adesivo de arte com loops'
               description_student: Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!
               description_teacher: Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.
             'Events: The Big Event':
@@ -16356,14 +16360,14 @@ pt:
               description_teacher: Nesta etapa especial, os alunos constroem seu próprio jogo Flappy Bird usando manipuladores de eventos para detectar cliques do mouse e colisões de objetos. No final do nível, os alunos poderão personalizar seu jogo alterando os visuais ou regras.
             Events in Play Lab:
               key: Eventos no Laboratório de jogos
-              name: Jogo de perseguição com eventos
+              name: 'Jogo de perseguição com eventos'
               description_student: É hora de ser criativo e criar um jogo no Play Lab!
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
             Picturing Data:
               key: Estruturação de dados
               name: Estruturação de dados
-              description_student: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
-              description_teacher: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
+              description_student: 'Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.'
+              description_teacher: 'Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.'
             'End of Course Project: Create a Play Lab Game':
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
               description_teacher: 'Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração! '
@@ -16433,7 +16437,7 @@ pt:
               key: Laços Aninhados na abelha
               name: Laços Aninhados no Labirinto
               description_student: Loops dentro de loops dentro de loops. O que isto significa? Esta lição ensinará o que acontece quando você cria um loop aninhado.
-              description_teacher: Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar '.
+              description_teacher: 'Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar ''.'
             Conditionals with Cards:
               key: Condicionais com cartas
               name: Condicionais com cartas
@@ -16541,7 +16545,7 @@ pt:
               description_student: A internet é divertida mas é importante estar seguro também. Esta lição ensina a diferença entre informações seguras para compartilhar e informações particulares.
             About Me:
               key: Sobre mim
-              name: Sobre mim com o Sprite Lab
+              name: 'Sobre mim com o Sprite Lab'
               description_student: Ao criar um pôster interativo com o SpriteLab, os alunos aplicarão seu entendimento sobre o compartilhamento de informações pessoais e privadas na web.
               description_teacher: "Ao criar um pôster interativo com o SpriteLab, os alunos aplicarão seu entendimento sobre o compartilhamento de informações pessoais e privadas na web.\\r\n"
             Digital Sharing:
@@ -16559,7 +16563,7 @@ pt:
               description_student: Mais laços aninhados! Desta vez, você pode fazer alguns desenhos INCRÍVEIS com laços aninhados.
             Nested Loops in Frozen:
               key: Laços Aninhados na Frozen
-              name: Laços Aninhados com Frozen
+              name: 'Laços Aninhados com Frozen'
               description_student: 'Anna e Elsa têm excelentes habilidades de patinação no gelo, mas precisam de sua ajuda para criar padrões no gelo. Use loops aninhados para criar algo super legal. '
               description_teacher: Agora que os alunos sabem como estratificar seus loops, eles podem criar tantas coisas bonitas. Esta lição levará os alunos a uma série de exercícios para ajudá-los a criar suas próprias imagens prontas para o portfólio, usando as excelentes habilidades de patinação no gelo de Anna e Elsa!
             'Functions: Songwriting':
@@ -16706,6 +16710,9 @@ pt:
               name: Introdução ao Sprite Lab
             lesson-8:
               name: Sprites em Ação
+            lesson-2:
+              name: O poder das palavras
+              description_student: Bullying nunca é bom. Esta lição ensinará sobre o que é e o que não é bom dizer on-line.
           lesson_groups:
             ramp_up:
               display_name: Treinamento
@@ -16721,6 +16728,8 @@ pt:
               display_name: variáveis
             lessonGroup-9:
               display_name: remover
+            lessonGroup-7:
+              display_name: Cidadania digital
           student_description: Aprenda a usar diferentes tipos de loops, eventos, funções e condicionais. Investigue diferentes técnicas de solução de problemas e discuta os impactos sociais da computação e da Internet. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com amigos e familiares.
         express-2021:
           title: Curso Expresso (2019)
@@ -16850,6 +16859,7 @@ pt:
               key: Festa dançante alienígena
               name: Festa dançante alienígena
               description_student: Crie um projeto interativo que possa ser compartilhado com os colegas de classe.
+              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma na qual os alunos podem criar suas próprias animações e jogos interativos. Além dos comportamentos, hoje os alunos incorporam a entrada do usuário como eventos para criar uma "festa de dança alienígena".  '
             Behaviors in Sprite Lab:
               key: Comportamentos no Lab Sprite
               name: Comportamentos no Lab Sprite
@@ -17171,6 +17181,15 @@ pt:
               name: Lição 14
             lesson15:
               name: Lição 15
+            lesson17:
+              name: Lição 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Lição 15: Dia da Avaliação'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           description: "Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado!"
           student_description: 'Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado!'

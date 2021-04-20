@@ -1,8 +1,8 @@
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:index, :show]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
+  before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'UnitGroup', except: [:index]
 
@@ -92,7 +92,11 @@ class CoursesController < ApplicationController
   def update
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
-    unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
+    unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
+    if unit_group.has_migrated_script? && unit_group.course_version
+      unit_group.resources = params[:resourceIds].reject(&:empty?).map {|id| Resource.find(id)} if params.key?(:resourceIds)
+      unit_group.student_resources = params[:studentResourceIds].reject(&:empty?).map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
+    end
     # Convert checkbox values from a string ("on") to a boolean.
     [:has_verified_resources, :has_numbered_units, :visible, :is_stable].each {|key| params[key] = !!params[key]}
     unit_group.update(course_params)
@@ -105,6 +109,38 @@ class CoursesController < ApplicationController
     # We don't support an edit experience for plc courses
     raise ActiveRecord::ReadOnlyRecord if unit_group.try(:plc_course)
     render 'edit', locals: {unit_group: unit_group}
+  end
+
+  def vocab
+    unit_group = UnitGroup.get_from_cache(params[:course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
+    # Assumes if one unit in a unit group is migrated they all are
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
+  end
+
+  def resources
+    unit_group = UnitGroup.get_from_cache(params[:course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
+    # Assumes if one unit in a unit group is migrated they all are
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
+  end
+
+  def code
+    unit_group = UnitGroup.get_from_cache(params[:course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
+    # Assumes if one unit in a unit group is migrated they all are
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
+  end
+
+  def standards
+    unit_group = UnitGroup.get_from_cache(params[:course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
+    # Assumes if one unit in a unit group is migrated they all are
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
   def i18n_params

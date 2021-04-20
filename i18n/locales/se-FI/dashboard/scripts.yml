@@ -6598,7 +6598,8 @@ se:
             Analysis of Design:
               key: Analyseret Designa
               name: Analyseret Designa
-              description_teacher: Go galget álggahit ovttadaga mii lea čadnon joavkočuolbmačoavdimii ja ovdánahttit buktagiid eará geavaheddjiide, oahppit iskagohtet iešguđet deadjalihtiid hábmemiid. Oahppit analyserejit juohke deadjalihtti ja geahččalit identifiseret movt earenoamáš geavaheaddjedárbu soaitá váikkuhan designa. Árvvoštallat dáid designaválljemiid ja geahččalit heivehit deadjalihtti vejolaš geavaheaddjái, sáhttet oahppit geahččagoahtit movt geavaheaddjevuđot lahkoneapmi designat buktagiid (sihke fysalaš ja digitála) sáhttá dahkat buktagiid ávkkáleabbon ja anolaččabun. Loahpas doaimma, oahppit galget evttohit muhtun rievdadusaid ovtta deadjalihttái dahkan dihte dan ávkkáleabbon ja anolaččabun.
+              description_teacher: |-
+                Go galget álggahit ovttadaga mii lea čadnon joavkočuolbmačoavdimii ja ovdánahttit buktagiid eará geavaheddjiide, oahppit iskagohtet iešguđet deadjalihtiid hábmemiid. Oahppit analyserejit juohke deadjalihtti ja geahččalit identifiseret movt earenoamáš geavaheaddjedárbu soaitá váikkuhan designa. Árvvoštallat dáid designaválljemiid ja geahččalit heivehit deadjalihtti vejolaš geavaheaddjái, sáhttet oahppit geahččagoahtit movt geavaheaddjevuđot lahkoneapmi designat buktagiid (sihke fysalaš ja digitála) sáhttá dahkat buktagiid ávkkáleabbon ja anolaččabun. Loahpas doaimma, oahppit galget evttohit muhtun rievdadusaid ovtta deadjalihttái dahkan dihte dan ávkkáleabbon ja anolaččabun.
             Understanding Your User:
               key: Ipmirdit Du Geavaheaddji
               name: Ipmirdit Du Geavaheaddji
@@ -6758,6 +6759,8 @@ se:
               display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
         express-2021:
           lesson_groups:
             csf_sprites:
@@ -6826,6 +6829,12 @@ se:
               name: Lekšuvdna 14
             lesson15:
               name: Lekšuvdna 15
+            lesson17:
+              name: Lekšuvdna 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         k5-onlinepd-2021:
           lessons:
             Events:

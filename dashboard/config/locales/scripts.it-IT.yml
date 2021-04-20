@@ -9228,7 +9228,9 @@ it:
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
             intro-categorical:
-              name: Lezione 5
+              name: Lezione 6
+            temp:
+              name: Lezione 20
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -9252,6 +9254,8 @@ it:
               name: Codifica di una simulazione
             Sprites in Action:
               name: Personaggi in azione
+            End of Course Project:
+              name: Progetto di fine corso
           lesson_groups:
             introduction:
               display_name: Introduzione
@@ -9509,6 +9513,8 @@ it:
                 e di applicare tutte le competenze di programmazione che hanno imparato
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 una storia nel Laboratorio!
+            lesson-1:
+              name: Progetto di fine corso
           lesson_groups:
             csf_digcit:
               display_name: Cittadinanza digitale
@@ -9518,6 +9524,8 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+            lessonGroup-5:
+              display_name: Progetto di fine corso
           student_description: 'Impara le basi dell''informatica e della sicurezza
             su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
             storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
@@ -9583,6 +9591,8 @@ it:
                 applicare tutte le competenze di programmazione che hanno imparato
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 un gioco nel Laboratorio!
+            lesson-1:
+              name: Progetto di fine corso
           lesson_groups:
             csf_digcit:
               display_name: Cittadinanza digitale
@@ -9592,6 +9602,8 @@ it:
               display_name: Cicli
             csf_events:
               display_name: Eventi
+            lessonGroup-6:
+              display_name: Progetto di fine corso
           student_description: 'Impara le basi dell''informatica e della sicurezza
             su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
             storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
@@ -10052,6 +10064,10 @@ it:
               name: Personaggi in azione
             lesson-5:
               name: Epidemia
+            lesson-2:
+              name: Cittadinanza digitale - Il potere delle parole
+              description_student: Il bullismo non va mai bene. In questa lezione
+                imparerai cosa si può dire online e cosa deve essere evitato.
           lesson_groups:
             ramp_up:
               display_name: Introduzione
@@ -10067,6 +10083,8 @@ it:
               display_name: Variabili
             lessonGroup-9:
               display_name: rimuovi
+            lessonGroup-7:
+              display_name: Cittadinanza digitale
           student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni
             e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
             dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
@@ -10421,6 +10439,11 @@ it:
           lessons:
             lesson-1:
               name: Lezione 1
+            lesson-2:
+              name: Lezione 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
         k5-onlinepd-2021:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare
@@ -10492,3 +10515,7 @@ it:
               display_name: Passi successivi
             Introduction:
               display_name: Introduzione
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: Lezione 1

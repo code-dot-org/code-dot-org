@@ -1,5 +1,5 @@
 {
-  "func": "var myButton = createButton",
+  "func": "createButton",
   "category": "Maker",
   "paletteParams": [
     "pin"
@@ -7,6 +7,5 @@
   "params": [
     "0"
   ],
-  "noAutocomplete": true,
-  "docFunc": "createButton"
+  "type": "either"
 }

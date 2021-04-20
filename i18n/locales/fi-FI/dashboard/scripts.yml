@@ -2998,7 +2998,7 @@ fi:
               name: Säveltäminen
           lesson_groups:
             ramp_up:
-              display_name: Silmukat
+              display_name: Sisäkkäiset silmukat
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
             csf_nested_loops:
@@ -3027,6 +3027,8 @@ fi:
               display_name: Muuttujat
             lessonGroup-9:
               display_name: poista
+            lessonGroup-7:
+              display_name: Digitaalinen kansalaisuus
         express-2021:
           lessons:
             Dance Party:

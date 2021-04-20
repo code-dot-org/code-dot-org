@@ -24756,6 +24756,8 @@ tr:
               name: Simülasyon Kodlama
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
+            End of Course Project:
+              name: Ders Projesinin Sonu
           lesson_groups:
             introduction:
               display_name: Giriş
@@ -26189,6 +26191,8 @@ tr:
                 Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin
                 tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın
                 ve yaratıcı olmanın zamanı!
+            lesson-1:
+              name: Ders Projesinin Sonu
           lesson_groups:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
@@ -26198,6 +26202,8 @@ tr:
               display_name: Döngüler
             csf_events:
               display_name: Olaylar
+            lessonGroup-5:
+              display_name: Ders Projesinin Sonu
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
@@ -26323,6 +26329,8 @@ tr:
                 etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
                 kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
                 için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+            lesson-1:
+              name: Ders Projesinin Sonu
           lesson_groups:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
@@ -26334,6 +26342,8 @@ tr:
               display_name: Bilgisayarın Etkileri
             csf_events:
               display_name: Olaylar
+            lessonGroup-6:
+              display_name: Ders Projesinin Sonu
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
@@ -27215,6 +27225,11 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             lesson-8:
               name: Eylem halindeki Hareketli Nesneler
+            lesson-2:
+              name: Kelimelerin gücü
+              description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
+                çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış
+                olduğunu öğretecektir.
           lesson_groups:
             ramp_up:
               display_name: Arttır
@@ -27234,6 +27249,8 @@ tr:
               display_name: Değişkenler
             lessonGroup-9:
               display_name: kaldır
+            lessonGroup-7:
+              display_name: Sayısal Vatandaşlık
           student_description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları
             kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek
             ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin
@@ -27475,6 +27492,11 @@ tr:
               name: Uzaylı Dans Partisi
               description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje
                 oluşturun.
+              description_teacher: 'Bu ders, öğrencilerin kendi etkileşimli animasyonlarını
+                ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını
+                içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans
+                partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
+                edecektir.  '
             Behaviors in Sprite Lab:
               key: Hareketli Nesne Laboratuvarındaki Davranışlar
               name: Hareketli Nesne Laboratuvarındaki Davranışlar
@@ -28277,6 +28299,15 @@ tr:
               name: Ders 14
             lesson15:
               name: Ders 15
+            lesson17:
+              name: Ders 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Ders 15: Değerlendirme Günü'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
         k5-onlinepd-2021:
           description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar
             Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini

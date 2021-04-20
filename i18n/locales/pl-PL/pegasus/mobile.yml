@@ -1087,6 +1087,12 @@
   coursed-2019_gradelevel: Klasa 8+
   coursee-2019_gradelevel: W wieku 8-12
   coursef-2019_gradelevel: W wieku 9-13
+  coursea-2020_gradelevel: W wieku 4-7
+  courseb-2020_gradelevel: W wieku 5-8
+  coursec-2020_gradelevel: W wieku 6-10
+  coursed-2020_gradelevel: Klasa 8+
+  coursee-2020_gradelevel: W wieku 8-12
+  coursef-2020_gradelevel: W wieku 9-13
   accelerated_gradelevel: "W wieku 10-18"
   codeorg_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
   codeintl_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
@@ -1213,6 +1219,12 @@
   coursed-2019_shortdescription_congrats: Szybko omów pojęcia z kursu C, a następnie przejdź dalej do algorytmów, zagnieżdżonych pętli, warunków i innych.
   coursee-2019_shortdescription_congrats: Szybko omów pojęcia w kursach C i D, a następnie przejdź dalej do funkcji.
   coursef-2019_shortdescription_congrats: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
+  coursea-2020_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
+  courseb-2020_shortdescription_congrats: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
+  coursec-2020_shortdescription_congrats: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
+  coursed-2020_shortdescription_congrats: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
+  coursee-2020_shortdescription_congrats: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+  coursef-2020_shortdescription_congrats: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

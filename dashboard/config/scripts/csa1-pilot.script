@@ -1,5 +1,45 @@
 curriculum_umbrella 'CSA'
 is_migrated true
 
-lesson 'lesson-1', display_name: 'Lesson 1', has_lesson_plan: true
+lesson_group 'lessonGroup-2', display_name: 'Content'
+lesson 'lesson-1', display_name: 'Welcome to CSA', has_lesson_plan: true
+
+lesson 'lesson-2', display_name: 'Classes and Objects', has_lesson_plan: true
+
+lesson 'lesson-3', display_name: 'Using Commands', has_lesson_plan: true
+
+lesson 'lesson-4', display_name: 'Conditionals and Debugging', has_lesson_plan: true
+
+lesson 'lesson-5', display_name: 'More with Objects', has_lesson_plan: true
+
+lesson 'lesson-6', display_name: 'While Loops and Practice', has_lesson_plan: true
+
+lesson 'lesson-7', display_name: 'More with Conditionals', has_lesson_plan: true
+
+lesson 'lesson-8', display_name: 'Introduction to Code Reviews', has_lesson_plan: true
+
+lesson 'lesson-9', display_name: 'Inheritance and Methods', has_lesson_plan: true
+
+lesson 'lesson-10', display_name: 'More Methods, More Features', has_lesson_plan: true
+
+lesson 'lesson-11', display_name: 'Painting Methods', has_lesson_plan: true
+
+lesson 'lesson-12', display_name: 'SprayPainter', has_lesson_plan: true
+
+lesson 'lesson-13', display_name: 'StampPainter', has_lesson_plan: true
+
+lesson 'lesson-14', display_name: 'Edge Cases', has_lesson_plan: true
+
+lesson 'lesson-15', display_name: 'Software Engineering Wrap Up', has_lesson_plan: true
+
+lesson_group 'lessonGroup-3', display_name: 'Show What You Know'
+lesson 'lesson-16', display_name: 'Project: Personal Symbol - Day 1', has_lesson_plan: true
+
+lesson 'lesson-17', display_name: 'Project: Personal Symbol - Day 2', has_lesson_plan: true
+
+lesson 'lesson-18', display_name: 'Project: Personal Symbol - Day 3', has_lesson_plan: true
+
+lesson 'lesson-19', display_name: 'FRQ Day', has_lesson_plan: true
+
+lesson 'lesson-20', display_name: 'Assessment Day', has_lesson_plan: true
 

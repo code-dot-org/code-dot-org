@@ -1,11 +1,11 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
+  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update]
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_script, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
@@ -138,9 +138,29 @@ class ScriptsController < ApplicationController
   def instructions
     require_levelbuilder_mode
 
-    script = Script.get_from_cache(params[:script_id])
+    script = Script.get_from_cache(params[:id])
 
     render 'levels/instructions', locals: {stages: script.lessons}
+  end
+
+  def vocab
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def resources
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def code
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def standards
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   private
@@ -211,6 +231,8 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
+      resourceIds: [],
+      studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h

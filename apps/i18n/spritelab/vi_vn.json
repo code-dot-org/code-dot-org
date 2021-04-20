@@ -1,4 +1,6 @@
 {
+  "clicked": "nhấn vào",
+  "new": "mới",
   "shareGame": "Chia sẻ trò chơi của bạn:",
   "outbreakMakeHealthySprites": "Hãy sử dụng khối này để tạo nhân vật quái vật khỏe mạnh:\n <xml><block type=\"gamelab_makeNumSprites\"><title name=\"ANIMATION_NAME\">\"khỏe mạnh\"</title><value name=\"NUM\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
   "outbreakMakeUnhealthySprite": "Bây giờ, hãy tạo tối thiểu một nhân vật quái vật bị bệnh bằng\n <xml><block type=\"gamelab_makeNumSprites\"><title name=\"ANIMATION_NAME\">\"bị bệnh\"</title><value name=\"NUM\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block></xml>",

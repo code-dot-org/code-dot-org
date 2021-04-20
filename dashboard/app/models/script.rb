@@ -42,6 +42,8 @@ class Script < ApplicationRecord
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :scripts_resources
   has_many :scripts_resources
+  has_many :scripts_student_resources, dependent: :destroy
+  has_many :student_resources, through: :scripts_student_resources, source: :resource
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -88,12 +90,14 @@ class Script < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
-            :standards
+            :standards,
+            :opportunity_standards
           ]
         },
         :script_levels,
         :levels,
-        :resources
+        :resources,
+        :student_resources
       ]
     )
   end
@@ -117,8 +121,6 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validate :set_is_migrated_only_for_migrated_scripts
-
   def prevent_duplicate_levels
     reload
 
@@ -134,12 +136,6 @@ class Script < ApplicationRecord
   after_save :generate_plc_objects
 
   SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
-
-  def set_is_migrated_only_for_migrated_scripts
-    if !!is_migrated && !hidden
-      errors.add(:is_migrated, "Can't be set on a course that is visible")
-    end
-  end
 
   def prevent_course_version_change?
     lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
@@ -842,19 +838,6 @@ class Script < ApplicationRecord
     ].include?(name)
   end
 
-  def localize_long_instructions?
-    # Don't ever show non-English markdown instructions for Course 1 - 4, the
-    # 20-hour course, or the pre-2017 minecraft courses.
-    !(
-      csf_international? ||
-      twenty_hour? ||
-      [
-        ScriptConstants::MINECRAFT_NAME,
-        ScriptConstants::MINECRAFT_DESIGNER_NAME
-      ].include?(name)
-    )
-  end
-
   def beta?
     Script.beta? name
   end
@@ -1264,7 +1247,9 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
+    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
+    update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
+    update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
     begin
       if Rails.application.config.levelbuilder_mode
         script = Script.find_by_name(script_name)
@@ -1272,7 +1257,7 @@ class Script < ApplicationRecord
         # across environments. The CPlat team is working on replacing it a new JSON-based approach.
         script.write_script_dsl
 
-        # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
+        # Also save in JSON format for "new seeding". This has not been launched yet for most scripts, but as part of
         # pre-launch testing, we'll start generating these files in addition to the old .script files.
         script.write_script_json
       end
@@ -1305,6 +1290,15 @@ class Script < ApplicationRecord
         skip_name_format_validation: true
       }
     )
+  end
+
+  def update_migrated_teacher_resources(resource_ids)
+    teacher_resources = (resource_ids || []).map {|id| Resource.find(id)}
+    self.resources = teacher_resources
+  end
+
+  def update_student_resources(resource_ids)
+    self.student_resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
 
   def self.rake
@@ -1428,6 +1422,8 @@ class Script < ApplicationRecord
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
+      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
@@ -1455,7 +1451,10 @@ class Script < ApplicationRecord
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
-      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false
+      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
+      courseVersionId: get_course_version&.id,
+      scriptOverviewPdfUrl: get_script_overview_pdf_url,
+      scriptResourcesPdfUrl: get_script_resources_pdf_url
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1467,6 +1466,22 @@ class Script < ApplicationRecord
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
+
+    summary
+  end
+
+  def summarize_for_rollup(user = nil)
+    summary = {
+      title: title_for_display,
+      name: name,
+      link: script_path(self)
+    }
+
+    # Filter out stages that have a visible_after date in the future
+    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
+    # Only get lessons with lesson plans
+    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
 
     summary
   end
@@ -1506,7 +1521,7 @@ class Script < ApplicationRecord
 
   def summarize_for_lesson_show(is_student = false)
     {
-      displayName: localized_title,
+      displayName: title_for_display,
       link: link,
       lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
@@ -1591,7 +1606,12 @@ class Script < ApplicationRecord
   end
 
   def localized_title
-    I18n.t "data.script.name.#{name}.title"
+    I18n.t(
+      "title",
+      default: name,
+      scope: [:data, :script, :name, name],
+      smart: true
+    )
   end
 
   def title_for_display
@@ -1901,5 +1921,17 @@ class Script < ApplicationRecord
 
   def self.script_json_filepath(script_name)
     "#{script_json_directory}/#{script_name}.script_json"
+  end
+
+  def get_script_overview_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_overview_url(self)
+    end
+  end
+
+  def get_script_resources_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(self)
+    end
   end
 end

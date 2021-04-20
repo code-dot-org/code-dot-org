@@ -1062,6 +1062,12 @@
   coursed-2019_gradelevel: 14 ára og eldri
   coursee-2019_gradelevel: 8 - 12 ára
   coursef-2019_gradelevel: Bekkur 10+
+  coursea-2020_gradelevel: Bekkur 5+
+  courseb-2020_gradelevel: Bekkur 6+
+  coursec-2020_gradelevel: Bekkur 7+
+  coursed-2020_gradelevel: 14 ára og eldri
+  coursee-2020_gradelevel: 8 - 12 ára
+  coursef-2020_gradelevel: Bekkur 10+
   accelerated_gradelevel: "Fyrir 10-18 ára"
   codeorg_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
   codeintl_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
@@ -1186,6 +1192,8 @@
   coursed-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiði C og svo haldið lengra með algrímum, földuðum lykkjum, skilyrðingum og fleiru.
   coursee-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiðum C og D og síðan haldið lengra með föllum.
   coursef-2019_shortdescription_congrats: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+  coursea-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+  courseb-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
   codeorg_longdescription: "Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum."
   codeintl_longdescription: "Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

@@ -638,6 +638,8 @@ pt:
               name: Olá!
         K5-OnlinePD:
           lessons:
+            Computer Science Fundamentals:
+              name: Fundamentos da Ciência da Computação
             Next Steps:
               name: Próximos Passos
         ECSPD2:
@@ -2895,6 +2897,8 @@ pt:
             k5_next_steps:
               display_name: Próximos Passos
           lessons:
+            Computer Science Fundamentals:
+              name: Fundamentos da Ciência da Computação
             Next Steps:
               name: Próximos Passos
             Sequencing:
@@ -3269,6 +3273,8 @@ pt:
           lessons:
             new stage:
               name: nova fase
+            Tools:
+              name: Ferramentas
         csp5-virtual:
           lessons:
             While Loops:
@@ -3588,7 +3594,7 @@ pt:
               description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
           lesson_groups:
             ramp_up:
-              display_name: Ciclos
+              display_name: Laços aninhados
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -3617,6 +3623,8 @@ pt:
               display_name: Variáveis
             lessonGroup-9:
               display_name: remover
+            lessonGroup-7:
+              display_name: Cidadania digital
         express-2021:
           lessons:
             Dance Party:
@@ -3669,6 +3677,12 @@ pt:
               name: Lição 14
             lesson15:
               name: Lição 15
+            lesson17:
+              name: Lição 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

@@ -1,6 +1,0 @@
-{
-  "func": "lightSensor.value",
-  "docFunc": "microbit-lightSensor.value",
-  "category": "micro:bit",
-  "type": "readonlyproperty"
-}

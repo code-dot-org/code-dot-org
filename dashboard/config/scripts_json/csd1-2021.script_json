@@ -11,12 +11,6 @@
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ]
-      ],
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
@@ -25,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:46:13 UTC",
+    "serialized_at": "2021-04-14 23:01:57 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -564,7 +558,7 @@
       "position": 4,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "b58f7f0f-78a4-4965-8f0d-9512076d5e0f",
@@ -2892,7 +2886,6 @@
       "key": "00405d7e-34d2-4784-8f34-67a211b9e112",
       "position": 1,
       "properties": {
-        "name": "App: Is It Your Birthday?",
         "progression_name": "App: Is It Your Birthday?"
       },
       "seeding_key": {
@@ -2904,7 +2897,6 @@
       "key": "d077e275-c2db-421d-962e-c684e04ae6fe",
       "position": 2,
       "properties": {
-        "name": "App: National Park Quiz",
         "progression_name": "App: National Park Quiz"
       },
       "seeding_key": {
@@ -2916,7 +2908,6 @@
       "key": "ef32a9d1-71ed-4d37-948e-6fac69e3abcc",
       "position": 3,
       "properties": {
-        "name": "App: How Many Countries...",
         "progression_name": "App: How Many Countries..."
       },
       "seeding_key": {
@@ -2928,7 +2919,6 @@
       "key": "416ac7dd-a043-4936-8f5c-3c55d0bd0a0a",
       "position": 4,
       "properties": {
-        "name": "App: My Famous Birthday",
         "progression_name": "App: My Famous Birthday"
       },
       "seeding_key": {
@@ -2940,7 +2930,6 @@
       "key": "9642adce-4c71-457e-a276-cc67ff166a2f",
       "position": 5,
       "properties": {
-        "name": "App: Stamp Notebook",
         "progression_name": "App: Stamp Notebook"
       },
       "seeding_key": {
@@ -2952,7 +2941,6 @@
       "key": "98ce89ea-461e-49e4-845d-521a80a2a550",
       "position": 6,
       "properties": {
-        "name": "App: The Fastest Finger",
         "progression_name": "App: The Fastest Finger"
       },
       "seeding_key": {
@@ -2964,7 +2952,6 @@
       "key": "2d8ce6da-027e-4a1c-944a-ce82c02f5f49",
       "position": 7,
       "properties": {
-        "name": "App: Guess the Number",
         "progression_name": "App: Guess the Number"
       },
       "seeding_key": {
@@ -2976,7 +2963,6 @@
       "key": "9df0efaf-11d3-4c55-81ff-e928ed7838c7",
       "position": 8,
       "properties": {
-        "name": "App: Where Should I Live?",
         "progression_name": "App: Where Should I Live?"
       },
       "seeding_key": {
@@ -5138,7 +5124,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Is It Your Birthday?",
         "level_keys": [
@@ -5164,7 +5150,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: National Park Quiz",
         "level_keys": [
@@ -5190,7 +5176,7 @@
       "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: How Many Countries...",
         "level_keys": [
@@ -5216,7 +5202,7 @@
       "chapter": 10,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: My Famous Birthday",
         "level_keys": [
@@ -5242,7 +5228,7 @@
       "chapter": 11,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Stamp Notebook",
         "level_keys": [
@@ -5268,7 +5254,7 @@
       "chapter": 12,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: The Fastest Finger",
         "level_keys": [
@@ -5294,7 +5280,7 @@
       "chapter": 13,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Guess the Number",
         "level_keys": [
@@ -5320,7 +5306,7 @@
       "chapter": 14,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Where Should I Live?",
         "level_keys": [
@@ -5743,11 +5729,11 @@
   "resources": [
     {
       "name": "Aluminum Boats",
-      "url": "https://studio.code.org/s/csd1-2021/stage/1/puzzle/1",
+      "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
       "key": "aluminum-boats-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "aluminum-boats-exemplar-2020"
@@ -5841,7 +5827,7 @@
     },
     {
       "name": "Problem Solving Process",
-      "url": "https://drive.google.com/open?id=0B2UNlnU_5Vg4aC1DVGdWU19hZkE",
+      "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view",
       "key": "problem-solving-process",
       "properties": {
         "type": "Graphic",
@@ -6164,17 +6150,6 @@
       }
     },
     {
-      "name": "Code.org How-to Video Playlist",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
-      "key": "how-to-videos",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "how-to-videos"
-      }
-    },
-    {
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
       "url": "https://studio.code.org/s/csd1-2020/stage/9/puzzle/1/",
       "key": "intro-to-problem-solving-newspaper-table-2020",
@@ -6209,17 +6184,6 @@
       },
       "seeding_key": {
         "resource.key": "build-a-newspaper-table"
-      }
-    },
-    {
-      "name": "Code.org How-to Video Playlist",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
-      "key": "how-to-videos",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "how-to-videos"
       }
     },
     {
@@ -6391,6 +6355,17 @@
       },
       "seeding_key": {
         "resource.key": "solving-problems-activity-guide-game-2020"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
       }
     }
   ],
@@ -6713,6 +6688,17 @@
         "resource.key": "solving-problems-activity-guide-game-2020"
       }
     }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd1-2021"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {
@@ -7142,5 +7128,262 @@
         "objective.key": "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0"
       }
     }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input and Output",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input and Output",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

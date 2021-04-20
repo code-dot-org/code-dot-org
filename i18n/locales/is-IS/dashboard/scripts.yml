@@ -6556,7 +6556,8 @@ is:
           description_short: "Forritun"
           lessons:
             Programming for Entertainment:
-              description_student: "Hópurinn er beðinn að skoða \"vandamálin\" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum."
+              description_student: |-
+                Hópurinn er beðinn að skoða "vandamálin" leiðindi og sjálfstjáningu og íhuga hvernig þeir nálgast þessi úrlausnarefni í eigin lífi. Síðan munu þeir kanna hvernig tölvunarfræði almennt og forritun sérstaklega hefur hlutverki að gegna annað hvort í tiltekinni tegund afþreyingar eða sem miðill til að tjá sig gegnum.
             Drawing in Game Lab:
               key: Teikning í Leikjasmiðju
               name: Teikning í Leikjasmiðju
@@ -6870,6 +6871,8 @@ is:
               name: Kynning á Kvikasmiðjunni
             lesson-8:
               name: Kvikar í verki
+            lesson-2:
+              name: Afl orða
           lesson_groups:
             ramp_up:
               display_name: Efling
@@ -6885,6 +6888,8 @@ is:
               display_name: Breytur
             lessonGroup-9:
               display_name: fjarlægja
+            lessonGroup-7:
+              display_name: Stafrænn borgari
         express-2021:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
           lessons:
@@ -6994,6 +6999,12 @@ is:
               name: Kennslustund 14
             lesson15:
               name: Kennslustund 15
+            lesson17:
+              name: Kennslustund 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

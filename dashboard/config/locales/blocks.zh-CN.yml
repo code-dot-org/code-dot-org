@@ -962,6 +962,8 @@ zh-CN:
             '"peas"': 黑眼豆豆合唱团 - 我有一种感觉
       gamelab_addBehaviorSimple:
         text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE}获取目标{TARGET}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -970,6 +972,8 @@ zh-CN:
           UNIT:
             '"seconds"': " 秒"
             '"frames"': 帧
+      gamelab_beginCollectingData:
+        text: 开始收集数据{BREAK}值{VALUE}带标签{LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} 弹开 {TARGET}"
       gamelab_changePropBy:
@@ -994,6 +998,8 @@ zh-CN:
         text: 点击 {SPRITE}
       gamelab_comment:
         text: 注释： {COMMENT}
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: "{SPRITE} 的数量"
       gamelab_createNewSprite:
@@ -1004,6 +1010,8 @@ zh-CN:
         text: 可拖拽
       gamelab_edgesDisplace:
         text: 边缘模块阻止了 {SPRITE} 移动
+      gamelab_followingTargets:
+        text: 遵循目标
       gamelab_getAllSprites:
         text: 所有精灵图
       gamelab_getProp:
@@ -1029,6 +1037,8 @@ zh-CN:
           UNIT:
             '"seconds"': " 秒"
             '"frames"': 帧
+      gamelab_hideHaiku:
+        text: 隐藏俳句
       gamelab_hideTitleScreen:
         text: 隐藏标题屏幕
       gamelab_ifVarEquals:
@@ -1174,6 +1184,8 @@ zh-CN:
             '"East"': 东
             '"South"': 南
             '"West"': 西
+      gamelab_printHaiku:
+        text: 显示俳句 {BREAK} 诗歌名 {TITLE} 诗歌作者 {AUTHOR} 第1行 {LINE1} 第2行 {LINE2}
       gamelab_printText:
         text: 打印 {TEXT}
       gamelab_randColor:
@@ -1215,12 +1227,17 @@ zh-CN:
       gamelab_setBackgroundImageAs:
         text: 设置背景为 {IMG}
       gamelab_setDefaultSpriteSize:
+        text: 将新精灵图的默认大小设置为{SIZE}
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': 特小
+            '50': 小
             '75': 中
-            '100': large
+            '100': 大
+      gamelab_setPrompt:
+        text: 提示用户{QUESTION}变量{VAR}
+      gamelab_setPromptWithChoices:
+        text: 提示用户{QUESTION}变量{VAR}有选择{A}{B}{C}
       gamelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
@@ -1240,6 +1257,8 @@ zh-CN:
             '"height"': 高度
       gamelab_setTint:
         text: 将 {THIS} 的颜色改为 {COLOR}
+      gamelab_setupScoreboard:
+        text: "绘制记分牌 \n{SPRITE1COSTUME}得分{VAR1}{SPRITE2COSTUME}得分{VAR2}目标{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           setup simulation with
@@ -1255,8 +1274,14 @@ zh-CN:
           CONDITION:
             '"when"': 当
             '"while"': 当
+      gamelab_stopCollectingData:
+        text: 停止收集数据
       gamelab_subjectSpritePointer:
         text: 点击 {SPRITE}
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: 旋转
       gamelab_turn:
@@ -1288,6 +1313,8 @@ zh-CN:
         text: 当{VAR}被回答
       gamelab_whenRightArrow:
         text: 当按右方向键时
+      gamelab_whenSpriteCreated:
+        text: 当 {SPRITE} 被创建时
       gamelab_whenTouching:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
       gamelab_whenUpArrow:
@@ -1338,6 +1365,8 @@ zh-CN:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的标签
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: 提示用户{QUESTION}变量{VAR}有选择{A}{B}{C}
       Mikelab_changePropBy:
         text: 将 {PROPERTY} {SPRITE} 改为 {VAL}
         options:
@@ -1523,6 +1552,8 @@ zh-CN:
           DANCE:
             MOVES.ClapHigh: 鱼
             MOVES.Clown: 不是我的标签
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: '位置 x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1798,6 +1829,7 @@ zh-CN:
             '"stoneBricks"': 石砖
             '"mossyStoneBricks"': 苔石砖
             '"crackedStoneBricks"': 裂石砖
+            '"chiseledStoneBricks"': 装饰性石砖
             '"blueCoralBlock"': 管珊瑚块
             '"pinkCoralBlock"': 脑纹珊瑚块
             '"magentaCoralBlock"': 气泡珊瑚块

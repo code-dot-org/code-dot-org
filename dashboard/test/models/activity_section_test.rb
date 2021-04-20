@@ -49,7 +49,7 @@ class ActivitySectionTest < ActiveSupport::TestCase
     activity_section = create :activity_section
     Services::MarkdownPreprocessor.expects(:process!).
       with(activity_section.description)
-    activity_section.summarize_for_lesson_show
+    activity_section.summarize_for_lesson_show(false)
   end
 
   test 'seeding_key' do

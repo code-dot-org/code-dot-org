@@ -2272,7 +2272,7 @@ ca:
               name: Composició de cançons
           lesson_groups:
             ramp_up:
-              display_name: Bucles
+              display_name: Bucles imbricats
             csf_digcit:
               display_name: Ciutadania digital
             csf_nested_loops:
@@ -2297,6 +2297,8 @@ ca:
               display_name: Variables
             lessonGroup-9:
               display_name: eliminar
+            lessonGroup-7:
+              display_name: Ciutadania digital
         express-2021:
           lessons:
             Dance Party:

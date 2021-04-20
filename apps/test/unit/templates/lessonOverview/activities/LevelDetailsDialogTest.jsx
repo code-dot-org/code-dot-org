@@ -6,7 +6,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 
 describe('LevelDetailsDialogTest', () => {
-  let handleCloseSpy, defaultProps;
+  let handleCloseSpy, loadVideoSpy, defaultProps;
 
   beforeEach(() => {
     handleCloseSpy = sinon.spy();
@@ -15,6 +15,11 @@ describe('LevelDetailsDialogTest', () => {
       viewAs: ViewType.Teacher,
       isRtl: false
     };
+    loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
+  });
+
+  afterEach(() => {
+    loadVideoSpy.restore();
   });
 
   it('calls handleClose when dismiss is clicked', () => {
@@ -58,11 +63,39 @@ describe('LevelDetailsDialogTest', () => {
         {...defaultProps}
         scriptLevel={{
           url: 'level.url',
-          level: {type: 'External', markdown: 'This is some text.'}
+          level: {type: 'External', markdown: 'This is some text.'},
+          name: 'External Markdown Level'
         }}
       />
     );
     expect(wrapper.contains('This is some text.')).to.be.true;
+    expect(wrapper.find('h1').contains('External Markdown Level')).to.be.true;
+  });
+
+  it('can display the video and teacher markdown for an external markdown level', () => {
+    const wrapper = mount(
+      <LevelDetailsDialog
+        {...defaultProps}
+        scriptLevel={{
+          url: 'level.url',
+          level: {
+            type: 'External',
+            markdown: 'This is some text.',
+            teacherMarkdown: 'This is some teacher only text.',
+            videoOptions: {url: 'video.url'}
+          }
+        }}
+      />
+    );
+    expect(loadVideoSpy.calledOnce).to.be.true;
+    expect(wrapper.contains('This is some text.')).to.be.true;
+    expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
+    expect(
+      wrapper
+        .find('TeacherOnlyMarkdown')
+        .first()
+        .props().content
+    ).to.equal('This is some teacher only text.');
   });
 
   it('can display a LevelGroup', () => {
@@ -98,7 +131,6 @@ describe('LevelDetailsDialogTest', () => {
   });
 
   it('tries to load a video on a standalone video level', () => {
-    const loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
     const wrapper = mount(
       <LevelDetailsDialog
         {...defaultProps}
@@ -113,6 +145,31 @@ describe('LevelDetailsDialogTest', () => {
     );
     expect(loadVideoSpy.calledOnce).to.be.true;
     expect(wrapper.contains('Some things to think about.')).to.be.true;
+  });
+
+  it('can display teacher markdown on a standalone video level', () => {
+    const wrapper = mount(
+      <LevelDetailsDialog
+        {...defaultProps}
+        scriptLevel={{
+          url: 'level.url',
+          level: {
+            type: 'StandaloneVideo',
+            longInstructions: 'Some things to think about.',
+            teacherMarkdown: 'Some things to teach about.'
+          }
+        }}
+      />
+    );
+    expect(loadVideoSpy.calledOnce).to.be.true;
+    expect(wrapper.contains('Some things to think about.')).to.be.true;
+    expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
+    expect(
+      wrapper
+        .find('TeacherOnlyMarkdown')
+        .first()
+        .props().content
+    ).to.equal('Some things to teach about.');
   });
 
   it('can display a bubble choice level', () => {
@@ -159,14 +216,16 @@ describe('LevelDetailsDialogTest', () => {
           status: 'not_tried',
           name: 'sublevel1',
           type: 'External',
-          markdown: 'Markdown1'
+          markdown: 'Markdown1',
+          display_name: 'Choice 1'
         },
         {
           id: '2',
           status: 'not_tried',
           name: 'sublevel2',
           type: 'External',
-          markdown: 'Markdown1'
+          markdown: 'Markdown1',
+          display_name: 'Choice 2'
         }
       ]
     };
@@ -183,6 +242,7 @@ describe('LevelDetailsDialogTest', () => {
         .first()
         .props().markdown
     ).to.equal('Markdown1');
+    expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
   });
 
   it('can display a CSD/CSP puzzle level', () => {
@@ -228,4 +288,48 @@ describe('LevelDetailsDialogTest', () => {
     );
     expect(wrapper.find('TopInstructions').length).to.equal(1);
   });
+
+  it('can display a multiple choice level'),
+    () => {
+      const wrapper = shallow(
+        <LevelDetailsDialog
+          {...defaultProps}
+          scriptLevel={{
+            id: 'scriptlevel',
+            url: 'level.url',
+            status: 'not_tried',
+            level: {
+              type: 'Multi',
+              id: 'level',
+              question:
+                'Look at the code below and predict how the headings will be displayed.',
+              questionText: 'Eggs, Bacon, Waffles',
+              teacherMarkdown: 'This is a multiple choice level.'
+            }
+          }}
+        />
+      );
+      expect(wrapper.find('SafeMarkdown').length).to.equal(2);
+      expect(
+        wrapper
+          .find('SafeMarkdown')
+          .at(0)
+          .props().markdown
+      ).equal(
+        'Look at the code below and predict how the headings will be displayed.'
+      );
+      expect(
+        wrapper
+          .find('SafeMarkdown')
+          .at(1)
+          .props().markdown
+      ).equal('Eggs, Bacon, Waffles');
+      expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
+      expect(
+        wrapper
+          .find('TeacherOnlyMarkdown')
+          .first()
+          .props().content
+      ).to.equal('This is a multiple choice level.');
+    };
 });

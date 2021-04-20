@@ -13,9 +13,9 @@ import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
+import StyledCodeBlock from './StyledCodeBlock';
 
 const styles = {
   header: {
@@ -67,7 +67,10 @@ class StudentLessonOverview extends Component {
                   text={i18n.print()}
                 />
               )}
-              <LessonNavigationDropdown lesson={lesson} />
+              <LessonNavigationDropdown
+                lesson={lesson}
+                isStudentLessonPlan={true}
+              />
             </div>
           </div>
         </div>
@@ -113,13 +116,7 @@ class StudentLessonOverview extends Component {
             <ul>
               {lesson.programmingExpressions.map(expression => (
                 <li key={expression.name}>
-                  <a
-                    href={studio(expression.link)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {expression.name}
-                  </a>
+                  <StyledCodeBlock programmingExpression={expression} />
                 </li>
               ))}
             </ul>

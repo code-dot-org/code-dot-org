@@ -36,6 +36,9 @@ az:
   cancel: İmtina et
   okay: Oldu
   or: və ya
+  join_section:
+    code:
+      submit: Qoşulun
   add_hint_form:
     placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
     submit: Məsləhət əlavə et
@@ -45,6 +48,9 @@ az:
   puzzle: Tapmaca
   trophies: kuboklar
   courses: marşrutlar
+  courses_page:
+    title_student: İnformatikanı öyrənin
+    title_teacher: İnformatikanı öyrədin
   unplugged_activity: Sərbəst fəaliyyət
   of: "/"
   more: DAHA ÇOX
@@ -228,6 +234,7 @@ az:
       algebra_game: Cəbr
       applab: Proqram Labı
       artist: Rəssam
+      artist_k1: Rəssam (məktəbəqədər)
       bounce: Tullan
       calc: Hesablama
       dance: Rəqs şənliyi
@@ -235,7 +242,7 @@ az:
       flappy: Flappy
       frozen: Buzlu ürək
       iceage: Buz dövrü
-      infinity: Sonsuzluq
+      infinity: Sonsuz sayda
       minecraft_designer: Minecraft
       playlab: Oyun labı
       starwars: Star Wars
@@ -397,6 +404,7 @@ az:
     hero:
       title: Minecraft
     unplugged:
+      title: Sərbəst dərslər
       audience: 4+ yaş
     unplugged_conditionals:
       title: Şərti ifadələr
@@ -433,6 +441,8 @@ az:
     open_response_title: Təşəkkürlər,
     correct_title: Düzgün
     correct_body: Bu düzgün cavabdır.
+  lesson_extras:
+    bonus_level: Bonus mərhələ
   dialog:
     ok: Oldu
     startover_title: Yenidən başlamaq istədiyinizə əminsiniz?

@@ -1,6 +1,0 @@
-{
-  "func": "soundSensor.start",
-  "docFunc": "microbit-soundSensor.start",
-  "category": "micro:bit",
-  "noAutocomplete": true
-}

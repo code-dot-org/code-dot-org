@@ -316,6 +316,7 @@ zh-CN:
       sections: "小组"
       help_support: "帮助与支持"
       report_bug: "报告错误"
+      report_abuse: "举报滥用"
       teacher_community: "教师社区"
       professional_learning: "专业学习"
       documentation: "使用文档"
@@ -352,6 +353,7 @@ zh-CN:
       help_us: "帮助我们"
       teach: "教学"
       about: "关于"
+      legal: "隐私与法律"
       legal_privacy: "隐私政策"
       legal_tos: "使用条款"
     user:
@@ -554,6 +556,7 @@ zh-CN:
     art_from_html_old: '我的世界&#8482; &copy; %{current_year} 微软，保留所有权利。星球大战&#8482; &copy; %{current_year} 迪斯尼和卢卡斯影业，保留所有权利。冰雪奇缘&#8482; &copy; %{current_year} 迪斯尼，保留所有权利。冰河世纪&#8482; &copy; %{current_year} 20世纪福克斯，保留所有权利。愤怒的小鸟&#8482; &copy; 2009-%{current_year} 维奥公司，保留所有权利。植物大战僵尸&#8482; &copy; %{current_year} 电子艺界，保留所有权利。阿甘妙世界是TM，&copy; %{current_year} 卡通网络。'
     code_from_html: 'Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> 之许可。'
     powered_by_aws: '由亚马逊网络服务'
+    built_on_github: '在微软的GitHub上构建'
     google_copyright: '© Google Inc，在有许可下使用。谷歌课堂是Google Inc的一个商标。'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour of Code&reg; 是 Code.org 的注册商标。'
     copyright: '版权'
@@ -565,6 +568,7 @@ zh-CN:
     tos_short: '条款'
     tos: '使用条款'
     privacy: '隐私政策'
+    privacy_updated: '隐私政策（已更新）'
     secure: '安全版本'
     report_abuse: '举报滥用'
     built_on_code_studio: '在代码工作室中建立'

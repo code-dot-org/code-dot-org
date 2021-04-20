@@ -15657,6 +15657,8 @@ id:
               name: Membuat Kode Simulasi
             Sprites in Action:
               name: Sprite tengah Beraksi
+            End of Course Project:
+              name: Proyek Akhir Kursus
           lesson_groups:
             introduction:
               display_name: Pendahuluan
@@ -15822,7 +15824,10 @@ id:
             Programming for Entertainment:
               key: Pemrograman untuk Hiburan
               name: Pemrograman untuk Hiburan
-              description_student: "**Pertanyaan Hari Ini: Bagaimana ilmu komputer digunakan di dunia hiburan?**\\r\n\\r\nMurid di kelas diminta untuk mempertimbangkan \"masalah\" kebosanan dan ekspresi diri, lalu menimbang cara mereka mendekati dua masalah tersebut dalam kehidupan masing-masing.  Dari situ mereka akan mengeksplorasi cara Ilmu Komputer secara umum, dan pemrograman secara khusus, memainkan peran entah dalam bentuk hiburan spesifik ataukah sebagai wahana ekspresi diri."
+              description_student: |-
+                **Pertanyaan Hari Ini: Bagaimana ilmu komputer digunakan di dunia hiburan?**\r
+                \r
+                Murid di kelas diminta untuk mempertimbangkan "masalah" kebosanan dan ekspresi diri, lalu menimbang cara mereka mendekati dua masalah tersebut dalam kehidupan masing-masing.  Dari situ mereka akan mengeksplorasi cara Ilmu Komputer secara umum, dan pemrograman secara khusus, memainkan peran entah dalam bentuk hiburan spesifik ataukah sebagai wahana ekspresi diri.
             Plotting Shapes:
               key: Merancang Bentuk
               name: Merancang Bentuk
@@ -15918,7 +15923,8 @@ id:
             Analysis of Design:
               key: Analisis desain
               name: Analisis desain
-              description_teacher: Untuk memulai unit yang dikhususkan bagi pemecahan masalah dan pengembangan produk bagi pengguna lain, murid memulai dengan memperhatikan desain berbagai poci teh. Murid menganalisis setiap poci teh dan berupaya mengidentifikasi bagaimana kebutuhan pengguna tertentu menjadi inspirasi bagi desain poci teh itu. Dengan mempertimbangkan pilihan desain tersebut dan berupaya mencocokkan setiap poci teh dengan calon pengguna, murid dapat mulai menyadari bahwa pendekatan berorientasi-pengguna dalam mendesain produk (baik fisik maupun digital) bisa membuat produk tersebut lebih bermanfaat dan praktis. Untuk mengakhiri aktivitas ini, murid diminta mengusulkan beberapa perubahan pada salah satu poci teh yang bisa membuatnya lebih bermanfaat dan praktis.
+              description_teacher: |-
+                Untuk memulai unit yang dikhususkan bagi pemecahan masalah dan pengembangan produk bagi pengguna lain, murid memulai dengan memperhatikan desain berbagai poci teh. Murid menganalisis setiap poci teh dan berupaya mengidentifikasi bagaimana kebutuhan pengguna tertentu menjadi inspirasi bagi desain poci teh itu. Dengan mempertimbangkan pilihan desain tersebut dan berupaya mencocokkan setiap poci teh dengan calon pengguna, murid dapat mulai menyadari bahwa pendekatan berorientasi-pengguna dalam mendesain produk (baik fisik maupun digital) bisa membuat produk tersebut lebih bermanfaat dan praktis. Untuk mengakhiri aktivitas ini, murid diminta mengusulkan beberapa perubahan pada salah satu poci teh yang bisa membuatnya lebih bermanfaat dan praktis.
             Understanding Your User:
               key: Memahami pengguna anda
               name: Memahami pengguna anda
@@ -16019,7 +16025,8 @@ id:
             Keeping Data Secret:
               key: Menjaga Kerahasiaan Data
               name: Menjaga Kerahasiaan Data
-              description_teacher: Murid mengadakan diskusi tentang berbagai level keamanan yang mereka inginkan untuk data pribadi.  Setelah murid di kelas membangun pemahaman tentang nilai penting privasi, mereka belajar tentang proses enkripsi informasi dengan melakukan enkripsi catatan untuk seorang rekan dan mendekripsi catatan rekan tersebut. Murid di kelas mengakhiri pelajaran dengan diskusi tentang nilai penting baik keamanan fisik maupun digital.
+              description_teacher: |-
+                Murid mengadakan diskusi tentang berbagai level keamanan yang mereka inginkan untuk data pribadi.  Setelah murid di kelas membangun pemahaman tentang nilai penting privasi, mereka belajar tentang proses enkripsi informasi dengan melakukan enkripsi catatan untuk seorang rekan dan mendekripsi catatan rekan tersebut. Murid di kelas mengakhiri pelajaran dengan diskusi tentang nilai penting baik keamanan fisik maupun digital.
             Combining Representations:
               key: Menggabungkan Representasi
               name: Menggabungkan Representasi
@@ -16047,7 +16054,8 @@ id:
             Project - Make a Recommendation:
               key: Proyek - Membuat Rekomendasi
               name: Proyek - Membuat Rekomendasi
-              description_teacher: Untuk mengakhiri unit ini, murid merancang mesin rekomendasi berdasarkan data yang mereka kumpulkan dan analisis dari teman-teman sekelas. Setelah mencermati sebuah contoh aplikasi rekomendasi, murid mengikuti panduan proyek untuk menyelesaikan aktivitas beberapa hari ini. Dalam beberapa langkah pertama, murid memilihkan pilihan yang mereka inginkan diambil oleh pengguna, data yang mereka perlukan untuk memberikan rekomendasi, membuat survei, dan mengumpulkan informasi tentang pilihan teman-teman sekelas. Mereka kemudian menginterpretasikan data dan menggunakan materi yang sudah mereka pelajari untuk membuat algorithm rekomendasi.  Terakhir, mereka menggunakan algorithm tersebut untuk membuat rekomendasi kepada beberapa teman sekelas. Murid mengadakan ulasan sejawat dan melakukan pembaruan yang diperlukan terhadap proyek mereka sebelum mempersiapkan presentasi di depan kelas.
+              description_teacher: |-
+                Untuk mengakhiri unit ini, murid merancang mesin rekomendasi berdasarkan data yang mereka kumpulkan dan analisis dari teman-teman sekelas. Setelah mencermati sebuah contoh aplikasi rekomendasi, murid mengikuti panduan proyek untuk menyelesaikan aktivitas beberapa hari ini. Dalam beberapa langkah pertama, murid memilihkan pilihan yang mereka inginkan diambil oleh pengguna, data yang mereka perlukan untuk memberikan rekomendasi, membuat survei, dan mengumpulkan informasi tentang pilihan teman-teman sekelas. Mereka kemudian menginterpretasikan data dan menggunakan materi yang sudah mereka pelajari untuk membuat algorithm rekomendasi.  Terakhir, mereka menggunakan algorithm tersebut untuk membuat rekomendasi kepada beberapa teman sekelas. Murid mengadakan ulasan sejawat dan melakukan pembaruan yang diperlukan terhadap proyek mereka sebelum mempersiapkan presentasi di depan kelas.
             Post-Project Test:
               key: Pengujian Pascaproyek
               name: Pengujian Pascaproyek
@@ -16605,12 +16613,14 @@ id:
               key: 'Event: Event Besar'
               name: The Big Event Jr.
               description_student: Gerak dan teriak ketika guru Anda menekan tombol pada remote raksasa.
-              description_teacher: "Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event."
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
             Events in Play Lab:
               key: Event dalam Play Lab
               name: Aktif bergerak dengan Event
               description_student: Buat permainan atau cerita Anda sendiri.
               description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!
+            lesson-1:
+              name: Proyek Akhir Kursus
           lesson_groups:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
@@ -16620,6 +16630,8 @@ id:
               display_name: Loop
             csf_events:
               display_name: kegiatan
+            lessonGroup-5:
+              display_name: Proyek Akhir Kursus
           student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
         courseb-2021:
           title: Kursus B (2020)
@@ -16665,7 +16677,7 @@ id:
               key: Loop dalam Kolektor
               name: Loop dengan Laurel
               description_student: Program Laurel si petualang untuk mengumpulkan harta karun di gua terbuka.
-              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
+              description_teacher: 'Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.'
             Loops in Artist:
               key: Loops in Artist
               name: Menggambar Taman dengan Loop
@@ -16680,12 +16692,14 @@ id:
               key: 'Event: Event Besar'
               name: The Big Event Jr.
               description_student: Gerak atau teriak ketika guru Anda menekan tombol pada remote raksasa.
-              description_teacher: "Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event."
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
             Events in Play Lab:
               key: Event dalam Play Lab
               name: Pertempuran Besar dengan Event
               description_student: Gunakan event untuk membuat cerita atau permainan interaktif.
               description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
+            lesson-1:
+              name: Proyek Akhir Kursus
           lesson_groups:
             csf_digcit:
               display_name: Kewarganegaraaan Digital
@@ -16697,6 +16711,8 @@ id:
               display_name: Dampak dari Komputasi
             csf_events:
               display_name: kegiatan
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
           student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
         coursec-2021:
           title: Kursus C (2020)
@@ -16724,7 +16740,7 @@ id:
               key: Debugging dalam Labirin
               name: Debugging dalam Labirin
               description_student: Carilah masalah dalam puzzle dan latih kemampuan debugging Anda.
-              description_teacher: "Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan."
+              description_teacher: Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan.
             Programming in Collector:
               key: Pemrograman dalam Kolektor
               name: Mengumpulkan Harta Karun bersama Laurel
@@ -16739,7 +16755,7 @@ id:
               key: Gelang biner
               name: Gelang biner
               description_student: Buat gelang binary Anda sendiri dan pelajari cara komputer mengingat informasi!
-              description_teacher: "Binary luar biasa penting di dunia komputer. Mayoritas komputer dewasa ini menyimpan semua jenis informasi dalam bentuk binary. Pelajaran ini membantu memperlihatkan kemungkinan mengambil sesuatu dari kehidupan nyata dan menerjemahkannya ke dalam serangkaian on dan off."
+              description_teacher: Binary luar biasa penting di dunia komputer. Mayoritas komputer dewasa ini menyimpan semua jenis informasi dalam bentuk binary. Pelajaran ini membantu memperlihatkan kemungkinan mengambil sesuatu dari kehidupan nyata dan menerjemahkannya ke dalam serangkaian on dan off.
             'Loops: My Loopy Robotic Friends':
               key: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
               name: Teman-teman Robot Saya yang Mengulang-ulang Jr.
@@ -16761,7 +16777,7 @@ id:
               description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
             Sticker Art with Loops:
               key: Seni Stiker dengan Loop
-              name: Seni Stiker dengan Loop
+              name: 'Seni Stiker dengan Loop'
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
               description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
             'Events: The Big Event':
@@ -16776,14 +16792,14 @@ id:
               description_teacher: Dalam tahapan khusus ini, murid harus membuat permainan Flappy Bird sendiri dengan menggunakan pengatur event untuk mendeteksi klik mouse dan benturan objek. Pada akhir level, murid akan dapat menyesuaikan permainan mereka dengan mengubah tampilan visual atau aturan.
             Events in Play Lab:
               key: Event dalam Play Lab
-              name: Permainan Kejar-kejaran dengan Event
+              name: 'Permainan Kejar-kejaran dengan Event'
               description_student: Saatnya menjadi kreatif dan membuat permainan di Play Lab!
               description_teacher: Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!
             Picturing Data:
               key: Penggambaran Data
               name: Penggambaran Data
-              description_student: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
-              description_teacher: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
+              description_student: 'Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.'
+              description_teacher: 'Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.'
             'End of Course Project: Create a Play Lab Game':
               name: Proyek Akhir Kursus
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
@@ -16856,7 +16872,7 @@ id:
               key: Nested Loop dalam Lebah
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+              description_teacher: 'Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.'
             Conditionals with Cards:
               key: Bersyarat dengan kartu
               name: Bersyarat dengan kartu
@@ -16972,9 +16988,9 @@ id:
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
             About Me:
               key: Tentang Saya
-              name: Tentang Saya dengan Sprite Lab
+              name: 'Tentang Saya dengan Sprite Lab'
               description_student: Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.
-              description_teacher: "Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.\\r"
+              description_teacher: 'Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.\r'
             Digital Sharing:
               key: Berbagi Secara Digital
               name: Berbagi Secara Digital
@@ -16990,7 +17006,7 @@ id:
               description_student: Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop.
             Nested Loops in Frozen:
               key: Nested Loop dalam Frozen
-              name: Nested Loop dengan Frozen
+              name: 'Nested Loop dengan Frozen'
               description_student: 'Anna dan Elsa memiliki keahlian seluncur es yang sempurna, tetapi membutuhkan bantuan Anda untuk membuat pola di es. Gunakan nested loop untuk menciptakan sesuatu yang KEREN habis. '
               description_teacher: Sekarang murid tahu cara melapisi loop, mereka dapat membuat begitu banyak hal yang indah.  Pelajaran ini akan membimbing murid mengerjakan serangkaian latihan untuk membantu mereka membuat gambar siap-portofolio sendiri menggunakan keterampilan berseluncur es Anna dan Elsa yang luar biasa!
             'Functions: Songwriting':
@@ -17143,6 +17159,9 @@ id:
               name: Memperkenalkan Sprite Lab
             lesson-8:
               name: Sprite tengah Beraksi
+            lesson-2:
+              name: Kekuatan kata-Kata
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
           lesson_groups:
             ramp_up:
               display_name: Jalan-Naik
@@ -17160,6 +17179,8 @@ id:
               display_name: variabel
             lessonGroup-9:
               display_name: Hapus
+            lessonGroup-7:
+              display_name: Kewarganegaraaan Digital
           student_description: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
         express-2021:
           title: Kursus Kilat (2020)
@@ -17289,6 +17310,7 @@ id:
               key: Pesta Dansa Alien
               name: Pesta Dansa Alien
               description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas.
+              description_teacher: 'Pelajaran ini menampilkan Sprite Lab, sebuah platform bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri. Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai event untuk membuat "pesta dansa alien".  '
             Behaviors in Sprite Lab:
               key: Perilaku dalam Sprite Lab
               name: Perilaku dalam Sprite Lab
@@ -17613,6 +17635,15 @@ id:
               name: Pelajaran ke- 14
             lesson15:
               name: Pelajaran ke- 15
+            lesson17:
+              name: Pelajaran ke- 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Pelajaran 15: Hari Penilaian'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
         k5-onlinepd-2021:
           description: "Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!"
           student_description: 'Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!'

@@ -2279,7 +2279,7 @@ hr:
               name: Pisanje pjesama
           lesson_groups:
             ramp_up:
-              display_name: Petlje
+              display_name: Ugniježđene petlje
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_nested_loops:
@@ -2305,6 +2305,8 @@ hr:
               display_name: Varijable
             lessonGroup-9:
               display_name: ukloni
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
         express-2021:
           lesson_groups:
             csf_loops:

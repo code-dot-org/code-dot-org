@@ -8026,7 +8026,7 @@ ka:
               name: ციკლები რეისთან და BB-8-სთან ერთად
             Sticker Art with Loops:
               key: ციკლები მხატვარში
-              name: ციკლები მხატვარში
+              name: 'ციკლები მხატვარში'
             'Events: The Big Event':
               key: 'მოვლენები: დიდი მოვლენა'
               name: დიდი მოვლენა
@@ -8035,7 +8035,7 @@ ka:
               name: ააწყვეთ მოფარფატე ჩიტის თამაში
             Events in Play Lab:
               key: მოვლენები სათამაშო ლაბორატორიაში
-              name: მოვლენები სათამაშო ლაბორატორიაში
+              name: 'მოვლენები სათამაშო ლაბორატორიაში'
             'End of Course Project: Create a Play Lab Game':
               description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ თქვენი პროექტის აწყობა.
           lesson_groups:
@@ -8181,6 +8181,9 @@ ka:
               name: For ციკლები მხატვარში
             lesson-8:
               name: სპრაიტები მოქმედებაში
+            lesson-2:
+              name: სიტყვების ძალა
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით, თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
           lesson_groups:
             ramp_up:
               display_name: გაუმჯობესება
@@ -8194,6 +8197,8 @@ ka:
               display_name: ცვლადები
             lessonGroup-9:
               display_name: მოცილება
+            lessonGroup-7:
+              display_name: ციფრული მოქალაქეობა
         express-2021:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
           description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
@@ -8386,6 +8391,12 @@ ka:
               name: გაკვეთილი 14
             lesson15:
               name: გაკვეთილი 15
+            lesson17:
+              name: გაკვეთილი 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

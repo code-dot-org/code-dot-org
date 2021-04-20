@@ -303,8 +303,32 @@ state-facts: true
             are female students
           %li
             = succeed "%" do
-              = state_info[:urm_codeorg_i]
-            are students from marginalized racial and ethnic groups underrepresented in computer science (Black/African American, Hispanic/Latino/Latina, Native American/Alaskan, or Native Hawaiian/Pacific Islander)
+              = state_info[:black_codeorg_i]
+            are Black/African American students
+          %li
+            = succeed "%" do
+              = state_info[:hispanic_codeorg_i]
+            are Hispanic/Latino/Latina students
+          %li
+            = succeed "%" do
+              = state_info[:native_american_codeorg_i]
+            are Native American/Alaskan students
+          %li
+            = succeed "%" do
+              = state_info[:hawaiian_codeorg_i]
+            are Native Hawaiian/Pacific Islander students
+          %li
+            = succeed "%" do
+              = state_info[:white_codeorg_i]
+            are white students
+          %li
+            = succeed "%" do
+              = state_info[:asian_codeorg_i]
+            are Asian students
+          %li
+            = succeed "%" do
+              = state_info[:two_codeorg_i]
+            are students who identify as two or more races
       %li
         - if state_info[:professional_learning_partners_t] == 'none' && state_info[:num_affiliates_i] == 0
           Code.org has

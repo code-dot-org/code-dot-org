@@ -292,7 +292,7 @@
   "timeShort": "rövid",
   "timeVeryLong": "nagyon hosszú",
   "timeVeryShort": "nagyon rövid",
-  "to": "ehhez:",
+  "to": "értéke:",
   "toSlotNumber": "erre a helyre",
   "tooManyBlocksFail": "A(z) {puzzleNumber}. feladvány befejeződött. Ügyes vagy! Egyébként ennyi blokkal is meg lehet csinálni: {numBlocks, plural, one {1 block} other {# blocks}}.",
   "turnRandom": "fordulás véletlenszerű irányba",

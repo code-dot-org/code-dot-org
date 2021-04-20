@@ -57,6 +57,9 @@
           },
           "draw cord": {
             "name": "rajzolj kábelt"
+          },
+          "draw R pad": {
+            "name": "rajzold meg az R panelt"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -550,7 +553,7 @@
           "draw an octagon": {
             "name": "rajzolj nyolcszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -658,13 +661,13 @@
           "n-sided shape": {
             "name": "n-oldalú síkidom",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a loop": {
             "name": "rajzolj hurkot",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw spiral circle": {
@@ -677,7 +680,7 @@
           "draw a loop": {
             "name": "rajzolj hurkot",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "n-sided shape": {
@@ -875,7 +878,7 @@
           "draw a hexagon": {
             "name": "rajzolj egy hatszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -883,13 +886,13 @@
           "draw a polygon": {
             "name": "rajzolj sokszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "do something": {
             "name": "csinálj valamit",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -897,7 +900,7 @@
           "draw a polygon": {
             "name": "rajzolj sokszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -905,7 +908,7 @@
           "draw a polygon": {
             "name": "rajzolj sokszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -913,14 +916,14 @@
           "draw a polygon": {
             "name": "rajzolj sokszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -929,7 +932,7 @@
             "name": "rajzolj egy csillagot",
             "parameters": {
               "points": "pontok",
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a circle": {
@@ -938,32 +941,32 @@
           "draw a pinwheel": {
             "name": "rajzolj szélkereket",
             "parameters": {
-              "length": "hossza",
+              "length": "length",
               "repeat": "ismételd"
             }
           },
           "draw a triangle": {
             "name": "Rajzolj egy háromszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a shape": {
             "name": "rajzolj síkidomot",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -985,7 +988,7 @@
           "draw a triangle with length": {
             "name": "rajzolj háromszöget, oldala",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -993,7 +996,7 @@
           "draw a pentagon": {
             "name": "rajzolj ötszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -1001,25 +1004,25 @@
           "draw a triangle": {
             "name": "Rajzolj egy háromszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a hexagon": {
             "name": "rajzolj egy hatszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a sqaure": {
             "name": "rajzolj négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -1027,7 +1030,7 @@
           "draw a triangle": {
             "name": "Rajzolj egy háromszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -1035,7 +1038,7 @@
           "draw a triangle with length": {
             "name": "rajzolj háromszöget, oldala",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -1043,7 +1046,7 @@
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "do something": {
@@ -1054,7 +1057,7 @@
           "draw a polygon": {
             "name": "rajzolj sokszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -1310,14 +1313,14 @@
         "course4_bee_fwp_challenge1": {
           "pick row": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
         "course4_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -2830,7 +2833,7 @@
           },
           "black outline": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -2838,7 +2841,7 @@
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "checker": {
@@ -2858,7 +2861,7 @@
           },
           "black outline": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -2866,7 +2869,7 @@
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -2874,7 +2877,7 @@
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a square2": {
@@ -2892,7 +2895,7 @@
           },
           "black outline": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -2900,7 +2903,7 @@
           "draw a polygon": {
             "name": "rajzolj sokszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -2908,21 +2911,21 @@
           "draw a polygon": {
             "name": "rajzolj sokszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
         "courseF_artist_fwp7": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "hossza",
+              "length": "length",
               "min": "min"
             }
           }
@@ -2930,7 +2933,7 @@
         "courseF_artist_fwp8": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "hossza",
+              "length": "length",
               "min": "min"
             }
           }
@@ -2940,7 +2943,7 @@
             "name": "rajzolj egy csillagot",
             "parameters": {
               "points": "pontok",
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a circle": {
@@ -2949,37 +2952,37 @@
           "draw a pinwheel": {
             "name": "rajzolj szélkereket",
             "parameters": {
-              "length": "hossza",
+              "length": "length",
               "repeat": "ismételd"
             }
           },
           "draw a triangle": {
             "name": "Rajzolj egy háromszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a shape": {
             "name": "rajzolj síkidomot",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a spiral edge": {
             "parameters": {
-              "length": "hossza",
+              "length": "length",
               "min": "min"
             }
           }
@@ -3011,7 +3014,7 @@
           "draw an octagon": {
             "name": "rajzolj nyolcszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -3133,7 +3136,7 @@
           "rowOfNectar": {
             "name": "nektárokSora",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -3180,14 +3183,14 @@
         "courseF_bee_fwp_challenge1": {
           "pick row": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
         "courseF_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },
@@ -3425,7 +3428,7 @@
             "name": "rajzolj egy csillagot",
             "parameters": {
               "points": "pontok",
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a circle": {
@@ -3434,32 +3437,32 @@
           "draw a pinwheel": {
             "name": "rajzolj szélkereket",
             "parameters": {
-              "length": "hossza",
+              "length": "length",
               "repeat": "ismételd"
             }
           },
           "draw a triangle": {
             "name": "Rajzolj egy háromszöget",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a shape": {
             "name": "rajzolj síkidomot",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a house": {
             "name": "rajzoljon egy házat",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           },
           "draw a square": {
             "name": "rajzoljon egy négyzetet",
             "parameters": {
-              "length": "hossza"
+              "length": "length"
             }
           }
         },

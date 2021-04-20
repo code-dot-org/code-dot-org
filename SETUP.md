@@ -319,7 +319,7 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew link imagemagick@6 --force`
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
-- `gem install rmagick -v 2.15.4`
+- `gem install rmagick -v 2.16.0`
 
 ### ImageMagick with Pango
 
@@ -422,6 +422,14 @@ If you run into error messages about `implicit declaration of function thin_xxx`
 - `gem install thin -v THIN_VERSION -- --with-cflags="-Wno-error=implicit-function-declaration"` where THIN_VERSION is the current version of thin in [Gemfile.lock](./Gemfile.lock)).
 
 (More info [here](https://github.com/macournoyer/thin/pull/364))
+
+#### mimemagic
+
+If you run into an error message about `Could not find MIME type database in the following locations...` while installing the `mimemagic` gem, try:
+
+- `brew install shared-mime-info`
+
+(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
 
 #### Xcode Set Up
 

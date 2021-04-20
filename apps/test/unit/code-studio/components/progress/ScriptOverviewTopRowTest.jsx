@@ -10,10 +10,11 @@ import {
   COMPLETED
 } from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {testLessons} from './unitCalendarTestData';
 
@@ -25,8 +26,10 @@ const defaultProps = {
   scriptTitle: 'Unit test script title',
   viewAs: ViewType.Student,
   isRtl: false,
-  resources: [],
-  showAssignButton: true
+  teacherResources: [],
+  studentResources: [],
+  showAssignButton: true,
+  isMigrated: false
 };
 
 describe('ScriptOverviewTopRow', () => {
@@ -140,7 +143,7 @@ describe('ScriptOverviewTopRow', () => {
       <ScriptOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Teacher}
-        resources={[
+        teacherResources={[
           {
             type: ResourceType.curriculum,
             link: 'https://example.com/a'
@@ -154,7 +157,7 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <TeacherResourcesDropdown
+        <ResourcesDropdown
           resources={[
             {
               type: ResourceType.curriculum,
@@ -165,6 +168,52 @@ describe('ScriptOverviewTopRow', () => {
               link: 'https://example.com/b'
             }
           ]}
+          useMigratedResources={false}
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('renders migrated resources for teacher on a migrated script', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        viewAs={ViewType.Teacher}
+        isMigrated={true}
+        migratedTeacherResources={[
+          {
+            id: 1,
+            key: 'curriculum',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            id: 2,
+            key: 'vocabulary',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <ResourcesDropdown
+          migratedResources={[
+            {
+              id: 1,
+              key: 'curriculum',
+              name: 'Curriculum',
+              url: 'https://example.com/a'
+            },
+            {
+              id: 2,
+              key: 'vocabulary',
+              name: 'Vocabulary',
+              url: 'https://example.com/b'
+            }
+          ]}
+          useMigratedResources={true}
         />
       )
     ).to.be.true;
@@ -230,6 +279,42 @@ describe('ScriptOverviewTopRow', () => {
         />
       )
     ).to.be.false;
+  });
+
+  it('renders dropdown button with links to printing options', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Teacher}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/script_overview.pdf',
+      '/link/to/script_resources.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plans',
+      'Print Handouts'
+    ]);
+  });
+
+  it('does not render printing option dropdown for students', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        scriptOverviewPdfUrl="/link/to/script_overview.pdf"
+        scriptResourcesPdfUrl="/link/to/script_resources.pdf"
+        viewAs={ViewType.Student}
+      />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(0);
   });
 
   it('renders RTL without errors', () => {
