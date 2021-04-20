@@ -141,6 +141,7 @@ Scenario: Lock settings for students who never submit
   When I sign in as "billy"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   Then I verify progress for stage 31 level 1 is "not_tried"
   Then I verify progress for stage 31 level 2 is "not_tried"
   Then I verify progress for stage 31 level 3 is "not_tried"
@@ -208,6 +209,9 @@ Scenario: Lock settings for retake not submit scenario
   # now editable, and student can submit
 
   When I sign in as "babby"
+  And I am on "http://studio.code.org/s/allthethings"
+  And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
@@ -276,5 +280,8 @@ Scenario: Lock settings for retake after submit scenario
   # now editable, and student can see unsubmit button
 
   When I sign in as "frank"
+  And I am on "http://studio.code.org/s/allthethings"
+  And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   Then element ".unsubmitButton" is visible
