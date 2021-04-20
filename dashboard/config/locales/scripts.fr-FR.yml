@@ -19276,7 +19276,7 @@ fr:
             Exploring Web Pages:
               name: Explorer des Pages Web
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Searching and Research:
               name: Être à la Recherche et Rechercher
             Sources and Research:
@@ -20950,7 +20950,7 @@ fr:
             Sources and Research:
               name: Les Sources et la Recherche
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               name: Planifier un Site Web Multi-Pages
             Linking and Navigation:
@@ -24074,7 +24074,7 @@ fr:
             Sources and Research:
               name: Les Sources et la Recherche
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               name: Planifier un Site Web Multi-Pages
             Linking and Navigation:
@@ -24170,6 +24170,10 @@ fr:
               name: Algorithmes
             Events:
               name: Événements
+        code-break-staging:
+          lessons:
+            Algorithms with Hill Harper:
+              name: Algorithmes avec Hill Harper
         no-lg:
           lessons:
             new stage:
@@ -24820,8 +24824,8 @@ fr:
               key: Les Sources et la Recherche
               name: Les Sources et la Recherche
             CSS Classes:
-              key: Classes CSS
-              name: Classes CSS
+              key: Les classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               key: Planifier un Site Web Multi-Pages
               name: Planifier un Site Web Multi-Pages
@@ -25488,6 +25492,8 @@ fr:
             Color Images:
               key: Les Images En Couleur
               name: Les Images En Couleur
+              description_student: Découvrez comment les ordinateurs représentent
+                des images couleur à l'aide de bits.
             Lossless Compression:
               key: Compression Sans Perte
               name: Compression Sans Perte
@@ -26951,6 +26957,10 @@ fr:
               name: Introduction au Labo des Lutins
             lesson-8:
               name: Les Lutins en Action
+            lesson-2:
+              name: Le Pouvoir des Mots
+              description_student: Le harcèlement n'est jamais acceptable. Cette leçon
+                vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
           lesson_groups:
             ramp_up:
               display_name: Progression
@@ -26966,6 +26976,8 @@ fr:
               display_name: variables
             lessonGroup-9:
               display_name: supprimer
+            lessonGroup-7:
+              display_name: Citoyenneté Numérique
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -27223,6 +27235,11 @@ fr:
               name: Soirée Dansante des Extraterrestres
               description_student: Crée un projet interactif qui peut être partagé
                 avec tes camarades de classe.
+              description_teacher: 'Cette leçon présente le Labo des Lutins, une plate-forme
+                où les élèves peuvent créer leurs propres animations et jeux interactifs.
+                Aujourd''hui, en plus des comportements, les étudiants intégreront
+                les entrées de l''utilisateur en tant qu''événements pour créer une
+                « soirée dansante extraterrestre ».  '
             Behaviors in Sprite Lab:
               key: Les Comportements dans le Labo des Lutins
               name: Les Comportements dans le Labo des Lutins
@@ -27386,6 +27403,8 @@ fr:
               name: Codage d'une simulation
             Course F Introduction:
               name: Introduction au Labo des Lutins
+            lesson-3:
+              name: Créer un Chat-bot
             Sprites in Action:
               name: Les Lutins en Action
             introducing-spritelab:
@@ -28107,6 +28126,15 @@ fr:
               name: Leçon 14
             lesson15:
               name: Leçon 15
+            lesson17:
+              name: Leçon 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Lesson 15 : Journée d''Évaluation'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
         k5-onlinepd-2021:
           description: Apprenez à enseigner l'informatique en utilisant les Principes
             Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit

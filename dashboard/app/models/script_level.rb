@@ -311,7 +311,7 @@ class ScriptLevel < ApplicationRecord
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
-    user_level.nil? || user_level.locked?(lesson)
+    user_level.nil? || user_level.show_as_locked?(lesson)
   end
 
   def previous_level
@@ -451,17 +451,11 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown)
     summary = summarize
     summary[:id] = id.to_s
-    summary[:levels] = levels.map do |level|
-      {
-        name: level.name,
-        id: level.id.to_s,
-        icon: level.icon,
-        isConceptLevel: level.concept_level?
-      }
-    end
+    summary[:scriptId] = script_id
+    summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 
@@ -501,11 +495,13 @@ class ScriptLevel < ApplicationRecord
 
   def summarize_as_bonus(user_id = nil)
     perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
+    localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
+    localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
     {
       id: id.to_s,
       type: level.type,
-      description: level.try(:bubble_choice_description),
-      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      description: localized_level_description,
+      display_name: localized_level_display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
       perfect: perfect,

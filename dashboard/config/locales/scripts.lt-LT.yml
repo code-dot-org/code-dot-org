@@ -2750,7 +2750,7 @@ lt:
               name: Dainų rašymas
           lesson_groups:
             ramp_up:
-              display_name: Kartojimas
+              display_name: Kartojimas kartojime
             csf_digcit:
               display_name: Virtuali pilietybė
             csf_nested_loops:
@@ -2773,6 +2773,8 @@ lt:
               display_name: Kintamieji
             lessonGroup-9:
               display_name: ištrink
+            lessonGroup-7:
+              display_name: Virtuali pilietybė
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2805,6 +2807,12 @@ lt:
               name: 14 pamoka
             lesson15:
               name: 15 pamoka
+            lesson17:
+              name: 15 pamoka
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

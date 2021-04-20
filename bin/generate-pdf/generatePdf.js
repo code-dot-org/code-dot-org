@@ -21,9 +21,18 @@ const puppeteer = require("puppeteer");
     )
     .help().argv;
 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    // pass the "unlimited storage" flag so we don't crash when printing very
+    // large pages.
+    // pass the "full memory crash report" flag because I'm still not 100% sure
+    // that unlimited storage will fix the crash we've been seeing
+    // occasionally, and I want more info if we do get another crash.
+    args: ["--unlimited-storage", "--full-memory-crash-report"]
+  });
   const page = await browser.newPage();
-  const pageOptions = { waitUntil: "networkidle2" };
+  const pageOptions = {
+    waitUntil: ["domcontentloaded", "networkidle2"]
+  };
 
   if (argv.url) {
     await page.goto(argv.url, pageOptions);

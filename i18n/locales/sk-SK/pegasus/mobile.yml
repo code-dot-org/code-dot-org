@@ -1049,6 +1049,12 @@
   coursed-2019_gradelevel: Vek 7-11
   coursee-2019_gradelevel: Vek 8-12
   coursef-2019_gradelevel: Vek 9-13
+  coursea-2020_gradelevel: Vek 4-7
+  courseb-2020_gradelevel: Vek 5-8
+  coursec-2020_gradelevel: Vek 6-10
+  coursed-2020_gradelevel: Vek 7-11
+  coursee-2020_gradelevel: Vek 8-12
+  coursef-2020_gradelevel: Vek 9-13
   accelerated_gradelevel: "Vek 10-18"
   codeorg_platformtext: "Moderné prehliadače, smartfóny, tablety"
   codeintl_platformtext: "Moderné prehliadače, smartfóny, tablety"
@@ -1173,6 +1179,11 @@
   coursed-2019_shortdescription_congrats: Rýchlo si zopakuj koncepty z Kurzu C a pokračuj s algoritmami, vnorenými cyklami, podmienkami a viac.
   coursee-2019_shortdescription_congrats: Rýchlo si zopakuj koncepty z kurzov C & D a potom pokračuj s funkciami.
   coursef-2019_shortdescription_congrats: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+  coursea-2020_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+  courseb-2020_shortdescription_congrats: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
+  coursec-2020_shortdescription_congrats: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
+  coursed-2020_shortdescription_congrats: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania sa oboznámia aj s významom pojmu "digitálne občianstvo".
+  coursee-2020_shortdescription_congrats: Začneš programovať s algoritmami, cyklami, podmienkami a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi a rodinou.
   codeorg_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   codeintl_longdescription: "Nauč sa základné koncepty informatiky pomocou vizuálneho blokového programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám. Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč sa príkazy opakovania, rozhodovania a základné algoritmy. Dostupné v 34 jazykoch."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

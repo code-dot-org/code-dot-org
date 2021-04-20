@@ -45,7 +45,7 @@ export default class StudentFeedbackNotification extends Component {
             buttonText={i18n.feedbackNotificationButton()}
             buttonLink="/feedback"
             dismissible={false}
-            analyticId="student-feedback"
+            googleAnalyticsId="student-feedback"
           />
         )}
       </div>

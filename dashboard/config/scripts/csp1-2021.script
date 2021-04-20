@@ -1,7 +1,6 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-teacher_resources [["curriculum", "/link/to/curriculum"]]
 has_verified_resources true
 version_year '2021'
 curriculum_umbrella 'CSP'
@@ -12,27 +11,51 @@ lesson 'CS Principles Pre-survey', display_name: 'CS Principles Pre-survey', loc
 level 'csp-pre-survey-levelgroup_2021', assessment: true
 
 lesson_group 'csp_unit1_2020', display_name: 'Unit 1: Digital Information'
-lesson 'Welcome to CSP', display_name: 'Welcome to CSP', has_lesson_plan: true
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+
+* **Establishing a Strong Classroom Culture:** This unit is designed to be hands-on, collaborative, and exploratory. A major focus of the unit is building a positive classroom culture in which students work together, explore problems, and communicate about their thinking. Most lessons either feature physical manipulatives or a digital widget, and the bulk of lesson time should be spent with students exploring these tools together to develop an understanding of the concepts they highlight. The course intentionally does not start with programming since, in many classrooms, some students have experience with programming and others do not. Choosing to begin with digital information and the internet lets you build community in the room while exploring a topic that is likely to be accessible to all students. The supportive and inclusive classroom environment built in this unit should help set a positive tone that can be carried through the school year.
+
+
+* **Empowering "Deciders":**  An important goal of the course is not merely to teach students technical knowledge, but to put those skills to work in meaningful ways. This unit builds towards the unit project, which provides an opportunity for students to be "deciders" about the impacts of computing on modern life. Other units will emphasize empowering units as "creators."
+
+### Major Assessment and Projects
+
+The unit project asks students to consider and debate issues that arise in modern society due to the digitizing of information. Students will analyze an article that addresses the intersection of digitizing information and current events. They will evaluate what data is being digitized and evaluate the benefits and harms caused by making this information digital. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+* DAT-1: The way a computer represents data internally is different from the way the data is interpreted and displayed for the user. Programs are used to translate data into a representation more easily understood by people.
+* IOC-1: while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 2.1 Binary Numbers
+* 2.2 Data Compression
+* 5.5 Legal and Ethical Concerns.'
+lesson 'Welcome to CSP', display_name: 'Welcome to CSP', has_lesson_plan: true, unplugged: true
 level 'Computer Science is Changing Everything_2021', progression: 'Computer Science is Changing Everything'
 level 'csp_socialBelonging_control_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Representing Information', display_name: 'Representing Information', has_lesson_plan: true
+lesson 'Representing Information', display_name: 'Representing Information', has_lesson_plan: true, unplugged: true
 level 'U1L3 CFU Sending Complex Messages_2021', progression: 'Check for Understanding', assessment: true
 
-lesson 'Circle Square Patterns', display_name: 'Circle Square Patterns', has_lesson_plan: true
+lesson 'Circle Square Patterns', display_name: 'Circle Square Patterns', has_lesson_plan: true, unplugged: true
 level 'CSP U1L4 CYU3_2021', progression: 'Check for Understanding', assessment: true
 
-lesson 'Binary Numbers', display_name: 'Binary Numbers', has_lesson_plan: true
+lesson 'Binary Numbers', display_name: 'Binary Numbers', has_lesson_plan: true, unplugged: true
 level 'U1L5 CFU how many bits_2021', progression: 'Check for Understanding', assessment: true
 level 'U1L5 CFU adding bits_2021', progression: 'Check for Understanding', assessment: true
 level 'U1L5 CFU bin dec similarities_2021', progression: 'Check for Understanding', assessment: true
 
-lesson 'Overflow and Rounding', display_name: 'Overflow and Rounding', has_lesson_plan: true
+lesson 'Overflow and Rounding', display_name: 'Overflow and Rounding', has_lesson_plan: true, unplugged: true
 level 'Widget: Binary Odometer_2021', progression: 'Odometer Activity'
 level 'U1L6 CFU beyond odometer_2021', progression: 'Check For Understanding', assessment: true
 level 'U1L6 CFU representing fractions_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Representing Text', display_name: 'Representing Text', has_lesson_plan: true
+lesson 'Representing Text', display_name: 'Representing Text', has_lesson_plan: true, unplugged: true
 level 'U1L8 Reflection Multiple Representations CSP_2021', progression: 'Check for Understanding', assessment: true
 
 lesson 'Black and White Images', display_name: 'Black and White Images', has_lesson_plan: true
@@ -52,7 +75,7 @@ level 'CSP U1L10 Color Pixelation Widget 1_2021', progression: 'Pixelation Widge
 level 'CSP U1L10 More Shades of Color_2021', progression: 'More Shades of Color'
 level 'CSP U1L10 Color Pixelation Widget 2_2021', progression: 'Pixelation Widget: Color'
 level 'CSP U1L10 Color Pixelation Widget 3_2021', progression: 'Pixelation Widget: Color'
-level 'CSP U1L10 Color Sampling_2021', progression: 'Color Sampling'
+level 'U1 Sampling Widget', progression: 'Color Sampling Widget'
 level 'CSP U1L10 Color Pixelation Widget 4_2021', progression: 'Pixelation Widget: Color'
 level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Assessment: Check For Understanding', assessment: true
 level 'U1L10 CFU Sampling_2021', progression: 'Assessment: Check For Understanding', assessment: true
@@ -68,14 +91,14 @@ level 'U1 Lossy Compression Widget v1_2021', progression: 'Lossy Compression Wid
 level 'U1 Lossy Compression Widget v2_2021', progression: 'Lossy Compression Widget'
 level 'U1L11 CPS CFU Cell Phone_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Intellectual Property', display_name: 'Intellectual Property', has_lesson_plan: true
-level 'U1L12 CFU Creative Commons_2021', progression: 'Check For Understanding', assessment: true
-level 'U1L12 CFU Copyright_2021', progression: 'Check For Understanding', assessment: true
+lesson 'Intellectual Property', display_name: 'Intellectual Property', has_lesson_plan: true, unplugged: true
+level 'U1L12 CFU Creative Commons_2021', assessment: true
+level 'U1L12 CFU Copyright_2021', assessment: true
 
-lesson 'Project - Digital Information Dilemmas Part 1', display_name: 'Project   Digital Information Dilemmas Part 1', has_lesson_plan: true
+lesson 'Project - Digital Information Dilemmas Part 1', display_name: 'Project   Digital Information Dilemmas Part 1', has_lesson_plan: true, unplugged: true
 level 'U1L13 CFU Digital Representation_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project - Digital Information Dilemmas Part 2', display_name: 'Project   Digital Information Dilemmas Part 2', has_lesson_plan: true
+lesson 'Project - Digital Information Dilemmas Part 2', display_name: 'Project   Digital Information Dilemmas Part 2', has_lesson_plan: true, unplugged: true
 level 'U1L14 CSP CFU digital information_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Lesson 14: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true

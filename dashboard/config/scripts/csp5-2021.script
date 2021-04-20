@@ -8,7 +8,45 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_lists', display_name: 'Lists'
-lesson 'Lists Explore', display_name: 'Lists Explore', has_lesson_plan: true
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+* **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the "Hackathon" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most "Create-PT-like" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.
+
+* **Growing Comfort with EIPM:** By Unit 5, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom\'s needs.
+
+* **Programming with Real-world Data:** The Data Library is a new feature in App Lab for the 2020-21 school year and was designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.
+
+
+
+### Major Assessment and Projects
+
+The unit project asks students to spend five days as part of a "Hackathon" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+* CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.
+* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.
+* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 3.2 Data Abstraction
+* 3.4 Strings
+* 3.8 Iteration
+* 3.10 Lists
+* 3.16 Simulations
+
+The College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.
+
+* 3.b.i
+* 3.b.ii
+* 3.b.iii
+* 3.b.iv
+* 3.b.v'
+lesson 'Lists Explore', display_name: 'Lists Explore', has_lesson_plan: true, unplugged: true
 level 'U5 L01 Introduction to Lists_2021', progression: 'Introduction to Lists'
 level 'Introduction to Lists - Part 2_2021', progression: 'Introduction to Lists'
 level 'csp-20-21-u5-assess-lists_2021', progression: 'Check For Understanding', assessment: true
@@ -42,7 +80,7 @@ level 'U5 Lists Make Project Sample App 2020_2021', progression: 'Try the Remind
 level 'U5 Lists Make Project 2020_2021', progression: 'Make the Reminders App', assessment: true
 
 lesson_group 'csp_loops', display_name: 'Loops'
-lesson 'Loops Explore', display_name: 'Loops Explore', has_lesson_plan: true
+lesson 'Loops Explore', display_name: 'Loops Explore', has_lesson_plan: true, unplugged: true
 level 'csp_applab_loops_2021', progression: 'Introduction to Loops'
 level 'U3L5 CSP CFU Looping_2021', progression: 'Check For Understanding', assessment: true
 
@@ -69,7 +107,7 @@ level 'U5 Loops Make Wallpaper App Example 2020_2021', progression: 'Try the Loc
 level 'U5 Loops Make Wallpaper App 2020_2021', progression: 'Make the Lock Screen Maker', assessment: true
 
 lesson_group 'csp_traversals', display_name: 'Traversals'
-lesson 'Traversals Explore', display_name: 'Traversals Explore', has_lesson_plan: true
+lesson 'Traversals Explore', display_name: 'Traversals Explore', has_lesson_plan: true, unplugged: true
 level 'Processing Lists with Loops_2021', progression: 'Introduction to Traversal'
 level 'U5 L09 Traversals Exit Ticket_2021', progression: 'Assessment: Check For Understanding', assessment: true
 

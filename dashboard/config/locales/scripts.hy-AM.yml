@@ -2644,7 +2644,7 @@ hy:
               name: songwriting
           lesson_groups:
             ramp_up:
-              display_name: loops
+              display_name: nested Loops
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
@@ -2673,6 +2673,8 @@ hy:
               display_name: փոփոխականների
             lessonGroup-9:
               display_name: ջնջել
+            lessonGroup-7:
+              display_name: Digital Citizenship
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2699,6 +2701,10 @@ hy:
               display_name: փոփոխականների
             variables:
               display_name: փոփոխականների
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

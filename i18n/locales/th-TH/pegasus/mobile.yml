@@ -71,7 +71,7 @@
   congratulations_on_completing_hoc: "ขอแสดงความยินดีในการผ่านการเรียนเขียนโปรแกรมกับ Hour of Code 1 หลักสูตร"
   congratulations_volunteer: 'ยินดีด้วย: หลังจากที่คุณได้ลองชั่วโมงแห่งการโค้ด <a href="https://code.org/volunteer">ลงทะเบียนเป็นอาสาสมัครในห้องเรียน</a>และช่วยนักเรียนเรียนรู้เป็นชั่วโมงแห่งการโค้ด'
   congratulations_on_completing_course: "ยินดีด้วยกับที่คุณทำบทเรียนได้ %{course}"
-  congrats_next_tutorials_title: "ลองการแนะนำการสอยอื่นต่อ"
+  congrats_next_tutorials_title: " ลองการแนะนำการสอนอื่นต่อ"
   congrats_next_tutorials_desc: "ลองแบบสั้นกว่านี้ 1 ชั่วโมงสำหรับการทบทวน หรือลอง<a href=\"%{current_path}/next\">บททบทวนที่ใกล้เคียง</a>"
   get_a_certificate_of_achievement: "รับใบประกาศนียบัตร"
   view_course: "ดูหลักสูตร"
@@ -735,6 +735,8 @@
   coursee-2018_gradelevel: อายุ 8-12 ปี
   coursed-2019_gradelevel: เกรด 8 +
   coursee-2019_gradelevel: อายุ 8-12 ปี
+  coursed-2020_gradelevel: เกรด 8 +
+  coursee-2020_gradelevel: อายุ 8-12 ปี
   accelerated_gradelevel: "อายุ 10-18 ปี"
   codeorg_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   codeintl_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
@@ -818,6 +820,9 @@
   frozen_shortdescription: "ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง"
   starwars_shortdescription: "ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ"
   artist_shortdescription: "Draw cool pictures and designs with the ศิลปิน!"
+  coursea-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  courseb-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  coursed-2020_shortdescription_congrats: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
   codeorg_longdescription: "เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา"
   codeintl_longdescription: "เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา"
   thinkersmithspanish_longdescription: "ด้วยการใช้คำศัพท์ของ Robot (ซึ่งมีมาให้แล้ว) นักเรียนจะได้ศึกษาวิธีการทำกิจกรรมต่างๆให้สำเร็จโดยไม่ต้องปรึกษากันมาก่อน บทเรียนนนี้สอนให้นักเรียนรู้จักการเชื่อมต่อของสัญลักษณ์และการกระทำ รวมไปถึงทักษะในการแก้ไขจุดบกพร่องต่างๆ"

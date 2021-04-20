@@ -3116,7 +3116,7 @@ et:
               name: Laulude kirjutamine
           lesson_groups:
             ramp_up:
-              display_name: Tsüklid
+              display_name: Korduvad tsüklid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_nested_loops:
@@ -3145,6 +3145,8 @@ et:
               display_name: Muutujad
             lessonGroup-9:
               display_name: eemalda
+            lessonGroup-7:
+              display_name: Digitaalne kodakondsus
         express-2021:
           lessons:
             Dance Party:
@@ -3193,6 +3195,12 @@ et:
               name: Õppetund 14
             lesson15:
               name: Õppetund 15
+            lesson17:
+              name: Õppetund 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

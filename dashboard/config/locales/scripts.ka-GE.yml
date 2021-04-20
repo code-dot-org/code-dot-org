@@ -8938,6 +8938,10 @@ ka:
               name: For ციკლები მხატვარში
             lesson-8:
               name: სპრაიტები მოქმედებაში
+            lesson-2:
+              name: სიტყვების ძალა
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით,
+                თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
           lesson_groups:
             ramp_up:
               display_name: გაუმჯობესება
@@ -8951,6 +8955,8 @@ ka:
               display_name: ცვლადები
             lessonGroup-9:
               display_name: მოცილება
+            lessonGroup-7:
+              display_name: ციფრული მოქალაქეობა
         express-2021:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -9169,6 +9175,12 @@ ka:
               name: გაკვეთილი 14
             lesson15:
               name: გაკვეთილი 15
+            lesson17:
+              name: გაკვეთილი 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

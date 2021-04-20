@@ -1138,4 +1138,9 @@ class LevelTest < ActiveSupport::TestCase
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
   end
+
+  test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
+    summary = @custom_level.summarize_for_lesson_show(false)
+    refute summary.key?('teacherMarkdown')
+  end
 end

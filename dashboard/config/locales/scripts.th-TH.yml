@@ -3399,7 +3399,7 @@ th:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
           lesson_groups:
             ramp_up:
-              display_name: ลูป
+              display_name: ลูปซ้อนลูป
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             csf_nested_loops:
@@ -3433,6 +3433,8 @@ th:
               display_name: ตัวแปร
             lessonGroup-9:
               display_name: เอาออก
+            lessonGroup-7:
+              display_name: พลเมืองดิจิทัล
         express-2021:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้

@@ -3494,7 +3494,7 @@
               name: Låtskriving
           lesson_groups:
             ramp_up:
-              display_name: Løkker
+              display_name: Løkker i løkker
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_nested_loops:
@@ -3525,6 +3525,8 @@
               display_name: Variabler
             lessonGroup-9:
               display_name: fjern
+            lessonGroup-7:
+              display_name: Digitalt statsborgerskap
         express-2021:
           lessons:
             Dance Party:
@@ -3577,6 +3579,10 @@
               display_name: 'Kapittel 2: Problemløsing med data'
             cspSurvey:
               display_name: Undersøkelse
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

@@ -11,12 +11,18 @@ import {
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import programmingExpressionsEditor, {
+  initProgrammingExpressions
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
+import createStandardsReducer, {
+  initStandards
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
@@ -31,14 +37,19 @@ describe('LessonEditor', () => {
     stubRedux();
     registerReducers({
       ...reducers,
-      resources: resourcesEditor,
-      vocabularies: vocabulariesEditor
+      resources: createResourcesReducer('lessonResource'),
+      vocabularies: vocabulariesEditor,
+      programmingExpressions: programmingExpressionsEditor,
+      standards: createStandardsReducer('standard'),
+      opportunityStandards: createStandardsReducer('opportunityStandard')
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions));
+    store.dispatch(init(sampleActivities, searchOptions, [], false));
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
+    store.dispatch(initProgrammingExpressions([]));
+    store.dispatch(initStandards([]));
     defaultProps = {
       relatedLessons: [],
       initialObjectives: [],
@@ -59,7 +70,8 @@ describe('LessonEditor', () => {
         courseVersionId: 1,
         scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        scriptIsVisible: false
+        scriptIsVisible: false,
+        frameworks: []
       }
     };
   });
@@ -95,8 +107,6 @@ describe('LessonEditor', () => {
       'purpose'
     ).to.be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
-    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(5);
-    expect(wrapper.find('input').length).to.equal(22);
     expect(
       wrapper
         .find('input')
@@ -109,11 +119,12 @@ describe('LessonEditor', () => {
         .at(2)
         .props().disabled
     ).to.equal(false);
-    expect(wrapper.find('select').length).to.equal(1);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
+    expect(wrapper.find('ProgrammingExpressionsEditor').length).to.equal(1);
+    expect(wrapper.find('StandardsEditor').length).to.equal(2);
     expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 

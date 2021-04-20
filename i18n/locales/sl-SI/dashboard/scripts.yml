@@ -2120,7 +2120,7 @@ sl:
               name: Napiši pesem
           lesson_groups:
             ramp_up:
-              display_name: Zanke
+              display_name: Gnezdenje zank
             csf_digcit:
               display_name: Digitalno državljanstvo
             csf_nested_loops:
@@ -2145,6 +2145,8 @@ sl:
               display_name: Spremenljivke
             lessonGroup-9:
               display_name: odstrani
+            lessonGroup-7:
+              display_name: Digitalno državljanstvo
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2169,6 +2171,10 @@ sl:
               display_name: Spremenljivke
             variables:
               display_name: Spremenljivke
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

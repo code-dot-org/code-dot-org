@@ -289,6 +289,7 @@ img.video_thumbnail {
     .create_button, .display_name, .pairing_name {
       html[dir=rtl] & {
         float: right;
+        padding-left: 3px;
       }
     }
 
@@ -329,6 +330,10 @@ img.video_thumbnail {
     margin-top: 0;
     padding-top: 4px;
     padding-left: 16px;
+
+    &:not(.user-is-tabbing) {
+      outline: none;
+    }
   }
 
   #signin_button .header_button {
@@ -2919,6 +2924,19 @@ $modal-no-icon-gap: 22px;
 
 .instructions-markdown {
   padding-top: 19px;
+
+  .instructor-image {
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+html[dir="rtl"] .instructions-markdown {
+  .instructor-image {
+    float: right;
+    padding-left: 10px;
+    padding-right: 0;
+  }
 }
 
 .markdown-level-header-text {
@@ -3178,16 +3196,21 @@ code {
 #diversity_survey {
   background-color: $background_gray;
   color: $dark_charcoal;
-  border-radius: 5px;
   overflow: hidden;
-  border: solid 1px $purple;
 
   #surveythanks {
     font-size: 14px;
     padding: 20px;
+    color: $bootstrap_success_text;
+    background-color: $bootstrap_success_background;
+    border: solid 1px $bootstrap_success_border;
+    border-radius: 5px;
   }
 
   #surveybody {
+    border: solid 1px $purple;
+    border-radius: 5px;
+
     #headingarea {
       margin-top: 0;
       background-color: $purple;
@@ -3213,9 +3236,8 @@ code {
       margin-bottom: 0;
       padding: 20px;
 
-      .survey_left {
-        width: 50%;
-        float: left;
+      .survey_questions {
+        width: 100%;
 
         li {
           font-size: 14px;
@@ -3236,49 +3258,6 @@ code {
           }
         }
       }
-    }
-
-    .survey_right {
-      width: 45%;
-      float: left;
-      border-left: 1px solid $charcoal;
-      padding-left: 20px;
-
-      li {
-        font-size: 14px;
-      }
-      .subtext {
-        font-size: 12px;
-        margin-top: 7px;
-      }
-
-      .dots {
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-left: 30px;
-        font-size: 14px;
-
-        .dot {
-          margin-top: 10px;
-
-          input {
-            margin-right: 3px;
-            vertical-align: top;
-            margin-top: 2px;
-          }
-
-          label {
-            display: inline;
-            margin-top: 2px;
-            font-size: 13px;
-            padding-right: 20px;
-          }
-        }
-      }
-    }
-
-    #submit {
-      text-align: right;
     }
 
     #noanswer {

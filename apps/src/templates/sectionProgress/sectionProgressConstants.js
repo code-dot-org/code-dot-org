@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {studentType} from '@cdo/apps/templates/progress/progressTypes';
 
 /**
  * Shape for scriptData
@@ -28,6 +29,26 @@ export const ViewType = {
   DETAIL: 'detail', // levels
   STANDARDS: 'standards'
 };
+
+/**
+ * @typedef {Object} StudentTableRow
+ * An object wrapping around `studentType` used to manage the
+ * expanded/collapsed state of section progress table rows.
+ *
+ * @property {string} id
+ * @property {studentType} student
+ * @property {number} expansionIndex 0 for the primary row,
+ * otherwise 1-based index of expanded row
+ * @property {bool} isExpanded used by primary row to track state
+ * @property {bool} useDarkBackground used by primary row to determine background color
+ */
+export const studentTableRowType = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  student: studentType.isRequired,
+  expansionIndex: PropTypes.number.isRequired,
+  isExpanded: PropTypes.bool,
+  useDarkBackground: PropTypes.bool
+});
 
 export const tooltipIdForStudent = studentId =>
   `tooltipIdForStudent${studentId}`;

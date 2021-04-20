@@ -2401,7 +2401,7 @@ gl:
               name: Composición
           lesson_groups:
             ramp_up:
-              display_name: Bucles
+              display_name: Bucles aniñados
             csf_digcit:
               display_name: Cidadanía dixital
             csf_nested_loops:
@@ -2430,6 +2430,8 @@ gl:
               display_name: Variables
             lessonGroup-9:
               display_name: eliminar
+            lessonGroup-7:
+              display_name: Cidadanía dixital
         express-2021:
           lesson_groups:
             csf_loops:

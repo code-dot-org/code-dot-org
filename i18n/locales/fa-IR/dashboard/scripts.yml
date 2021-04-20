@@ -2459,7 +2459,7 @@ fa:
               name: ترانه سرایی
           lesson_groups:
             ramp_up:
-              display_name: حلقه‌ها
+              display_name: حلقه های تو در تو
             csf_digcit:
               display_name: شهروندی دیجیتالی
             csf_nested_loops:
@@ -2488,6 +2488,8 @@ fa:
               display_name: متغیرها
             lessonGroup-9:
               display_name: حذف‌کن
+            lessonGroup-7:
+              display_name: شهروندی دیجیتالی
         express-2021:
           lessons:
             Dance Party:
@@ -2525,6 +2527,8 @@ fa:
             lesson14:
               name: درس 14
             lesson15:
+              name: درس 15
+            lesson17:
               name: درس 15
         k5-onlinepd-2021:
           lessons:

@@ -3,14 +3,16 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
@@ -45,6 +47,12 @@ const styles = {
   },
   resourcesRow: {
     display: 'flex'
+  },
+  buttonMarginLTR: {
+    marginLeft: 5
+  },
+  buttonMarginRTL: {
+    marginRight: 5
   }
 };
 
@@ -61,11 +69,36 @@ class ScriptOverviewTopRow extends React.Component {
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
-    showCalendar: PropTypes.bool
+    showCalendar: PropTypes.bool,
+    isMigrated: PropTypes.bool,
+    scriptOverviewPdfUrl: PropTypes.string,
+    scriptResourcesPdfUrl: PropTypes.string
+  };
+
+  compilePdfDropdownOptions = () => {
+    const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
+    const options = [];
+    if (scriptOverviewPdfUrl) {
+      options.push({
+        key: 'lessonPlans',
+        name: i18n.printLessonPlans(),
+        url: scriptOverviewPdfUrl
+      });
+    }
+    if (scriptResourcesPdfUrl) {
+      options.push({
+        key: 'scriptResources',
+        name: i18n.printHandouts(),
+        url: scriptResourcesPdfUrl
+      });
+    }
+    return options;
   };
 
   render() {
@@ -80,13 +113,24 @@ class ScriptOverviewTopRow extends React.Component {
       scriptTitle,
       viewAs,
       isRtl,
-      resources,
+      teacherResources,
+      migratedTeacherResources,
+      studentResources,
       showAssignButton,
       assignedSectionId,
       showCalendar,
       unitCalendarLessons,
-      weeklyInstructionalMinutes
+      weeklyInstructionalMinutes,
+      isMigrated
     } = this.props;
+
+    const pdfDropdownOptions = this.compilePdfDropdownOptions();
+
+    // Adjust styles if locale is RTL
+    const hasButtonMargin = studentResources.length > 0;
+    const buttonMarginStyle = isRtl
+      ? styles.buttonMarginRTL
+      : styles.buttonMarginLTR;
 
     return (
       <div style={styles.buttonRow} className="script-overview-top-row">
@@ -97,14 +141,23 @@ class ScriptOverviewTopRow extends React.Component {
               href={`/s/${scriptName}/next`}
               text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
+              style={{marginRight: 10}}
             />
+            {studentResources.length > 0 && (
+              <ResourcesDropdown
+                migratedResources={studentResources}
+                unitId={scriptId}
+                useMigratedResources={true}
+                studentFacing
+              />
+            )}
             <Button
               __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
               size={Button.ButtonSize.large}
-              style={{marginLeft: 10}}
+              style={hasButtonMargin ? buttonMarginStyle : {}}
             />
             {assignedSectionId && <Assigned />}
           </div>
@@ -113,12 +166,29 @@ class ScriptOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Teacher &&
-            resources.length > 0 && (
-              <TeacherResourcesDropdown
-                resources={resources}
+            ((!isMigrated && teacherResources.length > 0) ||
+              (isMigrated && migratedTeacherResources.length > 0)) && (
+              <ResourcesDropdown
+                resources={teacherResources}
+                migratedResources={migratedTeacherResources}
                 unitId={scriptId}
+                useMigratedResources={isMigrated}
               />
             )}
+          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Teacher && (
+            <div style={{marginRight: 5}}>
+              <DropdownButton
+                text={i18n.printingOptions()}
+                color={Button.ButtonColor.blue}
+              >
+                {pdfDropdownOptions.map(option => (
+                  <a key={option.key} href={option.url}>
+                    {option.name}
+                  </a>
+                ))}
+              </DropdownButton>
+            </div>
+          )}
           {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}

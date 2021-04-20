@@ -14,13 +14,13 @@
       "buttonUrl": "https://code.org/educate/professional-learning",
       "buttonId": "teacher-apps-open-2021-sign-up"
     },
-    "teacher-apps-closing-2020": {
+    "teacher-apps-closing-2021": {
       "image": "/images/professional-learning-2019-closing-soon.png",
       "title": "Don’t miss out. Apply today!",
-      "body": "98% of teachers recommend it and 90% of parents want their child to study computer science. Whether you are new to teaching CS, or have years of experience, join us in this movement and submit your application today.",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
       "buttonText": "Join us",
-      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
-      "buttonId": "teacher-apps-closing-2020-sign-up"
+      "buttonUrl": "http://bit.ly/PLsignup-teacherdash",
+      "buttonId": "teacher-apps-closing-2021-sign-up"
     },
     "teacher-apps-nominate-2020": {
       "image": "/images/fill-970x562/professional-learning-2019-trophy.png",

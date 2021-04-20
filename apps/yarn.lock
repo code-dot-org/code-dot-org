@@ -1568,21 +1568,19 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.33":
-  version "3.5.33"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.33.tgz#cf7cf61eeb7f4d10aebcedb1307bf35c12f3d052"
-  integrity sha512-KGFYKhGZ2UrRzqxkL0cvY85DUIPLUh1jCu9EUyfYYhEHcqICUnM52Jd3w0b8q53sMyKqktxGExI20dXG7QR6RQ==
+"@code-dot-org/blockly@3.5.35":
+  version "3.5.35"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.35.tgz#6afae54e8b4d61e4aa23209639cdbd066881306b"
+  integrity sha512-f+cEBjyMGslVf0qliRm1JJO9MHFswXpLvRklWPYLwlCgjSS9655YlS8e6g1h7UMFHT8uG2c+jlDtRN38r0RPmg==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.1.tgz#1c78132791485a003c5022113afe669ed58834a6"
-  integrity sha512-IQ8bTTmbTBOyhGz4+u/NYEijWKTkUHsvtP0fPKvXJTm56vKNMozTbgHpColzruyQoJ3s9AC5t3dIOrLClkgaPA==
-  optionalDependencies:
-    canvas "^1.6.13"
+"@code-dot-org/dance-party@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.3.tgz#93fbd9827a89cc3f240bafc33ab7b82f7643b200"
+  integrity sha512-92Ja8B0ktsadnEqNsJDgFEX39ZLtYL4SkFlpo50s2t8YRNTKx67QkAu9Kvxi/vlqDxZemMvpldkbHgRsZLtpsg==
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
@@ -1639,30 +1637,29 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.21":
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.21.tgz#60771919904410735b4d89681b843417db592c29"
-  integrity sha512-QhWGIVuW5wHru/B0aICbzBAH8X5G9oSd8hpUME2l2TKS+Ujhdw0bo67y92vCavZg2GN0gnoFHWZ5cwnpXIX3Cw==
+"@code-dot-org/ml-playground@0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.25.tgz#468bccf6cc22b51f1b6bb402cc1342a320db5b2e"
+  integrity sha512-KkhMrF22B7YJzCM6aO5E269Zv0xG/lA0W5WTNybJSKzQIm6YvCXvSSNOYRs6z36kXzooKPePjhYiYEqh2cs8UQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-regular-svg-icons" "^5.11.2"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
     "@fortawesome/react-fontawesome" "^0.1.7"
     chart.js "^2.9.4"
-    ml-svm "^2.1.2"
     react-chartjs-2 "^2.11.1"
 
-"@code-dot-org/p5.play@^1.3.12-cdo":
-  version "1.3.12-cdo"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.12-cdo.tgz#4bf3e9c8045ab7a3109cae31bbe73603fb209fe5"
-  integrity sha512-3zVTCLeOMowuZICzWF3OF9qY88j2Iq7q6h+NM6xvspecISi+veQ2JrO1FxXJL9wCIj75gJC1S3IKdYD66Bsk/w==
+"@code-dot-org/p5.play@^1.3.14-cdo":
+  version "1.3.14-cdo"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.14-cdo.tgz#af4566a0314590663004a0c65a4b79a1ffd3f9c2"
+  integrity sha512-flG1f0FQK73YrNBwyTECYmokARCnlLttCXoujZ5QX1vG3ex6YI0wc+V/vBV1s0g0gaEH3z9QLw3jeozJQAlR/w==
   dependencies:
-    "@code-dot-org/p5" "0.5.4-cdo.4"
+    "@code-dot-org/p5" "0.5.4-cdo.6"
 
-"@code-dot-org/p5@0.5.4-cdo.4":
-  version "0.5.4-cdo.4"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.4.tgz#81f7b3525d1a0395df50754710810d2333a82a11"
-  integrity sha512-WtAJokLTOVg2H4GsboMRnR0jgXxFBbxiHimDo2yY88xzBNI9NugV8EA474IO8U7m6guo3FfM4LzilY6O51HDnw==
+"@code-dot-org/p5@0.5.4-cdo.6":
+  version "0.5.4-cdo.6"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.6.tgz#d004e71e98d91ced6bf1bd7ed28e9ad5faa43c88"
+  integrity sha512-qcrqnrMwIXvRc3kwI+t0LRrVa/GsondnIazbOrQuoVDvPZnCbf+VAD75+jJjcmaDS7Bqw+KlNlIX/WSmgDIY+w==
   dependencies:
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
@@ -2424,11 +2421,6 @@
     "@svgr/plugin-jsx" "^4.1.0"
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
-
-"@types/estree@*":
-  version "0.0.45"
-  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.45.tgz#e9387572998e5ecdac221950dab3e8c3b16af884"
-  integrity sha512-jnqIUKDUqJbDIUxm0Uj7bnlMnRm1T/eZ9N+AVMqhPgzrba2GhGG5o/jCTwmdPK709nEZsGoMzXEDUjcXHa3W0g==
 
 "@types/node@*":
   version "11.13.0"
@@ -4284,13 +4276,6 @@ caniuse-lite@^1.0.30001010:
   version "1.0.30001012"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001012.tgz#653ec635e815b9e0fb801890923b0c2079eb34ec"
   integrity sha512-7RR4Uh04t9K1uYRWzOJmzplgEOAXbfK72oVNokCdMzA67trrhPzy93ahKk1AWHiA0c58tD2P+NHqxrA8FZ+Trg==
-
-canvas@^1.6.13:
-  version "1.6.13"
-  resolved "https://registry.yarnpkg.com/canvas/-/canvas-1.6.13.tgz#8cb4e9abbea9e615a377890ffac50277a1167c73"
-  integrity sha512-XAfzfEOHZ3JIPjEV+WSI6PpISgUta3dgmndWbsajotz+0TQOX/jDpp2kawjRERatOGv9sMMzk5auB3GKEKA6hg==
-  dependencies:
-    nan "^2.10.0"
 
 canvg@gabelerner/canvg:
   version "1.0.0"
@@ -8810,13 +8795,6 @@ is-alphanumerical@^1.0.0:
     is-alphabetical "^1.0.0"
     is-decimal "^1.0.0"
 
-is-any-array@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/is-any-array/-/is-any-array-0.1.0.tgz#e5a27965e3371610c10c66bca3be37ee177bdf8e"
-  integrity sha512-6Kkl1RnvfdkmXM6ZlP+kELGBMA74Nq5pSOm9gIKDaPRe9KQlIJzonrOgq0Jzn/iElB6F2/olpLgWYeVySzrSRg==
-  dependencies:
-    rollup "^1.31.1"
-
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -10614,66 +10592,10 @@ mkdirp@^0.5.4:
   dependencies:
     minimist "^1.2.5"
 
-ml-array-max@^1.1.1, ml-array-max@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/ml-array-max/-/ml-array-max-1.2.0.tgz#141595131fe10208dd89897ce98ab7fd382a3951"
-  integrity sha512-3UH7XCdjINxbtBWj1EuHMeI242Q3uLuC4rTpSybBWUpGjnG/BefAFxmTolUCuXDM59mJ/G/re80CQbaVIuMjQA==
-  dependencies:
-    is-any-array "^0.1.0"
-
-ml-array-min@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/ml-array-min/-/ml-array-min-1.2.0.tgz#6880ea319250a99ec73bc2799ac005c10a0f0489"
-  integrity sha512-Wgf2+lCndLy1SbeOZSUqlkxD9T1CXPT7CIlNGAZRRQI35wsqvfuNtLNH4qKFx8kNjlq3VGXKOSBHeiXR31vaTA==
-  dependencies:
-    is-any-array "^0.1.0"
-
-ml-array-rescale@^1.2.1:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/ml-array-rescale/-/ml-array-rescale-1.3.2.tgz#ebdeaaa84d15f714dbb00e94a6a9336ddcf10413"
-  integrity sha512-kiXwdVCGrer7rLnjR6Q9ZgP6e9rbnmQvYVUMLXyqNg4+zOs+jek8yBupqPZPDr+NvlSE5OuMnfAbP1oA63kHBA==
-  dependencies:
-    is-any-array "^0.1.0"
-    ml-array-max "^1.2.0"
-    ml-array-min "^1.2.0"
-
-ml-distance-euclidean@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ml-distance-euclidean/-/ml-distance-euclidean-1.0.0.tgz#08447c2233641a2b2a9b4c29e5f792d28f1d5b95"
-  integrity sha1-CER8IjNkGisqm0wp5feS0o8dW5U=
-
 ml-distance-euclidean@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ml-distance-euclidean/-/ml-distance-euclidean-2.0.0.tgz#3a668d236649d1b8fec96380b9435c6f42c9a817"
   integrity sha512-yC9/2o8QF0A3m/0IXqCTXCzz2pNEzvmcE/9HFKOZGnTjatvBbsn4lWYJkxENkA4Ug2fnYl7PXQxnPi21sgMy/Q==
-
-ml-kernel-gaussian@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ml-kernel-gaussian/-/ml-kernel-gaussian-2.0.2.tgz#2d1a1130d3205e551e7d1dbe642b8f150076e6c0"
-  integrity sha512-5MBrH2g9MBO53I6mcyXvMhyOLsmO2w21+26A1ZV/vYoxqpsov2PWkT8bhdFCEe0kgDupmAb6u81iOID/rhnarA==
-  dependencies:
-    ml-distance-euclidean "^2.0.0"
-
-ml-kernel-polynomial@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/ml-kernel-polynomial/-/ml-kernel-polynomial-2.0.1.tgz#ae99e26892f5763185e2334bad862adc5733c599"
-  integrity sha512-aGDNRPHDiKeJmBxB0L9wTxKNLfp5JytbdRIo5K+FTcmFjkWDe3YZPo6R6wBB5mxaJ5eqTRawzeV4RoIWHbakyQ==
-
-ml-kernel-sigmoid@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ml-kernel-sigmoid/-/ml-kernel-sigmoid-1.0.1.tgz#3eb4419a97d68d299dd6faffa8dca0fb91dd3300"
-  integrity sha512-mSbYOSbNQ7GsUAGrHuUHNsLgM3bZGpXkotw/FBdKZD9YMXfVOgQb1LvvvVeSlOR/ZdmX23qqaV0RnKSYWBF8og==
-
-ml-kernel@^2.2.0:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/ml-kernel/-/ml-kernel-2.3.4.tgz#7f6cdd5a3a9b1b6ee3c34bfd15c181664a0661dd"
-  integrity sha512-XH841rI/FANQD1JbhJuSy2XpXmstDjTRoYqJTQRq3V+sZmphvOKIJx1bWTr2vCxduDcWV/M77AYPZRivqt5QTA==
-  dependencies:
-    ml-distance-euclidean "^1.0.0"
-    ml-kernel-gaussian "^2.0.1"
-    ml-kernel-polynomial "^2.0.0"
-    ml-kernel-sigmoid "^1.0.0"
-    ml-matrix "^5.0.0"
 
 ml-knn@^3.0.0:
   version "3.0.0"
@@ -10681,27 +10603,6 @@ ml-knn@^3.0.0:
   integrity sha512-w7Jig4vW09OYMurlIRRJj8yL2O/835QJpxup+yW7QVYXSjixmanPtPQL+weiTYbaB/wWX8JilB+Wllk4mxvP5w==
   dependencies:
     ml-distance-euclidean "^2.0.0"
-
-ml-matrix@^5.0.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/ml-matrix/-/ml-matrix-5.3.0.tgz#2154902a3380f6a0874ab9a2539a09e873e8db92"
-  integrity sha512-DuvdXYwfGRpM+7MVdvi/zSjiazn+8QPrACT3Xi0pQpYx5SXZ1WuFYwUDXTSmV9+hrCxRhrC4hrzesNcfjpvOsw==
-  dependencies:
-    ml-array-max "^1.1.1"
-    ml-array-rescale "^1.2.1"
-
-ml-stat@^1.2.0:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/ml-stat/-/ml-stat-1.3.3.tgz#8a5493b0f67382fbf705c260e070436655a7dcfa"
-  integrity sha1-ilSTsPZzgvv3BcJg4HBDZlWn3Po=
-
-ml-svm@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/ml-svm/-/ml-svm-2.1.2.tgz#baecbd2e35a83ee675e8d81b9217ce5dfdffd529"
-  integrity sha1-uuy9LjWoPuZ16NgbkhfOXf3/1Sk=
-  dependencies:
-    ml-kernel "^2.2.0"
-    ml-stat "^1.2.0"
 
 mocha@^4.1.0:
   version "4.1.0"
@@ -10810,7 +10711,7 @@ nan@2.4.x, nan@^2.3.0, nan@^2.3.5:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
-nan@^2.10.0, nan@^2.13.2:
+nan@^2.13.2:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
@@ -14088,15 +13989,6 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^2.0.0"
     inherits "^2.0.1"
-
-rollup@^1.31.1:
-  version "1.32.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.32.1.tgz#4480e52d9d9e2ae4b46ba0d9ddeaf3163940f9c4"
-  integrity sha512-/2HA0Ec70TvQnXdzynFffkjA6XN+1e2pEv/uKS5Ulca40g2L7KuOE3riasHoNVHOsFD5KKZgDsMk1CP3Tw9s+A==
-  dependencies:
-    "@types/estree" "*"
-    "@types/node" "*"
-    acorn "^7.1.0"
 
 rosie@^2.0.1:
   version "2.0.1"

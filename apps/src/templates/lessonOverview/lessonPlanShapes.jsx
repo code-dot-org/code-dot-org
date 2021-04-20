@@ -80,6 +80,7 @@ export const lessonShape = PropTypes.shape({
       })
     ).isRequired
   }).isRequired,
+  id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
@@ -91,7 +92,8 @@ export const lessonShape = PropTypes.shape({
   programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string,
-  lessonPlanPdfUrl: PropTypes.string
+  lessonPlanPdfUrl: PropTypes.string,
+  courseVersionStandardsUrl: PropTypes.string
 });
 
 export const studentLessonShape = PropTypes.shape({
@@ -107,6 +109,7 @@ export const studentLessonShape = PropTypes.shape({
       })
     ).isRequired
   }).isRequired,
+  id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
@@ -118,6 +121,8 @@ export const studentLessonShape = PropTypes.shape({
 });
 
 export const navigationLessonShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
   unit: PropTypes.shape({
     lessons: PropTypes.arrayOf(
       PropTypes.shape({
@@ -128,4 +133,14 @@ export const navigationLessonShape = PropTypes.shape({
       })
     ).isRequired
   }).isRequired
+});
+
+export const standardShape = PropTypes.shape({
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 });

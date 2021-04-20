@@ -2199,8 +2199,6 @@ sr:
             Conditionals:
               key: Кондиционали
           lesson_groups:
-            ramp_up:
-              display_name: Петље
             csf_digcit:
               display_name: Дигитално држављанство
             csf_nested_loops:
@@ -2223,6 +2221,8 @@ sr:
               display_name: Променљиве
             lessonGroup-9:
               display_name: уклони
+            lessonGroup-7:
+              display_name: Дигитално држављанство
         express-2021:
           lesson_groups:
             csf_loops:

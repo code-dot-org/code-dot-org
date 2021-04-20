@@ -1,9 +1,14 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
-import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
-import ActivitySectionCardButtons from './ActivitySectionCardButtons';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
+
+import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
+import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
+import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
+import color from '@cdo/apps/util/color';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import {
   moveActivitySection,
   removeActivitySection,
@@ -13,11 +18,9 @@ import {
   addLevel,
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
-import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
-import ReactDOM from 'react-dom';
-import color from '@cdo/apps/util/color';
-import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+
+import ActivitySectionCardButtons from './ActivitySectionCardButtons';
+import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 // When dragging within this many pixels of the top or bottom of the screen,
 // start scrolling the page.
@@ -364,6 +367,35 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  insertMarkdownSyntaxAtSelection = newText => {
+    // If we (for whatever reason) don't have a reference for the textarea, we
+    // can't get the selection location. In that case, we could probably do
+    // nothing or throw an error or something. For now, let's just default to
+    // appending the text to the end.
+    if (!this.editorTextAreaRef) {
+      return this.appendMarkdownSyntax(newText);
+    }
+    const currentText = this.props.activitySection.text;
+    const selectionStart = this.editorTextAreaRef.selectionStart;
+    const selectionEnd = this.editorTextAreaRef.selectionEnd || selectionStart;
+    const resultingText =
+      currentText.slice(0, selectionStart) +
+      newText +
+      currentText.slice(selectionEnd);
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'text',
+      resultingText
+    );
+  };
+
+  appendProgrammingExpressionLink = programmingExpression => {
+    this.appendMarkdownSyntax(
+      buildProgrammingExpressionMarkdown(programmingExpression)
+    );
+  };
+
   appendResourceLink = resourceKey => {
     this.appendMarkdownSyntax(`\n[r ${resourceKey}]`);
   };
@@ -373,7 +405,9 @@ class ActivitySectionCard extends Component {
   };
 
   appendSlide = () => {
-    this.appendMarkdownSyntax(' [slide]');
+    this.insertMarkdownSyntaxAtSelection(
+      '<i class="fa fa-list-alt" aria-hidden="true"></i> '
+    );
   };
 
   handleRemoveLevel = levelPos => {
@@ -494,6 +528,7 @@ class ActivitySectionCard extends Component {
         {hasLessonPlan && (
           <textarea
             value={this.props.activitySection.text}
+            ref={ref => (this.editorTextAreaRef = ref)}
             rows={Math.max(
               this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
               2
@@ -542,6 +577,7 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           uploadImage={this.handleUploadImage}
           activityPosition={this.props.activityPosition}
+          appendProgrammingExpressionLink={this.appendProgrammingExpressionLink}
           appendResourceLink={this.appendResourceLink}
           appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}

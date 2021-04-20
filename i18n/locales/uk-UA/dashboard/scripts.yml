@@ -5084,6 +5084,8 @@ uk:
               name: Представляємо Лабораторію спрайтів
             lesson-8:
               name: Спрайт в Дії
+            lesson-2:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
           lesson_groups:
             ramp_up:
               display_name: Просунутися
@@ -5097,6 +5099,8 @@ uk:
               display_name: Змінні
             lessonGroup-9:
               display_name: видалити
+            lessonGroup-7:
+              display_name: Цифрове громадянство
         express-2021:
           description_audience: 'Вік: 9-18'
           lessons:
@@ -5205,6 +5209,12 @@ uk:
               name: Урок 14
             lesson15:
               name: Урок 15
+            lesson17:
+              name: Урок 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
         k5-onlinepd-2021:
           title: Викладання основ інформатики
           lessons:

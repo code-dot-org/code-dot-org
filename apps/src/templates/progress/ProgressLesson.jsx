@@ -68,6 +68,9 @@ const styles = {
   caret: {
     marginRight: 10
   },
+  caretRTL: {
+    marginLeft: 10
+  },
   icon: {
     marginRight: 5,
     fontSize: 18,
@@ -91,7 +94,8 @@ class ProgressLesson extends React.Component {
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
@@ -145,12 +149,16 @@ class ProgressLesson extends React.Component {
       showLockIcon,
       lessonIsVisible,
       lessonLockedForSection,
-      selectedSectionId
+      selectedSectionId,
+      isRtl
     } = this.props;
 
     if (!lessonIsVisible(lesson, viewAs)) {
       return null;
     }
+
+    // Adjust caret style if locale is RTL
+    const caretStyle = isRtl ? styles.caretRTL : styles.caret;
 
     // Is this a hidden stage that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
@@ -199,7 +207,7 @@ class ProgressLesson extends React.Component {
         >
           <div style={styles.heading}>
             <div style={styles.headingText} onClick={this.toggleCollapsed}>
-              <FontAwesome icon={caret} style={styles.caret} />
+              <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
               )}
@@ -234,7 +242,7 @@ class ProgressLesson extends React.Component {
                 <span style={styles.buttonStyle}>
                   <Button
                     __useDeprecatedTag
-                    id="ui-test-lesson-resources"
+                    className="ui-test-lesson-resources"
                     href={lesson.student_lesson_plan_html_url}
                     text={i18n.lessonResources()}
                     disabled={locked}
@@ -281,5 +289,6 @@ export default connect(state => ({
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   selectedSectionId: state.teacherSections.selectedSectionId.toString(),
-  scriptId: state.progress.scriptId
+  scriptId: state.progress.scriptId,
+  isRtl: state.isRtl
 }))(ProgressLesson);

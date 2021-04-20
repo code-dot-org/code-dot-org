@@ -3111,7 +3111,7 @@ bs:
               name: Pisanje pjesama
           lesson_groups:
             ramp_up:
-              display_name: Petlje
+              display_name: Ugniježdene Petlje
             csf_digcit:
               display_name: Digitalno Državljanstvo
             csf_nested_loops:
@@ -3134,6 +3134,8 @@ bs:
               display_name: Varijable
             lessonGroup-9:
               display_name: ukloni
+            lessonGroup-7:
+              display_name: Digitalno Državljanstvo
         express-2021:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lessons:
@@ -3189,6 +3191,8 @@ bs:
             lesson14:
               name: Lekcija 14
             lesson15:
+              name: Lekcija 15
+            lesson17:
               name: Lekcija 15
         k5-onlinepd-2021:
           lessons:

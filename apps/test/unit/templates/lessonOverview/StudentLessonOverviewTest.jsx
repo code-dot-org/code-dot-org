@@ -34,6 +34,7 @@ describe('StudentLessonOverview', () => {
             }
           ]
         },
+        id: 1,
         key: 'lesson-1',
         position: 1,
         displayName: 'Lesson 1',
@@ -165,7 +166,7 @@ describe('StudentLessonOverview', () => {
   it('displays the introduced code', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const codeSection = wrapper.find('#unit-test-introduced-code');
-    expect(codeSection.containsMatchingElement(<a>playSound</a>)).to.be.true;
+    assert.equal(codeSection.find('StyledCodeBlock').length, 1);
   });
 
   it('does not display the introduced code if no code', () => {

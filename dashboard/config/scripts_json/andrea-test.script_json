@@ -20,6 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-25 00:04:34 UTC",
     "seeding_key": {
       "script.name": "andrea-test"
     }
@@ -56,6 +57,7 @@
       "name": "Deeper Learning Overview",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -70,6 +72,7 @@
       "name": "Part 1",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -84,6 +87,7 @@
       "name": "Part 2",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -98,6 +102,7 @@
       "name": "part 3",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -121,7 +126,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "What is Deeper Learning"
+        "progression": "What is Deeper Learning",
+        "level_keys": [
+          "andrea_test1"
+        ]
       },
       "named_level": true,
       "bonus": null,
@@ -143,7 +151,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "President Question"
+        "progression": "President Question",
+        "level_keys": [
+          "andrea-test2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -165,7 +176,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Vice President Question"
+        "progression": "Vice President Question",
+        "level_keys": [
+          "andrea-test3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -187,6 +201,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "andrea_test1",
+          "andrea-test2"
+        ]
       },
       "named_level": true,
       "bonus": null,
@@ -210,7 +228,10 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Sandwich"
+        "progression": "Sandwich",
+        "level_keys": [
+          "dlp-hold1"
+        ]
       },
       "named_level": true,
       "bonus": null,
@@ -296,5 +317,29 @@
         "script.name": "andrea-test"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
   ]
 }

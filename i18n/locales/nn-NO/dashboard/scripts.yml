@@ -4235,7 +4235,7 @@ nn:
               name: Den store hendinga
             Events in Play Lab:
               key: Hendingar i Spel-lab
-              name: Hendingar i Spellab
+              name: 'Hendingar i Spellab'
           lesson_groups:
             csf_digcit:
               display_name: Digitalt statsborgerskap
@@ -4329,6 +4329,8 @@ nn:
               display_name: Variablar
             lessonGroup-9:
               display_name: fjern
+            lessonGroup-7:
+              display_name: Digitalt statsborgerskap
         express-2021:
           lessons:
             Dance Party:
@@ -4398,6 +4400,12 @@ nn:
               name: Leksjon 14
             lesson15:
               name: Leksjon 15
+            lesson17:
+              name: Leksjon 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

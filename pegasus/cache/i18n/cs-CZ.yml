@@ -1185,8 +1185,9 @@ cs-CZ:
   pre-express-2018_name: Rychlý kurz pro předškoláky (2018)
   express-2019_name: Rychlý kurz (2019)
   pre-express-2019_name: Rychlý kurz pro předškoláky (2019)
-  express-2020_name: Rychlý kurz (2019)
+  express-2020_name: Rychlý kurz (2020)
   accelerated_name: Zrychlený kurz
+  express_name: Rychlý kurz
   pre-express_name: Rychlý kurz pro předškoláky
   20-hour_name: Zrychlený kurz
   algebra_name: Informatika v algebře
@@ -1284,6 +1285,12 @@ cs-CZ:
   coursed-2019_gradelevel: Známky 8+
   coursee-2019_gradelevel: Věk 8-12
   coursef-2019_gradelevel: Věk 9 - 13
+  coursea-2020_gradelevel: Věk 4 - 7
+  courseb-2020_gradelevel: Věk 5 - 8
+  coursec-2020_gradelevel: Věk 6-10
+  coursed-2020_gradelevel: Známky 8+
+  coursee-2020_gradelevel: Věk 8-12
+  coursef-2020_gradelevel: Věk 9 - 13
   accelerated_gradelevel: Věk 10-18
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
@@ -1427,6 +1434,8 @@ cs-CZ:
     posune dál s algoritmy, vnořenými cykly, podmínkami a dalším.
   coursee-2019_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C a D a pak
     se posune dále s funkcemi.
+  coursed-2020_shortdescription_congrats: Studenti se naučí chápat cykly, podmínky
+    a události (events). Kromě programování se studenti naučí o digitálním občanství.
   codeorg_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší.
     Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích
     vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies.

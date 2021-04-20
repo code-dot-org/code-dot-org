@@ -10936,7 +10936,8 @@ fil:
             Programming for Entertainment:
               key: Pag-program para sa Libangan
               name: Pag-program para sa Libangan
-              description_student: "Ang klase ay hinihikayat na isaalang-alang ang mga \"problema\" ng pagkainip at pagpapahayag sa sarili, at para pag-isipan kung paano nila haharapin ang ganoong mga problema sa kanilang sariling buhay. Mula doon, sila ay tutuklas kung paano ang Computer Sciece sa pangkalahatag, at lalo na sa pagprogram, may ginagampanan na papel sa tiyak na uri ng paglilibang o bilang isang sasakyan sa pagpapahayag ng sarili."
+              description_student: |-
+                Ang klase ay hinihikayat na isaalang-alang ang mga "problema" ng pagkainip at pagpapahayag sa sarili, at para pag-isipan kung paano nila haharapin ang ganoong mga problema sa kanilang sariling buhay. Mula doon, sila ay tutuklas kung paano ang Computer Sciece sa pangkalahatag, at lalo na sa pagprogram, may ginagampanan na papel sa tiyak na uri ng paglilibang o bilang isang sasakyan sa pagpapahayag ng sarili.
             Plotting Shapes:
               key: Pag-plot ng mga Hugis
               name: Pag-plot ng mga Hugis
@@ -11008,7 +11009,8 @@ fil:
             Analysis of Design:
               key: Pagsusuri ng Disenyo
               name: Pagsusuri ng Disenyo
-              description_teacher: Upang masimulan ang yunit na inilaan para sa grupong paglutas ng problema at paggamit ng mga produkto para sa ibang mga gumagamit, ang mga estudyante ay magsisimula sa pagsisiyasat sa disenyo ng sari-saring mga tsarera. Ang mga estudyante ay magsusuri sa bawat tsarera, magsusubok na matukoy kung paano ang partikular na pangangailangan ng gumagamit ang nagdikta sa disenyo nito. Sa pamamagitan ng pagsaalang-alang sa mga pagpipilian sa disenyo, ang pagsubok na itugma ang bawat teapot sa potensyal na gumagamit, ang mga estudyante ay magsimulang makita kung paano ang pagkuha ng paraan na naka-sentro sa gumagamit para makapag-disenyo ng mga produkto (pareho sa pisikal at sa digital) ay makakagawa sa mga produktong iyon para maging mas makabuluhan at mas magagamit. Para tapusin ang gawain, ang mga estudyante ay tatanungin na magmungkahi ng ilang mga pagbabago sa isa sa mga tsarera para maging mas kapaki-pakibang at mas magagamit pa ito.
+              description_teacher: |-
+                Upang masimulan ang yunit na inilaan para sa grupong paglutas ng problema at paggamit ng mga produkto para sa ibang mga gumagamit, ang mga estudyante ay magsisimula sa pagsisiyasat sa disenyo ng sari-saring mga tsarera. Ang mga estudyante ay magsusuri sa bawat tsarera, magsusubok na matukoy kung paano ang partikular na pangangailangan ng gumagamit ang nagdikta sa disenyo nito. Sa pamamagitan ng pagsaalang-alang sa mga pagpipilian sa disenyo, ang pagsubok na itugma ang bawat teapot sa potensyal na gumagamit, ang mga estudyante ay magsimulang makita kung paano ang pagkuha ng paraan na naka-sentro sa gumagamit para makapag-disenyo ng mga produkto (pareho sa pisikal at sa digital) ay makakagawa sa mga produktong iyon para maging mas makabuluhan at mas magagamit. Para tapusin ang gawain, ang mga estudyante ay tatanungin na magmungkahi ng ilang mga pagbabago sa isa sa mga tsarera para maging mas kapaki-pakibang at mas magagamit pa ito.
             Understanding Your User:
               key: Pag-uunawa sa Iyong Gumagamit
               name: Pag-uunawa sa Iyong Gumagamit
@@ -11103,7 +11105,8 @@ fil:
             Keeping Data Secret:
               key: Pagiging Sekreto ng mga Datos
               name: Pagiging Sekreto ng mga Datos
-              description_teacher: Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
+              description_teacher: |-
+                Ang mga estudyante ay magkakaroon ng talakayan sa iba't ibang mga antas ng seguridad na gusto nila para sa kanilang mga personal na mga datos. Kapag ang klase ay nagkabuo ng pag-uunawa sa kahalagahan ng privacy, pagkatapos ay matutunan nila ang tungkol sa proseso ng pag-encrypt ng mga impormasyon sa pamamagitan ng pag-encipher ng nota para sa isang kasamahan at pag-decipher sa nota ng kasaman. Ang klase ay magtatapos sa isang diskusyon tungkol sa kahalagahan ng parehong pisikal at diginal na seguridad.
             Combining Representations:
               key: Pagsasama-sama ng mga Representasyon
               name: Pagsasama-sama ng mga Representasyon
@@ -11129,7 +11132,8 @@ fil:
               key: Pag-Automate ng mga Datos na mga Desisyon
               name: Pag-Automate ng mga Datos na mga Desisyon
             Project - Make a Recommendation:
-              description_teacher: Para tapusing ang yunit na ito, ang mga estudyante ay magdidisenyo ng isang makina na tagarekomenda ayon sa mga datos na nakolekta nila at nasuri mula sa kanilang mga kamag-aral. Pagkatapos tingnan ang isang halimbawa ng isang app na taga-rekomenda, ang mga estudyante ay susunod sa isang gabay sa proyekto para makompleto ang iilang araw na gawaing ito. Sa unang iilang mga hakbang, ang mga estudyante ay pipili kung ano ang opsyon na gusto nilang piliin ng gumagamit, kung anong mga datos ang kakailanganin nila para makabigay ng rekomendasyon, maglikha ng surbey, at magkolekta ng mga impormasyon tungkol sa mga napili ng kanilang mga kamag-aral. Pagkatapos ay susuriin nila ang mga datos at gamitin kung ano ang natutunan nila para maglikha ng algoritmo para sa rekomendasyon. Sa huli, gagamitin nila ang kanilang mga algoritmo para makagawa ng mga rekomendasyon sa iilang mga kamag-aral. Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda ng presentasyon sa klase.
+              description_teacher: |-
+                Para tapusing ang yunit na ito, ang mga estudyante ay magdidisenyo ng isang makina na tagarekomenda ayon sa mga datos na nakolekta nila at nasuri mula sa kanilang mga kamag-aral. Pagkatapos tingnan ang isang halimbawa ng isang app na taga-rekomenda, ang mga estudyante ay susunod sa isang gabay sa proyekto para makompleto ang iilang araw na gawaing ito. Sa unang iilang mga hakbang, ang mga estudyante ay pipili kung ano ang opsyon na gusto nilang piliin ng gumagamit, kung anong mga datos ang kakailanganin nila para makabigay ng rekomendasyon, maglikha ng surbey, at magkolekta ng mga impormasyon tungkol sa mga napili ng kanilang mga kamag-aral. Pagkatapos ay susuriin nila ang mga datos at gamitin kung ano ang natutunan nila para maglikha ng algoritmo para sa rekomendasyon. Sa huli, gagamitin nila ang kanilang mga algoritmo para makagawa ng mga rekomendasyon sa iilang mga kamag-aral. Ang mga estudyante ay gagawa ng isang peer review at gagawa ng kahit anong kinakailangang mga pagbabago sa kanilang mga proyekto bago maghanda ng presentasyon sa klase.
           lesson_groups:
             csd5_1:
               display_name: 'Kabanata 1: Pagrepresenta ng Impormasyon'
@@ -11275,7 +11279,7 @@ fil:
             Ocean Scene with Loops:
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             'Events: The Big Event':
-              description_teacher: "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
           lesson_groups:
@@ -11305,7 +11309,7 @@ fil:
               key: Mga Loops sa Harvester
               name: Mga Loops sa Harvester
             'Events: The Big Event':
-              description_teacher: "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
@@ -11454,7 +11458,7 @@ fil:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
               key: Naka-nest na mga Loop sa Frozen
-              name: Naka-Nest na mga Loops sa Frozen
+              name: 'Naka-Nest na mga Loops sa Frozen'
             'Functions: Songwriting':
               key: 'Mga Function: Pagsusulat ng Awit'
               name: Pagsusulat ng Awit
@@ -11519,6 +11523,9 @@ fil:
               name: Mga Loops sa Artist
               description_student: Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan.
               description_teacher: Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.
+            lesson-2:
+              name: Ang Kapangyarihan ng mga Salita
+              description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online.
           lesson_groups:
             ramp_up:
               display_name: Pabilisin
@@ -11534,6 +11541,8 @@ fil:
               display_name: Mga variable
             lessonGroup-9:
               display_name: tanggalin
+            lessonGroup-7:
+              display_name: Digital na Pagkamamamayan
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         express-2021:
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
@@ -11845,6 +11854,8 @@ fil:
             lesson14:
               name: Aralin 14
             lesson15:
+              name: Araling 15
+            lesson17:
               name: Araling 15
         k5-onlinepd-2021:
           lessons:

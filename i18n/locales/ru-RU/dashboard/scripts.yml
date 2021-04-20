@@ -5423,7 +5423,7 @@ ru:
               key: Циклы в харвестере
             Sticker Art with Loops:
               key: Циклы в исполнителе Художник
-              name: Циклы в исполнителе Художник
+              name: 'Циклы в исполнителе Художник'
             'Events: The Big Event':
               name: Большое Событие
             Picturing Data:
@@ -5565,6 +5565,8 @@ ru:
               display_name: Переменные
             lessonGroup-9:
               display_name: Удалить
+            lessonGroup-7:
+              display_name: Цифровое гражданство
         express-2021:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
@@ -5699,6 +5701,12 @@ ru:
               name: Урок 14
             lesson15:
               name: Урок 15
+            lesson17:
+              name: Урок 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
