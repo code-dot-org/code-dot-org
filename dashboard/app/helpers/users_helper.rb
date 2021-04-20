@@ -183,6 +183,7 @@ module UsersHelper
               # for now, we don't allow authorized teachers to be "locked"
               if locked && !user.authorized_teacher?
                 progress[level_id] = {
+                  # TODO: Stop sending status here when front-end stops using LEVEL_STATUS.locked (LP-1865)
                   status: LEVEL_STATUS.locked,
                   locked: true
                 }
@@ -215,6 +216,7 @@ module UsersHelper
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
             progress[level_id] = {
+              # TODO: Stop sending status here when front-end stops using LEVEL_STATUS.locked (LP-1865)
               status: LEVEL_STATUS.locked,
               locked: true
             }

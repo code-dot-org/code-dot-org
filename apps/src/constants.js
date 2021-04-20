@@ -104,9 +104,9 @@ export const TestResults = {
 
   SUBMITTED_RESULT: 1000,
   // LOCKED_RESULT and READONLY_SUBMISSION_RESULT are never stored on the backend.
-  // They are used to encode locked/readonly information into a TestResult. Eventually,
-  // we want to remove these and look at levelProgress.locked and levelProgress.readonly
-  // instead. (LP-1865)
+  // They are used to encode locked/readonly information into a TestResult.
+  // Eventually, we want to remove these and look at studentlevelProgressType.locked
+  // and studentlevelProgressType.readonly instead. (LP-1865)
   LOCKED_RESULT: 1001,
   READONLY_SUBMISSION_RESULT: 1002,
 
