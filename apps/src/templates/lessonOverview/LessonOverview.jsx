@@ -155,6 +155,9 @@ class LessonOverview extends Component {
             announcements={announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
+            firehoseAnalyticsData={{
+              lesson_id: lesson.id
+            }}
           />
         )}
         {displayVerifiedResourcesNotification && (
