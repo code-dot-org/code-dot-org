@@ -14,7 +14,7 @@ end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/#{GAMELAB_ALLTHETHINGS_STAGE}/puzzle/#{level_index}"
+    And I am on "http://studio.code.org/s/allthethings/lessons/#{GAMELAB_ALLTHETHINGS_STAGE}/levels/#{level_index}"
     And I rotate to landscape
     And I wait for the page to fully load
   STEPS

@@ -422,7 +422,7 @@ class ApiController < ApplicationController
     response[:signedIn] = !current_user.nil?
 
     script = Script.get_from_cache(params[:script])
-    stage = script.lessons[params[:stage_position].to_i - 1]
+    stage = script.lessons[params[:lesson_position].to_i - 1]
     script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
