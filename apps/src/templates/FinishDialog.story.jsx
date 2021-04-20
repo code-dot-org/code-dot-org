@@ -23,7 +23,7 @@ const achievements = [
   {
     isAchieved: true,
     iconUrl: '',
-    message: 'Effecient!'
+    message: 'Efficient!'
   }
 ];
 
@@ -76,6 +76,7 @@ const mockProgress = {
   courseId: null,
   currentStageId: 40,
   hasFullProgress: false,
+  scriptProgress: {},
   levelResults: {
     1815: 17,
     1818: 100,
