@@ -150,7 +150,7 @@ describe('progressHelpers', () => {
           lockableLesson,
           lockedLevels,
           state,
-          ViewType.Teacher
+          ViewType.Student
         ),
         true
       );
