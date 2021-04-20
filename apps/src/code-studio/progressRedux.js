@@ -17,6 +17,7 @@ import {authorizeLockable} from './stageLockRedux';
 
 // Action types
 export const INIT_PROGRESS = 'progress/INIT_PROGRESS';
+const SET_SCRIPT_PROGRESS = 'progress/SET_SCRIPT_PROGRESS';
 const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
@@ -52,7 +53,11 @@ const initialState = {
   isLessonExtras: false,
 
   // The remaining fields do change after initialization
-  // a mapping of level id to result
+  // scriptProgress is of type scriptProgressType (a map of levelId ->
+  // studentLevelProgressType)
+  scriptProgress: {},
+  // levelResults is a map of levelId -> TestResult
+  // note: eventually, we expect usage of this field to be replaced with scriptProgress
   levelResults: {},
   focusAreaStageIds: [],
   peerReviewLessonInfo: null,
@@ -103,6 +108,13 @@ export default function reducer(state = initialState, action) {
       hasFullProgress: action.isFullProgress,
       isLessonExtras: action.isLessonExtras,
       currentPageNumber: action.currentPageNumber
+    };
+  }
+
+  if (action.type === SET_SCRIPT_PROGRESS) {
+    return {
+      ...state,
+      scriptProgress: action.scriptProgress
     };
   }
 
@@ -359,6 +371,12 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
 
     // Merge progress from server
     if (data.progress) {
+      dispatch(setScriptProgress(data.progress));
+
+      // Note that we set the full progress object above in redux but also set
+      // a map containing just level results. This is the legacy code path and
+      // the goal is to eventually update all code paths to use scriptProgress
+      // instead of levelResults.
       const levelResults = _.mapValues(data.progress, getLevelResult);
       dispatch(mergeResults(levelResults));
 
@@ -409,6 +427,17 @@ export const initProgress = ({
   isFullProgress,
   isLessonExtras,
   currentPageNumber
+});
+
+/**
+ * Returns action that sets (overwrites) scriptProgress in the redux store.
+ *
+ * @param {scriptProgressType} scriptProgress
+ * @returns action
+ */
+export const setScriptProgress = scriptProgress => ({
+  type: SET_SCRIPT_PROGRESS,
+  scriptProgress: scriptProgress
 });
 
 export const clearResults = () => ({
@@ -553,7 +582,13 @@ const isCurrentLevel = (currentLevelId, level) => {
  * state.levelResults
  */
 const levelWithStatus = (
-  {levelResults, levelPairing = {}, currentLevelId, isSublevel = false},
+  {
+    levelResults,
+    scriptProgress,
+    levelPairing = {},
+    currentLevelId,
+    isSublevel = false
+  },
   level
 ) => {
   if (level.kind !== LevelKind.unplugged && !isSublevel) {
@@ -563,12 +598,15 @@ const levelWithStatus = (
       );
     }
   }
+
   const normalizedLevel = processedLevel(level);
+  const levelProgress = scriptProgress[normalizedLevel.id];
   return {
     ...normalizedLevel,
     status: statusForLevel(level, levelResults),
     isCurrentLevel: isCurrentLevel(currentLevelId, normalizedLevel),
     paired: levelPairing[level.activeId],
+    locked: levelProgress?.locked,
     readonlyAnswers: level.readonly_answers
   };
 };
@@ -579,19 +617,26 @@ const levelWithStatus = (
 export const levelsByLesson = ({
   stages,
   levelResults,
+  scriptProgress,
   levelPairing,
   currentLevelId
 }) =>
   stages.map(stage =>
     stage.levels.map(level => {
       let statusLevel = levelWithStatus(
-        {levelResults, levelPairing, currentLevelId},
+        {levelResults, scriptProgress, levelPairing, currentLevelId},
         level
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
           levelWithStatus(
-            {levelResults, levelPairing, currentLevelId, isSublevel: true},
+            {
+              levelResults,
+              scriptProgress,
+              levelPairing,
+              currentLevelId,
+              isSublevel: true
+            },
             sublevel
           )
         );
