@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-15 15:46:38 UTC",
+    "serialized_at": "2021-04-17 19:34:21 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -245,7 +245,9 @@
       "relative_position": 8,
       "properties": {
         "overview": "Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, then create a plan for their own project, and finally program it from scratch.",
-        "student_overview": "Apply your new skills with variables to one of three open-ended projects."
+        "student_overview": "Apply your new skills with variables to one of three open-ended projects.",
+        "purpose": "This lesson doesn’t introduce new skills or concepts, but instead gives students the opportunity to apply what they have been learning in a creative way.",
+        "preparation": "- Print the planning guide or distribute a digital copy to each student. Review it ahead of time in case you would like to make any modifications to fit your class.\n\n- Review the options in level 3 ahead of time to get familiar with the flow students will need to follow.\n\n- This lesson has the potential to stretch to multiple class periods. Consider scheduling implications ahead of time.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -856,7 +858,8 @@
       "key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae",
       "position": 1,
       "properties": {
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae",
@@ -869,7 +872,8 @@
       "key": "dd059082-7eee-4f7a-a287-a79748174d64",
       "position": 2,
       "properties": {
-        "name": "Main Activity"
+        "name": "Main Activity",
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "dd059082-7eee-4f7a-a287-a79748174d64",
@@ -882,7 +886,8 @@
       "key": "0fdc25c1-5137-42cf-8c8d-470a1cddc96f",
       "position": 3,
       "properties": {
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "0fdc25c1-5137-42cf-8c8d-470a1cddc96f",
@@ -2397,7 +2402,14 @@
       "key": "20919642-5201-4796-9e45-ee76e368614d",
       "position": 1,
       "properties": {
-        "progression_name": "Prediction"
+        "progression_name": "Prediction",
+        "description": "####Prediction (2 mins)\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "One of the trickiest parts of learning variables is making sure that a variable’s label always matches. In this level, be sure that students notice the difference between the variable **meal** and the variable **food**. Students should understand that the best way to solve this would be to just use one variable, making sure the label always matches."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "20919642-5201-4796-9e45-ee76e368614d",
@@ -2408,7 +2420,14 @@
       "key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2",
       "position": 2,
       "properties": {
-        "progression_name": "Exploration: Sample Apps"
+        "progression_name": "Exploration: Sample Programs",
+        "description": "###Exploration\n**Do This:** Have students explore the sample programs in level 1. This can be done as a whole class with discussion, with pairs sharing a device, or even individually. For each of the programs, have students think about how it works, who would use it, and any ideas it gives them about what they could make themselves. A good strategy here is to have students read the program’s code out loud, one line at a time, then talk about what it is for.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are short on time or want to minimize transitions, complete this portion of the lesson as a whole group discussion. You can remind students that they can revisit these programs later if they have a question about how something works.\n\nIf you have already gone through the entire lesson yourself, you can also show them your own finished program for inspiration!\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2",
@@ -2419,7 +2438,16 @@
       "key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5",
       "position": 1,
       "properties": {
-        "progression_name": "Planning"
+        "progression_name": "Planning",
+        "name": "User Input Programs",
+        "remarks": true,
+        "description": "###Planning (10 mins)\nWe have already had a chance to build a variety of programs in Sprite Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are short on time, it’s acceptable to have students just focus on the first page of the planning guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5",
@@ -2430,7 +2458,14 @@
       "key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea",
       "position": 2,
       "properties": {
-        "progression_name": "Mini-Project: User Input Programs"
+        "progression_name": "Application - Create Your Project",
+        "description": "###Application (20 mins)\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Level 3 presents students with a menu of options that correspond to the main project types they chose from. The main differences between these sublevels are the instructions and default sprite costumes. Students may need really clear instructions to understand how to navigate the choices here. For each of the project choices, there are two sub-levels here. To begin, students should pick one of the levels marked \"Part 1\". Once they finish that level they should return here and select \"Part 2\" of the same project. The first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a \"free play\" which is intended to allow students to make any changes to their code that they like."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea",
@@ -2441,6 +2476,8 @@
       "key": "d5bf3b23-128d-4078-bdb2-a806a59a2db1",
       "position": 1,
       "properties": {
+        "name": "Showcase",
+        "description": "**Do This:**  To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n- **Public Demo:**  Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement.\n- **Pair Playtesting:**  Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting.\n- **Gallery Walk:**  Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.\n"
       },
       "seeding_key": {
         "activity_section.key": "d5bf3b23-128d-4078-bdb2-a806a59a2db1",
@@ -4752,7 +4789,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4778,9 +4815,9 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Exploration: Sample Apps",
+        "progression": "Exploration: Sample Programs",
         "level_keys": [
           "courseF_variables_samples"
         ]
@@ -4804,7 +4841,7 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Planning",
         "level_keys": [
@@ -4830,9 +4867,9 @@
       "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: User Input Programs",
+        "progression": "Application - Create Your Project",
         "level_keys": [
           "courseF_variables_projects"
         ]
@@ -8264,6 +8301,30 @@
       }
     },
     {
+      "name": "User Input Programs",
+      "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+      "key": "user_input_programs",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "user_input_programs"
+      }
+    },
+    {
+      "name": "Mini Project: User Input Programs",
+      "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68",
+      "key": "mini_project_user_input_programs",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
@@ -8689,6 +8750,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Variables that Change in Artist",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -8978,6 +9051,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "A message on the computer screen that waits for input from the user.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "key": "input",
+      "word": "Input",
+      "definition": "The information computers get from users.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
       }
     },
     {
@@ -9312,6 +9415,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops with the Artist",
         "vocabulary.key": "loop"
       }
@@ -9632,6 +9753,36 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "66e1fe88-3957-437f-a065-66909844fcd1"
+      }
+    },
+    {
+      "key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8",
+      "properties": {
+        "description": "Use variables to hold words and phrases."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8"
+      }
+    },
+    {
+      "key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d",
+      "properties": {
+        "description": "Use variables in conjunction with prompts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d"
+      }
+    },
+    {
+      "key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957",
+      "properties": {
+        "description": "Create an interactive computer program that responds to user input."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957"
       }
     },
     {

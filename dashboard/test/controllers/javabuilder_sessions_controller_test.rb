@@ -11,14 +11,14 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :student,
     response: :forbidden
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), projectVersion: 123},
+    params: {channelId: storage_encrypt_channel_id(1, 1), projectVersion: 123, projectUrl: "url"},
     user: :levelbuilder,
     response: :success
 
   test 'can decode jwt token' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url"}
 
     response = JSON.parse(@response.body)
     token = response['token']
@@ -34,14 +34,28 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user = create :user
     create(:single_user_experiment, min_user_id: user.id, name: 'csa-pilot')
     sign_in(user)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url"}
     assert_response :success
   end
 
-  test 'params for project version and channel id are required' do
+  test 'param for channel id is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token
+    get :get_access_token, params: {projectVersion: 123, projectUrl: "url"}
+    assert_response :bad_request
+  end
+
+  test 'param for project version is required' do
+    levelbuilder = create :levelbuilder
+    sign_in(levelbuilder)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectUrl: "url"}
+    assert_response :bad_request
+  end
+
+  test 'param project_url is required' do
+    levelbuilder = create :levelbuilder
+    sign_in(levelbuilder)
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123}
     assert_response :bad_request
   end
 end

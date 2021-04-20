@@ -34,6 +34,7 @@ describe('StudentLessonOverview', () => {
             }
           ]
         },
+        id: 1,
         key: 'lesson-1',
         position: 1,
         displayName: 'Lesson 1',
