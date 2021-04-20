@@ -224,10 +224,9 @@ describe('progressHelpers', () => {
 
   describe('stageLocked', () => {
     it('returns true when we only have a level group and it is locked', () => {
-      const levels = fakeLevels(3).map(level => ({
+      const levels = fakeLevels(3).map((level, index) => ({
         ...level,
-        kind: LevelKind.assessment,
-        status: LevelStatus.locked
+        locked: index === 2 ? true : false // lock last level in level group
       }));
       assert.strictEqual(true, stageLocked(levels));
     });
@@ -240,14 +239,12 @@ describe('progressHelpers', () => {
       }));
 
       it('returns true when level group is locked', () => {
-        const levels = baseLevels.map(level => ({
+        // lock last level in level group
+        const levels = baseLevels.map((level, index) => ({
           ...level,
-          // lock assessment levels/pages
-          status:
-            level.kind === LevelKind.assessment
-              ? LevelStatus.locked
-              : level.status
+          locked: index === 3 ? true : false // lock last level in level group
         }));
+
         assert.strictEqual(true, stageLocked(levels));
       });
 
