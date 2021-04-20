@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import React from 'react';
 import memoize from 'memoize-one';
 import * as shapes from '../shapes';
+import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {PromptType, popPrompt} from './spritelabInputModule';
 import * as coreLibrary from './coreLibrary';
@@ -109,6 +110,12 @@ class SpritelabInput extends React.Component {
     coreLibrary.onPromptAnswer(variableName, value);
   }
 
+  onInputKeyDown = e => {
+    if (e.keyCode === KeyCodes.ENTER) {
+      this.onTextSubmit();
+    }
+  };
+
   onTextSubmit = () => {
     this.userInputSubmit(this.state.userInput);
     this.setState({userInput: ''});
@@ -152,6 +159,7 @@ class SpritelabInput extends React.Component {
             <input
               style={styles.inputArea}
               type="text"
+              onKeyDown={this.onInputKeyDown}
               onChange={event => this.setState({userInput: event.target.value})}
               value={this.state.userInput || ''}
               disabled={disabled}
