@@ -312,7 +312,7 @@ class Lesson < ApplicationRecord
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged_lesson?
+      lesson_data[:lesson_extras_level_url] = script_lesson_extras_url(script.name, lesson_position: relative_position) unless unplugged_lesson?
 
       lesson_data
     end
