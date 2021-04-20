@@ -17,7 +17,7 @@
           Location:
       %td
         - if @workshop.virtual?
-          = link_to @workshop.location_name, @workshop.location_name, target: "_blank"
+          = link_to @workshop.location_name, @workshop.location_name, target: "_blank", rel: "noopener noreferrer"
         - else
           = @workshop.location_name
           - if @workshop.location_address.present?
