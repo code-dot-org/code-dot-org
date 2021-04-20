@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import color from '@cdo/apps/util/color';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   dropdown: {
@@ -24,7 +26,8 @@ const styles = {
 
 export default class LessonNavigationDropdown extends Component {
   static propTypes = {
-    lesson: navigationLessonShape.isRequired
+    lesson: navigationLessonShape.isRequired,
+    isStudentLessonPlan: PropTypes.bool
   };
 
   constructor(props) {
@@ -42,7 +45,26 @@ export default class LessonNavigationDropdown extends Component {
 
   handleDropdownClick = listItem => {
     if (listItem.link) {
-      navigateToHref(linkWithQueryParams(listItem.link));
+      firehoseClient.putRecord(
+        {
+          study: 'lesson-plan',
+          study_group: this.props.isStudentLessonPlan
+            ? 'student-lesson-plan'
+            : 'teacher-lesson-plan',
+          event: 'navigate-between-lessons',
+          data_int: this.props.lesson.id,
+          data_json: JSON.stringify({
+            startingLessonId: this.props.lesson.id,
+            endingLessonId: listItem.id
+          })
+        },
+        {
+          includeUserId: true,
+          callback: () => {
+            navigateToHref(linkWithQueryParams(listItem.link));
+          }
+        }
+      );
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }
