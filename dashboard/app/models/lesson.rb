@@ -387,6 +387,7 @@ class Lesson < ApplicationRecord
 
   def summarize_for_lesson_show(user, can_view_teacher_markdown)
     {
+      id: id,
       unit: script.summarize_for_lesson_show,
       position: relative_position,
       lockable: lockable,
@@ -431,6 +432,7 @@ class Lesson < ApplicationRecord
   def summarize_for_student_lesson_plan
     all_resources = resources_for_lesson_plan(false)
     {
+      id: id,
       unit: script.summarize_for_lesson_show(true),
       position: relative_position,
       key: key,
@@ -446,6 +448,7 @@ class Lesson < ApplicationRecord
 
   def summarize_for_lesson_dropdown(is_student = false)
     {
+      id: id,
       key: key,
       displayName: localized_name,
       link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
