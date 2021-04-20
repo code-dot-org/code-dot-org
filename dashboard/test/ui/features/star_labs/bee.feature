@@ -1,7 +1,7 @@
 Feature: Complete a bee level
 
 Scenario: Complete Bee Conditions 4-5 Level 3
-  Given I am on "http://studio.code.org/s/course3/stage/7/puzzle/3?noautoplay=true"
+  Given I am on "http://studio.code.org/s/course3/lessons/7/levels/3?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
   And I dismiss the login reminder
