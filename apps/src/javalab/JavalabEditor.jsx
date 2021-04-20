@@ -24,7 +24,7 @@ const style = {
     backgroundColor: color.white
   },
   darkBackground: {
-    backgroundColor: '#282c34'
+    backgroundColor: color.dark_slate_gray
   }
 };
 
@@ -96,12 +96,13 @@ class JavalabEditor extends React.Component {
   makeListeners(key) {
     return {
       onContextMenu: e => {
-        this.handleTabContextMenu(key, e);
+        this.openTabContextMenu(key, e);
       }
     };
   }
 
-  handleTabContextMenu(key, e) {
+  openTabContextMenu(key, e) {
+    console.log(e);
     e.preventDefault();
     const boundingRect = e.target.getBoundingClientRect();
     this.setState({

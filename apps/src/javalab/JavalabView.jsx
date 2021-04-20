@@ -48,7 +48,7 @@ const style = {
     // this matches the current code mirror theme we are using
     // TODO: either add to color.scss or use a color from there depending
     // on final theme choice.
-    backgroundColor: '#272822',
+    backgroundColor: color.darkest_gray,
     color: color.white,
     width: 95,
     textAlign: 'center'
