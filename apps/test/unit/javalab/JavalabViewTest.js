@@ -37,9 +37,9 @@ describe('Java Lab View Test', () => {
       let props = {...defaultProps, isDarkMode: true};
       let editor = shallow(<JavalabView {...props} />);
       const notSettings = editor.instance().getButtonStyles(false);
-      expect(notSettings.backgroundColor).to.equal('#272822');
+      expect(notSettings.backgroundColor).to.equal(color.darkest_gray);
       const settings = editor.instance().getButtonStyles(false);
-      expect(settings.backgroundColor).to.equal('#272822');
+      expect(settings.backgroundColor).to.equal(color.darkest_gray);
     });
   });
 });

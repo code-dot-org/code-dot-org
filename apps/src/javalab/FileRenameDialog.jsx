@@ -11,7 +11,7 @@ const styles = {
     width: 500
   },
   darkDialog: {
-    backgroundColor: '#282c34',
+    backgroundColor: color.dark_slate_gray,
     color: color.white
   },
   dialogContent: {
@@ -22,17 +22,13 @@ const styles = {
   dialogInput: {
     margin: 0
   },
-  darkDialogInput: {
-    color: 'white',
-    backgroundColor: '#282c34'
-  },
   button: {
     width: 100,
     textAlign: 'center',
     padding: 6
   },
   darkButton: {
-    backgroundColor: '#272822',
+    backgroundColor: color.darkest_gray,
     color: 'white'
   },
   lightRename: {
@@ -42,6 +38,9 @@ const styles = {
   lightCancel: {
     backgroundColor: color.light_gray,
     color: color.black
+  },
+  label: {
+    marginBottom: 0
   }
 };
 
@@ -81,7 +80,12 @@ export default class FileRenameDialog extends Component {
         useUpdatedStyles
         hideCloseButton
       >
-        <div style={isDarkMode ? styles.darkDialog : {}}>Rename the file</div>
+        <label
+          htmlFor="filenameInput"
+          style={{...styles.label, ...(isDarkMode && styles.darkDialog)}}
+        >
+          Rename the file
+        </label>
         <div
           style={{
             ...styles.dialogContent,
@@ -90,11 +94,12 @@ export default class FileRenameDialog extends Component {
         >
           <input
             type="text"
+            name="filenameInput"
             defaultValue={filename}
             ref={this.setTextInputRef}
             style={{
               ...styles.dialogInput,
-              ...(isDarkMode && styles.darkDialogInput)
+              ...(isDarkMode && styles.darkDialog)
             }}
           />
           <div>

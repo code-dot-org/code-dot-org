@@ -18,10 +18,10 @@ const styles = {
       backgroundColor: color.lightest_gray,
       cursor: 'pointer'
     },
-    border: `1px solid ${color.charcoal}`
-  },
-  nonFirstAnchor: {
-    borderTop: `1px solid ${color.charcoal}`
+    border: `1px solid ${color.charcoal}`,
+    width: '100%',
+    borderRadius: 0,
+    margin: 0
   }
 };
 
@@ -47,16 +47,22 @@ export const JavalabContextMenu = class JavalabContextMenuComponent extends Comp
     const {renameFromContextMenu, cancelContextMenu} = this.props;
     return (
       <div>
-        <a key="rename" onClick={renameFromContextMenu} style={styles.anchor}>
+        <button
+          type="button"
+          key="rename"
+          onClick={renameFromContextMenu}
+          style={styles.anchor}
+        >
           Rename
-        </a>
-        <a
+        </button>
+        <button
+          type="button"
           key="cancel"
           onClick={cancelContextMenu}
-          style={{...styles.nonFirstAnchor, ...styles.anchor}}
+          style={styles.anchor}
         >
           Cancel
-        </a>
+        </button>
       </div>
     );
   }
