@@ -36,17 +36,19 @@ class PanelButtons extends Component {
   };
 
   onClickNext = () => {
-    if (this.props.panelButtons.next.panel === "modelSummary") {
-      this.props.startSaveTrainedModel(this.props.dataToSave);
-      this.props.setCurrentPanel(this.props.panelButtons.next.panel);
-    } else if (
+    if (
       this.props.panelButtons.next.panel === "continue" ||
       this.props.panelButtons.next.panel === "finish"
     ) {
       this.props.onContinue();
-    } else {
-      this.props.setCurrentPanel(this.props.panelButtons.next.panel);
+      return;
     }
+
+    if (this.props.panelButtons.next.panel === "modelSummary") {
+      this.props.startSaveTrainedModel(this.props.dataToSave);
+    }
+
+    this.props.setCurrentPanel(this.props.panelButtons.next.panel);
   };
 
   render() {

@@ -2,7 +2,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getSummaryStat } from "../redux";
 import { saveMessages, styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -36,10 +35,12 @@ class ModelSummary extends Component {
     );
 
     return (
-      <div style={{...styles.panel}}>
-          {saveStatus === "success" && (
-            <div style={{ ...styles.largeText, textAlign: "center" }}>{loadStatus}</div>
-          )}
+      <div style={{ ...styles.panel }}>
+        {saveStatus === "success" && (
+          <div style={{ ...styles.largeText, textAlign: "center" }}>
+            {loadStatus}
+          </div>
+        )}
       </div>
     );
   }

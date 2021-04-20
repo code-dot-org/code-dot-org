@@ -39,8 +39,6 @@ class ModelCard extends Component {
               )}
             </p>
           </div>
-          {console.log(metadata)}
-          {console.log(summaryStat)}
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>About the Data </h5>
             <p style={styles.modelCardContent}>{metadata.card.description}</p>
