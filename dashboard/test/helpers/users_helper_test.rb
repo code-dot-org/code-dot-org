@@ -181,7 +181,7 @@ class UsersHelperTest < ActionView::TestCase
     # No user level exists, show locked progress
     assert UserLevel.find_by(user: user, level: level).nil?
     assert_equal(
-      {level.id => {status: LEVEL_STATUS.locked}},
+      {level.id => {status: LEVEL_STATUS.locked, locked: true}},
       summarize_user_progress(script, user)[:progress]
     )
 
