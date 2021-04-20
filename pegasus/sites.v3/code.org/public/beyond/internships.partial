@@ -72,7 +72,7 @@ theme: responsive
 <br>
 
 <a href="https://www.code2040.org/fellows-program" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/afe.png">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/code2040.png">
 </a>
 <div style="width: 85%; float: left">
   <a href="https://www.code2040.org/fellows-program" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Code2040 Fellows Program</strong></h3></a>
@@ -104,5 +104,29 @@ theme: responsive
 <div style="clear:both"></div>
 <br>
 
+<p>Many companies and organizations offer internships to university students. Once you have an idea of the field(s) that you’re interested in, you can use this checklist to find an internship in that field.</p>
+
 <a id="highschool"></a>
 <h2>Internships for high school students</h2>
+
+<a href="https://genesysworks.org/for-students/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/genesys-works.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://genesysworks.org/for-students/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Genesys Works</strong></h3></a>
+  <p>Year-long program for high school students includes technical training and a paid corporate internship</p>
+  <p><i>Application period: January-March</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a href="https://careers.microsoft.com/students/us/en/ushighschoolprogram" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://careers.microsoft.com/students/us/en/ushighschoolprogram" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Microsoft internships for high school students</strong></h3></a>
+  <p>On-the-job learning and opportunities to contribute to real-world technology projects at Microsoft</p>
+  <p><i>Application period: Closed in 2021</i></p>
+</div>
+<div style="clear:both"></div>
+<br>

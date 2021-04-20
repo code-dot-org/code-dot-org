@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-04-09 20:52:35 UTC",
+    "serialized_at": "2021-04-19 22:55:59 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -161,7 +161,7 @@
         "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
         "student_overview": "Program Scrat to reach the acorn.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Cut out direction blocks from ***Manipulatives** to use with the Happy Maps bridging activity.\n - Make sure each student has a journal..",
+        "preparation": " - Cut out direction blocks from ***Manipulatives** to use with the Happy Maps bridging activity.\n - Make sure each student has a  Reflection Journal..",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1362,7 +1362,7 @@
       "key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
       "position": 1,
       "properties": {
-        "description": "*Goal:* Help students reflect on the things they learned in this lesson\n\nYou can give the students a journal prompt to help them process some of the things that they encountered during the day or lead a whole class discussion.\n\n**Prompts:**\n\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "description": "\n\n###Journaling\n**Goal:** Help students reflect on the things they learned in this lesson\n\nYou can give the students a journal prompt to help them process some of the things that they encountered during the day or lead a whole class discussion.\n\n###Journal Prompts\n\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
         "name": "Reflection",
         "tips": [
           {
@@ -2861,7 +2861,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -2887,7 +2887,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -2913,7 +2913,7 @@
       "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -2939,7 +2939,7 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -2965,7 +2965,7 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -2991,7 +2991,7 @@
       "chapter": 7,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3017,7 +3017,7 @@
       "chapter": 8,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3043,7 +3043,7 @@
       "chapter": 9,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3069,7 +3069,7 @@
       "chapter": 10,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3095,7 +3095,7 @@
       "chapter": 11,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3121,7 +3121,7 @@
       "chapter": 12,
       "position": 11,
       "activity_section_position": 11,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3147,7 +3147,7 @@
       "chapter": 13,
       "position": 12,
       "activity_section_position": 12,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3199,7 +3199,7 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Programming with Blocks",
         "level_keys": [
@@ -3225,7 +3225,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3251,7 +3251,7 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3277,7 +3277,7 @@
       "chapter": 18,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3303,7 +3303,7 @@
       "chapter": 19,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3329,7 +3329,7 @@
       "chapter": 20,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3355,7 +3355,7 @@
       "chapter": 21,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [

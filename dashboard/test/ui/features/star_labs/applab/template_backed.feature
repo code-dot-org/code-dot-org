@@ -4,7 +4,7 @@ Feature: App Lab Scenarios
 
   Scenario: Template backed level
     # One of two levels backed by the same template
-    Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/10?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I debug channel id
@@ -22,7 +22,7 @@ Feature: App Lab Scenarios
     And I wait until element ".project_updated_at" contains text "Saved"
 
     # Next level, backed by the same template
-    Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/11?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/11?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I wait to see ".projectTemplateWorkspaceIcon"
@@ -36,7 +36,7 @@ Feature: App Lab Scenarios
     And I press "runButton"
 
     # back to the first level
-    Then I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10?noautoplay=true"
+    Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/10?noautoplay=true"
     And I rotate to landscape
     And I wait to see "#runButton"
     And I wait to see ".projectTemplateWorkspaceIcon"

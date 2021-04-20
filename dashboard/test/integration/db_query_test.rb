@@ -21,9 +21,9 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level_source: create(:level_source, level: level)
 
     assert_cached_queries(14) do
-      get script_stage_script_level_path(
+      get script_lesson_script_level_path(
         script_id: script.name,
-        stage_position: 1,
+        lesson_position: 1,
         id: 1
       )
       assert_response :success
@@ -46,7 +46,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
 
     user_progress_path = user_progress_for_stage_and_level_path(
       script: script.name,
-      stage_position: 1,
+      lesson_position: 1,
       level_position: 1,
       level: level.id
     )
