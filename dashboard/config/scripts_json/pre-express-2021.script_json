@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-04-19 20:45:21 UTC",
+    "serialized_at": "2021-04-20 18:52:59 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -75,7 +75,7 @@
       "properties": {
         "overview": "This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
         "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
-        "preparation": "- Create your own class section on Code.org and make sure every student has a card with their **passcode** on it.\r\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\r\n- Have the school IT person add a quick link for your class section to the computer desktop.\r\n- Review the Common Sense Education website for more online safety content.",
+        "preparation": "- Watch the ***How to Make a Class Section on Code.org** - Teacher video. Create your own class section on Code.org and make sure every student has a card with their **passcode** on it.\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\n- Have the school IT person add a quick link for your class section to the computer desktop.\n- Review the Common Sense Education website for more online safety content.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "student_overview": "Click and drag to finish the puzzles."
       },
@@ -95,7 +95,7 @@
       "properties": {
         "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Watch the ***How to Make a Class Section** video. Create a class section and make sure every student has a card with their passcode on it.\n - Have the school IT person add a quick link for your class section to the computer desktop\n - Make sure each student has a Reflection Journal.",
+        "preparation": " - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "student_overview": "Program Scrat to reach the acorn."
       },
@@ -113,9 +113,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.",
+        "overview": "In this **skill-building** lesson, students will continue to develop sequential algorithms.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Make sure each student has a journal.",
+        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -296,8 +296,6 @@
       "key": "2eb677aa-fe8d-47bd-810e-b76bb6b4ed3f",
       "position": 2,
       "properties": {
-        "name": "Preview Online Puzzles",
-        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "2eb677aa-fe8d-47bd-810e-b76bb6b4ed3f",
@@ -324,7 +322,6 @@
       "key": "c9c9e152-149f-42d2-b0f5-4380cc937481",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "c9c9e152-149f-42d2-b0f5-4380cc937481",
@@ -351,7 +348,7 @@
       "key": "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a",
       "position": 6,
       "properties": {
-        "name": "Extension Activities"
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a",
@@ -406,7 +403,6 @@
       "key": "9162802e-1cab-426a-a0db-4f98de77f3eb",
       "position": 4,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "9162802e-1cab-426a-a0db-4f98de77f3eb",
@@ -433,7 +429,7 @@
       "key": "80d38f1c-ff9b-4393-9266-9d4fbee74acc",
       "position": 6,
       "properties": {
-        "name": "Extension Activities"
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "80d38f1c-ff9b-4393-9266-9d4fbee74acc",
@@ -457,11 +453,23 @@
       }
     },
     {
-      "key": "22fa621e-c033-4749-8307-cb114dfbe997",
+      "key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4",
       "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4",
+        "lesson.key": "Programming in with Angry Birds",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "pre-express-2021"
+      }
+    },
+    {
+      "key": "22fa621e-c033-4749-8307-cb114dfbe997",
+      "position": 3,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "22fa621e-c033-4749-8307-cb114dfbe997",
@@ -472,7 +480,7 @@
     },
     {
       "key": "0396f06e-4a9e-443d-859c-dc77fa229769",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -486,26 +494,12 @@
     },
     {
       "key": "3aaee60c-904c-4592-8092-b7abf66d9fac",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "3aaee60c-904c-4592-8092-b7abf66d9fac",
-        "lesson.key": "Programming in with Angry Birds",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
-      "key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4",
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021"
@@ -1027,14 +1021,14 @@
       "key": "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd",
       "position": 1,
       "properties": {
-        "description": "Goal: This discussion will teach students what to expect and how to behave when they enter the computer lab.",
+        "description": "###Behaving in the Computer Lab\n\n**Goal:** This discussion will teach students what to expect and how to behave when they enter the computer lab.",
         "tips": [
           {
             "type": "contentCorner",
             "markdown": "### Teaching this course as a class?\r\nOur grade-aligned CS Fundamentals courses use unplugged lessons to build community and introduce tricky computer science concepts, including **digital citizenship**. Check out the lesson [Going Places Safely](https://curriculum.code.org/csf-19/coursea/1/) from [Course A](https://curriculum.code.org/csf-19/coursea/)!\r\n\r\n"
           }
         ],
-        "name": "Behaving in the Computer Lab\r"
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd",
@@ -1061,8 +1055,7 @@
       "key": "1c2125d9-33ff-4e9b-af87-c814567226a5",
       "position": 3,
       "properties": {
-        "description": "Have a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\r\n\r\n - Is running in the computer lab okay?\r\n - How loudly should we walk when we are in the computer lab?\r\n - What should you do if you get stuck on a puzzle?\r\n - If you get frustrated, will it help to hit the computer?\r\n - When we're about to go to the computer lab, how should we get ready?",
-        "name": "Discuss\r"
+        "description": "**Discuss:**\n\nHave a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?"
       },
       "seeding_key": {
         "activity_section.key": "1c2125d9-33ff-4e9b-af87-c814567226a5",
@@ -1073,7 +1066,7 @@
       "key": "3e550dce-3786-49bf-8181-0db85bf76550",
       "position": 1,
       "properties": {
-        "description": "Project a puzzle from lesson 1. Show the class how to click on the picture and place it in the correct spot by dragging and dropping. Purposely make mistakes such as clicking the background or dropping the image before it's at the right spot. Ask for help from volunteers in the class when you run into these problems."
+        "description": "###Preview Online Puzzles (5 mins)\n\nProject a puzzle from lesson 1. Show the class how to click on the picture and place it in the correct spot by dragging and dropping. Purposely make mistakes such as clicking the background or dropping the image before it's at the right spot. Ask for help from volunteers in the class when you run into these problems."
       },
       "seeding_key": {
         "activity_section.key": "3e550dce-3786-49bf-8181-0db85bf76550",
@@ -1084,7 +1077,7 @@
       "key": "4dd75533-0a88-4007-b78d-c6237dc99e05",
       "position": 1,
       "properties": {
-        "description": "*Goal:* This will teach students how to use Code.org to complete online puzzles.\r\n\r\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.",
+        "description": "**Goal:** This will teach students how to use Code.org to complete online puzzles.\n\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.",
         "name": "Learn to Drag and Drop\r"
       },
       "seeding_key": {
@@ -1099,7 +1092,7 @@
         "description": "Take some time to explicitly teach how to click, drag, and drop. Take time to introduce the language around the devices students will be using when they work on the puzzles. If you have tablets, students will be using a *touch screen*. If you have laptops, they will likely be using a *trackpad*. Desktop computers like you might find in a lab will rely on the use of the *mouse*.",
         "tips": [
           {
-            "type": "contentCorner",
+            "type": "teachingTip",
             "markdown": "Considering having students break down the steps of dragging and dropping and record them on the board. For example: \r\n\r\n1. Move the arrow to the block. \r\n2. Click and hold the mouse button. \r\n3. Move the mouse. \r\n4. Let go of the button.\r\n\r\nDoing this will give students practice with creating an *algorithm*, which is a concept that will be explored in upcoming lessons.\r\n"
           }
         ]
@@ -1152,6 +1145,7 @@
       "key": "bde027df-b2a3-4252-980a-7e8493d898e6",
       "position": 1,
       "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "bde027df-b2a3-4252-980a-7e8493d898e6",
@@ -1182,27 +1176,17 @@
       }
     },
     {
-      "key": "4257e8ad-b9a4-4964-8047-e3f57ee99e87",
+      "key": "a6a26f0a-a384-454d-bcae-e6b7f4531439",
       "position": 1,
       "properties": {
+        "description": "Review expectations and how to behave when they enter the computer lab.\r\n\r\n\r\n**Discuss:**\r\n\r\nHave a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\r\n\r\n - Is running in the computer lab okay?\r\n - How loudly should we walk when we are in the computer lab?\r\n - What should you do if you get stuck on a puzzle?\r\n - If you get frustrated, will it help to hit the computer?\r\n - When we're about to go to the computer lab, how should we get ready?",
+        "name": "Behaving in the Computer Lab\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": " - Use calm bodies in the lab\n - Remember not to chew gum or candy\n - Sanitize your hands\n - Sit with your partner at one computer\n - Make sure that the first \"driver\" can reach the mouse\n - When you get frustrated, don't hit or shake the computer or monitor\n - Follow the ***20/20/20 rule**.\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher\n - Keep volume down so everyone else can hear their partners\n - Use your journal for keeping track of feelings and solutions\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4257e8ad-b9a4-4964-8047-e3f57ee99e87",
-        "lesson_activity.key": "dde11556-b732-467c-a7bf-70b47c9cc8ad"
-      }
-    },
-    {
-      "key": "a6a26f0a-a384-454d-bcae-e6b7f4531439",
-      "position": 2,
-      "properties": {
-        "description": "Review expectations and how to behave when they enter the computer lab.\r\n\r\n\r\n**Discuss:**\r\n\r\nHave a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\r\n\r\n - Is running in the computer lab okay?\r\n - How loudly should we walk when we are in the computer lab?\r\n - What should you do if you get stuck on a puzzle?\r\n - If you get frustrated, will it help to hit the computer?\r\n - When we're about to go to the computer lab, how should we get ready?",
-        "name": "Behaving in the Computer Lab\r"
       },
       "seeding_key": {
         "activity_section.key": "a6a26f0a-a384-454d-bcae-e6b7f4531439",
@@ -1216,7 +1200,7 @@
         "description": "Project a puzzle from the lesson. Show the class how to click on a block and place it in the correct spot by dragging and dropping. Purposely make mistakes such as clicking the background or dropping the image before it's at the right spot. Ask for help from volunteers in the class when you run into these problems, and help them use the skills that they developed in the last unplugged lesson to make things right.",
         "tips": [
           {
-            "type": "contentCorner",
+            "type": "teachingTip",
             "markdown": "### Teaching this course as a class?\r\nOur grade-aligned CS Fundamentals courses use unplugged lessons to build community and introduce tricky computer science concepts, including **sequencing**. Check out the lesson [Happy Maps](https://curriculum.code.org/csf-19/coursea/3/) from [Course A](https://curriculum.code.org/csf-19/coursea/) or [Move It, Move It!](https://curriculum.code.org/csf-19/courseb/2/) from [Course B](https://curriculum.code.org/csf-19/courseb/)!\r\n"
           }
         ]
@@ -1235,7 +1219,8 @@
             "type": "teachingTip",
             "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch  the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
           }
-        ]
+        ],
+        "name": "Programming with Blocks"
       },
       "seeding_key": {
         "activity_section.key": "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46",
@@ -1246,8 +1231,7 @@
       "key": "20e998a3-d920-48f1-9d92-ec4102990042",
       "position": 2,
       "properties": {
-        "description": "This will teach students how to use Code.org to complete online puzzles.\n\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.\n\nThe vocabulary introduced in this lesson becomes relevant during this activity.  Take some time to explicitly teach how to click, double-click, drag, and drop.  It might work better for you to cover these words in the classroom environment where you can lead by example -- or it might make more sense to teach the words individually as students work on their puzzles in the lab.  You will need to decide what you believe is best for your class.\n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.",
-        "name": "Online Puzzles\r"
+        "description": "This will teach students how to use Code.org to complete online puzzles.\n\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.\n\nThe vocabulary introduced in this lesson becomes relevant during this activity.  Take some time to explicitly teach how to click, double-click, drag, and drop.  It might work better for you to cover these words in the classroom environment where you can lead by example -- or it might make more sense to teach the words individually as students work on their puzzles in the lab.  You will need to decide what you believe is best for your class.\n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "20e998a3-d920-48f1-9d92-ec4102990042",
@@ -1255,9 +1239,21 @@
       }
     },
     {
-      "key": "0394c5d4-246e-42bc-aca2-97d7bd159173",
+      "key": "1ed021eb-9033-4d39-98d7-e9e245a7f785",
       "position": 1,
       "properties": {
+        "progression_name": "Video: Programming with Blocks"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ed021eb-9033-4d39-98d7-e9e245a7f785",
+        "lesson_activity.key": "9162802e-1cab-426a-a0db-4f98de77f3eb"
+      }
+    },
+    {
+      "key": "0394c5d4-246e-42bc-aca2-97d7bd159173",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "0394c5d4-246e-42bc-aca2-97d7bd159173",
@@ -1269,7 +1265,7 @@
       "position": 1,
       "properties": {
         "description": "###Journaling:\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n### Journal Prompts:\n\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n - Draw one of the ***Feeling Faces**  that shows how you felt about today's lesson in the corner of your journal page.",
-        "name": "Reflections"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "51b1c494-c02c-43d8-bf3d-543f6634f474",
@@ -1280,7 +1276,7 @@
       "key": "f810e0b8-71b7-4b54-8c8b-4205a471ca3b",
       "position": 1,
       "properties": {
-        "description": "If students complete the puzzles from this lesson early, have them spend some time trying to come up with their own puzzles in their [r think-spot-journal/pre-express/2021]."
+        "description": "If students complete the puzzles from this lesson early, have them spend some time trying to come up with their own puzzles in their reflection journals."
       },
       "seeding_key": {
         "activity_section.key": "f810e0b8-71b7-4b54-8c8b-4205a471ca3b",
@@ -1299,12 +1295,78 @@
       }
     },
     {
+      "key": "4ac20db9-eae2-43da-bcd7-48b005e9772b",
+      "position": 1,
+      "properties": {
+        "name": "Programming with Angry Birds",
+        "progression_name": "Video: Pair Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ac20db9-eae2-43da-bcd7-48b005e9772b",
+        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4"
+      }
+    },
+    {
+      "key": "c07f590c-4333-4b74-a479-fa00fb43acd4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4",
+        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4"
+      }
+    },
+    {
+      "key": "58491b40-8a56-4299-9f91-d96bd0af3ab0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "58491b40-8a56-4299-9f91-d96bd0af3ab0",
+        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4"
+      }
+    },
+    {
+      "key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9",
+        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4"
+      }
+    },
+    {
+      "key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3",
+        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4"
+      }
+    },
+    {
+      "key": "dec19d15-6248-4a60-87e3-b8bf155470bc",
+      "position": 6,
+      "properties": {
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming** video whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own"
+      },
+      "seeding_key": {
+        "activity_section.key": "dec19d15-6248-4a60-87e3-b8bf155470bc",
+        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4"
+      }
+    },
+    {
       "key": "179a6d3a-af19-4c62-85c7-82844964d06a",
       "position": 1,
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Show the students the *right* way to help classmates by:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
           }
@@ -1316,23 +1378,11 @@
       }
     },
     {
-      "key": "05a3fac8-cfa8-4886-8e14-e93470dc60cd",
-      "position": 2,
-      "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \r\n\r\n - Utilize [r pair-programming-vid/pre-express/2021] whenever possible\r\n - Encourage students with questions/challenges to start by asking their partner\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\r\n - Remind students to use the debugging process before you approach\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own",
-        "name": "Online Puzzles\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "05a3fac8-cfa8-4886-8e14-e93470dc60cd",
-        "lesson_activity.key": "22fa621e-c033-4749-8307-cb114dfbe997"
-      }
-    },
-    {
       "key": "12c1b1b7-2a91-4f58-ae14-136ea1536a67",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.",
-        "name": "Journaling\r"
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "12c1b1b7-2a91-4f58-ae14-136ea1536a67",
@@ -1348,16 +1398,6 @@
       "seeding_key": {
         "activity_section.key": "4bda804b-66e2-4290-8cf1-79b0649b470d",
         "lesson_activity.key": "3aaee60c-904c-4592-8092-b7abf66d9fac"
-      }
-    },
-    {
-      "key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3",
-        "lesson_activity.key": "e0aa5bd3-368a-43c0-b435-29b01a86a6d4"
       }
     },
     {
@@ -1980,7 +2020,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:1"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2005,7 +2046,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:2"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2030,7 +2072,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:3"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2055,7 +2098,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:4"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2080,7 +2124,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:5"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2105,7 +2150,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:6"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2130,7 +2176,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:7"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2155,7 +2202,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:8"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2180,7 +2228,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:9"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2205,7 +2254,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:10"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2230,7 +2280,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:11"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2255,7 +2306,8 @@
       "properties": {
         "level_keys": [
           "blockly:Jigsaw:12"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2278,9 +2330,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseAB_video_NewIntro_2021"
-        ]
+        "progression": "Video: Programming with Blocks"
       },
       "named_level": null,
       "bonus": null,
@@ -2291,7 +2341,7 @@
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "0394c5d4-246e-42bc-aca2-97d7bd159173"
+        "activity_section.key": "1ed021eb-9033-4d39-98d7-e9e245a7f785"
       },
       "level_keys": [
         "courseAB_video_NewIntro_2021"
@@ -2300,12 +2350,13 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2325,12 +2376,13 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp2_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2350,12 +2402,13 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp3a_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2375,12 +2428,13 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp3b_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2400,12 +2454,13 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp4a_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2425,12 +2480,13 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_Scrat_ramp5a_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2451,11 +2507,9 @@
       "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "elementary_video_pairProgramming_2021"
-        ]
+        "progression": "Video: Pair Programming"
       },
       "named_level": null,
       "bonus": null,
@@ -2466,7 +2520,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "4ac20db9-eae2-43da-bcd7-48b005e9772b"
       },
       "level_keys": [
         "elementary_video_pairProgramming_2021"
@@ -2475,12 +2529,10 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2491,7 +2543,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       },
       "level_keys": [
         "courseA_maze_seq1_2021"
@@ -2500,12 +2552,10 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq5_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2516,7 +2566,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       },
       "level_keys": [
         "courseA_maze_seq5_2021"
@@ -2525,12 +2575,10 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq5a_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2541,7 +2589,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       },
       "level_keys": [
         "courseA_maze_seq5a_2021"
@@ -2550,12 +2598,10 @@
     {
       "chapter": 24,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2566,7 +2612,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       },
       "level_keys": [
         "courseA_maze_seq6_2021"
@@ -2575,12 +2621,10 @@
     {
       "chapter": 25,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq8_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -2591,7 +2635,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       },
       "level_keys": [
         "courseA_maze_seq8_2021"
@@ -2600,13 +2644,11 @@
     {
       "chapter": 26,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseA_maze_seq10_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -2617,7 +2659,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "58491b40-8a56-4299-9f91-d96bd0af3ab0"
       },
       "level_keys": [
         "courseA_maze_seq10_2021"
@@ -2626,12 +2668,10 @@
     {
       "chapter": 27,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq11_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -2642,7 +2682,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9"
       },
       "level_keys": [
         "courseA_maze_seq11_2021"
@@ -2651,12 +2691,10 @@
     {
       "chapter": 28,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq12_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -2667,7 +2705,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9"
       },
       "level_keys": [
         "courseA_maze_seq12_2021"
@@ -2676,12 +2714,10 @@
     {
       "chapter": 29,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq13_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -2692,7 +2728,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9"
       },
       "level_keys": [
         "courseA_maze_seq13_2021"
@@ -2701,12 +2737,13 @@
     {
       "chapter": 30,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -2726,12 +2763,13 @@
     {
       "chapter": 31,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5484,7 +5522,7 @@
         "lesson.key": "Sequencing with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "0394c5d4-246e-42bc-aca2-97d7bd159173"
+        "activity_section.key": "1ed021eb-9033-4d39-98d7-e9e245a7f785"
       }
     },
     {
@@ -5568,7 +5606,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "4ac20db9-eae2-43da-bcd7-48b005e9772b"
       }
     },
     {
@@ -5580,7 +5618,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       }
     },
     {
@@ -5592,7 +5630,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       }
     },
     {
@@ -5604,7 +5642,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       }
     },
     {
@@ -5616,7 +5654,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       }
     },
     {
@@ -5628,7 +5666,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "c07f590c-4333-4b74-a479-fa00fb43acd4"
       }
     },
     {
@@ -5640,7 +5678,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "58491b40-8a56-4299-9f91-d96bd0af3ab0"
       }
     },
     {
@@ -5652,7 +5690,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9"
       }
     },
     {
@@ -5664,7 +5702,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9"
       }
     },
     {
@@ -5676,7 +5714,7 @@
         "lesson.key": "Programming in with Angry Birds",
         "lesson_group.key": "csf_sequencing",
         "script.name": "pre-express-2021",
-        "activity_section.key": "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3"
+        "activity_section.key": "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9"
       }
     },
     {
@@ -7003,18 +7041,6 @@
       }
     },
     {
-      "name": "How to Make a Class Section",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-      "key": "how_to_make_a_class_section",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_make_a_class_section"
-      }
-    },
-    {
       "name": "Think Spot Journal",
       "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/edit",
       "key": "think-spot-journal",
@@ -7108,8 +7134,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
-        "resource.key": "how_to_make_a_class_section"
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in with Angry Birds",
+        "resource.key": "feeling-faces-image"
       }
     },
     {
@@ -7966,6 +7998,27 @@
         "lesson.key": "Learn to Drag and Drop",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-18"
       }
     },
     {

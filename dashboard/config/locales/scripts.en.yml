@@ -19657,7 +19657,7 @@ en:
               key: Board Events
               name: Board Events
               description_student: "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n"
-              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
             Getting Properties:
               key: Getting Properties
               name: Getting Properties
@@ -21517,7 +21517,7 @@ en:
               key: Programming in with Angry Birds
               name: Programming with Angry Birds
               description_student: 
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_teacher: In this **skill-building** lesson, students will continue to develop sequential algorithms.
             Programming with Rey and BB-8:
               key: Programming with Rey and BB-8
               name: Programming with Rey and BB-8

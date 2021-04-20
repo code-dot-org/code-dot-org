@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-04-19 20:43:59 UTC",
+    "serialized_at": "2021-04-19 22:55:59 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -1362,7 +1362,7 @@
       "key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
       "position": 1,
       "properties": {
-        "description": "*Goal:* Help students reflect on the things they learned in this lesson\n\nYou can give the students a journal prompt to help them process some of the things that they encountered during the day or lead a whole class discussion.\n\n**Prompts:**\n\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "description": "\n\n###Journaling\n**Goal:** Help students reflect on the things they learned in this lesson\n\nYou can give the students a journal prompt to help them process some of the things that they encountered during the day or lead a whole class discussion.\n\n###Journal Prompts\n\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
         "name": "Reflection",
         "tips": [
           {
