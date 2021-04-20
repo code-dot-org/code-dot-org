@@ -2,7 +2,7 @@
 
 Given /^I load the Dance Party free play level/i do
   individual_steps <<-STEPS
-    And I am on "http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true"
+    And I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
     And I rotate to landscape
     And I wait until I see selector "#runButton"
     And I bypass the age dialog

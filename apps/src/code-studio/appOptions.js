@@ -6,7 +6,7 @@
  * @typedef {Object} AppOptionsConfig
  * @property {boolean} embedded
  * @property {string} scriptName
- * @property {string} stagePosition
+ * @property {string} lessonPosition
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
  * @property {SerializedAnimationList} initialAnimationList

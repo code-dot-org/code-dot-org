@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-14 16:46:47 UTC",
+    "serialized_at": "2021-04-14 20:12:19 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -322,6 +322,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "overview": "For this project, students create a symbol in The Neighborhood using the classes they have developed and extended. Students explore creative expression using computer programs by applying the concepts they have learned in this unit to create a symbol that represents something meaningful and interesting to them. Students experience being software engineers as they brainstorm and plan their projects and begin developing their programs.\n",
+        "student_overview": "For this project, you create a symbol in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create a symbol that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and start creating your program.\n",
+        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Personal Symbol Project Planning Guide\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-16",
@@ -337,6 +340,8 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "overview": "Students planned uses for existing classes in the previous lesson and designed a new class that would provide a needed behavior for creating their symbol. At this stage of the project, students implement the classes and commands they have developed throughout the unit and the new class and command to create their symbol. Software development skills and processes are reinforced as students participate in a code review to give and use feedback as they develop their program. \n",
+        "student_overview": "You are now implementing the classes and commands you have developed throughout the unit and your new class and command to create your symbol. Your software development skills and processes are strengthened when you participate in a code review to give and use feedback as you develop your program.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -352,6 +357,9 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
+        "overview": "Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes. \n",
+        "student_overview": "Using the feedback you received in the previous lesson, you finalize and submit your Personal Symbol Project. You share your final projects with your peers and celebrate your success!\n",
+        "preparation": "* Print copies of the Personal Symbol Project Peer Interview Cards - one set of cards per pair of students - and cut out cards"
       },
       "seeding_key": {
         "lesson.key": "lesson-18",
@@ -1042,6 +1050,144 @@
         "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7",
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "58761e6e-43ff-4393-b7bf-940fca48770e",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "58761e6e-43ff-4393-b7bf-940fca48770e",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "545c156f-dbea-4ee6-9ea7-2bbd65ec78c8",
+      "position": 2,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "545c156f-dbea-4ee6-9ea7-2bbd65ec78c8",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "190aa2a8-9c31-4046-90b5-029e3dcedae9",
+      "position": 3,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "190aa2a8-9c31-4046-90b5-029e3dcedae9",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "7b5677e8-9f05-4cd2-a14f-82617b129de2",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b5677e8-9f05-4cd2-a14f-82617b129de2",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "a39f9cf6-dcdb-4dd8-991b-14a47a35ce92",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a39f9cf6-dcdb-4dd8-991b-14a47a35ce92",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "21c54040-7fd1-4c31-b603-846aed353b33",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "21c54040-7fd1-4c31-b603-846aed353b33",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "ef298289-df39-4824-a32d-5fb891eabe34",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef298289-df39-4824-a32d-5fb891eabe34",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "29536076-3768-4da7-870e-b95536823d9d",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "29536076-3768-4da7-870e-b95536823d9d",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "a371a6f1-8c13-485a-bd05-e671ff9a32b3",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a371a6f1-8c13-485a-bd05-e671ff9a32b3",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c51ed06b-0a79-4104-808c-4931b67cc06c",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c51ed06b-0a79-4104-808c-4931b67cc06c",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-pilot"
       }
     }
@@ -4082,6 +4228,380 @@
         "activity_section.key": "5838bd4d-f552-45e8-9516-8839d4c86434",
         "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
       }
+    },
+    {
+      "key": "62ba4acc-29e1-464f-9c9f-b200d2e1a06d",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is designed to be completed in three class periods to provide time for planning and creating the program, including implementing a new class that extends `PainterPlus` with a new behavior. Student participation in planning and feedback activities to improve their programs and solve problems reinforce software development practices and self-image as a software engineer. Lessons 16, 17, and 18 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option is available that achieves the targeted learning objectives and goals. If using this option, refer to the Personal Symbol Project 1 Day Lesson Plan, which includes a one-day version of the Personal Symbol Project Planning Guide. Direct students to develop their program on Lesson 18 so they can submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "62ba4acc-29e1-464f-9c9f-b200d2e1a06d",
+        "lesson_activity.key": "58761e6e-43ff-4393-b7bf-940fca48770e"
+      }
+    },
+    {
+      "key": "2ca6d32e-b751-4600-aed2-f284f5a79c5f",
+      "position": 1,
+      "properties": {
+        "name": "The Michelangelo of Microsoft Excel",
+        "remarks": true,
+        "description": "We develop and use computer programs for many purposes. One way that computer programs can be used is for creative expression. Nowadays, people use programs to create artwork, sometimes even using programs intended for a different purpose."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ca6d32e-b751-4600-aed2-f284f5a79c5f",
+        "lesson_activity.key": "545c156f-dbea-4ee6-9ea7-2bbd65ec78c8"
+      }
+    },
+    {
+      "key": "ea313030-d463-44bd-8559-717809c162aa",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video \"The Michelangelo of Microsoft Excel\" to the class. Stop the video at 1:20.\n\n**Discuss:** *What does this make you wonder about how you could create art in The Neighborhood?*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Allow students time to individually consider ideas then pair with a neighbor to share. Have students volunteer responses or call on random students to share their thoughts."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ea313030-d463-44bd-8559-717809c162aa",
+        "lesson_activity.key": "545c156f-dbea-4ee6-9ea7-2bbd65ec78c8"
+      }
+    },
+    {
+      "key": "7720f923-cf2a-4cfd-96c3-9bb7f90e5fca",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students talk about using `PainterPlus`, `SprayPainter`, and `StampPainter` to create different elements in the artist's paintings. Students present ideas of different types of Painters they might need to create other elements in the paintings because of limitations of the existing classes or to simplify complex components.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7720f923-cf2a-4cfd-96c3-9bb7f90e5fca",
+        "lesson_activity.key": "545c156f-dbea-4ee6-9ea7-2bbd65ec78c8"
+      }
+    },
+    {
+      "key": "0840f6dd-9dd9-443c-95c0-dbd7885bd4b9",
+      "position": 1,
+      "properties": {
+        "name": "Introduction",
+        "duration": "5",
+        "remarks": true,
+        "description": "Today we are beginning the Personal Symbol Project, which is an opportunity to show what you have learned so far and create something meaningful or interesting to you.\n\nOver the next few days, you will be developing a program to create a symbol in The Neighborhood. You will need to use what you have created in this unit and create a new type of Painter to make your symbol."
+      },
+      "seeding_key": {
+        "activity_section.key": "0840f6dd-9dd9-443c-95c0-dbd7885bd4b9",
+        "lesson_activity.key": "190aa2a8-9c31-4046-90b5-029e3dcedae9"
+      }
+    },
+    {
+      "key": "b231842b-acb8-4b40-93df-b5fc4ee044b0",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Personal Symbol Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Personal Symbol Project Planning Guide and review the rubric on the last page."
+      },
+      "seeding_key": {
+        "activity_section.key": "b231842b-acb8-4b40-93df-b5fc4ee044b0",
+        "lesson_activity.key": "190aa2a8-9c31-4046-90b5-029e3dcedae9"
+      }
+    },
+    {
+      "key": "5494b087-8314-4228-8cca-206ba68c026d",
+      "position": 3,
+      "properties": {
+        "name": "Brainstorm",
+        "duration": "10",
+        "remarks": true,
+        "description": "Before you begin writing your program, you first need to decide what you will be creating, so you know what you already have and what you will need to make your symbol."
+      },
+      "seeding_key": {
+        "activity_section.key": "5494b087-8314-4228-8cca-206ba68c026d",
+        "lesson_activity.key": "190aa2a8-9c31-4046-90b5-029e3dcedae9"
+      }
+    },
+    {
+      "key": "29da5d69-14ae-4089-ba7a-42c60e9205f6",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Guide students through the planning guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 1 on page 2 of the Personal Symbol Project Planning Guide. Students write down ideas then select one to create. Students explain in a few sentences what their symbol will represent.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 2 on page 2 of the Personal Symbol Project Planning Guide. Students explain in a few sentences what their symbol will represent.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 3 on page 3 of the Personal Symbol Project Planning Guide. Students create a quick sketch of the symbol they will create.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 4 on page 4 of the Personal Symbol Project Planning Guide. Students fill in the table outlining what they already know and have and what they need to create their symbol.\n\n**Display:** Show the slide with the list of commands for `PainterPlus`, `StampPainter`, and `SprayPainter` for students to refer to as they complete Step 4 of the Personal Symbol Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Symbols should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new class. This will be evident when students are filling in the table on page 4.\n\nIf students find that what they want to make is not using at least two of the existing classes and requires a new class, they may need to revisit the symbol they plan to create.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "29da5d69-14ae-4089-ba7a-42c60e9205f6",
+        "lesson_activity.key": "190aa2a8-9c31-4046-90b5-029e3dcedae9"
+      }
+    },
+    {
+      "key": "372c06d8-776b-42d0-99d9-a37395406e72",
+      "position": 5,
+      "properties": {
+        "name": "Development",
+        "duration": "25",
+        "remarks": true,
+        "description": "Now that you have chosen a symbol and decided what you have and will need to create it, you will now write a program to create your symbol in The Neighborhood."
+      },
+      "seeding_key": {
+        "activity_section.key": "372c06d8-776b-42d0-99d9-a37395406e72",
+        "lesson_activity.key": "190aa2a8-9c31-4046-90b5-029e3dcedae9"
+      }
+    },
+    {
+      "key": "e52f0d2b-d4e6-4a4c-a642-1af43afdf955",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to develop their program to create their symbol. Students use the `PainterPlus`, `SprayPainter`, and/or `StampPainter` classes they wrote in previous lessons and write a new class that extends `PainterPlus` with a new behavior to create their symbol."
+      },
+      "seeding_key": {
+        "activity_section.key": "e52f0d2b-d4e6-4a4c-a642-1af43afdf955",
+        "lesson_activity.key": "190aa2a8-9c31-4046-90b5-029e3dcedae9"
+      }
+    },
+    {
+      "key": "4d3956fe-1a86-4b30-899c-c78b8de7d80d",
+      "position": 1,
+      "properties": {
+        "name": "Planning Reflection",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Briefly explain the new type of Painter you plan to create and the behavior it will perform. Why will you need this type of Painter to create your symbol?\n\n**Discussion Goal:** Students identify the element(s) of their symbol that requires a behavior that does not exist in the `PainterPlus`, `SprayPainter`, or `StampPainter` classes. Students name the class they are creating, explains the behavior this type of `Painter` has and identifies where they need this behavior to create their symbol.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d3956fe-1a86-4b30-899c-c78b8de7d80d",
+        "lesson_activity.key": "7b5677e8-9f05-4cd2-a14f-82617b129de2"
+      }
+    },
+    {
+      "key": "9271c612-becb-48a7-b7b1-c7fb7825ec15",
+      "position": 2,
+      "properties": {
+        "name": "Assessment (Optional)",
+        "description": "**Personal Symbol Project Planning Guide:** You can use pages 2-4 of the Personal Symbol Project Planning Guide as an optional completion assessment."
+      },
+      "seeding_key": {
+        "activity_section.key": "9271c612-becb-48a7-b7b1-c7fb7825ec15",
+        "lesson_activity.key": "7b5677e8-9f05-4cd2-a14f-82617b129de2"
+      }
+    },
+    {
+      "key": "e64f3237-3d97-4307-835b-db736d725d6c",
+      "position": 1,
+      "properties": {
+        "name": "Computer-Generated Art",
+        "remarks": true,
+        "description": "Programming a computer to create art is trending. Not only do people use computer programs to create art, but people also write programs to generate artwork as well."
+      },
+      "seeding_key": {
+        "activity_section.key": "e64f3237-3d97-4307-835b-db736d725d6c",
+        "lesson_activity.key": "a39f9cf6-dcdb-4dd8-991b-14a47a35ce92"
+      }
+    },
+    {
+      "key": "f1a2caa0-3b65-4081-beb8-3f50c8de3fde",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the image of the AI-generated art."
+      },
+      "seeding_key": {
+        "activity_section.key": "f1a2caa0-3b65-4081-beb8-3f50c8de3fde",
+        "lesson_activity.key": "a39f9cf6-dcdb-4dd8-991b-14a47a35ce92"
+      }
+    },
+    {
+      "key": "c9b50ef5-5d81-4145-a208-e4e8d038fb01",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "This AI-generated art sold for $432,500 at an auction in 2018. The artist used 15,000 portrait images from different time periods to teach the AI. It then created its own original portraits to look human-made."
+      },
+      "seeding_key": {
+        "activity_section.key": "c9b50ef5-5d81-4145-a208-e4e8d038fb01",
+        "lesson_activity.key": "a39f9cf6-dcdb-4dd8-991b-14a47a35ce92"
+      }
+    },
+    {
+      "key": "c1b07778-1098-4c9e-8e74-1b25d4169457",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Can a computer generate the next Picasso masterpiece on its own? Is this still considered to be art?*\n\n**Do This:** Randomly call on 2-3 students who agree and 2-3 students who disagree to explain their position briefly.\n\n**Discussion Goal:** Students share opinions about whether they think computer-generated art should be considered as art. Students compare artwork that is created by humans using physical media to artwork created by computers. Students may also make comparisons to artwork that is created using programs to computer-generated artwork."
+      },
+      "seeding_key": {
+        "activity_section.key": "c1b07778-1098-4c9e-8e74-1b25d4169457",
+        "lesson_activity.key": "a39f9cf6-dcdb-4dd8-991b-14a47a35ce92"
+      }
+    },
+    {
+      "key": "08ca6177-f607-441a-acf3-cd55d18535d2",
+      "position": 1,
+      "properties": {
+        "name": "Development",
+        "duration": "25",
+        "remarks": true,
+        "description": "Today you will continue to develop your program that will create your symbol in The Neighborhood. You should revisit the Project Planning Guide to make sure you meet the project requirements.\n\nOf course, as a software engineer, it is important to give and receive feedback on your programs, so we will be taking a moment to do code reviews after about 25 minutes of development work.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "08ca6177-f607-441a-acf3-cd55d18535d2",
+        "lesson_activity.key": "21c54040-7fd1-4c31-b603-846aed353b33"
+      }
+    },
+    {
+      "key": "ef7736fd-4563-4664-8945-3c01e84c8e97",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to continue developing their program for their Personal Symbol Project.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef7736fd-4563-4664-8945-3c01e84c8e97",
+        "lesson_activity.key": "21c54040-7fd1-4c31-b603-846aed353b33"
+      }
+    },
+    {
+      "key": "30dd251e-7c23-49ef-a366-7fb042691956",
+      "position": 3,
+      "properties": {
+        "name": "Code Review",
+        "duration": "10",
+        "remarks": true,
+        "description": "You have used code reviews throughout the unit to improve code and share knowledge. Let's take a moment to provide feedback to each other. Don't forget to follow ART – ask questions, raise flags about confusing code, and tag awesome code!"
+      },
+      "seeding_key": {
+        "activity_section.key": "30dd251e-7c23-49ef-a366-7fb042691956",
+        "lesson_activity.key": "21c54040-7fd1-4c31-b603-846aed353b33"
+      }
+    },
+    {
+      "key": "e10c5749-b0d5-4297-813a-e9533e1f1163",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on their Personal Symbol Project."
+      },
+      "seeding_key": {
+        "activity_section.key": "e10c5749-b0d5-4297-813a-e9533e1f1163",
+        "lesson_activity.key": "21c54040-7fd1-4c31-b603-846aed353b33"
+      }
+    },
+    {
+      "key": "2e58749f-2681-4853-b11d-b267bb73d8aa",
+      "position": 1,
+      "properties": {
+        "name": "Project Feedback",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 5 of their Personal Symbol Project Planning Guide. Allow students time to respond to the prompt.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e58749f-2681-4853-b11d-b267bb73d8aa",
+        "lesson_activity.key": "ef298289-df39-4824-a32d-5fb891eabe34"
+      }
+    },
+    {
+      "key": "879439d6-120f-47fa-8168-8ae6990d0991",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "Tomorrow you will finish writing your program to create your symbol. Think about the feedback you and your classmates received during the code review as you decide how you will finalize and submit your program.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "879439d6-120f-47fa-8168-8ae6990d0991",
+        "lesson_activity.key": "ef298289-df39-4824-a32d-5fb891eabe34"
+      }
+    },
+    {
+      "key": "f9804e05-71b0-4506-9d4a-35961f543fa2",
+      "position": 3,
+      "properties": {
+        "name": "Assessment (Optional)",
+        "description": "**Project Feedback:** You can collect the Project Feedback responses as an optional completion assessment."
+      },
+      "seeding_key": {
+        "activity_section.key": "f9804e05-71b0-4506-9d4a-35961f543fa2",
+        "lesson_activity.key": "ef298289-df39-4824-a32d-5fb891eabe34"
+      }
+    },
+    {
+      "key": "1bac7906-acdb-4891-be72-fb39a071a9d8",
+      "position": 1,
+      "properties": {
+        "name": "Project Progress",
+        "remarks": true,
+        "description": "You have learned and accomplished a lot in this unit! Your Personal Symbol Project showcases the knowledge and skills you have developed as well as your creativity and who you are."
+      },
+      "seeding_key": {
+        "activity_section.key": "1bac7906-acdb-4891-be72-fb39a071a9d8",
+        "lesson_activity.key": "29536076-3768-4da7-870e-b95536823d9d"
+      }
+    },
+    {
+      "key": "91e6f182-6214-496a-ada5-c0092537ea90",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 6 of their Personal Symbol Project Planning Guide. Allow students time to respond to the prompt.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "91e6f182-6214-496a-ada5-c0092537ea90",
+        "lesson_activity.key": "29536076-3768-4da7-870e-b95536823d9d"
+      }
+    },
+    {
+      "key": "e229c926-7b09-495c-bab2-8b19a95d0d90",
+      "position": 1,
+      "properties": {
+        "name": "Development",
+        "remarks": true,
+        "description": "\nToday you will finish developing your program to create your symbol. Be sure to consider the feedback you received from yesterday's code review as you work on your program. You should also revisit the Project Planning Guide to make sure you have included everything you need to meet the project requirements."
+      },
+      "seeding_key": {
+        "activity_section.key": "e229c926-7b09-495c-bab2-8b19a95d0d90",
+        "lesson_activity.key": "a371a6f1-8c13-485a-bd05-e671ff9a32b3"
+      }
+    },
+    {
+      "key": "7ef51ce8-0c03-432b-bc8d-e20069d2e01b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to finish developing their program for their Personal Symbol Project. Have students submit their projects at the end of the allotted time.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ef51ce8-0c03-432b-bc8d-e20069d2e01b",
+        "lesson_activity.key": "a371a6f1-8c13-485a-bd05-e671ff9a32b3"
+      }
+    },
+    {
+      "key": "03998b27-ffd4-4d07-958d-ac3b6ae387d4",
+      "position": 1,
+      "properties": {
+        "name": "Peer Interview",
+        "remarks": true,
+        "description": "Congratulations! You have completed your first project for this class, and you should be proud of the work you have done. We will show off our work through peer interviews so you can talk about what you created with your classmates."
+      },
+      "seeding_key": {
+        "activity_section.key": "03998b27-ffd4-4d07-958d-ac3b6ae387d4",
+        "lesson_activity.key": "c51ed06b-0a79-4104-808c-4931b67cc06c"
+      }
+    },
+    {
+      "key": "c05f4573-944c-483c-a200-2485022b801e",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Provide students a set of the Personal Symbol Project Peer Interview Cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs. Students take turns interviewing their partners about their project using the provided interview question cards.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "c05f4573-944c-483c-a200-2485022b801e",
+        "lesson_activity.key": "c51ed06b-0a79-4104-808c-4931b67cc06c"
+      }
+    },
+    {
+      "key": "67763420-bce4-4cf3-bbbe-b07646e41258",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Grading the Project",
+        "description": "**Personal Symbol Project:** Use the rubric on the last page of the Personal Symbol Project Planning Guide to assess student projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "67763420-bce4-4cf3-bbbe-b07646e41258",
+        "lesson_activity.key": "c51ed06b-0a79-4104-808c-4931b67cc06c"
+      }
     }
   ],
   "script_levels": [
@@ -4501,6 +5021,94 @@
         "lesson.key": "lesson-15",
         "objective.key": "f151a0f3-96dd-40bb-ba0e-50b5a859059c"
       }
+    },
+    {
+      "key": "a48821fc-ce7b-40f5-8763-75e5bf7f756e",
+      "properties": {
+        "description": "Plan a project to meet specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "a48821fc-ce7b-40f5-8763-75e5bf7f756e"
+      }
+    },
+    {
+      "key": "7497929e-b582-47e0-94aa-402ac0504ddd",
+      "properties": {
+        "description": "Design a class to extend an existing class and implement a new command"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "7497929e-b582-47e0-94aa-402ac0504ddd"
+      }
+    },
+    {
+      "key": "130b707d-163a-43a4-817e-1d3ecff66080",
+      "properties": {
+        "description": "Develop a program to create a symbol in The Neighborhood"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "130b707d-163a-43a4-817e-1d3ecff66080"
+      }
+    },
+    {
+      "key": "51fb0ea8-3bca-4947-8efb-a3443f0e396a",
+      "properties": {
+        "description": "Develop a program to create a symbol in The Neighborhood"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "objective.key": "51fb0ea8-3bca-4947-8efb-a3443f0e396a"
+      }
+    },
+    {
+      "key": "de57e011-74d0-4e81-b42b-e7072f2075e9",
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "objective.key": "de57e011-74d0-4e81-b42b-e7072f2075e9"
+      }
+    },
+    {
+      "key": "23156e61-f7ac-4a3d-8adb-0278dc3e5608",
+      "properties": {
+        "description": "Conduct code reviews to give and receive feedback on program code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "objective.key": "23156e61-f7ac-4a3d-8adb-0278dc3e5608"
+      }
+    },
+    {
+      "key": "2c8c4a48-3f46-4a71-88c9-b3d4f87e1e27",
+      "properties": {
+        "description": "Develop a program to create a symbol in The Neighborhood"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "2c8c4a48-3f46-4a71-88c9-b3d4f87e1e27"
+      }
+    },
+    {
+      "key": "a863f68d-b550-4e2a-82f4-bb908729e24d",
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "a863f68d-b550-4e2a-82f4-bb908729e24d"
+      }
+    },
+    {
+      "key": "00446f93-48bf-49f4-8da3-67ab1b131dc4",
+      "properties": {
+        "description": "Reflect on the development process"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "00446f93-48bf-49f4-8da3-67ab1b131dc4"
+      }
     }
   ],
   "lessons_standards": [
@@ -4747,6 +5355,300 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
       }
     }
   ],

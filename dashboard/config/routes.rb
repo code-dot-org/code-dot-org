@@ -221,8 +221,8 @@ Dashboard::Application.routes.draw do
 
   # quick links for cartoon network arabic
   get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
-  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/stage/1/puzzle/1'
-  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/stage/1/puzzle/1'
+  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/lessons/1/levels/1'
+  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/lessons/1/levels/1'
 
   # /lang/xx shortcut for all routes
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
@@ -284,15 +284,15 @@ Dashboard::Application.routes.draw do
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
-  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/stage/14%{all}')
-  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/stage/9%{all}')
-  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/stage/11%{all}')
-  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/stage/15%{all}')
-  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/stage/18%{all}')
-  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/stage/6%{all}')
-  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/stage/11%{all}')
-  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/stage/9%{all}')
-  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/stage/14%{all}')
+  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
+  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lessons/9%{all}')
+  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/lessons/11%{all}')
+  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/lessons/15%{all}')
+  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/lessons/18%{all}')
+  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/lessons/6%{all}')
+  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
+  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
+  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
   resources :lessons, only: [:edit, :update]
 
@@ -320,6 +320,15 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  # Redirects from old /stage/x/extras url to new /lessons/x/extras url
+  get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%{script_name}/lessons/%{position}/extras')
+
+  # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
+  get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
+
+  # Redirects from old /lockable/x/puzzle url to new /lockable/x/levels url
+  get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
@@ -335,31 +344,29 @@ Dashboard::Application.routes.draw do
       get 'instructions'
     end
 
-    ## TODO: Once we move levels over to /lessons as well combine the routing rules
-    resources :lessons, only: [:show], param: 'position' do
+    # /s/xxx/lessons/yyy
+    resources :lessons, only: [:show], param: 'position', format: false do
       get 'student', to: 'lessons#student_lesson_plan'
-    end
-
-    # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [], path: "/stage", param: 'position', format: false do
       get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+
+      # /s/xxx/lessons/yyy/levels/zzz
+      resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
-          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lessons/yyy/levels/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-          # /s/xxx/stage/yyy/puzzle/zzz/sublevel/sss
+          # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
           get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
         end
       end
     end
 
-    # /s/xxx/lockable/yyy/puzzle/zzz
+    # /s/xxx/lockable/yyy/levels/zzz
     resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+      resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
-          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lockable/yyy/levels/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
         end
       end
@@ -697,8 +704,8 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
