@@ -201,7 +201,7 @@ class Notification extends Component {
       // Our firehose logging system has standalone fields for commonly used metadata (eg, user_id).
       // Here, we separate out those fields from any other analytics data provided in the firehoseAnalyticsData prop.
       // We include these properties in the data_json object as well, in case that is easier for our product team to use.
-      ['user_id', 'script_id'].forEach(firehoseMetadataKey => {
+      ['user_id', 'script_id', 'lesson_id'].forEach(firehoseMetadataKey => {
         if (firehoseMetadataKey in firehoseAnalyticsData) {
           record[firehoseMetadataKey] =
             firehoseAnalyticsData[firehoseMetadataKey];
@@ -220,7 +220,7 @@ class Notification extends Component {
         })
       };
 
-      firehoseClient.putRecord(record);
+      firehoseClient.putRecord(record, {includeUserId: true});
     }
     if (this.props.onButtonClick) {
       this.props.onButtonClick();
