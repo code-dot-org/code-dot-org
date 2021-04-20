@@ -27,7 +27,12 @@ export default class SpriteUpload extends React.Component {
           </label>
           <label>
             <h4> Select Sprite to Add to Library: </h4>
-            <input type="file" ref="uploader" onChange={this.handleChange} />
+            <input
+              type="file"
+              accept="image/png"
+              ref="uploader"
+              onChange={this.handleChange}
+            />
           </label>
           <br />
           <label>
