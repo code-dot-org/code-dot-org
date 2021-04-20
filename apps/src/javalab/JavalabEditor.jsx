@@ -102,7 +102,6 @@ class JavalabEditor extends React.Component {
   }
 
   openTabContextMenu(key, e) {
-    console.log(e);
     e.preventDefault();
     const boundingRect = e.target.getBoundingClientRect();
     this.setState({
