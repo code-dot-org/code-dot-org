@@ -10,7 +10,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
-import {linkWithQueryParams, windowOpen} from '@cdo/apps/utils';
+import {linkWithQueryParams} from '@cdo/apps/utils';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
@@ -85,7 +85,9 @@ class LessonOverview extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired
   };
 
-  recordAndNavigateToPdf = (firehoseKey, url) => {
+  recordAndNavigateToPdf = (e, firehoseKey, url) => {
+    // Prevent navigation to url until callback
+    e.preventDefault();
     firehoseClient.putRecord(
       {
         study: 'pdf-click',
@@ -99,10 +101,11 @@ class LessonOverview extends Component {
       {
         includeUserId: true,
         callback: () => {
-          windowOpen(url);
+          window.location.href = url;
         }
       }
     );
+    return false;
   };
 
   compilePdfDropdownOptions = () => {
@@ -160,9 +163,10 @@ class LessonOverview extends Component {
                     {pdfDropdownOptions.map(option => (
                       <a
                         key={option.key}
-                        onClick={() =>
-                          this.recordAndNavigateToPdf(option.key, option.url)
+                        onClick={e =>
+                          this.recordAndNavigateToPdf(e, option.key, option.url)
                         }
+                        href={option.url}
                       >
                         {option.name}
                       </a>
