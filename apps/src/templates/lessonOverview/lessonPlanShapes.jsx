@@ -120,12 +120,18 @@ export const studentLessonShape = PropTypes.shape({
 
 export const navigationLessonShape = PropTypes.shape({
   unit: PropTypes.shape({
-    lessons: PropTypes.arrayOf(
+    lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
-        position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       })
     ).isRequired
   }).isRequired

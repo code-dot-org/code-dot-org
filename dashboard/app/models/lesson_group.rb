@@ -152,6 +152,15 @@ class LessonGroup < ApplicationRecord
     summary
   end
 
+  def summarize_for_lesson_dropdown(is_student = false)
+    {
+      key: key,
+      display_name: localized_display_name,
+      user_facing: user_facing,
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+    }
+  end
+
   # Used for seeding from JSON. Returns the full set of information needed to
   # uniquely identify this object as well as any other objects it belongs to.
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
