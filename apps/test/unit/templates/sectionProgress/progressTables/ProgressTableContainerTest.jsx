@@ -237,7 +237,7 @@ describe('ProgressTableView', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    wrapper.onToggleRow(rowData);
+    wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(
       STUDENTS.length + numDetailRows
     );
@@ -253,12 +253,11 @@ describe('ProgressTableView', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    wrapper.onToggleRow(rowData);
+    wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(
       STUDENTS.length + numDetailRows
     );
-
-    wrapper.onToggleRow(rowData);
+    wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
   });
 });
