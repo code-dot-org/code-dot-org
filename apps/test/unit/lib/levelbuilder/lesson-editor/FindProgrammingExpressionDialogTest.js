@@ -88,14 +88,18 @@ describe('FindProgrammingExpressionDialog', () => {
     const searchStub = sinon.stub(wrapper.instance(), 'doSearch');
 
     // searches on a new query
-    wrapper.setState({
-      searchQuery: 'foo'
+    wrapper.instance().handleSearch({
+      target: {
+        value: 'foo'
+      }
     });
     expect(searchStub.callCount).to.equal(1);
 
     // does not search again on the same query
-    wrapper.setState({
-      searchQuery: 'foo'
+    wrapper.instance().handleSearch({
+      target: {
+        value: 'foo'
+      }
     });
     expect(searchStub.callCount).to.equal(1);
 
@@ -106,13 +110,13 @@ describe('FindProgrammingExpressionDialog', () => {
     expect(searchStub.callCount).to.equal(1);
 
     // does search on filter or page change
-    wrapper.setState({
-      filteredProgrammingEnvironment: 'foo'
+    wrapper.instance().handleFilter({
+      target: {
+        value: 'foo'
+      }
     });
     expect(searchStub.callCount).to.equal(2);
-    wrapper.setState({
-      currentPage: 2
-    });
+    wrapper.instance().setCurrentPage(2);
     expect(searchStub.callCount).to.equal(3);
   });
 
@@ -128,14 +132,18 @@ describe('FindProgrammingExpressionDialog', () => {
     );
 
     // doesn't search if there is no query
-    wrapper.setState({
-      searchQuery: false
+    wrapper.instance().handleSearch({
+      target: {
+        value: false
+      }
     });
     expect(fetchStub.callCount).to.equal(0);
 
     // searches with a query and page
-    wrapper.setState({
-      searchQuery: 'foo'
+    wrapper.instance().handleSearch({
+      target: {
+        value: 'foo'
+      }
     });
     expect(fetchStub.callCount).to.equal(1);
     expect(fetchStub.lastCall.args).to.eql([
@@ -143,8 +151,10 @@ describe('FindProgrammingExpressionDialog', () => {
     ]);
 
     // optionally searches with filter
-    wrapper.setState({
-      filteredProgrammingEnvironment: 'bar'
+    wrapper.instance().handleFilter({
+      target: {
+        value: 'bar'
+      }
     });
     expect(fetchStub.callCount).to.equal(2);
     expect(fetchStub.lastCall.args).to.eql([
