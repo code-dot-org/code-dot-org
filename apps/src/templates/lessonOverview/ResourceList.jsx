@@ -40,7 +40,11 @@ export default class ResourceList extends Component {
       {
         includeUserId: true,
         callback: () => {
-          windowOpen(this.normalizeUrl(resource.download_url));
+          windowOpen(
+            this.normalizeUrl(resource.download_url),
+            'noopener',
+            'noreferrer'
+          );
         }
       }
     );
@@ -63,7 +67,7 @@ export default class ResourceList extends Component {
       {
         includeUserId: true,
         callback: () => {
-          windowOpen(this.normalizeUrl(resource.url));
+          windowOpen(this.normalizeUrl(resource.url), 'noopener', 'noreferrer');
         }
       }
     );
