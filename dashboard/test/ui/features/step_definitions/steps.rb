@@ -1878,7 +1878,7 @@ end
 Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/stage/#{stage_num}/extras?section_id=#{@section_id}"
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{stage_num}/extras?section_id=#{@section_id}"
   }
 end
 

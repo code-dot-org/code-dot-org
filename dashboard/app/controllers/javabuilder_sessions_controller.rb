@@ -12,7 +12,8 @@ class JavabuilderSessionsController < ApplicationController
   def get_access_token
     channel_id = params[:channelId]
     project_version = params[:projectVersion]
-    if !channel_id || !project_version
+    project_url = params[:projectUrl]
+    if !channel_id || !project_version || !project_url
       return render status: :bad_request, json: {}
     end
 
@@ -35,7 +36,8 @@ class JavabuilderSessionsController < ApplicationController
       storage_id: storage_id,
       storage_app_id: storage_app_id,
       channel_id: channel_id,
-      project_version: project_version
+      project_version: project_version,
+      project_url: project_url
     }
 
     # log payload to firehose

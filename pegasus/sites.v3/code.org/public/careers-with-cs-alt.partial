@@ -20,7 +20,7 @@ theme: responsive
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0">
   <img style="width: 10%; float: left; margin-right: 2%" src="/images/csjourneys/check.png" alt="checkmark icon">
   <div style="width: 87%; float: left">
-    <a href="#explore"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Find a career that matches my interests</p>
+    <a href="#explore"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Find a career that matches your interests</p>
   </div>
   <div style="clear: both"></div>
 </div>
@@ -101,7 +101,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a href="https://www.careeronestop.org/Videos/CareerVideos/career-videos.aspx" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Careeronestop videos</strong></h3></a>
+    <a href="https://www.careeronestop.org/Videos/CareerVideos/career-videos.aspx" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>CareerOneStop videos</strong></h3></a>
     <p style="color:#ffffff">Hundreds of videos profiling a vast range of career paths. Videos are arranged in clusters, by related types of work. Career details are also searchable by title and geographical area.</p>
     <br>
   </div>
