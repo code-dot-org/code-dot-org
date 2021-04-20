@@ -66,17 +66,11 @@ JoinSectionNotFoundNotification.propTypes = {
   sectionId: PropTypes.string.isRequired
 };
 
-/**
- * TODO: JoinSectionRestrictedNotification
- * - Replace strings with i18n implementation (commented)
- */
-
 const JoinSectionRestrictedNotification = () => (
   <Notification
     type="failure"
     notice={i18n.sectionsNotificationFailure()}
-    details={`We couldn't add you to this section. Please contact your teacher for help`}
-    // details={i18n.sectionsNotificationJoinRestricted()}
+    details={i18n.sectionsNotificationJoinRestricted()}
     dismissible={true}
   />
 );
