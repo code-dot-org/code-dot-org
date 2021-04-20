@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-16 20:28:30 UTC",
+    "serialized_at": "2021-04-20 18:29:49 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -2631,7 +2631,7 @@
       "key": "26aeeba5-74fa-4ac3-a6e2-504dcfad27b6",
       "position": 3,
       "properties": {
-        "description": "* How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.\r\n\r\n**Discuss:**  Students should think for a minute, then share with a partner.  Once students have shared, call on a few students to explain their answers with the class."
+        "description": "* How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.\n\n**Discuss:**  Students should think for a minute, then share with a partner.  Once students have shared, call on a few students to explain their answers with the class.\n\n**Discussion Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. "
       },
       "seeding_key": {
         "activity_section.key": "26aeeba5-74fa-4ac3-a6e2-504dcfad27b6",
@@ -2643,13 +2643,7 @@
       "position": 4,
       "properties": {
         "description": "Thank you for sharing your insights.  It seems to depend on the situation.  Sometimes we want to take a reading of the location more frequently.  Today, we’re actually learning about how images are represented in computers, but let’s keep in mind these ideas about how often to take a reading or measurement.",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. \n\n"
-          }
-        ]
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "cc866225-659a-4f8e-8b49-daf0bf1e7f11",
@@ -2661,8 +2655,9 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
-        "name": "Intro to the Pixelation Widget (10 mins)\r",
-        "progression_name": "Pixelation Widget Video "
+        "name": "Intro to the Pixelation Widget",
+        "progression_name": "Pixelation Widget Video ",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "69b3138b-1d10-476a-9142-eca8dcb65a34",
@@ -2767,21 +2762,10 @@
       }
     },
     {
-      "key": "1bb195ce-7010-4e8e-969a-8c5182c4915b",
+      "key": "096102c4-39a8-41f7-9c95-4c115797c27d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:**  In Challenges A and B, you and your partner practiced sampling the same image twice.  The second time, we did a more frequent sampling by using smaller squares.\r\n\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "1bb195ce-7010-4e8e-969a-8c5182c4915b",
-        "lesson_activity.key": "a11b3d5c-48db-4d9d-9dfd-ee837ad0236f"
-      }
-    },
-    {
-      "key": "096102c4-39a8-41f7-9c95-4c115797c27d",
-      "position": 2,
-      "properties": {
-        "description": "* What are the pros and cons of sampling an image more frequently?\r\n\r\n**Discuss:**  Allow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class."
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *What are the pros and cons of sampling an image more frequently?*\n\nAllow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class.\n\n**Discussion Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "096102c4-39a8-41f7-9c95-4c115797c27d",
@@ -2790,7 +2774,7 @@
     },
     {
       "key": "cbb2fd98-aae2-4df3-a45e-624e031c05b5",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Thank you for sharing.  It looks like there are several advantages and disadvantages when it comes to sampling more frequently by using smaller squares.  We get a better approximation of the analog image when we do more frequent sampling and it was a little easier to decide whether each square should be set to black or white.  However, it took longer and we needed a lot more bits.  We still got an image that didn’t represent the image accurately enough, though.\r\n\r\nFortunately, a computer does this process much more quickly than we can, and it can store thousands or even millions of bits to represent an analog image.\r\n\r\nBy this point, we've used bits to represent numbers, text, and images. The same sequence of bits can represent different types of data depending on the context. It all comes down to 0s and 1s!",
         "remarks": true
@@ -2802,15 +2786,9 @@
     },
     {
       "key": "8f4a6604-d6f0-40b2-88e0-70b8e2e48b1f",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "8f4a6604-d6f0-40b2-88e0-70b8e2e48b1f",
@@ -2819,7 +2797,7 @@
     },
     {
       "key": "0296ad0d-e598-4946-8ae2-74a2152173cf",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Assume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels) that were encoded after sampling an image. Choose the two statements that are true. \r\n\r\n**Question:** Which of the following would result in a better digital approximation of an analog black and white image?\r\n\r\n**Question:** Your computer science teacher asks you to sample a black and white image that is 4\"x6\". How would you sample the image to provide a good digital approximation using the pixelation widget? What sample size would you use? How would your decision affect the digital representation?",
         "name": "Assessment: Check For Understanding\r",
@@ -4703,7 +4681,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget Video ",
         "level_keys": [
@@ -4729,7 +4707,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: B&W",
         "level_keys": [
@@ -4755,7 +4733,7 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: B&W",
         "level_keys": [
@@ -4781,7 +4759,7 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: B&W",
         "level_keys": [
@@ -4807,7 +4785,7 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: B&W",
         "level_keys": [
@@ -4833,7 +4811,7 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: B&W",
         "level_keys": [

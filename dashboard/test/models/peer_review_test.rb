@@ -458,7 +458,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     standalone_level = create :level
     peer_review_with_standalone_level = create :peer_review, level: standalone_level
 
-    assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", peer_review_with_script_level.submission_path
+    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", peer_review_with_script_level.submission_path
     assert_equal "/levels/#{standalone_level.id}", peer_review_with_standalone_level.submission_path
   end
 
