@@ -136,7 +136,7 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson2
     create :script_level, script: script, lesson: lesson2
 
-    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, lesson1.next_level_path_for_lesson_extras(@student)
+    assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
   end
 
