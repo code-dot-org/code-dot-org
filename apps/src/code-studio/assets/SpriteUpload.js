@@ -22,13 +22,16 @@ export default class SpriteUpload extends React.Component {
         <h1>Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Select Sprite to Add to Library:
-            <br />
+            <h4> Sprite Category: </h4>
+            <input type="text" />
+          </label>
+          <label>
+            <h4> Select Sprite to Add to Library: </h4>
             <input type="file" ref="uploader" onChange={this.handleChange} />
           </label>
           <br />
           <label>
-            Image Preview:
+            <h4> Image Preview: </h4>
             <img src={this.state.file} />
           </label>
           <br />
