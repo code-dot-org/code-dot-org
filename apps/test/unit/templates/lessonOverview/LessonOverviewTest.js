@@ -38,6 +38,7 @@ describe('LessonOverview', () => {
             }
           ]
         },
+        id: 1,
         key: 'lesson-1',
         position: 1,
         lockable: false,
