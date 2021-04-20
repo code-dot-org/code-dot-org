@@ -149,17 +149,6 @@ class PeerReviewsControllerTest < ActionController::TestCase
     assert_equal [[plc_course.name, plc_course.id]], assigns(:course_list)
   end
 
-  test 'Dashboard does not display a deprecated course' do
-    create :plc_course, name: 'Deprecated course'
-    sign_in(create(:plc_reviewer))
-    # TODO- Figure out how to make script deprecated
-
-    get :dashboard
-    assert_response :success
-    plc_course = @learning_module.plc_course_unit.plc_course
-    assert_equal [[plc_course.name, plc_course.id]], assigns(:course_list)
-  end
-
   [:plc_reviewer, :facilitator, :teacher, :student].each do |user|
     test_user_gets_response_for(
       :dashboard,
