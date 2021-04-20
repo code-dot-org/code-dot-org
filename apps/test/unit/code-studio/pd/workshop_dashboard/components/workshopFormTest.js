@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {assert, expect} from 'chai';
 import {Factory} from 'rosie';
+import {FormControl, FormGroup} from 'react-bootstrap';
 import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import '../workshopFactory';
@@ -12,8 +13,6 @@ describe('WorkshopForm test', () => {
   beforeEach(() => {
     fakeWorkshop = Factory.build('workshop');
   });
-
-  afterEach(() => {});
 
   it('renders', () => {
     const wrapper = shallow(
@@ -27,7 +26,7 @@ describe('WorkshopForm test', () => {
       {context: {router: {}}}
     );
 
-    const someControl = wrapper.find('FormControl');
+    const someControl = wrapper.find(FormControl);
     assert(someControl.exists());
   });
 
@@ -44,7 +43,7 @@ describe('WorkshopForm test', () => {
       {context: {router: {}}}
     );
 
-    const locationGroup = wrapper.find('#location_name').closest('FormGroup');
+    const locationGroup = wrapper.find('#location_name').closest(FormGroup);
     assert(locationGroup.exists());
     expect(locationGroup.html()).to.include('Location Name');
   });
@@ -62,7 +61,7 @@ describe('WorkshopForm test', () => {
       {context: {router: {}}}
     );
 
-    const locationGroup = wrapper.find('#location_name').closest('FormGroup');
+    const locationGroup = wrapper.find('#location_name').closest(FormGroup);
     assert(locationGroup.exists());
     expect(locationGroup.html()).to.include('Link to Join');
   });
