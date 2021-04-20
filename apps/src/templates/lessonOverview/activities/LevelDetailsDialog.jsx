@@ -220,7 +220,7 @@ class LevelDetailsDialog extends Component {
       {
         includeUserId: true,
         callback: () => {
-          windowOpen(level.url || scriptLevel.url);
+          windowOpen(level.url || scriptLevel.url, 'noopener', 'noreferrer');
         }
       }
     );
