@@ -17,9 +17,7 @@ const styles = {
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
-    session_dates: PropTypes.arrayOf(PropTypes.string),
-    /* hides the location field in places we might not want to show it */
-    hide_virtual_location: PropTypes.bool
+    session_dates: PropTypes.arrayOf(PropTypes.string)
   };
 
   workshopCourse() {
@@ -55,7 +53,7 @@ export default class WorkshopDetails extends React.Component {
   }
 
   location() {
-    return (
+    return this.props.workshop.virtual ? null : (
       <div className="row">
         <div className="span2" style={styles.label}>
           <strong>
@@ -152,9 +150,7 @@ export default class WorkshopDetails extends React.Component {
           </div>
         </div>
         {this.sessionDates()}
-        {this.props.hide_virtual_location && this.props.workshop.virtual
-          ? null
-          : this.location()}
+        {this.location()}
         {this.courseAndSubject()}
         {this.fee()}
         {this.regionalPartner()}
