@@ -81,10 +81,9 @@ describe('progressHelpers', () => {
     const nonLockableLesson = fakeLesson('non-lockable lesson', '3', false);
     const lockableLesson = fakeLesson('lockable lesson', '4', true);
     const unlockedLevels = fakeLevels(3);
-    const lockedLevels = fakeLevels(3).map(level => ({
+    const lockedLevels = fakeLevels(3).map((level, index) => ({
       ...level,
-      kind: LevelKind.assessment,
-      status: LevelStatus.locked
+      locked: index === 2 ? true : false // lock last level in level group
     }));
 
     const state = {
