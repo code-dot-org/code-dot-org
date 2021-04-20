@@ -456,27 +456,19 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
 );
 PairProgrammingField.propTypes = FieldProps;
 
-/**
- * TODO: RestrictAccessField
- * - Replace strings with i18n implementation (commented)
- * - Replace Learn More CTA Placeholder with live URL
- **/
-
 const RestrictAccessField = ({value, onChange, disabled, loginType}) => (
   <div>
-    {/* <FieldName>{i18n.restrictSectionAccess()}</FieldName> */}
-    <FieldName>{`Restrict access to the section`}</FieldName>
+    <FieldName>{i18n.restrictSectionAccess()}</FieldName>
     <FieldDescription>
       {loginType === 'email'
-        ? `If set to ‘yes,’ students will not be able to join this section using the section code.
-          You can still add students to the section manually by moving or copying them from another 
-          section.`
-        : `If set to ‘yes,’ students will not be able to join this section using the selection code. 
-          You can still add students to the section manually on the Manage Students tab.`}{' '}
-      {/* {i18n.explainRestrictedSection(loginType)}{' '} */}
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        {`Learn more.`}
-        {/* {i18n.restrictSectionAccessLearnMore()} */}
+        ? i18n.explainRestrictedSectionEmail()
+        : i18n.explainRestrictedSectionWordAndPicture()}{' '}
+      <a
+        href="https://support.code.org/hc/en-us/articles/360060056611"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {i18n.learnMore()}
       </a>
     </FieldDescription>
     <YesNoDropdown
