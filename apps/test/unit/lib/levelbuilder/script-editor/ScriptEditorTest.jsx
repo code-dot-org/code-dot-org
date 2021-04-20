@@ -87,7 +87,7 @@ describe('ScriptEditor', () => {
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      expect(wrapper.find('input').length).to.equal(22);
+      expect(wrapper.find('input').length).to.equal(23);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
       expect(wrapper.find('textarea').length).to.equal(3);
       expect(wrapper.find('select').length).to.equal(5);
@@ -101,7 +101,7 @@ describe('ScriptEditor', () => {
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({initialHidden: false, isMigrated: true});
 
-      expect(wrapper.find('input').length).to.equal(25);
+      expect(wrapper.find('input').length).to.equal(26);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
