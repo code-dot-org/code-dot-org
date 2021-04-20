@@ -16,7 +16,6 @@ import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/Resourc
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {windowOpen} from '@cdo/apps/utils';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -83,7 +82,8 @@ class ScriptOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string
   };
 
-  recordAndNavigateToPdf = (firehoseKey, url) => {
+  recordAndNavigateToPdf = (e, firehoseKey, url) => {
+    e.preventDefault();
     firehoseClient.putRecord(
       {
         study: 'pdf-click',
@@ -97,7 +97,7 @@ class ScriptOverviewTopRow extends React.Component {
       {
         includeUserId: true,
         callback: () => {
-          windowOpen(url);
+          window.location.href = url;
         }
       }
     );

@@ -295,6 +295,10 @@ describe('ScriptOverviewTopRow', () => {
       .find(DropdownButton)
       .first()
       .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/script_overview.pdf',
+      '/link/to/script_resources.pdf'
+    ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plans',
       'Print Handouts'
