@@ -356,6 +356,16 @@ class RegistrationsControllerTest < ActionController::TestCase
     refute mail.body.to_s =~ /New to teaching computer science/
   end
 
+  test 'create new teacher with es-MX locale sends localized welcome email' do
+    with_default_locale('es-MX') do
+      teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
+      post :create, params: {user: teacher_params}
+      mail = ActionMailer::Base.deliveries.first
+      assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'es-MX'), mail.subject
+      assert_match /Hola/, mail.body.to_s
+    end
+  end
+
   test "create new teacher with opt-in option as yes writes email preference as yes" do
     teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])

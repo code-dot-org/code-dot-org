@@ -22,6 +22,8 @@ class UnitGroup < ApplicationRecord
   has_many :default_scripts, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
+  has_many :unit_groups_student_resources, dependent: :destroy
+  has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
@@ -88,6 +90,15 @@ class UnitGroup < ApplicationRecord
     UnitGroup.seed_from_hash(hash)
   end
 
+  def self.create_resource_from_hash(resource_data, course_version_id)
+    resource_attrs = resource_data.except('seeding_key')
+    resource_attrs['course_version_id'] = course_version_id
+    resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version_id)
+    resource.assign_attributes(resource_attrs)
+    resource.save! if resource.changed?
+    resource
+  end
+
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
@@ -97,16 +108,9 @@ class UnitGroup < ApplicationRecord
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
 
-    if course_version && hash['resources']
-      resources_imported = hash['resources'].map do |resource_data|
-        resource_attrs = resource_data.except('seeding_key')
-        resource_attrs['course_version_id'] = course_version.id
-        resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
-        resource.assign_attributes(resource_attrs)
-        resource.save! if resource.changed?
-        resource
-      end
-      unit_group.resources = resources_imported
+    if course_version
+      unit_group.resources = (hash['resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
+      unit_group.student_resources = (hash['student_resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
     end
 
     unit_group.save!
@@ -137,6 +141,7 @@ class UnitGroup < ApplicationRecord
         alternate_scripts: summarize_alternate_scripts,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
+        student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
     )
   end
@@ -337,11 +342,27 @@ class UnitGroup < ApplicationRecord
         script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
+      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
+      is_migrated: has_migrated_script?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user),
-      announcements: announcements
+      announcements: announcements,
+      course_version_id: course_version&.id
+    }
+  end
+
+  def summarize_for_rollup(user = nil)
+    {
+      title: localized_title,
+      link: link,
+      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
+      units: scripts_for_user(user).map do |script|
+        script.summarize_for_rollup(user)
+      end,
+      has_numbered_units: has_numbered_units?
     }
   end
 
@@ -656,4 +677,8 @@ class UnitGroup < ApplicationRecord
     return !!family_name && !!version_year
   end
   # rubocop:enable Naming/PredicateName
+
+  def has_migrated_script?
+    !!default_scripts[0]&.is_migrated?
+  end
 end

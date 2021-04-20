@@ -55,7 +55,8 @@ class Ability
       :pd_foorm,
       Foorm::Form,
       Foorm::Library,
-      Foorm::LibraryQuestion
+      Foorm::LibraryQuestion,
+      :javabuilder_session
     ]
     cannot :index, Level
 
@@ -191,22 +192,19 @@ class Ability
       end
     end
 
+    can [:vocab, :resources, :code, :standards], UnitGroup do
+      true
+    end
+
     # Override Script and ScriptLevel.
     can :read, Script do |script|
-      if script.pilot?
-        script.has_pilot_access?(user)
-      else
-        user.persisted? || !script.login_required?
-      end
-    end
-    can [:read, :student_lesson_plan], Lesson do |lesson|
-      script = lesson.script
       if script.pilot?
         script.has_pilot_access?(user)
       else
         true
       end
     end
+
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
       if script.pilot?
@@ -216,6 +214,19 @@ class Ability
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
         user.persisted? || !login_required
+      end
+    end
+
+    can [:vocab, :resources, :code, :standards], Script do |script|
+      !!script.is_migrated
+    end
+
+    can [:read, :student_lesson_plan], Lesson do |lesson|
+      script = lesson.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        true
       end
     end
 
@@ -251,7 +262,8 @@ class Ability
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
-        Foorm::LibraryQuestion
+        Foorm::LibraryQuestion,
+        :javabuilder_session
       ]
 
       # Only custom levels are editable.
@@ -276,6 +288,12 @@ class Ability
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
+      end
+    end
+
+    if user.persisted?
+      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+        can :get_access_token, :javabuilder_session
       end
     end
 

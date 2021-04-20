@@ -6,6 +6,7 @@ import Parser from '@code-dot-org/redactable-markdown';
 import {
   details,
   expandableImages,
+  visualCodeBlock,
   xmlAsTopLevelBlock
 } from '@code-dot-org/remark-plugins';
 
@@ -55,7 +56,7 @@ blocklyTags.forEach(tag => {
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
-  .use([xmlAsTopLevelBlock, expandableImages, details])
+  .use([expandableImages, visualCodeBlock, xmlAsTopLevelBlock, details])
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST

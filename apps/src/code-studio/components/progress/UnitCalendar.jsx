@@ -22,10 +22,10 @@ const styles = {
     border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     display: 'flex',
-    minHeight: 50
+    minHeight: 50,
+    margin: 0
   },
   table: {
-    border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     width: '100%'
   },
@@ -94,7 +94,7 @@ export default class UnitCalendar extends React.Component {
             lessonClone.isStart = true;
           }
           lessonClone.duration = weeklyInstructionalMinutes - currMinutes;
-          if (lesson.duration - lessonClone.duration < lessonClone.duration) {
+          if (lesson.duration - lessonClone.duration <= lessonClone.duration) {
             lessonClone.isMajority = true;
           }
           currWeek.push(lessonClone);
@@ -141,12 +141,7 @@ export default class UnitCalendar extends React.Component {
                 <td style={styles.weekColumn}>
                   {i18n.weekLabel({number: index + 1})}
                 </td>
-                <td
-                  style={{
-                    ...styles.scheduleColumn,
-                    ...{width: this.props.weekWidth}
-                  }}
-                >
+                <td style={styles.scheduleColumn}>
                   {this.renderWeek(week, index + 1)}
                 </td>
               </tr>

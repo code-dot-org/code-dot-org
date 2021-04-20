@@ -27,26 +27,38 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   end
 
   # GET api/v1/ml_models/names
-  # Retrieve the names and ids of a user's trained ML models.
-  def user_ml_model_names
-    user_ml_model_data = UserMlModel.where(user_id: current_user&.id).map {|user_ml_model| {"id": user_ml_model.model_id, "name": user_ml_model.name}}
+  # Retrieve the names, ids and metadata of a user's trained ML models.
+  def names
+    user_ml_model_data = UserMlModel.where(user_id: current_user&.id).map {|user_ml_model| {id: user_ml_model.model_id, name: user_ml_model.name, metadata: JSON.parse(user_ml_model.metadata)}}
     render json: user_ml_model_data.to_json
   end
 
-  # GET api/v1/ml_models/metadata/:model_id
+  # GET api/v1/ml_models/:id/metadata
   # Retrieve a trained ML model's metadata
-  def user_ml_model_metadata
-    metadata = UserMlModel.where(user_id: current_user&.id, model_id: params[:model_id])&.first&.metadata
+  def metadata
+    metadata = UserMlModel.where(model_id: params[:id])&.first&.metadata
     return render_404 unless metadata
     render json: JSON.parse(metadata)
   end
 
-  # GET api/v1/ml_models/:model_id
+  # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
-  def get_trained_model
-    model = download_from_s3(params[:model_id])
+  def show
+    model = download_from_s3(params[:id])
     return render_404 unless model
     render json: model
+  end
+
+  # DELETE api/v1/ml_models/:id
+  def destroy
+    @user_ml_model = UserMlModel.find_by(model_id: params[:id])
+    return head :not_found unless @user_ml_model
+    return head :forbidden unless @user_ml_model.user_id == current_user.id
+    @user_ml_model.destroy
+    deleted_from_s3 = delete_from_s3(@user_ml_model.model_id)
+    status =
+      @user_ml_model.destroyed? && deleted_from_s3 ? "success" : "failure"
+    render json: {id: @user_ml_model.model_id, status: status}
   end
 
   private
@@ -61,5 +73,9 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
 
   def download_from_s3(model_id)
     AWS::S3.download_from_bucket(S3_BUCKET, model_id)
+  end
+
+  def delete_from_s3(model_id)
+    AWS::S3.delete_from_bucket(S3_BUCKET, model_id)
   end
 end

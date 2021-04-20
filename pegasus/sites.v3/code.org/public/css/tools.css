@@ -78,12 +78,16 @@ h3.tutorial-info-h {
 .tutorial-info-start {
   margin-top: 20px;
 }
-
+.tutorial-info-start[dir='rtl']{
+  float:right;
+}
 .tutorial-info-guide {
   float: right;
   margin-top: 25px;
 }
-
+div[dir='rtl'] .tutorial-info-guide{
+  float:left;
+}
 b.purple {
   font-size: 14px;
   color: #7665a0;

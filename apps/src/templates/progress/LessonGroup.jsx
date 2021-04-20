@@ -37,6 +37,9 @@ const styles = {
   headingText: {
     marginLeft: 10
   },
+  headingTextRTL: {
+    marginRight: 10
+  },
   contents: {
     backgroundColor: color.lighter_purple,
     padding: 20
@@ -68,7 +71,8 @@ class LessonGroup extends React.Component {
     // redux provided
     scriptId: PropTypes.number,
     lessonIsVisible: PropTypes.func.isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool
   };
 
   state = {
@@ -116,8 +120,12 @@ class LessonGroup extends React.Component {
       isSummaryView,
       isPlc,
       lessonIsVisible,
-      viewAs
+      viewAs,
+      isRtl
     } = this.props;
+
+    // Adjust styles if locale is RTL
+    const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
 
     const TableType = isSummaryView
       ? SummaryProgressTable
@@ -142,7 +150,7 @@ class LessonGroup extends React.Component {
           <FontAwesome
             icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
           />
-          <span style={styles.headingText}>{lessonGroup.displayName}</span>
+          <span style={headingTextStyle}>{lessonGroup.displayName}</span>
           {(lessonGroup.description || lessonGroup.bigQuestions) && (
             <FontAwesome
               icon="info-circle"
@@ -185,5 +193,6 @@ export const UnconnectedLessonGroup = LessonGroup;
 export default connect(state => ({
   scriptId: state.progress.scriptId,
   lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs),
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  isRtl: state.isRtl
 }))(Radium(LessonGroup));

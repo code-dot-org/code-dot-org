@@ -271,6 +271,18 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/course/:course_name', to: redirect('/courses/%{course_name}')
+  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+
+  resources :courses, param: 'course_name' do
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+    end
+  end
+
   # CSP 20-21 lockable lessons with lesson plan redirects
   get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/stage/14%{all}')
   get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/stage/9%{all}')
@@ -282,6 +294,32 @@ Dashboard::Application.routes.draw do
   get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/stage/9%{all}')
   get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/stage/14%{all}')
 
+  resources :lessons, only: [:edit, :update]
+
+  resources :resources, only: [:create, :update] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :vocabularies, only: [:create, :update] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :programming_expressions, only: [] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :standards, only: [] do
+    collection do
+      get :search
+    end
+  end
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
@@ -289,7 +327,13 @@ Dashboard::Application.routes.draw do
     get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
-    get 'instructions', to: 'scripts#instructions'
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+      get 'instructions'
+    end
 
     ## TODO: Once we move levels over to /lessons as well combine the routing rules
     resources :lessons, only: [:show], param: 'position' do
@@ -326,20 +370,6 @@ Dashboard::Application.routes.draw do
 
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
-
-  resources :courses, param: 'course_name'
-  get '/course/:course_name', to: redirect('/courses/%{course_name}')
-
-  resources :lessons, only: [:edit, :update]
-
-  resources :resources, only: [:create, :update]
-  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
-
-  resources :vocabularies, only: [:create, :update]
-  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
-  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
-
-  get '/programmingexpressionsearch', to: 'programming_expressions#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -380,6 +410,7 @@ Dashboard::Application.routes.draw do
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
+  get '/admin/pilots/', to: 'admin_search#pilots', as: 'pilots'
   get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
   post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
 
@@ -441,6 +472,12 @@ Dashboard::Application.routes.draw do
   namespace :plc do
     root to: 'plc#index'
     resources :user_course_enrollments
+    resources :course_units, only: [] do
+      collection do
+        get :launch
+        post :launch_plc_course
+      end
+    end
   end
 
   concern :api_v1_pd_routes do
@@ -722,10 +759,15 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      post 'ml_models/save', to: 'ml_models#save'
-      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
-      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
-      get 'ml_models/:model_id/metadata', to: 'ml_models#user_ml_model_metadata'
+      resources :ml_models, only: [:show, :destroy] do
+        collection do
+          get 'names'
+          post 'save'
+        end
+        member do
+          get 'metadata'
+        end
+      end
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
@@ -792,6 +834,8 @@ Dashboard::Application.routes.draw do
   get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
+
+  get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
   namespace :foorm do
     resources :forms, only: [:create] do

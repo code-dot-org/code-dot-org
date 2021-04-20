@@ -8,6 +8,7 @@ import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
+import {connect} from 'react-redux';
 
 const styles = {
   levelPill: {
@@ -48,6 +49,9 @@ const styles = {
   },
   iconMargin: {
     marginLeft: 10
+  },
+  iconMarginRTL: {
+    marginRight: 10
   }
 };
 
@@ -65,7 +69,9 @@ class ProgressPill extends React.Component {
     disabled: PropTypes.bool,
     selectedSectionId: PropTypes.string,
     progressStyle: PropTypes.bool,
-    onSingleLevelClick: PropTypes.func
+    onSingleLevelClick: PropTypes.func,
+    // Redux
+    isRtl: PropTypes.bool
   };
 
   render() {
@@ -76,7 +82,8 @@ class ProgressPill extends React.Component {
       tooltip,
       disabled,
       selectedSectionId,
-      progressStyle
+      progressStyle,
+      isRtl
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
@@ -94,10 +101,13 @@ class ProgressPill extends React.Component {
 
     let style = {
       ...styles.levelPill,
-      ...(url && hoverStyle),
+      ...((url || onClick) && hoverStyle),
       ...(!multiLevelStep &&
         levelProgressStyle(levels[0].status, levels[0].kind, false))
     };
+
+    // Adjust icon margins if locale is RTL
+    const iconMarginStyle = isRtl ? styles.iconMarginRTL : styles.iconMargin;
 
     // If we're passed a tooltip, we also need to reference it from our div
     let tooltipProps = {};
@@ -128,7 +138,7 @@ class ProgressPill extends React.Component {
               className="ProgressPillTextAndIcon"
               style={{
                 ...textStyle,
-                ...(icon && styles.iconMargin)
+                ...(icon && iconMarginStyle)
               }}
             >
               {text}
@@ -142,4 +152,8 @@ class ProgressPill extends React.Component {
   }
 }
 
-export default Radium(ProgressPill);
+export const UnconnectedProgressPill = ProgressPill;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(ProgressPill));

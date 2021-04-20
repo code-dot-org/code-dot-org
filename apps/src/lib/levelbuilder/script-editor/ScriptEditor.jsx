@@ -22,7 +22,10 @@ import {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
-import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {
+  lessonGroupShape,
+  resourceShape as migratedResourceShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const styles = {
@@ -97,20 +100,27 @@ class ScriptEditor extends React.Component {
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
+    initialCourseVersionId: PropTypes.number,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     levelKeyList: PropTypes.object.isRequired,
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
+      .isRequired,
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.initialTeacherResources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
+    const teacherResources = [...props.initialTeacherResources];
+
+    if (!props.isMigrated) {
+      // add empty entries to get to max
+      while (teacherResources.length < Object.keys(ResourceType).length) {
+        teacherResources.push({type: '', link: ''});
+      }
     }
 
     this.state = {
@@ -153,7 +163,7 @@ class ScriptEditor extends React.Component {
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
-      teacherResources: resources,
+      teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
@@ -299,6 +309,12 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
+      resourceIds: this.props.migratedTeacherResources.map(
+        resource => resource.id
+      ),
+      studentResourceIds: this.props.studentResources.map(
+        resource => resource.id
+      ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
@@ -816,7 +832,7 @@ class ScriptEditor extends React.Component {
           )}
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Teacher Resources Settings">
+        <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
             Has Resources for Verified Teachers
             <input
@@ -836,19 +852,39 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
+          Select the resources you'd like to have show up in the dropdown at the
+          top of the script overview page:
           <div>
             <h4>Teacher Resources</h4>
             <div>
-              Select the Teacher Resources buttons you'd like to have show up on
-              the top of the script overview page
+              <div />
+              <ResourcesEditor
+                inputStyle={styles.input}
+                resources={this.state.teacherResources}
+                updateResources={teacherResources =>
+                  this.setState({teacherResources})
+                }
+                useMigratedResources={this.props.isMigrated}
+                courseVersionId={this.props.initialCourseVersionId}
+                migratedResources={this.props.migratedTeacherResources}
+              />
             </div>
-            <ResourcesEditor
-              inputStyle={styles.input}
-              resources={this.state.teacherResources}
-              updateTeacherResources={teacherResources =>
-                this.setState({teacherResources})
-              }
-            />
+            {this.props.isMigrated && (
+              <div>
+                <h4>Student Resources</h4>
+                <div>
+                  Select the Student Resources buttons you'd like to have show
+                  up on the top of the script overview page
+                </div>
+                <ResourcesEditor
+                  inputStyle={styles.input}
+                  useMigratedResources
+                  courseVersionId={this.props.initialCourseVersionId}
+                  migratedResources={this.props.studentResources}
+                  studentFacing
+                />
+              </div>
+            )}
           </div>
         </CollapsibleEditorSection>
         {this.props.isMigrated && (
@@ -960,7 +996,9 @@ export const UnconnectedScriptEditor = ScriptEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList
+    levelKeyList: state.levelKeyList,
+    migratedTeacherResources: state.resources,
+    studentResources: state.studentResources
   }),
   {
     init

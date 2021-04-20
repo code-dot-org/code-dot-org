@@ -26,7 +26,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test "lockable_state with swapped level with user_level for inactive level" do
     script, _, level2, lesson, _ = create_swapped_lockable_lesson
-    create :user_level, user: @student, script: script, level: level2, unlocked_at: Time.now
+    create :user_level, user: @student, script: script, level: level2, locked: false
 
     lockable_state = lesson.lockable_state [@student]
 
@@ -36,7 +36,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test "lockable_state with swapped level with user_level for active level" do
     script, level1, _, lesson, _ = create_swapped_lockable_lesson
-    create :user_level, user: @student, script: script, level: level1, unlocked_at: Time.now
+    create :user_level, user: @student, script: script, level: level1, locked: false
 
     lockable_state = lesson.lockable_state [@student]
 
@@ -172,7 +172,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson with new lesson plan link in migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, hidden: true
+    script = create :script, name: 'test-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: true
@@ -207,7 +207,7 @@ class LessonTest < ActiveSupport::TestCase
       }
     )
 
-    summary = lesson.summarize_for_lesson_show(@student)
+    summary = lesson.summarize_for_lesson_show(@student, false)
     assert_equal 'lesson-1', summary[:key]
     assert_equal 'lesson overview', summary[:overview]
     assert_equal 'learning', summary[:purpose]
@@ -287,6 +287,27 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal script.summarize_for_lesson_show(true), summary[:unit]
   end
 
+  test 'lesson_plan_has_verified_resources is true for lesson with verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    assert lesson.lesson_plan_has_verified_resources
+  end
+
+  test 'lesson_plan_has_verified_resources is false for lesson without verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    refute lesson.lesson_plan_has_verified_resources
+  end
+
   test 'summarize lesson for student lesson plan combines student and for all resources' do
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -341,7 +362,7 @@ class LessonTest < ActiveSupport::TestCase
     Services::MarkdownPreprocessor.expects(:process).
       with(lesson.assessment_opportunities)
 
-    lesson.summarize_for_lesson_show(create(:user))
+    lesson.summarize_for_lesson_show(create(:user), false)
   end
 
   test 'can summarize lesson for lesson plan dropdown' do
@@ -367,7 +388,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize for script edit includes bonus levels' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
     activity = create :lesson_activity, lesson: lesson
@@ -384,7 +405,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize uses unplugged property' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
 
@@ -393,7 +414,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize_for_calendar adds durations of all activities' do
-    script = create :script, is_migrated: false, hidden: true
+    script = create :script, is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
     activity1 = create :lesson_activity, lesson: lesson, duration: 20
@@ -635,7 +656,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 4, summaries.count
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script6.title",
+      scriptTitle: "script6",
       versionYear: nil,
       lockable: false,
       relativePosition: 1,
@@ -645,7 +666,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_summary, summaries[0]
 
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script0.title",
+      scriptTitle: "script0",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -695,7 +716,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 2, summaries.count
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script4.title",
+      scriptTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -759,7 +780,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 3, summaries.count
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script4.title",
+      scriptTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -796,27 +817,46 @@ class LessonTest < ActiveSupport::TestCase
       "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf"
     )
 
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.lesson_plan_pdf_url)
 
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some Verbose Lesson Name.pdf"
     )
   end
 
   test 'student_lesson_plan_pdf_url gets url for migrated script with student lesson plans' do
-    script = create :script, is_migrated: true, hidden: true, include_student_lesson_plans: true
+    script = create :script, is_migrated: true, include_student_lesson_plans: true
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.student_lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
     )
+  end
+
+  test 'script_resource_pdf_url gets url to script resources pdf for migrated script' do
+    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_equal(
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name} - Resources.pdf",
+      lesson.script_resource_pdf_url
+    )
+  end
+
+  test 'script_resource_pdf_url is nil for non-migrated script' do
+    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_nil lesson.script_resource_pdf_url
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
@@ -828,6 +868,24 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
   end
 
+  test 'opportunity standards do not count as regular standards' do
+    lesson = create :lesson
+    standard = create :standard
+    lesson.opportunity_standards << standard
+    assert_equal 0, lesson.standards.length
+    assert_equal 1, lesson.opportunity_standards.length
+  end
+
+  test 'destroying lesson destroys opportunity_standards join model' do
+    lesson = create :lesson
+    standard = create :standard
+    LessonsOpportunityStandard.destroy_all
+    lesson.opportunity_standards << standard
+    assert_equal 1, LessonsOpportunityStandard.count
+    lesson.destroy
+    assert_equal 0, LessonsOpportunityStandard.count
+  end
+
   def create_swapped_lockable_lesson
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
@@ -836,5 +894,45 @@ class LessonTest < ActiveSupport::TestCase
     script_level = create :script_level, script: script, levels: [level1, level2], assessment: true, lesson: lesson
 
     [script, level1, level2, lesson, script_level]
+  end
+
+  test 'course_version_standards_url returns nil without course version' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    refute script.get_course_version
+    refute lesson.course_version_standards_url
+  end
+
+  test 'course_version_standards_url in unit group returns courses path' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    # family name and version year must be set in order for a unit group to have
+    # a course offering and course version.
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '1999'
+    create :unit_group_unit, script: script, unit_group: unit_group, position: 1
+
+    # adds course offering and course version
+    CourseOffering.add_course_offering(unit_group)
+    assert script.get_course_version
+    assert_equal unit_group, script.get_course_version.content_root
+
+    expected_url = "/courses/#{unit_group.name}/standards"
+    assert_equal expected_url, lesson.course_version_standards_url
+  end
+
+  test 'course_version_standards_url in standalone script returns script path' do
+    script = create :script, is_course: true, family_name: 'my-family', version_year: '1999'
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    CourseOffering.add_course_offering(script)
+    assert script.get_course_version
+    assert_equal script, script.get_course_version.content_root
+
+    expected_url = "/s/#{script.name}/standards"
+    assert_equal expected_url, lesson.course_version_standards_url
   end
 end

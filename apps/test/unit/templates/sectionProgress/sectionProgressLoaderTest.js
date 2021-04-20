@@ -135,7 +135,7 @@ const fullExpectedResult = {
           status: 'locked',
           result: 1001,
           paired: false,
-          timeSpent: 0,
+          timeSpent: undefined,
           lastTimestamp: 12345
         },
         '2001': {
@@ -162,18 +162,10 @@ const fullExpectedResult = {
   studentLessonProgressByScript: {
     123: {
       100: {
-        11: {
-          isStarted: false,
-          incompletePercent: 100,
-          imperfectPercent: 0,
-          completedPercent: 0,
-          timeSpent: 0,
-          lastTimestamp: 0
-        }
+        11: null
       },
       101: {
         11: {
-          isStarted: true,
           incompletePercent: 50,
           imperfectPercent: 0,
           completedPercent: 50,
@@ -183,7 +175,6 @@ const fullExpectedResult = {
       },
       102: {
         11: {
-          isStarted: true,
           incompletePercent: 50,
           imperfectPercent: 0,
           completedPercent: 50,
@@ -195,9 +186,9 @@ const fullExpectedResult = {
   },
   studentLastUpdateByScript: {
     123: {
-      '100': 0,
-      '101': timeInSeconds * 1000,
-      '102': (timeInSeconds + 1) * 1000
+      '100': null,
+      '101': timeInSeconds,
+      '102': timeInSeconds + 1
     }
   }
 };

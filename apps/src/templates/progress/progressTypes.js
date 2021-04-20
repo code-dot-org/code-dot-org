@@ -6,6 +6,17 @@ import PropTypes from 'prop-types';
 export const PUZZLE_PAGE_NONE = -1;
 
 /**
+ * @typedef {Object} Student
+ *
+ * @property {number} id
+ * @property {string} name
+ */
+export const studentType = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
+/**
  * @typedef {Object} Level
  *
  * @property {string} id The id of the level. It is intentionally
@@ -80,8 +91,8 @@ const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
   paired: PropTypes.bool.isRequired,
-  timeSpent: PropTypes.number.isRequired,
-  lastTimestamp: PropTypes.number.isRequired
+  timeSpent: PropTypes.number,
+  lastTimestamp: PropTypes.number
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition
@@ -91,6 +102,14 @@ studentLevelProgressShape.pages = PropTypes.arrayOf(
 export const studentLevelProgressType = PropTypes.shape(
   studentLevelProgressShape
 );
+
+/*
+ * @typedef {Object} scriptProgressType
+ *
+ * scriptProgressType represents a user's progress in a script.  It is a map of
+ * levelId -> studentLevelProgressType objects.
+ */
+export const scriptProgressType = PropTypes.objectOf(studentLevelProgressType);
 
 /**
  * @typedef {Object} Lesson
@@ -114,7 +133,6 @@ export const lessonType = PropTypes.shape({
 /**
  * @typedef {Object} StudentLessonProgress
  *
- * @property {bool} isStarted
  * @property {number} incompletePercent
  * @property {number} imperfectPercent
  * @property {number} completedPercent
@@ -122,7 +140,6 @@ export const lessonType = PropTypes.shape({
  * @property {number} lastTimestamp
  */
 export const studentLessonProgressType = PropTypes.shape({
-  isStarted: PropTypes.bool.isRequired,
   incompletePercent: PropTypes.number.isRequired,
   imperfectPercent: PropTypes.number.isRequired,
   completedPercent: PropTypes.number.isRequired,

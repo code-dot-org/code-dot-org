@@ -1302,6 +1302,8 @@ en:
             '"height"': height
       gamelab_setTint:
         text: change color of {THIS} to {COLOR}
+      gamelab_setupScoreboard:
+        text: "draw scoreboard \n{SPRITE1COSTUME}score{VAR1}{SPRITE2COSTUME}score{VAR2}target{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           setup simulation with

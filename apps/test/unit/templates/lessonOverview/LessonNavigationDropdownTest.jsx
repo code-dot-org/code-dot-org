@@ -2,17 +2,21 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const shortLessonList = [
   {
+    id: 1,
     key: 'lesson-1',
     position: 1,
     displayName: 'Lesson 1',
     link: '/lessons/1'
   },
   {
+    id: 2,
     key: 'lesson-2',
     position: 2,
     displayName: 'Lesson 2',
@@ -23,6 +27,7 @@ const shortLessonList = [
 let longLessonList = [];
 for (let i = 1; i <= 15; i++) {
   longLessonList.push({
+    id: i,
     key: `lesson-${i}`,
     position: i,
     displayName: `Lesson ${i}`,
@@ -36,6 +41,7 @@ let lesson = {
     link: '/s/unit-1',
     lessons: []
   },
+  id: 3,
   key: 'lesson-1',
   position: 1,
   resources: {},
@@ -52,7 +58,7 @@ describe('LessonNavigationDropdown', () => {
   it('renders dropdown for short lesson list', () => {
     lesson.unit.lessons = shortLessonList;
     const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
-    expect(wrapper.find('DropdownButton').length).to.equal(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     expect(wrapper.find('a').length).to.equal(2);
 
     expect(wrapper.contains('1 - Lesson 1')).to.be.true;
@@ -62,7 +68,7 @@ describe('LessonNavigationDropdown', () => {
   it('renders dropdown for long lesson list', () => {
     lesson.unit.lessons = longLessonList;
     const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
-    expect(wrapper.find('DropdownButton').length).to.equal(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     expect(wrapper.find('a').length).to.equal(12);
 
     expect(wrapper.contains('Lessons 1 to 10')).to.be.true;
@@ -112,6 +118,7 @@ describe('LessonNavigationDropdown', () => {
   });
 
   it('navigates when click lesson', () => {
+    sinon.stub(firehoseClient, 'putRecord');
     sinon.stub(utils, 'navigateToHref');
 
     lesson.unit.lessons = longLessonList;
@@ -126,7 +133,10 @@ describe('LessonNavigationDropdown', () => {
     ).to.be.true;
     lesson1.simulate('click');
 
+    expect(firehoseClient.putRecord).to.have.been.calledOnce;
+    firehoseClient.putRecord.yieldTo('callback');
     expect(utils.navigateToHref).to.have.been.calledOnce;
     utils.navigateToHref.restore();
+    firehoseClient.putRecord.restore();
   });
 });

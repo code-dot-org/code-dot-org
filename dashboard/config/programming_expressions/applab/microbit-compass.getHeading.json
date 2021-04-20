@@ -1,6 +1,0 @@
-{
-  "func": "compass.getHeading",
-  "docFunc": "microbit-compass.getHeading",
-  "category": "micro:bit",
-  "type": "value"
-}

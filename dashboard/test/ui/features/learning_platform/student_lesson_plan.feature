@@ -1,12 +1,11 @@
-@no_ie
 @no_mobile
 Feature: Student Lesson Plan
 
   Scenario: Viewing Student Lesson Plan
     Given I create a student named "Jean"
     And I am on "http://studio.code.org/s/allthemigratedthings?no_redirect=true"
-    And I wait until element "#ui-test-lesson-resources" is visible
-    And I click selector "#ui-test-lesson-resources"
+    And I wait until element ".ui-test-lesson-resources" is visible
+    And I click selector ".ui-test-lesson-resources"
 
     When I switch tabs
     Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/1/student"
