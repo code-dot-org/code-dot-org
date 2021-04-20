@@ -509,7 +509,7 @@ export const styles = {
     marginBottom: "10px",
     marginTop: 0,
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif'
   },
 
   modelCardHeading: {
@@ -517,7 +517,7 @@ export const styles = {
     marginTop: 0,
     marginBottom: 5,
     textAlign: "center",
-    fontFamily: '"Gotham 5r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif'
   },
 
   modelCardContent: {
