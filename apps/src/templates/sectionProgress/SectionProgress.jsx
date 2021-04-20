@@ -4,8 +4,9 @@ import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
-import ProgressTableDetailView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailView';
+// import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
+// import ProgressTableDetailView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailView';
+import ProgressTableDoubleView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDoubleView';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -154,10 +155,6 @@ class SectionProgress extends Component {
     const lessons = scriptData ? scriptData.stages : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
-    const summaryStyle =
-      currentView === ViewType.SUMMARY ? styles.show : styles.hide;
-    const detailStyle =
-      currentView === ViewType.DETAIL ? styles.show : styles.hide;
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
     return (
@@ -196,7 +193,7 @@ class SectionProgress extends Component {
               className="fa-pulse fa-3x"
             />
           )}
-          {levelDataInitialized && currentView === ViewType.SUMMARY && (
+          {/* {levelDataInitialized && currentView === ViewType.SUMMARY && (
             <div id="uitest-summary-view" style={summaryStyle}>
               <ProgressTableSummaryView />
             </div>
@@ -205,6 +202,9 @@ class SectionProgress extends Component {
             <div id="uitest-detail-view" style={detailStyle}>
               <ProgressTableDetailView />
             </div>
+          )} */}
+          {levelDataInitialized && (
+            <ProgressTableDoubleView currentView={currentView} />
           )}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
