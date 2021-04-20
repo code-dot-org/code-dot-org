@@ -90,12 +90,12 @@ export default class LessonNavigationDropdown extends Component {
 
     const sectionsAndLessons = [];
     lesson.unit.lessonGroups.forEach((lessonGroup, index) => {
-      sectionsAndLessons.push({
-        displayName: lessonGroup.userFacing
-          ? lessonGroup.displayName
-          : i18n.lessons(),
-        sectionNumber: index + 1
-      });
+      if (lessonGroup.userFacing) {
+        sectionsAndLessons.push({
+          displayName: lessonGroup.displayName,
+          sectionNumber: index + 1
+        });
+      }
       if (index + 1 === this.state.currentSection) {
         lessonGroup.lessons.forEach(lesson => {
           sectionsAndLessons.push(lesson);
