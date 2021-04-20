@@ -86,12 +86,10 @@ class FollowersController < ApplicationController
       return
     end
 
-    # TODO: - Replace strings with i18n implementation
+    # Redirect and provide an error for restricted sections.
     if @section&.restricted?
       redirect_url = "#{root_url}join" # Keeps user on the join page.
-      # Redirect and provide an error for restricted sections. (commented)
-      redirect_to redirect_url, inline_alert: 'We couldn\'t add you to this section. Please contact your teacher for help.'
-      # redirect_to redirect_url, inline_alert: I18n.t('follower.error.restricted_section')
+      redirect_to redirect_url, inline_alert: I18n.t('follower.error.restricted_section')
     end
 
     # Redirect and provide an error for provider-managed sections.
