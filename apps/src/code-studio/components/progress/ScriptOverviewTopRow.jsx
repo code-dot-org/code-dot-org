@@ -3,6 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
@@ -75,7 +76,29 @@ class ScriptOverviewTopRow extends React.Component {
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
-    isMigrated: PropTypes.bool
+    isMigrated: PropTypes.bool,
+    scriptOverviewPdfUrl: PropTypes.string,
+    scriptResourcesPdfUrl: PropTypes.string
+  };
+
+  compilePdfDropdownOptions = () => {
+    const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
+    const options = [];
+    if (scriptOverviewPdfUrl) {
+      options.push({
+        key: 'lessonPlans',
+        name: i18n.printLessonPlans(),
+        url: scriptOverviewPdfUrl
+      });
+    }
+    if (scriptResourcesPdfUrl) {
+      options.push({
+        key: 'scriptResources',
+        name: i18n.printHandouts(),
+        url: scriptResourcesPdfUrl
+      });
+    }
+    return options;
   };
 
   render() {
@@ -100,6 +123,8 @@ class ScriptOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       isMigrated
     } = this.props;
+
+    const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
     // Adjust styles if locale is RTL
     const hasButtonMargin = studentResources.length > 0;
@@ -150,6 +175,20 @@ class ScriptOverviewTopRow extends React.Component {
                 useMigratedResources={isMigrated}
               />
             )}
+          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Teacher && (
+            <div style={{marginRight: 5}}>
+              <DropdownButton
+                text={i18n.printingOptions()}
+                color={Button.ButtonColor.blue}
+              >
+                {pdfDropdownOptions.map(option => (
+                  <a key={option.key} href={option.url}>
+                    {option.name}
+                  </a>
+                ))}
+              </DropdownButton>
+            </div>
+          )}
           {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
