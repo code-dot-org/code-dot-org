@@ -653,6 +653,14 @@ module.exports.blocks = [
     type: 'property'
   },
   {
+    func: 'alpha',
+    blockPrefix: spriteBlockPrefix,
+    category: 'Sprites',
+    tipPrefix: spriteMethodPrefix,
+    modeOptionName: '*.alpha',
+    type: 'property'
+  },
+  {
     func: 'setVelocity',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
