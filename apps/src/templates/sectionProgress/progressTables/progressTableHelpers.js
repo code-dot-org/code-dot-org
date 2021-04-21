@@ -7,92 +7,99 @@ import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
-// TODO maureen add comments explaining this
+// getSummaryCellFormatters returns the cell formatters for the progress table summary view
+// mainCellFormatter is used to format the main cell (summary of progress on lesson)
+// timeSpentCellFormatter is used to format the time spent cell (time spent on the lesson) in the expanded view
+// lastUpdatedCellFormatter is used to format the last updated cell (progress last updated) in the expanded view
 export function getSummaryCellFormatters(getLessonProgress, onClickLesson) {
-  return [
-    (lesson, student) => (
-      <ProgressTableSummaryCell
-        studentId={student.id}
-        studentLessonProgress={getLessonProgress(lesson, student)}
-        isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
-        onSelectDetailView={() => onClickLesson(lesson.position)}
-      />
-    ),
-    (lesson, student) =>
-      summaryExpandedCellFormatter(
-        lesson,
-        student,
-        timeSpentFormatter,
-        getLessonProgress
-      ),
-    (lesson, student) =>
-      summaryExpandedCellFormatter(
-        lesson,
-        student,
-        lastUpdatedFormatter,
-        getLessonProgress
-      )
-  ];
+  const mainCellFormatter = (lesson, student) => (
+    <ProgressTableSummaryCell
+      studentId={student.id}
+      studentLessonProgress={getLessonProgress(lesson, student)}
+      isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
+      onSelectDetailView={() => onClickLesson(lesson.position)}
+    />
+  );
+
+  const timeSpentCellFormatter = (lesson, student) => {
+    const timeSpent = summaryCellText(
+      lesson,
+      student,
+      getLessonProgress,
+      timeSpentFormatter
+    );
+    return <span style={progressStyles.flex}>{timeSpent}</span>;
+  };
+
+  const lastUpdatedCellFormatter = (lesson, student) => {
+    const lastUpdated = summaryCellText(
+      lesson,
+      student,
+      getLessonProgress,
+      lastUpdatedFormatter
+    );
+    return <span style={progressStyles.flex}>{lastUpdated}</span>;
+  };
+
+  return [mainCellFormatter, timeSpentCellFormatter, lastUpdatedCellFormatter];
 }
 
-// TODO maureen add comments explaining this
+// getDetailCellFormatters returns the cell formatters for the progress table detail view
+// mainCellFormatter is used to format the main cell (progress on each level in the lesson)
+// timeSpentCellFormatter is used to format the time spent cell (time spent on each level) in the expanded view
+// lastUpdatedCellFormatter is used to format the last updated cell (each level last updated) in the expanded view
 export function getDetailCellFormatters(getStudentProgress, section) {
-  return [
-    (lesson, student) => (
-      <ProgressTableDetailCell
-        studentId={student.id}
-        sectionId={section.id}
-        stageExtrasEnabled={section.stageExtras}
-        levels={lesson.levels}
-        studentProgress={getStudentProgress(student)}
-      />
-    ),
-    (lesson, student) =>
-      detailExpandedCellFormatter(
-        lesson,
-        student,
-        timeSpentFormatter,
-        getStudentProgress
-      ),
-    (lesson, student) =>
-      detailExpandedCellFormatter(
-        lesson,
-        student,
-        lastUpdatedFormatter,
-        getStudentProgress
-      )
-  ];
+  const mainCellFormatter = (lesson, student) => (
+    <ProgressTableDetailCell
+      studentId={student.id}
+      sectionId={section.id}
+      stageExtrasEnabled={section.stageExtras}
+      levels={lesson.levels}
+      studentProgress={getStudentProgress(student)}
+    />
+  );
+
+  const timeSpentCellFormatter = (lesson, student) => {
+    const timeSpentItems = detailCellItems(
+      lesson,
+      student,
+      getStudentProgress,
+      timeSpentFormatter
+    );
+    return <ProgressTableLevelSpacer items={timeSpentItems} />;
+  };
+
+  const lastUpdatedCellFormatter = (lesson, student) => {
+    const lastUpdatedItems = detailCellItems(
+      lesson,
+      student,
+      getStudentProgress,
+      lastUpdatedFormatter
+    );
+    return <ProgressTableLevelSpacer items={lastUpdatedItems} />;
+  };
+
+  return [mainCellFormatter, timeSpentCellFormatter, lastUpdatedCellFormatter];
 }
 
-// TODO maureen add comments explaining this
+// Formatter for the icons in the extra header on the detail view
 export function getLevelIconHeaderFormatter(scriptData) {
   return (_, {columnIndex}) => (
     <ProgressTableLevelIconSet levels={scriptData.stages[columnIndex].levels} />
   );
 }
 
-function summaryExpandedCellFormatter(
-  lesson,
-  student,
-  textFormatter,
-  getLessonProgress
-) {
+function summaryCellText(lesson, student, getLessonProgress, textFormatter) {
   const progress = getLessonProgress(lesson, student);
-  return <span style={progressStyles.flex}>{textFormatter(progress)}</span>;
+  return textFormatter(progress);
 }
 
-function detailExpandedCellFormatter(
-  lesson,
-  student,
-  textFormatter,
-  getStudentProgress
-) {
+function detailCellItems(lesson, student, getStudentProgress, textFormatter) {
   const studentProgress = getStudentProgress(student);
-  const levelItems = lesson.levels.map(level => ({
+  return lesson.levels.map(level => ({
     node: textFormatter(studentProgress[level.id]),
     sublevelCount: level.sublevels && level.sublevels.length
   }));
-  return <ProgressTableLevelSpacer items={levelItems} />;
 }
 
 function timeSpentFormatter(studentProgress) {
