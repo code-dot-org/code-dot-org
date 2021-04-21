@@ -490,6 +490,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert response_workshop.virtual?
   end
 
+  # this is a change from previous behavior that enforced virtual workshops suppressing emails
   test 'can create a virtual workshop without suppressed email' do
     sign_in @organizer
     assert_creates(Pd::Workshop) do
@@ -679,6 +680,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert workshop.virtual?
   end
 
+  # this is a change from previous behavior that enforced virtual workshops suppressing emails
   test 'can update a workshop to be virtual without suppressed email' do
     sign_in @organizer
     workshop = create :workshop, organizer: @organizer

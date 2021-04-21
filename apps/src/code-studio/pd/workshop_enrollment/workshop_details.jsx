@@ -56,9 +56,7 @@ export default class WorkshopDetails extends React.Component {
     return this.props.workshop.virtual ? null : (
       <div className="row">
         <div className="span2" style={styles.label}>
-          <strong>
-            {this.props.workshop.virtual ? 'Link to join:' : 'Location:'}
-          </strong>
+          <strong>Location:</strong>
         </div>
         <div className="span2">
           {this.props.workshop.location_name}
