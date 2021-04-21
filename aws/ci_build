@@ -69,8 +69,8 @@ def build
     RakeUtils.git_fetch
     count = RakeUtils.git_update_count
 
-    # Use a lock file to prevent git-pull and unison, both modify files in local
-    # repo, to run at the same time on the staging environment.
+    # Use a lock file to prevent git-pull and unison, which both modify files in
+    # local repo, to run at the same time on the staging environment.
     #
     # Context: On the staging environment, we use the unison tool to sync content
     # between local Dropbox and git repo. It works most of the time. However, we've
@@ -125,6 +125,10 @@ def build
     FileUtils.rm STARTED if File.file?(STARTED)
 
     status
+  end
+ensure
+  if Rails.env.staging? && File.exist?(GIT_PULL_STARTED_PATH)
+    FileUtils.rm GIT_PULL_STARTED_PATH
   end
 end
 
