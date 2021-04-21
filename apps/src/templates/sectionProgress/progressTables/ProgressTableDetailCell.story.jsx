@@ -17,11 +17,11 @@ const statusForLevel = [
 const levels = fakeLevels(5);
 levels[0].isConceptLevel = true;
 
-const diamondLevels = fakeLevels(2, {startLevel: 6});
+const diamondLevels = fakeLevels(2);
 diamondLevels[0].isConceptLevel = true;
 diamondLevels[1].isConceptLevel = true;
 
-const unpluggedLevel = fakeLevel({id: 8, isUnplugged: true});
+const unpluggedLevel = fakeLevel({id: 2, isUnplugged: true});
 
 const studentProgress = fakeProgressForLevels(levels);
 levels.forEach(
@@ -31,17 +31,12 @@ levels.forEach(
 const pairedProgress = fakeProgressForLevels(levels);
 pairedProgress[levels[0].id].paired = true;
 
-const sublevels = fakeLevels(5, {startLevel: 9});
+const sublevels = fakeLevels(5);
 sublevels.forEach((sub, index) => {
   sub.bubbleText = String.fromCharCode('a'.charCodeAt(0) + index);
 });
 const levelWithSublevels = fakeLevels(1)[0];
 levelWithSublevels.sublevels = sublevels;
-
-const sublevelProgress = fakeProgressForLevels(sublevels);
-sublevels.forEach(
-  (level, index) => (sublevelProgress[level.id].status = statusForLevel[index])
-);
 
 /**
  * This wrapper places the component in the same table structure that will be
@@ -77,7 +72,7 @@ export default storybook => {
               studentId={1}
               sectionId={1}
               levels={[levelWithSublevels]}
-              studentProgress={{...studentProgress, ...sublevelProgress}}
+              studentProgress={studentProgress}
             />
           )
       },

@@ -29,7 +29,6 @@ const placeholderUnpluggedBubble = (
   <div style={styles.unpluggedPlaceholderContainer}>
     <div>
       <ProgressTableLevelBubble
-        levelId="0"
         levelStatus={LevelStatus.not_tried}
         isUnplugged={true}
         isDisabled={true}
