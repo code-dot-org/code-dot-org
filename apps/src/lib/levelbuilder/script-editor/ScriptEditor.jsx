@@ -726,9 +726,9 @@ class ScriptEditor extends React.Component {
                 />
                 <HelpTip>
                   <p>
-                    Used only for Deeper Learning Courses. Prevents Peer Review
-                    Levels from displaying on the Deeper Learning Dashboard. In
-                    the future will be used to Deprecate any course.
+                    Used only for Professional Learning Courses. Deprecation
+                    prevents Peer Reviews conducted as part of this Script from
+                    being displayed in the admin-only Peer Review Dashboard.
                   </p>
                 </HelpTip>
               </label>
