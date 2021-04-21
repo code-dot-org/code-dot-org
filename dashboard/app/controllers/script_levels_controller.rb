@@ -247,7 +247,6 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    user = @user || current_user
     @stage = Script.get_from_cache(
       params[:script_id]
     ).lesson_by_relative_position(
@@ -256,14 +255,17 @@ class ScriptLevelsController < ApplicationController
     @script = @stage.script
     script_bonus_levels_by_stage = @script.get_bonus_script_levels(@stage)
 
-    # bonus level summaries explicitly don't contain any user-specific data,
-    # so we need to merge in the user's progress.
-    script_bonus_levels_by_stage.each do |stage|
-      stage[:levels].each do |level_summary|
-        ul = UserLevel.find_by(
-          level_id: level_summary[:level_id], user_id: user.id, script: @script
-        )
-        level_summary[:perfect] = ul&.perfect?
+    user = @user || current_user
+    unless user.nil?
+      # bonus level summaries explicitly don't contain any user-specific data,
+      # so we need to merge in the user's progress.
+      script_bonus_levels_by_stage.each do |stage|
+        stage[:levels].each do |level_summary|
+          ul = UserLevel.find_by(
+            level_id: level_summary[:level_id], user_id: user.id, script: @script
+          )
+          level_summary[:perfect] = ul&.perfect?
+        end
       end
     end
 
