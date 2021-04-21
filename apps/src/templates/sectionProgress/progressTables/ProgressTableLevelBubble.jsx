@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
+import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import {
   bubbleStyles,
   BubbleSize,
@@ -27,7 +28,6 @@ const bubbleHtmlCache = {};
  */
 export default class ProgressTableLevelBubble extends React.PureComponent {
   static propTypes = {
-    levelId: PropTypes.string.isRequired,
     levelStatus: PropTypes.string,
     levelKind: PropTypes.string,
     isLocked: PropTypes.bool,
@@ -45,55 +45,16 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     bubbleSize: BubbleSize.full
   };
 
-  renderContent() {
-    const {
-      isLocked,
-      isUnplugged,
-      isBonus,
-      isPaired,
-      title,
-      bubbleSize
-    } = this.props;
-    if (bubbleSize === BubbleSize.dot) {
-      // dot-sized bubbles are too small for content
-      return null;
-    }
-    return isUnplugged ? (
-      <span>{i18n.unpluggedActivity()}</span>
-    ) : isLocked ? (
-      <FontAwesome icon="lock" />
-    ) : isPaired ? (
-      <FontAwesome icon="users" />
-    ) : isBonus ? (
-      <FontAwesome icon="flag-checkered" />
-    ) : title ? (
-      <span>{title}</span>
-    ) : null;
+  getBubbleShape() {
+    return this.props.isUnplugged
+      ? BubbleShape.pill
+      : this.props.isConcept
+      ? BubbleShape.diamond
+      : BubbleShape.circle;
   }
 
   /**
-   * The only variation in the visual appearance of a bubble for a given level
-   * comes from `levelStatus`, so we cache bubbles by levelId and status.
-   */
-  cacheKey() {
-    return `levelId=${this.props.levelId}&status=${this.props.levelStatus}`;
-  }
-
-  /**
-   * Retrieve cached html if we have it, otherwise create and cache it.
-   */
-  getOrCreateHtml() {
-    const cacheKey = this.cacheKey();
-    let bubbleHtml = bubbleHtmlCache[cacheKey];
-    if (!bubbleHtml) {
-      bubbleHtml = this.createHtml();
-      bubbleHtmlCache[cacheKey] = bubbleHtml;
-    }
-    return bubbleHtml;
-  }
-
-  /**
-   * we can't use our usual `progressStyles.hoverStyle` for hover effect here
+   * We can't use our usual `progressStyles.hoverStyle` for hover effect here
    * because we can't use radium in our cached html, so instead we
    * conditionally add a CSS class to accomplish the same thing.
    */
@@ -103,33 +64,96 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     });
   }
 
+  /**
+   * Determines the simplest key to use for this bubble configuration.
+   */
+  getCacheKey() {
+    const {
+      isLocked,
+      levelStatus,
+      levelKind,
+      isUnplugged,
+      isBonus,
+      isPaired,
+      title,
+      bubbleSize
+    } = this.props;
+
+    let statusString = `status=${levelStatus}`;
+    if (levelKind === LevelKind.assessment) {
+      statusString = `assessment:${statusString}`;
+    }
+
+    if (bubbleSize === BubbleSize.letter) {
+      return `letter:title=${title}&${statusString}`;
+    } else if (isUnplugged) {
+      `unplugged:${statusString}`;
+    }
+
+    const shapeString = `shape=${this.getBubbleShape()}`;
+    const contentString = isLocked
+      ? `locked:`
+      : isPaired
+      ? `paired:`
+      : isBonus
+      ? `bonus:`
+      : title
+      ? `title=${title}`
+      : null;
+
+    return `${contentString}&${shapeString}&${statusString}`;
+  }
+
+  /**
+   * Retrieve cached html if we have it, otherwise create and cache it.
+   */
+  getOrCreateHtml() {
+    const cacheKey = this.getCacheKey();
+    let bubbleHtml = bubbleHtmlCache[cacheKey];
+    if (!bubbleHtml) {
+      bubbleHtml = this.createHtml();
+      bubbleHtmlCache[cacheKey] = bubbleHtml;
+    }
+    return bubbleHtml;
+  }
+
   createHtml() {
     return ReactDOMServer.renderToStaticMarkup(this.createBubbleElement());
   }
 
   createBubbleElement() {
-    const {
-      isUnplugged,
-      isConcept,
-      bubbleSize,
-      levelStatus,
-      levelKind
-    } = this.props;
-    const bubbleShape = isUnplugged
-      ? BubbleShape.pill
-      : isConcept
-      ? BubbleShape.diamond
-      : BubbleShape.circle;
-    return React.createElement(
-      BasicBubble,
-      {
-        shape: bubbleShape,
-        size: bubbleSize,
-        progressStyle: levelProgressStyle(levelStatus, levelKind),
-        classNames: this.getClassNames()
-      },
-      this.renderContent()
+    return (
+      <BasicBubble
+        shape={this.getBubbleShape()}
+        size={this.props.bubbleSize}
+        progressStyle={levelProgressStyle(
+          this.props.levelStatus,
+          this.props.levelKind
+        )}
+        classNames="progress-bubble"
+      >
+        {this.renderContent()}
+      </BasicBubble>
     );
+  }
+
+  renderContent() {
+    const {isUnplugged, isBonus, isPaired, title, bubbleSize} = this.props;
+    if (bubbleSize === BubbleSize.dot) {
+      // dot-sized bubbles are too small for content
+      return null;
+    }
+    return isUnplugged ? (
+      <span>{i18n.unpluggedActivity()}</span>
+    ) : this.isLocked() ? (
+      <FontAwesome icon="lock" />
+    ) : isPaired ? (
+      <FontAwesome icon="users" />
+    ) : isBonus ? (
+      <FontAwesome icon="flag-checkered" />
+    ) : title ? (
+      <span>{title}</span>
+    ) : null;
   }
 
   render() {
