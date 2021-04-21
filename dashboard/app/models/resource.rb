@@ -73,6 +73,7 @@ class Resource < ApplicationRecord
 
   def summarize_for_lesson_plan
     {
+      id: id,
       key: key,
       name: I18n.t("data.resource.#{key}.name", default: name),
       url: url,

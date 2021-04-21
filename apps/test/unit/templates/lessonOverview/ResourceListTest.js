@@ -23,6 +23,7 @@ describe('ResourceList', () => {
             type: 'Activity Guide'
           }
         ]}
+        pageType="teacher-lesson-plan"
       />
     );
     expect(wrapper.find('li').length).to.equal(2);
@@ -40,6 +41,7 @@ describe('ResourceList', () => {
             type: 'Activity Guide'
           }
         ]}
+        pageType="teacher-lesson-plan"
       />
     );
     expect(
@@ -61,6 +63,7 @@ describe('ResourceList', () => {
             type: 'Activity Guide'
           }
         ]}
+        pageType="teacher-lesson-plan"
       />
     );
     expect(
