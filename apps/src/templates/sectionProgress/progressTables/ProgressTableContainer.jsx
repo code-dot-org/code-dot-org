@@ -103,8 +103,16 @@ class ProgressTableContainer extends React.Component {
     this.recordToggleRow = this.recordToggleRow.bind(this);
     this.getLessonProgress = this.getLessonProgress.bind(this);
     this.getStudentProgress = this.getStudentProgress.bind(this);
-    // this.numDetailRows = props.summaryLessonCellFormatters.length - 1;
-    this.numDetailRows = 3 - 1;
+
+    this.summaryCellFormatters = getSummaryCellFormatters(
+      this.getLessonProgress,
+      props.onClickLesson
+    );
+
+    this.detailCellFormatters = getDetailCellFormatters(
+      this.getStudentProgress,
+      props.section
+    );
 
     // the primary table rows are represented by the students in the section,
     // but to support expanding those rows, we wrap each student in a
@@ -190,7 +198,7 @@ class ProgressTableContainer extends React.Component {
 
   expandDetailRows(rowData, rowIndex) {
     const detailRows = [];
-    for (let i = 1; i <= this.numDetailRows; i++) {
+    for (let i = 1; i <= this.numExtraRowsWhenExpanded(); i++) {
       detailRows.push({
         id: idForExpansionIndex(rowData.student.id, i),
         student: rowData.student,
@@ -202,6 +210,15 @@ class ProgressTableContainer extends React.Component {
     rows[rowIndex].isExpanded = true;
     rows.splice(rowIndex + 1, 0, ...detailRows);
     this.setState({rows});
+  }
+
+  numExtraRowsWhenExpanded() {
+    const rowsPerStudent =
+      this.props.currentView === ViewType.DETAIL
+        ? this.detailCellFormatters.length
+        : this.summaryCellFormatters.length;
+    // subtract one for the main row
+    return rowsPerStudent - 1;
   }
 
   collapseDetailRows(rowData, rowIndex) {
@@ -226,13 +243,8 @@ class ProgressTableContainer extends React.Component {
   };
 
   detailContentViewProps() {
-    const detailViewCellFormatters = getDetailCellFormatters(
-      this.getStudentProgress,
-      this.props.section
-    );
-
     return {
-      lessonCellFormatters: detailViewCellFormatters,
+      lessonCellFormatters: this.detailCellFormatters,
       extraHeaderFormatters: [
         getLevelIconHeaderFormatter(this.props.scriptData)
       ],
@@ -245,16 +257,11 @@ class ProgressTableContainer extends React.Component {
   }
 
   summaryContentViewProps() {
-    const summaryViewCellFormatters = getSummaryCellFormatters(
-      this.getLessonProgress,
-      this.props.onClickLesson
-    );
-
     return {
       columnWidths: new Array(this.props.scriptData.stages.length).fill(
         SUMMARY_VIEW_COLUMN_WIDTH
       ),
-      lessonCellFormatters: summaryViewCellFormatters,
+      lessonCellFormatters: this.summaryCellFormatters,
       includeHeaderArrows: false
     };
   }
