@@ -20590,7 +20590,7 @@ en:
               key: 'Programming: Happy Maps'
               name: Happy Maps
               description_student: Write instructions to get the Flurb to the fruit.
-              description_teacher: 'This **context-setting** lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.'
+              description_teacher: 'This **context-setting** lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided.'
             Sequencing with Scrat:
               key: Sequencing with Scrat
               name: Sequencing with Scrat
@@ -20610,22 +20610,22 @@ en:
               key: 'Loops: Happy Loops'
               name: Happy Loops
               description_student: Help the Flurb solve bigger problems using loops.
-              description_teacher: This **context-setting** lesson revisits Happy Maps. This time, student will use loops to solve bigger, longer puzzles with their code.
+              description_teacher: This **context-setting** lesson revisits Happy Maps. This time, students will use loops to solve bigger, longer puzzles with their code.
             Loops in Ice Age:
               key: Loops in Ice Age
               name: Loops with Scrat
               description_student: Help Scrat cover more ground using loops.
-              description_teacher: In this **skill-building** lesson, students will practice the concept of loops in programming puzzles where the goal is to help the squirrel reach the acorn.
+              description_teacher: In this **skill-building** lesson, students will practice loops in programming puzzles where the goal is to help the squirrel reach the acorn.
             Loops in Collector:
               key: Loops in Collector
               name: Loops with Laurel
               description_student: Help Laurel the adventurer collect the treasure underground.
-              description_teacher: In this **skill-building** lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze. Here, loops are used to collect treasure in open cave spaces.
+              description_teacher: In this **skill-building** lesson, students continue learning the concept of loops. Here, students use loops to collect treasure in open cave spaces.
             Ocean Scene with Loops:
               key: Ocean Scene with Loops
               name: Ocean Scene with Loops
               description_student: Use loops and patterns to finish the images.
-              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will be given the opportunity to create their own images.
+              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event Jr.
@@ -20633,13 +20633,13 @@ en:
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
-              name: On the Move with Events
+              name: 'Mini-Project: On the Move with Play Lab'
               description_student: Create your own game or story.
-              description_teacher: In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_teacher: In this **mini-project**, students will use events in Play Lab and apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             lesson-1:
               name: End of Course Project
               description_student: Tell a story with the Artist!
-              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and loops in an open-ended project with the Artist.
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and loops with the Artist.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20673,7 +20673,7 @@ en:
               key: Move It, Move It
               name: Move It, Move It
               description_student: Program your classmates to step carefully from place to place.
-              description_teacher: This **context-setting** lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course.  In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.
+              description_teacher: Students will program their classmates to step carefully around a large grid on the floor in this **context-setting** lesson.
             Sequencing in Maze:
               key: Sequencing in Maze
               name: Sequencing with Angry Birds
@@ -20688,12 +20688,12 @@ en:
               key: Programming in Harvester
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
-              description_teacher: 'In this **skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. '
+              description_teacher: Students will apply the programming concepts that they have learned to the Harvester environment in this **skill-building** lesson. Students will continue to develop sequential algorithm skills and start using the debugging process.
             'Loops: Getting Loopy':
               key: 'Loops: Getting Loopy'
               name: Getting Loopy
               description_student: In this lesson, we'll have a dance party using repeat loops!
-              description_teacher: In this **context-setting** lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.
+              description_teacher: In this **context-setting** lesson, students will learn to use loops to more easily communicate instructions by looking at the repeated patterns of a dance.
             Loops in Harvester:
               key: Loops in Harvester
               name: Loops with Harvester
@@ -20708,12 +20708,12 @@ en:
               key: Loops in Artist
               name: Drawing Gardens with Loops
               description_student: Use patterns and loops to finish the images.
-              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. At the end of this lesson, students will be given the opportunity to create their own images.
+              description_teacher: 'In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. '
             The Right App:
               key: The Right App
               name: The Right App
               description_student: Sketch your own smartphone app.
-              description_teacher: 'This **exploratory** lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. '
+              description_teacher: In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event Jr.
@@ -20723,7 +20723,7 @@ en:
               key: Events in Play Lab
               name: A Royal Battle with Events
               description_student: Use events to create a story or make an interactive game.
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+              description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
             lesson-1:
               name: End of Course Project
               description_student: Create your own story or game.
@@ -21551,13 +21551,13 @@ en:
             On the Move with Events:
               key: On the Move with Events
               name: On the Move with Events
-              description_student: 
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_student: Create your own game or story.
+              description_teacher: In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             A Royal Battle with Events:
               key: A Royal Battle with Events
               name: A Royal Battle with Events
-              description_student: 
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+              description_student: Use events to create a story or make an interactive game.
+              description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
