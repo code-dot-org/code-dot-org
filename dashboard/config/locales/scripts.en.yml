@@ -18918,7 +18918,7 @@ en:
               display_name: Variables
               description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
             outbreak:
-              display_name: Outbreak Simulation
+              display_name: Outbreak Simulator
             Loom Levels:
               display_name: Loom Levels
             contagion:
@@ -20330,7 +20330,7 @@ en:
           name: csp6-2021
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
         csp7-2021:
-          title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
+          title: CSP Unit 7 - Parameters, Return, and Libraries ('21-'22)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description_audience: ''
@@ -20399,7 +20399,7 @@ en:
           name: csp7-2021
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
         csp8-2021:
-          title: CSP Unit 8 - Create PT Prep ('20-'21)
+          title: CSP Unit 8 - Create PT Prep ('21-'22)
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
@@ -20427,7 +20427,7 @@ en:
           name: csp8-2021
           student_description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
         csp9-2021:
-          title: CSP Unit 9 - Data ('20-'21)
+          title: CSP Unit 9 - Data ('21-'22)
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
           description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
           description_audience: ''
@@ -20484,7 +20484,7 @@ en:
           name: csp9-2021
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
         csp10-2021:
-          title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
+          title: CSP Unit 10 - Cybersecurity and Global Impacts ('21-'22)
           description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description_audience: ''
@@ -21541,13 +21541,13 @@ en:
             Ocean Scene with Loops:
               key: Ocean Scene with Loops
               name: Ocean Scene with Loops
-              description_student: 
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_student: Use loops and patterns to finish the images.
+              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will be given the opportunity to create their own images.
             Drawing Gardens with Loops:
               key: Drawing Gardens with Loops
               name: Drawing Gardens with Loops
-              description_student: 
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_student: Use patterns and loops to finish the images.
+              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. At the end of this lesson, students will be given the opportunity to create their own images.
             On the Move with Events:
               key: On the Move with Events
               name: On the Move with Events

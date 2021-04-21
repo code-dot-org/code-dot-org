@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-04-20 20:13:34 UTC",
+    "serialized_at": "2021-04-21 18:40:35 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -193,7 +193,7 @@
       "properties": {
         "overview": "In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.",
         "purpose": "This lesson gives students more practice with loops and encourages them to put multiple blocks inside of a `repeat` as they try to collect as much treasure as possible.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Make sure each student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -210,10 +210,11 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.",
+        "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will be given the opportunity to create their own images.",
         "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of `repeat` loops.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure each student has a [r think-spot-journal/pre-express/2021].",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure each student has a Reflection Journal.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Use loops and patterns to finish the images."
       },
       "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
@@ -229,10 +230,11 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.",
+        "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. At the end of this lesson, students will be given the opportunity to create their own images.",
         "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students will test their critical thinking skills by evaluating given code and determining what needs to be added in order to solve the puzzle. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of `repeat` loops.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - Make sure each student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - Make sure each student has a reflection journal.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Use patterns and loops to finish the images."
       },
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
@@ -675,8 +677,7 @@
       "key": "9299b9d4-262a-452e-93f2-b04f9c64c34e",
       "position": 2,
       "properties": {
-        "name": "Online Foundation: Preview Loops in Collector",
-        "duration": 0
+        "name": "Online Foundation: Preview Loops in Collector"
       },
       "seeding_key": {
         "lesson_activity.key": "9299b9d4-262a-452e-93f2-b04f9c64c34e",
@@ -708,19 +709,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e6a1f5df-d8d4-41a1-8649-d518965997af",
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
-      "key": "a6302f54-4da5-4d1f-bb35-00067496bf81",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a6302f54-4da5-4d1f-bb35-00067496bf81",
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021"
@@ -763,19 +751,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "98e73710-a395-4b96-90ac-de9c5a8060e8",
-        "lesson.key": "Ocean Scene with Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
-      "key": "18c332dc-18a2-447a-9c78-0798983176fc",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "18c332dc-18a2-447a-9c78-0798983176fc",
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021"
@@ -1768,7 +1743,7 @@
       "key": "525d11d6-d492-48d2-b775-6dd460d72215",
       "position": 1,
       "properties": {
-        "description": "To introduce Laurel the Collector, preview an online puzzle (or two) as a class.\r\n\r\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 9, Puzzle 8.  Do students see any similarities to the last set of exercises that they did?  What are the big differences? When should the `get treasure` block be used?\r\n\r\nWork with your class to drag code into the workspace in such a way that Laurel (eventually) collects all of the treasure. \r\n\r\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
+        "description": "To introduce Laurel the Collector, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Puzzle 8.  Do students see any similarities to the last set of exercises that they did?  What are the big differences? When should the `get treasure` block be used?\n\nWork with your class to drag code into the workspace in such a way that Laurel (eventually) collects all of the treasure. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
       },
       "seeding_key": {
         "activity_section.key": "525d11d6-d492-48d2-b775-6dd460d72215",
@@ -1779,8 +1754,8 @@
       "key": "96d62dea-f1ff-46d9-a889-5ef9848c0acf",
       "position": 1,
       "properties": {
-        "description": "We've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\r\n\r\nPrediction Levels:\r\n\r\n - [Loops in Collector](https://studio.code.org/levels/8746)",
-        "name": "Teacher Demonstration\r"
+        "description": "###Teacher Demonstration\n\nWe've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\n\nPrediction Levels:\n\n - [Loops in Collector](https://studio.code.org/levels/8746)",
+        "name": "Loops with Laurel"
       },
       "seeding_key": {
         "activity_section.key": "96d62dea-f1ff-46d9-a889-5ef9848c0acf",
@@ -1800,11 +1775,88 @@
       }
     },
     {
+      "key": "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: The Collector"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3",
+        "lesson_activity.key": "879a5770-47f6-4f01-bc0f-14726d6ae8b4"
+      }
+    },
+    {
+      "key": "9aa00264-eca7-4093-92fb-60d301554a5b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "9aa00264-eca7-4093-92fb-60d301554a5b",
+        "lesson_activity.key": "879a5770-47f6-4f01-bc0f-14726d6ae8b4"
+      }
+    },
+    {
+      "key": "dead7fa5-406d-419c-a084-3a913cbd2499",
+      "position": 5,
+      "properties": {
+        "progression_name": "Video: Using the Repeat Block"
+      },
+      "seeding_key": {
+        "activity_section.key": "dead7fa5-406d-419c-a084-3a913cbd2499",
+        "lesson_activity.key": "879a5770-47f6-4f01-bc0f-14726d6ae8b4"
+      }
+    },
+    {
+      "key": "08049c61-d346-4c06-96f3-58775b4bf69d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d",
+        "lesson_activity.key": "879a5770-47f6-4f01-bc0f-14726d6ae8b4"
+      }
+    },
+    {
+      "key": "46172f79-e306-4a8f-9ecd-640b05733fb6",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "46172f79-e306-4a8f-9ecd-640b05733fb6",
+        "lesson_activity.key": "879a5770-47f6-4f01-bc0f-14726d6ae8b4"
+      }
+    },
+    {
+      "key": "c08bd0ec-993c-4554-b855-96bdf024e9ef",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef",
+        "lesson_activity.key": "879a5770-47f6-4f01-bc0f-14726d6ae8b4"
+      }
+    },
+    {
+      "key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021",
+      "position": 9,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021",
+        "lesson_activity.key": "879a5770-47f6-4f01-bc0f-14726d6ae8b4"
+      }
+    },
+    {
       "key": "6397718f-1733-47e6-8ace-820b3f9d1701",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw a line of treasure that Laurel could collect.\r\n - Draw something that uses loops.",
-        "name": "Journaling\r"
+        "description": "###Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a line of treasure that Laurel could collect.\n - Draw something that uses loops.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "6397718f-1733-47e6-8ace-820b3f9d1701",
@@ -1812,20 +1864,10 @@
       }
     },
     {
-      "key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6",
-        "lesson_activity.key": "a6302f54-4da5-4d1f-bb35-00067496bf81"
-      }
-    },
-    {
       "key": "6361a98f-3232-4060-8758-b1f8064507a8",
       "position": 1,
       "properties": {
-        "description": "- Quickly review the definition of a loop, the action of doing something over and over again. \r\n- Discuss different patterns like zigzags and stairsteps.\r\n\t- How would you explain to someone how to draw that pattern?\r\n\t- How could you draw this using a loop?\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\r\n\r\nIn the artist levels students will be using 45 degree angles described as northwest, northeast, southwest, southeast. We recommend briefly discussing these directions with the class and drawing an image for students to refer back to.\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)",
+        "description": "- Quickly review the definition of a loop, the action of doing something over and over again. \n- Discuss different patterns like zigzags and stairsteps.\n\t- _How would you explain to someone how to draw that pattern?_\n\t- _How could you draw this using a loop?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nIn the artist levels students will be using 45 degree angles described as northwest, northeast, southwest, southeast. We recommend briefly discussing these directions with the class and drawing an image for students to refer back to.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1838,7 +1880,7 @@
       "position": 1,
       "properties": {
         "description": "#### Teacher Demonstration",
-        "name": "Online Puzzles\r"
+        "name": "Ocean Scene with Loops"
       },
       "seeding_key": {
         "activity_section.key": "8cb479d1-0b50-4d24-998d-9fff971dcf0c",
@@ -1851,9 +1893,8 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think/pre-express/2021].\r\n"
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** video.\n"
           }
         ]
       },
@@ -1874,11 +1915,99 @@
       }
     },
     {
+      "key": "7ccc621e-43b3-4402-a0cc-c626dfa1ea79",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: The Artist in Code Studio"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ccc621e-43b3-4402-a0cc-c626dfa1ea79",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
+      "key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
+      "key": "eabc47c6-9f94-4b32-aab1-4a138064532b",
+      "position": 6,
+      "properties": {
+        "progression_name": "Video: Loops in Artist"
+      },
+      "seeding_key": {
+        "activity_section.key": "eabc47c6-9f94-4b32-aab1-4a138064532b",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
+      "key": "94271c9b-4000-4e8c-a99c-9a04d851549e",
+      "position": 7,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
+      "key": "073ef24a-022b-46a3-a900-9a5bd5c2b6fe",
+      "position": 8,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "073ef24a-022b-46a3-a900-9a5bd5c2b6fe",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
+      "key": "c2ef410e-28ad-4ebe-9061-f5658d8fe975",
+      "position": 9,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2ef410e-28ad-4ebe-9061-f5658d8fe975",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
+      "key": "9501ab3a-0fa4-46d5-88a1-d546663cdffa",
+      "position": 10,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "9501ab3a-0fa4-46d5-88a1-d546663cdffa",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
+      "key": "71d66635-8ac0-46fa-94d5-1f574f1c7996",
+      "position": 11,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "71d66635-8ac0-46fa-94d5-1f574f1c7996",
+        "lesson_activity.key": "089afb18-d132-46ab-88ca-2af47333e237"
+      }
+    },
+    {
       "key": "7043a915-b252-47d3-bb01-5975d613129c",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw some stairs. Imagine the loop needed to draw this.\r\n - Draw something else in your life that uses loops.",
-        "name": "Journaling\r"
+        "description": "###Journaling:\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw some stairs. Imagine the loop needed to draw this.\n - Draw something else in your life that uses loops.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "7043a915-b252-47d3-bb01-5975d613129c",
@@ -1886,20 +2015,10 @@
       }
     },
     {
-      "key": "03222074-c12a-47df-ac7a-b6387bf095ba",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba",
-        "lesson_activity.key": "18c332dc-18a2-447a-9c78-0798983176fc"
-      }
-    },
-    {
       "key": "b53a9767-0731-41e2-b2fe-0b8b841cd403",
       "position": 1,
       "properties": {
-        "description": "- Quickly review the definition of a loop, the action of doing something over and over again. \r\n- Discuss different patterns like zigzags and stairsteps.\r\n\t- How would you explain to someone how to draw that pattern?\r\n\t- How could you draw this using a loop?\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\r\n\r\nIn the artist levels, students will be using 45 degree angles described as northwest, northeast, southwest, southeast. We recommend briefly discussing these directions with the class and drawing an image for students to refer back to.\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)",
+        "description": "- Quickly review the definition of a loop, the action of doing something over and over again. \n- Discuss different patterns like zigzags and stairsteps.\n\t- _How would you explain to someone how to draw that pattern?_\n\t- _How could you draw this using a loop?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nIn the artist levels, students will be using 45 degree angles described as northwest, northeast, southwest, southeast. We recommend briefly discussing these directions with the class and drawing an image for students to refer back to.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1926,7 +2045,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think/pre-express/2021].\r\n"
+            "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online**.\n"
           }
         ]
       },
@@ -2461,7 +2580,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Programming with Blocks"
+        "progression": "Video: Programming with Blocks",
+        "level_keys": [
+          "courseAB_video_NewIntro_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2640,7 +2762,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Pair Programming"
+        "progression": "Video: Pair Programming",
+        "level_keys": [
+          "elementary_video_pairProgramming_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2663,7 +2788,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_maze_seq1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2686,7 +2814,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_maze_seq5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2709,7 +2840,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_maze_seq5a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2732,7 +2866,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_maze_seq6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2755,7 +2892,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_maze_seq8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2779,7 +2919,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseA_maze_seq10_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2802,7 +2945,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_maze_seq11_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2825,7 +2971,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_maze_seq12_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2848,7 +2997,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_maze_seq13_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2923,7 +3075,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Programming with Rey and BB-8"
+        "progression": "Video: Programming with Rey and BB-8",
+        "level_keys": [
+          "bb8_skinOverview_K-1_video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2946,7 +3101,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_starWars_prog1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2969,7 +3127,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_starWars_prog2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2992,7 +3153,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_starWars_prog3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3015,7 +3179,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_starWars_prog4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3038,7 +3205,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_starWars_prog5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3061,7 +3231,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_starWars_prog6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3084,7 +3257,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_starWars_prog7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3108,7 +3284,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseB_starWars_prog8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3209,7 +3388,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: The Harvester"
+        "progression": "Video: The Harvester",
+        "level_keys": [
+          "courseA_harvester_intro_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3232,7 +3414,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3255,7 +3440,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3278,7 +3466,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3301,7 +3492,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Debugging with the Step Button"
+        "progression": "Video: Debugging with the Step Button",
+        "level_keys": [
+          "courseAB_video_debugging_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3324,7 +3518,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3347,7 +3544,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3370,7 +3570,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3393,7 +3596,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3416,7 +3622,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3439,7 +3648,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseA_harvester_seq9_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3463,7 +3675,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseA_harvester_seq10_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3486,7 +3701,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_harvester_seq12_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3509,7 +3727,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_harvester_seq11_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3532,7 +3753,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseA_harvester_seq13_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3555,7 +3779,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3578,7 +3805,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3601,7 +3831,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Ice Age Loops"
+        "progression": "Video: Ice Age Loops",
+        "level_keys": [
+          "courseB_iceage_loops_video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3624,7 +3857,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3647,7 +3883,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3670,7 +3909,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3693,7 +3935,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3716,7 +3961,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3739,7 +3987,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseB_iceage_loops9_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3763,7 +4014,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseB_iceage_loops10_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3786,7 +4040,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops11_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3809,7 +4066,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseB_iceage_loops12_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3830,11 +4090,9 @@
       "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseAB_video_collector_2021"
-        ]
+        "progression": "Video: The Collector"
       },
       "named_level": null,
       "bonus": null,
@@ -3845,7 +4103,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3"
       },
       "level_keys": [
         "courseAB_video_collector_2021"
@@ -3854,12 +4112,10 @@
     {
       "chapter": 72,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3870,7 +4126,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "9aa00264-eca7-4093-92fb-60d301554a5b"
       },
       "level_keys": [
         "courseB_collector_loops1_2021"
@@ -3879,12 +4135,10 @@
     {
       "chapter": 73,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3895,7 +4149,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "9aa00264-eca7-4093-92fb-60d301554a5b"
       },
       "level_keys": [
         "courseB_collector_loops2_2021"
@@ -3904,12 +4158,10 @@
     {
       "chapter": 74,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_video_Loops_2021"
-        ]
+        "progression": "Video: Using the Repeat Block"
       },
       "named_level": null,
       "bonus": null,
@@ -3920,7 +4172,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "dead7fa5-406d-419c-a084-3a913cbd2499"
       },
       "level_keys": [
         "courseA_video_Loops_2021"
@@ -3929,12 +4181,10 @@
     {
       "chapter": 75,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3945,7 +4195,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       },
       "level_keys": [
         "courseB_collector_loops3_2021"
@@ -3954,12 +4204,10 @@
     {
       "chapter": 76,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3970,7 +4218,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       },
       "level_keys": [
         "courseB_collector_loops4_2021"
@@ -3979,12 +4227,10 @@
     {
       "chapter": 77,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops5_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -3995,7 +4241,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       },
       "level_keys": [
         "courseB_collector_loops5_2021"
@@ -4004,12 +4250,10 @@
     {
       "chapter": 78,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4020,7 +4264,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       },
       "level_keys": [
         "courseB_collector_loops6_2021"
@@ -4029,12 +4273,10 @@
     {
       "chapter": 79,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops7_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4045,7 +4287,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       },
       "level_keys": [
         "courseB_collector_loops7_2021"
@@ -4054,13 +4296,11 @@
     {
       "chapter": 80,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseB_collector_loops8_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4071,7 +4311,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       },
       "level_keys": [
         "courseB_collector_loops8_2021"
@@ -4080,12 +4320,10 @@
     {
       "chapter": 81,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops9_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -4096,7 +4334,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "46172f79-e306-4a8f-9ecd-640b05733fb6"
       },
       "level_keys": [
         "courseB_collector_loops9_2021"
@@ -4105,12 +4343,10 @@
     {
       "chapter": 82,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops10_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4121,7 +4357,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
       },
       "level_keys": [
         "courseB_collector_loops10_2021"
@@ -4130,12 +4366,10 @@
     {
       "chapter": 83,
       "position": 13,
-      "activity_section_position": 13,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops11_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4146,7 +4380,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
       },
       "level_keys": [
         "courseB_collector_loops11_2021"
@@ -4155,12 +4389,10 @@
     {
       "chapter": 84,
       "position": 14,
-      "activity_section_position": 14,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops_challenge1_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": true,
@@ -4171,7 +4403,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
       },
       "level_keys": [
         "courseB_collector_loops_challenge1_2021"
@@ -4180,12 +4412,10 @@
     {
       "chapter": 85,
       "position": 15,
-      "activity_section_position": 15,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops_challenge2a_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4196,7 +4426,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021"
       },
       "level_keys": [
         "courseB_collector_loops_challenge2a_2021"
@@ -4206,11 +4436,9 @@
       "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_video_ArtistIntro_2021"
-        ]
+        "progression": "Video: The Artist in Code Studio"
       },
       "named_level": null,
       "bonus": null,
@@ -4221,7 +4449,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "7ccc621e-43b3-4402-a0cc-c626dfa1ea79"
       },
       "level_keys": [
         "courseB_video_ArtistIntro_2021"
@@ -4230,12 +4458,10 @@
     {
       "chapter": 87,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4246,7 +4472,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab"
       },
       "level_keys": [
         "courseA_artist_loops1_2021"
@@ -4255,12 +4481,10 @@
     {
       "chapter": 88,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4271,7 +4495,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab"
       },
       "level_keys": [
         "courseA_artist_loops2_2021"
@@ -4280,12 +4504,10 @@
     {
       "chapter": 89,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4296,7 +4518,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab"
       },
       "level_keys": [
         "courseA_artist_loops3_2021"
@@ -4305,12 +4527,10 @@
     {
       "chapter": 90,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_video_loops1_2021"
-        ]
+        "progression": "Video: Loops in Artist"
       },
       "named_level": null,
       "bonus": null,
@@ -4321,7 +4541,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "eabc47c6-9f94-4b32-aab1-4a138064532b"
       },
       "level_keys": [
         "courseA_video_loops1_2021"
@@ -4330,12 +4550,10 @@
     {
       "chapter": 91,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4346,7 +4564,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       },
       "level_keys": [
         "courseA_artist_loops4_2021"
@@ -4355,12 +4573,10 @@
     {
       "chapter": 92,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops5_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4371,7 +4587,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       },
       "level_keys": [
         "courseA_artist_loops5_2021"
@@ -4380,12 +4596,10 @@
     {
       "chapter": 93,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4396,7 +4610,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       },
       "level_keys": [
         "courseA_artist_loops6_2021"
@@ -4405,12 +4619,10 @@
     {
       "chapter": 94,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops7_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4421,7 +4633,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       },
       "level_keys": [
         "courseA_artist_loops7_2021"
@@ -4430,12 +4642,10 @@
     {
       "chapter": 95,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops8_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4446,7 +4656,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       },
       "level_keys": [
         "courseA_artist_loops8_2021"
@@ -4455,13 +4665,11 @@
     {
       "chapter": 96,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseA_artist_loops9_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -4472,7 +4680,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "073ef24a-022b-46a3-a900-9a5bd5c2b6fe"
       },
       "level_keys": [
         "courseA_artist_loops9_2021"
@@ -4481,12 +4689,10 @@
     {
       "chapter": 97,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops10_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4497,7 +4703,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "c2ef410e-28ad-4ebe-9061-f5658d8fe975"
       },
       "level_keys": [
         "courseA_artist_loops10_2021"
@@ -4506,12 +4712,10 @@
     {
       "chapter": 98,
       "position": 13,
-      "activity_section_position": 13,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops11_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4522,7 +4726,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "c2ef410e-28ad-4ebe-9061-f5658d8fe975"
       },
       "level_keys": [
         "courseA_artist_loops11_2021"
@@ -4531,12 +4735,10 @@
     {
       "chapter": 99,
       "position": 14,
-      "activity_section_position": 14,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops12_2021"
-        ]
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -4547,7 +4749,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "9501ab3a-0fa4-46d5-88a1-d546663cdffa"
       },
       "level_keys": [
         "courseA_artist_loops12_2021"
@@ -4556,12 +4758,10 @@
     {
       "chapter": 100,
       "position": 15,
-      "activity_section_position": 15,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops_challenge2a_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4572,7 +4772,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "71d66635-8ac0-46fa-94d5-1f574f1c7996"
       },
       "level_keys": [
         "courseA_artist_loops_challenge2a_2021"
@@ -4581,12 +4781,10 @@
     {
       "chapter": 101,
       "position": 16,
-      "activity_section_position": 16,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -4597,7 +4795,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "71d66635-8ac0-46fa-94d5-1f574f1c7996"
       },
       "level_keys": [
         "courseA_artist_loops_challenge1_2021"
@@ -6280,7 +6478,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3"
       }
     },
     {
@@ -6292,7 +6490,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "9aa00264-eca7-4093-92fb-60d301554a5b"
       }
     },
     {
@@ -6304,7 +6502,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "9aa00264-eca7-4093-92fb-60d301554a5b"
       }
     },
     {
@@ -6316,7 +6514,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "dead7fa5-406d-419c-a084-3a913cbd2499"
       }
     },
     {
@@ -6328,7 +6526,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       }
     },
     {
@@ -6340,7 +6538,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       }
     },
     {
@@ -6352,7 +6550,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       }
     },
     {
@@ -6364,7 +6562,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       }
     },
     {
@@ -6376,7 +6574,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       }
     },
     {
@@ -6388,7 +6586,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "08049c61-d346-4c06-96f3-58775b4bf69d"
       }
     },
     {
@@ -6400,7 +6598,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "46172f79-e306-4a8f-9ecd-640b05733fb6"
       }
     },
     {
@@ -6412,7 +6610,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
       }
     },
     {
@@ -6424,7 +6622,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
       }
     },
     {
@@ -6436,7 +6634,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "c08bd0ec-993c-4554-b855-96bdf024e9ef"
       }
     },
     {
@@ -6448,7 +6646,7 @@
         "lesson.key": "Loops with Laurel",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "c3997303-a8e6-4834-ac1a-9cd314c5dca6"
+        "activity_section.key": "62dfefbf-589b-46c7-a6ae-2b80bb18b021"
       }
     },
     {
@@ -6460,7 +6658,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "7ccc621e-43b3-4402-a0cc-c626dfa1ea79"
       }
     },
     {
@@ -6472,7 +6670,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab"
       }
     },
     {
@@ -6484,7 +6682,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab"
       }
     },
     {
@@ -6496,7 +6694,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab"
       }
     },
     {
@@ -6508,7 +6706,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "eabc47c6-9f94-4b32-aab1-4a138064532b"
       }
     },
     {
@@ -6520,7 +6718,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       }
     },
     {
@@ -6532,7 +6730,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       }
     },
     {
@@ -6544,7 +6742,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       }
     },
     {
@@ -6556,7 +6754,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       }
     },
     {
@@ -6568,7 +6766,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "94271c9b-4000-4e8c-a99c-9a04d851549e"
       }
     },
     {
@@ -6580,7 +6778,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "073ef24a-022b-46a3-a900-9a5bd5c2b6fe"
       }
     },
     {
@@ -6592,7 +6790,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "c2ef410e-28ad-4ebe-9061-f5658d8fe975"
       }
     },
     {
@@ -6604,7 +6802,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "c2ef410e-28ad-4ebe-9061-f5658d8fe975"
       }
     },
     {
@@ -6616,7 +6814,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "9501ab3a-0fa4-46d5-88a1-d546663cdffa"
       }
     },
     {
@@ -6628,7 +6826,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "71d66635-8ac0-46fa-94d5-1f574f1c7996"
       }
     },
     {
@@ -6640,7 +6838,7 @@
         "lesson.key": "Ocean Scene with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "03222074-c12a-47df-ac7a-b6387bf095ba"
+        "activity_section.key": "71d66635-8ac0-46fa-94d5-1f574f1c7996"
       }
     },
     {
@@ -7103,6 +7301,18 @@
       }
     },
     {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "common-sense-media-pause-think",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
       "name": "Think Spot Journal",
       "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/edit",
       "key": "think-spot-journal",
@@ -7113,18 +7323,6 @@
       },
       "seeding_key": {
         "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "common-sense-media-pause-think",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -7233,19 +7431,7 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Laurel",
         "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -7263,13 +7449,13 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
-        "resource.key": "think-spot-journal"
+        "resource.key": "feeling-faces-image"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Drawing Gardens with Loops",
-        "resource.key": "feeling-faces-image"
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {

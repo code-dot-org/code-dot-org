@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-16 21:09:48 UTC",
+    "serialized_at": "2021-04-21 06:03:38 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -82,15 +82,6 @@
         "purpose": "The physical activity in this lesson helps provide a memorable experience and personal anchor for the rest of the unit - we can refer to the networks created in this activity to help motivate concepts in later lessons. In the final challenge for this lesson, it is important to let students wrestle with how to best balance the 3 network guidelines and refine their reasoning & explanation for decisions they made when creating their network. This is important in setting up later lessons in this unit - in this lesson, the guidelines are based on the physical impacts of creating a network but towards the end of the unit students will examine the societal and economical impacts for creating computer networks and will again think critically about how to balance several factors from a societal and economic lens.",
         "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \r\n* Decide how you would like students to physically form their networks - standing, in seats, etc.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1Fx8it6pc-B3Ppvs5lsX1Wa_Xu28fHEwvYHWgP2zYqqw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -111,16 +102,7 @@
         "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible.",
         "purpose": "Now that students have explored what it takes to link devices on a network, they are ready to learn how devices communicate with each other. Prior to this lesson, the Internet Simulator was set up only for point-to-point communication. This new version is setup to “broadcast” every message to every person in the same simulator room. This closely mimics a real life problem that computer scientists had to solve:  With all the bits passing through many computers on a network, how would a computer know if it was the intended recipient?  Which computer should get a reply?  Internet Protocol (IP) solves a portion of this problem by assigning a unique IP address to each device and standardizing how sender and recipient are identified.",
         "preparation": "\r\n* Preview the Internet Simulator (Broadcast version)\r\n* Preview the Wrap Up slides in [r csp-unit-2-the-internet]\r\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1ixl3b5ktdM7BKb7dPiZgBNxpPyLSZHOKGLGA6yc1j6k/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
@@ -139,17 +121,8 @@
         "overview": "Students spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
         "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network.",
         "purpose": "After yesterday’s lesson that motivated the need for some kind of addressing system, today’s lesson has students use IP Addresses to send messages to specific people. Today’s focus is on how routers help manage the paths that different messages take. The router logs are an important tool for students to discover the extra work that routers are doing to send messages - they can see that messages are passed between routers and that messages take different paths along the way, all from analyzing the data in the router logs. Importantly, students should make a connection between these observations about multiple pathways and the concept of **fault-tolerance** - because there are multiple pathways, the internet can continue to function even when there may be an issue that the routers need to address.",
-        "preparation": "\r\n* Read through [r teacher-guide-router] in order to:\r\n\t* Test the Internet Simulator to understand how the tool works\r\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\r\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1h7Vk01m0LJdFeC5eiOo_E3Y9GsaQFW_UQEM2UX3tOMw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "preparation": "\n* Read through [r teacher-guide-router/csp/2021] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
@@ -402,18 +375,6 @@
       }
     },
     {
-      "key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
-        "lesson.key": "Building a Network",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
       "key": "ca609800-322b-4779-b39c-778d2eab2d23",
       "position": 1,
       "properties": {
@@ -456,18 +417,6 @@
       }
     },
     {
-      "key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
-        "lesson.key": "The Need for Addressing",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
       "key": "33d0b05f-97ee-44c4-9818-6c1aa8c6b170",
       "position": 1,
       "properties": {
@@ -504,18 +453,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e",
-        "lesson.key": "Routers and Redundancy",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
-      "key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021"
@@ -1138,22 +1075,12 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Describe two different paths that a message could take from Person A to Person D:\n\n\n\n\n\n\n![](https://images.code.org/a15d79d6c9cdb1a0f295a0b6e180f955-network.png)",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4652a86f-e996-47c5-a03e-86572416869d",
         "lesson_activity.key": "58160049-4918-4cfe-8540-3af390c31af7"
-      }
-    },
-    {
-      "key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
-        "lesson_activity.key": "41ae02dc-a7b3-493e-9849-7beafe95f679"
       }
     },
     {
@@ -1201,7 +1128,8 @@
             "markdown": "**Running Each Week:** This lesson has students completing the same activity three times. Each time students need to create a schedule for the week that allows them to see every other member of their group on one of the days. Each time this activity should take roughly 3 - 5 minutes.\r\n\r\n**Running It Unplugged First:** This first unplugged run of the activity gives students a feel for how it runs. This will make sure that any confusion when they get to the Internet Simulator is caused by the lack of identifying information in the simulator and not simply misunderstanding what to do.\r\n\r\n"
           }
         ],
-        "name": "Scheduling Unplugged - Week 1 - 10 mins\r"
+        "name": "Scheduling Unplugged - Week 1",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "c08c56dc-9362-4006-a5ec-15f80b5c24a2",
@@ -1254,7 +1182,8 @@
             "markdown": "**Same Groups:** Students should be in the same set of groups they were in for the Unplugged Activity. When they get to the Simulator click “Add Room” button to make as many rooms as necessary for your class.\r\n\r\n**Week 4:** A fourth week is included on the activity guide in case your classroom wants to run the activitiy another time at some point in the lesson. If not feel free to ignore it.\r\n"
           }
         ],
-        "name": "Scheduling on the Internet Simulator - Week 2 - 10 mins\r"
+        "name": "Scheduling on the Internet Simulator - Week 2",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "5c1af235-3aab-4855-b834-aa165932ee41",
@@ -1277,7 +1206,8 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Agree with your group on the set of rules you'd like to try this time around for how to communicate. Then complete Week 3 like the previous two weeks. No talking!\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Based on your experience, take 5 minutes to write down in the rules section the collective rules you and your team would advise using going forward.",
-        "name": "Formalizing Rules - Week 3 - 10 mins\r"
+        "name": "Formalizing Rules - Week 3",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "488175c9-abab-4e15-9695-8974ac681079",
@@ -1368,33 +1298,12 @@
       "position": 7,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Pick the two statements that are true about the Internet Protocol (IP):\r\n\r\n**Question:** Describe how the Internet Protocol (IP) allows devices to easily connect and communicate on the Internet.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3",
         "lesson_activity.key": "bfac3a43-daf8-46b4-9038-189732aee8c6"
-      }
-    },
-    {
-      "key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
-      "position": 1,
-      "properties": {
-        "progression_name": "Internet Simulator: Broadcast Mode"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
-        "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546"
-      }
-    },
-    {
-      "key": "10315151-abd2-4010-9cea-178f33d51c4f",
-      "position": 2,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f",
-        "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546"
       }
     },
     {
@@ -1611,33 +1520,12 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Pick Two: If the post office delivered mail exactly like the routers deliver messages on the Internet, which of the following statements would be true?\r\n\r\n**Question:** What are the benefits of building redundancy into a network? What are the potential issues with building redundancy?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b",
         "lesson_activity.key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e"
-      }
-    },
-    {
-      "key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
-      "position": 1,
-      "properties": {
-        "progression_name": "Internet Simulator: Routers"
-      },
-      "seeding_key": {
-        "activity_section.key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
-        "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5"
-      }
-    },
-    {
-      "key": "438af42b-36dc-49dd-8421-569a4b4ad488",
-      "position": 2,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488",
-        "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5"
       }
     },
     {
@@ -2453,10 +2341,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U2L1 CFU paths_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2467,7 +2352,7 @@
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5"
+        "activity_section.key": "4652a86f-e996-47c5-a03e-86572416869d"
       },
       "level_keys": [
         "U2L1 CFU paths_2021"
@@ -2477,7 +2362,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Internet Simulator",
         "level_keys": [
@@ -2505,10 +2390,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U2L2 CSP CFU IP Addresses_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2519,7 +2401,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       },
       "level_keys": [
         "U2L2 CSP CFU IP Addresses_2021"
@@ -2531,10 +2413,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U2L2 CSP CFU IP works_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2545,7 +2424,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       },
       "level_keys": [
         "U2L2 CSP CFU IP works_2021"
@@ -2555,7 +2434,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Internet Simulator",
         "level_keys": [
@@ -2583,10 +2462,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U2L3 CSP CFU Routers_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2597,7 +2473,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       },
       "level_keys": [
         "U2L3 CSP CFU Routers_2021"
@@ -2609,10 +2485,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U2L3 CSP CFU Redundancy_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -2623,7 +2496,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       },
       "level_keys": [
         "U2L3 CSP CFU Redundancy_2021"
@@ -2846,7 +2719,7 @@
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5"
+        "activity_section.key": "4652a86f-e996-47c5-a03e-86572416869d"
       }
     },
     {
@@ -2870,7 +2743,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       }
     },
     {
@@ -2882,7 +2755,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       }
     },
     {
@@ -2906,7 +2779,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       }
     },
     {
@@ -2918,7 +2791,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       }
     },
     {
