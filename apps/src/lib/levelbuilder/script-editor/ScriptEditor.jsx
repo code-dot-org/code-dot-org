@@ -975,10 +975,9 @@ class ScriptEditor extends React.Component {
               <p>
                 Our Professional Learning Courses solicit self-reflections from
                 participants, which are then typically shown to other
-                participants in the enrolled in the course for feedback. This is
-                known as known as "peer review". The instructor of the course
-                also sees these self-reflections and can provide feedback as
-                well.
+                participants enrolled in the course for feedback. This is known
+                as "peer review". The instructor of the course also sees these
+                self-reflections and can provide feedback as well.
                 <br />
                 <br />
                 This setting allows you to collect those same reflections from
