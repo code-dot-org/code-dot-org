@@ -1,6 +1,101 @@
+import React from 'react';
 import moment from 'moment';
+import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import ProgressTableSummaryCell from './ProgressTableSummaryCell';
+import ProgressTableDetailCell from './ProgressTableDetailCell';
+import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
+import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
+import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
-export function timeSpentFormatter(studentProgress) {
+// TODO maureen add comments explaining this
+export function getSummaryCellFormatters(getLessonProgress, onClickLesson) {
+  return [
+    (lesson, student) => (
+      <ProgressTableSummaryCell
+        studentId={student.id}
+        studentLessonProgress={getLessonProgress(lesson, student)}
+        isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
+        onSelectDetailView={() => onClickLesson(lesson.position)}
+      />
+    ),
+    (lesson, student) =>
+      summaryExpandedCellFormatter(
+        lesson,
+        student,
+        timeSpentFormatter,
+        getLessonProgress
+      ),
+    (lesson, student) =>
+      summaryExpandedCellFormatter(
+        lesson,
+        student,
+        lastUpdatedFormatter,
+        getLessonProgress
+      )
+  ];
+}
+
+// TODO maureen add comments explaining this
+export function getDetailCellFormatters(getStudentProgress, section) {
+  return [
+    (lesson, student) => (
+      <ProgressTableDetailCell
+        studentId={student.id}
+        sectionId={section.id}
+        stageExtrasEnabled={section.stageExtras}
+        levels={lesson.levels}
+        studentProgress={getStudentProgress(student)}
+      />
+    ),
+    (lesson, student) =>
+      detailExpandedCellFormatter(
+        lesson,
+        student,
+        timeSpentFormatter,
+        getStudentProgress
+      ),
+    (lesson, student) =>
+      detailExpandedCellFormatter(
+        lesson,
+        student,
+        lastUpdatedFormatter,
+        getStudentProgress
+      )
+  ];
+}
+
+// TODO maureen add comments explaining this
+export function getLevelIconHeaderFormatter(scriptData) {
+  return (_, {columnIndex}) => (
+    <ProgressTableLevelIconSet levels={scriptData.stages[columnIndex].levels} />
+  );
+}
+
+function summaryExpandedCellFormatter(
+  lesson,
+  student,
+  textFormatter,
+  getLessonProgress
+) {
+  const progress = getLessonProgress(lesson, student);
+  return <span style={progressStyles.flex}>{textFormatter(progress)}</span>;
+}
+
+function detailExpandedCellFormatter(
+  lesson,
+  student,
+  textFormatter,
+  getStudentProgress
+) {
+  const studentProgress = getStudentProgress(student);
+  const levelItems = lesson.levels.map(level => ({
+    node: textFormatter(studentProgress[level.id]),
+    sublevelCount: level.sublevels && level.sublevels.length
+  }));
+  return <ProgressTableLevelSpacer items={levelItems} />;
+}
+
+function timeSpentFormatter(studentProgress) {
   if (studentProgress?.timeSpent) {
     const minutes = studentProgress.timeSpent / 60;
     return `${Math.ceil(minutes)}`;
@@ -8,7 +103,7 @@ export function timeSpentFormatter(studentProgress) {
   return missingDataFormatter(studentProgress, 'timeSpent');
 }
 
-export function lastUpdatedFormatter(studentProgress) {
+function lastUpdatedFormatter(studentProgress) {
   if (studentProgress?.lastTimestamp) {
     return moment.unix(studentProgress.lastTimestamp).format('M/D');
   }
