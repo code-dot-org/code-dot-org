@@ -206,6 +206,7 @@ class ScriptOverviewTopRow extends React.Component {
                 {pdfDropdownOptions.map(option => (
                   <a
                     key={option.key}
+                    href={option.url}
                     onClick={() =>
                       this.recordAndNavigateToPdf(option.key, option.url)
                     }
