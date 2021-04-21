@@ -274,9 +274,10 @@ module UsersHelper
   # Summarizes a user's progress on a particular level
   private def get_level_progress(user_level, script_level, paired_user_levels, include_timestamp)
     completion_status = activity_css_class(user_level)
-    locked = user_level.try(:show_as_locked?, script_level.lesson) || script_level.lesson.lockable? && !user_level
+    locked = user_level&.show_as_locked?(script_level.lesson) || script_level.lesson.lockable? && !user_level
 
-    # if the level has not been tried, less progress data is necessary
+    # For levels that are not tried we will either return no progress or a locked status for locked levels.
+    # In either case, we do not need a full set of progress data so we return early here.
     if completion_status == LEVEL_STATUS.not_tried
       return {
         status: completion_status,
@@ -285,16 +286,16 @@ module UsersHelper
     end
 
     # a user_level is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-    submitted = !!user_level.try(:submitted) &&
-      !(user_level.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(user_level.best_result))
+    submitted = !!user_level&.submitted &&
+      !(user_level.level&.peer_reviewable? && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(user_level.best_result))
 
     return {
       status: completion_status,
       locked: locked || nil,
-      result: user_level.try(:best_result) || 0,
+      result: user_level&.best_result || 0,
       submitted: submitted || nil,
-      readonly_answers: !!user_level.try(:readonly_answers) || nil,
-      paired: (paired_user_levels.include? user_level.try(:id)) || nil,
+      readonly_answers: !!user_level&.readonly_answers || nil,
+      paired: (paired_user_levels.include? user_level&.id) || nil,
       last_progress_at: include_timestamp ? user_level&.updated_at&.to_i : nil,
       time_spent: user_level&.time_spent&.to_i
     }.compact
