@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-20 18:29:49 UTC",
+    "serialized_at": "2021-04-21 17:59:29 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -199,15 +199,6 @@
         "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "preparation": "\r\n* Print copies of the Flippy Do Pro, 1 per group\r\n* Scissors",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1mS3KxvxoIR0jJBFi-zDw1HQ5k-fIpI2JaFRyO8gsBD0/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -258,16 +249,7 @@
         "student_overview": "Learn how computers represent black and white images using bits.",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
         "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1uRAvO0FiFpEShSXljmOeNCz4uqbVB9G5mNpzvky5dQM/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Black and White Images",
@@ -316,16 +298,7 @@
         "student_overview": "Learn how computers can decrease the number of bits used to represent a piece of information.",
         "purpose": "As students have been creating images over the last few lessons, the number of bits it takes to represent that information has grown and grown. In this lesson, students are introduced to the concept of compression as a way to address the growing file sizes of all of our information. This lesson is anchored by the Text Compression widget, which is a very hands-on & active widget for students to experiment with. Most of the lesson should be spent in the widget, having students experiment with different strategies for compression and creating a memorable experience to help anchor the concept of compression. Students also watch a video that introduces **lossless** and **lossy compression** - today’s lesson is an example of **lossless compression**, while tomorrow’s lesson is dedicated to **lossy compression**. The widget is just one example of lossless compression and students aren’t expected to master specific compression strategies - instead, they should understand that lossless compression uses less data and still lets them re-create the original information.",
         "preparation": "\r\n* Familiarize yourself with the Text Compression Widget\r\n* Open Unit 1 Slideshow to current lesson\r\n* Plan for how you will display the initial Pitter Patter Message & it's Compressed Message during the warm-up",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1T27X3QE0zjoakeRIRwdba-xKfTXb3-nC0cnb0Wtdgks/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lossless Compression",
@@ -345,16 +318,7 @@
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost.",
         "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
         "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information/csp/2021] ready for the discussion towards the end of the lesson\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1_sbw1zXbQa2_ZJkN20PrijCdIxLCxys_cYFPj1kYND0/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lossy Compression",
@@ -825,18 +789,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a11b3d5c-48db-4d9d-9dfd-ee837ad0236f",
-        "lesson.key": "Black and White Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "key": "a50bcd72-7f45-4043-a6eb-449b77e59256",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a50bcd72-7f45-4043-a6eb-449b77e59256",
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021"
@@ -2044,13 +1996,7 @@
       "key": "26421fa6-b7f9-440a-b97a-7a79686aec0c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** Imagine you work at a local store. In the register all you have are nine $10 bills, nine $1 bills, and nine dimes.\n\n* What’s the largest amount of change that you can give someone? \n* What’s the least? \n* What would you do if someone needed 7 cents in change?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Today we’re going to explore what happens when you don’t have the right “places” to store information. This can happen when you try to store very large numbers, very small ones, and everything in-between! The goal of the prompt is to understand the very real problem of making sure that enough place values are available to represent numbers. \n\n* The largest amount of change you can give someone is $99.90. \n* The least change you can give is $0.10. \n* You can’t give someone $0.07. You also can’t give someone $1.25 in change (because you have no nickels!) \n \nAt both extremes of the number range, large and small -- and in between numbers -- you are unable to build some numbers because you don’t have the place values to do so.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you work at a local store. In the register all you have are nine $10 bills, nine $1 bills, and nine dimes.*\n\n* *What’s the largest amount of change that you can give someone?* \n* *What’s the least?* \n* *What would you do if someone needed 7 cents in change?*\n\n**Discussion Goal:** Today we’re going to explore what happens when you don’t have the right “places” to store information. This can happen when you try to store very large numbers, very small ones, and everything in-between! The goal of the prompt is to understand the very real problem of making sure that enough place values are available to represent numbers. \n\n* The largest amount of change you can give someone is $99.90. \n* The least change you can give is $0.10. \n* You can’t give someone $0.07. You also can’t give someone $1.25 in change (because you have no nickels!) \n \nAt both extremes of the number range, large and small -- and in-between numbers -- you are unable to build some numbers because you don’t have the place values to do so.\n"
       },
       "seeding_key": {
         "activity_section.key": "26421fa6-b7f9-440a-b97a-7a79686aec0c",
@@ -2069,20 +2015,8 @@
       }
     },
     {
-      "key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4",
-      "position": 2,
-      "properties": {
-        "name": "Odometer Activity",
-        "progression_name": "Odometer Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4",
-        "lesson_activity.key": "6ce45546-2b83-44a0-91fa-37034bc87fab"
-      }
-    },
-    {
       "key": "4138d22b-ca45-4ad2-bcda-31f4aa6d3dc1",
-      "position": 3,
+      "position": 2,
       "properties": {
         "remarks": true,
         "description": "We will start exploring large place values to see what happens when a big number gets too big. Go to the Binary Odometer Widget on Level 2 of the lesson on Code Studio.This is a widget that simulates a car odometer - a device that tracks how far the car has driven (in miles or kilometers). Explore the odometer to understand how it works.",
@@ -2091,7 +2025,9 @@
             "type": "teachingTip",
             "markdown": "Students will tackle the problem of “running out of place values” when counting to bigger and bigger numbers. They will play with a digital odometer widget to explore what happens when you add one to the largest number you can represent in a number system.\n"
           }
-        ]
+        ],
+        "name": "Odometer Activity",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "4138d22b-ca45-4ad2-bcda-31f4aa6d3dc1",
@@ -2100,9 +2036,10 @@
     },
     {
       "key": "cae0af79-f7c4-48c9-b1e2-fc7935068662",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Navigate to Level 2. Play with the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and playwith the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
+        "progression_name": "Widget: Binary Odometer"
       },
       "seeding_key": {
         "activity_section.key": "cae0af79-f7c4-48c9-b1e2-fc7935068662",
@@ -2111,7 +2048,7 @@
     },
     {
       "key": "44ad24a1-9a1d-41cd-b069-2cecb9c34742",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "Now I'm going to give you a challenge to tackle with the Binary Odometer. Write your response in your journals.",
         "remarks": true
@@ -2123,9 +2060,9 @@
     },
     {
       "key": "a8b1daed-0ee9-4dee-a06c-a85e915c6e3e",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Set the binary odometer to the highest number possible. Then let it run!"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to set the binary odometer to the highest number possible. Then let it run!"
       },
       "seeding_key": {
         "activity_section.key": "a8b1daed-0ee9-4dee-a06c-a85e915c6e3e",
@@ -2134,15 +2071,9 @@
     },
     {
       "key": "1067acf7-c8d4-43b7-a676-678d34db0a57",
-      "position": 7,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* What happens to the odometer reading?\n* Does the odometer still show the distance driven by the car?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* *What happens to the odometer reading?*\n* *Does the odometer still show the distance driven by the car?*\n\n\n**Discussion Goal:** When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n"
       },
       "seeding_key": {
         "activity_section.key": "1067acf7-c8d4-43b7-a676-678d34db0a57",
@@ -2151,11 +2082,12 @@
     },
     {
       "key": "a71aae55-6d99-498d-a6fa-4c729901e49e",
-      "position": 8,
+      "position": 7,
       "properties": {
-        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy_do_pro/csp/2021]",
+        "description": "Now let's look at the limits of our Flippy Do when it comes to overflow.",
         "remarks": true,
-        "name": "Flippy Do Pro"
+        "name": "More Flippy Do Practice",
+        "duration": "5"
       },
       "seeding_key": {
         "activity_section.key": "a71aae55-6d99-498d-a6fa-4c729901e49e",
@@ -2163,27 +2095,10 @@
       }
     },
     {
-      "key": "5c7227a7-de8c-4de0-a37f-517a32e5034e",
-      "position": 9,
-      "properties": {
-        "description": "**Distribute:** Provide each group with a copy of the Flippy Do Pro Template and scissors."
-      },
-      "seeding_key": {
-        "activity_section.key": "5c7227a7-de8c-4de0-a37f-517a32e5034e",
-        "lesson_activity.key": "6ce45546-2b83-44a0-91fa-37034bc87fab"
-      }
-    },
-    {
       "key": "889eb94f-c896-4455-b616-c21511dd120d",
-      "position": 10,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Cut and fold your Flippy Do Pro following the guidance on the slide. Fill out all the numbers if they are not already done.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "* The Flippy Do Pro is still using 8 bits to represent a number. But this time, the place value of each bit has been assigned in a different way than in the previous Flippy Do or on the Binary Odometer. The bits have been \"shifted\" to the right two times. The value 1 (2^0) is no longer the smallest place value. The value of a bit just to the right of 1 (2^0) is 0.5, which is 2^-1. The value to the right again is 0.25 which is 2^-2.\n\n* Students may struggle with negative exponents. What's more important than emphasizing the math is emphasizing the pattern of place values in the Flippy Do Pro. As you move left, the place value doubles. As you move right, the place value halves. \n\n* Help students see that using the Flippy Do Pro is similar to using the Flippy Do. To form a value, flip the flaps up or down at the bottom of the device to create a sequence of zeros and ones. Note that the range of place values is limited by the largest bit value, 2^5 which is 32, and the smallest bit value, 2^-2 which is 0.25. As with the Flippy Do, adding together all the values for each place value containing a \"1\" produces the total value represented on the Flippy Do Pro. \n\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What value would cause your Flippy Do to overflow?*\n\n* *What adaptation could you make to the Flippy Do to represent that value?*\n\n* *Using your newly adapted Flippy Do, how many total numbers can be represented?*\n\n**Discussion Goal:** Look for students to physically model overflow using the Flippy Do, going from when all of the 1s are flipped up to the next number causing all the 1s to reset to 0s."
       },
       "seeding_key": {
         "activity_section.key": "889eb94f-c896-4455-b616-c21511dd120d",
@@ -2191,29 +2106,13 @@
       }
     },
     {
-      "key": "b7e5ac97-91f1-4fe6-a08a-9f364af5c9d1",
-      "position": 11,
-      "properties": {
-        "description": "The Flippy Do Pro is similar to the one you made before. But this time, the Flippy Do Pro is already filled with binary place values assigned in a different way -- they include fractions.When using the Flippy Do Pro, the numbers on the left-hand side of the line are whole numbers and those on the right-hand side of the line are fractional numbers.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "When referring to the Flippy Do Pro, we are using a vertical line to indicate the difference between the fractional part and the whole part of a number being represented.  Using language in a clear way can be tricky for this lesson because “decimal” can mean different things to students.  For example, students frequently refer to a number as a “decimal” if it isn’t a whole number (ex. Students may call “1.23” a “decimal”) but here we want to stick with students thinking as a decimal number to be a “base 10” number.  Therefore, we avoid using the word “decimal point” in the Flippy Do Pro and instead talk about the fractional part of the number and the whole part of the number.   The purpose of doing this is to maintain using \"decimal\" to only refer to a \"base 10\" number.  For your own personal knowledge, you can read more about \"decimal points\" and \"binary points\" on [Wikipedia](https://en.wikipedia.org/wiki/Radix_point).\n"
-          }
-        ],
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b7e5ac97-91f1-4fe6-a08a-9f364af5c9d1",
-        "lesson_activity.key": "6ce45546-2b83-44a0-91fa-37034bc87fab"
-      }
-    },
-    {
       "key": "a559bf19-262b-4294-97b5-879389d5ced9",
-      "position": 12,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #1 - Smallest Non-Zero Number:** Produce the smallest non-zero binary number possible with the Flippy Do Pro.\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The smallest binary number students produce is `000000.01` and this number has a decimal value of `0.25`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #2 - Next Value:** Increase the number made in Challenge #1 to the next possible value. \n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The binary number students produce is `000000.10` and this number has a decimal value of `0.50`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #3 - Got Quarters?** Make the values 0.25, 0.50, and 0.75 one after another. \n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The binary numbers students produce are `000000.01`, `000000.10`, `000000.11`. Note the pattern of changing a place value from 1 to 0 and then \"carrying\" the one. \n    \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #4 - Can't Make Change:** Make all the fractional possible in binary using the Flippy Do Pro. \n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are no new values besides those made in Challenge #3 because there are no place values for representing other fractions. \n* Note, if students need a concrete example for Challenge #4, have them try to make 39 cents in binary. It can't be done with the values they have available in the Flippy Do Pro.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #5 - Largest Number:** What is the largest number (in decimal) you can make with the Flippy Do Pro?\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> With all of the bits flipped to 1, the largest number you can make is 63.75. Note that this is smaller than the largest you can make with a traditional Flippy Do, which is 255. This is because we have shifted two bits to represent smaller numbers (0.5 & 0.25). \n\n    \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #6 - How Much Pie:**\n\nChallenge 6 contains a number of slides. Preview these slides before class to understand when to click through to the next slide. \n\nThis challenge is contained on a series of slides. Students use a Flippy Do Pro to determine how much pie is left at the end of dessert. With each slide, allow time for students to decide how to represent the amount of pie left as a binary number, then convert that to decimal and write it down in the journal. In this challenge it is expected that students will estimate and do some rounding when determining how much pie is left. \n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Add all the decimal numbers up together. Compare with a partner and discuss. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the example of one possible answer. Click to the next slide to show these totals added together.",
-        "name": "Flippy Do Pro Challenges"
+        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? \n\n",
+        "name": "Candy Shop Challenge",
+        "duration": "15",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a559bf19-262b-4294-97b5-879389d5ced9",
@@ -2222,10 +2121,15 @@
     },
     {
       "key": "7dd34f31-c90e-4a4a-afc8-97b208078550",
-      "position": 13,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In our final challenge, your answer may be different than your classmates. It comes down to how you rounded - did you decide to round up or round down with the various amounts of pie. If we did not have to round, the answer would be exactly one pie left over. You may have come to the same conclusion by rounding - or not!",
-        "remarks": true
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Add all the decimal numbers up together. Compare with a partner and discuss. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the example of one possible answer. Click to the next slide to show these totals added together.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "* The Flippy Do Pro is still using 8 bits to represent a number. But this time, the place value of each bit has been assigned in a different way than in the previous Flippy Do or on the Binary Odometer. The bits have been \"shifted\" to the right two times. The value 1 (2^0) is no longer the smallest place value. The value of a bit just to the right of 1 (2^0) is 0.5, which is 2^-1. The value to the right again is 0.25 which is 2^-2.\n\n* Students may struggle with negative exponents. What's more important than emphasizing the math is emphasizing the pattern of place values in the Flippy Do Pro. As you move left, the place value doubles. As you move right, the place value halves. \n\n* Help students see that using the Flippy Do Pro is similar to using the Flippy Do. To form a value, flip the flaps up or down at the bottom of the device to create a sequence of zeros and ones. Note that the range of place values is limited by the largest bit value, 2^5 which is 32, and the smallest bit value, 2^-2 which is 0.25. As with the Flippy Do, adding together all the values for each place value containing a \"1\" produces the total value represented on the Flippy Do Pro. \n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7dd34f31-c90e-4a4a-afc8-97b208078550",
@@ -2234,13 +2138,17 @@
     },
     {
       "key": "2ae35bc7-9480-465a-81a2-5e5cfc6c85bc",
-      "position": 14,
+      "position": 11,
       "properties": {
         "description": "**Prompt:** Why is it a problem for a computer if your answers are different than others?",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "**Goal:** Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.  \n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "For your own personal knowledge, you can read more about \"decimal points\" and \"binary points\" on [Wikipedia](https://en.wikipedia.org/wiki/Radix_point)."
           }
         ]
       },
@@ -2254,13 +2162,7 @@
       "position": 1,
       "properties": {
         "description": "The most important takeaway from this lesson is to understand that bits can represent a limited amount of information.",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \n"
-          }
-        ]
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "22b76b87-96ea-4081-866c-5c7e7f88f8db",
@@ -2271,7 +2173,7 @@
       "key": "7af435e3-5798-4ca6-940b-e70afe0257e8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** \r\n\r\n* What does the binary odometer show about representing large numbers?\r\n* What does the Flippy Do Pro show about representing very small numbers?\r\n* If we had a big enough odometer or Flippy Do Pro, could we represent every possible number? \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: Overflow Error and Round-off Error. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does the binary odometer show about representing large numbers?*\n* *If we had a big enough odometer or Flippy Do, could we represent every possible number?*\n\n**Discussion Goal:** As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \n \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: Overflow Error and Round-off Error. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "7af435e3-5798-4ca6-940b-e70afe0257e8",
@@ -2282,33 +2184,12 @@
       "key": "a9aab21e-130f-483e-b631-f6711e6c0ffa",
       "position": 3,
       "properties": {
-        "name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "a9aab21e-130f-483e-b631-f6711e6c0ffa",
-        "lesson_activity.key": "37954a3f-a2d6-4a8c-a486-ae29352e1bf2"
-      }
-    },
-    {
-      "key": "338e10b1-c620-4f78-8b4b-7bd5499e3992",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding",
+        "name": "Assessment",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Modern car odometers record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading?\n\n**Question:** When using bits to represent fractions of a number, can you create all possible fractions? Why or why not?",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992",
-        "lesson_activity.key": "37954a3f-a2d6-4a8c-a486-ae29352e1bf2"
-      }
-    },
-    {
-      "key": "4e85ec77-32de-435a-b9e0-90532268827d",
-      "position": 5,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Modern car odometers record up to a million miles driven. What happens to the odometer reading when a car drives beyond its maximum reading?\n\n**Question:** When using bits to represent fractions of a number, can you create all possible fractions? Why or why not?"
-      },
-      "seeding_key": {
-        "activity_section.key": "4e85ec77-32de-435a-b9e0-90532268827d",
+        "activity_section.key": "a9aab21e-130f-483e-b631-f6711e6c0ffa",
         "lesson_activity.key": "37954a3f-a2d6-4a8c-a486-ae29352e1bf2"
       }
     },
@@ -2607,20 +2488,10 @@
       }
     },
     {
-      "key": "e013fc58-74c1-4062-b972-19a9db053c6f",
+      "key": "48953751-55f1-4493-a8fd-6c7784f7bcdd",
       "position": 1,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e013fc58-74c1-4062-b972-19a9db053c6f",
-        "lesson_activity.key": "a3a205b3-b5f0-41b3-90ba-406bd2c0ad98"
-      }
-    },
-    {
-      "key": "48953751-55f1-4493-a8fd-6c7784f7bcdd",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  ** Prompt:**  You recently did some online shopping and are expecting a package to arrive in about a month.  The delivery service has a tracking system which reads the location of the package.\r\n\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**  *You recently did some online shopping and are expecting a package to arrive in about a month.  The delivery service has a tracking system which reads the location of the package.*\n* *How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.*\n"
       },
       "seeding_key": {
         "activity_section.key": "48953751-55f1-4493-a8fd-6c7784f7bcdd",
@@ -2629,9 +2500,9 @@
     },
     {
       "key": "26aeeba5-74fa-4ac3-a6e2-504dcfad27b6",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "* How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.\n\n**Discuss:**  Students should think for a minute, then share with a partner.  Once students have shared, call on a few students to explain their answers with the class.\n\n**Discussion Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. "
+        "description": "\n\nStudents should think for a minute, then share with a partner.  Once students have shared, call on a few students to explain their answers with the class.\n\n**Discussion Goal:** The goal here is for students to realize that, depending on the situation, we may want to take readings more frequently.  Later in the lesson, as students interact with the widget, you can help students make connections that the frequency of readings affects the digital representation that we obtain. "
       },
       "seeding_key": {
         "activity_section.key": "26aeeba5-74fa-4ac3-a6e2-504dcfad27b6",
@@ -2640,7 +2511,7 @@
     },
     {
       "key": "cc866225-659a-4f8e-8b49-daf0bf1e7f11",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Thank you for sharing your insights.  It seems to depend on the situation.  Sometimes we want to take a reading of the location more frequently.  Today, we’re actually learning about how images are represented in computers, but let’s keep in mind these ideas about how often to take a reading or measurement.",
         "remarks": true
@@ -2656,8 +2527,14 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
         "name": "Intro to the Pixelation Widget",
-        "progression_name": "Pixelation Widget Video ",
-        "duration": "10"
+        "progression_name": "Video: Intro to Pixelation Encoding B&W",
+        "duration": "10",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note:** The video displays an old version of the Pixelation Widget. In the version your students will use, they no longer need to set the width and height using binary numbers - they can use the slider at the top. They may also note that the width and height is not displayed in their work space in binary numbers.\n\nAlso, while the video uses the word \"metadata\" to describe this information, students do not need to leave this lesson understanding metadata. Metadata will be covered in a later lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "69b3138b-1d10-476a-9142-eca8dcb65a34",
@@ -2694,11 +2571,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Note:** The video displays an old version of the Pixelation Widget. In the version your students will use, they no longer need to set the width and height using binary numbers - they can use the slider at the top. They may also note that the width and height is not displayed in their work space in binary numbers. \n"
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "**Getting Familiar with the Pixelation Widget:** Once most of the class has finished levels 3 and 4, you can move on.  Encourage students who are finished to help those who haven’t.  The point of these two levels is to get students familiar with the tool and practice entering the bits.\n"
+            "markdown": "**Getting Familiar with the Pixelation Widget:** Once most of the class has finished levels 2 and 3, you can move on.  Encourage students who are finished to help those who haven’t.  The point of these two levels is to get students familiar with the tool and practice entering the bits.\n"
           }
         ]
       },
@@ -2713,7 +2586,8 @@
       "properties": {
         "description": "Now that you’ve had a chance to see how to set each pixel black or white, we are going to use the widget to represent an analog image using a process called sampling. \r\n\r\nWhat is an analog? It's a term used to mean something with continuous representation - such as a picture you draw on a piece of paper. Each pencil line smoothly connects to the next, no matter how much you zoomed in on the picture with a magnifying glass. \r\n\r\nWhen we represent an analog image digitally, we will have to make some choices on how to sample the image to get the smoothest representation possible while keeping in mind the number of bits it takes to build that image. \r\n\r\nWhat does it mean to sample? We are choosing how small to make section of the picture we look at when deciding whether to make it black or white. The smaller the sample, the more pixels required to represent that image. Larger samples require less pixels, but the image can become blurry. \r\n\r\nTry it out yourself!",
         "remarks": true,
-        "name": "Sampling an Analog Image (20 mins)\r"
+        "name": "Sampling an Analog Image",
+        "duration": "20"
       },
       "seeding_key": {
         "activity_section.key": "c41786c5-ac77-4926-8f85-c56ee10e7165",
@@ -2754,7 +2628,8 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 6.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
-        "name": "Challenge C\r"
+        "name": "Challenge C\r",
+        "progression_name": "Sampling an Analog Image"
       },
       "seeding_key": {
         "activity_section.key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27",
@@ -2806,16 +2681,6 @@
       "seeding_key": {
         "activity_section.key": "0296ad0d-e598-4946-8ae2-74a2152173cf",
         "lesson_activity.key": "a11b3d5c-48db-4d9d-9dfd-ee837ad0236f"
-      }
-    },
-    {
-      "key": "f00743a1-a145-4205-8393-e7767b9f04b2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f00743a1-a145-4205-8393-e7767b9f04b2",
-        "lesson_activity.key": "a50bcd72-7f45-4043-a6eb-449b77e59256"
       }
     },
     {
@@ -3101,7 +2966,7 @@
       "key": "dc8c48f7-8857-47bf-9562-728eaeaa46d4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** This list represents several common abbreviations used in text messages. What other abbreviations could you add to this list?\r\n\r\n* lol\r\n* ty\r\n* c u soon"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list additional abbreviations they might use in their daily lives."
       },
       "seeding_key": {
         "activity_section.key": "dc8c48f7-8857-47bf-9562-728eaeaa46d4",
@@ -3112,13 +2977,7 @@
       "key": "e91199a7-547d-4bab-9eed-9d031af107d5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** Why might we use abbreviations when sending messages? What are the advantages?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why might we use abbreviations when sending messages? What are the advantages?*\n\n**Discussion Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\n"
       },
       "seeding_key": {
         "activity_section.key": "e91199a7-547d-4bab-9eed-9d031af107d5",
@@ -3153,7 +3012,7 @@
       "key": "6386f186-dc49-44fc-b672-a31d5681e587",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** How is this message the same as the first? What actually gets sent to my friend?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **DIscuss:** *How is this message the same as the first? What actually gets sent to my friend?*\n\n**Discussion Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message."
       },
       "seeding_key": {
         "activity_section.key": "6386f186-dc49-44fc-b672-a31d5681e587",
@@ -3165,13 +3024,7 @@
       "position": 4,
       "properties": {
         "description": "Using abbreviations and symbols is a form of **compression**, where we try to represent the same information with fewer characters. The original message had 93 characters, but the new message and key, also called a dictionary, have a total of 56 characters. We’re essentially sending the same information, but with fewer characters. Our goal today will be to create our own text compressions using similar methods.",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message.\n\n\n\n"
-          }
-        ]
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "b58fd301-e04e-4b81-880c-afc181b02efc",
@@ -3229,7 +3082,7 @@
       "key": "c1f735a3-8494-451d-adb1-80722aa6a34e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What strategies are you using to compress your sample text? Which ones seem most successful?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students."
       },
       "seeding_key": {
         "activity_section.key": "c1f735a3-8494-451d-adb1-80722aa6a34e",
@@ -3277,10 +3130,6 @@
         "description": "We’re starting to reach the ‘limit’ for how much we can compress this particular message. But not every message can be compressed with a high rating. We’re going to investigate what makes some messages more compressible than others.",
         "remarks": true,
         "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.\n"
-          },
           {
             "type": "teachingTip",
             "markdown": "**Competitions:** You could incorporate a peer-to-peer competition (in small groups or as a full class) to get the ‘highest’ rating, but that can be isolating for students and suggests there is a single ‘best’ way to do this. An alternate strategy is: when students start for the second time, have them compete against themselves to beat their rating during the first 4 minutes. In this way, success is measured by personal growth and has a higher chance of letting every student feel successful.\n\n**Starting Over:** When solving computational problems, it can sometimes be helpful to restart completely from the beginning. This activity may be a good place to suggest this to students, especially those that feel particularly stuck or frustrated - sometimes restarting from the very beginning surfaces new ideas and strategies that we didn’t see before.\n"
@@ -3337,13 +3186,7 @@
       "key": "1ecb7e45-0259-4195-a200-901f7a5d5d55",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal: **\r\n\r\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\r\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\r\n\r\n\r\n"
-          }
-        ],
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?*\n\n**Discussion Goal:**\n\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\n\n\n",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -3414,13 +3257,7 @@
       "key": "93ce622a-51d8-4c01-8e6a-f5cb873cf889",
       "position": 3,
       "properties": {
-        "description": "**Prompt:** How is this widget similar to the widget we used yesterday? How is it different?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should identify that this widget is similar to yesterday’s text compression widget because it also shortens text, but it is different in that some of the information is permanently lost when it is shortened. You can emphasize this point by supplying some carefully-chosen sample text and seeing that the results can be ambiguous:\r\n\r\n* “there are three tiers of tires at the shop”\r\n\r\nStudents may debate whether or not this really fits the definition of compression we saw yesterday, which is a great bridge to the next part of the lesson.\r\n"
-          }
-        ]
+        "description": "**Discuss:** *How is this widget similar to the widget we used yesterday? How is it different?*\n\n**Discussion Goal:** Students should identify that this widget is similar to yesterday’s text compression widget because it also shortens text, but it is different in that some of the information is permanently lost when it is shortened. You can emphasize this point by supplying some carefully chosen sample text and seeing that the results can be ambiguous:\n\n* “there are three tiers of tires at the shop”\n\nStudents may debate whether or not this really fits the definition of compression we saw yesterday, which is a great bridge to the next part of the lesson.\n"
       },
       "seeding_key": {
         "activity_section.key": "93ce622a-51d8-4c01-8e6a-f5cb873cf889",
@@ -3513,7 +3350,7 @@
       "key": "d11d7017-7138-41cf-b217-913ed89c3f44",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess the image."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess\n\n**Discussion Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n the image."
       },
       "seeding_key": {
         "activity_section.key": "d11d7017-7138-41cf-b217-913ed89c3f44",
@@ -3538,10 +3375,6 @@
       "position": 9,
       "properties": {
         "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n"
-          },
           {
             "type": "teachingTip",
             "markdown": "This activity emphasizes that there is a balancing act between compressing an image while making sure it is still recognizable, and students are trying to find where this balance is for their particular image. Sharing results with the class is a way for students to see a wide variety of images and compressions before the next class discussion. There are many ways to structure this share-out, but here are a few options:\n\n**Gallery Walk:** Have students circulate around the room. On a post-it note, they should write down what they think the original image is and leave the note on each computer they visit\n\n**Screen Sharing:** If students have a way to share their screen with the rest of the class, students can volunteer to have their screen projected for the rest of the class.\n"
@@ -3586,7 +3419,7 @@
       "key": "f75b1330-f572-4c5a-82de-8cb90c8b8a84",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n1. *When is it a good idea to use lossless compression?* \n2. *When should you use lossy compression?* \n3. *What are the important factors in making that decision?*\n\n**Discussion Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)"
       },
       "seeding_key": {
         "activity_section.key": "f75b1330-f572-4c5a-82de-8cb90c8b8a84",
@@ -3594,19 +3427,8 @@
       }
     },
     {
-      "key": "3e644107-f19c-42d7-995b-89aa0b43bfd9",
-      "position": 2,
-      "properties": {
-        "description": "1. When is it a good idea to use lossless compression? \r\n2. When should you use lossy compression? \r\n3. What are the important factors in making that decision?"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e644107-f19c-42d7-995b-89aa0b43bfd9",
-        "lesson_activity.key": "21d2fd87-efb6-4415-b753-98e8d54489ad"
-      }
-    },
-    {
       "key": "422fb058-40b8-4580-82e1-fdb6fa83bb53",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "We’ve seen today that lossy compression can greatly reduce file size, but can also reduce the quality of the image. Finding that balance is important, especially when the size of your file is a concern. But, if you need to recreate an exact copy of the original, then lossless compression is a better choice.",
         "remarks": true
@@ -3618,15 +3440,9 @@
     },
     {
       "key": "2a6689df-ace8-42f6-8e05-0b27b687bdcd",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)\n\n\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2a6689df-ace8-42f6-8e05-0b27b687bdcd",
@@ -3635,7 +3451,7 @@
     },
     {
       "key": "58de57a3-27d7-489f-b885-7c7891630504",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "---"
       },
@@ -3646,9 +3462,9 @@
     },
     {
       "key": "141382b4-d9b9-4456-8203-34fe806fcdeb",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Choose all that match this question: Which of the following describe lossy compression?\r\n\r\n**Question:** You’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** You’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
         "name": "Assessment: Check For Understanding\r",
         "progression_name": "Check For Understanding"
       },
@@ -4577,12 +4393,9 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Odometer Activity",
-        "level_keys": [
-          "Widget: Binary Odometer_2021"
-        ]
+        "progression": "Widget: Binary Odometer"
       },
       "named_level": null,
       "bonus": null,
@@ -4593,7 +4406,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4"
+        "activity_section.key": "cae0af79-f7c4-48c9-b1e2-fc7935068662"
       },
       "level_keys": [
         "Widget: Binary Odometer_2021"
@@ -4605,10 +4418,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L6 CFU beyond odometer_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4619,7 +4429,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
+        "activity_section.key": "a9aab21e-130f-483e-b631-f6711e6c0ffa"
       },
       "level_keys": [
         "U1L6 CFU beyond odometer_2021"
@@ -4631,10 +4441,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L6 CFU representing fractions_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4645,7 +4452,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
+        "activity_section.key": "a9aab21e-130f-483e-b631-f6711e6c0ffa"
       },
       "level_keys": [
         "U1L6 CFU representing fractions_2021"
@@ -4683,7 +4490,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget Video ",
+        "progression": "Video: Intro to Pixelation Encoding B&W",
         "level_keys": [
           "U1 L9 Introduction to Pixelation_2021"
         ]
@@ -4735,10 +4542,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W",
-        "level_keys": [
-          "U1L9 Pixelation Widget Fix bit offset_2021"
-        ]
+        "progression": "Pixelation Widget: B&W"
       },
       "named_level": null,
       "bonus": null,
@@ -4758,13 +4562,10 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W",
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge a_2021"
-        ]
+        "progression": "Sampling an Analog Image"
       },
       "named_level": null,
       "bonus": null,
@@ -4775,7 +4576,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
+        "activity_section.key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge a_2021"
@@ -4784,13 +4585,10 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W",
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge B_2021"
-        ]
+        "progression": "Sampling an Analog Image"
       },
       "named_level": null,
       "bonus": null,
@@ -4801,7 +4599,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
+        "activity_section.key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge B_2021"
@@ -4810,13 +4608,10 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W",
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge C_2021"
-        ]
+        "progression": "Sampling an Analog Image"
       },
       "named_level": null,
       "bonus": null,
@@ -4827,7 +4622,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
+        "activity_section.key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27"
       },
       "level_keys": [
         "U1L9 Pixelation Widget challenge C_2021"
@@ -5149,7 +4944,7 @@
       "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Text Compression",
         "level_keys": [
@@ -5175,7 +4970,7 @@
       "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Text Compression Widget with Aloe Blacc",
         "level_keys": [
@@ -5253,7 +5048,7 @@
       "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Lossy Compression Widget",
         "level_keys": [
@@ -5279,7 +5074,7 @@
       "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Lossy Compression Widget",
         "level_keys": [
@@ -5562,7 +5357,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "ac4f114a-d4fd-4b82-931c-9c8ddafaa0f4"
+        "activity_section.key": "cae0af79-f7c4-48c9-b1e2-fc7935068662"
       }
     },
     {
@@ -5574,7 +5369,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
+        "activity_section.key": "a9aab21e-130f-483e-b631-f6711e6c0ffa"
       }
     },
     {
@@ -5586,7 +5381,7 @@
         "lesson.key": "Overflow and Rounding",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "338e10b1-c620-4f78-8b4b-7bd5499e3992"
+        "activity_section.key": "a9aab21e-130f-483e-b631-f6711e6c0ffa"
       }
     },
     {
@@ -5646,7 +5441,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
+        "activity_section.key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27"
       }
     },
     {
@@ -5658,7 +5453,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
+        "activity_section.key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27"
       }
     },
     {
@@ -5670,7 +5465,7 @@
         "lesson.key": "Black and White Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "fac44189-98c2-4812-82ca-01c532e51a14"
+        "activity_section.key": "9bb1fd7f-46a5-4e0b-8a8a-4789487a2b27"
       }
     },
     {
@@ -6112,18 +5907,6 @@
       }
     },
     {
-      "name": "Flippy Do Pro",
-      "url": "https://drive.google.com/a/code.org/file/d/1VpZH4E2c5fR-g2fBMggd4-pz8GNRxxwZ/view?usp=sharing",
-      "key": "flippy_do_pro",
-      "properties": {
-        "type": "Template",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "flippy_do_pro"
-      }
-    },
-    {
       "name": "ASCII Reference Sheet",
       "url": "https://docs.google.com/document/d/15pgXcGUX7XbAAGBkHfXMMLFwDP5cTKKZ-zFIfFKu9FQ/edit",
       "key": "ascii-reference-sheet",
@@ -6403,12 +6186,6 @@
       "seeding_key": {
         "lesson.key": "Overflow and Rounding",
         "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "resource.key": "flippy_do_pro"
       }
     },
     {
