@@ -16,7 +16,6 @@ import {
 const TITLE = '1';
 
 const defaultProps = {
-  levelId: '1',
   levelStatus: LevelStatus.not_tried,
   levelKind: LevelKind.level,
   isDisabled: false,

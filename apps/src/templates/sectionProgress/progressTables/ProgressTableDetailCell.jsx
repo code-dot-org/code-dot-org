@@ -63,7 +63,6 @@ export default class ProgressTableDetailCell extends React.Component {
               onClick={_ => this.recordBubbleClick(sublevel.id)}
             >
               <ProgressTableLevelBubble
-                levelId={sublevel.id}
                 levelStatus={subStatus}
                 bubbleSize={progressStyles.BubbleSize.letter}
                 isBonus={sublevel.bonus}
