@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 22:04:52 UTC",
+    "serialized_at": "2021-04-21 16:56:36 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -2054,7 +2054,7 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Cleaning Data",
         "level_keys": [
@@ -2080,12 +2080,12 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Filtering Data",
         "level_keys": [
           "CSP U9L3 Data Filtering_2021"
-        ],
-        "progression": "Filtering Data"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2472,6 +2472,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 9 AP-Style Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
