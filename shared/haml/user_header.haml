@@ -1,6 +1,7 @@
 -# Locals: current_user, loc_prefix, [session_pairings], level
 :ruby
   require 'cdo/create_header'
+  require 'cdo/language_dir'
   limit_project_types = request.cookies["_limit_project_types_#{rack_env}"]
 
   level = defined?(local_assigns) ?
