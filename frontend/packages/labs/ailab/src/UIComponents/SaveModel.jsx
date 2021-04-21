@@ -30,7 +30,9 @@ class SaveModel extends Component {
   }
 
   toggleColumnDescriptions = () => {
-    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions})
+    this.setState({
+      showColumnDescriptions: !this.state.showColumnDescriptions
+    });
   };
 
   handleChange = (event, field, isColumn) => {
@@ -41,8 +43,8 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
-      const columnType = columnDescription.id === this.props.labelColumn
-        ? "label" : "feature";
+      const columnType =
+        columnDescription.id === this.props.labelColumn ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -51,19 +53,31 @@ class SaveModel extends Component {
       });
     }
     return fields;
-  }
+  };
 
   getUsesFields = () => {
     var fields = [];
     fields.push({
       id: "potentialUses",
-      text: "How can this model be used?",
+      text: "Intended Use",
+      description:
+        "Describe the problem you think this model could help solve, or one potential app someone could make with this model.",
       placeholder: "Write a brief description."
     });
     fields.push({
       id: "potentialMisuses",
-      text: "How can this model be potentially misused?",
-      description: "Consider whether this model was trained on data that can identify subgroups, whether the data has adequate representation of subgroups, and whether this data could be used to inform decisions central to human life.",
+      text: "Warnings",
+      description: (
+        <span>
+          Describe any situations where this model could potentially be misused,
+          or any places where bias could potentially show up in the model.
+          Important questions to consider are:
+          <ul style={{margin: 0}}>
+            <li> Is there enough data to create an accurate model?</li>
+            <li>Does the data represent all possible users and scenarios?</li>
+          </ul>
+        </span>
+      ),
       placeholder: "Write a brief description."
     });
 
@@ -79,12 +93,14 @@ class SaveModel extends Component {
     const dataDescriptionField = {
       id: "datasetDescription",
       text: "Describe the dataset.",
-      placeholder: "How was the data collected? Who collected it? When was it collected?",
+      placeholder:
+        "How was the data collected? Who collected it? When was it collected?",
       answer: this.props.dataDescription
     };
 
     const arrowIcon = this.state.showColumnDescriptions
-      ? 'fa fa-caret-up' : 'fa fa-caret-down';
+      ? "fa fa-caret-up"
+      : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
 
@@ -124,7 +140,7 @@ class SaveModel extends Component {
             </div>
             <div>
               <span onClick={this.toggleColumnDescriptions}>
-                <i className={arrowIcon}/>
+                <i className={arrowIcon} />
                 <span> Column Descriptions ({columnCount})</span>
               </span>
               {this.state.showColumnDescriptions && (
@@ -138,15 +154,17 @@ class SaveModel extends Component {
                             <textarea
                               rows="1"
                               onChange={event =>
-                                this.handleChange(event, field.id, field.isColumn)
+                                this.handleChange(
+                                  event,
+                                  field.id,
+                                  field.isColumn
+                                )
                               }
                               placeholder={field.placeholder}
                             />
                           </div>
                         )}
-                        {field.answer && (
-                          <div>{field.answer}</div>
-                        )}
+                        {field.answer && <div>{field.answer}</div>}
                       </div>
                     );
                   })}
@@ -171,9 +189,7 @@ class SaveModel extends Component {
                         />
                       </div>
                     )}
-                    {field.answer && (
-                      <div>{field.answer}</div>
-                    )}
+                    {field.answer && <div>{field.answer}</div>}
                   </div>
                 );
               })}
