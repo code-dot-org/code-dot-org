@@ -22,8 +22,29 @@ modelData = {
       value2: convertedValue2
     }
   },
-  labelColumn: "labelColumn",
-  selectedFeatures: ["feature1", "feature2"],
+  label: {
+    id: "labelName",
+    description: "details about the column",
+    max: "highest value if column contains numerical data",
+    min: "lowest value if column contains numerical data",
+    values: ["category1", "category2"]
+  },
+  features: [
+    {
+      id: "feature1",
+      description: "details about the column",
+      max: "highest value if column contains numerical data",
+      min: "lowest value if column contains numerical data",
+      values: ["category1", "category2"]
+    },
+   {
+      id: "feature2",
+      description: "details about the column",
+      max: "highest value if column contains numerical data",
+      min: "lowest value if column contains numerical data",
+      values: ["category1", "category2"]
+    }
+  ],
   testData: {
     feature1: value,
     feature2: value,

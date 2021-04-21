@@ -4,6 +4,8 @@ import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
+import * as utils from '@cdo/apps/utils';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, loadVideoSpy, defaultProps;
@@ -41,6 +43,9 @@ describe('LevelDetailsDialogTest', () => {
   });
 
   it('links to level url', () => {
+    sinon.stub(firehoseClient, 'putRecord');
+    sinon.stub(utils, 'windowOpen');
+
     const wrapper = shallow(
       <LevelDetailsDialog
         {...defaultProps}
@@ -54,7 +59,13 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     const levelLink = wrapper.find('Button').at(1);
-    expect(levelLink.props().href).to.equal('level.url');
+    levelLink.simulate('click');
+    expect(firehoseClient.putRecord).to.have.been.calledOnce;
+    firehoseClient.putRecord.yieldTo('callback');
+    expect(utils.windowOpen).to.have.been.calledWith('level.url');
+
+    utils.windowOpen.restore();
+    firehoseClient.putRecord.restore();
   });
 
   it('can display an external markdown level', () => {
@@ -289,47 +300,46 @@ describe('LevelDetailsDialogTest', () => {
     expect(wrapper.find('TopInstructions').length).to.equal(1);
   });
 
-  it('can display a multiple choice level'),
-    () => {
-      const wrapper = shallow(
-        <LevelDetailsDialog
-          {...defaultProps}
-          scriptLevel={{
-            id: 'scriptlevel',
-            url: 'level.url',
-            status: 'not_tried',
-            level: {
-              type: 'Multi',
-              id: 'level',
-              question:
-                'Look at the code below and predict how the headings will be displayed.',
-              questionText: 'Eggs, Bacon, Waffles',
-              teacherMarkdown: 'This is a multiple choice level.'
-            }
-          }}
-        />
-      );
-      expect(wrapper.find('SafeMarkdown').length).to.equal(2);
-      expect(
-        wrapper
-          .find('SafeMarkdown')
-          .at(0)
-          .props().markdown
-      ).equal(
-        'Look at the code below and predict how the headings will be displayed.'
-      );
-      expect(
-        wrapper
-          .find('SafeMarkdown')
-          .at(1)
-          .props().markdown
-      ).equal('Eggs, Bacon, Waffles');
-      expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
-      expect(
-        wrapper
-          .find('TeacherOnlyMarkdown')
-          .first()
-          .props().content
-      ).to.equal('This is a multiple choice level.');
-    };
+  it('can display a multiple choice level', () => {
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        {...defaultProps}
+        scriptLevel={{
+          id: 'scriptlevel',
+          url: 'level.url',
+          status: 'not_tried',
+          level: {
+            type: 'Multi',
+            id: 'level',
+            question:
+              'Look at the code below and predict how the headings will be displayed.',
+            questionText: 'Eggs, Bacon, Waffles',
+            teacherMarkdown: 'This is a multiple choice level.'
+          }
+        }}
+      />
+    );
+    expect(wrapper.find('SafeMarkdown').length).to.equal(2);
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(0)
+        .props().markdown
+    ).equal(
+      'Look at the code below and predict how the headings will be displayed.'
+    );
+    expect(
+      wrapper
+        .find('SafeMarkdown')
+        .at(1)
+        .props().markdown
+    ).equal('Eggs, Bacon, Waffles');
+    expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
+    expect(
+      wrapper
+        .find('TeacherOnlyMarkdown')
+        .first()
+        .props().content
+    ).to.equal('This is a multiple choice level.');
+  });
 });

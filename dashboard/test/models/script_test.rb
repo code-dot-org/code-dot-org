@@ -1497,7 +1497,6 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "get_bonus_script_levels" do
-    student = create :student
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, lesson_group: lesson_group
@@ -1508,8 +1507,8 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson3, bonus: true
     create :script_level, script: script, lesson: lesson3, bonus: true
 
-    bonus_levels1 = script.get_bonus_script_levels(lesson1, student)
-    bonus_levels3 = script.get_bonus_script_levels(lesson3, student)
+    bonus_levels1 = script.get_bonus_script_levels(lesson1)
+    bonus_levels3 = script.get_bonus_script_levels(lesson3)
 
     assert_equal 1, bonus_levels1.length
     assert_equal 1, bonus_levels1[0][:stageNumber]
