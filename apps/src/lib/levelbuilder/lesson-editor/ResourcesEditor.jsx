@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
+import $ from 'jquery';
 
 const styles = {
   resourceSearch: {

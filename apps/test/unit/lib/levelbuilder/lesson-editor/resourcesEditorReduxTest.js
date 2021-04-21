@@ -32,6 +32,25 @@ describe('resourcesEditorRedux reducer tests', () => {
     ]);
   });
 
+  it('keeps rollup resources at the end', () => {
+    const rollupInitialState = initialState;
+    initialState[1].isRollup = true;
+    const nextState = resourcesEditor(
+      rollupInitialState,
+      addResource('lessonResource', {
+        key: 'new-key',
+        name: 'new-name',
+        url: 'new-fake.url',
+        isRollup: false
+      })
+    );
+    assert.deepEqual(nextState.map(r => r.key), [
+      'resource-1',
+      'new-key',
+      'resource-2'
+    ]);
+  });
+
   it('edit resource', () => {
     const editedResource = _.cloneDeep(resourceTestData[0]);
     editedResource.name = 'new name';
