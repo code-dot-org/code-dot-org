@@ -5,60 +5,6 @@ import {
 
 import { ResultsGrades } from "../../src/constants.js";
 
-const initialState = {
-  data: [
-    {
-      name: "Plain M&Ms",
-      chocolate: "yes",
-      nuts: "no",
-      fruity: "no",
-      delicious: "yes"
-    },
-    {
-      name: "Peanut M&Ms",
-      chocolate: "yes",
-      nuts: "yes",
-      fruity: "no",
-      delicious: "yes"
-    },
-    {
-      name: "Snickers",
-      chocolate: "yes",
-      nuts: "yes",
-      fruity: "no",
-      delicious: "yes"
-    },
-    {
-      name: "Almond Joy",
-      chocolate: "yes",
-      nuts: "yes",
-      fruity: "no",
-      delicious: "yes"
-    },
-    {
-      name: "Black Licorice",
-      chocolate: "no",
-      nuts: "no",
-      fruity: "no",
-      delicious: "no"
-    },
-    {
-      name: "Skittles",
-      chocolate: "no",
-      nuts: "no",
-      fruity: "yes",
-      delicious: "yes"
-    }
-  ],
-  labelColumn: "delicious",
-  selectedFeatures: ["chocolate", "nuts"],
-  columnsByDataType: {
-    chocolate: "categorical",
-    nuts: "categorical",
-    delicious: "categorical"
-  }
-};
-
 const resultsState = {
   data: [
     {
