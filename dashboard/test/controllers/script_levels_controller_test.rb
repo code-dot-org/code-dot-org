@@ -1945,6 +1945,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert extras_data['bonusLevels'][0]['levels'][0]['perfect']
   end
 
+  test "stage extras shows no progress if no current user" do
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: script
+    script_level.bonus = true
+    script_level.save!
+    create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
+    get :stage_extras, params: {
+      script_id: script_level.script,
+      lesson_position: 1,
+      section_id: @section.id,
+      user_id: @student.id
+    }
+    assert_response :success
+    assert_select 'script[data-extras]', 1
+    extras_data = JSON.parse(
+      css_select('script[data-extras]').first.attribute('data-extras').to_s
+    )
+    refute extras_data['bonusLevels'][0]['levels'][0]['perfect']
+  end
+
   test_user_gets_response_for :show, response: :redirect, user: nil,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'signed out user cannot view pilot script level'
