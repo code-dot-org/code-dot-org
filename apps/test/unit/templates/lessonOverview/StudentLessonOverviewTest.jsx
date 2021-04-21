@@ -17,20 +17,27 @@ describe('StudentLessonOverview', () => {
         unit: {
           displayName: 'Unit 1',
           link: '/s/unit-1',
-          lessons: [
+          lessonGroups: [
             {
-              key: 'lesson-1',
-              position: 1,
-              displayName: 'Lesson 1',
-              link: '/lessons/1',
-              lockable: false
-            },
-            {
-              key: 'lesson-2',
-              position: 2,
-              displayName: 'Lesson 2',
-              link: '/lessons/2',
-              lockable: false
+              key: 'lg-1',
+              displayName: 'Lesson Group',
+              userFacing: true,
+              lessons: [
+                {
+                  key: 'lesson-1',
+                  position: 1,
+                  displayName: 'Lesson 1',
+                  link: '/lessons/1',
+                  lockable: false
+                },
+                {
+                  key: 'lesson-2',
+                  position: 2,
+                  displayName: 'Lesson 2',
+                  link: '/lessons/2',
+                  lockable: false
+                }
+              ]
             }
           ]
         },
