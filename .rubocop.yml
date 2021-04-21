@@ -56,6 +56,13 @@ Layout/SpaceInsideHashLiteralBraces:
 Style/WordArray:
   MinSize: 5
 
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+    - levelbuilder
 # END CODE.ORG OVERRIDES
 
 # BEGIN BLACKLIST: Below are rules we don't plan to enable in the forseeable
