@@ -128,7 +128,7 @@ module Cdo
       else
         # TODO: Update to use this URL once we have Route53 set up for API Gateway
         # site_url('javabuilder.code.org', '', 'wss')
-        'wss://nsgeezjyul.execute-api.us-east-1.amazonaws.com/staging'
+        'wss://javabuilderpilot.code.org'
       end
     end
 
