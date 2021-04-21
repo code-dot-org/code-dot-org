@@ -16,6 +16,7 @@ import {
 const TITLE = '1';
 
 const defaultProps = {
+  levelId: '1',
   levelStatus: LevelStatus.not_tried,
   levelKind: LevelKind.level,
   isDisabled: false,
@@ -209,5 +210,12 @@ describe('ProgressTableLevelBubble', () => {
       });
       expect(style.backgroundColor).to.equal(assessmentBackgrounds[status]);
     });
+  });
+
+  it('renders raw HTML if useCache is true', () => {
+    const wrapper = mount(
+      <ProgressTableLevelBubble {...defaultProps} useCache={true} />
+    );
+    expect(wrapper.find('div').props().dangerouslySetInnerHTML).to.exist;
   });
 });
