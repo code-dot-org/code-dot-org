@@ -189,8 +189,9 @@ class Script < ApplicationRecord
   #   script is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
-    peer_reviews_to_complete
     professional_learning_course
+    only_instructor_review_required
+    peer_reviews_to_complete
     redirect_to
     student_detail_progress_view
     project_widget_visible
