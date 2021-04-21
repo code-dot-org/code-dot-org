@@ -49,6 +49,7 @@ export default storybook => {
           story: () =>
             wrapped(
               <ProgressTableLevelBubble
+                levelId={'1'}
                 levelStatus={LevelStatus.not_tried}
                 levelKind={LevelKind.level}
                 isLocked={true}
@@ -64,6 +65,7 @@ export default storybook => {
             story: () =>
               wrapped(
                 <ProgressTableLevelBubble
+                  levelId={'2'}
                   levelStatus={status}
                   levelKind={LevelKind.level}
                   title={'3'}
@@ -78,6 +80,7 @@ export default storybook => {
             story: () =>
               wrapped(
                 <ProgressTableLevelBubble
+                  levelId={'3'}
                   levelStatus={status}
                   levelKind={LevelKind.level}
                   title={'3'}
@@ -93,6 +96,7 @@ export default storybook => {
             story: () =>
               wrapped(
                 <ProgressTableLevelBubble
+                  levelId={'4'}
                   levelStatus={status}
                   levelKind={LevelKind.assessment}
                   title={'3'}
@@ -107,6 +111,7 @@ export default storybook => {
             story: () =>
               wrapped(
                 <ProgressTableLevelBubble
+                  levelId={'5'}
                   levelStatus={status}
                   levelKind={LevelKind.level}
                   title={'3'}
@@ -122,6 +127,7 @@ export default storybook => {
             story: () =>
               wrapped(
                 <ProgressTableLevelBubble
+                  levelId={'6'}
                   levelStatus={status}
                   levelKind={LevelKind.level}
                   title={'3'}
@@ -137,6 +143,7 @@ export default storybook => {
             story: () =>
               wrapped(
                 <ProgressTableLevelBubble
+                  levelId={'7'}
                   levelStatus={status}
                   levelKind={LevelKind.level}
                   title={'3'}
@@ -152,6 +159,7 @@ export default storybook => {
             story: () =>
               wrapMultiple([
                 <ProgressTableLevelBubble
+                  levelId={'8'}
                   levelStatus={LevelStatus.perfect}
                   bubbleSize={BubbleSize.letter}
                   title={'a'}
@@ -159,6 +167,7 @@ export default storybook => {
                   key={1}
                 />,
                 <ProgressTableLevelBubble
+                  levelId={'9'}
                   levelStatus={LevelStatus.attempted}
                   bubbleSize={BubbleSize.letter}
                   title={'b'}
@@ -166,6 +175,7 @@ export default storybook => {
                   key={2}
                 />,
                 <ProgressTableLevelBubble
+                  levelId={'10'}
                   levelStatus={LevelStatus.not_tried}
                   bubbleSize={BubbleSize.letter}
                   title={'c'}
@@ -181,6 +191,7 @@ export default storybook => {
             story: () =>
               wrapMultiple([
                 <ProgressTableLevelBubble
+                  levelId={'11'}
                   levelStatus={LevelStatus.perfect}
                   isConcept={true}
                   bubbleSize={BubbleSize.dot}
@@ -189,6 +200,7 @@ export default storybook => {
                   key={1}
                 />,
                 <ProgressTableLevelBubble
+                  levelId={'12'}
                   levelStatus={LevelStatus.attempted}
                   bubbleSize={BubbleSize.dot}
                   title={'b'}
@@ -196,6 +208,7 @@ export default storybook => {
                   key={2}
                 />,
                 <ProgressTableLevelBubble
+                  levelId={'13'}
                   levelStatus={LevelStatus.not_tried}
                   bubbleSize={BubbleSize.dot}
                   title={'c'}
