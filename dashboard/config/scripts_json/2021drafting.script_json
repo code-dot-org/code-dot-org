@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-20 18:00:49 UTC",
+    "serialized_at": "2021-04-21 14:01:48 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -63,7 +63,7 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "Outbreak Simulation"
+        "display_name": "Outbreak Simulator"
       },
       "seeding_key": {
         "lesson_group.key": "outbreak",
@@ -1210,7 +1210,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Creating a Simulation",
+        "progression": "Skill Building",
         "level_keys": [
           "CourseF_outbreak1"
         ]
@@ -1235,7 +1235,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Programming with Events",
+        "progression": "Skill Building",
         "level_keys": [
           "CourseF_outbreak2"
         ]
@@ -1260,7 +1260,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Stopping the Outbreak with Masks",
+        "progression": "Skill Building",
         "level_keys": [
           "CourseF_outbreak3"
         ]
@@ -1285,6 +1285,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "CourseF_outbreak4"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak4"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak4"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Learning from Simulations",
         "level_keys": [
           "CourseF_outbreak_story2"
@@ -1305,37 +1330,12 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "More Monsters",
-        "level_keys": [
-          "CourseF_outbreak4"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak4"
-        ],
-        "lesson.key": "Virus Simulation for Code Bytes",
-        "lesson_group.key": "outbreak",
-        "script.name": "2021drafting"
-      },
-      "level_keys": [
-        "CourseF_outbreak4"
-      ]
-    },
-    {
       "chapter": 43,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Recovery",
+        "progression": "Mini-Project: Outbreak Simulator",
         "level_keys": [
           "CourseF_outbreak5"
         ]
@@ -1360,8 +1360,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Chance",
-        "challenge": true,
+        "progression": "Mini-Project: Outbreak Simulator",
         "level_keys": [
           "CourseF_outbreak6"
         ]
@@ -1386,8 +1385,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Vaccines",
-        "challenge": true,
+        "progression": "Mini-Project: Outbreak Simulator",
         "level_keys": [
           "CourseF_outbreak7"
         ]
@@ -1412,7 +1410,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Share Your Message",
+        "progression": "Mini-Project: Outbreak Simulator",
         "level_keys": [
           "CourseF_outbreak8"
         ]
@@ -1437,7 +1435,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Free Play",
+        "progression": "Mini-Project: Outbreak Simulator",
         "level_keys": [
           "CourseF_outbreak_freeplay"
         ]
@@ -2150,9 +2148,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CourseF_outbreak_story2",
+        "level.key": "CourseF_outbreak4",
         "script_level.level_keys": [
-          "CourseF_outbreak_story2"
+          "CourseF_outbreak4"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
@@ -2161,9 +2159,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CourseF_outbreak4",
+        "level.key": "CourseF_outbreak_story2",
         "script_level.level_keys": [
-          "CourseF_outbreak4"
+          "CourseF_outbreak_story2"
         ],
         "lesson.key": "Virus Simulation for Code Bytes",
         "lesson_group.key": "outbreak",
