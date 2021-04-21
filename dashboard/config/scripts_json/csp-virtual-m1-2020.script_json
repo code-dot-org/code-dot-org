@@ -1,0 +1,1309 @@
+{
+  "script": {
+    "name": "csp-virtual-m1-2020",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "weekly_instructional_minutes": 90,
+      "show_calendar": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-04-21 03:02:29 UTC",
+    "seeding_key": {
+      "script.name": "csp-virtual-m1-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Asynchronous Pre-Work"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "day-1",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "In Person Sessions"
+      },
+      "seeding_key": {
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-5",
+      "name": "Pre-Work",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Asynchronous pre-work for teachers to do before your virtual in person workshop for module 1.",
+        "student_overview": "Asynchronous pre-work to do before your virtual in person workshop for module 1."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "session-1",
+      "name": "Workshop Opener",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. ",
+        "preparation": "**Workshop Modality:**\r\n\r\n* Whole group\r\n* Breakout rooms\r\n\r\n \r\n**Facilitator Supplies:**\r\n\r\n* [r facilitator-handbook-20-21]\r\n* [r vpl-m1-slides]\r\n\r\n**Teacher Materials:**\r\n\r\n* Check that teachers have materials for later sessions including: baggies, stickies, a whiteboard marker, and a light colored background (such as a white sheet of paper)\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "session-2",
+      "name": "Live Demo  U4L1   Variables Explore",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "Start the workshop",
+        "student_overview": "Start the workshop",
+        "purpose": "Since every programming unit in the curriculum follows the EIPM model, it is important that participants understand the unique role each lesson type plays in building student understanding of the content.  This live demo is intended to teach participants the content in the lesson (variables) but also understand the pedagogy used in Explore lessons. ",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n* Breakout rooms\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m1-slides]\n* ~4 ziploc baggies\n* Two different colored stickies (alternative: scraps of paper)\n* Whiteboard marker (alternative: permanent marker)\n* Pens\n* White background (white paper or folder)\n\n**Teacher Materials:**\n\n* ~4 ziploc baggies\n* Two different colored stickies (alternative: scraps of paper)\n* Whiteboard marker (alternative: permanent marker)\n* Pens\n* White background (white paper or folder)\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "session-3",
+      "name": "Live Demo  U4L2   Variables Investigate",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "In our quest to understand EIPM, the second lesson in Unit 4 helps participants build their understanding of both the content (variables) and of the Investigate lesson type.  The main takeaway participants should have is that the Investigate lesson type requires the teacher to guide the discussion actively.  Learners should not be doing this independently.  The learning is most powerful when done in a community where the teacher can also formatively assess constantly as students are discussing the code between partners and in the whole group.",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n* Breakout rooms\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m1-slides]\n\n**Teacher Materials:**\n\n* None.\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "session-4",
+      "name": "Wrap Up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Create space to respond to outstanding questions, wrap up the day, and allow for survey completion time.",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n \n**Facilitator Supplies:**\n\n* [r vpl-m1-slides]\n\n**Teacher Materials:**\n\n* None.",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c07ef675-fe99-4eb9-a5c5-301ddee4ee01",
+      "position": 1,
+      "properties": {
+        "name": "Pre-Work",
+        "duration": 90
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c07ef675-fe99-4eb9-a5c5-301ddee4ee01",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "119577da-4739-41ee-9b31-e5a93c520f8f",
+      "position": 1,
+      "properties": {
+        "name": "Workshop Opening Logistics",
+        "duration": 3
+      },
+      "seeding_key": {
+        "lesson_activity.key": "119577da-4739-41ee-9b31-e5a93c520f8f",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "fd32159c-4f13-4b26-bfeb-85b3409fd867",
+      "position": 2,
+      "properties": {
+        "name": "Connect to Asynchronous Work",
+        "duration": 12
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fd32159c-4f13-4b26-bfeb-85b3409fd867",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9",
+      "position": 1,
+      "properties": {
+        "name": "Context and Live Demo",
+        "duration": 22
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9",
+      "position": 2,
+      "properties": {
+        "name": "Discussion",
+        "duration": 13
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "b7c56c38-f1b5-437a-ae5b-675622b22bb1",
+      "position": 1,
+      "properties": {
+        "name": "Context and Live Demo",
+        "duration": 18
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7c56c38-f1b5-437a-ae5b-675622b22bb1",
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "3b393eac-5c44-4d4f-ba80-3b714e3082c7",
+      "position": 2,
+      "properties": {
+        "name": "Discussion",
+        "duration": 12
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3b393eac-5c44-4d4f-ba80-3b714e3082c7",
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "b9faac7f-65ea-496f-81b0-7a430dbe59fc",
+      "position": 1,
+      "properties": {
+        "name": "Parking Lot and Asynchronous Work",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9faac7f-65ea-496f-81b0-7a430dbe59fc",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    },
+    {
+      "key": "a91d66eb-9a51-42c1-854a-436500689176",
+      "position": 2,
+      "properties": {
+        "name": "Survey",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a91d66eb-9a51-42c1-854a-436500689176",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6c96d959-5281-4ea5-992e-031964481c8f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 1 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c96d959-5281-4ea5-992e-031964481c8f",
+        "lesson_activity.key": "c07ef675-fe99-4eb9-a5c5-301ddee4ee01"
+      }
+    },
+    {
+      "key": "6ea26ebd-4aa5-4c7a-a253-e41de84cedc3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrapping up Unit 3 (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ea26ebd-4aa5-4c7a-a253-e41de84cedc3",
+        "lesson_activity.key": "c07ef675-fe99-4eb9-a5c5-301ddee4ee01"
+      }
+    },
+    {
+      "key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 4 Overview (~30 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb",
+        "lesson_activity.key": "c07ef675-fe99-4eb9-a5c5-301ddee4ee01"
+      }
+    },
+    {
+      "key": "5499a03f-3a6f-4360-99d5-18cd56a07a44",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introducing EIPM (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5499a03f-3a6f-4360-99d5-18cd56a07a44",
+        "lesson_activity.key": "c07ef675-fe99-4eb9-a5c5-301ddee4ee01"
+      }
+    },
+    {
+      "key": "dc2b19e3-a4de-479d-8748-1b04bd94a125",
+      "position": 5,
+      "properties": {
+        "progression_name": "Module 1 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc2b19e3-a4de-479d-8748-1b04bd94a125",
+        "lesson_activity.key": "c07ef675-fe99-4eb9-a5c5-301ddee4ee01"
+      }
+    },
+    {
+      "key": "3aeea799-0887-4680-b88d-de3df3bfa06f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As participants join the call, warmly welcome them to the workshop.  It is recommended that you have some sort of get-to-know you discussion starter that can trigger some conversation for you to fill the time as people join.  The one in the slide deck is currently: What is one of your favorite comfort foods that you enjoy?  You may decide to change this if something else feels top of mind.\n\nDuring this time you can also take care of some logistics such as :\n\n* Encourage participants to take attendance\n* Ensure that participants have the slide deck open for the workshop\n* Making sure everyone has the materials needed for the live demo available, including:\n\t* ~4 ziploc baggies (alternative: envelopes or cups)\n\t* Two different colored stickies (alternative: scraps of paper)\n\t* Whiteboard marker (alternative: permanent marker)\n\t* Pens\n\t* White (or light solid color) background (white paper or folder)",
+        "name": "(0 minutes) As participants enter the room",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "  The <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> symbol indicates that a slide is included in the slide deck to cover the content in that section.  This is to help you know where you are in the agenda to some extent.  It is important to note that the slides do not include all of the text from the agenda.  Often we ask you as a facilitator to use the slides to support your presentations, but at times you should provide more context than what is on the slide.  You can find that context in this agenda."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3aeea799-0887-4680-b88d-de3df3bfa06f",
+        "lesson_activity.key": "119577da-4739-41ee-9b31-e5a93c520f8f"
+      }
+    },
+    {
+      "key": "48d03663-3048-4c4b-a1cf-d9fcc4400c1f",
+      "position": 2,
+      "properties": {
+        "description": "Have everyone complete the attendance for the day on the online workshop dashboard found in your workshop.\n\nFollow the instructions found in your Facilitator Handbook to take attendance for your workshop.",
+        "name": "(1 minute) Attendance"
+      },
+      "seeding_key": {
+        "activity_section.key": "48d03663-3048-4c4b-a1cf-d9fcc4400c1f",
+        "lesson_activity.key": "119577da-4739-41ee-9b31-e5a93c520f8f"
+      }
+    },
+    {
+      "key": "9e00e3be-6393-4ec0-aa10-6f881932f062",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk through the agenda of the day.  Participants should be aware that they will be gaining more experience with Unit 4 and introducing some pedagogical tools for teaching students to program.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Be up-front and concrete about how you plan on addressing the different styles of implementation throughout the workshop. We know that due to a variety of factors, teachers may be teaching this curriculum in a different setting than a traditional classroom.  You might note that by participating in virtual PD, participants will get to see portions of lessons delivered virtually.  Regardless of how participants plan on implementing the curriculum in their classrooms, the focus on the content and teaching strategies built into the curriculum.  We will also have time for participants to consider how they will implement the lessons in their own context.\n"
+          }
+        ],
+        "name": "(1 minute) Agenda Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e00e3be-6393-4ec0-aa10-6f881932f062",
+        "lesson_activity.key": "119577da-4739-41ee-9b31-e5a93c520f8f"
+      }
+    },
+    {
+      "key": "c03fe384-90a4-46ab-a148-39131dacdc39",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Remind the group of the norms you set at the Summer Workshop or in the kick-off call.",
+        "name": "(1 minute) Norms"
+      },
+      "seeding_key": {
+        "activity_section.key": "c03fe384-90a4-46ab-a148-39131dacdc39",
+        "lesson_activity.key": "119577da-4739-41ee-9b31-e5a93c520f8f"
+      }
+    },
+    {
+      "key": "fbb84e04-a045-4532-9971-b6f0c310dd3f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Remind participants of the work they did in the asynchronous work in this module.  This included:\n\n* Reading the Unit 3 and Unit 4 overviews and answering some questions about the material.\n* Reviewing the EIPM one-pager and videos\n* Optionally, looking at the virtual guidance provided by Code.org ",
+        "name": "(3 minutes) Asynchronous work reminder"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbb84e04-a045-4532-9971-b6f0c310dd3f",
+        "lesson_activity.key": "fd32159c-4f13-4b26-bfeb-85b3409fd867"
+      }
+    },
+    {
+      "key": "6d5a52ed-be86-4bb9-8494-12c6ed0ca4d9",
+      "position": 2,
+      "properties": {
+        "description": "\n**Facilitator to add to slides:** Pull out 1 or 2 quotes from the shared group reflections to summarize what participants heard.  For example you might say “Many of you mentioned that you felt most comfortable with your understanding of the Explore lesson type.  Austen said “The Explore lesson type feels like what we did during our summer workshop and what I have done in my classroom as a math teacher so I feel most comfortable with that”.  Pulling direct quotes from the asynchronous work is intended to:\n\n* Reassure participants who did the asynchronous work that the asynchronous work is important to their own learning and the learning of the community.\n* Support participants who did not do the asynchronous work by giving them insight to where the rest of the group is.\n* Pull out and connect ideas from the asynchronous work to the synchronous work.  In this example, we are going to dive deeper into the Explore lesson on Variables during this workshop, so drawing the connection to what they learned about EIPM and focusing on Explore task helps foreshadow what the participants will engage in during  this workshop."
+      },
+      "seeding_key": {
+        "activity_section.key": "6d5a52ed-be86-4bb9-8494-12c6ed0ca4d9",
+        "lesson_activity.key": "fd32159c-4f13-4b26-bfeb-85b3409fd867"
+      }
+    },
+    {
+      "key": "41082fa0-514a-4fbe-9e7b-aff2de5c9f93",
+      "position": 3,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of 2 in breakout rooms.</strong></span>",
+        "name": "(9 minutes)  Re-connect "
+      },
+      "seeding_key": {
+        "activity_section.key": "41082fa0-514a-4fbe-9e7b-aff2de5c9f93",
+        "lesson_activity.key": "fd32159c-4f13-4b26-bfeb-85b3409fd867"
+      }
+    },
+    {
+      "key": "12d20945-16df-4f69-a6c7-cc1b161b39ec",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> (6 minutes) **Provide directions for task**",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For the “reconnect” section, you might want to take this time to instead address questions that were raised in the asynchronous work or common themes you saw that participants were concerned about.  Encourage participants to answer one anothers’ questions and facilitate a discussion amongst participants rather than providing your own answer to questions and concerns.  For example, you might say “Many participants wrote that they were concerned about how they would handle students who finished the Make tasks early.  What ideas do you all have for this situation?”  \nThe goal of the reconnect time is to allow participants to connect to one another and to raise questions participants might have about the curriculum or implementation.  If those questions arise in the asynchronous work, here is a great place to address them.  If those questions don’t arise, feel free to use the questions in this agenda instead.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12d20945-16df-4f69-a6c7-cc1b161b39ec",
+        "lesson_activity.key": "fd32159c-4f13-4b26-bfeb-85b3409fd867"
+      }
+    },
+    {
+      "key": "7a64cf51-a133-4fcb-b288-f02c9a427e44",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “In a minute, you will be put into pairs to talk about your experiences.  You will have 5 minutes in these groups before coming back to share out.  In these groups, you will discuss:\n\n* How have students responded to the lessons you have taught so far?  \n* If you had a time machine, what advice would you like to give to yourself right before school started?\n\nIf you have questions that you’d like answered during this time, feel free to add it to our question parking lot slide.  We will do a short share-out after we get back to be prepared to share common themes from your discussion also”.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7a64cf51-a133-4fcb-b288-f02c9a427e44",
+        "lesson_activity.key": "fd32159c-4f13-4b26-bfeb-85b3409fd867"
+      }
+    },
+    {
+      "key": "878841f9-99ac-443a-84da-fc17599f47f6",
+      "position": 6,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPut participants in groups of 2 in breakout rooms for 5 minutes.</strong></span>\n\n\nFacilitator note: as participants are in pairs, watch the question parking lot for questions that have short answers.  Feel free to put brief answers directly in the document during this time.  Additionally, there might be questions from the question parking lot that you want to use to structure your share out.\n\n(3 minutes) **Share out.** \nWhen participants return, ask participants to share any themes or concerns they want to bring to the larger group here.  If you run short on time, encourage participants to share their questions in the question parking lot."
+      },
+      "seeding_key": {
+        "activity_section.key": "878841f9-99ac-443a-84da-fc17599f47f6",
+        "lesson_activity.key": "fd32159c-4f13-4b26-bfeb-85b3409fd867"
+      }
+    },
+    {
+      "key": "0ddb8569-f9bf-46b0-adec-b5c5724faca3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Provide a brief context for this lesson:**",
+        "name": "(2 minutes) Context"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ddb8569-f9bf-46b0-adec-b5c5724faca3",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "1b59b128-508d-4dd0-8dca-ef10d0dd8587",
+      "position": 2,
+      "properties": {
+        "description": "*  In your asynchronous work you read a high level overview of Units 3 and 4.  Next we are going to do a “live demo” of U4L1 which is the first lesson in Unit 4.  You will not see the lesson in full, but rather will engage in portions of the lesson. \n    * The asynchronous work you completed before this workshop provided you with context for this lesson, but at a high level, prior to this lesson students learned how to use design mode and basic event handlers in Unit 3.  Unit 4 is where they learn how to use more advanced programming concepts like variables, conditionals, and functions.* Unit 4 is also where we start using EIPM which you also read about in your asynchronous work.  Our purpose behind this live demo is to help you understand the content in the lesson but also how Explore lessons support student understanding of the concept.",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "We skim over the context here to save time and also since participants should have a solid understanding of the context if they did the asynchronous work.  These comments help remind participants of the asynchronous work and also provide a brief context for those who did not participate in that work.\n\n\n"
+          }
+        ],
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1b59b128-508d-4dd0-8dca-ef10d0dd8587",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "0e557536-cde6-488a-b762-3842b9c3d42f",
+      "position": 3,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong>Producer support: PREPARE to divide the room into two equal-sized groups.</strong></span>\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> ** Describe the roles during this exercise: **"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e557536-cde6-488a-b762-3842b9c3d42f",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "32c18ab2-6c32-4752-b89b-a0aeb4be1d10",
+      "position": 4,
+      "properties": {
+        "description": "*  We are going to divide up into two different breakout rooms for this live-demo.  This will allow us to better see what everyone is doing.  Also, if you’re in a reasonably quiet space, consider taking yourself off mute so you can freely participate in the smaller group.  We found it challenging to hold the manipulatives up and toggle between turning on and off the microphone.* During this exercise you will want to keep the perspective of the learner in mind, just like you keep learners in mind when you prepare for any lesson they teach.  After the lesson, we will have an opportunity to talk about how you might implement this lesson in your classroom, but during the live demo, embrace the learner experience!\n* tip!!!tip-1 We are going to divide up into two different breakout rooms for this live-demo.  This will allow us to better see what everyone is doing.  Also, if you’re in a reasonably quiet space, consider taking yourself off mute so you can freely participate in the smaller group.  We found it challenging to hold the manipulatives up and toggle between turning on and off the microphone.",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Depending on your group size, you may want to keep the full group together during this time.  It can be hard to monitor a large group for this session, so if your group is greater than 10 participants, we recommend breaking it up between you and your co-facilitator so each of you lead a smaller group in a breakout room.\n\n"
+          }
+        ],
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "32c18ab2-6c32-4752-b89b-a0aeb4be1d10",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "88d08790-e638-41db-936b-d0d582762bd9",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Facilitators will need to to contact their producers after they are done with your live demo.  Make sure you have a system to communicate this to them (either by using a text, Slack, or other messaging device to contact them).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "88d08790-e638-41db-936b-d0d582762bd9",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "59a57401-e539-4470-b4bf-fb474e925b93",
+      "position": 6,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: <li><span style=\"background-color:yellow;\">Put participants in two different breakout rooms - each breakout room should have one facilitator in it.</span></li><li><span style=\"background-color:yellow;\">This activity should take roughly 20 minutes.  Wait for a message from both facilitators before bringing everyone back to the full group session.</span></li></strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "59a57401-e539-4470-b4bf-fb474e925b93",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "51d6f8fe-9f39-4e6b-9e99-8c2d23fbd8da",
+      "position": 7,
+      "properties": {
+        "description": "Remind participants again of some basics when you get to your breakout room:\n\n* If you are in a quiet spot, take yourself off mute.\n* This is not a model lesson, but we are going to be thinking about learners while doing this task.\n* You will only see part of this lesson, not the full thing.\n\n<hr>",
+        "name": "(20 minutes) Run the Live Demo"
+      },
+      "seeding_key": {
+        "activity_section.key": "51d6f8fe-9f39-4e6b-9e99-8c2d23fbd8da",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "8cd2a47a-9703-42ef-be52-45e5e22efb82",
+      "position": 8,
+      "properties": {
+        "description": "#### Check for materials\nTurn off screen share.",
+        "name": "Start Live Demo"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cd2a47a-9703-42ef-be52-45e5e22efb82",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "e88ef41a-f5a7-4f5b-9eef-5814c36a7227",
+      "position": 9,
+      "properties": {
+        "description": "Let’s start!  Can everyone hold up their materials to the camera?  \n\n* Show me your baggies (pause)\n* Show me your dark marker / whiteboard marker (pause)\n* Show me your stickies or scraps of paper (pause)\n* Show me what you will be using as a background - a light sheet of paper will do.  (pause)",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e88ef41a-f5a7-4f5b-9eef-5814c36a7227",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "8110b89a-17c5-4440-9b77-d6b267967553",
+      "position": 10,
+      "properties": {
+        "description": "#### Introduce values - act this out."
+      },
+      "seeding_key": {
+        "activity_section.key": "8110b89a-17c5-4440-9b77-d6b267967553",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "85354243-b8ff-4530-b3a1-f0aec42b68cd",
+      "position": 11,
+      "properties": {
+        "description": "* On each sticky we are going to have a value.  For me, I am going to take my yellow sticky and I am going to write my favorite number on that sticky.   \n\t* Do this and hold it up on the screen.\n* Can you all take a sticky, if you have a yellow sticky, that’s great, if not, then pick any color sticky and write your favorite number on it.  When you are done, hold it up to the screen.\n\t* Pause, call out people who you see “I see Franklin’s favorite number is 44, I see Jess’s favorite number is 11” etc. \n* We can also have text stored in a value.  This text is called a “string” in programming.  I am going to take a different colored sticky and write my favorite sounding word on the sticky.  When we write a string in programming we use quotes.  So I wrote the word “lisp” on a blue sticky.  \n\t* Do this and hold it up on the screen.\n* Can you all take a different colored sticky, and write your favorite word to say and hold that value up to the screen?\n\t* Pause, call out people who you see with words on their stickies.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "85354243-b8ff-4530-b3a1-f0aec42b68cd",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "43350f6c-86ca-4f0f-8add-3cad67382ce4",
+      "position": 12,
+      "properties": {
+        "description": "#### Introduce Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "43350f6c-86ca-4f0f-8add-3cad67382ce4",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "b8b663a2-57c6-434d-b817-9836981410c0",
+      "position": 13,
+      "properties": {
+        "description": "* We're going to call the plastic baggies on your table \"variables\". Variables can hold at most one value, or sticky note. They have names that use no quotes, include no spaces, and must start with a letter. \n* I am going to make a variable called “boo” by writing “boo” on a baggie.  I am going to use a white background so you can see what this looks like.\n\t* Do this and hold it up on the screen.\n* Then I am going to put my value that I wrote down on my yellow sticky in the “boo” variable.  So now, my variable “boo” holds the value X (whatever you wrote down on the sticky).\n\t* Do this and hold it up on the screen.\n* Create your own variable by taking a baggie and giving the baggie a name.  This can be any name, it just has to start with a letter, have no spaces and you will not use quotes for this variable name. \n\t* Pause.  \n\t* Ask people to describe what they are showing you.  Rephrase what they say using words like “variable” and “value” (ex. “I have a baggie with the number 8” you can say “You have a variable called fun with the value 8 in it.”)\n* Variables can only hold one value at a time.  \n* Let’s make a new variable to store our string in.  Create a new variable - you can name it whatever  you like.  Store the value of your string in the baggie. Hold it up to the screen when done.  \n\t* Pause.\n\t* Ask people to describe what they are showing you.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b8b663a2-57c6-434d-b817-9836981410c0",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "70a3826d-3a34-4da5-bef0-7240087ee9eb",
+      "position": 14,
+      "properties": {
+        "description": "#### Introduce program code"
+      },
+      "seeding_key": {
+        "activity_section.key": "70a3826d-3a34-4da5-bef0-7240087ee9eb",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "aeeefab1-e430-44bb-86c8-f87781d5aff8",
+      "position": 15,
+      "properties": {
+        "description": "Let’s look at what this looks like in program code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aeeefab1-e430-44bb-86c8-f87781d5aff8",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "f5734945-7f1a-4fef-84f2-efc54b09e9e7",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Switch to sharing your slides.  \n\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSPVariables9.svg){: style=\"border:1px solid black\"} | **Say:** Here's what a program looks like. The var command tells the computer to create a variable. The variable’s name is pow.  So this line of code would have us get a baggie and write pow on the outside.  Nothing is inside the baggie yet.|\n|![](https://curriculum.code.org/media/uploads/CSPVariables10.svg){: style=\"border:1px solid black\"} | **Say:** The left arrow is called the \"assignment operator\". That's just a fancy word for \"put this value in the baggy\". If we wanted to read line 01 we would say \"pow gets 3\". We know that variables can only hold one sticky note or value. So if we try to assign a variable that already has a value in it, we just throw the old one away. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. <br><br> **Say:** In a computer you don't actually put the old number in a trash can, it's totally deleted! The numbers are stored as electrical charges somewhere in your computer's memory. When you assign a new number to a variable it actually erases the old number, and stores  the new number in its place. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables11.svg){: style=\"border:1px solid black\"} | **Say** I am going to share another set of code.  Act it out with your stickies. <br><br> **Note:** Pause for participants to work.  When done, have them hold up their pizza variable.  Check that it is accurate.  Then check the tacos variable.  No baggies should have more than one sticky note in them. Clarify misconceptions. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to see the answers.  |\n|![](https://curriculum.code.org/media/uploads/CSPVariables12.svg){: style=\"border:1px solid black\"} | **Say:** Now let's combine what we've learned. You can use assignment with expressions. In order for this to work you need to evaluate first, then assign. This makes sense because we know we can only put one sticky note in the variable baggy. |\n|![](https://curriculum.code.org/media/uploads/CSPVariables15.svg){: style=\"border:1px solid black\"} | **Do This:** Run through this program together as a class. <br><br> **Note:** Reinforce: Evaluate,  then assign <br><br> As shown on line 04, there's no special \"connection\" made between variables. All we're doing is moving information around. <br><br> Variables only hold one value, the old one is \"thrown away\" (again, what's happening is that assignment replaces the electric charges somewhere inside the computer so the old value is actually \"erased\" or \"deleted\") <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation: ** Click through to run the program. |\n\n<span style=\"background-color:greenyellow;\"><strong>End of the live demo.  Once you have gotten to this point, message your producer letting them know you are done.</strong></span>\n\n*Note: If you finish before your co-facilitator, talk about what they didn’t see and what the key takeaways are from this lesson - shown in the slides.  You can also give them time to process what they saw, but they will get time to talk after everyone gets back to the big room.  Once both groups are done, the producer will bring you back to the big room.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5734945-7f1a-4fef-84f2-efc54b09e9e7",
+        "lesson_activity.key": "4e1856fe-5369-4f0a-ba1a-e96f9248e7e9"
+      }
+    },
+    {
+      "key": "755673ef-b722-432d-9736-b26ab0a55699",
+      "position": 1,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: PREPARE to put participants in groups of 4.</strong></span>\n\n#### Introduce task\n\n* Welcome everyone back.  “You did not see the full lesson, but we wanted you to get a feel for what this looks like in practice.  We are going to go into smaller groups to process what we just saw”\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discussion task\n\t* Set roles:\n\t\t* Note taker: records your notes in the slides.\n\t\t* Share out person: shares out in the larger group and adds questions to the question parking lot\n\t* Talk with your group about the discussion questions.  \n\t\t* Discussion Questions: \n\t\t\t* This activity helps create a shared mental model for students of what a variable is.  As a teacher, how is having a “shared” mental model helpful in a classroom?\n\t\t\t\t* How does this impact your instruction or classroom for students?",
+        "name": "(6 minutess) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Small group discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "755673ef-b722-432d-9736-b26ab0a55699",
+        "lesson_activity.key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9"
+      }
+    },
+    {
+      "key": "fe6f5247-758c-4ec5-9431-2935b0dd233d",
+      "position": 2,
+      "properties": {
+        "description": "*  Having a shared mental model can help reinforce vocabulary. What techniques or strategies did you see used to develop vocabulary during this lesson?\n* We will meet back here at XX:XX (5 minutes)",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Encourage participants to consider what techniques they might use in their unique learning environments to develop vocabulary understanding during this lesson.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fe6f5247-758c-4ec5-9431-2935b0dd233d",
+        "lesson_activity.key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9"
+      }
+    },
+    {
+      "key": "b7c86eba-b3de-4f22-993e-5425f9280b98",
+      "position": 3,
+      "properties": {
+        "description": "Pause.  Have someone paraphrase the task.  Remind them to take notes in the designated slide for their group.\n\n<span style=\"background-color:yellow;\"><strong> Producer support: Put participants in groups of 4 for 5 minutes with a 2 minute warning</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7c86eba-b3de-4f22-993e-5425f9280b98",
+        "lesson_activity.key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9"
+      }
+    },
+    {
+      "key": "115d6634-55f7-4142-9a7c-2abc229cdefc",
+      "position": 4,
+      "properties": {
+        "description": "* Facilitators to turn off screen sharing so that everyone can see everyone’s faces during the discussion.\n* Have each person assigned to have the “share out” role share for the group.\n* Connect questions from the question parking lot whenever possible.",
+        "name": "(6 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Full group share out."
+      },
+      "seeding_key": {
+        "activity_section.key": "115d6634-55f7-4142-9a7c-2abc229cdefc",
+        "lesson_activity.key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9"
+      }
+    },
+    {
+      "key": "2cf50c0c-8422-4266-9138-9e90b77402ee",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "There is no built-in time for a break during this synchronous workshop, but you may find that a short break might be needed here.  Consider adding a 1 minute stretch before moving to the next section and reducing the time answering questions in the Q&A synchronously during the wrap-up and instead type out answers to those questions instead. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2cf50c0c-8422-4266-9138-9e90b77402ee",
+        "lesson_activity.key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9"
+      }
+    },
+    {
+      "key": "7ad417c5-1f32-4403-bc96-b88f027e3116",
+      "position": 6,
+      "properties": {
+        "description": "The goal here was for you to get the “feel” of developing a shared mental model with learners during an Explore lesson.  Next we are going to look at the Investigate lesson that follows this Explore lesson to see how the two are connected.",
+        "name": "(1 minute) Closure"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad417c5-1f32-4403-bc96-b88f027e3116",
+        "lesson_activity.key": "ce12fa3d-179b-4e12-b4bc-82c615c0ade9"
+      }
+    },
+    {
+      "key": "c0619383-386a-48a0-9e83-f9fd7a53dda5",
+      "position": 1,
+      "properties": {
+        "description": "Remind participants that this is the next lesson in the EIPM lesson progression on variables in Unit 4.  \n\nOnce again, participants will be taking the perspective of a learner during the lesson.  They will not see the full lesson, but will get a good idea for the “feel” of the lesson from the learner perspective.  \n\n*Note: For this live demo we will be keeping participants in one group with one facilitator leading.  This will allow them to go to breakout rooms for part of this time.*",
+        "name": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> (1 minute) Context"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0619383-386a-48a0-9e83-f9fd7a53dda5",
+        "lesson_activity.key": "b7c56c38-f1b5-437a-ae5b-675622b22bb1"
+      }
+    },
+    {
+      "key": "193c1b1d-2529-4e55-a406-f528955429d2",
+      "position": 2,
+      "properties": {
+        "description": "Tell participants that in the previous lesson we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword var. Now we are going to look at a new app that stores information in variables.  Get participants to U4L2 - Level 2.\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/InvestSlide1.png){: style=\"border:1px solid black\"} | **Get participants to U4L2 and get predictions (3 minutes)** <br><br> Level 2: Thermostat App v.1: This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. <br><br> In a full group have participants run the app for a few minutes to get a feel for how it works. <br><br> Predict: Ask learners to predict the information that is being stored in variables and share those predictions out loud with the group. \n|![](https://curriculum.code.org/media/uploads/InvestSlide2.png){: style=\"border:1px solid black\"} | **Level 3: Thermostat App v.1 Code (7 minutes)** <br><br> <span style=\"background-color:yellow;\"><strong>Producer support: PREPARE to put participants in groups of 2.</strong></span> <br><br> Explain that the next section we are going to do in pairs.  If participants are in an odd numbered breakout room, they will do the first section of code (lines 1-12).  The even numbered rooms investigate the second half on lines 14-21. <br><br> Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. <br><br> Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line. <br><br> <span style=\"background-color:yellow;\"><strong>Producer support: Put participants in groups of 2 for 4 minutes in groups with a 1 minute warning.</strong></span> <br><br> Class Discussion: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together. |\n|![](https://curriculum.code.org/media/uploads/InvestSlide3.png){: style=\"border:1px solid black\"} | Display the slide showing students how to add a watcher in the debugging panel to track the value a variable stores. |\n|![](https://curriculum.code.org/media/uploads/InvestSlide4.png){: style=\"border:1px solid black\"} | While in the full group, ask for a volunteer to describe how you would modify the app to change the degrees by two when the up and down arrows are clicked.  Share your screen as a participant shares their idea and you enact their strategy. |\n|![](https://curriculum.code.org/media/uploads/InvestSlide5.png){: style=\"border:1px solid black\"} | **Thermostat App v.2 - Level 4 (7 minutes)** <br><br> <span style=\"background-color:yellow;\"><strong>Producer support: PREPARE to put participants in the same groups as last time.</strong></span> <br><br> This program is an updated version of the Thermostat app. Put learners in the same pairs they were in before.  They should follow the directions on the screen for level 4.  We will discuss it as a class in 4 minutes.  They will need to follow the \"Do this\" directions on the level and slide. <br><br> <span style=\"background-color:yellow;\"><strong>Producer support: Put participants in the same groups as last time for 4 minutes with a 1 minute warning.</strong></span> <br><br> Class discussion: <br> -- Ask a few students to explain what's happening on line 3 with Math.round. <br> -- Ask participants to describe how they modified the code so that no space displays between the temperature and the unit description (\"F\" or \"C\").  Model this on the screen by sharing your screen. |\n\nThis is the end of the live demo and participants will now be asked to thinking about the lesson from a teacher perspective instead of learner perspective.  Make a clear pivot to talking about this lesson in the context of teachers and their classrooms.",
+        "name": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> (17 minutes) Live Demo - U4L2 - Variables Investigate"
+      },
+      "seeding_key": {
+        "activity_section.key": "193c1b1d-2529-4e55-a406-f528955429d2",
+        "lesson_activity.key": "b7c56c38-f1b5-437a-ae5b-675622b22bb1"
+      }
+    },
+    {
+      "key": "369f6337-82e3-446f-9bf8-1b4a55120b45",
+      "position": 1,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong>Producer support: PREPARE to put participants in groups of 4.</strong></span>\n\n**(1 minute) Pivot to talking about the lesson as a teacher.**  Remind participants that they only saw part of the investigate lesson and describe the process of the small group discussion.\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Task:\n\t* In your group, find the slide that corresponds with your breakout room number.  \n\t* Create a Venn Diagram with your table in the slides.  Think about the classroom “feel” learners experienced in Units 1 and 2.  As a learner, how is the classroom “feel” you experienced in this lesson similar or different from the feel in Units 1 and 2?\n\t* We will meet back here at XX:XX (5 minutes)\n \n\n<span style=\"background-color:yellow;\"><strong>Producer support: Put participants in groups of 4 for 5 minutes with a 1 minute warning</strong></span>",
+        "name": "(6 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Small group discussion task"
+      },
+      "seeding_key": {
+        "activity_section.key": "369f6337-82e3-446f-9bf8-1b4a55120b45",
+        "lesson_activity.key": "3b393eac-5c44-4d4f-ba80-3b714e3082c7"
+      }
+    },
+    {
+      "key": "e213cbf7-f87e-4079-8152-84dcec1c0aef",
+      "position": 2,
+      "properties": {
+        "description": "* Facilitator to turn off screen sharing so that everyone can see everyone’s faces during the discussion.\n* Acknowledge that there are differences in “classroom feel” when we get to programming lessons, but we still want to maintain a collaborative and supportive learning space in programming.  Have participants share out other similarities they noticed.\n* Transition to the following discussion question (also in the slides):\n\t* As a teacher, what happened in the class that helped produce that “feel” in this lesson?  What did the teacher do?  What did the students do?\n\nFacilitator note: Make sure to pull out the main ideas behind the investigate lesson type as described in the EIPM one-pager and corresponding videos.  Specifically: \n \n * The teacher is an ACTIVE participant in this lesson type.  \n * The teacher uses the shared mental model to reinforce ideas and correct misconceptions.  \n * The teacher also structures conversations throughout the lesson to bring the group together.",
+        "name": "(5 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Full group discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "e213cbf7-f87e-4079-8152-84dcec1c0aef",
+        "lesson_activity.key": "3b393eac-5c44-4d4f-ba80-3b714e3082c7"
+      }
+    },
+    {
+      "key": "705a8b8d-3419-485c-a3b4-88ed48699260",
+      "position": 3,
+      "properties": {
+        "description": "Remind participants that by getting students to frequently talk to one another and by checking in with the class multiple times throughout the lesson, teachers are able to create a classroom culture where community and collaboration is valued.",
+        "name": "(1 minute) Closure"
+      },
+      "seeding_key": {
+        "activity_section.key": "705a8b8d-3419-485c-a3b4-88ed48699260",
+        "lesson_activity.key": "3b393eac-5c44-4d4f-ba80-3b714e3082c7"
+      }
+    },
+    {
+      "key": "6cc2ed10-b05d-4a66-aa47-8283df7e68e0",
+      "position": 1,
+      "properties": {
+        "description": "Use this time to address outstanding question parking lot issues. Don't hesitate to give items from the parking lot back out to the group to answer.",
+        "name": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> (2 minutes) Clear the Question Parking Lot "
+      },
+      "seeding_key": {
+        "activity_section.key": "6cc2ed10-b05d-4a66-aa47-8283df7e68e0",
+        "lesson_activity.key": "b9faac7f-65ea-496f-81b0-7a430dbe59fc"
+      }
+    },
+    {
+      "key": "ff1e50dc-56a7-4a7f-a43f-189b79c54e04",
+      "position": 2,
+      "properties": {
+        "description": "Use the slides to guide your overview of asynchronous work for the next module.  This should include:\n\n* What participants will be asked to do\n* Why it will be helpful for their teaching practice\n* How we will build upon it in our next call\n \nIn this case, participants will be asked to: \n\n* Look at the Practice and Make lessons that round out the Variables EIPM sequence.\n* Consider the pros and cons of encouraging collaboration and independent work in your classroom.\n* Reflect on your own experiences with independent and collaborative work as a learner. \n \nThis will help teachers prepare for teaching Unit 4 as they will have a deeper understanding of the first full EIPM sequence.  Once they have a feel for what one sequence looks like, they will be better able to plan for future EIPM sequences as well.  \n\n**Participants should know how to access the asynchronous work through the Digital Digest and the Module 2 slides.  Model how they will access this work during this time.**\n\nFinally, in the next call we are going to look at EIPM across units and talk about when and how we encourage students to work collaboratively vs independently.  By engaging in the asynchronous work, participants will be more ready to make, share, and refine their plans with the community in the next call.\n \nRemind participants how they can get support while working on the asynchronous work.  This plan to support participants should be determined by you and your regional partner.\n \nFinally remind participants of when their next call is.",
+        "name": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> (3 minutes) Review Asynchronous work "
+      },
+      "seeding_key": {
+        "activity_section.key": "ff1e50dc-56a7-4a7f-a43f-189b79c54e04",
+        "lesson_activity.key": "b9faac7f-65ea-496f-81b0-7a430dbe59fc"
+      }
+    },
+    {
+      "key": "0190fda4-bdb8-49dd-9092-b9a386abae15",
+      "position": 1,
+      "properties": {
+        "description": "* If you are facilitating one module today:\n\t* Show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave.  \n\t* During the closing session of the even-numbered modules (M2, M4, M6, M8) CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview). If you are only facilitating an odd-numbered module today (M1, M3, M5,or M7) DO NOT CLOSE THE WORKSHOP.  \n\n\n* If you are facilitating two modules today:\n\t* During the closing session of the second module (M2, M4, M6, M8), show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave. On the [workshop dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) find your workshop and CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview).    \n\n\n<hr>\n\n#### Having trouble with the survey?\nIf your participants get an error message when you share the survey link, please follow these steps:\n\n1. Don’t worry!  This is likely an issue with how the workshop was scheduled in the dashboard.\n2. Ask your participants to take a few minutes to share their \"gots and needs\" in the chat. This will allow you to receive quick feedback to inform your post-workshop debrief.\n3. Let participants know the survey will be coming via email within a few days, and send participants \"home\" for the day.\n4. Contact your Regional Partner to let them know the survey link didn’t work, and ask the Regional Partner to follow-up with Code.org on the next business day.\n5. Code.org will work with Regional Partner to send the survey link to teachers.",
+        "name": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> (5 minutes) Complete Survey "
+      },
+      "seeding_key": {
+        "activity_section.key": "0190fda4-bdb8-49dd-9092-b9a386abae15",
+        "lesson_activity.key": "a91d66eb-9a51-42c1-854a-436500689176"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 1 Overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL AYWS1 Workshop Overview"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL AYWS1 Workshop Overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "6c96d959-5281-4ea5-992e-031964481c8f"
+      },
+      "level_keys": [
+        "CSP-PL AYWS1 Workshop Overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Wrapping up Unit 3 (~20 minutes)",
+        "level_keys": [
+          "CSP Module 1 Unit 3 Context"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 3 Context"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "6ea26ebd-4aa5-4c7a-a253-e41de84cedc3"
+      },
+      "level_keys": [
+        "CSP Module 1 Unit 3 Context"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP - Unit 4 tasks overview"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Unit 4 tasks overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      },
+      "level_keys": [
+        "CSP - Unit 4 tasks overview"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      },
+      "level_keys": [
+        "CSP-PL - U4 L12 Practice PT 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP-PL U4 L12 Practice PT 2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL U4 L12 Practice PT 2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      },
+      "level_keys": [
+        "CSP-PL U4 L12 Practice PT 2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP Module 1 Unit 4 Reflection"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 4 Reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      },
+      "level_keys": [
+        "CSP Module 1 Unit 4 Reflection"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Introducing EIPM (~25 minutes)",
+        "level_keys": [
+          "CSP Module 1 EIPM Reflection"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Module 1 EIPM Reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "5499a03f-3a6f-4360-99d5-18cd56a07a44"
+      },
+      "level_keys": [
+        "CSP Module 1 EIPM Reflection"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Introducing EIPM (~25 minutes)",
+        "level_keys": [
+          "CSP Module 1 EIPM goes virtual"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Module 1 EIPM goes virtual"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "5499a03f-3a6f-4360-99d5-18cd56a07a44"
+      },
+      "level_keys": [
+        "CSP Module 1 EIPM goes virtual"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 1 Asynchronous Wrap Up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 1 Wrap Up"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 1 Wrap Up"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "dc2b19e3-a4de-479d-8748-1b04bd94a125"
+      },
+      "level_keys": [
+        "CSP - Module 1 Wrap Up"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL AYWS1 Workshop Overview",
+        "script_level.level_keys": [
+          "CSP-PL AYWS1 Workshop Overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "6c96d959-5281-4ea5-992e-031964481c8f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Module 1 Unit 3 Context",
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 3 Context"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "6ea26ebd-4aa5-4c7a-a253-e41de84cedc3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Unit 4 tasks overview",
+        "script_level.level_keys": [
+          "CSP - Unit 4 tasks overview"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL - U4 L12 Practice PT 1",
+        "script_level.level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL U4 L12 Practice PT 2",
+        "script_level.level_keys": [
+          "CSP-PL U4 L12 Practice PT 2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Module 1 Unit 4 Reflection",
+        "script_level.level_keys": [
+          "CSP Module 1 Unit 4 Reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "22b7c203-0baa-4a5b-99ad-d6790be7a0eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Module 1 EIPM Reflection",
+        "script_level.level_keys": [
+          "CSP Module 1 EIPM Reflection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "5499a03f-3a6f-4360-99d5-18cd56a07a44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Module 1 EIPM goes virtual",
+        "script_level.level_keys": [
+          "CSP Module 1 EIPM goes virtual"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "5499a03f-3a6f-4360-99d5-18cd56a07a44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 1 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 1 Wrap Up"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m1-2020",
+        "activity_section.key": "dc2b19e3-a4de-479d-8748-1b04bd94a125"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "2b7fa55d-3d56-4abe-a935-04749394a416",
+      "properties": {
+        "description": "Participants can clear up misconceptions or questions from asynchronous work."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "2b7fa55d-3d56-4abe-a935-04749394a416"
+      }
+    },
+    {
+      "key": "1c3b140d-de5c-4063-bcd5-ef80ed3d01a7",
+      "properties": {
+        "description": "Participants build community through discussions about their own local contexts."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "1c3b140d-de5c-4063-bcd5-ef80ed3d01a7"
+      }
+    },
+    {
+      "key": "79bc9670-b2f4-430e-a7b9-1044ea20e39e",
+      "properties": {
+        "description": "Participants understand how the structure of Explore lessons support student understanding of concepts and vocabulary."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "79bc9670-b2f4-430e-a7b9-1044ea20e39e"
+      }
+    },
+    {
+      "key": "8bcdf4c0-2c0a-466b-8efb-8c7af9ad68d2",
+      "properties": {
+        "description": "Participants understand the role shared mental models play in the classroom."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "8bcdf4c0-2c0a-466b-8efb-8c7af9ad68d2"
+      }
+    },
+    {
+      "key": "0c17fa13-3e35-4303-9bfd-f7b4411889d4",
+      "properties": {
+        "description": "Participants understand the role of the teacher is essential to continuing the collaborative classroom feel in Investigate lessons."
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "objective.key": "0c17fa13-3e35-4303-9bfd-f7b4411889d4"
+      }
+    },
+    {
+      "key": "63e0d695-33c4-472e-b25b-11bd4e0f2751",
+      "properties": {
+        "description": "Participants understand how shared mental models can be used as a teaching tool in subsequent lessons. "
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "objective.key": "63e0d695-33c4-472e-b25b-11bd4e0f2751"
+      }
+    },
+    {
+      "key": "a3bfcd33-1d51-4f9f-a868-28543e6001a3",
+      "properties": {
+        "description": "Remaining parking lot or needs questions have been addressed"
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "a3bfcd33-1d51-4f9f-a868-28543e6001a3"
+      }
+    },
+    {
+      "key": "4e2e45e1-9c24-4a05-912e-3497e59099b4",
+      "properties": {
+        "description": "Participants know what to expect for the next set of asynchronous work"
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "4e2e45e1-9c24-4a05-912e-3497e59099b4"
+      }
+    },
+    {
+      "key": "ea9b93b2-90bc-4ee9-99d3-f5a68b572002",
+      "properties": {
+        "description": "Participants have taken the survey"
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "ea9b93b2-90bc-4ee9-99d3-f5a68b572002"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -22600,3 +22600,32 @@ en:
           description_short: ''
           description: This is the detailed facilitator agenda for Local Summer Workshops 2020. This agenda is intended for Local Summer Workshops which are 5-day in person trainings to prepare teachers to start teaching CS Principles. It focuses on the first three units of the course.
           student_description: ''
+        csp-virtual-m1-2020:
+          lessons:
+            session-1:
+              name: Workshop Opener
+              description_student: 'Workshop Modality:'
+              description_teacher: 
+            lesson-5:
+              name: Pre-Work
+              description_student: Asynchronous pre-work to do before your virtual in person workshop for module 1.
+              description_teacher: Asynchronous pre-work for teachers to do before your virtual in person workshop for module 1.
+            session-2:
+              name: Live Demo  U4L1   Variables Explore
+            session-3:
+              name: Live Demo  U4L2   Variables Investigate
+            session-4:
+              name: Wrap Up
+              description_student: 'Workshop Modality:'
+              description_teacher: 
+          lesson_groups:
+            day-1:
+              display_name: In Person Sessions
+            lessonGroup-2:
+              display_name: Asynchronous Pre-Work
+          name: csp-virtual-m1-2020
+          title: 'Virtual Module 1: Introduction to Unit 4 and EIPM'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
