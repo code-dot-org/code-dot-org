@@ -493,18 +493,17 @@ class ScriptLevel < ApplicationRecord
     extra_levels
   end
 
-  def summarize_as_bonus(user_id = nil)
-    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
+  def summarize_as_bonus
     localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
     localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
     {
       id: id.to_s,
+      level_id: level.id.to_s,
       type: level.type,
       description: localized_level_description,
       display_name: localized_level_display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
-      perfect: perfect,
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),

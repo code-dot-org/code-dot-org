@@ -45,7 +45,7 @@ lesson 'Project - Innovation Simulation Part 3', display_name: 'Project   Innova
 
 lesson 'Security Risks Part 1', display_name: 'Security Risks Part 1', has_lesson_plan: true
 level 'CSP 20-21 Keylogging_2021', progression: 'Keylogging'
-level 'CSP 20-21 Phishing_2021'
+level 'CSP 20-21 Phishing_2021', progression: 'Phishing'
 level 'CSP 20-21 Rogue Access Points_2021', progression: 'Malware'
 level 'U10 L07 CFU security risks_2021', progression: 'Check For Understanding', assessment: true
 
