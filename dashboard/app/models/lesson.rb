@@ -239,6 +239,12 @@ class Lesson < ApplicationRecord
     end
   end
 
+  def script_resource_pdf_url
+    if script.is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(script)
+    end
+  end
+
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -277,7 +283,6 @@ class Lesson < ApplicationRecord
         unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
-
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
@@ -307,7 +312,7 @@ class Lesson < ApplicationRecord
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged_lesson?
+      lesson_data[:lesson_extras_level_url] = script_lesson_extras_url(script.name, lesson_position: relative_position) unless unplugged_lesson?
 
       lesson_data
     end
@@ -382,6 +387,7 @@ class Lesson < ApplicationRecord
 
   def summarize_for_lesson_show(user, can_view_teacher_markdown)
     {
+      id: id,
       unit: script.summarize_for_lesson_show,
       position: relative_position,
       lockable: lockable,
@@ -403,7 +409,8 @@ class Lesson < ApplicationRecord
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedTeacher: user&.authorized_teacher?,
-      hasVerifiedResources: lockable || lesson_plan_has_verified_resources
+      hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
+      scriptResourcesPdfUrl: script_resource_pdf_url
     }
   end
 
@@ -425,6 +432,7 @@ class Lesson < ApplicationRecord
   def summarize_for_student_lesson_plan
     all_resources = resources_for_lesson_plan(false)
     {
+      id: id,
       unit: script.summarize_for_lesson_show(true),
       position: relative_position,
       key: key,
@@ -440,6 +448,7 @@ class Lesson < ApplicationRecord
 
   def summarize_for_lesson_dropdown(is_student = false)
     {
+      id: id,
       key: key,
       displayName: localized_name,
       link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),

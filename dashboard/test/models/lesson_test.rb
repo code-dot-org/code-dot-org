@@ -136,7 +136,7 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson2
     create :script_level, script: script, lesson: lesson2
 
-    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, lesson1.next_level_path_for_lesson_extras(@student)
+    assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
   end
 
@@ -838,6 +838,25 @@ class LessonTest < ActiveSupport::TestCase
       new_lesson.student_lesson_plan_pdf_url,
       "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
     )
+  end
+
+  test 'script_resource_pdf_url gets url to script resources pdf for migrated script' do
+    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_equal(
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name} - Resources.pdf",
+      lesson.script_resource_pdf_url
+    )
+  end
+
+  test 'script_resource_pdf_url is nil for non-migrated script' do
+    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_nil lesson.script_resource_pdf_url
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
