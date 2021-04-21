@@ -1413,6 +1413,7 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
@@ -1646,6 +1647,7 @@ class Script < ApplicationRecord
     nonboolean_keys = [
       :hideable_lessons,
       :professional_learning_course,
+      :only_instructor_review_required,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
       :project_widget_visible,
