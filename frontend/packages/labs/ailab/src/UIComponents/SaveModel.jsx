@@ -41,8 +41,7 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
-      const columnType = columnDescription.id === this.props.labelColumn
-       ? "label" : "feature";
+      const columnType = columnDescription.id === this.props.labelColumn ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -96,8 +95,7 @@ class SaveModel extends Component {
       answer: this.props.dataDescription
     };
 
-    const arrowIcon = this.state.showColumnDescriptions
-      ? "fa fa-caret-up" : "fa fa-caret-down";
+    const arrowIcon = this.state.showColumnDescriptions ? "fa fa-caret-up" : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
 
