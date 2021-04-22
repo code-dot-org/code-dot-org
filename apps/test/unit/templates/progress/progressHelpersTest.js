@@ -8,6 +8,7 @@ import {
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
   lessonIsVisible,
+  lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
@@ -62,20 +63,7 @@ describe('progressHelpers', () => {
       );
     });
 
-    it('returns false for a lockable stage when not authorized', () => {
-      const localState = {
-        ...state,
-        stageLock: {
-          lockableAuthorized: false
-        }
-      };
-      assert.strictEqual(
-        lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
-        false
-      );
-    });
-
-    it('returns true for a lockable stage when authorized', () => {
+    it('returns true for a lockable stage as teacher', () => {
       const localState = {
         ...state,
         stageLock: {
@@ -84,6 +72,85 @@ describe('progressHelpers', () => {
       };
       assert.strictEqual(
         lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
+        true
+      );
+    });
+  });
+
+  describe('lessonIsLockedForUser', () => {
+    const nonLockableLesson = fakeLesson('non-lockable lesson', '3', false);
+    const lockableLesson = fakeLesson('lockable lesson', '4', true);
+    const unlockedLevels = fakeLevels(3);
+    const lockedLevels = fakeLevels(3).map((level, index) => ({
+      ...level,
+      locked: index === 2 ? true : false // lock last level in level group
+    }));
+
+    const state = {
+      currentUser: {
+        userId: 1
+      },
+      stageLock: {
+        lockableAuthorized: true
+      }
+    };
+
+    it('returns false for non-lockable lesson', () => {
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          nonLockableLesson,
+          unlockedLevels,
+          state,
+          ViewType.Student
+        ),
+        false
+      );
+    });
+
+    it('returns true for lockable lesson for signed out user', () => {
+      const localState = {
+        ...state,
+        currentUser: {
+          userId: null
+        }
+      };
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          lockableLesson,
+          unlockedLevels,
+          localState,
+          ViewType.Student
+        ),
+        true
+      );
+    });
+
+    it('returns true for lockable lesson for non-verified teacher', () => {
+      const localState = {
+        ...state,
+        stageLock: {
+          lockableAuthorized: false
+        }
+      };
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          lockableLesson,
+          unlockedLevels,
+          localState,
+          ViewType.Teacher
+        ),
+        true
+      );
+    });
+
+    it('returns true for lockable lesson for stageLocked', () => {
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          lockableLesson,
+          lockedLevels,
+          state,
+          ViewType.Student
+        ),
         true
       );
     });
