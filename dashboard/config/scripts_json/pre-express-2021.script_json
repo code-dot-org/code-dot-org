@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-04-21 18:40:35 UTC",
+    "serialized_at": "2021-04-21 20:28:16 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -250,10 +250,11 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
+        "overview": "In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
         "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Review [r csf-lesson-recommend/pre-express/2021].\r\n - Make sure every student has a [r think-spot-journal/pre-express/2021].",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure every student has a Reflection Journal",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Create your own game or story."
       },
       "seeding_key": {
         "lesson.key": "On the Move with Events",
@@ -269,10 +270,11 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
+        "overview": "In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. ",
         "purpose": "In this online activity, students will learn how to use events in Play Lab. They will start by training the knight to move when an arrow key is pressed, then end with the opportunity to showcase the rest of the skills that they learned throughout this course, including sequence and looping, as part of the final freeplay puzzle.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Make sure every student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure every student has a reflection journal.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Use events to create a story or make an interactive game."
       },
       "seeding_key": {
         "lesson.key": "A Royal Battle with Events",
@@ -799,19 +801,6 @@
       }
     },
     {
-      "key": "e34fd5d3-2d30-46ee-a68f-eae1f04df0aa",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e34fd5d3-2d30-46ee-a68f-eae1f04df0aa",
-        "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
       "key": "3ad79f2e-3afc-4238-a58d-7f88ea78de65",
       "position": 1,
       "properties": {
@@ -829,8 +818,6 @@
       "key": "e5675058-2e9d-4978-a9c8-6ed44888202b",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Events",
-        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "e5675058-2e9d-4978-a9c8-6ed44888202b",
@@ -871,24 +858,10 @@
       "key": "9209915b-655f-4e9e-b106-3843617f4034",
       "position": 5,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "9209915b-655f-4e9e-b106-3843617f4034",
-        "lesson.key": "On the Move with Events",
-        "lesson_group.key": "csf_events",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
-      "key": "46b88b92-2ece-44f0-becb-5a7e25ca078b",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "46b88b92-2ece-44f0-becb-5a7e25ca078b",
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021"
@@ -909,22 +882,8 @@
       }
     },
     {
-      "key": "02a3ea4c-67c7-44c8-90db-fb202d1c6a74",
-      "position": 2,
-      "properties": {
-        "name": "Bridging Activity - Events",
-        "duration": 10
-      },
-      "seeding_key": {
-        "lesson_activity.key": "02a3ea4c-67c7-44c8-90db-fb202d1c6a74",
-        "lesson.key": "A Royal Battle with Events",
-        "lesson_group.key": "csf_events",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
       "key": "def2e87e-02de-40be-b652-89117499f7a0",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 30
@@ -938,7 +897,7 @@
     },
     {
       "key": "291b174a-b478-463d-aff6-af66feda095a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -952,26 +911,12 @@
     },
     {
       "key": "403fc603-5eea-490f-943f-0f0e1d4d99f9",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "403fc603-5eea-490f-943f-0f0e1d4d99f9",
-        "lesson.key": "A Royal Battle with Events",
-        "lesson_group.key": "csf_events",
-        "script.name": "pre-express-2021"
-      }
-    },
-    {
-      "key": "0e6241dd-fea9-4960-8341-c778fd2f3a35",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0e6241dd-fea9-4960-8341-c778fd2f3a35",
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021"
@@ -1118,7 +1063,7 @@
       "key": "68207b57-546c-4e2c-9742-e35a0ba2ef82",
       "position": 1,
       "properties": {
-        "description": "###Journaling\n\nGoal: Help students reflect on the things they learned in this lesson\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n###Journal prompts:\n\n - Draw one of the feeling faces that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n -  - Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - Draw one of the feeling faces that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n -  - Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1226,7 +1171,7 @@
       "key": "51b1c494-c02c-43d8-bf3d-543f6634f474",
       "position": 1,
       "properties": {
-        "description": "###Journaling:\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n### Journal Prompts:\n\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n - Draw one of the ***Feeling Faces**  that shows how you felt about today's lesson in the corner of your journal page.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"\n - Draw one of the ***Feeling Faces**  that shows how you felt about today's lesson in the corner of your journal page.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1343,7 +1288,7 @@
       "key": "12c1b1b7-2a91-4f58-ae14-136ea1536a67",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1434,7 +1379,7 @@
       "key": "4f8c5eb5-a782-4698-a471-19808d1dbbc4",
       "position": 1,
       "properties": {
-        "description": "###Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a picture of BB-8 you guided through the maze today and add a list of the commands that you used.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a picture of BB-8 you guided through the maze today and add a list of the commands that you used.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1563,7 +1508,7 @@
       "key": "94b18069-db8a-43d7-bbf0-8912ac563349",
       "position": 1,
       "properties": {
-        "description": "###Journaling:\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a time you found a bug in your code.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a time you found a bug in your code.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1708,7 +1653,7 @@
       "key": "0366b799-b555-4aef-b6c7-741c035590aa",
       "position": 1,
       "properties": {
-        "description": "###Journaling:\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw *Scrat* and an acorn.\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw *Scrat* and an acorn.\n - Draw yourself using a loop to do an everyday activity, like brushing your teeth.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1855,7 +1800,7 @@
       "key": "6397718f-1733-47e6-8ace-820b3f9d1701",
       "position": 1,
       "properties": {
-        "description": "###Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a line of treasure that Laurel could collect.\n - Draw something that uses loops.",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw a line of treasure that Laurel could collect.\n - Draw something that uses loops.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2006,7 +1951,7 @@
       "key": "7043a915-b252-47d3-bb01-5975d613129c",
       "position": 1,
       "properties": {
-        "description": "###Journaling:\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw some stairs. Imagine the loop needed to draw this.\n - Draw something else in your life that uses loops.",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw some stairs. Imagine the loop needed to draw this.\n - Draw something else in your life that uses loops.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2018,7 +1963,7 @@
       "key": "b53a9767-0731-41e2-b2fe-0b8b841cd403",
       "position": 1,
       "properties": {
-        "description": "- Quickly review the definition of a loop, the action of doing something over and over again. \n- Discuss different patterns like zigzags and stairsteps.\n\t- _How would you explain to someone how to draw that pattern?_\n\t- _How could you draw this using a loop?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nIn the artist levels, students will be using 45 degree angles described as northwest, northeast, southwest, southeast. We recommend briefly discussing these directions with the class and drawing an image for students to refer back to.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)",
+        "description": "- Quickly review the definition of a loop, the action of doing something over and over again. \n- Discuss different patterns like zigzags and stairsteps.\n\t- _How would you explain to someone how to draw that pattern?_\n\t- _How could you draw this using a loop?_\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2027,27 +1972,27 @@
       }
     },
     {
-      "key": "e1f08b5e-9624-4f52-a43d-f9e618c04422",
-      "position": 1,
+      "key": "e5e50ac0-9ede-4521-8a97-17ab48738bfc",
+      "position": 2,
       "properties": {
-        "description": "#### Teacher Demonstration",
-        "name": "Online Puzzles\r"
+        "description": "We've included a multiple choice prediction level that is difficult for non-readers. This level is optional for you to review with your class to help prepare for the puzzles to come. Alternatively, this could be used after finishing the stage as a review for the class.\n\nPrediction Levels:\n\n - [Loops in Artist](https://studio.code.org/levels/8745)"
       },
       "seeding_key": {
-        "activity_section.key": "e1f08b5e-9624-4f52-a43d-f9e618c04422",
-        "lesson_activity.key": "e651df8b-1577-4888-8321-37a135e4df24"
+        "activity_section.key": "e5e50ac0-9ede-4521-8a97-17ab48738bfc",
+        "lesson_activity.key": "ead863af-cc82-48f6-855f-0e2a4563ed9b"
       }
     },
     {
       "key": "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f",
-      "position": 2,
+      "position": 1,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online**.\n"
           }
-        ]
+        ],
+        "name": "Drawing Gardens with Loops"
       },
       "seeding_key": {
         "activity_section.key": "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f",
@@ -2055,13 +2000,57 @@
       }
     },
     {
-      "key": "0a709112-bac7-4147-a5e3-16e8dfd9a767",
-      "position": 3,
+      "key": "1474d69b-c98f-40d9-b8c5-07cbeb090699",
+      "position": 2,
       "properties": {
-        "description": "We've included some multiple choice prediction levels that are difficult for non-readers. These levels are optional for you to review with your class to help prepare for the puzzles to come. Alternatively, these could be used after finishing the stage as a review for the class.\r\n\r\nPrediction Levels:\r\n\r\n - [Loops in Artist](https://studio.code.org/levels/8745)"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "0a709112-bac7-4147-a5e3-16e8dfd9a767",
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699",
+        "lesson_activity.key": "e651df8b-1577-4888-8321-37a135e4df24"
+      }
+    },
+    {
+      "key": "77de1bff-b1e2-4956-9ed2-15110f9aa640",
+      "position": 3,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "77de1bff-b1e2-4956-9ed2-15110f9aa640",
+        "lesson_activity.key": "e651df8b-1577-4888-8321-37a135e4df24"
+      }
+    },
+    {
+      "key": "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0",
+        "lesson_activity.key": "e651df8b-1577-4888-8321-37a135e4df24"
+      }
+    },
+    {
+      "key": "92674c9e-c2dc-4023-a386-8fae5c2b8074",
+      "position": 5,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "92674c9e-c2dc-4023-a386-8fae5c2b8074",
+        "lesson_activity.key": "e651df8b-1577-4888-8321-37a135e4df24"
+      }
+    },
+    {
+      "key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44",
         "lesson_activity.key": "e651df8b-1577-4888-8321-37a135e4df24"
       }
     },
@@ -2069,22 +2058,12 @@
       "key": "e382cc47-35ef-4c10-80a1-4b9090d86856",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw the patterns you made with a loop.\r\n - Draw a pattern that you would like to make with a loop.",
-        "name": "Journaling\r"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw the patterns you made with a loop.\n - Draw a pattern that you would like to make with a loop.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "e382cc47-35ef-4c10-80a1-4b9090d86856",
         "lesson_activity.key": "bcb796e6-f8d8-456a-8e44-e22eb94ed098"
-      }
-    },
-    {
-      "key": "7200baaa-ea1b-4844-964e-0b0b3a45495a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a",
-        "lesson_activity.key": "e34fd5d3-2d30-46ee-a68f-eae1f04df0aa"
       }
     },
     {
@@ -2094,7 +2073,6 @@
         "description": "Now we're going to add events to our code. Specifically, we're going to have an event for when two characters touch each other.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "### Teaching this course as a class?\r\nOur grade-aligned CS Fundamentals courses use unplugged lessons to build community and introduce tricky computer science concepts, including **events**. Check out the lesson [The Big Event Jr.](https://curriculum.code.org/csf-19/coursea/11/) from [Course A](https://curriculum.code.org/csf-19/coursea/)!\r\n\r\n"
           }
@@ -2121,7 +2099,7 @@
       "key": "76c12b77-7e58-4d27-b6b5-ae529ae291ba",
       "position": 1,
       "properties": {
-        "description": "Pull a puzzle from the corresponding puzzles online. We recommend puzzle 7. Call on different students to make a funny noise when you click on Jorge. Explain this is an event that they are reacting to and Jorge can be coded to make noise when you click on him.",
+        "description": "Pull a puzzle from the corresponding puzzles online. We recommend puzzle 7. Call on different students to make a funny noise when you click on Jorge. Explain that this is an event that they are reacting to and Jorge can be coded to make noise when you click on him.",
         "name": "Previewing Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -2134,7 +2112,7 @@
       "position": 1,
       "properties": {
         "description": "At the final level students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.",
-        "name": "Online Puzzles and Free Play\r"
+        "name": "On the Move with Events"
       },
       "seeding_key": {
         "activity_section.key": "6c8d4815-0e66-45fd-980a-dacf20015a66",
@@ -2142,11 +2120,66 @@
       }
     },
     {
+      "key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video:  Create a Story"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae",
+        "lesson_activity.key": "602649f9-a35f-49ab-bddf-09ebdf771f17"
+      }
+    },
+    {
+      "key": "708df6be-8599-4a1a-993b-13ca6e874d5c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "708df6be-8599-4a1a-993b-13ca6e874d5c",
+        "lesson_activity.key": "602649f9-a35f-49ab-bddf-09ebdf771f17"
+      }
+    },
+    {
+      "key": "dd7a6bce-6e0d-4774-8588-76327c4315d6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd7a6bce-6e0d-4774-8588-76327c4315d6",
+        "lesson_activity.key": "602649f9-a35f-49ab-bddf-09ebdf771f17"
+      }
+    },
+    {
+      "key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Mini-project: Jorge the Dog"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9",
+        "lesson_activity.key": "602649f9-a35f-49ab-bddf-09ebdf771f17"
+      }
+    },
+    {
+      "key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad",
+        "lesson_activity.key": "602649f9-a35f-49ab-bddf-09ebdf771f17"
+      }
+    },
+    {
       "key": "9336ef6c-3ac8-4703-8f8d-98e88518e5e9",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw an event you used in your program today.\r\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
-        "name": "Journaling\r"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "9336ef6c-3ac8-4703-8f8d-98e88518e5e9",
@@ -2165,54 +2198,15 @@
       }
     },
     {
-      "key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b",
+      "key": "e41f8532-e8cd-4df7-a729-43346d3df6d1",
       "position": 1,
       "properties": {
+        "name": "Introduction",
+        "description": "Pull a puzzle from the corresponding online puzzles. We recommend puzzle 4 of this stage. Call on different students to make a funny face representing a mood when you click on Daisy. Explain this is an event that they are reacting to and Daisy can be coded to change moods when you click on her."
       },
       "seeding_key": {
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b",
-        "lesson_activity.key": "46b88b92-2ece-44f0-becb-5a7e25ca078b"
-      }
-    },
-    {
-      "key": "2a010cbf-eafb-408b-a8d8-af06c13103bf",
-      "position": 1,
-      "properties": {
-        "description": "Review \"The Big Event\" activity with students:\r\n\r\n - What did we \"program\" the button events to do?\r\n\r\nNow we're going to add events to our code. Specifically, we're going to have an event for when two characters touch each other.\r\n\r\n - When have you seen two characters touch each other as an event in games?",
-        "name": "Introduction\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "2a010cbf-eafb-408b-a8d8-af06c13103bf",
+        "activity_section.key": "e41f8532-e8cd-4df7-a729-43346d3df6d1",
         "lesson_activity.key": "3eb2dbe1-88c5-4306-83e5-0f057590e7d5"
-      }
-    },
-    {
-      "key": "26f97dc6-cf44-417d-a46b-7e83fd29ae9b",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "Students will have the opportunity to share their final product with a link. This is a great opportunity to show your school community the great things your students are doing. Collect all of the links and keep them on your class website for all to see!\r\n\r\nRemind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think/pre-express/2021].\r\n\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "26f97dc6-cf44-417d-a46b-7e83fd29ae9b",
-        "lesson_activity.key": "02a3ea4c-67c7-44c8-90db-fb202d1c6a74"
-      }
-    },
-    {
-      "key": "84aaa4c8-37cb-4057-8a09-352910951bcd",
-      "position": 2,
-      "properties": {
-        "description": "Pull a puzzle from the corresponding online puzzles. We recommend puzzle 4 of this stage. Call on different students to make a funny face representing a mood when you click on Daisy. Explain this is an event that they are reacting to and Daisy can be coded to change moods when you click on her.",
-        "name": "Previewing Online Puzzles as a Class\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "84aaa4c8-37cb-4057-8a09-352910951bcd",
-        "lesson_activity.key": "02a3ea4c-67c7-44c8-90db-fb202d1c6a74"
       }
     },
     {
@@ -2220,7 +2214,7 @@
       "position": 1,
       "properties": {
         "description": "At the final level students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.",
-        "name": "Online Puzzles and Free Play\r"
+        "name": "A Royal Battle with Events"
       },
       "seeding_key": {
         "activity_section.key": "fbc5ec8c-04e4-4690-8361-be9c49c1daca",
@@ -2228,11 +2222,44 @@
       }
     },
     {
+      "key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Mini-Project: Royal Battle"
+      },
+      "seeding_key": {
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7",
+        "lesson_activity.key": "def2e87e-02de-40be-b652-89117499f7a0"
+      }
+    },
+    {
+      "key": "ddebabd0-cce0-446d-81ad-f4734e71d06c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddebabd0-cce0-446d-81ad-f4734e71d06c",
+        "lesson_activity.key": "def2e87e-02de-40be-b652-89117499f7a0"
+      }
+    },
+    {
+      "key": "85076d8d-1ddf-45cc-b510-0eeddffaff85",
+      "position": 4,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "85076d8d-1ddf-45cc-b510-0eeddffaff85",
+        "lesson_activity.key": "def2e87e-02de-40be-b652-89117499f7a0"
+      }
+    },
+    {
       "key": "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - Draw one of the [r feeling-faces-image/pre-express/2021] that shows how you felt about today's lesson in the corner of your journal page.\r\n - Draw an event you used in your program today.\r\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
-        "name": "Journaling\r"
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c",
@@ -2248,16 +2275,6 @@
       "seeding_key": {
         "activity_section.key": "2b5cb5b7-6a5e-4727-b8b5-128a3c546781",
         "lesson_activity.key": "403fc603-5eea-490f-943f-0f0e1d4d99f9"
-      }
-    },
-    {
-      "key": "d29881de-8781-4fde-a959-5aa62a576ab0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0",
-        "lesson_activity.key": "0e6241dd-fea9-4960-8341-c778fd2f3a35"
       }
     }
   ],
@@ -4807,23 +4824,21 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseB_artist_loops1_2021"
+          "courseB_artist_loops2_2021"
         ],
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       },
       "level_keys": [
-        "courseB_artist_loops1_2021"
+        "courseB_artist_loops2_2021"
       ]
     },
     {
@@ -4832,23 +4847,21 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_video_artistLoops_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseB_video_artistLoops_2021"
+          "courseB_artist_loops3_2021"
         ],
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       },
       "level_keys": [
-        "courseB_video_artistLoops_2021"
+        "courseB_artist_loops3_2021"
       ]
     },
     {
@@ -4857,23 +4870,21 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseB_artist_loops2_2021"
+          "courseB_artist_loops4_2021"
         ],
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       },
       "level_keys": [
-        "courseB_artist_loops2_2021"
+        "courseB_artist_loops4_2021"
       ]
     },
     {
@@ -4882,23 +4893,21 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseB_artist_loops3_2021"
+          "courseB_artist_loops5_2021"
         ],
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       },
       "level_keys": [
-        "courseB_artist_loops3_2021"
+        "courseB_artist_loops5_2021"
       ]
     },
     {
@@ -4907,59 +4916,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseB_artist_loops4_2021"
-        ],
-        "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
-      },
-      "level_keys": [
-        "courseB_artist_loops4_2021"
-      ]
-    },
-    {
-      "chapter": 107,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseB_artist_loops5_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseB_artist_loops5_2021"
-        ],
-        "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
-      },
-      "level_keys": [
-        "courseB_artist_loops5_2021"
-      ]
-    },
-    {
-      "chapter": 108,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseB_artist_loops6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -4970,22 +4927,20 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       },
       "level_keys": [
         "courseB_artist_loops6_2021"
       ]
     },
     {
-      "chapter": 109,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 107,
+      "position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseB_artist_loops7_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -4996,21 +4951,19 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "77de1bff-b1e2-4956-9ed2-15110f9aa640"
       },
       "level_keys": [
         "courseB_artist_loops7_2021"
       ]
     },
     {
-      "chapter": 110,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 108,
+      "position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops8_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5021,21 +4974,19 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0"
       },
       "level_keys": [
         "courseB_artist_loops8_2021"
       ]
     },
     {
-      "chapter": 111,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 109,
+      "position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops9_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5046,21 +4997,19 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0"
       },
       "level_keys": [
         "courseB_artist_loops9_2021"
       ]
     },
     {
-      "chapter": 112,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 110,
+      "position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops10_2021"
-        ]
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -5071,21 +5020,19 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "92674c9e-c2dc-4023-a386-8fae5c2b8074"
       },
       "level_keys": [
         "courseB_artist_loops10_2021"
       ]
     },
     {
-      "chapter": 113,
-      "position": 12,
-      "activity_section_position": 12,
+      "chapter": 111,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5096,21 +5043,19 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44"
       },
       "level_keys": [
         "courseB_artist_loops_challenge1_2021"
       ]
     },
     {
-      "chapter": 114,
-      "position": 13,
-      "activity_section_position": 13,
+      "chapter": 112,
+      "position": 11,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops_challenge2_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5121,21 +5066,19 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44"
       },
       "level_keys": [
         "courseB_artist_loops_challenge2_2021"
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_video_events_2021"
-        ]
+        "progression": "Video:  Create a Story"
       },
       "named_level": null,
       "bonus": null,
@@ -5146,21 +5089,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae"
       },
       "level_keys": [
         "courseA_video_events_2021"
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 114,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playLab_events1_2021"
-        ]
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -5171,21 +5112,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "708df6be-8599-4a1a-993b-13ca6e874d5c"
       },
       "level_keys": [
         "courseA_playLab_events1_2021"
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 115,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playLab_events2_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5196,21 +5135,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "dd7a6bce-6e0d-4774-8588-76327c4315d6"
       },
       "level_keys": [
         "courseA_playLab_events2_2021"
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 116,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playLab_events3_2021"
-        ]
+        "progression": "Mini-project: Jorge the Dog"
       },
       "named_level": null,
       "bonus": null,
@@ -5221,21 +5158,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       },
       "level_keys": [
         "courseA_playLab_events3_2021"
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 117,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playLab_events4_2021"
-        ]
+        "progression": "Mini-project: Jorge the Dog"
       },
       "named_level": null,
       "bonus": null,
@@ -5246,21 +5181,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       },
       "level_keys": [
         "courseA_playLab_events4_2021"
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 118,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playLab_events5_2021"
-        ]
+        "progression": "Mini-project: Jorge the Dog"
       },
       "named_level": null,
       "bonus": null,
@@ -5271,21 +5204,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       },
       "level_keys": [
         "courseA_playLab_events5_2021"
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 119,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playLab_events6_2021"
-        ]
+        "progression": "Mini-project: Jorge the Dog"
       },
       "named_level": null,
       "bonus": null,
@@ -5296,21 +5227,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       },
       "level_keys": [
         "courseA_playLab_events6_2021"
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 120,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playLab_events7_2021"
-        ]
+        "progression": "Mini-project: Jorge the Dog"
       },
       "named_level": null,
       "bonus": null,
@@ -5321,21 +5250,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       },
       "level_keys": [
         "courseA_playLab_events7_2021"
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 121,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playlab_events_challenge2_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5346,21 +5273,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad"
       },
       "level_keys": [
         "courseA_playlab_events_challenge2_2021"
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 122,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_playlab_events_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5371,46 +5296,19 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad"
       },
       "level_keys": [
         "courseA_playlab_events_challenge1_2021"
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playLab_events1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseB_playLab_events1_2021"
-        ],
-        "lesson.key": "A Royal Battle with Events",
-        "lesson_group.key": "csf_events",
-        "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
-      },
-      "level_keys": [
-        "courseB_playLab_events1_2021"
-      ]
-    },
-    {
-      "chapter": 126,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseB_playlab_events2_2021"
-        ]
+        "progression": "Mini-Project: Royal Battle"
       },
       "named_level": null,
       "bonus": null,
@@ -5421,21 +5319,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       },
       "level_keys": [
         "courseB_playlab_events2_2021"
       ]
     },
     {
-      "chapter": 127,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "chapter": 124,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_events3_2021"
-        ]
+        "progression": "Mini-Project: Royal Battle"
       },
       "named_level": null,
       "bonus": null,
@@ -5446,21 +5342,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       },
       "level_keys": [
         "courseB_playlab_events3_2021"
       ]
     },
     {
-      "chapter": 128,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "chapter": 125,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_events4_2021"
-        ]
+        "progression": "Mini-Project: Royal Battle"
       },
       "named_level": null,
       "bonus": null,
@@ -5471,21 +5365,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       },
       "level_keys": [
         "courseB_playlab_events4_2021"
       ]
     },
     {
-      "chapter": 129,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "chapter": 126,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_events5_2021"
-        ]
+        "progression": "Mini-Project: Royal Battle"
       },
       "named_level": null,
       "bonus": null,
@@ -5496,21 +5388,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       },
       "level_keys": [
         "courseB_playlab_events5_2021"
       ]
     },
     {
-      "chapter": 130,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "chapter": 127,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_events6_2021"
-        ]
+        "progression": "Mini-Project: Royal Battle"
       },
       "named_level": null,
       "bonus": null,
@@ -5521,21 +5411,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       },
       "level_keys": [
         "courseB_playlab_events6_2021"
       ]
     },
     {
-      "chapter": 131,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "chapter": 128,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_events7_2021"
-        ]
+        "progression": "Mini-Project: Royal Battle"
       },
       "named_level": null,
       "bonus": null,
@@ -5546,21 +5434,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       },
       "level_keys": [
         "courseB_playlab_events7_2021"
       ]
     },
     {
-      "chapter": 132,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "chapter": 129,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_eventsFP_2021"
-        ]
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -5571,21 +5457,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "ddebabd0-cce0-446d-81ad-f4734e71d06c"
       },
       "level_keys": [
         "courseB_playlab_eventsFP_2021"
       ]
     },
     {
-      "chapter": 133,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "chapter": 130,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_events_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5596,21 +5480,19 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "85076d8d-1ddf-45cc-b510-0eeddffaff85"
       },
       "level_keys": [
         "courseB_playlab_events_challenge1_2021"
       ]
     },
     {
-      "chapter": 134,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "chapter": 131,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_playlab_events_challenge2_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -5621,7 +5503,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "85076d8d-1ddf-45cc-b510-0eeddffaff85"
       },
       "level_keys": [
         "courseB_playlab_events_challenge2_2021"
@@ -6843,30 +6725,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseB_artist_loops1_2021",
-        "script_level.level_keys": [
-          "courseB_artist_loops1_2021"
-        ],
-        "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_video_artistLoops_2021",
-        "script_level.level_keys": [
-          "courseB_video_artistLoops_2021"
-        ],
-        "lesson.key": "Drawing Gardens with Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseB_artist_loops2_2021",
         "script_level.level_keys": [
           "courseB_artist_loops2_2021"
@@ -6874,7 +6732,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       }
     },
     {
@@ -6886,7 +6744,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       }
     },
     {
@@ -6898,7 +6756,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       }
     },
     {
@@ -6910,7 +6768,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       }
     },
     {
@@ -6922,7 +6780,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "1474d69b-c98f-40d9-b8c5-07cbeb090699"
       }
     },
     {
@@ -6934,7 +6792,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "77de1bff-b1e2-4956-9ed2-15110f9aa640"
       }
     },
     {
@@ -6946,7 +6804,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0"
       }
     },
     {
@@ -6958,7 +6816,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0"
       }
     },
     {
@@ -6970,7 +6828,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "92674c9e-c2dc-4023-a386-8fae5c2b8074"
       }
     },
     {
@@ -6982,7 +6840,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44"
       }
     },
     {
@@ -6994,7 +6852,7 @@
         "lesson.key": "Drawing Gardens with Loops",
         "lesson_group.key": "csf_loops",
         "script.name": "pre-express-2021",
-        "activity_section.key": "7200baaa-ea1b-4844-964e-0b0b3a45495a"
+        "activity_section.key": "b1227c60-2106-47a0-a2a0-d7fb4a460d44"
       }
     },
     {
@@ -7006,7 +6864,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae"
       }
     },
     {
@@ -7018,7 +6876,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "708df6be-8599-4a1a-993b-13ca6e874d5c"
       }
     },
     {
@@ -7030,7 +6888,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "dd7a6bce-6e0d-4774-8588-76327c4315d6"
       }
     },
     {
@@ -7042,7 +6900,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       }
     },
     {
@@ -7054,7 +6912,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       }
     },
     {
@@ -7066,7 +6924,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       }
     },
     {
@@ -7078,7 +6936,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       }
     },
     {
@@ -7090,7 +6948,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "bf84d5a1-77c9-4769-9963-84b33df1e0b9"
       }
     },
     {
@@ -7102,7 +6960,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
+        "activity_section.key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad"
       }
     },
     {
@@ -7114,19 +6972,7 @@
         "lesson.key": "On the Move with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "f2979bb5-e209-4b1b-aa2c-fb2d4022389b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_playLab_events1_2021",
-        "script_level.level_keys": [
-          "courseB_playLab_events1_2021"
-        ],
-        "lesson.key": "A Royal Battle with Events",
-        "lesson_group.key": "csf_events",
-        "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "0a6abf88-92c8-455d-8d64-e8f61ae227ad"
       }
     },
     {
@@ -7138,7 +6984,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       }
     },
     {
@@ -7150,7 +6996,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       }
     },
     {
@@ -7162,7 +7008,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       }
     },
     {
@@ -7174,7 +7020,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       }
     },
     {
@@ -7186,7 +7032,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       }
     },
     {
@@ -7198,7 +7044,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7"
       }
     },
     {
@@ -7210,7 +7056,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "ddebabd0-cce0-446d-81ad-f4734e71d06c"
       }
     },
     {
@@ -7222,7 +7068,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "85076d8d-1ddf-45cc-b510-0eeddffaff85"
       }
     },
     {
@@ -7234,7 +7080,7 @@
         "lesson.key": "A Royal Battle with Events",
         "lesson_group.key": "csf_events",
         "script.name": "pre-express-2021",
-        "activity_section.key": "d29881de-8781-4fde-a959-5aa62a576ab0"
+        "activity_section.key": "85076d8d-1ddf-45cc-b510-0eeddffaff85"
       }
     }
   ],
@@ -7310,19 +7156,6 @@
       },
       "seeding_key": {
         "resource.key": "common-sense-media-pause-think"
-      }
-    },
-    {
-      "name": "Think Spot Journal",
-      "url": "https://docs.google.com/document/d/1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY/edit",
-      "key": "think-spot-journal",
-      "properties": {
-        "type": "Reflection Journal",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -7461,25 +7294,19 @@
     {
       "seeding_key": {
         "lesson.key": "On the Move with Events",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "On the Move with Events",
         "resource.key": "feeling-faces-image"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "A Royal Battle with Events",
-        "resource.key": "think-spot-journal"
+        "resource.key": "feeling-faces-image"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "A Royal Battle with Events",
-        "resource.key": "feeling-faces-image"
+        "resource.key": "common-sense-media-pause-think"
       }
     }
   ],
