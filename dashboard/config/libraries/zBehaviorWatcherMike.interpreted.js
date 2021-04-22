@@ -5,8 +5,10 @@ function spriteDebugPanels(){
   for(var i=0;i<list.length;i++){
     var mySprite = list[i];
     //To only show for sprites with behaviors, add this -> &&getBehaviorsForSpriteId(spriteIds[i]).length>0
+    mySprite.debug=false;
     if((mouseIsOver(mySprite)||list.length==1)){
       //rectMode(CENTER);
+      mySprite.debug=true;
       fill(rgb(50,50,50,0.5));
       stroke("gray");
       var textScaler=16;
