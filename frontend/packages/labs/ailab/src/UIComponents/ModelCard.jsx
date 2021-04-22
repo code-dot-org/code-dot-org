@@ -44,7 +44,7 @@ class ModelCard extends Component {
             <p style={styles.modelCardContent}>{metadata.card.description}</p>
           </div>
           <div style={styles.modelCardSubpanel}>
-            <h5 style={styles.modelCardHeading}>Intended Uses</h5>
+            <h5 style={styles.modelCardHeading}>Intended Use</h5>
             <p style={styles.modelCardContent}>
               {trainedModelDetails.potentialUses}{" "}
             </p>
