@@ -222,6 +222,30 @@ describe('ScriptEditor', () => {
     });
   });
 
+  it('disables peer review count when instructor review only selected', () => {
+    const wrapper = createWrapper({
+      initialOnlyInstructorReviewRequired: false,
+      initialPeerReviewsRequired: 2
+    });
+
+    let peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
+
+    expect(peerReviewCountInput.props().disabled).to.be.false;
+    expect(peerReviewCountInput.props().value).to.equal(2);
+
+    const instructorReviewOnlyCheckbox = wrapper.find(
+      '#only_instructor_review_checkbox'
+    );
+    instructorReviewOnlyCheckbox.simulate('change', {
+      target: {checked: true}
+    });
+
+    peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
+
+    expect(peerReviewCountInput.props().disabled).to.be.true;
+    expect(peerReviewCountInput.props().value).to.equal(0);
+  });
+
   describe('Saving Script Editor', () => {
     let clock;
 

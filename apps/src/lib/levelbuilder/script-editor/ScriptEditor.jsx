@@ -38,11 +38,8 @@ const styles = {
     borderRadius: 4,
     margin: 0
   },
-  label: {
-    fontWeight: 'bolder'
-  },
   checkbox: {
-    margin: '7px 0 7px 7px'
+    margin: '0 0 0 7px'
   },
   dropdown: {
     margin: '0 6px'
@@ -957,9 +954,10 @@ class ScriptEditor extends React.Component {
               />
             </label>
           )}
-          <label style={styles.label}>
+          <label>
             Only Require Review from Instructor (no Peer Reviews)
             <input
+              id="only_instructor_review_checkbox"
               type="checkbox"
               checked={this.state.onlyInstructorReviewRequired}
               style={styles.checkbox}
@@ -993,6 +991,7 @@ class ScriptEditor extends React.Component {
               <p>Currently only supported for professional learning courses</p>
             </HelpTip>
             <input
+              id={'number_peer_reviews_input'}
               value={this.state.peerReviewsRequired}
               style={styles.input}
               onChange={e =>
