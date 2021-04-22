@@ -160,7 +160,7 @@ theme: responsive
 <p>Adapted from our CS Discoveries and CS Principles courses, these short, self-paced modules are a great way to learn concepts that span all programming languages and tools. <i>Requires Code.org account to access</i>.</p>
 
 <br>
-<div class="col-33">
+<div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a href="https://studio.code.org/s/csd3-virtual" target="_blank">
         <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
@@ -175,7 +175,7 @@ theme: responsive
 </div>
 </div>
 
-<div class="col-33">
+<div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a href="https://studio.code.org/s/csp3-virtual" target="_blank">
         <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
@@ -190,7 +190,7 @@ theme: responsive
 </div>
 </div>
 
-<div class="col-33">
+<div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a href="https://studio.code.org/s/csp5-virtual" target="_blank">
         <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
@@ -206,7 +206,7 @@ theme: responsive
 </div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
-
+<br>
 <p><a href="#top">[Back to top]</a></p>
 
 <hr>

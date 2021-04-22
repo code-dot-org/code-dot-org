@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 23:11:16 UTC",
+    "serialized_at": "2021-04-15 18:09:55 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -1089,7 +1089,8 @@
       "key": "4909dde8-c244-4985-8482-1d23fbca66ea",
       "position": 1,
       "properties": {
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "duration": 2
       },
       "seeding_key": {
         "lesson_activity.key": "4909dde8-c244-4985-8482-1d23fbca66ea",
@@ -1103,7 +1104,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 35
+        "duration": 38
       },
       "seeding_key": {
         "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888",
@@ -1145,7 +1146,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 38
       },
       "seeding_key": {
         "lesson_activity.key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53",
@@ -2009,7 +2010,7 @@
       "key": "0955ca3f-4dce-4124-a915-53a3ede87355",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \r\n\r\n\r\n\r\n\r\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: `moveForward()`. <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command [`turnRight()`(#4dd0e1)](/docs/applab/turnRight/) <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command [`turnLeft()`(#4dd0e1)](/docs/applab/turnLeft/)  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \r\n\r\n\r\n\r\n\r\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: [`moveForward()`(#4dd0e1)](/docs/applab/moveForward/). <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command [`turnRight()`(#4dd0e1)](/docs/applab/turnRight/) <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command [`turnLeft()`(#4dd0e1)](/docs/applab/turnLeft/)  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |"
       },
       "seeding_key": {
         "activity_section.key": "0955ca3f-4dce-4124-a915-53a3ede87355",
@@ -2358,7 +2359,7 @@
       "key": "d61747a8-fdb0-4175-9302-5d8378b9cbf2",
       "position": 5,
       "properties": {
-        "description": "**Levels 1-3 While Loop Practice:** Simple `console.log` levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results"
+        "description": "**Levels 1-3 While Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels in which students practice using while loops.\n\n* Level 1: Students use a while loop to print the numbers 0-99\n* Level 2: Students use a while loop to print a message 100 times\n* Level 3: Students use a while loop to fill an array and print the results"
       },
       "seeding_key": {
         "activity_section.key": "d61747a8-fdb0-4175-9302-5d8378b9cbf2",
@@ -2380,7 +2381,7 @@
       "key": "844366dd-f65f-44b3-bd19-c16bd22f7836",
       "position": 7,
       "properties": {
-        "description": "\n**Levels 4-6 For Loop Practice:** Simple `console.log` levels to practice using for loops.\n\n* Level 4: Students use a for loop to print the numbers 0-99\n* Level 5: Students use a for loop to print a message 100 times\n* Level 6: Students use a for loop to fill an array and print the results"
+        "description": "\n**Levels 4-6 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 4: Students use a for loop to print the numbers 0-99\n* Level 5: Students use a for loop to print a message 100 times\n* Level 6: Students use a for loop to fill an array and print the results"
       },
       "seeding_key": {
         "activity_section.key": "844366dd-f65f-44b3-bd19-c16bd22f7836",
@@ -5006,7 +5007,7 @@
       "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
@@ -5032,7 +5033,7 @@
       "chapter": 53,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
@@ -5058,7 +5059,7 @@
       "chapter": 54,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Traversal Practice",
         "level_keys": [
@@ -5084,7 +5085,7 @@
       "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Reduce and Filter Practice",
         "level_keys": [
@@ -5110,7 +5111,7 @@
       "chapter": 56,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Reduce and Filter Practice",
         "level_keys": [
@@ -5136,7 +5137,7 @@
       "chapter": 57,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Reduce and Filter Practice",
         "level_keys": [
@@ -5162,7 +5163,7 @@
       "chapter": 58,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App Practice",
         "level_keys": [
@@ -5214,7 +5215,7 @@
       "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Try the Random Forecaster App",
         "level_keys": [

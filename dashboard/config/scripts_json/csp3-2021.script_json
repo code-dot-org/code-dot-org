@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 23:11:15 UTC",
+    "serialized_at": "2021-04-21 06:00:40 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -30,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 3: Intro to App Design"
+        "display_name": "Unit 3: Intro to App Design",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **New Topics, Same Classroom Culture:** This unit is students' first experience with programming. It is designed to maintain the collaborative and inclusive classroom environment developed in the previous two units. The collaborative project, fun, unplugged activities, and the focus on experimenting should help keep your whole class working together and trying out ideas. \n\n* **Emphasizing Skills:** Since this is the first of many programming units, it emphasizes attitudes and skills that will serve your students well for the remainder of the year. The project that runs through this unit emphasizes that programming is a creative and collaborative endeavor that students can use to help others. Key practices like pair programming and debugging help normalize working with a partner, asking for help, and making mistakes. While students have a lot to learn about programming and App Lab, there is just as much emphasis on establishing these positive habits and mindsets. \n\n* **Empowering \"Creators\":** This unit empowers students to be creators with a major emphasis on making personally meaningful apps. Students have a lot to learn about programming. Still, the goal is for students to come away from this unit, seeing programming as a powerful form of personal expression that allows them to draw on their innate talents and interests to help solve problems in their community.\n\n### Major Assessment and Projects\n\nThe unit project asks students to collaborate with a classmate to design an app that can teach others about a topic of shared interest. Students practice interviewing classmates to identify the project's goals, mockup designs, collaboratively program the app and run simple user tests. The app itself must include at least three screens and demonstrate what students have learned about user interface design and event-driven programming. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-1: incorporating multiple perspectives through collaboration improves computing innovations as they are developed.\n* CRD-2: developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 1.1 Collaboration\n* 1.2 Program Function and Purpose\n* 1.3 Program Design and Development\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.a.i.\n* 3.a.ii.\n* 3.a.iii\n"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit3_2020",
@@ -80,16 +81,7 @@
         "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab.",
         "purpose": "This lesson introduces students to Design Mode in App Lab and the different kinds of screen elements and properties at their disposal in this tool. This lesson not only builds up skills in designing a user interface but also sets students up to begin designing an app of their own in the following lesson.",
         "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1xwZqosb7C5LeQ4HMJq5WU-JyJyxg2YlkDz4qHmj02DE/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
@@ -199,16 +191,7 @@
         "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps.",
         "purpose": "This lesson is written in an Investigate style, a common format of lesson that will be used in the remainder of the programming units. In this kind of lesson students are encouraged to investigate working code and make simple modifications to understand how it works. \r\n\r\nThis lesson introduces a number of concepts and vocabulary around what programs are and how they run that will need to be reinforced in future lessons. ",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides at the conclusion of the lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1uoTeqaLbOQ1g_uRiqsLkRIsemZck9zGlj1AdNQpSJIs/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Intro to Programming",
@@ -348,7 +331,16 @@
         "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
         "preparation": "* Make sure students have access to their App Development Planning Guides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "assessment": true,
+        "announcements": [
+          {
+            "notice": "Lesson Modifications",
+            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
+            "link": "https://docs.google.com/document/d/1tQkjsKkaLeKKMfbTi5jUsI3ew3N02NyPb5r2lyzkw38/edit?usp=sharing",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ]
       },
       "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
@@ -634,18 +626,6 @@
       }
     },
     {
-      "key": "b13a1f67-0e0f-4f93-b09c-637a146d6474",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b13a1f67-0e0f-4f93-b09c-637a146d6474",
-        "lesson.key": "Intro to Programming",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
       "key": "c63c366d-6172-4791-b452-4d8509321c34",
       "position": 1,
       "properties": {
@@ -838,24 +818,10 @@
       }
     },
     {
-      "key": "aad3b12f-b997-4886-900e-04c0cd02e7f1",
+      "key": "cab51909-149f-4a96-839e-ea0425187e17",
       "position": 1,
       "properties": {
-        "name": "Lesson Modfications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "aad3b12f-b997-4886-900e-04c0cd02e7f1",
-        "lesson.key": "Lesson 11: Assessment Day",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "key": "cab51909-149f-4a96-839e-ea0425187e17",
-      "position": 2,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cab51909-149f-4a96-839e-ea0425187e17",
@@ -866,10 +832,10 @@
     },
     {
       "key": "2ef4fa0d-6feb-4088-b698-1370efe31599",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "2ef4fa0d-6feb-4088-b698-1370efe31599",
@@ -880,7 +846,7 @@
     },
     {
       "key": "b55eb866-7103-4452-ba05-dfc6804486ee",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Wrap Up",
         "duration": 10
@@ -894,7 +860,7 @@
     },
     {
       "key": "dfe0d8f3-2557-48ff-9640-27d04121e52a",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -1147,11 +1113,11 @@
       "key": "26ea61b2-cae8-4399-beaa-3eb2823ad75a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio.\n\n**Level 1:** Students examine an app from the previous lesson. They should feel free to move around and change any elements they'd like. Encourage students to spend a good amount of time on this level discovering how things work. Here are a few things they should notice:\n\n* The screen can be changed by clicking the dropdown at the top of the app screen\n* Each element has different properties that can be changed depending on the type of element. For example, a label element has choices like \"text alignment\" and \"font family\" while an image has choices like \"fit image\". ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Regrouping:** You may want to pull the class back together after Level 2 to discuss their findings. \r\n"
+            "markdown": "**Regrouping:** You may want to pull the class back together after Level 1 to discuss their findings. "
           }
         ]
       },
@@ -1164,7 +1130,7 @@
       "key": "4fa755d5-1ec0-4ccb-bc4a-14ffe312e4c4",
       "position": 2,
       "properties": {
-        "description": "**Level 1:** Students examine an app from the previous lesson. They should feel free to move around and change any elements they'd like. Encourage students to spend a good amount of time on this level discovering how things work. Here are a few things they should notice:\n\n* The screen can be changed by clicking the dropdown at the top of the app screen\n* Each element has different properties that can be changed depending on the type of element. For example, a label element has choices like \"text alignment\" and \"font family\" while an image has choices like \"fit image\". \n\n**Levels 2-6:** In these levels, students will learn how specific elements are set up and edited. Level 3 introduces the concept of themes, which control the overall \"look\" of an app. No matter what theme is chosen, students have the ability to override any element's design. \n\n**Level 7:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson."
+        "description": "\n\n**Levels 2-6:** In these levels, students will learn how specific elements are set up and edited. Level 3 introduces the concept of themes, which control the overall \"look\" of an app. No matter what theme is chosen, students have the ability to override any element's design. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "4fa755d5-1ec0-4ccb-bc4a-14ffe312e4c4",
@@ -1186,7 +1152,8 @@
       "key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
       "position": 4,
       "properties": {
-        "progression_name": "Copy an App"
+        "progression_name": "Copy an App",
+        "description": "**Level 7:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson."
       },
       "seeding_key": {
         "activity_section.key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
@@ -1208,7 +1175,7 @@
       "key": "1ed5a8c6-1a1f-466a-900f-81a99914d44e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> <span style=\"background-color: #FFFF00\"> **Discuss:** Have students answer the following</span>\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most element can do both, because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** \n* *What elements collect input?*\n* *What elements display output?*\n* *Do you think there are elements that can do both?*\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most elements can do both because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n"
       },
       "seeding_key": {
         "activity_section.key": "1ed5a8c6-1a1f-466a-900f-81a99914d44e",
@@ -1219,7 +1186,7 @@
       "key": "01c00fc1-562f-44c0-8125-6d5a51653ef2",
       "position": 2,
       "properties": {
-        "description": "* What elements collect input? \r\n* What elements display output?\r\n* Do you think there are elements that can do both?\r\n\r\n---"
+        "description": "---"
       },
       "seeding_key": {
         "activity_section.key": "01c00fc1-562f-44c0-8125-6d5a51653ef2",
@@ -1702,7 +1669,7 @@
       "key": "5acd0933-5cfb-4292-b8dd-09994428b8a2",
       "position": 2,
       "properties": {
-        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** *Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.*\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.* \n\n* `console.log` prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* `console.log` needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.* \n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.*\n\n* `playSound` will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.*\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
+        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.* \n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
       },
       "seeding_key": {
         "activity_section.key": "5acd0933-5cfb-4292-b8dd-09994428b8a2",
@@ -1788,22 +1755,12 @@
       "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n* What is the difference between a sequential program and an event-driven program?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "6da3cf97-c93c-4ba6-b29b-e26653cfba5f",
         "lesson_activity.key": "f26603a5-2d5c-4c3c-a8b4-df6b31260953"
-      }
-    },
-    {
-      "key": "08fc8c26-bc4e-499f-9143-706a35c36502",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "08fc8c26-bc4e-499f-9143-706a35c36502",
-        "lesson_activity.key": "b13a1f67-0e0f-4f93-b09c-637a146d6474"
       }
     },
     {
@@ -2291,17 +2248,6 @@
       }
     },
     {
-      "key": "14da987e-33e1-45c9-8a93-723be6d832ac",
-      "position": 1,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/image_6UvOK1t.png)\r\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1tQkjsKkaLeKKMfbTi5jUsI3ew3N02NyPb5r2lyzkw38/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "14da987e-33e1-45c9-8a93-723be6d832ac",
-        "lesson_activity.key": "aad3b12f-b997-4886-900e-04c0cd02e7f1"
-      }
-    },
-    {
       "key": "1611bc9c-d33d-449a-8ff7-bde56ff7f4b5",
       "position": 1,
       "properties": {
@@ -2318,7 +2264,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
-        "name": "Unit Assessment - 25 mins\r"
+        "name": "Unit Assessment",
+        "duration": "25"
       },
       "seeding_key": {
         "activity_section.key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b",
@@ -2330,7 +2277,8 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** One student per group displays their app on the computer. Groups rotate around the room running the different apps. Students can leave comments on sticky notes at each station.",
-        "name": "Gallery Walk - 10 mins\r"
+        "name": "Gallery Walk",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "42721b5f-7a1b-4bc8-8a79-9cdb8fde6dc2",
@@ -2690,7 +2638,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2716,7 +2664,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2742,7 +2690,7 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2768,7 +2716,7 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2794,7 +2742,7 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2820,7 +2768,7 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2846,7 +2794,7 @@
       "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Copy an App",
         "level_keys": [
@@ -2976,7 +2924,7 @@
       "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3002,7 +2950,7 @@
       "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3028,7 +2976,7 @@
       "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3054,7 +3002,7 @@
       "chapter": 27,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3080,7 +3028,7 @@
       "chapter": 28,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3108,10 +3056,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding",
-        "level_keys": [
-          "U3L6 CSP CFU Sequential vs Event Driven_2021"
-        ]
+        "progression": "Check for Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -3122,7 +3067,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "08fc8c26-bc4e-499f-9143-706a35c36502"
+        "activity_section.key": "6da3cf97-c93c-4ba6-b29b-e26653cfba5f"
       },
       "level_keys": [
         "U3L6 CSP CFU Sequential vs Event Driven_2021"
@@ -3446,7 +3391,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 3 Exam",
         "level_keys": [
           "CSP Unit 3 MC Assessment _2021"
         ]
@@ -3460,7 +3404,7 @@
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f"
+        "activity_section.key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b"
       },
       "level_keys": [
         "CSP Unit 3 MC Assessment _2021"
@@ -3813,7 +3757,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "08fc8c26-bc4e-499f-9143-706a35c36502"
+        "activity_section.key": "6da3cf97-c93c-4ba6-b29b-e26653cfba5f"
       }
     },
     {
@@ -3969,7 +3913,7 @@
         "lesson.key": "Lesson 11: Assessment Day",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f"
+        "activity_section.key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b"
       }
     }
   ],

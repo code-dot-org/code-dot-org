@@ -86,6 +86,7 @@ export default class RollupLessonEntrySection extends Component {
                   <h5>{i18n.forTheTeachers()}</h5>
                   <ResourceList
                     resources={this.props.lesson.resources['Teacher']}
+                    pageType="resources-rollup"
                   />
                 </div>
               )}
@@ -94,6 +95,7 @@ export default class RollupLessonEntrySection extends Component {
                   <h5>{i18n.forTheStudents()}</h5>
                   <ResourceList
                     resources={this.props.lesson.resources['Student']}
+                    pageType="resources-rollup"
                   />
                 </div>
               )}
@@ -102,6 +104,7 @@ export default class RollupLessonEntrySection extends Component {
                   <h5>{i18n.forAll()}</h5>
                   <ResourceList
                     resources={this.props.lesson.resources['All']}
+                    pageType="resources-rollup"
                   />
                 </div>
               )}

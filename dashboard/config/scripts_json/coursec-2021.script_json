@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-04-07 17:19:50 UTC",
+    "serialized_at": "2021-04-21 23:29:30 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -168,7 +168,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
+        "overview": "In this **skill-building** lesson, students will encounter pre-written code that contains mistakes. They will need to step through the existing code to identify errors.",
         "student_overview": "Find problems in puzzles and practice your debugging skills.",
         "purpose": "Students in your class might become frustrated with this lesson because of the essence of debugging. Debugging is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Review the ***Debugging Guide** from this course's curriculum overview page with the class.\n - Make sure every student has a reflection journal.",
@@ -228,7 +228,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
+        "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. ",
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
         "preparation": " - Make sure each student has a journal.\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 4 students.",
@@ -248,7 +248,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "This **skill-building** lesson builds has students using loops to help _BB-8_ traverse a maze more efficiently than before.",
+        "overview": "This **skill-building** lesson has students using loops to help BB-8 efficiently traverse a maze.",
         "student_overview": "Help _BB-8_ through mazes using loops! ",
         "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be looped. It should be noted that students will face puzzles with many different solutions. This will open up discussions on the various ways to solve puzzles with advantages and disadvantages to each approach.",
         "preparation": " - Play through the puzzles to determine if there will be any problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -268,7 +268,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "In this **skill-building** lesson, students loop new actions in order to help the harvester collect multiple veggies growing in large bunches.",
+        "overview": "Students loop new actions to help the harvester collect multiple veggies growing in large bunches in this **skill-building** lesson.",
         "student_overview": "Let's use loops to help the harvester collect some veggies!",
         "purpose": "In this lesson, students will use loops to repeat actions like harvesting pumpkins. New patterns will emerge and students will use creativity and logical thinking to determine what code needs to be repeated and how many times.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -288,7 +288,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "This **mini-project** lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
+        "overview": "This **mini-project** lesson builds on the understanding of loops from previous lessons. Students will create unique artwork with the Artist.\n",
         "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!",
         "purpose": "This series highlights the power of loops with creative and personal designs.  \n\nOffered as a project-backed sequence, this progression will allow students to build on top of their own work and create amazing artifacts.",
         "preparation": " - Practice making your own design. Make note of how these levels are different from everything that came before.\n - Make sure every student has a reflection journal.",
@@ -368,7 +368,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "In this **exploratory** lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs. Data can be used to help students understand their world and answer interesting questions. ",
+        "overview": "Students will collect data from a Play Lab project and visualize it using different graphs in this **exploratory** lesson.",
         "student_overview": "Data can be used to understand our world and answer interesting questions. ",
         "purpose": "Computers were created to help process data. There is an increasing amount of data in the world, so being able to read and analyze it is important.  This lesson is here to make sure students have the basic experience of collecting, visualizing, and analyzing a simple set of data.",
         "preparation": "* Print out one ***worksheet** for each student.\n* Try today's lesson on Code Studio. This is meant to be used as a tool for today's activity. Be prepared to project it to the class, or otherwise allow students to visit it on their own computers.\n - Make sure every student has a reflection journal.",
@@ -408,7 +408,7 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
+        "overview": "This **project** lesson takes students through designing, developing, and showcasing new Play Lab projects.",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
         "preparation": "* Play through the puzzles to find any potential problem areas for your class.\n* Print out one ***Project Planning Guide** for each student (or pair).\n* Review the ***Project Planning Guide (Exemplar)** document.\n* (Optional) Complete your own planning guide and code your own project to show to students!\n",
@@ -3854,7 +3854,7 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video:  Debugging with the Step Button",
         "level_keys": [
@@ -3880,7 +3880,7 @@
       "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3906,7 +3906,7 @@
       "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3932,7 +3932,7 @@
       "chapter": 19,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3958,7 +3958,7 @@
       "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3984,7 +3984,7 @@
       "chapter": 21,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4010,7 +4010,7 @@
       "chapter": 22,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4036,7 +4036,7 @@
       "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4063,7 +4063,7 @@
       "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4089,7 +4089,7 @@
       "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4115,7 +4115,7 @@
       "chapter": 26,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4141,7 +4141,7 @@
       "chapter": 27,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4871,7 +4871,7 @@
       "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "My Loopy Robotic Friends - Unplugged Activity",
         "level_keys": [
@@ -4897,7 +4897,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Programming with Rey and BB-8",
         "level_keys": [
@@ -4923,7 +4923,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4949,7 +4949,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4975,7 +4975,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Repeat Blocks with BB-8",
         "level_keys": [
@@ -5001,7 +5001,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5027,7 +5027,7 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5053,7 +5053,7 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5079,7 +5079,7 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5105,7 +5105,7 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5131,7 +5131,7 @@
       "chapter": 65,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5158,7 +5158,7 @@
       "chapter": 66,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5184,7 +5184,7 @@
       "chapter": 67,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5210,7 +5210,7 @@
       "chapter": 68,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5236,7 +5236,7 @@
       "chapter": 69,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5262,7 +5262,7 @@
       "chapter": 70,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5288,7 +5288,7 @@
       "chapter": 71,
       "position": 16,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5314,7 +5314,7 @@
       "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: The Harvester",
         "level_keys": [
@@ -5340,7 +5340,7 @@
       "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5366,7 +5366,7 @@
       "chapter": 74,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5392,7 +5392,7 @@
       "chapter": 75,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5418,7 +5418,7 @@
       "chapter": 76,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5444,7 +5444,7 @@
       "chapter": 77,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5470,7 +5470,7 @@
       "chapter": 78,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5496,7 +5496,7 @@
       "chapter": 79,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5522,7 +5522,7 @@
       "chapter": 80,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5549,7 +5549,7 @@
       "chapter": 81,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5575,7 +5575,7 @@
       "chapter": 82,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5601,7 +5601,7 @@
       "chapter": 83,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5627,7 +5627,7 @@
       "chapter": 84,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5653,7 +5653,7 @@
       "chapter": 85,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5679,7 +5679,7 @@
       "chapter": 86,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5705,7 +5705,7 @@
       "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5731,7 +5731,7 @@
       "chapter": 88,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5757,7 +5757,7 @@
       "chapter": 89,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5783,7 +5783,7 @@
       "chapter": 90,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5809,7 +5809,7 @@
       "chapter": 91,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5835,7 +5835,7 @@
       "chapter": 92,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5861,7 +5861,7 @@
       "chapter": 93,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5887,7 +5887,7 @@
       "chapter": 94,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5913,7 +5913,7 @@
       "chapter": 95,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6589,7 +6589,7 @@
       "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Picturing Data",
         "level_keys": [
@@ -6641,7 +6641,7 @@
       "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration: Sample Project",
         "level_keys": [
@@ -6667,7 +6667,7 @@
       "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6693,7 +6693,7 @@
       "chapter": 125,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6719,7 +6719,7 @@
       "chapter": 126,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6745,7 +6745,7 @@
       "chapter": 127,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6771,7 +6771,7 @@
       "chapter": 128,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6797,7 +6797,7 @@
       "chapter": 129,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -9061,6 +9061,9 @@
         "script.name": "coursec-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {

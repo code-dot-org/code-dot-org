@@ -10,7 +10,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-import project from '@cdo/apps/code-studio/initApp/project';
 
 const style = {
   instructionsAndPreview: {
@@ -48,7 +47,7 @@ const style = {
     // this matches the current code mirror theme we are using
     // TODO: either add to color.scss or use a color from there depending
     // on final theme choice.
-    backgroundColor: '#272822',
+    backgroundColor: color.darkest_gray,
     color: color.white,
     width: 95,
     textAlign: 'center'
@@ -61,8 +60,10 @@ const style = {
 class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
+    onRun: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
+    onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
@@ -76,27 +77,7 @@ class JavalabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
-    this.getToken();
   }
-
-  getToken = () => {
-    // TODO: Use token to connect to Java Builder
-    $.ajax({
-      url: '/javabuilder/access_token',
-      type: 'get',
-      data: {
-        channelId: this.props.channelId,
-        projectVersion: project.getCurrentSourceVersionId()
-      }
-    })
-      .done()
-      .fail();
-  };
-
-  run = () => {
-    this.props.appendOutputLog('Running program...');
-    this.props.appendOutputLog('Hello world!');
-  };
 
   compile = () => {
     this.props.appendOutputLog('Compiling program...');
@@ -124,7 +105,13 @@ class JavalabView extends React.Component {
   };
 
   render() {
-    const {isDarkMode} = this.props;
+    const {
+      isDarkMode,
+      onCommitCode,
+      onContinue,
+      onRun,
+      onInputMessage
+    } = this.props;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
     } else {
@@ -148,7 +135,7 @@ class JavalabView extends React.Component {
               color: isDarkMode ? color.white : color.black
             }}
           >
-            <JavalabEditor onCommitCode={this.props.onCommitCode} />
+            <JavalabEditor onCommitCode={onCommitCode} />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
                 <button
@@ -163,7 +150,7 @@ class JavalabView extends React.Component {
                 <button
                   type="button"
                   style={this.getButtonStyles(false)}
-                  onClick={this.props.onContinue}
+                  onClick={onContinue}
                 >
                   <FontAwesome icon="check" className="fa-2x" />
                   <br />
@@ -179,7 +166,7 @@ class JavalabView extends React.Component {
                 <button
                   type="button"
                   style={this.getButtonStyles(false)}
-                  onClick={this.run}
+                  onClick={onRun}
                 >
                   <FontAwesome icon="play" className="fa-2x" />
                   <br />
@@ -187,7 +174,7 @@ class JavalabView extends React.Component {
                 </button>
               </div>
               <div style={style.consoleStyle}>
-                <JavalabConsole />
+                <JavalabConsole onInputMessage={onInputMessage} />
               </div>
             </div>
           </div>

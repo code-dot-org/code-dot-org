@@ -81,7 +81,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
   });
 
-  it('renders with dashbed border when locked for individual student', () => {
+  it('renders with dashed border when locked for individual student', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -89,7 +89,7 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => false}
         levels={defaultProps.levels.map(level => ({
           ...level,
-          status: LevelStatus.locked
+          locked: true
         }))}
       />
     );

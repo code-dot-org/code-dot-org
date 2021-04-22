@@ -5,6 +5,7 @@ import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/l
 import {sampleActivities} from '../../lib/levelbuilder/lesson-editor/activitiesTestData';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -20,23 +21,31 @@ describe('LessonOverview', () => {
         unit: {
           displayName: 'Unit 1',
           link: '/s/unit-1',
-          lessons: [
+          lessonGroups: [
             {
-              key: 'lesson-1',
-              position: 1,
-              displayName: 'Lesson 1',
-              link: '/lessons/1',
-              lockable: false
-            },
-            {
-              key: 'lesson-2',
-              position: 2,
-              displayName: 'Lesson 2',
-              link: '/lessons/2',
-              lockable: false
+              key: 'lg-1',
+              displayName: 'Lesson Group',
+              userFacing: true,
+              lessons: [
+                {
+                  key: 'lesson-1',
+                  position: 1,
+                  displayName: 'Lesson 1',
+                  link: '/lessons/1',
+                  lockable: false
+                },
+                {
+                  key: 'lesson-2',
+                  position: 2,
+                  displayName: 'Lesson 2',
+                  link: '/lessons/2',
+                  lockable: false
+                }
+              ]
             }
           ]
         },
+        id: 1,
         key: 'lesson-1',
         position: 1,
         lockable: false,
@@ -85,7 +94,9 @@ describe('LessonOverview', () => {
       activities: [],
       announcements: [],
       viewAs: ViewType.Teacher,
-      isSignedIn: true
+      isSignedIn: true,
+      hasVerifiedResources: false,
+      isVerifiedTeacher: false
     };
   });
 
@@ -150,6 +161,39 @@ describe('LessonOverview', () => {
       />
     );
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+  });
+
+  it('shows verified resources warning if teacher is not verified and lesson has verified resources', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={false}
+        hasVerifiedResources={true}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+  });
+
+  it('does not show verified resources warning if teacher is verified', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={true}
+        hasVerifiedResources={true}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+  });
+
+  it('does not show verified resources warning if lesson does not have verified resources', () => {
+    const wrapper = shallow(
+      <LessonOverview
+        {...defaultProps}
+        isVerifiedTeacher={false}
+        hasVerifiedResources={false}
+      />
+    );
+    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
   });
 
   it('has student announcement if viewing as student', () => {
@@ -243,5 +287,29 @@ describe('LessonOverview', () => {
     expect(
       wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
     ).to.be.true;
+  });
+
+  it('renders dropdown button with links to printing options', () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/lesson_plan.pdf',
+      '/link/to/script_resources.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plan',
+      'Print Handouts'
+    ]);
   });
 });

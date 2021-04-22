@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 23:23:50 UTC",
+    "serialized_at": "2021-04-21 16:58:03 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -627,7 +627,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "c91ffbab-f9e3-4ff9-8f26-cb782db4b493",
@@ -841,22 +841,11 @@
       "key": "3932b04a-e75b-4ed5-85c2-ce661ee76c58",
       "position": 3,
       "properties": {
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "duration": 3
       },
       "seeding_key": {
         "lesson_activity.key": "3932b04a-e75b-4ed5-85c2-ce661ee76c58",
-        "lesson.key": "Project - Make a Library Part 2",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2021"
-      }
-    },
-    {
-      "key": "b52dd175-f13f-410e-8004-7bf7b94d9ba8",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b52dd175-f13f-410e-8004-7bf7b94d9ba8",
         "lesson.key": "Project - Make a Library Part 2",
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2021"
@@ -908,8 +897,8 @@
       "key": "64327b59-a21c-44f6-9b9c-381894ea329c",
       "position": 1,
       "properties": {
-        "name": "Assessment (25 mins)",
-        "duration": 5
+        "name": "Assessment",
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "64327b59-a21c-44f6-9b9c-381894ea329c",
@@ -922,8 +911,8 @@
       "key": "49d26ee1-3a0b-4c42-b526-fffb230f09e8",
       "position": 2,
       "properties": {
-        "name": "Assessment Review (20 mins)",
-        "duration": 35
+        "name": "Assessment Review",
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "49d26ee1-3a0b-4c42-b526-fffb230f09e8",
@@ -2242,7 +2231,7 @@
       "key": "ebeaa3b1-e291-4805-ba2a-802b7d17ab74",
       "position": 2,
       "properties": {
-        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Tests Refresher:** Briefly review with students how to use `console.log` to write tests for their functions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\n",
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Tests Refresher:** Briefly review with students how to use [`console.log`(#BB77C7)](/docs/applab/console.log/) to write tests for their functions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\n",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2272,28 +2261,6 @@
       "seeding_key": {
         "activity_section.key": "83e63d33-cca3-4689-9253-5044a5f3848c",
         "lesson_activity.key": "3932b04a-e75b-4ed5-85c2-ce661ee76c58"
-      }
-    },
-    {
-      "key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8",
-      "position": 1,
-      "properties": {
-        "progression_name": "Build Your Library"
-      },
-      "seeding_key": {
-        "activity_section.key": "acf90e01-8d29-40d8-b514-233a4cdc4ea8",
-        "lesson_activity.key": "b52dd175-f13f-410e-8004-7bf7b94d9ba8"
-      }
-    },
-    {
-      "key": "807e8eb9-bd96-4daf-8604-684d82c82dd4",
-      "position": 2,
-      "properties": {
-        "progression_name": "Test a Classmate's Library"
-      },
-      "seeding_key": {
-        "activity_section.key": "807e8eb9-bd96-4daf-8604-684d82c82dd4",
-        "lesson_activity.key": "b52dd175-f13f-410e-8004-7bf7b94d9ba8"
       }
     },
     {
