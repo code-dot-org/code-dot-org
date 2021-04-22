@@ -8,21 +8,15 @@
       - @workshop.sessions.each do |session|
         = session.start_date_with_start_and_end_times_us_format
         %br
-  - unless @workshop.location_name.blank?
+  - unless @workshop.location_name.blank? || @workshop.virtual?
     %tr
       %td.heading
-        - if @workshop.virtual?
-          Link to join:
-        - else
-          Location:
+        Location:
       %td
-        - if @workshop.virtual?
-          = link_to @workshop.location_name, @workshop.location_name, target: "_blank", rel: "noopener noreferrer"
-        - else
-          = @workshop.location_name
-          - if @workshop.location_address.present?
-            %br
-            = @workshop.location_address
+        = @workshop.location_name
+        - if @workshop.location_address.present?
+          %br
+          = @workshop.location_address
   %tr
     %td.heading
       Organizer:
