@@ -76,8 +76,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     stageLock: {
       stagesBySectionId: {
         '11': {}
-      },
-      lockableAuthorized: false
+      }
     },
     viewAs: viewAs,
     teacherSections: {
@@ -90,43 +89,6 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     }),
     progress: {
       showTeacherInfo: false
-    },
-    currentUser: {
-      userId: 1
-    }
-  });
-};
-
-/**
- * Creates the shell of a redux store with the provided lessonId being hidden
- * @param {ViewType} viewAs
- * @param {number?} lessonId - Lesson to hide (or null if none)
- */
-export const createStoreWithLockedLesson = (
-  viewAs,
-  lockableAuthorized = false
-) => {
-  return createStore(state => state, {
-    stageLock: {
-      stagesBySectionId: {
-        '11': {}
-      },
-      lockableAuthorized: lockableAuthorized
-    },
-    viewAs: viewAs,
-    teacherSections: {
-      selectedSectionId: '11'
-    },
-    hiddenStage: Immutable.fromJS({
-      stagesBySection: {
-        '11': {[lessonId]: true}
-      }
-    }),
-    progress: {
-      showTeacherInfo: false
-    },
-    currentUser: {
-      userId: 1
     }
   });
 };

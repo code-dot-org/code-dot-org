@@ -2,14 +2,7 @@ import React from 'react';
 import {UnconnectedSummaryProgressTable as SummaryProgressTable} from './SummaryProgressTable';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {
-  fakeLesson,
-  fakeLevels,
-  fakeLevel,
-  createStoreWithHiddenLesson,
-  createStoreWithLockedLesson
-} from './progressTestHelpers';
-import {Provider} from 'react-redux';
+import {fakeLesson, fakeLevels, fakeLevel} from './progressTestHelpers';
 
 const defaultProps = {
   lessons: [
@@ -38,23 +31,23 @@ const defaultProps = {
     fakeLevels(2)
   ],
   viewAs: ViewType.Student,
-  lessonIsVisible: () => true
+
+  lessonIsVisible: () => true,
+  lessonLockedForSection: () => false
 };
 
 export default storybook => {
-  storybook.storiesOf('Progress/SummaryProgressTable', module).addStoryTable([
-    {
-      name: 'simple SummaryProgressTable',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
-          <SummaryProgressTable {...defaultProps} />
-        </Provider>
-      )
-    },
-    {
-      name: 'SummaryProgressTable with focus area',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+  storybook
+    .storiesOf('Progress/SummaryProgressTable', module)
+    .withReduxStore()
+    .addStoryTable([
+      {
+        name: 'simple SummaryProgressTable',
+        story: () => <SummaryProgressTable {...defaultProps} />
+      },
+      {
+        name: 'SummaryProgressTable with focus area',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessons={defaultProps.lessons.map((lesson, index) => ({
@@ -65,14 +58,13 @@ export default storybook => {
               index === 1 ? fakeLevels(8) : levels
             )}
             lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'SummaryProgressTable for peer reviews',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        )
+      },
+      {
+        name: 'SummaryProgressTable for peer reviews',
+        story: () => (
           <SummaryProgressTable
             lessons={[
               {
@@ -109,14 +101,13 @@ export default storybook => {
               ]
             ]}
             lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'second lesson is a hidden stage, viewing as teacher',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
+        )
+      },
+      {
+        name: 'second lesson is a hidden stage, viewing as teacher',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             viewAs={ViewType.Teacher}
@@ -124,13 +115,11 @@ export default storybook => {
               lesson.id !== 2 || viewAs === ViewType.Teacher
             }
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'third lesson is a hidden stage, viewing as teacher',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '3')}>
+        )
+      },
+      {
+        name: 'third lesson is a hidden stage, viewing as teacher',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             viewAs={ViewType.Teacher}
@@ -138,41 +127,35 @@ export default storybook => {
               lesson.id !== 3 || viewAs === ViewType.Teacher
             }
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'second lesson is a hidden stage, viewing as student',
-      description: 'Row 2 should not be visible',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
+        )
+      },
+      {
+        name: 'second lesson is a hidden stage, viewing as student',
+        description: 'Row 2 should not be visible',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessonIsVisible={(lesson, viewAs) =>
               lesson.id !== 2 || viewAs === ViewType.Teacher
             }
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'third row is a hidden stage, viewing as student',
-      description: 'Row 3 should not be visible, gray still every other row',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Student, '3')}>
+        )
+      },
+      {
+        name: 'third row is a hidden stage, viewing as student',
+        description: 'Row 3 should not be visible, gray still every other row',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessonIsVisible={(lesson, viewAs) =>
               lesson.id !== 3 || viewAs === ViewType.Teacher
             }
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'locked lesson in current section as teacher',
-      story: () => (
-        <Provider store={createStoreWithLockedLesson(ViewType.Teacher, true)}>
+        )
+      },
+      {
+        name: 'locked lesson in current section as teacher',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessons={[
@@ -182,14 +165,13 @@ export default storybook => {
             ]}
             levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
             viewAs={ViewType.Teacher}
+            lessonLockedForSection={lessonId => lessonId === 2}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'locked lesson as student',
-      story: () => (
-        <Provider store={createStoreWithLockedLesson(ViewType.Student)}>
+        )
+      },
+      {
+        name: 'locked lesson as student',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessons={[
@@ -205,14 +187,13 @@ export default storybook => {
               })),
               fakeLevels(2)
             ]}
+            lessonLockedForSection={() => false}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'unlocked lesson in current section as teacher',
-      story: () => (
-        <Provider store={createStoreWithLockedLesson(ViewType.Teacher, true)}>
+        )
+      },
+      {
+        name: 'unlocked lesson in current section as teacher',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessons={[
@@ -223,14 +204,13 @@ export default storybook => {
             levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
             viewAs={ViewType.Teacher}
             lessonIsVisible={() => true}
+            lessonLockedForSection={() => false}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'locked, hidden lesson as teacher',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
+        )
+      },
+      {
+        name: 'locked, hidden lesson as teacher',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessons={[
@@ -243,14 +223,13 @@ export default storybook => {
             lessonIsVisible={(lesson, viewAs) =>
               lesson.id !== 2 || viewAs === ViewType.Teacher
             }
+            lessonLockedForSection={lessonId => lessonId === 2}
           />
-        </Provider>
-      )
-    },
-    {
-      name: 'unplugged lesson',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        )
+      },
+      {
+        name: 'unplugged lesson',
+        story: () => (
           <SummaryProgressTable
             {...defaultProps}
             lessons={[fakeLesson('Stage with Unplugged', 1, false, 1)]}
@@ -258,8 +237,7 @@ export default storybook => {
               [fakeLevel({isUnplugged: true}), ...fakeLevels(3)]
             ]}
           />
-        </Provider>
-      )
-    }
-  ]);
+        )
+      }
+    ]);
 };
