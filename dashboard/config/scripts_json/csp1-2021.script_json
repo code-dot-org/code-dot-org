@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 17:59:29 UTC",
+    "serialized_at": "2021-04-22 17:53:17 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -4395,7 +4395,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Binary Odometer"
+        "progression": "Widget: Binary Odometer",
+        "level_keys": [
+          "Widget: Binary Odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4418,7 +4421,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4441,7 +4447,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU representing fractions_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4542,7 +4551,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4565,7 +4577,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4588,7 +4603,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4611,7 +4629,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6446,16 +6467,6 @@
       "seeding_key": {
         "lesson.key": "Binary Numbers",
         "objective.key": "55e857e0-ae6a-4f9f-99e6-09f5ec3b90ae"
-      }
-    },
-    {
-      "key": "c51e8577-7f92-49e4-a456-a9e5249242ae",
-      "properties": {
-        "description": "Describe how to include fractions in the binary number system. "
-      },
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "objective.key": "c51e8577-7f92-49e4-a456-a9e5249242ae"
       }
     },
     {
