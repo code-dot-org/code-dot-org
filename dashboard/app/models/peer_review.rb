@@ -146,15 +146,21 @@ class PeerReview < ApplicationRecord
         level: user_level.level,
       ).destroy_all
 
-      peer_review = create!(
+      base_peer_review_attributes = {
         submitter_id: user_level.user.id,
-        from_instructor: false,
         script: user_level.script,
         level: user_level.level,
         level_source_id: level_source_id
-      )
+      }
 
-      peer_review.create_escalated_duplicate
+      # First, create a placeholder Peer Review entry for someone else enrolled in the course to review.
+      # Only create it if this CourseUnit (PLC Courses equivalent of a Script) requires review from peers.
+      create!(base_peer_review_attributes) unless user_level.script&.only_instructor_review_required?
+
+      # Always create a Peer Review entry in order for the instructor to provide a review.
+      # The use of find_or_create_by here is legacy -- why we use it here but not when creating the
+      # Peer Review above is unknown.
+      find_or_create_by!(base_peer_review_attributes.merge({status: 2}))
     end
   end
 
@@ -278,17 +284,6 @@ class PeerReview < ApplicationRecord
   # the written section
   def review_completed?
     (status == 'accepted' || status == 'rejected') || data?
-  end
-
-  def create_escalated_duplicate
-    PeerReview.find_or_create_by!(
-      submitter: submitter,
-      reviewer: nil,
-      script: script,
-      level: level,
-      level_source_id: level_source_id,
-      status: 2
-    )
   end
 
   # Whether this peer review is a review of the latest version of the submitter's answer

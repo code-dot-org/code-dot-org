@@ -1367,7 +1367,7 @@ class Script < ApplicationRecord
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
     # don't have a lesson group in the database right now)
-    if has_peer_reviews?
+    if has_peer_reviews? && !only_instructor_review_required?
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
