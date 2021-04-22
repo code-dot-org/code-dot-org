@@ -2,7 +2,7 @@
 Feature: Contract Editor section configuration and manipulation
 
 Background:
-  Given I am on "http://studio.code.org/s/algebra/stage/7/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/algebra/lessons/7/levels/4?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   Then element "#runButton" is visible

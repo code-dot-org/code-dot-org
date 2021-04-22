@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:22:18 UTC",
+    "serialized_at": "2021-04-21 16:58:03 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -2231,7 +2231,7 @@
       "key": "ebeaa3b1-e291-4805-ba2a-802b7d17ab74",
       "position": 2,
       "properties": {
-        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Tests Refresher:** Briefly review with students how to use `console.log` to write tests for their functions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\n",
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Tests Refresher:** Briefly review with students how to use [`console.log`(#BB77C7)](/docs/applab/console.log/) to write tests for their functions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\n",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -3047,7 +3047,7 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build Your Library",
         "level_keys": [
@@ -3073,7 +3073,7 @@
       "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Test a Classmate's Library",
         "level_keys": [

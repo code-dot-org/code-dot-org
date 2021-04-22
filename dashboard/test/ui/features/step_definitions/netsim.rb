@@ -8,7 +8,7 @@ NETSIM_ALLTHETHINGS_STAGE = 14
 # Navigates to the requested level in the AllTheThings script.
 Given /^I am on the (\d+)(?:st|nd|rd|th)? (?:Net ?Sim|Internet Simulator) test level$/ do |level_index|
   steps <<-STEPS
-    And I am on "http://studio.code.org/s/allthethings/stage/#{NETSIM_ALLTHETHINGS_STAGE}/puzzle/#{level_index}?noautoplay=true"
+    And I am on "http://studio.code.org/s/allthethings/lessons/#{NETSIM_ALLTHETHINGS_STAGE}/levels/#{level_index}?noautoplay=true"
     And I rotate to landscape
   STEPS
 end
