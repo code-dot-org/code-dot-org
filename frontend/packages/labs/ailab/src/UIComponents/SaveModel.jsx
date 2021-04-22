@@ -2,8 +2,12 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
-import { styles, ModelNameMaxLength } from "../constants";
+import {
+  setTrainedModelDetail,
+  getSelectedColumnDescriptions,
+  getDataDescription
+} from "../redux";
+import { styles, saveMessages, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 
 class SaveModel extends Component {
@@ -12,7 +16,9 @@ class SaveModel extends Component {
     setTrainedModelDetail: PropTypes.func,
     trainedModelDetails: PropTypes.object,
     labelColumn: PropTypes.string,
-    columnDescriptions: PropTypes.array
+    columnDescriptions: PropTypes.array,
+    saveStatus: PropTypes.string,
+    dataDescription: PropTypes.string
   };
 
   constructor(props) {
@@ -73,6 +79,13 @@ class SaveModel extends Component {
       text: "What will you name the model? (required)"
     };
 
+    const dataDescriptionField = {
+      id: "datasetDescription",
+      text: "Describe the dataset.",
+      placeholder: "How was the data collected? Who collected it? When was it collected?",
+      answer: this.props.dataDescription
+    };
+
     const arrowIcon = this.state.showColumnDescriptions
       ? "fa fa-caret-up"
       : "fa fa-caret-down";
@@ -94,6 +107,24 @@ class SaveModel extends Component {
                   maxLength={ModelNameMaxLength}
                 />
               </div>
+            </div>
+            <div key={dataDescriptionField.id} style={styles.cardRow}>
+              <label>{dataDescriptionField.text}</label>
+              {!dataDescriptionField.answer && (
+                <div>
+                  <textarea
+                    rows="4"
+                    onChange={event =>
+                      this.handleChange(event, dataDescriptionField.id, false)
+                    }
+                    placeholder={dataDescriptionField.placeholder}
+                    style={styles.saveInputsWidth}
+                  />
+                </div>
+              )}
+              {dataDescriptionField.answer && (
+                <div>{dataDescriptionField.answer}</div>
+              )}
             </div>
             <div>
               <span onClick={this.toggleColumnDescriptions}>
@@ -163,7 +194,9 @@ export default connect(
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
-    columnDescriptions: getSelectedColumnDescriptions(state)
+    columnDescriptions: getSelectedColumnDescriptions(state),
+    saveStatus: state.saveStatus,
+    dataDescription: getDataDescription(state)
   }),
   dispatch => ({
     setTrainedModelDetail(field, value, isColumn) {

@@ -42,6 +42,7 @@ class ModelCard extends Component {
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>About the Data </h5>
             <p style={styles.modelCardContent}>{metadata.card.description}</p>
+            <p style={styles.modelCardContent}>Dataset size: rows</p>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Intended Use</h5>
@@ -64,6 +65,7 @@ class ModelCard extends Component {
             <p style={styles.modelCardContent}>{selectedFeatures.join(", ")}</p>
           </div>
         </div>
+        {console.log(metadata)}
       </div>
     );
   }

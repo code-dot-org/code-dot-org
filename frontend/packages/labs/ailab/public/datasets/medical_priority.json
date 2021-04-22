@@ -1,4 +1,14 @@
 {
+  "card": {
+    "description": "Data collected by a hospital on all patients who entered an emergency room over the course of one month",
+    "source": "Code.org Generated Dataset",
+    "lastUpdated": "2020",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
+      "potentialMisuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
+    }
+  },
   "defaultLabelColumn": "decision",
   "fields": [
     {
@@ -41,26 +51,5 @@
       "id": "decision",
       "description": "How quickly the patient received treatment"
     }
-  ],
-  "card": {
-    "description": "Data collected by a hospital on all patients who entered an emergency room over the course of one month",
-    "source": "Code.org Generated Dataset",
-    "lastUpdated": "2020",
-    "context": {
-      "createdBy": "Code.org",
-      "preparation": "Yes",
-      "confidentiality": "No",
-      "subgroupIdentifiers": "Yes",
-      "representative": "No",
-      "potentialUses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
-      "potentialMisuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
-    }
-  },
-  "recommended_features": [
-    "bleeding",
-    "shortness_of_breath",
-    "weight",
-    "area_of_pain"
-  ],
-  "recommended_label": "decision"
+  ]
 }
