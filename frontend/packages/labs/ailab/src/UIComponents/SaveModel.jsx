@@ -68,15 +68,15 @@ class SaveModel extends Component {
       id: "potentialMisuses",
       text: "Warnings",
       description: (
-        <span>
+        <div>
           Describe any situations where this model could potentially be misused,
           or any places where bias could potentially show up in the model.
           Important questions to consider are:
-          <ul style={{margin: 0}}>
-            <li> Is there enough data to create an accurate model?</li>
-            <li>Does the data represent all possible users and scenarios?</li>
+          <ul style={{ margin: 0 }}>
+            <li>- Is there enough data to create an accurate model?</li>
+            <li>- Does the data represent all possible users and scenarios?</li>
           </ul>
-        </span>
+        </div>
       ),
       placeholder: "Write a brief description."
     });
@@ -110,7 +110,7 @@ class SaveModel extends Component {
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div key={nameField.id} style={styles.cardRow}>
-              <label>{nameField.text}</label>
+              <label style={styles.bold}>{nameField.text}</label>
               <div>
                 <input
                   onChange={event =>
@@ -121,7 +121,7 @@ class SaveModel extends Component {
               </div>
             </div>
             <div key={dataDescriptionField.id} style={styles.cardRow}>
-              <label>{dataDescriptionField.text}</label>
+              <label style={styles.bold}>{dataDescriptionField.text}</label>
               {!dataDescriptionField.answer && (
                 <div>
                   <textarea
@@ -141,7 +141,9 @@ class SaveModel extends Component {
             <div>
               <span onClick={this.toggleColumnDescriptions}>
                 <i className={arrowIcon} />
-                <span> Column Descriptions ({columnCount})</span>
+                <span style={styles.bold}>
+                  Column Descriptions ({columnCount})
+                </span>
               </span>
               {this.state.showColumnDescriptions && (
                 <div>
@@ -175,7 +177,7 @@ class SaveModel extends Component {
               {this.getUsesFields().map(field => {
                 return (
                   <div key={field.id} style={styles.cardRow}>
-                    <label>{field.text}</label>
+                    <label style={styles.bold}>{field.text}</label>
                     <div>{field.description}</div>
                     {!field.answer && (
                       <div>
