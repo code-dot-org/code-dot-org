@@ -3,6 +3,7 @@ const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const TOGGLE_DARK_MODE = 'javalab/TOGGLE_DARK_MODE';
+const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
@@ -37,6 +38,11 @@ export const setSource = (filename, source, isVisible = true) => ({
   filename,
   source,
   isVisible
+});
+
+export const removeFile = filename => ({
+  type: REMOVE_FILE,
+  filename
 });
 
 export const toggleDarkMode = () => ({
@@ -81,6 +87,14 @@ export default function reducer(state = initialState, action) {
       // if old filename doesn't exist, can't do a rename
       return state;
     }
+  }
+  if (action.type === REMOVE_FILE) {
+    let newSources = {...state.sources};
+    delete newSources[action.filename];
+    return {
+      ...state,
+      sources: newSources
+    };
   }
   if (action.type === SET_ALL_SOURCES) {
     return {

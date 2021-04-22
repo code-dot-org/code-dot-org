@@ -11,6 +11,7 @@ import {EditorView} from '@codemirror/view';
 import {editorSetup, lightMode} from './editorSetup';
 import {EditorState, tagExtension} from '@codemirror/state';
 import FileRenameDialog from './FileRenameDialog';
+import CreateFileDialog from './CreateFileDialog';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
@@ -45,20 +46,16 @@ class JavalabEditor extends React.Component {
     this.renameFromContextMenu = this.renameFromContextMenu.bind(this);
     this.cancelContextMenu = this.cancelContextMenu.bind(this);
     this.onRenameFile = this.onRenameFile.bind(this);
+    this.onCreateFile = this.onCreateFile.bind(this);
+    this._codeMirrors = {};
 
     let tabs = [];
     // TODO: remove isOriginal once we have editors for each file
     Object.keys(props.sources).forEach((file, index) => {
       tabs.push({
         filename: file,
-        key: `file-${index}`,
-        isOriginal: true
+        key: `file-${index}`
       });
-    });
-    tabs.push({
-      filename: 'FakeFile.java',
-      key: 'file-1',
-      isOriginal: false
     });
     this.state = {
       tabs,
@@ -67,14 +64,21 @@ class JavalabEditor extends React.Component {
       dialogOpen: false,
       menuPosition: {},
       editTabKey: null,
-      editTabFilename: null
+      editTabFilename: null,
+      newFileDialogOpen: false,
+      newFileError: null
     };
   }
 
   componentDidMount() {
-    // TODO: support multi-file
-    const filename = Object.keys(this.props.sources)[0];
-    let doc = this.props.sources[filename].text;
+    this.editors = {};
+    const {sources} = this.props;
+    Object.keys(sources).forEach(filename => {
+      this.createEditor(filename, sources[filename].text);
+    });
+  }
+
+  createEditor(filename, doc) {
     const {isDarkMode} = this.props;
     const extensions = [...editorSetup];
 
@@ -83,13 +87,13 @@ class JavalabEditor extends React.Component {
     } else {
       extensions.push(tagExtension('style', lightMode));
     }
-    this.editor = new EditorView({
+    this.editors[filename] = new EditorView({
       state: EditorState.create({
         doc: doc,
         extensions: extensions
       }),
-      parent: this._codeMirror,
-      dispatch: this.dispatchEditorChange()
+      parent: this._codeMirrors[filename],
+      dispatch: this.dispatchEditorChange(filename)
     });
   }
 
@@ -138,7 +142,7 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevProps.isDarkMode !== this.props.isDarkMode) {
       if (this.props.isDarkMode) {
         this.editor.dispatch({
@@ -150,21 +154,28 @@ class JavalabEditor extends React.Component {
         });
       }
     }
+    if (prevState.tabs.length !== this.state.tabs.length) {
+      this.state.tabs.forEach(tab => {
+        // create codemirror for a new tab
+        if (!this.editors[tab.filename]) {
+          const source = this.props.sources[tab.filename];
+          const doc = (source && source.text) || '';
+          this.createEditor(tab.filename, doc);
+        }
+      });
+    }
   }
 
-  dispatchEditorChange = () => {
+  dispatchEditorChange = filename => {
     // tr is a code mirror transaction
     // see https://codemirror.net/6/docs/ref/#state.Transaction
     return tr => {
       // we are overwriting the default dispatch method for codemirror,
       // so we need to manually call the update method.
-      this.editor.update([tr]);
+      this.editors[filename].update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        this.props.setSource(
-          Object.keys(this.props.sources)[0],
-          tr.newDoc.toString()
-        );
+        this.props.setSource(filename, tr.newDoc.toString());
         projectChanged();
       }
     };
@@ -177,11 +188,33 @@ class JavalabEditor extends React.Component {
       }
       return tab;
     });
-    const {sources, renameFile} = this.props;
-    const filename = Object.keys(sources)[0];
-    renameFile(filename, newFilename);
+    const {renameFile} = this.props;
+    renameFile(this.state.editTabFilename, newFilename);
     projectChanged();
     this.setState({tabs: newTabs, dialogOpen: false});
+  }
+
+  onCreateFile(filename) {
+    const {sources} = this.props;
+    if (Object.keys(sources).includes(filename)) {
+      this.setState({
+        newFileError: `You already have a file named ${filename}. Please choose a different name`
+      });
+      return;
+    }
+
+    this.setState({newFileError: null});
+    let newTabs = [...this.state.tabs];
+    const newIndex = newTabs.length;
+    newTabs.push({
+      filename: filename,
+      key: `file-${newIndex}`
+    });
+    this.setState({tabs: newTabs});
+    this.props.setSource(filename, '');
+    projectChanged();
+
+    this.setState({newFileDialogOpen: false});
   }
 
   render() {
@@ -197,6 +230,15 @@ class JavalabEditor extends React.Component {
     return (
       <div style={this.props.style}>
         <PaneHeader hasFocus={true}>
+          <PaneButton
+            id="javalab-editor-create-file"
+            iconClass="fa fa-plus-circle"
+            onClick={() => this.setState({newFileDialogOpen: true})}
+            headerHasFocus={true}
+            isRtl={false}
+            label="Create File"
+            leftJustified={true}
+          />
           <PaneButton
             id="javalab-editor-save"
             iconClass="fa fa-check-circle"
@@ -222,6 +264,7 @@ class JavalabEditor extends React.Component {
                     key={`${tab.key}-tab`}
                     {...this.makeListeners(tab.key)}
                   >
+                    {/*TODO: make this an input on rename/new file? */}
                     {tab.filename}
                   </NavItem>
                 );
@@ -231,24 +274,13 @@ class JavalabEditor extends React.Component {
               {tabs.map(tab => {
                 return (
                   <Tab.Pane eventKey={tab.key} key={`${tab.key}-content`}>
-                    {tab.isOriginal ? ( // TODO: remove isOriginal once we have editors for each file
-                      <div
-                        ref={el => (this._codeMirror = el)}
-                        style={{
-                          ...style.editor,
-                          ...(this.props.isDarkMode && style.darkBackground)
-                        }}
-                      />
-                    ) : (
-                      <div
-                        style={{
-                          ...style.editor,
-                          ...(this.props.isDarkMode && style.darkBackground)
-                        }}
-                      >
-                        Content {tab.filename}
-                      </div>
-                    )}
+                    <div
+                      ref={el => (this._codeMirrors[tab.filename] = el)}
+                      style={{
+                        ...style.editor,
+                        ...(this.props.isDarkMode && style.darkBackground)
+                      }}
+                    />
                   </Tab.Pane>
                 );
               })}
@@ -267,6 +299,13 @@ class JavalabEditor extends React.Component {
           filename={editTabFilename}
           handleRename={this.onRenameFile}
           isDarkMode={this.props.isDarkMode}
+        />
+        <CreateFileDialog
+          isOpen={this.state.newFileDialogOpen}
+          handleClose={() => this.setState({newFileDialogOpen: false})}
+          handleCreate={this.onCreateFile}
+          isDarkMode={this.props.isDarkMode}
+          errorMessage={this.state.newFileError}
         />
       </div>
     );
