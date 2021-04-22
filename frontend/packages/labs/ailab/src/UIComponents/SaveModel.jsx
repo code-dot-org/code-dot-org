@@ -69,9 +69,9 @@ class SaveModel extends Component {
           Describe any situations where this model could potentially be misused,
           or any places where bias could potentially show up in the model.
           Important questions to consider are:
-          <ul style={{ margin: 0 }}>
-            <li>- Is there enough data to create an accurate model?</li>
-            <li>- Does the data represent all possible users and scenarios?</li>
+          <ul style={{ marginBottom: 0 }}>
+            <li>Is there enough data to create an accurate model?</li>
+            <li>Does the data represent all possible users and scenarios?</li>
           </ul>
         </div>
       ),
