@@ -105,6 +105,10 @@ export const styles = {
     marginBottom: 8
   },
 
+  smallTextNoMargin: {
+    fontSize: 12
+  },
+
   footerText: {
     fontSize: 13,
     marginTop: 12
@@ -332,11 +336,13 @@ export const styles = {
   resultsTableFirstHeader: {
     top: 0,
     backgroundColor: "white",
-    color: "rgb(30, 30, 30)"
+    color: "rgb(30, 30, 30)",
+    verticalAlign: "top",
+    height: 45
   },
 
   resultsTableSecondHeader: {
-    top: "30px",
+    top: "47px",
     color: "white"
   },
 
