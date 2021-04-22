@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-04-21 18:54:23 UTC",
+    "serialized_at": "2021-04-21 21:04:49 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -130,7 +130,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "This **context-setting** lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course.  In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.",
+        "overview": "Students will program their classmates to step carefully around a large grid on the floor in this **context-setting** lesson.",
         "student_overview": "Program your classmates to step carefully from place to place.",
         "purpose": "By using physical movement to program their classmates, students will run into issues and emotions similar to what they will feel when they begin coding on a computer.  Encountering those stresses in a playful and open environment will help to alleviate intensity and allow students to practice necessary skills before they run into problems on their own.",
         "preparation": "- Watch the ***Teacher Video**\n- Print (or otherwise prepare to display) one ***Worksheet Answer Key**\n- Print one ***Map Activity** and one ***Worksheet** per group of 2-3 students\n- Prepare blank papers to fill out the rest of the walking grid (4-7 needed per group)\n",
@@ -191,7 +191,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
+        "overview": "Students will apply the programming concepts that they have learned to the Harvester environment in this **skill-building** lesson. Students will continue to develop sequential algorithm skills and start using the debugging process.",
         "student_overview": "Help the Harvester collect vegetables along a path.",
         "purpose": "In this lesson, students will develop debugging skills and will continue developing their programming skills.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure each student has a reflection journal.\n",
@@ -211,7 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this **context-setting** lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.",
+        "overview": "In this **context-setting** lesson, students will learn to use loops to more easily communicate instructions by looking at the repeated patterns of a dance.",
         "student_overview": "In this lesson, we'll have a dance party using repeat loops!",
         "purpose": "At this point in the course, students should have developed comfort with programming a set of linear instructions. Frequently the linear set of instructions includes patterns that are repeated multiple times and as students want to write more complex and interesting programs, manually duplicating that code becomes cumbersome and inefficient. To enable students to write more powerful programs, we'll need to rely on structures that break out of the that single linear list. Loops allow for students to structure their code in a way that repeats. In this lesson, we will focus on identifying patterns in physical movement before moving back onto the computer to look for patterns in our code.",
         "preparation": "- Prepare to display the ***Worksheet** to students.\n- Print one ***Assessment** per student.\n- Make sure every student has a reflection journal.",
@@ -272,7 +272,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. At the end of this lesson, students will be given the opportunity to create their own images.",
+        "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. ",
         "student_overview": "Use patterns and loops to finish the images.",
         "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students will test their critical thinking skills by evaluating given code and determining what needs to be added in order to solve the puzzle. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of `repeat` loops.",
         "preparation": " - Play through the puzzles before the lesson to find any potential problem areas for your class.\n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Make sure each student has a reflection journal.",
@@ -292,7 +292,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "This **exploratory** lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. ",
+        "overview": "In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.",
         "student_overview": "Sketch your own smartphone app.",
         "purpose": "Today, computing is more accessible than ever before. People from all walks of life use software on many different devices, particularly smartphones, for information, communication, and entertainment. Because people have such diverse experiences and needs, it is important for budding computer scientists to empathize with people and identify solutions with them in mind. ",
         "preparation": "* Read through the speaker notes in the ***slide deck**. \n* Prepare enough sketching/drawing supplies for all students.\n* Make sure each student has a reflection journal.",
@@ -334,7 +334,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
+        "overview": "In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. ",
         "student_overview": "Use events to create a story or make an interactive game.",
         "purpose": "In this online activity, students will learn how to use events in Play Lab. They will start by training the knight to move when an arrow key is pressed, then end with the opportunity to showcase the rest of the skills that they learned throughout this course, including sequence and looping, as part of the final freeplay puzzle.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Make sure every student has a reflection journal.",
@@ -1558,7 +1558,7 @@
       "key": "d6a58782-e0dc-4632-a239-8ca9f36113ac",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n####Journal prompts####\n\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"",
+        "description": "Give the students a journal prompt to help them process some of the things that they encountered during the day.\n\n**Prompts:**\n\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw a sequence for getting ready to go to the computer lab?\n - Draw a computer lab \"Do\" and a \"Don't\"",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2827,7 +2827,7 @@
       "key": "f7fafab8-5c1c-473a-901b-893eb23c491b",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2977,7 +2977,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Move It Move it Video  - Unplugged Activity",
         "level_keys": [
@@ -3003,7 +3003,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video - Maze Intro: Programming with Blocks",
         "level_keys": [
@@ -3029,7 +3029,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3055,7 +3055,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3081,7 +3081,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3107,7 +3107,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3133,7 +3133,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3159,7 +3159,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3889,7 +3889,7 @@
       "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Getting Loopy",
         "level_keys": [
@@ -5010,7 +5010,7 @@
       "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Right App - Unplugged Activity",
         "level_keys": [
@@ -5062,7 +5062,7 @@
       "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Create a Story",
         "level_keys": [
@@ -5088,7 +5088,7 @@
       "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5114,7 +5114,7 @@
       "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5140,7 +5140,7 @@
       "chapter": 85,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5166,7 +5166,7 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5192,7 +5192,7 @@
       "chapter": 87,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5218,7 +5218,7 @@
       "chapter": 88,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5244,7 +5244,7 @@
       "chapter": 89,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Royal Battle",
         "level_keys": [
@@ -5270,7 +5270,7 @@
       "chapter": 90,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5296,7 +5296,7 @@
       "chapter": 91,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5322,7 +5322,7 @@
       "chapter": 92,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
