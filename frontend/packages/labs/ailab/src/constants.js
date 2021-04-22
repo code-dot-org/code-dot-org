@@ -291,11 +291,24 @@ export const styles = {
     borderColor: "#d6f2fa",
     cursor: "pointer"
   },
+  dataDisplayCellHighlightedLabel: {
+    backgroundColor: "#f1caca",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f1caca",
+    cursor: "pointer"
+  },
   dataDisplayCellSelected: {
     backgroundColor: "#94e3fa",
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "#94e3fa"
+  },
+  dataDisplayCellSelectedLabel: {
+    backgroundColor: "#f39f9f",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f39f9f"
   },
 
   tableCell: {
@@ -370,19 +383,58 @@ export const styles = {
 
   statement: {
     fontSize: 32,
-    paddingBottom: 15
+    paddingBottom: 15,
+    lineHeight: '50px'
   },
 
   statementLabel: {
-    color: labelColor,
+    backgroundColor: labelColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    height: 46
   },
 
   statementFeature: {
-    color: featureColor,
+    backgroundColor: featureColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    height: 46
+  },
+
+  statementDeleteIcon: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    transform: 'translateX(50%) translateY(-50%)',
+    color: "black",
+    cursor: "pointer"
+  },
+
+  statementDeleteCircle: {
+    backgroundColor: "white",
+    borderRadius: "50%",
+    height: 20,
+    width: 20,
+    top: 0,
+    left: 0
+  },
+
+  statementDeleteX: {
+    fontSize: 20,
+    position: "absolute",
+    top: 0,
+    right: 0,
+    lineHeight: "20px"
   },
 
   selectLabelText: {
@@ -391,6 +443,24 @@ export const styles = {
 
   selectFeaturesText: {
     color: featureColor
+  },
+
+  selectLabelButton: {
+    backgroundColor: labelColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 18
+  },
+
+  selectFeaturesButton: {
+    backgroundColor: featureColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 18
   },
 
   trainModelContainer: {

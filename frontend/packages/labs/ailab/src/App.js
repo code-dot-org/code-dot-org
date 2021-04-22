@@ -178,9 +178,9 @@ class App extends Component {
             <ContainerLeft>
               <DataDisplay setColumnRef={this.setColumnRef} />
             </ContainerLeft>
-            <ColumnInspector columnPositions={this.columnPositions} />
+
             <ContainerRight>
-              <PhraseBuilder />
+              <ColumnInspector columnPositions={this.columnPositions} />
             </ContainerRight>
           </BodyContainer>
         )}
