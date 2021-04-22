@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {levelType, lessonType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
-import {lessonIsVisible} from './progressHelpers';
+import {lessonIsVisible, lessonIsLockedForAllStudents} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const styles = {
@@ -30,6 +30,7 @@ class SummaryProgressTable extends React.Component {
 
     // redux provided
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
+    lessonLockedForSection: PropTypes.func.isRequired,
     lessonIsVisible: PropTypes.func.isRequired
   };
 
@@ -66,6 +67,11 @@ class SummaryProgressTable extends React.Component {
                 levels={levelsByLesson[item.unfilteredIndex]}
                 lesson={item.lesson}
                 dark={filteredIndex % 2 === 1}
+                lockedForSection={this.props.lessonLockedForSection(
+                  item.lesson.id
+                )}
+                viewAs={viewAs}
+                lessonIsVisible={this.props.lessonIsVisible}
               />
             ))}
         </tbody>
@@ -77,5 +83,7 @@ class SummaryProgressTable extends React.Component {
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({
   viewAs: state.viewAs,
+  lessonLockedForSection: lessonId =>
+    lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(SummaryProgressTable);
