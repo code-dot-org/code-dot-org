@@ -62,15 +62,10 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     # This query gets matching fully-hydrated models in the correct order.
     real_reviews = PeerReview.find(reviews.map(&:id))
 
-    # Pull out any that are tied to deprecated scripts/units
-    active_reviews = []
     real_reviews.each do |review|
       script = Script.find(review.script_id)
-      active_reviews << review unless script.deprecated?
-    end
-
-    active_reviews.each do |review|
-      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script)
+      # Pull out any that are tied to deprecated scripts/units
+      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script) unless script.deprecated?
     end
 
     render json: {
