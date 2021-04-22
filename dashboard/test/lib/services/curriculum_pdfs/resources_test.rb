@@ -62,4 +62,28 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
       assert Services::CurriculumPdfs.fetch_resource_pdf(resource, tmpdir)
     end
   end
+
+  test 'export_from_google will download or export file, as appropriate' do
+    mock_pdf_file = OpenStruct.new(
+      available_content_types: ["application/pdf"],
+      download_to_file: true
+    )
+
+    mock_other_file = OpenStruct.new(
+      available_content_types: [],
+      id: "id"
+    )
+
+    Services::CurriculumPdfs.unstub(:export_from_google)
+
+    GoogleDrive::Session.any_instance.stubs(:file_by_url).returns(mock_pdf_file)
+    mock_pdf_file.expects(:download_to_file).with("foo.pdf")
+    Services::CurriculumPdfs.export_from_google("", "foo.pdf")
+
+    GoogleDrive::Session.any_instance.stubs(:file_by_url).returns(mock_other_file)
+    URI.expects(:open).with("https://docs.google.com/document/d/id/export?format=pdf")
+    Services::CurriculumPdfs.export_from_google("", "foo.pdf")
+
+    Services::CurriculumPdfs.stubs(:export_from_google)
+  end
 end
