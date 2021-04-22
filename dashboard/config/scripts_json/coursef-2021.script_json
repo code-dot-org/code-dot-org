@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-17 19:34:21 UTC",
+    "serialized_at": "2021-04-22 19:00:01 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -108,7 +108,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this **context-setting** lesson, students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.",
+        "overview": "In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.\n",
         "student_overview": "You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.",
         "purpose": "The first lesson is about getting students excited about the course and connecting their own personal interests to computer science. \n",
         "preparation": "- Determine how students will login to Code.org.\n- If needed, create Code.org accounts for students.\n- Assign Introducing Sprite Lab to students.\n- Print copies of ***Exploring Apps** worksheet (or post the digital version to your LMS)."
@@ -127,7 +127,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs, and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. ",
+        "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. ",
         "student_overview": "\nIn this lesson you will write programs and learn about sprites and behaviors.",
         "purpose": "This lesson is designed to introduce students to programming in Sprite Lab. Students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
         "preparation": "Play through the levels and review the ***lesson slides**."
@@ -1859,7 +1859,7 @@
       "key": "84a55315-a3fb-4f8c-a451-b167ff8700cb",
       "position": 2,
       "properties": {
-        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts: \nWhat advice would you have for a friend who is interested in creating their own programs in Sprite Lab?\n\n"
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\nWhat advice would you have for a friend who is interested in creating their own programs in Sprite Lab?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "84a55315-a3fb-4f8c-a451-b167ff8700cb",
@@ -1990,7 +1990,7 @@
       "key": "663232b3-1a0c-4d35-a039-f6219180dd04",
       "position": 2,
       "properties": {
-        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts: \nArrow keys are one way to make a program more interactive. What other ways could we give a user control over what happens in an app or game?\n\n"
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:** \nArrow keys are one way to make a program more interactive. What other ways could we give a user control over what happens in an app or game?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "663232b3-1a0c-4d35-a039-f6219180dd04",
@@ -3827,7 +3827,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Introducing Sprite Lab",
         "level_keys": [
@@ -3853,7 +3853,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration: Sample Apps",
         "level_keys": [
@@ -3879,7 +3879,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -3905,7 +3905,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: How to Make a Sprite",
         "level_keys": [
@@ -3931,7 +3931,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3957,7 +3957,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3983,7 +3983,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4009,7 +4009,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4035,7 +4035,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4061,7 +4061,7 @@
       "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4087,7 +4087,7 @@
       "chapter": 11,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play: Make a Scene",
         "level_keys": [
@@ -4113,7 +4113,7 @@
       "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4139,7 +4139,7 @@
       "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Sprites in Action",
         "level_keys": [
@@ -4165,7 +4165,7 @@
       "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4191,7 +4191,7 @@
       "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4217,7 +4217,7 @@
       "chapter": 16,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4243,7 +4243,7 @@
       "chapter": 17,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4269,7 +4269,7 @@
       "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4295,7 +4295,7 @@
       "chapter": 19,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play: Make an Interactive Scene",
         "level_keys": [
@@ -6245,238 +6245,26 @@
       "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_story"
-        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "contagion_story"
+          "CourseF_outbreak_story"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
+        "activity_section.key": "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99"
       },
       "level_keys": [
-        "contagion_story"
+        "CourseF_outbreak_story"
       ]
     },
     {
       "chapter": 95,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_setup"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_setup"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_setup"
-      ]
-    },
-    {
-      "chapter": 96,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_events"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_events"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_events"
-      ]
-    },
-    {
-      "chapter": 97,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_data"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_data"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_data"
-      ]
-    },
-    {
-      "chapter": 98,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_masks"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_masks"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_masks"
-      ]
-    },
-    {
-      "chapter": 99,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_chance"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_chance"
-      ]
-    },
-    {
-      "chapter": 100,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_more chance"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_more chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_more chance"
-      ]
-    },
-    {
-      "chapter": 101,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_modify_chance"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_modify_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_modify_chance"
-      ]
-    },
-    {
-      "chapter": 102,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_vaccine"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_vaccine"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_vaccine"
-      ]
-    },
-    {
-      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6502,7 +6290,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6528,7 +6316,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6554,7 +6342,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6580,7 +6368,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6606,7 +6394,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6632,7 +6420,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -6658,7 +6446,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6684,7 +6472,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6710,7 +6498,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6736,7 +6524,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 105,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7881,110 +7669,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "contagion_story",
+        "level.key": "CourseF_outbreak_story",
         "script_level.level_keys": [
-          "contagion_story"
+          "CourseF_outbreak_story"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_setup",
-        "script_level.level_keys": [
-          "contagion_setup"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_events",
-        "script_level.level_keys": [
-          "contagion_events"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_data",
-        "script_level.level_keys": [
-          "contagion_data"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_masks",
-        "script_level.level_keys": [
-          "contagion_masks"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_chance",
-        "script_level.level_keys": [
-          "contagion_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_more chance",
-        "script_level.level_keys": [
-          "contagion_more chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_modify_chance",
-        "script_level.level_keys": [
-          "contagion_modify_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_vaccine",
-        "script_level.level_keys": [
-          "contagion_vaccine"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
+        "activity_section.key": "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99"
       }
     },
     {

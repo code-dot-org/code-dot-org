@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-14 23:01:57 UTC",
+    "serialized_at": "2021-04-21 23:43:58 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -265,7 +265,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "1. **Determine possible processing used to perform common computing tasks**\n\n\tIn the wrap-up discussion, make sure that students come up with multiple examples of processing and are able to explain how that processing turns input into outpput. You might also collect individual answers to this question as an exit ticket."
       },
       "seeding_key": {
         "lesson.key": "Processing",
@@ -4994,7 +4995,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Problem Solving Process",
         "level_keys": [
@@ -5020,7 +5021,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: What Makes a Computer, a Computer?",
         "level_keys": [
@@ -5046,7 +5047,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Pet Chooser",
         "level_keys": [
@@ -5072,7 +5073,7 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Story Creator",
         "level_keys": [
@@ -5098,7 +5099,7 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Improved Pet Chooser",
         "level_keys": [
@@ -5332,7 +5333,7 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Outfit Picker",
         "level_keys": [
@@ -5358,7 +5359,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Friend Finder",
         "level_keys": [
@@ -5384,7 +5385,7 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Kids Movie Recommender",
         "level_keys": [
@@ -5410,7 +5411,7 @@
       "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: IOSP Model",
         "level_keys": [
@@ -5777,11 +5778,11 @@
     },
     {
       "name": "Problem Solving Process",
-      "url": "https://studio.code.org/s/csd1-2020/stage/2/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/",
       "key": "problem-solving-process-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "problem-solving-process-exemplar-2020"
@@ -5851,11 +5852,11 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://studio.code.org/s/csd1-2021/stage/3/puzzle/1",
+      "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
       "key": "solving-problems-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "solving-problems-exemplar-2020"
@@ -5876,11 +5877,11 @@
     },
     {
       "name": "What is a Computer?",
-      "url": "https://studio.code.org/s/csd1-2020/stage/4/puzzle/1/",
+      "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
       "key": "what-is-a-computer-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "what-is-a-computer-2020"
@@ -5939,11 +5940,11 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://studio.code.org/s/csd1-2020/stage/5/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
       "key": "input-and-output-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "input-and-output-2020"
@@ -5976,11 +5977,11 @@
     },
     {
       "name": "Processing",
-      "url": "https://studio.code.org/s/csd1-2020/stage/6/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
       "key": "processing-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "processing-2020"
@@ -6038,11 +6039,11 @@
     },
     {
       "name": "Storage",
-      "url": "https://studio.code.org/s/csd1-2020/stage/7/puzzle/1",
+      "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing",
       "key": "storage-1",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "storage-1"
@@ -6074,12 +6075,12 @@
       }
     },
     {
-      "name": "Project - Propose an App",
-      "url": "https://studio.code.org/s/csd1-2020/stage/8/puzzle/1",
+      "name": "Project Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit",
       "key": "project-propose-an-app-2020",
       "properties": {
-        "type": "Project Guide Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "project-propose-an-app-2020"
@@ -6138,24 +6139,36 @@
       }
     },
     {
-      "name": "Apps and Problem Solving",
-      "url": "https://studio.code.org/s/csd1-2019/stage/8/puzzle/1",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1oZ67Hh9ITbADuabNgrEqE249KBOnp8uGsSaMLWr7c-I/edit",
       "key": "apps-and-problem-solving-marked-rubrics",
       "properties": {
-        "type": "Sample Marked Rubrics",
-        "audience": "Teacher"
+        "audience": "Verified Teacher",
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "apps-and-problem-solving-marked-rubrics"
       }
     },
     {
+      "name": "Peer Review Exemplar",
+      "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit",
+      "key": "peer_review_exemplar",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_exemplar"
+      }
+    },
+    {
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-      "url": "https://studio.code.org/s/csd1-2020/stage/9/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
       "key": "intro-to-problem-solving-newspaper-table-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "intro-to-problem-solving-newspaper-table-2020"
@@ -6188,11 +6201,11 @@
     },
     {
       "name": "Intro to Problem Solving - Spaghetti Bridge",
-      "url": "https://studio.code.org/s/csd1-2020/stage/10/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
       "key": "intro-to-problem-solving-spaghetti-bridge-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "intro-to-problem-solving-spaghetti-bridge-2020"
@@ -6224,11 +6237,11 @@
     },
     {
       "name": "Intro to Problem Solving - Paper Tower",
-      "url": "https://studio.code.org/s/csd1-2020/stage/11/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
       "key": "intro-to-problem-solving-paper-tower-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "intro-to-problem-solving-paper-tower-2020"
@@ -6272,11 +6285,11 @@
     },
     {
       "name": "Exploring Problem Solving - Animal Theme",
-      "url": "https://studio.code.org/s/csd1-2020/stage/12/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1yEDSiEwx6OICs4MZwzl4zBd_aVfVEWd6JlPIqo2mc1c/edit?usp=sharing",
       "key": "exploring-problem-solving-animal-theme-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "exploring-problem-solving-animal-theme-2020"
@@ -6322,11 +6335,11 @@
     },
     {
       "name": "Exploring Problem Solving - Games Theme",
-      "url": "https://studio.code.org/s/csd1-2020/stage/13/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/edit?usp=sharing",
       "key": "exploring-problem-solving-games-theme-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "exploring-problem-solving-games-theme-2020"
@@ -6572,6 +6585,12 @@
       "seeding_key": {
         "lesson.key": "Project - Propose an App",
         "resource.key": "apps-and-problem-solving-marked-rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "peer_review_exemplar"
       }
     },
     {
