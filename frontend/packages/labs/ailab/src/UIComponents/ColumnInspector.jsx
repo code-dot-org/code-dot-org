@@ -217,6 +217,7 @@ class ColumnInspector extends Component {
               {currentPanel === "dataDisplayLabel" &&
                 currentColumnData.id !== labelColumn && (
                   <button
+                    type="button"
                     onClick={e =>
                       this.setPredictColumn(e, currentColumnData.id)
                     }
@@ -229,6 +230,7 @@ class ColumnInspector extends Component {
               {currentPanel === "dataDisplayFeatures" &&
                 !selectedFeatures.includes(currentColumnData.id) && (
                   <button
+                    type="button"
                     onClick={e => this.addFeature(e, currentColumnData.id)}
                     style={styles.selectFeaturesButton}
                   >
