@@ -1650,17 +1650,17 @@
     ml-svm "^2.1.2"
     react-chartjs-2 "^2.11.1"
 
-"@code-dot-org/p5.play@^1.3.16-cdo":
-  version "1.3.16-cdo"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.16-cdo.tgz#2e00c9241e3307295d2e54ca213fb23a1658bf50"
-  integrity sha512-xZfpW46hnynEvgQMvUJDtJQAtoM1Mc7/ie4aFnEAYqD6LcrsX00TPoIVOr4N3Wj+CvAvMcwCgZlhE/PmjqCC2g==
+"@code-dot-org/p5.play@^1.3.17-cdo":
+  version "1.3.17-cdo"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.17-cdo.tgz#c7d3dd3744c626dd2d2b90bda735fe64f64be662"
+  integrity sha512-0H423zbBWym1EyuJ7HfaCb68W4bGQd0E6DD5ENjmLBPZq/PXyf6Rn/agBnlKPZ1OGMStEVwlgRbg8IhpYRhWZA==
   dependencies:
-    "@code-dot-org/p5" "0.5.4-cdo.8"
+    "@code-dot-org/p5" "0.5.4-cdo.9"
 
-"@code-dot-org/p5@0.5.4-cdo.8":
-  version "0.5.4-cdo.8"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.8.tgz#cee397e0c3af20f746fb6bda046677d2dbaa3550"
-  integrity sha512-+Uc3vWEivYLq1Wkkl8EBXrtPCp3VGd6Aar1+XwClRgdlX1KqlRSZR3SUGKFhn17NWQzr3TymmdwtP4LAo8ymJw==
+"@code-dot-org/p5@0.5.4-cdo.9":
+  version "0.5.4-cdo.9"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.9.tgz#8d5e7a75130bf3b4ee21678a7601fabed9858c7d"
+  integrity sha512-spJZkp8f2Hfqq6Xg8aiZlFSEtoPLln01e/MCX0ak4/7uX+NpgN0SkPKfzREp+NaLCOEZG0u+45XkSWYaFAGXvA==
   dependencies:
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
