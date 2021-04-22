@@ -22,10 +22,9 @@ const defaultProps = {
   ],
   showTeacherInfo: false,
   viewAs: ViewType.Teacher,
+  showLockIcon: true,
   lessonIsVisible: () => true,
-  lessonIsLockedForUser: () => false,
-  lessonIsLockedForAllStudents: () => false,
-  lockableAuthorized: true
+  lessonLockedForSection: () => false
 };
 
 export default storybook => {
@@ -113,53 +112,21 @@ export default storybook => {
         story: () => (
           <ProgressLesson
             {...defaultProps}
-            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Student}
+            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
           />
         )
       },
       {
-        name: 'locked lesson as verified teacher',
-        story: () => (
-          <ProgressLesson
-            {...defaultProps}
-            lesson={fakeLesson('Assessment Number One', 1, true)}
-            levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForAllStudents={() => true}
-          />
-        )
-      },
-      {
-        name: 'unlocked lesson as verified teacher',
+        name: 'locked lesson as teacher',
         story: () => (
           <ProgressLesson
             {...defaultProps}
             lesson={fakeLesson('Asessment Number One', 1, true)}
-            levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForAllStudents={() => false}
-          />
-        )
-      },
-      {
-        name: 'locked lesson as unverified teacher',
-        story: () => (
-          <ProgressLesson
-            {...defaultProps}
-            lesson={fakeLesson('Asessment Number One', 1, true)}
-            levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={() => true}
-            lockableAuthorized={false}
-          />
-        )
-      },
-      {
-        name: 'locked lesson signed out',
-        story: () => (
-          <ProgressLesson
-            {...defaultProps}
-            viewAs={ViewType.Student}
-            lesson={fakeLesson('Asessment Number One', 1, true)}
-            levels={fakeLevels(5, {named: false})}
-            lessonIsLockedForUser={() => true}
+            levels={fakeLevels(5, {named: false}).map(level => ({
+              ...level,
+              status: LevelStatus.locked
+            }))}
+            lessonLockedForSection={() => true}
           />
         )
       },
@@ -174,7 +141,7 @@ export default storybook => {
               ...level,
               status: LevelStatus.locked
             }))}
-            lessonIsLockedForUser={() => true}
+            lessonLockedForSection={() => true}
           />
         )
       },
@@ -186,7 +153,7 @@ export default storybook => {
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
-              status: LevelStatus.not_tried
+              status: LevelStatus.attempted
             }))}
           />
         )

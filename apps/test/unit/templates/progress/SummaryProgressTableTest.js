@@ -1,4 +1,4 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedSummaryProgressTable as SummaryProgressTable} from '@cdo/apps/templates/progress/SummaryProgressTable';
@@ -29,6 +29,7 @@ describe('SummaryProgressTable', () => {
         lessons={lessons}
         levelsByLesson={levelsByLesson}
         lessonIsVisible={() => true}
+        lessonLockedForSection={() => false}
       />
     );
     const rows = wrapper.find('tbody').props().children;
@@ -50,6 +51,7 @@ describe('SummaryProgressTable', () => {
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs === ViewType.Teacher
         }
+        lessonLockedForSection={() => false}
       />
     );
 
@@ -68,6 +70,7 @@ describe('SummaryProgressTable', () => {
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs !== ViewType.Student
         }
+        lessonLockedForSection={() => false}
       />
     );
 
