@@ -265,7 +265,7 @@ module UsersHelper
 
     # a user_level is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
     submitted = !!user_level&.submitted &&
-      !(user_level.level&.peer_reviewable? && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(user_level.best_result))
+      !(user_level.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(user_level.best_result))
 
     return {
       status: completion_status,
