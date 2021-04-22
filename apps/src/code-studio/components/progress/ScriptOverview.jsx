@@ -54,6 +54,8 @@ class ScriptOverview extends React.Component {
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
+    scriptOverviewPdfUrl: PropTypes.string,
+    scriptResourcesPdfUrl: PropTypes.string,
 
     // redux provided
     perLevelResults: PropTypes.object.isRequired,
@@ -119,7 +121,9 @@ class ScriptOverview extends React.Component {
       showCalendar,
       weeklyInstructionalMinutes,
       unitCalendarLessons,
-      isMigrated
+      isMigrated,
+      scriptOverviewPdfUrl,
+      scriptResourcesPdfUrl
     } = this.props;
 
     const displayRedirectDialog =
@@ -188,6 +192,8 @@ class ScriptOverview extends React.Component {
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
               unitCalendarLessons={unitCalendarLessons}
               isMigrated={isMigrated}
+              scriptOverviewPdfUrl={scriptOverviewPdfUrl}
+              scriptResourcesPdfUrl={scriptResourcesPdfUrl}
             />
           </div>
         )}

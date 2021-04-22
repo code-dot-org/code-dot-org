@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import {connect} from 'react-redux';
 
 const styles = {
   main: {
@@ -27,6 +28,10 @@ const styles = {
   rightButton: {
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0
+  },
+  reverseButtons: {
+    display: 'flex',
+    flexDirection: 'row-reverse'
   }
 };
 
@@ -34,23 +39,27 @@ const styles = {
  * A component that provides a toggle that goes between visible and hidden that
  * can be used be teachers to hide/show scripts or stages on a per section basis.
  */
-export default class HiddenForSectionToggle extends React.Component {
+class HiddenForSectionToggle extends React.Component {
   static propTypes = {
     hidden: PropTypes.bool.isRequired,
     disabled: PropTypes.bool,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+    // Redux
+    isRtl: PropTypes.bool
   };
 
   render() {
-    const {hidden, disabled, onChange} = this.props;
+    const {hidden, disabled, onChange, isRtl} = this.props;
+
+    // Reverse button order if locale is RTL
+    const mainStyle = {
+      ...styles.main,
+      ...(disabled && styles.disabled),
+      ...(isRtl ? styles.reverseButtons : null)
+    };
+
     return (
-      <div
-        style={{
-          ...styles.main,
-          ...(disabled && styles.disabled)
-        }}
-        className="uitest-togglehidden"
-      >
+      <div style={mainStyle} className="uitest-togglehidden">
         <Button
           __useDeprecatedTag
           onClick={() => !disabled && onChange('visible')}
@@ -73,3 +82,9 @@ export default class HiddenForSectionToggle extends React.Component {
     );
   }
 }
+
+export const UnconnectedHiddenForSectionToggle = HiddenForSectionToggle;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(HiddenForSectionToggle);

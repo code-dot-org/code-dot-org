@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:57 UTC",
+    "serialized_at": "2021-04-16 22:04:48 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -59,12 +59,27 @@
       }
     },
     {
-      "key": "Create PT - Make a Plan",
-      "name": "Create PT   Make a Plan",
+      "key": "lesson-4",
+      "name": "Create PT Deep Dive",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "Create PT - Make a Plan",
+      "name": "Create PT   Make a Plan",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
       "properties": {
         "overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson.",
         "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.",
@@ -90,16 +105,17 @@
     {
       "key": "Create PT - Complete the Task",
       "name": "Create PT - Complete the Task (12 hrs)",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "overview": "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio.",
         "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 12 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - written responses must be done on your own.",
         "purpose": "\r\nThere are no new CS concepts covered in this lesson. Students will work individually or with a collaborative partner on the Create Performance Task.",
         "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\r\n* Review how to create a stand-alone App Lab project to assist students",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
@@ -110,21 +126,8 @@
   ],
   "lesson_activities": [
     {
-      "key": "4c929c15-de18-4488-b022-0d8418fd9704",
-      "position": 1,
-      "properties": {
-        "name": "Lessom Modifications"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4c929c15-de18-4488-b022-0d8418fd9704",
-        "lesson.key": "Create PT - Review the Task",
-        "lesson_group.key": "",
-        "script.name": "csp8-2021"
-      }
-    },
-    {
       "key": "504c2d5f-fc17-4fe8-bc19-815d98352fea",
-      "position": 2,
+      "position": 1,
       "properties": {
         "name": "Warm Up",
         "duration": 10
@@ -138,7 +141,7 @@
     },
     {
       "key": "14d8bd81-4fab-494f-93a3-5dc58a2f6639",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Activity",
         "duration": 25
@@ -152,7 +155,7 @@
     },
     {
       "key": "8bb6a656-e228-4bf1-86f2-eca2630cc837",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Wrap Up",
         "duration": 10
@@ -165,10 +168,52 @@
       }
     },
     {
+      "key": "d83a5921-3b68-4a8d-874f-d03c0141ffcd",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d83a5921-3b68-4a8d-874f-d03c0141ffcd",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "12127a8b-e011-4016-87bf-6bd7712405eb",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
+      "key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csp8-2021"
+      }
+    },
+    {
       "key": "6e25a224-243e-456f-97bc-7522985d375e",
       "position": 1,
       "properties": {
-        "name": "Getting Started",
+        "name": "Warm Up",
         "duration": 5
       },
       "seeding_key": {
@@ -183,7 +228,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 60
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "147366ad-a736-4b77-a4e8-39a6e5be61e1",
@@ -238,7 +283,7 @@
       "position": 3,
       "properties": {
         "name": "Activity",
-        "duration": 12
+        "duration": 70
       },
       "seeding_key": {
         "lesson_activity.key": "c5767ca4-fa97-4376-987f-4a7d9e8ba233",
@@ -274,17 +319,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "b72a4fb7-2990-49bb-8929-1ac849f549e2",
-      "position": 1,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/image_6UvOK1t.png)\r\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1AduaaUdKIe4BOd3tYhQdIYCZZRTNYWjuLvvvUZx5ah0/edit?usp=sharing) to access the modifications."
-      },
-      "seeding_key": {
-        "activity_section.key": "b72a4fb7-2990-49bb-8929-1ac849f549e2",
-        "lesson_activity.key": "4c929c15-de18-4488-b022-0d8418fd9704"
-      }
-    },
     {
       "key": "e59b50bc-582b-42f5-a27b-2dcd30a94064",
       "position": 1,
@@ -460,6 +494,46 @@
       "seeding_key": {
         "activity_section.key": "893dccf4-502e-4b7a-8f92-aba584ea11fe",
         "lesson_activity.key": "8bb6a656-e228-4bf1-86f2-eca2630cc837"
+      }
+    },
+    {
+      "key": "cd95f17e-0217-4cd7-b88c-88092457f87e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd95f17e-0217-4cd7-b88c-88092457f87e",
+        "lesson_activity.key": "d83a5921-3b68-4a8d-874f-d03c0141ffcd"
+      }
+    },
+    {
+      "key": "6f79ace5-1596-46ad-8e3e-67d6e7444546",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f79ace5-1596-46ad-8e3e-67d6e7444546",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
+      "key": "83344e75-d6d4-4fb2-9d22-3705d0ba44e3",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "83344e75-d6d4-4fb2-9d22-3705d0ba44e3",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
+      "key": "0e6406d9-84c0-43f4-a867-651a2d416b4f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0e6406d9-84c0-43f4-a867-651a2d416b4f",
+        "lesson_activity.key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0"
       }
     },
     {
@@ -1222,6 +1296,9 @@
   "scripts_resources": [
 
   ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
@@ -1356,5 +1433,8 @@
         "standard.shortcode": "3B-AP-14"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

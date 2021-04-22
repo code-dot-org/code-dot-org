@@ -61,7 +61,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow {...baseProps} lockedForSection={true} />
     );
     assert.strictEqual(
-      wrapper.find('ProgressBubbleSet').props().disabled,
+      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
       true
     );
   });
@@ -77,7 +77,7 @@ describe('SummaryProgressRow', () => {
       />
     );
     assert.strictEqual(
-      wrapper.find('ProgressBubbleSet').props().disabled,
+      wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
       true
     );
   });
@@ -104,7 +104,10 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        lockedForSection={true}
+        levels={baseProps.levels.map((level, index) => ({
+          ...level,
+          locked: index === baseProps.levels.length - 1 ? true : false // lock last level
+        }))}
       />
     );
     assert.equal(
@@ -118,11 +121,7 @@ describe('SummaryProgressRow', () => {
 
   it('has an unlock icon when lockable and unlocked', () => {
     const wrapper = shallow(
-      <SummaryProgressRow
-        {...baseProps}
-        lesson={fakeLesson('Maze', 1, true)}
-        lockedForSection={false}
-      />
+      <SummaryProgressRow {...baseProps} lesson={fakeLesson('Maze', 1, true)} />
     );
     assert.equal(
       wrapper

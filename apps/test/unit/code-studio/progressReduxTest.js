@@ -650,6 +650,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
+            locked: undefined,
             bonus: false,
             sublevels: []
           },
@@ -671,6 +672,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
+            locked: undefined,
             bonus: false,
             sublevels: []
           },
@@ -692,6 +694,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
+            locked: undefined,
             bonus: true,
             sublevels: []
           }
@@ -715,6 +718,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
+            locked: undefined,
             bonus: false,
             sublevels: []
           },
@@ -736,6 +740,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
+            locked: undefined,
             bonus: false,
             sublevels: []
           },
@@ -757,6 +762,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
+            locked: undefined,
             bonus: false,
             sublevels: []
           }
@@ -798,6 +804,7 @@ describe('progressReduxTest', () => {
             ]
           }
         ],
+        scriptProgress: {},
         levelResults: {}
       });
       assert.equal(results[0][0].isUnplugged, true);
@@ -1069,6 +1076,7 @@ describe('progressReduxTest', () => {
           }
         ],
         stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
+        scriptProgress: {},
         levelResults: {},
         focusAreaStageIds: []
       };
@@ -1096,6 +1104,7 @@ describe('progressReduxTest', () => {
           fakeLesson('Lesson Group', 'lesson2', 2),
           fakeLesson('Lesson Group', 'lesson3', 3)
         ],
+        scriptProgress: {},
         levelResults: {},
         focusAreaStageIds: []
       };
@@ -1129,6 +1138,7 @@ describe('progressReduxTest', () => {
             lessons: []
           }
         ],
+        scriptProgress: {},
         levelResults: {},
         focusAreaStageIds: []
       };
@@ -1476,6 +1486,7 @@ describe('progressReduxTest', () => {
         'progress/UPDATE_FOCUS_AREAS',
         'stageLock/AUTHORIZE_LOCKABLE',
         'progress/SET_SCRIPT_COMPLETED',
+        'progress/SET_SCRIPT_PROGRESS',
         'progress/MERGE_RESULTS',
         'progress/MERGE_PEER_REVIEW_PROGRESS',
         'progress/SET_CURRENT_STAGE_ID'

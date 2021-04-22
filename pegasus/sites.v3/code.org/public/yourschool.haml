@@ -25,7 +25,9 @@ social:
 - census_announcement['school_zip'] = request.params["zip"] if request.params["zip"]
 - census_announcement['school_year'] = current_census_year
 - census_announcement['locale'] = request.locale
-- census_announcement['teacher_applications_active'] = DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active).to_s
+- teacher_application_mode  = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
+- census_announcement['show_professional_learning_banner'] = (request.locale == 'en-US' && %w(open closing-soon).include?(teacher_application_mode)).to_s
+- census_announcement['teacher_application_mode'] = teacher_application_mode
 
 = inline_css 'trophy_announcement_sparkle.css'
 

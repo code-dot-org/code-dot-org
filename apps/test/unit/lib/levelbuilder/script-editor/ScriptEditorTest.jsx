@@ -17,7 +17,6 @@ import {
 import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
@@ -30,7 +29,8 @@ describe('ScriptEditor', () => {
     registerReducers({
       ...reducers,
       isRtl,
-      resources: createResourcesReducer('teacherResource')
+      resources: createResourcesReducer('teacherResource'),
+      studentResources: createResourcesReducer('studentResource')
     });
     store = getStore();
     store.dispatch(
@@ -110,7 +110,7 @@ describe('ScriptEditor', () => {
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({initialHidden: false, isMigrated: true});
 
-      expect(wrapper.find('input').length).to.equal(25);
+      expect(wrapper.find('input').length).to.equal(26);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(4);
@@ -169,7 +169,12 @@ describe('ScriptEditor', () => {
         const wrapper = createWrapper({
           isMigrated: true
         });
-        expect(wrapper.find(MigratedResourcesEditor).length).to.equal(1);
+        expect(
+          wrapper
+            .find('ResourcesEditor')
+            .first()
+            .props().useMigratedResources
+        ).to.be.true;
       });
     });
 

@@ -5,7 +5,7 @@ require 'fileutils'
 
 class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
   setup do
-    PDF.stubs(:generate_from_url)
+    PDF.stubs(:invoke_generation_script)
     PDF.stubs(:merge_local_pdfs)
   end
 
