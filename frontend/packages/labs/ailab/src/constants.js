@@ -141,7 +141,7 @@ export const styles = {
   },
 
   scrollingContents: {
-    overflow: "scroll",
+    overflow: "auto",
     height: "100%",
     boxSizing: "border-box"
   },
@@ -177,7 +177,7 @@ export const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
     boxSizing: "border-box",
-    overflow: "scroll",
+    overflow: "auto",
     marginTop: 59,
     position: "relative"
   },
@@ -234,7 +234,7 @@ export const styles = {
   },
 
   tableParent: {
-    overflowY: "scroll",
+    overflowY: "auto",
     overflowWrap: "break-word",
     fontSize: 10,
     boxSizing: "border-box",
