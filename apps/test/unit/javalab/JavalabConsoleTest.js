@@ -27,7 +27,7 @@ describe('Java Lab Console Test', () => {
   const createWrapper = () => {
     return mount(
       <Provider store={store}>
-        <JavalabConsole />
+        <JavalabConsole onInputMessage={() => {}} />
       </Provider>
     );
   };

@@ -1,0 +1,108 @@
+---
+title: Internships and apprenticeships
+video_player: true
+theme: responsive
+---
+<a id="top"></a>
+<h1>Internships and apprenticeships</h1>
+<p>Get real-world experience with these internship and apprenticeship opportunities.</p>
+
+<br>
+
+<p style="text-align:center"><a href="#apprenticeships">Apprenticeships</a> | <a href="#college">Internships in/before college</a> | <a href="#highschool">Internships in high school</a></p>
+
+<a id="apprenticeships"></a>
+<h2>Apprenticeships</h2>
+<a href="https://apprenticareers.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/apprenti.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://apprenticareers.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Apprenti</strong></h3></a>
+  <p>Technical training and year-long paid apprenticeships at tech companies for students looking for an alternative to college</p>
+  <p><i>Application period: Rolling</i></p>
+</div>
+<div style="clear: both"></div>
+<br>
+
+<a href="https://www.multiverse.io/en-US/young-adults" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/multiverse.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://www.multiverse.io/en-US/young-adults" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Multiverse.io</strong></h3></a>
+  <p>Paid CS apprenticeships at top companies and career development for students looking for an alternative to college</p>
+  <p><i>Application period: Rolling</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a href="https://www.npower.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/npower.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://www.npower.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>NPower</strong></h3></a>
+  <p>Work-study program in select state for military veterans and students from underserved communities</p>
+  <p><i>Application period: Rolling</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a href="https://www.yearup.org/students" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/year-up.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://www.yearup.org/students" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Year Up</strong></h3></a>
+  <p>Year-long program includes six months of technical training and a six-month corporate internship</p>
+  <p><i>Application period: Rolling</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a id="college"></a>
+<h2>Internships for students entering or in college</h2>
+
+<a href="https://www.amazonfutureengineer.com/scholarship" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/afe.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://www.amazonfutureengineer.com/scholarship" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Amazon Future Engineer</strong></h3></a>
+  <p>Paid summer internships at Amazon plus $40,000 for college for high school seniors from underserved communities planning to major in CS</p>
+  <p><i>Application period: xxxxxxx</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a href="https://www.code2040.org/fellows-program" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/afe.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://www.code2040.org/fellows-program" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Code2040 Fellows Program</strong></h3></a>
+  <p>Summer internships at tech companies for Black and Latinx college student</p>
+  <p><i>Application period: xxxxxxx</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a href="https://www.infosys.com/instep.html" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/infosys-instep.png">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://www.infosys.com/instep.html" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>InStep from Infosys</strong></h3></a>
+  <p>Internships across the globe with opportunities spanning artificial intelligence, sustainability, big data, and more</p>
+  <p><i>Application period: xxxxxxx</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a href="https://careers.microsoft.com/students/us/en/usuniversityinternship" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg">
+</a>
+<div style="width: 85%; float: left">
+  <a href="https://careers.microsoft.com/students/us/en/usuniversityinternship" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Microsoft internships</strong></h3></a>
+  <p>Paid internship opportunities in software engineering, UX design, data science, and more</p>
+  <p><i>Application period: xxxxxxx</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a id="highschool"></a>
+<h2>Internships for high school students</h2>

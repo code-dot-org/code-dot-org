@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 16:22:15 UTC",
+    "serialized_at": "2021-04-16 20:28:30 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -117,7 +117,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Representing Information",
@@ -146,7 +147,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Circle Square Patterns",
@@ -175,7 +177,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Binary Numbers",
@@ -204,7 +207,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Overflow and Rounding",
@@ -233,7 +237,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Representing Text",
@@ -378,7 +383,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Intellectual Property",
@@ -407,7 +413,9 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true,
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
@@ -436,7 +444,9 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true,
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
@@ -4157,7 +4167,6 @@
         "description": "Yesterday you began making a position poster based on an article you read. Today we are going to finish that up before debating our positions!",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Get to the Activity:** The warm-up is short today. Continue on to the activity as soon as possible to give students the maximum amount of time to complete their posters. \r\n"
           }
@@ -4176,7 +4185,6 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Use the lesson slides to guide students through completing their position posters.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Encourage students to find creative ways to represent the information in each quadrant. \n"
           }
@@ -4254,7 +4262,6 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Debate:** Is our world better or worse because of digital representation?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "At this point, open the floor for general discussion. Students should state their case for the group position, referencing the articles and sharing from their own experiences.  \n"
           }
@@ -4295,7 +4302,6 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** Why should we care about information being represented digitally? How does this impact you personally?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Allow students time to think and share about the personal implications of digital representation. \r\n"
           }
@@ -6091,11 +6097,10 @@
       }
     },
     {
-      "name": "U1 L4 Flippy Do",
+      "name": "Flippy Do",
       "url": "https://drive.google.com/a/code.org/file/d/1ZrO6gBcLYrj2_scYsbxA78ZuQyGdHOjC/view?usp=sharing",
       "key": "u1_l4_flippy_do",
       "properties": {
-        "type": "Template",
         "audience": "Student"
       },
       "seeding_key": {
@@ -6313,7 +6318,7 @@
       }
     },
     {
-      "name": "Course Master Vocabulary",
+      "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
