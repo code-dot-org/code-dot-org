@@ -58,7 +58,7 @@ class JavalabEditor extends React.Component {
     super(props);
 
     this.onChangeTabs = this.onChangeTabs.bind(this);
-    this.openTabMenu = this.openTabMenu.bind(this);
+    this.toggleTabMenu = this.toggleTabMenu.bind(this);
     this.renameFromTabMenu = this.renameFromTabMenu.bind(this);
     this.cancelTabMenu = this.cancelTabMenu.bind(this);
     this.onRenameFile = this.onRenameFile.bind(this);
@@ -122,7 +122,7 @@ class JavalabEditor extends React.Component {
     }
   }
 
-  openTabMenu(key, e) {
+  toggleTabMenu(key, e) {
     if (key === this.state.contextTarget) {
       this.cancelTabMenu();
     } else {
@@ -222,7 +222,13 @@ class JavalabEditor extends React.Component {
     });
     newTabs.splice(selectedFileIndex, 1);
     newTabs.unshift(selectedFile);
-    this.setState({activeTabKey: key, tabs: newTabs});
+    // closes the tab menu if it is open
+    this.setState({
+      activeTabKey: key,
+      tabs: newTabs,
+      showMenu: false,
+      contextTarget: null
+    });
   }
 
   render() {
@@ -274,7 +280,7 @@ class JavalabEditor extends React.Component {
                           ...(this.props.isDarkMode &&
                             style.darkFileMenuToggleButton)
                         }}
-                        onClick={e => this.openTabMenu(tab.key, e)}
+                        onClick={e => this.toggleTabMenu(tab.key, e)}
                         className="no-focus-outline"
                       >
                         <FontAwesome
