@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 06:03:38 UTC",
+    "serialized_at": "2021-04-22 16:27:34 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -101,7 +101,7 @@
         "overview": "Students complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
         "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible.",
         "purpose": "Now that students have explored what it takes to link devices on a network, they are ready to learn how devices communicate with each other. Prior to this lesson, the Internet Simulator was set up only for point-to-point communication. This new version is setup to “broadcast” every message to every person in the same simulator room. This closely mimics a real life problem that computer scientists had to solve:  With all the bits passing through many computers on a network, how would a computer know if it was the intended recipient?  Which computer should get a reply?  Internet Protocol (IP) solves a portion of this problem by assigning a unique IP address to each device and standardizing how sender and recipient are identified.",
-        "preparation": "\r\n* Preview the Internet Simulator (Broadcast version)\r\n* Preview the Wrap Up slides in [r csp-unit-2-the-internet/csp/2021]\r\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \r\n",
+        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp-unit-2-the-internet/csp/2021]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) ",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -121,7 +121,7 @@
         "overview": "Students spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
         "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network.",
         "purpose": "After yesterday’s lesson that motivated the need for some kind of addressing system, today’s lesson has students use IP Addresses to send messages to specific people. Today’s focus is on how routers help manage the paths that different messages take. The router logs are an important tool for students to discover the extra work that routers are doing to send messages - they can see that messages are passed between routers and that messages take different paths along the way, all from analyzing the data in the router logs. Importantly, students should make a connection between these observations about multiple pathways and the concept of **fault-tolerance** - because there are multiple pathways, the internet can continue to function even when there may be an issue that the routers need to address.",
-        "preparation": "\n* Read through [r teacher-guide-router/csp/2021] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
+        "preparation": "* Read through [r teacher-guide-router/csp/2021] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1140,7 +1140,7 @@
       "key": "b4c7eb08-dab2-4bfa-b7e4-6db17bb304f3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** [r u2l02-the-need-for-addressing/csp/2021] "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** \n[r u2l02-the-need-for-addressing/csp/2021]"
       },
       "seeding_key": {
         "activity_section.key": "b4c7eb08-dab2-4bfa-b7e4-6db17bb304f3",
@@ -1241,7 +1241,7 @@
       "key": "88d04e61-58ab-4032-b9fc-eb983afc249d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  [r the-internet-ip-addresses-and-dns-1/csp/2021].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  [r the-internet-ip-addresses-and-dns-1/csp/2021].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS."
       },
       "seeding_key": {
         "activity_section.key": "88d04e61-58ab-4032-b9fc-eb983afc249d",
@@ -1324,7 +1324,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Before starting this lesson, it is helpful to test the widget that students will be using and to have some additional routers setup ahead of time. These steps are in a separate document - [r teacher-guide-router/csp/2021]\r\n\r\n\r\n"
+            "markdown": "Before starting this lesson, it is helpful to test the widget that students will be using and to have some additional routers setup ahead of time. These steps are in a separate document: [r teacher-guide-router/csp/2021]\n\n\n"
           }
         ]
       },
@@ -2341,7 +2341,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U2L1 CFU paths_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2390,7 +2393,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2413,7 +2419,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U2L2 CSP CFU IP works_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2462,7 +2471,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U2L3 CSP CFU Routers_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2485,7 +2497,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,

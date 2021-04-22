@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-04-20 17:48:09 UTC",
+    "serialized_at": "2021-04-22 04:34:05 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -5427,7 +5427,7 @@
       "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Demo - Bug Grab",
         "level_keys": [
@@ -5453,7 +5453,7 @@
       "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Plan Your Project",
         "level_keys": [
@@ -5479,7 +5479,7 @@
       "chapter": 79,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5505,7 +5505,7 @@
       "chapter": 80,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -5531,7 +5531,7 @@
       "chapter": 81,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -5557,7 +5557,7 @@
       "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions",
         "level_keys": [
@@ -5583,7 +5583,7 @@
       "chapter": 83,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions",
         "level_keys": [
@@ -5609,7 +5609,7 @@
       "chapter": 84,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -7663,7 +7663,7 @@
       "chapter": 163,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Your Prototype",
         "level_keys": [
@@ -7689,7 +7689,7 @@
       "chapter": 164,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "User Interface",
         "level_keys": [
@@ -7715,7 +7715,7 @@
       "chapter": 165,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "User Interface",
         "level_keys": [
@@ -7741,7 +7741,7 @@
       "chapter": 166,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Input and Output",
         "level_keys": [
@@ -7767,7 +7767,7 @@
       "chapter": 167,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Input and Output",
         "level_keys": [
@@ -7793,7 +7793,7 @@
       "chapter": 168,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -7819,7 +7819,7 @@
       "chapter": 169,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -10112,12 +10112,12 @@
       }
     },
     {
-      "name": "Make a Game",
-      "url": "https://studio.code.org/s/csd6-2019/stage/9/puzzle/1",
+      "name": "Sample Marked Rubrics 1",
+      "url": "https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q",
       "key": "make-a-game-exemplars",
       "properties": {
-        "type": "Exemplars",
-        "audience": "Teacher"
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "make-a-game-exemplars"
@@ -10128,12 +10128,23 @@
       "url": "https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/edit",
       "key": "make-game-guide",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "make-game-guide"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 2",
+      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY",
+      "key": "sample_marked_rubrics_2_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_2_2"
       }
     },
     {
@@ -10164,18 +10175,6 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://studio.code.org/s/csd6-2019/stage/16/puzzle/1",
-      "key": "protype-an-innovation-exemplars",
-      "properties": {
-        "type": "Exemplars",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "protype-an-innovation-exemplars"
-      }
-    },
-    {
-      "name": "Prototype an Innovation",
       "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
       "key": "prototype-an-innovation-1",
       "properties": {
@@ -10198,6 +10197,54 @@
       },
       "seeding_key": {
         "resource.key": "planning-your-innovation"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 1",
+      "url": "https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90",
+      "key": "sample_marked_rubrics_1_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_1_2"
+      }
+    },
+    {
+      "name": "Peer Review 1",
+      "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
+      "key": "peer_review_1_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_1_1"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 2",
+      "url": "https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc",
+      "key": "sample_marked_rubrics_2_3",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_2_3"
+      }
+    },
+    {
+      "name": "Peer Review 2",
+      "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
+      "key": "peer_review_2_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_2_1"
       }
     },
     {
@@ -10269,6 +10316,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "sample_marked_rubrics_2_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
         "resource.key": "circuits-logic-video"
       }
@@ -10288,12 +10341,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "protype-an-innovation-exemplars"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "prototype-an-innovation-1"
       }
     },
@@ -10301,6 +10348,30 @@
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "planning-your-innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics_1_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "peer_review_1_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics_2_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "peer_review_2_1"
       }
     }
   ],
