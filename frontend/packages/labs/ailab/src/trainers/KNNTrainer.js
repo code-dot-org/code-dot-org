@@ -6,7 +6,9 @@ import {
   setModelSize,
   setTrainedModel,
   setPrediction,
-  setAccuracyCheckPredictedLabels
+  setAccuracyCheckPredictedLabels,
+  getSummaryStat,
+  setHistoricResult
 } from "../redux";
 
 const KNN = require("ml-knn");
@@ -29,6 +31,13 @@ export default class KNNTrainer {
     setTimeout(() => {
       store.dispatch(setModelSize(kiloBytes));
     }, 3000);
+
+    const state2 = store.getState();
+
+    const accuracy = getSummaryStat(state2).stat;
+    store.dispatch(
+      setHistoricResult(state2.labelColumn, state2.selectedFeatures, accuracy)
+    );
   }
 
   batchPredict(accuracyCheckExamples) {

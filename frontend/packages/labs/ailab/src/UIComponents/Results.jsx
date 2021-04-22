@@ -11,7 +11,7 @@ import {
 import { styles } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
-import Statement from "./Statement";
+import { UnconnectedStatement } from "./Statement";
 import ResultsTable from "./ResultsTable";
 
 class Results extends Component {
@@ -24,68 +24,27 @@ class Results extends Component {
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
     resultsPhase: PropTypes.number,
-    setResultsPhase: PropTypes.func
+    setResultsPhase: PropTypes.func,
+    historicResults: PropTypes.array
   };
-
-  componentDidMount() {
-    this.props.setResultsPhase(0);
-    setTimeout(() => {
-      this.props.setResultsPhase(1);
-    }, 1000);
-    setTimeout(() => {
-      this.props.setResultsPhase(2);
-    }, 2000);
-    setTimeout(() => {
-      this.props.setResultsPhase(3);
-    }, 3000);
-  }
 
   render() {
     return (
       <div id="results" style={styles.panel}>
-        <Statement />
-        {this.props.resultsPhase === 0 && (
-          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
-            <img
-              src={aiBotHead}
-              style={{
-                ...styles.trainBotHead,
-                ...(false && styles.trainBotOpen)
-              }}
-            />
-            <img src={aiBotBody} style={styles.trainBotBody} />
-          </div>
-        )}
-
-        {this.props.resultsPhase >= 1 &&
-          !isNaN(this.props.summaryStat.stat) && (
+        {this.props.historicResults.map(historicResult => {
+          return (
             <div>
-              {this.props.percentDataToReserve}% of the training data was
-              reserved to test the accuracy of the newly trained model.
-            </div>
-          )}
-
-        {this.props.resultsPhase >= 1 &&
-          !isNaN(this.props.summaryStat.stat) && <ResultsTable />}
-
-        <div style={{ opacity: this.props.resultsPhase >= 2 ? 1 : 0 }}>
-          {isNaN(this.props.summaryStat.stat) && (
-            <p>
-              An accuracy score was not calculated because no training data was
-              reserved for testing.
-            </p>
-          )}
-          <div>
-            {!isNaN(this.props.summaryStat.stat) && (
-              <div>
-                <div style={styles.mediumText}>Accuracy</div>
-                <div style={styles.contents}>
-                  {this.props.summaryStat.stat}%
-                </div>
+              <div style={{float: "left", width: "80%"}}>
+                <UnconnectedStatement
+                  shouldShow={true}
+                  labelColumn={historicResult.label}
+                  selectedFeatures={historicResult.features}
+                />
               </div>
-            )}
-          </div>
-        </div>
+              <div style={{float: "left", fontSize: 32}}>{historicResult.accuracy}%</div>
+            </div>
+          );
+        })}
       </div>
     );
   }
@@ -103,7 +62,8 @@ export default connect(
       state.accuracyCheckPredictedLabels
     ),
     percentDataToReserve: state.percentDataToReserve,
-    resultsPhase: state.resultsPhase
+    resultsPhase: state.resultsPhase,
+    historicResults: state.historicResults
   }),
   dispatch => ({
     setResultsPhase(phase) {

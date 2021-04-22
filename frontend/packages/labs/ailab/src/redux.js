@@ -57,6 +57,7 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
 
 // Action creators
 export function setMode(mode) {
@@ -200,6 +201,10 @@ export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
+export function setHistoricResult(label, features, accuracy) {
+  return { type: SET_HISTORIC_RESULT, label, features, accuracy };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -230,7 +235,8 @@ const initialState = {
   currentColumn: undefined,
   resultsPhase: undefined,
   saveStatus: undefined,
-  columnRefs: {}
+  columnRefs: {},
+  historicResults: []
 };
 
 // Reducer
@@ -523,6 +529,20 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
+  if (action.type === SET_HISTORIC_RESULT) {
+    return {
+      ...state,
+      historicResults: [
+        ...state.historicResults,
+        {
+          label: action.label,
+          features: action.features,
+          accuracy: action.accuracy
+        }
+      ]
+    };
+  }
+
   return state;
 }
 
@@ -897,13 +917,14 @@ export function getEmptyCellDetails(state) {
 export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
-    state.metadata
-    && state.metadata.card
-    && state.metadata.card.description
+    state.metadata &&
+    state.metadata.card &&
+    state.metadata.card.description
   ) {
     return state.metadata.card.description;
   } else if (
-    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+    state.trainedModelDetails &&
+    state.trainedModelDetails.datasetDescription
   ) {
     return state.trainedModelDetails.datasetDescription;
   } else {
@@ -912,7 +933,7 @@ export function getDataDescription(state) {
 }
 
 function getDatasetDetails(state) {
-  const datasetDetails = {}
+  const datasetDetails = {};
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
   return datasetDetails;
@@ -923,7 +944,7 @@ function getColumnDataToSave(state, column) {
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
-    columnData.values = getUniqueOptions(state, column)
+    columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
     const maxMin = getRange(state, column, false);
     columnData.max = maxMin.max;
@@ -935,7 +956,7 @@ function getColumnDataToSave(state, column) {
 function getFeaturesToSave(state) {
   const features = state.selectedFeatures.map(feature =>
     getColumnDataToSave(state, feature)
-  )
+  );
   return features;
 }
 

@@ -6,19 +6,19 @@ import { styles } from "../constants";
 
 class Statement extends Component {
   static propTypes = {
-    data: PropTypes.array,
+    shouldShow: PropTypes.bool,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array
   };
 
   render() {
     const {
-      data,
+      shouldShow,
       labelColumn,
       selectedFeatures
     } = this.props;
 
-    if (data.length === 0) {
+    if (!shouldShow) {
       return null;
     }
 
@@ -45,9 +45,11 @@ class Statement extends Component {
   }
 }
 
+export const UnconnectedStatement = Statement;
+
 export default connect(
   state => ({
-    data: state.data,
+    shouldShow: state.data.length !== 0,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures
   })
