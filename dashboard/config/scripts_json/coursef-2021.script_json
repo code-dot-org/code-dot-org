@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-13 21:04:39 UTC",
+    "serialized_at": "2021-04-22 19:00:01 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -87,21 +87,9 @@
       }
     },
     {
-      "key": "csf_sprites",
-      "user_facing": true,
-      "position": 6,
-      "properties": {
-        "display_name": "Impacts of Computing"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
       "key": "end_of_course_project",
       "user_facing": true,
-      "position": 7,
+      "position": 6,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -120,7 +108,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this **context-setting** lesson, students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.",
+        "overview": "In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.\n",
         "student_overview": "You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.",
         "purpose": "The first lesson is about getting students excited about the course and connecting their own personal interests to computer science. \n",
         "preparation": "- Determine how students will login to Code.org.\n- If needed, create Code.org accounts for students.\n- Assign Introducing Sprite Lab to students.\n- Print copies of ***Exploring Apps** worksheet (or post the digital version to your LMS)."
@@ -139,7 +127,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs, and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. ",
+        "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. ",
         "student_overview": "\nIn this lesson you will write programs and learn about sprites and behaviors.",
         "purpose": "This lesson is designed to introduce students to programming in Sprite Lab. Students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
         "preparation": "Play through the levels and review the ***lesson slides**."
@@ -257,7 +245,9 @@
       "relative_position": 8,
       "properties": {
         "overview": "Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, then create a plan for their own project, and finally program it from scratch.",
-        "student_overview": "Apply your new skills with variables to one of three open-ended projects."
+        "student_overview": "Apply your new skills with variables to one of three open-ended projects.",
+        "purpose": "This lesson doesn’t introduce new skills or concepts, but instead gives students the opportunity to apply what they have been learning in a creative way.",
+        "preparation": "- Print the planning guide or distribute a digital copy to each student. Review it ahead of time in case you would like to make any modifications to fit your class.\n\n- Review the options in level 3 ahead of time to get familiar with the flow students will need to follow.\n\n- This lesson has the potential to stretch to multiple class periods. Consider scheduling implications ahead of time.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -484,32 +474,12 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Designing for Accessibility",
+      "key": "End of Course Project",
+      "name": "End of Course Project",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 20,
-      "properties": {
-        "overview": "In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
-        "student_overview": "In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
-        "unplugged": true,
-        "purpose": "Through learning about accessibility, students recognize the impacts of computing beyond their own lives. Accessibility might not seem like a relevant CS topic, but creating technology that is accessible for underserved users helps make tech better for everyone else as well. ",
-        "preparation": "* For context, read about the ***types of disabilities**. \n* Read through the speaker notes in the ***slide deck**.\n* Prepare enough sketching/drawing supplies for all students."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "End of Course Project",
-      "name": "End of Course Project",
-      "absolute_position": 21,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 21,
       "properties": {
         "overview": "This longer **project** lesson provide an opportunity for students to put their coding skills to use in a capstone project. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. ",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
@@ -888,7 +858,8 @@
       "key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae",
       "position": 1,
       "properties": {
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "98b93eda-ff3a-4b27-9d08-dbaf4e0e5dae",
@@ -901,7 +872,8 @@
       "key": "dd059082-7eee-4f7a-a287-a79748174d64",
       "position": 2,
       "properties": {
-        "name": "Main Activity"
+        "name": "Main Activity",
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "dd059082-7eee-4f7a-a287-a79748174d64",
@@ -914,7 +886,8 @@
       "key": "0fdc25c1-5137-42cf-8c8d-470a1cddc96f",
       "position": 3,
       "properties": {
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "0fdc25c1-5137-42cf-8c8d-470a1cddc96f",
@@ -1513,60 +1486,6 @@
       }
     },
     {
-      "key": "2dd5c425-a6b3-4c10-b96a-9bf539d7a20c",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 5
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2dd5c425-a6b3-4c10-b96a-9bf539d7a20c",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "b571540b-3d00-43e6-972a-6f00a4fc42a1",
-      "position": 2,
-      "properties": {
-        "name": "Main Activity",
-        "duration": 35
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b571540b-3d00-43e6-972a-6f00a4fc42a1",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "ffce5a13-b7ec-46db-abdc-b3eccae8253d",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ffce5a13-b7ec-46db-abdc-b3eccae8253d",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
-      "key": "5b85f708-3324-4be8-9184-35ab0e2098fb",
-      "position": 4,
-      "properties": {
-        "name": "Wrap Up",
-        "duration": 5
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5b85f708-3324-4be8-9184-35ab0e2098fb",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021"
-      }
-    },
-    {
       "key": "80cbea1a-7c3f-4121-bab6-abd831772020",
       "position": 1,
       "properties": {
@@ -1940,7 +1859,7 @@
       "key": "84a55315-a3fb-4f8c-a451-b167ff8700cb",
       "position": 2,
       "properties": {
-        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts: \nWhat advice would you have for a friend who is interested in creating their own programs in Sprite Lab?\n\n"
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\nWhat advice would you have for a friend who is interested in creating their own programs in Sprite Lab?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "84a55315-a3fb-4f8c-a451-b167ff8700cb",
@@ -2071,7 +1990,7 @@
       "key": "663232b3-1a0c-4d35-a039-f6219180dd04",
       "position": 2,
       "properties": {
-        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts: \nArrow keys are one way to make a program more interactive. What other ways could we give a user control over what happens in an app or game?\n\n"
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:** \nArrow keys are one way to make a program more interactive. What other ways could we give a user control over what happens in an app or game?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "663232b3-1a0c-4d35-a039-f6219180dd04",
@@ -2483,7 +2402,14 @@
       "key": "20919642-5201-4796-9e45-ee76e368614d",
       "position": 1,
       "properties": {
-        "progression_name": "Prediction"
+        "progression_name": "Prediction",
+        "description": "####Prediction (2 mins)\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "One of the trickiest parts of learning variables is making sure that a variable’s label always matches. In this level, be sure that students notice the difference between the variable **meal** and the variable **food**. Students should understand that the best way to solve this would be to just use one variable, making sure the label always matches."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "20919642-5201-4796-9e45-ee76e368614d",
@@ -2494,7 +2420,14 @@
       "key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2",
       "position": 2,
       "properties": {
-        "progression_name": "Exploration: Sample Apps"
+        "progression_name": "Exploration: Sample Programs",
+        "description": "###Exploration\n**Do This:** Have students explore the sample programs in level 1. This can be done as a whole class with discussion, with pairs sharing a device, or even individually. For each of the programs, have students think about how it works, who would use it, and any ideas it gives them about what they could make themselves. A good strategy here is to have students read the program’s code out loud, one line at a time, then talk about what it is for.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are short on time or want to minimize transitions, complete this portion of the lesson as a whole group discussion. You can remind students that they can revisit these programs later if they have a question about how something works.\n\nIf you have already gone through the entire lesson yourself, you can also show them your own finished program for inspiration!\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "10bfa1b7-62ca-4bb1-93e8-05d661819ca2",
@@ -2505,7 +2438,16 @@
       "key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5",
       "position": 1,
       "properties": {
-        "progression_name": "Planning"
+        "progression_name": "Planning",
+        "name": "User Input Programs",
+        "remarks": true,
+        "description": "###Planning (10 mins)\nWe have already had a chance to build a variety of programs in Sprite Lab. Today, this experience will be much more open-ended, so it will require planning beforehand! Planning is a very important part of coding a game or any other kind of software.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you are short on time, it’s acceptable to have students just focus on the first page of the planning guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fc1dcb70-576f-4a5e-8407-856ffa7d43a5",
@@ -2516,7 +2458,14 @@
       "key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea",
       "position": 2,
       "properties": {
-        "progression_name": "Mini-Project: User Input Programs"
+        "progression_name": "Application - Create Your Project",
+        "description": "###Application (20 mins)\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Level 3 presents students with a menu of options that correspond to the main project types they chose from. The main differences between these sublevels are the instructions and default sprite costumes. Students may need really clear instructions to understand how to navigate the choices here. For each of the project choices, there are two sub-levels here. To begin, students should pick one of the levels marked \"Part 1\". Once they finish that level they should return here and select \"Part 2\" of the same project. The first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a \"free play\" which is intended to allow students to make any changes to their code that they like."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea",
@@ -2527,6 +2476,8 @@
       "key": "d5bf3b23-128d-4078-bdb2-a806a59a2db1",
       "position": 1,
       "properties": {
+        "name": "Showcase",
+        "description": "**Do This:**  To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n- **Public Demo:**  Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement.\n- **Pair Playtesting:**  Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting.\n- **Gallery Walk:**  Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.\n"
       },
       "seeding_key": {
         "activity_section.key": "d5bf3b23-128d-4078-bdb2-a806a59a2db1",
@@ -3685,64 +3636,6 @@
       }
     },
     {
-      "key": "70e56d16-cf16-4daf-b5da-24e780908414",
-      "position": 1,
-      "properties": {
-        "name": "Background and Motivation",
-        "description": "**Discuss**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_ \n * _What kinds of apps are there?_ \n * _Where do we use apps?_\n\n While discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\n**Say**: (Ensure that all students are on the same page regarding this topic by introducing some key terms and concepts.) \n\n- *In this course we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\n**Discuss**: Apps are everywhere! Ask students why they think apps have become so popular. Here are some example explanations:\n\n- Many people can more easily access or afford a mobile device (e.g., smartphone) than a larger computer with a keyboard, mouse, and so forth. \n- Apps can address a variety of needs. For example, if I need a ride somewhere, I might try a ride sharing app and get there quickly. If I want to know what movies I should watch, there's probably an app that can help me decide. And of course, if I want to call or text someone on my phone, I use apps for those as well! \n\nIntroduce accessibility with the remarks below.\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might simply wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who, even though they have disabilities, are just like them."
-      },
-      "seeding_key": {
-        "activity_section.key": "70e56d16-cf16-4daf-b5da-24e780908414",
-        "lesson_activity.key": "2dd5c425-a6b3-4c10-b96a-9bf539d7a20c"
-      }
-    },
-    {
-      "key": "915a19f9-e3fd-4869-b1a2-ddbfa5029c23",
-      "position": 1,
-      "properties": {
-        "name": "Designing for Accessibility",
-        "progression_name": "Designing for Accessibility - Unplugged Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "915a19f9-e3fd-4869-b1a2-ddbfa5029c23",
-        "lesson_activity.key": "b571540b-3d00-43e6-972a-6f00a4fc42a1"
-      }
-    },
-    {
-      "key": "b1504a1f-9cf8-40a2-b4af-34b5ffb408b0",
-      "position": 1,
-      "properties": {
-        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the ***Designing for Accessibility Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n[slides]\n\n#### Designing for Accessibility Scenarios\n\n*Slide 1: Meet Wei*\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near to her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n*Slide 2: Introducing Grammaphone!*\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n* Here is a screenshot of the home screen. What do you think about it? How do you think this app works? \n\n*Slide 3: Wei’s Problem*\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n*Slide 4: Meet Roger*\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. Due to an accident a few years ago, Roger’s hand had to be “amputated” (surgically removed). \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand”, which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n*Slide 5: Introducing Football Frenzy!*\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n* Here’s a screenshot of the game in action. Based on the interface, how do you think this game is played? \n\n*Slide 6: Roger’s Problem*\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n*Slide 7: I Wish...* \n\n* Neither of these apps were designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s make their wishes come true by redesigning these apps! \n\n[/slides]"
-      },
-      "seeding_key": {
-        "activity_section.key": "b1504a1f-9cf8-40a2-b4af-34b5ffb408b0",
-        "lesson_activity.key": "ffce5a13-b7ec-46db-abdc-b3eccae8253d"
-      }
-    },
-    {
-      "key": "71d18ecc-5940-42c7-be54-b21fad7cf1be",
-      "position": 2,
-      "properties": {
-        "description": "####App Redesign Activity (25 min)\n\nThe final scenario allows students to sketch a redesign of one app from the scenarios (\"Grammaphone\" for Wei or \"Football Frenzy\" for Roger). \n\nStudents should primarily focus their efforts on making their redesigned app more accessible for either of them, along with any other accessibility features they can think of. Students can design as many screens for the app as they wish, and they do not need to make their app look anything like the original examples.\n\nIf there is time, students may redesign apps for both characters.\n\n**Distribute**: Pass out crayons/pencils/etc. to each student as they open their reflection journals. \n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design addresses the need of the user in question."
-      },
-      "seeding_key": {
-        "activity_section.key": "71d18ecc-5940-42c7-be54-b21fad7cf1be",
-        "lesson_activity.key": "ffce5a13-b7ec-46db-abdc-b3eccae8253d"
-      }
-    },
-    {
-      "key": "a71a9085-b8a7-4028-8108-c16df08ead15",
-      "position": 1,
-      "properties": {
-        "name": "Reflection",
-        "description": "**Discuss**: Discuss real-world examples of how apps and other technology can be made more accessible. Ask students how they think making something more accessible can also make it better for others. One example is wheelchair ramps near building entrances. These were originally made for people with wheelchairs, but they are also convenient for people with baby strollers, dollies, and other wheeled equipment."
-      },
-      "seeding_key": {
-        "activity_section.key": "a71a9085-b8a7-4028-8108-c16df08ead15",
-        "lesson_activity.key": "5b85f708-3324-4be8-9184-35ab0e2098fb"
-      }
-    },
-    {
       "key": "41c8a77e-7549-4597-94c2-b5d1916209eb",
       "position": 1,
       "properties": {
@@ -3934,7 +3827,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Introducing Sprite Lab",
         "level_keys": [
@@ -3960,7 +3853,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration: Sample Apps",
         "level_keys": [
@@ -3986,7 +3879,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4012,7 +3905,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: How to Make a Sprite",
         "level_keys": [
@@ -4038,7 +3931,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4064,7 +3957,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4090,7 +3983,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4116,7 +4009,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4142,7 +4035,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4168,7 +4061,7 @@
       "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4194,7 +4087,7 @@
       "chapter": 11,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play: Make a Scene",
         "level_keys": [
@@ -4220,7 +4113,7 @@
       "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4246,7 +4139,7 @@
       "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Sprites in Action",
         "level_keys": [
@@ -4272,7 +4165,7 @@
       "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4298,7 +4191,7 @@
       "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4324,7 +4217,7 @@
       "chapter": 16,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4350,7 +4243,7 @@
       "chapter": 17,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4376,7 +4269,7 @@
       "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4402,7 +4295,7 @@
       "chapter": 19,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play: Make an Interactive Scene",
         "level_keys": [
@@ -4898,10 +4791,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Prediction",
+        "level_keys": [
+          "courseF_label_predict"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_label_predict"
@@ -4921,10 +4817,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Exploration: Sample Apps"
+        "progression": "Exploration: Sample Programs",
+        "level_keys": [
+          "courseF_variables_samples"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_variables_samples"
@@ -4944,10 +4843,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Planning"
+        "progression": "Planning",
+        "level_keys": [
+          "courseF_variables_stop"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_variables_stop"
@@ -4967,10 +4869,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-Project: User Input Programs"
+        "progression": "Application - Create Your Project",
+        "level_keys": [
+          "courseF_variables_projects"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_variables_projects"
@@ -6340,238 +6245,26 @@
       "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_story"
-        ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "contagion_story"
+          "CourseF_outbreak_story"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
+        "activity_section.key": "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99"
       },
       "level_keys": [
-        "contagion_story"
+        "CourseF_outbreak_story"
       ]
     },
     {
       "chapter": 95,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_setup"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_setup"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_setup"
-      ]
-    },
-    {
-      "chapter": 96,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_events"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_events"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_events"
-      ]
-    },
-    {
-      "chapter": 97,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_data"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_data"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_data"
-      ]
-    },
-    {
-      "chapter": 98,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_masks"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_masks"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_masks"
-      ]
-    },
-    {
-      "chapter": 99,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_chance"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_chance"
-      ]
-    },
-    {
-      "chapter": 100,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_more chance"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_more chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_more chance"
-      ]
-    },
-    {
-      "chapter": 101,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_modify_chance"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_modify_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_modify_chance"
-      ]
-    },
-    {
-      "chapter": 102,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
-      "properties": {
-        "progression": "Outbreak",
-        "level_keys": [
-          "contagion_vaccine"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "contagion_vaccine"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      },
-      "level_keys": [
-        "contagion_vaccine"
-      ]
-    },
-    {
-      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6597,7 +6290,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6623,7 +6316,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6649,7 +6342,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6675,7 +6368,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -6701,7 +6394,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -6727,7 +6420,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -6753,7 +6446,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 1,
       "assessment": null,
@@ -6779,7 +6472,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6805,33 +6498,7 @@
       ]
     },
     {
-      "chapter": 112,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Designing for Accessibility - Unplugged Activity",
-        "level_keys": [
-          "DesigningForAccessibilityMarkdownLevel_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "DesigningForAccessibilityMarkdownLevel_2021"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021",
-        "activity_section.key": "915a19f9-e3fd-4869-b1a2-ddbfa5029c23"
-      },
-      "level_keys": [
-        "DesigningForAccessibilityMarkdownLevel_2021"
-      ]
-    },
-    {
-      "chapter": 113,
+      "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6857,7 +6524,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 105,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -8002,110 +7669,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "contagion_story",
+        "level.key": "CourseF_outbreak_story",
         "script_level.level_keys": [
-          "contagion_story"
+          "CourseF_outbreak_story"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_setup",
-        "script_level.level_keys": [
-          "contagion_setup"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_events",
-        "script_level.level_keys": [
-          "contagion_events"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_data",
-        "script_level.level_keys": [
-          "contagion_data"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_masks",
-        "script_level.level_keys": [
-          "contagion_masks"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_chance",
-        "script_level.level_keys": [
-          "contagion_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_more chance",
-        "script_level.level_keys": [
-          "contagion_more chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_modify_chance",
-        "script_level.level_keys": [
-          "contagion_modify_chance"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "contagion_vaccine",
-        "script_level.level_keys": [
-          "contagion_vaccine"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursef-2021",
-        "activity_section.key": "8e60fcd8-37ef-47fe-9588-2ea4eef7a882"
+        "activity_section.key": "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99"
       }
     },
     {
@@ -8214,18 +7785,6 @@
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
         "activity_section.key": "3c0ece8c-eca6-4340-9023-7a89cfad4090"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "DesigningForAccessibilityMarkdownLevel_2021",
-        "script_level.level_keys": [
-          "DesigningForAccessibilityMarkdownLevel_2021"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursef-2021",
-        "activity_section.key": "915a19f9-e3fd-4869-b1a2-ddbfa5029c23"
       }
     },
     {
@@ -8431,6 +7990,30 @@
       },
       "seeding_key": {
         "resource.key": "text_and_prompts"
+      }
+    },
+    {
+      "name": "User Input Programs",
+      "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+      "key": "user_input_programs",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "user_input_programs"
+      }
+    },
+    {
+      "name": "Mini Project: User Input Programs",
+      "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68",
+      "key": "mini_project_user_input_programs",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_user_input_programs"
       }
     },
     {
@@ -8651,30 +8234,6 @@
       }
     },
     {
-      "name": "Designing for Accessibility",
-      "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/edit?usp=sharing",
-      "key": "designing_for_accessibility",
-      "properties": {
-        "type": "Slides",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "designing_for_accessibility"
-      }
-    },
-    {
-      "name": "Types of Disabilities",
-      "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
-      "key": "types_of_disabilities",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "types_of_disabilities"
-      }
-    },
-    {
       "name": "Design Process",
       "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/",
       "key": "design-process",
@@ -8883,6 +8442,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Variables that Change in Artist",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -8987,18 +8558,6 @@
       "seeding_key": {
         "lesson.key": "Internet",
         "resource.key": "get-site-ip-com"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "designing_for_accessibility"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "types_of_disabilities"
       }
     },
     {
@@ -9184,6 +8743,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "A message on the computer screen that waits for input from the user.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "key": "input",
+      "word": "Input",
+      "definition": "The information computers get from users.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
       }
     },
     {
@@ -9518,6 +9107,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops with the Artist",
         "vocabulary.key": "loop"
       }
@@ -9841,6 +9448,36 @@
       }
     },
     {
+      "key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8",
+      "properties": {
+        "description": "Use variables to hold words and phrases."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "a81623bb-ffd8-467f-be3f-5488e42ea5f8"
+      }
+    },
+    {
+      "key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d",
+      "properties": {
+        "description": "Use variables in conjunction with prompts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d"
+      }
+    },
+    {
+      "key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957",
+      "properties": {
+        "description": "Create an interactive computer program that responds to user input."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "a1e3a5d5-d609-4c1f-a4ef-6000a4335957"
+      }
+    },
+    {
       "key": "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b",
       "properties": {
         "description": "Identify the benefits of using a loop structure instead of manual repetition."
@@ -10078,36 +9715,6 @@
       "seeding_key": {
         "lesson.key": "Internet",
         "objective.key": "e94042c1-9793-4fe8-8ce9-1a76bc63f161"
-      }
-    },
-    {
-      "key": "9f9e9e49-5e1e-48f2-9c54-bb0c700c4809",
-      "properties": {
-        "description": "In their own words, describe the impact of mobile apps on the modern world."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "9f9e9e49-5e1e-48f2-9c54-bb0c700c4809"
-      }
-    },
-    {
-      "key": "b74bb5e6-0cd3-4462-b030-734a92c80b41",
-      "properties": {
-        "description": "Explain why accessibility is an important part of designing an app for users."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "b74bb5e6-0cd3-4462-b030-734a92c80b41"
-      }
-    },
-    {
-      "key": "87370389-db79-4ed7-85b6-d1c80715ef7f",
-      "properties": {
-        "description": "Improve upon an existing app design by addressing the accessibility needs of users."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "87370389-db79-4ed7-85b6-d1c80715ef7f"
       }
     },
     {
@@ -10388,48 +9995,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-CS-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-18"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-20"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-08"
@@ -10500,19 +10065,6 @@
     }
   ],
   "lessons_opportunity_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "ccela",
-        "opportunity_standard.shortcode": "4.RI.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "ccela",
-        "opportunity_standard.shortcode": "4.RI.7"
-      }
-    }
+
   ]
 }

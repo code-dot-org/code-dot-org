@@ -29,6 +29,7 @@ class ScriptDSL < BaseDSL
     @project_sharing = nil
     @curriculum_umbrella = nil
     @tts = false
+    @deprecated = false
     @is_course = false
     @background = nil
     @is_migrated = false
@@ -48,6 +49,7 @@ class ScriptDSL < BaseDSL
   boolean :is_stable
   boolean :project_sharing
   boolean :tts
+  boolean :deprecated
   boolean :is_course
   boolean :is_migrated
 
@@ -163,6 +165,7 @@ class ScriptDSL < BaseDSL
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
+      deprecated: @deprecated,
       lesson_groups: @lesson_groups,
       is_course: @is_course,
       background: @background,
@@ -351,6 +354,7 @@ class ScriptDSL < BaseDSL
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
+    s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
     s << "background '#{script.background}'" if script.background
     s << 'is_migrated true' if script.is_migrated

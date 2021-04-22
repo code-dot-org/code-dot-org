@@ -5,12 +5,11 @@
   "level_num": "custom",
   "user_id": 2,
   "properties": {
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"body {\\n  background: white;\\n}\\np {\\n  color: black;\\n}\\nh1 {\\n  font-weight: bold;\\n}\"\r\n    },\r\n    {\r\n      \"name\": \"codeorg-logo.png\"\r\n    }\r\n  ]\r\n}\r\n",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"body {\\n  background: white;\\n}\\np {\\n  color: black;\\n}\\nh1 {\\n  font-weight: bold;\\n}\"\r\n    }\r\n  ]\r\n}\r\n",
     "is_project_level": "true"
   },
   "published": true,
   "notes": "",
-  "level_concept_difficulty": {
-  }
+  "level_concept_difficulty": {}
 }]]></config>
 </Weblab>

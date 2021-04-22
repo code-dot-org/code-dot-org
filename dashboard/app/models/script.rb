@@ -208,6 +208,7 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
+    deprecated
     is_course
     background
     show_calendar
@@ -1439,6 +1440,7 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      deprecated: deprecated?,
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
@@ -1446,7 +1448,9 @@ class Script < ApplicationRecord
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
-      courseVersionId: get_course_version&.id
+      courseVersionId: get_course_version&.id,
+      scriptOverviewPdfUrl: get_script_overview_pdf_url,
+      scriptResourcesPdfUrl: get_script_resources_pdf_url
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1515,7 +1519,7 @@ class Script < ApplicationRecord
     {
       displayName: title_for_display,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)}
     }
   end
 
@@ -1661,6 +1665,7 @@ class Script < ApplicationRecord
       :is_stable,
       :project_sharing,
       :tts,
+      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
@@ -1912,5 +1917,17 @@ class Script < ApplicationRecord
 
   def self.script_json_filepath(script_name)
     "#{script_json_directory}/#{script_name}.script_json"
+  end
+
+  def get_script_overview_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_overview_url(self)
+    end
+  end
+
+  def get_script_resources_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(self)
+    end
   end
 end

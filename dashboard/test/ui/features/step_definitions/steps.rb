@@ -491,6 +491,14 @@ When /^I click "([^"]*)"( once it exists)?(?: to load a new (page|tab))?$/ do |s
   page_load(load) {element.click}
 end
 
+When /^I click "([^"]*)" if it is visible$/ do |selector|
+  if @browser.execute_script(jquery_is_element_visible(selector))
+    find = -> {@browser.find_element(:css, selector)}
+    element = find.call
+    element.click
+  end
+end
+
 When /^I select the end of "([^"]*)"$/ do |selector|
   @browser.execute_script("document.querySelector(\"#{selector}\").setSelectionRange(9999, 9999);")
 end
@@ -1878,7 +1886,7 @@ end
 Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/stage/#{stage_num}/extras?section_id=#{@section_id}"
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{stage_num}/extras?section_id=#{@section_id}"
   }
 end
 

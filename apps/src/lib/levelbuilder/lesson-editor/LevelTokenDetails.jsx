@@ -37,6 +37,11 @@ const tooltipText = {
   challenge: 'Show students the Challenge dialog when viewing this level.'
 };
 
+const disabledBonusTooltipText =
+  'You must enable lesson extras for unit to set levels as bonus.';
+const bonusAlreadySelectedTooltipText =
+  'In order for bonus levels to show up for users you must enable lesson extras for the unit.';
+
 const ArrowRenderer = ({onMouseDown}) => {
   return <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />;
 };
@@ -49,7 +54,8 @@ class LevelTokenDetails extends Component {
     activityPosition: PropTypes.number.isRequired,
 
     //redux
-    setScriptLevelField: PropTypes.func.isRequired
+    setScriptLevelField: PropTypes.func.isRequired,
+    lessonExtrasAvailableForScript: PropTypes.bool
   };
 
   handleCheckboxChange = field => {
@@ -85,11 +91,23 @@ class LevelTokenDetails extends Component {
                 style={styles.checkboxInput}
                 checked={!!this.props.scriptLevel[option]}
                 onChange={this.handleCheckboxChange.bind(this, option)}
+                disabled={
+                  option === 'bonus' &&
+                  !this.props.scriptLevel[option] &&
+                  !this.props.lessonExtrasAvailableForScript
+                }
               />
               &nbsp;
               <span style={styles.checkboxText}>{option}</span>
               <ReactTooltip id={tooltipIds[option]} delayShow={500}>
-                <div style={styles.tooltip}>{tooltipText[option]}</div>
+                <div style={styles.tooltip}>
+                  {option === 'bonus' &&
+                  !this.props.lessonExtrasAvailableForScript
+                    ? !this.props.scriptLevel[option]
+                      ? disabledBonusTooltipText
+                      : bonusAlreadySelectedTooltipText
+                    : tooltipText[option]}
+                </div>
               </ReactTooltip>
             </label>
           ))}
@@ -102,7 +120,9 @@ class LevelTokenDetails extends Component {
 export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 
 export default connect(
-  state => ({}),
+  state => ({
+    lessonExtrasAvailableForScript: state.lessonExtrasAvailableForScript
+  }),
   {
     setScriptLevelField
   }

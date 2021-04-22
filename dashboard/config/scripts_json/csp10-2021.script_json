@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 23:45:50 UTC",
+    "serialized_at": "2021-04-21 16:55:28 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -30,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 10: Cybersecurity and Global Impacts"
+        "display_name": "Unit 10: Cybersecurity and Global Impacts",
+        "description": "### Unit Philosophy and Pedagogy\n\n* **Learning Through Full-class Simulation:** The simulation project that runs through this unit serves several important goals. It helps contextualize what students are learning by moving from abstract ideas of privacy or security to concrete potential innovations. Since the simulation is based on modernizing schools, students can consider the consequences of computing innovations in a familiar setting. By taking on an assigned role and interacting with a group of teammates who have done the same, students must consider a breadth of interests and goals beyond their own when it comes to innovating in schools. \n\n* **Ending the Year as \"Deciders\":** A major theme students engage with throughout this unit is the need to consider both sides of technological innovation. Computing technology has led to both benefits and harms to culture, economy, and society at large. Responding to important questions facing our world requires understanding technology and an ability to identify and interpret the impacts it causes. This unit is not designed to advocate for any particular point of view on the impact of technology. Still, it should empower students to adeptly see and weigh the consequences of the technology around them. While the Create PT may feel like the most significant project of this course, the Explore Curricular requirement and the questions faced in this unit are arguably more crucial. Many of the young people who take CS Principles may pursue studies or careers in which they are \"creators\" with technology, but all of them will need to be thoughtful \"deciders\" in a world profoundly shaped by computing. \n\n\n### Major Assessment and Projects\n\nStudents complete the Future School Convention simulation throughout this unit. Working in teams of roughly five people, students are assigned a role and a set of interests they'll need to investigate. They research real-world innovations that could improve schools and align with the interests of their character. Throughout the unit, they are given opportunities to refine their proposals as a team and debate the benefits and risks of different computing innovations. Eventually, their team submits an overall proposal for the Future School, and all students vote for the team and innovation they believe to be the best. Students will also complete an end-of-unit assessment aligned with the CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n* IOC-2: The use of computing innovations may involve risks to your personal safety and identity.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 5.1 Beneficial and Harmful Effects\n* 5.6 Safe Computing"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit10_2020",
@@ -597,7 +598,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "8267a895-ee2b-46e0-9f28-4139729d8d8b",
@@ -622,7 +623,8 @@
       "key": "07b20577-bb08-4d7c-812b-9bc48907c0ae",
       "position": 1,
       "properties": {
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "07b20577-bb08-4d7c-812b-9bc48907c0ae",
@@ -977,7 +979,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 35
+        "duration": 37
       },
       "seeding_key": {
         "lesson_activity.key": "e4a7d946-59ae-44d0-b395-97f95631bf01",
@@ -1005,7 +1007,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 2
+        "duration": 3
       },
       "seeding_key": {
         "lesson_activity.key": "8e39a6da-767a-4b23-8e5e-4f59da18b6e5",
@@ -1019,7 +1021,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 35
+        "duration": 37
       },
       "seeding_key": {
         "lesson_activity.key": "20765674-739d-4c5a-82e4-797cee3f0cbb",
@@ -1061,7 +1063,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 38
       },
       "seeding_key": {
         "lesson_activity.key": "1cf6acdd-1749-44e2-a421-4469b0eab096",
@@ -1441,7 +1443,8 @@
           }
         ],
         "remarks": true,
-        "name": "How to Read a Privacy Policy - 5 mins"
+        "name": "How to Read a Privacy Policy",
+        "duration": "5"
       },
       "seeding_key": {
         "activity_section.key": "e5d82573-1934-4054-a246-b283f2d2577d",
@@ -1465,7 +1468,8 @@
       "properties": {
         "description": "Today we're going to practice reading data policies to get a sense for what kinds of information is actually being collected by modern computing innovations like websites and apps. We're going to spend today filling out the front part of the activity guide. In the next lesson we'll think more deeply about whether we think the tradeoffs of privacy are worth it, but you don't need to worry about that side of the activity guide today.",
         "remarks": true,
-        "name": "Data Policy Exploration - 25 mins"
+        "name": "Data Policy Exploration",
+        "duration": "25"
       },
       "seeding_key": {
         "activity_section.key": "b98662a4-bd17-485e-93e5-85688d5ecf37",
@@ -1572,7 +1576,8 @@
       "position": 1,
       "properties": {
         "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
-        "name": "Convenience vs Privacy - Facial Recognition - 10 mins\r"
+        "name": "Convenience vs Privacy - Facial Recognition ",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "98bd233e-f176-45a9-be50-e153c6118595",
@@ -1580,21 +1585,12 @@
       }
     },
     {
-      "key": "50a4529a-76d1-468e-8351-46a7d82ad81d",
+      "key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
       "position": 2,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "50a4529a-76d1-468e-8351-46a7d82ad81d",
-        "lesson_activity.key": "1a1d6e24-9883-459b-81ce-1e1661033a65"
-      }
-    },
-    {
-      "key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
-      "position": 3,
-      "properties": {
         "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient / fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think the benefits outweigh the privacy concerns?*\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
-        "name": "Security vs Privacy - Should the Government Need a Warrant? - 10 mins\r"
+        "name": "Security vs Privacy - Should the Government Need a Warrant?",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "00cc763f-3f70-4e51-b63c-0af2b7c57e86",
@@ -1603,7 +1599,7 @@
     },
     {
       "key": "0b65878c-bbdf-470d-a515-6a5af4322bce",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the privacy concerns?\" Have students share some of their thoughts as a class.*"
       },
@@ -1614,10 +1610,11 @@
     },
     {
       "key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "Students are given a good chunk of class time to complete this activity. Ask students to reflect quietly but as individuals or groups finish they should begin discussing with one another. If most students finish early you could begin a full-class discussion.\n\nIndividually fill in the last page of your activity guide.",
-        "name": "Privacy Tradeoffs - Your Innovation - 15 mins"
+        "name": "Privacy Tradeoffs - Your Innovation",
+        "duration": "15"
       },
       "seeding_key": {
         "activity_section.key": "c2cee5a6-05f7-4744-a81d-8dd2f754f16a",
@@ -1626,7 +1623,7 @@
     },
     {
       "key": "e9e1cda4-436f-4676-9f26-f6aaeb139af0",
-      "position": 6,
+      "position": 5,
       "properties": {
         "tips": [
           {
@@ -1809,7 +1806,8 @@
       "key": "b0597ab4-c5ad-490c-a1ac-24fc8084e504",
       "position": 3,
       "properties": {
-        "description": "2. Phishing\n"
+        "description": "2. Phishing\n",
+        "progression_name": "Phishing"
       },
       "seeding_key": {
         "activity_section.key": "b0597ab4-c5ad-490c-a1ac-24fc8084e504",
@@ -2906,6 +2904,7 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Phishing",
         "level_keys": [
           "CSP 20-21 Phishing_2021"
         ]
