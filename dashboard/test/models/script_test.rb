@@ -856,7 +856,9 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'can summarize script for lesson plan' do
     script = create :script, name: 'my-script'
-    lesson_group = create :lesson_group, script: script
+    lesson_group = create :lesson_group, key: 'lg-1', script: script
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
+    lesson_group3 = create :lesson_group, key: 'lg-3', script: script
     create(
       :lesson,
       lesson_group: lesson_group,
@@ -880,17 +882,45 @@ class ScriptTest < ActiveSupport::TestCase
       absolute_position: 2
     )
 
+    create(
+      :lesson,
+      lesson_group: lesson_group2,
+      script: script,
+      name: 'Lesson 3',
+      key: 'lesson-3',
+      has_lesson_plan: true,
+      lockable: false,
+      relative_position: 3,
+      absolute_position: 3
+    )
+
+    create(
+      :lesson,
+      lesson_group: lesson_group3,
+      script: script,
+      name: 'Lesson 4',
+      key: 'lesson-4',
+      has_lesson_plan: false,
+      lockable: false,
+      relative_position: 4,
+      absolute_position: 4
+    )
+
     summary = script.summarize_for_lesson_show
     assert_equal '/s/my-script', summary[:link]
+    # only includes lesson groups with lessons with lesson plans
+    assert_equal 2, summary[:lessonGroups].count
     # only includes lessons with lesson plans
-    assert_equal 1, summary[:lessons].count
-    assert_equal 'lesson-1', summary[:lessons][0][:key]
-    assert_equal '/s/my-script/lessons/1', summary[:lessons][0][:link]
+    assert_equal 1, summary[:lessonGroups][0][:lessons].count
+    assert_equal 'lesson-1', summary[:lessonGroups][0][:lessons][0][:key]
+    assert_equal '/s/my-script/lessons/1', summary[:lessonGroups][0][:lessons][0][:link]
   end
 
   test 'can summarize script for student lesson plan' do
     script = create :script, name: 'my-script'
     lesson_group = create :lesson_group, script: script
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
+    lesson_group3 = create :lesson_group, key: 'lg-3', script: script
     create(
       :lesson,
       lesson_group: lesson_group,
@@ -914,13 +944,39 @@ class ScriptTest < ActiveSupport::TestCase
       absolute_position: 2
     )
 
+    create(
+      :lesson,
+      lesson_group: lesson_group2,
+      script: script,
+      name: 'Lesson 3',
+      key: 'lesson-3',
+      has_lesson_plan: true,
+      lockable: false,
+      relative_position: 3,
+      absolute_position: 3
+    )
+
+    create(
+      :lesson,
+      lesson_group: lesson_group3,
+      script: script,
+      name: 'Lesson 4',
+      key: 'lesson-4',
+      has_lesson_plan: false,
+      lockable: false,
+      relative_position: 4,
+      absolute_position: 4
+    )
+
     summary = script.summarize_for_lesson_show(true)
     assert_equal '/s/my-script', summary[:link]
+    # only includes lesson groups with lessons with lesson plans
+    assert_equal 2, summary[:lessonGroups].count
     # only includes lessons with lesson plans
-    assert_equal 1, summary[:lessons].count
-    assert_equal 'lesson-1', summary[:lessons][0][:key]
+    assert_equal 1, summary[:lessonGroups][0][:lessons].count
+    assert_equal 'lesson-1', summary[:lessonGroups][0][:lessons][0][:key]
     # lesson links end with /student
-    assert_equal '/s/my-script/lessons/1/student', summary[:lessons][0][:link]
+    assert_equal '/s/my-script/lessons/1/student', summary[:lessonGroups][0][:lessons][0][:link]
   end
 
   class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
@@ -1497,6 +1553,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "get_bonus_script_levels" do
+    student = create :student
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, lesson_group: lesson_group
@@ -1507,8 +1564,8 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson3, bonus: true
     create :script_level, script: script, lesson: lesson3, bonus: true
 
-    bonus_levels1 = script.get_bonus_script_levels(lesson1)
-    bonus_levels3 = script.get_bonus_script_levels(lesson3)
+    bonus_levels1 = script.get_bonus_script_levels(lesson1, student)
+    bonus_levels3 = script.get_bonus_script_levels(lesson3, student)
 
     assert_equal 1, bonus_levels1.length
     assert_equal 1, bonus_levels1[0][:stageNumber]

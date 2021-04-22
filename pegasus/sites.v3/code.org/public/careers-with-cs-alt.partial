@@ -157,9 +157,9 @@ theme: responsive
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a href="https://roadtripnation.com/roadmap" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="The Roadmap from Roadtrip Nation">
+        <img class="tutorial-tile-img" src="/images/csjourneys/roadtrip-nation.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="The Roadmap from Roadtrip Nation">
       </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #7665a0; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>The Roadmap from Roadtrip Nation</strong></h3>
         <div class="smalltext" style="color: dimgray;">With the Roadmap, view career paths that align with your interests. Features video interviews with more than 1,000 professionals and steps for getting started.</div>
@@ -178,7 +178,7 @@ theme: responsive
       <a href="https://www.mynextmove.org/explore/ip" target="_blank">
         <img class="tutorial-tile-img" src="/images/fill-485x235/csjourneys/o-net.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="O*Net logo">
       </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #7665a0; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>The O*NET Interest Profiler from the U.S. Department of Labor</strong></h3>
         <div class="smalltext" style="color: dimgray; ">The O*NET Interest Profiler can help you find out what your interests are and what kinds of careers you might want to explore.</div>
@@ -206,7 +206,7 @@ theme: responsive
       <a href="https://www.careervillage.org/" target="_blank">
         <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Career Village">
       </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #0094ca; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Career Village</strong></h3>
         <div class="smalltext" style="color: dimgray;">Get your questions, about any role or industry, answered by real professionals on Career Village. <i>Account creation is required.</i></div>
@@ -222,7 +222,7 @@ theme: responsive
       <a href="https://www.collegeconfidential.com/" target="_blank">
         <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="College Confidential">
       </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #0094ca; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>College Confidential</strong></h3>
         <div class="smalltext" style="color: dimgray; ">Connect with college students on College Confidential to ask questions about college majors. <i>Account creation is required.</i></div>

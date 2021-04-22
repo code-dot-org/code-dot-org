@@ -49,8 +49,8 @@
         %a{href: "/highlights"}
           %button 
             =hoc_s(:highlights_see_more)
--elsif latam_country_code?(@country) || @country == 'la'
-  -# For LATAM countries, show only the LATAM HoC Twitter Feed.
+-elsif latam_country_code?(@country) || @country == 'la' || @language == 'la'
+  -# For LATAM countries and Spanish-LATAM language, show only the LATAM HoC Twitter Feed.
   -# For historical reasons, we also use 'la' code to represent LATAM countries in
   -# i18n/countries.json. Unfortunately, it is a real country code for Laos Republic
   -# (ISO_3166-1_alpha-2 codes). We should change it to a different code later.
