@@ -73,15 +73,15 @@ def protected_git_pull
   # This change is a speculative fix to prevent any potential conflicts between
   # git-pull and unison.
   #
-  if Rails.env.staging?
+  if rack_env?(:staging)
     FileUtils.touch GIT_PULL_STARTED_PATH
     # Wait a few seconds to give the unison tool time to finish.
     # Unison is fast and usually finishes in less than 1 second.
     sleep 2
   end
-  RakeUtils.git_pull if count > 0
+  RakeUtils.git_pull
 ensure
-  if Rails.env.staging? && File.exist?(GIT_PULL_STARTED_PATH)
+  if rack_env?(:staging) && File.exist?(GIT_PULL_STARTED_PATH)
     FileUtils.rm GIT_PULL_STARTED_PATH
   end
 end
@@ -93,7 +93,7 @@ def build
 
     RakeUtils.git_fetch
     count = RakeUtils.git_update_count
-    protected_git_pull
+    protected_git_pull if count > 0
     count = [1, count].max
 
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
