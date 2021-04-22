@@ -229,8 +229,7 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined,
-  columnRefs: {}
+  saveStatus: undefined
 };
 
 // Reducer
@@ -895,13 +894,14 @@ export function getEmptyCellDetails(state) {
 export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
-    state.metadata
-    && state.metadata.card
-    && state.metadata.card.description
+    state.metadata &&
+    state.metadata.card &&
+    state.metadata.card.description
   ) {
     return state.metadata.card.description;
   } else if (
-    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+    state.trainedModelDetails &&
+    state.trainedModelDetails.datasetDescription
   ) {
     return state.trainedModelDetails.datasetDescription;
   } else {
@@ -910,7 +910,7 @@ export function getDataDescription(state) {
 }
 
 function getDatasetDetails(state) {
-  const datasetDetails = {}
+  const datasetDetails = {};
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
   return datasetDetails;
@@ -921,7 +921,7 @@ function getColumnDataToSave(state, column) {
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
-    columnData.values = getUniqueOptions(state, column)
+    columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
     const maxMin = getRange(state, column, false);
     columnData.max = maxMin.max;
@@ -933,7 +933,7 @@ function getColumnDataToSave(state, column) {
 function getFeaturesToSave(state) {
   const features = state.selectedFeatures.map(feature =>
     getColumnDataToSave(state, feature)
-  )
+  );
   return features;
 }
 

@@ -15,7 +15,6 @@ class DataTable extends Component {
     setHighlightColumn: PropTypes.func,
     currentColumn: PropTypes.string,
     highlightColumn: PropTypes.string,
-    setColumnRef: PropTypes.func,
     reducedColumns: PropTypes.bool,
     singleRow: PropTypes.number,
     startingRow: PropTypes.number
@@ -90,12 +89,7 @@ class DataTable extends Component {
   };
 
   render() {
-    const {
-      data,
-      setCurrentColumn,
-      setColumnRef,
-      setHighlightColumn
-    } = this.props;
+    const { data, setCurrentColumn, setHighlightColumn } = this.props;
 
     if (data.length === 0) {
       return null;
@@ -111,7 +105,6 @@ class DataTable extends Component {
                   key={key}
                   style={this.getColumnHeaderStyle(key)}
                   onClick={() => setCurrentColumn(key)}
-                  ref={ref => setColumnRef && setColumnRef(key, ref)}
                   onMouseEnter={() => setHighlightColumn(key)}
                   onMouseLeave={() => setHighlightColumn(undefined)}
                 >
@@ -154,7 +147,7 @@ export default connect(
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,
     highlightColumn: state.highlightColumn,
-    currentPanel: state.currentPanel,
+    currentPanel: state.currentPanel
   }),
   dispatch => ({
     setCurrentColumn(column) {

@@ -57,7 +57,6 @@ class ColumnInspector extends Component {
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
     hideSpecifyColumns: PropTypes.bool,
-    columnPositions: PropTypes.object,
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array
@@ -111,14 +110,6 @@ class ColumnInspector extends Component {
     }
 
     const maxLabelsInHistogram = 5;
-
-    let leftPosition = 0;
-
-    if (currentColumnData) {
-      if (this.props.columnPositions[currentColumnData.id]) {
-        leftPosition = this.props.columnPositions[currentColumnData.id];
-      }
-    }
 
     return (
       currentColumnData && (

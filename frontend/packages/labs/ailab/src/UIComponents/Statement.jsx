@@ -57,7 +57,7 @@ class Statement extends Component {
           based on{" "}
           {selectedFeatures.map((selectedFeature, index) => {
             return (
-              <span>
+              <span key={index}>
                 <div style={styles.statementFeature}>
                   {selectedFeature}
                   {currentPanel === "dataDisplayFeatures" && (
