@@ -44,7 +44,7 @@ level 'U9L2 CFU Histogram vs Bar Chart_2021', progression: 'Check For Understand
 
 lesson 'Filtering and Cleaning Data', display_name: 'Filtering and Cleaning Data', has_lesson_plan: true
 level 'CSP U9L3 Data Cleaning_2021', progression: 'Cleaning Data'
-level 'CSP U9L3 Data Filtering_2021'
+level 'CSP U9L3 Data Filtering_2021', progression: 'Filtering Data'
 level 'U9L3 CFU manually cleaning data_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Exploring Two Columns', display_name: 'Exploring Two Columns', has_lesson_plan: true
@@ -71,5 +71,5 @@ lesson 'Project - Tell a Data Story - Part 2', display_name: 'Project   Tell a D
 level 'CSP U9 Data Story Day 2_2021', progression: 'Data Story Workspace', assessment: true
 
 lesson 'Lesson 9: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
-level 'CSP Unit 9 AP-Style Assessment _2021', progression: 'Unit 9 Exam', assessment: true
+level 'CSP Unit 9 AP-Style Assessment _2021', assessment: true
 

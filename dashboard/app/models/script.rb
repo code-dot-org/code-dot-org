@@ -1517,7 +1517,7 @@ class Script < ApplicationRecord
     {
       displayName: title_for_display,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)}
     }
   end
 

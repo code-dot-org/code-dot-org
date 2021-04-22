@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-04-07 21:12:05 UTC",
+    "serialized_at": "2021-04-21 18:54:23 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -191,7 +191,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this *skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
+        "overview": "In this **skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
         "student_overview": "Help the Harvester collect vegetables along a path.",
         "purpose": "In this lesson, students will develop debugging skills and will continue developing their programming skills.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure each student has a reflection journal.\n",
@@ -1796,7 +1796,7 @@
       "key": "9aac4851-ae7d-497a-967e-1926a3d77c21",
       "position": 2,
       "properties": {
-        "description": "####Debugging, Persistence, and Frustration\n\n**Discuss:** Prepare students for today's online exercises by asking them what they would do if they thought they had a bug in their code. More specifically, what would they ask themselves? \n\n- Was everything in the first step right?\n- How about the second? Third?\n- Where did my program go wrong?\n- What does that tell me?\n    \n**Prompt**: **Debugging** can be frustrating! But persistence can help us get through it. What are some things we can do to persist through frustration? \n\nExample responses:\n\n- Count to 10\n- Take deep breaths\n- Journal about bugs we've found\n- Talk to a partner about bugs\n- Ask for help\n\n**Transition:** Let your students know that frustration is part of coding. Everyone gets bugs! It's okay if they think they have a bug but they can't find or fix it right away. Using strategies like those listed above can help them persist through frustration and solve any problem!"
+        "description": "####Debugging, Persistence, and Frustration\n\n**Discuss:** Prepare students for today's online exercises by asking them what they would do if they thought they had a bug in their code. More specifically, what would they ask themselves? \n\n- Was everything in the first step right?\n- How about the second? Third?\n- Where did my program go wrong?\n- What does that tell me?\n    \n**Prompt**: **Debugging** can be frustrating! But persistence can help us get through it. What are some things we can do to persist through frustration? \n\nExample responses:\n\n- Count to 10\n- Take deep breathsProg\n- Journal about bugs we've found\n- Talk to a partner about bugs\n- Ask for help\n\n**Transition:** Let your students know that frustration is part of coding. Everyone gets bugs! It's okay if they think they have a bug but they can't find or fix it right away. Using strategies like those listed above can help them persist through frustration and solve any problem!"
       },
       "seeding_key": {
         "activity_section.key": "9aac4851-ae7d-497a-967e-1926a3d77c21",
@@ -3185,7 +3185,7 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Pair Programming",
         "level_keys": [
@@ -3211,7 +3211,7 @@
       "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3237,7 +3237,7 @@
       "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3263,7 +3263,7 @@
       "chapter": 13,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3289,7 +3289,7 @@
       "chapter": 14,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3315,7 +3315,7 @@
       "chapter": 15,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3341,7 +3341,7 @@
       "chapter": 16,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3368,7 +3368,7 @@
       "chapter": 17,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3394,7 +3394,7 @@
       "chapter": 18,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3420,7 +3420,7 @@
       "chapter": 19,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3446,7 +3446,7 @@
       "chapter": 20,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -3472,7 +3472,7 @@
       "chapter": 21,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -3498,7 +3498,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: The Harvester",
         "level_keys": [
@@ -3524,7 +3524,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3550,7 +3550,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3576,7 +3576,7 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3602,7 +3602,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Debugging with the Step Button",
         "level_keys": [
@@ -3628,7 +3628,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3654,7 +3654,7 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3680,7 +3680,7 @@
       "chapter": 29,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3706,7 +3706,7 @@
       "chapter": 30,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3732,7 +3732,7 @@
       "chapter": 31,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3758,7 +3758,7 @@
       "chapter": 32,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3784,7 +3784,7 @@
       "chapter": 33,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3811,7 +3811,7 @@
       "chapter": 34,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3837,7 +3837,7 @@
       "chapter": 35,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3863,7 +3863,7 @@
       "chapter": 36,
       "position": 15,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4645,7 +4645,7 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: The Artist in Code Studio",
         "level_keys": [
@@ -4671,7 +4671,7 @@
       "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4697,7 +4697,7 @@
       "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Repeat Blocks with the Artist",
         "level_keys": [
@@ -4723,7 +4723,7 @@
       "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4749,7 +4749,7 @@
       "chapter": 70,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4775,7 +4775,7 @@
       "chapter": 71,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4801,7 +4801,7 @@
       "chapter": 72,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4827,7 +4827,7 @@
       "chapter": 73,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4853,7 +4853,7 @@
       "chapter": 74,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4880,7 +4880,7 @@
       "chapter": 75,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4906,7 +4906,7 @@
       "chapter": 76,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4932,7 +4932,7 @@
       "chapter": 77,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4958,7 +4958,7 @@
       "chapter": 78,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4984,7 +4984,7 @@
       "chapter": 79,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5350,7 +5350,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Project"
+        "progression": "Project",
+        "level_keys": [
+          "courseB_EOC_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7250,6 +7253,9 @@
       }
     }
   ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
     {
       "key": "algorithm",
@@ -7352,6 +7358,16 @@
       }
     },
     {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
@@ -7369,6 +7385,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
       }
     },
     {
@@ -7546,6 +7582,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
         "vocabulary.key": "bug"
       }
     },
@@ -7553,6 +7595,18 @@
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
         "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "programming"
       }
     },
     {
@@ -7704,6 +7758,26 @@
       "seeding_key": {
         "lesson.key": "Programming in Maze",
         "objective.key": "fae372cb-4b72-4b35-abd6-e2424e54d791"
+      }
+    },
+    {
+      "key": "bffe609e-4319-4507-b643-b2a2ab2507b9",
+      "properties": {
+        "description": "Construct a program by reorganizing sequential movements."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "objective.key": "bffe609e-4319-4507-b643-b2a2ab2507b9"
+      }
+    },
+    {
+      "key": "7fe333c7-2422-4e9e-8328-9fcd2da6fdba",
+      "properties": {
+        "description": "Build a computer program from a set of written instructions."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "objective.key": "7fe333c7-2422-4e9e-8328-9fcd2da6fdba"
       }
     },
     {

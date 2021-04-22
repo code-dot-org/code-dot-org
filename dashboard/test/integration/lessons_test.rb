@@ -80,8 +80,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     assert_equal 'lesson overview', lesson_data['overview']
     assert_equal '/s/unit-1', lesson_data['unit']['link']
-    assert_equal script_lesson_path(@lesson.script, @lesson), lesson_data['unit']['lessons'][0]['link']
-    assert_equal script_lesson_path(@lesson2.script, @lesson2), lesson_data['unit']['lessons'][1]['link']
+    assert_equal script_lesson_path(@lesson.script, @lesson), lesson_data['unit']['lessonGroups'][0]['lessons'][0]['link']
+    assert_equal script_lesson_path(@lesson2.script, @lesson2), lesson_data['unit']['lessonGroups'][0]['lessons'][1]['link']
     assert_equal 'Standard Description', lesson_data['standards'][0]['description']
     assert_equal 'Opportunity Standard Description', lesson_data['opportunityStandards'][0]['description']
   end

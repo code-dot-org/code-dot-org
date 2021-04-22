@@ -165,8 +165,8 @@ class ScriptLevelsController < ApplicationController
   def self.get_script_level(script, params)
     if params[:chapter]
       script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+    elsif params[:lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lesson_position], params[:id], false)
     elsif params[:lockable_stage_position]
       script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
     else
@@ -231,7 +231,7 @@ class ScriptLevelsController < ApplicationController
     return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
-    @stage = @script.lesson_by_relative_position(params[:stage_position].to_i)
+    @stage = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
@@ -247,7 +247,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    @stage = Script.get_from_cache(params[:script_id]).lesson_by_relative_position(params[:stage_position].to_i)
+    @stage = Script.get_from_cache(params[:script_id]).lesson_by_relative_position(params[:lesson_position].to_i)
     @script = @stage.script
     @stage_extras = {
       next_stage_number: @stage.next_level_number_for_lesson_extras(current_user),
@@ -269,8 +269,8 @@ class ScriptLevelsController < ApplicationController
     script = Script.get_from_cache(params[:script_id])
 
     stage =
-      if params[:stage_position]
-        script.lesson_by_relative_position(params[:stage_position])
+      if params[:lesson_position]
+        script.lesson_by_relative_position(params[:lesson_position])
       else
         script.lesson_by_relative_position(params[:lockable_stage_position], true)
       end

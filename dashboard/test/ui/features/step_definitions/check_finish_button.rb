@@ -1,22 +1,22 @@
 # Helper steps for dance party levels
 free_play_level_urls = {
   'blockly' => {
-    'Dance Party' => 'http://studio.code.org/s/dance/stage/1/puzzle/13?noautoplay=true',
-    'Artist' => 'http://studio.code.org/s/20-hour/stage/5/puzzle/10?noautoplay=true',
-    'Bounce' => 'http://studio.code.org/s/course3/stage/15/puzzle/10?noautoplay=true',
-    'CS in Algebra' => 'http://studio.code.org/s/algebra/stage/1/puzzle/2?noautoplay=true',
+    'Dance Party' => 'http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true',
+    'Artist' => 'http://studio.code.org/s/20-hour/lessons/5/levels/10?noautoplay=true',
+    'Bounce' => 'http://studio.code.org/s/course3/lessons/15/levels/10?noautoplay=true',
+    'CS in Algebra' => 'http://studio.code.org/s/algebra/lessons/1/levels/2?noautoplay=true',
     'Flappy' => 'http://studio.code.org/flappy/10?noautoplay=true',
-    'Sprite Lab' => 'http://studio.code.org/s/coursee-2019/stage/9/puzzle/6?noautoplay=true'
+    'Sprite Lab' => 'http://studio.code.org/s/coursee-2019/lessons/9/levels/6?noautoplay=true'
   },
   'droplet' => {
-    'App Lab' => 'http://studio.code.org/s/applab-intro/stage/1/puzzle/15?noautoplay=true',
-    'Game Lab' => 'http://studio.code.org/s/csd3-2019/stage/22/puzzle/12?noautoplay=true'
+    'App Lab' => 'http://studio.code.org/s/applab-intro/lessons/1/levels/15?noautoplay=true',
+    'Game Lab' => 'http://studio.code.org/s/csd3-2019/lessons/22/levels/12?noautoplay=true'
   },
   'minecraft' => {
-    'Minecraft Aquatic' => 'http://studio.code.org/s/aquatic/stage/1/puzzle/12?noautoplay=true',
-    'Minecraft Heroes Journey' => 'http://studio.code.org/s/hero/stage/1/puzzle/12?noautoplay=true',
-    'Minecraft Adventurer' => 'http://studio.code.org/s/mc/stage/1/puzzle/14?noautoplay=true',
-    'Minecraft Designer' => 'http://studio.code.org/s/minecraft/stage/1/puzzle/12?noautoplay=true'
+    'Minecraft Aquatic' => 'http://studio.code.org/s/aquatic/lessons/1/levels/12?noautoplay=true',
+    'Minecraft Heroes Journey' => 'http://studio.code.org/s/hero/lessons/1/levels/12?noautoplay=true',
+    'Minecraft Adventurer' => 'http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true',
+    'Minecraft Designer' => 'http://studio.code.org/s/minecraft/lessons/1/levels/12?noautoplay=true'
   }
 }
 
