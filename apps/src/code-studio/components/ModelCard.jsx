@@ -93,8 +93,8 @@ export default class ModelCard extends React.Component {
               <div style={styles.heading}>Summary</div>
               <p style={styles.details}>
                 Predict {metadata.label.id} based on{' '}
-                {selectedFeatures.join(', ')} with{' '}
-                {metadata.summaryStat?.stat}% accuracy.
+                {selectedFeatures.join(',')} with {metadata.summaryStat?.stat}%
+                accuracy.
               </p>
             </div>
             <div style={styles.subPanel}>
