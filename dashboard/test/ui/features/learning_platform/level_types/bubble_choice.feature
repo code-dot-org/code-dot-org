@@ -27,10 +27,9 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/s/allthethings"
     And I wait until element ".teacher-panel" is visible
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
-    And I wait until current URL contains "user_id="
-    And I wait until element "td:contains(Lesson Name)" is visible
     And I wait until element "td:contains(Bubble Choice)" is visible
-    Then I verify progress for stage 42 level 1 is "perfect"
+    And I wait for 4 seconds
+    Then I verify progress for stage 40 level 1 is "perfect"
 
     # View progress from BubbleChoice activity page
     Given I am on "http://studio.code.org/s/allthethings/lessons/40/levels/1"
