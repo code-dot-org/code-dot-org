@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
-import onClickOutside from 'react-onclickoutside';
 
 const styles = {
   anchor: {
@@ -29,28 +28,24 @@ const styles = {
  * A menu with a set of clickable links that calls the cancel handler if you
  * click outside the menu or the cancel button.
  */
-export const JavalabContextMenu = class JavalabContextMenuComponent extends Component {
+export const JavalabTabMenu = class JavalabTabMenuComponent extends Component {
   static propTypes = {
-    cancelContextMenu: PropTypes.func.isRequired,
-    renameFromContextMenu: PropTypes.func.isRequired
+    cancelTabMenu: PropTypes.func.isRequired,
+    renameFromTabMenu: PropTypes.func.isRequired
   };
 
   state = {
     dropdownOpen: false
   };
 
-  handleClickOutside = () => {
-    this.props.cancelContextMenu();
-  };
-
   render() {
-    const {renameFromContextMenu, cancelContextMenu} = this.props;
+    const {renameFromTabMenu, cancelTabMenu} = this.props;
     return (
       <div>
         <button
           type="button"
           key="rename"
-          onClick={renameFromContextMenu}
+          onClick={renameFromTabMenu}
           style={styles.anchor}
         >
           Rename
@@ -58,7 +53,7 @@ export const JavalabContextMenu = class JavalabContextMenuComponent extends Comp
         <button
           type="button"
           key="cancel"
-          onClick={cancelContextMenu}
+          onClick={cancelTabMenu}
           style={styles.anchor}
         >
           Cancel
@@ -68,4 +63,4 @@ export const JavalabContextMenu = class JavalabContextMenuComponent extends Comp
   }
 };
 
-export default onClickOutside(Radium(JavalabContextMenu));
+export default Radium(JavalabTabMenu);
