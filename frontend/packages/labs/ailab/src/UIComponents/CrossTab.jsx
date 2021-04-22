@@ -40,7 +40,7 @@ class CrossTab extends Component {
 
     return (
       <div id="cross-tab">
-        {!showTable && (
+        {crossTabData && !showTable && (
           <div>
             The currently-selected data is too large to show in a table.
           </div>
