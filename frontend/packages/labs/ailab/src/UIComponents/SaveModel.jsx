@@ -30,9 +30,7 @@ class SaveModel extends Component {
   }
 
   toggleColumnDescriptions = () => {
-    this.setState({
-      showColumnDescriptions: !this.state.showColumnDescriptions
-    });
+    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions});
   };
 
   handleChange = (event, field, isColumn) => {
@@ -43,8 +41,8 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
-      const columnType =
-        columnDescription.id === this.props.labelColumn ? "label" : "feature";
+      const columnType = columnDescription.id === this.props.labelColumn
+       ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -99,8 +97,7 @@ class SaveModel extends Component {
     };
 
     const arrowIcon = this.state.showColumnDescriptions
-      ? "fa fa-caret-up"
-      : "fa fa-caret-down";
+      ? "fa fa-caret-up" : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
 
@@ -156,11 +153,7 @@ class SaveModel extends Component {
                             <textarea
                               rows="1"
                               onChange={event =>
-                                this.handleChange(
-                                  event,
-                                  field.id,
-                                  field.isColumn
-                                )
+                                this.handleChange(event, field.id, field.isColumn)
                               }
                               placeholder={field.placeholder}
                             />
