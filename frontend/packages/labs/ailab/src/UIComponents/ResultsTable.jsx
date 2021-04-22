@@ -49,7 +49,7 @@ class ResultsTable extends Component {
                 >
                   <span style={styles.largeText}>{"Actual"}</span>
                   {this.props.isRegression && (
-                    <div style={styles.smallText}>{"+/- 3% of range"}</div>
+                    <div style={styles.smallTextNoMargin}>{"+/- 3% of range"}</div>
                   )}
                 </th>
                 <th
