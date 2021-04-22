@@ -38,6 +38,9 @@ const styles = {
     overflow: 'hidden',
     lineHeight: '15px',
     whiteSpace: 'pre-wrap'
+  },
+  spinnerHeight: {
+    height: 'calc(80vh - 140px)'
   }
 };
 
@@ -159,7 +162,11 @@ export default class ModelManagerDialog extends React.Component {
           style={styles.dialog}
         >
           <h1 style={styles.header}>AI Trained Models</h1>
-          {this.state.isModelListPending && <Spinner />}
+          {this.state.isModelListPending && (
+            <div style={styles.spinnerHeight}>
+              <Spinner />
+            </div>
+          )}
           {!this.state.isModelListPending && (
             <div>
               <div style={styles.left}>
