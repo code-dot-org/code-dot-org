@@ -39,11 +39,11 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-04-22 22:28:24 UTC",
     "seeding_key": {
       "script.name": "csp1-2020"
     }
@@ -287,11 +287,11 @@
     },
     {
       "key": "Lesson 14: Assessment Day",
-      "name": "Lesson 14: Assessment Day",
+      "name": "Assessment Day",
       "absolute_position": 15,
       "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 2,
+      "has_lesson_plan": true,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -2296,13 +2296,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }
