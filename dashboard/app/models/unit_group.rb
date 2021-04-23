@@ -34,6 +34,8 @@ class UnitGroup < ApplicationRecord
     CSD = 'csd'.freeze,
     CSP = 'csp'.freeze,
     CSA = 'csa'.freeze,
+    PL_CSP_ACADEMIC = 'pl-csp-academic-in-person'.freeze,
+    PL_CSP_ACADEMIC_VIRTUAL = 'pl-csp-academic-virtual'.freeze,
     TEST = 'ui-test-course'.freeze
   ].freeze
 

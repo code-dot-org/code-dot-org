@@ -22859,3 +22859,157 @@ en:
           description_short: ''
           description: "The kick-off call is designed to introduce virtual workshop participants to the virtual workshop model, explain how to engage with the asynchronous work, and to support community building among the cohort.\n\n\n## Virtual Academic Year Workshop Kick-Off\n\n**Resources**\n\n[2020-21 Virtual Academic Year Workshop Kick-Off Slides - Template](https://docs.google.com/presentation/d/15NZcppIwNyR-hoUMpSGexfTa6cLdyTdQpdjg_a4j-DU/edit?usp=sharing)\n\n[2020-21 **CS Principles** Virtual Module 1 Slides - Template](https://docs.google.com/presentation/d/1NqyfugF5M3DMQY6KZLC7rc5CZYv5ebS08XMU2ync8BI/edit?usp=sharing)\n\n[2020-21 Virtual Academic Year Workshops: Digital Digest Template](https://docs.google.com/document/d/1UEGjOdhdv_Ex22kr1BsLUCPnXadcyyjbcWszqgDxAiw/edit?usp=sharing)\n\n[2020-21 Virtual Academic Year Workshop Planning Doc Template](https://docs.google.com/spreadsheets/d/1irYL5l0npH70YnXQAbXap8FF21UDsA-LUiTaWgK_sEY/edit?usp=sharing)\n\n\n## Accessing Asynchronous Modules and Work \n\n## **Important:** \n### Please read this guide to learn how to set up and access your cohort's asynchronous work.\n\n[2020-21 Virtual Academic Year Workshop Access to Asynchronous Work](https://docs.google.com/document/d/1ZFqNR-W1hcui7hyBe83G0I_DNLAfdsfSITQtGHlEgtw/edit)\n\n"
           student_description: A call to start your academic year workshops.
+        csp-academic-w1-2020:
+          lessons:
+            new lesson:
+              name: lesson display name
+            session-1:
+              name: Workshop Opener
+            session-2:
+              name: 'Introduction to Unit 4 and EIPM Pedagogy '
+            session-3:
+              name: Break
+            session-4:
+              name: Model Lesson   U4L1  Variables Explore
+            session-5:
+              name: Model Lesson   U4L2  Variables Investigate
+            session-6:
+              name: Lunch
+            session-7:
+              name: Lesson Exploration   U4L3  Variables Practice
+            session-8:
+              name: Lesson Exploration   U4L4  Variables Make
+            session-9:
+              name: Break
+            session-10:
+              name: 'Zooming Out   EIPM and The Big Picture '
+            session-11:
+              name: Collaborative and Independent work in Unit 4
+            session-12:
+              name: Wrap Up
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+            day-1:
+              display_name: Day 1
+          name: csp-academic-w1-2020
+          title: In-person CSP 20-21 Workshop 1
+          description_audience: ''
+          description_short: ''
+          description: "## A note about supplies\n\nKeep in mind, this workshop goes over the Variables Explore lesson which requires special supplies.  These supplies include:\n\n* Two different colored post-it notes per table\n* ~6 plastic baggies per participant\n* White board or dry-erase markers for writing on baggies \n\nWe also recommend printing out a copy of [EIPM: A Short Introduction](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit) for each participant if possible.\n\n\n## Agenda Walkthrough Resources\n\nBelow are a set of resources to help you get a sense of the flow of the workshop and key things to prepare for.\n\n* **[Goals and Objectives](https://docs.google.com/document/d/1a9LOElvEZX0FvBw6ZzgY0l6PC30skym-PlazC7M-tRM/edit?usp=sharing)**\nThis resource provides a high-level overview of the goals for the day and where we meet those goals in individual sessions. \n\n* ** [Opportunities for Equity One-pager](https://drive.google.com/open?id=1vTrYLfx8apzYWmXsy4uSZKky2PHVffpN-zRfNrP9wLY)**  \nThis resource calls out opportunities to create an equitable workshop for participants and help teachers create equitable computer science classes in their classrooms. \n\n* ** [Essential Content One-pager](https://drive.google.com/open?id=1UE_AvG1wjigJSoiWzQa0yu4mTolOkOE9BGl2wTRchoQ)**  \nThis resource points to which lessons are referenced in different points of the workshop.\n\n## Printing Agendas\n\nFor the high level agenda that is printable and editable, go to:\n\n[Google Sheet View of High Level Agenda](https://drive.google.com/open?id=1_d9TYyvDJy3MyeIG6VmsduaWIZiJDKxEum7T0dh4c_g)\n\n\n## Recommended Workshop Timing\n\nCovering content that is scheduled for weeks 8 - 10 (Unit 4) of the year. Workshop should be 5 - 7 weeks into the school year.\n\n\n## Prepping for Sessions\n\n### Review Past Workshop(s)\n\nReview how things went during your Previous Workshop\n\n- Review your feedback from teachers in the [Workshop Dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) to see what needs you can address and how you can continue to improve your local workshops\n- Talk about feedback for each other in how you can better prepare for the workshop together, how you run certain sessions, and other ways you can grow as individuals and a team\n- Make a plan together for actions you are going to take during this workshop to improve\n\n### Supplies\n\n| Provided By Regional Partner | Teachers Should Bring |\n| ------------- | ------------- |\n| Room set up for table groups of 4-5 teachers <br> Room with reliable wifi <br> Power Strips <br> Projector <br> Speaker System <br> Pens <br> Easel Pads <br> Large 3x4 Post-it Notes - 1 per table <br> Medium 3x3 Post-it Notes - 2 sets per table <strong>in two different colors</strong> <br> Small 1x2 Post-it Notes <br> 8-pack Markers - 1 per table <br> Snack or sandwich sized baggies - 6 per participant <br> Whiteboard markers - 1 per participant <br> Blue Painter's Tape <br> Scissors <br> | Printed Curriculum Guide <br> Printed AP Course and Exam Description <br> Journal <br> Computers  |\n\n### Connect with your Regional Partner \n\nPrior to the workshop, find time to meet in person or virtually with both facilitators and the Regional Partner to discuss:\n\n| Subject  | Conversation Points |\n| ------------- | ------------- |\n| Supplies  | <ul><li>Go through the list of necessary supplies together</li><li>Make a plan for when different supplies will be set up/provided</li></ul> |\n| Online Workshop Dashboard  | <ul><li>Look at the registration. Are teachers signed up? What do you need to do to make sure all the teachers are registered?</li><li>Make sure facilitators are added on the workshop so you will be able to take attendance</li></ul> |\n| Venue  | <ul><li>Discuss the set up of the space <ul><li>What does the room look like? </li><li>What does the table set up look like?</li><li>Will the space have a projector? Do we need to bring certain type of hook ups?</li><li> Will the space have a sound system? If not how do you plan to play videos during the week?</li><li>Is the other course workshop co-located? </li></ul> </li><li>How do we get into the building?</li><li>Are there any directions about parking or locating the space?</li></ul> |\n| Workshop Timeframe  | <ul><li>What time are we scheduled to start with teachers?</li><li>What time are we scheduled to end with teacher?</li><li>What time can we come in to prep in the morning?</li><li>What time can we stay to debrief till in the afternoon?</li></ul> |\n| Food  |  <ul><li>What food will be provided for participants during the workshop?</li><li>What time will food be set up?</li><li>Is there a separate room for lunch? </li></ul> |\n| Agenda | <ul><li>Is there any local material to cover during this workshop?</li><li> How long do you anticipate it taking to cover the material (Check that the time suggested fits within the amount of Local Flex Time for this workshop)?</li></ul> |\n| Staff | <ul><li> Will someone from your organization be on site for the day of the workshop?</li><li> If yes, who is the staff member and how should we contact them if needed?</li> <li> If no, who should we contact in case something comes up during the workshop that we need your organizations support with?</li> |\n\n\n### Make a plan\n\nYou should go through every session to make a plan for how you and your co-facilitator will support each other in running the session.\n\nDon't forget to check the pre-survey results to determine what lessons to focus on during the TTL progression. The survey gets sent out to teachers automatically 10 days before the workshop. You can view the results on the [Workshop Dashboard](https://studio.code.org/pd/workshop_dashboard/workshops).\n\n\n### Create Materials For Region\n\n* A copy of the [r csp-q1-slides-20-21] for the workshop that you have updated according to your needs.\n* Set up a section for your workshop participants to join (if everyone is already in a section together from the summer, then you are all set!\n\n\n## First Morning Of Workshop\n\n### Room Setup\n\nUsing the supplies provided by the Regional Partner, set up the room. In the agenda, we will call this the \"Normal Breakout Room Set Up\". \n\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2018-02-26-at-6.30.48-AM.png){: style='float:right; margin-left:10px; width:40%'}\n\n* Tech\n\t* Reliable guest wifi - check this as early as possible\n\t* Projector (separate table for projector)\n\t* Speaker System\n* 8 Teacher Tables (for 32 teachers) with:\n\t* 4 chairs at each table\n\t* Table angled toward the projector screen\n\t* Surge protectors in the middle of each table\n\t* 4-5 post-it note pads of different sizes\n\t* 3-4 Pens\n* Facilitator Table:\n\t* Located in the back of the room\n\t* 2-3 chairs at table (need chairs for lead facilitators)\n\n### Create Posters\n\n* Posters up for people to add post-its to as they come in\n\t* **Question Parking Lot** - For people to put up questions they have.\n\t* **“Where are we now”** - On a piece of chart paper or on the board, create a histogram for teachers to add where they are in the curriculum. Remind teachers to take out their Curriculum Guide as a guide to unit progressions.\n\n\n## Concerns?\n\nIf you need to raise concerns before or during the workshop that require immediate attention (Internet, health issues, etc.), you should contact your Regional Partner."
+          student_description: ''
+        csp-academic-w2-2020:
+          lessons:
+            new lesson:
+              name: lesson display name
+            session-1:
+              name: Workshop Opener
+            session-2:
+              name: Recruiting Students to your CS Principles Classroom
+            session-3:
+              name: Break
+            session-4:
+              name: Previously, On CSP...
+            session-5:
+              name: Model Lesson   U5L2   Lists Investigate
+            session-6:
+              name: Model Lesson Reflection
+            session-7:
+              name: Lesson Investigation   U5L3   Lists Practice
+            session-8:
+              name: Lunch
+            session-9:
+              name: Lesson Investigation   U5L4   Lists Make
+            session-10:
+              name: Lesson Investigation   U5L10   Traversals Investigate
+            session-11:
+              name: Unit 5 Conclusions and Connections
+            session-12:
+              name: Break
+            session-13:
+              name: Unit 6 Overview
+            session-14:
+              name: Wrap Up
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+            day-1:
+              display_name: Day 1
+          name: csp-academic-w2-2020
+          title: In-person CSP 2020-21 Workshop 2
+          description_audience: ''
+          description_short: ''
+          description: "## Agenda Walkthrough Resources\n\nBelow are a set of resources to help you get a sense of the flow of the workshop and key things to prep for.\n\n* [Workshop Goals and Outcomes One-pager](https://docs.google.com/document/d/1xoMnCGEjXbLlElMwBezxrmbqRhWNvDLWpxH-gE-syu0/edit?usp=sharing)  \nThe document outlines the overall goals and outcomes for Workshop 2 along with where in the workshop these goals and outcomes are addressed. We recommend you reviewing this document before reading the agenda. \n\n* ** [Opportunities for Equity One-pager](https://docs.google.com/document/d/1EVMlbhcekRG43eT8GlCBQ0WUqmb-LW5d2PMJPglYGtw/edit?usp=sharing)**  \nThis resource calls out opportunities to create an equitable workshop for participants and help teachers create equitable computer science classes in their classrooms. \n\n* ** [Essential Content One-pager](https://docs.google.com/document/d/1ni2JoE3hFlbMZ1KWQkaIHTJ63y8gwnAg7LlJXs6FDCo/edit?usp=sharing)**  \nThis resource points to which lessons are referenced in different points of the workshop.\n\n\n\n## Printing Agendas\n\nFor the high level agenda that is printable and editable go to:\n\n[Google Sheet View of High Level Agenda](https://docs.google.com/spreadsheets/d/1zsTsvo9XhsoIzuwC7N1zkIQVs6aQYVaKzqVYEPz7wqg/edit?usp=sharing)\n\n\n## Prepping for your workshop\n\nRefer to your facilitator handbook for complete lists and ideas about how to prepare for your workshop.\n\n\n### Connecting with your regional partner and co-facilitator\n\n* Contact your regional partner to discuss materials, food plans, or special announcements.\n* Work with your co-facilitator to:\n\t* Determine who will run which sessions and what support will look like during each session.\n\t* Anticipate challenges for each session given your knowledge of your cohort.\n\t* Review your feedback and pre-survey data from teachers in the [Workshop Dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) to see what needs you can address\n\n### Create materials for your region\n\n* A copy of the [r csp-q2-slides-20] for the workshop, that you have updated according to your needs.  You may want to add extra slides for notes or use the speaker notes as a note taking area for your workshop.\n\n\n### Create posters\n\n* Hang up the following posters for people to add post-its to as they come in:\n\t* **Question Parking Lot** - For people to put up questions they have.\n\t* **“Where are we now”** - On a piece of poster paper, or on the board, create a histogram for teachers to indicate where they are in the curriculum. Remind teachers to take out their Curriculum Guide as a guide to unit progressions.\n\n\n## Concerns?\n\nIf you need to raise concerns before or during the workshop about issues that require immediate attention (internet, health issues, etc.) you should contact your regional partner.\n"
+          student_description: ''
+        csp-academic-w3-2020:
+          lessons:
+            new lesson:
+              name: lesson display name
+            session-1:
+              name: Workshop Opener
+            session-2:
+              name: Context for Unit 7 Lesson Exploration
+            session-3:
+              name: Break
+            session-4:
+              name: 'Lesson exploration: U7L1 - Parameters and return explore'
+            session-5:
+              name: 'Lesson exploration: U7L3-4 - Parameters and Return Practice and Make'
+            session-6:
+              name: Lunch
+            session-7:
+              name: Unit 7 Conclusions and Connections
+            session-8:
+              name: Break
+            session-9:
+              name: Introduction to the Create Performance Task
+            session-10:
+              name: Planning for the Create Performance Task
+            session-11:
+              name: Wrap Up
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+            day-1:
+              display_name: Day 1
+          name: csp-academic-w3-2020
+          title: In-person CSP 2020-21 Workshop 3
+          description_audience: ''
+          description_short: ''
+          description: "<iframe src=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vT5ckIJ9q7WNvW2tJNVjywU9Ppr_QwXPo6xIWTtWaA5YHBZQUVyvq8uqk_IvPT_LkjpDoVaztFa3oCO/pubhtml?widget=true&amp;headers=false\" style=\"width:450px; height:700px; margin:25px; float:right\"></iframe>\n\n\n## Agenda Walkthrough Resources\n\nBelow are a set of resources to help you get a sense of the flow of the workshop and key things to prep for.\n\n* [Workshop Goals and Outcomes One-pager](https://docs.google.com/document/d/1MKMTlNAFSdYtj22U5rfRVAz1qQwpxfrt_-idvMJi4vE/edit?usp=sharing)  \nThe document outlines the overall goals and outcomes for Workshop 3 along with where in the workshop these goals and outcomes are addressed. We recommend you reviewing this document before reading the agenda. \n\n* ** [Opportunities for Equity One-pager](https://docs.google.com/document/d/1q0uIa9QZxdOf5_0QxfjNzzN4UTM-jtBK50-7aEelPqg/edit?usp=sharing)**  \nThis resource calls out opportunities to create an equitable workshop for participants and help teachers create equitable computer science classes in their classrooms. \n\n* ** [Essential Content One-pager](https://docs.google.com/document/d/1LJxh0Q76Akp_M5JTMxastvbhik7Ee99jwzKLBDRb9cw/edit?usp=sharing)**  \nThis resource points to which lessons are referenced in different points of the workshop.\n\n\n\n## Printing Agendas\n\nFor the high level agenda that is printable and editable, go to:\n\n[Google Sheet View of High Level Agenda](https://docs.google.com/spreadsheets/d/1zZJriDX28BzkIWCIMYLIERTuj_amZc31AmpbgiQkJNM/edit?usp=sharing)\n\n\n\n## Prepping for your workshop\n\n### Materials\n\nDuring this workshop, we recommend that each participant have a physical copy of the following materials printed out:\n\n* A copy of the [AP Rubric](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf) (also known as the \"Scoring Guidelines\") for the Create PT.\n* Printed copies of the Create PT Survival Guide.\n\nIf these materials cannot be printed, participants can use the digital versions linked online.\n\nAs a facilitator, you also may want to use physical manipulatives to demonstrate the [U7L5 - Libraries Explore](https://curriculum.code.org/csp-20/unit7/5/).  You may also use the slides, but we have found that a different type of \"a ha\" moment happens when using physical manipulatives to explain how these concepts work.  For this lesson, you may want the following physical materials:\n\n* A file folder\n* Envelopes\n* Paper\n\nNote that you should review the lesson and prep these physical materials ahead of your workshop if you decide to go this route. \n\n\n\n### Connecting with your regional partner and co-facilitator\n\n* Contact your regional partner to discuss materials, food plans, or special announcements.\n* Work with your co-facilitator to:\n\t* Determine who will run which sessions and what support will look like during each session.\n\t* Anticipate challenges for each session given your knowledge of your cohort.\n\t* Review your feedback and pre-survey data from teachers in the [Workshop Dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) to see what needs you can address\n\n### Create materials for your region\n\n* A copy of the [r csp-q3-slides-20] for the workshop, that you have updated according to your needs.  You may want to add extra slides for notes or use the speaker notes as a note taking area for your workshop.\n\n\n### Create posters\n\n* Hang up the following posters for people to add post-its to as they come in:\n\t* **Question Parking Lot** - For people to put up questions they have.\n\t* **“Where are we now”** - On a piece of poster paper, or on the board, create a histogram for teachers to indicate where they are in the curriculum. Remind teachers to take out their Curriculum Guide as a guide to unit progressions.\n\n\n\nRefer to your facilitator handbook for complete lists and ideas about how to prepare for your workshop.\n\n\n\n## Concerns?\n\nIf you need to raise concerns before or during the workshop about issues that require immediate attention (internet, health issues, etc.) you should contact your regional partner.\n"
+          student_description: ''
+        csp-academic-w4-2020:
+          lessons:
+            new lesson:
+              name: lesson display name
+            session-1:
+              name: Workshop Opener
+            session-2:
+              name: Equitable and Inclusive Classrooms
+            session-3:
+              name: Break
+            session-4:
+              name: Unit 9 Lesson Jigsaw
+            session-5:
+              name: Lunch
+            session-6:
+              name: Unit 10 Overview
+            session-7:
+              name: Break
+            session-8:
+              name: AP Test Prep
+            session-9:
+              name: Connecting to the community going forward
+            session-10:
+              name: Wrap Up
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+            day-1:
+              display_name: Day 1
+          name: csp-academic-w4-2020
+          title: In-person CSP 2020-21 Workshop 4
+          description_audience: ''
+          description_short: ''
+          description: "## Agenda Walkthrough Resources\n\nBelow are a set of resources to help you get a sense of the flow of the workshop and key things to prep for.\n\n* [Workshop Goals and Outcomes One-pager](https://docs.google.com/document/d/1JM6j5RP9PDo_6OZFft6tjkW_xczZVT7gTfRfW5tRfRI/edit?usp=sharing)  \nThe document outlines the overall goals and outcomes for Workshop 4 along with where in the workshop these goals and outcomes are addressed. We recommend you reviewing this document before reading the agenda. \n\n* ** [Opportunities for Equity One-pager](https://docs.google.com/document/d/1lkIbM31SUHiszqmJd_2Ia3I73DHgmrMB6iFC6epSLmk/edit#)**  \nThis resource calls out opportunities to create an equitable workshop for participants and help teachers create equitable computer science classes in their classrooms. \n\n* ** [Essential Content One-pager](https://docs.google.com/document/d/11lmIUwJhm2ab6sQEWseNY8YP_MNBKaTSuBAWF3jXdig/edit?usp=sharing)**  \nThis resource points to which lessons are referenced in different points of the workshop.\n\n\n\n## Printing Agendas\n\nFor the high level agenda that is printable and editable go to:\n\n[Google Sheet View of High Level Agenda](https://docs.google.com/spreadsheets/d/1jskb1RSWSnyzjeObYAwB7CUHPkuZUOvTQTZ0tAtbj8c/edit?usp=sharing)\n\n\n## Prepping for your workshop\n\n### Materials\n\nAs part of our review of Unit 10, participants will participate in a light version of the simulation.  We recommend printing the following to help make that simulation come alive.\n\nTo print single-sided: \n* Physical copies of the [Character Bio](https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/)\n* [Printed name plates](https://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/) \n\nThese resources are also found in the [U10L1 lesson plan](http://curriculum.code.org/csp-20/unit10/1).\n\n\n\n### Connecting with your regional partner and co-facilitator\n\n* Contact your regional partner to discuss materials, food plans, or special announcements.\n* Work with your co-facilitator to:\n\t* Determine who will run which sessions and what support will look like during each session.\n\t* Anticipate challenges for each session given your knowledge of your cohort.\n\t* Review your feedback and pre-survey data from teachers in the [Workshop Dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) to see what needs you can address\n\n### Create materials for your region\n\n* A copy of the [r csp-q4-slides-2020] for the workshop, that you have updated according to your needs.  You may want to add extra slides for notes or use the speaker notes as a note taking area for your workshop.\n\n\n### Create posters\n\n* Hang up the following posters for people to add post-its to as they come in:\n\t* **Question Parking Lot** - For people to put up questions they have.\n\t* **“Where are we now”** - On a piece of poster paper, or on the board, create a histogram for teachers to indicate where they are in the curriculum. Remind teachers to take out their Curriculum Guide as a guide to unit progressions.\n\n* For the \"Equitable and inclusive classrooms\" session, we recommend making an [equity-access-diversity-inclusion poster](https://drive.google.com/file/d/1ja979_d-EUQvP_gt1SxC3VWCwdPYuVI4/view?usp=sharing) to reference the different vocabulary during the session.\n\n### Do your research\nFor the community session, you should connect with your Regional Partner prior to the event to understand what opportunities they have plans to help participants connect to the cohort, Regional Partner, or other local CS community moving forward.\n\n\nRefer to your facilitator handbook for complete lists and ideas about how to prepare for your workshop.\n\n\n\n## Concerns?\n\nIf you need to raise concerns before or during the workshop about issues that require immediate attention (internet, health issues, etc.) you should contact your regional partner.\n\n\n\n"
+          student_description: ''

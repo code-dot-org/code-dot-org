@@ -1,0 +1,24 @@
+student_detail_progress_view true
+is_migrated true
+
+lesson_group 'day-1', display_name: 'Day 1'
+lesson 'session-1', display_name: 'Workshop Opener', has_lesson_plan: true
+
+lesson 'session-2', display_name: 'Equitable and Inclusive Classrooms', has_lesson_plan: true
+
+lesson 'session-3', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-4', display_name: 'Unit 9 Lesson Jigsaw', has_lesson_plan: true
+
+lesson 'session-5', display_name: 'Lunch', has_lesson_plan: true
+
+lesson 'session-6', display_name: 'Unit 10 Overview', has_lesson_plan: true
+
+lesson 'session-7', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-8', display_name: 'AP Test Prep', has_lesson_plan: true
+
+lesson 'session-9', display_name: 'Connecting to the community going forward', has_lesson_plan: true
+
+lesson 'session-10', display_name: 'Wrap Up', has_lesson_plan: true
+

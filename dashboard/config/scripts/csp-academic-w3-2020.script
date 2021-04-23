@@ -1,0 +1,26 @@
+student_detail_progress_view true
+is_migrated true
+
+lesson_group 'day-1', display_name: 'Day 1'
+lesson 'session-1', display_name: 'Workshop Opener', has_lesson_plan: true
+
+lesson 'session-2', display_name: 'Context for Unit 7 Lesson Exploration', has_lesson_plan: true
+
+lesson 'session-3', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-4', display_name: 'Lesson exploration  U7L1   Parameters and return explore', has_lesson_plan: true
+
+lesson 'session-5', display_name: 'Lesson exploration  U7L3 4   Parameters and Return Practice and Make', has_lesson_plan: true
+
+lesson 'session-6', display_name: 'Lunch', has_lesson_plan: true
+
+lesson 'session-7', display_name: 'Unit 7 Conclusions and Connections', has_lesson_plan: true
+
+lesson 'session-8', display_name: 'Break', has_lesson_plan: true
+
+lesson 'session-9', display_name: 'Introduction to the Create Performance Task', has_lesson_plan: true
+
+lesson 'session-10', display_name: 'Planning for the Create Performance Task', has_lesson_plan: true
+
+lesson 'session-11', display_name: 'Wrap Up', has_lesson_plan: true
+

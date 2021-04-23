@@ -12,7 +12,9 @@
     "csp-virtual-m8-2020"
   ],
   "properties": {
-    "has_numbered_units": true
+    "has_numbered_units": true,
+    "version_year": "2020",
+    "family_name": "pl-csp-academic-virtual"
   },
   "resources": [
 

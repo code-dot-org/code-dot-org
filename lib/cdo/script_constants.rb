@@ -302,6 +302,10 @@ module ScriptConstants
     CSP_CREATE = 'csp-create'.freeze,
     CSP_EXPLORE = 'csp-explore'.freeze,
 
+    # CSP PL
+    PL_CSP_SUMMER = 'pl-csp-summer-in-person'.freeze,
+    PL_CSP_SUMMER_VIRTUAL = 'pl-csp-summer-virtual'.freeze,
+
     # CSD
     CSD1 = "csd1".freeze,
     CSD2 = "csd2".freeze,

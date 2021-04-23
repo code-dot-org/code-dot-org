@@ -1,0 +1,20 @@
+{
+  "name": "csp-academic-2020",
+  "script_names": [
+    "csp-academic-w1-2020",
+    "csp-academic-w2-2020",
+    "csp-academic-w3-2020",
+    "csp-academic-w4-2020"
+  ],
+  "properties": {
+    "has_numbered_units": true,
+    "version_year": "2020",
+    "family_name": "pl-csp-academic-in-person"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
