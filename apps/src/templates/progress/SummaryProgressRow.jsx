@@ -126,7 +126,9 @@ class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col1,
-            ...((hiddenForStudents || isLockedForUser) && styles.fadedCol)
+            ...(((hiddenForStudents && !viewAs === ViewType.Teacher) ||
+              isLockedForUser) &&
+              styles.fadedCol)
           }}
         >
           <div style={styles.colText}>
@@ -174,7 +176,9 @@ class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col2,
-            ...((hiddenForStudents || isLockedForUser) && styles.fadedCol)
+            ...(((hiddenForStudents && !viewAs === ViewType.Teacher) ||
+              isLockedForUser) &&
+              styles.fadedCol)
           }}
         >
           {levels.length === 0 ? (
