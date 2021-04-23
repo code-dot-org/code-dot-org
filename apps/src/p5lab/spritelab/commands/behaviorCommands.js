@@ -14,10 +14,18 @@ export const commands = {
   draggableFunc(p5Inst) {
     return spriteArg => {
       let sprite = coreLibrary.getSpriteArray(spriteArg)[0];
-      if (p5Inst.mousePressedOver(sprite) && !sprite.dragging) {
-        sprite.dragging = true;
-        sprite.xOffset = sprite.x - p5Inst.World.mouseX;
-        sprite.yOffset = sprite.y - p5Inst.World.mouseY;
+      const allSprites = coreLibrary.getSpriteArray({costume: 'all'});
+      if (p5Inst.mousePressedOver(sprite) && p5Inst.mouseWentDown()) {
+        const topOtherSprite = Math.max(
+          ...allSprites
+            .filter(s => s !== sprite && p5Inst.mousePressedOver(s))
+            .map(s => s.depth)
+        );
+        if (sprite.depth > topOtherSprite) {
+          sprite.dragging = true;
+          sprite.xOffset = sprite.x - p5Inst.World.mouseX;
+          sprite.yOffset = sprite.y - p5Inst.World.mouseY;
+        }
       }
       if (sprite.dragging) {
         sprite.x = p5Inst.World.mouseX + sprite.xOffset;
