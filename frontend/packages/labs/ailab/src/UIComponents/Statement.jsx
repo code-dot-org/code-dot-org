@@ -7,38 +7,32 @@ import { styles } from "../constants";
 class Statement extends Component {
   static propTypes = {
     shouldShow: PropTypes.bool,
+    smallFont: PropTypes.bool,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array
   };
 
   render() {
-    const {
-      shouldShow,
-      labelColumn,
-      selectedFeatures
-    } = this.props;
+    const { shouldShow, smallFont, labelColumn, selectedFeatures } = this.props;
 
     if (!shouldShow) {
       return null;
     }
 
     return (
-      <div style={styles.statement} id="statement">
+      <div
+        style={smallFont ? styles.statementSmall : styles.statement}
+        id="statement"
+      >
         Predict{" "}
-        <span style={styles.statementLabel}>
-          {labelColumn || "..."}
-        </span>
+        <span style={styles.statementLabel}>{labelColumn || "..."}</span>
         <span>
           {" "}
           based on{" "}
           <span style={styles.statementFeature}>
-            {selectedFeatures.length > 0
-              ? selectedFeatures.join(", ")
-              : "..."}
+            {selectedFeatures.length > 0 ? selectedFeatures.join(", ") : "..."}
           </span>
-          {selectedFeatures.length > 0 && (
-            "."
-          )}
+          {selectedFeatures.length > 0 && "."}
         </span>
       </div>
     );
@@ -47,10 +41,8 @@ class Statement extends Component {
 
 export const UnconnectedStatement = Statement;
 
-export default connect(
-  state => ({
-    shouldShow: state.data.length !== 0,
-    labelColumn: state.labelColumn,
-    selectedFeatures: state.selectedFeatures
-  })
-)(Statement);
+export default connect(state => ({
+  shouldShow: state.data.length !== 0,
+  labelColumn: state.labelColumn,
+  selectedFeatures: state.selectedFeatures
+}))(Statement);

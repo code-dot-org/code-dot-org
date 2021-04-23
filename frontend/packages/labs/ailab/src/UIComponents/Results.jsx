@@ -29,22 +29,41 @@ class Results extends Component {
   };
 
   render() {
+    const { historicResults } = this.props;
+
     return (
       <div id="results" style={styles.panel}>
-        {this.props.historicResults.map(historicResult => {
-          return (
-            <div>
-              <div style={{float: "left", width: "80%"}}>
-                <UnconnectedStatement
-                  shouldShow={true}
-                  labelColumn={historicResult.label}
-                  selectedFeatures={historicResult.features}
-                />
-              </div>
-              <div style={{float: "left", fontSize: 32}}>{historicResult.accuracy}%</div>
-            </div>
-          );
-        })}
+        <div style={styles.scrollableContents}>
+          <div style={styles.scrollingContents}>
+            {historicResults.map((historicResult, index) => {
+              return (
+                <div key={index}>
+                  <div style={{ float: "left", width: "80%" }}>
+                    <UnconnectedStatement
+                      shouldShow={true}
+                      smallFont={true}
+                      labelColumn={historicResult.label}
+                      selectedFeatures={historicResult.features}
+                    />
+                  </div>
+                  <div style={{ float: "left", fontSize: 18 }}>
+                    {historicResult.accuracy}%
+                  </div>
+                  {index === 0 && historicResults.length > 1 && (
+                    <div
+                      style={{
+                        ...styles.resultsPreviousHeading,
+                        ...styles.italic
+                      }}
+                    >
+                      Previous results
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     );
   }

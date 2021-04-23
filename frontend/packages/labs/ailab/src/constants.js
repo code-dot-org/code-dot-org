@@ -218,7 +218,7 @@ export const styles = {
     fontSize: 13.33,
     padding: "2px 6px",
     margin: 0,
-    border: "none",
+    border: "none"
   },
 
   specifyColumnsItem: {
@@ -329,6 +329,8 @@ export const styles = {
     backgroundColor: "rgba(255,100,100, 1)"
   },
 
+  resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
+
   resultsTableFirstHeader: {
     top: 0,
     backgroundColor: "white",
@@ -371,6 +373,11 @@ export const styles = {
   statement: {
     fontSize: 32,
     paddingBottom: 15
+  },
+
+  statementSmall: {
+    fontSize: 18,
+    paddingBottom: 6
   },
 
   statementLabel: {

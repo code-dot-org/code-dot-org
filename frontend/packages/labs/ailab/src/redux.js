@@ -533,12 +533,12 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       historicResults: [
-        ...state.historicResults,
         {
           label: action.label,
           features: action.features,
           accuracy: action.accuracy
-        }
+        },
+        ...state.historicResults
       ]
     };
   }
@@ -1108,6 +1108,20 @@ function isPanelAvailable(state, panelId) {
   return true;
 }
 
+function isAccuracyAcceptable(state) {
+  const mode = state.mode;
+
+  if (
+    mode &&
+    mode.requireAccuracy &&
+    mode.requireAccuracy > state.historicResults[0].accuracy
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
 // Given the current panel, return the appropriate previous & next buttons.
 export function getPanelButtons(state) {
   let prev, next;
@@ -1147,9 +1161,11 @@ export function getPanelButtons(state) {
     }
   } else if (state.currentPanel === "results") {
     prev = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Back" }
+      ? { panel: "dataDisplayFeatures", text: "Try again" }
       : null;
-    next = isPanelAvailable(state, "saveModel")
+    next = !isAccuracyAcceptable(state)
+      ? null
+      : isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
