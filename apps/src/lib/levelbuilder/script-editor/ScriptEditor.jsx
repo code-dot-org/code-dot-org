@@ -66,6 +66,7 @@ class ScriptEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialHidden: PropTypes.bool,
     initialIsStable: PropTypes.bool,
+    initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
     initialStudentDetailProgressView: PropTypes.bool,
@@ -165,7 +166,8 @@ class ScriptEditor extends React.Component {
       teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
-      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      deprecated: this.props.initialDeprecated
     };
   }
 
@@ -275,6 +277,7 @@ class ScriptEditor extends React.Component {
       announcements: JSON.stringify(this.state.announcements),
       visible_to_teachers: !this.state.hidden,
       is_stable: this.state.isStable,
+      deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
@@ -708,6 +711,24 @@ class ScriptEditor extends React.Component {
                     If checked, this unit will be eligible to be the recommended
                     version of the unit. The most recent eligible version will
                     be the recommended version.
+                  </p>
+                </HelpTip>
+              </label>
+              <label>
+                Deprecated
+                <input
+                  type="checkbox"
+                  checked={this.state.deprecated}
+                  style={styles.checkbox}
+                  onChange={() =>
+                    this.setState({deprecated: !this.state.deprecated})
+                  }
+                />
+                <HelpTip>
+                  <p>
+                    Used only for Professional Learning Courses. Deprecation
+                    prevents Peer Reviews conducted as part of this Script from
+                    being displayed in the admin-only Peer Review Dashboard.
                   </p>
                 </HelpTip>
               </label>

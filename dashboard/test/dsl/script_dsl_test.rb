@@ -34,6 +34,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     project_sharing: nil,
     curriculum_umbrella: nil,
     tts: false,
+    deprecated: false,
     is_course: false,
     background: nil,
     is_migrated: false
@@ -388,6 +389,19 @@ endvariants
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:tts]
+  end
+
+  test 'can set deprecated' do
+    input_dsl = <<~DSL
+      deprecated 'true'
+
+      lesson 'Lesson1', display_name: 'Lesson1'
+      level 'Level 1'
+      lesson 'Lesson2', display_name: 'Lesson2'
+      level 'Level 2'
+    DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:deprecated]
   end
 
   test 'can set teacher_resources' do
