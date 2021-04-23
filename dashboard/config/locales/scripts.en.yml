@@ -18908,6 +18908,8 @@ en:
               name: Haiku Bot
             End of Course Project:
               name: End of Course Project
+            Outbreaklab:
+              name: Outbreak Standalone Lab
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
