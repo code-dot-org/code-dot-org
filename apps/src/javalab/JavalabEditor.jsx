@@ -29,7 +29,7 @@ const style = {
     backgroundColor: color.dark_slate_gray
   },
   fileMenuToggleButton: {
-    margin: '0px 0px 0px 4px',
+    margin: '0, 0, 0, 4px',
     padding: 0,
     backgroundColor: 'transparent',
     border: 'none',
