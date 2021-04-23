@@ -45,7 +45,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.html(), null);
   });
 
-  it('renders with dashed border when viewing a hidden lesson as a teacher', () => {
+  it('renders with dashed border and not faded when viewing a hidden lesson as a teacher', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -55,9 +55,16 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
+    assert.equal(
+      wrapper
+        .find('div')
+        .at(1)
+        .props().style.opacity,
+      undefined
+    );
   });
 
-  it('renders with dashed border when locked for user', () => {
+  it('renders with dashed border and faded out when locked for user', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -68,9 +75,16 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
+    assert.equal(
+      wrapper
+        .find('div')
+        .at(1)
+        .props().style.opacity,
+      0.6
+    );
   });
 
-  it('renders with dashed border when locked for section', () => {
+  it('renders with dashed border and not faded out when locked for section', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -81,6 +95,13 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.props().style.background, color.lightest_gray);
     assert.equal(wrapper.props().style.borderWidth, 4);
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
+    assert.equal(
+      wrapper
+        .find('div')
+        .at(1)
+        .props().style.opacity,
+      undefined
+    );
   });
 
   it('disables bubbles when locked for user', () => {

@@ -206,7 +206,7 @@ class ProgressLesson extends React.Component {
         <div
           style={{
             ...styles.main,
-            ...(((hiddenForStudents && !viewAs === ViewType.Teacher) ||
+            ...(((hiddenForStudents && viewAs === ViewType.Student) ||
               isLockedForUser) &&
               styles.translucent)
           }}
