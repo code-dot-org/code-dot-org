@@ -31,6 +31,14 @@ class PeerReview < ApplicationRecord
   include LevelsHelper
   include Rails.application.routes.url_helpers
 
+  SYSTEM_DELETED_DATA = ''.freeze
+
+  enum status: {
+    accepted: 0,
+    rejected: 1,
+    escalated: 2
+  }
+
   belongs_to :submitter, class_name: 'User'
   belongs_to :reviewer, class_name: 'User'
   belongs_to :script
@@ -39,31 +47,24 @@ class PeerReview < ApplicationRecord
 
   validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
 
+  before_save :add_status_to_audit_trail, if: -> {reviewer_id? && (status_changed? || data_changed?)}
+  before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
+
+  after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
   after_update :mark_user_level, if: -> {saved_change_to_status? || saved_change_to_data?}
 
-  SYSTEM_DELETED_DATA = ''.freeze
-
-  before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
   def add_assignment_to_audit_trail
     message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
     append_audit_trail message
   end
 
-  before_save :add_status_to_audit_trail, if: -> {reviewer_id? && (status_changed? || data_changed?)}
   def add_status_to_audit_trail
     append_audit_trail "REVIEWED by user id #{reviewer_id} as #{status}"
   end
 
-  after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
   def send_review_completed_mail
     PeerReviewMailer.review_completed_receipt(self).deliver_now
   end
-
-  enum status: {
-    accepted: 0,
-    rejected: 1,
-    escalated: 2
-  }
 
   def user_level
     UserLevel.find_by!(user: submitter, level: level)
