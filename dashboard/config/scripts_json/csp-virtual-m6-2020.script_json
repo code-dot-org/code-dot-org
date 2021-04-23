@@ -1,0 +1,903 @@
+{
+  "script": {
+    "name": "csp-virtual-m6-2020",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "weekly_instructional_minutes": 90,
+      "show_calendar": true,
+      "include_student_lesson_plans": true,
+      "hideable_lessons": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-04-23 03:43:32 UTC",
+    "seeding_key": {
+      "script.name": "csp-virtual-m6-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Pre-Work"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "day-1",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "In Person Sessions"
+      },
+      "seeding_key": {
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Pre-Work",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Asynchronous pre-work for teachers to do before your virtual in person workshop for module 6.",
+        "student_overview": "Asynchronous pre-work to do before your virtual in person workshop for module 6."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "session-1",
+      "name": "Workshop Opener",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. ",
+        "preparation": "**Workshop Modality:**\r\n\r\n* Whole group\r\n* Breakout rooms\r\n\r\n \r\n**Facilitator Supplies:**\r\n\r\n* [r vpl-m6-slides]\r\n* Slide set-up: Add quotes from asynchronous work to the slides.\r\n\r\n**Teacher Materials:**\r\n\r\n* None\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "session-2",
+      "name": "Grading Example Create PTs",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "This is an opportunity for participants to be able to understand the big picture of grading the Create PT and use their experiences from the asynchronous work to inform their grading decisions.",
+        "preparation": "**Workshop Modality:**\r\n\r\n* Whole group\r\n* Breakout rooms\r\n\r\n \r\n**Facilitator Supplies:**\r\n\r\n* [r vpl-m6-slides]\r\n* Slide set-up: Make sure that the grids for grading projects are large enough for your group.  It is currently set up for 21 participants.\r\n\r\n**Teacher Materials:**\r\n\r\n* None\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "session-3",
+      "name": "Stretch Break",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "student_overview": "Stretch Break",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "session-4",
+      "name": "Supporting students in the Create PT",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "The purpose of this session is to give participants time to create a plan for supporting students before or during the Create PT. \r\n\r\nBy doing this in community with other computer science teachers, participants will be able to bounce ideas off one another during this session. \r\n",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n* Individual reflection\n* Breakout rooms\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m6-slides]\n* Slide-setup: Make sure you have enough slides for each participant to make their plan. There are currently 21 slides in there. \n\n**Teacher Materials:**\n\n* None\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "session-5",
+      "name": "Wrap Up",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Create space to respond to outstanding questions, wrap up the day, and allow for survey completion time.",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m6-slides]\n* Slide setup: Update the slides with information about the next call and how participants can get support during asynchronous work.\n\n**Teacher Materials:**\n\n* None\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-5",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "bfa5d15d-98d9-46f9-9973-89b492013c1f",
+      "position": 1,
+      "properties": {
+        "name": "Pre-Work",
+        "duration": 90
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bfa5d15d-98d9-46f9-9973-89b492013c1f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "3fd5f63f-db55-49a1-9cff-b86b1c4ad578",
+      "position": 1,
+      "properties": {
+        "name": "Workshop opening logistics",
+        "duration": 3
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fd5f63f-db55-49a1-9cff-b86b1c4ad578",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "037f4323-848a-4d8e-99f7-c78835e972d2",
+      "position": 2,
+      "properties": {
+        "name": " Connect to Asynchronous Work",
+        "duration": 12
+      },
+      "seeding_key": {
+        "lesson_activity.key": "037f4323-848a-4d8e-99f7-c78835e972d2",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "50d21fbb-34f3-4ed4-aa13-464cba45bd4f",
+      "position": 1,
+      "properties": {
+        "name": "Group scoring",
+        "duration": 25
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50d21fbb-34f3-4ed4-aa13-464cba45bd4f",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "9b4c5618-414b-4416-b63a-d5da423d8c31",
+      "position": 2,
+      "properties": {
+        "name": "Discussion",
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b4c5618-414b-4416-b63a-d5da423d8c31",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "de7c1a77-cd01-4244-9af2-d73f91427573",
+      "position": 1,
+      "properties": {
+        "name": "Encourage participants to move!",
+        "duration": 0
+      },
+      "seeding_key": {
+        "lesson_activity.key": "de7c1a77-cd01-4244-9af2-d73f91427573",
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "79023f0d-41f3-4762-a385-4d350579548e",
+      "position": 1,
+      "properties": {
+        "name": "Making your plan",
+        "duration": 12
+      },
+      "seeding_key": {
+        "lesson_activity.key": "79023f0d-41f3-4762-a385-4d350579548e",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "bef68983-63f2-4e25-bb39-e6d5b465df2f",
+      "position": 2,
+      "properties": {
+        "name": "Discussion",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bef68983-63f2-4e25-bb39-e6d5b465df2f",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "a99870a3-d7c9-404f-a483-eb441f8b56bd",
+      "position": 1,
+      "properties": {
+        "name": "Question parking lot and Asynchronous Work",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a99870a3-d7c9-404f-a483-eb441f8b56bd",
+        "lesson.key": "session-5",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    },
+    {
+      "key": "637058cb-7c47-4003-8852-cefd07f5c35b",
+      "position": 2,
+      "properties": {
+        "name": "Survey",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "637058cb-7c47-4003-8852-cefd07f5c35b",
+        "lesson.key": "session-5",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m6-2020"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a1105901-7994-48ba-b3be-5d1c5e94c8db",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 6 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1105901-7994-48ba-b3be-5d1c5e94c8db",
+        "lesson_activity.key": "bfa5d15d-98d9-46f9-9973-89b492013c1f"
+      }
+    },
+    {
+      "key": "9d536a88-2b9f-4851-862b-9c7b35da38b4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Requirements of the Create Performance Task (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d536a88-2b9f-4851-862b-9c7b35da38b4",
+        "lesson_activity.key": "bfa5d15d-98d9-46f9-9973-89b492013c1f"
+      }
+    },
+    {
+      "key": "de88fee4-08d7-4428-bb3b-0f5819d293d3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Digging into the Create PT Survival Guide (~40 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "de88fee4-08d7-4428-bb3b-0f5819d293d3",
+        "lesson_activity.key": "bfa5d15d-98d9-46f9-9973-89b492013c1f"
+      }
+    },
+    {
+      "key": "59925241-f247-4e95-90a9-099bbf421255",
+      "position": 4,
+      "properties": {
+        "progression_name": "Role of the teacher during the Create PT (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "59925241-f247-4e95-90a9-099bbf421255",
+        "lesson_activity.key": "bfa5d15d-98d9-46f9-9973-89b492013c1f"
+      }
+    },
+    {
+      "key": "a763432d-c632-4a7f-91d6-2d4076ad6ab4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a763432d-c632-4a7f-91d6-2d4076ad6ab4",
+        "lesson_activity.key": "bfa5d15d-98d9-46f9-9973-89b492013c1f"
+      }
+    },
+    {
+      "key": "a29b321e-383b-432d-a7dd-2c6df82cfa6a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As participants join the call, warmly welcome them to the workshop.  It is recommended that you have some sort of get-to-know you discussion starter that can trigger some conversation for you to fill the time as people join.  The one in the slide deck is currently: What is the best thing about the place you currently live?  You may decide to change this if something else feels top of mind.\n\nDuring this time you can also take care of some logistics such as :\n\n* Encouraging them to take attendance\n* Ensuring that they have the slide deck open for the workshop",
+        "name": "(0 minutes) As participants enter the room"
+      },
+      "seeding_key": {
+        "activity_section.key": "a29b321e-383b-432d-a7dd-2c6df82cfa6a",
+        "lesson_activity.key": "3fd5f63f-db55-49a1-9cff-b86b1c4ad578"
+      }
+    },
+    {
+      "key": "6b46844f-0bc3-4053-b9c4-8d140c86931f",
+      "position": 2,
+      "properties": {
+        "description": "Have everyone complete the attendance for the day on the online workshop dashboard found in your workshop.\n\nFollow the instructions found in your Facilitator Handbook to take attendance for your workshop.",
+        "name": "(2 minutes) Attendance"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b46844f-0bc3-4053-b9c4-8d140c86931f",
+        "lesson_activity.key": "3fd5f63f-db55-49a1-9cff-b86b1c4ad578"
+      }
+    },
+    {
+      "key": "56b62f7d-f59f-4c97-83cf-febdd8d689be",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk through the agenda of the day.  Participants should be aware that they will be gaining more experience with the Create Performance Task.",
+        "name": "(1 minute) Agenda overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "56b62f7d-f59f-4c97-83cf-febdd8d689be",
+        "lesson_activity.key": "3fd5f63f-db55-49a1-9cff-b86b1c4ad578"
+      }
+    },
+    {
+      "key": "241972ad-77b4-4371-8d08-447b376b5499",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Remind the group of the norms you set at the Summer Workshop or in the kick-off call.",
+        "name": "(2 minutes) Norms"
+      },
+      "seeding_key": {
+        "activity_section.key": "241972ad-77b4-4371-8d08-447b376b5499",
+        "lesson_activity.key": "3fd5f63f-db55-49a1-9cff-b86b1c4ad578"
+      }
+    },
+    {
+      "key": "d3a1fb5a-9171-4a60-b14f-934c3b6047ad",
+      "position": 1,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of 2 in breakout rooms.</strong></span>\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Remind participants of the work they did in the asynchronous work in this module.  This included:\n\n* Reviewing the directions and rubric for the Create Performance Task.\n* Engaging in activities from U8L2 and the Create PT Survival Guide about the requirements for a function in the Create PT.\n* Reviewing the actions teachers can and cannot take before and during the administration of the Create PT.\n\n**Facilitator to add: Pull out 1 or 2 quotes from the shared group reflections to summarize what participants did in the asynchronous work.** It is important to note that the \"public reflection prompt\" is more open-ended than prior prompts.  This is because we want a variety of reflections from the asynchronous work that describe the different aspects of the work.  For example, we want to highlight that some teachers found the role of the teacher to be more limiting than they expected and another teacher to highlight that they found the written response prompts to be vague.  For participants who did not do the asynchronous work, we want them to hear these thoughts and think \"Oh!  I should maybe go look at that...\".",
+        "name": "(3 minutes) Asynchronous work reminder"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3a1fb5a-9171-4a60-b14f-934c3b6047ad",
+        "lesson_activity.key": "037f4323-848a-4d8e-99f7-c78835e972d2"
+      }
+    },
+    {
+      "key": "26ca3043-3933-438d-a3ad-877be8ed894f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> (6 minutes) The rest of the workshop today will be focused on looking at the Create PT in more detail, but first we want to re-connect and talk in breakout groups about how things are currently going in your classroom. In these groups, you will discuss:\n\n* Think back to your 30-60-90 day plan you created in the last workshop to help recruit a group of students that represent your building as a whole.  How is that plan going?  \n* In the prior workshop we talked about creating an inclusive classroom.  Since that workshop, what have you tried and what was the outcome?\n \nIf you have questions that you’d like answered during this time, feel free to add it to our question parking lot slide.  We will do a short share-out after we get back to be prepared to share common themes from your discussion also”",
+        "remarks": true,
+        "name": "(9 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Re-connect "
+      },
+      "seeding_key": {
+        "activity_section.key": "26ca3043-3933-438d-a3ad-877be8ed894f",
+        "lesson_activity.key": "037f4323-848a-4d8e-99f7-c78835e972d2"
+      }
+    },
+    {
+      "key": "4d6e2fce-d1da-4f48-9d60-acdb6ed64b30",
+      "position": 3,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: Put participants in groups of 2 in breakout rooms for 5 minutes.</strong></span>\n\n*Facilitator note: As participants are in pairs, watch the question parking lot for questions that have short answers.  Feel free to put brief answers directly in the document during this time.  Additionally, there might be questions from the question parking lot that you want to use to structure your share out.*\n\n** <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share-out (3 minutes)**\n\nWhen participants return, ask participants to share any themes or concerns they want to bring to the larger group here.  If you run short on time, encourage participants to share their questions in the question parking lot."
+      },
+      "seeding_key": {
+        "activity_section.key": "4d6e2fce-d1da-4f48-9d60-acdb6ed64b30",
+        "lesson_activity.key": "037f4323-848a-4d8e-99f7-c78835e972d2"
+      }
+    },
+    {
+      "key": "ca45c4c7-bca0-49e2-8efd-13d4dab28e2e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In your asynchronous work you looked at the directions and rubric for the Create PT.  You also looked at key requirements of the task in more depth.  In this session, we are going to put it all together and look at the project and the rubric together and grade sample projects.",
+        "remarks": true,
+        "name": "(1 minute) Context "
+      },
+      "seeding_key": {
+        "activity_section.key": "ca45c4c7-bca0-49e2-8efd-13d4dab28e2e",
+        "lesson_activity.key": "50d21fbb-34f3-4ed4-aa13-464cba45bd4f"
+      }
+    },
+    {
+      "key": "bf643e4c-004f-40b9-90bb-a55821c14870",
+      "position": 2,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: PREPARE to put participants in groups of 3 in breakout rooms.</strong></span>\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have teachers work in breakout rooms to score Create PT Samples 1 and 2 found in [U8L1](https://curriculum.code.org/csp-20/unit8/1/). Participants should open up the video and the written response (WR). \n\nWhile scoring the samples, be sure to jot down:\n\n* The score for each row.\n* Why are you giving them the score?\n* What are they missing?\nAfter they are done scoring each sample, each group should add an X to the chart in the slides (also pictured below) if they gave the sample the point for a given row in the rubric.\n\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2020-09-30-at-9.33.24-AM.png)\n\n<span style=\"background-color:yellow;\"><strong> Producer support: Put participants in groups of 3 in breakout rooms for 5 minutes.</strong></span>",
+        "name": "(24 minutes) Group scoring "
+      },
+      "seeding_key": {
+        "activity_section.key": "bf643e4c-004f-40b9-90bb-a55821c14870",
+        "lesson_activity.key": "50d21fbb-34f3-4ed4-aa13-464cba45bd4f"
+      }
+    },
+    {
+      "key": "fb051e8e-050e-4743-9d64-468164df1d63",
+      "position": 1,
+      "properties": {
+        "description": "(4 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the chart described above to collect and record each table’s scoring for their samples. Cover the following questions during your discussion:\n\n* Do we all agree on scores? (Probably not)\n* Did we agree on what was present or missing?\n\n(10 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Give participants ~ 10 minutes to individually look at the “answers” to the task by reviewing the annotated samples linked in the [U8L1 lesson plan](https://curriculum.code.org/csp-20/unit8/1/). \n\n(5 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discussion\n\n* What insights do you have about how the rubric was applied?\n* What questions do you have about how the rubric was applied by the College Board?\n\n(1 minute) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Wrap-up\nHave participants write down 1-2 takeaways they will want to stress with students now that they have seen the task in its entirety.",
+        "name": "(20 minutes) Whole group share out and discussion "
+      },
+      "seeding_key": {
+        "activity_section.key": "fb051e8e-050e-4743-9d64-468164df1d63",
+        "lesson_activity.key": "9b4c5618-414b-4416-b63a-d5da423d8c31"
+      }
+    },
+    {
+      "key": "a53af281-b384-4b0a-a26d-13ca1329231c",
+      "position": 1,
+      "properties": {
+        "description": "Feel free to lead a movement break, but keep it short. If you are running short on time, you may also shorten or eliminate this section."
+      },
+      "seeding_key": {
+        "activity_section.key": "a53af281-b384-4b0a-a26d-13ca1329231c",
+        "lesson_activity.key": "de7c1a77-cd01-4244-9af2-d73f91427573"
+      }
+    },
+    {
+      "key": "1f401bf6-43ad-4de4-bfba-435365347b0a",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "For participants who are teaching a virtual or socially-distanced classroom, this is a good opportunity to take in those considerations into the planning process. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1f401bf6-43ad-4de4-bfba-435365347b0a",
+        "lesson_activity.key": "79023f0d-41f3-4762-a385-4d350579548e"
+      }
+    },
+    {
+      "key": "666e7efa-8d41-4430-9f1f-72a5b0476c93",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the slides to describe the resources included in Unit 8.  Include:\n\n* What work was done prior to Unit 8 to help students prepare.\n* U8L1 includes 3 examples for students to practice grading.\n* U8L2 includes the survival guide which has two parts.  The first part we did in this workshop, the second portion helps students choose a project that will meet the requirements set by the College Board.\n* The rest of the unit is dedicated for the 12 hours students are spent working on the Create PT.\n\t* It is important to note what the teacher is and is not able to do during the Create PT.  We are covering that next. \n \n<span style=\"background-color:yellow;\"><strong> Producer support: PREPARE to put participants in groups of 2 in breakout rooms.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "666e7efa-8d41-4430-9f1f-72a5b0476c93",
+        "lesson_activity.key": "79023f0d-41f3-4762-a385-4d350579548e"
+      }
+    },
+    {
+      "key": "1c2befdb-10a6-4e7e-94ad-11e8ea1616a6",
+      "position": 3,
+      "properties": {
+        "description": "The next 5 minutes are yours to INDIVIDUALLY make a plan for getting to the Create Task.  You can use the slides to organize your thinking. After 5 minutes you will go into partner groups to share your plan.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1c2befdb-10a6-4e7e-94ad-11e8ea1616a6",
+        "lesson_activity.key": "79023f0d-41f3-4762-a385-4d350579548e"
+      }
+    },
+    {
+      "key": "bf52159c-e379-422c-b853-6095abb03004",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do this:\n\n* Review any resources you would like to spend more time with such as:\n\t* Sample 3 in U8L1\n\t* Part 2 of the Create PT Survival Guide\n* Answer the following questions:\n\t* How will I use the existing projects in the curriculum to help prepare students for the Create PT?\n\t* How can I help students keep their projects within the scope of what is needed for the Create Task?\n\t* What other ways do I plan to support students prior to the Create PT?\n\n\nAfter 5 minutes, put participants in groups of 2 to share their thoughts\n \n<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of 2 in breakout rooms for 5 minutes.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf52159c-e379-422c-b853-6095abb03004",
+        "lesson_activity.key": "79023f0d-41f3-4762-a385-4d350579548e"
+      }
+    },
+    {
+      "key": "e2be2064-bec8-444d-ba2e-930a4242d60d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use this time to share plans in the room.  Use this time to also address questions that haven’t been answered at this point.",
+        "name": "(5 minutes) Share out"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2be2064-bec8-444d-ba2e-930a4242d60d",
+        "lesson_activity.key": "bef68983-63f2-4e25-bb39-e6d5b465df2f"
+      }
+    },
+    {
+      "key": "3d942e6a-bae2-47f2-af5d-a75d14e64156",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use this time to address outstanding question parking lot issues. Don't hesitate to give items from the parking lot back out to the group to answer.",
+        "name": "(2 minutes) Clear the Question Parking Lot "
+      },
+      "seeding_key": {
+        "activity_section.key": "3d942e6a-bae2-47f2-af5d-a75d14e64156",
+        "lesson_activity.key": "a99870a3-d7c9-404f-a483-eb441f8b56bd"
+      }
+    },
+    {
+      "key": "adc56fd4-ef4e-4b0a-9576-fdf0e332066d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the slides to guide your overview of asynchronous work for the next module.  This should include:\n\n* What participants will be asked to do\n* Why it will be helpful for their teaching practice\n* How we will build upon it in our next call\n \nIn this case, participants will be asked to: \n\n* Learn about the big picture context for lessons in Unit 9.\n* Use tools from specific Unit 9 lessons to understand the content.\n* Explore the end of unit project for Unit 9.\n \nRemind participants of the best way to get support during the asynchronous work. \n\nFinally remind participants of when their next call is.",
+        "name": "(3 minutes) Review Asynchronous work "
+      },
+      "seeding_key": {
+        "activity_section.key": "adc56fd4-ef4e-4b0a-9576-fdf0e332066d",
+        "lesson_activity.key": "a99870a3-d7c9-404f-a483-eb441f8b56bd"
+      }
+    },
+    {
+      "key": "c100be13-94cb-4aa0-a317-fcfdea9733c7",
+      "position": 1,
+      "properties": {
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If you are facilitating one module today:\n\t* Show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave.  \n\t* During the closing session of the even-numbered modules (M2, M4, M6, M8) CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview). If you are only facilitating an odd-numbered module today (M1, M3, M5,or M7) DO NOT CLOSE THE WORKSHOP.  \n\n\n* If you are facilitating two modules today:\n\t* During the closing session of the second module (M2, M4, M6, M8), show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave. On the [workshop dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) find your workshop and CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview). \n\n\n<hr>\n\n#### Having trouble with the survey?\nIf your participants get an error message when you share the survey link, please follow these steps:\n\n1. Don’t worry!  This is likely an issue with how the workshop was scheduled in the dashboard.\n2. Ask your participants to take a few minutes to share their \"gots and needs\" in the chat. This will allow you to receive quick feedback to inform your post-workshop debrief.\n3. Let participants know the survey will be coming via email within a few days, and send participants \"home\" for the day.\n4. Contact your Regional Partner to let them know the survey link didn’t work, and ask the Regional Partner to follow-up with Code.org on the next business day.\n5. Code.org will work with Regional Partner to send the survey link to teachers.",
+        "name": "(5 minutes) Complete the survey "
+      },
+      "seeding_key": {
+        "activity_section.key": "c100be13-94cb-4aa0-a317-fcfdea9733c7",
+        "lesson_activity.key": "637058cb-7c47-4003-8852-cefd07f5c35b"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 6 overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL Module 6 - Workshop Overview"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL Module 6 - Workshop Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "a1105901-7994-48ba-b3be-5d1c5e94c8db"
+      },
+      "level_keys": [
+        "CSP-PL Module 6 - Workshop Overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Requirements of the Create Performance Task (~20 minutes)",
+        "level_keys": [
+          "CSP-PL M6 - Create PT Reqs"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M6 - Create PT Reqs"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "9d536a88-2b9f-4851-862b-9c7b35da38b4"
+      },
+      "level_keys": [
+        "CSP-PL M6 - Create PT Reqs"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Digging into the Create PT Survival Guide (~40 minutes)",
+        "level_keys": [
+          "CSP-PL M6 - Survival Guide"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M6 - Survival Guide"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "de88fee4-08d7-4428-bb3b-0f5819d293d3"
+      },
+      "level_keys": [
+        "CSP-PL M6 - Survival Guide"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Role of the teacher during the Create PT (~15 minutes)",
+        "level_keys": [
+          "CSP-PL M6 - Role of teacher"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M6 - Role of teacher"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "59925241-f247-4e95-90a9-099bbf421255"
+      },
+      "level_keys": [
+        "CSP-PL M6 - Role of teacher"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 6 Asynchronous Wrap-Up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 6 Wrap Up"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 6 Wrap Up"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "a763432d-c632-4a7f-91d6-2d4076ad6ab4"
+      },
+      "level_keys": [
+        "CSP - Module 6 Wrap Up"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL Module 6 - Workshop Overview",
+        "script_level.level_keys": [
+          "CSP-PL Module 6 - Workshop Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "a1105901-7994-48ba-b3be-5d1c5e94c8db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M6 - Create PT Reqs",
+        "script_level.level_keys": [
+          "CSP-PL M6 - Create PT Reqs"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "9d536a88-2b9f-4851-862b-9c7b35da38b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M6 - Survival Guide",
+        "script_level.level_keys": [
+          "CSP-PL M6 - Survival Guide"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "de88fee4-08d7-4428-bb3b-0f5819d293d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M6 - Role of teacher",
+        "script_level.level_keys": [
+          "CSP-PL M6 - Role of teacher"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "59925241-f247-4e95-90a9-099bbf421255"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 6 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 6 Wrap Up"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m6-2020",
+        "activity_section.key": "a763432d-c632-4a7f-91d6-2d4076ad6ab4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "94753b1f-0cba-44b4-9d44-cf9bb9a7f0c0",
+      "properties": {
+        "description": "Participants can clear up misconceptions or questions from asynchronous work."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "94753b1f-0cba-44b4-9d44-cf9bb9a7f0c0"
+      }
+    },
+    {
+      "key": "20bef443-29d1-4a0d-86ca-1758ef972b5b",
+      "properties": {
+        "description": "Participants build community through discussions about their own local contexts."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "20bef443-29d1-4a0d-86ca-1758ef972b5b"
+      }
+    },
+    {
+      "key": "ac145f9f-95a6-4be2-a796-a45a55bfd1f3",
+      "properties": {
+        "description": "Participants understand how to support students in picking a project and identifying an function that meets the Create PT requirements."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "ac145f9f-95a6-4be2-a796-a45a55bfd1f3"
+      }
+    },
+    {
+      "key": "bd3b06cd-4e35-4c18-80be-307ed8ef8a5d",
+      "properties": {
+        "description": "Participants understand how the rubric will be applied to the Create PT."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "bd3b06cd-4e35-4c18-80be-307ed8ef8a5d"
+      }
+    },
+    {
+      "key": "435e0f26-ba39-4e2b-aa75-7672b094beb8",
+      "properties": {
+        "description": "Participants understand what is needed to successfully complete the Create PT."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "435e0f26-ba39-4e2b-aa75-7672b094beb8"
+      }
+    },
+    {
+      "key": "eac0e895-a309-4eec-ba24-23c006b28572",
+      "properties": {
+        "description": "Participants understand how to support students in picking a project and identifying a function that meets the Create PT requirements. "
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "eac0e895-a309-4eec-ba24-23c006b28572"
+      }
+    },
+    {
+      "key": "345b6edd-5e39-469c-8e5b-88dccd70a3f7",
+      "properties": {
+        "description": "Remaining parking lot or needs questions have been addressed."
+      },
+      "seeding_key": {
+        "lesson.key": "session-5",
+        "objective.key": "345b6edd-5e39-469c-8e5b-88dccd70a3f7"
+      }
+    },
+    {
+      "key": "1f8302f8-4fa7-467b-a3bb-99ad19b4a634",
+      "properties": {
+        "description": "Participants know what to expect for the next set of asynchronous work."
+      },
+      "seeding_key": {
+        "lesson.key": "session-5",
+        "objective.key": "1f8302f8-4fa7-467b-a3bb-99ad19b4a634"
+      }
+    },
+    {
+      "key": "eb040abf-48bd-4233-9c2e-b3516e82aa3a",
+      "properties": {
+        "description": "Participants have taken the survey."
+      },
+      "seeding_key": {
+        "lesson.key": "session-5",
+        "objective.key": "eb040abf-48bd-4233-9c2e-b3516e82aa3a"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

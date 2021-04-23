@@ -1,0 +1,34 @@
+hideable_lessons true
+student_detail_progress_view true
+is_migrated true
+
+lesson_group 'lessonGroup-2', display_name: 'Asynchronous Pre-Work'
+lesson 'lesson-1', display_name: 'Pre-Work', has_lesson_plan: true
+level 'CSP-PL AYWS2 Workshop Overview', progression: 'Module 2 Overview (~5 minutes)'
+level 'CSP - Variables Practice overview', progression: 'Variables Practice (~35 minutes)'
+level 'CSP-PL - U4 L03 Variables numbers practice 1', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables numbers practice 4', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 1', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 3', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 2', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - U4 L03 Variables operator practice 5', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL8 - U4 L03 Variables operator practice 6', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL9 - U4 L03 Variable Scope: Local vs. Global', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - PL - Practice Reflection', progression: 'Variables Practice (~35 minutes)'
+level 'CSP - Variables Make overview', progression: 'Variables Make (~30 minutes)'
+level 'CSP - PL U4 L04 Variables Make Project_2020', progression: 'Variables Make (~30 minutes)'
+level 'CSP - PL - U4 L04 Variables Make Project Submit_2020', progression: 'Variables Make (~30 minutes)'
+level 'CSP - PL - Make Reflection', progression: 'Variables Make (~30 minutes)'
+level 'CSP-PL - Unit 4 Wrap-up', progression: 'Collaborative and Independent Work (~10 minutes)'
+level 'CSP - PL - Collaboration Reflection', progression: 'Collaborative and Independent Work (~10 minutes)'
+level 'CSP - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~10 minutes)'
+
+lesson_group 'in-person', display_name: 'In Person Sessions'
+lesson 'session-1', display_name: 'Workshop Opener', has_lesson_plan: true
+
+lesson 'session-2', display_name: 'Independent and Collaborative work in Unit 4', has_lesson_plan: true
+
+lesson 'session-3', display_name: 'Zooming out  EIPM and the Big Picture', has_lesson_plan: true
+
+lesson 'session-4', display_name: 'Wrap Up', has_lesson_plan: true
+

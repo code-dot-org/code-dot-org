@@ -1,0 +1,1105 @@
+{
+  "script": {
+    "name": "csp-virtual-m7-2020",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "weekly_instructional_minutes": 90,
+      "show_calendar": true,
+      "include_student_lesson_plans": true,
+      "hideable_lessons": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-04-23 03:43:50 UTC",
+    "seeding_key": {
+      "script.name": "csp-virtual-m7-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Pre-Work"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "day-1",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "In Person Sessions"
+      },
+      "seeding_key": {
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Pre-Work",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Asynchronous pre-work for teachers to do before your virtual in person workshop for module 7.",
+        "student_overview": "Asynchronous pre-work to do before your virtual in person workshop for module 7."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "session-1",
+      "name": "Workshop Opener",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. ",
+        "preparation": "**Workshop Modality:**\r\n\r\n* Whole group\r\n* Breakout rooms\r\n\r\n \r\n**Facilitator Supplies:**\r\n\r\n* [r vpl-m7-slides]\r\n* Slide setup: \r\n\t* Add quotes from asynchronous work to the slides.\r\n\t* Look at asynchronous work and pull out common misconceptions or questions you saw surfaced in the shared group reflections\r\n\r\n**Teacher Materials:**\r\n\r\n* None\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "session-2",
+      "name": "Context for Unit 10",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "While most of our time today is spent talking about the simulation, it is important for participants to see that there are intermediate lessons between simulation lessons.  This time is designated for some of that conversation.",
+        "preparation": "**Workshop Modality:**\r\n\r\n* Whole group\r\n\r\n \r\n**Facilitator Supplies:**\r\n\r\n* [r vpl-m7-slides]\r\n\r\n**Teacher Materials:**\r\n\r\n* None\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "session-3",
+      "name": "Unit 10 Project Run through ",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Similar to Unit 3, Unit 10 has a long project that runs through the course of the unit.   For teachers who plan only one lesson at a time, this project can be difficult to understand since it is not intended to take one class period.  Also, Unit 10 includes important themes and skills that we want students to know to be an informed citizen in the digital world.  At times, teachers find these units as “less essential” because they are not directly building students’ programming skills, but in reality, it is these units that we see as building essential and enduring skills regardless of what passions students decide to pursue next.  ",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n* Breakout rooms\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m7-slides]\n* Slide set-up: Fill out the names of the characters each person will play.  Note, we have 16 spots in the chart, but you can duplicate the slide if needed to add more participants.  It is OK for two people to have the same role, just put them in different groups when directed to in the agenda.\n\n**Teacher Materials:**\n\n* [Character bios](https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/)\n* [Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/)",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "session-4",
+      "name": "Wrap Up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Create space to respond to outstanding questions, wrap up the day, and allow for survey completion time.",
+        "preparation": "**Workshop Modality:**\r\n\r\n* Whole group\r\n\r\n \r\n**Facilitator Supplies:**\r\n\r\n* [r vpl-m7-slides]\r\n\t* Slide set-up: Update the slides with information about the next call and how participants can get support during asynchronous work. \r\n* [r vpl-m8-slides]\r\n\t* Slide set-up: Have Module 8 slides set-up for participants to engage with. \r\n\r\n\r\n**Teacher Materials:**\r\n\r\n* None\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "6ccf3b37-b107-4e95-adf2-93bad559f66b",
+      "position": 1,
+      "properties": {
+        "name": "Pre-Work",
+        "duration": 90
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ccf3b37-b107-4e95-adf2-93bad559f66b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "47f1a3bb-1670-422a-8d97-00fd2fa0a141",
+      "position": 1,
+      "properties": {
+        "name": "Workshop opening logistics",
+        "duration": 3
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47f1a3bb-1670-422a-8d97-00fd2fa0a141",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "e66232ce-80b1-4ac1-be0b-a82f3d1d0ea3",
+      "position": 2,
+      "properties": {
+        "name": "Connect to asynchronous work",
+        "duration": 12
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e66232ce-80b1-4ac1-be0b-a82f3d1d0ea3",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "f4855532-cf78-4538-b8a4-9b5f0c13a7b5",
+      "position": 1,
+      "properties": {
+        "name": "Context",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4855532-cf78-4538-b8a4-9b5f0c13a7b5",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a",
+      "position": 1,
+      "properties": {
+        "name": "Do the simulation, but at warp-speed... ",
+        "duration": 43
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a",
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "a69e674e-ce33-428f-afc2-bb860d8d6c9c",
+      "position": 2,
+      "properties": {
+        "name": "Reflection and discussion",
+        "duration": 17
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a69e674e-ce33-428f-afc2-bb860d8d6c9c",
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "6c144926-9c59-4545-921e-3aa9c596aaef",
+      "position": 1,
+      "properties": {
+        "name": "Parking Lot and Asynchronous Work",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c144926-9c59-4545-921e-3aa9c596aaef",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    },
+    {
+      "key": "450405e9-d982-4a0a-a042-a851faa79935",
+      "position": 2,
+      "properties": {
+        "name": "Survey",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "450405e9-d982-4a0a-a042-a851faa79935",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m7-2020"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b8233dc4-8fa0-4308-aa90-c78f7eabeda7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 7 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8233dc4-8fa0-4308-aa90-c78f7eabeda7",
+        "lesson_activity.key": "6ccf3b37-b107-4e95-adf2-93bad559f66b"
+      }
+    },
+    {
+      "key": "95b29fdc-af74-4550-b5a2-45030fe2a0bc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview of Unit 9 - Data (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "95b29fdc-af74-4550-b5a2-45030fe2a0bc",
+        "lesson_activity.key": "6ccf3b37-b107-4e95-adf2-93bad559f66b"
+      }
+    },
+    {
+      "key": "77abd74e-0205-4a3e-bcfc-64b59322afd6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using the Google Trends tool (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "77abd74e-0205-4a3e-bcfc-64b59322afd6",
+        "lesson_activity.key": "6ccf3b37-b107-4e95-adf2-93bad559f66b"
+      }
+    },
+    {
+      "key": "ad801692-1677-42f2-a892-463a3fbd8a53",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using the Data Visualizer tool (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53",
+        "lesson_activity.key": "6ccf3b37-b107-4e95-adf2-93bad559f66b"
+      }
+    },
+    {
+      "key": "621734be-e1c7-4730-8e15-34ee187d30a8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Module 7 asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "621734be-e1c7-4730-8e15-34ee187d30a8",
+        "lesson_activity.key": "6ccf3b37-b107-4e95-adf2-93bad559f66b"
+      }
+    },
+    {
+      "key": "36ea2ca4-75d1-4111-8975-ff2d8c5dd6a2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As participants join the call, warmly welcome them to the workshop.  It is recommended that you have some sort of get-to-know you discussion starter that can trigger some conversation for you to fill the time as people join.  The one in the slide deck is currently: When you were a child, what did you want to be when you grew up? You may decide to change this if something else feels top of mind.\n\nDuring this time you can also take care of some logistics such as:\n\n* Encourage them to take attendance\n* Ensuring that they have the slide deck open for the workshop",
+        "name": "(0 minutes) As participants enter the room"
+      },
+      "seeding_key": {
+        "activity_section.key": "36ea2ca4-75d1-4111-8975-ff2d8c5dd6a2",
+        "lesson_activity.key": "47f1a3bb-1670-422a-8d97-00fd2fa0a141"
+      }
+    },
+    {
+      "key": "d7a7508c-e6ca-4651-aa11-1060ddbaef66",
+      "position": 2,
+      "properties": {
+        "description": "Have everyone complete the attendance for the day on the online workshop dashboard found in your workshop.\n\nFollow the instructions found in your Facilitator Handbook to take attendance for your workshop.",
+        "name": "(1 minute) Attendance"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7a7508c-e6ca-4651-aa11-1060ddbaef66",
+        "lesson_activity.key": "47f1a3bb-1670-422a-8d97-00fd2fa0a141"
+      }
+    },
+    {
+      "key": "5751f93d-0ae8-42da-abcf-e9eda8cb02b8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk through the agenda of the day.  Participants should be aware that they will be gaining more experience with Unit 10 for most of the workshop.  However, before we talk about Unit 10, we want to wrap-up Unit 9.",
+        "name": "(1 minute) Agenda Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5751f93d-0ae8-42da-abcf-e9eda8cb02b8",
+        "lesson_activity.key": "47f1a3bb-1670-422a-8d97-00fd2fa0a141"
+      }
+    },
+    {
+      "key": "2fdf6dea-883d-4379-b288-8785c26b851a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Remind the group of the norms you set at the Summer Workshop or in the kick-off call.",
+        "name": "(1 minute) Norms"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fdf6dea-883d-4379-b288-8785c26b851a",
+        "lesson_activity.key": "47f1a3bb-1670-422a-8d97-00fd2fa0a141"
+      }
+    },
+    {
+      "key": "d89651e1-2ecf-4d49-a3d1-c76ff3c50c64",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Remind participants of the work they did in the asynchronous work in this module.  This included:\n\n* Reviewing the Unit 9 - Data landing page.\n* Using the Data Visualization tool to create histograms and cross tab charts. \n* Reviewing how students would use the Data Analysis Process in the Unit 9 project. \n\n**Facilitator to add:** Pull out 1 or 2 quotes from the shared group reflections to summarize what participants heard.  The question participants were asked to answer in the asynchronous work was: “Who we are and our experiences with the world can shape how we interpret data. How do your experiences influence how you will approach teaching this unit?”\n\nPulling direct quotes from the asynchronous work is intended to:\n\n* Reassure participants who did the asynchronous work that the asynchronous work is important to their own learning and the learning of the community.\n* Support participants who did not do the asynchronous work by giving them insight to where the rest of the group is.\n\nThank participants for sharing all of their reflections and then connect this to the next portion of the session which is thinking about how students’ experiences will influence their work in Unit 9. \n\n<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of two in breakout rooms.</strong></span>",
+        "name": "(3 minutes) Asynchronous work reminder"
+      },
+      "seeding_key": {
+        "activity_section.key": "d89651e1-2ecf-4d49-a3d1-c76ff3c50c64",
+        "lesson_activity.key": "e66232ce-80b1-4ac1-be0b-a82f3d1d0ea3"
+      }
+    },
+    {
+      "key": "5b1e799b-d96d-476f-97d9-30150ddf5340",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In a minute, you will be put into pairs to talk about your experiences.  You will have 5 minutes in these groups before coming back to share out.  In these groups, you will discuss:\n\n* How will your students’ experiences influence how they might tell data stories in Unit 9 - Data?\nIf you have questions that you’d like answered during this time, feel free to add it to our question parking lot slide.  We will do a short share-out after we get back so be prepared to also share common themes from your discussion.”",
+        "remarks": true,
+        "name": "(9 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Re-connect "
+      },
+      "seeding_key": {
+        "activity_section.key": "5b1e799b-d96d-476f-97d9-30150ddf5340",
+        "lesson_activity.key": "e66232ce-80b1-4ac1-be0b-a82f3d1d0ea3"
+      }
+    },
+    {
+      "key": "c7da108b-c6bd-454a-ba8a-b33e6454b744",
+      "position": 3,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPut participants in groups of two in breakout rooms for five minutes.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7da108b-c6bd-454a-ba8a-b33e6454b744",
+        "lesson_activity.key": "e66232ce-80b1-4ac1-be0b-a82f3d1d0ea3"
+      }
+    },
+    {
+      "key": "bb57bca8-f9ff-47f7-a0d0-f522d4917483",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "As participants are in pairs, watch the question parking lot for questions that have short answers.  Feel free to put brief answers directly in the document during this time.  Additionally, there might be questions from the question parking lot that you want to use to structure your share out.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb57bca8-f9ff-47f7-a0d0-f522d4917483",
+        "lesson_activity.key": "e66232ce-80b1-4ac1-be0b-a82f3d1d0ea3"
+      }
+    },
+    {
+      "key": "23f37d24-4b59-4a37-9d19-d8046fe9881f",
+      "position": 5,
+      "properties": {
+        "description": "(3 minutes) When participants return, ask participants to share any themes or concerns they want to bring to the larger group here.  If you run short on time, encourage participants to share their questions in the question parking lot."
+      },
+      "seeding_key": {
+        "activity_section.key": "23f37d24-4b59-4a37-9d19-d8046fe9881f",
+        "lesson_activity.key": "e66232ce-80b1-4ac1-be0b-a82f3d1d0ea3"
+      }
+    },
+    {
+      "key": "fb603335-5169-4363-83e8-7a224d9a7791",
+      "position": 1,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nDuring this time, fill out the slide titled “Roles for the simulation” with your participants’ names next to the character names already listed.\nRemove any character names you do not use. </strong></span>\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the big picture of the unit. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Model using the encryption tools.\n\n* Only the Caesar cipher is linked in the slides, but you can choose to also show the random substitution cipher in the room if you have time.  The goal is to give participants an idea of the tools in the unit and how they are connected to CS. \n* In the case of the Caesar Cipher, you can see that the encrypted text is hard to understand, but using the tool, it is very easy to break.  In CS, we are always looking to make sure our encryption tools are difficult to break."
+      },
+      "seeding_key": {
+        "activity_section.key": "fb603335-5169-4363-83e8-7a224d9a7791",
+        "lesson_activity.key": "f4855532-cf78-4538-b8a4-9b5f0c13a7b5"
+      }
+    },
+    {
+      "key": "89a813f6-202f-499b-8eff-53953fad77a2",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Really sell this as a simulation.  Address participants by their new name, encourage them to describe their role, and be creative thinkers about what their character would want to introduce.  \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "89a813f6-202f-499b-8eff-53953fad77a2",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "b5a375a5-2e54-4cb9-b43c-e071988b31d5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As we mentioned, most of this unit is an extended simulation.  In the slides, you will see a banner showing you and students that we are in simulation mode.  We are going to engage with this project at a “sprinter’s pace” to get a feel for what students will be doing.  We expect students will be doing much more research at each of these steps, but here we are going to focus more on the steps of the project rather than the CS content.  <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> You have all been assigned a role in this simulation.  You are now this new character and you are planning on proposing a new concept for the “Future school”.  Before we start, \n\n* We have assigned you a new role!  On the “Roles for the simulation slide” find your name and your character’s name.  Read a bit about your new character on your [Character Bio](https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/) sheet we linked on the slide.\n* Make a copy of the [Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/) linked in the slides.",
+        "remarks": true,
+        "name": "(5 minutes) Introduce the task"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5a375a5-2e54-4cb9-b43c-e071988b31d5",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "1b55d4c2-c02e-4afe-83f5-70de52b1ff60",
+      "position": 3,
+      "properties": {
+        "description": "Pause for ~2-3 minutes.  Consider having participants give you some sort of sign that they are done with the two tasks listed above."
+      },
+      "seeding_key": {
+        "activity_section.key": "1b55d4c2-c02e-4afe-83f5-70de52b1ff60",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "18026184-083d-4204-8314-71b2b425118a",
+      "position": 4,
+      "properties": {
+        "description": "We are now going to start the simulation!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "18026184-083d-4204-8314-71b2b425118a",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "dc9522db-7873-4368-962a-8b6ebc9fa67e",
+      "position": 5,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of 4 into breakout rooms.  You will want 4 people with different roles for the simulation in each room.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc9522db-7873-4368-962a-8b6ebc9fa67e",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "488f7111-a272-412b-acc0-d38a051d3322",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We are so excited to have all of you participate in the “Future School Convention”!  You each have a lot to bring to the conversation!   To start, look at step 1 of your Activity Guide and write a bit about what YOU (in your character) would want in a Future School.",
+        "remarks": true,
+        "name": "(3 minutes) Step 1 - Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "488f7111-a272-412b-acc0-d38a051d3322",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "d791bc89-1198-45d8-891b-28f80d910eb1",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We know you have a lot of ideas for Future School.  Now is the time to get them out on the table!  Research two different innovations that YOU (in your character) are interested in proposing the Future School adapt.  Due to the accelerated pace here, we are going to ask you to answer all these questions the best you can - no citing of sources needed due to the warp-speed we are moving at!",
+        "remarks": true,
+        "name": "(7 minutes)  Step 2 - Research"
+      },
+      "seeding_key": {
+        "activity_section.key": "d791bc89-1198-45d8-891b-28f80d910eb1",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "81471774-588d-42fc-9f4a-94e73141c2ab",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> You are already sitting with your groupmates!  Together, you are going to propose a vision or theme for Future School, one that connects all your innovations.  For example, you might suggest that Future School be focused on international relations, or local agriculture, or maybe something else entirely.  In your groups:\n\n* Share what innovations you are thinking of for the school\n* Give feedback on the innovations\n* And develop a theme/vision for your school that connects all those innovations.",
+        "remarks": true,
+        "name": "(15 minutes) Table share out and formulate a vision - Step 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "81471774-588d-42fc-9f4a-94e73141c2ab",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "c00146a7-a692-4149-ab12-3345fea6ccc6",
+      "position": 9,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPut participants in groups of four in breakout rooms for 15 minutes.  \nParticipants will come back briefly to get next directions after 15 minutes and then head back to their breakout rooms.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "c00146a7-a692-4149-ab12-3345fea6ccc6",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "d384f453-0509-436a-975c-404fa038e462",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In your group develop a 2-minute pitch for your big theme.  This pitch should be:\n\n* Coherent: Explains the theme that ties your different innovations together\n* Compelling: Highlight the benefits of your vision and get the audience excited\n* Creative: Choose the format that will best communicate your vision \n* Clear: Make it clear specifically what you’re proposing\n* Collaborative: Every group member has a role, and every innovation is briefly explained\n* Concise: You’ll only have a couple minutes",
+        "remarks": true,
+        "name": "(8 minutes) Develop a pitch - Step 5"
+      },
+      "seeding_key": {
+        "activity_section.key": "d384f453-0509-436a-975c-404fa038e462",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "bdeae14c-df17-43f1-8808-b72defe0871a",
+      "position": 11,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: Put participants in the same groups of four in breakout rooms for seven minutes. </strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "bdeae14c-df17-43f1-8808-b72defe0871a",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "7fb59830-7f84-41b5-b1b5-3dfeb99fcb33",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Welcome to the Future School Convention!  Let’s have one or two groups share their hard work in developing a vision for the Future School!",
+        "remarks": true,
+        "name": "(5 minutes) Share-out"
+      },
+      "seeding_key": {
+        "activity_section.key": "7fb59830-7f84-41b5-b1b5-3dfeb99fcb33",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "c7756875-6672-4124-9afd-04524c813e66",
+      "position": 13,
+      "properties": {
+        "description": "Have 1-2 groups share their pitch.  Cheer each group that presents and thank them for their contributions to the Future School Convention!"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7756875-6672-4124-9afd-04524c813e66",
+        "lesson_activity.key": "cec6e1df-35f7-46e9-ae4f-7ebb55c6fe2a"
+      }
+    },
+    {
+      "key": "8e4c662c-fb0e-42ff-ba7c-319d78c61659",
+      "position": 1,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of three into breakout rooms. </strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e4c662c-fb0e-42ff-ba7c-319d78c61659",
+        "lesson_activity.key": "a69e674e-ce33-428f-afc2-bb860d8d6c9c"
+      }
+    },
+    {
+      "key": "6e044c36-9719-4a08-84f2-676a5905ab34",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> You can see we REALLY rushed this project.  In the classroom many things would be different:\n\n* Students would actually do research on their innovations.\n* Students would create a one-pager on ONE of their innovations.\n* Groups would get feedback on their ideas.\n* All groups would share out and vote on best innovation and best vision/theme at the “convention”.\n* Also, periodically, students will pause the simulation for lessons that will help inform their decisions in the simulation.  For example, they will learn about security and privacy in technology in two separate lessons that are not part of the simulation, before addressing the security concerns of their own innovations they are proposing.",
+        "remarks": true,
+        "name": "(3 minutes) Context"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e044c36-9719-4a08-84f2-676a5905ab34",
+        "lesson_activity.key": "a69e674e-ce33-428f-afc2-bb860d8d6c9c"
+      }
+    },
+    {
+      "key": "c0f8d188-f3c6-4996-abc6-92a608aab913",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "If teachers “sell” the simulation to students, it will be more fun for everyone involved.  Encourage teachers to go over the top with emphasizing roles and purpose in the “convention”.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c0f8d188-f3c6-4996-abc6-92a608aab913",
+        "lesson_activity.key": "a69e674e-ce33-428f-afc2-bb860d8d6c9c"
+      }
+    },
+    {
+      "key": "42431fad-79d4-4b59-aa1a-b5469baba90a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have participants Think-Pair-Share for 2, 5, and 5 minutes respectively on the following prompts:\n\n* What can you do to get students to “buy in” to the extended simulation?\n* What do YOU want students to get out of the project?  What would success look like for your class?\n* What critical thinking skills are students building during this project that will be helpful regardless of what careers or interests students pursue after taking CSP?\n\n<span style=\"background-color:yellow;\"><strong> Producer support: \nPut participants in groups of three into breakout rooms for five minutes when directed to by the facilitator. </strong></span>\n\n\n**Closing remarks:** Summarize any points from the discussion that you want to reiterate.  Otherwise, wrap-up this section with a summary of where we have been.  This is the last unit that introduces new content to students and is intended to really end on a collaborative and creative note.",
+        "name": "(14 minutes) Think-Pair-Share Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "42431fad-79d4-4b59-aa1a-b5469baba90a",
+        "lesson_activity.key": "a69e674e-ce33-428f-afc2-bb860d8d6c9c"
+      }
+    },
+    {
+      "key": "50db2167-f50c-4486-91a3-e020e53393db",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use this time to address outstanding question parking lot issues. Don't hesitate to give items from the parking lot back out to the group to answer.",
+        "name": "Clear the Question Parking Lot (2 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "50db2167-f50c-4486-91a3-e020e53393db",
+        "lesson_activity.key": "6c144926-9c59-4545-921e-3aa9c596aaef"
+      }
+    },
+    {
+      "key": "72f42cd5-96de-4073-b515-a41b9becdcc2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the slides to guide your overview of asynchronous work for the next module.  This should include:\n\n* What participants will be asked to do\n* Why it will be helpful for their teaching practice\n* How we will build upon it in our next call\n \nIn this case, participants will be asked to: \n\n* Review different CS communities that they may benefit from joining.\n* Learn about the content and structure of the AP Multiple Choice Exam and make a plan for supporting students in preparing for that exam.\n* Create a slide in our shared slide deck describing how you plan to use provided resources to support students in preparing for the AP exam.  Note: it might be wise for you to show the specific slides in the [r vpl-m8-slides] they will be creating so they will be more familiar with the expectations during the asynchronous work.\n \nFinally, in our next call we are going to review each other's plans for preparing students for the AP Exam, define goals for building an inclusive classroom in the future, and make plans for maintaining and building our CS community.  By engaging in the asynchronous work, participants will be more ready to make, share, and refine their plans with the community in the next call.\n \nRemind participants of the best way to get support during the asynchronous work if needed.  This might be by contacting the regional partner, the facilitator, or reaching out in a digital community space you use like a Facebook group or Slack.\n\nFinally remind participants of when their next call is.",
+        "name": "Review Asynchronous work (3 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "72f42cd5-96de-4073-b515-a41b9becdcc2",
+        "lesson_activity.key": "6c144926-9c59-4545-921e-3aa9c596aaef"
+      }
+    },
+    {
+      "key": "8772dc3e-4c2b-494b-b15a-bd225ac546e5",
+      "position": 1,
+      "properties": {
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If you are facilitating one module today:\n\t* Show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave.  \n\t* During the closing session of the even-numbered modules (M2, M4, M6, M8) CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview). If you are only facilitating an odd-numbered module today (M1, M3, M5,or M7) DO NOT CLOSE THE WORKSHOP.  \n\n\n* If you are facilitating two modules today:\n\t* During the closing session of the second module (M2, M4, M6, M8), show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave. On the [workshop dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) find your workshop and CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview). \n\n\n<hr>\n\n#### Having trouble with the survey?\nIf your participants get an error message when you share the survey link, please follow these steps:\n\n1. Don’t worry!  This is likely an issue with how the workshop was scheduled in the dashboard.\n2. Ask your participants to take a few minutes to share their \"gots and needs\" in the chat. This will allow you to receive quick feedback to inform your post-workshop debrief.\n3. Let participants know the survey will be coming via email within a few days, and send participants \"home\" for the day.\n4. Contact your Regional Partner to let them know the survey link didn’t work, and ask the Regional Partner to follow-up with Code.org on the next business day.\n5. Code.org will work with Regional Partner to send the survey link to teachers.",
+        "name": "(5 minutes) Complete the survey "
+      },
+      "seeding_key": {
+        "activity_section.key": "8772dc3e-4c2b-494b-b15a-bd225ac546e5",
+        "lesson_activity.key": "450405e9-d982-4a0a-a042-a851faa79935"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 7 overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL Module 7 - Workshop Overview"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL Module 7 - Workshop Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "b8233dc4-8fa0-4308-aa90-c78f7eabeda7"
+      },
+      "level_keys": [
+        "CSP-PL Module 7 - Workshop Overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Overview of Unit 9 - Data (~10 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Unit 9 Overview"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Unit 9 Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "95b29fdc-af74-4550-b5a2-45030fe2a0bc"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Unit 9 Overview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Google Trends tool (~20 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "77abd74e-0205-4a3e-bcfc-64b59322afd6"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Google Trends"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      },
+      "level_keys": [
+        "CSP-PL M7 - Data Viz 4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 7 asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "621734be-e1c7-4730-8e15-34ee187d30a8"
+      },
+      "level_keys": [
+        "CSP - Module 7 Wrap Up"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL Module 7 - Workshop Overview",
+        "script_level.level_keys": [
+          "CSP-PL Module 7 - Workshop Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "b8233dc4-8fa0-4308-aa90-c78f7eabeda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Unit 9 Overview",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Unit 9 Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "95b29fdc-af74-4550-b5a2-45030fe2a0bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Google Trends",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "77abd74e-0205-4a3e-bcfc-64b59322afd6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 1",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 2",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 3",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M7 - Data Viz 4",
+        "script_level.level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "ad801692-1677-42f2-a892-463a3fbd8a53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 7 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m7-2020",
+        "activity_section.key": "621734be-e1c7-4730-8e15-34ee187d30a8"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "f1d781f9-6a56-4fee-bdc0-02b2c5688cfd",
+      "properties": {
+        "description": "Participants can clear up misconceptions or questions from asynchronous work."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "f1d781f9-6a56-4fee-bdc0-02b2c5688cfd"
+      }
+    },
+    {
+      "key": "546ec108-c933-4ef2-bf73-b546ece0eee1",
+      "properties": {
+        "description": "Participants build community through discussions about their own local contexts."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "546ec108-c933-4ef2-bf73-b546ece0eee1"
+      }
+    },
+    {
+      "key": "9bb5ffee-1f2f-4bb8-8e2f-1f205efb98ce",
+      "properties": {
+        "description": "Participants understand the context for the Unit 10 project."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "9bb5ffee-1f2f-4bb8-8e2f-1f205efb98ce"
+      }
+    },
+    {
+      "key": "8a3e9a7e-5ec1-4960-9331-239f6a04c79f",
+      "properties": {
+        "description": "Participants understand the structure and content of the Unit 10 project."
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "objective.key": "8a3e9a7e-5ec1-4960-9331-239f6a04c79f"
+      }
+    },
+    {
+      "key": "846dce01-2f78-4121-a45b-130ca7ff079c",
+      "properties": {
+        "description": "Participants have a plan for how they will get “buy in” from students during the Unit 10 project."
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "objective.key": "846dce01-2f78-4121-a45b-130ca7ff079c"
+      }
+    },
+    {
+      "key": "ff98e567-8196-4a79-8c4b-b02c0ee27ab3",
+      "properties": {
+        "description": "Remaining parking lot or needs questions have been addressed."
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "ff98e567-8196-4a79-8c4b-b02c0ee27ab3"
+      }
+    },
+    {
+      "key": "3bfa528d-f392-497c-82ea-0afa7e1e5d3c",
+      "properties": {
+        "description": "Participants know what to expect for the next set of asynchronous work."
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "3bfa528d-f392-497c-82ea-0afa7e1e5d3c"
+      }
+    },
+    {
+      "key": "69518fd8-ff89-4f96-add7-0fc09676a2fc",
+      "properties": {
+        "description": "Participants have taken the survey."
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "69518fd8-ff89-4f96-add7-0fc09676a2fc"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

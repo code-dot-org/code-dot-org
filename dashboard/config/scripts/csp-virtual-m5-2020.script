@@ -1,0 +1,32 @@
+hideable_lessons true
+student_detail_progress_view true
+is_migrated true
+
+lesson_group 'lessonGroup-2', display_name: 'Pre-Work'
+lesson 'lesson-1', display_name: 'Pre-Work', has_lesson_plan: true
+level 'CSP-PL Module 5 - Workshop Overview', progression: 'Module 5 overview (~5 minutes)'
+level 'CSP-PL M5 - Intro to Unit 7', progression: 'Understanding Unit 7 (~5 minutes)'
+level 'CSP-PL M5 - Param Explore', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'CSP-PL M5 - Param Prac 1', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 1', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 2', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 3', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 4', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 5', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Investigate Calculator App', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Practice App 2', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'CSP-PL M5 - Param Prac 10', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'CSP-PL M5 - Inclusive Classrooms', progression: 'Creating inclusive classrooms (~15 minutes)'
+level 'CSP - Module 5 Wrap Up', progression: 'Module 5 Asynchronous wrap-up (~10 minutes)'
+
+lesson_group 'in-person', display_name: 'In Person Sessions'
+lesson 'session-1', display_name: 'Workshop Opener', has_lesson_plan: true
+
+lesson 'session-2', display_name: 'Parameters and Return Make Lesson and Inclusion', has_lesson_plan: true
+
+lesson 'session-3', display_name: 'Stretch Break', has_lesson_plan: true
+
+lesson 'session-4', display_name: 'Unit 7 Conclusions and Connections', has_lesson_plan: true
+
+lesson 'session-5', display_name: 'Wrap Up', has_lesson_plan: true
+

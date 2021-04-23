@@ -1,0 +1,31 @@
+hideable_lessons true
+student_detail_progress_view true
+is_migrated true
+
+lesson_group 'lessonGroup-2', display_name: 'Pre-Work'
+lesson 'lesson-1', display_name: 'Pre-Work', has_lesson_plan: true
+level 'CSP-PL AYWS3 Workshop Overview', progression: 'Module 3 Overview (~5 minutes)'
+level 'CSP - Understanding the context for the Model Lesson overview', progression: 'Understanding the Context for Lists (~55 minutes)'
+level 'CSP - Synch3 - Reflection 1', progression: 'Understanding the Context for Lists (~55 minutes)'
+level 'CSP - Synch3 - Reflection 2', progression: 'Understanding the Context for Lists (~55 minutes)'
+level 'CSP - Asynch3 - Intro to CI', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
+level 'CSP - Asynch3 - Broadening the def', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
+level 'CSP - Asynch3 - Feedback in CI', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
+level 'CSP - Asynch3 - Practice feedback', progression: 'Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)'
+level 'CSP - Module 3 Wrap Up', progression: 'Module 3 Asynchronous Wrap-Up (~10 minutes)'
+
+lesson_group 'in-person', display_name: 'In Person Sessions'
+lesson 'session-1', display_name: 'Workshop Opener', has_lesson_plan: true
+
+lesson 'session-2', display_name: 'Previously, On CSP...', has_lesson_plan: true
+
+lesson 'session-3', display_name: 'Short Stretch Break', has_lesson_plan: true
+
+lesson 'session-4', display_name: 'Model Lesson   Lists Investigate   U5L2', has_lesson_plan: true
+
+lesson 'session-5', display_name: 'Short Stretch Break', has_lesson_plan: true
+
+lesson 'session-6', display_name: 'Model Lesson Reflection', has_lesson_plan: true
+
+lesson 'session-7', display_name: 'Wrap up', has_lesson_plan: true
+

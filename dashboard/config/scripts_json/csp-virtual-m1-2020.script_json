@@ -7,11 +7,14 @@
     "properties": {
       "is_migrated": true,
       "weekly_instructional_minutes": 90,
-      "show_calendar": true
+      "show_calendar": true,
+      "include_student_lesson_plans": true,
+      "hideable_lessons": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 03:02:29 UTC",
+    "serialized_at": "2021-04-23 03:42:06 UTC",
     "seeding_key": {
       "script.name": "csp-virtual-m1-2020"
     }

@@ -1,0 +1,30 @@
+hideable_lessons true
+student_detail_progress_view true
+is_migrated true
+
+lesson_group 'lessonGroup-2', display_name: 'Pre-Work'
+lesson 'lesson-1', display_name: 'Pre-Work', has_lesson_plan: true
+level 'CSP-PL AYWA4 Workshop Overview', progression: 'Module 4 Overview (~5 minutes)'
+level 'CSP - Understanding the content of the Lists EIPM sequence', progression: 'Content of the Lists EIPM sequence (~25 minutes)'
+level 'CSP - Lists EIPM reflection', progression: 'Content of the Lists EIPM sequence (~25 minutes)'
+level 'CSP AYW4 - Mental Models in Unit 5', progression: 'Mental models in Unit 5 (~35 minutes)'
+level 'CSP - Asynch4 - Intro to Traversals', progression: 'Traversals and datasets (~15 minutes)'
+level 'CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify', progression: 'Traversals and datasets (~15 minutes)'
+level 'CSP - Asynch4 - U5L10 Traversals Investigate', progression: 'Traversals and datasets (~15 minutes)'
+level 'CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify', progression: 'Traversals and datasets (~15 minutes)'
+level 'CSP AYW4 - Reflection on datasets', progression: 'Traversals and datasets (~15 minutes)'
+level 'CSP - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap-Up (~10 minutes)'
+
+lesson_group 'in-person', display_name: 'In Person Sessions'
+lesson 'session-1', display_name: 'Workshop Opener ', has_lesson_plan: true
+
+lesson 'session-2', display_name: 'Recruiting Students to Your CS Principles Classroom', has_lesson_plan: true
+
+lesson 'session-3', display_name: 'Stretch break', has_lesson_plan: true
+
+lesson 'session-4', display_name: 'Unit 5 Conclusions and Connections ', has_lesson_plan: true
+
+lesson 'session-5', display_name: 'Unit 6 Overview ', has_lesson_plan: true
+
+lesson 'session-6', display_name: 'Wrap up', has_lesson_plan: true
+

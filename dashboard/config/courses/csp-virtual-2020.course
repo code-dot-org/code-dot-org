@@ -1,0 +1,22 @@
+{
+  "name": "csp-virtual-2020",
+  "script_names": [
+    "csp-virtual-m1-2020",
+    "csp-virtual-m2-2020",
+    "csp-virtual-m3-2020",
+    "csp-virtual-m4-2020",
+    "csp-virtual-m5-2020",
+    "csp-virtual-m6-2020",
+    "csp-virtual-m7-2020",
+    "csp-virtual-m8-2020"
+  ],
+  "properties": {
+    "has_numbered_units": true
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

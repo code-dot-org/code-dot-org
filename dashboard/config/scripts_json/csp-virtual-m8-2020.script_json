@@ -1,0 +1,1129 @@
+{
+  "script": {
+    "name": "csp-virtual-m8-2020",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "weekly_instructional_minutes": 90,
+      "show_calendar": true,
+      "include_student_lesson_plans": true,
+      "hideable_lessons": true,
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-04-23 03:44:02 UTC",
+    "seeding_key": {
+      "script.name": "csp-virtual-m8-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Pre-Work"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "day-1",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "In Person Sessions"
+      },
+      "seeding_key": {
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Pre-Work",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Asynchronous pre-work for teachers to do before your virtual in person workshop for module 8.",
+        "student_overview": "Asynchronous pre-work to do before your virtual in person workshop for module 8."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "session-1",
+      "name": "Workshop Opener",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. ",
+        "preparation": "**Workshop Modality:**\r\n\r\n* Whole group\r\n\r\n \r\n**Facilitator Supplies:**\r\n\r\n* [r vpl-m8-slides]\r\n* Slide set-up: Look at asynchronous work and pull out common misconceptions or questions you saw surfaced in the shared group reflections\r\n\r\n\r\n**Teacher Materials:**\r\n\r\n* None\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "session-2",
+      "name": "Setting goals for an inclusive classroom",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "This session provides participants with an opportunity to reflect on the CS Principles professional learning equity sessions they engaged with throughout the year, as well as the progress they themselves have made in supporting equity in their CS Principles classrooms. This session also supports participants in identifying next steps they want to commit to taking after the workshop as they continue to work towards the equity goal of bringing computer science to all students.",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n* Breakout rooms\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m8-slides]\n* Slide set-up: \n\t* Ensure the slides recapping the equity journey your participants have been on matches what you actually implemented during the year.   It is possible that changes you made for your local context means that this slide is not accurate for your group.\n\t* Decide if you want to do a stretch break during this session or not. \n\t* There are enough breakout slides for 26 participants if you are putting groups in pairs.  If you need more slides, add more in the slide deck.  Currently, there are 13 slides for breakout rooms.\n\n**Teacher Materials:**\n\n* None\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "session-3",
+      "name": "Connecting to the community",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "As this is the last time this group will be coming together, we want to leave the workshop on the note of community and leadership.  This extends the asynchronous work participants did to connect to the CS community both locally and nationally.",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n* Breakout rooms\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m8-slides]\n* Slide set-up: Consider adding local groups you know about to the “CS Communities” slide prior to the workshop.\n\n**Teacher Materials:**\n\n* None\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "session-4",
+      "name": "Wrap Up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "student_overview": "Workshop Modality:",
+        "purpose": "Create space to respond to outstanding questions, wrap up the day, and allow for survey completion time.",
+        "preparation": "**Workshop Modality:**\n\n* Whole group\n\n \n**Facilitator Supplies:**\n\n* [r vpl-m8-slides]\n\n**Teacher Materials:**\n\n* None\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ccab2cfd-7012-4799-83fd-32819abaa9e5",
+      "position": 1,
+      "properties": {
+        "name": "Pre-Work",
+        "duration": 90
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccab2cfd-7012-4799-83fd-32819abaa9e5",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "ecd0323b-7613-4c2b-8512-dc2e808e710e",
+      "position": 1,
+      "properties": {
+        "name": "Workshop opening logistics",
+        "duration": 4
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecd0323b-7613-4c2b-8512-dc2e808e710e",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "577eeeb3-aa54-40d1-89d2-7a9a76416f96",
+      "position": 2,
+      "properties": {
+        "name": "Connect to asynchronous work",
+        "duration": 11
+      },
+      "seeding_key": {
+        "lesson_activity.key": "577eeeb3-aa54-40d1-89d2-7a9a76416f96",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "8b841867-53cc-4e71-80fd-0dd6a489b8c5",
+      "position": 1,
+      "properties": {
+        "name": "Looking back",
+        "duration": 6
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b841867-53cc-4e71-80fd-0dd6a489b8c5",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b",
+      "position": 2,
+      "properties": {
+        "name": "Going forward",
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "fd2009e4-d8f1-4272-86d7-858fa798698f",
+      "position": 3,
+      "properties": {
+        "name": "Give and get feedback",
+        "duration": 24
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fd2009e4-d8f1-4272-86d7-858fa798698f",
+        "lesson.key": "session-2",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "780799ac-cd79-4e24-bdf9-ccada759d07c",
+      "position": 1,
+      "properties": {
+        "name": "Introduction",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "780799ac-cd79-4e24-bdf9-ccada759d07c",
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "c382f698-4cbe-4626-93b9-1537e4bfbc5d",
+      "position": 2,
+      "properties": {
+        "name": "Discussion",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c382f698-4cbe-4626-93b9-1537e4bfbc5d",
+        "lesson.key": "session-3",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "6efc0a46-dcf6-4de8-a5cf-13052bd5d69c",
+      "position": 1,
+      "properties": {
+        "name": "Parking lot",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6efc0a46-dcf6-4de8-a5cf-13052bd5d69c",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    },
+    {
+      "key": "5843d011-ee6f-4721-a36b-16b8321d4b1a",
+      "position": 2,
+      "properties": {
+        "name": "Survey",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5843d011-ee6f-4721-a36b-16b8321d4b1a",
+        "lesson.key": "session-4",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-m8-2020"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2f06186f-9974-4d64-85c2-453c80e12ea7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 8 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f06186f-9974-4d64-85c2-453c80e12ea7",
+        "lesson_activity.key": "ccab2cfd-7012-4799-83fd-32819abaa9e5"
+      }
+    },
+    {
+      "key": "21addd70-828a-4d38-adf6-b6fff3fdf855",
+      "position": 2,
+      "properties": {
+        "progression_name": "Connecting to the CS community (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "21addd70-828a-4d38-adf6-b6fff3fdf855",
+        "lesson_activity.key": "ccab2cfd-7012-4799-83fd-32819abaa9e5"
+      }
+    },
+    {
+      "key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Preparing students for the AP multiple choice exam (~60 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3",
+        "lesson_activity.key": "ccab2cfd-7012-4799-83fd-32819abaa9e5"
+      }
+    },
+    {
+      "key": "8d2c5f0f-a59d-49e6-9d6b-cb3ec4330648",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 8 asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d2c5f0f-a59d-49e6-9d6b-cb3ec4330648",
+        "lesson_activity.key": "ccab2cfd-7012-4799-83fd-32819abaa9e5"
+      }
+    },
+    {
+      "key": "1f8f4ed9-4ebb-43f7-af32-34de077ed54f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As participants join the call, warmly welcome them to the workshop.  It is recommended that you have some sort of get-to-know you discussion starter that can trigger some conversation for you to fill the time as people join.  The one in the slide deck is currently: \"What was the first album or CD you bought as a kid?\"  You may decide to change this if something else feels top of mind.\n\nDuring this time you can also take care of some logistics such as:\n\n* Encourage them to take attendance\n* Ensuring that they have the slide deck open for the workshop\n\n\n## (2 minutes) Attendance\nHave everyone complete the attendance for the day on the online workshop dashboard found in your workshop.\n\nFollow the instructions found in your Facilitator Handbook to take attendance for your workshop.",
+        "name": "(0 minutes) As participants enter the room"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f8f4ed9-4ebb-43f7-af32-34de077ed54f",
+        "lesson_activity.key": "ecd0323b-7613-4c2b-8512-dc2e808e710e"
+      }
+    },
+    {
+      "key": "a9fac47f-7a1c-4913-8dfc-326ac5aa1320",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk through the agenda of the day.  Participants should be aware that they will be building on what they did with building community connections and preparing for the AP exam as well as making a plan for the future.",
+        "name": "(1 minute) Agenda Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9fac47f-7a1c-4913-8dfc-326ac5aa1320",
+        "lesson_activity.key": "ecd0323b-7613-4c2b-8512-dc2e808e710e"
+      }
+    },
+    {
+      "key": "e6f70dfc-9113-4163-aff3-d726d3af6416",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Remind the group of the norms you set at the Summer Workshop or in the kick-off call.",
+        "name": "(1 minute) Norms"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6f70dfc-9113-4163-aff3-d726d3af6416",
+        "lesson_activity.key": "ecd0323b-7613-4c2b-8512-dc2e808e710e"
+      }
+    },
+    {
+      "key": "e77548fe-4aa9-4642-80cd-ed632f3f511e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Remind participants of the work they did in the asynchronous work in this module.  This included:",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "If no one (or few people) have finished creating their plans for preparing students for the AP Exam in the shared slides, you may want to modify the Workshop Opener to account for this fact.\n"
+          }
+        ],
+        "name": "(2 minutes) Asynchronous work reminder"
+      },
+      "seeding_key": {
+        "activity_section.key": "e77548fe-4aa9-4642-80cd-ed632f3f511e",
+        "lesson_activity.key": "577eeeb3-aa54-40d1-89d2-7a9a76416f96"
+      }
+    },
+    {
+      "key": "8ea1b5ec-0718-4f3b-9395-8b1a7599cfa9",
+      "position": 2,
+      "properties": {
+        "description": "* Looking at different CS communities anyone can engage with after this year. \n* Reviewing the structure and content of the AP Multiple Choice Exam.\n* Considering what content and skills students need to know to be successful on the exam.\n* Reviewing resources to help students prepare for the exam and making a plan to use those resources."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ea1b5ec-0718-4f3b-9395-8b1a7599cfa9",
+        "lesson_activity.key": "577eeeb3-aa54-40d1-89d2-7a9a76416f96"
+      }
+    },
+    {
+      "key": "7f2b7c76-f4cf-4a74-aded-9233f03333cf",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We appreciate the time you took to put together your plan for preparing students for the AP Exam and sharing your plan in the slides.  Let’s take a minute to review the plans that everyone created.  Feel free to use the chat as a “back channel” to ask questions or pull-out ideas you like on the slides.  (~3 minutes)",
+        "remarks": true,
+        "name": "(9 minutes) <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Re-connect "
+      },
+      "seeding_key": {
+        "activity_section.key": "7f2b7c76-f4cf-4a74-aded-9233f03333cf",
+        "lesson_activity.key": "577eeeb3-aa54-40d1-89d2-7a9a76416f96"
+      }
+    },
+    {
+      "key": "22faa239-16e4-45c5-9a84-a9afb777b007",
+      "position": 4,
+      "properties": {
+        "description": "Discuss in the call (~6 minutes):\n\n* What ideas did you take from seeing others’ plans?\n* What questions do you still have about preparing students for the AP Exam?"
+      },
+      "seeding_key": {
+        "activity_section.key": "22faa239-16e4-45c5-9a84-a9afb777b007",
+        "lesson_activity.key": "577eeeb3-aa54-40d1-89d2-7a9a76416f96"
+      }
+    },
+    {
+      "key": "82d54d9c-cfd6-458d-8cad-89a4a054aa59",
+      "position": 1,
+      "properties": {
+        "description": "As we start today, we want to take a look back on where we have been.  We have looked at content from Units 1-10 in Code.org’s CS Principles curriculum, but we also have intentionally included time and space to think about how we build an equitable CS classroom.  Let’s look at the plan for this session. \n\nWe want to clarify the language we are going to be using to talk about equitable CS classrooms.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "82d54d9c-cfd6-458d-8cad-89a4a054aa59",
+        "lesson_activity.key": "8b841867-53cc-4e71-80fd-0dd6a489b8c5"
+      }
+    },
+    {
+      "key": "7e890500-a92e-4ca2-9928-cfa000a1fff1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the definitions on the slide, including: \n\n* Equity: Equitable education ensures that learning experiences are accessible and inclusive for all learners. This means that every student has what they uniquely need to succeed.\n* Access: The right and opportunity for all students to learn and experience computer science.\n* Diversity: Ensuring CS courses and programs have student enrollment rates that reflect the demographics of the larger school or community population, particularly in terms of race, ethnicity, gender and disability status.\n* Inclusion: Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgment. This means actively attending to gender, race, ethnicity, ability or socioeconomic status."
+      },
+      "seeding_key": {
+        "activity_section.key": "7e890500-a92e-4ca2-9928-cfa000a1fff1",
+        "lesson_activity.key": "8b841867-53cc-4e71-80fd-0dd6a489b8c5"
+      }
+    },
+    {
+      "key": "75ed7e16-a1cc-450e-b214-9c349b6a90f3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As you can see many of these are related to one another.  For example, if CS classes aren’t offered in a school, students don’t have access to them, thus we cannot address diversity and inclusion until we address the access issue.  We have touched on each of these items at different times in our workshops.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75ed7e16-a1cc-450e-b214-9c349b6a90f3",
+        "lesson_activity.key": "8b841867-53cc-4e71-80fd-0dd6a489b8c5"
+      }
+    },
+    {
+      "key": "71a6f346-2577-4d5f-a26d-317849a1f671",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the slides to review how we have addressed equity throughout the year.  One option when reviewing this slide is to let participants read the slide themselves as there is a lot of text on the slide.  Alternatively, you can pull out memorable equity-related discussions you had with your group as you talk about the journey your group has been on.  Note, if you did your own summer workshop without Code.org materials or modified some of the sessions throughout the year, this slide might not be accurate.  Please review the slide and update it for how you implemented the workshops."
+      },
+      "seeding_key": {
+        "activity_section.key": "71a6f346-2577-4d5f-a26d-317849a1f671",
+        "lesson_activity.key": "8b841867-53cc-4e71-80fd-0dd6a489b8c5"
+      }
+    },
+    {
+      "key": "eb763478-90e7-4e3f-86ed-caaf1e9af2f9",
+      "position": 5,
+      "properties": {
+        "description": "You are such a key player in making CS education more equitable.  In many ways, just by offering CSP at your school, you are already making a big impact on ensuring students have access to CS!  Today, we are going to focus on creating “Inclusive classrooms” and make a plan for next year.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eb763478-90e7-4e3f-86ed-caaf1e9af2f9",
+        "lesson_activity.key": "8b841867-53cc-4e71-80fd-0dd6a489b8c5"
+      }
+    },
+    {
+      "key": "5ba9f96c-0805-4057-a773-0669024c0402",
+      "position": 1,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of four in breakout rooms.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ba9f96c-0805-4057-a773-0669024c0402",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "d08d62ed-507c-45c2-8f56-3b1752d1169a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> You will all be making a slide with other participants which answers the question of “What does an inclusive classroom look and sound like?”  You can be as creative as you want with your slide but the slide should still be able to be “understood” without any additional narration because after ~7 minutes we are going to do a gallery walk to look at other slides.",
+        "remarks": true,
+        "name": "(7 minutes) Brainstorming what an inclusive classroom looks and sounds like "
+      },
+      "seeding_key": {
+        "activity_section.key": "d08d62ed-507c-45c2-8f56-3b1752d1169a",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "407294a0-b151-466f-937a-e538f5be6670",
+      "position": 3,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPut participants in groups of four in breakout rooms for seven minutes.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "407294a0-b151-466f-937a-e538f5be6670",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "1e964599-dda7-4293-8b5c-1da2689f5764",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now we are going to take a gallery walk to look at other slides in the room.  As you look at other slides, identify aspects of creating an inclusive classroom that you really want to focus on next year.  That is, what is one thing you want to see and hear next year in your CS classroom?  When you are finished reviewing the other slides, write down that goal.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1e964599-dda7-4293-8b5c-1da2689f5764",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "d52b445a-4db7-442d-9bae-29bd5969aac3",
+      "position": 5,
+      "properties": {
+        "description": "(1 minute) Have participants share in the chat: What is your goal for what your CS classroom will look like or sound like next year that will help you know you’re working toward building an inclusive classroom?  Remember, focus on what you will see or hear in your classroom that will let you know that you’re working toward your goal of an inclusive classroom.  Next, we will talk about how we will get there.",
+        "name": "(5 minutes) Virtual Gallery Walk"
+      },
+      "seeding_key": {
+        "activity_section.key": "d52b445a-4db7-442d-9bae-29bd5969aac3",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "c6bbc574-758b-43a7-8379-183b39b3c03d",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Focus on things participants say that are observable.  For example “I want students to share their ideas with one another”  or “I want to see projects that are just as unique as my students being created in my classroom”.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c6bbc574-758b-43a7-8379-183b39b3c03d",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "19956387-29f5-4fb1-9ec0-e5c4643cb8df",
+      "position": 7,
+      "properties": {
+        "description": "**Stretch break: Consider taking a 1 minute stretch break here before moving on.**"
+      },
+      "seeding_key": {
+        "activity_section.key": "19956387-29f5-4fb1-9ec0-e5c4643cb8df",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "1ea4246b-2b8e-4802-9b8c-53c4b358b1b7",
+      "position": 8,
+      "properties": {
+        "description": "Now that you have identified your goal for creating an even more inclusive classroom next year, in your own personal slide, create a plan for how you will accomplish that goal.  Consider what challenges you faced this year in getting to that goal and how you might plan to overcome those challenges.  You will share this out in breakout rooms.",
+        "remarks": true,
+        "name": "(6 minutes) Introduce Task - Planning to accomplish your goal"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ea4246b-2b8e-4802-9b8c-53c4b358b1b7",
+        "lesson_activity.key": "f84c7fa6-bffd-49c9-929a-7d0e7b8ecc7b"
+      }
+    },
+    {
+      "key": "210c251b-6468-4117-87df-96f9659b7213",
+      "position": 1,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of three in breakout rooms.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "210c251b-6468-4117-87df-96f9659b7213",
+        "lesson_activity.key": "fd2009e4-d8f1-4272-86d7-858fa798698f"
+      }
+    },
+    {
+      "key": "f77c3ffa-399c-4090-a3cd-311aa170864f",
+      "position": 2,
+      "properties": {
+        "description": "Next we are going to engage in a timed protocol to discuss goals and plans.  For this, you will get into triads.  \n\nIn triads we will do three rounds of the timed protocol.  Each round will have a different presenter.  The protocol will look like this:\n\n* 2 minutes - The presenter shares their goal and their plan.  The rest of the team will be silent and may take notes.\n* 3 minutes - The rest of the team will give warm and cool feedback. The team offers warm (positive) and cool (productive) feedback and suggestions for improving the plan while the presenter silently takes notes.  See sentence starters in the slides.\n* 1 minute - the presenter will reflect on what they have heard. The rest of the team is silent.\n \nWhen you get into groups, you will need to select someone to keep time.  Our suggestion is that person use a timer on their phone so the timing is precise.  Also, some people find it helpful to be off mute so the group can hear the timer go off to let the group know it is time to move on to the next step of the protocol.\n\nYou will repeat the process 3 times.  Each time you will have a different “presenter”",
+        "remarks": true,
+        "name": "(21 minutes) Introduce and engage with the feedback protocol"
+      },
+      "seeding_key": {
+        "activity_section.key": "f77c3ffa-399c-4090-a3cd-311aa170864f",
+        "lesson_activity.key": "fd2009e4-d8f1-4272-86d7-858fa798698f"
+      }
+    },
+    {
+      "key": "f6940bea-b7d7-42a1-850a-63934b990264",
+      "position": 3,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPut participants in groups of three in breakout rooms for ~20 minutes.</strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6940bea-b7d7-42a1-850a-63934b990264",
+        "lesson_activity.key": "fd2009e4-d8f1-4272-86d7-858fa798698f"
+      }
+    },
+    {
+      "key": "df49c51f-b754-4463-9723-3cbd3b223a9c",
+      "position": 4,
+      "properties": {
+        "description": "Share-out Prompt: How did engaging in this process influence your goal or plan? \n\nEncourage 3-4 quick share outs in the room.",
+        "name": "(3 minutes) Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "df49c51f-b754-4463-9723-3cbd3b223a9c",
+        "lesson_activity.key": "fd2009e4-d8f1-4272-86d7-858fa798698f"
+      }
+    },
+    {
+      "key": "b754de13-3fd4-4e20-a10f-bf0461a4fdb8",
+      "position": 5,
+      "properties": {
+        "description": "Thank you all for your engagement throughout this equity journey we have been on this year.  Of course, you do not need to wait until next year to get started!  You might find that you want to try some of the ideas you have out on your classroom and see what kind of impact it has on the classroom culture.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b754de13-3fd4-4e20-a10f-bf0461a4fdb8",
+        "lesson_activity.key": "fd2009e4-d8f1-4272-86d7-858fa798698f"
+      }
+    },
+    {
+      "key": "ece5176e-84c5-4c04-8917-c4cff4425364",
+      "position": 1,
+      "properties": {
+        "description": "We started this adventure together last summer.  Since then, we have gone through much of the material in Code.org’s CSP curriculum, discussed teaching CSP with an equitable lens, brainstormed solutions to problems, and began to more fully understand the AP Exam.  While we covered a lot of content, and we hope that this stays with you beyond this year, we also want to acknowledge the community we have built here and also connect you with the larger CS community.  \n\nIn your asynchronous work we introduced you to some communities that you can work within.  However, you might already be plugged into a supportive CS community locally that we didn’t list in the asynchronous work.   If you have communities you would like to share with the group, please add it in the slide in our deck.",
+        "remarks": true,
+        "name": "Describe where we have been"
+      },
+      "seeding_key": {
+        "activity_section.key": "ece5176e-84c5-4c04-8917-c4cff4425364",
+        "lesson_activity.key": "780799ac-cd79-4e24-bdf9-ccada759d07c"
+      }
+    },
+    {
+      "key": "6b11ba5d-da76-4e74-95da-ad00922faa4a",
+      "position": 1,
+      "properties": {
+        "description": "In your asynchronous work, you were asked to consider “What do you think you will need from your local or national CS community moving forward? Consider, what has been helpful this year? What challenges are you still facing that the community could support?”\n\nTake a minute to go back and read your responses or think about your answer here.",
+        "remarks": true,
+        "name": "(3 minutes) Review asynchronous work"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b11ba5d-da76-4e74-95da-ad00922faa4a",
+        "lesson_activity.key": "c382f698-4cbe-4626-93b9-1537e4bfbc5d"
+      }
+    },
+    {
+      "key": "8b50eaa8-d227-436b-abbf-c9cec79836ef",
+      "position": 2,
+      "properties": {
+        "description": "<span style=\"background-color:yellow;\"><strong> Producer support: \nPREPARE to put participants in groups of two into breakout rooms. </strong></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b50eaa8-d227-436b-abbf-c9cec79836ef",
+        "lesson_activity.key": "c382f698-4cbe-4626-93b9-1537e4bfbc5d"
+      }
+    },
+    {
+      "key": "278d89b1-2f92-4101-a490-684af4295948",
+      "position": 3,
+      "properties": {
+        "description": "Prompt: In pairs, share your thoughts on the following two questions:\n\n* What support from the CS community do you think would be helpful moving forward for you?\n* What can you offer to the CSed community either in this room or outside it? \n\t* Examples include: Project ideas you used in your classroom that you could share on a facebook group, strategies for recruiting girls and students of color to CS, AP review games you created, etc.\n\n<span style=\"background-color:yellow;\"><strong> Producer support: \nPut participants in groups of two into breakout rooms for four minutes. </strong></span>",
+        "name": "(4 minutes) Paired discussion. "
+      },
+      "seeding_key": {
+        "activity_section.key": "278d89b1-2f92-4101-a490-684af4295948",
+        "lesson_activity.key": "c382f698-4cbe-4626-93b9-1537e4bfbc5d"
+      }
+    },
+    {
+      "key": "d15ed473-0ee1-4dc0-8416-b925b11d2dce",
+      "position": 4,
+      "properties": {
+        "description": "In the chat answer ONE of these two prompts:\n\n* What is one way this community has supported you this year?\n* What is one way you might connect to the CS community in the future?",
+        "name": "(3 minutes) Share-out "
+      },
+      "seeding_key": {
+        "activity_section.key": "d15ed473-0ee1-4dc0-8416-b925b11d2dce",
+        "lesson_activity.key": "c382f698-4cbe-4626-93b9-1537e4bfbc5d"
+      }
+    },
+    {
+      "key": "0c7a7613-ebd5-454f-9902-a3cc373bd13f",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Pull out ideas you see in the chat.  This is a chance to thank participants and one another for their engagement this year.  It is also a chance to acknowledge the growth everyone has had - both participants and facilitators.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0c7a7613-ebd5-454f-9902-a3cc373bd13f",
+        "lesson_activity.key": "c382f698-4cbe-4626-93b9-1537e4bfbc5d"
+      }
+    },
+    {
+      "key": "b186457d-d8fc-448a-bffa-c8a4c8452418",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use this time to address outstanding question parking lot issues. Don't hesitate to give items from the parking lot back out to the group to answer.",
+        "name": "Clear the Question Parking Lot (2 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b186457d-d8fc-448a-bffa-c8a4c8452418",
+        "lesson_activity.key": "6efc0a46-dcf6-4de8-a5cf-13052bd5d69c"
+      }
+    },
+    {
+      "key": "c7a0cd67-1266-4f1f-958e-c67a60508442",
+      "position": 1,
+      "properties": {
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If you are facilitating one module today:\n\t* Show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave.  \n\t* During the closing session of the even-numbered modules (M2, M4, M6, M8) CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview). If you are only facilitating an odd-numbered module today (M1, M3, M5,or M7) DO NOT CLOSE THE WORKSHOP.  \n\n\n* If you are facilitating two modules today:\n\t* During the closing session of the second module (M2, M4, M6, M8), show the slide at the end of the deck that includes the appropriate link based on your virtual workshop model.  Make sure all the teachers in your workshop take the survey before they leave. On the [workshop dashboard](https://studio.code.org/pd/workshop_dashboard/workshops) find your workshop and CLOSE THE WORKSHOP. Follow the instructions found in the [Facilitator Tools Guide](https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview). \n\n\n<hr>\n\n#### Having trouble with the survey?\nIf your participants get an error message when you share the survey link, please follow these steps:\n\n1. Don’t worry!  This is likely an issue with how the workshop was scheduled in the dashboard.\n2. Ask your participants to take a few minutes to share their \"gots and needs\" in the chat. This will allow you to receive quick feedback to inform your post-workshop debrief.\n3. Let participants know the survey will be coming via email within a few days, and send participants \"home\" for the day.\n4. Contact your Regional Partner to let them know the survey link didn’t work, and ask the Regional Partner to follow-up with Code.org on the next business day.\n5. Code.org will work with Regional Partner to send the survey link to teachers.",
+        "name": "(5 minutes) Complete the survey "
+      },
+      "seeding_key": {
+        "activity_section.key": "c7a0cd67-1266-4f1f-958e-c67a60508442",
+        "lesson_activity.key": "5843d011-ee6f-4721-a36b-16b8321d4b1a"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 8 overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "2f06186f-9974-4d64-85c2-453c80e12ea7"
+      },
+      "level_keys": [
+        "CSP-PL Module 8 - Workshop Overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Connecting to the CS community (~15 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Community 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "21addd70-828a-4d38-adf6-b6fff3fdf855"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Community 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Connecting to the CS community (~15 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Community 2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "21addd70-828a-4d38-adf6-b6fff3fdf855"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Community 2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3"
+      },
+      "level_keys": [
+        "CSP-PL M8 - MC Exam 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Exam 2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3"
+      },
+      "level_keys": [
+        "CSP-PL M8 - Exam 3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Module 8 asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 8 Wrap Up"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 8 Wrap Up"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8d2c5f0f-a59d-49e6-9d6b-cb3ec4330648"
+      },
+      "level_keys": [
+        "CSP - Module 8 Wrap Up"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL Module 8 - Workshop Overview",
+        "script_level.level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "2f06186f-9974-4d64-85c2-453c80e12ea7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Community 1",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "21addd70-828a-4d38-adf6-b6fff3fdf855"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Community 2",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Community 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "21addd70-828a-4d38-adf6-b6fff3fdf855"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - MC Exam 1",
+        "script_level.level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Exam 2",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL M8 - Exam 3",
+        "script_level.level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8e8b68a7-3430-45ce-89e6-33f50eb608a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 8 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 8 Wrap Up"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp-virtual-m8-2020",
+        "activity_section.key": "8d2c5f0f-a59d-49e6-9d6b-cb3ec4330648"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "11a08bfb-ae12-42aa-9132-1ee6432f60ae",
+      "properties": {
+        "description": "Participants understand how to support students in picking a project and identifying an function that meets the Create PT requirements."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "11a08bfb-ae12-42aa-9132-1ee6432f60ae"
+      }
+    },
+    {
+      "key": "e44a3f35-4f7d-4fdb-b43e-26ac10b1451b",
+      "properties": {
+        "description": "Participants understand how the rubric will be applied to the Create PT."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "e44a3f35-4f7d-4fdb-b43e-26ac10b1451b"
+      }
+    },
+    {
+      "key": "1b569142-ffaf-4da9-b5ee-cdcaad16a306",
+      "properties": {
+        "description": "Participants understand what is needed to successfully complete the Create PT."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "1b569142-ffaf-4da9-b5ee-cdcaad16a306"
+      }
+    },
+    {
+      "key": "4b43cede-bb2a-459d-9b3b-469f8719e4f4",
+      "properties": {
+        "description": "Participants will determine what an equitable and inclusive CS classroom looks and sounds like."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "4b43cede-bb2a-459d-9b3b-469f8719e4f4"
+      }
+    },
+    {
+      "key": "0c0fbe9e-4b71-4e40-9543-255e2ada782f",
+      "properties": {
+        "description": "Participants will identify challenges in supporting an equitable and inclusive CS classroom and strategies for addressing them."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "0c0fbe9e-4b71-4e40-9543-255e2ada782f"
+      }
+    },
+    {
+      "key": "b34a1aef-7cbb-4264-86b1-16b7e046e99c",
+      "properties": {
+        "description": "Participants will identify next steps they want to commit to taking after the workshop to include the following school year."
+      },
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "objective.key": "b34a1aef-7cbb-4264-86b1-16b7e046e99c"
+      }
+    },
+    {
+      "key": "8edafd41-ad79-4e0f-8b9c-b97eb9f3e24b",
+      "properties": {
+        "description": "Participants have a plan to continuously develop new skills after this workshop."
+      },
+      "seeding_key": {
+        "lesson.key": "session-3",
+        "objective.key": "8edafd41-ad79-4e0f-8b9c-b97eb9f3e24b"
+      }
+    },
+    {
+      "key": "2f256dfb-dbff-47b0-9fe0-1ded326dcfff",
+      "properties": {
+        "description": "Remaining parking lot or needs questions have been addressed."
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "2f256dfb-dbff-47b0-9fe0-1ded326dcfff"
+      }
+    },
+    {
+      "key": "dc7c993c-356e-4c96-aa6d-09ff1c1f6ce9",
+      "properties": {
+        "description": "Participants have taken the survey."
+      },
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "objective.key": "dc7c993c-356e-4c96-aa6d-09ff1c1f6ce9"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
