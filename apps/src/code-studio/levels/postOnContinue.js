@@ -20,6 +20,13 @@ import {TestResults} from '@cdo/apps/constants';
  * the level is a type that will always post "success".
  */
 export function onContinue() {
+  // prevent multiple milestone reports
+  const submitButton = $('.submitButton');
+  if (submitButton.attr('disabled')) {
+    return;
+  }
+  submitButton.attr('disabled', true);
+
   // In cases where this is used, we register the default getResult function, so
   // this will just be { response: 'ok', result: true }
   const result = getResult();
