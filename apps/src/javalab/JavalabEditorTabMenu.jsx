@@ -28,7 +28,7 @@ const styles = {
  * A menu with a set of clickable links that calls the cancel handler if you
  * click outside the menu or the cancel button.
  */
-export const JavalabTabMenu = class JavalabTabMenuComponent extends Component {
+class JavalabTabMenuComponent extends Component {
   static propTypes = {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired
@@ -61,6 +61,6 @@ export const JavalabTabMenu = class JavalabTabMenuComponent extends Component {
       </div>
     );
   }
-};
+}
 
-export default Radium(JavalabTabMenu);
+export default Radium(JavalabTabMenuComponent);

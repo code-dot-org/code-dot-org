@@ -52,7 +52,7 @@ const styles = {
  * A button that drops down to a set of clickable buttons, and closes itself if
  * you click on the buttons or outside of the dropdown.
  */
-export const JavalabFileExplorer = class JavalabFileExplorerComponent extends Component {
+class JavalabFileExplorerComponent extends Component {
   static propTypes = {
     files: PropTypes.arrayOf(
       PropTypes.shape({
@@ -128,6 +128,6 @@ export const JavalabFileExplorer = class JavalabFileExplorerComponent extends Co
       </div>
     );
   }
-};
+}
 
-export default onClickOutside(Radium(JavalabFileExplorer));
+export default onClickOutside(Radium(JavalabFileExplorerComponent));
