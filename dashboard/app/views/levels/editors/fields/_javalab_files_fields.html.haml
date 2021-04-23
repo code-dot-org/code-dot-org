@@ -1,0 +1,18 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#javalab_files"}}
+  Source Files
+
+#javalab_files.in.collapse
+  %table.javalab_file_table
+    %tr
+      %th File
+      %th Type
+      %th Actions
+    - @level.start_sources.keys.map{|key| key.to_s}.each do |filename|
+      %tr
+        %td
+          = filename
+        %td
+          %select
+            %option{value: 'support', selected: @level.start_sources[filename]["visible"] === false} Support
+            %option{value: 'starter', selected: @level.start_sources[filename]["visible"] === true} Starter
+        %td TBD
