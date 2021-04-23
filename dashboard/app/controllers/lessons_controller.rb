@@ -64,9 +64,21 @@ class LessonsController < ApplicationController
       current_lesson_data[:resources]&.map! {|v| v[:id]}
       old_lesson_data['resources']&.map! {|v| v['id']}
       if old_lesson_data.to_json != current_lesson_data.to_json
+        # Log error details to firehose instead of honeybadger to minimize the
+        # chances of the data being truncated.
+        FirehoseClient.instance.put_record(
+          :analysis,
+          {
+            study: 'lesson-update',
+            event: "server-data-mismatch",
+            data_string: request.path,
+            data_json: {
+              old_lesson_data: old_lesson_data,
+              current_lesson_data: current_lesson_data
+            }.to_json
+          }
+        )
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
-        msg += "\nold_lesson_data: #{JSON.pretty_generate(old_lesson_data)}"
-        msg += "\ncurrent_lesson_data: #{JSON.pretty_generate(current_lesson_data)}"
         raise msg
       end
     end
