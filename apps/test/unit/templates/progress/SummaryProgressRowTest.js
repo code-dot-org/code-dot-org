@@ -20,7 +20,7 @@ describe('SummaryProgressRow', () => {
     lockableAuthorized: false
   };
 
-  it('renders with dashed border when teacher viewing hidden lesson', () => {
+  it('renders with dashed border and not faded when teacher viewing hidden lesson', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
@@ -28,9 +28,23 @@ describe('SummaryProgressRow', () => {
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
+    assert.equal(
+      wrapper
+        .find('td')
+        .at(0)
+        .props().style.opacity,
+      undefined
+    );
+    assert.equal(
+      wrapper
+        .find('td')
+        .at(1)
+        .props().style.opacity,
+      undefined
+    );
   });
 
-  it('renders with dashed border when locked for student', () => {
+  it('renders with dashed border and faded when locked for student', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
@@ -40,6 +54,20 @@ describe('SummaryProgressRow', () => {
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
+    assert.equal(
+      wrapper
+        .find('td')
+        .at(0)
+        .props().style.opacity,
+      0.6
+    );
+    assert.equal(
+      wrapper
+        .find('td')
+        .at(1)
+        .props().style.opacity,
+      0.6
+    );
   });
 
   it('renders with dashed border when lockable lesson and teacher is not verified', () => {
@@ -55,7 +83,7 @@ describe('SummaryProgressRow', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('renders with dashed border when lockable lesson and lesson locked for students in teachers section', () => {
+  it('renders with dashed border and not faded when lockable lesson and lesson locked for students in teachers section', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
@@ -66,6 +94,20 @@ describe('SummaryProgressRow', () => {
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
+    assert.equal(
+      wrapper
+        .find('td')
+        .at(0)
+        .props().style.opacity,
+      undefined
+    );
+    assert.equal(
+      wrapper
+        .find('td')
+        .at(1)
+        .props().style.opacity,
+      undefined
+    );
   });
 
   it('disables bubbles when locked for student', () => {
