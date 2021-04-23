@@ -51,7 +51,11 @@ const nonLockableNoLessonPlan = {
   lockable: false
 };
 
-const createStore = ({preload = false, allowHidden = true} = {}) => {
+const createStore = ({
+  preload = false,
+  allowHidden = true,
+  teacherVerified = true
+} = {}) => {
   registerReducers({teacherSections});
   const store = createStoreWithReducers();
   const stages = [
@@ -66,7 +70,9 @@ const createStore = ({preload = false, allowHidden = true} = {}) => {
       stages
     })
   );
-  store.dispatch(authorizeLockable());
+  if (teacherVerified) {
+    store.dispatch(authorizeLockable());
+  }
   store.dispatch(showTeacherInfo());
   store.dispatch(setViewType(ViewType.Teacher));
   store.dispatch(
@@ -188,6 +194,23 @@ export default storybook => {
           'hideable allowed, lockable lesson with lesson plan, with lesson url',
         story: () => {
           const store = createStore();
+          const state = store.getState();
+          return (
+            <Provider store={store}>
+              <div style={style}>
+                <ProgressLessonTeacherInfo
+                  lesson={lessons(state.progress)[2]}
+                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                />
+              </div>
+            </Provider>
+          );
+        }
+      },
+      {
+        name: 'non-verified teacher view for lockable lesson',
+        story: () => {
+          const store = createStore({teacherVerified: false});
           const state = store.getState();
           return (
             <Provider store={store}>
