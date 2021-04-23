@@ -3,7 +3,10 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import i18n from '@cdo/locale';
-import {ViewType, scriptDataPropType} from '../sectionProgressConstants';
+import {
+  ViewType,
+  scriptDataPropType
+} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   studentLessonProgressType,

@@ -8,7 +8,8 @@ import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
 // getSummaryCellFormatters returns the cell formatters for the progress table summary view
-// mainCellFormatter is used to format the main cell (summary of progress on lesson)
+// each entry in the array provides a formatter for cells in a particular row
+// mainCellFormatter is used to format the main cell (summary of progress on lesson) for each student
 // timeSpentCellFormatter is used to format the time spent cell (time spent on the lesson) in the expanded view
 // lastUpdatedCellFormatter is used to format the last updated cell (progress last updated) in the expanded view
 export function getSummaryCellFormatters(getLessonProgress, onClickLesson) {
@@ -22,23 +23,17 @@ export function getSummaryCellFormatters(getLessonProgress, onClickLesson) {
   );
 
   const timeSpentCellFormatter = (lesson, student) => {
-    const timeSpent = summaryCellText(
-      lesson,
-      student,
-      getLessonProgress,
-      timeSpentFormatter
+    const progress = getLessonProgress(lesson, student);
+    return (
+      <span style={progressStyles.flex}>{timeSpentFormatter(progress)}</span>
     );
-    return <span style={progressStyles.flex}>{timeSpent}</span>;
   };
 
   const lastUpdatedCellFormatter = (lesson, student) => {
-    const lastUpdated = summaryCellText(
-      lesson,
-      student,
-      getLessonProgress,
-      lastUpdatedFormatter
+    const progress = getLessonProgress(lesson, student);
+    return (
+      <span style={progressStyles.flex}>{lastUpdatedFormatter(progress)}</span>
     );
-    return <span style={progressStyles.flex}>{lastUpdated}</span>;
   };
 
   return [mainCellFormatter, timeSpentCellFormatter, lastUpdatedCellFormatter];
@@ -87,11 +82,6 @@ export function getLevelIconHeaderFormatter(scriptData) {
   return (_, {columnIndex}) => (
     <ProgressTableLevelIconSet levels={scriptData.stages[columnIndex].levels} />
   );
-}
-
-function summaryCellText(lesson, student, getLessonProgress, textFormatter) {
-  const progress = getLessonProgress(lesson, student);
-  return textFormatter(progress);
 }
 
 function detailCellItems(lesson, student, getStudentProgress, textFormatter) {
