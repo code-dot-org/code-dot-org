@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Radium from 'radium';
-import {setSource, renameFile} from './javalabRedux';
+import {setSource, renameFile, removeFile} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
   PaneSection,
@@ -10,13 +10,12 @@ import PaneHeader, {
 import {EditorView} from '@codemirror/view';
 import {editorSetup, lightMode} from './editorSetup';
 import {EditorState, tagExtension} from '@codemirror/state';
-import FileRenameDialog from './FileRenameDialog';
-import CreateFileDialog from './CreateFileDialog';
 import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
 import JavalabEditorContextMenu from './JavalabEditorContextMenu';
+import NameFileDialog from './NameFileDialog';
 
 const style = {
   editor: {
@@ -36,6 +35,7 @@ class JavalabEditor extends React.Component {
     // populated by redux
     setSource: PropTypes.func,
     renameFile: PropTypes.func,
+    removeFile: PropTypes.func,
     sources: PropTypes.object,
     isDarkMode: PropTypes.bool
   };
@@ -45,18 +45,21 @@ class JavalabEditor extends React.Component {
 
     this.renameFromContextMenu = this.renameFromContextMenu.bind(this);
     this.cancelContextMenu = this.cancelContextMenu.bind(this);
+    this.deleteFromContextMenu = this.deleteFromContextMenu.bind(this);
     this.onRenameFile = this.onRenameFile.bind(this);
     this.onCreateFile = this.onCreateFile.bind(this);
     this._codeMirrors = {};
 
     let tabs = [];
-    // TODO: remove isOriginal once we have editors for each file
     Object.keys(props.sources).forEach((file, index) => {
       tabs.push({
         filename: file,
         key: `file-${index}`
       });
     });
+
+    const firstTabKey = tabs.length > 0 ? tabs[0].key : null;
+
     this.state = {
       tabs,
       showMenu: false,
@@ -66,19 +69,46 @@ class JavalabEditor extends React.Component {
       editTabKey: null,
       editTabFilename: null,
       newFileDialogOpen: false,
-      newFileError: null
+      newFileError: null,
+      renameFileError: null,
+      activeTabKey: firstTabKey,
+      lastTabKeyIndex: tabs.length - 1
     };
   }
 
   componentDidMount() {
     this.editors = {};
     const {sources} = this.props;
-    Object.keys(sources).forEach(filename => {
-      this.createEditor(filename, sources[filename].text);
+    this.state.tabs.forEach(tab => {
+      this.createEditor(tab.key, tab.filename, sources[tab.filename].text);
     });
   }
 
-  createEditor(filename, doc) {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.isDarkMode !== this.props.isDarkMode) {
+      if (this.props.isDarkMode) {
+        this.editor.dispatch({
+          reconfigure: {style: oneDark}
+        });
+      } else {
+        this.editor.dispatch({
+          reconfigure: {style: lightMode}
+        });
+      }
+    }
+    if (prevState.tabs.length !== this.state.tabs.length) {
+      this.state.tabs.forEach(tab => {
+        // create codemirror for a new tab
+        if (!this.editors[tab.key]) {
+          const source = this.props.sources[tab.filename];
+          const doc = (source && source.text) || '';
+          this.createEditor(tab.key, tab.filename, doc);
+        }
+      });
+    }
+  }
+
+  createEditor(key, filename, doc) {
     const {isDarkMode} = this.props;
     const extensions = [...editorSetup];
 
@@ -87,13 +117,13 @@ class JavalabEditor extends React.Component {
     } else {
       extensions.push(tagExtension('style', lightMode));
     }
-    this.editors[filename] = new EditorView({
+    this.editors[key] = new EditorView({
       state: EditorState.create({
         doc: doc,
         extensions: extensions
       }),
-      parent: this._codeMirrors[filename],
-      dispatch: this.dispatchEditorChange(filename)
+      parent: this._codeMirrors[key],
+      dispatch: this.dispatchEditorChange(key, filename)
     });
   }
 
@@ -142,37 +172,52 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isDarkMode !== this.props.isDarkMode) {
-      if (this.props.isDarkMode) {
-        this.editor.dispatch({
-          reconfigure: {style: oneDark}
-        });
-      } else {
-        this.editor.dispatch({
-          reconfigure: {style: lightMode}
-        });
+  deleteFromContextMenu() {
+    // TODO: delete confirmation
+    let filename;
+    let indexToRemove = -1;
+    // find tab in list
+    this.state.tabs.forEach((tab, index) => {
+      if (tab.key === this.state.contextTarget) {
+        filename = tab.filename;
+        indexToRemove = index;
       }
-    }
-    if (prevState.tabs.length !== this.state.tabs.length) {
-      this.state.tabs.forEach(tab => {
-        // create codemirror for a new tab
-        if (!this.editors[tab.filename]) {
-          const source = this.props.sources[tab.filename];
-          const doc = (source && source.text) || '';
-          this.createEditor(tab.filename, doc);
+    });
+    if (indexToRemove >= 0) {
+      // delete from tabs
+      let newTabs = [...this.state.tabs];
+      newTabs.splice(indexToRemove, 1);
+      let newActiveTabKey = this.state.activeTabKey;
+      // we need to update the active tab if we are deleting the currently active tab
+      if (this.state.activeTabKey === this.state.contextTarget) {
+        if (newTabs.length > 0) {
+          // if there is still at least 1 file, go to first file
+          newActiveTabKey = newTabs[0].key;
+        } else {
+          // otherwise wipe out active tab key
+          newActiveTabKey = null;
         }
+      }
+      this.setState({tabs: newTabs, activeTabKey: newActiveTabKey});
+
+      // delete from sources
+      this.props.removeFile(filename);
+      projectChanged();
+
+      this.setState({
+        showMenu: false,
+        contextTarget: null
       });
     }
   }
 
-  dispatchEditorChange = filename => {
+  dispatchEditorChange = (key, filename) => {
     // tr is a code mirror transaction
     // see https://codemirror.net/6/docs/ref/#state.Transaction
     return tr => {
       // we are overwriting the default dispatch method for codemirror,
       // so we need to manually call the update method.
-      this.editors[filename].update([tr]);
+      this.editors[key].update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
         this.props.setSource(filename, tr.newDoc.toString());
@@ -182,6 +227,14 @@ class JavalabEditor extends React.Component {
   };
 
   onRenameFile(newFilename) {
+    // check for duplicate filename
+    if (Object.keys(this.props.sources).includes(newFilename)) {
+      this.setState({
+        renameFileError: this.duplicateFileError(newFilename)
+      });
+      return;
+    }
+
     const newTabs = this.state.tabs.map(tab => {
       if (tab.key === this.state.editTabKey) {
         tab.filename = newFilename;
@@ -191,30 +244,44 @@ class JavalabEditor extends React.Component {
     const {renameFile} = this.props;
     renameFile(this.state.editTabFilename, newFilename);
     projectChanged();
-    this.setState({tabs: newTabs, dialogOpen: false});
+    this.setState({tabs: newTabs, dialogOpen: false, renameFileError: null});
   }
 
   onCreateFile(filename) {
     const {sources} = this.props;
     if (Object.keys(sources).includes(filename)) {
       this.setState({
-        newFileError: `You already have a file named ${filename}. Please choose a different name`
+        newFileError: this.duplicateFileError(filename)
       });
       return;
     }
 
     this.setState({newFileError: null});
     let newTabs = [...this.state.tabs];
-    const newIndex = newTabs.length;
+    const newTabIndex = this.state.lastTabKeyIndex + 1;
+    const newTabKey = `file-${newTabIndex}`;
+
     newTabs.push({
       filename: filename,
-      key: `file-${newIndex}`
+      key: newTabKey
     });
-    this.setState({tabs: newTabs});
+
+    // add new file to sources
     this.props.setSource(filename, '');
     projectChanged();
 
-    this.setState({newFileDialogOpen: false});
+    // add new tab and set it as the active tab
+    this.setState({
+      tabs: newTabs,
+      activeTabKey: newTabKey,
+      lastTabKeyIndex: newTabIndex,
+      newFileDialogOpen: false,
+      newFileError: null
+    });
+  }
+
+  duplicateFileError(filename) {
+    return `File name ${filename} is already in use in this project. Please choose a different name`;
   }
 
   render() {
@@ -250,7 +317,8 @@ class JavalabEditor extends React.Component {
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <Tab.Container
-          defaultActiveKey="file-0"
+          activeKey={this.state.activeTabKey}
+          onSelect={tabKey => this.setState({activeTabKey: tabKey})}
           style={{marginTop: 10}}
           id="javalab-editor-tabs"
           className={this.props.isDarkMode ? 'darkmode' : ''}
@@ -264,7 +332,6 @@ class JavalabEditor extends React.Component {
                     key={`${tab.key}-tab`}
                     {...this.makeListeners(tab.key)}
                   >
-                    {/*TODO: make this an input on rename/new file? */}
                     {tab.filename}
                   </NavItem>
                 );
@@ -275,7 +342,7 @@ class JavalabEditor extends React.Component {
                 return (
                   <Tab.Pane eventKey={tab.key} key={`${tab.key}-content`}>
                     <div
-                      ref={el => (this._codeMirrors[tab.filename] = el)}
+                      ref={el => (this._codeMirrors[tab.key] = el)}
                       style={{
                         ...style.editor,
                         ...(this.props.isDarkMode && style.darkBackground)
@@ -291,20 +358,30 @@ class JavalabEditor extends React.Component {
           <JavalabEditorContextMenu
             cancelContextMenu={this.cancelContextMenu}
             renameFromContextMenu={this.renameFromContextMenu}
+            deleteFromContextMenu={this.deleteFromContextMenu}
           />
         </div>
-        <FileRenameDialog
+        <NameFileDialog
           isOpen={this.state.dialogOpen}
-          handleClose={() => this.setState({dialogOpen: false})}
+          handleClose={() =>
+            this.setState({dialogOpen: false, renameFileError: null})
+          }
           filename={editTabFilename}
-          handleRename={this.onRenameFile}
+          handleSave={this.onRenameFile}
           isDarkMode={this.props.isDarkMode}
+          inputLabel="Rename the file"
+          saveButtonText="Rename"
+          errorMessage={this.state.renameFileError}
         />
-        <CreateFileDialog
+        <NameFileDialog
           isOpen={this.state.newFileDialogOpen}
-          handleClose={() => this.setState({newFileDialogOpen: false})}
-          handleCreate={this.onCreateFile}
+          handleClose={() =>
+            this.setState({newFileDialogOpen: false, newFileError: null})
+          }
+          handleSave={this.onCreateFile}
           isDarkMode={this.props.isDarkMode}
+          inputLabel="Create new file"
+          saveButtonText="Create"
           errorMessage={this.state.newFileError}
         />
       </div>
@@ -320,6 +397,7 @@ export default connect(
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
     renameFile: (oldFilename, newFilename) =>
-      dispatch(renameFile(oldFilename, newFilename))
+      dispatch(renameFile(oldFilename, newFilename)),
+    removeFile: filename => dispatch(removeFile(filename))
   })
 )(Radium(JavalabEditor));

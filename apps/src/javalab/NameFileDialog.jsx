@@ -41,16 +41,22 @@ const styles = {
   },
   label: {
     marginBottom: 0
+  },
+  errorMessage: {
+    color: color.red
   }
 };
 
-export default class CreateFileDialog extends Component {
+export default class NameFileDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
-    handleCreate: PropTypes.func.isRequired,
+    handleSave: PropTypes.func.isRequired,
+    inputLabel: PropTypes.string.isRequired,
+    saveButtonText: PropTypes.string.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
-    errorMessage: PropTypes.string
+    errorMessage: PropTypes.string,
+    filename: PropTypes.string
   };
 
   constructor(props) {
@@ -65,9 +71,12 @@ export default class CreateFileDialog extends Component {
     const {
       isOpen,
       handleClose,
-      handleCreate,
+      handleSave,
+      inputLabel,
+      saveButtonText,
       isDarkMode,
-      errorMessage
+      errorMessage,
+      filename
     } = this.props;
     return (
       <BaseDialog
@@ -84,7 +93,7 @@ export default class CreateFileDialog extends Component {
           htmlFor="filenameInput"
           style={{...styles.label, ...(isDarkMode && styles.darkDialog)}}
         >
-          Create new file
+          {inputLabel}
         </label>
         <div
           style={{
@@ -95,6 +104,7 @@ export default class CreateFileDialog extends Component {
           <input
             type="text"
             name="filenameInput"
+            defaultValue={filename}
             ref={this.setTextInputRef}
             style={{
               ...styles.dialogInput,
@@ -108,9 +118,9 @@ export default class CreateFileDialog extends Component {
                 ...styles.button,
                 ...(isDarkMode ? styles.darkButton : styles.lightRename)
               }}
-              onClick={() => handleCreate(this.textInput.value)}
+              onClick={() => handleSave(this.textInput.value)}
             >
-              Create
+              {saveButtonText}
             </button>
             <button
               type="button"
@@ -122,9 +132,9 @@ export default class CreateFileDialog extends Component {
             >
               Cancel
             </button>
-            {errorMessage && <div>{errorMessage}</div>}
           </div>
         </div>
+        {errorMessage && <div style={styles.errorMessage}>{errorMessage}</div>}
       </BaseDialog>
     );
   }

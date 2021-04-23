@@ -32,7 +32,8 @@ const styles = {
 export const JavalabContextMenu = class JavalabContextMenuComponent extends Component {
   static propTypes = {
     cancelContextMenu: PropTypes.func.isRequired,
-    renameFromContextMenu: PropTypes.func.isRequired
+    renameFromContextMenu: PropTypes.func.isRequired,
+    deleteFromContextMenu: PropTypes.func.isRequired
   };
 
   state = {
@@ -44,7 +45,11 @@ export const JavalabContextMenu = class JavalabContextMenuComponent extends Comp
   };
 
   render() {
-    const {renameFromContextMenu, cancelContextMenu} = this.props;
+    const {
+      renameFromContextMenu,
+      deleteFromContextMenu,
+      cancelContextMenu
+    } = this.props;
     return (
       <div>
         <button
@@ -54,6 +59,14 @@ export const JavalabContextMenu = class JavalabContextMenuComponent extends Comp
           style={styles.anchor}
         >
           Rename
+        </button>
+        <button
+          type="button"
+          key="delete"
+          onClick={deleteFromContextMenu}
+          style={styles.anchor}
+        >
+          Delete
         </button>
         <button
           type="button"
