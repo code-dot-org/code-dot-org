@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:28:45 UTC",
+    "serialized_at": "2021-04-21 06:00:40 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -81,16 +81,7 @@
         "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab.",
         "purpose": "This lesson introduces students to Design Mode in App Lab and the different kinds of screen elements and properties at their disposal in this tool. This lesson not only builds up skills in designing a user interface but also sets students up to begin designing an app of their own in the following lesson.",
         "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1xwZqosb7C5LeQ4HMJq5WU-JyJyxg2YlkDz4qHmj02DE/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
@@ -200,16 +191,7 @@
         "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps.",
         "purpose": "This lesson is written in an Investigate style, a common format of lesson that will be used in the remainder of the programming units. In this kind of lesson students are encouraged to investigate working code and make simple modifications to understand how it works. \r\n\r\nThis lesson introduces a number of concepts and vocabulary around what programs are and how they run that will need to be reinforced in future lessons. ",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides at the conclusion of the lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1uoTeqaLbOQ1g_uRiqsLkRIsemZck9zGlj1AdNQpSJIs/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Intro to Programming",
@@ -638,18 +620,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f26603a5-2d5c-4c3c-a8b4-df6b31260953",
-        "lesson.key": "Intro to Programming",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "key": "b13a1f67-0e0f-4f93-b09c-637a146d6474",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b13a1f67-0e0f-4f93-b09c-637a146d6474",
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021"
@@ -1143,11 +1113,11 @@
       "key": "26ea61b2-cae8-4399-beaa-3eb2823ad75a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio.\n\n**Level 1:** Students examine an app from the previous lesson. They should feel free to move around and change any elements they'd like. Encourage students to spend a good amount of time on this level discovering how things work. Here are a few things they should notice:\n\n* The screen can be changed by clicking the dropdown at the top of the app screen\n* Each element has different properties that can be changed depending on the type of element. For example, a label element has choices like \"text alignment\" and \"font family\" while an image has choices like \"fit image\". ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Regrouping:** You may want to pull the class back together after Level 2 to discuss their findings. \r\n"
+            "markdown": "**Regrouping:** You may want to pull the class back together after Level 1 to discuss their findings. "
           }
         ]
       },
@@ -1160,7 +1130,7 @@
       "key": "4fa755d5-1ec0-4ccb-bc4a-14ffe312e4c4",
       "position": 2,
       "properties": {
-        "description": "**Level 1:** Students examine an app from the previous lesson. They should feel free to move around and change any elements they'd like. Encourage students to spend a good amount of time on this level discovering how things work. Here are a few things they should notice:\n\n* The screen can be changed by clicking the dropdown at the top of the app screen\n* Each element has different properties that can be changed depending on the type of element. For example, a label element has choices like \"text alignment\" and \"font family\" while an image has choices like \"fit image\". \n\n**Levels 2-6:** In these levels, students will learn how specific elements are set up and edited. Level 3 introduces the concept of themes, which control the overall \"look\" of an app. No matter what theme is chosen, students have the ability to override any element's design. \n\n**Level 7:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson."
+        "description": "\n\n**Levels 2-6:** In these levels, students will learn how specific elements are set up and edited. Level 3 introduces the concept of themes, which control the overall \"look\" of an app. No matter what theme is chosen, students have the ability to override any element's design. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "4fa755d5-1ec0-4ccb-bc4a-14ffe312e4c4",
@@ -1182,7 +1152,8 @@
       "key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
       "position": 4,
       "properties": {
-        "progression_name": "Copy an App"
+        "progression_name": "Copy an App",
+        "description": "**Level 7:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson."
       },
       "seeding_key": {
         "activity_section.key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
@@ -1204,7 +1175,7 @@
       "key": "1ed5a8c6-1a1f-466a-900f-81a99914d44e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> <span style=\"background-color: #FFFF00\"> **Discuss:** Have students answer the following</span>\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most element can do both, because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** \n* *What elements collect input?*\n* *What elements display output?*\n* *Do you think there are elements that can do both?*\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most elements can do both because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n"
       },
       "seeding_key": {
         "activity_section.key": "1ed5a8c6-1a1f-466a-900f-81a99914d44e",
@@ -1215,7 +1186,7 @@
       "key": "01c00fc1-562f-44c0-8125-6d5a51653ef2",
       "position": 2,
       "properties": {
-        "description": "* What elements collect input? \r\n* What elements display output?\r\n* Do you think there are elements that can do both?\r\n\r\n---"
+        "description": "---"
       },
       "seeding_key": {
         "activity_section.key": "01c00fc1-562f-44c0-8125-6d5a51653ef2",
@@ -1698,7 +1669,7 @@
       "key": "5acd0933-5cfb-4292-b8dd-09994428b8a2",
       "position": 2,
       "properties": {
-        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** *Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.*\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.* \n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.* \n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.*\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.*\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
+        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** *Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.* \n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
       },
       "seeding_key": {
         "activity_section.key": "5acd0933-5cfb-4292-b8dd-09994428b8a2",
@@ -1784,22 +1755,12 @@
       "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n* What is the difference between a sequential program and an event-driven program?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "6da3cf97-c93c-4ba6-b29b-e26653cfba5f",
         "lesson_activity.key": "f26603a5-2d5c-4c3c-a8b4-df6b31260953"
-      }
-    },
-    {
-      "key": "08fc8c26-bc4e-499f-9143-706a35c36502",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "08fc8c26-bc4e-499f-9143-706a35c36502",
-        "lesson_activity.key": "b13a1f67-0e0f-4f93-b09c-637a146d6474"
       }
     },
     {
@@ -2677,7 +2638,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2703,7 +2664,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2729,7 +2690,7 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2755,7 +2716,7 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2781,7 +2742,7 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2807,7 +2768,7 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Mode Exploration",
         "level_keys": [
@@ -2833,7 +2794,7 @@
       "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Copy an App",
         "level_keys": [
@@ -2963,7 +2924,7 @@
       "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -2989,7 +2950,7 @@
       "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3015,7 +2976,7 @@
       "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3041,7 +3002,7 @@
       "chapter": 27,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3067,7 +3028,7 @@
       "chapter": 28,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Investigation",
         "level_keys": [
@@ -3095,10 +3056,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding",
-        "level_keys": [
-          "U3L6 CSP CFU Sequential vs Event Driven_2021"
-        ]
+        "progression": "Check for Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -3109,7 +3067,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "08fc8c26-bc4e-499f-9143-706a35c36502"
+        "activity_section.key": "6da3cf97-c93c-4ba6-b29b-e26653cfba5f"
       },
       "level_keys": [
         "U3L6 CSP CFU Sequential vs Event Driven_2021"
@@ -3433,6 +3391,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 MC Assessment _2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3796,7 +3757,7 @@
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "08fc8c26-bc4e-499f-9143-706a35c36502"
+        "activity_section.key": "6da3cf97-c93c-4ba6-b29b-e26653cfba5f"
       }
     },
     {

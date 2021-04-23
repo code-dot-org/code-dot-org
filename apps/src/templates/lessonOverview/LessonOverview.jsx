@@ -6,9 +6,11 @@ import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import {linkWithQueryParams} from '@cdo/apps/utils';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
@@ -19,7 +21,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import Announcements from '../../code-studio/components/progress/Announcements';
-import {linkWithQueryParams} from '@cdo/apps/utils';
 import LessonStandards, {ExpandMode} from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
@@ -84,19 +85,42 @@ class LessonOverview extends Component {
     hasVerifiedResources: PropTypes.bool.isRequired
   };
 
+  recordAndNavigateToPdf = (e, firehoseKey, url) => {
+    // Prevent navigation to url until callback
+    e.preventDefault();
+    firehoseClient.putRecord(
+      {
+        study: 'pdf-click',
+        study_group: 'lesson',
+        event: 'open-pdf',
+        data_json: JSON.stringify({
+          name: this.props.lesson.key,
+          pdfType: firehoseKey
+        })
+      },
+      {
+        includeUserId: true,
+        callback: () => {
+          window.location.href = url;
+        }
+      }
+    );
+    return false;
+  };
+
   compilePdfDropdownOptions = () => {
     const {lessonPlanPdfUrl, scriptResourcesPdfUrl} = this.props.lesson;
     const options = [];
     if (lessonPlanPdfUrl) {
       options.push({
-        key: 'lessonPlan',
+        key: 'singleLessonPlan',
         name: i18n.printLessonPlan(),
         url: lessonPlanPdfUrl
       });
     }
     if (scriptResourcesPdfUrl) {
       options.push({
-        key: 'scriptResource',
+        key: 'scriptResources',
         name: i18n.printHandouts(),
         url: scriptResourcesPdfUrl
       });
@@ -134,12 +158,16 @@ class LessonOverview extends Component {
                 <div style={{marginRight: 5}}>
                   <DropdownButton
                     color={Button.ButtonColor.gray}
-                    href={lesson.lessonPlanPdfUrl}
-                    target="_blank"
                     text={i18n.printingOptions()}
                   >
                     {pdfDropdownOptions.map(option => (
-                      <a key={option.key} href={option.url}>
+                      <a
+                        key={option.key}
+                        onClick={e =>
+                          this.recordAndNavigateToPdf(e, option.key, option.url)
+                        }
+                        href={option.url}
+                      >
                         {option.name}
                       </a>
                     ))}
