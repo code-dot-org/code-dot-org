@@ -116,6 +116,21 @@ class SchoolDistrict < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2019-2020 school district data"
+      import_options_1920 = {col_sep: ",", headers: true, quote_char: "\x00"}
+      AWS::S3.seed_from_file('cdo-nces', "2019-2020/ccd/districts.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_1920, true, is_dry_run: false) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2019-20'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2019-20'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2019-20'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2019-20']) ? '2019-2020' : nil
+          }
+        end
+      end
     end
   end
 
