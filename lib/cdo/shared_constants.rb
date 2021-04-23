@@ -448,6 +448,7 @@ module SharedConstants
       "createEdgeSprites": null,
       "shapeColor": null,
       "tint": null,
+      "alpha": null,
       "setVelocity": null,
       "getDirection": null,
       "getSpeed": null,
