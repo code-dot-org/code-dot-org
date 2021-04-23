@@ -1,0 +1,413 @@
+{
+  "script": {
+    "name": "csp-virtual-kickoff-2020",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "hideable_lessons": true,
+      "weekly_instructional_minutes": 60,
+      "show_calendar": true,
+      "include_student_lesson_plans": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-04-23 03:52:56 UTC",
+    "seeding_key": {
+      "script.name": "csp-virtual-kickoff-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "day-1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Kickoff Call"
+      },
+      "seeding_key": {
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "session-1",
+      "name": "Virtual AYW Cohort Kick Off ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "student_overview": "This session is designed to kick-off the virtual academic year workshop series on a positive note, setting the tone for a supportive, engaging learning experience for all participants. ",
+        "purpose": "This session is designed to kick-off the virtual academic year workshop series on a positive note, setting the tone for a supportive, engaging learning experience for all participants. ",
+        "preparation": "**Virtual Room Setup**\n\n* Join Zoom via video and audio\n\n**Facilitator Supplies:**\n\n* [r vpl-ayw-kick-off-slides 20-21]\n* [r vpl-m1-slides]\n* [r vpl-ayw-digital-digest-template 20-21]\n\n* **Note:** Permissions set to \"anyone with the link can edit\"\n\n**Teacher Supplies:**\n\n* Computer with webcam\n* Optional: journal",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d",
+      "position": 1,
+      "properties": {
+        "name": "Welcome, norms, and agenda",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    },
+    {
+      "key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5",
+      "position": 2,
+      "properties": {
+        "name": "What to Expect from AYWs",
+        "duration": 16
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    },
+    {
+      "key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13",
+      "position": 3,
+      "properties": {
+        "name": "Asynchronous practice",
+        "duration": 22
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    },
+    {
+      "key": "812889ba-3a22-41e0-89f1-fd7b688539fb",
+      "position": 4,
+      "properties": {
+        "name": "Wrap up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "812889ba-3a22-41e0-89f1-fd7b688539fb",
+        "lesson.key": "session-1",
+        "lesson_group.key": "day-1",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2c706290-81ce-4317-8be5-da0c505767bd",
+      "position": 1,
+      "properties": {
+        "description": "** (4 mins) As participants join the call… ***\r\n\r\n* Ask them to take attendance using your workshop’s unique attendance code\r\n* Encourage people to respond in writing to the warm-up prompt on the slide: “what is one of your highlights (personal or professional) from this summer?”\r\n\r\n** (4 mins) Welcome **\r\n\r\n* Quick reminder of video and mute features on Zoom\r\n* Facilitators and producer introduce themselves and their roles in the cohort\r\n* Remind participants they will have many opportunities to get to know each other and build a supportive community as they go through this experience together this year.\r\n* Pick a few responses from the warm-up to highlight, and ask the participants who share those responses to come off of mute and share out a bit more.",
+        "name": "(8 mins) Welcome ###\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c706290-81ce-4317-8be5-da0c505767bd",
+        "lesson_activity.key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d"
+      }
+    },
+    {
+      "key": "aa2fdb0f-e9da-4819-9a85-80b727fe5a3d",
+      "position": 2,
+      "properties": {
+        "description": "Here’s what we’ll be doing in our quick kick-off today:\r\n\tOverview of Academic Year Workshops\r\n\tIntro to the asynchronous work and tools\r\n\tMaking sure you know next steps and where to find support\r\n\r\nNote: We won’t be digging into curriculum content today! However, if you do have curriculum or classroom-specific questions, don’t hesitate to add them to the parking lot at the end of this slide deck, and we will make sure to address your questions asap.",
+        "remarks": true,
+        "name": "(1 min) Today’s agenda ###\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa2fdb0f-e9da-4819-9a85-80b727fe5a3d",
+        "lesson_activity.key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d"
+      }
+    },
+    {
+      "key": "a7179e7e-f1b2-42c1-96b2-6e2c46dfcde0",
+      "position": 3,
+      "properties": {
+        "description": "To help support this community, we ask that we all honor these engagement norms throughout our year:",
+        "remarks": true,
+        "name": "(1 min) Norms ###\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7179e7e-f1b2-42c1-96b2-6e2c46dfcde0",
+        "lesson_activity.key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d"
+      }
+    },
+    {
+      "key": "53e98388-de9c-4e79-8c0b-79580efdb3dc",
+      "position": 4,
+      "properties": {
+        "description": "Example norms currently in the slides:",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "facilitators have the option to use the sample tech/engagement norms in the slides, or build their own\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "53e98388-de9c-4e79-8c0b-79580efdb3dc",
+        "lesson_activity.key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d"
+      }
+    },
+    {
+      "key": "d635e321-a932-4c6c-8e86-9348d22760ff",
+      "position": 5,
+      "properties": {
+        "description": "* Show your video during our workshop\r\n* Mute yourself in a large group\r\n* Be present\r\n* Start/end on time\r\n* Monitor your air time\r\n* Contribute to our cohort community"
+      },
+      "seeding_key": {
+        "activity_section.key": "d635e321-a932-4c6c-8e86-9348d22760ff",
+        "lesson_activity.key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d"
+      }
+    },
+    {
+      "key": "6b8383a8-ac4d-4d20-8a46-231800009792",
+      "position": 1,
+      "properties": {
+        "description": "** (10 mins) Overview of Academic Year Workshops **\r\n\r\n<span style=\"background-color:yellow;\"><strong> **Producers: prepare random breakout rooms for groups of 3 or 4 people per room. </strong></span>",
+        "name": "(13 mins) Overview of AYWs ###\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b8383a8-ac4d-4d20-8a46-231800009792",
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5"
+      }
+    },
+    {
+      "key": "dd60c9bf-689c-4d63-a975-3de981fc4650",
+      "position": 2,
+      "properties": {
+        "description": "AYWs are a key component of the year-long Professional Learning Program. They are intended to support teachers in successfully implementing the course with their students, and to provide “just-in-time” support to do so. Our virtual AYW option consists of this kick-off call plus eight monthly modules that include asynchronous, independent work as well as synchronous workshops.\r\n\r\nWe’ll all get out of this what we put into it! Let’s talk about what we want to be true about our experience as a cohort.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dd60c9bf-689c-4d63-a975-3de981fc4650",
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5"
+      }
+    },
+    {
+      "key": "3f4c7640-c754-4e32-84dc-842c8502f469",
+      "position": 3,
+      "properties": {
+        "description": "** (4 mins) Prompt **\r\n**Think back to your summer workshop experience. What did you value about that experience? Consider the approach to learning, the community, how you were engaged, what you needed to fully participate virtually, etc.**\r\n\r\n* (1 min) Reflect silently, and consider jotting these things down in your journal\r\n\r\n* (3 mins) Type a few of the things you valued about that experience into the shared slide, and then take a look at what others have written.\r\n\r\n\r\n** (1 min) Breakout room directions (groups of 3 or 4) **"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f4c7640-c754-4e32-84dc-842c8502f469",
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5"
+      }
+    },
+    {
+      "key": "ec388c6c-15a3-4a9a-bda0-b7daa3071ad2",
+      "position": 4,
+      "properties": {
+        "description": "We’re going to send you to breakout rooms now to discuss what we’re each looking for from this cohort. In your breakouts, identify:",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ec388c6c-15a3-4a9a-bda0-b7daa3071ad2",
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5"
+      }
+    },
+    {
+      "key": "4039e46a-2003-497f-ae57-468b8d523abb",
+      "position": 5,
+      "properties": {
+        "description": "* What commonalities do you see in what we’ve all shared? \r\n* What do you each want to commit to as participants to make our academic year workshops a positive experience for our cohort?\r\n\r\n<span style=\"background-color:yellow;\"><strong> **Producers: prepare random breakout rooms for groups of 3 or 4 people per room. </strong></span>\r\n\r\n* (6 mins) Breakout rooms\r\n* (~2 min) What commonalities do you see in what we’ve all shared? \r\n* (~4 mins) What do you want to commit to as a participant to make our academic year workshops a positive experience for our cohort?\r\n\r\n<span style=\"background-color:yellow;\"><strong> **Producers: close breakout rooms. </strong></span>\r\n\r\n** (1 min) Closing **\r\n\r\nFacilitators: Close by choosing one or two things from the list generated by participants that you can commit to supporting as facilitators, and share those out. If you don’t see things in the list that you’d like to highlight, consider saying something like, “in addition to all of the great ideas you’ve generated here, as facilitators we’re really committed to a few specific things.” Examples to consider (facilitators are encouraged to develop commitments make sense for their cohort’s context):\r\n\r\n* Creating a cohort community where you feel welcomed and able to participate and ask questions\r\n* Making sure that our synchronous sessions are a time for active learning and community building."
+      },
+      "seeding_key": {
+        "activity_section.key": "4039e46a-2003-497f-ae57-468b8d523abb",
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5"
+      }
+    },
+    {
+      "key": "bace29c5-e64f-4f01-82bc-5898a5776105",
+      "position": 6,
+      "properties": {
+        "description": "We mentioned that each virtual module includes asynchronous work and a synchronous workshop. Here’s a quick overview of the purpose of those components.",
+        "remarks": true,
+        "name": "(3 mins) Components of Virtual AYWs ###\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "bace29c5-e64f-4f01-82bc-5898a5776105",
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5"
+      }
+    },
+    {
+      "key": "4302f207-3e2a-4c48-991f-8215e995bf43",
+      "position": 7,
+      "properties": {
+        "description": "* (2 mins) Each module starts with asynchronous work. We’ll walk through how to find and engage with those materials in a few minutes. For now, we want to stress a few things: \r\n\r\n\t* The asynchronous portion isn’t optional! This work is a valuable time for you to engage in meaningful learning at your own pace, and is designed to feed into the following synchronous workshop.\r\n\t* The asynchronous work for each module is designed to take about 90 mins to complete. You might find optional activities, lessons, videos, etc. that you want to spend more time digging into, and that’s ok! However, it’s not expected or required that you go beyond 90 mins for the asynchronous work.\r\n\t* To support the connection between the asynchronous and synchronous components of the modules, and to keep us connected as a community, the asynchronous work ends with a written reflection that will be visible to the entire cohort in the shared slides. As facilitators, we’ll use your responses to those questions to help inform the content of the upcoming synchronous portion of the module. \r\n\r\n** (1 min) Once a month, we’ll come together for the synchronous portion of the module. **\r\n\r\n* Each synchronous workshop is also 90 mins.\r\n* We prioritize activities during our synchronous time that are best completed with other people in real-time: discussions, collaborative exercises, etc. \r\n* At the end of each synchronous workshop, we’ll make sure you know how to find the asynchronous work for the next module.\r\n\r\n\t* You can find the schedule for all of our synchronous workshops on our cohort’s digital digest. We recommend you bookmark this digital digest as it will contain the links to all of the slide decks we’ll use this year."
+      },
+      "seeding_key": {
+        "activity_section.key": "4302f207-3e2a-4c48-991f-8215e995bf43",
+        "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5"
+      }
+    },
+    {
+      "key": "1bffb23c-ec2e-453e-a611-34a3049c7899",
+      "position": 1,
+      "properties": {
+        "description": "Let’s spend some time digging into the asynchronous work! We’ll walk you through the steps you’ll take to access the materials, and then you’ll get a chance to test it out. By the end of this activity, we want to make sure you know how to find the resources, how to engage with them, and how to make the asynchronous work a valuable part of your experience this year.",
+        "remarks": true,
+        "name": "(5 mins) Demonstration ###\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "1bffb23c-ec2e-453e-a611-34a3049c7899",
+        "lesson_activity.key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13"
+      }
+    },
+    {
+      "key": "effbe181-1678-4342-bfa4-4bfe5be21d06",
+      "position": 2,
+      "properties": {
+        "description": "** (4 mins) Demonstration (facilitator shares screen)** \r\n\r\nAt the end of each synchronous workshop, you’ll find a slide that includes a link to our digital digest. \r\n\r\n* Go to the digital digest to find the slide deck for the next module.\r\n\t* Use the /join code to join  \r\n\t* Open the deck for that module, and find the asynchronous work instructions at the beginning of that deck. Those instructions include a link to the asynchronous course in Code Studio, a place to add questions as they come up for you, a space to post a reflection that the whole group will see, and a link to the pre-survey for the next module. \r\n\r\n** Things to highlight about the asynchronous course ** \r\n\r\n* Estimated times\r\n* Reflection prompts, and who sees their submissions\r\n* Opportunities to dig into optional activities and resources (e.g., videos, lessons, etc). Make sure to stress that these optional activities are included to help meet a variety of needs and interests, and participants should engage with those materials in a way that makes sense for them."
+      },
+      "seeding_key": {
+        "activity_section.key": "effbe181-1678-4342-bfa4-4bfe5be21d06",
+        "lesson_activity.key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13"
+      }
+    },
+    {
+      "key": "bcf74b4b-d22d-4e87-848f-e52b6ad11b46",
+      "position": 3,
+      "properties": {
+        "description": "You’ll have about 10 minutes now to just explore! As you do, make sure to look for a few things:",
+        "remarks": true,
+        "name": "(17 mins) Try it! ###\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcf74b4b-d22d-4e87-848f-e52b6ad11b46",
+        "lesson_activity.key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13"
+      }
+    },
+    {
+      "key": "2eee82e1-2898-48f3-b412-3f8b8cc1aed4",
+      "position": 4,
+      "properties": {
+        "description": "* The guidance that’s provided to help you estimate activity times\r\n* Where and how to submit reflection prompts\r\n* Opportunities to dig into optional activities\r\n* Also make a note of any questions that come up for you. You’re welcome to record them in the following “Questions I have…” slide\r\n\r\n** (9 mins) Independent resource exploration ** \r\n\r\n* Participants explore the asynchronous course, and note questions on the questions slide.\r\n\r\n* As participants explore, facilitators should keep an eye on the questions on the slide, and choose questions to prioritize during the Q&A\r\n\r\n** (5 mins) Q & A** \r\n\r\n* Respond to as many of the questions that were added to the slide as is reasonable."
+      },
+      "seeding_key": {
+        "activity_section.key": "2eee82e1-2898-48f3-b412-3f8b8cc1aed4",
+        "lesson_activity.key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13"
+      }
+    },
+    {
+      "key": "6cbc734d-ef26-4e27-9fa3-a5367ad3f3e6",
+      "position": 5,
+      "properties": {
+        "description": "The last level of the asynchronous work in Code Studio will remind you to go back to the slide deck to respond to the group reflection question. **(Share screen)** Return to the slide deck. You’ll find the slide to post your group reflection question response there. Everyone, please go ahead and add your name to a row in the Module 1 group reflection slide so we can make sure you know where to go.\r\n\r\nAs a reminder, we count on your reflections as facilitators! They help us know what’s on your mind, and how to shape the upcoming synchronous session. Please make sure to complete these reflections by XX days before the synchronous workshop.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6cbc734d-ef26-4e27-9fa3-a5367ad3f3e6",
+        "lesson_activity.key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13"
+      }
+    },
+    {
+      "key": "012c168c-8285-4166-af4d-6e3e4f144844",
+      "position": 1,
+      "properties": {
+        "description": "As we near the end of our kick-off, let’s make sure you know your next steps:\r\n\r\n* At the end of this deck is a slide that includes the link back to our digital digest. If you haven’t already, bookmark the digest so you can always find it!\r\n* Find the deck for Module 1 in the digest, and follow the directions in that deck for your asynchronous work.\r\n* Make sure to complete that work and submit your group reflection question response and pre-survey response by **xx** date\r\n* Need help? Here’s who to contact. As a reminder, their names and contact info are in the digital digest.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "012c168c-8285-4166-af4d-6e3e4f144844",
+        "lesson_activity.key": "812889ba-3a22-41e0-89f1-fd7b688539fb"
+      }
+    },
+    {
+      "key": "fa523f4a-a988-4a27-9e4d-2a03bb8e4ec5",
+      "position": 2,
+      "properties": {
+        "description": "Any remaining questions?\r\n\r\n* Check parking lot and respond as appropriate\r\n\r\n** Please take this survey (link in slide).** \r\n\r\nWe’ll look forward to seeing your asynchronous reflections, and joining you again at our Module 1 synchronous workshop!"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa523f4a-a988-4a27-9e4d-2a03bb8e4ec5",
+        "lesson_activity.key": "812889ba-3a22-41e0-89f1-fd7b688539fb"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "9acce6c7-d37d-4547-b0b7-57354a4fbe68",
+      "properties": {
+        "description": "Feel a sense of community, support, and accountability with and to the cohort members."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "9acce6c7-d37d-4547-b0b7-57354a4fbe68"
+      }
+    },
+    {
+      "key": "42ce7beb-9687-4c7b-bcec-f3d3535de7f5",
+      "properties": {
+        "description": "Understand the process, expectations, and purpose of engaging in asynchronous and synchronous sessions."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "42ce7beb-9687-4c7b-bcec-f3d3535de7f5"
+      }
+    },
+    {
+      "key": "cb45e888-6163-40eb-8382-4b576e82dee4",
+      "properties": {
+        "description": "Know the next steps in the process for participating in the workshop series."
+      },
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "objective.key": "cb45e888-6163-40eb-8382-4b576e82dee4"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,0 +1,6 @@
+hideable_lessons true
+is_migrated true
+
+lesson_group 'day-1', display_name: 'Kickoff Call'
+lesson 'session-1', display_name: 'Virtual AYW Cohort Kick Off ', has_lesson_plan: true
+
