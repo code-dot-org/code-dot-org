@@ -110,4 +110,4 @@ export default connect(
       dispatch(setResultsPhase(phase));
     }
   })
-)(Results);
+)(ResultsDetails);
