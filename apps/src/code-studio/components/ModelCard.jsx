@@ -56,7 +56,7 @@ class FeatureDetails extends React.Component {
           Possible Values:{' '}
           {!feature.values && (
             <p style={styles.details}>
-              min: {feature.min} max: {feature.max}
+              min: {feature.min}, max: {feature.max}
             </p>
           )}
           {feature.values && feature.values.join(', ')}
