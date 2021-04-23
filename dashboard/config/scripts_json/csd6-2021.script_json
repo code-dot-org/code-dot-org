@@ -207,7 +207,7 @@
         "overview": "In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.",
         "student_overview": "Students get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\r\n",
         "purpose": "This lesson builds on the previous by introducing analog sensors as a new form of input. These sensors all perform analog-to-digital conversion, allowing programs to sense things as represented by a 10 bit number (0-1023).",
-        "preparation": "* Cue up the [r analog-digital-video]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
+        "preparation": "* Cue up the [r analog-digital-video/csd/2021]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "1. **Develop programs that respond to analog input**\n\n\tCode Studio: See rubric on bubble 11\n\n2. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: See rubric on bubble 11\n\n3. **Represent a sensor value in a variety of ways**\n\n\tCode Studio: See rubric on bubble 11"
       },

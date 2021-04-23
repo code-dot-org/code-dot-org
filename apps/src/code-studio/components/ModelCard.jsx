@@ -40,6 +40,33 @@ const styles = {
   }
 };
 
+class FeatureDetails extends React.Component {
+  static propTypes = {
+    feature: PropTypes.object
+  };
+
+  render() {
+    const {feature} = this.props;
+
+    return (
+      <div>
+        <p style={styles.bold}>{feature.id}</p>
+        <p>{feature.description}</p>
+        <div>
+          Possible Values:{' '}
+          {!feature.values && (
+            <p style={styles.details}>
+              min: {feature.min}, max: {feature.max}
+            </p>
+          )}
+          {feature.values && feature.values.join(', ')}
+        </div>
+        <br />
+      </div>
+    );
+  }
+}
+
 export default class ModelCard extends React.Component {
   static propTypes = {
     model: PropTypes.object
@@ -48,6 +75,9 @@ export default class ModelCard extends React.Component {
   render() {
     const model = this.props.model;
     const metadata = model?.metadata;
+    const selectedFeatures = metadata?.features.map(feature => {
+      return feature.id;
+    });
 
     return (
       <div>
@@ -62,9 +92,9 @@ export default class ModelCard extends React.Component {
             <div style={styles.subPanel}>
               <div style={styles.heading}>Summary</div>
               <p style={styles.details}>
-                Predict {metadata.labelColumn} based on{' '}
-                {metadata.selectedFeatures?.join(', ')} with{' '}
-                {metadata.summaryStat?.stat}% accuracy.
+                Predict {metadata.label.id} based on{' '}
+                {selectedFeatures.join(',')} with {metadata.summaryStat?.stat}%
+                accuracy.
               </p>
             </div>
             <div style={styles.subPanel}>
@@ -89,13 +119,13 @@ export default class ModelCard extends React.Component {
             </div>
             <div style={styles.subPanel}>
               <div style={styles.heading}>Label</div>
-              <p style={styles.details}>{metadata.labelColumn}</p>
+              <FeatureDetails feature={metadata.label} />
             </div>
             <div style={styles.subPanel}>
               <div style={styles.heading}>Features</div>
-              <p style={styles.details}>
-                {metadata.selectedFeatures?.join(', ')}
-              </p>
+              {metadata.features.map(feature => {
+                return <FeatureDetails feature={feature} key={feature.id} />;
+              })}
             </div>
           </div>
         )}
