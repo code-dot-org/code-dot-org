@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-29 20:17:33 UTC",
+    "serialized_at": "2021-04-22 23:40:07 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -144,7 +144,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+        "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig on the other side. To do this, they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
         "student_overview": "Learn about sequences and algorithms with _Angry Birds_.",
         "purpose": "In this lesson, students will develop programming skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a reflection journal.",
@@ -158,13 +158,13 @@
     },
     {
       "key": "Debugging with Scrat",
-      "name": "Debugging with Scrat",
+      "name": "Debugging in Maze",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
+        "overview": "In this **skill-building** lesson, students will encounter pre-written code that contains mistakes. They will need to step through the existing code to identify errors.",
         "student_overview": "Find problems in puzzles and practice your debugging skills.",
         "purpose": "Students in your class might become frustrated with this lesson because of the essence of debugging. Debugging is a concept that is very important to computer programming. Computer scientists have to get really good at finding the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
         "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a Reflection Journal.",
@@ -184,8 +184,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.",
-        "student_overview": "Write algorithms to help Laurel the Adventurer collect lots of gems!",
+        "overview": "In this **skill-building** lesson, students will continue to develop their understanding of algorithms and debugging. With a new character, *Laurel the Adventurer*, students will create sequential algorithms to get *Laurel* to pick up treasure as she walks along a path.",
+        "student_overview": "Write algorithms to help *Laurel the Adventurer* collect lots of gems!",
         "purpose": "In this lesson, students will be practicing their programming skills using a new character, _Laurel the Adventurer_. When someone starts programming they piece together instructions in a specific order using something that a machine can read. Through the use of programming, students will develop an understanding of how a computer navigates instructions and order. Using a new character with a different puzzle objective will help students widen their scope of experience with sequencing and algorithms in programming.",
         "preparation": " - Play through the puzzles to find potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
@@ -204,7 +204,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.",
+        "overview": "In this **skill-building** lesson, students will take control of the Artist to complete drawings on the screen.",
         "student_overview": "Create beautiful images by programming the Artist.",
         "purpose": "Building off of the students' previous experience with sequencing, this lesson will work to inspire more creativity with coding. The purpose of this lesson is to solidify knowledge on sequencing by introducing new blocks and goals. In this case, students learn more about pixels and angles using the new blocks, while still practicing their sequencing skills. Also, students will be able to visualize new goals such as coding the Artist to draw a square.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\n - Print one ***Student Handout** for each student.",
@@ -224,7 +224,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "This stage will have students using loops to help _BB-8_ traverse a maze efficiently.",
+        "overview": "This **skill-building** lesson has students using loops to help the *Star Wars* character *BB-8* efficiently traverse a maze.",
         "student_overview": "Help _BB-8_ through mazes using loops! ",
         "purpose": "In this lesson, students will be learning about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be looped. It should be noted that students will face puzzles with many different solutions. This will open up discussions on the various ways to solve puzzles with advantages and disadvantages to each approach.",
         "preparation": " - Play through the puzzles to determine if there will be any problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -238,13 +238,13 @@
     },
     {
       "key": "Sticker Art with Loops",
-      "name": "Sticker Art with Loops",
+      "name": "Mini-Project: Sticker Art",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
+        "overview": "This **mini-project** lesson builds on the understanding of loops. Students will create unique artwork with the Artist.",
         "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!",
         "purpose": "This series highlights the power of loops with creative and personal designs.  \n\nOffered as a project-backed sequence, this progression will allow students to build on top of their own work and create amazing artifacts.",
         "preparation": " - Practice making your own design. Make note of how these levels are different from everything that came before.\n - Make sure every student has a Reflection Journal.",
@@ -264,7 +264,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.",
+        "overview": "In this **skill-building** lesson, students will learn how to program a loop inside of another loop.",
         "student_overview": "Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.",
         "purpose": "In this introduction to nested loops, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* repeated patterns to develop these nested loops. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and complex to write out the long way. After a video introduces nested loops, students are shown an example and asked to predict what will happen when a loop is put inside of another loop. This progression leads to plenty of practice for students to solidify and build on their understanding of looping in programming.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -284,7 +284,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using the excellent ice-skating skills of _Anna_ and _Elsa_ from _Frozen_!",
+        "overview": "This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the _Frozen_ movies.",
         "student_overview": "_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
         "purpose": "In this series, students will get practice nesting loops while creating images that they will be excited to share. \n\nBeginning with a handful of instructions, students will make their own decisions when it comes to creating designs for repetition.  They will then spin those around a variety of ways to end up with a work of art that is truly unique.",
         "preparation": " - Play through the lesson to find and potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -304,7 +304,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
+        "overview": "This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!",
         "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -324,7 +324,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
+        "overview": "In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
         "student_overview": "Now that you understand conditionals, it's time to program Bee to use them when collecting honey and nectar. ",
         "purpose": "Students will practice using conditionals in their programs. The `if / else` blocks will allow for a more flexible program. The bee will only collect nectar _if_ there is a flower or make honey _if_ there is a honeycomb. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -344,7 +344,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\nWhile loops are loops that continue to repeat commands while a condition is met. While loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat.",
+        "overview": "In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.",
         "student_overview": "Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!",
         "purpose": "As your students continue to deepen their knowledge of loops, they will come across problems where a command needs to be repeated, but it is unknown how many times it needs to be repeated. This is where while loops come in. In today's lesson, students will develop a beginner's understanding of condition-based loops and also expand their knowledge of loops in general. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -364,7 +364,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point!",
+        "overview": "In this **context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!",
         "student_overview": "Here you will use conditionals in the world of Minecraft.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and  conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -384,7 +384,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.",
+        "overview": "In this **skill-building** lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions until they reach their desired stopping point.",
         "student_overview": "You can do some amazing things when you use `until` loops!",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops by adding the `until` conditional. By pairing these concepts together, students will be able to explore the potential for creating complex and innovative programs.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -424,7 +424,7 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "Students will begin to understand how functions can be helpful in this fun and interactive _Minecraft_ adventure!",
+        "overview": "In this **skill-building** lesson, students will begin to understand how functions can be helpful!",
         "student_overview": "Can you figure out how to use functions for the most efficient code?",
         "purpose": "Students will discover the versatility of programming by practicing functions in different environments. Here, students will recognize reusable patterns and be able to incorporate named blocks to call pre-defined functions.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -444,7 +444,7 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "Students will use functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.",
+        "overview": "In this **skill-building** lesson, students will use conditionals with functions to harvest crops in Harvester.",
         "student_overview": "Functions will save you lots of work as you help the farmer with her harvest!",
         "purpose": "This lesson is meant to further push students to use functions in more creative ways. Students will learn there are many ways to approach a problem, but some are more efficient than others. These puzzles are intended to increase problem solving and critical thinking skills.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure ever student has a Reflection Journal.",
@@ -464,7 +464,7 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "overview": "Students will be using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.",
+        "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
         "student_overview": "Make complex drawings more easily with functions!",
         "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident and proud of their hard work.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -478,13 +478,13 @@
     },
     {
       "key": "Variables with Artist",
-      "name": "Variables with Artist",
+      "name": "Using Variables with Artist",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "overview": "In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read, even when the values don't change at runtime.",
+        "overview": "In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.",
         "student_overview": "Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.",
         "purpose": "This stage teaches the most basic use for variables, as a constant that reoccurs frequently in a program. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -498,13 +498,13 @@
     },
     {
       "key": "Changing Variables with Bee",
-      "name": "Changing Variables with Bee",
+      "name": "Variables with the Bee",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
-        "overview": "This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. ",
+        "overview": "This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.",
         "student_overview": "This bee loves variables!",
         "purpose": "You don't always know what a value is going to be before you begin your program.  Sometimes, values change while your code is running.  This lesson will illustrate how code with changing values can be helpful.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -524,7 +524,7 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
-        "overview": "In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
+        "overview": "In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
         "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs.",
         "purpose": "Variables are essentially placeholders for values that might be unknown at the time that you run your program or for values that can change during the execution of a program. These are vital to creating dynamic code because they allow your program to change and grow based on any number of potential modifications.  This stage reinforces the use of variables, using the most basic capabilities of setting and using them.",
         "preparation": "- Play through the lesson to find any potential problem areas for your class.\n- Make sure every student has a Reflection Journal.",
@@ -544,7 +544,7 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
-        "overview": "Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
+        "overview": "This **skill-building** lesson focuses on “for” loops and using an incrementing variable to solve more complicated puzzles. ",
         "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!",
         "purpose": "Today's concept, `for` loops, are a very important topic in computer science. Not only are they widely used, the process of learning `for` loops enhances the learning of other important concepts (such as variables and parameters.) Students will have plenty of practice critically thinking through problems by determining the starting, ending, and stepping values for each `for` loop. This concept uses plenty of math as well, so feel free to pair it with a math lesson for an even deeper learning experience.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -564,7 +564,7 @@
       "has_lesson_plan": true,
       "relative_position": 22,
       "properties": {
-        "overview": "In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a free play level.",
+        "overview": "In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.",
         "student_overview": "Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.",
         "purpose": "Creativity and critical thinking come together beautifully in this lesson. Students will continue their practice with `for` loops and variables while they create jaw-dropping images. This lesson inspires a creative mind while teaching core concepts to computer science.",
         "preparation": " - Play through the lesson to find and potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -584,7 +584,7 @@
       "has_lesson_plan": true,
       "relative_position": 23,
       "properties": {
-        "overview": "In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.",
+        "overview": "In this **skill-building** lesson, students will program an interactive dance party. ",
         "student_overview": "Time to celebrate! In this lesson, you will program your own interactive dance party.",
         "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.\n - Consider the need for headphones. This activity relies on sound."
@@ -603,7 +603,7 @@
       "has_lesson_plan": true,
       "relative_position": 24,
       "properties": {
-        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.",
+        "overview": "Students will program a simple animated underwater scene in this **skill-building lesson**.",
         "student_overview": "Learn how to create and edit sprites.",
         "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -623,7 +623,7 @@
       "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
-        "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an \"alien dance party\".  ",
+        "overview": "Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.",
         "student_overview": "Create an interactive project that can be shared with classmates.",
         "purpose": "Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. This lesson reinforces events in programming and even gives students a chance to show creativity! At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -663,7 +663,7 @@
       "has_lesson_plan": true,
       "relative_position": 27,
       "properties": {
-        "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
+        "overview": "Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
         "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
@@ -683,7 +683,7 @@
       "has_lesson_plan": true,
       "relative_position": 28,
       "properties": {
-        "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! ",
+        "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects!",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
         "preparation": " - Spend time making your own project with both the project tools available to students. Familiarize yourself with the capabilities and limitations of each tool.\n - Modify the ***rubric** to fit your class goals and print one copy for each student or group.\n - Modify the ***project planning guide** to fit your class and print one for each student or group.",
@@ -2222,7 +2222,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today. When completed, this can be used as a  review sheet for them to look at in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better."
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today. When completed, this can be used as a  review sheet for them to look at in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better."
       },
       "seeding_key": {
         "activity_section.key": "0cf25b1a-ce7f-42e1-9460-f17762284ea3",
@@ -2357,7 +2357,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?"
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?"
       },
       "seeding_key": {
         "activity_section.key": "0406b536-ef27-4e66-aebd-6163d05bcc36",
@@ -2492,7 +2492,7 @@
       "key": "c1db98cf-ca82-4092-a167-fc450bf6fd0f",
       "position": 1,
       "properties": {
-        "description": "\n\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw a maze that you might solve with the blocks you used today.",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw a maze that you might solve with the blocks you used today.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2600,7 +2600,7 @@
       "key": "6e2ecb9e-09e6-4af0-b1b4-7b704334ba6c",
       "position": 1,
       "properties": {
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are the interior angles that make up a square. What about for a triangle?\n - Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are the interior angles that make up a square. What about for a triangle?\n - Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2769,7 +2769,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How did loops make your program easier to write?\n - Think of something that repeats over and over again.  What might the program for that look like?"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How did loops make your program easier to write?\n - Think of something that repeats over and over again.  What might the program for that look like?"
       },
       "seeding_key": {
         "activity_section.key": "8953de3d-a49f-4c4f-81e4-bcfbbc0baa3e",
@@ -2856,7 +2856,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you would like to program? Can you come up with the code to create it?"
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you would like to program? Can you come up with the code to create it?"
       },
       "seeding_key": {
         "activity_section.key": "c40cef20-3f9c-4084-8440-4394cc4ea03a",
@@ -2991,7 +2991,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What is a nested loop?\n - Can you draw a puzzle that would use a nested loop? Try coding the solution to your own puzzle."
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What is a nested loop?\n - Can you draw a puzzle that would use a nested loop? Try coding the solution to your own puzzle."
       },
       "seeding_key": {
         "activity_section.key": "fc83d25f-9089-4795-9933-52f7372e3ae7",
@@ -3038,7 +3038,7 @@
       "key": "d1f0e984-22d3-4086-978b-0e830c9cc6c9",
       "position": 1,
       "properties": {
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - When do you use a loop? When do you use a nested loop?\n - How would the code for your snowflake look different if you only used one loop? No loops? Can you draw out an example?\n ",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - When do you use a loop? When do you use a nested loop?\n - How would the code for your snowflake look different if you only used one loop? No loops? Can you draw out an example?\n ",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3098,7 +3098,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
       },
       "seeding_key": {
         "activity_section.key": "a8610908-835c-4ecf-87b2-0f10e7381e88",
@@ -3244,7 +3244,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did today's lesson make you feel?\n - What conditionals did you use in your code today?\n - What are some other conditionals a bee might use? Examples include: \n    - if there is a tree in front of me, buzz out of the way   \n    - if my wing is hurt, rest on the ground   \n    - if I see another bee, say \"Hello!\""
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How did today's lesson make you feel?\n - What conditionals did you use in your code today?\n - What are some other conditionals a bee might use? Examples include: \n    - if there is a tree in front of me, buzz out of the way   \n    - if my wing is hurt, rest on the ground   \n    - if I see another bee, say \"Hello!\""
       },
       "seeding_key": {
         "activity_section.key": "50020a45-10c5-4b0c-ba08-b54004bdcaa8",
@@ -3379,7 +3379,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is the difference between a while loop and a normal repeat loop?\n - Give an example of a puzzle where you would use a while loop, but not use a repeat loop. Can you give an example of a puzzle where you would use a repeat loop, but not a while loop?"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is the difference between a while loop and a normal repeat loop?\n - Give an example of a puzzle where you would use a while loop, but not use a repeat loop. Can you give an example of a puzzle where you would use a repeat loop, but not a while loop?"
       },
       "seeding_key": {
         "activity_section.key": "4860c6c5-d580-4865-a582-3c33cdb8e4da",
@@ -3416,7 +3416,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this Minecraft world.\n - Can you draw a scene where someone is using a conditional?"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this Minecraft world.\n - Can you draw a scene where someone is using a conditional?"
       },
       "seeding_key": {
         "activity_section.key": "59d6d7fb-e5be-4534-b78a-c3899159474b",
@@ -3552,7 +3552,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What's the difference between an `until` loop and a `while` loop?"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What's the difference between an `until` loop and a `while` loop?"
       },
       "seeding_key": {
         "activity_section.key": "8995dda6-6311-4747-a13d-9e793d658e20",
@@ -3654,7 +3654,7 @@
       "key": "294fb9eb-4bd1-497a-8326-562ddd2671bf",
       "position": 1,
       "properties": {
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How can you see conditionals being useful in programs?\n - What if people only spoke in `if/else` statements? What would be some advantages and disadvantages of this?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How can you see conditionals being useful in programs?\n - What if people only spoke in `if/else` statements? What would be some advantages and disadvantages of this?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3708,7 +3708,7 @@
       "key": "18f44055-e1bd-4cc4-9291-26a997c32a45",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3811,7 +3811,7 @@
       "key": "3c8c44ae-c181-41c0-9574-54a236e706f9",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling \n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What makes you realize a function could help your program?\n - How do `while` loops and `if / else` statements help your program?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What makes you realize a function could help your program?\n - How do `while` loops and `if / else` statements help your program?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3913,7 +3913,7 @@
       "key": "48eb2965-3a46-402c-9bcd-c38037adf810",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How do you feel about today’s lesson?\n - What are some differences between functions and loops?\n - Sketch out a drawing you made today. Can you write the code needed to create this?\n - Draw a picture you would like to create with code. Try writing or drafting the code that would make that drawing.",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How do you feel about today’s lesson?\n - What are some differences between functions and loops?\n - Sketch out a drawing you made today. Can you write the code needed to create this?\n - Draw a picture you would like to create with code. Try writing or drafting the code that would make that drawing.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3982,7 +3982,7 @@
       "key": "e1938d70-43cf-4038-8782-51509d171b00",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What is a variable? Why is it helpful in programming?  \n - How well do you think you understand variables? (Answer on a scale from 1-5 or with an emoticon.) If you're having troubles, can you put into words what you don't understand?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What is a variable? Why is it helpful in programming?  \n - How well do you think you understand variables? (Answer on a scale from 1-5 or with an emoticon.) If you're having troubles, can you put into words what you don't understand?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4047,7 +4047,7 @@
       "key": "40a52b8d-4101-4d39-a124-460b6553eea6",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are some ways you have used variables so far?\n - What else do you think you can do with variables?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are some ways you have used variables so far?\n - What else do you think you can do with variables?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4106,7 +4106,7 @@
       "key": "f8c8e0ab-6df9-44f2-ad51-0949843af969",
       "position": 1,
       "properties": {
-        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n\nWhat was today’s lesson about?\n\nHow did you feel during today’s lesson?\n\nHave you tried mixing multiple variables into one program? What might that look like? When would it be helpful?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\nWhat was today’s lesson about?\n\nHow did you feel during today’s lesson?\n\nHave you tried mixing multiple variables into one program? What might that look like? When would it be helpful?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4220,7 +4220,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "####Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a `for` loop different from a `repeat` loop?\n - Why do you think `for` loops could be useful?"
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a `for` loop different from a `repeat` loop?\n - Why do you think `for` loops could be useful?"
       },
       "seeding_key": {
         "activity_section.key": "3dde779a-f373-47b8-b892-013f3898d438",
@@ -4300,7 +4300,7 @@
       "key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4659,7 +4659,7 @@
       "key": "35c19cbc-9b7b-4a5c-9d88-5f971a66fab2",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to make a scene that was more creative?\n - Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to make a scene that was more creative?\n - Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4756,7 +4756,7 @@
       "key": "9ca65456-ea00-4214-9869-6ecf4fd81480",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to have control over what your characters were able to do?\n - Did you change the program in any way to make it feel more like your own?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n    \n    \n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to have control over what your characters were able to do?\n - Did you change the program in any way to make it feel more like your own?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4864,7 +4864,7 @@
       "key": "9f934839-a67b-4f65-b983-d528415d4968",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other behaviors would you like to give your sprites if you knew how?",
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other behaviors would you like to give your sprites if you knew how?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4961,7 +4961,7 @@
       "key": "8970ddea-49ba-429a-9607-6239c33e06be",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -17543,6 +17543,9 @@
       }
     }
   ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
     {
       "key": "algorithm",
@@ -19481,5 +19484,8 @@
         "standard.shortcode": "1B-AP-12"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

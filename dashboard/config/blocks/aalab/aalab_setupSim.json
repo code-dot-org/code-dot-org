@@ -1,0 +1,21 @@
+{
+  "category": "Outbreak",
+  "config": {
+    "func": "setupSim",
+    "blockText": "setup Monster Town with{COUNT}monsters",
+    "eventBlock": true,
+    "inline": false,
+    "args": [
+      {
+        "name": "COUNT",
+        "type": "Number",
+        "field": true
+      }
+    ],
+    "color": [
+      39,
+      1,
+      0.99
+    ]
+  }
+}
