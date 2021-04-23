@@ -1,4 +1,5 @@
 hideable_lessons true
+announcements [{"notice"=>"2020-21 Virtual Academic Year Workshop Access to Asynchronous Work", "details"=>"Please read this guide to learn how to set up and access your cohort's asynchronous work.", "link"=>"https://docs.google.com/document/d/1ZFqNR-W1hcui7hyBe83G0I_DNLAfdsfSITQtGHlEgtw/edit", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 is_migrated true
 
 lesson_group 'day-1', display_name: 'Kickoff Call'

@@ -7,11 +7,15 @@
     "properties": {
       "is_migrated": true,
       "weekly_instructional_minutes": 420,
-      "show_calendar": true
+      "show_calendar": true,
+      "version_year": "2020",
+      "is_course": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-04-17 04:23:03 UTC",
+    "family_name": "pl-csp-summer-in-person",
+    "serialized_at": "2021-04-23 19:30:28 UTC",
     "seeding_key": {
       "script.name": "csp-summer-2020"
     }
@@ -6568,7 +6572,6 @@
         "description": "We also have 4 more workshops after this to reconnect:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Add dates to the slides if the dates for the academic year workshops have been decided.\r\n"
           }
@@ -6734,13 +6737,29 @@
 
   ],
   "resources": [
-
+    {
+      "name": "High Level Agenda",
+      "url": "https://docs.google.com/spreadsheets/d/123uO3Ur60T-A9w2QY1_4aJjZiBdN5r9WJiOnp_XRbcU/edit#gid=620909564",
+      "key": "high_level_agenda",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "high_level_agenda"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "high_level_agenda",
+        "script.name": "csp-summer-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 

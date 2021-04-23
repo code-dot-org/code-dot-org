@@ -9,11 +9,20 @@
       "hideable_lessons": true,
       "weekly_instructional_minutes": 60,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "announcements": [
+        {
+          "notice": "2020-21 Virtual Academic Year Workshop Access to Asynchronous Work",
+          "details": "Please read this guide to learn how to set up and access your cohort's asynchronous work.",
+          "link": "https://docs.google.com/document/d/1ZFqNR-W1hcui7hyBe83G0I_DNLAfdsfSITQtGHlEgtw/edit",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 03:52:56 UTC",
+    "serialized_at": "2021-04-23 19:22:36 UTC",
     "seeding_key": {
       "script.name": "csp-virtual-kickoff-2020"
     }

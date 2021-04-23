@@ -1,3 +1,7 @@
+hideable_lessons true
+family_name 'pl-csp-summer-in-person'
+version_year '2020'
+is_course true
 is_migrated true
 
 lesson_group 'day-1', display_name: 'Day 1'
