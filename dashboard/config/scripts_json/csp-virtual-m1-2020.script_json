@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 03:42:06 UTC",
+    "serialized_at": "2021-04-23 20:01:32 UTC",
     "seeding_key": {
       "script.name": "csp-virtual-m1-2020"
     }
@@ -1191,13 +1191,29 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "The Goals and Objectives Document for Module 1",
+      "url": "https://docs.google.com/document/d/1KZl8A3_A9j3A4bxuwA6ZzqLbF9uV2fyNmlfRRe-pRQA/edit",
+      "key": "the_goals_and_objectives_document_for_module_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_goals_and_objectives_document_for_module_1"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "the_goals_and_objectives_document_for_module_1",
+        "script.name": "csp-virtual-m1-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 

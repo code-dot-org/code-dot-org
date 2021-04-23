@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 04:29:39 UTC",
+    "serialized_at": "2021-04-23 20:16:00 UTC",
     "seeding_key": {
       "script.name": "csp-academic-w2-2020"
     }
@@ -1774,13 +1774,81 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Workshop Goals and Outcomes One-pager - W2",
+      "url": "https://docs.google.com/document/d/1xoMnCGEjXbLlElMwBezxrmbqRhWNvDLWpxH-gE-syu0/edit",
+      "key": "workshop_goals_and_outcomes_one-pager",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "workshop_goals_and_outcomes_one-pager"
+      }
+    },
+    {
+      "name": "Opportunities for Equity One-pager - W2",
+      "url": "https://docs.google.com/document/d/1EVMlbhcekRG43eT8GlCBQ0WUqmb-LW5d2PMJPglYGtw/edit",
+      "key": "opportunities_for_equity_one-pager_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "opportunities_for_equity_one-pager_1"
+      }
+    },
+    {
+      "name": "Essential Content One-pager - W2",
+      "url": "https://docs.google.com/document/d/1ni2JoE3hFlbMZ1KWQkaIHTJ63y8gwnAg7LlJXs6FDCo/edit",
+      "key": "essential_content_one-pager_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "essential_content_one-pager_1"
+      }
+    },
+    {
+      "name": "Google Sheet View of High Level Agenda - W2",
+      "url": "https://docs.google.com/spreadsheets/d/1zsTsvo9XhsoIzuwC7N1zkIQVs6aQYVaKzqVYEPz7wqg/edit",
+      "key": "google_sheet_view_of_high_level_agenda_-_w2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "google_sheet_view_of_high_level_agenda_-_w2"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "workshop_goals_and_outcomes_one-pager",
+        "script.name": "csp-academic-w2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "opportunities_for_equity_one-pager_1",
+        "script.name": "csp-academic-w2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "essential_content_one-pager_1",
+        "script.name": "csp-academic-w2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "google_sheet_view_of_high_level_agenda_-_w2",
+        "script.name": "csp-academic-w2-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 

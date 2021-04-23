@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 19:22:36 UTC",
+    "serialized_at": "2021-04-23 19:51:05 UTC",
     "seeding_key": {
       "script.name": "csp-virtual-kickoff-2020"
     }
@@ -361,13 +361,83 @@
 
   ],
   "resources": [
-
+    {
+      "name": "2020-21 Virtual Academic Year Workshop Kick-Off Slides - Template",
+      "url": "https://docs.google.com/presentation/d/15NZcppIwNyR-hoUMpSGexfTa6cLdyTdQpdjg_a4j-DU/edit",
+      "key": "2020-21_virtual_academic_year_workshop_kick-off_slides_-_template",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2020-21_virtual_academic_year_workshop_kick-off_slides_-_template"
+      }
+    },
+    {
+      "name": "2020-21 CS Principles Virtual Module 1 Slides - Template",
+      "url": "https://docs.google.com/presentation/d/1NqyfugF5M3DMQY6KZLC7rc5CZYv5ebS08XMU2ync8BI/edit",
+      "key": "2020-21_cs_principles_virtual_module_1_slides_-_template",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2020-21_cs_principles_virtual_module_1_slides_-_template"
+      }
+    },
+    {
+      "name": "2020-21 Virtual Academic Year Workshops: Digital Digest Template",
+      "url": "https://docs.google.com/document/d/1UEGjOdhdv_Ex22kr1BsLUCPnXadcyyjbcWszqgDxAiw/edit",
+      "key": "2020-21_virtual_academic_year_workshops_digital_digest_template",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2020-21_virtual_academic_year_workshops_digital_digest_template"
+      }
+    },
+    {
+      "name": "2020-21 Virtual Academic Year Workshop Planning Doc Template",
+      "url": "https://docs.google.com/spreadsheets/d/1irYL5l0npH70YnXQAbXap8FF21UDsA-LUiTaWgK_sEY/edit",
+      "key": "2020-21_virtual_academic_year_workshop_planning_doc_template",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2020-21_virtual_academic_year_workshop_planning_doc_template"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2020-21_virtual_academic_year_workshop_kick-off_slides_-_template",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2020-21_cs_principles_virtual_module_1_slides_-_template",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2020-21_virtual_academic_year_workshops_digital_digest_template",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2020-21_virtual_academic_year_workshop_planning_doc_template",
+        "script.name": "csp-virtual-kickoff-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 
