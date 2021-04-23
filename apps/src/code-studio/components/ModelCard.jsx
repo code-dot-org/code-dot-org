@@ -110,7 +110,7 @@ export default class ModelCard extends React.Component {
               )}
             </div>
             <div style={styles.subPanel}>
-              <div style={styles.heading}>Intended Uses</div>
+              <div style={styles.heading}>Intended Use</div>
               <p style={styles.details}>{metadata.potentialUses}</p>
             </div>
             <div style={styles.subPanel}>
