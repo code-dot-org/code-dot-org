@@ -16,19 +16,23 @@
 </div>
 <script>
   function connect() {
-    let socket = new WebSocket("wss://nsgeezjyul.execute-api.us-east-1.amazonaws.com/development/?Authorization=demo");
+    let socket = new WebSocket("wss://nsgeezjyul.execute-api.us-east-1.amazonaws.com/development/?Authorization=connectivityTest");
     document.querySelector("#loading").style.display = "block";
     document.querySelector("#success").style.display = "none";
     document.querySelector("#fail").style.display = "none";
 
     socket.onopen = function(e) {
-      document.querySelector("#loading").style.display = "none";
-      document.querySelector("#success").style.display = "block";
-      socket.send("connectionDemo");
+      socket.send("connectivityTest");
     };
 
-    socket.onmessage = function(e) {
-      debugger;
+    socket.onmessage = function(message) {
+      if (message.data == "success") {
+        document.querySelector("#loading").style.display = "none";
+        document.querySelector("#success").style.display = "block";
+      } else {
+        document.querySelector("#loading").style.display = "none";
+        document.querySelector("#fail").style.display = "block";
+      }
       socket.close();
     }
 
