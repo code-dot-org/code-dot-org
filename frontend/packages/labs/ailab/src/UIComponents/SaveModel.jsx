@@ -83,13 +83,12 @@ class SaveModel extends Component {
     const dataDescriptionField = {
       id: "datasetDescription",
       text: "Describe the dataset.",
-      placeholder:
-        "How was the data collected? Who collected it? When was it collected?",
+      placeholder: "How was the data collected? Who collected it? When was it collected?",
       answer: this.props.dataDescription
     };
 
     const arrowIcon = this.state.showColumnDescriptions
-      ? "fa fa-caret-up" : "fa fa-caret-down";
+      ? 'fa fa-caret-up' : 'fa fa-caret-down';
 
     const columnCount = this.getColumnFields().length;
 
