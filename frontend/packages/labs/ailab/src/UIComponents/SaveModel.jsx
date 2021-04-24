@@ -41,7 +41,8 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
-      const columnType = columnDescription.id === this.props.labelColumn ? "label" : "feature";
+      const columnType = columnDescription.id === this.props.labelColumn
+        ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -64,17 +65,9 @@ class SaveModel extends Component {
     fields.push({
       id: "potentialMisuses",
       text: "Warnings",
-      description: (
-        <div>
-          Describe any situations where this model could potentially be misused,
-          or any places where bias could potentially show up in the model.
-          Important questions to consider are:
-          <ul style={{ marginBottom: 0 }}>
-            <li>Is there enough data to create an accurate model?</li>
-            <li>Does the data represent all possible users and scenarios?</li>
-          </ul>
-        </div>
-      ),
+      description: "Describe any situations where this model could potentially be misused, or any places where bias could potentially show up in the model. Important questions to consider are:",
+      misuseQuestionOne: "Is there enough data to create an accurate model?",
+      misuseQuestionTwo: "Does the data represent all possible users and scenarios?",
       placeholder: "Write a brief description."
     });
 
@@ -95,7 +88,8 @@ class SaveModel extends Component {
       answer: this.props.dataDescription
     };
 
-    const arrowIcon = this.state.showColumnDescriptions ? "fa fa-caret-up" : "fa fa-caret-down";
+    const arrowIcon = this.state.showColumnDescriptions
+      ? "fa fa-caret-up" : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
 
@@ -157,7 +151,9 @@ class SaveModel extends Component {
                             />
                           </div>
                         )}
-                        {field.answer && <div>{field.answer}</div>}
+                        {field.answer && (
+                          <div>{field.answer}</div>
+                        )}
                       </div>
                     );
                   })}
@@ -170,6 +166,12 @@ class SaveModel extends Component {
                   <div key={field.id} style={styles.cardRow}>
                     <label style={styles.bold}>{field.text}</label>
                     <div>{field.description}</div>
+                    {field.misuseQuestionOne && (
+                      <div>{field.misuseQuestionOne}</div>
+                    )}
+                    {field.misuseQuestionTwo && (
+                      <div>{field.misuseQuestionTwo}</div>
+                    )}
                     {!field.answer && (
                       <div>
                         <textarea
@@ -182,7 +184,9 @@ class SaveModel extends Component {
                         />
                       </div>
                     )}
-                    {field.answer && <div>{field.answer}</div>}
+                    {field.answer && (
+                      <div>{field.answer}</div>
+                    )}
                   </div>
                 );
               })}
