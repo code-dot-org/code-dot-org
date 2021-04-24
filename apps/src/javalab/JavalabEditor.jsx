@@ -16,6 +16,7 @@ import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
 import JavalabEditorContextMenu from './JavalabEditorContextMenu';
 import NameFileDialog from './NameFileDialog';
+import DeleteConfirmationDialog from './DeleteConfirmationDialog';
 
 const style = {
   editor: {
@@ -72,7 +73,9 @@ class JavalabEditor extends React.Component {
       newFileError: null,
       renameFileError: null,
       activeTabKey: firstTabKey,
-      lastTabKeyIndex: tabs.length - 1
+      lastTabKeyIndex: tabs.length - 1,
+      confirmDeleteDialogOpen: false,
+      fileToDelete: ''
     };
   }
 
@@ -173,42 +176,16 @@ class JavalabEditor extends React.Component {
   }
 
   deleteFromContextMenu() {
-    // TODO: delete confirmation
     let filename;
-    let indexToRemove = -1;
-    // find tab in list
-    this.state.tabs.forEach((tab, index) => {
+    this.state.tabs.forEach(tab => {
       if (tab.key === this.state.contextTarget) {
         filename = tab.filename;
-        indexToRemove = index;
       }
     });
-    if (indexToRemove >= 0) {
-      // delete from tabs
-      let newTabs = [...this.state.tabs];
-      newTabs.splice(indexToRemove, 1);
-      let newActiveTabKey = this.state.activeTabKey;
-      // we need to update the active tab if we are deleting the currently active tab
-      if (this.state.activeTabKey === this.state.contextTarget) {
-        if (newTabs.length > 0) {
-          // if there is still at least 1 file, go to first file
-          newActiveTabKey = newTabs[0].key;
-        } else {
-          // otherwise wipe out active tab key
-          newActiveTabKey = null;
-        }
-      }
-      this.setState({tabs: newTabs, activeTabKey: newActiveTabKey});
-
-      // delete from sources
-      this.props.removeFile(filename);
-      projectChanged();
-
-      this.setState({
-        showMenu: false,
-        contextTarget: null
-      });
-    }
+    this.setState({
+      confirmDeleteDialogOpen: true,
+      fileToDelete: filename
+    });
   }
 
   dispatchEditorChange = (key, filename) => {
@@ -278,6 +255,45 @@ class JavalabEditor extends React.Component {
       newFileDialogOpen: false,
       newFileError: null
     });
+  }
+
+  onDeleteFile() {
+    let filename;
+    let indexToRemove = -1;
+    // find tab in list
+    this.state.tabs.forEach((tab, index) => {
+      if (tab.key === this.state.contextTarget) {
+        filename = tab.filename;
+        indexToRemove = index;
+      }
+    });
+    if (indexToRemove >= 0) {
+      // delete from tabs
+      let newTabs = [...this.state.tabs];
+      newTabs.splice(indexToRemove, 1);
+      let newActiveTabKey = this.state.activeTabKey;
+      // we need to update the active tab if we are deleting the currently active tab
+      if (this.state.activeTabKey === this.state.contextTarget) {
+        if (newTabs.length > 0) {
+          // if there is still at least 1 file, go to first file
+          newActiveTabKey = newTabs[0].key;
+        } else {
+          // otherwise wipe out active tab key
+          newActiveTabKey = null;
+        }
+      }
+      this.setState({tabs: newTabs, activeTabKey: newActiveTabKey});
+
+      // delete from sources
+      this.props.removeFile(filename);
+      projectChanged();
+
+      this.setState({
+        showMenu: false,
+        contextTarget: null,
+        confirmDeleteDialogOpen: false
+      });
+    }
   }
 
   duplicateFileError(filename) {
@@ -361,6 +377,13 @@ class JavalabEditor extends React.Component {
             deleteFromContextMenu={this.deleteFromContextMenu}
           />
         </div>
+        <DeleteConfirmationDialog
+          isOpen={this.state.confirmDeleteDialogOpen}
+          handleConfirm={this.onDeleteFile}
+          handleClose={() => this.setState({confirmDeleteDialogOpen: false})}
+          filename={this.state.fileToDelete}
+          isDarkMode={this.props.isDarkMode}
+        />
         <NameFileDialog
           isOpen={this.state.dialogOpen}
           handleClose={() =>
