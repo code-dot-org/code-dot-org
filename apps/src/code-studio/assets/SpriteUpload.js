@@ -1,13 +1,12 @@
 import React from 'react';
-import {animations as animationsApi} from "@cdo/apps/clientApi";
 
 export default class SpriteUpload extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       fileData: null,
-      filename: "",
-      category: ""
+      filename: '',
+      category: ''
     };
   }
 
@@ -17,7 +16,7 @@ export default class SpriteUpload extends React.Component {
     let xhr = new XMLHttpRequest();
 
     const onError = function() {
-      reject(new Error(`${xhr.status} ${xhr.statusText}`));
+      console.log(new Error(`${xhr.status} ${xhr.statusText}`));
     };
 
     const onSuccess = function() {
@@ -29,17 +28,14 @@ export default class SpriteUpload extends React.Component {
 
     xhr.addEventListener('load', onSuccess);
     xhr.addEventListener('error', onError);
-    xhr.open('PUT', animationsApi.basePath(animationKey + '.png'), true);
+    xhr.open(
+      'POST',
+      `/api/v1/animation-library/level_animations/${this.state.filename}`,
+      true
+    );
     xhr.setRequestHeader('Content-type', 'image/png');
-    xhr.send(animationProps.blob);
-  });
-    $.ajax({
-      url: `/api/v1/animation-library/level_animations/${this.state.filename}`,
-      method: 'POST',
-      contentType: 'image/png',
-      dataType: 'json'
-    });
-  }
+    xhr.send(this.state.fileData);
+  };
 
   handleImageChange = event => {
     this.setState({
@@ -61,7 +57,11 @@ export default class SpriteUpload extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             <h4> Sprite Category: </h4>
-            <input type="text" value={this.state.category} onChange={this.handleCategoryChange}/>
+            <input
+              type="text"
+              value={this.state.category}
+              onChange={this.handleCategoryChange}
+            />
           </label>
           <label>
             <h4> Select Sprite to Add to Library: </h4>
