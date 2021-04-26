@@ -18606,6 +18606,8 @@ en:
               name: Module 8
             'CS Principles: Functions':
               name: 'CS Principles: Functions'
+            'CS Principles: Variables Practice - Choice Test':
+              name: Variables Practice - Choice Test
           lesson_groups:
             lesson group:
               display_name: display name
