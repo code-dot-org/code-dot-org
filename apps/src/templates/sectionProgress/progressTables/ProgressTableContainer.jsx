@@ -199,7 +199,7 @@ class ProgressTableContainer extends React.Component {
 
   expandDetailRows(rowData, rowIndex) {
     const detailRows = [];
-    for (let i = 1; i <= this.numExtraRowsWhenExpanded(); i++) {
+    for (let i = 1; i <= this.numDetailRowsPerStudent(); i++) {
       detailRows.push({
         id: idForExpansionIndex(rowData.student.id, i),
         student: rowData.student,
@@ -213,7 +213,7 @@ class ProgressTableContainer extends React.Component {
     this.setState({rows});
   }
 
-  numExtraRowsWhenExpanded() {
+  numDetailRowsPerStudent() {
     const rowsPerStudent =
       this.props.currentView === ViewType.DETAIL
         ? this.detailCellFormatters.length
