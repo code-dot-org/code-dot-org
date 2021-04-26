@@ -49,23 +49,28 @@ class JavalabEditor extends React.Component {
     this.deleteFromContextMenu = this.deleteFromContextMenu.bind(this);
     this.onRenameFile = this.onRenameFile.bind(this);
     this.onCreateFile = this.onCreateFile.bind(this);
+    this.onDeleteFile = this.onDeleteFile.bind(this);
     this._codeMirrors = {};
 
     let tabs = [];
+    let tabKeysToFilenames = {};
     Object.keys(props.sources).forEach((file, index) => {
+      let tabKey = this.getTabKey(index);
       tabs.push({
         filename: file,
-        key: `file-${index}`
+        key: tabKey
       });
+      tabKeysToFilenames[tabKey] = file;
     });
 
     const firstTabKey = tabs.length > 0 ? tabs[0].key : null;
 
     this.state = {
       tabs,
+      tabKeysToFilenames,
       showMenu: false,
       contextTarget: null,
-      dialogOpen: false,
+      renameDialogOpen: false,
       menuPosition: {},
       editTabKey: null,
       editTabFilename: null,
@@ -75,7 +80,7 @@ class JavalabEditor extends React.Component {
       activeTabKey: firstTabKey,
       lastTabKeyIndex: tabs.length - 1,
       confirmDeleteDialogOpen: false,
-      fileToDelete: ''
+      fileToDelete: null
     };
   }
 
@@ -83,7 +88,7 @@ class JavalabEditor extends React.Component {
     this.editors = {};
     const {sources} = this.props;
     this.state.tabs.forEach(tab => {
-      this.createEditor(tab.key, tab.filename, sources[tab.filename].text);
+      this.createEditor(tab.key, sources[tab.filename].text);
     });
   }
 
@@ -105,13 +110,13 @@ class JavalabEditor extends React.Component {
         if (!this.editors[tab.key]) {
           const source = this.props.sources[tab.filename];
           const doc = (source && source.text) || '';
-          this.createEditor(tab.key, tab.filename, doc);
+          this.createEditor(tab.key, doc);
         }
       });
     }
   }
 
-  createEditor(key, filename, doc) {
+  createEditor(key, doc) {
     const {isDarkMode} = this.props;
     const extensions = [...editorSetup];
 
@@ -126,8 +131,30 @@ class JavalabEditor extends React.Component {
         extensions: extensions
       }),
       parent: this._codeMirrors[key],
-      dispatch: this.dispatchEditorChange(key, filename)
+      dispatch: this.dispatchEditorChange(key)
     });
+  }
+
+  dispatchEditorChange = key => {
+    // tr is a code mirror transaction
+    // see https://codemirror.net/6/docs/ref/#state.Transaction
+    return tr => {
+      // we are overwriting the default dispatch method for codemirror,
+      // so we need to manually call the update method.
+      this.editors[key].update([tr]);
+      // if there are changes to the editor, update redux.
+      if (!tr.changes.empty && tr.newDoc) {
+        this.props.setSource(
+          this.state.tabKeysToFilenames[key],
+          tr.newDoc.toString()
+        );
+        projectChanged();
+      }
+    };
+  };
+
+  getTabKey(index) {
+    return `file-${index}`;
   }
 
   makeListeners(key) {
@@ -152,19 +179,14 @@ class JavalabEditor extends React.Component {
   }
 
   renameFromContextMenu() {
-    let filename;
-    this.state.tabs.forEach(tab => {
-      if (tab.key === this.state.contextTarget) {
-        filename = tab.filename;
-      }
-    });
+    const filename = this.state.tabKeysToFilenames[this.state.contextTarget];
 
     this.setState({
       showMenu: false,
       contextTarget: null,
       editTabKey: this.state.contextTarget,
       editTabFilename: filename,
-      dialogOpen: true
+      renameDialogOpen: true
     });
   }
 
@@ -176,32 +198,13 @@ class JavalabEditor extends React.Component {
   }
 
   deleteFromContextMenu() {
-    let filename;
-    this.state.tabs.forEach(tab => {
-      if (tab.key === this.state.contextTarget) {
-        filename = tab.filename;
-      }
-    });
+    const filename = this.state.tabKeysToFilenames[this.state.contextTarget];
+
     this.setState({
       confirmDeleteDialogOpen: true,
       fileToDelete: filename
     });
   }
-
-  dispatchEditorChange = (key, filename) => {
-    // tr is a code mirror transaction
-    // see https://codemirror.net/6/docs/ref/#state.Transaction
-    return tr => {
-      // we are overwriting the default dispatch method for codemirror,
-      // so we need to manually call the update method.
-      this.editors[key].update([tr]);
-      // if there are changes to the editor, update redux.
-      if (!tr.changes.empty && tr.newDoc) {
-        this.props.setSource(filename, tr.newDoc.toString());
-        projectChanged();
-      }
-    };
-  };
 
   onRenameFile(newFilename) {
     // check for duplicate filename
@@ -212,16 +215,27 @@ class JavalabEditor extends React.Component {
       return;
     }
 
+    // update tab with new filename
     const newTabs = this.state.tabs.map(tab => {
       if (tab.key === this.state.editTabKey) {
         tab.filename = newFilename;
       }
       return tab;
     });
+
+    // update tab to filename map with new filename
+    const newTabKeyMap = {...this.state.tabKeysToFilenames};
+    newTabKeyMap[this.state.editTabKey] = newFilename;
+
     const {renameFile} = this.props;
     renameFile(this.state.editTabFilename, newFilename);
     projectChanged();
-    this.setState({tabs: newTabs, dialogOpen: false, renameFileError: null});
+    this.setState({
+      tabs: newTabs,
+      tabKeysToFilenames: newTabKeyMap,
+      renameDialogOpen: false,
+      renameFileError: null
+    });
   }
 
   onCreateFile(filename) {
@@ -236,7 +250,11 @@ class JavalabEditor extends React.Component {
     this.setState({newFileError: null});
     let newTabs = [...this.state.tabs];
     const newTabIndex = this.state.lastTabKeyIndex + 1;
-    const newTabKey = `file-${newTabIndex}`;
+    const newTabKey = this.getTabKey(newTabIndex);
+
+    // update tab to filename map with new file
+    const newTabKeyMap = {...this.state.tabKeysToFilenames};
+    newTabKeyMap[newTabKey] = filename;
 
     newTabs.push({
       filename: filename,
@@ -250,6 +268,7 @@ class JavalabEditor extends React.Component {
     // add new tab and set it as the active tab
     this.setState({
       tabs: newTabs,
+      tabKeysToFilenames: newTabKeyMap,
       activeTabKey: newTabKey,
       lastTabKeyIndex: newTabIndex,
       newFileDialogOpen: false,
@@ -258,22 +277,23 @@ class JavalabEditor extends React.Component {
   }
 
   onDeleteFile() {
-    let filename;
+    let tabToDelete;
     let indexToRemove = -1;
     // find tab in list
     this.state.tabs.forEach((tab, index) => {
-      if (tab.key === this.state.contextTarget) {
-        filename = tab.filename;
+      if (tab.filename === this.state.fileToDelete) {
         indexToRemove = index;
+        tabToDelete = tab.key;
       }
     });
+
     if (indexToRemove >= 0) {
       // delete from tabs
       let newTabs = [...this.state.tabs];
       newTabs.splice(indexToRemove, 1);
       let newActiveTabKey = this.state.activeTabKey;
       // we need to update the active tab if we are deleting the currently active tab
-      if (this.state.activeTabKey === this.state.contextTarget) {
+      if (this.state.activeTabKey === tabToDelete) {
         if (newTabs.length > 0) {
           // if there is still at least 1 file, go to first file
           newActiveTabKey = newTabs[0].key;
@@ -282,22 +302,32 @@ class JavalabEditor extends React.Component {
           newActiveTabKey = null;
         }
       }
-      this.setState({tabs: newTabs, activeTabKey: newActiveTabKey});
 
-      // delete from sources
-      this.props.removeFile(filename);
-      projectChanged();
+      // delete tab key from tab to filename map
+      const newTabKeyMap = {...this.state.tabKeysToFilenames};
+      delete newTabKeyMap[tabToDelete];
 
       this.setState({
-        showMenu: false,
-        contextTarget: null,
-        confirmDeleteDialogOpen: false
+        tabs: newTabs,
+        activeTabKey: newActiveTabKey,
+        tabKeysToFilenames: newTabKeyMap
       });
+
+      // delete from sources
+      this.props.removeFile(this.state.fileToDelete);
+      projectChanged();
     }
+
+    this.setState({
+      showMenu: false,
+      contextTarget: null,
+      confirmDeleteDialogOpen: false,
+      fileToDelete: null
+    });
   }
 
   duplicateFileError(filename) {
-    return `File name ${filename} is already in use in this project. Please choose a different name`;
+    return `Filename ${filename} is already in use in this project. Please choose a different name`;
   }
 
   render() {
@@ -385,9 +415,9 @@ class JavalabEditor extends React.Component {
           isDarkMode={this.props.isDarkMode}
         />
         <NameFileDialog
-          isOpen={this.state.dialogOpen}
+          isOpen={this.state.renameDialogOpen}
           handleClose={() =>
-            this.setState({dialogOpen: false, renameFileError: null})
+            this.setState({renameDialogOpen: false, renameFileError: null})
           }
           filename={editTabFilename}
           handleSave={this.onRenameFile}

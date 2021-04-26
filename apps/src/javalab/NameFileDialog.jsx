@@ -31,7 +31,7 @@ const styles = {
     backgroundColor: color.darkest_gray,
     color: 'white'
   },
-  lightRename: {
+  lightSave: {
     backgroundColor: color.cyan,
     color: color.white
   },
@@ -116,7 +116,7 @@ export default class NameFileDialog extends Component {
               type="button"
               style={{
                 ...styles.button,
-                ...(isDarkMode ? styles.darkButton : styles.lightRename)
+                ...(isDarkMode ? styles.darkButton : styles.lightSave)
               }}
               onClick={() => handleSave(this.textInput.value)}
             >
