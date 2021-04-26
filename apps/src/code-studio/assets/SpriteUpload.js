@@ -13,7 +13,6 @@ export default class SpriteUpload extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state.fileData);
     let xhr = new XMLHttpRequest();
 
     const onError = function() {
