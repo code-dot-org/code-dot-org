@@ -3,6 +3,7 @@ https://github.com/mljs/knn */
 
 import { store } from "../index.js";
 import {
+  isRegression,
   setModelSize,
   setTrainedModel,
   setPrediction,
@@ -14,7 +15,7 @@ const KNN = require("ml-knn");
 export default class KNNTrainer {
   startTraining() {
     const state = store.getState();
-    const k = Math.round(0.33 * state.data.length);
+    const k = isRegression(state) ? 5 : Math.round(0.33 * state.data.length);
     this.knn = new KNN(state.trainingExamples, state.trainingLabels, {k: k});
     var model = this.knn.toJSON();
     store.dispatch(setTrainedModel(model));
