@@ -137,7 +137,7 @@ class FollowersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to '/join'
-    expected = I18n.t('follower.error.restricted_section')
+    expected = I18n.t('follower.error.restricted_section', section_code: section.code)
     assert_equal(expected, flash[:inline_alert])
   end
 

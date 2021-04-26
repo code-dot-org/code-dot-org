@@ -28,6 +28,9 @@ class FollowersController < ApplicationController
       return render 'student_user_new', formats: [:html]
     end
 
+    # Create boolean to confirm if a user already actively exists on a section roster
+    is_existing_follower = !!Follower.find_by(section: @section, student_user: @user)
+
     if current_user && current_user.display_captcha? && !verify_recaptcha
       flash[:alert] = I18n.t('follower.captcha_required')
       # Concatenate section code so user does not have to type section code again
@@ -40,7 +43,16 @@ class FollowersController < ApplicationController
         if @user.save && @section&.add_student(@user)
           sign_in(:user, @user)
           @user.increment_section_attempts
-          redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
+          # Check for an exiting user, and redirect to course if found
+          if is_existing_follower
+            redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
+          # Check if section is restricted, and redirect with restricted error if true
+          elsif @section.restricted?
+            redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
+          # Othewise, register user and redirect to course with welcome message
+          else
+            redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
+          end
           return
         end
       end
@@ -86,10 +98,10 @@ class FollowersController < ApplicationController
       return
     end
 
-    # Redirect and provide an error for restricted sections.
-    if @section&.restricted?
+    # Redirect and provide an error for restricted sections if the user is not already enrolled in this section.
+    if @section&.restricted? && current_user && !Follower.find_by(section: @section, student_user: current_user)
       redirect_url = "#{root_url}join" # Keeps user on the join page.
-      redirect_to redirect_url, inline_alert: I18n.t('follower.error.restricted_section')
+      redirect_to redirect_url, inline_alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
     end
 
     # Redirect and provide an error for provider-managed sections.
