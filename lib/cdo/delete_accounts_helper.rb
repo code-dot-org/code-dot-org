@@ -174,21 +174,6 @@ class DeleteAccountsHelper
     @pegasus_db[:contacts].where(id: contact_ids).delete
   end
 
-  # TODO: Fully remove the deprecated V1 of contact rollups,
-  # (ie, remove the contact_rollups table), at which point this step can be removed.
-  # @param [Integer] The user ID to purge from deprecated contact rollups table.
-  def remove_from_deprecated_contact_rollups_by_user_id(user_id)
-    @log.puts "Removing from deprecated contact rollups"
-    @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id).delete
-  end
-
-  # TODO: Fully remove the deprecated V1 of contact rollups,
-  # (ie, remove the contact_rollups table), at which point this step can be removed.
-  # @param [Integer] The email to purge from deprecated contact rollups table.
-  def remove_from_deprecated_contact_rollups_by_email(email)
-    @pegasus_db[:contact_rollups].where(email: email).delete
-  end
-
   # Marks emails for deletion from Pardot via contact rollups process.
   def set_pardot_deletion_via_contact_rollups(email)
     if User.find_by_email(email)
