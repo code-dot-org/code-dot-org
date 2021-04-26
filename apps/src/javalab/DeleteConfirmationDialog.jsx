@@ -14,6 +14,14 @@ const styles = {
     backgroundColor: color.dark_slate_gray,
     color: color.white
   },
+  dialogContent: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  buttons: {
+    display: 'flex'
+  },
   button: {
     width: 100,
     textAlign: 'center',
@@ -22,6 +30,14 @@ const styles = {
   darkButton: {
     backgroundColor: color.darkest_gray,
     color: 'white'
+  },
+  lightDelete: {
+    backgroundColor: color.cyan,
+    color: color.white
+  },
+  lightCancel: {
+    backgroundColor: color.light_gray,
+    color: color.black
   }
 };
 
@@ -31,7 +47,7 @@ export default class DeleteConfirmationDialog extends Component {
     handleClose: PropTypes.func.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
-    filename: PropTypes.string.isRequired
+    filename: PropTypes.string
   };
 
   render() {
@@ -53,28 +69,35 @@ export default class DeleteConfirmationDialog extends Component {
         useUpdatedStyles
         hideCloseButton
       >
-        <div>{`Are you sure you want to delete ${filename}?`}</div>
-        <div>
-          <button
-            type="button"
-            style={{
-              ...styles.button,
-              ...(isDarkMode ? styles.darkButton : styles.lightRename)
-            }}
-            onClick={handleConfirm}
-          >
-            Yes, delete the file
-          </button>
-          <button
-            type="button"
-            style={{
-              ...styles.button,
-              ...(isDarkMode ? styles.darkButton : styles.lightCancel)
-            }}
-            onClick={handleClose}
-          >
-            Cancel
-          </button>
+        <div
+          style={{
+            ...styles.dialogContent,
+            ...(isDarkMode && styles.darkDialog)
+          }}
+        >
+          <div>{`Are you sure you want to delete ${filename}?`}</div>
+          <div style={styles.buttons}>
+            <button
+              type="button"
+              style={{
+                ...styles.button,
+                ...(isDarkMode ? styles.darkButton : styles.lightDelete)
+              }}
+              onClick={handleConfirm}
+            >
+              Delete
+            </button>
+            <button
+              type="button"
+              style={{
+                ...styles.button,
+                ...(isDarkMode ? styles.darkButton : styles.lightCancel)
+              }}
+              onClick={handleClose}
+            >
+              Cancel
+            </button>
+          </div>
         </div>
       </BaseDialog>
     );
