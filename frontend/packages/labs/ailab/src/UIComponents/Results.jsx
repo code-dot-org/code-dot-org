@@ -10,7 +10,8 @@ import ResultsDetails from "./ResultsDetails";
 class Results extends Component {
   static propTypes = {
     historicResults: PropTypes.array,
-    showResultsDetails: PropTypes.bool
+    showResultsDetails: PropTypes.bool,
+    setShowResultsDetails: PropTypes.func
   };
 
   showDetails = () => {
