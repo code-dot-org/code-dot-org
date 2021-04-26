@@ -1,9 +1,7 @@
 name 'csp-choice-test'
-display_name 'Practice with Models in App Lab'
+display_name 'Practice with Variables'
 
 sublevels
-level 'ml-use model card-choice1'
-level 'ml-use model card-choice2'
-level 'ml-use model card-choice3'
-level 'ml-use model card-choice4'
-level 'ml-use model card-choice5'
+level 'csp-variables-choice1'
+level 'csp-variables-choice2'
+level 'csp-variables-choice3'

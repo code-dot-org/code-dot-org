@@ -19644,7 +19644,7 @@ en:
               key: Designing Screens with Code
               name: Designing Screens with Code
               description_student: "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n"
-              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).
             The Circuit Playground:
               key: The Circuit Playground
               name: The Circuit Playground
@@ -21348,7 +21348,7 @@ en:
               description_teacher: In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig on the other side. To do this, they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
             Debugging with Scrat:
               key: Debugging with Scrat
-              name: Debugging with Scrat
+              name: Debugging in Maze
               description_student: Find problems in puzzles and practice your debugging skills.
               description_teacher: In this **skill-building** lesson, students will encounter pre-written code that contains mistakes. They will need to step through the existing code to identify errors.
             Collecting Treasure with Laurel:
@@ -21368,7 +21368,7 @@ en:
               description_teacher: This **skill-building** lesson has students using loops to help the *Star Wars* character *BB-8* efficiently traverse a maze.
             Sticker Art with Loops:
               key: Sticker Art with Loops
-              name: Sticker Art with Loops
+              name: 'Mini-Project: Sticker Art'
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
               description_teacher: This **mini-project** lesson builds on the understanding of loops. Students will create unique artwork with the Artist.
             Nested Loops in Maze:

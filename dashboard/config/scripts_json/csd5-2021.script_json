@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-22 04:18:26 UTC",
+    "serialized_at": "2021-04-24 15:52:24 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -1179,7 +1179,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 220
+        "duration": 215
       },
       "seeding_key": {
         "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1",
@@ -4799,7 +4799,7 @@
       "position": 14,
       "properties": {
         "description": "####Day 4 Warm-Up\n\n**Distribute:** Re-distribute the Project Guides from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.",
-        "name": "Days 4 and 5 Activity (90 mins)"
+        "name": "Days 4 and 5 Activity (85 mins)"
       },
       "seeding_key": {
         "activity_section.key": "5eb7b7fb-3bd7-4ef4-bce1-ed0aeb6384a4",
