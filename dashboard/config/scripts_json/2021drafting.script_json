@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-22 15:30:18 UTC",
+    "serialized_at": "2021-04-23 20:46:07 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -230,12 +230,27 @@
       }
     },
     {
-      "key": "End of Course Project",
-      "name": "End of Course Project",
+      "key": "Outbreaklab",
+      "name": "Outbreak Standalone Lab",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -247,10 +262,10 @@
     {
       "key": "Sprite Lab",
       "name": "Sprite Lab Blocks",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -262,10 +277,10 @@
     {
       "key": "video",
       "name": "Sprite Lab Videos",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -1460,6 +1475,30 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "level_keys": [
+          "outbreak_library"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "outbreak_library"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "outbreak_library"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Project",
         "level_keys": [
           "courseAB_EOC_2021"
@@ -1480,7 +1519,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1505,7 +1544,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1530,7 +1569,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1555,7 +1594,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1580,7 +1619,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1605,7 +1644,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1630,7 +1669,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1655,7 +1694,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1680,7 +1719,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1705,8 +1744,58 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Text",
+        "level_keys": [
+          "courseF_text_events_loom"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_events_loom"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Prompts",
+        "level_keys": [
+          "courseF_text_concat_loom"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat_loom"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_concat_loom"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -2250,6 +2339,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "outbreak_library",
+        "script_level.level_keys": [
+          "outbreak_library"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseAB_EOC_2021",
         "script_level.level_keys": [
           "courseAB_EOC_2021"
@@ -2352,6 +2452,28 @@
         "level.key": "courseF_events_loom_sandbox",
         "script_level.level_keys": [
           "courseF_events_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events_loom",
+        "script_level.level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat_loom",
+        "script_level.level_keys": [
+          "courseF_text_concat_loom"
         ],
         "lesson.key": "video",
         "lesson_group.key": "Loom Levels",
