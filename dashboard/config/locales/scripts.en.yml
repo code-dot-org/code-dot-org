@@ -21430,12 +21430,12 @@ en:
               description_teacher: In this **skill-building** lesson, students will use functions with the Artist.
             Variables with Artist:
               key: Variables with Artist
-              name: Using Variables with Artist
+              name: Variables with Artist
               description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.
               description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
             Changing Variables with Bee:
               key: Changing Variables with Bee
-              name: Variables with the Bee
+              name: Changing Variables with Bee
               description_student: This bee loves variables!
               description_teacher: This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.
             Changing Variables with Artist:

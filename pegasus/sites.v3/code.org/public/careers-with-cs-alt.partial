@@ -60,9 +60,9 @@ theme: responsive
 </div>
 
 <div class="col-33" style="background-color:#00adbc; text-align:center; margin-top:15px; padding:15px; padding-left:25px; padding-right:25px; overflow: hidden; position: relative; border-radius:15px">
-  <h3 style="color:#ffffff"><strong>Viewing Guide and Reflection Worksheets</strong></h3>
-  <p style="color:#ffffff">Teachers, check out our viewing guide for using these videos in class. Guide also includes reflection worksheets for students in grade 6 and up.</p>
-  <img src="/images/alt-about/photo.png" style="width:75%" alt="Careers with CS video viewing guide">
+  <h3 style="color:#ffffff"><strong>Viewing Guide and Reflection Worksheet</strong></h3>
+  <p style="color:#ffffff">Teachers, check out our viewing guide for using these videos in class. Guide also includes reflection worksheet for students in grade 6 and up.</p>
+  <img src="/images/csjourneys/viewing-guide.png" style="width:90%" alt="Careers with CS video viewing guide">
   <br>
   <p style="color:#ffffff">View our <a href="/csjourneys" target="_blank" style="color:#ffffff">CS Journeys page</a> for more resources connecting classroom learning to real-world CS pathways.</p>
   <br>
@@ -204,7 +204,7 @@ theme: responsive
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a href="https://www.careervillage.org/" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Career Village">
+        <img class="tutorial-tile-img" src="/images/csjourneys/career-village.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Career Village">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
@@ -220,7 +220,7 @@ theme: responsive
 <div class="col-50">
   <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
       <a href="https://www.collegeconfidential.com/" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="College Confidential">
+        <img class="tutorial-tile-img" src="/images/csjourneys/college-confidential.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="College Confidential">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
