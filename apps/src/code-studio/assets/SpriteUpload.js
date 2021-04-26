@@ -5,6 +5,7 @@ export default class SpriteUpload extends React.Component {
     super(props);
     this.state = {
       fileData: null,
+      filePreviewURL: '',
       filename: '',
       category: ''
     };
@@ -38,9 +39,11 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleImageChange = event => {
+    let file = event.target.files[0];
     this.setState({
-      fileData: URL.createObjectURL(event.target.files[0]),
-      filename: event.target.files[0].name
+      fileData: file,
+      filename: file.name,
+      filePreviewURL: URL.createObjectURL(file)
     });
   };
 
@@ -75,7 +78,7 @@ export default class SpriteUpload extends React.Component {
           <br />
           <label>
             <h4> Image Preview: </h4>
-            <img src={this.state.fileData} />
+            <img src={this.state.filePreviewURL} />
           </label>
           <br />
           <button type="submit">Upload to Library</button>
