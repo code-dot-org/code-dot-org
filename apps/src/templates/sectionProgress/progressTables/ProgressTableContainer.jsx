@@ -104,16 +104,14 @@ class ProgressTableContainer extends React.Component {
     this.onScroll = this.onScroll.bind(this);
     this.onToggleRow = this.onToggleRow.bind(this);
     this.recordToggleRow = this.recordToggleRow.bind(this);
-    this.getLessonProgress = this.getLessonProgress.bind(this);
-    this.getStudentProgress = this.getStudentProgress.bind(this);
 
     this.summaryCellFormatters = getSummaryCellFormatters(
-      this.getLessonProgress,
+      props.lessonProgressByStudent,
       props.onClickLesson
     );
 
     this.detailCellFormatters = getDetailCellFormatters(
-      this.getStudentProgress,
+      props.levelProgressByStudent,
       props.section
     );
 
@@ -255,10 +253,6 @@ class ProgressTableContainer extends React.Component {
     };
   }
 
-  getStudentProgress(student) {
-    return this.props.levelProgressByStudent[student.id];
-  }
-
   summaryContentViewProps() {
     return {
       columnWidths: new Array(this.props.scriptData.stages.length).fill(
@@ -267,10 +261,6 @@ class ProgressTableContainer extends React.Component {
       lessonCellFormatters: this.summaryCellFormatters,
       includeHeaderArrows: false
     };
-  }
-
-  getLessonProgress(lesson, student) {
-    return this.props.lessonProgressByStudent[student.id][lesson.id];
   }
 
   render() {

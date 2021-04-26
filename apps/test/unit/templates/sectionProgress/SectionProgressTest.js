@@ -5,6 +5,7 @@ import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/Se
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sinon from 'sinon';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -66,19 +67,16 @@ describe('SectionProgress', () => {
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('shows summary view', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
-  });
-
-  it('shows detail view', () => {
+  it('passes currentView to ProgressTableContainer', () => {
     const wrapper = shallow(
       <UnconnectedSectionProgress
         {...DEFAULT_PROPS}
         currentView={ViewType.DETAIL}
       />
     );
-    expect(wrapper.find('#uitest-detail-view').exists()).to.be.true;
+    expect(wrapper.find(ProgressTableContainer).props().currentView).to.equal(
+      ViewType.DETAIL
+    );
   });
 
   it('shows standards view', () => {
