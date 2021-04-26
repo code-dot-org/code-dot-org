@@ -22,7 +22,7 @@ class Results extends Component {
     const { historicResults, showResultsDetails } = this.props;
 
     return (
-      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      <div style={styles.resultsPanelContainer}>
         {showResultsDetails && <ResultsDetails />}
 
         <div id="results" style={styles.panel}>
@@ -31,7 +31,7 @@ class Results extends Component {
               {historicResults.map((historicResult, index) => {
                 return (
                   <div key={index}>
-                    <div style={{ float: "left", width: "80%" }}>
+                    <div style={styles.resultsStatement}>
                       <UnconnectedStatement
                         shouldShow={true}
                         smallFont={true}
@@ -39,11 +39,11 @@ class Results extends Component {
                         selectedFeatures={historicResult.features}
                       />
                     </div>
-                    <div style={{ float: "left", fontSize: 18, width: "10%" }}>
+                    <div style={styles.resultsAccuracy}>
                       {historicResult.accuracy}%
                     </div>
                     {index === 0 && (
-                      <div style={{ float: "left", textAlign: "center", width: "10%" }}>
+                      <div style={styles.resultsDetailsButtonContainer}>
                         <button
                           type="button"
                           onClick={this.showDetails}

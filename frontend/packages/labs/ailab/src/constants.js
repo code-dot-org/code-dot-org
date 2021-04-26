@@ -243,17 +243,6 @@ export const styles = {
     border: "none"
   },
 
-  resultsDetailsButton: {
-    fontSize: 14,
-    padding: '4px 12px',
-    margin: 0,
-    border: 'none',
-    cursor: 'pointer',
-    borderRadius: 5,
-    backgroundColor: '#61d2eb',
-    color: 'white'
-  },
-
   specifyColumnsItem: {
     display: "inline-block",
     width: "20%"
@@ -360,6 +349,36 @@ export const styles = {
   },
   crossTabCell5: {
     backgroundColor: "rgba(255,100,100, 1)"
+  },
+
+  resultsPanelContainer: {
+    width: "100%",
+    height: "100%",
+    position: "relative"
+  },
+
+  resultsStatement: {
+    float: "left",
+    width: "80%"
+  },
+
+  resultsAccuracy: { float: "left", fontSize: 18, width: "10%" },
+
+  resultsDetailsButtonContainer: {
+    float: "left",
+    textAlign: "center",
+    width: "10%"
+  },
+
+  resultsDetailsButton: {
+    fontSize: 14,
+    padding: "4px 12px",
+    margin: 0,
+    border: "none",
+    cursor: "pointer",
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white"
   },
 
   resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
