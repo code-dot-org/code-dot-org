@@ -3,7 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import ToggleButton from '@cdo/apps/templates/ToggleButton';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import {UnconnectedToggleGroup as ToggleGroup} from '@cdo/apps/templates/ToggleGroup';
 
 describe('ToggleGroup', function() {
   let wrapper, onChange;

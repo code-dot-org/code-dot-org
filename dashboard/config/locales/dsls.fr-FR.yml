@@ -602,22 +602,46 @@ fr-FR:
           à l'aide de deux valeurs simples.\n"
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Regardez le code ci-dessous et prédisez comment les en-têtes seront
+          affichés. Choisissez parmi l'une des options sur la droite.
+        title: Vérification rapide sur les titres
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Regardez le code ci-dessous et prédisez comment les en-têtes seront
+          affichés. Choisissez parmi l'une des options sur la droite.
+        title: Vérification rapide sur les titres
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Regardez le code ci-dessous et prédisez comment les en-têtes seront
+          affichés. Choisissez parmi l'une des options sur la droite.
+        title: Vérification rapide sur les titres
       CSD U2 Design Project:
         content1: description ici
       CSD U2 Design Project_2018:
@@ -626,18 +650,120 @@ fr-FR:
         content1: description ici
       CSD U2 L1 Overview:
         content1: description ici
+        markdown: |
+          # Aperçu
+
+          Cette leçon couvre les objectifs qu'un site web pourrait servir, pour les utilisateurs et les créateurs. La classe va explorée une poignée de site web les plus utilisés aux États Unis et discuter de comment chacun de ces sites est utile pour les utilisateurs  et comment il pourrait aussi servir ses créateurs.
+          ## Vocabulaire
+
+          * **Site web** - Un emplacement connecté à Internet qui gère une ou plusieurs pages sur le World Wide Web.
+
+
+          ## Ressources
+
+          * [The Purpose of Websites - Activity Guide](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [The Purpose of Websites - Exemplar](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: description ici
+        markdown: "# Aperçu\n\nCette leçon introduit les sites web comme un moyen
+          d'expression personnel.  Premièrement la classe discute des différentes
+          possibilités qu'on les gens pour s'exprimer et partager leurs intérêts et
+          idées, ensuite elle regarde quelques exemples de sites web réalisés par
+          des élèves du cours précédent. Ensuite tout le monde réfléchit et partage
+          une liste de sujets et intérêts à y inclure, crée une ressource pour le
+          développement d'un site web personnel par la suite. \n## Vocabulaire\n\n*
+          **Contenu d'un site web** - Du texte brute, des images, et d'autres éléments
+          inclut dans une page web\n\n\n## Ressources\n\n* [Personal Website Sketch
+          - Activity Guide](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Personal Website Sketch](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: description ici
+        markdown: |
+          # Aperçu
+
+          Cette leçon introduit le HTML comme une solution au problème de comment communiquer le contenu et la structure d'un site web à l'ordinateur. La leçon commence avec une brève activité débranchée démontrant le challenge de communiquer efficacement la structure d'une page web. La classe regarde une page HTML dans le Web Lab et discute de comment les tags HTML aident à résoudre ce problème, ensuite utilise le HTML pour écrire leur première page web de l'unité.
+          ## Vocabulaire
+
+          * **HTML** - Hypertext Markup Language, un langage utilisé pour créer des pages web
+          * **Elément HTML** - Une partie d'un site web, marquée par une balise de début et parfois fermée par une balise de fin
+          * **Balise HTML** - Un ensemble de caractères spéciaux qui indiquent le début et laa fin d'un élément HTML et le type de cet élément
+          * **Contenu de site web** - Le texte brute, des images, et d'autres éléments inclut dans une page web
+          * **Structure d'un site web** - Le but de différents éléments de contenu dans une page web, utilisé pour aider l'ordinateur à déterminer comment ce contenu doit être affiché
+
+          ## Code introduit
+
+          * **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
+          * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
         content1: description ici
+        markdown: |+
+          # Aperçu
+
+          Cette leçon continue l'introduction aux balises HTML, cette fois-ci avec les titres.  La classe pratique en utilisant des balises de titres pour créer des titres de page et section et apprend comment les différents éléments de titres sont affichés par défaut.  Ensuite, la classe planifie comment organiser le contenu sur la page web personnelle qui va être construite tout au long de cette unité et commence la première page du projet.
+          ## Vocabulaire
+
+          * **Titre** - Un titre ou un résumé pour un document ou une section d'un document.
+
+          ## Code introduit
+
+          *  **[Heading](//studio.code.org/docs/weblab/h/)** - `<h1></h1>`
+
       CSD U2 L5 Overview:
         content1: description ici
+        markdown: |
+          # Aperçu
+
+          Cette leçon prend du recul par rapport à la création du site web personnel pour parler des informations personnelles que les gens choisissent de partager numériquement. La classe commence par discuter des types d'informations qu'il est bon de partager avec d'autres personnes, puis examine plusieurs exemples de pages de médias sociaux pour voir quels types d'informations personnelles pourraient être partagées intentionnellement ou non. Enfin, la classe propose un ensemble de directives à suivre lors de la mise en ligne d'informations.
+          ## Vocabulaire
+
+          * ** Empreinte numérique ** - Les informations collectées sur une personne sur plusieurs sites web sur Internet.
+
+
+          ## Ressources
+
+          * [Quand votre vie privée est-elle importante? - Guide d'activité(https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Détective social - Guide d'activité](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |+
+          * [Quand votre vie privée est-elle importante?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Exemplaire du Guide d'activités ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Détective social](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Activity Guide ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
       CSD U2 L6 Overview:
         content1: description ici
+        markdown: |+
+          # Aperçu
+
+          Cette leçon présente les listes ordonnées et non ordonnées et les éléments associés &lt; ul &gt;, &lt; ol &gt;, et &lt; li &gt; balises HTML. La classe s'entraîne à utiliser les balises, puis retourne au projet de page web personnelle pour ajouter une nouvelle page HTML qui inclut les nouvelles balises.
+
+          ## Code introduit
+
+
+          *  **[Listes non ordonnées](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          *  **[Item de liste](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          *  **[Liste ordonnée](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+
       CSD U2 Lesson 6 Overview:
         content1: description ici
+        markdown: |-
+          # Aperçu
+
+          Cette leçon couvre les problèmes courants qui surviennent lors de la conception de pages Web en HTML. La classe corrigera les erreurs dans une séquence de pages web de plus en plus complexes trouvées sur Code Studio et apprendra l'importance des commentaires, des espaces blancs et de l'indentation en tant qu'outils pour rendre les pages Web plus faciles à lire.
+          ## Vocabulaire
+
+          * ** Bug ** - Partie d'un programme qui ne fonctionne pas correctement.
+          * ** Commentaire ** - Un commentaire est une note lisible par un programmeur dans le code source d'un programme informatique.
+          * ** Débogage ** - Recherche et résolution de problèmes dans votre algorithme ou programme.
+          * ** Indentation ** - Le placement du texte plus à droite, ou à gauche, pour le séparer du texte environnant, ce qui aide à transmettre la structure du programme.
+          * ** Espace blanc ** - L'espace blanc fait référence à tout caractère qui apparaît comme un espace vide sur l'écran, comme un espace, une tabulation ou une nouvelle ligne. Les espaces blancs aident à séparer les différentes parties du document pour le rendre plus facile à lire.
+
+          ## Code introduit
+
+          * ** [Comment] (// studio.code.org/docs/weblab/comment/)** - `<! - ->`
       CSD U2 expand project:
         content1: description ici
       CSD U2 expand project_2018:
@@ -659,43 +785,79 @@ fr-FR:
         - {}
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Faites correspondre la liste au code qui la crée.
+        title: Vérification rapide sur les listes
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Faites correspondre la liste au code qui la crée.
+        title: Vérification rapide sur les listes
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Faites correspondre la liste au code qui la crée.
+        title: Vérification rapide sur les listes
       CSD U2 project guide:
         content1: description ici
       CSD U2 project guide_2018:
@@ -4371,3 +4533,79 @@ fr-FR:
         description: Vous avez terminé le tutoriel ! Continuez à apporter des modifications
           ou des améliorations à votre projet. Vous pouvez choisir de continuer à
           travailler avec les mêmes blocs ou essayer une boîte à outils élargie.
+      CSD U2 L7 Overview:
+        markdown: |-
+          # Aperçu
+
+          Cette leçon explique comment utiliser le contenu créé par d'autres sur un site web tout en respectant les droits du créateur original de ce contenu. Après avoir étudié les licences Creative Commons, la classe apprend à ajouter des images aux pages web et à attribuer une attribution appropriée.
+
+          ## Vocabulaire
+
+          * ** Citation ** - Une citation ou une référence à un livre, un article ou un auteur, en particulier dans un ouvrage scientifique.
+          * ** Copyright ** - le droit légal exclusif, accordé à un créateur ou à un cessionnaire d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer du matériel littéraire, artistique ou musical, et d'autoriser d'autres personnes à faire de même.
+          * ** Creative Commons ** - Une licence publique de droit d'auteur qui permet la distribution gratuite d'une œuvre autrement protégée par le droit d'auteur. Une licence CC est utilisée lorsqu'un auteur souhaite donner aux gens le droit de partager, d'utiliser et de construire sur une œuvre qu'ils ont créée.
+          * ** Propriété intellectuelle ** - Une œuvre ou une invention qui est le résultat de la créativité, comme un manuscrit ou un dessin, sur laquelle on a des droits et pour laquelle on peut demander un brevet, un droit d'auteur, une marque, etc.
+
+          ## Code introduit
+
+          * ** [Image] (// studio.code.org/docs/weblab/img/)** - `<img />`
+
+          ## Ressources
+
+          * [Présentation de Creative Commons] (https://www.youtube.com/watch?v=HKfqoPYJdVc) - Vidéo
+          * [Licence de votre travail - Guide d'activités] (https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Licence de votre travail - Exemplaire du guide d'activités](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)\n"
+      CSD U2 Lesson 9 Overview:
+        markdown: |-
+          # Aperçu
+
+          Cette leçon couvre les hyperliens, qui permettent aux développeurs Web de connecter des pages entre elles dans un seul site Web. La classe liera toutes les pages précédentes en un seul projet et créera des barres de navigation pour chaque page avant de publier l'intégralité du site sur le Web.
+          ## Vocabulaire
+
+          * ** Hyperlien ** - Un lien d'un fichier HTML vers un autre emplacement ou fichier, généralement activé en cliquant sur un mot ou une image en surbrillance à l'écran.
+
+          ## Code introduit
+
+          * ** [Hyperlink] (// studio.code.org/docs/weblab/A/)** - `<a> </a>`
+
+          ## Ressources
+
+          * [Site Web personnel - Guide de projet] (https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)
+          * [Site Web personnel - Évaluation par les pairs] (https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
+          * [Site Web personnel - Rubrique] (https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)
+        teacher_markdown: |+
+          * [Site web personnel](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Exemplaire du guide du projet ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+          * [Site web personnel](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Exemple d'examen par les pairs ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
+
+
+
+      CSD U2 Top Websites:
+        markdown: |-
+          # Les meilleurs sites internet aux États Unis
+
+          Ce qui suit est la liste des sites internet les plus visités aux États Unis. Chaque élément contient une brève description de la fonction principale du site web.
+
+
+          1. Google.com - Moteur de recherche pour sites web, images, vidéos, et d'autre média
+          2. Youtube.com - Site de visionnage de vidéos uploder par les utilisateurs avec la possibilité de noter et commenter les vidéos
+          3. Facebook.com - Communauté de médias sociaux qui autorise les utilisateurs de partager des informations avec leurs amis
+          4. Amazon.com - Site de ventes en ligne de tous types de biens
+          4. Yahoo.com - Un moteur de recherche, Un fournisseur de messagerie électronique, et sources de nouvelles
+          5. Wikipedia.org - Une encyclopédie gratuite avec du contenu généré par les utilisateurs
+      Unit 2 Lesson 7 Overview:
+        markdown: |-
+          # Aperçu
+
+          Cette leçon présente le CSS comme moyen de styliser les éléments de la page. La classe apprend la syntaxe de base des ensembles de règles CSS, puis explore les propriétés qui ont un impact sur les éléments de texte HTML. Enfin, chacun applique des styles de texte à ses sites web personnels.
+          ## Vocabulaire
+
+          * ** CSS ** - CSS signifie Feuilles de style en cascade. CSS permet à chaque élément HTML d'être stylé selon un certain ensemble de règles.
+          * ** Sélecteur CSS ** - Spécifie la partie du code à laquelle le style doit être appliqué.
+
+          ## Code introduit
+
+          * ** [Color] (// studio.code.org/docs/weblab/color/)** - `couleur: valeur;`
+          * ** [Text Align] (// studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          * ** [Texte Decoration](// studio.code.org/docs/weblab/Text-Dec/)** - `text-decoration: value;`
+          * ** [Font Family] (// studio.code.org/docs/weblab/font-family/)** - `font-family: value;`
+          * ** [Font Size] (// studio.code.org/docs/weblab/font-size/)** - `font-size: value;`

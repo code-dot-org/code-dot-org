@@ -4,7 +4,7 @@ import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
@@ -17,6 +17,8 @@ import {
   searchOptions
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
+const resourcesEditor = createResourcesReducer('lessonResource');
+
 const createStoreWithLessonPlan = () => {
   registerReducers({
     ...reducers,
@@ -24,8 +26,8 @@ const createStoreWithLessonPlan = () => {
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
-  store.dispatch(init(sampleActivities, searchOptions, []));
-  store.dispatch(initResources([]));
+  store.dispatch(init(sampleActivities, searchOptions, [], false));
+  store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
   return store;
 };
@@ -38,9 +40,9 @@ const createStoreWithoutLessonPlan = () => {
   });
   const store = createStoreWithReducers();
   store.dispatch(
-    init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [])
+    init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [], false)
   );
-  store.dispatch(initResources([]));
+  store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
   return store;
 };

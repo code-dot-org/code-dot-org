@@ -9112,6 +9112,8 @@ se:
               display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
         express-2021:
           lesson_groups:
             csf_sprites:

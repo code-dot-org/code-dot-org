@@ -2,7 +2,7 @@ import {expect} from '../../../util/deprecatedChai';
 import sinon from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
-import JoinSection from '@cdo/apps/templates/studioHomepages/JoinSection';
+import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,

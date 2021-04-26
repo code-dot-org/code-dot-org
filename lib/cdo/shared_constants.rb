@@ -275,6 +275,9 @@ module SharedConstants
       "appendItem": null,
       "removeItem": null,
       "join": null,
+      "declareAssign_object": null,
+      "getValue": null,
+      "addPair": null,
 
       // Functions
       "functionParams_none": null,
@@ -445,6 +448,7 @@ module SharedConstants
       "createEdgeSprites": null,
       "shapeColor": null,
       "tint": null,
+      "alpha": null,
       "setVelocity": null,
       "getDirection": null,
       "getSpeed": null,
@@ -579,8 +583,6 @@ module SharedConstants
       "comment": null
     }
   JSON
-
-  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
 
   # Subset of Ruby Logger::Severity constants.
   # https://github.com/ruby/ruby/blob/trunk/lib/logger.rb

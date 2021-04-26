@@ -138,7 +138,7 @@ class ScriptsController < ApplicationController
   def instructions
     require_levelbuilder_mode
 
-    script = Script.get_from_cache(params[:script_id])
+    script = Script.get_from_cache(params[:id])
 
     render 'levels/instructions', locals: {stages: script.lessons}
   end
@@ -203,6 +203,7 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :visible_to_teachers,
+      :deprecated,
       :curriculum_umbrella,
       :family_name,
       :version_year,
@@ -231,6 +232,7 @@ class ScriptsController < ApplicationController
       resourceTypes: [],
       resourceLinks: [],
       resourceIds: [],
+      studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h

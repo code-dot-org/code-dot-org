@@ -2,7 +2,7 @@
 Feature: Fun-O-Meter
 
 Scenario: Rate a Puzzle
-  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
 
@@ -23,10 +23,10 @@ Scenario: Rate a Puzzle
   When I press "like"
   And I press "continue-button"
 
-  Then I wait until I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/5"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5"
   And I wait until "puzzleRatings" in localStorage equals "[]"
 
-  Given I am on "http://studio.code.org/s/allthethings/stage/4/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
 

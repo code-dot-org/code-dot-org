@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2020-02-20T18:11:38.000Z",
-  "level_num": "custom",
-  "user_id": 976,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -190,9 +186,16 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
+    "start_blocks": "console.log(\"Is this all it does?\")",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"default\" id=\"screen1\"><button style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 115px; top: 85px;\" id=\"button1\">Button</button></div></div>",
     "preload_asset_list": null
   },
-  "published": true
+  "game_id": 41,
+  "created_at": "2020-02-20T18:11:38.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-04-09 16:58:30 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2021-04-09 16:58:33 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

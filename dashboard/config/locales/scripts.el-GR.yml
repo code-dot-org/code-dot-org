@@ -3155,6 +3155,8 @@ el:
               display_name: Μεταβλητές
             lessonGroup-9:
               display_name: αφαίρεσε
+            lessonGroup-7:
+              display_name: Ψηφιακή υπηκοότητα
         express-2021:
           lessons:
             Dance Party:

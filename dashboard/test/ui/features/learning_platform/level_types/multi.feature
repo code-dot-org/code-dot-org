@@ -1,7 +1,7 @@
 Feature: Playing multi levels
 
 Background:
-  Given I am on "http://studio.code.org/s/course1/stage/2/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2?noautoplay=true"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
@@ -31,20 +31,20 @@ Scenario: Submitting an incorrect option
   And I wait until element "#cross_0" is visible
 
 Scenario: Rendering in another language
-  Given I am on "http://studio.code.org/s/course1/stage/2/puzzle/2/lang/es-MX"
+  Given I am on "http://studio.code.org/s/course1/lessons/2/levels/2/lang/es-MX"
   Then I rotate to landscape
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
   Then element ".multi h1" has "es-MX" text from key "data.dsls.2-3 Algorithms Multi 1.title"
 
 Scenario: Does not scroll horizontally
-  Given I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/2?noautoplay=true"
   When I rotate to landscape
   And element ".submitButton" is visible
   Then there is no horizontal scrollbar
 
 Scenario: Can render without a question
-  Given I am on "http://studio.code.org/s/allthethings/stage/9/puzzle/4?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/9/levels/4?noautoplay=true"
   When I rotate to landscape
   And element ".submitButton" is visible
   Then element ".multi-question" is not visible

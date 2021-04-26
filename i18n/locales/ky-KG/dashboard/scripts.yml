@@ -1601,7 +1601,7 @@ ky:
               name: Код менен Сүрөт жаратуу
             Sticker Art with Loops:
               key: Чаптама өнөрү циклдар менен
-              name: Чаптама өнөрү циклдар менен
+              name: 'Чаптама өнөрү циклдар менен'
           lesson_groups:
             csf_loops:
               display_name: Циклдер

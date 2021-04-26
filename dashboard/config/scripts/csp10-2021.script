@@ -8,6 +8,28 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_unit10_2020', display_name: 'Unit 10: Cybersecurity and Global Impacts'
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+* **Learning Through Full-class Simulation:** The simulation project that runs through this unit serves several important goals. It helps contextualize what students are learning by moving from abstract ideas of privacy or security to concrete potential innovations. Since the simulation is based on modernizing schools, students can consider the consequences of computing innovations in a familiar setting. By taking on an assigned role and interacting with a group of teammates who have done the same, students must consider a breadth of interests and goals beyond their own when it comes to innovating in schools. 
+
+* **Ending the Year as "Deciders":** A major theme students engage with throughout this unit is the need to consider both sides of technological innovation. Computing technology has led to both benefits and harms to culture, economy, and society at large. Responding to important questions facing our world requires understanding technology and an ability to identify and interpret the impacts it causes. This unit is not designed to advocate for any particular point of view on the impact of technology. Still, it should empower students to adeptly see and weigh the consequences of the technology around them. While the Create PT may feel like the most significant project of this course, the Explore Curricular requirement and the questions faced in this unit are arguably more crucial. Many of the young people who take CS Principles may pursue studies or careers in which they are "creators" with technology, but all of them will need to be thoughtful "deciders" in a world profoundly shaped by computing. 
+
+
+### Major Assessment and Projects
+
+Students complete the Future School Convention simulation throughout this unit. Working in teams of roughly five people, students are assigned a role and a set of interests they\'ll need to investigate. They research real-world innovations that could improve schools and align with the interests of their character. Throughout the unit, they are given opportunities to refine their proposals as a team and debate the benefits and risks of different computing innovations. Eventually, their team submits an overall proposal for the Future School, and all students vote for the team and innovation they believe to be the best. Students will also complete an end-of-unit assessment aligned with the CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the "Standards" page for this unit.
+
+* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.
+* IOC-2: The use of computing innovations may involve risks to your personal safety and identity.
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 5.1 Beneficial and Harmful Effects
+* 5.6 Safe Computing'
 lesson 'Project - Innovation Simulation Part 1', display_name: 'Project   Innovation Simulation Part 1', has_lesson_plan: true
 level 'U10 L01 CFU innovations_2021', progression: 'Check For Understanding', assessment: true
 
@@ -17,17 +39,17 @@ level 'U10 L02 CFU innovations part 2_2021', progression: 'Check For Understandi
 lesson 'Data Policies and Privacy', display_name: 'Data Policies and Privacy', has_lesson_plan: true
 level 'U10L3 CFU Why Collect PII_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'The Value of Privacy', display_name: 'The Value of Privacy', has_lesson_plan: true
+lesson 'The Value of Privacy', display_name: 'The Value of Privacy', has_lesson_plan: true, unplugged: true
 
 lesson 'Project - Innovation Simulation Part 3', display_name: 'Project   Innovation Simulation Part 3', has_lesson_plan: true
 
 lesson 'Security Risks Part 1', display_name: 'Security Risks Part 1', has_lesson_plan: true
 level 'CSP 20-21 Keylogging_2021', progression: 'Keylogging'
-level 'CSP 20-21 Phishing_2021'
+level 'CSP 20-21 Phishing_2021', progression: 'Phishing'
 level 'CSP 20-21 Rogue Access Points_2021', progression: 'Malware'
 level 'U10 L07 CFU security risks_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Security Risks Part 2', display_name: 'Security Risks Part 2', has_lesson_plan: true
+lesson 'Security Risks Part 2', display_name: 'Security Risks Part 2', has_lesson_plan: true, unplugged: true
 level 'U10 L08 CFU security risks_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Project: Innovation Simulation Part 4', display_name: 'Project   Innovation Simulation Part 4', has_lesson_plan: true
@@ -37,7 +59,7 @@ level 'Crack a Caesar Cipher_2021', progression: 'Encryption Widgets'
 level 'Crack Random Substitution_2021', progression: 'Encryption Widgets'
 level 'U10L9 CFU public key_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Protecting Data Part 2', display_name: 'Protecting Data Part 2', has_lesson_plan: true
+lesson 'Protecting Data Part 2', display_name: 'Protecting Data Part 2', has_lesson_plan: true, unplugged: true
 level 'U10L10 CFU MFA_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Project: Innovation Simulation Part 5', display_name: 'Project   Innovation Simulation Part 5', has_lesson_plan: true

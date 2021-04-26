@@ -4,10 +4,6 @@
   width: 95%;
 }
 
-body {
-  background-color: #1b1c17;
-}
-
 .main {
   padding: 0;
 }
@@ -27,4 +23,34 @@ body {
 
 #codeWorkspace {
   border: none !important;
+}
+
+.nav {
+  margin-bottom: 0px;
+}
+
+// The selected tab
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  border-color: darkgrey;
+  border-bottom-color: transparent;
+}
+
+// This class is used in the editor tabs when we're in dark mode
+.darkmode {
+  // The selected tab
+  .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    border-color: darkgrey;
+    background-color: rgb(40, 44, 52);
+    color: white;
+  }
+
+  // Tabs
+  ul > li > a {
+    color: darkgrey;
+  }
+
+  // On hover over a tab
+  ul > li > a:hover {
+    background-color: black;
+  }
 }

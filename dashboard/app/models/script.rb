@@ -42,6 +42,8 @@ class Script < ApplicationRecord
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :scripts_resources
   has_many :scripts_resources
+  has_many :scripts_student_resources, dependent: :destroy
+  has_many :student_resources, through: :scripts_student_resources, source: :resource
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -94,7 +96,8 @@ class Script < ApplicationRecord
         },
         :script_levels,
         :levels,
-        :resources
+        :resources,
+        :student_resources
       ]
     )
   end
@@ -205,6 +208,7 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
+    deprecated
     is_course
     background
     show_calendar
@@ -834,19 +838,6 @@ class Script < ApplicationRecord
     ].include?(name)
   end
 
-  def localize_long_instructions?
-    # Don't ever show non-English markdown instructions for Course 1 - 4, the
-    # 20-hour course, or the pre-2017 minecraft courses.
-    !(
-      csf_international? ||
-      twenty_hour? ||
-      [
-        ScriptConstants::MINECRAFT_NAME,
-        ScriptConstants::MINECRAFT_DESIGNER_NAME
-      ].include?(name)
-    )
-  end
-
   def beta?
     Script.beta? name
   end
@@ -1254,6 +1245,7 @@ class Script < ApplicationRecord
     end
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
     update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
+    update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
     begin
       if Rails.application.config.levelbuilder_mode
         script = Script.find_by_name(script_name)
@@ -1299,6 +1291,10 @@ class Script < ApplicationRecord
   def update_migrated_teacher_resources(resource_ids)
     teacher_resources = (resource_ids || []).map {|id| Resource.find(id)}
     self.resources = teacher_resources
+  end
+
+  def update_student_resources(resource_ids)
+    self.student_resources = (resource_ids || []).map {|id| Resource.find(id)}
   end
 
   def self.rake
@@ -1422,7 +1418,8 @@ class Script < ApplicationRecord
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_teacher_resources_dropdown),
+      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
@@ -1443,6 +1440,7 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      deprecated: deprecated?,
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
@@ -1450,7 +1448,9 @@ class Script < ApplicationRecord
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
-      courseVersionId: get_course_version&.id
+      courseVersionId: get_course_version&.id,
+      scriptOverviewPdfUrl: get_script_overview_pdf_url,
+      scriptResourcesPdfUrl: get_script_resources_pdf_url
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1517,9 +1517,9 @@ class Script < ApplicationRecord
 
   def summarize_for_lesson_show(is_student = false)
     {
-      displayName: localized_title,
+      displayName: title_for_display,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)}
     }
   end
 
@@ -1665,6 +1665,7 @@ class Script < ApplicationRecord
       :is_stable,
       :project_sharing,
       :tts,
+      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
@@ -1916,5 +1917,17 @@ class Script < ApplicationRecord
 
   def self.script_json_filepath(script_name)
     "#{script_json_directory}/#{script_name}.script_json"
+  end
+
+  def get_script_overview_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_overview_url(self)
+    end
+  end
+
+  def get_script_resources_pdf_url
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(self)
+    end
   end
 end

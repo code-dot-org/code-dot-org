@@ -1,6 +1,6 @@
 @import "color";
 @import "font";
-@import "markdown";
+@import "curriculum/markdown";
 @import "responsive-visualization";
 @import "style-constants";
 
@@ -842,7 +842,6 @@ input[type="radio"] {
   vertical-align: top;
   width: 50px;
   padding-right: 10px;
-  padding-bottom: 10px;
   height: auto;
 
   /* authored hints */

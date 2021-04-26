@@ -67,7 +67,10 @@ class StudentLessonOverview extends Component {
                   text={i18n.print()}
                 />
               )}
-              <LessonNavigationDropdown lesson={lesson} />
+              <LessonNavigationDropdown
+                lesson={lesson}
+                isStudentLessonPlan={true}
+              />
             </div>
           </div>
         </div>
@@ -122,7 +125,10 @@ class StudentLessonOverview extends Component {
         {lesson.resources.length > 0 && (
           <div id="resource-section">
             <h2>{i18n.resources()}</h2>
-            <ResourceList resources={lesson.resources} />
+            <ResourceList
+              resources={lesson.resources}
+              pageType="student-lesson-plan"
+            />
           </div>
         )}
       </div>

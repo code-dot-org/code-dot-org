@@ -5,11 +5,12 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "pilot_experiment": "haikubot-pilot"
+      "pilot_experiment": "haikubot-pilot",
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-05 21:29:55 UTC",
+    "serialized_at": "2021-04-22 22:31:24 UTC",
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }
@@ -986,6 +987,9 @@
 
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
