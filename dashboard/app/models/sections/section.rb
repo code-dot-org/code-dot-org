@@ -163,10 +163,12 @@ class Section < ApplicationRecord
   # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
   #   already in the section or has now been added.
   def add_student(student)
-    return ADD_STUDENT_FAILURE if user_id == student.id
-    return ADD_STUDENT_RESTRICTED if restrict_section == TRUE
-
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
+
+    return ADD_STUDENT_FAILURE if user_id == student.id
+    # Check for a restricted section that does not already have this follower enrolled (should exist and not be deleted)
+    return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+
     if follower
       if follower.deleted?
         follower.restore
