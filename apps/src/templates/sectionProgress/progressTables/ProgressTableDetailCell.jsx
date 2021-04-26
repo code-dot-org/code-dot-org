@@ -69,7 +69,6 @@ export default class ProgressTableDetailCell extends React.Component {
                 isConcept={sublevel.isConceptLevel}
                 title={sublevel.bubbleText}
                 url={this.buildBubbleUrl(sublevel)}
-                useCache={true}
               />
             </div>
           );
@@ -95,7 +94,6 @@ export default class ProgressTableDetailCell extends React.Component {
             isConcept={level.isConceptLevel}
             title={level.bubbleText}
             url={url}
-            useCache={true}
           />
         </div>
         {level.sublevels && this.renderSublevels(level)}
