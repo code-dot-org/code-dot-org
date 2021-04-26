@@ -179,8 +179,8 @@ const prepareTrainingData = () => {
       numReserved++;
     }
   }
-  store.dispatch(setAccuracyCheckExamples(trainingExamples));
-  store.dispatch(setAccuracyCheckLabels(trainingLabels));
+  store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
+  store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };
 
 const prepareTestData = () => {

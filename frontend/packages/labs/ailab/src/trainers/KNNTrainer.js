@@ -14,7 +14,8 @@ const KNN = require("ml-knn");
 export default class KNNTrainer {
   startTraining() {
     const state = store.getState();
-    this.knn = new KNN(state.trainingExamples, state.trainingLabels);
+    const k = Math.round(0.33 * state.data.length);
+    this.knn = new KNN(state.trainingExamples, state.trainingLabels, {k: k});
     var model = this.knn.toJSON();
     store.dispatch(setTrainedModel(model));
     const size = Buffer.byteLength(JSON.stringify(model));
