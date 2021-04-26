@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 23:43:58 UTC",
+    "serialized_at": "2021-04-24 15:02:46 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -601,7 +601,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "675f7979-4687-4193-bd1e-10332a1ac050",
@@ -615,7 +615,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 15
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "a427afac-1d4e-477c-8efb-2f2813326ece",
@@ -656,7 +656,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 75
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "c8d05b47-5ef6-429d-8162-74d7c1198428",
@@ -794,7 +794,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "05118f86-6a73-4845-98b1-8ae7b80a3548",
@@ -808,7 +808,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "a8aae27a-c021-4027-8ce0-37a888ec37f5",
@@ -822,7 +822,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "cb343ba8-a1d1-442d-a038-3f54c35175c8",
@@ -876,8 +876,7 @@
       "key": "c68b28b6-c6ee-4bf5-8fd6-f579f36e5182",
       "position": 3,
       "properties": {
-        "name": "Introducing the IOSP Model",
-        "duration": 15
+        "name": "Introducing the IOSP Model"
       },
       "seeding_key": {
         "lesson_activity.key": "c68b28b6-c6ee-4bf5-8fd6-f579f36e5182",
@@ -932,7 +931,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 150
+        "duration": 215
       },
       "seeding_key": {
         "lesson_activity.key": "faf4b5ae-838a-4a44-bfe5-9450699ab59f",

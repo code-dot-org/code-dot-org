@@ -1,11 +1,10 @@
 ---
-title: Take the next step on your CS Journey with these opportunities
+title: Take the next step on your CS Journey
 video_player: true
 theme: responsive
 ---
 <a id="top"></a>
-<h1>Take the next step on your CS Journey with these opportunities</h1>
-<p>xxxxxxxxxxx............</p>
+<h1>Take the next step on your CS Journey</h1>
 
 <br>
 
@@ -48,7 +47,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc; text-align:center">
   <a href="/beyond/extended-learning" style="text-decoration:none" target="_blank">
-  <h3 style="color:#ffffff; margin-top:12px"><strong>Free online courses</strong></h3>
+  <h3 style="color:#ffffff; margin-top:12px"><strong>Online courses</strong></h3>
   <img src="/images/csjourneys/online-courses.jpg" style="width:100%" alt="young man working on tablet">
   </a>
 </div>
