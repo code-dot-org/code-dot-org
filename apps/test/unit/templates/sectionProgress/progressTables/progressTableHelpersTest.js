@@ -1,11 +1,10 @@
 import {expect} from '../../../../util/reconfiguredChai';
-import {
-  timeSpentFormatter,
-  lastUpdatedFormatter
-} from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
+import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
 
 describe('progressTableHelpers', () => {
   describe('timeSpentFormatter', () => {
+    const timeSpentFormatter = unitTestExports.timeSpentFormatter;
+
     it('returns "" when progress is null', () => {
       expect(timeSpentFormatter(null)).to.equal('');
     });
@@ -28,6 +27,7 @@ describe('progressTableHelpers', () => {
   });
 
   describe('lastUpdatedFormatter', () => {
+    const lastUpdatedFormatter = unitTestExports.lastUpdatedFormatter;
     it('returns "" when progress is null', () => {
       expect(lastUpdatedFormatter(null)).to.equal('');
     });

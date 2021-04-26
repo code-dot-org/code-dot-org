@@ -301,6 +301,7 @@ class ProgressTableContainer extends React.Component {
           </div>
           <div style={styles.contentView} className="content-view">
             <ProgressTableContentView
+              key={this.props.currentView} //force a full re-instantiation of the component when view changes
               ref={r => (this.contentView = r)}
               rows={this.state.rows}
               onRow={this.onRow}

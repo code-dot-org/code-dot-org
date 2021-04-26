@@ -125,3 +125,8 @@ function missingDataFormatter(studentProgress, field) {
     return '-';
   }
 }
+
+export const unitTestExports = {
+  timeSpentFormatter,
+  lastUpdatedFormatter
+};
