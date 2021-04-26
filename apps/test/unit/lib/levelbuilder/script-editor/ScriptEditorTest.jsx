@@ -14,10 +14,9 @@ import {
   getStore,
   registerReducers
 } from '@cdo/apps/redux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
@@ -27,7 +26,12 @@ describe('ScriptEditor', () => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
 
-    registerReducers({...reducers, isRtl, resources: resourcesEditor});
+    registerReducers({
+      ...reducers,
+      isRtl,
+      resources: createResourcesReducer('teacherResource'),
+      studentResources: createResourcesReducer('studentResource')
+    });
     store = getStore();
     store.dispatch(
       init(
@@ -92,8 +96,8 @@ describe('ScriptEditor', () => {
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      expect(wrapper.find('input').length).to.equal(22);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
+      expect(wrapper.find('input').length).to.equal(23);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(3);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
@@ -106,8 +110,8 @@ describe('ScriptEditor', () => {
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({initialHidden: false, isMigrated: true});
 
-      expect(wrapper.find('input').length).to.equal(25);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('input').length).to.equal(27);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(13);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(4);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
@@ -165,7 +169,12 @@ describe('ScriptEditor', () => {
         const wrapper = createWrapper({
           isMigrated: true
         });
-        expect(wrapper.find(MigratedResourcesEditor).length).to.equal(1);
+        expect(
+          wrapper
+            .find('ResourcesEditor')
+            .first()
+            .props().useMigratedResources
+        ).to.be.true;
       });
     });
 

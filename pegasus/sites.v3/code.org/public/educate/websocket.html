@@ -1,0 +1,48 @@
+<div id="main-content" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <p>This page is intended for future AP CSA teachers in the AP CSA pilot.</p>
+        <label for="connect">Click to test WebSocket connection:</label>
+        <div>
+          <button id="connect" class="btn btn-primary">Connect</button>
+        </div>
+        <p id="loading" class="text-info" style="display: none">Connecting...</p>
+        <p id="success" class="text-success" style="display: none">You successfully connected!</p>
+        <p id="fail" class="text-danger" style="display: none">Error. Connection unsuccessful.`</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function connect() {
+    let socket = new WebSocket("wss://javabuilderpilot.code.org?Authorization=connectivityTest");
+    document.querySelector("#loading").style.display = "block";
+    document.querySelector("#success").style.display = "none";
+    document.querySelector("#fail").style.display = "none";
+
+    socket.onopen = function(e) {
+      socket.send("connectivityTest");
+    };
+
+    socket.onmessage = function(message) {
+      if (message.data == "success") {
+        document.querySelector("#loading").style.display = "none";
+        document.querySelector("#success").style.display = "block";
+      } else {
+        document.querySelector("#loading").style.display = "none";
+        document.querySelector("#fail").style.display = "block";
+      }
+      socket.close();
+    }
+
+    socket.onerror = function(error) {
+      document.querySelector("#loading").style.display = "none";
+      document.querySelector("#fail").style.display = "block";
+      socket.close();
+    };
+  };
+  $(function () {
+    $( "#connect" ).click(function() { connect(); });
+  });
+</script>

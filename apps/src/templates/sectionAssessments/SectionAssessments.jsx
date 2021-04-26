@@ -35,6 +35,7 @@ import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import FeedbackDownload from './FeedbackDownload';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -272,7 +273,7 @@ class SectionAssessments extends Component {
                   </div>
                 )}
                 {totalStudentSubmissions <= 0 && (
-                  <div>{i18n.emptySurveyOverviewTable()}</div>
+                  <SafeMarkdown markdown={i18n.emptySurveyOverviewTable()} />
                 )}
               </div>
             )}

@@ -122,10 +122,14 @@ class MakerController < ApplicationController
   # renders a page for users to copy and paste a login key
   def display_code
     # Generate encrypted code to display to user
-    user_auth = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
-    @secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
-    )
+    user_auth = current_user&.find_credential(AuthenticationOption::GOOGLE)
+    if user_auth.nil?
+      @secret_code = nil
+      return
+    end
+
+    secret_str = Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth[:authentication_id] + user_auth[:credential_type]
+    @secret_code = Encryption.encrypt_string_utf8(secret_str)
   end
 
   # GET /maker/confirm_login
@@ -133,6 +137,8 @@ class MakerController < ApplicationController
   # This route is need to convert the GET request from the Maker App into
   # a POST that can be used to login via Google OAuth
   def confirm_login
+    return_to = params[:user_return_to]
+    session[:user_return_to] = return_to if return_to.present?
   end
 
   # POST /maker/complete

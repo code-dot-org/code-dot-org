@@ -35,8 +35,8 @@ export const commands = {
   },
 
   // Action commands
-  addTarget(spriteArg, targetArg) {
-    actionCommands.addTarget(spriteArg, targetArg);
+  addTarget(spriteArg, targetArg, targetType) {
+    actionCommands.addTarget(spriteArg, targetArg, targetType);
   },
 
   bounceOff(spriteArg, targetArg) {
@@ -135,6 +135,10 @@ export const commands = {
     behaviorCommands.addBehavior(spriteArg, behavior);
   },
 
+  avoidingTargetsFunc(spriteArg) {
+    return behaviorCommands.avoidingTargetsFunc(this);
+  },
+
   Behavior(callback) {
     return behaviorCommands.Behavior(callback);
   },
@@ -182,6 +186,10 @@ export const commands = {
 
   spriteClicked(condition, spriteArg, callback) {
     eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenAllPromptsAnswered(callback) {
+    eventCommands.whenAllPromptsAnswered(callback);
   },
 
   whenSpriteCreated(spriteArg, callback) {

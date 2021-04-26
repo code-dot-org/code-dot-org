@@ -136,7 +136,7 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson2
     create :script_level, script: script, lesson: lesson2
 
-    assert_match /\/s\/bogus-script-\d+\/stage\/2\/puzzle\/1/, lesson1.next_level_path_for_lesson_extras(@student)
+    assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
     assert_equal '/', lesson2.next_level_path_for_lesson_extras(@student)
   end
 
@@ -285,6 +285,27 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'lesson overview', summary[:overview]
     assert_equal 2, summary[:announcements].length
     assert_equal script.summarize_for_lesson_show(true), summary[:unit]
+  end
+
+  test 'lesson_plan_has_verified_resources is true for lesson with verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'verified teacher resource', audience: 'Verified Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    assert lesson.lesson_plan_has_verified_resources
+  end
+
+  test 'lesson_plan_has_verified_resources is false for lesson without verified resources ' do
+    lesson = create :lesson
+
+    create :resource, name: 'teacher resource', audience: 'Teacher', lessons: [lesson]
+    create :resource, name: 'student resource', audience: 'Student', lessons: [lesson]
+    create :resource, name: 'all resource', audience: 'All', lessons: [lesson]
+
+    refute lesson.lesson_plan_has_verified_resources
   end
 
   test 'summarize lesson for student lesson plan combines student and for all resources' do
@@ -819,6 +840,25 @@ class LessonTest < ActiveSupport::TestCase
     )
   end
 
+  test 'script_resource_pdf_url gets url to script resources pdf for migrated script' do
+    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_equal(
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name} - Resources.pdf",
+      lesson.script_resource_pdf_url
+    )
+  end
+
+  test 'script_resource_pdf_url is nil for non-migrated script' do
+    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
+
+    assert_nil lesson.script_resource_pdf_url
+  end
+
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
     script = create :script, include_student_lesson_plans: true
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
@@ -854,5 +894,45 @@ class LessonTest < ActiveSupport::TestCase
     script_level = create :script_level, script: script, levels: [level1, level2], assessment: true, lesson: lesson
 
     [script, level1, level2, lesson, script_level]
+  end
+
+  test 'course_version_standards_url returns nil without course version' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    refute script.get_course_version
+    refute lesson.course_version_standards_url
+  end
+
+  test 'course_version_standards_url in unit group returns courses path' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    # family name and version year must be set in order for a unit group to have
+    # a course offering and course version.
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '1999'
+    create :unit_group_unit, script: script, unit_group: unit_group, position: 1
+
+    # adds course offering and course version
+    CourseOffering.add_course_offering(unit_group)
+    assert script.get_course_version
+    assert_equal unit_group, script.get_course_version.content_root
+
+    expected_url = "/courses/#{unit_group.name}/standards"
+    assert_equal expected_url, lesson.course_version_standards_url
+  end
+
+  test 'course_version_standards_url in standalone script returns script path' do
+    script = create :script, is_course: true, family_name: 'my-family', version_year: '1999'
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    CourseOffering.add_course_offering(script)
+    assert script.get_course_version
+    assert_equal script, script.get_course_version.content_root
+
+    expected_url = "/s/#{script.name}/standards"
+    assert_equal expected_url, lesson.course_version_standards_url
   end
 end

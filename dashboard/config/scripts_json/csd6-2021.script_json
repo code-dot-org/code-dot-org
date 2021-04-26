@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-03-26 15:41:24 UTC",
+    "serialized_at": "2021-04-24 16:12:41 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -164,9 +164,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
+        "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
         "student_overview": "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n",
-        "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The `onBoardEvent()` block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
+        "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "1. **Attach an event handler to a hardware input**\n\n\tCode Studio: See rubric on bubble 3.\n\n2. **Choose the appropriate event for a given scenario**\n\n\tWrap Up: Students should describe different scenarios that would be more appropriate for different events."
       },
@@ -207,7 +207,7 @@
         "overview": "In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.",
         "student_overview": "Students get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\r\n",
         "purpose": "This lesson builds on the previous by introducing analog sensors as a new form of input. These sensors all perform analog-to-digital conversion, allowing programs to sense things as represented by a 10 bit number (0-1023).",
-        "preparation": "* Cue up the [r analog-digital-video]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
+        "preparation": "* Cue up the [r analog-digital-video/csd/2021]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "1. **Develop programs that respond to analog input**\n\n\tCode Studio: See rubric on bubble 11\n\n2. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: See rubric on bubble 11\n\n3. **Represent a sensor value in a variety of ways**\n\n\tCode Studio: See rubric on bubble 11"
       },
@@ -452,7 +452,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 45
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f",
@@ -507,7 +507,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 45
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "2fff60de-5366-470f-ad77-577397a87071",
@@ -549,7 +549,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 45
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "cc88c5f7-4a54-4ec9-b548-194fb175932d",
@@ -605,7 +605,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 2
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "ab4ccdb8-44eb-47ee-aefd-d7cd635ca363",
@@ -759,7 +759,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 60
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664",
@@ -801,7 +801,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 80
+        "duration": 215
       },
       "seeding_key": {
         "lesson_activity.key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c",
@@ -1011,7 +1011,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 60
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97",
@@ -1053,7 +1053,7 @@
       "position": 2,
       "properties": {
         "name": "Activity  1",
-        "duration": 30
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2",
@@ -1081,7 +1081,7 @@
       "position": 4,
       "properties": {
         "name": "Activity 3",
-        "duration": 30
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "09284bd4-8906-4775-8b69-db734dde7324",
@@ -1136,7 +1136,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 145
+        "duration": 210
       },
       "seeding_key": {
         "lesson_activity.key": "c61550fb-464b-4871-92d2-f532c0ec62cf",
@@ -1150,7 +1150,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 30
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "d411cf59-7c5f-4e4e-8aba-845836bc9658",
@@ -1711,7 +1711,7 @@
       "key": "5f73a5a3-c6bd-424f-b8a8-89fa0bc9ca56",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\r\n\r\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\r\n\r\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.",
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -2852,7 +2852,7 @@
       "key": "61efbeb1-5fcd-4dec-9265-4628f24745de",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**  When you needed to access the pitch and roll of the accelerometer in the last lesson, you used the block `accelerometer.getOrientation`, and you chose whether to get the pitch or the roll.  Why do you think the creators make the program work that way, rather than having two blocks, one for the pitch and one for the roll?",
+        "description": "**Prompt:**  When you needed to access the pitch and roll of the accelerometer in the last lesson, you used the block [`accelerometer.getOrientation`(#f78183)](/docs/applab/accelerometer.getOrientation/), and you chose whether to get the pitch or the roll.  Why do you think the creators make the program work that way, rather than having two blocks, one for the pitch and one for the roll?",
         "tips": [
           {
             "type": "discussionGoal",
@@ -3451,7 +3451,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Innovation Research",
         "level_keys": [
@@ -3477,7 +3477,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Setting Properties",
         "level_keys": [
@@ -3503,7 +3503,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Setting Properties",
         "level_keys": [
@@ -3555,7 +3555,7 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events and Properties",
         "level_keys": [
@@ -3581,7 +3581,7 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events and Properties",
         "level_keys": [
@@ -3607,7 +3607,7 @@
       "chapter": 7,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events and Properties",
         "level_keys": [
@@ -3659,7 +3659,7 @@
       "chapter": 9,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Emotion Machine Example",
         "level_keys": [
@@ -3685,7 +3685,7 @@
       "chapter": 10,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Building an App",
         "level_keys": [
@@ -3711,7 +3711,7 @@
       "chapter": 11,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Building an App",
         "level_keys": [
@@ -3737,7 +3737,7 @@
       "chapter": 12,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Building an App",
         "level_keys": [
@@ -3789,7 +3789,7 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Hardware and Software",
         "level_keys": [
@@ -3815,7 +3815,7 @@
       "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3841,7 +3841,7 @@
       "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3867,7 +3867,7 @@
       "chapter": 17,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3893,7 +3893,7 @@
       "chapter": 18,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3919,7 +3919,7 @@
       "chapter": 19,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the LED",
         "level_keys": [
@@ -3971,7 +3971,7 @@
       "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -3997,7 +3997,7 @@
       "chapter": 22,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -4023,7 +4023,7 @@
       "chapter": 23,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -4049,7 +4049,7 @@
       "chapter": 24,
       "position": 11,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "LED Apps",
         "level_keys": [
@@ -4101,7 +4101,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Input Examples",
         "level_keys": [
@@ -4127,7 +4127,7 @@
       "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Input Examples",
         "level_keys": [
@@ -4153,7 +4153,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Events",
         "level_keys": [
@@ -4179,7 +4179,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Events",
         "level_keys": [
@@ -4231,7 +4231,7 @@
       "chapter": 31,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4257,7 +4257,7 @@
       "chapter": 32,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4283,7 +4283,7 @@
       "chapter": 33,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Using the Switch",
         "level_keys": [
@@ -4309,7 +4309,7 @@
       "chapter": 34,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4335,7 +4335,7 @@
       "chapter": 35,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4361,7 +4361,7 @@
       "chapter": 36,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Buzzer",
         "level_keys": [
@@ -4387,7 +4387,7 @@
       "chapter": 37,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Extra Challenge: Sound Board",
         "level_keys": [
@@ -5089,7 +5089,7 @@
       "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Program",
         "level_keys": [
@@ -5115,7 +5115,7 @@
       "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Plan Your Project",
         "level_keys": [
@@ -5141,7 +5141,7 @@
       "chapter": 66,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5167,7 +5167,7 @@
       "chapter": 67,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5193,7 +5193,7 @@
       "chapter": 68,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5219,7 +5219,7 @@
       "chapter": 69,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Functions",
         "level_keys": [
@@ -5245,7 +5245,7 @@
       "chapter": 70,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Functions",
         "level_keys": [
@@ -5271,7 +5271,7 @@
       "chapter": 71,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Functions",
         "level_keys": [
@@ -5297,7 +5297,7 @@
       "chapter": 72,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Checking for a Winner",
         "level_keys": [
@@ -5323,7 +5323,7 @@
       "chapter": 73,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Checking for a Winner",
         "level_keys": [
@@ -5349,7 +5349,7 @@
       "chapter": 74,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Checking for a Winner",
         "level_keys": [
@@ -5401,7 +5401,7 @@
       "chapter": 76,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Make it Your Own",
         "level_keys": [
@@ -5427,7 +5427,7 @@
       "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Demo - Bug Grab",
         "level_keys": [
@@ -5453,7 +5453,7 @@
       "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Plan Your Project",
         "level_keys": [
@@ -5479,7 +5479,7 @@
       "chapter": 79,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Screen Design",
         "level_keys": [
@@ -5505,7 +5505,7 @@
       "chapter": 80,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -5531,7 +5531,7 @@
       "chapter": 81,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -5557,7 +5557,7 @@
       "chapter": 82,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions",
         "level_keys": [
@@ -5583,7 +5583,7 @@
       "chapter": 83,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions",
         "level_keys": [
@@ -5609,7 +5609,7 @@
       "chapter": 84,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -6935,7 +6935,7 @@
       "chapter": 135,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -6961,7 +6961,7 @@
       "chapter": 136,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -6987,7 +6987,7 @@
       "chapter": 137,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7013,7 +7013,7 @@
       "chapter": 138,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7039,7 +7039,7 @@
       "chapter": 139,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Functions with Parameters",
         "level_keys": [
@@ -7065,7 +7065,7 @@
       "chapter": 140,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7091,7 +7091,7 @@
       "chapter": 141,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7117,7 +7117,7 @@
       "chapter": 142,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Iteration and Parameters",
         "level_keys": [
@@ -7143,7 +7143,7 @@
       "chapter": 143,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7169,7 +7169,7 @@
       "chapter": 144,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7195,7 +7195,7 @@
       "chapter": 145,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7221,7 +7221,7 @@
       "chapter": 146,
       "position": 12,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7247,7 +7247,7 @@
       "chapter": 147,
       "position": 13,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7299,7 +7299,7 @@
       "chapter": 149,
       "position": 15,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7325,7 +7325,7 @@
       "chapter": 150,
       "position": 16,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Star Chaser",
         "level_keys": [
@@ -7351,7 +7351,7 @@
       "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Circuits and Logic",
         "level_keys": [
@@ -7377,7 +7377,7 @@
       "chapter": 152,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7403,7 +7403,7 @@
       "chapter": 153,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7429,7 +7429,7 @@
       "chapter": 154,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7455,7 +7455,7 @@
       "chapter": 155,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Simple Circuits",
         "level_keys": [
@@ -7481,7 +7481,7 @@
       "chapter": 156,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Smart Bike - Blinkers",
         "level_keys": [
@@ -7533,7 +7533,7 @@
       "chapter": 158,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Smart Bike - Blinkers",
         "level_keys": [
@@ -7559,7 +7559,7 @@
       "chapter": 159,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Button Circuits",
         "level_keys": [
@@ -7585,7 +7585,7 @@
       "chapter": 160,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finish the Prototype",
         "level_keys": [
@@ -7611,7 +7611,7 @@
       "chapter": 161,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finish the Prototype",
         "level_keys": [
@@ -7663,7 +7663,7 @@
       "chapter": 163,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Your Prototype",
         "level_keys": [
@@ -7689,7 +7689,7 @@
       "chapter": 164,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "User Interface",
         "level_keys": [
@@ -7715,7 +7715,7 @@
       "chapter": 165,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "User Interface",
         "level_keys": [
@@ -7741,7 +7741,7 @@
       "chapter": 166,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Input and Output",
         "level_keys": [
@@ -7767,7 +7767,7 @@
       "chapter": 167,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Board Input and Output",
         "level_keys": [
@@ -7793,7 +7793,7 @@
       "chapter": 168,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -7819,7 +7819,7 @@
       "chapter": 169,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Finishing Touches",
         "level_keys": [
@@ -10112,12 +10112,12 @@
       }
     },
     {
-      "name": "Make a Game",
-      "url": "https://studio.code.org/s/csd6-2019/stage/9/puzzle/1",
+      "name": "Sample Marked Rubrics 1",
+      "url": "https://docs.google.com/document/d/1iCKDoZqJs9jrKGAxJAAqrlPAhs48SqPew7ZD3muey8Q",
       "key": "make-a-game-exemplars",
       "properties": {
-        "type": "Exemplars",
-        "audience": "Teacher"
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "make-a-game-exemplars"
@@ -10128,12 +10128,23 @@
       "url": "https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/edit",
       "key": "make-game-guide",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "make-game-guide"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 2",
+      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY",
+      "key": "sample_marked_rubrics_2_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_2_2"
       }
     },
     {
@@ -10164,18 +10175,6 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://studio.code.org/s/csd6-2019/stage/16/puzzle/1",
-      "key": "protype-an-innovation-exemplars",
-      "properties": {
-        "type": "Exemplars",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "protype-an-innovation-exemplars"
-      }
-    },
-    {
-      "name": "Prototype an Innovation",
       "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
       "key": "prototype-an-innovation-1",
       "properties": {
@@ -10198,6 +10197,54 @@
       },
       "seeding_key": {
         "resource.key": "planning-your-innovation"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 1",
+      "url": "https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90",
+      "key": "sample_marked_rubrics_1_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_1_2"
+      }
+    },
+    {
+      "name": "Peer Review 1",
+      "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
+      "key": "peer_review_1_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_1_1"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 2",
+      "url": "https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc",
+      "key": "sample_marked_rubrics_2_3",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_2_3"
+      }
+    },
+    {
+      "name": "Peer Review 2",
+      "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
+      "key": "peer_review_2_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_2_1"
       }
     },
     {
@@ -10269,6 +10316,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "sample_marked_rubrics_2_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
         "resource.key": "circuits-logic-video"
       }
@@ -10288,12 +10341,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "protype-an-innovation-exemplars"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "prototype-an-innovation-1"
       }
     },
@@ -10301,6 +10348,30 @@
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "planning-your-innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics_1_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "peer_review_1_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics_2_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "peer_review_2_1"
       }
     }
   ],
@@ -10311,6 +10382,9 @@
         "script.name": "csd6-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {
@@ -11667,5 +11741,8 @@
         "standard.shortcode": "2-CS-03"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

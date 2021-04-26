@@ -66,6 +66,7 @@ class ScriptEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialHidden: PropTypes.bool,
     initialIsStable: PropTypes.bool,
+    initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
     initialStudentDetailProgressView: PropTypes.bool,
@@ -106,6 +107,7 @@ class ScriptEditor extends React.Component {
     levelKeyList: PropTypes.object.isRequired,
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
       .isRequired,
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
@@ -164,7 +166,8 @@ class ScriptEditor extends React.Component {
       teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
-      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      deprecated: this.props.initialDeprecated
     };
   }
 
@@ -274,6 +277,7 @@ class ScriptEditor extends React.Component {
       announcements: JSON.stringify(this.state.announcements),
       visible_to_teachers: !this.state.hidden,
       is_stable: this.state.isStable,
+      deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
@@ -306,6 +310,9 @@ class ScriptEditor extends React.Component {
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
       resourceIds: this.props.migratedTeacherResources.map(
+        resource => resource.id
+      ),
+      studentResourceIds: this.props.studentResources.map(
         resource => resource.id
       ),
       is_migrated: this.props.isMigrated,
@@ -707,6 +714,24 @@ class ScriptEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
+              <label>
+                Deprecated
+                <input
+                  type="checkbox"
+                  checked={this.state.deprecated}
+                  style={styles.checkbox}
+                  onChange={() =>
+                    this.setState({deprecated: !this.state.deprecated})
+                  }
+                />
+                <HelpTip>
+                  <p>
+                    Used only for Professional Learning Courses. Deprecation
+                    prevents Peer Reviews conducted as part of this Script from
+                    being displayed in the admin-only Peer Review Dashboard.
+                  </p>
+                </HelpTip>
+              </label>
               <VisibleAndPilotExperiment
                 visible={!this.state.hidden}
                 updateVisible={() =>
@@ -807,7 +832,7 @@ class ScriptEditor extends React.Component {
           )}
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Teacher Resources Settings">
+        <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
             Has Resources for Verified Teachers
             <input
@@ -827,24 +852,39 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
+          Select the resources you'd like to have show up in the dropdown at the
+          top of the script overview page:
           <div>
             <h4>Teacher Resources</h4>
             <div>
-              <div>
-                Select the Teacher Resources buttons you'd like to have show up
-                on the top of the script overview page
-              </div>
+              <div />
               <ResourcesEditor
                 inputStyle={styles.input}
-                teacherResources={this.state.teacherResources}
-                updateTeacherResources={teacherResources =>
+                resources={this.state.teacherResources}
+                updateResources={teacherResources =>
                   this.setState({teacherResources})
                 }
                 useMigratedResources={this.props.isMigrated}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedTeacherResources={this.props.migratedTeacherResources}
+                migratedResources={this.props.migratedTeacherResources}
               />
             </div>
+            {this.props.isMigrated && (
+              <div>
+                <h4>Student Resources</h4>
+                <div>
+                  Select the Student Resources buttons you'd like to have show
+                  up on the top of the script overview page
+                </div>
+                <ResourcesEditor
+                  inputStyle={styles.input}
+                  useMigratedResources
+                  courseVersionId={this.props.initialCourseVersionId}
+                  migratedResources={this.props.studentResources}
+                  studentFacing
+                />
+              </div>
+            )}
           </div>
         </CollapsibleEditorSection>
         {this.props.isMigrated && (
@@ -957,7 +997,8 @@ export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
     levelKeyList: state.levelKeyList,
-    migratedTeacherResources: state.resources
+    migratedTeacherResources: state.resources,
+    studentResources: state.studentResources
   }),
   {
     init

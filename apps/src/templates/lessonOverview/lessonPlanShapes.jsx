@@ -69,17 +69,23 @@ export const activityShape = PropTypes.shape({
 
 export const lessonShape = PropTypes.shape({
   unit: PropTypes.shape({
-    displayName: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    lessons: PropTypes.arrayOf(
+    lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
-        position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       })
     ).isRequired
   }).isRequired,
+  id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
@@ -91,22 +97,29 @@ export const lessonShape = PropTypes.shape({
   programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string,
-  lessonPlanPdfUrl: PropTypes.string
+  lessonPlanPdfUrl: PropTypes.string,
+  courseVersionStandardsUrl: PropTypes.string
 });
 
 export const studentLessonShape = PropTypes.shape({
   unit: PropTypes.shape({
-    displayName: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    lessons: PropTypes.arrayOf(
+    lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
-        position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       })
     ).isRequired
   }).isRequired,
+  id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
@@ -118,13 +131,22 @@ export const studentLessonShape = PropTypes.shape({
 });
 
 export const navigationLessonShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
   unit: PropTypes.shape({
-    lessons: PropTypes.arrayOf(
+    lessonGroups: PropTypes.arrayOf(
       PropTypes.shape({
         key: PropTypes.string.isRequired,
-        position: PropTypes.number.isRequired,
         displayName: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        userFacing: PropTypes.bool.isRequired,
+        lessons: PropTypes.arrayOf(
+          PropTypes.shape({
+            key: PropTypes.string.isRequired,
+            position: PropTypes.number.isRequired,
+            displayName: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired
+          })
+        ).isRequired
       })
     ).isRequired
   }).isRequired

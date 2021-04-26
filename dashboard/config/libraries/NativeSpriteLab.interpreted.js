@@ -60,6 +60,10 @@ function withPercentChance(num, callback) {
   }
 }
 
+function withPercentChanceDropdown(num, callback) {
+  withPercentChance(num, callback);
+}
+
 /* Legacy code only. Do not add any new code below here */
 function clickedOn(spriteId, callback) {
   spriteClicked('when', spriteId, callback);
@@ -67,6 +71,10 @@ function clickedOn(spriteId, callback) {
 
 function draggable() {
   return {func: draggableFunc(), name: 'draggable'};
+}
+
+function avoidingTargets() {
+  return {func: avoidingTargetsFunc(), name: 'avoiding targets'};
 }
 
 function followingTargets() {

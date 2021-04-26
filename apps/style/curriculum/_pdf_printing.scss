@@ -1,0 +1,64 @@
+@import 'color';
+@import 'style/aniGif';
+
+@media screen {
+  .print-only {
+    height: 0;
+    display: none;
+  }
+}
+
+@media print {
+  /* we have many components that we never want to include in a print view */
+  #environment_tag,
+  .announcement-notification,
+  .extra-links,
+  .footer,
+  .header-wrapper,
+  .push {
+    display: none;
+  }
+
+  /* I'm not 100% sure that this is necessary, but including
+   * it for safety */
+  @page {
+    size: letter;
+  }
+
+  /* Our default website width of 970px is too wide to fit on a printed page;
+   * shrink it a bit. */
+  .container {
+    /* width value comes from https://stackoverflow.com/a/11084797/1810460 */
+    width: 670px !important;
+  }
+
+  .print-only {
+    height: auto;
+    visibility: visible;
+  }
+
+  /**
+   * Bootstrap Fixes
+   *
+   * Bootstrap adds a BUNCH of print style which use !important styles
+   * extensively. Unfortunately, that means we ourselves have to use !important
+   * in order to make adjustments to them. Hacks beget hacks.
+   *
+   * If we could eventally get rid of Bootstrap - or at least get rid of its
+   * print styles - we could remove these. Until then, we are forced to violate
+   * CSS best practice by using !important.
+   */
+
+  /* Bootstrap adds the href of links to the print view by default; disable it
+   * for lessons. */
+  a[href]:after {
+    content: none !important;
+  }
+
+  /* Bootstrap coerces the color of _everything_ to be black, but for the
+   * progress bubble checkmarks this means we'd be drawing a black checkmark on
+   * a black background. We attempt to scope this to just stacked checkmarks. */
+  .fa-check.fa-stack-1x {
+    color: white !important;
+  }
+}

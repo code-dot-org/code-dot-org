@@ -44,7 +44,8 @@ level 'Virtual Pet 7_2021', progression: 'Mini-Project: Create a Virtual Pet'
 level 'Virtual Pet 8_2021', progression: 'Free Play'
 
 lesson_group 'lessonGroup-7', display_name: 'Digital Citizenship'
-lesson 'lesson-2', display_name: 'The Power of Words', has_lesson_plan: true
+lesson 'lesson-2', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
+level 'PowerOfWords-Unplugged_2021', progression: 'The Power of Words - Unplugged Activity'
 
 lesson_group 'lessonGroup-8', display_name: 'Variables'
 lesson 'lesson-9', display_name: 'Blank Space Stories', has_lesson_plan: true, unplugged: true
@@ -60,6 +61,12 @@ level 'courseF_text_prompts', progression: 'Skill Building'
 level 'courseF_text_answer', progression: 'Skill Building'
 level 'courseF_text_concat', progression: 'Skill Building'
 level 'courseF_text_practice', progression: 'Practice'
+
+lesson 'lesson-11', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: true
+level 'courseF_label_predict', progression: 'Prediction'
+level 'courseF_variables_samples', progression: 'Exploration: Sample Apps'
+level 'courseF_variables_stop', progression: 'Planning'
+level 'courseF_variables_projects', progression: 'Mini-Project: User Input Programs'
 
 lesson 'Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2021', progression: 'Video: Artist Intro with JR Hildebrande'
@@ -129,7 +136,7 @@ lesson_group 'csf_data', display_name: 'Data and Simulations'
 lesson 'Simulating Experiments', display_name: 'Simulating Experiments', has_lesson_plan: true
 level 'simstarter_2021', progression: 'Run a simulation'
 level 'simconfig_2021', progression: 'Modify simulation variables'
-level 'simcustom_2021', progression: 'Customize the simulation'
+level 'simcustom_2021', progression: 'Customize'
 
 lesson 'lesson-5', display_name: 'Outbreak', has_lesson_plan: true
 level 'contagion_story', progression: 'Outbreak'
@@ -154,10 +161,6 @@ level 'CourseF_Oceans_Long_2021', progression: 'Teach A.I. a new word'
 
 lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet-Unplugged_2021', progression: 'The Internet - Unplugged Activity'
-
-lesson_group 'csf_sprites', display_name: 'Impacts of Computing'
-lesson 'lesson-1', display_name: 'Designing for Accessibility', has_lesson_plan: true, unplugged: true
-level 'DesigningForAccessibilityMarkdownLevel_2021', progression: 'Designing for Accessibility - Unplugged Activity'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'
 lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true

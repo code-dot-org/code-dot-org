@@ -300,7 +300,7 @@ function loadAppAsync(appOptions) {
     $.ajax(
       `/api/user_progress` +
         `/${appOptions.scriptName}` +
-        `/${appOptions.stagePosition}` +
+        `/${appOptions.lessonPosition}` +
         `/${appOptions.levelPosition}` +
         `/${appOptions.serverLevelId}`
     )

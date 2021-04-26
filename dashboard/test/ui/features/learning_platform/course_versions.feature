@@ -26,7 +26,7 @@ Scenario: Version warning announcement on course and script overview pages
   # generate some progress in csp-2017
 
   Given I am on "http://studio.code.org/s/ui-test-script-in-course-2017/next"
-  And I wait until current URL contains "/s/ui-test-script-in-course-2017/stage/1/puzzle/1"
+  And I wait until current URL contains "/s/ui-test-script-in-course-2017/lessons/1/levels/1"
 
   # course and unit pages now show version warning
 
@@ -70,7 +70,7 @@ Scenario: Versions warning announcement on script overview page
 
   Given I am assigned to script "ui-test-versioned-script-2017"
   When I am on "http://studio.code.org/s/ui-test-versioned-script-2017/next"
-  And I wait until current URL contains "/s/ui-test-versioned-script-2017/stage/1/puzzle/1"
+  And I wait until current URL contains "/s/ui-test-versioned-script-2017/lessons/1/levels/1"
 
   When I am on "http://studio.code.org/s/ui-test-versioned-script-2019"
   And I wait until element "#script-title" is visible
@@ -89,9 +89,9 @@ Scenario: Versions warning announcement on script overview page
   Then element ".announcement-notification:contains(newer version)" is not visible
 
   # Generate progress in course 2
-  When I am on "http://studio.code.org/s/course2/stage/1/puzzle/1"
+  When I am on "http://studio.code.org/s/course2/lessons/1/levels/1"
   And I click selector ".next-stage" once I see it
-  And I wait until current URL contains "/s/course2/stage/1/puzzle/2"
+  And I wait until current URL contains "/s/course2/lessons/1/levels/2"
 
   When I am on "http://studio.code.org/s/course1"
   And I wait until element "#script-title" is visible

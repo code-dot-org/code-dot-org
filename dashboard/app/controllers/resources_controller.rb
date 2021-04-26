@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
 
-  # GET /resourcesearch
+  # GET /resources/search
   def search
     render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
   end

@@ -5,7 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit9/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit9/standards/"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit9/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"", "details"=>"Are your students planning to take the AP Exam? This unit covers content that will be assessed on the exam. Check out the standards covered in this unit.", "link"=>"https://curriculum.code.org/csp-20/unit9/standards/", "type"=>"information", "visibility"=>"Teacher-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'

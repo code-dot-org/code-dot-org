@@ -10,8 +10,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
 import {
   lessonIsVisible,
-  lessonIsLockedForAllStudents,
-  stageLocked
+  lessonIsLockedForUser,
+  lessonIsLockedForAllStudents
 } from './progressHelpers';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
@@ -68,6 +68,9 @@ const styles = {
   caret: {
     marginRight: 10
   },
+  caretRTL: {
+    marginLeft: 10
+  },
   icon: {
     marginRight: 5,
     fontSize: 18,
@@ -75,6 +78,15 @@ const styles = {
   },
   unlockedIcon: {
     color: color.orange
+  },
+  notAuthorizedWarning: {
+    color: color.red,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontStyle: 'italic',
+    marginTop: 10
+  },
+  learnMoreLink: {
+    marginLeft: 5
   }
 };
 
@@ -88,10 +100,12 @@ class ProgressLesson extends React.Component {
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
-    lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string
+    lessonIsLockedForUser: PropTypes.func.isRequired,
+    selectedSectionId: PropTypes.string,
+    lockableAuthorized: PropTypes.bool.isRequired,
+    lessonIsLockedForAllStudents: PropTypes.func.isRequired,
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
@@ -142,10 +156,11 @@ class ProgressLesson extends React.Component {
       levels,
       showTeacherInfo,
       viewAs,
-      showLockIcon,
       lessonIsVisible,
-      lessonLockedForSection,
-      selectedSectionId
+      lessonIsLockedForUser,
+      lessonIsLockedForAllStudents,
+      selectedSectionId,
+      isRtl
     } = this.props;
 
     if (!lessonIsVisible(lesson, viewAs)) {
@@ -154,23 +169,22 @@ class ProgressLesson extends React.Component {
 
     // Is this a hidden stage that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
+    const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
+    const showAsLocked = isLockedForUser || isLockedForSection;
+
     const title = lesson.stageNumber
       ? i18n.lessonNumbered({
           lessonNumber: lesson.stageNumber,
           lessonName: lesson.name
         })
       : lesson.name;
+
+    // Adjust caret style if locale is RTL
+    const caretStyle = isRtl ? styles.caretRTL : styles.caret;
     const caret = this.state.collapsed ? 'caret-right' : 'caret-down';
 
-    // Treat the stage as locked if either
-    // (a) it is locked for this user (in the case of a student)
-    // (b) it is locked for all students in the section (in the case of a teacher)
-    const locked =
-      lesson.lockable &&
-      (stageLocked(levels) || lessonLockedForSection(lesson.id));
-
-    const hiddenOrLocked = hiddenForStudents || locked;
-    const tooltipId = _.uniqueId();
+    const lockedTooltipId = _.uniqueId();
 
     const description =
       viewAs === ViewType.Teacher
@@ -186,38 +200,35 @@ class ProgressLesson extends React.Component {
       <div
         style={{
           ...styles.outer,
-          ...(hiddenOrLocked && styles.hiddenOrLocked)
+          ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked)
         }}
       >
         <div
           style={{
             ...styles.main,
-            ...(hiddenOrLocked &&
-              viewAs !== ViewType.Teacher &&
+            ...(((hiddenForStudents && viewAs === ViewType.Student) ||
+              isLockedForUser) &&
               styles.translucent)
           }}
         >
           <div style={styles.heading}>
             <div style={styles.headingText} onClick={this.toggleCollapsed}>
-              <FontAwesome icon={caret} style={styles.caret} />
+              <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
               )}
-              {showLockIcon && lesson.lockable && locked && (
-                <FontAwesome icon="lock" style={styles.icon} />
-              )}
-              {showLockIcon && lesson.lockable && !locked && (
-                <span data-tip data-for={tooltipId}>
+              {lesson.lockable && (
+                <span data-tip data-for={lockedTooltipId}>
                   <FontAwesome
-                    icon="unlock"
+                    icon={showAsLocked ? 'lock' : 'unlock'}
                     style={{
                       ...styles.icon,
-                      ...styles.unlockedIcon
+                      ...(!showAsLocked && styles.unlockedIcon)
                     }}
                   />
-                  {viewAs === ViewType.Teacher && (
+                  {!showAsLocked && viewAs === ViewType.Teacher && (
                     <ReactTooltip
-                      id={tooltipId}
+                      id={lockedTooltipId}
                       role="tooltip"
                       wrapper="span"
                       effect="solid"
@@ -237,7 +248,6 @@ class ProgressLesson extends React.Component {
                     className="ui-test-lesson-resources"
                     href={lesson.student_lesson_plan_html_url}
                     text={i18n.lessonResources()}
-                    disabled={locked}
                     icon="file-text"
                     color="purple"
                     target="_blank"
@@ -246,11 +256,24 @@ class ProgressLesson extends React.Component {
                 </span>
               )}
           </div>
+          {lesson.lockable &&
+            !this.props.lockableAuthorized &&
+            viewAs === ViewType.Teacher && (
+              <div style={styles.notAuthorizedWarning}>
+                {i18n.unverifiedTeacherLockWarning()}
+                <a
+                  style={styles.learnMoreLink}
+                  href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
+                >
+                  {i18n.learnMoreWithPeriod()}
+                </a>
+              </div>
+            )}
           {!this.state.collapsed && (
             <ProgressLessonContent
               description={description}
               levels={levels}
-              disabled={locked && viewAs !== ViewType.Teacher}
+              disabled={isLockedForUser}
               selectedSectionId={selectedSectionId}
             />
           )}
@@ -274,12 +297,13 @@ export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
-  showLockIcon:
-    !!state.teacherSections.selectedSectionId ||
-    state.viewAs === ViewType.Student,
-  lessonLockedForSection: lessonId =>
-    lessonIsLockedForAllStudents(lessonId, state),
+  lockableAuthorized: state.stageLock.lockableAuthorized,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
+  lessonIsLockedForUser: (lesson, levels, viewAs) =>
+    lessonIsLockedForUser(lesson, levels, state, viewAs),
+  lessonIsLockedForAllStudents: lessonId =>
+    lessonIsLockedForAllStudents(lessonId, state),
   selectedSectionId: state.teacherSections.selectedSectionId.toString(),
-  scriptId: state.progress.scriptId
+  scriptId: state.progress.scriptId,
+  isRtl: state.isRtl
 }))(ProgressLesson);

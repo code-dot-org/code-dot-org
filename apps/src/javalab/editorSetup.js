@@ -2,7 +2,8 @@ import {
   highlightSpecialChars,
   drawSelection,
   highlightActiveLine,
-  keymap
+  keymap,
+  EditorView
 } from '@codemirror/view';
 import {EditorState, Prec} from '@codemirror/state';
 import {history, historyKeymap} from '@codemirror/history';
@@ -16,7 +17,6 @@ import {highlightSelectionMatches, searchKeymap} from '@codemirror/search';
 import {commentKeymap} from '@codemirror/comment';
 import {rectangularSelection} from '@codemirror/rectangular-selection';
 import {defaultHighlightStyle} from '@codemirror/highlight';
-import {oneDarkTheme, oneDarkHighlightStyle} from '@codemirror/theme-one-dark';
 import {java} from '@codemirror/lang-java';
 
 // Extensions for codemirror. Based on @codemirror/basic-setup, with javascript-specific
@@ -44,9 +44,13 @@ const editorSetup = [
     ...commentKeymap,
     defaultTabBinding
   ]),
-  oneDarkTheme,
-  oneDarkHighlightStyle,
   java()
 ];
 
 export {editorSetup};
+
+// The default light theme styles for codemirror
+export const lightTheme = EditorView.theme({}, {dark: false});
+
+// Extension to enable the light theme (both the editor theme and the highlight style).
+export const lightMode = [lightTheme, defaultHighlightStyle];

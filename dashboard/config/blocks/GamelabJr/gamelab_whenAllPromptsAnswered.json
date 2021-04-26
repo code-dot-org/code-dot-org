@@ -1,0 +1,16 @@
+{
+  "category": "",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenAllPromptsAnswered",
+    "blockText": "when all prompts answered",
+    "callbackParams": [
+      "extraArgs"
+    ],
+    "eventBlock": true
+  }
+}

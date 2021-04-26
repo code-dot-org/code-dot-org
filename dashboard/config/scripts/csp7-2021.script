@@ -8,7 +8,40 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_parameters_return_values', display_name: 'Parameters and Return Values'
-lesson 'Parameters and Return Explore', display_name: 'Parameters and Return Explore', has_lesson_plan: true
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+* **Learning by Building Libraries:** In the second EIPM sequence of this unit, students learn to use the Student-Create Libraries tool in App Lab. This tool allows them to build and share libraries of functions that they can use in many different projects. This tool serves many purposes besides simply teaching students about libraries. By having to write functions that other students find useful, they will need to think about common patterns or situations that they have seen in projects across the course. Students will also practice commenting their code so others can understand how it works, practice designing functions that use parameters and return.  
+
+* **Final Preparation for the Create PT:** Students learn very few new concepts in this unit; nevertheless, it can be challenging because students need to learn how to integrate the ideas of parameters and return with every other concept they have learned in this course. This unit presents a good opportunity to do a final review of every programming construct covered in the course as students prepare to demonstrate what they\'ve learned on the Create PT.
+
+### Major Assessment and Projects
+
+The unit project asks students to design a library of functions that they can share with classmates. Their library must contain at least two functions, and at least one of those functions must include a parameter, return, a loop, and an if-statement. This requirement ensures students practice skills they willll use in the Create PT. Using a project guide, students choose a theme for their library, build it, test it, and exchange feedback with other students. Students submit their library code, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. They will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.
+* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 3.12 Calling Procedures
+* 3.13 Developing Procedures
+* 3.14 Libraries
+
+The College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.
+
+* 3.c.i
+* 3.c.ii
+* 3.c.iii
+* 3.c.iv
+* 3.d.i
+* 3.d.ii
+* 3.d.iii'
+lesson 'Parameters and Return Explore', display_name: 'Parameters and Return Explore', has_lesson_plan: true, unplugged: true
 level 'U7L1 CFU Return_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Parameters and Return Investigate', display_name: 'Parameters and Return Investigate', has_lesson_plan: true
@@ -32,7 +65,7 @@ level 'U7 Param Return Make RPS App_2021', progression: 'Try the Rock Paper Scis
 level 'U7 Param Return Make RPS App Project_2021', progression: 'Make the Rock Paper Scissors App', assessment: true
 
 lesson_group 'csp_libraries', display_name: 'Libraries'
-lesson 'Libraries Explore', display_name: 'Libraries Explore', has_lesson_plan: true
+lesson 'Libraries Explore', display_name: 'Libraries Explore', has_lesson_plan: true, unplugged: true
 level 'U7 L04 Exit Ticket_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Libraries Investigate', display_name: 'Libraries Investigate', has_lesson_plan: true
