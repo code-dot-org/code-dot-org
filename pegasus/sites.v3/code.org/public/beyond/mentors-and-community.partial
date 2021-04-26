@@ -7,46 +7,22 @@ theme: responsive
 <h1>Mentorships and Community</h1>
 <p>Mentors and communities can support you on your CS Journey in a number of ways — they can provide guidance and support, and connect you to opportunities and resources like networking events, internship and job opportunities, and professional development.</p>
 
+<ul>
+  <li><a href="#native-students">For Native American students</a></li>
+  <li><a href="#black-students">For Black students</a></li>
+  <li><a href="#hispanic-latino-students">For Hispanic / Latino students</a></li>
+  <li><a href="#youngwomen">For young women</a></li>
+  <li><a href="#allstudents">For all students</a></li>
+</ul>
+
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0; text-align:center">
-  <a href="#native-students">
-  <p style="color:#ffffff; margin-top:12px; font-family:Gotham"><strong>For Native American students</strong></h3>
-  </a>
-</div>
-
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca; text-align:center">
-  <a href="#black-students">
-  <p style="color:#ffffff; margin-top:12px; font-family:Gotham"><strong>For Black students</strong></h3>
-  </a>
-</div>
-
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#ffa400; text-align:center">
-  <a href="#hispanic-latino-students">
-  <p style="color:#ffffff; margin-top:12px; font-family:Gotham"><strong>For Hispanic / Latino students</strong></h3>
-  </a>
-</div>
-
-<div style="clear: both"></div>
-
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#b9bf15; text-align:center">
-  <a href="#youngwomen">
-  <p style="color:#ffffff; margin-top:12px; font-family:Gotham"><strong>For young women</strong></h3>
-  </a>
-</div>
-
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc; text-align:center">
-  <a href="#allstudents">
-  <p style="color:#ffffff; margin-top:12px; font-family:Gotham"><strong>For all students</strong></h3>
-  </a>
-</div>
-
-<div style="clear: both; margin-bottom: 35px"></div>
 
 <a id="native-students"></a>
-<div class="col-100" style="padding:25px; background-color:#ebe8f1; border-radius:15px">
-<h2 style="margin-top:10px">For Native American students</h2>
-
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Native American students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 <a href="http://www.aises.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/aises.png" alt="AISES logo">
 </a>
@@ -72,9 +48,10 @@ theme: responsive
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="black-students"></a>
-<div class="col-100" style="padding:25px; background-color:#d9eff7; border-radius:15px">
-<h2 style="margin-top:10px">For Black students</h2>
-
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Black students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 <a href="http://www.nsbe.org/home.aspx" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/nsbe.png" alt="NSBE logo">
 </a>
@@ -87,7 +64,7 @@ theme: responsive
 <br>
 
 <a href="https://www.blackgirlscode.com/" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/blackgirlscode.png" alt="Black Girls CODE logo">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
 </a>
 <div style="width: 85%; float: left">
   <a href="https://www.blackgirlscode.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls CODE</strong></h3></a>
@@ -100,9 +77,10 @@ theme: responsive
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="hispanic-latino-students"></a>
-<div class="col-100" style="padding:25px; background-color:#fff29d; border-radius:15px">
-<h2 style="margin-top:10px">For Hispanic / Latino students</h2>
-
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Hispanic / Latino students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 <a href="https://shpe.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/shpe.png" alt="SHPE logo">
 </a>
@@ -128,9 +106,10 @@ theme: responsive
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="youngwomen"></a>
-<div class="col-100" style="padding:25px; background-color:#f5f5dc; border-radius:15px">
-<h2 style="margin-top:10px">For young women</h2>
-
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For young women</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 <a href="https://www.builtbygirls.com/about-wave" target="_blank">
   <img style="width: 8%; float: left; margin-top: 1%; margin-right: 6%" src="/images/beyond/built-by-girls.png" alt="Built By Girls logo">
 </a>
@@ -143,7 +122,7 @@ theme: responsive
 <br>
 
 <a href="https://girlswhocode.com/programs/college-loops" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/girls-who-code.png" alt="Girls Who Code logo">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/girls_who_code.png" alt="Girls Who Code logo">
 </a>
 <div style="width: 85%; float: left">
   <a href="https://girlswhocode.com/programs/college-loops" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Girls Who Code College Loops</strong></h3></a>
@@ -189,9 +168,10 @@ theme: responsive
 <div style="clear:both; margin-bottom:35px"></div>
 
 <a id="allstudents"></a>
-<div class="col-100" style="padding:25px; background-color:#d9f3f5; border-radius:15px">
-<h2 style="margin-top:10px">For all students</h2>
-
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For all students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 <a href="https://codepath.org/" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/codepath.png" alt="CodePath logo">
 </a>

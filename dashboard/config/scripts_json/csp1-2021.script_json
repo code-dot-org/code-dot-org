@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 17:59:29 UTC",
+    "serialized_at": "2021-04-22 23:50:45 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -2098,7 +2098,7 @@
       "key": "889eb94f-c896-4455-b616-c21511dd120d",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What value would cause your Flippy Do to overflow?*\n\n* *What adaptation could you make to the Flippy Do to represent that value?*\n\n* *Using your newly adapted Flippy Do, how many total numbers can be represented?*\n\n**Discussion Goal:** Look for students to physically model overflow using the Flippy Do, going from when all of the 1s are flipped up to the next number causing all the 1s to reset to 0s."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What value would cause your Flippy Do to overflow?*\n\n* *What adaptation could you make to the Flippy Do to represent that value?*\n\n* *Using your newly adapted Flippy Do, how many total numbers can be represented?*\n\n**Discussion Goal:** Use this conversation to show that we can always add bits to represent more numbers but when working with a set number of bits, at some point we will run into overflow if we try to represent large enough values.\n* Look for students to physically model overflow using the Flippy Do, going from when all of the 1s are flipped up to the next number causing all the 1s to reset to 0s. \n* With the Flippy Do, trying to represent the number 256 will cause an overflow. One common adaptation students will come up with is adding an additional column/bit to the Flippy Do to be able to represent that number. For a 9-bit Flippy Do, the first number that will cause overflow is 512. "
       },
       "seeding_key": {
         "activity_section.key": "889eb94f-c896-4455-b616-c21511dd120d",
@@ -2123,11 +2123,15 @@
       "key": "7dd34f31-c90e-4a4a-afc8-97b208078550",
       "position": 10,
       "properties": {
-        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Add all the decimal numbers up together. Compare with a partner and discuss. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the example of one possible answer. Click to the next slide to show these totals added together.",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n* *How did you go about deciding which binary number to use for each price?*\n\n* *In your system, who pays the difference between the true price and the value stored in your computer system: the shop owner or the customer?*\n\n**Discussion Goal:** Use this discussion to highlight that the Flippy Do doesn't have the precision needed to represent these fractional values and in that case, decisions must be made on how to represent those values. In this case, those decisions impact who ends up benefitting when it comes to the price of each candy.\n",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "* The Flippy Do Pro is still using 8 bits to represent a number. But this time, the place value of each bit has been assigned in a different way than in the previous Flippy Do or on the Binary Odometer. The bits have been \"shifted\" to the right two times. The value 1 (2^0) is no longer the smallest place value. The value of a bit just to the right of 1 (2^0) is 0.5, which is 2^-1. The value to the right again is 0.25 which is 2^-2.\n\n* Students may struggle with negative exponents. What's more important than emphasizing the math is emphasizing the pattern of place values in the Flippy Do Pro. As you move left, the place value doubles. As you move right, the place value halves. \n\n* Help students see that using the Flippy Do Pro is similar to using the Flippy Do. To form a value, flip the flaps up or down at the bottom of the device to create a sequence of zeros and ones. Note that the range of place values is limited by the largest bit value, 2^5 which is 32, and the smallest bit value, 2^-2 which is 0.25. As with the Flippy Do, adding together all the values for each place value containing a \"1\" produces the total value represented on the Flippy Do Pro. \n\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Many students may use traditional rounding to decide on the prices for each of the candies."
           }
         ]
       },
@@ -4395,7 +4399,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Binary Odometer"
+        "progression": "Widget: Binary Odometer",
+        "level_keys": [
+          "Widget: Binary Odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4418,7 +4425,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4441,7 +4451,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L6 CFU representing fractions_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4542,7 +4555,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Pixelation Widget: B&W"
+        "progression": "Pixelation Widget: B&W",
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4565,7 +4581,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4588,7 +4607,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4611,7 +4633,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sampling an Analog Image"
+        "progression": "Sampling an Analog Image",
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6446,16 +6471,6 @@
       "seeding_key": {
         "lesson.key": "Binary Numbers",
         "objective.key": "55e857e0-ae6a-4f9f-99e6-09f5ec3b90ae"
-      }
-    },
-    {
-      "key": "c51e8577-7f92-49e4-a456-a9e5249242ae",
-      "properties": {
-        "description": "Describe how to include fractions in the binary number system. "
-      },
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "objective.key": "c51e8577-7f92-49e4-a456-a9e5249242ae"
       }
     },
     {

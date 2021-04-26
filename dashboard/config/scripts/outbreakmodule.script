@@ -1,0 +1,16 @@
+lesson_group 'Outbreak Module', display_name: 'Outbreak Module'
+lesson 'intro monster town', display_name: 'Outbreak in Monster Town', has_lesson_plan: false
+level 'contagion_story', progression: 'Welcome to Monster Town'
+level 'outbreak_rampup_sprites_make', progression: 'Setup'
+level 'outbreak_rampup_sprites_properties', progression: 'Setup'
+
+lesson 'contagion simulator setup', display_name: 'Contagion Simulator Setup', has_lesson_plan: false
+
+lesson 'sometimes but not always', display_name: 'Sometimes, but Not Always', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'Sometimes, but Not Always'
+
+lesson 'modifying your model', display_name: 'Modifying Your model', has_lesson_plan: false
+
+lesson 'telling a data story', display_name: 'Telling a Data Story', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'Telling a Data Story'
+

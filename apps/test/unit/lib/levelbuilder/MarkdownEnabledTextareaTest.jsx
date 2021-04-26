@@ -31,14 +31,27 @@ describe('MarkdownEnabledTextarea', () => {
     expect(wrapper.find('button').length).to.equal(0);
 
     wrapper.setProps({features: {imageUpload: true}});
-    expect(wrapper.find('button').length).to.equal(1);
-    expect(wrapper.find('button').text()).to.equal('Image');
+    expect(
+      wrapper
+        .find('.btn-toolbar')
+        .find('li')
+        .map(li => li.text())
+    ).to.eql(['Image']);
 
     wrapper.setProps({features: {resourceLink: true}});
-    expect(wrapper.find('button').length).to.equal(1);
-    expect(wrapper.find('button').text()).to.equal('Resource');
+    expect(
+      wrapper
+        .find('.btn-toolbar')
+        .find('li')
+        .map(li => li.text())
+    ).to.eql(['Resource']);
 
     wrapper.setProps({features: {imageUpload: true, resourceLink: true}});
-    expect(wrapper.find('button').length).to.equal(2);
+    expect(
+      wrapper
+        .find('.btn-toolbar')
+        .find('li')
+        .map(li => li.text())
+    ).to.eql(['Image', 'Resource']);
   });
 });

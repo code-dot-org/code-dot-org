@@ -67,13 +67,9 @@ Run all UI tests using the local chromedriver against your localhost. Faster tha
 
 `./runner.rb -l`
 
-Run all UI tests for a given browser/os combination - full list of combinations is in browsers.json
-
-`./runner.rb --config ChromeLatestWin7`
-
 Run all UI tests for a given browser
 
-`./runner.rb --browser Chrome`
+`./runner.rb --config Chrome`
 
 Run all tests in a given feature file for all browser/os combinations
 
@@ -89,11 +85,11 @@ Run one feature using chromedriver against your local machine with html output
 
 Run one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
 
-`./runner.rb -l -f features/big_game_remix.feature -c ChromeLatestWin7 --html`
+`./runner.rb -l -f features/big_game_remix.feature -c Chrome --html`
 
 Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
 
-`./runner.rb -l -f features/angle_helper.feature -c ChromeLatestWin7 --html --eyes`
+`./runner.rb -l -f features/angle_helper.feature -c Chrome --html --eyes`
 
 ## Tips
 

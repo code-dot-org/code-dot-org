@@ -208,6 +208,7 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
+    deprecated
     is_course
     background
     show_calendar
@@ -867,29 +868,18 @@ class Script < ApplicationRecord
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_lesson)
+  def get_bonus_script_levels(current_stage, current_user)
     unless @all_bonus_script_levels
-      @all_bonus_script_levels = lessons.map do |lesson|
+      @all_bonus_script_levels = lessons.map do |stage|
         {
-          stageNumber: lesson.relative_position,
-          levels: lesson.script_levels.select(&:bonus)
+          stageNumber: stage.relative_position,
+          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user&.id)}
         }
       end
-      @all_bonus_script_levels.select! {|lesson| lesson[:levels].any?}
+      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
     end
 
-    lesson_levels = @all_bonus_script_levels.select do |lesson|
-      lesson[:stageNumber] <= current_lesson.absolute_position
-    end
-
-    # we don't cache the level summaries because they include localized text
-    summarized_lesson_levels = lesson_levels.map do |lesson|
-      {
-        stageNumber: lesson[:stageNumber],
-        levels: lesson[:levels].map(&:summarize_as_bonus)
-      }
-    end
-    summarized_lesson_levels
+    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
   end
 
   def pre_reader_tts_level?
@@ -1450,6 +1440,7 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      deprecated: deprecated?,
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
@@ -1674,6 +1665,7 @@ class Script < ApplicationRecord
       :is_stable,
       :project_sharing,
       :tts,
+      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
