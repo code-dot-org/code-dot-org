@@ -31,6 +31,7 @@ class Javalab < Level
     is_project_level
     submittable
     encrypted_examples
+    neighborhood_enabled
   )
 
   before_save :fix_examples

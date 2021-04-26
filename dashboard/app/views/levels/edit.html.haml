@@ -25,7 +25,6 @@
         %p the level cannot be renamed because it is a standalone project level.
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :neighborhood_enabled, description: "Display Neighborhood visualization"}
 
   / Only enter name to create new records of certain level types.
   - unless @level.is_a?(Fish) || (@level.new_record? && @level.is_a?(Blockly))
