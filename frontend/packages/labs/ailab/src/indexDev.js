@@ -10,7 +10,6 @@ const sampleModes = {
     hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
     hideModelCard: true,
-    hideColumnClicking: true,
     hideSelectLabel: true
   },
 

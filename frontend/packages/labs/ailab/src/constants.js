@@ -121,14 +121,6 @@ export const styles = {
     position: "relative"
   },
 
-  popupPanel: {
-    position: "absolute",
-    border: "1px solid",
-    top: 90,
-    height: "initial",
-    zIndex: 1
-  },
-
   scrollableContents: {
     overflow: "hidden"
   },
