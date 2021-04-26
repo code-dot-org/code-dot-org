@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 14:01:48 UTC",
+    "serialized_at": "2021-04-22 15:30:18 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -1656,6 +1656,31 @@
     },
     {
       "chapter": 56,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Draw Lines",
+        "level_keys": [
+          "avoid_follow_lines"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "avoid_follow_lines"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "avoid_follow_lines"
+      ]
+    },
+    {
+      "chapter": 57,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1680,7 +1705,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2305,6 +2330,17 @@
         "level.key": "avoid_follow",
         "script_level.level_keys": [
           "avoid_follow"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "avoid_follow_lines",
+        "script_level.level_keys": [
+          "avoid_follow_lines"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",
