@@ -1,7 +1,7 @@
 {
   "category": "Outbreak",
   "config": {
-    "func": "setProp",
+    "func": "setSpeed",
     "docFunc": "gamelab_setProp",
     "blockText": "set monster speed to {VAL}",
     "args": [

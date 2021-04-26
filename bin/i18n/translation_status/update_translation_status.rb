@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
-require_relative '../cron/only_one'
+require_relative '../../cron/only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-require_relative '../../lib/cdo/redshift'
-require_relative '../../dashboard/config/environment'
+require_relative '../../../lib/cdo/redshift'
+require_relative '../../../dashboard/config/environment'
 
 # Gets all unique string keys added to the i18n_string_tracking_events table
 # over the last N days.
