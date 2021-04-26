@@ -172,7 +172,6 @@ class DSLDefined < Level
 
     level_params = {}
     level_params[:encrypted] = level_encrypted? if level_encrypted?
-    level_params[:neighborhood_enabled] = neighborhood_enabled? if neighborhood_enabled?
     self.class.create_from_level_builder({dsl_text: new_dsl}, level_params) if new_dsl
   end
 
@@ -197,14 +196,6 @@ class DSLDefined < Level
 
   def encrypted=(value)
     properties['encrypted'] = value
-  end
-
-  def neighborhood_enabled?
-    properties['neighborhood_enabled'].present? && properties['neighborhood_enabled'] != "false"
-  end
-
-  def neighborhood_enabled=(value)
-    properties['neighborhood_enabled'] = value
   end
 
   # don't allow markdown in DSL levels unless child class overrides this

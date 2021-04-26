@@ -87,7 +87,6 @@ class Level < ApplicationRecord
     rubric_performance_level_4
     mini_rubric
     encrypted
-    neighborhood_enabled
     editor_experiment
     teacher_markdown
     bubble_choice_description
