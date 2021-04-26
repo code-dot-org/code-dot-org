@@ -314,8 +314,7 @@ export default function rootReducer(state = initialState, action) {
     if (!state.selectedFeatures.includes(action.selectedFeature)) {
       return {
         ...state,
-        selectedFeatures: [...state.selectedFeatures, action.selectedFeature],
-        currentColumn: undefined
+        selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
       };
     }
   }
@@ -332,8 +331,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
-      labelColumn: action.labelColumn,
-      currentColumn: undefined
+      labelColumn: action.labelColumn
     };
   }
   if (action.type === SET_FEATURE_NUMBER_KEY) {

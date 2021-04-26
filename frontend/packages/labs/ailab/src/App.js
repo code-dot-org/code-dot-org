@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
-import PhraseBuilder from "./UIComponents/PhraseBuilder";
 import DataCard from "./UIComponents/DataCard";
 import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
@@ -136,19 +135,6 @@ class App extends Component {
     dataToSave: PropTypes.object
   };
 
-  constructor(props) {
-    super(props);
-
-    this.columnPositions = {};
-  }
-
-  setColumnRef = (columnId, ref) => {
-    if (ref) {
-      const rect = ref.getBoundingClientRect();
-      this.columnPositions[columnId] = rect.left + rect.width;
-    }
-  };
-
   render() {
     const {
       panelButtons,
@@ -176,11 +162,11 @@ class App extends Component {
         {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
           <BodyContainer>
             <ContainerLeft>
-              <DataDisplay setColumnRef={this.setColumnRef} />
+              <DataDisplay />
             </ContainerLeft>
-            <ColumnInspector columnPositions={this.columnPositions} />
+
             <ContainerRight>
-              <PhraseBuilder />
+              <ColumnInspector />
             </ContainerRight>
           </BodyContainer>
         )}
