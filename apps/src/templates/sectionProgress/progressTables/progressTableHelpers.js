@@ -7,59 +7,74 @@ import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
-// getSummaryCellFormatters returns the cell formatters for the progress table summary view
-// each entry in the array provides a formatter for cells in a particular row
-// mainCellFormatter is used to format the main cell (summary of progress on lesson) for each student
-// timeSpentCellFormatter is used to format the time spent cell (time spent on the lesson) in the expanded view
-// lastUpdatedCellFormatter is used to format the last updated cell (progress last updated) in the expanded view
-export function getSummaryCellFormatters(getLessonProgress, onClickLesson) {
+/**
+ * @return {Array} Array of formatter functions for the progress table summary view
+ * mainCellFormatter is used to format the main cell (summary of progress on lesson) for each student
+ * timeSpentCellFormatter is used to format the time spent cell (time spent on the lesson) in the expanded view
+ * lastUpdatedCellFormatter is used to format the last updated cell (progress last updated) in the expanded view
+ *
+ * @param {Object} lessonProgressByStudent
+ * An object mapping student id to an object with lesson id mapping to studentLessonProgressType
+ * @param {function} onClickLesson
+ * A function which is called when a summary cell is clicked
+ *
+ * */
+export function getSummaryCellFormatters(
+  lessonProgressByStudent,
+  onClickLesson
+) {
   const mainCellFormatter = (lesson, student) => (
     <ProgressTableSummaryCell
       studentId={student.id}
-      studentLessonProgress={getLessonProgress(lesson, student)}
+      studentLessonProgress={lessonProgressByStudent[student.id][lesson.id]}
       isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
       onSelectDetailView={() => onClickLesson(lesson.position)}
     />
   );
 
   const timeSpentCellFormatter = (lesson, student) => {
-    const progress = getLessonProgress(lesson, student);
-    return (
-      <span style={progressStyles.flex}>{timeSpentFormatter(progress)}</span>
-    );
+    const progress = lessonProgressByStudent[student.id][lesson.id];
+    return <span style={progressStyles.flex}>{formatTimeSpent(progress)}</span>;
   };
 
   const lastUpdatedCellFormatter = (lesson, student) => {
-    const progress = getLessonProgress(lesson, student);
+    const progress = lessonProgressByStudent[student.id][lesson.id];
     return (
-      <span style={progressStyles.flex}>{lastUpdatedFormatter(progress)}</span>
+      <span style={progressStyles.flex}>{formatLastUpdated(progress)}</span>
     );
   };
 
   return [mainCellFormatter, timeSpentCellFormatter, lastUpdatedCellFormatter];
 }
 
-// getDetailCellFormatters returns the cell formatters for the progress table detail view
-// mainCellFormatter is used to format the main cell (progress on each level in the lesson)
-// timeSpentCellFormatter is used to format the time spent cell (time spent on each level) in the expanded view
-// lastUpdatedCellFormatter is used to format the last updated cell (each level last updated) in the expanded view
-export function getDetailCellFormatters(getStudentProgress, section) {
+/**
+ * @return {Array} Array of formatter functions for the progress table detail view
+ * mainCellFormatter is used to format the main cell (progress on each level in the lesson)
+ * timeSpentCellFormatter is used to format the time spent cell (time spent on each level) in the expanded view
+ * lastUpdatedCellFormatter is used to format the last updated cell (each level last updated) in the expanded view
+ *
+ * @param {Object} levelProgressByStudent
+ * An object mapping student id to studentLevelProgressType
+ * @param {object} section
+ * A object representing the section (sectionDataPropType)
+ *
+ * */
+export function getDetailCellFormatters(levelProgressByStudent, section) {
   const mainCellFormatter = (lesson, student) => (
     <ProgressTableDetailCell
       studentId={student.id}
       sectionId={section.id}
       stageExtrasEnabled={section.stageExtras}
       levels={lesson.levels}
-      studentProgress={getStudentProgress(student)}
+      studentProgress={levelProgressByStudent[student.id]}
     />
   );
 
   const timeSpentCellFormatter = (lesson, student) => {
     const timeSpentItems = detailCellItems(
       lesson,
-      student,
-      getStudentProgress,
-      timeSpentFormatter
+      levelProgressByStudent[student.id],
+      formatTimeSpent
     );
     return <ProgressTableLevelSpacer items={timeSpentItems} />;
   };
@@ -67,9 +82,8 @@ export function getDetailCellFormatters(getStudentProgress, section) {
   const lastUpdatedCellFormatter = (lesson, student) => {
     const lastUpdatedItems = detailCellItems(
       lesson,
-      student,
-      getStudentProgress,
-      lastUpdatedFormatter
+      levelProgressByStudent[student.id],
+      formatLastUpdated
     );
     return <ProgressTableLevelSpacer items={lastUpdatedItems} />;
   };
@@ -84,15 +98,14 @@ export function getLevelIconHeaderFormatter(scriptData) {
   );
 }
 
-function detailCellItems(lesson, student, getStudentProgress, textFormatter) {
-  const studentProgress = getStudentProgress(student);
+function detailCellItems(lesson, studentProgress, textFormatter) {
   return lesson.levels.map(level => ({
     node: textFormatter(studentProgress[level.id]),
     sublevelCount: level.sublevels && level.sublevels.length
   }));
 }
 
-function timeSpentFormatter(studentProgress) {
+function formatTimeSpent(studentProgress) {
   if (studentProgress?.timeSpent) {
     const minutes = studentProgress.timeSpent / 60;
     return `${Math.ceil(minutes)}`;
@@ -100,7 +113,7 @@ function timeSpentFormatter(studentProgress) {
   return missingDataFormatter(studentProgress, 'timeSpent');
 }
 
-function lastUpdatedFormatter(studentProgress) {
+function formatLastUpdated(studentProgress) {
   if (studentProgress?.lastTimestamp) {
     return moment.unix(studentProgress.lastTimestamp).format('M/D');
   }
@@ -127,6 +140,6 @@ function missingDataFormatter(studentProgress, field) {
 }
 
 export const unitTestExports = {
-  timeSpentFormatter,
-  lastUpdatedFormatter
+  formatTimeSpent,
+  formatLastUpdated
 };
