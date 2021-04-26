@@ -6,13 +6,13 @@ import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
   getSummaryStat,
-  setResultsPhase
+  setShowResultsDetails
 } from "../redux";
 import { styles } from "../constants";
-import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
-import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import Statement from "./Statement";
 import ResultsTable from "./ResultsTable";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class ResultsDetails extends Component {
   static propTypes = {
@@ -23,52 +23,32 @@ class ResultsDetails extends Component {
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
-    resultsPhase: PropTypes.number,
-    setResultsPhase: PropTypes.func
+    setShowResultsDetails: PropTypes.func
   };
 
-  componentDidMount() {
-    this.props.setResultsPhase(0);
-    setTimeout(() => {
-      this.props.setResultsPhase(1);
-    }, 1000);
-    setTimeout(() => {
-      this.props.setResultsPhase(2);
-    }, 2000);
-    setTimeout(() => {
-      this.props.setResultsPhase(3);
-    }, 3000);
-  }
+  onClose = () => {
+    this.props.setShowResultsDetails(false);
+  };
 
   render() {
     return (
-      <div id="results" style={styles.panel}>
-        <Statement />
-        {this.props.resultsPhase === 0 && (
-          <div style={{ ...styles.trainBot, margin: "0 auto" }}>
-            <img
-              src={aiBotHead}
-              style={{
-                ...styles.trainBotHead,
-                ...(false && styles.trainBotOpen)
-              }}
-            />
-            <img src={aiBotBody} style={styles.trainBotBody} />
+      <div style={styles.panelPopupContainer}>
+        <div id="results-details" style={styles.panelPopup}>
+          <div onClick={this.onClose} style={styles.popupClose}>
+            <FontAwesomeIcon icon={faTimes} />
           </div>
-        )}
 
-        {this.props.resultsPhase >= 1 &&
-          !isNaN(this.props.summaryStat.stat) && (
+          <Statement />
+
+          {!isNaN(this.props.summaryStat.stat) && (
             <div>
               {this.props.percentDataToReserve}% of the training data was
               reserved to test the accuracy of the newly trained model.
             </div>
           )}
 
-        {this.props.resultsPhase >= 1 &&
-          !isNaN(this.props.summaryStat.stat) && <ResultsTable />}
+          {!isNaN(this.props.summaryStat.stat) && <ResultsTable />}
 
-        <div style={{ opacity: this.props.resultsPhase >= 2 ? 1 : 0 }}>
           {isNaN(this.props.summaryStat.stat) && (
             <p>
               An accuracy score was not calculated because no training data was
@@ -102,12 +82,11 @@ export default connect(
       state,
       state.accuracyCheckPredictedLabels
     ),
-    percentDataToReserve: state.percentDataToReserve,
-    resultsPhase: state.resultsPhase
+    percentDataToReserve: state.percentDataToReserve
   }),
   dispatch => ({
-    setResultsPhase(phase) {
-      dispatch(setResultsPhase(phase));
+    setShowResultsDetails(show) {
+      dispatch(setShowResultsDetails(show));
     }
   })
 )(ResultsDetails);

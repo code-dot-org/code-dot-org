@@ -2,51 +2,70 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setResultsPhase } from "../redux";
 import { styles } from "../constants";
 import { UnconnectedStatement } from "./Statement";
+import { setShowResultsDetails } from "../redux";
+import ResultsDetails from "./ResultsDetails";
 
 class Results extends Component {
   static propTypes = {
-    resultsPhase: PropTypes.number,
-    setResultsPhase: PropTypes.func,
-    historicResults: PropTypes.array
+    historicResults: PropTypes.array,
+    showResultsDetails: PropTypes.bool
+  };
+
+  showDetails = () => {
+    this.props.setShowResultsDetails(true);
   };
 
   render() {
-    const { historicResults } = this.props;
+    const { historicResults, showResultsDetails } = this.props;
 
     return (
-      <div id="results" style={styles.panel}>
-        <div style={styles.scrollableContents}>
-          <div style={styles.scrollingContents}>
-            {historicResults.map((historicResult, index) => {
-              return (
-                <div key={index}>
-                  <div style={{ float: "left", width: "80%" }}>
-                    <UnconnectedStatement
-                      shouldShow={true}
-                      smallFont={true}
-                      labelColumn={historicResult.label}
-                      selectedFeatures={historicResult.features}
-                    />
-                  </div>
-                  <div style={{ float: "left", fontSize: 18 }}>
-                    {historicResult.accuracy}%
-                  </div>
-                  {index === 0 && historicResults.length > 1 && (
-                    <div
-                      style={{
-                        ...styles.resultsPreviousHeading,
-                        ...styles.italic
-                      }}
-                    >
-                      Previous results
+      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+        {showResultsDetails && <ResultsDetails />}
+
+        <div id="results" style={styles.panel}>
+          <div style={styles.scrollableContents}>
+            <div style={styles.scrollingContents}>
+              {historicResults.map((historicResult, index) => {
+                return (
+                  <div key={index}>
+                    <div style={{ float: "left", width: "80%" }}>
+                      <UnconnectedStatement
+                        shouldShow={true}
+                        smallFont={true}
+                        labelColumn={historicResult.label}
+                        selectedFeatures={historicResult.features}
+                      />
                     </div>
-                  )}
-                </div>
-              );
-            })}
+                    <div style={{ float: "left", fontSize: 18, width: "10%" }}>
+                      {historicResult.accuracy}%
+                    </div>
+                    {index === 0 && (
+                      <div style={{ float: "left", textAlign: "center", width: "10%" }}>
+                        <button
+                          type="button"
+                          onClick={this.showDetails}
+                          style={styles.resultsDetailsButton}
+                        >
+                          Details
+                        </button>
+                      </div>
+                    )}
+                    {index === 0 && historicResults.length > 1 && (
+                      <div
+                        style={{
+                          ...styles.resultsPreviousHeading,
+                          ...styles.italic
+                        }}
+                      >
+                        Previous results
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -56,12 +75,12 @@ class Results extends Component {
 
 export default connect(
   state => ({
-    resultsPhase: state.resultsPhase,
-    historicResults: state.historicResults
+    historicResults: state.historicResults,
+    showResultsDetails: state.showResultsDetails
   }),
   dispatch => ({
-    setResultsPhase(phase) {
-      dispatch(setResultsPhase(phase));
+    setShowResultsDetails(show) {
+      dispatch(setShowResultsDetails(show));
     }
   })
 )(Results);

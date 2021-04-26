@@ -121,6 +121,28 @@ export const styles = {
     position: "relative"
   },
 
+  panelPopupContainer: {
+    position: "absolute",
+    left: 20,
+    top: 20,
+    width: "calc(100% - 40px)",
+    height: "calc(100% - 40px)",
+    zIndex: 10
+  },
+
+  panelPopup: {
+    padding: 10,
+    backgroundColor: "white",
+    overflow: "hidden",
+    height: "100%",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    //opacity: 0.7,
+    border: "solid 1px black",
+    boxShadow: "-5px 5px 10px black"
+  },
+
   popupPanel: {
     position: "absolute",
     border: "1px solid",
@@ -219,6 +241,17 @@ export const styles = {
     padding: "2px 6px",
     margin: 0,
     border: "none"
+  },
+
+  resultsDetailsButton: {
+    fontSize: 14,
+    padding: '4px 12px',
+    margin: 0,
+    border: 'none',
+    cursor: 'pointer',
+    borderRadius: 5,
+    backgroundColor: '#61d2eb',
+    color: 'white'
   },
 
   specifyColumnsItem: {

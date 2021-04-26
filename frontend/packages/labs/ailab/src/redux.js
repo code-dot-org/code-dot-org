@@ -58,6 +58,7 @@ const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
+const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 
 // Action creators
 export function setMode(mode) {
@@ -205,6 +206,10 @@ export function setHistoricResult(label, features, accuracy) {
   return { type: SET_HISTORIC_RESULT, label, features, accuracy };
 }
 
+export function setShowResultsDetails(show) {
+  return {type: SET_SHOW_RESULTS_DETAILS, show};
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -236,7 +241,8 @@ const initialState = {
   resultsPhase: undefined,
   saveStatus: undefined,
   columnRefs: {},
-  historicResults: []
+  historicResults: [],
+  showResultsDetails: false
 };
 
 // Reducer
@@ -540,6 +546,12 @@ export default function rootReducer(state = initialState, action) {
         },
         ...state.historicResults
       ]
+    };
+  }
+  if (action.type === SET_SHOW_RESULTS_DETAILS) {
+    return {
+      ...state,
+      showResultsDetails: action.show
     };
   }
 
