@@ -42,7 +42,8 @@ const ALREADY_OWNED = {
 
 const RESTRICTED_SECTION = {
   action: 'join',
-  result: 'section_restricted'
+  result: 'section_restricted',
+  id: 'ABCDEF'
 };
 
 describe('JoinSectionNotifications', () => {
