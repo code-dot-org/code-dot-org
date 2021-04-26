@@ -41,30 +41,19 @@ class AnimationLibraryApi < Sinatra::Base
 
   #
   # POST /api/v1/animation-library/level_animations/<filename>
-  # Create or Replace Animation
+  # Create Sprite in Level Animations folder
   #
   post %r{/api/v1/animation-library/level_animations/(.+)} do |animation_name|
     dont_cache
-
-    bad_request unless request.POST['files'] && request.POST['files'][0]
-
     if request.content_type == 'image/png'
       body = request.body
+      key = "level_animations/#{animation_name}"
 
-      key = "cdo-animation-library/level_animations/#{animation_name}"
-      puts key
-      puts body
-      #response = s3.put_object(bucket: @bucket, key: key, body: body)
-
-      # Delete the old version, if doing an in-place replace
-      #s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
-
-      #{filename: filename, category: category, size: source_size, versionId: response.version_id}.to_json
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
     else
       bad_request
     end
   end
-
 
   #
   # GET /api/v1/animation-library/(spritelab|gamelab)/<version-id>/<filename>
