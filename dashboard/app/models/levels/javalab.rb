@@ -52,6 +52,13 @@ class Javalab < Level
     self.examples = examples.select(&:present?)
   end
 
+  def assign_attributes(params)
+    puts 'assign attributes'
+    puts params
+    puts 'visible'
+    puts params[:visible]
+  end
+
   # Return an 'appOptions' hash derived from the level contents
   def non_blockly_puzzle_level_options
     options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do

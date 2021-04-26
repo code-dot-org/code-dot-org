@@ -236,6 +236,8 @@ class LevelsController < ApplicationController
   # PATCH/PUT /levels/1
   # PATCH/PUT /levels/1.json
   def update
+    puts level_params
+    puts "hi there"
     if level_params[:name] &&
         @level.name != level_params[:name] &&
         @level.name.downcase == level_params[:name].downcase
@@ -428,6 +430,8 @@ class LevelsController < ApplicationController
       {if_block_options: []},
       {place_block_options: []},
       {play_sound_options: []},
+      :visible,
+      {start_sources: {}}
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
