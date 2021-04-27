@@ -1,6 +1,9 @@
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
+import {
+  postMilestoneForPageLoad,
+  onContinue
+} from '@cdo/apps/code-studio/levels/postOnLoad';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import React from 'react';
@@ -10,6 +13,9 @@ import _ from 'lodash';
 
 $(document).ready(() => {
   registerGetResult();
+
+  // make milestone post
+  postMilestoneForPageLoad();
 
   // handle click on continue (results in navigating to next puzzle)
   $('.submitButton').click(onContinue);
