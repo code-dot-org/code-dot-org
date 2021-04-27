@@ -61,6 +61,10 @@ class PiskelEditor extends React.Component {
     this.piskel.onPiskelReady(this.onPiskelReady);
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
+
+    // Added a sample locale so that Piskel Repo has access to it
+    const iframe = document.getElementById('piskelFrame');
+    iframe.contentWindow.locale = 'en_us';
   }
 
   componentWillUnmount() {
@@ -211,6 +215,7 @@ class PiskelEditor extends React.Component {
         ref={iframe => (this.iframe = iframe)}
         style={this.props.style}
         src={PISKEL_PATH}
+        id="piskelFrame"
       />
     );
   }
