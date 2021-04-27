@@ -1,6 +1,6 @@
-require "redis"
-require "singleton"
-require "json"
+require 'redis'
+require 'singleton'
+require 'json'
 require 'cdo/buffer'
 
 # Wrapper client for Redis in memory store
@@ -25,9 +25,9 @@ class RedisClient
   cattr_accessor :client
   cattr_accessor :log
 
-  # 'The max length of a list is 232 - 1 elements (4294967295, more than 4 billion of elements per list).'
+  # 'The max length of a list is 2^32 - 1 elements (4294967295, more than 4 billion of elements per list).'
   # Ref: https://redis.io/topics/data-types#:~:text=The%20max%20length%20of%20a%20list%20is%20232%20-%201%20elements%20(4294967295,%20more%20than%204%20billion%20of%20elements%20per%20list).
-  MAX_LIST_LENGTH = 2 ** 32 - 1
+  MAX_LIST_LENGTH = 2**32 - 1
 
   class Buffer < Cdo::Buffer
     # @param stream_name [String] The Redis stream to send records to. Must be defined.
@@ -77,7 +77,7 @@ class RedisClient
     unless [:development, :test].include? rack_env
       self.client = Redis.new
     end
-    @buffers = Hash.new { |h, stream_name| h[stream_name] = Buffer.new(stream_name: stream_name) }
+    @buffers = Hash.new {|h, stream_name| h[stream_name] = Buffer.new(stream_name: stream_name)}
   end
 
   # Posts a record to the analytics stream.
@@ -102,7 +102,7 @@ class RedisClient
   end
 
   def flush!
-    @buffers.each { |_, buffer| buffer.flush! }
+    @buffers.each {|_, buffer| buffer.flush!}
     @buffers.clear
   end
 
