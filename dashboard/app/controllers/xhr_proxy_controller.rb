@@ -26,16 +26,15 @@ class XhrProxyController < ApplicationController
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
-    allrecipes.com
     apex.oracle.com
+    api.blizzard.com
     api.coinlayer.com
-    api.data.gov
     api.datamuse.com
     api.energidataservice.dk
     api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
-    api.fungenerators.com
+    api.github.com
     api.mojang.com
     api.nasa.gov
     api.nookipedia.com
@@ -45,6 +44,7 @@ class XhrProxyController < ApplicationController
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.scryfall.com
     api.si.edu
     api.spacexdata.com
     api.spotify.com
@@ -53,10 +53,8 @@ class XhrProxyController < ApplicationController
     api.uclassify.com
     api.waqi.info
     api.zippopotam.us
-    atlas.media.mit.edu
     bible-api.com
     code.org
-    compete.hsctf.com
     covidtracking.com
     cryptonator.com
     data.austintexas.gov
@@ -64,50 +62,39 @@ class XhrProxyController < ApplicationController
     data.gv.at
     data.nasa.gov
     developer.accuweather.com
-    developers.zomato.com
-    donordrive.com
     dweet.io
     enclout.com
-    githubusercontent.com
-    hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
-    maps.googleapis.com
     opentdb.com
     pixabay.com
     pokeapi.co
     qrng.anu.edu.au
     quandl.com
-    quizlet.com
     rejseplanen.dk
     maker.ifttt.com
-    maps.googleapis.com
+    myschoolapp.com
     noaa.gov
     numbersapi.com
     pastebin.com
     random.org
     restcountries.eu
-    rhcloud.com
     runescape.com
-    samples.openweathermap.org
     sessionserver.mojang.com
-    sheets.googleapis.com
     spreadsheets.google.com
     stats.minecraftservers.org
-    swapi.co
+    swapi.dev
     textures.minecraft.net
     thecatapi.com
     thedogapi.com
     theunitedstates.io
     transitchicago.com
-    translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
     worldclockapi.com
-    words.bighugelabs.com
   ).freeze
 
   # How long the content is allowed to be cached

@@ -565,17 +565,6 @@ const peerReviewLevels = state =>
   }));
 
 /**
- * Determine whether the passed in level is our current level (i.e. in the dots
- * in our header
- * @returns {boolean}
- */
-const isCurrentLevel = (currentLevelId, level) => {
-  return (
-    !!currentLevelId && (level.id && level.id.indexOf(currentLevelId) !== -1)
-  );
-};
-
-/**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of
@@ -604,7 +593,7 @@ const levelWithStatus = (
   return {
     ...normalizedLevel,
     status: statusForLevel(level, levelResults),
-    isCurrentLevel: isCurrentLevel(currentLevelId, normalizedLevel),
+    isCurrentLevel: currentLevelId === normalizedLevel.id,
     paired: levelPairing[level.activeId],
     locked: levelProgress?.locked,
     readonlyAnswers: level.readonly_answers
