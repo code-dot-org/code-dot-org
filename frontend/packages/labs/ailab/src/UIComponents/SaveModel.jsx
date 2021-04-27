@@ -160,7 +160,9 @@ class SaveModel extends Component {
                             />
                           </div>
                         )}
-                        {field.answer && <div>{field.answer}</div>}
+                        {field.answer && (
+                          <div>{field.answer}</div>
+                        )}
                       </div>
                     );
                   })}
@@ -185,13 +187,15 @@ class SaveModel extends Component {
                         />
                       </div>
                     )}
-                    {field.answer && <div>{field.answer}</div>}
+                    {field.answer && (
+                      <div>{field.answer}</div>
+                    )}
                   </div>
                 );
               })}
               <div>
               {saveStatus && (
-                <div style={{ position: "absolute", bottom: 0 }}>
+                <div style={styles.modelSaveMessage}>
                   {loadStatus}
                 </div>
               )}

@@ -76,7 +76,10 @@ function onContinueStub() {
 
 function saveTrainedModelStub(data, response) {
   console.log("This would save a trained model.", data);
-  response({ id: 303, status: "success" });
+  setTimeout(
+    () => response({ id: 303, status: "success" }),
+    2000
+  );
 }
 
 function setInstructionsKeyStub(instructionsKey) {

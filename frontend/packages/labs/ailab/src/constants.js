@@ -553,5 +553,10 @@ export const styles = {
     position: "absolute",
     bottom: 20,
     marginLeft: 20
+  },
+
+  modelSaveMessage: {
+    position: "absolute",
+    bottom: 0
   }
 };
