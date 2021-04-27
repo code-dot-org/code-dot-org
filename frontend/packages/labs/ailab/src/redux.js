@@ -1293,3 +1293,9 @@ function areArraysEqual(array1, array2) {
     })
   );
 }
+
+export function isUserUploadedDataset(state) {
+  // The csvfile for internally curated datasets are strings; those uploaded by
+  // users are objects. Use data type as a proxy to know which case we're in.
+  return typeof state.csvfile === 'object' && state.csvfile !== null;
+}
