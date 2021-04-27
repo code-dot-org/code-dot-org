@@ -26,6 +26,7 @@ es-MX:
       buttonMargin: Margen_botón
       buttonWidth: Ancho_botón
       cat_score: puntuación_gato
+      cat_speed: velocidad_gato
       cats: gatos
       centerToPadLeft: centerToPadLeft
       choice: elección
