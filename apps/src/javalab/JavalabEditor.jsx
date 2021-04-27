@@ -122,6 +122,7 @@ class JavalabEditor extends React.Component {
     }
   }
 
+  // This opens and closes the dropdown menu on the active tab
   toggleTabMenu(key, e) {
     if (key === this.state.contextTarget) {
       this.cancelTabMenu();
@@ -139,6 +140,8 @@ class JavalabEditor extends React.Component {
     }
   }
 
+  // This is called from the dropdown menu on the active tab
+  // when the rename option is clicked
   renameFromTabMenu() {
     let filename;
     this.state.tabs.forEach(tab => {
@@ -156,6 +159,7 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  // This closes the dropdown menu on the active tab
   cancelTabMenu() {
     this.setState({
       showMenu: false,
@@ -209,6 +213,7 @@ class JavalabEditor extends React.Component {
     this.setState({tabs: newTabs, dialogOpen: false});
   }
 
+  // This is called from the file explorer when we want to jump to a file
   onOpenFile(key) {
     const {tabs} = this.state;
     let newTabs = [...tabs];
