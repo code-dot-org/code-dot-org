@@ -22,6 +22,22 @@ describe('ProgressLevelSet', function() {
     assert.equal(wrapper.find('Connect(ProgressPill)').props().text, '1');
   });
 
+  it('has a pill and no link for a single level with an onBubbleClick prop', () => {
+    const wrapper = shallow(
+      <ProgressLevelSet
+        name="My Level Name"
+        levels={fakeLevels(1)}
+        disabled={false}
+        onBubbleClick={() => {}}
+      />
+    );
+
+    assert.equal(wrapper.find('Connect(ProgressPill)').length, 1);
+    assert.equal(wrapper.find('Connect(ProgressBubbleSet)').length, 0);
+    assert.equal(wrapper.find('Connect(ProgressPill)').props().text, '1');
+    assert.isUndefined(wrapper.find('a').props().href);
+  });
+
   it('has a pill and bubbles when we have multiple levels', () => {
     const wrapper = shallow(
       <ProgressLevelSet

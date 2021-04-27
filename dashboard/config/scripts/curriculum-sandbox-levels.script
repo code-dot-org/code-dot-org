@@ -15,6 +15,7 @@ level 'courseB_artist_loops8_predict1'
 lesson 'Course E/F', display_name: 'Course E/F', has_lesson_plan: false
 level 'teacherSandboxFish'
 level 'Swimming Fish Teacher Sandbox'
+level 'courseF_label_predict_sandbox2'
 
 lesson 'CS Discoveries', display_name: 'CS Discoveries', has_lesson_plan: false
 level 'csd digital unplugged PSP word search big'
