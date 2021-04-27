@@ -4,15 +4,23 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { UnconnectedStatement } from "./Statement";
-import { setShowResultsDetails } from "../redux";
+import { setShowResultsDetails, setResultsPhase } from "../redux";
 import ResultsDetails from "./ResultsDetails";
 
 class Results extends Component {
   static propTypes = {
     historicResults: PropTypes.array,
     showResultsDetails: PropTypes.bool,
-    setShowResultsDetails: PropTypes.func
+    setShowResultsDetails: PropTypes.func,
+    setResultsPhase: PropTypes.func
   };
+
+  componentDidMount() {
+    this.props.setResultsPhase(0);
+    setTimeout(() => {
+      this.props.setResultsPhase(1);
+    }, 1000);
+  }
 
   showDetails = () => {
     this.props.setShowResultsDetails(true);
@@ -80,6 +88,9 @@ export default connect(
     showResultsDetails: state.showResultsDetails
   }),
   dispatch => ({
+    setResultsPhase(phase) {
+      dispatch(setResultsPhase(phase));
+    },
     setShowResultsDetails(show) {
       dispatch(setShowResultsDetails(show));
     }

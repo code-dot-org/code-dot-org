@@ -18,8 +18,8 @@ class Statement extends Component {
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
-    setLabelColumn: PropTypes.func.isRequired,
-    removeSelectedFeature: PropTypes.func.isRequired
+    setLabelColumn: PropTypes.func,
+    removeSelectedFeature: PropTypes.func
   };
 
   removeLabel = () => {
