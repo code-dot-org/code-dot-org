@@ -235,7 +235,7 @@ vi:
         text: "Rất nhiều hình đơn giản có thể được sử dụng để tạo ra các hình phức tạp hơn. Trong trò chơi tiếp theo, mã bạn đã viết mới đây để tạo một vòng tròn sẽ được dùng để định nghĩa 1 hàm mới mà có thể tạo hình tròn với kích thước khác nhau. Bạn có thể sử dụng nó để giúp Elsa tạo ra các hình phức tạp và xinh đẹp trong tuyết?"
     playlab_intro:
       1:
-        text: "Chúng ta sẽ tạo ra trò chơi bằng cách sử dụng Play Lab. Một trò chơi hay cần có cốt truyện, và mọi trò chơi cần có nhân vật. Chúng ta có thể học cách xây dựng nhân vật như phù thuỷ, công chúa, giọng nói của các con thú, chuyển động, nói chuyện. Ở cuối bài học này, bạn có thể làm 1 trò chơi từ đầu tới cuối và chia sẻ với bạn bè."
+        text: "Chúng ta sẽ tạo ra trò chơi bằng cách sử dụng Play Lab. Một trò chơi hay cần có cốt truyện, và mọi trò chơi cần có nhân vật. Chúng ta có thể học cách xây dựng nhân vật như phù thuỷ, công chúa, giọng nói của các con thú, chuyển động, nói chuyện. Ở cuối bài học này, bạn có thể làm 1 trò chơi từ Scratch và chia sẻ với bạn bè."
       2:
         text: "Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới."
       3:

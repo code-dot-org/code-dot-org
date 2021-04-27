@@ -486,7 +486,11 @@
         "bounce_5_basketball": "Mình sẽ để chiếc bóng bay đến tay. Gắn một khối lệnh vào khối \"khi quả bóng chạy tay\" để quả bóng bay đến chỗ lá cờ.",
         "scrat 17": "Ok, hãy cùng nhau làm lại thêm một lần nữa để luyện tập nào - phần này không khác gì nhiều, nhưng hãy cẩn thận với bức tường!",
         "scrat 18": "Khối lệnh \"Nếu-khác\" sẽ xem xét điều kiện, và thực hiện câu lệnh này HOẶC câu lệnh khác. Để giúp tôi tới chỗ hạt sồi, hãy thử dùng khối lệnh mới này.",
-        "scrat 20": "Chỉ sử dụng 3 khối lệnh, bạn có thể giúp tôi giải quyết mê cung phức tạp này không? Nếu bạn làm đúng, tôi có thể đi một chặng đường ngoằn ngoèo bất chấp cả quãng đường dài. Hãy nhanh lên! Băng đang tan đấy!"
+        "scrat 20": "Chỉ sử dụng 3 khối lệnh, bạn có thể giúp tôi giải quyết mê cung phức tạp này không? Nếu bạn làm đúng, tôi có thể đi một chặng đường ngoằn ngoèo bất chấp cả quãng đường dài. Hãy nhanh lên! Băng đang tan đấy!",
+        "courseC_flappy_events10": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!",
+        "courseC_flappy_events10_2018": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!",
+        "courseC_flappy_events10_2019": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!",
+        "courseC_flappy_events10_2020": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!"
       }
     }
   }

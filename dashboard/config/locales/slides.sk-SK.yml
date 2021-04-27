@@ -249,7 +249,37 @@ sk:
         text: Čo ak chceme nakresliť niekoľko trojuholníkov s rôznymi dĺžkami strán?
       3:
         text: Môžeme napísať celý kód ručne alebo môžeme použiť funkcie s parametrami.
+      4:
+        text: Dá sa to dosiahnúť kliknutím na modrú hviezdičku v definícii funckie
+          "nakresli trojuholník". Potom presuň "názov vstupu" do bloku "vstupy".
+      5:
+        text: Potom, ak napíšeš "dĺžka" do políčka, kde je teraz "x" a stlačíš "Enter",
+          vytvoríš tvojej funkcii vstup pre dĺžku.
+      6:
+        text: Opäť klikni na hviezdičku. Teraz klikni na kategóriu blokov "Premenné"
+          a presuň blok "dĺžka" do bloku "posuň dopredu", ktorý je v definícii tvojej
+          funkcie. Pôvodný blok s číslom presuň preč.
+      7:
+        text: Pre použitie tvojej funkcie s parametrami, klikni na kategóriu blokov
+          "Funkcie" a vytiahni odtiaľ tvoju funkciu "nakresli trojuholník s dĺžkou".
+      8:
+        text: Teraz môžeš použiť blok z kategórie "Matematika" na vloženie rôznych
+          číselných hodnôt pre vykreslenie trojuholníkov rôznych veľkostí.
     hoc_wrapup:
+      1:
+        text: Gratulujem! Poslednou vyriešenou úlohou, sa ti podarilo napísať kód,
+          ktorý vie AKÉMUKOĽVEK robotovi povedať, ako nájsť cestu cez nerozvetvujúce
+          sa bludisko alebo tunel akejkoľvek dĺžky, či je to zombi, vtáčik, vozidlo
+          na Marse alebo dokonca aj autonómny automobil.
+      2:
+        text: Tieto základné použité koncepty sú jadrom každého programu alebo aplikácie,
+          ktorú kedy vyskúšaš. Učili sme sa o opakujúcich sa cykloch, "repeat until"
+          (opakuj pokiaľ neplatí) príkazoch, "if" (ak) a "if-else" (ak-potom) príkazoch.
+      3:
+        text: Ak sa ti tvoja prvá hodina programovania páčila, navštív code.org pre
+          pokračovanie tvojho štúdia informatiky! Po absolvovaní nášho 20-hodinového
+          kurzu si osvojíš základy programovania a môžeš začať s učením, ako písať
+          aplikácie pre telefóny, inštrukcie pre roboty, hry a povedz ty čo ešte.
       4:
         text: 'Technológie menia všetko čo robíme, nezáleží na tom, či si mladý, alebo
           starý: programovanie je zábava, používaš svoju kreativitu a programovať
@@ -351,6 +381,20 @@ sk:
           známy ako nová funkcia, takže budeš môcť vytvárať kružnice rôznych veľkostí.
           Vieš tento blok použiť a pomôcť nakresliť Else do snehu zložité a nádherné
           vzory?
+    playlab_intro:
+      1:
+        text: Použitím Play Labu  budeme vytvárať hry. Dobré hry majú príbeh a každý
+          príbeh má postavy. Naučíme sa ako na to, aby postavy ako čarodejníci, mimozemšťania
+          a zvieratká navzájom hovorili, hýbali sa a reagovali na seba. Po prejdení
+          tohto návodu dokážeš vytvoriť hru od základu a zdieľať ju so svojimi kamarátmi.
+      2:
+        text: Tvoja obrazovka je rozdelená do troch hlavných častí. Naľavo je herný
+          priestor, kde pobeží tvoj program. Pokyny pre každú úroveň sú napísané pod
+          ním.
+      3:
+        text: Stredná časť je panel nástrojov a každý z týchto blokov je časťou kódu.
+          Biely priestor napravo sa volá pracovný priestor a tu budeš vytvárať svoj
+          program.
     playlab_events:
       2:
         text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
@@ -362,6 +406,11 @@ sk:
       2:
         text: Ak má postava niečo opakovane vykonávať bez zásahu hráča, budeme vkladať
           tieto bloky do vnútra bloku "opakuj donekonečna".
+      3:
+        text: V tejto úlohe je našim cieľom pomôcť čarodejníkovi strážiť hranice kráľovstva
+          nepretržite zľava doprava a naspäť. Tým, že sa naučíme ako fungujú príkazy
+          opakovania, si neskôr ušetríme množstvo času pri tvorení našej vlastnej
+          hry.
     C1_artist_intro:
       1:
         text: S týmito blokmi kreslíš. Použi ich, aby sa umelec dostal kam potrebuje
@@ -369,12 +418,37 @@ sk:
       2:
         text: "S týmito blokmi skáčeš. Keď ich použiješ, tvoj umelec sa pohne, ale
           nekreslí, takže pomocou nich preskočíš na ďalšiu šedú čiaru. \n"
+    C1_bee_level_intro:
+      1:
+        text: 'Nie sú včely super skvelé? V nasledujúcej sérii úloh je tvojim cieľom
+          pomôcť včele dostať sa ku kvetom, získať z nich nektár a preletieť k plástu,
+          aby vyrobila med. Na toto cvičenie potrebuješ použiť bloky "získaj nektár"
+          a "vyrob med". '
+      2:
+        text: 'Každý kvet má rozdielny počet nektáru: 1, 2, 3, alebo viac. Poznáme
+          to podľa malého čísielka v rohu pri červených kvetoch. Preto sa pred pokračovaním
+          ďalej uisti, že všetkok nektár z kvetu bol získaný. Rovnako môže aj každý
+          plást uchovať len nejaké množstvo medu: 1, 2, 3, alebo viac. Vyrob preto
+          len toľko medu, koľko dokáže uchovať plást.'
+      3:
+        text: Uspeješ a postúpiš na ďalšiu úroveň, ak zvládneš získať všetok nektár
+          a vyrobiť všetok med. Inak si budeš musieť túto úlohu zopakovať. Skús tomu
+          chvíľu "v-čeliť" a získaj pocit, čo znamená byť programátorom!
     C1_bee_loops:
       1:
         text: Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a
           skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát.
           Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane.
+      2:
+        text: Na tejto úrovni cheme, aby včela získala z kvetu tri nektáre. Namiesto
+          trojnásobného použitia "získaj nektár", použi opakovací blok na získanie
+          nektáru tri krát. Stlač "Spustiť" a zisti, či to máš správne. Výborne!
     C1_bigevent_unplugged:
+      1:
+        text: Táto lekcia sa volá veľká udalosť. Je to všetko o tom, ako dokážeme
+          ovládať náš program a dokonca meniť spôsob činnosťi programu počas jeho
+          behu použitím udalostí, akými sú napríklad stlačenie klávesy alebo kliknutie
+          myši.
       2:
         text: V tejto lekcii budeš ovládaný papierovým diaľkovým ovládačom. Je to
           niečo ako reálna-živá video hra.
@@ -772,6 +846,11 @@ sk:
         text: Ak potiahnem do nášho pracovného priestoru blok pohybVľavo(); a potom
           kliknem Spustiť, čo sa stane? BB=8 sa pohne doľava o jedno pole v mriežke.
     starwars_events:
+      2:
+        text: Gratulujem, zvládaš to! BB-8 je naprogramovaný. Myslím, že sme pripravení
+          na niečo zložitejšie. Poďme na to. Keďže sa ti práve podarilo naučiť základy
+          programovania, vráťme sa v čase a vytvorme tvoju vlastnú hru, v ktorej bude
+          účinkovať R2-D2 a C-3PO.
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -779,10 +858,24 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
+      5:
+        text: Tu urobíme to, aby sa R2-D2 pohyboval smerom hore a doručil správu pilotovi
+          rebelov, a potom smerom dole k inému pilotovi rebelov. K jeho pohybu použijeme
+          udalosti tak, že hráč použije šípky alebo tlačidlá hore/dole.
+      6:
+        text: Použijeme blok udalosti "whenUp()" (akHore()) a pripojíme k nemu blok
+          "goUp()" (choďHore()). Ak hráč stlačí šípku hore, spustí sa kód pripojený
+          k "whenUp()" bloku. Podobne sa to dá urobiť, aby sa R2-D2 hýbal smerom dole.
+      7:
+        text: Aby sme to dosiahli, použijeme príkaz, ktorý sa volá "whenUp()" (akHore).
+          Ak presunieš príkaz z panela nástrojov, uvidíš, že začína a končí zloženou
+          (kučeravou) zátvorkou, nie bodko-čiarkou. Toto nám dáva priestor, aby sme
+          dovnútra volžili ďalšie príkazy. Každý príkaz, ktorý vložíme dovnútra zátvoriek,
+          sa spustí, keď hráč stlačí šípku hore.
     starwars_congrats:
       1:
-        text: Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím pracovala
-          som na tomto návode, ktorý si práve prechádzaš.
+        text: Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím a
+          pracovala som na tomto návode, ktorý si práve prechádzaš.
       2:
         text: Podarilo sa ti dosiahnuť záverečnú úroveň. Blahoželám! Už vieš všetko
           potrebné na vytvorenie svojej vlastnej Star Wars hry. Už žiadne ďalšie pokyny,
@@ -819,6 +912,11 @@ sk:
         text: Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej
           plochy a presuň ho späť do panela nástrojov.
     starwars_blocks_events:
+      2:
+        text: Gratulujem, zvládaš to! BB-8 je naprogramovaný. Myslím, že sme pripravení
+          na niečo zložitejšie. Poďme na to. Keďže sa ti práve podarilo naučiť základy
+          programovania, vráťme sa v čase a vytvorme tvoju vlastnú hru, v ktorej bude
+          účinkovať R2-D2 a C-3PO.
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -826,12 +924,16 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
+      5:
+        text: Tu urobíme to, aby sa R2-D2 pohyboval smerom hore a doručil správu pilotovi
+          rebelov, a potom smerom dole k inému pilotovi rebelov. K jeho pohybu použijeme
+          udalosti tak, že hráč použije šípky alebo tlačidlá hore/dole.
       7:
         text: Krok po kroku, sa tvoja hra stáva viac interaktívnou.
     starwars_blocks_congrats:
       1:
-        text: Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím pracovala
-          som na tomto návode, ktorý si práve prechádzaš.
+        text: Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím a
+          pracovala som na tomto návode, ktorý si práve prechádzaš.
       2:
         text: Podarilo sa ti dosiahnuť záverečnú úroveň. Blahoželám! Už vieš všetko
           potrebné na vytvorenie svojej vlastnej Star Wars hry. Už žiadne ďalšie pokyny,
