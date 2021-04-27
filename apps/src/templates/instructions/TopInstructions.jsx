@@ -599,7 +599,7 @@ class TopInstructions extends Component {
     const widgetWidth = WIDGET_WIDTH + 'px';
 
     const topInstructionsStyle = [
-      !mainStyle && (isRtl ? styles.mainRtl : styles.main),
+      isRtl ? styles.mainRtl : styles.main,
       mainStyle,
       {
         height: height - RESIZER_HEIGHT
