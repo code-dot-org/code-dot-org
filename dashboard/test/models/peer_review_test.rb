@@ -46,6 +46,17 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status).to_set
   end
 
+  test 'submitting a peer reviewed level in instructor review only script should create one escalated PeerReview object' do
+    script_only_instructor_review = create :script, only_instructor_review_required: true
+    script_level_only_instructor_review = create :script_level, levels: [@level], script: script_only_instructor_review
+
+    assert_difference('PeerReview.count', 1) do
+      track_progress @level_source.id, @user, script_level_only_instructor_review
+    end
+
+    assert_equal ['escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status)
+  end
+
   test 'submitting a non peer reviewable level should not create Peer Review objects' do
     @level.peer_reviewable = 'false'
     @level.save
