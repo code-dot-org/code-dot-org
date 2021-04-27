@@ -29,6 +29,10 @@ const style = {
   }
 };
 
+const RENAME_FILE = 'renameFile';
+const DELETE_FILE = 'deleteFile';
+const CREATE_FILE = 'createFile';
+
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
@@ -71,16 +75,13 @@ class JavalabEditor extends React.Component {
       fileMetadata,
       showMenu: false,
       contextTarget: null,
-      renameDialogOpen: false,
+      openDialog: null,
       menuPosition: {},
       editTabKey: null,
-      editTabFilename: null,
-      newFileDialogOpen: false,
       newFileError: null,
       renameFileError: null,
       activeTabKey: firstTabKey,
       lastTabKeyIndex: orderedTabKeys.length - 1,
-      confirmDeleteDialogOpen: false,
       fileToDelete: null
     };
   }
@@ -96,15 +97,12 @@ class JavalabEditor extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.isDarkMode !== this.props.isDarkMode) {
-      if (this.props.isDarkMode) {
-        this.editor.dispatch({
-          reconfigure: {style: oneDark}
+      const newStyle = this.props.isDarkMode ? oneDark : lightMode;
+      Object.keys(this.editors).forEach(editorKey => {
+        this.editors[editorKey].dispatch({
+          reconfigure: {style: newStyle}
         });
-      } else {
-        this.editor.dispatch({
-          reconfigure: {style: lightMode}
-        });
-      }
+      });
     }
 
     const {orderedTabKeys, fileMetadata} = this.state;
@@ -183,14 +181,11 @@ class JavalabEditor extends React.Component {
   }
 
   renameFromContextMenu() {
-    const filename = this.state.fileMetadata[this.state.contextTarget];
-
     this.setState({
       showMenu: false,
       contextTarget: null,
       editTabKey: this.state.contextTarget,
-      editTabFilename: filename,
-      renameDialogOpen: true
+      openDialog: RENAME_FILE
     });
   }
 
@@ -202,10 +197,8 @@ class JavalabEditor extends React.Component {
   }
 
   deleteFromContextMenu() {
-    //const filename = this.state.fileMetadata[this.state.contextTarget];
-
     this.setState({
-      confirmDeleteDialogOpen: true,
+      openDialog: DELETE_FILE,
       fileToDelete: this.state.contextTarget
     });
   }
@@ -228,7 +221,7 @@ class JavalabEditor extends React.Component {
     projectChanged();
     this.setState({
       fileMetadata: newFileMetadata,
-      renameDialogOpen: false,
+      openDialog: null,
       renameFileError: null
     });
   }
@@ -263,7 +256,7 @@ class JavalabEditor extends React.Component {
       fileMetadata: newFileMetadata,
       activeTabKey: newTabKey,
       lastTabKeyIndex: newTabIndex,
-      newFileDialogOpen: false,
+      openDialog: null,
       newFileError: null
     });
   }
@@ -312,7 +305,7 @@ class JavalabEditor extends React.Component {
     this.setState({
       showMenu: false,
       contextTarget: null,
-      confirmDeleteDialogOpen: false,
+      openDialog: null,
       fileToDelete: null
     });
   }
@@ -322,7 +315,17 @@ class JavalabEditor extends React.Component {
   }
 
   render() {
-    const {orderedTabKeys, fileMetadata, editTabFilename} = this.state;
+    const {
+      orderedTabKeys,
+      fileMetadata,
+      activeTabKey,
+      editTabKey,
+      openDialog,
+      fileToDelete,
+      renameFileError,
+      newFileError
+    } = this.state;
+    const {onCommitCode, isDarkMode} = this.props;
 
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
@@ -337,7 +340,7 @@ class JavalabEditor extends React.Component {
           <PaneButton
             id="javalab-editor-create-file"
             iconClass="fa fa-plus-circle"
-            onClick={() => this.setState({newFileDialogOpen: true})}
+            onClick={() => this.setState({openDialog: CREATE_FILE})}
             headerHasFocus={true}
             isRtl={false}
             label="Create File"
@@ -346,7 +349,7 @@ class JavalabEditor extends React.Component {
           <PaneButton
             id="javalab-editor-save"
             iconClass="fa fa-check-circle"
-            onClick={this.props.onCommitCode}
+            onClick={onCommitCode}
             headerHasFocus={true}
             isRtl={false}
             label="Commit Code"
@@ -354,11 +357,11 @@ class JavalabEditor extends React.Component {
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <Tab.Container
-          activeKey={this.state.activeTabKey}
+          activeKey={activeTabKey}
           onSelect={tabKey => this.setState({activeTabKey: tabKey})}
           style={{marginTop: 10}}
           id="javalab-editor-tabs"
-          className={this.props.isDarkMode ? 'darkmode' : ''}
+          className={isDarkMode ? 'darkmode' : ''}
         >
           <div>
             <Nav bsStyle="tabs" style={{marginBottom: 0}}>
@@ -382,7 +385,7 @@ class JavalabEditor extends React.Component {
                       ref={el => (this._codeMirrors[tabKey] = el)}
                       style={{
                         ...style.editor,
-                        ...(this.props.isDarkMode && style.darkBackground)
+                        ...(isDarkMode && style.darkBackground)
                       }}
                     />
                   </Tab.Pane>
@@ -399,34 +402,34 @@ class JavalabEditor extends React.Component {
           />
         </div>
         <DeleteConfirmationDialog
-          isOpen={this.state.confirmDeleteDialogOpen}
+          isOpen={openDialog === DELETE_FILE}
           handleConfirm={this.onDeleteFile}
-          handleClose={() => this.setState({confirmDeleteDialogOpen: false})}
-          filename={fileMetadata[this.state.fileToDelete]}
-          isDarkMode={this.props.isDarkMode}
+          handleClose={() => this.setState({openDialog: null})}
+          filename={fileMetadata[fileToDelete]}
+          isDarkMode={isDarkMode}
         />
         <NameFileDialog
-          isOpen={this.state.renameDialogOpen}
+          isOpen={openDialog === RENAME_FILE}
           handleClose={() =>
-            this.setState({renameDialogOpen: false, renameFileError: null})
+            this.setState({openDialog: null, renameFileError: null})
           }
-          filename={editTabFilename}
+          filename={fileMetadata[editTabKey]}
           handleSave={this.onRenameFile}
-          isDarkMode={this.props.isDarkMode}
+          isDarkMode={isDarkMode}
           inputLabel="Rename the file"
           saveButtonText="Rename"
-          errorMessage={this.state.renameFileError}
+          errorMessage={renameFileError}
         />
         <NameFileDialog
-          isOpen={this.state.newFileDialogOpen}
+          isOpen={openDialog === CREATE_FILE}
           handleClose={() =>
-            this.setState({newFileDialogOpen: false, newFileError: null})
+            this.setState({openDialog: null, newFileError: null})
           }
           handleSave={this.onCreateFile}
-          isDarkMode={this.props.isDarkMode}
+          isDarkMode={isDarkMode}
           inputLabel="Create new file"
           saveButtonText="Create"
-          errorMessage={this.state.newFileError}
+          errorMessage={newFileError}
         />
       </div>
     );

@@ -31,7 +31,7 @@ const styles = {
     backgroundColor: color.darkest_gray,
     color: 'white'
   },
-  lightDelete: {
+  lightConfirm: {
     backgroundColor: color.cyan,
     color: color.white
   },
@@ -81,7 +81,7 @@ export default class DeleteConfirmationDialog extends Component {
               type="button"
               style={{
                 ...styles.button,
-                ...(isDarkMode ? styles.darkButton : styles.lightDelete)
+                ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
               }}
               onClick={handleConfirm}
             >
