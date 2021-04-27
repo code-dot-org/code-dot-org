@@ -53,12 +53,8 @@ class Javalab < Level
   end
 
   def assign_attributes(params)
-    # puts 'assign attributes!'
-    # puts params
-    # puts 'hello'
     params[:visible].keys.map(&:to_s).each do |filename|
-      puts filename
-      puts params[:visible][filename]
+      start_sources[filename]["visible"] = params[:visible][filename] === "true"
     end
   end
 
