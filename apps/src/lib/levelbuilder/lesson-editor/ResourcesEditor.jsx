@@ -266,12 +266,17 @@ class ResourcesEditor extends Component {
       .done(data => {
         this.props.resources
           .filter(resource => resource.isRollup)
+          .filter(resource => !data.find(r => r.key === resource.key))
           .forEach(resource =>
             this.props.removeResource(this.props.resourceContext, resource)
           );
-        data.forEach(resource =>
-          this.props.addResource(this.props.resourceContext, resource)
-        );
+        data
+          .filter(
+            resource => !this.props.resources.find(r => r.key === resource.key)
+          )
+          .forEach(resource =>
+            this.props.addResource(this.props.resourceContext, resource)
+          );
       })
       .fail(error => {
         this.setState({error: 'Could not add rollup resources'});
