@@ -36,7 +36,9 @@ class ScriptDSL < BaseDSL
   end
 
   integer :id
+
   string :professional_learning_course
+  boolean :only_instructor_review_required
   integer :peer_reviews_to_complete
 
   boolean :hidden
@@ -147,6 +149,7 @@ class ScriptDSL < BaseDSL
       hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
+      only_instructor_review_required: @only_instructor_review_required,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
       lesson_extras_available: @lesson_extras_available,
@@ -330,6 +333,7 @@ class ScriptDSL < BaseDSL
     s << "id '#{legacy_script_ids[script.name]}'" if legacy_script_ids[script.name]
 
     s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
+    s << "only_instructor_review_required #{script.only_instructor_review_required}" if script.only_instructor_review_required
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
     s << 'hidden false' unless script.hidden
