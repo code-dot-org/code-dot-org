@@ -76,7 +76,8 @@ class EditSectionForm extends Component {
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeEnglishName: PropTypes.string,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
+    showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
 
   state = {
@@ -139,6 +140,20 @@ class EditSectionForm extends Component {
     );
   };
 
+  recordRestrictSectionEvent = restrictSection => {
+    firehoseClient.putRecord(
+      {
+        study: 'lock_section',
+        study_group: 'display_lock_section',
+        event: restrictSection ? 'turn_on' : 'turn_off',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id
+        })
+      },
+      {useProgressScriptId: false, includeUserId: true}
+    );
+  };
+
   render() {
     const {
       section,
@@ -154,7 +169,8 @@ class EditSectionForm extends Component {
       assignedScriptName,
       localeEnglishName,
       isNewSection,
-      localeCode
+      localeCode,
+      showLockSectionField // DCDO Flag - show/hide Lock Section field
     } = this.props;
 
     /**
@@ -249,14 +265,17 @@ class EditSectionForm extends Component {
               disabled={isSaveInProgress}
             />
           )}
-          <RestrictAccessField
-            value={section.restrictSection}
-            onChange={restrictSection =>
-              editSectionProperties({restrictSection})
-            }
-            disabled={isSaveInProgress}
-            loginType={this.props.section.loginType}
-          />
+          {showLockSectionField && (
+            <RestrictAccessField
+              value={section.restrictSection}
+              onChange={restrictSection => {
+                editSectionProperties({restrictSection});
+                this.recordRestrictSectionEvent(restrictSection);
+              }}
+              disabled={isSaveInProgress}
+              loginType={this.props.section.loginType}
+            />
+          )}
         </div>
         <DialogFooter>
           <Button
@@ -554,7 +573,10 @@ let defaultPropsFromState = state => ({
   hiddenStageState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
-  localeCode: state.locales.localeCode
+  localeCode: state.locales.localeCode,
+
+  // DCDO Flag - show/hide Lock Section field
+  showLockSectionField: state.teacherSections.showLockSectionField
 });
 
 export const UnconnectedEditSectionForm = EditSectionForm;
