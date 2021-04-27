@@ -85,34 +85,36 @@ describe('Java Lab Editor Test', () => {
         contextTarget: null,
         editTabKey: 'file-0',
         editTabFilename: oldFilename,
-        dialogOpen: true,
-        tabs: [
-          {
-            key: 'file-0',
-            filename: oldFilename
-          }
-        ]
+        openDialog: 'renameFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        fileMetadata: {
+          'file-0': oldFilename,
+          'file-1': 'AnotherClass.java'
+        }
       });
       javalabEditor.onRenameFile(newFilename);
       expect(store.getState().javalab.sources[newFilename]).to.not.be.undefined;
       expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
-      expect(javalabEditor.state.dialogOpen).to.be.false;
-      expect(javalabEditor.state.tabs).to.deep.equal([
-        {
-          key: 'file-0',
-          filename: newFilename
-        }
+      expect(javalabEditor.state.openDialog).to.be.null;
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-0',
+        'file-1'
       ]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-0': newFilename,
+        'file-1': 'AnotherClass.java'
+      });
     });
   });
 
   describe('componentDidUpdate', () => {
     it('toggles between light and dark modes', () => {
       const editor = createWrapper();
-      const dispatchSpy = sinon.spy(
-        editor.find('JavalabEditor').instance().editor,
-        'dispatch'
-      );
+      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
+        .editors;
+      const firstEditor = Object.values(javalabCodeMirrors)[0];
+
+      const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
       store.dispatch(toggleDarkMode());
       expect(dispatchSpy).to.have.been.calledWith({
         reconfigure: {style: oneDark}
