@@ -60,9 +60,7 @@ class ResourcesEditor extends Component {
     courseVersionId: PropTypes.number,
     resourceContext: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-
-    addRollupsType: PropTypes.oneOf(['course', 'script']),
-    addRollupsId: PropTypes.string,
+    getRollupsUrl: PropTypes.string,
 
     // Provided by redux
     addResource: PropTypes.func.isRequired,
@@ -260,9 +258,8 @@ class ResourcesEditor extends Component {
   };
 
   addRollupPages = () => {
-    const urlPrefix = this.props.addRollupsType === 'course' ? 'courses' : 's';
     $.ajax({
-      url: `/${urlPrefix}/${this.props.addRollupsId}/get_rollup_resources`,
+      url: this.props.getRollupsUrl,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     })
@@ -338,7 +335,7 @@ class ResourcesEditor extends Component {
             <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
             Resource
           </button>
-          {this.props.addRollupsType && this.props.addRollupsId && (
+          {this.props.getRollupsUrl && (
             <button
               onClick={this.addRollupPages}
               style={styles.addButton}

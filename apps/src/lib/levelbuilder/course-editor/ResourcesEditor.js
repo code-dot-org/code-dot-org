@@ -44,8 +44,7 @@ export default class ResourcesEditor extends Component {
     studentFacing: PropTypes.bool,
     updateResources: PropTypes.func,
     courseVersionId: PropTypes.number,
-    addRollupsType: PropTypes.string,
-    addRollupsId: PropTypes.string
+    getRollupsUrl: PropTypes.string
   };
 
   constructor(props) {
@@ -105,8 +104,7 @@ export default class ResourcesEditor extends Component {
               this.props.studentFacing ? 'studentResource' : 'teacherResource'
             }
             resources={this.props.migratedResources}
-            addRollupsType={this.props.addRollupsType}
-            addRollupsId={this.props.addRollupsId}
+            getRollupsUrl={this.props.getRollupsUrl}
           />
         ) : (
           resources

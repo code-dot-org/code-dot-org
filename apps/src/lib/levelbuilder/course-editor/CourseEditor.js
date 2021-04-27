@@ -301,8 +301,7 @@ class CourseEditor extends Component {
               }
               courseVersionId={this.props.courseVersionId}
               useMigratedResources={this.props.useMigratedResources}
-              addRollupsType="course"
-              addRollupsId={this.props.name}
+              getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
           </div>
           {this.props.useMigratedResources && (
