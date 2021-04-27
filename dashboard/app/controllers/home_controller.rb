@@ -106,6 +106,9 @@ class HomeController < ApplicationController
     @homepage_data[:mapboxAccessToken] = CDO.mapbox_access_token
     @homepage_data[:currentUserId] = current_user.id
 
+    # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
+    @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
+
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
     @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
