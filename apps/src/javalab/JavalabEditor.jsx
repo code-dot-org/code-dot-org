@@ -72,6 +72,7 @@ class JavalabEditor extends React.Component {
     this.onRenameFile = this.onRenameFile.bind(this);
     this.onCreateFile = this.onCreateFile.bind(this);
     this.onDeleteFile = this.onDeleteFile.bind(this);
+    this.onOpenFile = this.onOpenFile.bind(this);
     this._codeMirrors = {};
 
     // fileMetadata is a dictionary of file key -> filename.
@@ -314,13 +315,8 @@ class JavalabEditor extends React.Component {
       let newActiveTabKey = activeTabKey;
       // we need to update the active tab if we are deleting the currently active tab
       if (activeTabKey === fileToDelete) {
-        if (newTabs.length > 0) {
-          // if there is still at least 1 file, go to first file
-          newActiveTabKey = newTabs[0];
-        } else {
-          // otherwise wipe out active tab key
-          newActiveTabKey = null;
-        }
+        // if there is still at least 1 file, go to first file, otherwise wipe out active tab key
+        newActiveTabKey = newTabs.length > 0 ? newTabs[0] : null;
       }
 
       // delete tab key from tab to filename map
@@ -352,22 +348,14 @@ class JavalabEditor extends React.Component {
 
   // This is called from the file explorer when we want to jump to a file
   onOpenFile(key) {
-    const {tabs} = this.state;
-    let newTabs = [...tabs];
-    let selectedFileIndex;
-    let selectedFile;
-    newTabs.forEach((tab, index) => {
-      if (tab.key === key) {
-        selectedFileIndex = index;
-        selectedFile = tab;
-      }
-    });
+    let newTabs = [...this.state.orderedTabKeys];
+    let selectedFileIndex = newTabs.indexOf(key);
     newTabs.splice(selectedFileIndex, 1);
-    newTabs.unshift(selectedFile);
+    newTabs.unshift(key);
     // closes the tab menu if it is open
     this.setState({
       activeTabKey: key,
-      tabs: newTabs,
+      orderedTabKeys: newTabs,
       showMenu: false,
       contextTarget: null
     });
@@ -381,9 +369,9 @@ class JavalabEditor extends React.Component {
       editTabKey,
       openDialog,
       fileToDelete,
+      contextTarget,
       renameFileError,
-      newFileError,
-      contextTarget
+      newFileError
     } = this.state;
     const {onCommitCode, isDarkMode} = this.props;
 
@@ -426,9 +414,9 @@ class JavalabEditor extends React.Component {
           <div>
             <Nav bsStyle="tabs" style={{marginBottom: 0}}>
               <JavalabFileExplorer
-                files={orderedTabKeys}
+                fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
-                isDarkMode={this.props.isDarkMode}
+                isDarkMode={isDarkMode}
               />
               {orderedTabKeys.map(tabKey => {
                 return (
