@@ -96,8 +96,6 @@ describe('ScriptEditor', () => {
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      console.log(wrapper.debug());
-
       expect(wrapper.find('input').length).to.equal(24);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(3);
