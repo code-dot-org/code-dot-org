@@ -388,7 +388,7 @@ export const styles = {
     paddingBottom: 1,
     display: "inline-block",
     position: "relative",
-    height: 46
+    lineHeight: 1.3
   },
 
   statementFeature: {
@@ -400,7 +400,7 @@ export const styles = {
     paddingBottom: 1,
     display: "inline-block",
     position: "relative",
-    height: 46
+    lineHeight: 1.3
   },
 
   statementDeleteIcon: {
