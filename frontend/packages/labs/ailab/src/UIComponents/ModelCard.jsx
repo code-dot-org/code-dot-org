@@ -9,6 +9,8 @@ import { getSummaryStat,
   getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn
 } from "../redux";
+import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
+import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 
 class ModelCard extends Component {
   static propTypes = {
@@ -117,6 +119,16 @@ class ModelCard extends Component {
             })}
            </p>
         </div>
+        </div>
+        <div style={styles.summaryScreenBot}>
+          <img
+            src={aiBotHead}
+            style={{
+              ...styles.trainBotHead,
+              ...(false && styles.trainBotOpen)
+            }}
+          />
+          <img src={aiBotBody} style={styles.trainBotBody} />
         </div>
       </div>
     );

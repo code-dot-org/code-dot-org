@@ -516,7 +516,8 @@ export const styles = {
     padding: 20,
     whiteSpace: "normal",
     overflowY: "scroll",
-    width: "30%"
+    width: "30%",
+    margin: "0 auto"
   },
 
   modelCardHeader: {
@@ -546,4 +547,11 @@ export const styles = {
     marginBottom: 10,
     padding: 10
   },
+
+  summaryScreenBot: {
+    width: 300,
+    position: "absolute",
+    bottom: 20,
+    marginLeft: 20
+  }
 };
