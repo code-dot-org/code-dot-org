@@ -78,12 +78,11 @@ describe('ResourcesEditor', () => {
     expect(editResource).to.have.been.calledOnce;
   });
 
-  it('shows a button to add rollup resources if addRollupsType and addRollupsId are passed as props', () => {
+  it('shows a button to add rollup resources if getRollupsUrl is passed as a prop', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        addRollupsType="script"
-        addRollupsId="coursea"
+        getRollupsUrl="/s/coursea/get_rollup_resources"
       />
     );
     const addRollupsButton = wrapper.find('button').at(1);
@@ -91,12 +90,11 @@ describe('ResourcesEditor', () => {
     expect(addRollupsButton.contains('Add rollup pages')).to.be.true;
   });
 
-  it('adds rollup pages from server for script', () => {
+  it('adds rollup pages from server', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        addRollupsType="script"
-        addRollupsId="coursea"
+        getRollupsUrl="/s/coursea/get_rollup_resources"
       />
     );
     const codeRollup = {
@@ -114,41 +112,6 @@ describe('ResourcesEditor', () => {
 
     const server = sinon.fakeServer.create();
     server.respondWith('GET', '/s/coursea/get_rollup_resources', [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify([codeRollup, vocabRollup])
-    ]);
-    wrapper.instance().addRollupPages();
-    server.respond();
-    expect(addResource.withArgs(defaultResourceContext, codeRollup)).to.be
-      .calledOnce;
-    expect(addResource.withArgs(defaultResourceContext, vocabRollup)).to.be
-      .calledOnce;
-  });
-
-  it('adds rollup pages from server for course', () => {
-    const wrapper = shallow(
-      <ResourcesEditor
-        {...defaultProps}
-        addRollupsType="course"
-        addRollupsId="csd"
-      />
-    );
-    const codeRollup = {
-      id: 1,
-      key: 'all-code',
-      name: 'All Code',
-      url: '/courses/csd/code'
-    };
-    const vocabRollup = {
-      id: 2,
-      key: 'all-vocab',
-      name: 'All Vocab',
-      url: '/courses/csd/vocab'
-    };
-
-    const server = sinon.fakeServer.create();
-    server.respondWith('GET', '/courses/csd/get_rollup_resources', [
       200,
       {'Content-Type': 'application/json'},
       JSON.stringify([codeRollup, vocabRollup])
