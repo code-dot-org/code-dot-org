@@ -7,7 +7,7 @@ import ImportScreensDialog from './ImportScreensDialog';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
-import {ApplabInterfaceMode} from './constants';
+import {ApplabInterfaceMode, WIDGET_WIDTH} from './constants';
 import CodeWorkspace from '../templates/CodeWorkspace';
 import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 import ProtectedDesignWorkspace from './ProtectedDesignWorkspace';
@@ -21,6 +21,12 @@ class AppLabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
     autogenerateML: PropTypes.func.isRequired,
+    isEditingProject: PropTypes.bool.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired,
+
+    // Provided by redux
     hasDataMode: PropTypes.bool.isRequired,
     hasDesignMode: PropTypes.bool.isRequired,
     interfaceMode: PropTypes.oneOf([
@@ -28,12 +34,8 @@ class AppLabView extends React.Component {
       ApplabInterfaceMode.DESIGN,
       ApplabInterfaceMode.DATA
     ]).isRequired,
-    isEditingProject: PropTypes.bool.isRequired,
-
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onScreenCreate: PropTypes.func.isRequired,
-
-    onMount: PropTypes.func.isRequired
+    isRtl: PropTypes.bool,
+    widgetMode: PropTypes.bool
   };
 
   componentDidMount() {
@@ -43,6 +45,14 @@ class AppLabView extends React.Component {
   render() {
     const codeWorkspaceVisible =
       ApplabInterfaceMode.CODE === this.props.interfaceMode;
+
+    let instructionsStyle = {};
+    if (this.props.widgetMode) {
+      instructionsStyle = this.props.isRtl
+        ? styles.widgetInstructionsRtl
+        : styles.widgetInstructions;
+    }
+
     return (
       <StudioAppWrapper>
         <ImportProjectDialog />
@@ -54,7 +64,10 @@ class AppLabView extends React.Component {
           onScreenCreate={this.props.onScreenCreate}
         />
         <VisualizationResizeBar />
-        <InstructionsWithWorkspace>
+        <InstructionsWithWorkspace
+          style={instructionsStyle}
+          instructionsStyle={instructionsStyle}
+        >
           <CodeWorkspace
             withSettingsCog
             style={{display: codeWorkspaceVisible ? 'block' : 'none'}}
@@ -75,5 +88,16 @@ class AppLabView extends React.Component {
 export default connect(state => ({
   hasDataMode: state.pageConstants.hasDataMode || false,
   hasDesignMode: state.pageConstants.hasDesignMode || false,
-  interfaceMode: state.interfaceMode
+  interfaceMode: state.interfaceMode,
+  isRtl: state.isRtl,
+  widgetMode: state.pageConstants.widgetMode
 }))(AppLabView);
+
+const styles = {
+  widgetInstructions: {
+    left: WIDGET_WIDTH
+  },
+  widgetInstructionsRtl: {
+    right: WIDGET_WIDTH
+  }
+};
