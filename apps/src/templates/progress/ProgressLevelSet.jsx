@@ -86,7 +86,8 @@ class ProgressLevelSet extends React.Component {
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    const url = multiLevelStep ? undefined : levels[0].url;
+    const url = multiLevelStep || onBubbleClick ? undefined : levels[0].url;
+    const onClick = multiLevelStep ? undefined : () => onBubbleClick(levels[0]);
 
     // Adjust column styles if locale is RTL
     const col2Style = isRtl ? styles.col2RTL : styles.col2;
@@ -126,7 +127,7 @@ class ProgressLevelSet extends React.Component {
               />
             </td>
             <td style={col2Style}>
-              <a href={url}>
+              <a href={url} onClick={onClick}>
                 <div style={{...styles.nameText, ...styles.text}}>{name}</div>
               </a>
             </td>
