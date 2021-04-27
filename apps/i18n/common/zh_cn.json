@@ -810,6 +810,7 @@
   "freePlayUnchangedFail": "你是否完成？看似你尚未有完成在本级别的工作，你确定你要继续吗？假如你选择了“继续”，这个级别将会标注为“进行中”以方便你返回并完成本级别。",
   "freePlayUnchangedFailInline": "好像你还没有完成在本级别的工作。尝试添加一些模块！",
   "fromWhen": "(在 {when}):",
+  "fullCourseAlignment": "全课程对齐",
   "gdprDialogHeaderUpdated": "您同意 Code.org 在您使用本网站的过程中会传输资料（包括个人资料）到美利坚合众国以保存和使用本资料吗？",
   "gdprDialogDetailsUpdated": "Code.org是一家位于美国的非营利性网站，美国的数据收集法律有可能与你所在国家/地区的法律不同。",
   "gdprDialogVisitPrivacyPolicy": "访问Code.org的《隐私权政策》以了解更多信息。",

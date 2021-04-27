@@ -858,6 +858,7 @@
   "freePlayUnchangedFail": "¿Estás seguro de que has terminado? Parece que tienes más trabajo que hacer en este nivel. Si decides continuar, este nivel se marcará como \"En curso\" para que puedas volver a terminarlo más tarde.",
   "freePlayUnchangedFailInline": "Parece que aún no has terminado de trabajar en este nivel. ¡Intenta añadir más bloques!",
   "fromWhen": "(Desde {when}):",
+  "fullCourseAlignment": "Curso Completo Alineamiento",
   "gdprDialogHeaderUpdated": "¿Acepta que Code.org pueda transferir datos (incluyendo datos personales) de su uso de este sitio a los Estados Unidos con el fin de alojar y procesar dichos datos?",
   "gdprDialogDetailsUpdated": "Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de su país.",
   "gdprDialogVisitPrivacyPolicy": "Consulte la política de privacidad de Code.org para obtener más información.",
