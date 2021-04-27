@@ -64,6 +64,9 @@ export default function initPage(scriptEditorData) {
         initialProfessionalLearningCourse={
           scriptData.professionalLearningCourse || ''
         }
+        initialOnlyInstructorReviewRequired={
+          scriptData.only_instructor_review_required
+        }
         initialPeerReviewsRequired={scriptData.peerReviewsRequired}
         initialWrapupVideo={scriptData.wrapupVideo || ''}
         initialProjectWidgetVisible={scriptData.project_widget_visible}

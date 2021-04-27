@@ -133,6 +133,7 @@ namespace :seed do
     'csp8-2020',
     'csp9-2020',
     'csp10-2020',
+    'csp-post-survey-2020',
     'dance',
     'events',
     'express-2017',
