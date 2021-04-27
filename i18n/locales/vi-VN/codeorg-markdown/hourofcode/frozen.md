@@ -1,31 +1,31 @@
 ---
-title: Teacher Resources - Code with Anna and Elsa
+title: Tài liệu dành cho giáo viên – Lập trình với Anna và Elsa
 ---
 
-# Code with Anna and Elsa: An Hour of Code Tutorial
+# Lập trình với Anna và Elsa: Bài hướng dẫn Giờ lập trình
 
 {{ hoc_frozen_video }}
 
 [col-50]
 
-## Teacher Resources
+## Tài liệu dành cho giáo viên
 
-### Lesson Plans:
+### Giáo án:
 
-- [Code with Anna and Elsa]({{ hoc_frozen_cb_url }})
-- [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
-- OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
+- [Lập trình với Anna và Elsa]({{ hoc_frozen_cb_url }})
+- [Phiếu đáp án](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- TÙY CHỌN: [Máy vẽ](http://code.org/curriculum/misc/hocunplugged/Teacher)
 
-### Extension Activities:
+### Hoạt động mở rộng:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Mở rộng Giờ lập trình](http://code.org/learn/beyond)
+- [Các nguyên tắc cơ bản của khoa học máy tính: Khóc học 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Các tài liệu khác dành cho giáo viên:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Giờ lập trình: Hướng dẫn cho các giáo viên](https://hourofcode.com/how-to)
+- [Phương pháp hay nhất của các giáo viên thành công](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Sự kiện trực tiếp: [Hướng dẫn Giờ lập trình của một giáo viên](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -33,12 +33,12 @@ title: Teacher Resources - Code with Anna and Elsa
 
 ## Tổng quát
 
-Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+Hãy sử dụng mã lệnh để cùng Anna và Elsa khám phá sự kỳ diệu và vẻ đẹp của băng tuyết. Bạn sẽ tạo ra những bông tuyết và hoa văn khi trượt băng và tạo nên một thế giới thần tiên mùa đông để sau đó có thể chia sẻ với bạn bè của mình!
 
-**Recommended Age Range:** 8+
+**Độ tuổi đề xuất:** 8+
 
-**Technology Requirements:** Modern browsers + tablets
+**Yêu cầu công nghệ:** Trình duyệt hiện hành + máy tính bảng
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/frozen/reset"><button>Hãy thử bài hướng dẫn</button></a>
 
 [/col-50]

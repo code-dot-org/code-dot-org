@@ -25,7 +25,7 @@ title: Teacher Resources - Artist
 
 [col-50]
 
-## Resumen
+## Visión General
 
 Draw cool pictures and designs with the Artist!
 

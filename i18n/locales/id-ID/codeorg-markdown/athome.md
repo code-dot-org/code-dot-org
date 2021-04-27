@@ -15,31 +15,16 @@ title: Belajar ilmu komputer saat sekolah ditutup sebagai respons terhadap Covid
 <p>Kami juga mengumpulkan sejumlah <a href="#teacher-support">sumber daya untuk membantu para guru untuk terus mengajarkan ilmu komputer </a> saat siswa mereka berada di tempat yang jauh atau di ruang kelas dengan pembatasan sosial. </p>
 <p><a href="#apps">Tidak ada komputer di rumah? Lihat opsi ponsel cerdas</a></p>
 
-<br>
-
-<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
-
-<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
-<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
-</div>
-
-<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
-
-<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
-<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
-<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
-</div>
-
-<div class="clearboth"></div></div>
-
 ## Hour of Code: Cobalah tutorial pengantar yang menarik ini
-Cobalah tutorial bedurasi 1 jam yang dirancang untuk semua usia. Terdapat ratusan kegiatan dan tutorial dalam lebih dari 45 bahasa.
+Try a one-hour tutorial designed for all ages. There are hundreds of activities and tutorials in over 45 languages.
 * [Dance Party](https://code.org/dance)  - Buat coding pesta tari yang mengusung musik Katy Perry, Shawn Mendes, dan lainnya.
 * [Minecraft](https://code.org/api/hour/begin/mc) - Gunakan kreativitas dan keterampilan pemecahan masalah untuk menjelajahi dan mengeksplorasi dunia baru.
 * [AI for Oceans](https://code.org/oceans) - Pelajari bagaimana AI dan machine learning dapat digunakan untuk mengatasi masalah dunia.
 * [Flappy Code](http://studio.code.org/s/flappy/reset) - Tulislah kode permainan kepakan sayap milik Anda sendiri.
 * [Coding in Astronomy](https://quorumlanguage.com/hourofcode/astro1.html) - Pelajari tentang astronomi menggunakan Quorum, suatu bahasa pemrograman yang dapat diakses oleh pembelajar yang buta atau terganggu penglihatannya.
 * Dan banyak lagi  [tutorial lainnya](https://code.org/hourofcode/overview)!
+
+Akses internet terbatas atau tidak ada sama sekali? Try our <a href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">unplugged Hour of Code activities</a>!
 
 <p><a href="#top">[Kembali ke atas]</a></p>
 
@@ -58,18 +43,18 @@ Cobalah tutorial bedurasi 1 jam yang dirancang untuk semua usia. Terdapat ratusa
 
 ## Pelajari dasar-dasarnya melalui kursus mandiri kami
 ### **Kursus Express**
-Pilihan yang tepat bagi siswa yang baru memulai. Anda akan mempelajari dasar-dasar ilmu komputer dengan menarik & meletakkan blok. Buat gambar dan game Anda sendiri. <strong>Catatan: Kursus Express saat ini hanya tersedia dalam bahasa Inggris, Hindi, Italia dan Spanyol. Untuk bahasa lain, kami menyarankan <a href="https://studio.code.org/s/20-hour">Kursus Akselerasi</a> kami yang berdurasi 20 jam. Untuk melihat yang tersedia dalam bahasa Anda, kunjungi <a href="https://studio.code.org/courses">katalog kursus</a>.</strong> kami
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Kursus Express</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Kursus Express untuk anak yang belum/baru belajar membaca</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
 
 </div>
 <div style="clear: both"></div>
@@ -120,7 +105,7 @@ Pilihan yang tepat bagi siswa yang baru memulai. Anda akan mempelajari dasar-das
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Belajar coding melalui pelajaran yang menyenangkan dan singkat di ponsel yang akan mengajari Anda cara menulis JavaScript yang sebenarnya. Sebuah Kode dengan Program Google. <i>(‌untuk‌ sekolah menengah dan di atasnya)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -130,24 +115,38 @@ Pilihan yang tepat bagi siswa yang baru memulai. Anda akan mempelajari dasar-das
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 ## Akses internet terbatas atau tidak ada sama sekali? Lihatlah kegiatan tanpa komputer ini
+
+<div class="col-33">
+    <img src="/images/new-main.jpg" width="90%">
+</div>
+<div class="col-66" style="padding-left: 20px">
+<p>Looking for some great ways for your students to get “hands-on” with computer science? Check out our library of unplugged lessons you can do without a computer from our CS Fundamentals courses! <i>(for ages 4 and up)</i></p>
+<br>
+<a href="https://code.org/curriculum/unplugged" target="_blank"><button>View unplugged lessons</button></a>
+</div>
+<div style="clear: both; margin-bottom: 15px"></div>
+
+<br>
+
+Or view these unplugged options from other organizations:
 * [Hello Ruby](https://www.helloruby.com/play)  - Cara paling ajaib di dunia untuk belajar tentang komputer, teknologi dan pemrograman. Aktivitas dengan berbagai topik CS, seperti kemampuan menguraikan masalah, menemukan pola, berpikir secara algoritme, men-debug masalah dan bekerja sama. *(untuk usia 4-10)*
 * [CS Unplugged](https://csunplugged.org/en/) - Sebuah koleksi bahan ajar gratis yang mengajarkan Ilmu Komputer melalui permainan dan teka-teki menarik yang menggunakan kartu, string, krayon dan banyak aktivitas berlarian. *(untuk usia 5-14)*
 
 <p><a href="#top">[Kembali ke atas]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Code Break: Pelajari dari tim Code.org dan tamu istimewa!
+## Learn from the Code.org team and special guests!
 
 <div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Tamu istimewa akan bergabung dengan CEO Code.org Hadi Partovi dalam ruang kelas interaktif mingguan untuk belajar konsep ilmu komputer seperti algoritma, kecerdasan buatan dan enkripsi.</p>
-<p>Jika Anda belum melihat semua episode Code Break, Anda belum terlambat! Episode live tidak lagi disiarkan, namun Anda dapat melihat semua episode dan kegiatan mandiri <a href="https://code.org/break">di sini</a>.</p>
+<p>Special guests join Code.org CEO Hadi Partovi in a live, interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
+<p>If you haven’t checked out all the Code Break or CodeBytes episodes, it’s not too late! Live episodes are no longer airing, but you can view all the Code Break episodes and self-paced activities <a href="https://code.org/break" target="_blank">here</a>. CodeBytes episodes can be found <a href="https://code.org/codebytes" target="_blank">here</a>.</p>
 
 <div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
 <a id="teacher-support"></a>
 
 ## Dukungan untuk para guru dalam ruang kelas virtual atau dengan pembatasan sosial
-Kunjungi <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> untuk melihat sumber daya dan saran bagi para guru yang mengajar di ruang kelas virtual atau dengan pembatasan sosial. Sumber daya terkait kursus dapat diakses dengan mengklik tautan berikut.
+Please visit <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> to view resources and suggestions for teachers in virtual or socially-distanced classroom environments. Course-specific resources can be accessed by clicking the links below.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -174,3 +173,4 @@ Kunjungi <a href="https://code.org/alternative-classrooms">code.org/alternative-
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

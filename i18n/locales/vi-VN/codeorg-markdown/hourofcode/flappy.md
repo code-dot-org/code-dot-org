@@ -1,29 +1,29 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: Tài liệu dành cho giáo viên – Tạo game dạng Flappy Bird
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Tạo game dạng Flappy Bird: Bài hướng dẫn Giờ lập trình
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## Tài liệu dành cho giáo viên
 
-### Lesson Plans:
+### Giáo án:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Tạo game dạng Flappy Bird]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### Hoạt động mở rộng:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Mở rộng Giờ lập trình](http://code.org/learn/beyond)
+- [Các nguyên tắc cơ bản của khoa học máy tính: Khóc học 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Các tài liệu khác dành cho giáo viên:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Giờ lập trình: Hướng dẫn cho các giáo viên](https://hourofcode.com/how-to)
+- [Phương pháp hay nhất của các giáo viên thành công](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Sự kiện trực tiếp: [Hướng dẫn Giờ lập trình của một giáo viên](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -31,12 +31,12 @@ title: Teacher Resources - Make a Flappy Game
 
 ## Tổng quát
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Sử dụng lập trình kéo thả để làm game dạng Flappy Bird của riêng bạn và tùy chỉnh để có diện mạo khác biệt (Flappy Shark, Flappy Santa hay bất cứ gì). Thêm game vào điện thoại của bạn bằng một cú nhấp chuột.
 
-**Recommended Age Range:** 4-104
+**Độ tuổi đề xuất:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Yêu cầu công nghệ:** Trình duyệt hiện hành, điện thoại thông minh + máy tính bảng
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>Hãy thử bài hướng dẫn</button></a>
 
 [/col-50]

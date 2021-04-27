@@ -1,34 +1,34 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: Tài liệu dành cho Giáo viên – MINECRAFT
 ---
 
-# MINECRAFT Hour of Code
+# Giờ lập trình MINECRAFT
 
 {{ hoc_mc_video }}
 
 [col-50]
 
-## Teacher Resources
+## Tài liệu dành cho giáo viên
 
-### Lesson Plans:
+### Giáo án:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [Giáo án MINECRAFT](/files/minecraft-lp.pdf)
+- [Phiếu đáp án và lời khuyên cho giáo viên trong Giờ lập trình Minecraft Chuyến du hành dưới nước](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Phiếu đáp án và lời khuyên cho giáo viên trong Giờ lập trình Minecraft Nhà phiêu lưu](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Phiếu đáp án và lời khuyên cho giáo viên trong Giờ lập trình Minecraft Nhà thiết kế](/files/minecraft-designer-answer-sheet.pdf)
+- [Thử thách bổ sung](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### Hoạt động mở rộng:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Mở rộng Giờ lập trình](http://code.org/learn/beyond)
+- [Các nguyên tắc cơ bản của khoa học máy tính: Khóc học 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Các tài liệu khác dành cho giáo viên:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [Giờ lập trình: Hướng dẫn cho các giáo viên](https://hourofcode.com/how-to)
+- [Phương pháp hay nhất của các giáo viên thành công](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Sự kiện trực tiếp: [Hướng dẫn Giờ lập trình của một giáo viên](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Các tài liệu giúp bạn lập kế hoạch và dẫn dắt một sự kiện](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -36,12 +36,12 @@ title: Teacher Resources - MINECRAFT
 
 ## Tổng quát
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+Sử dụng các khối mã lệnh để dẫn Steve hoặc Alex trên cuộc phiêu lưu qua thế giới Minecraft này.
 
-**Recommended Age Range:** 6+
+**Độ tuổi đề xuất:** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**Yêu cầu công nghệ:** Trình duyệt hiện hành + máy tính bảng
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>Hãy thử bài hướng dẫn</button></a>
 
 [/col-50]

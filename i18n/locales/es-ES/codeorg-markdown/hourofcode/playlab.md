@@ -29,7 +29,7 @@ title: Teacher Resources - Play Lab
 
 [col-50]
 
-## Resumen
+## Visión General
 
 Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
 

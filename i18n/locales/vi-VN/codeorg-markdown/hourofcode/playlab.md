@@ -1,29 +1,29 @@
 ---
-title: Teacher Resources - Play Lab
+title: Tài liệu dành cho giáo viên – Play Lab
 ---
 
-# Play Lab: An Hour of Code Tutorial
+# Play Lab: Bài hướng dẫn Giờ lập trình
 
 {{ hoc_playlab_video }}
 
 [col-50]
 
-## Teacher Resources
+## Tài liệu dành cho giáo viên
 
-### Lesson Plans:
+### Giáo án:
 
 - [Play Lab]({{ hoc_playlab_cb_url }})
 
-### Extension Activities:
+### Hoạt động mở rộng:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Mở rộng Giờ lập trình](http://code.org/learn/beyond)
+- [Các nguyên tắc cơ bản của khoa học máy tính: Khóc học 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Các tài liệu khác dành cho giáo viên:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Giờ lập trình: Hướng dẫn cho các giáo viên](https://hourofcode.com/how-to)
+- [Phương pháp hay nhất của các giáo viên thành công](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Sự kiện trực tiếp: [Hướng dẫn Giờ lập trình của một giáo viên](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -31,12 +31,12 @@ title: Teacher Resources - Play Lab
 
 ## Tổng quát
 
-Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+Viết một câu chuyện hoặc làm game với Play Lab! Tạo chuyển động cho động vật, cướp biển, thây ma, ninja và nhiều nhân vật khác, tạo âm thanh, ghi điểm và thậm chí là ném quả cầu lửa!
 
-**Recommended Age Range:** 4-104
+**Độ tuổi đề xuất:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Yêu cầu công nghệ:** Trình duyệt hiện hành, điện thoại thông minh + máy tính bảng
 
-<a href="http://studio.code.org/s/playlab/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/playlab/reset"><button>Hãy thử bài hướng dẫn</button></a>
 
 [/col-50]
