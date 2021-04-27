@@ -318,7 +318,6 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
-    remove_from_deprecated_contact_rollups_by_user_id(user.id)
     set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -344,7 +343,6 @@ class DeleteAccountsHelper
     migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
     remove_poste_data(email)
-    remove_from_deprecated_contact_rollups_by_email(email)
     set_pardot_deletion_via_contact_rollups(email)
     clean_pegasus_forms_for_email(email)
   end
