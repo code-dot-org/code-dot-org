@@ -23,7 +23,7 @@ Look through the changes in each of the commits and verify that all changes are 
   [2019-10-04 02:39:00] Warning: Error processing localization file i18n/common/zh_tw.json: SyntaxError: Expected [0-9a-zA-Z$_] but "\u8A0A" found. Use --force to continue. 
   ```
 
-  This usually means that a translator has translated one of the [MessageFormat variables](https://messageformat.github.io/messageformat/page-guide#toc2__anchor). In this case, you should find and fix the offending translation in crowdin, and then manually update the associated strings in `i18n/locales` and `apps/i18n`.
+  This usually means that a translator has translated one of the [MessageFormat variables](https://messageformat.github.io/messageformat/guide/#variables). In this case, you should find and fix the offending translation in crowdin, and then manually update the associated strings in `i18n/locales` and `apps/i18n`.
 
   See https://github.com/code-dot-org/code-dot-org/pull/31098/commits/ab3e5d1d740869a880f2e9da5cf0a4348886915e and https://github.com/code-dot-org/code-dot-org/pull/31098/commits/0fca37658cacaaff55d9adfc9d04c40b37cc5e2d for an example.
 
