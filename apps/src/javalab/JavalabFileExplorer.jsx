@@ -54,12 +54,7 @@ const styles = {
  */
 class JavalabFileExplorerComponent extends Component {
   static propTypes = {
-    files: PropTypes.arrayOf(
-      PropTypes.shape({
-        filename: PropTypes.string.isRequired,
-        key: PropTypes.string.isRequired
-      })
-    ),
+    fileMetadata: PropTypes.object,
     onSelectFile: PropTypes.func.isRequired,
     isDarkMode: PropTypes.bool.isRequired
   };
@@ -95,9 +90,18 @@ class JavalabFileExplorerComponent extends Component {
     this.props.onSelectFile(key);
   };
 
+  transformFileMetadata() {
+    const files = [];
+    for (const fileKey in this.props.fileMetadata) {
+      files.push({key: fileKey, filename: this.props.fileMetadata[fileKey]});
+    }
+    return files;
+  }
+
   render() {
-    const {files, isDarkMode} = this.props;
+    const {isDarkMode} = this.props;
     const {dropdownOpen} = this.state;
+    const files = this.transformFileMetadata();
 
     return (
       <div style={styles.main}>
@@ -111,7 +115,7 @@ class JavalabFileExplorerComponent extends Component {
 
         {dropdownOpen && (
           <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
-            {[...files]
+            {files
               .sort((a, b) => (a.filename > b.filename ? 1 : -1))
               .map((file, index) => (
                 <button
