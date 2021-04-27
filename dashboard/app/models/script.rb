@@ -189,8 +189,9 @@ class Script < ApplicationRecord
   #   script is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
-    peer_reviews_to_complete
     professional_learning_course
+    only_instructor_review_required
+    peer_reviews_to_complete
     redirect_to
     student_detail_progress_view
     project_widget_visible
@@ -868,18 +869,29 @@ class Script < ApplicationRecord
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_stage, current_user)
+  def get_bonus_script_levels(current_lesson)
     unless @all_bonus_script_levels
-      @all_bonus_script_levels = lessons.map do |stage|
+      @all_bonus_script_levels = lessons.map do |lesson|
         {
-          stageNumber: stage.relative_position,
-          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user&.id)}
+          stageNumber: lesson.relative_position,
+          levels: lesson.script_levels.select(&:bonus)
         }
       end
-      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
+      @all_bonus_script_levels.select! {|lesson| lesson[:levels].any?}
     end
 
-    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+    lesson_levels = @all_bonus_script_levels.select do |lesson|
+      lesson[:stageNumber] <= current_lesson.absolute_position
+    end
+
+    # we don't cache the level summaries because they include localized text
+    summarized_lesson_levels = lesson_levels.map do |lesson|
+      {
+        stageNumber: lesson[:stageNumber],
+        levels: lesson[:levels].map(&:summarize_as_bonus)
+      }
+    end
+    summarized_lesson_levels
   end
 
   def pre_reader_tts_level?
@@ -1366,7 +1378,7 @@ class Script < ApplicationRecord
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
     # don't have a lesson group in the database right now)
-    if has_peer_reviews?
+    if has_peer_reviews? && !only_instructor_review_required?
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
@@ -1412,6 +1424,7 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
@@ -1645,6 +1658,7 @@ class Script < ApplicationRecord
     nonboolean_keys = [
       :hideable_lessons,
       :professional_learning_course,
+      :only_instructor_review_required,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
       :project_widget_visible,

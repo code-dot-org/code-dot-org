@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-22 03:59:08 UTC",
+    "serialized_at": "2021-04-24 15:48:56 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -1497,7 +1497,7 @@
       "position": 2,
       "properties": {
         "name": "Days 1 and 2",
-        "duration": 70
+        "duration": 150
       },
       "seeding_key": {
         "lesson_activity.key": "023a1a6b-0219-4fa2-bac4-3e8894455cc6",
@@ -1511,7 +1511,7 @@
       "position": 3,
       "properties": {
         "name": "Days 3 and 4",
-        "duration": 10
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "84d660d9-6dc5-40da-8955-1aacbbe9a7b9",
