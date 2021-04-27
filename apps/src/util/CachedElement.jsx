@@ -16,6 +16,7 @@ export default function CachedElement({elementType, cacheKey, createElement}) {
     htmlCache[cacheKey] = elementHtml;
     elementsHtmlCache[elementType] = htmlCache;
   }
+  // since we generated this html ourselves, we know it is safe
   // eslint-disable-next-line react/no-danger
   return <div dangerouslySetInnerHTML={{__html: elementHtml}} />;
 }
