@@ -1,5 +1,5 @@
-require_relative '../../../../shared/test/common_test_helper'
 require_relative '../../translation_status/translation_service'
+require_relative '../test_helper'
 
 class TranslationServiceTest < Minitest::Test
   # Use the same service for all the tests because initialization is very slow
