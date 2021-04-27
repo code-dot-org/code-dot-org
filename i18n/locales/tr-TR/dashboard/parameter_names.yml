@@ -1,6 +1,7 @@
 tr:
   data:
     parameter_names:
+      "???": "???"
       actor: aktör
       color: renk
       counter: sayaç
