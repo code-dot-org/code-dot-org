@@ -26,6 +26,7 @@ en:
       buttonMargin: buttonMargin
       buttonWidth: buttonWidth
       cat_score: cat_score
+      cat_speed: cat_speed
       cats: cats
       centerToPadLeft: centerToPadLeft
       choice: choice
