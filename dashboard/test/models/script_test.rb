@@ -854,6 +854,25 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  test 'does not include peer reviews in script that only requires instructor review' do
+    # Our script editing UI prevents creating a script with a number of peer reviews
+    # to complete that is not 0 when only instructor review is required.
+    # That said, this test confirms that we would not display a peer review lesson even if this
+    # did occur.
+    script = create(:script,
+      name: 'script-with-peer-review',
+      peer_reviews_to_complete: 1,
+      only_instructor_review_required: true
+    )
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson)
+
+    summary = script.summarize
+
+    assert_nil summary[:peerReviewLessonInfo]
+  end
+
   test 'can summarize script for lesson plan' do
     script = create :script, name: 'my-script'
     lesson_group = create :lesson_group, key: 'lg-1', script: script
