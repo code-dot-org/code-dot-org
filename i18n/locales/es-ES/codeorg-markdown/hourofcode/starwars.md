@@ -30,7 +30,7 @@ title: Teacher Resources - Star Wars
 
 [col-50]
 
-## Visión General
+## Resumen
 
 Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
 

@@ -29,7 +29,7 @@ title: Teacher Resources - Infinity Play Lab
 
 [col-50]
 
-## Visión General
+## Resumen
 
 Use Play Lab to create a story or game starring Disney Infinity characters.
 

@@ -1,30 +1,30 @@
 ---
-title: Tài liệu dành cho giáo viên – Lệnh điều kiện với Thẻ
+title: Teacher Resources - Conditionals with Cards
 ---
 
-# Lệnh điều kiện với thẻ: Hướng dẫn Giờ lập trình
+# Conditionals With Cards: An Hour of Code Tutorial
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Tài liệu dành cho giáo viên
+## Teacher Resources
 
-### Giáo án:
+### Lesson Plans:
 
-- [Lệnh điều kiện với thẻ](/files/ConditionalsHoC.pdf)
-- Video:[ Cách tạo lệnh điều kiện với thẻ trong lớp học của bạn](https://youtu.be/IcEL5ibSvTs)
+- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
+- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
 
-### Hoạt động mở rộng:
+### Extension Activities:
 
-- [Mở rộng Giờ lập trình](http://code.org/learn/beyond)
-- [Các nguyên tắc cơ bản của khoa học máy tính: Khóc học 2](https://studio.code.org/s/course2)
+- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
 
-### Các tài liệu khác dành cho giáo viên:
+### Other Teacher Resources:
 
-- [Giờ lập trình: Hướng dẫn cho các giáo viên](https://hourofcode.com/how-to)
-- [Phương pháp hay nhất của các giáo viên thành công](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Sự kiện trực tiếp: [Hướng dẫn Giờ lập trình của một giáo viên](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
+- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -32,12 +32,12 @@ title: Tài liệu dành cho giáo viên – Lệnh điều kiện với Thẻ
 
 ## Tổng quát
 
-Tìm hiểu về các thuật toán và câu lệnh điều kiện trong hoạt động “không dùng thiết bị điện tử” này bằng cách sử dụng một bộ bài. Học sinh thực hiện hoạt động này theo nhóm và mỗi đội cần một bộ bài.
+Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
 
-**Độ tuổi đề xuất:** 8-12
+**Recommended Age Range:** 8-12
 
-**Yêu cầu công nghệ:** Không! Đây là một hoạt động “không dùng thiết bị điện tử”, chỉ cần một bộ bài để dạy.
+**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Tải xuống hoạt động</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
 
 [/col-50]

@@ -1,29 +1,29 @@
 ---
-title: Tài liệu dành cho Giáo viên – Viết chương trình máy tính đầu tiên
+title: Teacher Resources - Write your first computer program
 ---
 
-# Viết chương trình máy tính đầu tiên: Hướng dẫn Giờ lập trình
+# Write your first computer program: An Hour of Code Tutorial
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Tài liệu dành cho giáo viên
+## Teacher Resources
 
-### Giáo án:
+### Lesson Plans:
 
-- [Viết chương trình máy tính đầu tiên]({{ hoc_hourofcode_cb_url }})
+- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
 
-### Hoạt động mở rộng:
+### Extension Activities:
 
-- [Mở rộng Giờ lập trình](http://code.org/learn/beyond)
-- [Các nguyên tắc cơ bản của khoa học máy tính: Khóc học 2](https://studio.code.org/s/course2)
+- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
 
-### Các tài liệu khác dành cho giáo viên:
+### Other Teacher Resources:
 
-- [Giờ lập trình: Hướng dẫn cho các giáo viên](https://hourofcode.com/how-to)
-- [Phương pháp hay nhất của các giáo viên thành công](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Sự kiện trực tiếp: [Hướng dẫn Giờ lập trình của một giáo viên](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
+- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -31,12 +31,12 @@ title: Tài liệu dành cho Giáo viên – Viết chương trình máy tính �
 
 ## Tổng quát
 
-Tìm hiểu các khái niệm cơ bản của Khoa học Máy tính với lập trình kéo thả. Đây là bài hướng dẫn dạng game, tự định hướng, với sự đóng góp từ các bài giảng video của Bill Gates, Mark Zuckerberg, Angry Birds và Plants vs. Zombies. Tìm hiểu vòng lặp, lệnh điều kiện và thuật toán cơ bản. Có sẵn bằng 37 ngôn ngữ.
+Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
 
-**Độ tuổi đề xuất:** 4-104
+**Recommended Age Range:** 4-104
 
-**Yêu cầu công nghệ:** Trình duyệt hiện hành, điện thoại thông minh + máy tính bảng
+**Technology Requirements:** Modern browsers, smartphones + tablets
 
-<a href="http://studio.code.org/hoc/reset"><button>Hãy thử bài hướng dẫn</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
 
 [/col-50]

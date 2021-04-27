@@ -31,7 +31,7 @@ title: Teacher Resources - Code with Anna and Elsa
 
 [col-50]
 
-## Visión General
+## Resumen
 
 Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
 

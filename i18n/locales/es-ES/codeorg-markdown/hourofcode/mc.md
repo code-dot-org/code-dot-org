@@ -34,7 +34,7 @@ title: Teacher Resources - MINECRAFT
 
 [col-50]
 
-## Visión General
+## Resumen
 
 Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
 

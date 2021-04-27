@@ -30,7 +30,7 @@ title: Teacher Resources - Conditionals with Cards
 
 [col-50]
 
-## Visión General
+## Resumen
 
 Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
 

@@ -29,7 +29,7 @@ title: Teacher Resources - Make a Flappy Game
 
 [col-50]
 
-## Visión General
+## Resumen
 
 Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
 

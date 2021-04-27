@@ -15,6 +15,23 @@ title: Imparare l'informatica quando le scuole sono chiuse in risposta al Covid1
 <p>Abbiamo raccolto delle <a href="#teacher-support">risorse per aiutare gli insegnanti a continuare a insegnare informatica </a> quando gli studenti seguono a distanza. </p>
 <p><a href="#apps">Non hai un computer a casa? Vedi le opzioni dello smartphone</a></p>
 
+<br>
+
+<div class="breakoutquote" style="padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5, #ffffff)">
+
+<div class="col-40" style="margin-top: 18px; margin-bottom: 18px;">
+<a href="https://code.org/codebytes"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 95%; padding-left:25px; margin: auto"></a>
+</div>
+
+<div class="col-60" style="padding:0 20px 0 10px;margin-top: 18px; margin-bottom: 18px;">
+
+<p style="border: 0; color: #4d575f">Join us December 7-11 for our CodeBytes live mini-lessons!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!</p>
+<p style="font-size: 14px; border: 0; color: #4d575f">Learn more at <a href="https://code.org/codebytes" style="color:#7665a0">code.org/codebytes</a></p>
+</div>
+
+<div class="clearboth"></div></div>
+
 ## L'ora del codice: prova questi interessanti tutorial introduttivi
 Prova un tutorial di un'ora progettato per tutte le età. Ci sono centinaia di attività e tutorial in oltre 45 lingue.
 * [Dance Party](https://code.org/dance)  - Programma una festa da ballo con la musica di Katy Perry, Shawn Mendes e altro.
@@ -23,8 +40,6 @@ Prova un tutorial di un'ora progettato per tutte le età. Ci sono centinaia di a
 * [ Codice Flappy ](http://studio.code.org/s/flappy/reset) - Scrivi il tuo codice di gioco flappy.
 * [Programmazione per l'astronomia](https://quorumlanguage.com/hourofcode/astro1.html) - Scopri l'astronomia usando Quorum, un linguaggio di programmazione accessibile a studenti non vedenti o ipovedenti.
 * E molti [altri tutorial](https://code.org/hourofcode/overview)!
-
-Accesso a Internet limitato o assente? Try our <a href="https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf" target="_blank">unplugged Hour of Code activities</a>!
 
 <p><a href="#top">[Back to top]</a></p>
 
@@ -43,18 +58,18 @@ Accesso a Internet limitato o assente? Try our <a href="https://code.org/files/H
 
 ## Impara i fondamenti con i nostri corsi a ritmo personalizzato
 ### **Corsi rapidi**
-A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. <strong>Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses">course catalog</a>.</strong>
+Un'ottima opzione per gli studenti che iniziano da soli. Imparerai i principi base dell'informatica con i blocchi trascina & rilascia. Crea i tuoi disegni e giochi. <strong>Nota: I corsi rapidi, al momento, sono disponibili solo in inglese, hindi, italiano e spagnolo. Per altre lingue, consigliamo il nostro<a href="https://studio.code.org/s/20-hour">Corso accelerato</a> di 20 ore. Per vedere cosa è disponibile nella tua lingua, visita il nostro <a href="https://studio.code.org/courses">catalogo dei corsi</a>.</strong>
 
 <div style="clear: both; margin-bottom: 30px"></div>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
+<a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Corso rapido</a>
 
 </div>
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Express Course for pre-readers</a>
+<a href="https://studio.code.org/s/pre-express-2019"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%"></a><br><a href="https://studio.code.org/s/pre-express-2019">Corso rapido prescolare</a>
 
 </div>
 <div style="clear: both"></div>
@@ -105,7 +120,7 @@ A great option for students getting started on their own. You'll learn the funda
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Learn coding with fun, quick lessons on your phone that teach you to write real JavaScript. A Code with Google Program. <i>(for middle school and up)</i>
+<a href="https://grasshopper.app/"><img src="/images/athome/grasshopper.png" style="width: 100%"></a><br><a href="https://grasshopper.app/"><h3 style="color:#7665a0"><strong>Cavalletta</strong></h3></a>Impara i codici della programmazione con divertenti e veloci lezioni sul tuo telefono che ti insegnano a scrivere veri JavaScript. Un codice con il programma Google. <i> (per le scuole medie e superiori) </i>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -115,38 +130,24 @@ A great option for students getting started on their own. You'll learn the funda
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
 ## Accesso a Internet limitato o assente? Dai un'occhiata a queste attività tradizionali
-
-<div class="col-33">
-    <img src="/images/new-main.jpg" width="90%">
-</div>
-<div class="col-66" style="padding-left: 20px">
-<p>Looking for some great ways for your students to get “hands-on” with computer science? Check out our library of unplugged lessons you can do without a computer from our CS Fundamentals courses! <i>(for ages 4 and up)</i></p>
-<br>
-<a href="https://code.org/curriculum/unplugged" target="_blank"><button>View unplugged lessons</button></a>
-</div>
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<br>
-
-Or view these unplugged options from other organizations:
 * [Ciao Ruby](https://www.helloruby.com/play)  - Il modo più stravagante del mondo per conoscere computer, tecnologia e programmazione. Attività su una vasta gamma di argomenti d'informatica, come la capacità di scomporre un problema, individuare schemi, pensare in modo algoritmico, eseguire il debug dei problemi e lavorare insieme. *(dai 4 ai 10 anni)*
 * [Informatica offline](https://csunplugged.org/en/) - Una raccolta di materiale didattico gratuito che insegna Informatica attraverso giochi e puzzle avvincenti che utilizzano carte, spaghi, pastelli e tanto divertimento. *(dai 5 ai 14 anni)*
 
 <p><a href="#top">[Back to top]</a></p>
 <div style="clear: both; padding-top: 40px; border-bottom:1px solid #00adbc"></div>
 
-## Learn from the Code.org team and special guests!
+## Code Break: impara dal team di Code.org e dagli ospiti speciali!
 
 <div style="max-width:490px; position:relative; float:left; padding-right:20px;">{{ codebreak_promoreel }}</div>
-<p>Special guests join Code.org CEO Hadi Partovi in a live, interactive classroom to learn computer science concepts like algorithms, artificial intelligence, and encryption.</p>
-<p>If you haven’t checked out all the Code Break or CodeBytes episodes, it’s not too late! Live episodes are no longer airing, but you can view all the Code Break episodes and self-paced activities <a href="https://code.org/break" target="_blank">here</a>. CodeBytes episodes can be found <a href="https://code.org/codebytes" target="_blank">here</a>.</p>
+<p>Gli ospiti speciali si uniscono all'Amministratore di Code.org Hadi Partovi in un'aula interattiva settimanale per apprendere concetti di informatica come algoritmi, intelligenza artificiale e crittografia.</p>
+<p>Se non hai ancora visto tutti gli episodi di Code Break, sei ancora a tempo! Gli episodi dal vivo non vengono più trasmessi, ma <a href="https://code.org/break">qui</a> puoi visualizzare tutti gli episodi e le attività personalizzate.</p>
 
 <div style="clear:both; padding-top: 30px; border-bottom:1px solid #00adbc"></div>
 
 <a id="teacher-support"></a>
 
 ## Supporto per insegnanti in classi virtuali o con distanziamento sociale
-Please visit <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> to view resources and suggestions for teachers in virtual or socially-distanced classroom environments. Course-specific resources can be accessed by clicking the links below.
+Visita <a href="https://code.org/alternative-classrooms">code.org/alternative-classrooms</a> per visualizzare risorse e suggerimenti per gli insegnanti in ambienti di classe virtuali o con distanziamento sociale. È possibile accedere alle risorse specifiche del corso facendo clic sui seguenti collegamenti.
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
@@ -160,7 +161,7 @@ Please visit <a href="https://code.org/alternative-classrooms">code.org/alternat
 
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
-<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p>Computer Science Fundamentals</p></a></div>
+<div class="solid-block-header" style="background-color:#ffa400; margin-top:10px"><a href="/athome/csf" style="color:#ffffff; text-decoration: none"><p> Fondamenti di Informatica </p></a></div>
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
@@ -173,4 +174,3 @@ Please visit <a href="https://code.org/alternative-classrooms">code.org/alternat
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
-
