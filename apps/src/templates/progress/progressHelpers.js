@@ -25,11 +25,6 @@ export function lessonIsVisible(lesson, state, viewAs) {
     throw new Error('missing param viewAs in lessonIsVisible');
   }
 
-  // Don't show stage if not authorized to see lockable
-  if (lesson.lockable && !state.stageLock.lockableAuthorized) {
-    return false;
-  }
-
   const hiddenStageState = state.hiddenStage;
   const sectionId = state.teacherSections.selectedSectionId;
 
@@ -42,7 +37,34 @@ export function lessonIsVisible(lesson, state, viewAs) {
 }
 
 /**
- * Check to see if a stage/lesson is locked for all stages in the current section
+ * Treat the lesson as locked if either
+ * (a) it is locked for this user (in the case of a student)
+ * (b) non-verified teacher
+ * (c) signed out user
+ * @param {number} lesson - the lesson we're querying
+ * @param {object} state - State of our entire redux store
+ * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
+ *   for students or teachers
+ * @returns {boolean} True if the provided lesson is visible
+ */
+export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
+  if (!lesson.lockable) {
+    return false;
+  }
+
+  if (!state.currentUser.userId) {
+    // Signed out user
+    return true;
+  } else if (viewAs === ViewType.Teacher) {
+    return !state.stageLock.lockableAuthorized;
+  } else if (viewAs === ViewType.Student) {
+    return stageLocked(levels);
+  }
+  return true;
+}
+
+/**
+ * Check to see if a lesson is locked for all students in the current section
  * or not. If called as a student, this should always return false since they
  * don't have a selected section.
  * @param {number} lessonId - Id representing the stage/lesson we're curious about

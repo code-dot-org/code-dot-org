@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-16 21:09:48 UTC",
+    "serialized_at": "2021-04-22 16:27:34 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -82,15 +82,6 @@
         "purpose": "The physical activity in this lesson helps provide a memorable experience and personal anchor for the rest of the unit - we can refer to the networks created in this activity to help motivate concepts in later lessons. In the final challenge for this lesson, it is important to let students wrestle with how to best balance the 3 network guidelines and refine their reasoning & explanation for decisions they made when creating their network. This is important in setting up later lessons in this unit - in this lesson, the guidelines are based on the physical impacts of creating a network but towards the end of the unit students will examine the societal and economical impacts for creating computer networks and will again think critically about how to balance several factors from a societal and economic lens.",
         "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \r\n* Decide how you would like students to physically form their networks - standing, in seats, etc.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1Fx8it6pc-B3Ppvs5lsX1Wa_Xu28fHEwvYHWgP2zYqqw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -110,17 +101,8 @@
         "overview": "Students complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
         "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible.",
         "purpose": "Now that students have explored what it takes to link devices on a network, they are ready to learn how devices communicate with each other. Prior to this lesson, the Internet Simulator was set up only for point-to-point communication. This new version is setup to “broadcast” every message to every person in the same simulator room. This closely mimics a real life problem that computer scientists had to solve:  With all the bits passing through many computers on a network, how would a computer know if it was the intended recipient?  Which computer should get a reply?  Internet Protocol (IP) solves a portion of this problem by assigning a unique IP address to each device and standardizing how sender and recipient are identified.",
-        "preparation": "\r\n* Preview the Internet Simulator (Broadcast version)\r\n* Preview the Wrap Up slides in [r csp-unit-2-the-internet]\r\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1ixl3b5ktdM7BKb7dPiZgBNxpPyLSZHOKGLGA6yc1j6k/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp-unit-2-the-internet/csp/2021]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) ",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
@@ -139,17 +121,8 @@
         "overview": "Students spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
         "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network.",
         "purpose": "After yesterday’s lesson that motivated the need for some kind of addressing system, today’s lesson has students use IP Addresses to send messages to specific people. Today’s focus is on how routers help manage the paths that different messages take. The router logs are an important tool for students to discover the extra work that routers are doing to send messages - they can see that messages are passed between routers and that messages take different paths along the way, all from analyzing the data in the router logs. Importantly, students should make a connection between these observations about multiple pathways and the concept of **fault-tolerance** - because there are multiple pathways, the internet can continue to function even when there may be an issue that the routers need to address.",
-        "preparation": "\r\n* Read through [r teacher-guide-router] in order to:\r\n\t* Test the Internet Simulator to understand how the tool works\r\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\r\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1h7Vk01m0LJdFeC5eiOo_E3Y9GsaQFW_UQEM2UX3tOMw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "preparation": "* Read through [r teacher-guide-router/csp/2021] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
@@ -168,7 +141,7 @@
         "overview": "Students learn that large messages sent over the Internet are actually divided into individual packets and explore the challenges this creates. First students explore a version of the Internet Simulator that breaks messages into packets to get a sense for how it works. Students then use an activity guide that walks them through the challenges that dropped or out-of-order packets create. They then design their own protocol that addresses these challenges. At the end of the lesson students watch a video and learn and the User Datagram Protocol (UDP) and The Transmission Control Protocol (TCP), two different protocols for sending messages broken into packets.",
         "student_overview": "Learn how information travelling over the Internet is divided into many packets that travel separately through the network as well as the protocols that allow this process to work even when some packets are lost or delayed.",
         "purpose": "Information on the Internet is not sent all at once, but is instead broken into smaller chunks of data called packets. Each packet is sent through the Internet individually and may actually take different paths or arrive at different times than others. Once they arrive the receiver will use the packets to recreate the original file.\n\nTwo protocols used to send data as packets are UDP and TCP. The User Datagram Protocol (UDP) simply sends all the packets. If some arrive out of order or are entirely missing there's no system to fix the errors. The Transmission Control Protocol (TCP) numbers packets before sending them so that the receiver can correctly reorder the packets and request missing packets be resent. \n\nOnly one of these two protocols will be used, depending on the situation. TCP takes longer than UDP because of the error-checking done to guarantee every packet was received. TCP is used to send information like emails, images, websites, and more where saving fractions of a second is less important than accuracy. In instances like live-streaming television or online gaming where speed is most important, UDP will be used since it is faster and there's less benefit to correcting errors.\n\nThis lesson gives students a hands-on experience with the ideas behind both protocols and helps them understand the implications of splitting large files into packets when sending them online.\n\nNote: UDP is not covered in the video at the end of the lesson.\n",
-        "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\r\n* Preview [r the-internet-packets-routing-and-reliability-1].\t\r\n* The previous lesson's [r teacher-guide-router] contains helpful tips on setting up routers and managing student conversations.",
+        "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\r\n* Preview [r the-internet-packets-routing-and-reliability-1/csp/2021].\t\r\n* The previous lesson's [r teacher-guide-router/csp/2021] contains helpful tips on setting up routers and managing student conversations.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -197,7 +170,7 @@
         "overview": "Students conclude their study of the layers of the Internet by learning about two top-level protocols, HTTP and DNS. The lesson begins with a review of the layers students have already learned, namely the physical Internet, IP, and TCP / UDP. The lesson then dives into the core of the unit which is \"What happens when I type an address into my browser?\" Students will complete two brief activities, one unplugged, and one plugged, that explore how the DNS works. Students then watch videos explaining how both DNS and HTTP work, taking notes in a provided activity guide. The lesson concludes with a review of how the different layers of the Internet work.\r\n",
         "student_overview": "Learn how websites are shared on the Internet and then examine whether everyone actually has equal access to information on the World Wide Web.",
         "purpose": "This lesson is designed to wrap up the series on how the Internet works and highlight the main design philosophies of openness, reliability, and scalability.  However, actions taken by governments and organizations challenge some of these design philosophies and may hinder the ability of the World Wide Web to be truly worldwide.  Students will begin thinking about some of the dilemmas caused by these conflicts, which they will explore further after this lesson.",
-        "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\r\n* Preview [r the-internet-ip-addresses-and-dns-video].  Specifically the portion starting after 4:09 on DNS. \r\n* Preview [r the-internet-http-and-html-1]",
+        "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\r\n* Preview [r the-internet-ip-addresses-and-dns-video/csp/2021].  Specifically the portion starting after 4:09 on DNS. \r\n* Preview [r the-internet-http-and-html-1/csp/2021]",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -402,18 +375,6 @@
       }
     },
     {
-      "key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "41ae02dc-a7b3-493e-9849-7beafe95f679",
-        "lesson.key": "Building a Network",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
       "key": "ca609800-322b-4779-b39c-778d2eab2d23",
       "position": 1,
       "properties": {
@@ -456,18 +417,6 @@
       }
     },
     {
-      "key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546",
-        "lesson.key": "The Need for Addressing",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
       "key": "33d0b05f-97ee-44c4-9818-6c1aa8c6b170",
       "position": 1,
       "properties": {
@@ -504,18 +453,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e",
-        "lesson.key": "Routers and Redundancy",
-        "lesson_group.key": "csp_unit2_2020",
-        "script.name": "csp2-2021"
-      }
-    },
-    {
-      "key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5",
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021"
@@ -1138,22 +1075,12 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Describe two different paths that a message could take from Person A to Person D:\n\n\n\n\n\n\n![](https://images.code.org/a15d79d6c9cdb1a0f295a0b6e180f955-network.png)",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "4652a86f-e996-47c5-a03e-86572416869d",
         "lesson_activity.key": "58160049-4918-4cfe-8540-3af390c31af7"
-      }
-    },
-    {
-      "key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5",
-        "lesson_activity.key": "41ae02dc-a7b3-493e-9849-7beafe95f679"
       }
     },
     {
@@ -1201,7 +1128,8 @@
             "markdown": "**Running Each Week:** This lesson has students completing the same activity three times. Each time students need to create a schedule for the week that allows them to see every other member of their group on one of the days. Each time this activity should take roughly 3 - 5 minutes.\r\n\r\n**Running It Unplugged First:** This first unplugged run of the activity gives students a feel for how it runs. This will make sure that any confusion when they get to the Internet Simulator is caused by the lack of identifying information in the simulator and not simply misunderstanding what to do.\r\n\r\n"
           }
         ],
-        "name": "Scheduling Unplugged - Week 1 - 10 mins\r"
+        "name": "Scheduling Unplugged - Week 1",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "c08c56dc-9362-4006-a5ec-15f80b5c24a2",
@@ -1212,7 +1140,7 @@
       "key": "b4c7eb08-dab2-4bfa-b7e4-6db17bb304f3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** [r u2l02-the-need-for-addressing] "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** \n[r u2l02-the-need-for-addressing/csp/2021]"
       },
       "seeding_key": {
         "activity_section.key": "b4c7eb08-dab2-4bfa-b7e4-6db17bb304f3",
@@ -1254,7 +1182,8 @@
             "markdown": "**Same Groups:** Students should be in the same set of groups they were in for the Unplugged Activity. When they get to the Simulator click “Add Room” button to make as many rooms as necessary for your class.\r\n\r\n**Week 4:** A fourth week is included on the activity guide in case your classroom wants to run the activitiy another time at some point in the lesson. If not feel free to ignore it.\r\n"
           }
         ],
-        "name": "Scheduling on the Internet Simulator - Week 2 - 10 mins\r"
+        "name": "Scheduling on the Internet Simulator - Week 2",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "5c1af235-3aab-4855-b834-aa165932ee41",
@@ -1277,7 +1206,8 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Agree with your group on the set of rules you'd like to try this time around for how to communicate. Then complete Week 3 like the previous two weeks. No talking!\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Based on your experience, take 5 minutes to write down in the rules section the collective rules you and your team would advise using going forward.",
-        "name": "Formalizing Rules - Week 3 - 10 mins\r"
+        "name": "Formalizing Rules - Week 3",
+        "duration": "10"
       },
       "seeding_key": {
         "activity_section.key": "488175c9-abab-4e15-9695-8974ac681079",
@@ -1311,7 +1241,7 @@
       "key": "88d04e61-58ab-4032-b9fc-eb983afc249d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  [r the-internet-ip-addresses-and-dns-1].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  [r the-internet-ip-addresses-and-dns-1/csp/2021].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS."
       },
       "seeding_key": {
         "activity_section.key": "88d04e61-58ab-4032-b9fc-eb983afc249d",
@@ -1368,33 +1298,12 @@
       "position": 7,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Pick the two statements that are true about the Internet Protocol (IP):\r\n\r\n**Question:** Describe how the Internet Protocol (IP) allows devices to easily connect and communicate on the Internet.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3",
         "lesson_activity.key": "bfac3a43-daf8-46b4-9038-189732aee8c6"
-      }
-    },
-    {
-      "key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
-      "position": 1,
-      "properties": {
-        "progression_name": "Internet Simulator: Broadcast Mode"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e1eea6b-ec9d-4068-8a40-5893c7d5635a",
-        "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546"
-      }
-    },
-    {
-      "key": "10315151-abd2-4010-9cea-178f33d51c4f",
-      "position": 2,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f",
-        "lesson_activity.key": "20b20dda-09c1-450d-a1b6-62dfacb49546"
       }
     },
     {
@@ -1415,7 +1324,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Before starting this lesson, it is helpful to test the widget that students will be using and to have some additional routers setup ahead of time. These steps are in a separate document - [r teacher-guide-router]\r\n\r\n\r\n"
+            "markdown": "Before starting this lesson, it is helpful to test the widget that students will be using and to have some additional routers setup ahead of time. These steps are in a separate document: [r teacher-guide-router/csp/2021]\n\n\n"
           }
         ]
       },
@@ -1611,33 +1520,12 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Pick Two: If the post office delivered mail exactly like the routers deliver messages on the Internet, which of the following statements would be true?\r\n\r\n**Question:** What are the benefits of building redundancy into a network? What are the potential issues with building redundancy?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b",
         "lesson_activity.key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e"
-      }
-    },
-    {
-      "key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
-      "position": 1,
-      "properties": {
-        "progression_name": "Internet Simulator: Routers"
-      },
-      "seeding_key": {
-        "activity_section.key": "e10bda55-fb32-4e14-82d7-0a3a70e27ea1",
-        "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5"
-      }
-    },
-    {
-      "key": "438af42b-36dc-49dd-8421-569a4b4ad488",
-      "position": 2,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488",
-        "lesson_activity.key": "f8039b62-ce75-4aa8-887e-6097a524c4a5"
       }
     },
     {
@@ -1708,7 +1596,7 @@
       "key": "71be40d8-3125-4c8a-8102-e65ad79ee322",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  [r u2l04-packets]\t\n\n**Why Packets:** Read the paragraph explaining why messages are divided into packets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Protocol 1 - Just Send All the Packets:** Guide students through creating a single multi-packet message to send to their partner. They should aim for roughly 5 - 10 packets to increase the likelihood of some packets dropping or arriving out of order.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Read the Traffic:** Instruct students to read the router logs so they can watch their messages travel through the network. They should then answer the two questions provided. Students may need help narrowing down the logs to just their traffic. If they find their packets are taking the same route or none or dropping then make sure they're connected to different routers. They may also just get lucky and need to send a second message.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Briefly discuss responses to the [r u2l04-packets]. Have a few different groups share out. See if you can find the examples students share in the router logs and display them at the front of the class. Focus on the following points:*\n\n* Packets can take different paths from one another, just like messages\n* Packets can be dropped, just like messages in the previous lesson\n* As a result, messages may arrive out of order or incomplete\n* While a human might be able to understand the original message based on context, a computer would not, the message would simply be lost",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  [r u2l04-packets/csp/2021]\t\n\n**Why Packets:** Read the paragraph explaining why messages are divided into packets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Protocol 1 - Just Send All the Packets:** Guide students through creating a single multi-packet message to send to their partner. They should aim for roughly 5 - 10 packets to increase the likelihood of some packets dropping or arriving out of order.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Read the Traffic:** Instruct students to read the router logs so they can watch their messages travel through the network. They should then answer the two questions provided. Students may need help narrowing down the logs to just their traffic. If they find their packets are taking the same route or none or dropping then make sure they're connected to different routers. They may also just get lucky and need to send a second message.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Briefly discuss responses to the [r u2l04-packets/csp/2021]. Have a few different groups share out. See if you can find the examples students share in the router logs and display them at the front of the class. Focus on the following points:*\n\n* Packets can take different paths from one another, just like messages\n* Packets can be dropped, just like messages in the previous lesson\n* As a result, messages may arrive out of order or incomplete\n* While a human might be able to understand the original message based on context, a computer would not, the message would simply be lost",
         "name": "Activity Guide - Packets - (25 mins)\r"
       },
       "seeding_key": {
@@ -1818,7 +1706,7 @@
       "key": "c300671e-81e0-4923-b3ba-3b2707db0838",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  Watch [r the-internet-packets-routing-and-reliability-1]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  Watch [r the-internet-packets-routing-and-reliability-1/csp/2021]",
         "tips": [
           {
             "type": "teachingTip",
@@ -1880,7 +1768,7 @@
       "key": "9788ec6c-7468-4e17-8c12-40f96c175649",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** As students enter class hand each of them a single IP address (precut by teacher from [r ip-address-labels])",
+        "description": "**Distribute:** As students enter class hand each of them a single IP address (precut by teacher from [r ip-address-labels/csp/2021])",
         "tips": [
           {
             "type": "teachingTip",
@@ -1955,7 +1843,7 @@
       "key": "83465a75-6362-4cd1-93a4-153870f5ee23",
       "position": 1,
       "properties": {
-        "description": "<span style=\"background-color: #FFFF00\"><i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *As we watch the following video take notes on:*</span>\n\n* *How does the DNS solve the problem of translating domain names like example.com into IP addresses?*\n* *How does the DNS help the Internet scale?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the-internet-ip-addresses-and-dns-video] on DNS, which explains how it works.  Video will automatically start playing at the introduction of DNS.",
+        "description": "<span style=\"background-color: #FFFF00\"><i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *As we watch the following video take notes on:*</span>\n\n* *How does the DNS solve the problem of translating domain names like example.com into IP addresses?*\n* *How does the DNS help the Internet scale?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the-internet-ip-addresses-and-dns-video/csp/2021] on DNS, which explains how it works.  Video will automatically start playing at the introduction of DNS.",
         "name": "DNS - Video - 8 mins\r"
       },
       "seeding_key": {
@@ -2078,7 +1966,7 @@
       "key": "403095cd-3360-4bcf-bf54-d52d48303b3e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\n\n\n\n**Distribute:** Give students a copy of the [r layers-of-the-internet-activity-guide]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\n\n\n\n**Distribute:** Give students a copy of the [r layers-of-the-internet-activity-guide/csp/2021]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?*"
       },
       "seeding_key": {
         "activity_section.key": "403095cd-3360-4bcf-bf54-d52d48303b3e",
@@ -2210,7 +2098,7 @@
       "key": "2dbe66fd-18ca-4701-a091-c793747db0a0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Distribute:** Give students copies of [r internet-dilemmas-2021]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Distribute:** Give students copies of [r internet-dilemmas-2021/csp/2021]",
         "tips": [
           {
             "type": "teachingTip",
@@ -2285,7 +2173,7 @@
       "key": "4141c41c-74b4-40d8-a3a0-40f92f15a0a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This (30 mins):** Students complete each section of the Internet Dilemma Policy One Pager found in [r internet-dilemmas-2021].",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This (30 mins):** Students complete each section of the Internet Dilemma Policy One Pager found in [r internet-dilemmas-2021/csp/2021].",
         "tips": [
           {
             "type": "teachingTip",
@@ -2467,7 +2355,7 @@
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5"
+        "activity_section.key": "4652a86f-e996-47c5-a03e-86572416869d"
       },
       "level_keys": [
         "U2L1 CFU paths_2021"
@@ -2477,7 +2365,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Internet Simulator",
         "level_keys": [
@@ -2519,7 +2407,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       },
       "level_keys": [
         "U2L2 CSP CFU IP Addresses_2021"
@@ -2545,7 +2433,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       },
       "level_keys": [
         "U2L2 CSP CFU IP works_2021"
@@ -2555,7 +2443,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Internet Simulator",
         "level_keys": [
@@ -2597,7 +2485,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       },
       "level_keys": [
         "U2L3 CSP CFU Routers_2021"
@@ -2623,7 +2511,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       },
       "level_keys": [
         "U2L3 CSP CFU Redundancy_2021"
@@ -2846,7 +2734,7 @@
         "lesson.key": "Building a Network",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "1edcd05d-b48c-498e-9c94-33388d74ddd5"
+        "activity_section.key": "4652a86f-e996-47c5-a03e-86572416869d"
       }
     },
     {
@@ -2870,7 +2758,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       }
     },
     {
@@ -2882,7 +2770,7 @@
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "10315151-abd2-4010-9cea-178f33d51c4f"
+        "activity_section.key": "32b13191-de8b-4ed4-b2ce-37b924c28dd3"
       }
     },
     {
@@ -2906,7 +2794,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       }
     },
     {
@@ -2918,7 +2806,7 @@
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2021",
-        "activity_section.key": "438af42b-36dc-49dd-8421-569a4b4ad488"
+        "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b"
       }
     },
     {

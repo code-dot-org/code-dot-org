@@ -24,7 +24,7 @@ Scenario: App Lab UI elements from initial code and html
   And I rotate to landscape
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9?noautoplay=true"
+  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9?noautoplay=true"
   And I wait for the page to fully load
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
@@ -74,7 +74,7 @@ Scenario: Text area with multiple lines, radio button, checkbox
 
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
-  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
+  And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9"
   And I wait for the page to fully load
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels

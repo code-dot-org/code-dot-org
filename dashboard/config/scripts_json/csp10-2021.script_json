@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:51:20 UTC",
+    "serialized_at": "2021-04-22 20:23:40 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -1806,7 +1806,8 @@
       "key": "b0597ab4-c5ad-490c-a1ac-24fc8084e504",
       "position": 3,
       "properties": {
-        "description": "2. Phishing\n"
+        "description": "2. Phishing\n",
+        "progression_name": "Phishing"
       },
       "seeding_key": {
         "activity_section.key": "b0597ab4-c5ad-490c-a1ac-24fc8084e504",
@@ -2903,6 +2904,7 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Phishing",
         "level_keys": [
           "CSP 20-21 Phishing_2021"
         ]
@@ -3404,6 +3406,30 @@
       }
     },
     {
+      "name": "Planet Money: Bad Credit Bureau (Podcast)",
+      "url": "https://www.npr.org/sections/money/2017/10/06/556212654/episode-798-bad-credit-bureau",
+      "key": "planet_money_bad_credit_bureau_podcast_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "planet_money_bad_credit_bureau_podcast_"
+      }
+    },
+    {
+      "name": "Equifax Data Breach: What Went Wrong (Podcast)",
+      "url": "https://www.carbonite.com/podcasts/breach/s02e03-Equifax-data-breach",
+      "key": "equifax_data_breach_what_went_wrong_podcast_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
+      }
+    },
+    {
       "name": "Call Center - Reading Passage",
       "url": "https://docs.google.com/document/d/1ukiDCZ1tnd0CtuPl0o2H6vOLGaYbIgjbO2xHlLTuTio/edit?usp=sharing",
       "key": "call-center-reading-passage",
@@ -3560,6 +3586,18 @@
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
         "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "resource.key": "planet_money_bad_credit_bureau_podcast_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
       }
     },
     {

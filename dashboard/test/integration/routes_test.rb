@@ -18,19 +18,19 @@ class RoutesTest < ActionDispatch::IntegrationTest
     create :script_level, script: script, lesson: lesson, position: 12
     create :script_level, script: script, lesson: lesson, position: 13
 
-    get '/s/dance/stage/1/puzzle/1'
+    get '/s/dance/lessons/1/levels/1'
     assert_caching_enabled response.headers['Cache-Control'],
       ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
       ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
     assert_nil cookies['_learn_session_test']
 
-    get '/s/dance/stage/1/puzzle/12'
+    get '/s/dance/lessons/1/levels/12'
     assert_caching_enabled response.headers['Cache-Control'],
       ScriptLevelsController::DEFAULT_PUBLIC_CLIENT_MAX_AGE,
       ScriptLevelsController::DEFAULT_PUBLIC_PROXY_MAX_AGE
     assert_nil cookies['_learn_session_test']
 
-    get '/s/dance/stage/1/puzzle/13'
+    get '/s/dance/lessons/1/levels/13'
     assert_caching_disabled response.headers['Cache-Control']
     assert_not_nil cookies['_learn_session_test']
   end

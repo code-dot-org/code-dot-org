@@ -208,6 +208,7 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
+    deprecated
     is_course
     background
     show_calendar
@@ -867,18 +868,29 @@ class Script < ApplicationRecord
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_stage, current_user)
+  def get_bonus_script_levels(current_lesson)
     unless @all_bonus_script_levels
-      @all_bonus_script_levels = lessons.map do |stage|
+      @all_bonus_script_levels = lessons.map do |lesson|
         {
-          stageNumber: stage.relative_position,
-          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user&.id)}
+          stageNumber: lesson.relative_position,
+          levels: lesson.script_levels.select(&:bonus)
         }
       end
-      @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
+      @all_bonus_script_levels.select! {|lesson| lesson[:levels].any?}
     end
 
-    @all_bonus_script_levels.select {|stage| stage[:stageNumber] <= current_stage.absolute_position}
+    lesson_levels = @all_bonus_script_levels.select do |lesson|
+      lesson[:stageNumber] <= current_lesson.absolute_position
+    end
+
+    # we don't cache the level summaries because they include localized text
+    summarized_lesson_levels = lesson_levels.map do |lesson|
+      {
+        stageNumber: lesson[:stageNumber],
+        levels: lesson[:levels].map(&:summarize_as_bonus)
+      }
+    end
+    summarized_lesson_levels
   end
 
   def pre_reader_tts_level?
@@ -1439,6 +1451,7 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      deprecated: deprecated?,
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
@@ -1517,7 +1530,7 @@ class Script < ApplicationRecord
     {
       displayName: title_for_display,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)}
     }
   end
 
@@ -1663,6 +1676,7 @@ class Script < ApplicationRecord
       :is_stable,
       :project_sharing,
       :tts,
+      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
