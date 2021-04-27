@@ -191,9 +191,11 @@ class SectionProgress extends Component {
               className="fa-pulse fa-3x"
             />
           )}
-          {levelDataInitialized && (
-            <ProgressTableContainer currentView={currentView} />
-          )}
+          {levelDataInitialized &&
+            (currentView === ViewType.SUMMARY ||
+              currentView === ViewType.DETAIL) && (
+              <ProgressTableContainer currentView={currentView} />
+            )}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView

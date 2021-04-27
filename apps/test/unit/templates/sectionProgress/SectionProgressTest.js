@@ -55,37 +55,42 @@ describe('SectionProgress', () => {
     progressLoader.loadScriptProgress.restore();
   });
 
-  it('loading data shows loading icon', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress {...DEFAULT_PROPS} isLoadingProgress={true} />
+  const setUp = (overrideProps = {}) => {
+    return shallow(
+      <UnconnectedSectionProgress {...DEFAULT_PROPS} {...overrideProps} />
     );
+  };
+
+  it('loading data shows loading icon', () => {
+    const wrapper = setUp({isLoadingProgress: true});
     expect(wrapper.find('#uitest-spinner').exists()).to.be.true;
   });
 
   it('done loading data does not show loading icon', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const wrapper = setUp();
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
+  it('renders ProgressTableContainer for detail and summary view only', () => {
+    let wrapper = setUp({currentView: ViewType.DETAIL});
+    expect(wrapper.find(ProgressTableContainer)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.SUMMARY});
+    expect(wrapper.find(ProgressTableContainer)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.STANDARDS});
+    expect(wrapper.find(ProgressTableContainer)).to.have.length(0);
+  });
+
   it('passes currentView to ProgressTableContainer', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        currentView={ViewType.DETAIL}
-      />
-    );
+    const wrapper = setUp({currentView: ViewType.DETAIL});
     expect(wrapper.find(ProgressTableContainer).props().currentView).to.equal(
       ViewType.DETAIL
     );
   });
 
   it('shows standards view', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        currentView={ViewType.STANDARDS}
-      />
-    );
+    const wrapper = setUp({currentView: ViewType.STANDARDS});
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
   });
 });

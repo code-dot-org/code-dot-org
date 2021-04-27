@@ -286,6 +286,7 @@ class ProgressTableContainer extends React.Component {
       : this.summaryContentViewProps();
 
     return (
+      // outer div contains both table and legend
       <div>
         <div style={styles.container} className="progress-table">
           <div style={styles.studentList} className="student-list">
