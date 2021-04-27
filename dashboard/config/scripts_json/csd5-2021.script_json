@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-07 17:29:41 UTC",
+    "serialized_at": "2021-04-24 15:52:24 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -1179,7 +1179,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 220
+        "duration": 215
       },
       "seeding_key": {
         "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1",
@@ -3070,7 +3070,7 @@
       "key": "6fc7958a-8055-43c0-b691-c935982236fd",
       "position": 3,
       "properties": {
-        "description": "**The Problem Solving Process:** Remind students of the problem solving process: Define, Prepare, Try, Reflect. We will use this process to solve today's problem.\n\n**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem-solving-with-data], one per student.\n\n\n\n#### Solving a Data Problem"
+        "description": "**The Problem Solving Process:** Remind students of the problem solving process: Define, Prepare, Try, Reflect. We will use this process to solve today's problem.\n\n**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem-solving-with-data/csd/2021], one per student.\n\n\n\n#### Solving a Data Problem"
       },
       "seeding_key": {
         "activity_section.key": "6fc7958a-8055-43c0-b691-c935982236fd",
@@ -4799,7 +4799,7 @@
       "position": 14,
       "properties": {
         "description": "####Day 4 Warm-Up\n\n**Distribute:** Re-distribute the Project Guides from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.",
-        "name": "Days 4 and 5 Activity (90 mins)"
+        "name": "Days 4 and 5 Activity (85 mins)"
       },
       "seeding_key": {
         "activity_section.key": "5eb7b7fb-3bd7-4ef4-bce1-ed0aeb6384a4",
@@ -5023,7 +5023,7 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5049,7 +5049,7 @@
       "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5075,7 +5075,7 @@
       "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5101,7 +5101,7 @@
       "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5127,7 +5127,7 @@
       "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5153,7 +5153,7 @@
       "chapter": 11,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5179,7 +5179,7 @@
       "chapter": 12,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Binary and Data",
         "level_keys": [
@@ -5205,7 +5205,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Combining Representations",
         "level_keys": [
@@ -5231,7 +5231,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Combining Representations",
         "level_keys": [
@@ -5335,7 +5335,7 @@
       "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Data Visualization",
         "level_keys": [
@@ -5361,7 +5361,7 @@
       "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Data Visualization",
         "level_keys": [
@@ -5387,7 +5387,7 @@
       "chapter": 20,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Data Visualization",
         "level_keys": [
@@ -5413,7 +5413,7 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Cake Survey",
         "level_keys": [
@@ -5439,7 +5439,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Problem Solving",
         "level_keys": [
@@ -5465,7 +5465,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Problem Solving",
         "level_keys": [
@@ -5491,7 +5491,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Problem Solving",
         "level_keys": [
@@ -6006,11 +6006,11 @@
     },
     {
       "name": "Representation Matters",
-      "url": "https://studio.code.org/s/csd5-2019/stage/1/puzzle/1",
+      "url": "https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing",
       "key": "representation-matters-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "representation-matters-exemplar-2019"
@@ -6018,11 +6018,11 @@
     },
     {
       "name": "Meals Data",
-      "url": "https://studio.code.org/s/csd5-2019/stage/1/puzzle/1",
+      "url": "https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing",
       "key": "meals-data-resource-2019",
       "properties": {
         "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "meals-data-resource-2019"
@@ -6055,12 +6055,12 @@
       }
     },
     {
-      "name": "Representing Information",
-      "url": "https://studio.code.org/s/csd5-2019/stage/2/puzzle/1",
+      "name": "Representing Information 1",
+      "url": "https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit",
       "key": "representing-information-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "representing-information-exemplar-2019"
@@ -6080,12 +6080,24 @@
       }
     },
     {
+      "name": "Representing Information 2",
+      "url": "https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit",
+      "key": "representing_information_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "representing_information_2"
+      }
+    },
+    {
       "name": "ASCII",
       "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit",
       "key": "ascii-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "ascii-exemplar-2019"
@@ -6161,7 +6173,7 @@
       "key": "representing-numbers-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "representing-numbers-exemplar-2019"
@@ -6186,7 +6198,7 @@
       "key": "pet-records-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "pet-records-exemplar-2019"
@@ -6224,7 +6236,7 @@
       "key": "keeping-data-secret-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "keeping-data-secret-exemplar-2019"
@@ -6286,7 +6298,7 @@
       "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
       "key": "create-a-representation-exemplar-2019",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -6361,7 +6373,7 @@
       "key": "problem-solving-with-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "problem-solving-with-data-exemplar-2019"
@@ -6399,7 +6411,7 @@
       "key": "structuring-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "structuring-data-exemplar-2019"
@@ -6411,7 +6423,7 @@
       "key": "interpreting-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "interpreting-data-exemplar-2019"
@@ -6449,7 +6461,7 @@
       "key": "making-decisions-with-data-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "making-decisions-with-data-exemplar-2019"
@@ -6487,7 +6499,7 @@
       "key": "automating-data-decisions-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "automating-data-decisions-exemplar-2019"
@@ -6564,7 +6576,7 @@
       "key": "data-in-the-real-world-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "data-in-the-real-world-exemplar-2019"
@@ -6628,7 +6640,7 @@
       "key": "project_guide_exemplar",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "project_guide_exemplar"
@@ -6640,7 +6652,7 @@
       "key": "sample_marked_rubrics_1",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "sample_marked_rubrics_1"
@@ -6652,7 +6664,7 @@
       "key": "peer_review_exemplar_1",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "peer_review_exemplar_1"
@@ -6664,7 +6676,7 @@
       "key": "sample_marked_rubrics_2",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "sample_marked_rubrics_2"
@@ -6676,7 +6688,7 @@
       "key": "peer_review_exemplar_2",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "peer_review_exemplar_2"
@@ -6753,6 +6765,12 @@
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
         "resource.key": "animal-shapes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns and Representation",
+        "resource.key": "representing_information_2"
       }
     },
     {
@@ -7129,6 +7147,9 @@
         "script.name": "csd5-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {

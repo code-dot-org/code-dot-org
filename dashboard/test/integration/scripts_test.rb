@@ -22,7 +22,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
     get build_script_level_path(@lockable_level_group_sl)
-    assert_includes @response.body, '/s/csp1-2020/stage/14/'
+    assert_includes @response.body, '/s/csp1-2020/lessons/14/'
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1
@@ -40,7 +40,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
     get build_script_level_path(@lockable_level_group_sl)
-    assert_includes @response.body, '/s/csp2-2020/stage/9/'
+    assert_includes @response.body, '/s/csp2-2020/lessons/9/'
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1

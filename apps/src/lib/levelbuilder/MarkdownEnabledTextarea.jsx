@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
+
 import UploadImageDialog from './lesson-editor/UploadImageDialog';
 import FindResourceDialog from './lesson-editor/FindResourceDialog';
+import FindProgrammingExpressionDialog from './lesson-editor/FindProgrammingExpressionDialog';
 
 const styles = {
   container: {
@@ -60,12 +63,20 @@ export default class MarkdownEnabledTextarea extends React.Component {
     this.setState({addResourceLinkOpen: true});
   };
 
+  handleOpenAddProgrammingExpression = () => {
+    this.setState({addProgrammingExpressionOpen: true});
+  };
+
   handleCloseUploadImage = () => {
     this.setState({uploadImageOpen: false});
   };
 
   handleCloseAddResourceLink = () => {
     this.setState({addResourceLinkOpen: false});
+  };
+
+  handleCloseAddProgrammingExpression = () => {
+    this.setState({addProgrammingExpressionOpen: false});
   };
 
   handleConfirmAddResourceLink = resourceKey => {
@@ -80,6 +91,16 @@ export default class MarkdownEnabledTextarea extends React.Component {
     this.changeMarkdown(this.props.markdown + `\n\n![${param}](${url})`);
   };
 
+  handleAddProgrammingExpression = programmingExpression => {
+    if (programmingExpression) {
+      this.changeMarkdown(
+        this.props.markdown +
+          buildProgrammingExpressionMarkdown(programmingExpression)
+      );
+    }
+    this.handleCloseAddProgrammingExpression();
+  };
+
   render() {
     return (
       <div>
@@ -91,27 +112,38 @@ export default class MarkdownEnabledTextarea extends React.Component {
             style={styles.input}
             value={this.props.markdown}
           />
-          {this.props.features.imageUpload && (
-            <button
-              className="btn"
-              onClick={this.handleOpenUploadImage}
-              type="button"
-            >
-              <i style={styles.icon} className="fa fa-plus-circle" />
-              Image
-            </button>
-          )}
-          {this.props.features.resourceLink && (
-            <button
-              className="btn"
-              onClick={this.handleOpenAddResourceLink}
-              type="button"
-            >
-              <i style={styles.icon} className="fa fa-plus-circle" />
-              Resource
-            </button>
-          )}
+          <div className="btn-toolbar">
+            <div className="btn-group">
+              <a
+                className="btn dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+              >
+                Add&hellip; <span className="caret" />
+              </a>
+              <ul className="dropdown-menu">
+                {this.props.features.imageUpload && (
+                  <li>
+                    <a onClick={this.handleOpenUploadImage}>Image</a>
+                  </li>
+                )}
+                {this.props.features.resourceLink && (
+                  <li>
+                    <a onClick={this.handleOpenAddResourceLink}>Resource</a>
+                  </li>
+                )}
+                {this.props.features.programmingExpression && (
+                  <li>
+                    <a onClick={this.handleOpenAddProgrammingExpression}>
+                      Code Block
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
         </div>
+
         {this.props.features.imageUpload && (
           <UploadImageDialog
             handleClose={this.handleCloseUploadImage}
@@ -124,6 +156,13 @@ export default class MarkdownEnabledTextarea extends React.Component {
             handleClose={this.handleCloseAddResourceLink}
             handleConfirm={this.handleConfirmAddResourceLink}
             isOpen={!!this.state.addResourceLinkOpen}
+          />
+        )}
+        {this.props.features.programmingExpression && (
+          <FindProgrammingExpressionDialog
+            handleClose={this.handleCloseAddProgrammingExpression}
+            handleConfirm={this.handleAddProgrammingExpression}
+            isOpen={!!this.state.addProgrammingExpressionOpen}
           />
         )}
       </div>

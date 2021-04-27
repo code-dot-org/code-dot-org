@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-14 23:01:57 UTC",
+    "serialized_at": "2021-04-24 15:02:46 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -265,7 +265,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "1. **Determine possible processing used to perform common computing tasks**\n\n\tIn the wrap-up discussion, make sure that students come up with multiple examples of processing and are able to explain how that processing turns input into outpput. You might also collect individual answers to this question as an exit ticket."
       },
       "seeding_key": {
         "lesson.key": "Processing",
@@ -314,7 +315,7 @@
         "overview": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\r\n\r\nTo conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.",
         "student_overview": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\r\n\r\nTo conclude the study of the problem solving process and the input/output/store/process model of a computer, the class proposes apps designed to solve real world problems. This project is completed across multiple days and culminates in a poster presentation where students highlight the features of their apps. The project is designed to be completed in pairs, though it can be completed individually.\r\n",
         "purpose": "This project combines the two major themes of Unit 1, problem solving, and the input-output-store-process model of a computer. This project ties both themes to a broader goal of identifying real world problems and finding ways to use technology to help solve them. Students collaborate in the creation of their app and also take part in a structured peer review process that they will see many more times throughout the course. This project should be a fun and creative experience as well, and gives students a chance to tie the field of computer science to their own interests and ambitions.",
-        "preparation": "* Print a copy of [r app-proposal-project] for each pair of students\r\n* Poster paper, pens, markers and other supplies for making posters",
+        "preparation": "* Print a copy of [r app-proposal-project/csd/2021] for each pair of students\r\n* Poster paper, pens, markers and other supplies for making posters",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.  You may also choose to assign the post-project test through code studio.",
         "announcements": [
@@ -600,7 +601,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "675f7979-4687-4193-bd1e-10332a1ac050",
@@ -614,7 +615,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 15
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "a427afac-1d4e-477c-8efb-2f2813326ece",
@@ -655,7 +656,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 75
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "c8d05b47-5ef6-429d-8162-74d7c1198428",
@@ -793,7 +794,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "05118f86-6a73-4845-98b1-8ae7b80a3548",
@@ -807,7 +808,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "a8aae27a-c021-4027-8ce0-37a888ec37f5",
@@ -821,7 +822,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "cb343ba8-a1d1-442d-a038-3f54c35175c8",
@@ -875,8 +876,7 @@
       "key": "c68b28b6-c6ee-4bf5-8fd6-f579f36e5182",
       "position": 3,
       "properties": {
-        "name": "Introducing the IOSP Model",
-        "duration": 15
+        "name": "Introducing the IOSP Model"
       },
       "seeding_key": {
         "lesson_activity.key": "c68b28b6-c6ee-4bf5-8fd6-f579f36e5182",
@@ -931,7 +931,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 150
+        "duration": 215
       },
       "seeding_key": {
         "lesson_activity.key": "faf4b5ae-838a-4a44-bfe5-9450699ab59f",
@@ -1321,7 +1321,7 @@
       "key": "ad03dcc6-515c-4a86-bf14-d0bb13c89769",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org TeacherCon during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2021)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [r how-to-videos]",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org TeacherCon during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2021)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [r how-to-videos/csd/2021]",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -1345,7 +1345,7 @@
       "key": "1dca60be-eb7f-40ef-8b91-8ca231c1b14a",
       "position": 1,
       "properties": {
-        "description": "Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n**How much time does it take?**\r\n\r\nThe survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\r\n\r\nBecause it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team",
+        "description": "Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment/csd/2021] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n**How much time does it take?**\r\n\r\nThe survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\r\n\r\nBecause it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team",
         "name": "Important! Have your students take the CSD Pre-Course Survey!\r",
         "tips": [
           {
@@ -4994,7 +4994,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Problem Solving Process",
         "level_keys": [
@@ -5020,7 +5020,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: What Makes a Computer, a Computer?",
         "level_keys": [
@@ -5046,7 +5046,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Pet Chooser",
         "level_keys": [
@@ -5072,7 +5072,7 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Story Creator",
         "level_keys": [
@@ -5098,7 +5098,7 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Improved Pet Chooser",
         "level_keys": [
@@ -5332,7 +5332,7 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Outfit Picker",
         "level_keys": [
@@ -5358,7 +5358,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Friend Finder",
         "level_keys": [
@@ -5384,7 +5384,7 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App: Kids Movie Recommender",
         "level_keys": [
@@ -5410,7 +5410,7 @@
       "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: IOSP Model",
         "level_keys": [
@@ -5777,11 +5777,11 @@
     },
     {
       "name": "Problem Solving Process",
-      "url": "https://studio.code.org/s/csd1-2020/stage/2/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/",
       "key": "problem-solving-process-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "problem-solving-process-exemplar-2020"
@@ -5851,11 +5851,11 @@
     },
     {
       "name": "Solving Problems",
-      "url": "https://studio.code.org/s/csd1-2021/stage/3/puzzle/1",
+      "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
       "key": "solving-problems-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "solving-problems-exemplar-2020"
@@ -5876,11 +5876,11 @@
     },
     {
       "name": "What is a Computer?",
-      "url": "https://studio.code.org/s/csd1-2020/stage/4/puzzle/1/",
+      "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
       "key": "what-is-a-computer-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "what-is-a-computer-2020"
@@ -5939,11 +5939,11 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://studio.code.org/s/csd1-2020/stage/5/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
       "key": "input-and-output-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "input-and-output-2020"
@@ -5976,11 +5976,11 @@
     },
     {
       "name": "Processing",
-      "url": "https://studio.code.org/s/csd1-2020/stage/6/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
       "key": "processing-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "processing-2020"
@@ -6038,11 +6038,11 @@
     },
     {
       "name": "Storage",
-      "url": "https://studio.code.org/s/csd1-2020/stage/7/puzzle/1",
+      "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing",
       "key": "storage-1",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "storage-1"
@@ -6074,12 +6074,12 @@
       }
     },
     {
-      "name": "Project - Propose an App",
-      "url": "https://studio.code.org/s/csd1-2020/stage/8/puzzle/1",
+      "name": "Project Guide Exemplar",
+      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit",
       "key": "project-propose-an-app-2020",
       "properties": {
-        "type": "Project Guide Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "project-propose-an-app-2020"
@@ -6138,24 +6138,36 @@
       }
     },
     {
-      "name": "Apps and Problem Solving",
-      "url": "https://studio.code.org/s/csd1-2019/stage/8/puzzle/1",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1oZ67Hh9ITbADuabNgrEqE249KBOnp8uGsSaMLWr7c-I/edit",
       "key": "apps-and-problem-solving-marked-rubrics",
       "properties": {
-        "type": "Sample Marked Rubrics",
-        "audience": "Teacher"
+        "audience": "Verified Teacher",
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "apps-and-problem-solving-marked-rubrics"
       }
     },
     {
+      "name": "Peer Review Exemplar",
+      "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit",
+      "key": "peer_review_exemplar",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_exemplar"
+      }
+    },
+    {
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-      "url": "https://studio.code.org/s/csd1-2020/stage/9/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
       "key": "intro-to-problem-solving-newspaper-table-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "intro-to-problem-solving-newspaper-table-2020"
@@ -6188,11 +6200,11 @@
     },
     {
       "name": "Intro to Problem Solving - Spaghetti Bridge",
-      "url": "https://studio.code.org/s/csd1-2020/stage/10/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
       "key": "intro-to-problem-solving-spaghetti-bridge-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "intro-to-problem-solving-spaghetti-bridge-2020"
@@ -6224,11 +6236,11 @@
     },
     {
       "name": "Intro to Problem Solving - Paper Tower",
-      "url": "https://studio.code.org/s/csd1-2020/stage/11/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
       "key": "intro-to-problem-solving-paper-tower-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "intro-to-problem-solving-paper-tower-2020"
@@ -6272,11 +6284,11 @@
     },
     {
       "name": "Exploring Problem Solving - Animal Theme",
-      "url": "https://studio.code.org/s/csd1-2020/stage/12/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1yEDSiEwx6OICs4MZwzl4zBd_aVfVEWd6JlPIqo2mc1c/edit?usp=sharing",
       "key": "exploring-problem-solving-animal-theme-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "exploring-problem-solving-animal-theme-2020"
@@ -6322,11 +6334,11 @@
     },
     {
       "name": "Exploring Problem Solving - Games Theme",
-      "url": "https://studio.code.org/s/csd1-2020/stage/13/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/edit?usp=sharing",
       "key": "exploring-problem-solving-games-theme-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "exploring-problem-solving-games-theme-2020"
@@ -6572,6 +6584,12 @@
       "seeding_key": {
         "lesson.key": "Project - Propose an App",
         "resource.key": "apps-and-problem-solving-marked-rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "peer_review_exemplar"
       }
     },
     {

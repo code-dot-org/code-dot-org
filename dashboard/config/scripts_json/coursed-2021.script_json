@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-04-07 17:19:47 UTC",
+    "serialized_at": "2021-04-22 19:29:52 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -205,7 +205,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this **context-setting**/**skill-building** lesson, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.",
+        "overview": "In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.",
         "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!",
         "purpose": "Events are very common in computer programs, especially in video games.  \n\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
         "preparation": " - Make sure every student has a reflection journal.\n - Play through the puzzles to find any potential problem areas for your class.\n - Read the ***slide deck** (to be presented to students at end of class).",
@@ -225,7 +225,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will practice using events to build a game that they can share online. Featuring _R2-D2_ and other _Star Wars_ characters, students will be guided through events, then given space to create their own game.",
+        "overview": "In this **skill-building** lesson, students will practice using events to build a game that they can share.",
         "student_overview": "Feel the force as you build your own Star Wars game in this lesson.",
         "purpose": "CS Fundamentals is not simply about teaching computer science, it is about making computer science fun and exciting. In this series, students will learn about events using popular characters from _Star Wars_. These puzzles blur the lines between \"learning\" and \"fun\". Also, students will learn to recognize regular programming practices in games so that when they play games at home, they can see common computer science principles being used.",
         "preparation": " - Play through the puzzles and find any potential problem areas.\n - Make sure every student has a reflection journal.",
@@ -245,7 +245,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.",
+        "overview": "In this **skill-building** lesson, students will program an interactive dance party. ",
         "student_overview": "Time to celebrate! In this lesson, you will program your own interactive dance party.",
         "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.\n - Consider the need for headphones. This activity relies on sound.",
@@ -265,7 +265,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "This **context-setting** and **skill-building** lesson will quickly introduce studenst to *loops*, then have students using the repeat block to get Scrat to the acorn more efficiently.",
+        "overview": "This **context-setting/skill-building** lesson will quickly introduce students to loops.",
         "student_overview": "In this lesson you'll use the repeat block to help Scrat reach the acorn as efficiently as possible.",
         "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be repeated.",
         "preparation": " - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a reflection journal.",
@@ -305,7 +305,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a loop to be inside of another loop. ",
+        "overview": "In this **skill-building** lesson, students will learn how to program a loop inside of another loop.",
         "student_overview": "This lesson will teach you what happens when you put loops inside loops inside loops.",
         "purpose": "In this introduction to nested loops, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* repeated patterns to develop these nested loops. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and too complex to write out the long way. After a video introduces nested loops, students are shown an example and asked to predict what will happen when a loop is put inside of another loop. This progression leads to plenty of practice for students to solidify and build on their understanding of looping in programming.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -325,7 +325,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this **context-setting** lesson, students will *conditional (if/else) statements* to state the rules of simple card games. ",
+        "overview": "In this **context-setting** lesson, students will write *conditional (if/else) statements* to state the rules of simple card games. ",
         "student_overview": "It's time to play a game where you earn points only under certain conditions!",
         "purpose": "One of the best parts of teaching conditionals is that students already understand the concept from their everyday lives. \n\nThis lesson merges computer science into the real world by building off of their ability to tell if a condition is true or false. Students will learn to use `if` statements to declare when a certain command should be run, as well as `if / else` statements to declare when a command should be run and what to run otherwise. Students may not recognize the word conditionals, but most students will understand the idea of using \"if\" to make sure that some action only occurs when it is supposed to.",
         "preparation": "- Gather decks of cards or something similar.\n- Print or display the ***sample programs**.\n- Print one ***assessment** for each student.\n- Make sure every student has a reflection journal.",
@@ -346,7 +346,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "This **skill-building** lesson was originally created alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting their first experience with conditionals!",
+        "overview": "This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!",
         "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a reflection journal."
@@ -385,7 +385,7 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but hey will not know the size of the holes or the height of the mountains of dirt. To solve these puzzles, students will use a new kind of loop.",
+        "overview": "In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.",
         "student_overview": "Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!",
         "purpose": "As your students continue to deepen their knowledge of loops, they will come across problems where a command needs to be repeated, but it is unknown how many times it needs to be repeated. This is where while loops come in. In today's lesson, students will develop a beginner's understanding of condition-based loops and also expand their knowledge of loops in general. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -425,7 +425,7 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! ",
+        "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects!",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
         "preparation": "* Play through the puzzles to find any potential problem areas for your class.\n* Print out one ***Project Planning Guide** for each student (or pair).\n* (Optional) Complete your own planning guide and code your own project to show to students!",
@@ -2045,7 +2045,7 @@
       "key": "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What is a bug? How do you know there is a bug in your program?\n - What does it mean to debug code? How do you debug a program?",
+        "description": "\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What is a bug? How do you know there is a bug in your program?\n - What does it mean to debug code? How do you debug a program?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3901,7 +3901,7 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: De-bugging with the Step Button",
         "level_keys": [
@@ -3927,7 +3927,7 @@
       "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3953,7 +3953,7 @@
       "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3979,7 +3979,7 @@
       "chapter": 17,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4005,7 +4005,7 @@
       "chapter": 18,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4031,7 +4031,7 @@
       "chapter": 19,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4057,7 +4057,7 @@
       "chapter": 20,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4084,7 +4084,7 @@
       "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4110,7 +4110,7 @@
       "chapter": 22,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4136,7 +4136,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4162,7 +4162,7 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4188,7 +4188,7 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4214,7 +4214,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4240,7 +4240,7 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4266,7 +4266,7 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4292,7 +4292,7 @@
       "chapter": 29,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4318,7 +4318,7 @@
       "chapter": 30,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4344,7 +4344,7 @@
       "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Star Wars Project",
         "level_keys": [
@@ -4370,7 +4370,7 @@
       "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4396,7 +4396,7 @@
       "chapter": 33,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4422,7 +4422,7 @@
       "chapter": 34,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4448,7 +4448,7 @@
       "chapter": 35,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4474,7 +4474,7 @@
       "chapter": 36,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4500,7 +4500,7 @@
       "chapter": 37,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4526,7 +4526,7 @@
       "chapter": 38,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4552,7 +4552,7 @@
       "chapter": 39,
       "position": 9,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4578,7 +4578,7 @@
       "chapter": 40,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4604,7 +4604,7 @@
       "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Warm Up",
         "level_keys": [
@@ -4630,7 +4630,7 @@
       "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4656,7 +4656,7 @@
       "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Events",
         "level_keys": [
@@ -4682,7 +4682,7 @@
       "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -4708,7 +4708,7 @@
       "chapter": 45,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -4734,7 +4734,7 @@
       "chapter": 46,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Measures",
         "level_keys": [
@@ -4760,7 +4760,7 @@
       "chapter": 47,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -4786,7 +4786,7 @@
       "chapter": 48,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -4812,7 +4812,7 @@
       "chapter": 49,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -4838,7 +4838,7 @@
       "chapter": 50,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Properties",
         "level_keys": [
@@ -4864,7 +4864,7 @@
       "chapter": 51,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -4890,7 +4890,7 @@
       "chapter": 52,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -4916,7 +4916,7 @@
       "chapter": 53,
       "position": 13,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -4942,7 +4942,7 @@
       "chapter": 54,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Wrap-up",
         "level_keys": [
@@ -4968,7 +4968,7 @@
       "chapter": 55,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4994,7 +4994,7 @@
       "chapter": 56,
       "position": 16,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5020,7 +5020,7 @@
       "chapter": 57,
       "position": 17,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5046,7 +5046,7 @@
       "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5072,7 +5072,7 @@
       "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5098,7 +5098,7 @@
       "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Using the Repeat Block",
         "level_keys": [
@@ -5124,7 +5124,7 @@
       "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5150,7 +5150,7 @@
       "chapter": 62,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5176,7 +5176,7 @@
       "chapter": 63,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5202,7 +5202,7 @@
       "chapter": 64,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5228,7 +5228,7 @@
       "chapter": 65,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5254,7 +5254,7 @@
       "chapter": 66,
       "position": 9,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5280,7 +5280,7 @@
       "chapter": 67,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5307,7 +5307,7 @@
       "chapter": 68,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5333,7 +5333,7 @@
       "chapter": 69,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5646,7 +5646,7 @@
       "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5672,7 +5672,7 @@
       "chapter": 82,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5698,7 +5698,7 @@
       "chapter": 83,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Nested Loops with the Bee",
         "level_keys": [
@@ -5724,7 +5724,7 @@
       "chapter": 84,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5750,7 +5750,7 @@
       "chapter": 85,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5776,7 +5776,7 @@
       "chapter": 86,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5802,7 +5802,7 @@
       "chapter": 87,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5828,7 +5828,7 @@
       "chapter": 88,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5854,7 +5854,7 @@
       "chapter": 89,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5880,7 +5880,7 @@
       "chapter": 90,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5907,7 +5907,7 @@
       "chapter": 91,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5933,7 +5933,7 @@
       "chapter": 92,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5959,7 +5959,7 @@
       "chapter": 93,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5985,7 +5985,7 @@
       "chapter": 94,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6011,7 +6011,7 @@
       "chapter": 95,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6037,7 +6037,7 @@
       "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals with Cards - Unplugged Activity",
         "level_keys": [
@@ -6063,7 +6063,7 @@
       "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6089,7 +6089,7 @@
       "chapter": 98,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6115,7 +6115,7 @@
       "chapter": 99,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6141,7 +6141,7 @@
       "chapter": 100,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6167,7 +6167,7 @@
       "chapter": 101,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6193,7 +6193,7 @@
       "chapter": 102,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6219,7 +6219,7 @@
       "chapter": 103,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6245,7 +6245,7 @@
       "chapter": 104,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6271,7 +6271,7 @@
       "chapter": 105,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6297,7 +6297,7 @@
       "chapter": 106,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6323,7 +6323,7 @@
       "chapter": 107,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6350,7 +6350,7 @@
       "chapter": 108,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6377,7 +6377,7 @@
       "chapter": 109,
       "position": 13,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6403,7 +6403,7 @@
       "chapter": 110,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6820,7 +6820,7 @@
       "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6846,7 +6846,7 @@
       "chapter": 127,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6872,7 +6872,7 @@
       "chapter": 128,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6898,7 +6898,7 @@
       "chapter": 129,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: While Loops with the Farmer",
         "level_keys": [
@@ -6924,7 +6924,7 @@
       "chapter": 130,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6950,7 +6950,7 @@
       "chapter": 131,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6976,7 +6976,7 @@
       "chapter": 132,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7002,7 +7002,7 @@
       "chapter": 133,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7028,7 +7028,7 @@
       "chapter": 134,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7054,7 +7054,7 @@
       "chapter": 135,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7081,7 +7081,7 @@
       "chapter": 136,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7107,7 +7107,7 @@
       "chapter": 137,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7133,7 +7133,7 @@
       "chapter": 138,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7159,7 +7159,7 @@
       "chapter": 139,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7472,7 +7472,7 @@
       "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example projects",
         "level_keys": [
@@ -7498,7 +7498,7 @@
       "chapter": 152,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -10087,6 +10087,9 @@
         "script.name": "coursed-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {

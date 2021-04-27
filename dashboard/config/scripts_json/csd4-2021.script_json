@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-06 23:24:22 UTC",
+    "serialized_at": "2021-04-24 15:48:56 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -498,7 +498,7 @@
         "purpose": "Students should focus the majority of their time on updating their apps based on user feedback, but they should also use the “To Do / Doing / Done” chart to stay organized and track their work. Moving a task across the board to the “Done” stage is a major accomplishment and, by the end of class, teams can celebrate how many tasks they completed in a single period.",
         "preparation": "* Print one copy of the activity guide for each team\r\n* (Optional) Prepare poster paper or a large whiteboard space for each team\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. Track progress while making changes to their app\r\n\r\n\tActivity Guide: Monitor students as they move post-its across the “To Do / Doing / Done” chart, ensuring that their current work is reflected on the chart."
+        "assessment_opportunities": "**1. Track progress while making changes to their app**\n\nActivity Guide: Monitor students as they move post-its across the “To Do / Doing / Done” chart, ensuring that their current work is reflected on the chart."
       },
       "seeding_key": {
         "lesson.key": "Updating Your Prototype",
@@ -1497,7 +1497,7 @@
       "position": 2,
       "properties": {
         "name": "Days 1 and 2",
-        "duration": 70
+        "duration": 150
       },
       "seeding_key": {
         "lesson_activity.key": "023a1a6b-0219-4fa2-bac4-3e8894455cc6",
@@ -1511,7 +1511,7 @@
       "position": 3,
       "properties": {
         "name": "Days 3 and 4",
-        "duration": 10
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "84d660d9-6dc5-40da-8955-1aacbbe9a7b9",
@@ -7083,11 +7083,11 @@
     },
     {
       "name": "Determine the User",
-      "url": "https://studio.code.org/s/csd4-2019/stage/1/puzzle/1",
+      "url": "https://docs.google.com/a/code.org/document/d/1kCvBqDl9XV5-RuW9zEOKDPTpULDFPyzvqVKfjcIow14/edit?usp=sharing",
       "key": "determine-user-exemplar-2019",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "determine-user-exemplar-2019"
@@ -7119,12 +7119,12 @@
       }
     },
     {
-      "name": "Reacting as Your User",
-      "url": "https://studio.code.org/s/csd4-2019/stage/2/puzzle/1",
+      "name": "Reacting as Your User Profile 1",
+      "url": "https://docs.google.com/document/d/1VFvDunQ2ahFH9xp7aYv2CRvdh14z26o6XuCPfDPrq10/edit",
       "key": "reacting-as-your-user-exemplar-19",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "reacting-as-your-user-exemplar-19"
@@ -7196,6 +7196,42 @@
       }
     },
     {
+      "name": "Reacting as Your User Profile 2",
+      "url": "https://docs.google.com/document/d/1aoekiZA8YNZiWOmJky1wQZkWWFf8KvJcNMZr-0h2Sys/edit",
+      "key": "reacting_as_your_user_profile_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "reacting_as_your_user_profile_2"
+      }
+    },
+    {
+      "name": "Reacting as Your User Profile 3",
+      "url": "https://docs.google.com/document/d/1Cx5M2WHzKr2mz-5oM_x49Si20gJ77RiRFd3ASRMNOaw/edit",
+      "key": "reacting_as_your_user_profile_3",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "reacting_as_your_user_profile_3"
+      }
+    },
+    {
+      "name": "Reacting as Your User Profile 4",
+      "url": "https://docs.google.com/document/d/1KxWZEztMy7pZ6Ksg5OO0io7dLCJblKRcBpCoVkEpXfc/edit",
+      "key": "reacting_as_your_user_profile_4",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "reacting_as_your_user_profile_4"
+      }
+    },
+    {
       "name": "User Centered Design (Define & Prepare) 2021",
       "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
       "key": "user-centered-design-2021",
@@ -7222,11 +7258,11 @@
     },
     {
       "name": "User Centered Design",
-      "url": "https://studio.code.org/s/csd4-2019/stage/3/puzzle/1",
+      "url": "https://docs.google.com/document/d/1XI02ssNt_W9zWRU1IsYtekN7KHWZ5sM48D5cjJAPlOs/edit",
       "key": "user-centered-design-exemplar-19",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "user-centered-design-exemplar-19"
@@ -7286,11 +7322,11 @@
     },
     {
       "name": "Improve a Screen",
-      "url": "https://studio.code.org/s/csd4-2019/stage/5/puzzle/1",
+      "url": "https://docs.google.com/document/d/1q3J_DQFPps7O5jOwRig_iApTNzVvagecx7rsjpeuNE8/edit",
       "key": "improve-a-screen-exemplar-19",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "improve-a-screen-exemplar-19"
@@ -7376,18 +7412,6 @@
     },
     {
       "name": "Paper Prototypes",
-      "url": "https://studio.code.org/s/csd4-2019/stage/7/puzzle/1",
-      "key": "paper-prototype-exemplars",
-      "properties": {
-        "type": "Exemplars",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "paper-prototype-exemplars"
-      }
-    },
-    {
-      "name": "Paper Prototypes",
       "url": "https://docs.google.com/document/d/1-ncbYhgkXHXs4aRBxzJu9ue4r8CLZyGsIpFTIYBADt4/edit",
       "key": "paper-prototypes",
       "properties": {
@@ -7397,6 +7421,30 @@
       },
       "seeding_key": {
         "resource.key": "paper-prototypes"
+      }
+    },
+    {
+      "name": "Sample Marked Rubric 1",
+      "url": "https://docs.google.com/document/d/118GHsZn4Lam2CfBURxO4cF0ZMBCIsl7cB0tH-jF108s",
+      "key": "sample_marked_rubric_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubric_1"
+      }
+    },
+    {
+      "name": "Sample Marked Rubric 2",
+      "url": "https://docs.google.com/document/d/1xhNHoP0uS2-2MT0zqsgAmYAEQz-j7GCcf9eUi45uh9E/edit#heading=h.x6qf06pz94i6",
+      "key": "sample_marked_rubric_2_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubric_2_1"
       }
     },
     {
@@ -7593,17 +7641,6 @@
       }
     },
     {
-      "name": "App Presentation - Exemplars",
-      "url": "https://studio.code.org/s/csd4-2019/stage/16/puzzle/1",
-      "key": "app-presentation-exemplars",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "app-presentation-exemplars"
-      }
-    },
-    {
       "name": "App Presentation",
       "url": "https://docs.google.com/document/d/1j3L47nIHsN3D4qCfuXgz3i9E-rAcf9flvnodiGMYSnQ/edit",
       "key": "app-presentation",
@@ -7638,6 +7675,54 @@
       },
       "seeding_key": {
         "resource.key": "app-presentation-exemplar"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 1",
+      "url": "https://docs.google.com/document/d/1Y9WTc_RRT333k_Sc21S-JANvZHpAZiv_jWC0lPEeSw8",
+      "key": "sample_marked_rubrics_1_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_1_1"
+      }
+    },
+    {
+      "name": "Peer Review 1",
+      "url": "https://docs.google.com/document/d/1CVcpiBI1UeA5U5SbGnkM6xqKmKZo2XefU2J7Tg8zWqk",
+      "key": "peer_review_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_1"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics 2",
+      "url": "https://docs.google.com/document/d/1xCbTX6f65JLRC2s52PSfmOYFjcntKbZb_El0dK-yF8A",
+      "key": "sample_marked_rubrics_2_1",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics_2_1"
+      }
+    },
+    {
+      "name": "Peer Review 2",
+      "url": "https://docs.google.com/document/d/1PA_zExhRqRnZ5j6DaJHnceUSYGHBGHgqw3VSfQNm2E0",
+      "key": "peer_review_2",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_2"
       }
     },
     {
@@ -7717,6 +7802,24 @@
       "seeding_key": {
         "lesson.key": "Understanding Your User",
         "resource.key": "profile-4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user_profile_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user_profile_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "resource.key": "reacting_as_your_user_profile_4"
       }
     },
     {
@@ -7854,13 +7957,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "paper-prototype-exemplars"
+        "resource.key": "paper-prototypes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "paper-prototypes"
+        "resource.key": "sample_marked_rubric_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "sample_marked_rubric_2_1"
       }
     },
     {
@@ -8052,12 +8161,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
-        "resource.key": "app-presentation-exemplars"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
         "resource.key": "app-presentation"
       }
     },
@@ -8072,6 +8175,30 @@
         "lesson.key": "Project - App Presentation",
         "resource.key": "app-presentation-exemplar"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "sample_marked_rubrics_1_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "peer_review_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "sample_marked_rubrics_2_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "resource.key": "peer_review_2"
+      }
     }
   ],
   "scripts_resources": [
@@ -8081,6 +8208,9 @@
         "script.name": "csd4-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {

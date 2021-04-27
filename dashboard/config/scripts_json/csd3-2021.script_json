@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-16 23:47:15 UTC",
+    "serialized_at": "2021-04-24 15:44:08 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -164,7 +164,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\r\n\r\nIn this lesson students continue to develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters\". Students learn to draw with versions of [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and `rect()` that include width and height parameters. They also learn to use the [`background()`(#4dd0e1)](/docs/gamelab/background/) block.",
+        "overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\r\n\r\nIn this lesson students continue to develop their familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters\". Students learn to draw with versions of [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and [`rect()`(#4dd0e1)](/docs/gamelab/rect/) that include width and height parameters. They also learn to use the [`background()`(#4dd0e1)](/docs/gamelab/background/) block.",
         "student_overview": "**Question of the Day:  How can we use parameters to give the computer more specific instructions?**\r\n\r\nIn this lesson, students continue to develop a familiarity with Game Lab by manipulating the width and height of the shapes they use to draw. The lesson kicks off with a discussion that connects expanded block functionality (e.g. different sized shapes) with the need for more block inputs, or \"parameters.\" Finally, the class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block.\r\n",
         "purpose": "This lesson gives students a chance to slightly expand their drawing skills while continuing to develop general purpose programming skills. They will need to reason about the x-y coordinate plane, consider the order of their code, and slightly increase their programs' complexity.  This lesson should be focused primarily on skill-building.",
         "preparation": "* Review the level sequence in Code Studio",
@@ -224,7 +224,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the `randomNumber()` block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program.  Combining all of these skills, students draw randomized images.",
+        "overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the [`randomNumber()`(#FFB74D)](/docs/gamelab/randomNumber/) block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program.  Combining all of these skills, students draw randomized images.",
         "student_overview": "**Question of the Day: How can we make our programs behave differently each time they are run?**\r\n\r\nStudents are introduced to the randomNumber() block and how it can be used to create new behaviors in their programs. They then learn how to update variables during a program, and use those skills to draw randomized images.",
         "purpose": "This lesson introduces randomness, which is important both as a way to make programs more interesting, but also to motivate the use of variables. In the middle of the activity, students are exposed to a variable that is updated multiple times in the program, expanding their understanding of how variables can be used.",
         "preparation": "Review the level progression in Code Studio",
@@ -325,7 +325,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "**1. Add text**\n\nUse Level 5 as an assessment for students. Click inside the level to view a rubric."
       },
       "seeding_key": {
         "lesson.key": "Text",
@@ -353,7 +354,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Captioned Scenes",
@@ -440,7 +442,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Animation",
@@ -644,7 +647,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.\n"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Side Scroller",
@@ -689,7 +693,7 @@
       "has_lesson_plan": true,
       "relative_position": 22,
       "properties": {
-        "overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lessson, students program their sprites to interact in new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and `bounceOff`).",
+        "overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lessson, students program their sprites to interact in new ways. After a brief review of how they used the [`isTouching`(#f78183)](/docs/gamelab/isTouching/) block, students brainstorm other ways that two sprites could interact. They then use [`isTouching`(#f78183)](/docs/gamelab/isTouching/) to make one sprite push another across the screen before practicing with the four collision blocks ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), and [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)).",
         "student_overview": "**Question of the Day: How can programmers build on abstractions to create further abstractions?**\r\n\r\nIn this lesson, the class programs their sprites to interact in new ways. After a brief review of how they used the isTouching block, students brainstorm other ways that two sprites could interact. They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).\r\n",
         "purpose": "This lesson introduces collisions, another useful abstraction that will allow students to manipulate their sprites in entirely new ways. While students could theoretically have written their own displace, collide, or bounce commands, the ability to ignore the details of this code allows them to focus their attention on the high level structure of the games they want to build.\r\n\r\nThis lesson is also intended to give students more practice using the new commands they have learned in the second chapter. This the last time they will learn a new sprite behavior, and following this lesson students will transition to focusing on how they organize their increasingly complex code.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -730,7 +734,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.\n"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Flyer Game",
@@ -1173,7 +1178,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "9a78dce2-0812-414f-8c20-1728b4ff1de2",
@@ -1593,7 +1598,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 70
+        "duration": 215
       },
       "seeding_key": {
         "lesson_activity.key": "ee232401-7aef-488e-b0f1-4b169a7a854e",
@@ -1942,7 +1947,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 60
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "ee6441ac-3fe1-451b-846f-24a977986f9c",
@@ -1984,7 +1989,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 60
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "06cc83f5-66b2-401e-850a-466b164ef104",
@@ -2026,7 +2031,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 140
+        "duration": 215
       },
       "seeding_key": {
         "lesson_activity.key": "064fad66-35a6-480e-ad60-dff751b5230c",
@@ -2762,7 +2767,7 @@
       "key": "267a9bc0-eca4-43ff-9a91-64c0b389089c",
       "position": 1,
       "properties": {
-        "description": "1. [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/)\r\n3. `rect()`"
+        "description": "1. [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/)\r\n3. [`rect()`(#4dd0e1)](/docs/gamelab/rect/)"
       },
       "seeding_key": {
         "activity_section.key": "267a9bc0-eca4-43ff-9a91-64c0b389089c",
@@ -2789,7 +2794,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion introduces the vocabulary word \"parameter\" and also helps students understand the need for parameters. Students will be seeing versions of the [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and `rect()` block in this lesson that have additional parameters. Students may say they want inputs for the size of the shapes, their color, etc. During this conversation tie the behaviors the students want to the inputs the block would need. For example, if you want rectangles to be a different size, the block will need an input that lets the programmer decide how large to make it.\r\n"
+            "markdown": "**Goal:** This discussion introduces the vocabulary word \"parameter\" and also helps students understand the need for parameters. Students will be seeing versions of the [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/) and [`rect()`(#4dd0e1)](/docs/gamelab/rect/) block in this lesson that have additional parameters. Students may say they want inputs for the size of the shapes, their color, etc. During this conversation tie the behaviors the students want to the inputs the block would need. For example, if you want rectangles to be a different size, the block will need an input that lets the programmer decide how large to make it.\r\n"
           }
         ]
       },
@@ -3391,7 +3396,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "Make sure students understand that they will need to both create the image (or animation) in the Animation Tab and then add the animation to the sprite using the `setAnimation` block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\nStudents can use an animation already in the animation tab library, upload one from their computer, or create their own using the provided drawing tools. Additionally, students can use the drawing tools to modify the images they have chosen from the library or uploaded.\n\n**Misconception Alert!**\nMany students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, just as other properties can change, and that two or more sprites might share the same animation."
+            "markdown": "Make sure students understand that they will need to both create the image (or animation) in the Animation Tab and then add the animation to the sprite using the [`setAnimation`(#f78183)](/docs/gamelab/setAnimation/) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\nStudents can use an animation already in the animation tab library, upload one from their computer, or create their own using the provided drawing tools. Additionally, students can use the drawing tools to modify the images they have chosen from the library or uploaded.\n\n**Misconception Alert!**\nMany students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, just as other properties can change, and that two or more sprites might share the same animation."
           }
         ]
       },
@@ -7384,7 +7389,7 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Drawing Shapes",
         "level_keys": [
@@ -8710,7 +8715,7 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -8736,7 +8741,7 @@
       "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -8762,7 +8767,7 @@
       "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -8788,7 +8793,7 @@
       "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8840,7 +8845,7 @@
       "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -8866,7 +8871,7 @@
       "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Scenes",
         "level_keys": [
@@ -8892,7 +8897,7 @@
       "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Background",
         "level_keys": [
@@ -8918,7 +8923,7 @@
       "chapter": 65,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Sprites",
         "level_keys": [
@@ -8944,7 +8949,7 @@
       "chapter": 66,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Text",
         "level_keys": [
@@ -8970,7 +8975,7 @@
       "chapter": 67,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Scene",
         "level_keys": [
@@ -9464,7 +9469,7 @@
       "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example Animated Scene",
         "level_keys": [
@@ -9490,7 +9495,7 @@
       "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Plan Your Scene",
         "level_keys": [
@@ -9516,7 +9521,7 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Draw a Background",
         "level_keys": [
@@ -9542,7 +9547,7 @@
       "chapter": 89,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Sprites",
         "level_keys": [
@@ -9568,7 +9573,7 @@
       "chapter": 90,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Text",
         "level_keys": [
@@ -9594,7 +9599,7 @@
       "chapter": 91,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Movement",
         "level_keys": [
@@ -9620,7 +9625,7 @@
       "chapter": 92,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Animated Scene",
         "level_keys": [
@@ -10322,7 +10327,7 @@
       "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "interactive Card",
         "level_keys": [
@@ -10348,7 +10353,7 @@
       "chapter": 120,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Make an Interactive Card",
         "level_keys": [
@@ -10374,7 +10379,7 @@
       "chapter": 121,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10400,7 +10405,7 @@
       "chapter": 122,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10426,7 +10431,7 @@
       "chapter": 123,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10452,7 +10457,7 @@
       "chapter": 124,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10478,7 +10483,7 @@
       "chapter": 125,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Work",
         "level_keys": [
@@ -10790,7 +10795,7 @@
       "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Game",
         "level_keys": [
@@ -10816,7 +10821,7 @@
       "chapter": 138,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10842,7 +10847,7 @@
       "chapter": 139,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10868,7 +10873,7 @@
       "chapter": 140,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10894,7 +10899,7 @@
       "chapter": 141,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10920,7 +10925,7 @@
       "chapter": 142,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10972,7 +10977,7 @@
       "chapter": 144,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -10998,7 +11003,7 @@
       "chapter": 145,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Intro to Side Scrollers",
         "level_keys": [
@@ -11024,7 +11029,7 @@
       "chapter": 146,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Draw Your Background",
         "level_keys": [
@@ -11050,7 +11055,7 @@
       "chapter": 147,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create Your Sprites",
         "level_keys": [
@@ -11076,7 +11081,7 @@
       "chapter": 148,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Player Controls",
         "level_keys": [
@@ -11102,7 +11107,7 @@
       "chapter": 149,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Looping",
         "level_keys": [
@@ -11128,7 +11133,7 @@
       "chapter": 150,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -11154,7 +11159,7 @@
       "chapter": 151,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Scoring & Scoreboard",
         "level_keys": [
@@ -11180,7 +11185,7 @@
       "chapter": 152,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Game",
         "level_keys": [
@@ -11596,7 +11601,7 @@
       "chapter": 168,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Intro to Flyer Game",
         "level_keys": [
@@ -11622,7 +11627,7 @@
       "chapter": 169,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Make Your Sprites",
         "level_keys": [
@@ -11648,7 +11653,7 @@
       "chapter": 170,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Player Controls",
         "level_keys": [
@@ -11674,7 +11679,7 @@
       "chapter": 171,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Player Controls",
         "level_keys": [
@@ -11700,7 +11705,7 @@
       "chapter": 172,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Player Controls",
         "level_keys": [
@@ -11726,7 +11731,7 @@
       "chapter": 173,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Movement",
         "level_keys": [
@@ -11752,7 +11757,7 @@
       "chapter": 174,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -11778,7 +11783,7 @@
       "chapter": 175,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Game",
         "level_keys": [
@@ -12064,7 +12069,7 @@
       "chapter": 186,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Same Game",
         "level_keys": [
@@ -12090,7 +12095,7 @@
       "chapter": 187,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Plan Your Project",
         "level_keys": [
@@ -12116,7 +12121,7 @@
       "chapter": 188,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Set Up Sprites",
         "level_keys": [
@@ -12142,7 +12147,7 @@
       "chapter": 189,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Set Up Sprites",
         "level_keys": [
@@ -12168,7 +12173,7 @@
       "chapter": 190,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Control Your Player",
         "level_keys": [
@@ -12194,7 +12199,7 @@
       "chapter": 191,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Control Your Player",
         "level_keys": [
@@ -12220,7 +12225,7 @@
       "chapter": 192,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Control Your Player",
         "level_keys": [
@@ -12246,7 +12251,7 @@
       "chapter": 193,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12272,7 +12277,7 @@
       "chapter": 194,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12298,7 +12303,7 @@
       "chapter": 195,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12324,7 +12329,7 @@
       "chapter": 196,
       "position": 11,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12350,7 +12355,7 @@
       "chapter": 197,
       "position": 12,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sprite Interactions",
         "level_keys": [
@@ -12376,7 +12381,7 @@
       "chapter": 198,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12402,7 +12407,7 @@
       "chapter": 199,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Platform Jumper Game",
         "level_keys": [
@@ -12428,7 +12433,7 @@
       "chapter": 200,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Build a Platform Jumper",
         "level_keys": [
@@ -12454,7 +12459,7 @@
       "chapter": 201,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12480,7 +12485,7 @@
       "chapter": 202,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12506,7 +12511,7 @@
       "chapter": 203,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12532,7 +12537,7 @@
       "chapter": 204,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Background and Variables",
         "level_keys": [
@@ -12558,7 +12563,7 @@
       "chapter": 205,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Platforms",
         "level_keys": [
@@ -12584,7 +12589,7 @@
       "chapter": 206,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Platforms",
         "level_keys": [
@@ -12610,7 +12615,7 @@
       "chapter": 207,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Platforms",
         "level_keys": [
@@ -12636,7 +12641,7 @@
       "chapter": 208,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Items",
         "level_keys": [
@@ -12662,7 +12667,7 @@
       "chapter": 209,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Items",
         "level_keys": [
@@ -12688,7 +12693,7 @@
       "chapter": 210,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Items",
         "level_keys": [
@@ -12714,7 +12719,7 @@
       "chapter": 211,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12740,7 +12745,7 @@
       "chapter": 212,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12766,7 +12771,7 @@
       "chapter": 213,
       "position": 15,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12792,7 +12797,7 @@
       "chapter": 214,
       "position": 16,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Platform Jumper - Player",
         "level_keys": [
@@ -12844,7 +12849,7 @@
       "chapter": 216,
       "position": 18,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12870,7 +12875,7 @@
       "chapter": 217,
       "position": 19,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12896,7 +12901,7 @@
       "chapter": 218,
       "position": 20,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -12922,7 +12927,7 @@
       "chapter": 219,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Design Your Game",
         "level_keys": [
@@ -12948,7 +12953,7 @@
       "chapter": 220,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -12974,7 +12979,7 @@
       "chapter": 221,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -13000,7 +13005,7 @@
       "chapter": 222,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -13026,7 +13031,7 @@
       "chapter": 223,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Background and Variables",
         "level_keys": [
@@ -13052,7 +13057,7 @@
       "chapter": 224,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13078,7 +13083,7 @@
       "chapter": 225,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13104,7 +13109,7 @@
       "chapter": 226,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13130,7 +13135,7 @@
       "chapter": 227,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13156,7 +13161,7 @@
       "chapter": 228,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project - Sprites and Interactions",
         "level_keys": [
@@ -13182,7 +13187,7 @@
       "chapter": 229,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Game",
         "level_keys": [
@@ -16132,11 +16137,11 @@
     },
     {
       "name": "CS in Entertainment",
-      "url": "https://studio.code.org/s/csd3-2020/stage/1/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
       "key": "cs_in_entertainment",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "cs_in_entertainment"
@@ -16144,11 +16149,11 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://studio.code.org/s/csd3-2020/stage/2/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing",
       "key": "drawing-shapes-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "drawing-shapes-exemplar-2020"
@@ -16172,7 +16177,7 @@
       "key": "colored-shape-drawing",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "colored-shape-drawing"
@@ -16316,11 +16321,11 @@
     },
     {
       "name": "Mini Project - Captioned Scenes",
-      "url": "https://studio.code.org/s/csd3-2020/stage/10/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit",
       "key": "mini-project-captioned-scenes-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "mini-project-captioned-scenes-2020"
@@ -16439,11 +16444,11 @@
     },
     {
       "name": "Animated Scene Planning",
-      "url": "https://studio.code.org/s/csd3-2020/stage/13/puzzle/1/",
+      "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
       "key": "animated-scene-planning-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "animated-scene-planning-exemplar-2020"
@@ -16550,11 +16555,11 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://studio.code.org/s/csd3-2020/stage/17/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
       "key": "interactive-card-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "interactive-card-exemplar-2020"
@@ -16562,11 +16567,11 @@
     },
     {
       "name": "Interactive Card - Marked Rubrics",
-      "url": "https://studio.code.org/s/csd3-2020/stage/17/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1k1jRoyOzMgaUIKTgGP3mE6CbQEkEbaGStxhIMNmLF3A",
       "key": "interactive-card-marked-rubrics",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "interactive-card-marked-rubrics"
@@ -16637,11 +16642,11 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://studio.code.org/s/csd3-2020/stage/19/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
       "key": "collision-detection-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "collision-detection-exemplar-2020"
@@ -16687,11 +16692,11 @@
     },
     {
       "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://studio.code.org/s/csd3-2020/stage/20/puzzle/1/",
+      "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
       "key": "mini-project-guide-side-scroller-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
@@ -16773,11 +16778,11 @@
     },
     {
       "name": "Flyer Game - Project Guide",
-      "url": "https://studio.code.org/s/csd3-2020/stage/23/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
       "key": "flyer-game-project-guide-exemplar",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "flyer-game-project-guide-exemplar"
@@ -16860,11 +16865,11 @@
     },
     {
       "name": "Planning Your Platform Game",
-      "url": "https://studio.code.org/s/csd3-2020/stage/26/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
       "key": "planning-your-platform-game-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "planning-your-platform-game-exemplar-2020"
@@ -16897,11 +16902,11 @@
     },
     {
       "name": "Make Your Own Game ",
-      "url": "https://studio.code.org/s/csd3-2020/stage/27/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
       "key": "make-your-own-game-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "make-your-own-game-exemplar-2020"
@@ -16909,11 +16914,11 @@
     },
     {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://studio.code.org/s/csd3-2020/stage/27/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1QfufVwYLGjaWqR-7Fh-w0dJH2xWI5jxwM5QJTf-cTxE/edit",
       "key": "make-your-own-game-sample-marked-rubrics",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "make-your-own-game-sample-marked-rubrics"

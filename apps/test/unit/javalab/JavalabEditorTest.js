@@ -42,45 +42,67 @@ describe('Java Lab Editor Test', () => {
     );
   };
 
-  describe('Rename', () => {
-    it('Rename button changes to save button after it is clicked', () => {
+  describe('Open Context Menu', () => {
+    it('Opens the menu after right clicking on a tab', () => {
       const editor = createWrapper();
-
-      // find 'Rename' button and click it (enables rename)
-      const activateRenameBtn = editor.find('button').first();
-      expect(activateRenameBtn.contains('Rename')).to.be.true;
-      activateRenameBtn.invoke('onClick')();
-
-      // save button should now be second input (first is file name input)
-      const submitBtn = editor.find('input').at(1);
-      expect(submitBtn.prop('value')).to.equal('Save');
+      const firstTab = editor.find('NavItem').first();
+      firstTab.props().onContextMenu({
+        preventDefault: sinon.stub(),
+        target: {
+          getBoundingClientRect: () => {
+            return {
+              bottom: 2,
+              left: 4
+            };
+          }
+        }
+      });
+      expect(editor.find('JavalabEditor').instance().state.showMenu).to.be.true;
+      expect(
+        editor.find('JavalabEditor').instance().state.contextTarget
+      ).to.equal('file-0');
+      expect(
+        editor.find('JavalabEditor').instance().state.menuPosition
+      ).to.deep.equal({
+        top: '2px',
+        left: '4px'
+      });
     });
+  });
 
+  describe('Rename', () => {
     it('updates state on rename save', () => {
       const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
       const oldFilename = 'MyClass.java'; // default filename
       const newFilename = 'NewFilename.java';
 
       // should have default file in redux
       expect(store.getState().javalab.sources[oldFilename]).to.not.be.undefined;
 
-      const activateRenameBtn = editor.find('button').first();
-      activateRenameBtn.invoke('onClick')();
-
-      // first input should be file rename text input
-      const renameInput = editor.find('input').first();
-      renameInput.invoke('onChange')({target: {value: newFilename}});
-
-      // save button not clicked, should not yet have changed filename in redux
-      expect(store.getState().javalab.sources[newFilename]).to.be.undefined;
-      expect(store.getState().javalab.sources[oldFilename]).to.not.be.undefined;
-
-      // submit form, should trigger file rename
-      const form = editor.find('form').first();
-      // stub preventDefault function
-      form.invoke('onSubmit')({preventDefault: () => {}});
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        editTabKey: 'file-0',
+        editTabFilename: oldFilename,
+        dialogOpen: true,
+        tabs: [
+          {
+            key: 'file-0',
+            filename: oldFilename
+          }
+        ]
+      });
+      javalabEditor.onRenameFile(newFilename);
       expect(store.getState().javalab.sources[newFilename]).to.not.be.undefined;
       expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
+      expect(javalabEditor.state.dialogOpen).to.be.false;
+      expect(javalabEditor.state.tabs).to.deep.equal([
+        {
+          key: 'file-0',
+          filename: newFilename
+        }
+      ]);
     });
   });
 
