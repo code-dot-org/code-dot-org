@@ -229,25 +229,29 @@ def localize_level_content(variable_strings, parameter_strings)
         # keep the contents of certain levels secret.
         next if level.encrypted?
 
-        url = I18nScriptUtils.get_level_url_key(script, level)
-        script_strings[url] = get_i18n_strings(level)
-        progression_strings[script_level.progression] = script_level.progression if script_level.progression
+        new_url = I18nScriptUtils.get_level_url_key(script, level)
+        old_url = I18nScriptUtils.get_level_url_key_old(script, level)
+        urls = (new_url != old_url) ? [new_url, old_url] : [new_url]
+        urls.each do |url|
+          script_strings[url] = get_i18n_strings(level)
+          progression_strings[script_level.progression] = script_level.progression if script_level.progression
 
-        # extract block category strings; although these are defined for each
-        # level, the expectation here is that there is a massive amount of
-        # overlap between levels, so we actually want to just present these all
-        # as a single group rather than breaking them up by script
-        if script_strings[url].key? "block_categories"
-          block_category_strings.merge! script_strings[url].delete("block_categories")
-        end
+          # extract block category strings; although these are defined for each
+          # level, the expectation here is that there is a massive amount of
+          # overlap between levels, so we actually want to just present these all
+          # as a single group rather than breaking them up by script
+          if script_strings[url].key? "block_categories"
+            block_category_strings.merge! script_strings[url].delete("block_categories")
+          end
 
-        # do the same for variables and parameters
-        if script_strings[url].key? "variable_names"
-          variable_strings.merge! script_strings[url].delete("variable_names")
-        end
+          # do the same for variables and parameters
+          if script_strings[url].key? "variable_names"
+            variable_strings.merge! script_strings[url].delete("variable_names")
+          end
 
-        if script_strings[url].key? "parameter_names"
-          parameter_strings.merge! script_strings[url].delete("parameter_names")
+          if script_strings[url].key? "parameter_names"
+            parameter_strings.merge! script_strings[url].delete("parameter_names")
+          end
         end
       end
       script_strings.delete_if {|_, value| value.blank?}
