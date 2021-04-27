@@ -193,6 +193,7 @@ module ScriptConstants
       CSP8_2020_NAME = 'csp8-2020'.freeze,
       CSP9_2020_NAME = 'csp9-2020'.freeze,
       CSP10_2020_NAME = 'csp10-2020'.freeze,
+      CSP_POST_SURVEY_2020_NAME = 'csp-post-survey-2020'.freeze
     ].freeze,
     csp_2019: [
       CSP1_2019_NAME = 'csp1-2019'.freeze,
