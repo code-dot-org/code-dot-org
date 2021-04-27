@@ -14,9 +14,11 @@ import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 import {oneDark} from '@codemirror/theme-one-dark';
 import color from '@cdo/apps/util/color';
 import {Tab, Nav, NavItem} from 'react-bootstrap';
-import JavalabEditorContextMenu from './JavalabEditorContextMenu';
 import NameFileDialog from './NameFileDialog';
 import DeleteConfirmationDialog from './DeleteConfirmationDialog';
+import JavalabEditorTabMenu from './JavalabEditorTabMenu';
+import JavalabFileExplorer from './JavalabFileExplorer';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const style = {
   editor: {
@@ -26,6 +28,19 @@ const style = {
   },
   darkBackground: {
     backgroundColor: color.dark_slate_gray
+  },
+  fileMenuToggleButton: {
+    margin: '0, 0, 0, 4px',
+    padding: 0,
+    backgroundColor: 'transparent',
+    border: 'none',
+    ':hover': {
+      cursor: 'pointer',
+      boxShadow: 'none'
+    }
+  },
+  darkFileMenuToggleButton: {
+    color: color.white
   }
 };
 
@@ -48,9 +63,12 @@ class JavalabEditor extends React.Component {
   constructor(props) {
     super(props);
 
-    this.renameFromContextMenu = this.renameFromContextMenu.bind(this);
-    this.cancelContextMenu = this.cancelContextMenu.bind(this);
-    this.deleteFromContextMenu = this.deleteFromContextMenu.bind(this);
+    this.onChangeTabs = this.onChangeTabs.bind(this);
+    this.toggleTabMenu = this.toggleTabMenu.bind(this);
+    this.renameFromTabMenu = this.renameFromTabMenu.bind(this);
+    this.deleteFromTabMenu = this.deleteFromTabMenu.bind(this);
+    this.cancelTabMenu = this.cancelTabMenu.bind(this);
+
     this.onRenameFile = this.onRenameFile.bind(this);
     this.onCreateFile = this.onCreateFile.bind(this);
     this.onDeleteFile = this.onDeleteFile.bind(this);
@@ -167,20 +185,37 @@ class JavalabEditor extends React.Component {
     };
   }
 
-  openTabContextMenu(key, e) {
-    e.preventDefault();
-    const boundingRect = e.target.getBoundingClientRect();
-    this.setState({
-      showMenu: true,
-      contextTarget: key,
-      menuPosition: {
-        top: `${boundingRect.bottom}px`,
-        left: `${boundingRect.left}px`
-      }
-    });
+  onChangeTabs(key) {
+    if (key !== this.state.activeTabKey) {
+      this.setState({
+        showMenu: false,
+        contextTarget: null,
+        activeTabKey: key
+      });
+    }
   }
 
-  renameFromContextMenu() {
+  // This opens and closes the dropdown menu on the active tab
+  toggleTabMenu(key, e) {
+    if (key === this.state.contextTarget) {
+      this.cancelTabMenu();
+    } else {
+      e.preventDefault();
+      const boundingRect = e.target.getBoundingClientRect();
+      this.setState({
+        showMenu: true,
+        contextTarget: key,
+        menuPosition: {
+          top: `${boundingRect.bottom}px`,
+          left: `${boundingRect.left}px`
+        }
+      });
+    }
+  }
+
+  // This is called from the dropdown menu on the active tab
+  // when the rename option is clicked
+  renameFromTabMenu() {
     this.setState({
       showMenu: false,
       contextTarget: null,
@@ -189,14 +224,15 @@ class JavalabEditor extends React.Component {
     });
   }
 
-  cancelContextMenu() {
+  // This closes the dropdown menu on the active tab
+  cancelTabMenu() {
     this.setState({
       showMenu: false,
       contextTarget: null
     });
   }
 
-  deleteFromContextMenu() {
+  deleteFromTabMenu() {
     this.setState({
       openDialog: DELETE_FILE,
       fileToDelete: this.state.contextTarget
@@ -314,6 +350,29 @@ class JavalabEditor extends React.Component {
     return `Filename ${filename} is already in use in this project. Please choose a different name`;
   }
 
+  // This is called from the file explorer when we want to jump to a file
+  onOpenFile(key) {
+    const {tabs} = this.state;
+    let newTabs = [...tabs];
+    let selectedFileIndex;
+    let selectedFile;
+    newTabs.forEach((tab, index) => {
+      if (tab.key === key) {
+        selectedFileIndex = index;
+        selectedFile = tab;
+      }
+    });
+    newTabs.splice(selectedFileIndex, 1);
+    newTabs.unshift(selectedFile);
+    // closes the tab menu if it is open
+    this.setState({
+      activeTabKey: key,
+      tabs: newTabs,
+      showMenu: false,
+      contextTarget: null
+    });
+  }
+
   render() {
     const {
       orderedTabKeys,
@@ -323,7 +382,8 @@ class JavalabEditor extends React.Component {
       openDialog,
       fileToDelete,
       renameFileError,
-      newFileError
+      newFileError,
+      contextTarget
     } = this.state;
     const {onCommitCode, isDarkMode} = this.props;
 
@@ -358,21 +418,40 @@ class JavalabEditor extends React.Component {
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
-          onSelect={tabKey => this.setState({activeTabKey: tabKey})}
+          onSelect={key => this.onChangeTabs(key)}
           style={{marginTop: 10}}
           id="javalab-editor-tabs"
           className={isDarkMode ? 'darkmode' : ''}
         >
           <div>
             <Nav bsStyle="tabs" style={{marginBottom: 0}}>
+              <JavalabFileExplorer
+                files={orderedTabKeys}
+                onSelectFile={this.onOpenFile}
+                isDarkMode={this.props.isDarkMode}
+              />
               {orderedTabKeys.map(tabKey => {
                 return (
-                  <NavItem
-                    eventKey={tabKey}
-                    key={`${tabKey}-tab`}
-                    {...this.makeListeners(tabKey)}
-                  >
-                    {fileMetadata[tabKey]}
+                  <NavItem eventKey={tabKey} key={`${tabKey}-tab`}>
+                    <span>{fileMetadata[tabKey]}</span>
+                    {activeTabKey === tabKey && (
+                      <button
+                        type="button"
+                        style={{
+                          ...style.fileMenuToggleButton,
+                          ...(this.props.isDarkMode &&
+                            style.darkFileMenuToggleButton)
+                        }}
+                        onClick={e => this.toggleTabMenu(tabKey, e)}
+                        className="no-focus-outline"
+                      >
+                        <FontAwesome
+                          icon={
+                            contextTarget === tabKey ? 'caret-up' : 'caret-down'
+                          }
+                        />
+                      </button>
+                    )}
                   </NavItem>
                 );
               })}
@@ -395,10 +474,10 @@ class JavalabEditor extends React.Component {
           </div>
         </Tab.Container>
         <div style={menuStyle}>
-          <JavalabEditorContextMenu
-            cancelContextMenu={this.cancelContextMenu}
-            renameFromContextMenu={this.renameFromContextMenu}
-            deleteFromContextMenu={this.deleteFromContextMenu}
+          <JavalabEditorTabMenu
+            cancelTabMenu={this.cancelTabMenu}
+            renameFromTabMenu={this.renameFromTabMenu}
+            deleteFromTabMenu={this.deleteFromTabMenu}
           />
         </div>
         <DeleteConfirmationDialog
