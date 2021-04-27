@@ -543,6 +543,7 @@ hr:
         cs: 'Računalna znanost'
         math: 'Matematika'
         science: 'Znanost'
+        la: 'Humanistika'
       resources:
         kodable: 'Kodable'
       robotics:

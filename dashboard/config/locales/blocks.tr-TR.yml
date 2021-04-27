@@ -213,7 +213,7 @@ tr:
       Dancelab_everyMeasuresRange:
         text: "{N} ölçütünü her {START} sonrasında tekrarlayın "
       Dancelab_everySeconds:
-        text: 'повторювати кожні {N} {UNIT} '
+        text: 'her {N} {UNIT}’de bir '
         options:
           UNIT:
             '"measures"': ölçü

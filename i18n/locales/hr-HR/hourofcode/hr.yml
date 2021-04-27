@@ -30,11 +30,8 @@ hr:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2016.'
   africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  hoc2020_header: Učite danas, gradite svjetlije sutra.
+  hoc2020_header_with_line_break_markdown: Učite danas, gradite svjetlije sutra.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -56,7 +53,7 @@ hr:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Sat kodiranja se približava!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
@@ -82,7 +79,7 @@ hr:
   oceans_landing_teacher_resources: Teacher Resources
   oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
     AI, machine learning, training data, and bias, while exploring ethical issues.
-  oceans_landing_resource_button: View Resources
+  oceans_landing_resource_button: Prikaži resurse
   oceans_landing_cs_for_good: CS for Good
   oceans_landing_cs_for_good_desc: Resources to help students understand the role
     computer science could play in creating a more equitable world.
@@ -133,7 +130,7 @@ hr:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_live: Hour of Code Live
+  hoc_live: Sat kodiranja uživo
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
@@ -150,7 +147,7 @@ hr:
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
-  ai_video_title_what_is_ai: What is AI?
+  ai_video_title_what_is_ai: Što je AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
   ai_video_title_what_is_ml: What is Machine Learning?
@@ -203,7 +200,7 @@ hr:
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
+  codeorg_homepage_hoc2018_header_line1: Sat kodiranja se približava...
   codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: What will you create?
   codeorg_homepage_hoc2018_header_line3: Give flight to imagination and birth to innovation.
@@ -235,9 +232,9 @@ hr:
   cookie_banner_accept: I agree
   front_header_banner: Pridružite se najvećem edukativnom događaju u povijesti, od
     8. do 14. prosinca 2015
-  front_intro_default: Sat Kodiranja globalni je pokret kojeg čine deseci milijuna
+  front_intro_default: Sat kodiranja globalni je pokret kojeg čine deseci milijuna
     učenika u preko 180 zemalja. Bilo tko, bilo gdje može organizirati događanje Sat
-    Kodiranja. Jednosatni vodiči dostupni su na preko 40 jezika. Nikakvo iskustvo
+    kodiranja. Jednosatni vodiči dostupni su na preko 40 jezika. Nikakvo iskustvo
     nije potrebno. <strong>Od 4 do 104 godine.</strong>
   front_intro_default_2: A global movement in 180+ countries.
   front_watch_video: Pogledajte novi video
@@ -245,7 +242,7 @@ hr:
   front_volunteers: Traže se tehnički volonteri
   front_start_learning: Počnite učiti
   header_menu_resources: Resursi
-  header_menu_faq: Učestalo postavljana pitanja
+  header_menu_faq: Piitanja
   header_menu_how_to: Upute
   header_menu_promote: Promocija
   header_menu_activities: Aktivnosti
@@ -397,9 +394,9 @@ hr:
     Novi tutorijali uskoro su tu za bilo koji preglednik, smartphone – ili čak i bez
     računala! <a href='http://code.org/learn'> Isprobajte trenutne tutorijale</a>
   whats_next_how_to: "<a href='/how-to'> Kako pokrenuti Sat kodiranja</a>"
-  whats_next_promote: "<a href='/promote'> Reklamiraj Sata kodiranja</a>"
-  whats_next_how_to_promote: "<a href='/promote/resources'> Kako promovirati Sat kodiranja</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'> Kako promovirati Sat kodiranja</a>"
+  whats_next_promote: "<a href='/promote'>Promoviraj Sat kodiranja</a>"
+  whats_next_how_to_promote: "<a href='/promote/resources'>Kako promovirati Sat kodiranja</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>Kako promovirati Sat kodiranja</a>"
   whats_next_try: "<a href='http://code.org/learn'> Isprobajte tutorijale</a>"
   whats_next_try_button: Isprobajte tutorijale
   n_have_learned_an_hoc: "<h1>Pokušaj</h1> <h2>Sata koda</h2> <h3># organiziran</h3>"
@@ -410,14 +407,14 @@ hr:
   share_on_facebook: Podijeli na Facebooku
   share_on_twitter: Podijeli na Twitteru
   promote_additional_resources: Additional resources coming soon!
-  front_join_us_heading: Sat Kodiranja za svakog učenika.
+  front_join_us_heading: Sat kodiranja za svakog učenika.
   front_join_us_announcements: Obavijesti
   front_join_us_anybody_can_learn: Svatko može naučiti
   front_join_us_description: Informatika je temelj za svakog učenika. Pomozite nam
     predstaviti je stotinama milijuna.
   front_join_us_description_short: Računarstvo je temelj za svakog učenika.
   front_join_us_button: Pridružite nam se
-  front_what_is_hoc: Što je Sat Kodiranja?
+  front_what_is_hoc: Što je Sat kodiranja?
   front_join_us_header: Svatko može naučiti osnove, i zabaviti  se dok to radi!
   front_join_us_volunteer_header: Volonteri za Sat kodiranja
   front_join_us_tutorials: Isprobajte ovogodišnje vodiče!
@@ -430,14 +427,14 @@ hr:
     biste pronašli popis djelatnosti vezanih uz robote!
   front_join_us_teacher: Jeste li učitelj?
   front_join_us_inspire: Potaknuti studente s
-  front_join_us_inspire_link: Sat Kodiranja u učionici.
+  front_join_us_inspire_link: Sat kodiranja u učionici.
   front_join_us_teacher_link: Inspiriraj učenike sa Satom kodiranja na nastavi
   front_join_us_teacher_volunteer: Potraga za volonterima koji mogu posjetiti učionicu
     ili inspirirati vaše učenike na daljinu
   front_join_us_parent: Jeste li roditelj?
   front_join_us_ask_link: Pitajte svoju mjesnu školu
   front_join_us_ask: da bude domaćin Sata Kodiranja.
-  front_join_us_parent_link: Pitajte lokalne škole da li bi željele ugostiti Sat kodiranja
+  front_join_us_parent_link: Zamolite školu u svojoj blizini da organizira Sat kodiranja
   front_join_us_computer_science: Samo volite informatiku?
   front_join_us_cs_volunteer: Osjećate strast prema računarskoj znanosti i podučavanju?
   front_join_us_spread: Proširite vijest.
@@ -445,9 +442,9 @@ hr:
   front_join_us_spread_word_work: Recite svima u zajednici i na radnom mjestu
   front_join_us_sign_up_volunteer: Prijavite se za volontera u lokalnoj učionici putem
     video chata
-  front_join_us_organize: Ili organizirajte Sat Kodiranja sami.
-  front_join_us_how_to_run: Evo kako izvesti Sat Kodiranja
-  front_join_us_help_promote: Pomozite u promicanju Sata Kodiranja
+  front_join_us_organize: Ili organizirajte Sat kodiranja sami.
+  front_join_us_how_to_run: Evo kako održati Sat kodiranja
+  front_join_us_help_promote: Pomozite u promicanju Sata kodiranja
   front_join_us_students: Učenici
   front_join_us_teachers: Učitelji
   front_join_us_everyone: Svi
@@ -499,8 +496,8 @@ hr:
   signup_email_preference_opt_in: Can we email you about updates to Code.org courses,
     local opportunities, or other computer science news?
   signup_email_preference_privacy: "(See our privacy policy)"
-  signup_email_preference_yes: 'Yes'
-  signup_email_preference_no: 'No'
+  signup_email_preference_yes: Da
+  signup_email_preference_no: Ne
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: Ako ste domaćih više događanja, molimo vas da pošaljete
     jedinstveni naziv ili adresu e-pošte za svaki od njih. Računamo samo jedan događaj
@@ -518,15 +515,15 @@ hr:
     karti
   signup_event_type_in_school: U školi
   signup_event_type_out_of_school: Izvan škole
-  signup_event_type_at_home: Home
-  signup_submit_census_label: Submit
+  signup_event_type_at_home: Početna
+  signup_submit_census_label: Pošalji
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.
   signup_submit_label: Registrirajte se
   signup_submit_error_message: Došlo je do greške. Molimo provjerite jesu li sva obvezna
     polja popunjena ispravno.
-  signup_submit_and_continue_label: Submit and Continue
-  signup_continue_label: Continue
+  signup_submit_and_continue_label: Pošalji i nastavi
+  signup_continue_label: Nastavi
   signup_thank_you_header: Hvala vam za registriranje da budete domaćin Sata Koridanja.
   signup_thank_you_message: Poslali smo vam e-poštu potvrde sa informacijama da vam
     pomognemo započeti.
@@ -553,7 +550,7 @@ hr:
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
   map_title: Mapa sata koda
-  map_header: "# Sat Kodiranja događanja diljem svijeta"
+  map_header: "# Sat kodiranja događanja diljem svijeta"
   map_header_count_year: "%{event_count} events registered in %{year}"
   see_all_events: Prikaži sva događanja
   map_header_company: "# Organizirano od strane firme"
@@ -568,22 +565,26 @@ hr:
     page.</a>
   map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
   meta_tag_og_title: Sat kodiranja se približava
-  meta_tag_og_description: Sat Kodiranja je globalni pokret koji doseže milijune učenika
+  meta_tag_og_description: Sat kodiranja je globalni pokret koji doseže milijune učenika
     u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.
   meta_tag_twitter_title: Sat kodiranja se približava
-  meta_tag_twitter_description: Sat Kodiranja je globalni pokret koji doseže milijune
+  meta_tag_twitter_description: Sat kodiranja je globalni pokret koji doseže milijune
     učenika u 180+ zemalja i na preko 30 jezika. Od 4 do 104 godine.
-  twitter_default_text: 'Ja sudjelujem u ovogodišnjem Satu Kodiranja #HourOfCode,
+  twitter_default_text: 'Ja sudjelujem u ovogodišnjem Satu kodiranja #HourOfCode,
     a vi? @codeorg'
   twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
     (Thanks %{random_donor} for supporting @codeorg)'
   twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
     Are you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Učestalo postavljana pitanja
-  hoc_faq_what_is_hoc_q: Što je Sat Kodiranja?
-  hoc_faq_what_is_hoc_a: Sat kodiranja jednosatni je uvod u računarstvo, osmišljen
-    za demistifikaciju kodiranja i kao dokaz da svatko može naučiti osnove. <a href='%{codeorg_url}'>
-    Pogledajte tutorijale</a>.
+  hoc_faq_what_is_hoc_q: Što je Sat kodiranja?
+  hoc_faq_what_is_hoc_a: Sat kodiranja započeo je kao jednosatni uvod u računalnu
+    znanost, osmišljen kako bi demistificirao "kôd", pokazao da svatko može naučiti
+    osnove i proširio sudjelovanje na polju računalnih znanosti. Otada je postao svjetski
+    pokušaj promoviranja računalne znanosti, počevši od jednosatnih kodiranja, ali
+    proširivši se i na različite vrste aktivnosti u zajednici. Pogledajte <a href='%{tutorials}'>
+    vodiče i aktivnosti </a>. Ovu osnovnu kampanju podržava preko <a href='%{partners}'>
+    400 partnera </a> i 200.000 edukatora širom svijeta.
   hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
     to computer science, designed to demystify "code", to show that anybody can learn
     the basics, and to broaden participation in the field of computer science. It
@@ -592,15 +593,13 @@ hr:
     out the [tutorials and activities](%{tutorials}). This grassroots campaign is
     supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
   hoc_faq_last_year: Isprobajte tutorijale
-  hoc_faq_when_is_hoc_q: Kada je Sat Kodiranja?
-  hoc_faq_when_is_hoc_a: Bilo tko može ugostiti Sat kodiranja bilo kada, ali cilj
-    masovnih kampanji je da deseci milijuna učenika isprobaju Sat kodiranja tokom
-    %{campaign_date}, u svrhu proslave <a href='http://csedweek.org'> tjedna podučavanja
-    informatike</a>. Je li to jedan specifičan <i>sat</i>? Ne. Sata kodiranja možete
-    organizirati bilo kada tijekom ovog tjedna. Možete razdvojiti Sat kodiranja i
-    u više sesija dokle god vaši učenici završe tutorijal Sata kodiranja. Učinite
-    ono što je najbolje za vas i vaše učenike. (I ako to ne možete učiniti tijekom
-    tog tjedna, učinite tjedan prije ili poslije).
+  hoc_faq_when_is_hoc_q: Kada je Sat kodiranja?
+  hoc_faq_when_is_hoc_a: Sat koda održava se svake godine tijekom <a href='%{csedweek_url}'>Tjedna
+    obrazovanja za računalne znanosti</a>. %{campaign_date_year} Tjedan obrazovanja
+    za računalne znanosti bit će%{campaign_date_full}, ali možete biti domaćin Sat
+    kodiranja tijekom cijele godine. Tjedan obrazovanja za računalne znanosti održava
+    se svake godine u znak priznanja rođendana pionira računalstva, <a href='%{grace_hopper}'>admirala
+    Grace Murray Hoppera</a> (9. prosinca 1906).
   hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
     Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
     Education Week will be %{campaign_date_full}, but you can host an Hour of Code
@@ -625,24 +624,23 @@ hr:
     our how-to guide. You can organize an Hour of Code event at your school or in
     your community — like in an extracurricular club, non-profit or at work. Or, just
     try it yourself when %{campaign_date} arrives."
-  hoc_faq_behind_hoc_q: Tko stoji iza sata Kodiranja?
-  hoc_faq_behind_hoc_a: Sat kodiranja organiziran je od strane <a href='http://code.org'>
-    Code.org</a>, javne 501 c 3 neprofitne organizacije posvećene širenju informatike
-    tako što omogućuju dostupnost u sve više škola, i povećano sudjelovanje žena i
-    manje zastupljenih učenika pripadnika manjina. <a href='http://code.org/about/partners'>
-    Besprimjerna koalicija partnera</a>ujedinjeno podržava Sat Kodiranja&mdash; uključujući
-    Microsoft, Apple, Amazon, Boys and Girls Clubs of America i Uprave Sveučilišta.
+  hoc_faq_behind_hoc_q: Tko stoji iza Sata kodiranja?
+  hoc_faq_behind_hoc_a: Sat kodiranja organizira Tjedan Sata kodiranja i obrazovanja
+    za računalne znanosti <a href='%{partner_url}'> Savjetodavni i revizijski odbori
+    </a>, kao i široka koalicija partnera koja se okupila kako bi podržala Sat kodiranja
+    &mdash; uključujući Microsoft, Apple, Amazon, Boys and Girls Clubs of America
+    i College Board.
   hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
     Computer Science Education Week [Advisory and Review Committees](%{partner_url})
     as well as an unprecedented coalition of partners that have come together to support
     the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
     America and the College Board.
   hoc_faq_host_q: Ne znam ništa o kodiranju. Mogu li ipak biti domaćin događaja?
-  hoc_faq_host_a: Naravno. Aktivnosti Sata Kodiranja imaju smjernice. Sve što morate
-    učiniti je <a href='%{codeorg_url}/learn'>probati naš aktuelni vodič</a>, odabrati
+  hoc_faq_host_a: Naravno. Aktivnosti Sata kodiranja imaju smjernice. Sve što morate
+    učiniti je <a href='%{codeorg_url}/learn'>probati naš aktualni vodič</a>, odabrati
     lekciju koju želite i sat svoga vremena &mdash; mi ćemo se pobrinuti za ostalo.
-    Također imamo opcije za svaku dob i nivo iskustva, od vrtića na gore. Počnite
-    planirati svoj događaj čitajući naše <a href='/resources/how-to'> vodiče sa smjernicama</a>.
+    Također imamo opcije za svaku dob i nivo iskustva, počevši od vrtića. Počnite
+    planirati svoj događaj čitajući naše <a href='/resources/how-to'>vodiče sa smjernicama</a>.
   hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
     you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
     tutorial you want, and pick an hour — we take care of the rest. We also have options
@@ -661,17 +659,18 @@ hr:
     in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
     if your school can't accommodate the tutorials!
   hoc_faq_need_computers_q: Trebam li računalo za svakog sudionika?
-  hoc_faq_need_computers_a: Ne. Mi imamo vodiče Sata Kodiranja koji rade na računalima,
-    pametnim telefonima, tabletima, kao i neke za koje uopće ne trebate računalo!
-    Možete pristupiti gdje god se nalazili, uz bilo što što imate. <p><i>Evo nekoliko
-    mogućnosti:</i> <br><ul><li><b>Rad u parovima.</b> Istraživanja pokazuju da učenici
-    najbolje uče <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programiranjem
-    u parovima</a> dijeljenjem računala i zajedničkim radom. Potaknite svoje učenike
-    da  dijele. <li><b>Koristite projektor.</b> Ako imate projektor i zaslon za računalo
-    povezano na internet, cijela grupa mođe učiti Sat Kodiranja zajedno. Pogledajte
-    video zapise zajedno i naizmjence rješavajte zagonetke i odgovarajte na pitanja.
-    <li><b>Učite bez upotrebe elektronike.</b> Nudimo vodiče za koje uopće ne trebate
-    računalo. </ul>
+  hoc_faq_need_computers_a: 'Ne. Imamo vodiče za Sat kodiranja koje možete koristiti
+    za primjenu na osobnim računalima, pametnim telefonima, tabletima, dok za neke
+    računalo uopće nije potrebno! Možete se pridružiti gdje god bili, sa svime što
+    imate. <p> <i> Evo nekoliko opcija: </i> <br> <ul> <li> <b> Rad u parovima. </b>
+    <a href=''%{pair_programming_research}''> Istraživanje pokazuje </a> studenti
+    najbolje uče s <a href=''%{pair_programming_video}''>programiranjem u paru</a>,
+    dijeljenjem računala i zajedničkim radom. Potaknite svoje učenike da se organiziraju
+    u timove.<li> <b>Koristite projekciju zaslona.</b> Ako imate projektor i zaslon
+    za računalo povezano s mrežom, cijela vaša grupa može zajedno odraditi Sat kodiranja.
+    Zajedno gledajte dijelove videozapisa i naizmjence rješavajte zagonetke ili odgovarajte
+    na pitanja. <li> <b>Budite "unplugged".</b> Nudimo <a href=''%{unplugged_url}''>
+    vodiče za koje uopće nije potrebno računalo </a>. </ul>'
   hoc_faq_need_computers_a_markdown: |-
     No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
 
@@ -681,9 +680,9 @@ hr:
     - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
     - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
   hoc_faq_international_q: Ja sam u <country>. Kako međunarodno sudjelovati?
-  hoc_faq_international_a: Sat Kodiranja može organizirati svatko, bilo gdje u svijetu.
-    Prošle godine, studenti diljem svijeta pridružili su se Satu Kodiranja. Saznajte
-    više <a href='target-resources'>ovdje</a>.
+  hoc_faq_international_a: Svatko može organizirati događaj Sat kodiranja, bilo gdje
+    u svijetu. Prošle godine su se studenti širom svijeta udružili na Satu kodiranja.
+    Saznajte više <a href='/promote'> ovdje </a>.
   hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
     in the world. Last year, students worldwide joined together for the Hour of Code.
     Find out more [here](%{promote}).
@@ -814,7 +813,7 @@ hr:
   hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
     usage, but we want to make sure its usage fits within a few limits. Please see
     [these guidelines for usage](%{logo_url}).
-  stats_hoc_2013_image_alt: Statistika Sata Kodiranja 2013
+  stats_hoc_2013_image_alt: Statistika Sata kodiranja 2013
   stats_growth: Najbrže je dostignut broj od 15 milijuna korisnika.
   stats_i18n: Učenici uče na 40 jezika
   stats_tumblr: 'Tumblr: 3,5 godine'
@@ -822,7 +821,7 @@ hr:
   stats_twitter: 'Twitter: 2.5 godine'
   stats_pinterest: 'Pinterest: 2 godine'
   stats_instagram: 'Instagram: 14 mjeseci'
-  stats_hoc: 'Sat Kodiranja: 5 dana'
+  stats_hoc: 'Sat kodiranja: 5 dana'
   stats_global: Preko 100 milijuna učenika isprobalo je Sat kodiranja
   stats_girls_more: Informatiku je isprobalo više djevojaka no u posljednjih 70 godina
   stats_females: Participation of female students in computer science is only 20-25%
@@ -871,7 +870,7 @@ hr:
   handouts_participationguide: Planirajte svoj Sat kodiranja s ovim vodičem za sudjelovanje
   videos_title: Pokažite učenicima ovaj video za inspiraciju
   videos_what_most_schools_dont_teach: Ono što većina škola ne uči (5 min)
-  videos_hoc_2014: Sat kodiranja je ovdje- svatko može naučiti
+  videos_hoc_2014: Sat kodiranja je ovdje - svatko može naučiti
   videos_obama_cs: Predsjednik Obama o informatici
   videos_anybody_can_learn: Svatko može naučiti (1 min)
   videos_creativity: What is Creativity?
@@ -899,7 +898,7 @@ hr:
   title_partners: Partneri
   title_resources: Resursi
   title_past_posters: Past Hour of Code Posters
-  title_signup_thanks: Hvala na prijavi za domaćina Sata Kodiranja!
+  title_signup_thanks: Hvala na prijavi za domaćina Sata kodiranja!
   title_tutorial_guidelines: Smjernice za tutorijale
   title_whole_school: Sudjelovanje cijele škole
   events_nav_title: Događanja Sat kodiranja
@@ -910,8 +909,8 @@ hr:
   events_all_old_title: Događanja Sat kodiranja u @year.-oj
   events_all_title: Svi događaji Sata Kodiranja
   events_whole_school_title: Sat kodiranja u školama
-  events_special_title: Posebni Satovi Kodiranja
-  events_orgs_title: Sva događanja Sata Kodiranja organizirana uz pomoć partnera
+  events_special_title: Posebni Satovi kodiranja
+  events_orgs_title: Sva događanja Sata kodiranja organizirana uz pomoć partnera
   event: događaj
   events: događaji
   highlights_title: Izdvajamo
@@ -942,7 +941,10 @@ hr:
     Neymar Jr, Carmelo Anthony and more inspire students to push themselves.
   highlights_constant_athletes_short_heading: Push yourself
   footer_copyright_message: Copyright 2015 Code.org. Sva prava pridržana.
-  footer_trademark_message: Sata Kodiranja ™ je zaštitni znak tvrtke Code.org.
+  footer_trademark_message: Hour of Code ™ i Hora del Código® zaštitni su znakovi
+    tvrtke Code.org. Amazon Web Services i logotip "Powered by AWS" zaštitni su znakovi
+    tvrtke Amazon.com, Inc. ili njenih podružnica u Sjedinjenim Državama i/ili drugim
+    zemljama.
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partneri
   footer_menu_contact: Kontakt
