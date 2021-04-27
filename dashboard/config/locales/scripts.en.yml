@@ -9901,6 +9901,7 @@ en:
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
           student_description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          name: csp3-2018
         csp-explore-2018:
           title: Explore - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -15790,6 +15791,8 @@ en:
               display_name: Functions
             csp_project:
               display_name: Project
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Variables Explore:
               name: Variables Explore
@@ -15821,6 +15824,8 @@ en:
               name: Project - Decision Maker App Part 3
             'Lesson 15: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           name: csp4-2020
         csp5-2020:
@@ -15837,6 +15842,8 @@ en:
               display_name: Traversals
             csp_project:
               display_name: Project
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Lists Explore:
               name: Lists Explore
@@ -15878,6 +15885,8 @@ en:
               name: Unit 5 STUDENT Survey
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           name: csp5-2020
         csp7-2020:
@@ -15890,6 +15899,8 @@ en:
               display_name: Parameters and Return Values
             csp_libraries:
               display_name: Libraries
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Parameters and Return Explore:
               name: Parameters and Return Explore
@@ -15921,6 +15932,8 @@ en:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp7-2020
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
         csd2-projects-temp:
@@ -17472,6 +17485,8 @@ en:
               display_name: 'Unit 1: Digital Information'
             cspSurvey:
               display_name: Survey
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17505,6 +17520,8 @@ en:
               name: Assessment Day
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           name: csp1-2020
         csp2-2020:
@@ -17515,6 +17532,8 @@ en:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17536,6 +17555,8 @@ en:
               name: Project - Internet Dilemmas Part 2
             'Lesson 9: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           name: csp2-2020
         csp3-2020:
@@ -17546,6 +17567,8 @@ en:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17571,6 +17594,8 @@ en:
               name: Project - Designing an App Part 5
             'Lesson 11: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp3-2020
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
         csp6-2020:
@@ -17581,6 +17606,8 @@ en:
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithms'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17596,6 +17623,8 @@ en:
               name: Parallel and Distributed Algorithms
             'Lesson 6: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           name: csp6-2020
         csp8-2020:
@@ -17623,6 +17652,8 @@ en:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17644,6 +17675,8 @@ en:
               name: Project - Tell a Data Story - Part 2
             'Lesson 9: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
           name: csp9-2020
         csp10-2020:
@@ -17654,6 +17687,8 @@ en:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17691,6 +17726,8 @@ en:
               name: 'Project: Innovation Simulation Part 7'
             'Lesson 14: Unit Assessment Day':
               name: Unit Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
           name: csp10-2020
         csp-march-virtual:
@@ -18606,6 +18643,8 @@ en:
               name: Module 8
             'CS Principles: Functions':
               name: 'CS Principles: Functions'
+            'CS Principles: Variables Practice - Choice Test':
+              name: Variables Practice - Choice Test
           lesson_groups:
             lesson group:
               display_name: display name
@@ -18681,7 +18720,7 @@ en:
             lesson group:
               display_name: display name
           title: Curriculum Sandbox Levels
-          description_audience: Internal
+          description_audience: 'Internal - Do not delete. This script houses important curriculum levels that would otherwise not have a script. '
           description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
           description: ''
           student_description: ''
@@ -20569,7 +20608,7 @@ en:
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
         coursea-2021:
           title: Course A (2021)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
           lessons:
@@ -20657,7 +20696,7 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb-2021:
           title: Course B (2021)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
           lessons:
@@ -20751,7 +20790,7 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec-2021:
           title: Course C (2021)
-          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
           lessons:
@@ -20869,7 +20908,7 @@ en:
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed-2021:
           title: Course D (2021)
-          description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
           lessons:
@@ -21013,10 +21052,10 @@ en:
             lessonGroup-6:
               display_name: Digital Citizenship
           name: coursed-2021
-          student_description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
         coursee-2021:
           title: Course E (2021)
-          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
           lessons:
@@ -21155,10 +21194,10 @@ en:
             lessonGroup-7:
               display_name: Impacts of Computing
           name: coursee-2021
-          student_description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
         coursef-2021:
           title: Course F (2021)
-          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn more advanced concepts, including variables and “for” loops. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects and artwork to share with their friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
           lessons:
@@ -21329,7 +21368,7 @@ en:
             lessonGroup-7:
               display_name: Digital Citizenship
           name: coursef-2021
-          student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          student_description: Learn to code with sprites, variables, and loops and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
         express-2021:
           title: Express Course (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -22484,3 +22523,16 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: CSP Post-Course Survey
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Survey
+          name: csp-post-survey-2020
+          title: CSP Student Post-Course Survey ('20-'21)
+          description_audience: CSP Students
+          description_short: CSP Student Post Course Survey
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
