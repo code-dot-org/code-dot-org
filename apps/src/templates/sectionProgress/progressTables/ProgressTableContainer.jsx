@@ -142,8 +142,20 @@ class ProgressTableContainer extends React.Component {
   contentView = null;
 
   componentDidMount() {
-    // override the default initial number of rows to render
+    this.setRowsToRender();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentView !== this.props.currentView) {
+      this.setRowsToRender();
+    }
+  }
+
+  // override the default initial number of rows to render
+  setRowsToRender() {
     const initialRows = parseInt(progressTableStyles.MAX_ROWS);
+
+    // amountOfRowsToRender is a reactabular internal
     this.studentList &&
       this.studentList.bodyComponent.setState({
         amountOfRowsToRender: initialRows
