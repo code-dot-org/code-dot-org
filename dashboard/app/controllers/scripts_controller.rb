@@ -236,6 +236,7 @@ class ScriptsController < ApplicationController
       :hideable_lessons,
       :curriculum_path,
       :professional_learning_course,
+      :only_instructor_review_required,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,

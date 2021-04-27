@@ -14,6 +14,15 @@ const styles = {
   },
   boldText: {
     fontFamily: '"Gotham 7r", sans-serif'
+  },
+  section: {
+    width: 300,
+    fontFamily: '"Gotham 4r", sans-serif',
+    backgroundColor: color.lightest_purple
+  },
+  lesson: {
+    width: 300,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 
@@ -123,14 +132,7 @@ export default class LessonNavigationDropdown extends Component {
               key={index}
               onClick={this.handleDropdownClick.bind(this, listItem)}
               className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
-              style={
-                listItem.link
-                  ? {fontFamily: '"Gotham 4r", sans-serif'}
-                  : {
-                      fontFamily: '"Gotham 4r", sans-serif',
-                      backgroundColor: color.lightest_purple
-                    }
-              }
+              style={listItem.link ? styles.lesson : styles.section}
             >
               {listItem.link && (
                 <span style={{marginLeft: 10}}>

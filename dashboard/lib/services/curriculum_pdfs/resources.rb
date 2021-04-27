@@ -91,7 +91,7 @@ module Services
 
           # If file is already a PDF, we can just download it; otherwise, we
           # need to export to convert it.
-          if file.available_content_types.include? "appliction/pdf"
+          if file.available_content_types.include? "application/pdf"
             file.download_to_file(path)
           else
             # The intuitive option here would be to use

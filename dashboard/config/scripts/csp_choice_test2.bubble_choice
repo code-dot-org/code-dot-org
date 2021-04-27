@@ -1,0 +1,7 @@
+name 'csp-choice-test2'
+display_name 'Practice with Variables'
+
+sublevels
+level 'csp-parameters-choice1'
+level 'csp-parameters-choice2'
+level 'csp-parameters-choice3'
