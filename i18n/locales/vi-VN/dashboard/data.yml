@@ -335,6 +335,8 @@ vi:
         C4_unplugged_forloops: Cho vòng lặp
         C4_unplugged_parameters: Sáng tác với tham số
         C4_unplugged_binary: Nhị phân
+        CSF_a_b_artist_loops: Vòng lặp trong Artist
+        CSF_artist_angles: Góc trong Artist
         CSF_maze_intro_k1_blocks: Hướng dẫn sử dụng Code Studio
         CSF_maze_intro_text_blocks: Hướng dẫn sử dụng Code Studio
         CSF_my_robotic_friends: Bạn bè robot của tôi
@@ -352,17 +354,36 @@ vi:
         csp_applab_functions_parameters: Hàm và tham số
         csp_applab_loops: Vòng lặp
         csp_cs_is_changing_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
+        starwars_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới thiệu'
+        starwars_typing: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - JavaScript'
+        starwars_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
+        starwars_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc mừng'
+        starwars_blocks_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới thiệu'
+        starwars_blocks_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
+        starwars_blocks_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc mừng'
         mc_intro: Minecraft - Giới thiệu
         mc_repeat: Minecraft - Lặp lại
         mc_if_statements: Minecraft - Lệnh if
         mc_congrats_share: Minecraft - Xin chúc mừng
         mc_congrats_no_share: Minecraft - Xin chúc mừng
+        mc_2016_intro: Giờ lập trình Minecraft - Giới thiệu
+        mc_2016_loops: Giờ lập trình Minecraft - Vòng lặp
+        mc_2016_events: Giờ lập trình Minecraft - Sự kiện
+        mc_2016_spawn: Giờ lập trình Minecraft - Tạo nhân vật
+        mc_2016_congrats: Giờ lập trình Minecraft - Chúc mừng
         mc_2017_agent_intro: Giờ lập trình Minecraft - Đặc vụ
+        mc_2017_repeat: Giờ lập trình Minecraft - Vòng lặp liên tiếp
+        mc_2017_functions: Giờ lập trình Minecraft - Hàm
+        mc_2017_congratulations: Giờ lập trình Minecraft - Chúc mừng
         mc_2017_puzzle_1: Giờ lập trình Minecraft - Đặc vụ
+        mc_2017_puzzle_3: Giờ lập trình Minecraft - Vòng lặp liên tiếp
+        mc_2017_puzzle_8: Giờ lập trình Minecraft - Hàm
+        mc_2017_puzzle_12: Giờ lập trình Minecraft - Chơi tự do
         csd_applab_arrays: Giới thiệu Danh sách
         CSF_scrat_loops_K1: Vòng lặp trong Kỷ băng hà
         CSF_scrat_loops_CF: Vòng lặp trong Kỷ băng hà
         CSF_loops_AB: Vòng lặp
+        CSF_StarWars_ProjectIntro: Giới thiệu Dự án Star Wars
         mc_2018_intro: 'Minecraft: Chuyến thám hiểm đại dương - Giới thiệu'
         MC_2018_loops: 'Minecraft: Chuyến thám hiểm đại dương - Lặp tới khi'
         mc_2018_conditionals: 'Minecraft: Chuyến thám hiểm đại dương - Điều kiện'
