@@ -189,8 +189,9 @@ class Script < ApplicationRecord
   #   script is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
-    peer_reviews_to_complete
     professional_learning_course
+    only_instructor_review_required
+    peer_reviews_to_complete
     redirect_to
     student_detail_progress_view
     project_widget_visible
@@ -1377,7 +1378,7 @@ class Script < ApplicationRecord
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
     # don't have a lesson group in the database right now)
-    if has_peer_reviews?
+    if has_peer_reviews? && !only_instructor_review_required?
       levels = []
       peer_reviews_to_complete.times do |x|
         levels << {
@@ -1423,6 +1424,7 @@ class Script < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
       csf: csf?,
+      only_instructor_review_required: only_instructor_review_required?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewLessonInfo: peer_review_lesson_info,
       student_detail_progress_view: student_detail_progress_view?,
@@ -1656,6 +1658,7 @@ class Script < ApplicationRecord
     nonboolean_keys = [
       :hideable_lessons,
       :professional_learning_course,
+      :only_instructor_review_required,
       :peer_reviews_to_complete,
       :student_detail_progress_view,
       :project_widget_visible,
