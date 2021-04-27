@@ -134,5 +134,5 @@ lesson_group_description '
 
 ![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)'
 lesson 'lesson-1', display_name: 'End of Course Project', has_lesson_plan: true
-level 'courseAB_EOC_2021', progression: 'Project'
+level 'courseB_EOC_2021', progression: 'Project'
 
