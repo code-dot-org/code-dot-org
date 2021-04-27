@@ -7831,7 +7831,7 @@ es-ES:
             hagas clic en "Ejecutar"?
       courseD_multi_scrat_predict1:
         answers:
-        - text: Nada. Scrat no se moverá en absoluto.
+        - text: Nada. Scrat no se moverá.
           feedback: Incorrecto. Colocar el bloque 'avanzar' dentro del bloque 'repetir'
             hará que Scrat avance tres veces.
         - text: Scrat avanzará tres veces, girará, y luego avanzará tres veces más.
@@ -10381,7 +10381,7 @@ es-ES:
           target=\"blank\"><button class=\"plc\">Publica tu plan >></button></a>\n"
       PowerOfWords-Unplugged_2020:
         markdown: |
-          # El poder de las palabras
+          # El Poder de las Palabras
 
           #¿Qué debes hacer cuando alguien utiliza un lenguaje mezquino o hiriente en Internet?
       PrivatePersonalInformation-Unplugged_2020:
