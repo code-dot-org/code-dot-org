@@ -53,10 +53,13 @@ class Javalab < Level
   end
 
   def assign_attributes(params)
-    puts 'assign attributes'
-    puts params
-    puts 'visible'
-    puts params[:visible]
+    # puts 'assign attributes!'
+    # puts params
+    # puts 'hello'
+    params[:visible].keys.map(&:to_s).each do |filename|
+      puts filename
+      puts params[:visible][filename]
+    end
   end
 
   # Return an 'appOptions' hash derived from the level contents

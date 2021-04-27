@@ -430,6 +430,8 @@ class LevelsController < ApplicationController
       {if_block_options: []},
       {place_block_options: []},
       {play_sound_options: []},
+      {visible: []},
+      {visible: {}},
       :visible,
       {start_sources: {}}
     ]

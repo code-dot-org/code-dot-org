@@ -12,5 +12,8 @@
         %td
           = filename
         %td
-          = f.select :visible, options_for_select([["Support", false], ["Starter", true]], @level.start_sources[filename]["visible"]), {selected: @level.start_sources[filename]["visible"]}
+          -# %select{name: "level[visible[#{filename}]]"}
+          -#   %option{value: false, selected: !@level.start_sources[filename]["visible"]}= "Support"
+          -#   %option{value: true, selected: @level.start_sources[filename]["visible"]}= "Starter"
+          = f.select "visible[#{filename}]", options_for_select([["Support", false], ["Starter", true]], @level.start_sources[filename]["visible"]), {selected: @level.start_sources[filename]["visible"]}
         %td TBD
