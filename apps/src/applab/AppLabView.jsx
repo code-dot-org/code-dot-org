@@ -64,6 +64,9 @@ class AppLabView extends React.Component {
           onScreenCreate={this.props.onScreenCreate}
         />
         <VisualizationResizeBar />
+        {/* Applying instructionsStyle to both the container (using style) and instructions (using
+         * instructionsStyle) is necessary because the instructions element is absolutely positioned.
+         */}
         <InstructionsWithWorkspace
           style={instructionsStyle}
           instructionsStyle={instructionsStyle}
