@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
-import { getSummaryStat } from "../redux";
+import { getSummaryStat,
+  getSelectedNumericalFeatures,
+  getRangesByColumn,
+  getSelectedCategoricalFeatures,
+  getUniqueOptionsByColumn
+} from "../redux";
 
 class ModelCard extends Component {
   static propTypes = {
@@ -11,7 +16,12 @@ class ModelCard extends Component {
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
     metadata: PropTypes.object,
-    summaryStat: PropTypes.object
+    summaryStat: PropTypes.object,
+    dataLength: PropTypes.number,
+    selectedNumericalFeatures: PropTypes.array,
+    rangesByColumn: PropTypes.object,
+    selectedCategoricalFeatures: PropTypes.array,
+    uniqueOptionsByColumn: PropTypes.object,
   };
 
   render() {
@@ -20,7 +30,11 @@ class ModelCard extends Component {
       labelColumn,
       selectedFeatures,
       metadata,
-      summaryStat
+      summaryStat,
+      dataLength,
+      selectedNumericalFeatures,
+      selectedCategoricalFeatures,
+      uniqueOptionsByColumn
     } = this.props;
 
     return (
@@ -42,12 +56,17 @@ class ModelCard extends Component {
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>About the Data </h5>
             <p style={styles.modelCardContent}>{metadata.card.description}</p>
-            <p style={styles.modelCardContent}>Dataset size: rows</p>
+            {dataLength !== 0 && (
+              <p style={styles.modelCardContent}>
+                <br />
+                Dataset size: {dataLength} rows
+              </p>
+            )}
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Intended Use</h5>
             <p style={styles.modelCardContent}>
-              {trainedModelDetails.potentialUses}{" "}
+              {trainedModelDetails.potentialUses}
             </p>
           </div>
           <div style={styles.modelCardSubpanel}>
@@ -58,14 +77,47 @@ class ModelCard extends Component {
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Label</h5>
-            <p style={styles.modelCardContent}>{labelColumn}</p>
+            <p style={styles.modelCardContent}>
+            <p style={styles.bold}>{labelColumn}</p>
+              {metadata.fields.find(field => field.id === labelColumn).description}
+            </p>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Features</h5>
-            <p style={styles.modelCardContent}>{selectedFeatures.join(", ")}</p>
-          </div>
+            <p style={styles.modelCardContent}>
+            {selectedNumericalFeatures.map((feature, index) => {
+              let min = this.props.rangesByColumn[feature].min.toFixed(2);
+              let max = this.props.rangesByColumn[feature].max.toFixed(2);
+              let selectedFeature = metadata.fields.find(field => field.id === feature);
+              return (
+                <div key={index}>
+                <p styles={styles.bold}>
+                  {feature}
+                </p>
+                <p>{selectedFeature.description}</p>
+                <p>Possible Values: <br />
+                  min: {min}, max: {max}
+                </p>
+                </div>
+              );
+            })}
+            {selectedCategoricalFeatures.map ((feature, index) => {
+              let selectedFeature = metadata.fields.find(field => field.id === feature);
+              return (
+                <div key={index}>
+                  <p styles={styles.bold}>
+                  {feature}
+                  </p>
+                  <p>{selectedFeature.description}</p>
+                  <p>Possible Values:{" "}
+                    {uniqueOptionsByColumn[feature].join(", ")}
+                  </p>
+                </div>
+              );
+            })}
+           </p>
         </div>
-        {console.log(metadata)}
+        </div>
       </div>
     );
   }
@@ -75,5 +127,10 @@ export default connect(state => ({
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,
   metadata: state.metadata,
-  summaryStat: getSummaryStat(state)
+  summaryStat: getSummaryStat(state),
+  dataLength: state.data.length,
+  selectedNumericalFeatures: getSelectedNumericalFeatures(state),
+  rangesByColumn: getRangesByColumn(state),
+  selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
+  uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
 }))(ModelCard);

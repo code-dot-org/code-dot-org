@@ -335,7 +335,7 @@ export const styles = {
   },
 
   resultsTableSecondHeader: {
-    top: "30px",
+    top: 30,
     color: "white"
   },
 
@@ -512,14 +512,15 @@ export const styles = {
 
   modelCardContainer: {
     backgroundColor: "rgb(198, 202, 205)",
-    borderRadius: "5px",
-    padding: "20px",
+    borderRadius: 5,
+    padding: 20,
     whiteSpace: "normal",
-    overflowY: "scroll"
+    overflowY: "scroll",
+    width: "30%"
   },
 
   modelCardHeader: {
-    marginBottom: "10px",
+    marginBottom: 10,
     marginTop: 0,
     fontSize: 18,
     fontFamily: '"Gotham 7r", sans-serif'
@@ -541,8 +542,8 @@ export const styles = {
 
   modelCardSubpanel: {
     backgroundColor: "rgb(231, 232, 234)",
-    borderRadius: "5px",
-    marginBottom: "10px",
-    padding: "10px"
+    borderRadius: 5,
+    marginBottom: 10,
+    padding: 10
   },
 };

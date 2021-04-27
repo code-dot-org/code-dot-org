@@ -1069,20 +1069,15 @@ function isPanelEnabled(state, panelId) {
   if (panelId === "results") {
     if (
       state.percentDataToReserve === 0 ||
-      state.accuracyCheckExamples.length === 0
+      state.accuracyCheckExamples.length === 0 ||
+      state.saveStatus === "success"
     ) {
       return false;
     }
   }
 
-  if (panelId === "modelSummary") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
-      return false;
-    }
-  }
-
-  if (panelId === "finish") {
-    if (state.saveStatus !== "success") {
+  if (panelId === "saveModel") {
+    if (state.saveStatus === "success") {
       return false;
     }
   }
@@ -1117,6 +1112,12 @@ function isPanelAvailable(state, panelId) {
     }
   }
 
+  if (panelId === "modelSummary") {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
+  }
+
   return true;
 }
 
@@ -1129,8 +1130,8 @@ export function getPanelButtons(state) {
     next = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Continue" }
       : isPanelAvailable(state, "dataDisplayFeatures")
-        ? { panel: "dataDisplayFeatures", text: "Continue" }
-        : null;
+      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      : null;
   } else if (state.currentPanel === "dataDisplayLabel") {
     prev = isPanelAvailable(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
@@ -1166,8 +1167,10 @@ export function getPanelButtons(state) {
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = isPanelAvailable(state, "modelSummary")
-      ? { panel: "modelSummary", text: "Save" }
+    next = state.saveStatus === "success"
+      ? { panel: "modelSummary", text: "Continue" }
+      : isPanelAvailable(state, "modelSummary")
+      ? { panel: "saveModel", text: "Save" }
       : null;
   } else if (state.currentPanel === "modelSummary") {
     prev = { panel: "saveModel", text: "Back" };
