@@ -66,8 +66,8 @@ class SaveModel extends Component {
       id: "potentialMisuses",
       text: "Warnings",
       description: "Describe any situations where this model could potentially be misused, or any places where bias could potentially show up in the model. Important questions to consider are:",
-      misuseQuestionOne: "Is there enough data to create an accurate model?",
-      misuseQuestionTwo: "Does the data represent all possible users and scenarios?",
+      descriptionDetailOne: "Is there enough data to create an accurate model?",
+      descriptionDetailTwo: "Does the data represent all possible users and scenarios?",
       placeholder: "Write a brief description."
     });
 
@@ -165,11 +165,11 @@ class SaveModel extends Component {
                   <div key={field.id} style={styles.cardRow}>
                     <label style={styles.bold}>{field.text}</label>
                     <div>{field.description}</div>
-                    {field.misuseQuestionOne && (
-                      <div>{field.misuseQuestionOne}</div>
+                    {field.descriptionDetailOne && (
+                      <div>{field.descriptionDetailOne}</div>
                     )}
-                    {field.misuseQuestionTwo && (
-                      <div>{field.misuseQuestionTwo}</div>
+                    {field.descriptionDetailTwo && (
+                      <div>{field.descriptionDetailTwo}</div>
                     )}
                     {!field.answer && (
                       <div>
