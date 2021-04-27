@@ -12,18 +12,20 @@ import CachedElement from '@cdo/apps/util/CachedElement';
 import {levelProgressStyle} from '../../progress/progressStyles';
 
 /**
- * Top-level bubble component responsible for configuring BasicBubble based on
- * properties of a level and student progress.
+ * Bubble component designed specifically for use in our section progress
+ * table, responsible for configuring `BasicBubble` based on properties of a
+ * level and student progress, and generating cache keys from same.
  *
  * Our progress table displays thousands of these bubbles. However, the vast
  * majority of them are duplicated in all aspects except the url they link to.
- * Thus we are able to improve rendering performance by caching the HTML for the
- * underlying `BasicBubble` to avoid recreating ones we already have.
- *
- * Note: if adding pr removing props in this component, be sure to read the
- * comment for `getCacheKey` and update accordingly if necessary.
+ * Thus we are able to improve rendering performance by caching the HTML for
+ * the underlying `BasicBubble` to avoid recreating ones we already have.
  */
 export default class ProgressTableLevelBubble extends React.PureComponent {
+  /**
+   * Note: if adding or removing props in this component, be sure to read the
+   * comment for `getCacheKey` and update accordingly if necessary.
+   */
   static propTypes = {
     levelStatus: PropTypes.string,
     levelKind: PropTypes.string,
@@ -100,6 +102,11 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
    * However, that means future maintainers of this component will need to
    * think carefully about whether the addition or removal of props in this
    * component will require an update to this function.
+   *
+   * The general requirement is that if a property affects how the rendered
+   * bubble will appear, it should be included in the key. That includes
+   * properties related to shape and size, as well as anything passed into
+   * `getProgressStyle` and `getBubbleContent`.
    */
   getCacheKey() {
     const {
@@ -117,10 +124,10 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     // sacrificing key readability for every little performance boost ("sts")
     let statusString = `sts=${levelStatus}`;
 
-    // we need to explicitly specify if the level is an assessment since
-    // assessment bubble are a different color than regular bubbles.
+    // we need to explicitly specify if the level is an assessment, since
+    // assessment bubbles are a different color than regular bubbles.
     if (levelKind === LevelKind.assessment) {
-      statusString = `ass:${statusString}`;
+      statusString = `asmt:${statusString}`;
     }
 
     // letter bubbles and unplugged bubbles are all of the same shape and
@@ -132,8 +139,8 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     }
 
     // in the general case, we need to include all the properties that affect
-    // the bubble's style in the cache key, which include the shape, status,
-    // and all the props used to determine the content
+    // the bubble's appearance in the cache key, which include the shape,
+    // status, and all the props used to determine the content
     const shapeString = `shp=${getBubbleShape(isUnplugged, isConcept)}`;
     const contentString = isLocked
       ? `lkd:`
