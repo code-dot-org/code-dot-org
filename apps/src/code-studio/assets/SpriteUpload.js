@@ -13,6 +13,10 @@ export default class SpriteUpload extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    let destination =
+      this.state.category.length === 0
+        ? `/level_animations/${this.state.filename}`
+        : `/spritelab/category_${this.state.category}/${this.state.filename}`;
     let xhr = new XMLHttpRequest();
 
     const onError = function() {
@@ -28,11 +32,7 @@ export default class SpriteUpload extends React.Component {
 
     xhr.addEventListener('load', onSuccess);
     xhr.addEventListener('error', onError);
-    xhr.open(
-      'POST',
-      `/api/v1/animation-library/level_animations/${this.state.filename}`,
-      true
-    );
+    xhr.open('POST', `/api/v1/animation-library` + destination, true);
     xhr.setRequestHeader('Content-type', 'image/png');
     xhr.send(this.state.fileData);
   };
@@ -59,6 +59,11 @@ export default class SpriteUpload extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             <h4> Sprite Category: </h4>
+            <p>
+              Enter the category to which this sprite belongs. Leave blank if
+              the sprite should be uploaded to the level-specific animations
+              folder.
+            </p>
             <input
               type="text"
               value={this.state.category}
