@@ -234,7 +234,7 @@ describe('ProgressTableContainer', () => {
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 
-    const numDetailRows = wrapper.numExtraRowsWhenExpanded();
+    const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
     wrapper.onToggleRow(rowData);
@@ -250,7 +250,7 @@ describe('ProgressTableContainer', () => {
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 
-    const numDetailRows = wrapper.numExtraRowsWhenExpanded();
+    const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
     wrapper.onToggleRow(rowData);
