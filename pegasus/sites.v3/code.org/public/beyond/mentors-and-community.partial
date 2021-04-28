@@ -2,6 +2,16 @@
 title: Mentorships and Community
 video_player: true
 theme: responsive
+social:
+  "og:title": "CS Journeys: Find a mentor and community"
+  "og:description": "Find support and guidance on your CS Journey"
+  "og:image": ""
+  "og:image:width": 1200
+  "og:image:height": 630
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
 ---
 <a id="top"></a>
 <h1>Mentorships and Community</h1>
