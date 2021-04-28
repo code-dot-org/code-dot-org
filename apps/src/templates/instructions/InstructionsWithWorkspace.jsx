@@ -97,14 +97,16 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
+    const {style, instructionsStyle, instructionsHeight, children} = this.props;
+
     return (
-      <span style={this.props.style}>
-        <TopInstructions mainStyle={this.props.instructionsStyle} />
+      <span style={style}>
+        <TopInstructions mainStyle={instructionsStyle} />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          topMargin={this.props.instructionsHeight}
+          topMargin={instructionsHeight}
         >
-          {this.props.children}
+          {children}
         </CodeWorkspaceContainer>
       </span>
     );
