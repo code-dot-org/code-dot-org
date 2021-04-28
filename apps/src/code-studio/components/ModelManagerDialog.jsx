@@ -155,7 +155,7 @@ export default class ModelManagerDialog extends React.Component {
       this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
     return (
-      <div>
+      <div className="ml-modal">
         <BaseDialog
           isOpen={isOpen}
           handleClose={this.closeModelManager}
