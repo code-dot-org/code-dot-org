@@ -6,6 +6,7 @@ import {
   BasicBubble,
   LinkWrapper,
   getBubbleContent,
+  getBubbleClassNames,
   getBubbleShape
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import CachedElement from '@cdo/apps/util/CachedElement';
@@ -71,21 +72,24 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
       title,
       bubbleSize
     } = this.props;
+
+    const content = getBubbleContent(
+      isUnplugged,
+      isBonus,
+      isPaired,
+      title,
+      bubbleSize,
+      levelStatus
+    );
+
     return (
       <BasicBubble
         shape={getBubbleShape(isUnplugged, isConcept)}
         size={bubbleSize}
         progressStyle={levelProgressStyle(levelStatus, levelKind)}
-        classNames="progress-bubble"
+        classNames={getBubbleClassNames(true)}
       >
-        {getBubbleContent(
-          isUnplugged,
-          isBonus,
-          isPaired,
-          title,
-          bubbleSize,
-          levelStatus
-        )}
+        {content}
       </BasicBubble>
     );
   }
