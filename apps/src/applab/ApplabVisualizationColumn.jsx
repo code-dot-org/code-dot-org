@@ -187,21 +187,18 @@ class ApplabVisualizationColumn extends React.Component {
 
 export const UnconnectedApplabVisualizationColumn = ApplabVisualizationColumn;
 
-export default connect(function propsFromStore(state) {
-  return {
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    visualizationHasPadding: state.pageConstants.visualizationHasPadding,
-    isShareView: state.pageConstants.isShareView,
-    isResponsive: isResponsiveFromState(state),
-    nonResponsiveWidth:
-      state.pageConstants.nonResponsiveVisualizationColumnWidth,
-    isIframeEmbed: state.pageConstants.isIframeEmbed,
-    hideSource: state.pageConstants.hideSource,
-    isRunning: state.runState.isRunning,
-    awaitingContainedResponse: state.runState.awaitingContainedResponse,
-    isPaused: state.runState.isDebuggerPaused,
-    playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
-    pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-    widgetMode: state.pageConstants.widgetMode
-  };
-})(Radium(ApplabVisualizationColumn));
+export default connect(state => ({
+  isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+  visualizationHasPadding: state.pageConstants.visualizationHasPadding,
+  isShareView: state.pageConstants.isShareView,
+  isResponsive: isResponsiveFromState(state),
+  nonResponsiveWidth: state.pageConstants.nonResponsiveVisualizationColumnWidth,
+  isIframeEmbed: state.pageConstants.isIframeEmbed,
+  hideSource: state.pageConstants.hideSource,
+  isRunning: state.runState.isRunning,
+  awaitingContainedResponse: state.runState.awaitingContainedResponse,
+  isPaused: state.runState.isDebuggerPaused,
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
+  widgetMode: state.pageConstants.widgetMode
+}))(Radium(ApplabVisualizationColumn));
