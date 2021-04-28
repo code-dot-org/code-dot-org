@@ -50,6 +50,8 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
+  this.isDarkMode = config.usingDarkModePref;
+  console.log(config.usingDarkModePref);
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
