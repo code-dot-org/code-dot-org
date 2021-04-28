@@ -103,6 +103,10 @@ class School < ApplicationRecord
   # Non-open statuses are 'Closed', 'Future', 'Inactive'
   OPEN_SCHOOL_STATUSES = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
 
+  # School statuses representing currently open schools in 2019-2020 import.
+  # Non-open statuses are '2-Closed', '7-Future', '6-Inactive'
+  OPEN_SCHOOL_STATUSES_2019_2020 = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
+
   # School categories need to be mapped to existing values for 2019-2020 import.
   SCHOOL_CATEGORY_MAP = {
     '1-Regular school' => 'Regular School',
@@ -374,7 +378,7 @@ class School < ApplicationRecord
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
             state_school_id:              row['State School ID [Public School] 2019-20'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2019-20']].presence,
-            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2019-20'].to_s.slice(2..-1)) ? '2019-2020' : nil
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES_2019_2020.include?(row['Updated Status [Public School] 2019-20']) ? '2019-2020' : nil
           }
         end
       end
@@ -391,11 +395,19 @@ class School < ApplicationRecord
     return state_cs_offering.reload
   end
 
+  # format a list of schools to a string
+  def self.pretty_print_school_list(schools)
+    schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")
+  end
+
   # Loads/merges the data from a CSV into the schools table.
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param update_existing [Boolean] Specify whether existing rows should be updated.  Default to true for backwards compatible with existing logic that calls this method to UPSERT schools.
+  # @param is_dry_run [Boolean] Allows testing of importing a CSV by rolling back any changes
+  # @param new_attributes [Array] List of attributes that are being imported for the first time. Allows us to determine which schools have changes to existing data, and which are just adding new attributes
+  # @param insert_new [Boolean] Determines whether to insert (or if false, skip) importing new schools in this import
   # @param limit [Integer] Limits the number of rows parsed from the csv file (for testing). Default to nil for no limit.
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: false, new_attributes: [], insert_new: true, limit: nil)
     schools = nil
@@ -406,13 +418,12 @@ class School < ApplicationRecord
     duplicate_schools = []
     state_cs_offerings_deleted_count = 0
     state_cs_offerings_reloaded_count = 0
-    lines = 0
-    errored_schools = []
+    lines_processed = 0
 
     ActiveRecord::Base.transaction do
       schools = CSV.read(filename, options).each do |row|
-        break if limit && lines > limit
-        lines += 1
+        break if limit && lines_processed > limit
+        lines_processed += 1
         csv_entry = block_given? ? yield(row) : row.to_hash.symbolize_keys
         db_entry = find_by_id(csv_entry[:id])
 
@@ -460,8 +471,9 @@ class School < ApplicationRecord
 
             begin
               db_entry.update!(csv_entry)
-            rescue
-              errored_schools << csv_entry
+            rescue ActiveRecord::RecordNotUnique
+              CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
+              duplicate_schools << csv_entry
             end
 
             if deleted_state_cs_offerings.any?
@@ -480,12 +492,14 @@ class School < ApplicationRecord
         end
       end
 
+      # Raise an error so that the db transaction rolls back
+      raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if is_dry_run
+    ensure
       future_tense_dry_run = is_dry_run ? ' to be' : ''
       summary_message =
         "School seeding: done processing #{filename}.\n"\
         "#{new_schools.length} new schools#{future_tense_dry_run} added.\n"\
         "#{updated_schools} schools#{future_tense_dry_run} updated.\n"\
-        "#{errored_schools.length} schools#{future_tense_dry_run} updated failed.\n"\
         "#{unchanged_schools} schools#{future_tense_dry_run} unchanged (school considered unchanged if only update was adding new columns included in this import).\n"\
         "#{duplicate_schools.length} duplicate schools#{future_tense_dry_run} skipped.\n"\
         "State CS offerings#{future_tense_dry_run} deleted: #{state_cs_offerings_deleted_count}, state CS offerings#{future_tense_dry_run} reloaded: #{state_cs_offerings_reloaded_count}\n"
@@ -503,26 +517,17 @@ class School < ApplicationRecord
         if new_schools.any?
           summary_message <<
             "Schools#{future_tense_dry_run} added:\n"\
-            "#{new_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
-        end
-
-        if errored_schools.any?
-          summary_message <<
-            "These schools failed to update:\n"\
-            "#{errored_schools.map {|school| school[:name] + ' ' + school[:id].to_s}.join("\n")}\n"
+            "#{pretty_print_school_list(new_schools)}\n"
         end
 
         if duplicate_schools.any?
           summary_message <<
             "Duplicate schools#{future_tense_dry_run} skipped:\n"\
-            "#{duplicate_schools.map {|school| school[:name] + ' ' + school[:id]}.join("\n")}"
+            "#{pretty_print_schools_list(duplicate_schools)}"
         end
       end
 
       CDO.log.info summary_message
-
-      # Raise an error so that the db transaction rolls back
-      raise "This was a dry run" if is_dry_run
     end
 
     schools
