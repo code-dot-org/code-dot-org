@@ -19,6 +19,7 @@ import DeleteConfirmationDialog from './DeleteConfirmationDialog';
 import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import _ from 'lodash';
 
 const style = {
   editor: {
@@ -124,16 +125,18 @@ class JavalabEditor extends React.Component {
       });
     }
 
-    const {orderedTabKeys, fileMetadata} = this.state;
-    if (prevState.orderedTabKeys.length !== orderedTabKeys.length) {
-      orderedTabKeys.forEach(tabKey => {
-        // create codemirror for a new tab
+    const {fileMetadata} = this.state;
+    if (
+      !_.isEqual(Object.keys(prevState.fileMetadata), Object.keys(fileMetadata))
+    ) {
+      for (const tabKey in fileMetadata) {
         if (!this.editors[tabKey]) {
+          // create an editor if it doesn't exist yet
           const source = this.props.sources[fileMetadata[tabKey]];
           const doc = (source && source.text) || '';
           this.createEditor(tabKey, doc);
         }
-      });
+      }
     }
   }
 
@@ -233,8 +236,12 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  // This is called from the dropdown menu on the active tab
+  // when the delete option is clicked
   deleteFromTabMenu() {
     this.setState({
+      showMenu: false,
+      contextTarget: null,
       openDialog: DELETE_FILE,
       fileToDelete: this.state.contextTarget
     });
@@ -264,8 +271,7 @@ class JavalabEditor extends React.Component {
   }
 
   onCreateFile(filename) {
-    const {sources} = this.props;
-    if (Object.keys(sources).includes(filename)) {
+    if (Object.keys(this.props.sources).includes(filename)) {
       this.setState({
         newFileError: this.duplicateFileError(filename)
       });
@@ -322,6 +328,8 @@ class JavalabEditor extends React.Component {
       // delete tab key from tab to filename map
       const newFileMetadata = {...fileMetadata};
       delete newFileMetadata[fileToDelete];
+      // clean up editors
+      delete this.editors[fileToDelete];
 
       this.setState({
         orderedTabKeys: newTabs,
