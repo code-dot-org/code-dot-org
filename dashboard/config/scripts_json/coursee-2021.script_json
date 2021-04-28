@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-04-27 20:01:00 UTC",
+    "serialized_at": "2021-04-28 17:37:01 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -9215,7 +9215,7 @@
       "key": "sprite_lab_documentation",
       "properties": {
         "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
@@ -9647,6 +9647,28 @@
       "seeding_key": {
         "resource.key": "teacher_forum_1"
       }
+    },
+    {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_1"
+      }
+    },
+    {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation_2",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_2"
+      }
     }
   ],
   "lessons_resources": [
@@ -9909,10 +9931,21 @@
         "resource.key": "teacher_forum_1",
         "script.name": "coursee-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_1",
+        "script.name": "coursee-2021"
+      }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_2",
+        "script.name": "coursee-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
