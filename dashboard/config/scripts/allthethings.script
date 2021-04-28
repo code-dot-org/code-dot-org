@@ -217,8 +217,8 @@ variants
   level '4-5 Maze 6', active: false
 endvariants
 variants
-  level 'csp_socialBelonging_control'
   level 'csp_socialBelonging_intervention', experiments: ["socialBelongingTest"]
+  level 'csp_socialBelonging_control'
 endvariants
 
 lesson 'Anonymous student survey', display_name: 'Anonymous student survey', has_lesson_plan: false
@@ -246,6 +246,7 @@ level 'allthethings_map'
 
 lesson 'Sprite Lab', display_name: 'Sprite Lab', has_lesson_plan: false
 level 'allthethings_fish_tank'
+level 'AllTheThings sprite lab with video'
 
 lesson 'Dance Lab', display_name: 'Dance Lab', has_lesson_plan: false
 level 'allthethings HOC Dance 1'
