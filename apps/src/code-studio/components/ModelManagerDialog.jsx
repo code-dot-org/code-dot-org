@@ -41,7 +41,7 @@ const styles = {
     whiteSpace: 'pre-wrap'
   },
   spinner: {
-    height: 'calc(80vh - 140px)',
+    height: 'calc(80vh - 150px)',
     color: color.dark_charcoal
   }
 };
