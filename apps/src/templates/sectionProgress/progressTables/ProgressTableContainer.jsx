@@ -3,14 +3,33 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import i18n from '@cdo/locale';
-import {scriptDataPropType} from '../sectionProgressConstants';
+import {
+  ViewType,
+  scriptDataPropType
+} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
-import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {
+  studentLessonProgressType,
+  studentLevelProgressType
+} from '@cdo/apps/templates/progress/progressTypes';
+import {
+  getCurrentScriptData,
+  jumpToLessonDetails
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import styleConstants from '@cdo/apps/styleConstants';
 import ProgressTableStudentList from './ProgressTableStudentList';
 import ProgressTableContentView from './ProgressTableContentView';
+import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+import {
+  getSummaryCellFormatters,
+  getDetailCellFormatters,
+  getLevelIconHeaderFormatter
+} from './progressTableHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classnames from 'classnames';
+
+const SUMMARY_VIEW_COLUMN_WIDTH = 40;
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -63,16 +82,18 @@ function idForExpansionIndex(studentId, index) {
  */
 class ProgressTableContainer extends React.Component {
   static propTypes = {
-    onClickLesson: PropTypes.func.isRequired,
-    columnWidths: PropTypes.arrayOf(PropTypes.number),
-    lessonCellFormatters: PropTypes.arrayOf(PropTypes.func.isRequired),
-    extraHeaderFormatters: PropTypes.arrayOf(PropTypes.func),
-    extraHeaderLabels: PropTypes.arrayOf(PropTypes.string),
-    includeHeaderArrows: PropTypes.bool,
+    currentView: PropTypes.oneOf([ViewType.SUMMARY, ViewType.DETAIL]),
 
     // redux
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
+    lessonProgressByStudent: PropTypes.objectOf(
+      PropTypes.objectOf(studentLessonProgressType)
+    ).isRequired,
+    levelProgressByStudent: PropTypes.objectOf(
+      PropTypes.objectOf(studentLevelProgressType)
+    ).isRequired,
+    onClickLesson: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
     localeCode: PropTypes.string
@@ -83,7 +104,16 @@ class ProgressTableContainer extends React.Component {
     this.onScroll = this.onScroll.bind(this);
     this.onToggleRow = this.onToggleRow.bind(this);
     this.recordToggleRow = this.recordToggleRow.bind(this);
-    this.numDetailRows = props.lessonCellFormatters.length - 1;
+
+    this.summaryCellFormatters = getSummaryCellFormatters(
+      props.lessonProgressByStudent,
+      props.onClickLesson
+    );
+
+    this.detailCellFormatters = getDetailCellFormatters(
+      props.levelProgressByStudent,
+      props.section
+    );
 
     // the primary table rows are represented by the students in the section,
     // but to support expanding those rows, we wrap each student in a
@@ -112,8 +142,20 @@ class ProgressTableContainer extends React.Component {
   contentView = null;
 
   componentDidMount() {
-    // override the default initial number of rows to render
+    this.setRowsToRender();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.currentView !== this.props.currentView) {
+      this.setRowsToRender();
+    }
+  }
+
+  // override the default initial number of rows to render
+  setRowsToRender() {
     const initialRows = parseInt(progressTableStyles.MAX_ROWS);
+
+    // amountOfRowsToRender is a reactabular internal
     this.studentList &&
       this.studentList.bodyComponent.setState({
         amountOfRowsToRender: initialRows
@@ -169,7 +211,7 @@ class ProgressTableContainer extends React.Component {
 
   expandDetailRows(rowData, rowIndex) {
     const detailRows = [];
-    for (let i = 1; i <= this.numDetailRows; i++) {
+    for (let i = 1; i <= this.numDetailRowsPerStudent(); i++) {
       detailRows.push({
         id: idForExpansionIndex(rowData.student.id, i),
         student: rowData.student,
@@ -181,6 +223,15 @@ class ProgressTableContainer extends React.Component {
     rows[rowIndex].isExpanded = true;
     rows.splice(rowIndex + 1, 0, ...detailRows);
     this.setState({rows});
+  }
+
+  numDetailRowsPerStudent() {
+    const rowsPerStudent =
+      this.props.currentView === ViewType.DETAIL
+        ? this.detailCellFormatters.length
+        : this.summaryCellFormatters.length;
+    // subtract one for the main row
+    return rowsPerStudent - 1;
   }
 
   collapseDetailRows(rowData, rowIndex) {
@@ -204,38 +255,73 @@ class ProgressTableContainer extends React.Component {
     };
   };
 
+  detailContentViewProps() {
+    return {
+      lessonCellFormatters: this.detailCellFormatters,
+      extraHeaderFormatters: [
+        getLevelIconHeaderFormatter(this.props.scriptData)
+      ],
+      includeHeaderArrows: true
+    };
+  }
+
+  summaryContentViewProps() {
+    return {
+      columnWidths: new Array(this.props.scriptData.stages.length).fill(
+        SUMMARY_VIEW_COLUMN_WIDTH
+      ),
+      lessonCellFormatters: this.summaryCellFormatters,
+      includeHeaderArrows: false
+    };
+  }
+
   render() {
+    const isDetailView = this.props.currentView === ViewType.DETAIL;
+
+    const studentListHeaders = [i18n.lesson()];
+    isDetailView && studentListHeaders.push(i18n.levelType());
+
+    const contentViewProps = isDetailView
+      ? this.detailContentViewProps()
+      : this.summaryContentViewProps();
+
     return (
-      <div style={styles.container} className="progress-table">
-        <div style={styles.studentList} className="student-list">
-          <ProgressTableStudentList
-            ref={r => (this.studentList = r)}
-            headers={[i18n.lesson(), ...(this.props.extraHeaderLabels || [])]}
-            rows={this.state.rows}
-            onRow={this.onRow}
-            sectionId={this.props.section.id}
-            scriptData={this.props.scriptData}
-            studentTimestamps={this.props.studentTimestamps}
-            localeCode={this.props.localeCode}
-            onToggleRow={this.onToggleRow}
-          />
+      // outer div contains both table and legend
+      <div>
+        <div style={styles.container} className="progress-table">
+          <div style={styles.studentList} className="student-list">
+            <ProgressTableStudentList
+              ref={r => (this.studentList = r)}
+              headers={studentListHeaders}
+              rows={this.state.rows}
+              onRow={this.onRow}
+              sectionId={this.props.section.id}
+              scriptData={this.props.scriptData}
+              studentTimestamps={this.props.studentTimestamps}
+              localeCode={this.props.localeCode}
+              onToggleRow={this.onToggleRow}
+            />
+          </div>
+          <div style={styles.contentView} className="content-view">
+            <ProgressTableContentView
+              key={this.props.currentView} //force a full re-instantiation of the component when view changes
+              ref={r => (this.contentView = r)}
+              rows={this.state.rows}
+              onRow={this.onRow}
+              needsGutter={this.needsContentHeaderGutter()}
+              onScroll={this.onScroll}
+              scriptData={this.props.scriptData}
+              lessonOfInterest={this.props.lessonOfInterest}
+              onClickLesson={this.props.onClickLesson}
+              {...contentViewProps}
+            />
+          </div>
         </div>
-        <div style={styles.contentView} className="content-view">
-          <ProgressTableContentView
-            ref={r => (this.contentView = r)}
-            rows={this.state.rows}
-            onRow={this.onRow}
-            needsGutter={this.needsContentHeaderGutter()}
-            onScroll={this.onScroll}
-            scriptData={this.props.scriptData}
-            lessonOfInterest={this.props.lessonOfInterest}
-            onClickLesson={this.props.onClickLesson}
-            columnWidths={this.props.columnWidths}
-            lessonCellFormatters={this.props.lessonCellFormatters}
-            extraHeaderFormatters={this.props.extraHeaderFormatters}
-            includeHeaderArrows={this.props.includeHeaderArrows}
-          />
-        </div>
+        {this.props.currentView === ViewType.DETAIL ? (
+          <ProgressLegend excludeCsfColumn={!this.props.scriptData.csf} />
+        ) : (
+          <SummaryViewLegend showCSFProgressBox={this.props.scriptData.csf} />
+        )}
       </div>
     );
   }
@@ -243,13 +329,28 @@ class ProgressTableContainer extends React.Component {
 
 export const UnconnectedProgressTableContainer = ProgressTableContainer;
 
-export default connect(state => ({
-  section: state.sectionData.section,
-  scriptData: getCurrentScriptData(state),
-  lessonOfInterest: state.sectionProgress.lessonOfInterest,
-  studentTimestamps:
-    state.sectionProgress.studentLastUpdateByScript[
-      state.scriptSelection.scriptId
-    ],
-  localeCode: state.locales.localeCode
-}))(ProgressTableContainer);
+export default connect(
+  state => ({
+    section: state.sectionData.section,
+    scriptData: getCurrentScriptData(state),
+    lessonProgressByStudent:
+      state.sectionProgress.studentLessonProgressByScript[
+        state.scriptSelection.scriptId
+      ],
+    levelProgressByStudent:
+      state.sectionProgress.studentLevelProgressByScript[
+        state.scriptSelection.scriptId
+      ],
+    lessonOfInterest: state.sectionProgress.lessonOfInterest,
+    studentTimestamps:
+      state.sectionProgress.studentLastUpdateByScript[
+        state.scriptSelection.scriptId
+      ],
+    localeCode: state.locales.localeCode
+  }),
+  dispatch => ({
+    onClickLesson(lessonPosition) {
+      dispatch(jumpToLessonDetails(lessonPosition));
+    }
+  })
+)(ProgressTableContainer);
