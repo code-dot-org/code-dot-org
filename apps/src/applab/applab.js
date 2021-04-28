@@ -149,12 +149,6 @@ function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
-
-  // TODO: REMOVE OUTDATED COMMENT
-  // Historically, appWidth and appHeight were customizable on a per level basis.
-  // This led to lots of hackery in the code to properly scale the visualization
-  // area. Width/height are now constant, but much of the hackery still remains
-  // since I don't understand it well enough.
   Applab.appWidth = applabConstants.getAppWidth(level);
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
