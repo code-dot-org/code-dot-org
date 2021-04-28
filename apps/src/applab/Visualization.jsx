@@ -49,6 +49,7 @@ const styles = {
 
 class Visualization extends React.Component {
   static propTypes = {
+    // Provided by redux
     visualizationHasPadding: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
