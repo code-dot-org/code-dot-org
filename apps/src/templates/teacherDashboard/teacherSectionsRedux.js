@@ -17,8 +17,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'courseId',
   'scriptId',
   'grade',
-  'hidden',
-  'restrictSection'
+  'hidden'
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -51,11 +50,6 @@ const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
 const SET_PREREADER_SCRIPT_IDS = 'teacherDashboard/SET_PREREADER_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
-
-// DCDO Flag - show/hide Lock Section field
-const SET_SHOW_LOCK_SECTION_FIELD =
-  'teacherDashboard/SET_SHOW_LOCK_SECTION_FIELD';
-
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -140,14 +134,6 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   students: studentInfo
 });
 export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
-
-// DCDO Flag - show/hide Lock Section field
-export const setShowLockSectionField = showLockSectionField => {
-  return {
-    type: SET_SHOW_LOCK_SECTION_FIELD,
-    showLockSectionField
-  };
-};
 
 // pageType describes the current route the user is on. Used only for logging.
 // Enum of allowed values:
@@ -538,10 +524,7 @@ const initialState = {
   // Error that occurred while loading oauth classrooms
   loadError: null,
   // The page where the action is occurring
-  pageType: '',
-
-  // DCDO Flag - show/hide Lock Section field
-  showLockSectionField: null
+  pageType: ''
 };
 
 /**
@@ -568,8 +551,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     courseId: courseId || null,
     scriptId: scriptId || null,
     hidden: false,
-    isAssigned: undefined,
-    restrictSection: false
+    isAssigned: undefined
   };
 }
 
@@ -1060,14 +1042,6 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  // DCDO Flag - show/hide Lock Section field
-  if (action.type === SET_SHOW_LOCK_SECTION_FIELD) {
-    return {
-      ...state,
-      showLockSectionField: action.showLockSectionField
-    };
-  }
-
   return state;
 }
 
@@ -1174,8 +1148,7 @@ export const sectionFromServerSection = serverSection => ({
     ? serverSection.script.id
     : serverSection.script_id || null,
   hidden: serverSection.hidden,
-  isAssigned: serverSection.isAssigned,
-  restrictSection: serverSection.restrict_section
+  isAssigned: serverSection.isAssigned
 });
 
 /**
@@ -1205,8 +1178,7 @@ export function serverSectionFromSection(section) {
     tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
-    script: section.scriptId ? {id: section.scriptId} : undefined,
-    restrict_section: section.restrictSection
+    script: section.scriptId ? {id: section.scriptId} : undefined
   };
 }
 
