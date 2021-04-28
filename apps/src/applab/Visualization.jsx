@@ -71,6 +71,19 @@ class Visualization extends React.Component {
     studioApp().runButtonClick();
   };
 
+  getVisualizationClassNames = () => {
+    const {widgetMode, isResponsive, visualizationHasPadding} = this.props;
+
+    if (widgetMode) {
+      return classNames('widgetWidth', 'widgetHeight');
+    }
+
+    return classNames({
+      responsive: isResponsive,
+      with_padding: visualizationHasPadding
+    });
+  };
+
   render() {
     const {appWidth} = this.state;
     const appHeight =
@@ -79,14 +92,7 @@ class Visualization extends React.Component {
     return (
       <div
         id={VISUALIZATION_DIV_ID}
-        className={
-          this.props.widgetMode
-            ? 'widgetWidth widgetHeight'
-            : classNames({
-                responsive: this.props.isResponsive,
-                with_padding: this.props.visualizationHasPadding
-              })
-        }
+        className={this.getVisualizationClassNames()}
         style={[
           !this.props.isResponsive && {
             ...styles.nonResponsive,

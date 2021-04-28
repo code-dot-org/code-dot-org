@@ -76,14 +76,10 @@ class ApplabVisualizationColumn extends React.Component {
   state = {renderedWidth: this.props.widgetMode ? WIDGET_WIDTH : APP_WIDTH};
 
   getClassNames() {
-    if (this.props.widgetMode) {
-      return 'widgetWidth';
-    }
-
     const chromelessShare = dom.isMobile() && !dom.isIPad();
     return classNames({
       with_padding: this.props.visualizationHasPadding,
-      responsive: this.props.isResponsive,
+      responsive: this.props.isResponsive && !this.props.widgetMode,
       pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
 
       // the below replicates some logic in StudioApp.handleHideSource_ which
@@ -91,7 +87,8 @@ class ApplabVisualizationColumn extends React.Component {
       // parameters. This logic really shouldn't live in StudioApp, so I don't
       // feel too bad about copying it here, where it should really live...
       chromelessShare: chromelessShare && this.props.isShareView,
-      wireframeShare: !chromelessShare && this.props.isShareView
+      wireframeShare: !chromelessShare && this.props.isShareView,
+      widgetWidth: this.props.widgetMode
     });
   }
 
