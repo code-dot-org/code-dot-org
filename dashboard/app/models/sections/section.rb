@@ -20,7 +20,6 @@
 #  sharing_disabled     :boolean          default(FALSE), not null
 #  hidden               :boolean          default(FALSE), not null
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
-#  restrict_section     :boolean          default(FALSE)
 #
 # Indexes
 #
@@ -92,7 +91,6 @@ class Section < ApplicationRecord
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
-  ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -163,12 +161,9 @@ class Section < ApplicationRecord
   # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
   #   already in the section or has now been added.
   def add_student(student)
-    follower = Follower.with_deleted.find_by(section: self, student_user: student)
-
     return ADD_STUDENT_FAILURE if user_id == student.id
-    # Check for a restricted section that does not already have this follower enrolled (should exist and not be deleted)
-    return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
 
+    follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
       if follower.deleted?
         follower.restore
@@ -275,7 +270,6 @@ class Section < ApplicationRecord
       providerManaged: provider_managed?,
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
-      restrict_section: restrict_section
     }
   end
 
@@ -289,10 +283,6 @@ class Section < ApplicationRecord
 
   def provider_managed?
     false
-  end
-
-  def restricted?
-    restrict_section
   end
 
   # Hide or unhide a stage for this section
