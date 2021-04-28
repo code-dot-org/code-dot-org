@@ -49,9 +49,9 @@ module LevelsHelper
     elsif !script_level.lesson.numbered_lesson?
       script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level)
     elsif script_level.bonus
-      `/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/extras?level_name=#{script_level.level.name}`
+      "/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/extras?level_name=#{script_level.level.name}"
     else
-      `/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/puzzle/#{script_level.position}`
+      "/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/puzzle/#{script_level.position}"
     end
   end
 

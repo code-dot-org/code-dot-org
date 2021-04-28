@@ -462,7 +462,7 @@ class LevelsHelperTest < ActionView::TestCase
     )
 
     bonus_script_level = script.lessons.first.script_levels[1]
-    assert_equal `/s/test_bonus_level_links/stage/1/extras?level_name=BonusLevel1`, build_script_level_path_for_translations(bonus_script_level)
+    assert_equal '/s/test_bonus_level_links/stage/1/extras?level_name=BonusLevel1', build_script_level_path_for_translations(bonus_script_level)
   end
 
   test 'build_script_level_path_for_translations for normal level' do
@@ -481,7 +481,7 @@ class LevelsHelperTest < ActionView::TestCase
     )
 
     script_level = script.lessons.first.script_levels[0]
-    assert_equal `/s/test_level_links/stage/1/puzzle/1`, build_script_level_path_for_translations(script_level)
+    assert_equal '/s/test_level_links/stage/1/puzzle/1', build_script_level_path_for_translations(script_level)
   end
 
   test 'build_script_level_path differentiates lesson and survey' do
