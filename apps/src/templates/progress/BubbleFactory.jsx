@@ -134,10 +134,8 @@ export function getBubbleShape(isUnplugged, isConcept) {
     : BubbleShape.circle;
 }
 
-export function getBubbleClassNames(isDisabled, status) {
-  return classNames('progress-bubble', {
-    enabled: isBubbleEnabled(isDisabled, status)
-  });
+export function getBubbleClassNames(isEnabled) {
+  return classNames('progress-bubble', {enabled: isEnabled});
 }
 
 export const unitTestExports = {
