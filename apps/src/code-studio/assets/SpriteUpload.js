@@ -7,7 +7,8 @@ export default class SpriteUpload extends React.Component {
       fileData: null,
       filePreviewURL: '',
       filename: '',
-      category: ''
+      category: '',
+      currentCategories: []
     };
   }
 
@@ -53,6 +54,11 @@ export default class SpriteUpload extends React.Component {
   };
 
   render() {
+    fetch(`/api/v1/animation-library/manifest/spritelab/en_us`)
+      .then(response => response.json())
+      .then(data =>
+        this.setState({currentCategories: Object.keys(data.categories)})
+      );
     return (
       <div>
         <h1>Sprite Upload</h1>
