@@ -2,6 +2,7 @@
 az:
   data:
     parameter_names:
+      "???": "???"
       actor: personaj
       counter: sayğac
       height: hündürlük
@@ -10,5 +11,7 @@ az:
       length: uzunluq
       min: min
       points: xallar
+      radius: radius
+      sides: tərəflər
       size: ölçü
       speed: sürət

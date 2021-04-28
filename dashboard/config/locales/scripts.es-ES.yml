@@ -24603,6 +24603,8 @@ es:
               name: Módulo 8
             Module 7:
               name: Módulo 7
+            Self Paced Playground:
+              name: Parque Infantil Autodidacta
           name: guión-prueba-jess
         csd2-virtual:
           title: Introducción autodidacta al Laboratorio Web
@@ -30299,6 +30301,10 @@ es:
                 historia en el Laboratorio de juegos!
             lesson-1:
               name: Proyecto de fin de curso
+              description_student: "¡Cuenta una historia con el Artista!"
+              description_teacher: En esta lección de **proyecto**, los alumnos aplican
+                lo que han aprendido sobre secuencias y bucles en un proyecto abierto
+                con el Artista.
           lesson_groups:
             csf_digcit:
               display_name: Ciudadanía Digital
@@ -30445,6 +30451,10 @@ es:
                 un juego en el Laboratorio de juegos!
             lesson-1:
               name: Proyecto de fin de curso
+              description_student: Crea tu propia historia o juego.
+              description_teacher: En esta lección de **proyecto**, los alumnos aplican
+                lo que han aprendido sobre secuenciación y sucesos en un proyecto
+                abierto con el Laboratorio de Juegos.
           lesson_groups:
             csf_digcit:
               display_name: Ciudadanía Digital
@@ -30458,6 +30468,10 @@ es:
               display_name: Eventos
             lessonGroup-6:
               display_name: Proyecto de fin de curso
+              description: |2-
+
+
+                ![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)
           name: Curso B - 2021
           student_description: Aprende los fundamentos de las ciencias de la computación
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
@@ -32879,12 +32893,56 @@ es:
                 la identificación de errores sintácticos y lógicos.'
             lesson-5:
               name: Más con Objetos
+              description_student: En esta lección, aprenderás a crear objetos `Pintor`
+                especificando dónde empieza el `Pintor`, en qué dirección está el
+                `Pintor` y el color de la pintura. También tendrás en cuenta qué es
+                un "buen código" y practicarás la escritura de código eficiente.
+              description_teacher: La relación entre clases y objetos se refuerza
+                cuando los alumnos crean sus propios objetos. Los alumnos aprenden
+                a crear objetos con y sin parámetros. Los alumnos empiezan a tener
+                en cuenta lo que constituye un "buen código" y practican la escritura
+                de soluciones eficaces.
             lesson-6:
               name: Bucles "while" y práctica
+              description_student: Has practicado el movimiento del  "Pintor" y el
+                uso de condicionales para ayudar al "Pintor" a tomar decisiones sobre
+                la interacción con El Barrio. ¿Qué pasaría si pudieras hacer que el
+                "Pintor" repitiera los comandos? En esta lección, aprenderás a utilizar
+                un bucle "mientras" con algunos comandos nuevos para mover al "Pintor"
+                por El Barrio.
+              description_teacher: Los alumnos han aprendido mucho en su primera semana.
+                En esta lección, los alumnos conocen el bucle "mientras" y otros métodos
+                para controlar el movimiento del "Pintor" en El Barrio. Los alumnos
+                combinan sus conocimientos sobre métodos, constructores y estructuras
+                de control para desarrollar soluciones a puzzles cada vez más complejos.
             lesson-7:
               name: Más con Condicionales
+              description_student: Has estado utilizando sentencias "si" para ayudar
+                al "Pintor" a tomar decisiones para interactuar con El Barrio. En
+                esta lección, utilizarás las sentencias "si-si no" para dar al "Pintor"
+                una acción alternativa. También aprenderás sobre el operador "!" (no)
+                para ayudar con las decisiones que toma el "Pintor".
+              description_teacher: Los alumnos amplían sus conocimientos sobre las
+                estructuras de control y las expresiones booleanas utilizando las
+                sentencias "si-si no" y el operador lógico "!" (no). Los alumnos practican
+                el uso de la sentencia "si-si no" y "!" (no) para resolver problemas
+                más complejos, además de los comandos del "Pintor" que han utilizado
+                hasta ahora.
             lesson-8:
               name: Introducción a Revisiones del Código
+              description_student: 'Como ingeniero de software, quieres desarrollar
+                un código que sea fácil de leer, mantener y modificar con el tiempo.
+                En esta lección, practicarás el uso de las revisiones de código para
+                proporcionar retroalimentación y comentarás las estrategias para dar
+                y utilizar la retroalimentación. Estas estrategias serán útiles durante
+                todo el año.  '
+              description_teacher: En este curso, los alumnos se imaginan a sí mismos
+                como ingenieros de software y modelan las habilidades profesionales
+                del mundo real. Los ingenieros de software utilizan las revisiones
+                de código en toda la industria para desarrollar un código que sea
+                fácil de leer, mantener y modificar con el tiempo. Los alumnos se
+                inician en el proceso de revisión de código para sentar las bases
+                de las habilidades que seguirán adquiriendo a lo largo del curso.
             lesson-9:
               name: Herencia y Métodos
             lesson-10:
