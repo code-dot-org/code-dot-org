@@ -43,12 +43,24 @@ class AppLabView extends React.Component {
   }
 
   render() {
-    const codeWorkspaceVisible =
-      ApplabInterfaceMode.CODE === this.props.interfaceMode;
+    const {
+      interfaceMode,
+      widgetMode,
+      isRtl,
+      isEditingProject,
+      screenIds,
+      onScreenCreate,
+      autogenerateML,
+      hasDesignMode,
+      hasDataMode,
+      handleVersionHistory
+    } = this.props;
+
+    const codeWorkspaceVisible = ApplabInterfaceMode.CODE === interfaceMode;
 
     let instructionsStyle = {};
-    if (this.props.widgetMode) {
-      instructionsStyle = this.props.isRtl
+    if (widgetMode) {
+      instructionsStyle = isRtl
         ? styles.widgetInstructionsRtl
         : styles.widgetInstructions;
     }
@@ -59,9 +71,9 @@ class AppLabView extends React.Component {
         <ImportScreensDialog />
         <ExternalRedirectDialog />
         <ApplabVisualizationColumn
-          isEditingProject={this.props.isEditingProject}
-          screenIds={this.props.screenIds}
-          onScreenCreate={this.props.onScreenCreate}
+          isEditingProject={isEditingProject}
+          screenIds={screenIds}
+          onScreenCreate={onScreenCreate}
         />
         <VisualizationResizeBar />
         {/* Applying instructionsStyle to both the container (using style) and instructions (using
@@ -74,13 +86,11 @@ class AppLabView extends React.Component {
           <CodeWorkspace
             withSettingsCog
             style={{display: codeWorkspaceVisible ? 'block' : 'none'}}
-            autogenerateML={this.props.autogenerateML}
+            autogenerateML={autogenerateML}
           />
-          {this.props.hasDesignMode && <ProtectedDesignWorkspace />}
-          {this.props.hasDataMode && (
-            <DataWorkspace
-              handleVersionHistory={this.props.handleVersionHistory}
-            />
+          {hasDesignMode && <ProtectedDesignWorkspace />}
+          {hasDataMode && (
+            <DataWorkspace handleVersionHistory={handleVersionHistory} />
           )}
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
