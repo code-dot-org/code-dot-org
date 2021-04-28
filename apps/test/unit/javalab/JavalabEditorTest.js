@@ -13,6 +13,7 @@ import {
 import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {toggleDarkMode} from '@cdo/apps/javalab/javalabRedux';
+import {setAllSources} from '../../../src/javalab/javalabRedux';
 
 describe('Java Lab Editor Test', () => {
   let defaultProps, store, appOptions;
@@ -144,6 +145,44 @@ describe('Java Lab Editor Test', () => {
         'file-1': 'AnotherClass.java'
       });
     });
+
+    it('displays error message on a naming collision', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+      store.dispatch(
+        setAllSources({
+          'Class1.java': {text: '', visible: true},
+          'Class2.java': {text: '', visible: true}
+        })
+      );
+
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        editTabKey: 'file-0',
+        editTabFilename: 'Class1.java',
+        openDialog: 'renameFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        fileMetadata: {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        }
+      });
+      // we are trying to update Class1.java -> Class2.java here
+      javalabEditor.onRenameFile('Class2.java');
+      // after rename with existing filename, dialog should not close and
+      // error message should be populated
+      expect(store.getState().javalab.renameFileError).to.not.be.null;
+      expect(javalabEditor.state.openDialog).to.equal('renameFile');
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-0',
+        'file-1'
+      ]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-0': 'Class1.java',
+        'file-1': 'Class2.java'
+      });
+    });
   });
 
   describe('componentDidUpdate', () => {
@@ -219,6 +258,43 @@ describe('Java Lab Editor Test', () => {
         'file-0': 'Class1.java',
         'file-1': 'Class2.java',
         'file-2': newFilename
+      });
+    });
+
+    it('displays error message on a naming collision', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+      store.dispatch(
+        setAllSources({
+          'Class1.java': {text: '', visible: true},
+          'Class2.java': {text: '', visible: true}
+        })
+      );
+
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        openDialog: 'createFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        lastTabKeyIndex: 1,
+        fileMetadata: {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        }
+      });
+      const newFilename = 'Class2.java';
+      javalabEditor.onCreateFile(newFilename);
+      // after create with existing filename, dialog should not close and
+      // error message should be populated
+      expect(store.getState().javalab.newFileError).to.not.be.null;
+      expect(javalabEditor.state.openDialog).to.equal('createFile');
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-0',
+        'file-1'
+      ]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-0': 'Class1.java',
+        'file-1': 'Class2.java'
       });
     });
   });
