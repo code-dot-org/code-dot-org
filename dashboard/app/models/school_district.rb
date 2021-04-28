@@ -175,7 +175,7 @@ class SchoolDistrict < ApplicationRecord
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
         loaded = find_by_id(parsed[:id])
         if loaded.nil?
-          SchoolDistrict.new(parsed).save! unless is_dry_run
+          SchoolDistrict.new(parsed).save!
           new_districts << parsed
         elsif write_updates
           loaded.assign_attributes(parsed)
@@ -184,29 +184,31 @@ class SchoolDistrict < ApplicationRecord
               unchanged_districts += 1 :
               updated_districts += 1
 
-            loaded.update!(parsed) unless is_dry_run
+            loaded.update!(parsed)
           else
             unchanged_districts += 1
           end
         end
       end
+
+      # Raise an error so that the db transaction rolls back
+      raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if is_dry_run
+    ensure
+      future_tense_dry_run = is_dry_run ? ' to be' : ''
+      summary_message = "School District seeding: done processing #{filename}.\n"\
+        "#{new_districts.length} new districts#{future_tense_dry_run} added.\n"\
+        "#{updated_districts} districts#{future_tense_dry_run} updated.\n"\
+        "#{unchanged_districts} districts#{future_tense_dry_run} unchanged (district considered changed if only update was adding new columns included in this import).\n"
+
+      # More detailed logging in dry run mode
+      if !new_districts.empty? && is_dry_run
+        summary_message <<
+          "Districts#{future_tense_dry_run} added:\n"\
+          "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
+      end
+
+      CDO.log.info summary_message
     end
-
-    future_tense_dry_run = is_dry_run ? ' to be' : ''
-    summary_message = "School District seeding: done processing #{filename}.\n"\
-      "#{new_districts.length} new districts#{future_tense_dry_run} added.\n"\
-      "#{updated_districts} districts#{future_tense_dry_run} updated.\n"\
-      "#{unchanged_districts} districts#{future_tense_dry_run} unchanged (district considered changed if only update was adding new columns included in this import).\n"
-
-    # More detailed logging in dry run mode
-    if !new_districts.empty? && is_dry_run
-      summary_message <<
-        "Districts#{future_tense_dry_run} added:\n"\
-        "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
-    end
-
-    CDO.log.info summary_message
-    CDO.log.info "This is a dry run. No data written to the database." if is_dry_run
 
     districts
   end
