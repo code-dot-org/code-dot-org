@@ -100,40 +100,47 @@ class ModelCard extends Component {
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Features</h5>
-            <p style={styles.modelCardContent}>
-            {selectedNumericalFeatures.map((feature, index) => {
-              // toFixed converts a number to a string and rounds to two decimal places.
-              let min = this.props.rangesByColumn[feature].min.toFixed(2);
-              let max = this.props.rangesByColumn[feature].max.toFixed(2);
-              let selectedFeature = metadata.fields.find(field => field.id === feature);
-              return (
-                <div key={index}>
-                <p styles={styles.bold}>
-                  {feature}
-                </p>
-                <p>{selectedFeature.description}</p>
-                <p>Possible Values: <br />
-                  {/* The unary plus operator converts the operand to a number and truncates any trailing zeroes.  */}
-                  min: {+min}, max: {+max}
-                </p>
-                </div>
-              );
-            })}
-            {selectedCategoricalFeatures.map ((feature, index) => {
-              let selectedFeature = metadata.fields.find(field => field.id === feature);
-              return (
-                <div key={index}>
-                  <p styles={styles.bold}>
-                  {feature}
-                  </p>
-                  <p>{selectedFeature.description}</p>
-                  <p>Possible Values:{" "}
-                    {uniqueOptionsByColumn[feature].join(", ")}
-                  </p>
-                </div>
-              );
-            })}
-           </p>
+            {selectedNumericalFeatures.length > 0 && (
+              <p style={styles.modelCardContent}>
+                {selectedNumericalFeatures.map((feature, index) => {
+                  // toFixed converts a number to a string and rounds to two decimal places.
+                  let min = this.props.rangesByColumn[feature].min.toFixed(2);
+                  let max = this.props.rangesByColumn[feature].max.toFixed(2);
+                  let selectedFeature = metadata.fields.find(field => field.id === feature);
+                  return (
+                    <div key={index}>
+                    <p styles={styles.bold}>
+                      {feature}
+                    </p>
+                    <p>{selectedFeature.description}</p>
+                    <p>Possible Values:
+                      <br />
+                      {/* The unary plus operator converts the operand to a number and truncates any trailing zeroes.  */}
+                      min: {+min}, max: {+max}
+                    </p>
+                    </div>
+                  );
+                })}
+              </p>
+            )}
+            {selectedCategoricalFeatures.length > 0 && (
+              <p style={styles.modelCardContent}>
+                {selectedCategoricalFeatures.map ((feature, index) => {
+                  let selectedFeature = metadata.fields.find(field => field.id === feature);
+                  return (
+                    <div key={index}>
+                      <p styles={styles.bold}>
+                        {feature}
+                      </p>
+                      <p>{selectedFeature.description}</p>
+                      <p>Possible Values:{" "}
+                        {uniqueOptionsByColumn[feature].join(", ")}
+                      </p>
+                    </div>
+                  );
+                })}
+              </p>
+           )}
         </div>
         </div>
         <div style={styles.summaryScreenBot}>
