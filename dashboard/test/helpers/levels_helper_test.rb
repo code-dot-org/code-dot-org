@@ -448,11 +448,11 @@ class LevelsHelperTest < ActionView::TestCase
     input_dsl = <<~DSL
       lesson 'Test bonus level links', display_name: 'Test bonus level links'
       level 'Level1'
-      level 'BonusLevel1', bonus: true
+      level 'Bonus Level 1', bonus: true
     DSL
 
     create :level, name: 'Level1'
-    create :level, name: 'BonusLevel1'
+    create :level, name: 'Bonus Level 1'
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'test_bonus_level_links')
 
@@ -462,7 +462,7 @@ class LevelsHelperTest < ActionView::TestCase
     )
 
     bonus_script_level = script.lessons.first.script_levels[1]
-    assert_equal '/s/test_bonus_level_links/stage/1/extras?level_name=BonusLevel1', build_script_level_path_for_translations(bonus_script_level)
+    assert_equal '/s/test_bonus_level_links/stage/1/extras?level_name=Bonus%20Level%201', build_script_level_path_for_translations(bonus_script_level)
   end
 
   test 'build_script_level_path_for_translations for normal level' do
@@ -476,12 +476,12 @@ class LevelsHelperTest < ActionView::TestCase
     script_data, _ = ScriptDSL.parse(input_dsl, 'test_level_links')
 
     script = Script.add_script(
-      {name: 'test_level_links'},
+      {name: 'test level links'},
       script_data[:lesson_groups]
     )
 
     script_level = script.lessons.first.script_levels[0]
-    assert_equal '/s/test_level_links/stage/1/puzzle/1', build_script_level_path_for_translations(script_level)
+    assert_equal '/s/test%20level%20links/stage/1/puzzle/1', build_script_level_path_for_translations(script_level)
   end
 
   test 'build_script_level_path differentiates lesson and survey' do
