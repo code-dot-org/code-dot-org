@@ -6393,9 +6393,6 @@ eslint-plugin-mocha@^4.12.1:
   dependencies:
     ramda "^0.25.0"
 
-"eslint-plugin-my-project@file:./eslint":
-  version "1.0.0"
-
 eslint-plugin-prettier@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.0.1.tgz#19d521e3981f69dd6d14f64aec8c6a6ac6eb0b0d"
