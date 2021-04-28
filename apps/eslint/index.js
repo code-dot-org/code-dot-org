@@ -14,7 +14,10 @@ module.exports = {
             )[0];
 
             const classDeclarations = node.body.filter(
-              item => item.type === 'ClassDeclaration'
+              item =>
+                item.type === 'ClassDeclaration' ||
+                (item.type === 'ExportDefaultDeclaration' &&
+                  item.declaration.type === 'ClassDeclaration')
             );
 
             // if the program contains a style block and class declaration
@@ -29,6 +32,15 @@ module.exports = {
                   message: 'Style block should be declared after class',
                   fix: function(fixer) {
                     const sourceCode = context.getSourceCode();
+                    const styleComments = sourceCode.getCommentsBefore(
+                      styleBlock
+                    );
+
+                    // if there are style comments, don't automatically re-arrange block
+                    if (styleComments.length) {
+                      return null;
+                    }
+
                     const styleBlockText = sourceCode.getText(styleBlock);
 
                     // moves the style block below the last class
