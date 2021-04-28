@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {appendOutputLog, toggleDarkMode} from './javalabRedux';
+import {appendOutputLog, setIsDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -71,7 +71,7 @@ class JavalabView extends React.Component {
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
-    toggleDarkMode: PropTypes.func,
+    setIsDarkMode: PropTypes.func,
     channelId: PropTypes.string
   };
 
@@ -87,7 +87,7 @@ class JavalabView extends React.Component {
   renderSettings = () => {
     const {isDarkMode} = this.props;
     return [
-      <a onClick={this.props.toggleDarkMode} key="theme-setting">
+      <a onClick={this.props.setIsDarkMode(!isDarkMode)} key="theme-setting">
         Switch to {isDarkMode ? 'light mode' : 'dark mode'}
       </a>
     ];
@@ -197,6 +197,6 @@ export default connect(
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
-    toggleDarkMode: () => dispatch(toggleDarkMode())
+    setIsDarkMode: () => dispatch(setIsDarkMode())
   })
 )(UnconnectedJavalabView);

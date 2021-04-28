@@ -1,8 +1,10 @@
+import UserPreferences from '../lib/util/UserPreferences';
+
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
-const TOGGLE_DARK_MODE = 'javalab/TOGGLE_DARK_MODE';
+const SET_IS_DARK_MODE = 'javalab/SET_IS_DARK_MODE';
 
 const initialState = {
   consoleLogs: [],
@@ -39,9 +41,13 @@ export const setSource = (filename, source, isVisible = true) => ({
   isVisible
 });
 
-export const toggleDarkMode = () => ({
-  type: TOGGLE_DARK_MODE
-});
+export const setIsDarkMode = isDarkMode => {
+  new UserPreferences().setUsingDarkMode(isDarkMode);
+  return {
+    isDarkMode: isDarkMode,
+    type: SET_IS_DARK_MODE
+  };
+};
 
 // Selectors
 export const getSources = state => {
@@ -88,10 +94,10 @@ export default function reducer(state = initialState, action) {
       sources: action.sources
     };
   }
-  if (action.type === TOGGLE_DARK_MODE) {
+  if (action.type === SET_IS_DARK_MODE) {
     return {
       ...state,
-      isDarkMode: !state.isDarkMode
+      isDarkMode: action.isDarkMode
     };
   }
   return state;
