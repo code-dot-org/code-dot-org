@@ -6,6 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 const DEFAULT_MARGIN = 7;
 
@@ -49,7 +50,6 @@ export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    autogenerateML: PropTypes.func,
     // Levelbuilders can pre-populate App Lab levels with a pre-trained model.
     levelbuilderModel: PropTypes.object
   };
@@ -111,7 +111,7 @@ export default class ModelManagerDialog extends React.Component {
   importMLModel = async () => {
     this.setState({isImportPending: true});
     const modelId = this.root.value;
-    await this.props.autogenerateML(modelId);
+    await autogenerateML(modelId);
     this.setState({isImportPending: false});
     this.closeModelManager();
   };
