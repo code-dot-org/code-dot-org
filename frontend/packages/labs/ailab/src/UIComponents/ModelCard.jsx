@@ -52,11 +52,13 @@ class ModelCard extends Component {
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>About the Data </h5>
             <div style={styles.modelCardContent}>
-              {datasetDetails && (
+              {datasetDetails.description && (
                 <p style={styles.modelCardDetails}>
                   {datasetDetails.description}
-                  <br />
-                  <br />
+                </p>
+              )}
+              {datasetDetails.numRows && (
+                <p style={styles.modelCardDetails}>
                   Dataset size: {datasetDetails.numRows} rows
                 </p>
               )}
@@ -85,7 +87,7 @@ class ModelCard extends Component {
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Label</h5>
             <div style={styles.modelCardContent}>
-              <div style={styles.bold}>{label.id}</div>
+              <p style={styles.bold}>{label.id}</p>
                 {label.description && (
                   <p>{label.description}</p>
                 )}
@@ -122,7 +124,9 @@ class ModelCard extends Component {
                         </p>
                       )}
                       {feature.values && (
-                        <p>Possible Values: {feature.values.join(', ')}</p>
+                        <p>
+                          Possible Values: {feature.values.join(', ')}
+                        </p>
                       )}
                     </div>
                   );
