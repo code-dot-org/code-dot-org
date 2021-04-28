@@ -919,14 +919,14 @@ export function getDataDescription(state) {
   }
 }
 
-function getDatasetDetails(state) {
+export function getDatasetDetails(state) {
   const datasetDetails = {}
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
   return datasetDetails;
 }
 
-function getColumnDataToSave(state, column) {
+export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
@@ -940,7 +940,7 @@ function getColumnDataToSave(state, column) {
   return columnData;
 }
 
-function getFeaturesToSave(state) {
+export function getFeaturesToSave(state) {
   const features = state.selectedFeatures.map(feature =>
     getColumnDataToSave(state, feature)
   )

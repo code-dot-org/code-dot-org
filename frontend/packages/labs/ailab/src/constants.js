@@ -548,6 +548,10 @@ export const styles = {
     padding: 10
   },
 
+  modelCardDetails: {
+    marginBottom: 0
+  },
+
   summaryScreenBot: {
     width: 300,
     position: "absolute",
