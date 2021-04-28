@@ -53,7 +53,7 @@ const assessmentBackgrounds = {
 /**
  * ProgressTableLevelBubble's primary purpose is to determine the shape, size,
  * style, and cache key for an underlying BasicBubble. Consequently many of our
- * tests need to verify porperties of the underlying BasicBubble. However,
+ * tests need to verify properties of the underlying BasicBubble. However,
  * since what the component actually renders is the cached HTML representation
  * of the BasicBubble, we use a spy to intercept the BasicBubble returned from
  * ProgressTableLevelBubble.createBubbleElement for easier verification.
@@ -64,12 +64,20 @@ const elementSpy = sinon.spy(
 );
 
 /**
- * The spy's history is reset after each test so this will give us the first
+ * The spy's history is reset before each test so this will give us the first
  * BasicBubble rendered during this test.
  */
 function getFirstRenderedBasicBubble(propOverrides = {}) {
+  // first we render the bubble we want to test, which will call
+  // `createBubbleElement` in the process
   mount(<ProgressTableLevelBubble {...defaultProps} {...propOverrides} />);
+
+  // next we get the rendered `BasicBubble` returned by `createBubbleElement`
   const renderedBubble = elementSpy.returnValues[0];
+
+  // finally we render the `BasicBubble` itself so we can verifty its props
+  // (since the underlying `CachedElement` rendered it as raw HTML when
+  // rendering the `ProgressTableLevelBubble`)
   return mount(renderedBubble);
 }
 
@@ -90,7 +98,12 @@ function getCacheSize() {
 }
 
 describe('ProgressTableLevelBubble', () => {
-  afterEach(() => {
+  beforeEach(() => {
+    elementSpy.resetHistory();
+    cacheExports.clearElementsCache();
+  });
+
+  after(() => {
     elementSpy.resetHistory();
     cacheExports.clearElementsCache();
   });

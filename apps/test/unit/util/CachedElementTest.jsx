@@ -36,7 +36,12 @@ const defaultProps = {
 const spy = sinon.spy(createDiv);
 
 describe('CachedElement', () => {
-  afterEach(() => {
+  beforeEach(() => {
+    spy.resetHistory();
+    unitTestExports.clearElementsCache();
+  });
+
+  after(() => {
     spy.resetHistory();
     unitTestExports.clearElementsCache();
   });
