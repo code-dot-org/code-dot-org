@@ -9,7 +9,7 @@
 $root: '/blockly/media/applab/'; //TODO: Parameterize for asset pipeline
 $defaultWidth: 320px;
 $defaultFooterlessHeight: 450px;
-$widgetWidth: 600px;
+$widgetWidth: 600px; // Note: This constant is also maintained in applab/constants.js.
 $widgetHeight: $defaultFooterlessHeight;
 
 div#visualization {
