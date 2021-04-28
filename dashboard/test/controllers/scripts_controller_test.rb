@@ -1006,6 +1006,43 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "get_rollup_resources return rollups for a script with code, resources, standards, and vocab" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @migrated_script
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    lesson.programming_expressions = [create(:programming_expression)]
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+    lesson.vocabularies = [create(:vocabulary, course_version_id: course_version.id)]
+
+    get :get_rollup_resources, params: {id: @migrated_script.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 4, response_body.length
+    assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
+  end
+
+  test "get_rollup_resources doesn't return rollups if no lesson in a script has the associated object" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @migrated_script
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    # Only add resources and standards, not programming expressions and vocab
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+
+    get :get_rollup_resources, params: {id: @migrated_script.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 2, response_body.length
+    assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
+  end
+
   def stub_file_writes(script_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]
     File.stubs(:write).with do |filename, _|
