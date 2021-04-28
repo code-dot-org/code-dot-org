@@ -9,6 +9,7 @@ require 'cdo/languages'
 require 'net/http'
 require 'uri'
 require 'json'
+require 'addressable'
 
 module LevelsHelper
   include ApplicationHelper
@@ -45,13 +46,14 @@ module LevelsHelper
     if script_level.script.name == Script::HOC_NAME
       hoc_chapter_path(script_level.chapter)
     elsif script_level.script.name == Script::FLAPPY_NAME
-      flappy_chapter_path(script_level.chapter)
+      flappy_chapter_path(script_level.chapter
+      )
     elsif !script_level.lesson.numbered_lesson?
       script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level)
     elsif script_level.bonus
-      "/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/extras?level_name=#{script_level.level.name}"
+      Addressable::URI.encode("/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/extras?level_name=#{script_level.level.name}")
     else
-      "/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/puzzle/#{script_level.position}"
+      Addressable::URI.encode("/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/puzzle/#{script_level.position}")
     end
   end
 
