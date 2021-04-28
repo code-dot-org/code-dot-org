@@ -20,7 +20,6 @@ import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
 class AppLabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
-    autogenerateML: PropTypes.func.isRequired,
     hasDataMode: PropTypes.bool.isRequired,
     hasDesignMode: PropTypes.bool.isRequired,
     interfaceMode: PropTypes.oneOf([
@@ -58,7 +57,6 @@ class AppLabView extends React.Component {
           <CodeWorkspace
             withSettingsCog
             style={{display: codeWorkspaceVisible ? 'block' : 'none'}}
-            autogenerateML={this.props.autogenerateML}
           />
           {this.props.hasDesignMode && <ProtectedDesignWorkspace />}
           {this.props.hasDataMode && (
