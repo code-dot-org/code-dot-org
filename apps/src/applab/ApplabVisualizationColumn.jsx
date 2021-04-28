@@ -1,7 +1,7 @@
 import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import * as color from '../util/color';
-import {WIDGET_WIDTH, APP_WIDTH, APP_HEIGHT} from './constants';
+import {getAppWidth, APP_HEIGHT} from './constants';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
@@ -73,9 +73,8 @@ class ApplabVisualizationColumn extends React.Component {
     onScreenCreate: PropTypes.func.isRequired
   };
 
-  state = {renderedWidth: this.props.widgetMode ? WIDGET_WIDTH : APP_WIDTH};
-
   getClassNames() {
+    // TODO: DESTRUCTURE PROPS
     const chromelessShare = dom.isMobile() && !dom.isIPad();
     return classNames({
       with_padding: this.props.visualizationHasPadding,
@@ -104,7 +103,7 @@ class ApplabVisualizationColumn extends React.Component {
       this.props.isIframeEmbed && !this.props.isRunning && (
         <IFrameEmbedOverlay
           key="2"
-          appWidth={this.state.renderedWidth}
+          appWidth={getAppWidth(this.props)}
           appHeight={APP_HEIGHT}
         />
       )

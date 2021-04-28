@@ -58,12 +58,6 @@ class Visualization extends React.Component {
     widgetMode: PropTypes.bool
   };
 
-  state = {
-    appWidth: this.props.widgetMode
-      ? applabConstants.WIDGET_WIDTH
-      : applabConstants.APP_WIDTH
-  };
-
   handleDisableMaker = () => project.setMakerEnabled(null);
 
   handleTryAgain = () => {
@@ -85,7 +79,7 @@ class Visualization extends React.Component {
   };
 
   render() {
-    const {appWidth} = this.state;
+    const appWidth = applabConstants.getAppWidth(this.props);
     const appHeight =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
