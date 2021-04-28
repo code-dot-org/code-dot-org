@@ -53,6 +53,11 @@ const styles = {
  */
 class ApplabVisualizationColumn extends React.Component {
   static propTypes = {
+    isEditingProject: PropTypes.bool.isRequired,
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+
+    // Provided by redux
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     visualizationHasPadding: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
@@ -65,12 +70,7 @@ class ApplabVisualizationColumn extends React.Component {
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool,
-
-    // non redux backed
-    isEditingProject: PropTypes.bool.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onScreenCreate: PropTypes.func.isRequired
+    widgetMode: PropTypes.bool
   };
 
   getClassNames() {
