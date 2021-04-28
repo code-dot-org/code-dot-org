@@ -20,7 +20,6 @@
 #  sharing_disabled     :boolean          default(FALSE), not null
 #  hidden               :boolean          default(FALSE), not null
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
-#  restrict_section     :boolean          default(FALSE)
 #
 # Indexes
 #
