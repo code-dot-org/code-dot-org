@@ -76,7 +76,7 @@ class SaveModel extends Component {
   };
 
   render() {
-    const { saveStatus, dataDescription } = this.props;
+    const { saveStatus } = this.props;
 
     const nameField = {
       id: "name",
@@ -87,7 +87,7 @@ class SaveModel extends Component {
       id: "datasetDescription",
       text: "Describe the dataset.",
       placeholder: "How was the data collected? Who collected it? When was it collected?",
-      answer: dataDescription
+      answer: this.props.dataDescription
     };
 
     const arrowIcon = this.state.showColumnDescriptions
