@@ -31,7 +31,7 @@ class Javalab < Level
     is_project_level
     submittable
     encrypted_examples
-    neighborhood_enabled
+    csa_view_mode
   )
 
   before_save :fix_examples
