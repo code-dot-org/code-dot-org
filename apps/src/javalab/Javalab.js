@@ -6,6 +6,7 @@ import JavalabView from './JavalabView';
 import javalab, {
   getSources,
   setAllSources,
+  setIsDarkMode,
   appendOutputLog
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -51,7 +52,6 @@ Javalab.prototype.init = function(config) {
   this.level = config.level;
   this.channelId = config.channel;
   this.isDarkMode = config.usingDarkModePref;
-  console.log(config.usingDarkModePref);
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -124,6 +124,9 @@ Javalab.prototype.init = function(config) {
   ) {
     getStore().dispatch(setAllSources(startSources));
   }
+
+  // dispatch a redux update of isDarkMode
+  getStore().dispatch(setIsDarkMode(this.isDarkMode));
 
   ReactDOM.render(
     <Provider store={getStore()}>
