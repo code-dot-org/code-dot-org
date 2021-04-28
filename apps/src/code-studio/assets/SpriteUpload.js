@@ -5,7 +5,8 @@ export default class SpriteUpload extends React.Component {
     fileData: null,
     filePreviewURL: '',
     filename: '',
-    category: ''
+    category: '',
+    uploadState: ''
   };
 
   handleSubmit = event => {
@@ -22,17 +23,14 @@ export default class SpriteUpload extends React.Component {
       }
     )
       .then(response => {
-        let responseText = document.getElementById('sprite-upload-error');
-        if (response.ok) {
-          responseText.innerText = 'Image succesfully uploaded.';
-        } else {
-          throw Error(response.status + ': ' + response.statusText);
-        }
+        this.setState({
+          uploadState: response.ok
+            ? 'Image Successfully Uploaded'
+            : `Error(${response.status}: ${response.statusText})`
+        });
       })
       .catch(err => {
         console.error(err);
-        let errorText = document.getElementById('sprite-upload-error');
-        errorText.innerText = err;
       });
   };
 
@@ -41,7 +39,8 @@ export default class SpriteUpload extends React.Component {
     this.setState({
       fileData: file,
       filename: file.name,
-      filePreviewURL: URL.createObjectURL(file)
+      filePreviewURL: URL.createObjectURL(file),
+      uploadState: ''
     });
   };
 
@@ -57,7 +56,7 @@ export default class SpriteUpload extends React.Component {
         <h1>Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
-            <h4> Sprite Category:</h4>
+            <h4>Sprite Category:</h4>
             <input
               type="text"
               value={this.state.category}
@@ -65,7 +64,7 @@ export default class SpriteUpload extends React.Component {
             />
           </label>
           <label>
-            <h4> Select Sprite to Add to Library:</h4>
+            <h4>Select Sprite to Add to Library:</h4>
             <input
               type="file"
               accept="image/png"
@@ -75,12 +74,12 @@ export default class SpriteUpload extends React.Component {
           </label>
           <br />
           <label>
-            <h4> Image Preview:</h4>
+            <h4>Image Preview:</h4>
             <img src={this.state.filePreviewURL} />
           </label>
           <br />
           <button type="submit">Upload to Library</button>
-          <p id="sprite-upload-error" />
+          <p id="sprite-upload-error">{this.state.uploadState}</p>
         </form>
       </div>
     );
