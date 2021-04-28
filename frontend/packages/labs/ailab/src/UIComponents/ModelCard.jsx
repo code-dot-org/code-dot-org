@@ -49,7 +49,7 @@ class ModelCard extends Component {
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Summary</h5>
-            <p style={styles.modelCardContent}>
+            <div style={styles.modelCardContent}>
               Predict {labelColumn} based on{" "}
               {selectedFeatures.length > 0 && summaryStat && (
                 <span>
@@ -57,51 +57,51 @@ class ModelCard extends Component {
                   accuracy.
                 </span>
               )}
-            </p>
+            </div>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>About the Data </h5>
+            <div style={styles.modelCardContent}>
               {card && (
-                <p style={styles.modelCardContent}>
-                {metadata.card.description}
-                </p>
+                <p>{metadata.card.description}</p>
               )}
-            {dataLength !== 0 && (
-              <p style={styles.modelCardContent}>
-                <br />
-                Dataset size: {dataLength} rows
-              </p>
-            )}
+              {dataLength !== 0 && (
+                <div style={styles.modelCardContent}>
+                  <br />
+                  Dataset size: {dataLength} rows
+                </div>
+              )}
+            </div>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Intended Use</h5>
-            {trainedModelDetails.potentialUses && (
-              <p style={styles.modelCardContent}>
-                {trainedModelDetails.potentialUses}
-              </p>
-            )}
+            <div style={styles.modelCardContent}>
+              {trainedModelDetails.potentialUses && (
+                <p>{trainedModelDetails.potentialUses}</p>
+              )}
+            </div>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Warnings</h5>
-            {trainedModelDetails.potentialMisuses && (
-              <p style={styles.modelCardContent}>
-                {trainedModelDetails.potentialMisuses}
-              </p>
-            )}
+            <div style={styles.modelCardContent}>
+              {trainedModelDetails.potentialMisuses && (
+                <p>{trainedModelDetails.potentialMisuses}</p>
+              )}
+            </div>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Label</h5>
-            <p style={styles.bold}>{labelColumn}</p>
-            {labelDescription && (
-              <p style={styles.modelCardContent}>
-                {labelDescription}
-              </p>
-            )}
+            <div style={styles.modelCardContent}>
+              <div style={styles.bold}>{labelColumn}</div>
+                {labelDescription && (
+                  <p>{labelDescription}</p>
+                )}
+            </div>
           </div>
           <div style={styles.modelCardSubpanel}>
             <h5 style={styles.modelCardHeading}>Features</h5>
             {selectedNumericalFeatures.length > 0 && (
-              <p style={styles.modelCardContent}>
+              <div style={styles.modelCardContent}>
                 {selectedNumericalFeatures.map((feature, index) => {
                   // toFixed converts a number to a string and rounds to two decimal places.
                   let min = this.props.rangesByColumn[feature].min.toFixed(2);
@@ -109,29 +109,25 @@ class ModelCard extends Component {
                   let selectedFeature = metadata.fields.find(field => field.id === feature);
                   return (
                     <div key={index}>
-                    <p styles={styles.bold}>
-                      {feature}
-                    </p>
-                    <p>{selectedFeature.description}</p>
-                    <p>Possible Values:
-                      <br />
-                      {/* The unary plus operator converts the operand to a number and truncates any trailing zeroes.  */}
-                      min: {+min}, max: {+max}
-                    </p>
+                      <div style={styles.bold}>{feature}</div>
+                      <p>{selectedFeature.description}</p>
+                      <p>Possible Values:
+                        <br />
+                        {/* The unary plus operator converts the operand to a number and truncates any trailing zeroes.  */}
+                        min: {+min}, max: {+max}
+                      </p>
                     </div>
                   );
                 })}
-              </p>
+              </div>
             )}
             {selectedCategoricalFeatures.length > 0 && (
-              <p style={styles.modelCardContent}>
+              <div style={styles.modelCardContent}>
                 {selectedCategoricalFeatures.map ((feature, index) => {
                   let selectedFeature = metadata.fields.find(field => field.id === feature);
                   return (
                     <div key={index}>
-                      <p styles={styles.bold}>
-                        {feature}
-                      </p>
+                      <div style={styles.bold}>{feature}</div>
                       <p>{selectedFeature.description}</p>
                       <p>Possible Values:{" "}
                         {uniqueOptionsByColumn[feature].join(", ")}
@@ -139,7 +135,7 @@ class ModelCard extends Component {
                     </div>
                   );
                 })}
-              </p>
+              </div>
            )}
         </div>
         </div>
