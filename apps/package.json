@@ -8,7 +8,6 @@
     "npm": ">=3.10.8"
   },
   "scripts": {
-    "lint-one": "eslint --format ./.eslintCustomMessagesFormatter.js --fix src/templates/sectionProgress/progressTables/ProgressTableContainer.jsx",
     "lint": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx src test",
     "test": "TZ=UTC ./test-low-memory.sh",
     "test-low-memory": "TZ=UTC ./test-low-memory.sh",
@@ -100,7 +99,6 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-cdo-custom-rules": "file:./eslint",
     "eslint-plugin-mocha": "^4.12.1",
-    "eslint-plugin-my-project": "file:./eslint",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.11.0",
     "fast-memoize": "2.0.2",
