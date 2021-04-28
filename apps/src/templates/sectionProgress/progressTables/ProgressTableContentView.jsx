@@ -57,8 +57,10 @@ export default class ProgressTableContentView extends React.Component {
     this.scrollToSelectedLesson();
   }
 
-  componentDidUpdate() {
-    this.scrollToSelectedLesson();
+  componentDidUpdate(prevProps) {
+    if (prevProps.lessonOfInterest !== this.props.lessonOfInterest) {
+      this.scrollToSelectedLesson();
+    }
   }
 
   scrollToSelectedLesson() {
