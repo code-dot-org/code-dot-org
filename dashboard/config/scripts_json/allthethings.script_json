@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-04 21:07:16 UTC",
+    "serialized_at": "2021-04-28 00:04:36 UTC",
     "seeding_key": {
       "script.name": "allthethings"
     }
@@ -3552,24 +3552,24 @@
           }
         },
         "level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
         "script.name": "allthethings"
       },
       "level_keys": [
-        "csp_socialBelonging_control",
-        "csp_socialBelonging_intervention"
+        "csp_socialBelonging_intervention",
+        "csp_socialBelonging_control"
       ]
     },
     {
@@ -3814,6 +3814,30 @@
     },
     {
       "chapter": 126,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "AllTheThings sprite lab with video"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AllTheThings sprite lab with video"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      },
+      "level_keys": [
+        "AllTheThings sprite lab with video"
+      ]
+    },
+    {
+      "chapter": 127,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -3837,7 +3861,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -3861,7 +3885,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 1,
       "activity_section_position": null,
       "assessment": true,
@@ -3885,7 +3909,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 2,
       "activity_section_position": null,
       "assessment": true,
@@ -3909,7 +3933,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 3,
       "activity_section_position": null,
       "assessment": true,
@@ -3933,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": null,
       "assessment": true,
@@ -3957,7 +3981,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -3981,7 +4005,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -4005,7 +4029,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -4029,7 +4053,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -4053,7 +4077,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -4077,7 +4101,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -4101,7 +4125,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -4125,7 +4149,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -4149,7 +4173,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 141,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -4173,7 +4197,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 142,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -4197,7 +4221,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 143,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -4221,7 +4245,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 144,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -4245,7 +4269,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 145,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -4269,7 +4293,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 146,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -4293,7 +4317,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -4317,7 +4341,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 148,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -5547,7 +5571,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 6",
+        "level.key": "2-3 Maze 3",
         "script_level.level_keys": [
           "2-3 Maze 3",
           "2-3 Maze 6"
@@ -5559,7 +5583,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 3",
+        "level.key": "2-3 Maze 6",
         "script_level.level_keys": [
           "2-3 Maze 3",
           "2-3 Maze 6"
@@ -5715,10 +5739,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_control",
+        "level.key": "csp_socialBelonging_intervention",
         "script_level.level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5727,10 +5751,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_intervention",
+        "level.key": "csp_socialBelonging_control",
         "script_level.level_keys": [
-          "csp_socialBelonging_control",
-          "csp_socialBelonging_intervention"
+          "csp_socialBelonging_intervention",
+          "csp_socialBelonging_control"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -5841,6 +5865,17 @@
         "level.key": "allthethings_fish_tank",
         "script_level.level_keys": [
           "allthethings_fish_tank"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AllTheThings sprite lab with video",
+        "script_level.level_keys": [
+          "AllTheThings sprite lab with video"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "",
@@ -6096,13 +6131,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }
