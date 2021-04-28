@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-24 15:44:08 UTC",
+    "serialized_at": "2021-04-28 20:19:33 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -2626,7 +2626,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal**\n\nMake sure students understand how to access the block documentation by clicking on the blocks inside the toolbox and clicking \"see examples\".\n\nAs students think of ideas of why they might prefer to use block mode, make sure that they understand that the block-based version of the programming language is just as legitimate as the text-based version. Students may offer that blocks make it easier to remember the exact commands or that they don't have to worry about the details of the parentheses or semicolons.\n\n(Alternatively, advantages to text might be that it's easier to edit or that the text takes up less space.)"
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- Where can you find more information about how to use the blocks?\n- What’s an advantage of using block mode?"
       },
       "seeding_key": {
         "activity_section.key": "9663d7f7-168d-4f85-8f8a-cc2d6f86efa3",
@@ -2654,7 +2655,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal:**\nStroke controls the border color of the shape, and fill controls the color inside of it."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- What’s the difference between stroke and fill?"
       },
       "seeding_key": {
         "activity_section.key": "c838ee44-b6fd-467e-8733-9b52d9727b08",
