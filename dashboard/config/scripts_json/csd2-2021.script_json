@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 16:36:48 UTC",
+    "serialized_at": "2021-04-29 22:15:50 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -79,16 +79,7 @@
         "purpose": "This unit is all about the World Wide Web, with a focus on creating websites for self expression. To start students thinking about why they might want to create a website, they must begin to consider how websites are useful tools for both users and creators. The lesson opens with popular websites because students are familiar with them, but students are asked to narrow their vision to simpler sites that are within the scope of what they will be able to make in this course.",
         "preparation": "* Print a copy of the activity guide for each student.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Identify the reasons someone might visit a given website**\r\n\r\n\tOn the activity guide, check that students have reasons that a user might visit each website, such as learning more about a topic or entertaining themselves.\r\n    \r\n2. **Identify the reasons someone might create a given website**\r\n\r\n\tOn the activity guide, check students' reasons for why the creators would make their respective sites. Student explanations may include pragmatic reasons, such as getting feedback and advice from others, or more social reasons such as personal expression.\r\n",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1M7K6AIq1owiD6uVKk9CW33N31nGunjohZrCZzeaaza0/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Identify the reasons someone might visit a given website**\r\n\r\n\tOn the activity guide, check that students have reasons that a user might visit each website, such as learning more about a topic or entertaining themselves.\r\n    \r\n2. **Identify the reasons someone might create a given website**\r\n\r\n\tOn the activity guide, check students' reasons for why the creators would make their respective sites. Student explanations may include pragmatic reasons, such as getting feedback and advice from others, or more social reasons such as personal expression.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
@@ -9447,6 +9438,18 @@
       }
     },
     {
+      "name": "HTML Tags",
+      "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view",
+      "key": "html_tags",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "html_tags"
+      }
+    },
+    {
       "name": "Project Guide - HTML Project",
       "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view",
       "key": "project-guide-html-project-2020",
@@ -9556,18 +9559,6 @@
       },
       "seeding_key": {
         "resource.key": "social-sleuth"
-      }
-    },
-    {
-      "name": "Styling Text with CSS",
-      "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
-      "key": "styling-text-with-css",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "styling-text-with-css"
       }
     },
     {
@@ -10284,6 +10275,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "resource.key": "html_tags"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Headings",
         "resource.key": "csd_unit_2_-_web_development"
       }
@@ -10345,7 +10342,7 @@
     {
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
-        "resource.key": "styling-text-with-css"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
