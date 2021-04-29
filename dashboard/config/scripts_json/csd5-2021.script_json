@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-24 15:52:24 UTC",
+    "serialized_at": "2021-04-29 17:40:47 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -5993,8 +5993,8 @@
   ],
   "resources": [
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
+      "name": "CSD Unit 5 - Data & Society",
+      "url": "https://docs.google.com/presentation/d/1qAf-Nt78JMDtvqh837cyP8dtudTv5o2AvAsWiUH2YJs/copy",
       "key": "unit-5-data-society",
       "properties": {
         "type": "Slides",
