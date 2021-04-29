@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 23:02:30 UTC",
+    "serialized_at": "2021-04-29 23:58:31 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -52,16 +52,7 @@
         "student_overview": "Welcome to the Introduction to App Development! We begin this unit by examining the basics of an app. ",
         "purpose": "This lesson is an introduction to a unit that introduces programming through the broader context of designing apps that help people. This lesson is designed to build excitement about the skills that students will develop throughout the unit and get them thinking early about the ways programming can help others. This lesson also establishes shared vocabulary for talking about apps in a generic sense, for example its inputs, outputs, and overall user interface.",
         "preparation": "* Preview the How Computers Work Video\r\n* Explore the apps used in this lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1TnK-Vg69E2D93Q5IDvbyMFz6Y93790w4FCZ9qezUD7g/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
@@ -102,15 +93,6 @@
         "purpose": "This lesson kicks off a project that students will complete throughout the unit. The framing of this project is also important for how programming is presented overall. Students are encouraged to collaboratively design their projects, choose topics of personal interest, and build an app to meet the needs of other people. All of this is important as part of framing programming as a collaborative, creative, and socially situated pursuit.",
         "preparation": "* Read over the [r app_development_planning_guide/csp/2021]",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1hMZWH4WsV8zU05wvxl82C6dL6oea78tQY52Y0gtos18/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true,
         "unplugged": true
       },
@@ -132,15 +114,6 @@
         "student_overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
         "preparation": "* Make sure students have access to their App Development Planning Guides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1EJ6JrDvFh8EvcRrRhafHOTrYsqgH-PxsGuPpSUXTsHY/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -162,15 +135,6 @@
         "purpose": "This lesson is students' first introduction to the concept of a programming language. It helps them understand why programming languages exist by giving them a first-hand experience with the problems that programming languages are designed to address. Natural language is usually too ambiguous for giving precise instructions that can be followed correctly 100% of the time. We need to create more structured and precise programming languages in order to accomplish this.",
         "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1xsriQ8v_NoLvGbcLL3hmFryhRx-6AsgZ65YRwor4t3o/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -211,16 +175,7 @@
         "student_overview": "Learn how to identify and fix problems in your code through the debugging process. Then practice using it with a classmate.",
         "purpose": "This lesson serves a number of roles. Even if students had modified programs in the previous lesson, this continues to be an introduction to many of the skills of programming. Students are also introduced to debugging as a skill they'll need to use and develop as programmers. A huge goal of this lesson, however, is attitudinal.",
         "preparation": "* Review the steps of the debugging process\r\n* Review the levels students will need to complete on Code Studio",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qtZDBI9euOVQCIeLZVhlH14q0paODGJaRyAoSYFiS6I/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Debugging",
@@ -241,15 +196,6 @@
         "purpose": "Pair Programming is an effective collaboration strategy both inside the classroom and in professional setting. As this is the first opportunity students have to program starting from a blank screen, this is a good opportunity to explore the usefulness of Pair Programming. ",
         "preparation": "* Make sure students have access to their App Development Planning Guides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1zKCUbZy57mraE9MZ8vPRS2C4MA9sFyLk9EjFiAnZUnE/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -271,15 +217,6 @@
         "purpose": "This lesson reinforces the importance of feedback in the process of developing software. Feedback and testing help make sure that an app actually works for lots of people and in the context in which it will be used. This process also reinforces the importance of making iterative improvements in making software.",
         "preparation": "* Make sure students have access to their App Development Planning Guides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1QvlNBadhge3uxdG-InbI2oeThAz9pP8iRLVj0NTB3nA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -301,15 +238,6 @@
         "purpose": "This lesson concludes the project students have been working on throughout the unit. Students will have a chance to respond to any feedback they received and incorporate that into their project. The reflection prompts in the activity help students synthesize their overall experience with a focus on how collaboration within their team and within their classroom impacted the final projects they designed.",
         "preparation": "* Make sure students have access to their App Development Planning Guides\r\n* Review the two sample project submissions, available in the \"For Teachers Only\" area on the first level of this lesson on Code Studio",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1nbt1DIwRWvpbaiAMRxlBZpSdwMb_k2iJOucQM5IO1h4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -331,16 +259,7 @@
         "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
         "preparation": "* Make sure students have access to their App Development Planning Guides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true,
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1tQkjsKkaLeKKMfbTi5jUsI3ew3N02NyPb5r2lyzkw38/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",

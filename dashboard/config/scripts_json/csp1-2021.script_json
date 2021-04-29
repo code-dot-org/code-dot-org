@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 22:59:27 UTC",
+    "serialized_at": "2021-04-29 23:58:30 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -79,15 +79,6 @@
         "purpose": "This activity plants the initial seed for students to think about the ways in which they might be able to solve some problems relevant to their lives with technological innovations. ",
         "preparation": "- Procure poster paper for sharing innovations\r\n- Queue up CS is Changing Everything video\r\n- Setup section in Code Studio for this course\r\n- Have student sign-up link ready to share",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1WsCHV1oqTOhitJRDA2i6pghcydiJKY4LuYb-cZ-Zb6U/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -109,15 +100,6 @@
         "purpose": "This lesson introduces the concept of sending bits of information from one place to another. While building and modifying their information sending devices students should eventually recognize that it's easier to invent a system of communication that used a combination of patterns with a simple device, rather than making a new, or increasingly complex device for each new problem. This lays the foundation for understanding how complex information is represented in computers using a combination of bits. ",
         "preparation": "- Reusable and consumable supplies for the classroom, such as markers, small flashlights, noisemakers, bells, whistles, cups and string, straws, slinkies, blocks, or colored paper.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1_F9ZVtRNuRByDcoySYqe5P7gUKplnW0p327OIIC5KwU/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -139,15 +121,6 @@
         "purpose": "Eventually, students will need to understand the binary number system which uses 1's and 0's rather than circles and squares. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced. In wrestling with the challenge of describing the rules of ordering patterns of circles and squares clearly, students will be primed to see how the binary number system solves many of these problems. Students may discover a system that is equivalent to the binary number system, which is a feat worth celebrating, but it is not expected that every student uncovers the rules for binary in this lesson.",
         "preparation": "* Have scissors ready for groups to create [r ab-cutouts/csp/2021] or have these pre-cut and prepared before class\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1pM9hA2A0Cv17D92BY7Z2GPFzUGh8mylaDaQ2IaxFfRI/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -169,15 +142,6 @@
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
         "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/103D1GRy11mGEchhkCAC4ZQjQV6665phWvyBQeo6sWpw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -220,15 +184,6 @@
         "purpose": "After this lesson students will understand the ways the most common types of information, text and numbers, are stored using binary. More importantly they should understand the challenges or principles that led to the creation of these systems and that these systems are somewhat arbitrarily created to solve a shared problem. They work not because there was \"one right answer\" but because many people agreed to use them. The wrap up discussion begins to explore the concept of abstraction. This is a challenging concept to understand and one that students will return to many times throughout the course. In this context, we emphasize how common it is to send text messages to each other yet these messages rely on many smaller layers (like binary numbers and electrical signals) to truly function correctly.",
         "preparation": "\r\n* Decide how you will distribute challenge phrases to students\r\n* Access to journals, paper, or other places that students can write down systems for the main activity.\r\n* Optionally print copies of ASCII Reference Sheet or prepare to project it",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1Lyd2Uu1scI2Lu-9oBPhjOhSEElKBxE-Pq7FTDPmNIX8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -269,16 +224,7 @@
         "student_overview": "Learn how computers represent color images using bits.",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
         "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information/csp/2021]\t\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qPlUIVBriflJhmjBGOiu02Dk0rzFzqmgyGnRLAV87zw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Color Images",
@@ -339,15 +285,6 @@
         "purpose": "Students have been examining how digital information is created and stored, but they have not closely examined the question of who owns their digital data and what rules govern how that information can be shared. This lesson introduces the concept of copyright by presenting students with an article that challenges their current understanding of digital ownership and makes them wrestle with some of the complexities of owning and sharing digital information. It’s important for students to talk through their ideas and hear the perspectives of their peers as they try to unpack how copyright law can impact society. Ultimately, students begin to form their own opinions about copyright focusing on how these policies impact the world around us and observing who benefits and who is harmed in particular copyright situations.\r\n\r\nThis lesson is also a scaffold to the larger project that begins after this lesson which includes several tasks that are also a part of this lesson such as, annotating an article, answering questions, and forming an opinion using the article as evidence. Students may need support with these processes during this lesson so they are able to complete the following lesson independently. It is especially important that students use marking the text strategies to help them comprehend and synthesize the information from their article, because they will need to do this in the next lesson as well. \r\n",
         "preparation": "\r\n* Print out [r fortnite-article/csp/2021] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1VqeD3PZyFnUXeUFjbY-z-fkz0XWmy5AqdXk-kRpgQzs/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -369,15 +306,6 @@
         "purpose": "At this point in the unit students understand a great deal about how information is digitized and they are ready to start considering the impacts of digitization on society at large.\r\n\r\nThis lesson is very similar to the project that students will complete at the end of Unit 2 in which students evaluate the benefits and harms of connecting humanity through vast networks.",
         "preparation": "* Print copies of articles for students",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1_RxxezfQ8cJj9AcMxMObps1E65sHqj5HxHDKii3OHhI/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true,
         "unplugged": true
       },
@@ -400,15 +328,6 @@
         "purpose": "This lesson is a continuation of the major unit project. Students continue to consider broad societal questions about the impacts of computing and the ways it is changing their world.",
         "preparation": "* Make sure students have access to the posters they began designing in the previous lesson",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1kOrZhsFNaNeo9TK_0xz-FClogTagfsqHFCtFgeHmK9E/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true,
         "unplugged": true
       },
@@ -430,15 +349,6 @@
         "student_overview": "Assessment day to conclude the unit.",
         "preparation": "* Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1UdTga_uGpDH5GQ7N-qkHhGvv1qhyYN8XA0o3UafLASI/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {

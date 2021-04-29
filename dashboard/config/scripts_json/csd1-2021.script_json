@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 16:48:27 UTC",
+    "serialized_at": "2021-04-29 23:58:44 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -108,16 +108,7 @@
         "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The aluminum boats problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems. ",
         "preparation": "**For each group**\r\n\r\n* 2 sheets of aluminum foil, 5x5 inches in length each\r\n* 1 container that can hold 3-5 inches of water \r\n* Several paper towels or rags that can be placed under the container \r\n* 15 pennies\r\n* One copy of the activity guide\r\n\r\n**For the teacher**\r\n\r\n* 1 container that can hold 3-5 inches of water \r\n* 50 pennies \r\n* Extra paper towels or rags \r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1f9On2arFwLmpVPgQkj0ABNabiaeGHmuKejGiQy5P9_I/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving",
@@ -138,16 +129,7 @@
         "purpose": "This lesson aims to anchor the formal problem solving process students will use throughout the course in some real-life experiences they already have solving problems. Future units in CS Discoveries will present problems in contexts that may or may not be familiar. A structured problem solving process will be an important tool for helping students move forward in the face of novel and complex challenges.",
         "preparation": "For each student \r\n\r\n* Print a copy of Activity Guide\r\n\r\nFor the class\r\n\r\n* Poster paper\r\n* Markers/colored pencils\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Given a problem, identify individual actions that would fall within each step of the problem solving process**\r\n\r\n\tOn page 2 of the activity guide, check that students have written down reasonable actions for each of the four steps in the problem they are trying to solve.\r\n\r\n2. **Identify useful strategies within each step of the problem solving process**\r\n\r\n\tIn the wrap up, check that students are coming up with effective strategies for each step of the process.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1D_3bTO3L5U7qbPEHjDdQWR4mribIyEDUa6FxzK4NQcs/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Given a problem, identify individual actions that would fall within each step of the problem solving process**\r\n\r\n\tOn page 2 of the activity guide, check that students have written down reasonable actions for each of the four steps in the problem they are trying to solve.\r\n\r\n2. **Identify useful strategies within each step of the problem solving process**\r\n\r\n\tIn the wrap up, check that students are coming up with effective strategies for each step of the process."
       },
       "seeding_key": {
         "lesson.key": "The Problem Solving Process",
@@ -168,16 +150,7 @@
         "purpose": "This lesson provides students with more practice with the problem solving process in a variety of contexts. It highlights the fact that the problem solving process is particularly helpful when approaching poorly defined problems. The final brainstorm of the lesson provides students with some strategies and questions they can ask to better define problems for themselves, since this is often the most critical step. The problems seen in this lesson also help to drive a discussion in the following lesson about the types of problems that computers are well-suited to solve.",
         "preparation": "* Print the activity guide for each student\r\n* Scratch paper for the Birthday Party problem\r\n* Poster to record strategies for defining problems in wrap up discussion",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1BFDYLilXWbO-nbnxo15w65yUywVGYED-PBFENmlxJQs/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem."
       },
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving",
@@ -198,16 +171,7 @@
         "purpose": "This lesson builds on the problem solving theme of the earlier lessons and focuses on the specifics of how computing is used in problem solving. In this lesson, students will consider different types of computers and that these computers use information as part of the problem solving process. Upcoming lessons will dive much deeper into what an information problem looks like and how computers solve these problems.",
         "preparation": "**For each group** \r\n\r\n  * Print out copies of the activity guide. Note there are two sets of pictures, but each group only needs a single set.\r\n  * Scissors (if you will not have time to cut the pictures prior to class) \r\n  * Poster paper\r\n  * Markers or colored pencils \r\n  * Glue or tape to attach pictures \r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Identify a computer as a machine that works with information.**\r\n\r\n\tIn the last discussion of the main activity, check students' reasoning about whether a device is a computer.  Make sure that they are mentioning that it uses information or solves information (or thinking) problems.\r\n\r\n2. **Reason about whether particular objects are or are not computers.**\r\n\r\n\tIn the last discussion of the main activity, check students' reasoning about whether a device is a computer.  Make sure that they are mentioning that it uses information or solves information (or thinking) problems.\r\n    \r\n3. **Choose problems that can be solved with computing and justify those choices.**\r\n\r\n\tIn the wrap up activity, check that students have chosen information problems and have explained how a computer gets and uses the information needed to solve the problem.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1HJBP5uL422jtPqVsTFLvTcue25N7EbwKFJCavD3pfH4/edit",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Identify a computer as a machine that works with information.**\r\n\r\n\tIn the last discussion of the main activity, check students' reasoning about whether a device is a computer.  Make sure that they are mentioning that it uses information or solves information (or thinking) problems.\r\n\r\n2. **Reason about whether particular objects are or are not computers.**\r\n\r\n\tIn the last discussion of the main activity, check students' reasoning about whether a device is a computer.  Make sure that they are mentioning that it uses information or solves information (or thinking) problems.\r\n    \r\n3. **Choose problems that can be solved with computing and justify those choices.**\r\n\r\n\tIn the wrap up activity, check that students have chosen information problems and have explained how a computer gets and uses the information needed to solve the problem."
       },
       "seeding_key": {
         "lesson.key": "What is a Computer?",
@@ -228,16 +192,7 @@
         "purpose": "In the previous lesson students began brainstorming features that can help classify devices as a computer. This lesson introduces input and output as one of these features and has students identify different methods of input or output in common apps.",
         "preparation": "* Prepare copies of the activity guide",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Select the inputs and outputs used to perform common computing tasks**\n\n\tIn the wrap-up discussion, make sure that students come up with multiple examples of tasks that involve input and output, and that they are coming up with multiple types of inputs and outputs specific to the task at hand.  You might also collect individual answers to this question as an exit ticket.\n\n2. **Explain the role that input and output take when computers are used to solve information problems.**\n\n\tOn the activity guide, check that \"student app\" has appropriate inputs and outputs listed, with a reasonable explanation for why each is necessary.  Student answers will vary, but you can use the exemplar linked on the first level of the Code Studio progression as a guide.\n\n",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1PsQk7CBQUPQWSyZkoe3qRXCgNzt-dWiq6nbDZxzlOa0/edit",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Select the inputs and outputs used to perform common computing tasks**\n\n\tIn the wrap-up discussion, make sure that students come up with multiple examples of tasks that involve input and output, and that they are coming up with multiple types of inputs and outputs specific to the task at hand.  You might also collect individual answers to this question as an exit ticket.\n\n2. **Explain the role that input and output take when computers are used to solve information problems.**\n\n\tOn the activity guide, check that \"student app\" has appropriate inputs and outputs listed, with a reasonable explanation for why each is necessary.  Student answers will vary, but you can use the exemplar linked on the first level of the Code Studio progression as a guide.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Input and Output",
@@ -257,15 +212,6 @@
         "student_overview": "**Question of the Day: What are the different ways computers can process information?**\r\n\r\nThis lesson introduces four types of processing that the class will use throughout the course. Through a series of apps, the class explores how processing is used to turn input into output. In the end, the class brainstorms more types of app processing that would be useful.\r\n",
         "purpose": "This lesson introduces the concept of processing within computational problem solving. The definition of processing presented in this lesson is intentionally approachable. Students should understand that processing is whatever a computer does to turn inputs to outputs, and that there are many different ways for computers to do this work. The goal of this lesson is not for students to write specific algorithms for the example apps.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1VrpFQyP3qr7EhDC1DM4Ky5aVYJGCefk3HLSrt-DR80g/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment_opportunities": "1. **Determine possible processing used to perform common computing tasks**\n\n\tIn the wrap-up discussion, make sure that students come up with multiple examples of processing and are able to explain how that processing turns input into outpput. You might also collect individual answers to this question as an exit ticket."
       },
       "seeding_key": {
@@ -287,16 +233,7 @@
         "purpose": "In Chapter 1 of this unit, students learned the problem solving process. In Chapter 2, students learned how computers solve problems. At this point, students know that computers are information processing machines that can do four things with information: input, output, store, and process.  In this final lesson before the unit project, students look at types of input that may be needed to solve a particular problem and describe the processing and storage that a computer would do to produce the desired output.  This should prepare them to eventually design their own app to address a problem and explain how that app would work.",
         "preparation": "* Print a copy of the activity guide for each student",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Determine whether some input should be stored or not.**\n\n\tInput  In the activity guide, check student answers and reasoning for what information should be stored.\n\n1. **Identify guidelines regarding which kinds of input should and should not be stored.**\n\n\tCheck the guidelines that each group writes together.\n\n1. **Use the IOSP model to identify some of the input, output, storage, and processing used in a given computer.**\n\n\tThe two journal prompts after the IOSP video ask students to identify the different parts of IOSP in an app they commonly use and in a smartphone. \n",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1EvA8nYpnMXc6NaY9dSCbXmmXyQcFyVMkfxiO7w1bVr0/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Determine whether some input should be stored or not.**\n\n\tInput  In the activity guide, check student answers and reasoning for what information should be stored.\n\n1. **Identify guidelines regarding which kinds of input should and should not be stored.**\n\n\tCheck the guidelines that each group writes together.\n\n1. **Use the IOSP model to identify some of the input, output, storage, and processing used in a given computer.**\n\n\tThe two journal prompts after the IOSP video ask students to identify the different parts of IOSP in an app they commonly use and in a smartphone. \n"
       },
       "seeding_key": {
         "lesson.key": "Storage",
@@ -317,16 +254,7 @@
         "purpose": "This project combines the two major themes of Unit 1, problem solving, and the input-output-store-process model of a computer. This project ties both themes to a broader goal of identifying real world problems and finding ways to use technology to help solve them. Students collaborate in the creation of their app and also take part in a structured peer review process that they will see many more times throughout the course. This project should be a fun and creative experience as well, and gives students a chance to tie the field of computer science to their own interests and ambitions.",
         "preparation": "* Print a copy of [r app-proposal-project/csd/2021] for each pair of students\r\n* Poster paper, pens, markers and other supplies for making posters",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.  You may also choose to assign the post-project test through code studio.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/11XOFYrIjZP5E7qjr7fTPU6YwubvvkwBT5qGhWj-7neU/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.  You may also choose to assign the post-project test through code studio."
       },
       "seeding_key": {
         "lesson.key": "Project - Propose an App",
@@ -362,16 +290,7 @@
         "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The newspaper table problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems. ",
         "preparation": "**For each group**\r\n\r\n* 2 full newspapers for each group of students\r\n* 1 roll of tape for each group of students\r\n* One copy of the activity guide\r\n\r\n**For the teacher**\r\n\r\n* 10-20 books of similar weight.\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1f9On2arFwLmpVPgQkj0ABNabiaeGHmuKejGiQy5P9_I/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
@@ -392,16 +311,7 @@
         "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The spaghetti bridge problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems.",
         "preparation": "**For each group**\r\n\r\n* 1 pound of dry spaghetti noodles (about 1 box)\r\n* 1 glue gun\r\n* One copy of the activity guide\r\n\r\n**For the teacher**\r\n\r\n* 10-20 books of similar size and weight\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1f9On2arFwLmpVPgQkj0ABNabiaeGHmuKejGiQy5P9_I/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
@@ -422,16 +332,7 @@
         "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The paper towers problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems. ",
         "preparation": "**For each group**\r\n\r\n* 20 sheets of paper, 8.5 x 11 inches\r\n* Space to build their tower\r\n* One copy of the activity guide\r\n\r\n**For the teacher**\r\n \r\n* Extra paper \r\n* Timer\r\n* Ruler\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1f9On2arFwLmpVPgQkj0ABNabiaeGHmuKejGiQy5P9_I/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
@@ -452,16 +353,7 @@
         "purpose": "This lesson provides students with more practice with the problem solving process in a variety of contexts. It highlights the fact that the problem solving process is particularly helpful when approaching poorly defined problems. The final brainstorm of the lesson provides students with some strategies and questions they can ask to better define problems for themselves, since this is often the most critical step. The problems seen in this lesson also help to drive a discussion in the following lesson about the types of problems that computers are well-suited to solve.",
         "preparation": "* Print the activity guide for each student\r\n* Prepare tangrams for students, or print out one tangram sheet and get scissors for each group.\r\n* Poster to record strategies for defining problems in wrap up discussion",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1BFDYLilXWbO-nbnxo15w65yUywVGYED-PBFENmlxJQs/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem."
       },
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
@@ -482,16 +374,7 @@
         "purpose": "This lesson provides students with more practice with the problem solving process in a variety of contexts. It highlights the fact that the problem solving process is particularly helpful when approaching poorly defined problems. The final brainstorm of the lesson provides students with some strategies and questions they can ask to better define problems for themselves, since this is often the most critical step. The problems seen in this lesson also help to drive a discussion in the following lesson about the types of problems that computers are well-suited to solve.",
         "preparation": "* Print the activity guide for each student\r\n* Scratch paper for the Partner Race Relay problem\r\n* Poster to record strategies for defining problems in wrap up discussion",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1BFDYLilXWbO-nbnxo15w65yUywVGYED-PBFENmlxJQs/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem."
       },
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
