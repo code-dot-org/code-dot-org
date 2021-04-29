@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: foorm_misc_surveys
+# Table name: foorm_simple_survey_submissions
 #
 #  id                  :integer          not null, primary key
 #  foorm_submission_id :integer          not null
@@ -11,14 +11,16 @@
 #
 # Indexes
 #
-#  index_foorm_misc_surveys_on_user_id              (user_id)
-#  index_misc_survey_foorm_submissions_on_foorm_id  (foorm_submission_id) UNIQUE
+#  index_foorm_simple_survey_submissions_on_foorm_submission_id  (foorm_submission_id) UNIQUE
+#  index_foorm_simple_survey_submissions_on_user_id              (user_id)
 #
 
-class Foorm::MiscSurvey < ApplicationRecord
+class Foorm::SimpleSurveySubmission < ApplicationRecord
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
 
+  # To do: delete this once we've connected this model to the SimpleSurveyForm model,
+  # which will be responsible for managing these configurations going forward.
   def self.all_form_data
     [
       {
@@ -66,16 +68,6 @@ class Foorm::MiscSurvey < ApplicationRecord
         form_name: 'surveys/pd/csd_csp_facilitator_post_survey',
         misc_form_path: 'facilitator_post_survey',
         allow_multiple_submissions: true
-      },
-      {
-        form_name: 'surveys/pd/virtual_teacher_order_form',
-        misc_form_path: 'virtual_order_form',
-        allow_multiple_submissions: false
-      },
-      {
-        form_name: 'surveys/pd/pre_csd_p_facilitator_summit_survey',
-        misc_form_path: 'facilitator_summit_survey',
-        allow_multiple_submissions: false
       }
     ]
   end
@@ -91,6 +83,9 @@ class Foorm::MiscSurvey < ApplicationRecord
     end
   end
 
+  # To do: create a new DCDO flag with the same contents as this flag (foorm_simple_surveys_disabled),
+  # and replace its use here.
+  # Longer term, maybe we add a disabled flag on the SimpleSurveyForm model.
   def self.form_disabled?(misc_form_path)
     disabled_forms = DCDO.get('foorm_misc_survey_disabled', [])
     disabled_forms && disabled_forms.include?(misc_form_path)
