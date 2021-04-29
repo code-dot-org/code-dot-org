@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:06:33 UTC",
+    "serialized_at": "2021-04-29 23:05:57 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -3654,7 +3654,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -3680,7 +3680,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -3706,7 +3706,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -6568,10 +6568,10 @@
     },
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
+      "url": "https://docs.google.com/presentation/d/1a4w7xtUqAs-3jxMdcLiwGayVA9r3x7k27oiVfsApRMs/edit?usp=sharing",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

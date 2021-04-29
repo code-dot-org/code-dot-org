@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:09:55 UTC",
+    "serialized_at": "2021-04-29 23:10:14 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -3681,7 +3681,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -3707,7 +3707,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -6191,10 +6191,10 @@
   "resources": [
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
+      "url": "https://docs.google.com/presentation/d/1DABkbjVXjTM7FkPeNN1PavV3BWKsOWFyNksWW4UDdQk/edit?usp=sharing",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

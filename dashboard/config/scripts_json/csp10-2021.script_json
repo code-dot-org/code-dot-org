@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-22 20:23:40 UTC",
+    "serialized_at": "2021-04-29 23:16:12 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -3369,10 +3369,10 @@
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
-      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
+      "url": "https://docs.google.com/presentation/d/13hzCmcAxUal2GpjNj6yjxzAtB58TPPG8tjVZRLvcwf0/edit?usp=sharing",
       "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {
