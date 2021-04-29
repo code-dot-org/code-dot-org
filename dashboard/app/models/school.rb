@@ -154,8 +154,8 @@ class School < ApplicationRecord
       School.transaction do
         merge_from_csv(schools_tsv)
       end
-    else
-      School.seed_from_s3
+      # else
+      # School.seed_from_s3
     end
   end
 

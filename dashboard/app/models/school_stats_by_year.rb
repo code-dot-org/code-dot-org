@@ -52,14 +52,13 @@ class SchoolStatsByYear < ApplicationRecord
   # @param options [Hash] Optional, the CSV file parsing options.
   # @param dry_run [Boolean] Optional, roll back any db transactions after processing.
   def self.merge_from_csv(filename, options = {col_sep: "\t", headers: true, quote_char: "\x00"}, dry_run = false)
-    school_stats = []
     new_schools = 0
     updated_schools = 0
     unchanged_schools = 0
     errored_schools = []
 
     ActiveRecord::Base.transaction do
-      school_stats = CSV.read(filename, options).each do |row|
+      CSV.read(filename, options).each do |row|
         parsed = yield row
         loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
         if loaded.nil?
@@ -88,7 +87,7 @@ class SchoolStatsByYear < ApplicationRecord
         "#{new_schools} new stats#{future_tense_dry_run} added.\n"\
         "#{updated_schools} stats#{future_tense_dry_run} updated.\n"\
         "#{unchanged_schools} stats#{future_tense_dry_run} unchanged.\n"\
-        "#{errored_schools.length} schools failed to be added:\n"\
+        "#{errored_schools.length} stats failed to be added:\n"\
         "#{errored_schools.join("\n")}\n"
 
       CDO.log.info summary_message
