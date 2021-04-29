@@ -18,8 +18,8 @@ export default class ResultsHandler {
   succeeded() {
     if (this.maze_.subtype.finish) {
       return (
-        this.maze_.pegmanX === this.maze_.subtype.finish.x &&
-        this.maze_.pegmanY === this.maze_.subtype.finish.y
+        this.maze.getPegmanX() === this.maze_.subtype.finish.x &&
+        this.maze.getPegmanY() === this.maze_.subtype.finish.y
       );
     }
   }
