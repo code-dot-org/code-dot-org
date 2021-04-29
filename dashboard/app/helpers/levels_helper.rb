@@ -536,9 +536,13 @@ module LevelsHelper
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
 
+    # Allow levelbuilders building AppLab widgets in start mode to access Applab as usual.
+    # Everywhere else, widgets should be treated as embedded levels.
+    treat_widget_as_embed = level_options['widgetMode'] && !@is_start_mode
+
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
-    level_options['embed'] = level_options['embed'] || level_options['widgetMode']
+    level_options['embed'] = level_options['embed'] || treat_widget_as_embed
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true

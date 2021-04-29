@@ -477,6 +477,13 @@ Applab.init = function(config) {
   var showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
   var breakpointsEnabled = !config.level.debuggerDisabled;
   var showDebugConsole = !config.hideSource;
+  // TODO: RENAME THIS
+  const nonLevelbuilderWidgetMode =
+    config.level.widgetMode && !config.isStartMode;
+  const hasDesignMode = !(
+    config.level.hideViewDataButton || nonLevelbuilderWidgetMode
+  );
+  const hasDataMode = !(config.level.hideDesignMode || config.level.widgetMode);
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -676,8 +683,8 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
-    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
+    hasDataMode,
+    hasDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
