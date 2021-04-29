@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 22:15:50 UTC",
+    "serialized_at": "2021-04-29 22:23:35 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -96,20 +96,11 @@
       "relative_position": 2,
       "properties": {
         "overview": "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\nIn this lesson students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson.",
-        "student_overview": "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\n\r\nThis lesson introduces HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity that demonstrates the challenges of effectively communicating the structure of a web page. Then, the class looks at an HTML page in Web Lab and discusses how HTML tags help solve this problem, before using HTML to write their first web pages of the unit.\r\n",
+        "student_overview": "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\n\n\nYou will look at an HTML page in Web Lab and discusses how HTML tags help solve this problem, then  use HTML to write your first web page of the unit.\n",
         "purpose": "This lesson introduces many new concepts and tools to students. They are introduced to HTML, the Web Lab tool, and how to navigate lesson resources on Code.org in general. While the understanding of HTML as a way to communicate the structure of a web page is a critical learning objective, this lesson has students do minimal programming since there are many other new ideas and tools to grasp. In the next lesson students will have more time to spend programming in HTML.",
         "preparation": "* Review the Code Studio levels",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Explain that HTML allows a programmer to communicate the way content should be structured on a web page**\n\n\tIn the final reflection prompt, students should give an explanation of how HTML is used to structure content on a page.\n\n2. **Write a simple HTML document that uses opening and closing tags to structure content**\n\n\tLevel 6 on Code Studio provides a mini-rubric to assess student use of HTML.\n\n3. **Understand how to use lesson resources provided in Web Lab**\n\n\tAs students progress through the HTML lesson, check that they are looking through the drop-down tips on the right hand side of the instructions, clicking into the map levels in the \"Help and Tips\" tab, and making use of the inspector tool.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1M7K6AIq1owiD6uVKk9CW33N31nGunjohZrCZzeaaza0/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Explain that HTML allows a programmer to communicate the way content should be structured on a web page**\n\n\tIn the final reflection prompt, students should give an explanation of how HTML is used to structure content on a page.\n\n2. **Write a simple HTML document that uses opening and closing tags to structure content**\n\n\tLevel 6 on Code Studio provides a mini-rubric to assess student use of HTML.\n\n3. **Understand how to use lesson resources provided in Web Lab**\n\n\tAs students progress through the HTML lesson, check that they are looking through the drop-down tips on the right hand side of the instructions, clicking into the map levels in the \"Help and Tips\" tab, and making use of the inspector tool."
       },
       "seeding_key": {
         "lesson.key": "Intro to HTML",

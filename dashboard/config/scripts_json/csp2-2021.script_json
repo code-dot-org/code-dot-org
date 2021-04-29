@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-22 16:27:34 UTC",
+    "serialized_at": "2021-04-29 23:01:12 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -2287,7 +2287,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Internet Simulator",
         "level_keys": [
@@ -2910,10 +2910,10 @@
     },
     {
       "name": "CSP Unit 2 - The Internet",
-      "url": "https://docs.google.com/presentation/d/1WEXtNtb_ecrC-UyLO3JxFWNBjk_aun5EnYIeu4G_DRM/copy",
+      "url": "https://docs.google.com/presentation/d/1zk7XyygG02tc_DCKQK2K_10XayKoIG-gRwOoRjwFgRg/edit?usp=sharing",
       "key": "csp-unit-2-the-internet",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

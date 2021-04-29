@@ -19095,7 +19095,11 @@ en:
             Intro to HTML:
               key: Intro to HTML
               name: Intro to HTML
-              description_student: "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\n\r\nThis lesson introduces HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity that demonstrates the challenges of effectively communicating the structure of a web page. Then, the class looks at an HTML page in Web Lab and discusses how HTML tags help solve this problem, before using HTML to write their first web pages of the unit.\r\n"
+              description_student: |
+                **Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**
+
+
+                You will look at an HTML page in Web Lab and discusses how HTML tags help solve this problem, then  use HTML to write your first web page of the unit.
               description_teacher: "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\nIn this lesson students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson."
             Headings:
               key: Headings
@@ -19405,7 +19409,7 @@ en:
           lessons:
             Analysis of Design:
               key: Analysis of Design
-              name: Designing With Empathy
+              name: Analysis of Design
               description_student: "The class explores a variety of different teapot designs to consider design choices. Building on this, students explore the relationship between users, their needs, and the design of objects they use.\r\n"
               description_teacher: |-
                 **Question of the Day:** How can we choose products based on the needs of a user?

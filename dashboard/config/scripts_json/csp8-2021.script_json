@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 16:57:25 UTC",
+    "serialized_at": "2021-04-29 23:14:15 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -1004,10 +1004,10 @@
     },
     {
       "name": "CSP Unit 8 - Create PT Prep",
-      "url": "https://docs.google.com/presentation/d/130WMgJC9JxZ2bz7pO59i-0-XafKeKLADKSqIGx1ZcSQ/copy",
+      "url": "https://docs.google.com/presentation/d/174nHpIilMIvy5kcnB-jQ6Ai9rajgnUtBrSfNObOKHCk/edit?usp=sharing",
       "key": "csp_unit_8_-_create_pt_prep",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {
