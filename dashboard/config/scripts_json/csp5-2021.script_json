@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 23:10:14 UTC",
+    "serialized_at": "2021-04-29 23:58:33 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -89,15 +89,6 @@
         "purpose": "In the warmup, students brainstorm different lists of information that they encounter on a daily basis. Then in the activity, students return to baggies and sticky notes from the previous unit to build a concrete model of a list before seeing how lists are programmed in Javascript. Students are exposed to different ways of interacting with a list like accessing, removing, appending, and inserting elements. The wrap up concludes the lesson with a summary video and a journal vocabulary exercise. ",
         "preparation": "* 7+ sandwich baggies per pair of students\r\n* 1 gallon-sized baggy per pair of students\r\n* packs of red and orange stickies\r\n* pens / pencils\r\n* 1 dry erase marker per four students (pairs can share)\r\n* Review the slides and click through all animations",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qD09yWcP0TmiM_nEdhuyeknypZ1OqgC1N5_kSWAmI_4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -118,16 +109,7 @@
         "student_overview": "Investigate and modify sample apps that use lists learn common programming patterns with lists.",
         "purpose": "After building a conceptual model for list and list operations in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using lists. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists will come in the following lesson.",
         "preparation": "* Review the three apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1xWHSnqmMDNLYjKnaO_KCyUP3NLa59RDY6PXH5W2cJzA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lists Investigate",
@@ -147,16 +129,7 @@
         "student_overview": "Practice programming with lists through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "* Review the slide on string indexes which you'll cover at the beginning of the lesson\r\n* Review the programming progression to understand what students will be asked to do. ",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1NOoAflVmsQBwwbbZrpMJzkJ0gEOCvmSj6555SgSAtcM/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lists Practice",
@@ -175,16 +148,7 @@
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
         "student_overview": "Make an app that uses lists and programming patterns with lists.",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1xFKqhqHGkIzkZwOX9LZR8gNtbDFPIXs0x_ATtS-Ej9s/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lists Make",
@@ -205,15 +169,6 @@
         "purpose": "Students are introduced to the concept of loops through a robot maze activity. This unplugged lessons provides students a physical mental model they will be able to use when they start programming with loops in the subsequent lessons.",
         "preparation": "* 1 game board per pair of students\r\n* 1 \"robot\" per pair of students\r\n* Game pieces, markers, or tokens that can be used to represent barriers\r\n* Review the Intro to Loops presentation and click through all animations",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1UwGrwFKRLxS-ZH8N9uoHEVajCCn89HrJ9RqUCPKFVvA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -234,16 +189,7 @@
         "student_overview": "Investigate and modify sample apps that use loops and learn common programming patterns with loops.",
         "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Practice activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "Review the two apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1vJtmSemCbt_y9zdBi0nG3P9sLAK9GQxq4RmrwHdyRHo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Loops Investigate",
@@ -263,16 +209,7 @@
         "student_overview": "Practice programming with loops through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "* Review the programming progression to understand what students will be asked to do",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1a16RcOBPCi77G7nuhxXmEXalfNl27QhdnBeCxVuGbWk/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Loops Practice",
@@ -291,16 +228,7 @@
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
         "student_overview": "Practice making an app that uses loops and programming patterns with loops.",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1RPF2VsxIrvlhjoF9JL8XyoCK8oLaCVAu6z7uOtpPzg8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Loops Make",
@@ -321,15 +249,6 @@
         "purpose": "Students are introduced to the concept of traversal using the Traversal Machine. This unplugged lessons provides students a physical mental model they will be able to use when they transition to programming traversals in App Lab. ",
         "preparation": "Per pair of students:\r\n\r\n* 1 Traversal Machine \r\n\r\n\t* The index sheet contains enough sections to divide between six students\r\n\r\n* Preview the Intro to Traversals slideshow. Click through all animations.  ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1k8RDuZXj4m99BbMjS9aKP6clvHc1Txjw413K2e8RADs/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -349,16 +268,7 @@
         "overview": "In this lesson students work with partners to investigate three different apps that use traversal to access items in a lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with traversals.",
         "student_overview": "Investigate and modify sample apps that use traversals.",
         "purpose": "After building a conceptual model using a for loop to traverse a list in the previous lesson, this lesson allows students to see how this is actually implemented in code. This lesson also introduces common programming patterns when using lists and traverals. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists and traversals will come in the following lesson.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1vbD47mqxEn-LweN1y_1UBBq__UKANPEuOW9LzfFjHK0/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
@@ -378,16 +288,7 @@
         "student_overview": "Practice programming with list traversals through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "* Review the levels that students will be completing with an eye for how you will encourage them to use the debugging practices emphasized in today's lesson.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1N137MOwyCgbD4YQdHVdJwQl3zt83yVPG3__ZrYp0jd8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Traversals Practice",
@@ -407,16 +308,7 @@
         "student_overview": "Practice making an app that processes a list from a data set using traversal. ",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\r\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1HfFQZy7EkhDXFbkbhFZgFEcigbdnal5M3HixYAm4oo4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Traversals Make",
@@ -437,15 +329,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines\r\n* Go to the last lesson of the project to review the [Example Written Response Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/1)\r\n and [Example Project App Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/10B7nztCcB40WHaZVhHoVYbnAGqCFHKsquKgNazg9q0M/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -467,15 +350,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1WqaVwyT2x8WZ5jtT1bugUGfLq8geqRrPWjhOERA6O60/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -497,15 +371,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide\r\n\t* Pay particular focus to the Scoring Guidelines",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1kur2pn96K572Y4Jr4482cbZH8-GDMfl_AF-XtIZhhlo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -527,15 +392,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide\r\n\t* Pay particular focus to the Scoring Guidelines",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1k3XrYsIRuwBwmj__tL5IW4dF66BIx_UQbrMGBLV52HY/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -557,15 +413,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide paying particular focus to the Scoring Guidelines\n* Review the [Example Written Response Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/1)\n and [Example Project App Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1kRKv8LF-F1uaThc21Kr5OKg6zRUhCpZnaqROrK0RoJQ/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -586,15 +433,6 @@
         "student_overview": "Assessment day to conclude the unit.",
         "preparation": "* Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1vD78ljpckeNa3BhwLbouGEUfn4ht11o-G17Jwq2f1Bg/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {

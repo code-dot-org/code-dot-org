@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 23:01:12 UTC",
+    "serialized_at": "2021-04-29 23:58:31 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -52,16 +52,7 @@
         "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.",
         "purpose": "This lesson helps transition between representing digital information in Unit 1 to communicating digital information in Unit 2. The stage is set to understand the different layers of the Internet through the sticky notes activity where students record what they know and don't know about how the Internet works. Following this, students are exposed to the Internet Simulator, which will be revisited throughout the unit. Students should leave this lesson primed to know more about the Internet. ",
         "preparation": "* Test out the Internet Simulator. If you open up the level on two different tabs, you can use it by yourself. \r\n* Prepare for the Teacher Demo.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1M8r0dHLKFIT_R0VyJKU_0dukiWPXRz239mG4OX_ITAE/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Welcome to the Internet",
@@ -142,16 +133,7 @@
         "student_overview": "Learn how information travelling over the Internet is divided into many packets that travel separately through the network as well as the protocols that allow this process to work even when some packets are lost or delayed.",
         "purpose": "Information on the Internet is not sent all at once, but is instead broken into smaller chunks of data called packets. Each packet is sent through the Internet individually and may actually take different paths or arrive at different times than others. Once they arrive the receiver will use the packets to recreate the original file.\n\nTwo protocols used to send data as packets are UDP and TCP. The User Datagram Protocol (UDP) simply sends all the packets. If some arrive out of order or are entirely missing there's no system to fix the errors. The Transmission Control Protocol (TCP) numbers packets before sending them so that the receiver can correctly reorder the packets and request missing packets be resent. \n\nOnly one of these two protocols will be used, depending on the situation. TCP takes longer than UDP because of the error-checking done to guarantee every packet was received. TCP is used to send information like emails, images, websites, and more where saving fractions of a second is less important than accuracy. In instances like live-streaming television or online gaming where speed is most important, UDP will be used since it is faster and there's less benefit to correcting errors.\n\nThis lesson gives students a hands-on experience with the ideas behind both protocols and helps them understand the implications of splitting large files into packets when sending them online.\n\nNote: UDP is not covered in the video at the end of the lesson.\n",
         "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\r\n* Preview [r the-internet-packets-routing-and-reliability-1/csp/2021].\t\r\n* The previous lesson's [r teacher-guide-router/csp/2021] contains helpful tips on setting up routers and managing student conversations.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/18edmGLGiM6thrxPWPSvoio69DojoLTN7OJsAjxdfYyM/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Packets",
@@ -171,16 +153,7 @@
         "student_overview": "Learn how websites are shared on the Internet and then examine whether everyone actually has equal access to information on the World Wide Web.",
         "purpose": "This lesson is designed to wrap up the series on how the Internet works and highlight the main design philosophies of openness, reliability, and scalability.  However, actions taken by governments and organizations challenge some of these design philosophies and may hinder the ability of the World Wide Web to be truly worldwide.  Students will begin thinking about some of the dilemmas caused by these conflicts, which they will explore further after this lesson.",
         "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\r\n* Preview [r the-internet-ip-addresses-and-dns-video/csp/2021].  Specifically the portion starting after 4:09 on DNS. \r\n* Preview [r the-internet-http-and-html-1/csp/2021]",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1lX5TS6Rodnr1UNfhOQT5u5PnFxAoXf95QYWVYhtnLBo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "DNS and HTTP",
@@ -201,15 +174,6 @@
         "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. This project addresses the \"so what\" question - why is it important to learn about how the Internet works?",
         "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \r\n* Preview the articles in order to answer student questions. \r\n* [KEY - Internet Dilemmas](https://studio.code.org/s/csp2-2020/stage/7/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1MjJxxvVjaNDzYb_9zLRIDaB-8m6B-MGncx91T7oWFEI/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -230,15 +194,6 @@
         "student_overview": "Share your conclusions on the question \"Has the Internet made the world better or worse\" by discussing the articles you read as well as your own experience.",
         "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. These project lessons address the \"so what\" question - why is it important to learn about how the Internet works?",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1G3XEUILGoVl2_fSRsza7wEKoBq_9wySqMZltxfxA_8E/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -259,15 +214,6 @@
         "student_overview": "Assessment day to conclude the unit.",
         "preparation": "* Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1GVqFJQT6KOrPvdBjJ_hyMZY5nxibVIc3a5000cwWFT4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
