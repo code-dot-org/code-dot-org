@@ -48,8 +48,8 @@ class SchoolDistrict < ApplicationRecord
       SchoolDistrict.transaction do
         merge_from_csv(school_districts_tsv)
       end
-    else
-      SchoolDistrict.seed_from_s3
+      # else
+      # SchoolDistrict.seed_from_s3
     end
   end
 
