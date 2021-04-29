@@ -174,21 +174,6 @@ class DeleteAccountsHelper
     @pegasus_db[:contacts].where(id: contact_ids).delete
   end
 
-  # TODO: Fully remove the deprecated V1 of contact rollups,
-  # (ie, remove the contact_rollups table), at which point this step can be removed.
-  # @param [Integer] The user ID to purge from deprecated contact rollups table.
-  def remove_from_deprecated_contact_rollups_by_user_id(user_id)
-    @log.puts "Removing from deprecated contact rollups"
-    @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id).delete
-  end
-
-  # TODO: Fully remove the deprecated V1 of contact rollups,
-  # (ie, remove the contact_rollups table), at which point this step can be removed.
-  # @param [Integer] The email to purge from deprecated contact rollups table.
-  def remove_from_deprecated_contact_rollups_by_email(email)
-    @pegasus_db[:contact_rollups].where(email: email).delete
-  end
-
   # Marks emails for deletion from Pardot via contact rollups process.
   def set_pardot_deletion_via_contact_rollups(email)
     if User.find_by_email(email)
@@ -333,7 +318,6 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
-    remove_from_deprecated_contact_rollups_by_user_id(user.id)
     set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -359,7 +343,6 @@ class DeleteAccountsHelper
     migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
     remove_poste_data(email)
-    remove_from_deprecated_contact_rollups_by_email(email)
     set_pardot_deletion_via_contact_rollups(email)
     clean_pegasus_forms_for_email(email)
   end

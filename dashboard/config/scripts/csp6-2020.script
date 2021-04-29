@@ -43,3 +43,7 @@ lesson 'Lesson 6: Assessment Day', display_name: 'Assessment Day', lockable: tru
 level 'CSP U6L6 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 6 AP-Style Assessment _2020', progression: 'Unit 6 Exam', assessment: true
 
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
+

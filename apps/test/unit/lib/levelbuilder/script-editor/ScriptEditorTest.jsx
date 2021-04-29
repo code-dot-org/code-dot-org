@@ -96,8 +96,8 @@ describe('ScriptEditor', () => {
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      expect(wrapper.find('input').length).to.equal(23);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('input').length).to.equal(24);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(3);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
@@ -110,8 +110,8 @@ describe('ScriptEditor', () => {
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({initialHidden: false, isMigrated: true});
 
-      expect(wrapper.find('input').length).to.equal(27);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(13);
+      expect(wrapper.find('input').length).to.equal(28);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(4);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
@@ -220,6 +220,30 @@ describe('ScriptEditor', () => {
       expect(familyNameSelect.props().value).to.equal('Family');
       expect(courseCheckbox.props().disabled).to.be.false;
     });
+  });
+
+  it('disables peer review count when instructor review only selected', () => {
+    const wrapper = createWrapper({
+      initialOnlyInstructorReviewRequired: false,
+      initialPeerReviewsRequired: 2
+    });
+
+    let peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
+
+    expect(peerReviewCountInput.props().disabled).to.be.false;
+    expect(peerReviewCountInput.props().value).to.equal(2);
+
+    const instructorReviewOnlyCheckbox = wrapper.find(
+      '#only_instructor_review_checkbox'
+    );
+    instructorReviewOnlyCheckbox.simulate('change', {
+      target: {checked: true}
+    });
+
+    peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
+
+    expect(peerReviewCountInput.props().disabled).to.be.true;
+    expect(peerReviewCountInput.props().value).to.equal(0);
   });
 
   describe('Saving Script Editor', () => {

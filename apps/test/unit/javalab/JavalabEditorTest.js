@@ -42,21 +42,25 @@ describe('Java Lab Editor Test', () => {
     );
   };
 
-  describe('Open Context Menu', () => {
-    it('Opens the menu after right clicking on a tab', () => {
+  describe('toggleTabMenu', () => {
+    it('Opens the menu after clicking on a tab if it is not open', () => {
       const editor = createWrapper();
       const firstTab = editor.find('NavItem').first();
-      firstTab.props().onContextMenu({
-        preventDefault: sinon.stub(),
-        target: {
-          getBoundingClientRect: () => {
-            return {
-              bottom: 2,
-              left: 4
-            };
+      firstTab
+        .find('button')
+        .first()
+        .props()
+        .onClick({
+          preventDefault: sinon.stub(),
+          target: {
+            getBoundingClientRect: () => {
+              return {
+                bottom: 2,
+                left: 4
+              };
+            }
           }
-        }
-      });
+        });
       expect(editor.find('JavalabEditor').instance().state.showMenu).to.be.true;
       expect(
         editor.find('JavalabEditor').instance().state.contextTarget
@@ -67,6 +71,41 @@ describe('Java Lab Editor Test', () => {
         top: '2px',
         left: '4px'
       });
+    });
+
+    it('Closes the tab menu if it is open to that key', () => {
+      const editor = createWrapper();
+      editor
+        .find('JavalabEditor')
+        .instance()
+        .setState({
+          showMenu: true,
+          contextTarget: 'file-0',
+          menuPosition: {
+            top: '2px',
+            left: '4px'
+          }
+        });
+      const firstTab = editor.find('NavItem').first();
+      firstTab
+        .find('button')
+        .first()
+        .props()
+        .onClick({
+          preventDefault: sinon.stub(),
+          target: {
+            getBoundingClientRect: () => {
+              return {
+                bottom: 2,
+                left: 4
+              };
+            }
+          }
+        });
+      expect(editor.find('JavalabEditor').instance().state.showMenu).to.be
+        .false;
+      expect(editor.find('JavalabEditor').instance().state.contextTarget).to.be
+        .null;
     });
   });
 
@@ -121,6 +160,42 @@ describe('Java Lab Editor Test', () => {
       expect(dispatchSpy).to.have.been.calledWith({
         reconfigure: {style: lightMode}
       });
+    });
+  });
+
+  describe('onOpenFile', () => {
+    it('moves the selected tab to the front and selects it', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+      javalabEditor.setState({
+        activeTabKey: 'file-0',
+        tabs: [
+          {
+            filename: 'file0.java',
+            key: 'file-0'
+          },
+          {
+            filename: 'file1.java',
+            key: 'file-1'
+          }
+        ],
+        showMenu: true,
+        contextTarget: 'file-0'
+      });
+      javalabEditor.onOpenFile('file-1');
+      expect(javalabEditor.state.activeTabKey).to.equal('file-1');
+      expect(javalabEditor.state.tabs).to.deep.equal([
+        {
+          filename: 'file1.java',
+          key: 'file-1'
+        },
+        {
+          filename: 'file0.java',
+          key: 'file-0'
+        }
+      ]);
+      expect(javalabEditor.state.showMenu).to.be.false;
+      expect(javalabEditor.state.contextTarget).to.be.null;
     });
   });
 });

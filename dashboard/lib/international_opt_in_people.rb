@@ -11,6 +11,7 @@ module InternationalOptInPeople
     "Weena Naowaprateep",
     "Beth Zigmont & Hana Zimmerman Karl",
     "María Cristina Charters",
+    "IT Park Team",
     I18n.t('pd.international_opt_in.facilitator_not_listed'),
     I18n.t('pd.international_opt_in.facilitator_not_applicable')
   ].freeze
@@ -20,6 +21,7 @@ module InternationalOptInPeople
     "Computadores para Educar",
     "Cuantrix",
     "Fundacion Kodea",
+    "IT Park",
     "Malaysia Digital Economy Corporation",
     "Mineduc",
     "Wix.com",
