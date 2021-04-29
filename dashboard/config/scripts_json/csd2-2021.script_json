@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-28 20:16:36 UTC",
+    "serialized_at": "2021-04-29 16:36:48 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -9423,18 +9423,6 @@
       }
     },
     {
-      "name": "Intro to HTML",
-      "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
-      "key": "intro-to-html",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "intro-to-html"
-      }
-    },
-    {
       "name": "Exemplar Text Website",
       "url": "https://codeprojects.org/t0CRT-85_y-VLFBO5RF3VQ/",
       "key": "exemplar-text-website",
@@ -9447,15 +9435,15 @@
       }
     },
     {
-      "name": "Headings",
-      "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
-      "key": "headings",
+      "name": "CSD Unit 2 - Web Development",
+      "url": "https://docs.google.com/presentation/d/1rg7Lf6ahVruRMzmYnZuXZZqLUgqK5ahp53tCIPtl8wc/copy",
+      "key": "csd_unit_2_-_web_development",
       "properties": {
         "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "headings"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10285,19 +10273,19 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "resource.key": "intro-to-html"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
         "resource.key": "exemplar-text-website"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Headings",
-        "resource.key": "headings"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
