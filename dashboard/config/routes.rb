@@ -280,6 +280,7 @@ Dashboard::Application.routes.draw do
       get 'resources'
       get 'code'
       get 'standards'
+      get 'get_rollup_resources'
     end
   end
 
@@ -342,6 +343,7 @@ Dashboard::Application.routes.draw do
       get 'code'
       get 'standards'
       get 'instructions'
+      get 'get_rollup_resources'
     end
 
     # /s/xxx/lessons/yyy

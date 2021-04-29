@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-04-23 23:21:49 UTC",
+    "serialized_at": "2021-04-27 20:16:13 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -17354,14 +17354,39 @@
       }
     },
     {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csf",
-      "key": "teacher_forum",
+      "name": "CSTA Standards Mapping",
+      "url": "https://studio.code.org/s/express-2021/standards",
+      "key": "csta_standards_mapping",
       "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "teacher_forum"
+        "resource.key": "csta_standards_mapping"
+      }
+    },
+    {
+      "name": "Course Vocabulary\t",
+      "url": "https://studio.code.org/s/express-2021/vocab",
+      "key": "course_vocabulary_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary_1"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf/",
+      "key": "teacher_forum_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
       }
     }
   ],
@@ -17538,7 +17563,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "csta_standards_mapping",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary_1",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "express-2021"
       }
     }

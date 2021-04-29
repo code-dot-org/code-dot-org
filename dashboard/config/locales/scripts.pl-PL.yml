@@ -5274,6 +5274,8 @@ pl:
               name: Uczenie się przez odkrywanie
             Measuring Student Learning:
               name: Pomiar osignięć ucznia
+          student_description: Oto zestaw pomocy online zebranych w Profesjonalny
+            Kurs Edukacyjny dla Nauczycieli przygotowujący do nauki zestawu 5.
           name: csp5-wsparcie
         csppostap-2017:
           title: CSP Pos-AP - Bazy danych i używanie danych w Twoich aplikacjach ('17-'18)
@@ -24384,6 +24386,8 @@ pl:
               name: Moduł 8
             Module 7:
               name: Moduł 7
+            Self Paced Playground:
+              name: Plac własnych zabaw
           name: skrypt testu jess
         csd2-virtual:
           title: Wprowadzenie do Web Lab we własnym tempie
@@ -25741,6 +25745,8 @@ pl:
               name: Wprowadzenie Sprite Lab
             Learning Sprites with Sprite Lab:
               name: Programowanie z Sprite Lab
+            lesson-1:
+              name: Zmienne Pustych Znaków
             lesson-2:
               name: Przechowywanie i przetwarzanie tekstu
             lesson-3:
@@ -25888,6 +25894,14 @@ pl:
             Exploring Problem Solving:
               key: Zgłębianie rozwiązywania problemów
               name: Zgłębianie rozwiązywania problemów
+              description_student: "**Pytanie dnia: Jak możemy dostosować proces rozwiązywania
+                problemów do wielu różnych rodzajów problemów?**\r\n\r\nW tej lekcji
+                klasa stosuje proces rozwiązywania problemu do trzech różnych problemów:
+                wyszukiwania słowa, rozmieszczenia gości przy stole na przyjęciu urodzinowym
+                oraz planowania wycieczki. Te problemy stają się coraz bardziej złożone
+                i zbyt słabo zdefiniowane, aby przedstawić dlaczego proces rozwiązywania
+                problemów jest szczególnie pomocny w zmaganiach z problemami tego
+                typu."
             What is a Computer?:
               key: Czym jest komputer?
               name: Czym jest komputer?
@@ -26364,9 +26378,29 @@ pl:
             'Mini-Project: Flyer Game':
               key: 'Mini-projekt: Gra typu Flyer'
               name: 'Mini-projekt: Gra typu Flyer'
+              description_student: "**Pytanie dnia: W jaki sposób można wykorzystywać
+                nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\r\n\r\nUczniowie
+                wykorzystują to,  czego się nauczyli na temat symulowania grawitacji
+                i różnych rodzajów kolizji w celu tworzenia prostych gier związanych
+                z lataniem. Po przyjrzeniu się przykładowej grze tego typu, uczniowie
+                przeprowadzają burzę mózgów, jakiego typu grę chcieliby mieć, a następnie
+                wykorzystują uporządkowany proces do zaprogramowania gry w Code Studio.\r"
+              description_teacher: "**Pytanie dnia: W jaki sposób można wykorzystywać
+                nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\r\n\r\nUczniowie
+                wykorzystują to,  czego się nauczyli na temat symulowania grawitacji
+                i różnych rodzajów kolizji przy tworzeniu prostych gier związanych
+                z lataniem. Po przyjrzeniu się przykładowej grze tego typu, przeprowadzają
+                burzę mózgów, jakiego typu grę chcieliby mieć, a następnie wykorzystują
+                uporządkowany proces do zaprogramowania gry w Code Studio."
             Functions:
               key: Funkcje
               name: Funkcje
+              description_student: "**Pytanie dnia: W jaki sposób programiści używają
+                funkcji, aby tworzyć własne abstrakcje?**\r\n\r\nTa lekcja jest poświęcona
+                funkcjom jako sposobowi uporządkowania kodu, zwiększenia jego czytelności
+                oraz usunięcia powtórzonych bloków kodu. Klasa uczy się, że wyższy
+                poziom lub bardziej abstrakcyjne kroki ułatwiają zrozumienie i argumentację
+                dotyczącą kroków, a następnie zaczyna tworzyć funkcje w Game Lab. "
               description_teacher: "**Pytanie dnia: W jaki sposób programiści używają
                 funkcji, aby tworzyć własne abstrakcje?**\r\n\r\nUczniowie uczą się,
                 jak tworzyć funkcje tak, by porządkować swój kod, zwiększać jego czytelność
@@ -27524,6 +27558,10 @@ pl:
                 grę. Czas na kreatywność i utworzenie historyjki w Play Lab!
             lesson-1:
               name: Koniec projektu kursu
+              description_student: Opowiedz historię z Artystą!
+              description_teacher: Na tej lekcji z **projektem** uczniowie wykorzystują
+                zdobytą wiedzę o sekwencjonowaniu i pętlach w otwartym projekcie z
+                artystą.
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -27656,6 +27694,10 @@ pl:
                 grę. Czas na kreatywność i utworzenie gry w Play Lab!
             lesson-1:
               name: Koniec projektu kursu
+              description_student: Utwórz własną historię lub grę.
+              description_teacher: Na tej lekcji z **projektem** uczniowie wykorzystują
+                zdobytą wiedzę o sekwencjonowaniu i pętlach w otwartym projekcie z
+                artystą.
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -27669,6 +27711,10 @@ pl:
               display_name: Zdarzenia
             lessonGroup-6:
               display_name: Koniec projektu kursu
+              description: |2-
+
+
+                ![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)
           name: courseb-2021
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
             Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
@@ -29974,12 +30020,53 @@ pl:
                 debugowania, identyfikując błędy składniowe i logiczne. '
             lesson-5:
               name: Więcej z obiektami
+              description_student: Na tej lekcji nauczysz się, jak tworzyć obiekty
+                typu „Malarz”, określając, gdzie zaczyna się „Malarz”, w jakim kierunku
+                jest zwrócony oraz jaki jest kolor farby. Zastanawiasz się również,
+                co składa się na „dobry kod” i ćwiczysz pisanie wydajnego kodu.
+              description_teacher: Relacja między klasami i obiektami jest wzmacniana,
+                gdy uczniowie tworzą własne obiekty; są oni wprowadzani do tworzenia
+                obiektów zarówno z parametrami, jak i bez nich. Zaczynają także, na
+                czym polega „dobry kod” i ćwiczą pisanie skutecznych rozwiązań.
             lesson-6:
               name: Pętle "dopóki" i praktyka
+              description_student: Ćwiczyłeś przesuwanie „Malarza” i używanie warunków,
+                aby pomóc „Malarzowi” w podejmowaniu decyzji dotyczących interakcji
+                z sąsiedztwem. A co by było, gdyby "Malarz" mógł powtarzać polecenia?
+                Na tej lekcji nauczysz się używać pętli `dopóki` z kilkoma nowymi
+                poleceniami do przemieszczania "Malarza" po okolicy.
+              description_teacher: Uczniowie wiele się nauczyli w pierwszym tygodniu!
+                Na tej lekcji zapoznają się z pętlą „dopóki” i dodatkowymi metodami
+                kontrolowania ruchu „Malarza” w Sąsiedztwie. Łączą swoją wiedzę o
+                metodach, konstruktorach i strukturach sterujących, aby rozwijać rozwiązania
+                dla coraz bardziej złożonych łamigłówek
             lesson-7:
               name: Więcej z warunkami
+              description_student: Używałeś instrukcji „jeśli”, aby pomóc „Malarzowi”
+                w podejmowaniu decyzji o interakcji z Sąsiedztwem. Na tej lekcji użyjesz
+                instrukcji „jeśli-w przeciwnym razie”, aby spowodować inne działania
+                „Malarza”. Dowiesz się również o operatorze `!` (Nie), który pomoże
+                w podejmowaniu decyzji, które podejmuje `Malarz`.
+              description_teacher: Uczniowie poszerzają swoją wiedzę na temat struktur
+                sterujących i wyrażeń logicznych za pomocą instrukcji „jeśli-w przeciwnym
+                razie” i operatora logicznego „!” (Nie). Ćwiczą używanie instrukcji
+                `jeśli-w przeciwnym razie` i`! `(Nie) do rozwiązywania bardziej złożonych
+                problemów, w uzupełnieniu poleceń `Malarza`, których używali do tej
+                pory.
             lesson-8:
               name: Wprowadzenie do weryfikacji kodu
+              description_student: 'Jako inżynier oprogramowania chcesz tworzyć kod,
+                który z czasem będzie łatwy do odczytania, utrzymania i modyfikowania
+                przez innych. Na tej lekcji przećwiczysz używanie recenzji kodu do
+                opininiowania i omawiania strategii przekazywania i wykorzystywania
+                informacji zwrotnych. Te strategie będą przydatne przez cały rok! '
+              description_teacher: Na tym kursie uczniowie przyjmują rolę inżynierów
+                oprogramowania i modelują umiejętności zawodowe w świecie rzeczywistym.
+                Inżynierowie oprogramowania używają recenzji kodu w całej branży do
+                tworzenia kodu, który jest łatwy do odczytania, utrzymania i modyfikowania
+                przez innych w czasie. Uczniowie są wprowadzani do procesu recenzowania
+                kodu, aby położyć podwaliny pod umiejętności, które będą dalej rozwijać
+                w trakcie kursu.
             lesson-9:
               name: Dziedziczenie i metody
             lesson-10:

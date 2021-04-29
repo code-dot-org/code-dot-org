@@ -43,7 +43,8 @@ export default class ResourcesEditor extends Component {
     useMigratedResources: PropTypes.bool.isRequired,
     studentFacing: PropTypes.bool,
     updateResources: PropTypes.func,
-    courseVersionId: PropTypes.number
+    courseVersionId: PropTypes.number,
+    getRollupsUrl: PropTypes.string
   };
 
   constructor(props) {
@@ -103,6 +104,7 @@ export default class ResourcesEditor extends Component {
               this.props.studentFacing ? 'studentResource' : 'teacherResource'
             }
             resources={this.props.migratedResources}
+            getRollupsUrl={this.props.getRollupsUrl}
           />
         ) : (
           resources

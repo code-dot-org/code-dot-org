@@ -689,7 +689,7 @@
   "emptyTextResponsesTable": "Nessuna risposta",
   "emptyTopLevelBlock": "Non ci sono blocchi da eseguire. È necessario attaccare un blocco al blocco {topLevelBlockName}.",
   "enable": "Abilita",
-  "enableLessonExtras": "Abilita Esercizi Supplementari (solo per alcuni dei nuovi Corsi A-F)",
+  "enableLessonExtras": "Abilita Esercizi Supplementari (solo per alcuni dei corsi)",
   "enableMaker": "Attiva il Maker Toolkit (BETA)",
   "enableMakerDialogTitle": "Abilitare gli strumenti da Maker?",
   "enableMakerDialogWarningOnlyCP": "Attenzione: La tua app NON funzionerà a meno che tu non abbia un circuito Adafruit Circuit Playground.",

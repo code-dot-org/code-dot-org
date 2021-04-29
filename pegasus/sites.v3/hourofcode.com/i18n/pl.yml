@@ -143,16 +143,16 @@ pl:
     nauczania.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
-  hoc_live_learn_title: Learn with Hour of Code Live
+  hoc_live_learn_title: Ucz się z Godziną Kodowania na Żywo
   hoc_live_sign_up_message: Ucz się w czasie rzeczywistym wraz z gośćmi specjalnymi!
     Mile widziani są wszyscy uczniowie w każdym wieku i dysponujący wszelkimi umiejętnościami,
     również osoby niedysponujące komputerami.Dołącz do  naszej listy mailingowej,
     aby otrzymywać nagrania odcinków i zasobów umożliwiających kontynuację nauki w
     domu.
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: Naucz się podstawowych pojęć z informatyki wraz ze specjalnymi
+    gośćmi! Zapraszamy na uczniów w każdym wieku i na każdym poziomie umiejętności,
+    także tych bez komputera. Kontynuuj naukę w domu, korzystając z odcinków Godziny
+    Kodowania na żywo.
   hoc_live_join_us: Dołącz do nas
   hoc_live_learn_more: Dowiedz się więcej
   hoc_overview_oceans_tutorial_header: AI dla oceanów
@@ -1608,7 +1608,7 @@ pl:
   tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
-  tutorial_icomputelearn_name: Learn Coding with iCompute
+  tutorial_icomputelearn_name: Naucz się kodowania z iCompute
   tutorial_rpstress_name: Stress ball
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
