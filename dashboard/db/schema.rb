@@ -497,7 +497,7 @@ ActiveRecord::Schema.define(version: 2021_04_29_183952) do
   end
 
   create_table "foorm_simple_survey_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "path"
+    t.string "path", null: false
     t.string "form_name", null: false
     t.integer "form_version"
     t.text "properties"
