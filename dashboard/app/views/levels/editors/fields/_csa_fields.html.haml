@@ -2,5 +2,6 @@
   CSA Features
 
 #csa_features.in.collapse
-  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :csa_view_mode, description: "Select either Neighborhood, Theater, or Console View"}
-
+  .field
+    Select the desired CSA view:
+    = f.select :csa_view_mode, options_for_select([['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']])
