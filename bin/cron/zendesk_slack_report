@@ -61,8 +61,9 @@ GROUP_FILTERS = {
   '*Labs' => '301129028',
 }
 
+# Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'regional_managers' => ['zendesk-outreach@code.org'],
+  'regional_managers' => ['zendesk-outreach'],
 }
 
 class Zendesk
@@ -209,7 +210,7 @@ end
 def get_tickets_by_user
   zendesk = Zendesk.new
   user_results = zendesk.user_search(
-    users: MONITORING_USERS.values.flatten,
+    users: MONITORING_USERS.values.flatten.map {|u| "#{u}@code.org"},
     statuses: STATUSES_TO_REPORT
   )
 
@@ -222,7 +223,8 @@ def get_tickets_by_user
 
   # Report out for each Slack room
   MONITORING_USERS.each do |slack_room, users|
-    user_messages = users.map do |user_email|
+    user_messages = users.map do |user|
+      user_email = "#{user}@code.org"
       count = user_counts[user_email] || 0
       next nil if count == 0
 
