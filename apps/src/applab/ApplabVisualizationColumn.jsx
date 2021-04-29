@@ -47,10 +47,6 @@ const styles = {
   }
 };
 
-/**
- * Equivalent of visualizationColumn.html.ejs. Initially only supporting
- * portions used by App Lab
- */
 class ApplabVisualizationColumn extends React.Component {
   static propTypes = {
     isEditingProject: PropTypes.bool.isRequired,
