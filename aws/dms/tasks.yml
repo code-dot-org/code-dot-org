@@ -1,6 +1,5 @@
 cron-pii:
 - dashboard.census_submissions
-- pegasus.contact_rollups
 - pegasus.contacts
 - pegasus.forms
 - pegasus.form_geos

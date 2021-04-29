@@ -1,6 +1,6 @@
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -19,8 +19,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  dialogInput: {
-    margin: 0
+  buttons: {
+    display: 'flex'
   },
   button: {
     width: 100,
@@ -31,43 +31,32 @@ const styles = {
     backgroundColor: color.darkest_gray,
     color: 'white'
   },
-  lightRename: {
+  lightConfirm: {
     backgroundColor: color.cyan,
     color: color.white
   },
   lightCancel: {
     backgroundColor: color.light_gray,
     color: color.black
-  },
-  label: {
-    marginBottom: 0
   }
 };
 
-export default class FileRenameDialog extends Component {
+export default class DeleteConfirmationDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
-    filename: PropTypes.string,
-    handleRename: PropTypes.func.isRequired,
-    isDarkMode: PropTypes.bool.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    isDarkMode: PropTypes.bool.isRequired,
+    filename: PropTypes.string
   };
-
-  constructor(props) {
-    super(props);
-    this.textInput = null;
-    this.setTextInputRef = element => {
-      this.textInput = element;
-    };
-  }
 
   render() {
     const {
       isOpen,
       handleClose,
-      handleRename,
-      filename,
-      isDarkMode
+      handleConfirm,
+      isDarkMode,
+      filename
     } = this.props;
     return (
       <BaseDialog
@@ -80,38 +69,23 @@ export default class FileRenameDialog extends Component {
         useUpdatedStyles
         hideCloseButton
       >
-        <label
-          htmlFor="filenameInput"
-          style={{...styles.label, ...(isDarkMode && styles.darkDialog)}}
-        >
-          Rename the file
-        </label>
         <div
           style={{
             ...styles.dialogContent,
             ...(isDarkMode && styles.darkDialog)
           }}
         >
-          <input
-            type="text"
-            name="filenameInput"
-            defaultValue={filename}
-            ref={this.setTextInputRef}
-            style={{
-              ...styles.dialogInput,
-              ...(isDarkMode && styles.darkDialog)
-            }}
-          />
-          <div>
+          <div>{`Are you sure you want to delete ${filename}?`}</div>
+          <div style={styles.buttons}>
             <button
               type="button"
               style={{
                 ...styles.button,
-                ...(isDarkMode ? styles.darkButton : styles.lightRename)
+                ...(isDarkMode ? styles.darkButton : styles.lightConfirm)
               }}
-              onClick={() => handleRename(this.textInput.value)}
+              onClick={handleConfirm}
             >
-              Rename
+              Delete
             </button>
             <button
               type="button"
