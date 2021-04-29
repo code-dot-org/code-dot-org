@@ -159,7 +159,7 @@ class LevelDetailsDialog extends Component {
           isCollapsed={false}
           hidden={false}
           isEmbedView={false}
-          mainStyle={{paddingBottom: 5}}
+          mainStyle={{paddingBottom: 5, position: 'static'}}
           containerStyle={{
             overflowY: 'auto',
             height: this.state.height - HEADER_HEIGHT

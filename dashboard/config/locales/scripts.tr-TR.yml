@@ -27024,6 +27024,7 @@ tr:
                 partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
                 edecektir.
             Loops with the Artist:
+              key: Sanatçı ile Döngüler
               name: Döngüler ile çizim
               description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler
                 yapmayı kolaylaştırır.
@@ -27179,6 +27180,7 @@ tr:
               description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak
                 için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
+              name: 'Mini Proje: Sanal Hayvan'
               description_student: Bu derste öğrenciler, istedikleri gibi görünen
                 ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
                 kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
@@ -27534,6 +27536,8 @@ tr:
                 programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan
                 dolayı bu aktivite ses gerektirir.
           lesson_groups:
+            csf_warmup:
+              display_name: Isınmak
             csf_sequencing:
               display_name: Sıralama
             csf_loops:
@@ -27550,6 +27554,8 @@ tr:
               display_name: Hareketli Nesneler
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+            lessonGroup-9:
+              display_name: Isınmak
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.

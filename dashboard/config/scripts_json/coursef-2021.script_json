@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-22 19:54:48 UTC",
+    "serialized_at": "2021-04-28 17:32:31 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -500,7 +500,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 15
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "daa1a660-5d69-4188-a07d-b8ca374cb2cf",
@@ -514,7 +514,7 @@
       "position": 2,
       "properties": {
         "name": "Main Activity",
-        "duration": 25
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "d242b6cc-881c-4f49-acb9-e03383340b0c",
@@ -1586,7 +1586,7 @@
       "key": "ae9c68f5-dc04-4e99-917b-e2ba8424692f",
       "position": 2,
       "properties": {
-        "description": "**Do This:**  Create a T-Chart on the board. Label the left side “Favorite Apps and Games” and the right side “Why we like them”. After modeling with one example, have students suggest their own additions to the list. As students explain why they like a particular app, restate their ideas and focus on choice, and times when the user gets to choose how they play or use it. Move on when students are seeing the connection that people prefer to be able to make choices.\n"
+        "description": "**Do This:**  Using the lesson slides or a whiteboard, show students a T-chart labeled “Favorite apps and games” on the left and “Why we like them” on the right. After modeling with one example, have students suggest their own additions to the list. As students explain why they like a particular app, restate their ideas and focus on *choices*, and times when the user gets to *choose* how they play or use it. Move on when students are seeing the connection that people prefer to be able to make choices.\n"
       },
       "seeding_key": {
         "activity_section.key": "ae9c68f5-dc04-4e99-917b-e2ba8424692f",
@@ -1598,7 +1598,7 @@
       "position": 3,
       "properties": {
         "remarks": true,
-        "description": "When apps and games are made, they are designed with a user in mind. The user is you, or whoever will be using and playing with the app. Creators have ideas about how their apps should be used, but it is up to the user to make the choices!\nToday we are going to explore how (and why) app and game makers let us make choices\n"
+        "description": "When apps and games are made, they are designed with a user in mind. The user is you, or whoever will be using and playing with the app. Creators have ideas about how their apps should be used, but it is up to the user to make the choices!\nToday we are going to explore how (and why) app and game makers let us make choices."
       },
       "seeding_key": {
         "activity_section.key": "bee82cce-d1ce-452a-b733-b9e750e54b90",
@@ -1609,7 +1609,7 @@
       "key": "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205",
       "position": 4,
       "properties": {
-        "description": "**Do This:**Show the User Choices slide, found in the Resources section above.\n\n**Discuss:** For each app or game you see, what choice do you think the app maker is giving the  user?\n\n**Goal:** Students should be of the discussion is for students to be discussing ideas not just about what the apps are about, but the specific choices that the user gets to make. For example, Talk Box lets users choose an avatar, or digital representation of yourself. This choice is a good thing because it helps the user feel like the app is really for them.\n",
+        "description": "**Do This:** Show the User Choices slide, found in the Resources section above.\n\n**Discuss:** For each app or game you see, what choice do you think the app maker is giving the user?\n\n**Goal:** Students should be of the discussion is for students to be discussing ideas not just about what the apps are about, but the specific choices that the user gets to make. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1651,7 +1651,8 @@
       "properties": {
         "progression_name": "Video: Introducing Sprite Lab",
         "name": "Introducing Sprite Lab",
-        "description": "**Do This:** Play the ***Introducing Sprite Lab** video."
+        "description": "**Do This:** Play the ***Introducing Sprite Lab** video.",
+        "duration": "5"
       },
       "seeding_key": {
         "activity_section.key": "75406aa7-bf10-4ca7-83af-6967a9f225eb",
@@ -1674,14 +1675,16 @@
       "key": "e9148961-d1ba-4ce8-b9f6-79d0603b3122",
       "position": 3,
       "properties": {
-        "description": "####Exploring Apps (15 mins)\n\n_Explore at least 3 Sprite Lab programs on Code.org. For each program, you will list the sprites you see and describe the choices you made as the user._\n\n**Do this:** \n- Provide each individual (or group) with a physical or digital copy of the ***Exploring Apps** worksheet. \n- Direct students to level 2 on Code Studio (Exploration: Sample Apps). \n\n- Consider modeling one app with the class before having students complete the task independently.\n\n**Extension:** If students finish the task ahead of others, they may proceed to level 3 where they can make a first try at writing code. This is a purely exploratory task with no right or wrong answers.\n",
+        "description": "_Explore at least 3 Sprite Lab programs on Code.org. For each program, you will list the sprites you see and describe the choices you made as the user._\n\n**Do this:** \n- Provide each individual (or group) with a physical or digital copy of the ***Exploring Apps** worksheet. \n- Direct students to level 2 on Code Studio (Exploration: Sample Apps). \n\n- Consider modeling one app with the class before having students complete the task independently.\n",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "If this is your students’ first time using Code.org, dedicate some extra time to helping students understand how to navigate to the website and sign in to their accounts."
           }
         ],
-        "progression_name": "Exploration: Sample Apps"
+        "progression_name": "Exploration: Sample Apps",
+        "name": "Exploring Apps",
+        "duration": "15"
       },
       "seeding_key": {
         "activity_section.key": "e9148961-d1ba-4ce8-b9f6-79d0603b3122",
@@ -1692,10 +1695,25 @@
       "key": "f321b39c-8051-4fc9-9e40-24f25216f88c",
       "position": 4,
       "properties": {
-        "description": "####Share Out (5 mins)\n**Discuss:** What were the most interesting choices you were able to make with these apps? Was there ever a time you wished you could change something in the app but were not given the choice?\n\n**Goal:** Students should be able to name specific choices they made, but should also discuss why they think the creator gave us that choice. Choices to highlight include the words you type in (e.g. Chat Bot), the type of sprites that are used (e.g. Collector Game), or the way you interact with something. "
+        "description": "\n**Discuss:** What were the most interesting choices you were able to make with these apps? Was there ever a time you wished you could change something in the app but were not given the choice?\n\n**Goal:** Students should be able to name specific choices they made, but should also discuss why they think the creator gave us that choice. Choices to highlight include the words you type in (e.g. Chat Bot), the type of sprites that are used (e.g. Collector Game), or the way you interact with something. ",
+        "name": "Share Out",
+        "duration": "5"
       },
       "seeding_key": {
         "activity_section.key": "f321b39c-8051-4fc9-9e40-24f25216f88c",
+        "lesson_activity.key": "d242b6cc-881c-4f49-acb9-e03383340b0c"
+      }
+    },
+    {
+      "key": "efa336e3-b101-4300-9bce-45771a6e114d",
+      "position": 5,
+      "properties": {
+        "name": "Propose an Improvement",
+        "duration": "5",
+        "description": "**Prompt:** Think about an app you have used, and come up with a way to make it better by giving the user more choices.\n\nAs time allows, have students consider the prompt above through one or more of the following methods:\n* Have volunteers offer ideas in a whole-group discussion.\n* Engage in a small discussion with pairs or small groups.\n* Have students create a sketch or poster with their ideas."
+      },
+      "seeding_key": {
+        "activity_section.key": "efa336e3-b101-4300-9bce-45771a6e114d",
         "lesson_activity.key": "d242b6cc-881c-4f49-acb9-e03383340b0c"
       }
     },
@@ -1757,7 +1775,7 @@
       "key": "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5",
       "position": 3,
       "properties": {
-        "description": "**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/), show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this sprite scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?\n"
+        "description": "**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this sprite scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?\n"
       },
       "seeding_key": {
         "activity_section.key": "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5",
@@ -2163,11 +2181,22 @@
       }
     },
     {
-      "key": "c03754de-e580-4e9f-b58e-af136a073898",
+      "key": "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1",
       "position": 1,
       "properties": {
-        "name": "Introduction",
-        "description": "####Blank Space Stories (5 mins)\n\n**Do this:** Show the first blank space story (Favorite Meal) on the board. \n\n**Prompt:** _How do you think this blank space story works? What do you notice about the labels for each blank space?_\n\nIt’s important that students understand one person typically provides the words designated by each label without seeing the story first. Students may notice that each space has a unique label.\n\n####Favorite Meal [5 mins]\n\n**Do This:**\nPrepare the first three envelopes for demonstration.\nIf using the slides, advance the animation to show the three purple boxes. \n"
+        "description": "**Do this:** Display the lesson slides for the class.\n\nAsk students to think about we organize and store things. Do students ever keep things in boxes? Are those boxes labeled? Why? If students do not have this experience, ask them to imagine helping you pack up the classroom for the summer.\n\nInform students that today we will be playing a word game, similar to Mad Libs®, where you will be prompted for words that will then be placed into a silly story."
+      },
+      "seeding_key": {
+        "activity_section.key": "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1",
+        "lesson_activity.key": "bb5fbcc6-51ec-4613-b32d-ac0ffb0d5737"
+      }
+    },
+    {
+      "key": "c03754de-e580-4e9f-b58e-af136a073898",
+      "position": 2,
+      "properties": {
+        "name": "Favorite Meal",
+        "description": "**Do this:** Show the first blank space story (Favorite Meal) on the board using the lesson slides. \n\n**Prompt:** _How do you think this blank space story works? What do you notice about the labels for each blank space?_\n\nIt’s important that students understand one person typically provides the words designated by each label without seeing the story first. Students may notice that each space has a unique label.\n\n####Favorite Meal\n\n**Do This:** Prepare the first three envelopes for demonstration. If using the slides, advance the animation to show the three purple boxes. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "c03754de-e580-4e9f-b58e-af136a073898",
@@ -2176,7 +2205,7 @@
     },
     {
       "key": "7a4a67f6-dfb0-42ee-a28c-b6604100abde",
-      "position": 2,
+      "position": 3,
       "properties": {
         "remarks": true,
         "description": "\nIn a moment, I’ll have volunteers to help us fill in the blank. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n"
@@ -2188,7 +2217,7 @@
     },
     {
       "key": "ffa7ea29-3325-4d95-8766-4411729f47d9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Do This:** Facilitate handing out and collecting the envelopes marked “object”, “liquid”, and “number”. Once collected, keep the envelopes closed and begin reading the story. Only when you reach each blank, open the envelope and read the value stored.\n\n"
       },
@@ -2199,9 +2228,10 @@
     },
     {
       "key": "437d0e58-a47c-4ea2-8125-501e4c0b154f",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "####Party Games (5 mins)\n\n**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You request and store the information from the user and then work out how to put the story together. To involved more students and have them act out this model, assign roles:\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n_Users:_ Submit the words needed to complete the story.\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief (5 mins)\n\n**Discuss:** How is writing a blank space story different from writing a normal story?"
+        "description": "**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You will request and store the information from the \"users\" and then work out how to put the story together. To involve more students and have them act out this model, assign roles:\n\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n\n_Users:_ Submit the words needed to complete the story.\n\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief\n\n**Discuss:** How is writing a blank space story different from writing a normal story?",
+        "name": "Party Games"
       },
       "seeding_key": {
         "activity_section.key": "437d0e58-a47c-4ea2-8125-501e4c0b154f",
@@ -2230,7 +2260,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Writing a blank space story can be surprisingly challenging. It can be helpful to give students suggestions of themes to inspire and focus their writing. Consider having students work on this task in groups so they can collaborate.\n\n**Topic suggestions:**\n- imaginary class field trip\n\n- unusual holiday\n\n- movie review\n\n- morning routine\n\n- a day at the beach\n\n- how to fly a kite\n"
+            "markdown": "Writing a blank space story can be challenging. It can be helpful to give students suggestions of themes to inspire and focus their writing. Consider having students work on this task in groups so they can collaborate.\n\n**Topic suggestions:**\n- imaginary class field trip\n\n- unusual holiday\n\n- movie review\n\n- morning routine\n\n- a day at the beach\n\n- how to fly a kite\n"
           }
         ]
       },
@@ -2251,23 +2281,11 @@
       }
     },
     {
-      "key": "035f92b6-2d03-4fec-adc4-a15a1b620f08",
+      "key": "220a9c31-c877-4fe2-83ef-722e93bed0a5",
       "position": 1,
       "properties": {
-        "name": "Reflection",
-        "description": "####Connecting to Computer Science (10 mins)\n\n\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "035f92b6-2d03-4fec-adc4-a15a1b620f08",
-        "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
-      }
-    },
-    {
-      "key": "220a9c31-c877-4fe2-83ef-722e93bed0a5",
-      "position": 2,
-      "properties": {
-        "remarks": true,
-        "description": "The blank spaces in these stories work like containers for information. Each container also has a label. In computer science, we call something like this a variable."
+        "description": "**Do this:** Summarize the rules of blank space stories once more with the class.\n\n*The blank spaces in these stories work like containers for information. Each container also has a label.  In computer science, when you create a label for a piece of information in your program, it's called a* ***variable***.\n\n**Do this:** Show the lesson slide with the three sample app images.",
+        "name": "Introducing Variables"
       },
       "seeding_key": {
         "activity_section.key": "220a9c31-c877-4fe2-83ef-722e93bed0a5",
@@ -2275,13 +2293,26 @@
       }
     },
     {
-      "key": "b764363d-61f2-4d3d-b352-d0a985e2076a",
-      "position": 3,
+      "key": "a76c58bc-57ad-45c4-b179-bdb68ce8d392",
+      "position": 2,
       "properties": {
-        "description": "**Discussion:** How do these stories relate to how computers get information from a user?\n\nThe lesson slides include 3 sample apps that all ask the user for text, such as a word, search term, or username. Guide students to make connections between blank space stories and the input functionality of real apps. Each app is prompting the user for information that would be stored in a variable.\n"
+        "remarks": true,
+        "description": "*These apps are all asking the user to provide some information. How does this relate to today's activity?*\n\n*Information is stored in the computer's memory with variables. Each variable has a label that tells us what kind of information to expect. When the computer needs that information later, it looks for the label of the variable.*\n\n*Whether you're storing objects in a box, words in an envelope, or information in a variable, it's important to use good labels, so you don't get confused later.*\n\n*When a user types into a prompt, it’s like the computer stores the information in a container. The variable label tells us what kind of information to expect.*\n"
       },
       "seeding_key": {
-        "activity_section.key": "b764363d-61f2-4d3d-b352-d0a985e2076a",
+        "activity_section.key": "a76c58bc-57ad-45c4-b179-bdb68ce8d392",
+        "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
+      }
+    },
+    {
+      "key": "035f92b6-2d03-4fec-adc4-a15a1b620f08",
+      "position": 3,
+      "properties": {
+        "name": "Reflection",
+        "description": "**Prompt:**\n* How do you think blank space stories relate to learning computer science?\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "035f92b6-2d03-4fec-adc4-a15a1b620f08",
         "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
       }
     },
@@ -2403,13 +2434,14 @@
       "position": 1,
       "properties": {
         "progression_name": "Prediction",
-        "description": "####Prediction (2 mins)\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "description": "**Do This:** Using the lesson slides, review the concepts that students have explore so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "One of the trickiest parts of learning variables is making sure that a variable’s label always matches. In this level, be sure that students notice the difference between the variable **meal** and the variable **food**. Students should understand that the best way to solve this would be to just use one variable, making sure the label always matches."
+            "markdown": "One of the trickiest parts of learning variables is making sure that a variable’s label always matches. In this level, be sure that students notice the difference between the variable **meal** and the variable **food**. Students should understand that the best way to solve this would be to just use one variable, making sure the label always matches.\n\nYou can also walk your class through correcting the bugs in this program by using this [Teacher Sandbox](https://studio.code.org/levels/) level with your projector.\n"
           }
-        ]
+        ],
+        "name": "Review"
       },
       "seeding_key": {
         "activity_section.key": "20919642-5201-4796-9e45-ee76e368614d",
@@ -2463,7 +2495,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Level 3 presents students with a menu of options that correspond to the main project types they chose from. The main differences between these sublevels are the instructions and default sprite costumes. Students may need really clear instructions to understand how to navigate the choices here. For each of the project choices, there are two sub-levels here. To begin, students should pick one of the levels marked \"Part 1\". Once they finish that level they should return here and select \"Part 2\" of the same project. The first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a \"free play\" which is intended to allow students to make any changes to their code that they like."
+            "markdown": "This level presents students with a menu of options that correspond to the main project types they chose from. The main differences between these sublevels are the instructions and default sprite costumes. Students may need really clear instructions to understand how to navigate the choices here. For each of the project choices, there are two sub-levels here. To begin, students should pick one of the levels marked \"Part 1\". Once they finish that level, they should return here and select \"Part 2\" of the same project. The first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is \"free play,\" which is intended to allow students to make any changes to their code that they like."
           }
         ]
       },
@@ -3827,7 +3859,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Introducing Sprite Lab",
         "level_keys": [
@@ -3853,7 +3885,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Exploration: Sample Apps",
         "level_keys": [
@@ -3879,7 +3911,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -3905,7 +3937,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: How to Make a Sprite",
         "level_keys": [
@@ -3931,7 +3963,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3957,7 +3989,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3983,7 +4015,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4009,7 +4041,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4035,7 +4067,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4061,7 +4093,7 @@
       "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4087,7 +4119,7 @@
       "chapter": 11,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play: Make a Scene",
         "level_keys": [
@@ -4113,7 +4145,7 @@
       "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4139,7 +4171,7 @@
       "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Sprites in Action",
         "level_keys": [
@@ -4165,7 +4197,7 @@
       "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4191,7 +4223,7 @@
       "chapter": 15,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4217,7 +4249,7 @@
       "chapter": 16,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4243,7 +4275,7 @@
       "chapter": 17,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4269,7 +4301,7 @@
       "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4295,7 +4327,7 @@
       "chapter": 19,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play: Make an Interactive Scene",
         "level_keys": [
@@ -4321,7 +4353,7 @@
       "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Exploration",
         "level_keys": [
@@ -4347,7 +4379,7 @@
       "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Create a Virtual Pet",
         "level_keys": [
@@ -4373,7 +4405,7 @@
       "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Create a Virtual Pet",
         "level_keys": [
@@ -4399,7 +4431,7 @@
       "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Create a Virtual Pet",
         "level_keys": [
@@ -4425,7 +4457,7 @@
       "chapter": 24,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Create a Virtual Pet",
         "level_keys": [
@@ -4451,7 +4483,7 @@
       "chapter": 25,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-Project: Create a Virtual Pet",
         "level_keys": [
@@ -4477,7 +4509,7 @@
       "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4529,7 +4561,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Unplugged Variables in Envelopes",
         "level_keys": [
@@ -4555,7 +4587,7 @@
       "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4581,7 +4613,7 @@
       "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Text and Prompts",
         "level_keys": [
@@ -4607,7 +4639,7 @@
       "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4633,7 +4665,7 @@
       "chapter": 32,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4659,7 +4691,7 @@
       "chapter": 33,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4685,7 +4717,7 @@
       "chapter": 34,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4711,7 +4743,7 @@
       "chapter": 35,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4737,7 +4769,7 @@
       "chapter": 36,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4763,7 +4795,7 @@
       "chapter": 37,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4789,7 +4821,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4815,7 +4847,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Exploration: Sample Programs",
         "level_keys": [
@@ -4841,7 +4873,7 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Planning",
         "level_keys": [
@@ -4867,7 +4899,7 @@
       "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Application - Create Your Project",
         "level_keys": [
@@ -4893,7 +4925,7 @@
       "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Artist Intro with JR Hildebrande",
         "level_keys": [
@@ -4919,7 +4951,7 @@
       "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4945,7 +4977,7 @@
       "chapter": 44,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4971,7 +5003,7 @@
       "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Loops with the Artist",
         "level_keys": [
@@ -4997,7 +5029,7 @@
       "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5023,7 +5055,7 @@
       "chapter": 47,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5049,7 +5081,7 @@
       "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5075,7 +5107,7 @@
       "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5101,7 +5133,7 @@
       "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Variables in Artist",
         "level_keys": [
@@ -5127,7 +5159,7 @@
       "chapter": 51,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5153,7 +5185,7 @@
       "chapter": 52,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5179,7 +5211,7 @@
       "chapter": 53,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5205,7 +5237,7 @@
       "chapter": 54,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5231,7 +5263,7 @@
       "chapter": 55,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5257,7 +5289,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5283,7 +5315,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5309,7 +5341,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5335,7 +5367,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5361,7 +5393,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5387,7 +5419,7 @@
       "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5413,7 +5445,7 @@
       "chapter": 62,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5439,7 +5471,7 @@
       "chapter": 63,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5465,7 +5497,7 @@
       "chapter": 64,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5491,7 +5523,7 @@
       "chapter": 65,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5517,7 +5549,7 @@
       "chapter": 66,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5543,7 +5575,7 @@
       "chapter": 67,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5569,7 +5601,7 @@
       "chapter": 68,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5595,7 +5627,7 @@
       "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "For Loop Fun - Unplugged Activity",
         "level_keys": [
@@ -5621,7 +5653,7 @@
       "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Review",
         "level_keys": [
@@ -5647,7 +5679,7 @@
       "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Review",
         "level_keys": [
@@ -5673,7 +5705,7 @@
       "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Exploration: For Loops",
         "level_keys": [
@@ -5699,7 +5731,7 @@
       "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: For Loops",
         "level_keys": [
@@ -5725,7 +5757,7 @@
       "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5751,7 +5783,7 @@
       "chapter": 75,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5777,7 +5809,7 @@
       "chapter": 76,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5803,7 +5835,7 @@
       "chapter": 77,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5829,7 +5861,7 @@
       "chapter": 78,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5855,7 +5887,7 @@
       "chapter": 79,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lesson Extras",
         "level_keys": [
@@ -5881,7 +5913,7 @@
       "chapter": 80,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lesson Extras",
         "level_keys": [
@@ -5907,7 +5939,7 @@
       "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: For Loops",
         "level_keys": [
@@ -5933,7 +5965,7 @@
       "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Exploration",
         "level_keys": [
@@ -5959,7 +5991,7 @@
       "chapter": 83,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5985,7 +6017,7 @@
       "chapter": 84,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6011,7 +6043,7 @@
       "chapter": 85,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6037,7 +6069,7 @@
       "chapter": 86,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6063,7 +6095,7 @@
       "chapter": 87,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6089,7 +6121,7 @@
       "chapter": 88,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6115,7 +6147,7 @@
       "chapter": 89,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lesson Extras",
         "level_keys": [
@@ -6141,7 +6173,7 @@
       "chapter": 90,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lesson Extras",
         "level_keys": [
@@ -6167,7 +6199,7 @@
       "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Run a simulation",
         "level_keys": [
@@ -6193,7 +6225,7 @@
       "chapter": 92,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Modify simulation variables",
         "level_keys": [
@@ -6219,7 +6251,7 @@
       "chapter": 93,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Customize",
         "level_keys": [
@@ -6245,11 +6277,14 @@
       "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_outbreak_story"
@@ -6267,7 +6302,7 @@
       "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: AI: What is Machine Learning?",
         "level_keys": [
@@ -6293,7 +6328,7 @@
       "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Train AI to Clean the Ocean",
         "level_keys": [
@@ -6319,7 +6354,7 @@
       "chapter": 97,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Train AI to Clean the Ocean",
         "level_keys": [
@@ -6345,7 +6380,7 @@
       "chapter": 98,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Train AI to Clean the Ocean",
         "level_keys": [
@@ -6371,7 +6406,7 @@
       "chapter": 99,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Training Data & Bias",
         "level_keys": [
@@ -6397,7 +6432,7 @@
       "chapter": 100,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Using Training Data",
         "level_keys": [
@@ -6423,7 +6458,7 @@
       "chapter": 101,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Impacts on Society",
         "level_keys": [
@@ -6449,7 +6484,7 @@
       "chapter": 102,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Teach A.I. a new word",
         "level_keys": [
@@ -6475,7 +6510,7 @@
       "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Internet - Unplugged Activity",
         "level_keys": [
@@ -6501,7 +6536,7 @@
       "chapter": 104,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Example projects",
         "level_keys": [
@@ -6527,7 +6562,7 @@
       "chapter": 105,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -7862,18 +7897,6 @@
       }
     },
     {
-      "name": "Sample Project",
-      "url": "https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/",
-      "key": "sample_project",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_project"
-      }
-    },
-    {
       "name": "Sprite Lab Documentation",
       "url": "https://studio.code.org/docs/spritelab/",
       "key": "sprite_lab_documentation",
@@ -8272,62 +8295,135 @@
       }
     },
     {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csf",
-      "key": "teacher_forum",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-      "key": "curriculum_guide",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "curriculum_guide"
-      }
-    },
-    {
-      "name": "Change Log",
-      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "change_log_from_2020_version_",
+      "name": "CSTA Standards Mapping",
+      "url": "https://studio.code.org/s/coursef-2021/standards",
+      "key": "csta_standards_mapping",
       "properties": {
         "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "change_log_from_2020_version_"
+        "resource.key": "csta_standards_mapping"
       }
     },
     {
-      "name": "Cross-Curricular Standards Guidance",
-      "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview",
-      "key": "cross-curricular_standards_guidance",
+      "name": "Common Core and NGSS Guidance",
+      "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3",
+      "key": "common_core_and_ngss_guidance",
       "properties": {
         "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "cross-curricular_standards_guidance"
+        "resource.key": "common_core_and_ngss_guidance"
       }
     },
     {
       "name": "Cross-Curricular Extension Activities",
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
-      "key": "cross-curricular_extension_activities",
+      "key": "cross-curricular_extension_activities_1",
       "properties": {
         "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "cross-curricular_extension_activities"
+        "resource.key": "cross-curricular_extension_activities_1"
+      }
+    },
+    {
+      "name": "Course Vocabulary\t",
+      "url": "https://studio.code.org/s/coursef-2021/vocab",
+      "key": "course_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Implementation Guide",
+      "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+      "key": "implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "implementation_guide"
+      }
+    },
+    {
+      "name": "Lesson Type Guide",
+      "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+      "key": "lesson_type_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+      "key": "debugging_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
+      "name": "Curriculum Guide",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview\t",
+      "key": "curriculum_guide_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1"
+      }
+    },
+    {
+      "name": "2021 Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "2021_change_log",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2021_change_log"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf/",
+      "key": "teacher_forum_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
+      }
+    },
+    {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_1"
       }
     }
   ],
@@ -8359,19 +8455,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "sample_project"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-7",
         "resource.key": "sprite_lab_documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "resource.key": "making_sprites"
       }
     },
     {
@@ -8582,37 +8666,78 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "csta_standards_mapping",
         "script.name": "coursef-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "curriculum_guide",
+        "resource.key": "common_core_and_ngss_guidance",
         "script.name": "coursef-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "change_log_from_2020_version_",
+        "resource.key": "cross-curricular_extension_activities_1",
         "script.name": "coursef-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "cross-curricular_standards_guidance",
+        "resource.key": "course_vocabulary",
         "script.name": "coursef-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "cross-curricular_extension_activities",
+        "resource.key": "implementation_guide",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_type_guide",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2021_change_log",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_1",
         "script.name": "coursef-2021"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_1",
+        "script.name": "coursef-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
