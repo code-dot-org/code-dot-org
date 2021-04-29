@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-24 15:48:56 UTC",
+    "serialized_at": "2021-04-29 17:38:54 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -7070,8 +7070,8 @@
   ],
   "resources": [
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
+      "name": "CSD Unit 4 - The Design Process",
+      "url": "https://docs.google.com/presentation/d/1aM1QmHeYJTx1V-Puzinc4Jp8gpae7ZArLW1Y1sI3CYY/copy",
       "key": "unit-4-the-design-process",
       "properties": {
         "type": "Slides",
