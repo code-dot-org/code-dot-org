@@ -1,5 +1,5 @@
-require_relative '../../translation_status/translation_service'
 require_relative '../test_helper'
+require_relative '../../translation_status/translation_service'
 
 class TranslationServiceTest < Minitest::Test
   # Use the same service for all the tests because initialization is very slow
@@ -7,6 +7,10 @@ class TranslationServiceTest < Minitest::Test
 
   def test_translated_given_english_hello_should_return_true
     assert @@translation_service.translated?('en-US', 'hello')
+  end
+
+  def test_translated_given_lowercase_english_locale_should_return_true
+    assert @@translation_service.translated?('en-us', 'hello')
   end
 
   def test_translated_given_german_hello_should_return_true
