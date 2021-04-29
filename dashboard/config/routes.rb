@@ -590,7 +590,7 @@ Dashboard::Application.routes.draw do
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
-  post '/dashboardapi/v1/foorm/misc_survey_submission', action: :create, controller: 'api/v1/foorm_misc_survey_submissions'
+  post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -838,9 +838,9 @@ Dashboard::Application.routes.draw do
 
   get '/help', to: redirect("https://support.code.org")
 
-  get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
+  get '/form/:misc_form_path', to: 'foorm/simple_survey#new'
 
-  get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
+  get '/form/:misc_form_path/show', to: 'foorm/simple_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
