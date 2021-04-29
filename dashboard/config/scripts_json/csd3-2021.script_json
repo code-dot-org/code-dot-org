@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-28 20:19:33 UTC",
+    "serialized_at": "2021-04-29 17:37:36 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -16113,18 +16113,6 @@
   ],
   "resources": [
     {
-      "name": "Programming for Entertainment",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "programming-for-entertainment",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "programming-for-entertainment"
-      }
-    },
-    {
       "name": "CS in Entertainment",
       "url": "https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/edit",
       "key": "cs-entertainment-activity",
@@ -16147,6 +16135,18 @@
       },
       "seeding_key": {
         "resource.key": "cs_in_entertainment"
+      }
+    },
+    {
+      "name": "CSD Unit 3 - Interactive Animations and Games",
+      "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
+      "key": "csd_unit_3_-_interactive_animations_and_games",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16993,12 +16993,6 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "programming-for-entertainment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
         "resource.key": "cs-entertainment-activity"
       }
     },
@@ -17006,6 +17000,12 @@
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
         "resource.key": "cs_in_entertainment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
