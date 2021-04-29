@@ -474,9 +474,9 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  var showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
-  var breakpointsEnabled = !config.level.debuggerDisabled;
-  var showDebugConsole = !config.hideSource;
+  const showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
+  const breakpointsEnabled = !config.level.debuggerDisabled;
+  const showDebugConsole = !config.hideSource;
   // TODO: RENAME THIS
   const nonLevelbuilderWidgetMode =
     config.level.widgetMode && !config.isStartMode;
