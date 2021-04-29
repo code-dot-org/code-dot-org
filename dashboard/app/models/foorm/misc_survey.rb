@@ -66,6 +66,16 @@ class Foorm::MiscSurvey < ApplicationRecord
         form_name: 'surveys/pd/csd_csp_facilitator_post_survey',
         misc_form_path: 'facilitator_post_survey',
         allow_multiple_submissions: true
+      },
+      {
+        form_name: 'surveys/pd/virtual_teacher_order_form',
+        misc_form_path: 'virtual_order_form',
+        allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/pd/pre_csd_p_facilitator_summit_survey',
+        misc_form_path: 'facilitator_summit_survey',
+        allow_multiple_submissions: false
       }
     ]
   end
