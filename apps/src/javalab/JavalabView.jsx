@@ -85,9 +85,12 @@ class JavalabView extends React.Component {
   };
 
   renderSettings = () => {
-    const {isDarkMode} = this.props;
+    const {isDarkMode} = this.props.isDarkMode;
+    console.log('current dark mode is: ');
+    console.log(isDarkMode);
+    this.setIsDarkMode = this.props.setIsDarkMode.bind(this, !isDarkMode);
     return [
-      <a onClick={this.props.setIsDarkMode(!isDarkMode)} key="theme-setting">
+      <a onClick={this.setIsDarkMode} key="theme-setting">
         Switch to {isDarkMode ? 'light mode' : 'dark mode'}
       </a>
     ];
@@ -197,6 +200,6 @@ export default connect(
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
-    setIsDarkMode: () => dispatch(setIsDarkMode())
+    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
   })
 )(UnconnectedJavalabView);

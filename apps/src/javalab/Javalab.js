@@ -51,7 +51,9 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
-  this.isDarkMode = config.usingDarkModePref;
+  this.isDarkMode = !!config.usingDarkModePref;
+  console.log('first page load has dark mode set at this for javalab.js: ');
+  console.log(this.isDarkMode);
 
   config.makeYourOwn = false;
   config.wireframeShare = true;

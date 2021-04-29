@@ -43,6 +43,8 @@ export const setSource = (filename, source, isVisible = true) => ({
 
 export const setIsDarkMode = isDarkMode => {
   new UserPreferences().setUsingDarkMode(isDarkMode);
+  console.log('redux is being called on set is dark mode with this value:');
+  console.log(isDarkMode);
   return {
     isDarkMode: isDarkMode,
     type: SET_IS_DARK_MODE
@@ -95,6 +97,8 @@ export default function reducer(state = initialState, action) {
     };
   }
   if (action.type === SET_IS_DARK_MODE) {
+    console.log('we are updating the state in redux with the value of ');
+    console.log(action.isDarkMode);
     return {
       ...state,
       isDarkMode: action.isDarkMode
