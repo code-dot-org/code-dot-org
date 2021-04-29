@@ -89,10 +89,7 @@ class Visualization extends React.Component {
         id={VISUALIZATION_DIV_ID}
         className={this.getVisualizationClassNames()}
         style={[
-          !this.props.isResponsive && {
-            ...styles.nonResponsive,
-            ...{width: appWidth}
-          },
+          !this.props.isResponsive && styles.nonResponsive,
           this.props.isShareView && styles.share,
           this.props.playspacePhoneFrame && styles.phoneFrame,
           this.props.playspacePhoneFrame &&
