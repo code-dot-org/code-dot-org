@@ -5,7 +5,11 @@ import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
-import {levelType, lessonType, lessonGroupType} from './progressTypes';
+import {
+  levelWithProgressType,
+  lessonType,
+  lessonGroupType
+} from './progressTypes';
 
 export const styles = {
   hidden: {
@@ -21,7 +25,8 @@ class ProgressTable extends React.Component {
       PropTypes.shape({
         lessonGroup: lessonGroupType,
         lessons: PropTypes.arrayOf(lessonType).isRequired,
-        levels: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired
+        levels: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
+          .isRequired
       })
     ).isRequired,
     minimal: PropTypes.bool

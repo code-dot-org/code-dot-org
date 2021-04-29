@@ -6,7 +6,7 @@ import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTabl
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
-  levelType,
+  levelWithProgressType,
   lessonType,
   lessonGroupType
 } from '@cdo/apps/templates/progress/progressTypes';
@@ -64,7 +64,8 @@ class LessonGroup extends React.Component {
   static propTypes = {
     lessonGroup: lessonGroupType,
     lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
+    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
+      .isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
 

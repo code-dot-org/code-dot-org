@@ -558,6 +558,7 @@ const peerReviewLevels = state =>
     // so always use a specific id that won't collide with real levels
     id: PEER_REVIEW_ID,
     status: level.locked ? LevelStatus.locked : level.status,
+    isLocked: level.locked,
     url: level.url,
     name: level.name,
     icon: level.locked ? level.icon : undefined,
@@ -570,7 +571,7 @@ const peerReviewLevels = state =>
  * about and (b) determines current status based on the current state of
  * state.levelResults
  */
-const levelWithStatus = (
+const levelWithProgress = (
   {
     levelResults,
     scriptProgress,
@@ -595,7 +596,7 @@ const levelWithStatus = (
     status: statusForLevel(level, levelResults),
     isCurrentLevel: currentLevelId === normalizedLevel.id,
     paired: levelPairing[level.activeId],
-    locked: levelProgress?.locked,
+    isLocked: levelProgress?.locked,
     readonlyAnswers: level.readonly_answers
   };
 };
@@ -612,13 +613,13 @@ export const levelsByLesson = ({
 }) =>
   stages.map(stage =>
     stage.levels.map(level => {
-      let statusLevel = levelWithStatus(
+      let statusLevel = levelWithProgress(
         {levelResults, scriptProgress, levelPairing, currentLevelId},
         level
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
-          levelWithStatus(
+          levelWithProgress(
             {
               levelResults,
               scriptProgress,
@@ -640,7 +641,7 @@ export const levelsByLesson = ({
 export const levelsForLessonId = (state, lessonId) =>
   state.stages
     .find(stage => stage.id === lessonId)
-    .levels.map(level => levelWithStatus(state, level));
+    .levels.map(level => levelWithProgress(state, level));
 
 export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled

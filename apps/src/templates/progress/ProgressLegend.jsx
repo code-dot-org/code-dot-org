@@ -175,6 +175,7 @@ class ProgressLegend extends Component {
                   level={{
                     id: '1',
                     status: LevelStatus.not_tried,
+                    isLocked: false,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.notStarted()}`
                   }}
@@ -188,6 +189,7 @@ class ProgressLegend extends Component {
                   level={{
                     id: '1',
                     status: LevelStatus.attempted,
+                    isLocked: false,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.inProgress()}`
                   }}
@@ -202,6 +204,7 @@ class ProgressLegend extends Component {
                   level={{
                     id: '1',
                     status: LevelStatus.perfect,
+                    isLocked: false,
                     isConceptLevel: true,
                     name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
@@ -251,6 +254,7 @@ class ProgressLegend extends Component {
                   level={{
                     id: '1',
                     status: LevelStatus.not_tried,
+                    isLocked: false,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.notStarted()}`
                   }}
@@ -264,6 +268,7 @@ class ProgressLegend extends Component {
                   level={{
                     id: '1',
                     status: LevelStatus.attempted,
+                    isLocked: false,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.inProgress()}`
                   }}
@@ -278,6 +283,7 @@ class ProgressLegend extends Component {
                     level={{
                       id: '1',
                       status: LevelStatus.passed,
+                      isLocked: false,
                       isConceptLevel: false,
                       name: `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
                     }}
@@ -292,6 +298,7 @@ class ProgressLegend extends Component {
                   level={{
                     id: '1',
                     status: LevelStatus.perfect,
+                    isLocked: false,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
                   }}
@@ -305,6 +312,7 @@ class ProgressLegend extends Component {
                   level={{
                     id: '1',
                     status: LevelStatus.submitted,
+                    isLocked: false,
                     isConceptLevel: false,
                     name: `${i18n.activity()}: ${i18n.submitted()}`
                   }}

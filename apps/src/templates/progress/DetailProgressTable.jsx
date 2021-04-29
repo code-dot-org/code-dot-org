@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ProgressLesson from './ProgressLesson';
-import {levelType, lessonType} from './progressTypes';
+import {levelWithProgressType, lessonType} from './progressTypes';
 
 /**
  * A component that shows progress in a course with more detail than the summary
@@ -10,7 +10,8 @@ import {levelType, lessonType} from './progressTypes';
 export default class DetailProgressTable extends React.Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired
+    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
+      .isRequired
   };
 
   render() {

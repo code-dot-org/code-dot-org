@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  levelTypeWithoutStatus,
+  levelSchematicType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
@@ -32,7 +32,7 @@ export default class ProgressTableDetailCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    levels: PropTypes.arrayOf(levelTypeWithoutStatus).isRequired,
+    levels: PropTypes.arrayOf(levelSchematicType).isRequired,
     studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
     stageExtrasEnabled: PropTypes.bool
   };
