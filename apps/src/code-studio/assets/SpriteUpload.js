@@ -1,13 +1,5 @@
 import React from 'react';
-
-const styles = {
-  uploadStatusMessage: {
-    fontSize: 20
-  },
-  uploadFailure: {
-    color: 'red'
-  }
-};
+import color from '@cdo/apps/util/color';
 
 export default class SpriteUpload extends React.Component {
   state = {
@@ -43,7 +35,9 @@ export default class SpriteUpload extends React.Component {
         });
       })
       .catch(err => {
-        this.setState({uploadStatus: {success: false, message: err}});
+        this.setState({
+          uploadStatus: {success: false, message: err.toString()}
+        });
         console.error(err);
       });
   };
@@ -107,3 +101,12 @@ export default class SpriteUpload extends React.Component {
     );
   }
 }
+
+const styles = {
+  uploadStatusMessage: {
+    fontSize: 20
+  },
+  uploadFailure: {
+    color: color.red
+  }
+};
