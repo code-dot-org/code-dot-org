@@ -13,6 +13,7 @@ import {
 import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {toggleDarkMode} from '@cdo/apps/javalab/javalabRedux';
+import {setAllSources} from '../../../src/javalab/javalabRedux';
 
 describe('Java Lab Editor Test', () => {
   let defaultProps, store, appOptions;
@@ -110,7 +111,7 @@ describe('Java Lab Editor Test', () => {
   });
 
   describe('Rename', () => {
-    it('updates state on rename save', () => {
+    it('updates state and sources on rename save', () => {
       const editor = createWrapper();
       const javalabEditor = editor.find('JavalabEditor').instance();
       const oldFilename = 'MyClass.java'; // default filename
@@ -124,34 +125,74 @@ describe('Java Lab Editor Test', () => {
         contextTarget: null,
         editTabKey: 'file-0',
         editTabFilename: oldFilename,
-        dialogOpen: true,
-        tabs: [
-          {
-            key: 'file-0',
-            filename: oldFilename
-          }
-        ]
+        openDialog: 'renameFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        fileMetadata: {
+          'file-0': oldFilename,
+          'file-1': 'AnotherClass.java'
+        }
       });
       javalabEditor.onRenameFile(newFilename);
       expect(store.getState().javalab.sources[newFilename]).to.not.be.undefined;
       expect(store.getState().javalab.sources[oldFilename]).to.be.undefined;
-      expect(javalabEditor.state.dialogOpen).to.be.false;
-      expect(javalabEditor.state.tabs).to.deep.equal([
-        {
-          key: 'file-0',
-          filename: newFilename
-        }
+      expect(javalabEditor.state.openDialog).to.be.null;
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-0',
+        'file-1'
       ]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-0': newFilename,
+        'file-1': 'AnotherClass.java'
+      });
+    });
+
+    it('displays error message on a naming collision', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+      store.dispatch(
+        setAllSources({
+          'Class1.java': {text: '', visible: true},
+          'Class2.java': {text: '', visible: true}
+        })
+      );
+
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        editTabKey: 'file-0',
+        editTabFilename: 'Class1.java',
+        openDialog: 'renameFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        fileMetadata: {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        }
+      });
+      // we are trying to update Class1.java -> Class2.java here
+      javalabEditor.onRenameFile('Class2.java');
+      // after rename with existing filename, dialog should not close and
+      // error message should be populated
+      expect(store.getState().javalab.renameFileError).to.not.be.null;
+      expect(javalabEditor.state.openDialog).to.equal('renameFile');
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-0',
+        'file-1'
+      ]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-0': 'Class1.java',
+        'file-1': 'Class2.java'
+      });
     });
   });
 
   describe('componentDidUpdate', () => {
     it('toggles between light and dark modes', () => {
       const editor = createWrapper();
-      const dispatchSpy = sinon.spy(
-        editor.find('JavalabEditor').instance().editor,
-        'dispatch'
-      );
+      const javalabCodeMirrors = editor.find('JavalabEditor').instance()
+        .editors;
+      const firstEditor = Object.values(javalabCodeMirrors)[0];
+
+      const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
       store.dispatch(toggleDarkMode());
       expect(dispatchSpy).to.have.been.calledWith({
         reconfigure: {style: oneDark}
@@ -169,33 +210,144 @@ describe('Java Lab Editor Test', () => {
       const javalabEditor = editor.find('JavalabEditor').instance();
       javalabEditor.setState({
         activeTabKey: 'file-0',
-        tabs: [
-          {
-            filename: 'file0.java',
-            key: 'file-0'
-          },
-          {
-            filename: 'file1.java',
-            key: 'file-1'
-          }
-        ],
+        orderedTabKeys: ['file-0', 'file-1'],
+        fileMetadata: {
+          'file-0': 'file1.java',
+          'file-1': 'file2.java'
+        },
         showMenu: true,
         contextTarget: 'file-0'
       });
       javalabEditor.onOpenFile('file-1');
       expect(javalabEditor.state.activeTabKey).to.equal('file-1');
-      expect(javalabEditor.state.tabs).to.deep.equal([
-        {
-          filename: 'file1.java',
-          key: 'file-1'
-        },
-        {
-          filename: 'file0.java',
-          key: 'file-0'
-        }
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-1',
+        'file-0'
       ]);
       expect(javalabEditor.state.showMenu).to.be.false;
       expect(javalabEditor.state.contextTarget).to.be.null;
+    });
+  });
+
+  describe('Create New File', () => {
+    it('updates state and sources on create save', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        openDialog: 'createFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        lastTabKeyIndex: 1,
+        fileMetadata: {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        }
+      });
+      const newFilename = 'Class3.java';
+      javalabEditor.onCreateFile(newFilename);
+      expect(store.getState().javalab.sources[newFilename]).to.not.be.undefined;
+      expect(javalabEditor.state.openDialog).to.be.null;
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-0',
+        'file-1',
+        'file-2'
+      ]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-0': 'Class1.java',
+        'file-1': 'Class2.java',
+        'file-2': newFilename
+      });
+    });
+
+    it('displays error message on a naming collision', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+      store.dispatch(
+        setAllSources({
+          'Class1.java': {text: '', visible: true},
+          'Class2.java': {text: '', visible: true}
+        })
+      );
+
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        openDialog: 'createFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        lastTabKeyIndex: 1,
+        fileMetadata: {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        }
+      });
+      const newFilename = 'Class2.java';
+      javalabEditor.onCreateFile(newFilename);
+      // after create with existing filename, dialog should not close and
+      // error message should be populated
+      expect(store.getState().javalab.newFileError).to.not.be.null;
+      expect(javalabEditor.state.openDialog).to.equal('createFile');
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([
+        'file-0',
+        'file-1'
+      ]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-0': 'Class1.java',
+        'file-1': 'Class2.java'
+      });
+    });
+  });
+
+  describe('Delete File', () => {
+    it('updates state and sources on delete save', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        openDialog: 'createFile',
+        orderedTabKeys: ['file-0', 'file-1'],
+        lastTabKeyIndex: 1,
+        fileMetadata: {
+          'file-0': 'Class1.java',
+          'file-1': 'Class2.java'
+        },
+        activeTabKey: 'file-0',
+        fileToDelete: 'file-0'
+      });
+      javalabEditor.onDeleteFile();
+      expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
+      expect(javalabEditor.state.openDialog).to.be.null;
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal(['file-1']);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({
+        'file-1': 'Class2.java'
+      });
+    });
+
+    it('can delete the only file in the editor', () => {
+      const editor = createWrapper();
+      const javalabEditor = editor.find('JavalabEditor').instance();
+
+      javalabEditor.setState({
+        showMenu: false,
+        contextTarget: null,
+        openDialog: 'createFile',
+        orderedTabKeys: ['file-0'],
+        lastTabKeyIndex: 1,
+        fileMetadata: {
+          'file-0': 'Class1.java'
+        },
+        activeTabKey: 'file-0',
+        fileToDelete: 'file-0'
+      });
+      javalabEditor.onDeleteFile();
+      expect(store.getState().javalab.sources['Class1.java']).to.be.undefined;
+      expect(javalabEditor.state.openDialog).to.be.null;
+      expect(javalabEditor.state.activeTabKey).to.be.null;
+      expect(javalabEditor.state.orderedTabKeys).to.deep.equal([]);
+      expect(javalabEditor.state.fileMetadata).to.deep.equal({});
     });
   });
 });
