@@ -4169,6 +4169,7 @@ pl:
               name: Uczenie się przez odkrywanie
             Measuring Student Learning:
               name: Pomiar osignięć ucznia
+          student_description: Oto zestaw pomocy online zebranych w Profesjonalny Kurs Edukacyjny dla Nauczycieli przygotowujący do nauki zestawu 5.
           name: csp5-wsparcie
         csppostap-2017:
           title: CSP Pos-AP - Bazy danych i używanie danych w Twoich aplikacjach ('17-'18)
@@ -15051,6 +15052,8 @@ pl:
               name: Moduł 8
             Module 7:
               name: Moduł 7
+            Self Paced Playground:
+              name: Plac własnych zabaw 
           name: skrypt testu jess
         csd2-virtual:
           title: Wprowadzenie do Web Lab we własnym tempie
@@ -15856,6 +15859,8 @@ pl:
               name: Wprowadzenie Sprite Lab
             Learning Sprites with Sprite Lab:
               name: Programowanie z Sprite Lab
+            lesson-1:
+              name: Zmienne Pustych Znaków
             lesson-2:
               name: Przechowywanie i przetwarzanie tekstu
             lesson-3:
@@ -15948,6 +15953,7 @@ pl:
             Exploring Problem Solving:
               key: Zgłębianie rozwiązywania problemów
               name: Zgłębianie rozwiązywania problemów
+              description_student: "**Pytanie dnia: Jak możemy dostosować proces rozwiązywania problemów do wielu różnych rodzajów problemów?**\\r\n\\r\nW tej lekcji klasa stosuje proces rozwiązywania problemu do trzech różnych problemów: wyszukiwania słowa, rozmieszczenia gości przy stole na przyjęciu urodzinowym oraz planowania wycieczki. Te problemy stają się coraz bardziej złożone i zbyt słabo zdefiniowane, aby przedstawić dlaczego proces rozwiązywania problemów jest szczególnie pomocny w zmaganiach z problemami tego typu."
             What is a Computer?:
               key: Czym jest komputer?
               name: Czym jest komputer?
@@ -16117,7 +16123,10 @@ pl:
             Programming for Entertainment:
               key: Programowanie dla rozrywki
               name: Programowanie dla rozrywki
-              description_student: "**Pytanie dnia: W jaki sposób informatyka jest używana do celów rozrywkowych?**\\r\n\\r\nKlasa jest poproszona o przemyślenie \"problemów\" nudy i samoekspresji oraz podzielenia się spostrzeżeniami, jak podchodzą do tych problemów w swoim własnym życiu. Od tego momentu będą badać rolę, jaką informatyka w ujęciu ogólnym, a programowanie w wymiarze szczególnym, odgrywają w konkretnej formie rozrywki lub jako nośniki samoekspresji."
+              description_student: |-
+                **Pytanie dnia: W jaki sposób informatyka jest używana do celów rozrywkowych?**\r
+                \r
+                Klasa jest poproszona o przemyślenie "problemów" nudy i samoekspresji oraz podzielenia się spostrzeżeniami, jak podchodzą do tych problemów w swoim własnym życiu. Od tego momentu będą badać rolę, jaką informatyka w ujęciu ogólnym, a programowanie w wymiarze szczególnym, odgrywają w konkretnej formie rozrywki lub jako nośniki samoekspresji.
             Plotting Shapes:
               key: Rysowanie kształtów
               name: Rysowanie kształtów
@@ -16184,9 +16193,12 @@ pl:
             'Mini-Project: Flyer Game':
               key: 'Mini-projekt: Gra typu Flyer'
               name: 'Mini-projekt: Gra typu Flyer'
+              description_student: "**Pytanie dnia: W jaki sposób można wykorzystywać nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\\r\n\\r\nUczniowie wykorzystują to,  czego się nauczyli na temat symulowania grawitacji i różnych rodzajów kolizji w celu tworzenia prostych gier związanych z lataniem. Po przyjrzeniu się przykładowej grze tego typu, uczniowie przeprowadzają burzę mózgów, jakiego typu grę chcieliby mieć, a następnie wykorzystują uporządkowany proces do zaprogramowania gry w Code Studio.\\r"
+              description_teacher: "**Pytanie dnia: W jaki sposób można wykorzystywać nowe rodzaje kolizji i modelowania ruchu do tworzenia gry?**\\r\n\\r\nUczniowie wykorzystują to,  czego się nauczyli na temat symulowania grawitacji i różnych rodzajów kolizji przy tworzeniu prostych gier związanych z lataniem. Po przyjrzeniu się przykładowej grze tego typu, przeprowadzają burzę mózgów, jakiego typu grę chcieliby mieć, a następnie wykorzystują uporządkowany proces do zaprogramowania gry w Code Studio."
             Functions:
               key: Funkcje
               name: Funkcje
+              description_student: "**Pytanie dnia: W jaki sposób programiści używają funkcji, aby tworzyć własne abstrakcje?**\\r\n\\r\nTa lekcja jest poświęcona funkcjom jako sposobowi uporządkowania kodu, zwiększenia jego czytelności oraz usunięcia powtórzonych bloków kodu. Klasa uczy się, że wyższy poziom lub bardziej abstrakcyjne kroki ułatwiają zrozumienie i argumentację dotyczącą kroków, a następnie zaczyna tworzyć funkcje w Game Lab. "
               description_teacher: "**Pytanie dnia: W jaki sposób programiści używają funkcji, aby tworzyć własne abstrakcje?**\\r\n\\r\nUczniowie uczą się, jak tworzyć funkcje tak, by porządkować swój kod, zwiększać jego czytelność oraz usuwać powtórzone bloki kodu. Najpierw uczniowie zastanawiają się jakiego rodzaju nowe bloki chcieliby mieć w Game Lab, oraz jaki kod te bloki powinny w sobie zawierać. Następnie uczniowie uczą się tworzyć funkcje w Game Lab. Będą używać funkcji do usuwania długich bloków kodu ze swoich pętli rysowania oraz wymiany powtórzonych fragmentów kodu pojedynczą funkcją."
             The Game Design Process:
               key: Proces projektowania gry
@@ -16231,7 +16243,8 @@ pl:
             Analysis of Design:
               key: Analiza Projektu
               name: Analiza Projektu
-              description_teacher: Aby wystartować z realizacją działu poświęconego rozwiązywaniu problemów grupowych oraz opracowywaniu produktów dla innych użytkowników, uczniowie rozpoczynają od zbadania wzornictwa różnych czajniczków do herbaty. Uczniowie analizują każdy czajniczek w ramach próby identyfikacji, w jaki sposób konkretne potrzeby użytkownika zostały uwzględnione w przyjętym wzorze. Poprzez rozpatrywanie wyborów takiego wzoru oraz próbie dopasowania każdego czajniczka do potencjalnego użytkownika uczniowie mogą zacząć zauważać, w jaki sposób przyjęcie podejścia skoncentrowanego na użytkowniku w procesie projektowania produktów (zarówno w trybie fizycznym, jak i cyfrowym) może zwiększyć użyteczność i przydatność użytkową tych produktów. Przy podsumowaniu zajęć uczniowie zostaną poproszeni o zaproponowanie kilku zmian do jednego z czajniczków, które zwiększyłyby ich użyteczność i przydatność użytkową. 
+              description_teacher: |-
+                Aby wystartować z realizacją działu poświęconego rozwiązywaniu problemów grupowych oraz opracowywaniu produktów dla innych użytkowników, uczniowie rozpoczynają od zbadania wzornictwa różnych czajniczków do herbaty. Uczniowie analizują każdy czajniczek w ramach próby identyfikacji, w jaki sposób konkretne potrzeby użytkownika zostały uwzględnione w przyjętym wzorze. Poprzez rozpatrywanie wyborów takiego wzoru oraz próbie dopasowania każdego czajniczka do potencjalnego użytkownika uczniowie mogą zacząć zauważać, w jaki sposób przyjęcie podejścia skoncentrowanego na użytkowniku w procesie projektowania produktów (zarówno w trybie fizycznym, jak i cyfrowym) może zwiększyć użyteczność i przydatność użytkową tych produktów. Przy podsumowaniu zajęć uczniowie zostaną poproszeni o zaproponowanie kilku zmian do jednego z czajniczków, które zwiększyłyby ich użyteczność i przydatność użytkową. 
             Understanding Your User:
               key: Zrozumienie twojego użytkownika
               name: Zrozumienie twojego użytkownika
@@ -16354,7 +16367,8 @@ pl:
             Keeping Data Secret:
               key: Zachowywanie danych w tajemnicy
               name: Zachowywanie danych w tajemnicy
-              description_teacher: Uczniowie prowadzą dyskusję o różnych poziomach bezpieczeństwa, jakie chcieliby zapewnić swoim danym osobowym. Gdy klasa zrozumie już znaczenie prywatności, poznaje proces szyfrowania informacji poprzez zaszyfrowanie notki o swoim partnerze i odszyfrowanie notki tego partnera. Zajęcia kończą się rozmową na temat znaczenia bezpieczeństwa zarówno w wymiarze fizycznym, jak i cyfrowym.
+              description_teacher: |-
+                Uczniowie prowadzą dyskusję o różnych poziomach bezpieczeństwa, jakie chcieliby zapewnić swoim danym osobowym. Gdy klasa zrozumie już znaczenie prywatności, poznaje proces szyfrowania informacji poprzez zaszyfrowanie notki o swoim partnerze i odszyfrowanie notki tego partnera. Zajęcia kończą się rozmową na temat znaczenia bezpieczeństwa zarówno w wymiarze fizycznym, jak i cyfrowym.
             Combining Representations:
               key: Łączenie reprezentacji
               name: Łączenie reprezentacji
@@ -16382,7 +16396,8 @@ pl:
             Project - Make a Recommendation:
               key: Projekt - zarekomenduj
               name: Projekt - zarekomenduj
-              description_teacher: W celu skończenia przerabiania materiału tego działu uczniowie projektują wyszukiwarkę zaleceń w oparciu o zbierane i analizowane dane pochodzące od ich kolegów z klasy. Po przyjrzeniu się przykładom aplikacji na potrzeby dokonywania zaleceń, uczniowie kierują się przewodnikiem po projekcie, aby skończyć tę wielodniową pracę. W ramach pierwszych działań uczniowie podejmują decyzję, w dokonaniu jakiego pierwszego wyboru chcą pomóc użytkownikowi, jakie dane są im potrzebne do udzielenia zalecenia, tworzą ankietę i zbierają informacje na temat decyzji swoich kolegów z klasy. Następnie dokonują interpretacji danych oraz wykorzystują nabytą wiedzę do utworzenia algorytmu rekomendacji. W końcu używają algorytmów do udzielenia rekomendacji kilku kolegom z klasy. Uczniowie przeprowadzają weryfikację wśród rówieśników i wprowadzają stosowne aktualizacje do swoich projektów przed opracowaniem prezentacji dla klasy.
+              description_teacher: |-
+                W celu skończenia przerabiania materiału tego działu uczniowie projektują wyszukiwarkę zaleceń w oparciu o zbierane i analizowane dane pochodzące od ich kolegów z klasy. Po przyjrzeniu się przykładom aplikacji na potrzeby dokonywania zaleceń, uczniowie kierują się przewodnikiem po projekcie, aby skończyć tę wielodniową pracę. W ramach pierwszych działań uczniowie podejmują decyzję, w dokonaniu jakiego pierwszego wyboru chcą pomóc użytkownikowi, jakie dane są im potrzebne do udzielenia zalecenia, tworzą ankietę i zbierają informacje na temat decyzji swoich kolegów z klasy. Następnie dokonują interpretacji danych oraz wykorzystują nabytą wiedzę do utworzenia algorytmu rekomendacji. W końcu używają algorytmów do udzielenia rekomendacji kilku kolegom z klasy. Uczniowie przeprowadzają weryfikację wśród rówieśników i wprowadzają stosowne aktualizacje do swoich projektów przed opracowaniem prezentacji dla klasy.
             Post-Project Test:
               key: Testy po realizacji projektu
               name: Testy po realizacji projektu
@@ -16989,6 +17004,10 @@ pl:
               name: W drodze ze zdarzeniami
               description_student: Twórz swoją własną grę lub historyjkę.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie historyjki w Play Lab!
+            lesson-1:
+              name: Koniec projektu kursu
+              description_student: Opowiedz historię z Artystą!
+              description_teacher: Na tej lekcji z **projektem** uczniowie wykorzystują zdobytą wiedzę o sekwencjonowaniu i pętlach w otwartym projekcie z artystą. 
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -16998,6 +17017,8 @@ pl:
               display_name: Pętle
             csf_events:
               display_name: Zdarzenia
+            lessonGroup-5:
+              display_name: Koniec projektu kursu
           name: coursea-2021
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
         courseb-2021:
@@ -17065,6 +17086,10 @@ pl:
               name: Królewska bitwa ze zdarzeniami
               description_student: Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną grę.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!
+            lesson-1:
+              name: Koniec projektu kursu
+              description_student: Utwórz własną historię lub grę.
+              description_teacher: Na tej lekcji z **projektem** uczniowie wykorzystują zdobytą wiedzę o sekwencjonowaniu i pętlach w otwartym projekcie z artystą. 
           lesson_groups:
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
@@ -17076,6 +17101,12 @@ pl:
               display_name: Wplywy informatyki
             csf_events:
               display_name: Zdarzenia
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
+              description: |2-
+
+
+                ![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)
           name: courseb-2021
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
         coursec-2021:
@@ -17142,7 +17173,7 @@ pl:
               description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu, jak również zerknąć na instrukcje warunkowe!
             Sticker Art with Loops:
               key: Grafika naklejek przy pomocy pętli
-              name: Grafika naklejek przy pomocy pętli
+              name: 'Grafika naklejek przy pomocy pętli'
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
               description_teacher: Patrz jak twarze uczniów rozpromieniają się na widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub na wywiadówki.
             'Events: The Big Event':
@@ -17157,7 +17188,7 @@ pl:
               description_teacher: Na tym szczególnym etapie, uczniowie muszą zbudować swoją własną grę "Flappy Bird" używając procedury obsługi zdarzeń, aby wykrywać kliknięcia myszki oraz kolizje obiektów. Pod koniec poziomu uczniowie będą w stanie nadać grze własny styl poprzez zmianę elementów wizualnych i zasad.
             Events in Play Lab:
               key: Zdarzenia w Play Lab
-              name: Gra w berka ze zdarzeniami
+              name: 'Gra w berka ze zdarzeniami'
               description_student: Czas na twórcze działanie lub utworzenie gry w Play Lab!
               description_teacher: W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!
             Picturing Data:
@@ -17560,6 +17591,9 @@ pl:
               name: Epidemia
               description_student: W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia. 
               description_teacher: 'Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. '
+            lesson-2:
+              name: Moc słów
+              description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy, które mówi się w Internecie.
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -17577,6 +17611,8 @@ pl:
               display_name: Zmienne
             lessonGroup-9:
               display_name: usuń
+            lessonGroup-7:
+              display_name: Cyfrowe obywatelstwo
           name: coursef-2021
           student_description: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
         express-2021:
@@ -18221,12 +18257,20 @@ pl:
               description_teacher: 'Na tej lekcji uczniowie modyfikują programy przy użyciu trzech poleceń zwrotnych: `isOnPaint ()`, `isOnBucket ()` i `canMove ()`. Instrukcje logiczne, instrukcje warunkowe i instrukcje powrotu są wprowadzane za pomocą instrukcji `jeżli` i poleceń powrotu` Malarz`, aby mogli ćwiczyć używanie logiki warunkowej w swoich programach. Pojęcia te zostaną omówione bardziej szczegółowo na przyszłych lekcjach i utrwalone w trakcie kursu. Uczniowie opracowują również strategie debugowania, identyfikując błędy składniowe i logiczne. '
             lesson-5:
               name: Więcej z obiektami 
+              description_student: Na tej lekcji nauczysz się, jak tworzyć obiekty typu „Malarz”, określając, gdzie zaczyna się „Malarz”, w jakim kierunku jest zwrócony oraz jaki jest kolor farby. Zastanawiasz się również, co składa się na „dobry kod” i ćwiczysz pisanie wydajnego kodu.
+              description_teacher: Relacja między klasami i obiektami jest wzmacniana, gdy uczniowie tworzą własne obiekty; są oni wprowadzani do tworzenia obiektów zarówno z parametrami, jak i bez nich. Zaczynają także, na czym polega „dobry kod” i ćwiczą pisanie skutecznych rozwiązań. 
             lesson-6:
               name: Pętle "dopóki" i praktyka
+              description_student: Ćwiczyłeś przesuwanie „Malarza” i używanie warunków, aby pomóc „Malarzowi” w podejmowaniu decyzji dotyczących interakcji z sąsiedztwem. A co by było, gdyby "Malarz" mógł powtarzać polecenia? Na tej lekcji nauczysz się używać pętli `dopóki` z kilkoma nowymi poleceniami do przemieszczania "Malarza" po okolicy.
+              description_teacher: Uczniowie wiele się nauczyli w pierwszym tygodniu! Na tej lekcji zapoznają się z pętlą „dopóki” i dodatkowymi metodami kontrolowania ruchu „Malarza” w Sąsiedztwie. Łączą swoją wiedzę o metodach, konstruktorach i strukturach sterujących, aby rozwijać rozwiązania dla coraz bardziej złożonych łamigłówek 
             lesson-7:
               name: Więcej z warunkami
+              description_student: Używałeś instrukcji „jeśli”, aby pomóc „Malarzowi” w podejmowaniu decyzji o interakcji z Sąsiedztwem. Na tej lekcji użyjesz instrukcji „jeśli-w przeciwnym razie”, aby spowodować inne działania „Malarza”. Dowiesz się również o operatorze `!` (Nie), który pomoże w podejmowaniu decyzji, które podejmuje `Malarz`. 
+              description_teacher: Uczniowie poszerzają swoją wiedzę na temat struktur sterujących i wyrażeń logicznych za pomocą instrukcji „jeśli-w przeciwnym razie” i operatora logicznego „!” (Nie). Ćwiczą używanie instrukcji `jeśli-w przeciwnym razie` i`! `(Nie) do rozwiązywania bardziej złożonych problemów, w uzupełnieniu poleceń `Malarza`, których używali do tej pory. 
             lesson-8:
               name: Wprowadzenie do weryfikacji kodu 
+              description_student: 'Jako inżynier oprogramowania chcesz tworzyć kod, który z czasem będzie łatwy do odczytania, utrzymania i modyfikowania przez innych. Na tej lekcji przećwiczysz używanie recenzji kodu do opininiowania i omawiania strategii przekazywania i wykorzystywania informacji zwrotnych. Te strategie będą przydatne przez cały rok! '
+              description_teacher: Na tym kursie uczniowie przyjmują rolę inżynierów oprogramowania i modelują umiejętności zawodowe w świecie rzeczywistym. Inżynierowie oprogramowania używają recenzji kodu w całej branży do tworzenia kodu, który jest łatwy do odczytania, utrzymania i modyfikowania przez innych w czasie. Uczniowie są wprowadzani do procesu recenzowania kodu, aby położyć podwaliny pod umiejętności, które będą dalej rozwijać w trakcie kursu. 
             lesson-9:
               name: Dziedziczenie i metody 
             lesson-10:

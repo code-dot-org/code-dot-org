@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-31 15:45:45 UTC",
+    "serialized_at": "2021-04-27 00:53:25 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -177,7 +177,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals. "
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
@@ -195,7 +196,7 @@
       "properties": {
         "overview": "**Question of the Day: How can you make sure that your private information stays private?**\r\n\r\nThis lesson takes a step back from students’ work developing web pages to help them articulate what personal information they choose to share digitally and with whom. It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r\n\r\nStudents look at several social media pages to determine what sorts of information people are sharing about themselves or one another. Last, students reflect on what guidelines they think are appropriate for posting information online.\r\n\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realize that they don’t have control over information released online.",
         "student_overview": "**Question of the Day: How can you make sure that your private information stays private?**\r\n\r\nThis lesson takes a step back from creating websites to talk about the personal information that people choose to share digitally. The class begins by discussing what types of information they have shared on various websites, then they look at several sample social media pages to see what types of personal information could be shared intentionally or unintentionally. Finally, the class comes up with a set of guidelines to follow when putting information online.",
-        "purpose": "Now that students are beginning to share information publicly, it's crucial that they are instilled with an understanding of the potential consequences of sharing personal information online.\r\n\r\nIn this lesson students look through several example social media profiles for fake students. Individually these pages contain relatively innocuous information, but when students cross reference information across multiple profiles they see how a detailed picture (or [v digital footprint]) can start to form. Through this activity students see that even information that they may not see as private on its own can share more information than intended when combined with other small details.",
+        "purpose": "Now that students are beginning to share information publicly, it's crucial that they are instilled with an understanding of the potential consequences of sharing personal information online.\n\nIn this lesson students look through several example social media profiles for fake students. Individually these pages contain relatively innocuous information, but when students cross reference information across multiple profiles they see how a detailed picture (or [v digital_footprint/csd/2021]) can start to form. Through this activity students see that even information that they may not see as private on its own can share more information than intended when combined with other small details.",
         "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "1. **Understand and explain reasons that it is difficult to control who sees information published online.**\r\n\r\n\tIn page 2 the Social Sleuth activity guide, look at students' explanations of how information was accidentally shared.\r\n\r\n2. **Understand and justify guidelines for safely publishing information online.**\r\n\r\n\tReview students' checklists in the lesson wrap up.",
@@ -266,7 +267,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Your Personal Style",
@@ -501,7 +503,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "**1. Students ablility to work as a team**\n\nUse the short answer responses on the second page of the activity guide to assess student mastery of learning goals of this lesson."
       },
       "seeding_key": {
         "lesson.key": "Team Problem Solving",
@@ -647,7 +650,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals."
       },
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
@@ -2019,7 +2023,8 @@
             "type": "discussionGoal",
             "markdown": "**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n\nAlthough it's not part of the video, the instructions pane will also often include drop down questions and answers that students can use when they are completing an activity, and in some levels the tabs at the top of the instructions pane will take students to a \"Help and Tips\" area that includes reference information relevant to the activities."
           }
-        ]
+        ],
+        "description": "**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?"
       },
       "seeding_key": {
         "activity_section.key": "08e81098-b771-4c82-bb64-9108ece6c97c",
@@ -2053,7 +2058,8 @@
             "type": "discussionGoal",
             "markdown": "**Discussion Goals**\n\n**Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n\nAs students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nAlthough certain structural roles may be associated with appearance (headings are larger), HTML does not specify anything in particular about the appearance. This allows users with different needs, such as the visually impaired, to interact with the structured content in a way that makes the most sense for them. Later in the unit, students will learn about styles and CSS, which allows them to specify the exact size, color, and spacing of their HTML elements.\n\nThe paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?"
           }
-        ]
+        ],
+        "description": "**Questions to consider with the video:\n- Why are HTML tags useful?\n- What does the paragraph tag do?"
       },
       "seeding_key": {
         "activity_section.key": "470c3268-f70d-43ac-831f-b37c3103531b",
@@ -2346,7 +2352,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal:**\nThe goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry standard practice, not just something done by learners in the classroom."
           }
-        ]
+        ],
+        "description": "**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?"
       },
       "seeding_key": {
         "activity_section.key": "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1",
@@ -2397,7 +2404,8 @@
             "type": "teachingTip",
             "markdown": "Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describe the bug, hunt for the bug, try out small solutions (or change your code), and document what you have learned.\n\nYou may also want to reference the Guide to Debugging found on the CS Discoveries curriculum page."
           }
-        ]
+        ],
+        "description": "**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?"
       },
       "seeding_key": {
         "activity_section.key": "f5c13deb-a9a7-4f04-9daa-ec92ec261b02",
@@ -2729,7 +2737,7 @@
       "key": "dfb7b97b-9a3b-4424-8b24-e4e1f208b5a9",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Explore how small pieces of personal information, spread across multiple sites on the Internet, can produce a fairly detailed picture of a person, known as a [v digital footprint].\r\n\r\n**Group:** This activity can be done individually, but is better when students are in groups of 2-3\r\n\r\n**Distribute:** Activity guide to \"Social Sleuth\"\r\n\r\n**Transition:** Send students to Code Studio.",
+        "description": "**Goal:** Explore how small pieces of personal information, spread across multiple sites on the Internet, can produce a fairly detailed picture of a person, known as a [v digital_footprint/csd/2021].\n\n**Group:** This activity can be done individually, but is better when students are in groups of 2-3\n\n**Distribute:** Activity guide to \"Social Sleuth\"\n\n**Transition:** Send students to Code Studio.",
         "name": "Investigating Social Profiles"
       },
       "seeding_key": {
@@ -2941,7 +2949,8 @@
             "type": "discussionGoal",
             "markdown": "**Goals**\n\n**Key Vocabulary:**\n\n- CSS - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n- CSS Selector - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\nStudents should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with the video: **\n- How is the style of a web page different from structure?\n- Why might you want your web page to have a certain style?"
       },
       "seeding_key": {
         "activity_section.key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
@@ -5024,7 +5033,7 @@
       "key": "6a799e5e-d77a-4c80-bdd4-713e6a4d9760",
       "position": 6,
       "properties": {
-        "description": "**Display:** Watch the [r how-search-works-video] with the class.",
+        "description": "**Display:** Watch the [r how-search-works-video/csd/2021] with the class.",
         "name": " How Search Works\r"
       },
       "seeding_key": {
@@ -5867,7 +5876,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Personal Web Pages",
         "level_keys": [
@@ -5893,7 +5902,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Experiment with Web Lab",
         "level_keys": [
@@ -5919,7 +5928,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Intro to Web Lab - Part 1",
         "level_keys": [
@@ -5945,7 +5954,7 @@
       "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Explore HTML",
         "level_keys": [
@@ -5971,7 +5980,7 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Intro to Web Lab - Part 2",
         "level_keys": [
@@ -5997,7 +6006,7 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6049,7 +6058,7 @@
       "chapter": 8,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6075,7 +6084,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Pair Programming",
         "level_keys": [
@@ -6101,7 +6110,7 @@
       "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6127,7 +6136,7 @@
       "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6153,7 +6162,7 @@
       "chapter": 12,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6205,7 +6214,7 @@
       "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Debugging",
         "level_keys": [
@@ -6231,7 +6240,7 @@
       "chapter": 15,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6283,7 +6292,7 @@
       "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -6309,7 +6318,7 @@
       "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review: HTML",
         "level_keys": [
@@ -6335,7 +6344,7 @@
       "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge: Lists",
         "level_keys": [
@@ -6361,7 +6370,7 @@
       "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Code Your Page",
         "level_keys": [
@@ -6387,7 +6396,7 @@
       "chapter": 21,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Page",
         "level_keys": [
@@ -6413,7 +6422,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Social Sleuth",
         "level_keys": [
@@ -6439,7 +6448,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Website",
         "level_keys": [
@@ -6465,7 +6474,7 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration",
         "level_keys": [
@@ -6491,7 +6500,7 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Intro to CSS - Part 1",
         "level_keys": [
@@ -6517,7 +6526,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6543,7 +6552,7 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6569,7 +6578,7 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6595,7 +6604,7 @@
       "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Intro to CSS - Part 2",
         "level_keys": [
@@ -6621,7 +6630,7 @@
       "chapter": 30,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6647,7 +6656,7 @@
       "chapter": 31,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6699,7 +6708,7 @@
       "chapter": 33,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -6725,7 +6734,7 @@
       "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review: CSS",
         "level_keys": [
@@ -6751,7 +6760,7 @@
       "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge: RGB Colors",
         "level_keys": [
@@ -6777,7 +6786,7 @@
       "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Content and Structure to Your Page",
         "level_keys": [
@@ -6803,7 +6812,7 @@
       "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Style to Your Page",
         "level_keys": [
@@ -6829,7 +6838,7 @@
       "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review Your Page",
         "level_keys": [
@@ -7063,7 +7072,7 @@
       "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Personal Websites",
         "level_keys": [
@@ -7323,7 +7332,7 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Project Guide",
         "level_keys": [
@@ -7349,7 +7358,7 @@
       "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Website Project",
         "level_keys": [
@@ -7375,7 +7384,7 @@
       "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Website Project",
         "level_keys": [
@@ -7401,7 +7410,7 @@
       "chapter": 60,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Website Project",
         "level_keys": [
@@ -7427,7 +7436,7 @@
       "chapter": 61,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Website Project",
         "level_keys": [
@@ -7453,7 +7462,7 @@
       "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Publishing Your Website",
         "level_keys": [
@@ -7479,7 +7488,7 @@
       "chapter": 63,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Publishing Your Website",
         "level_keys": [
@@ -7531,7 +7540,7 @@
       "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Top Websites",
         "level_keys": [
@@ -7557,7 +7566,7 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Teamwork",
         "level_keys": [
@@ -7583,7 +7592,7 @@
       "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Managing Disagreement",
         "level_keys": [
@@ -7765,7 +7774,7 @@
       "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Upload Your Images",
         "level_keys": [
@@ -7973,7 +7982,7 @@
       "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Your Team Project",
         "level_keys": [
@@ -7999,7 +8008,7 @@
       "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Content and HTML",
         "level_keys": [
@@ -8025,7 +8034,7 @@
       "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Share Your Pages",
         "level_keys": [
@@ -8051,7 +8060,7 @@
       "chapter": 85,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Style",
         "level_keys": [
@@ -8077,7 +8086,7 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Share Your Stylesheets",
         "level_keys": [
@@ -8103,7 +8112,7 @@
       "chapter": 87,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Check Your Work",
         "level_keys": [
@@ -8129,7 +8138,7 @@
       "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Final Website",
         "level_keys": [
@@ -9362,11 +9371,11 @@
   "resources": [
     {
       "name": "Exploring Web Pages",
-      "url": "https://studio.code.org/s/csd2-2020/stage/1/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1H442FzizijHYbf8mozKacAZNQaMBHNQ2wvXY5qRB8nU/edit?usp=sharing",
       "key": "exploring-web-pages-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "exploring-web-pages-exemplar-2020"
@@ -9435,11 +9444,11 @@
     },
     {
       "name": "Project Guide - HTML Project",
-      "url": "https://studio.code.org/s/csd2-2020/stage/4/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view",
       "key": "project-guide-html-project-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "project-guide-html-project-2020"
@@ -9447,11 +9456,11 @@
     },
     {
       "name": "Peer Review - HTML Web Page",
-      "url": "https://studio.code.org/s/csd2-2020/stage/4/puzzle/1/",
+      "url": "https://docs.google.com/document/d/18JNbIAo4rrhAFlYk8qKxLrkYjmGp4k6RXQgXq5uFq2M/view",
       "key": "peer-review-html-web-page-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "peer-review-html-web-page-exemplar-2020"
@@ -9522,11 +9531,11 @@
     },
     {
       "name": "Social Sleuth",
-      "url": "https://studio.code.org/s/csd2-2020/stage/5/puzzle/1",
+      "url": "https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/",
       "key": "social-sleuth-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "social-sleuth-exemplar-2020"
@@ -9559,11 +9568,11 @@
     },
     {
       "name": "Project Guide - Your Personal Style",
-      "url": "https://studio.code.org/s/csd2-2020/stage/7/puzzle/1/",
+      "url": "https://docs.google.com/document/d/14Zlx1BC-QxW01D0vk_C5JTB77PCK80OatVFv1hcClZw/view",
       "key": "project-guide-your-personal-style-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "project-guide-your-personal-style-exemplar-2020"
@@ -9571,11 +9580,11 @@
     },
     {
       "name": "Peer Review - Your Personal Style",
-      "url": "https://studio.code.org/s/csd2-2020/stage/7/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view",
       "key": "peer-review-your-personal-style-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "peer-review-your-personal-style-exemplar-2020"
@@ -9634,11 +9643,11 @@
     },
     {
       "name": "Licensing Your Work",
-      "url": "https://studio.code.org/s/csd2-2020/stage/8/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1Fx-NsWsvtGJf4uMM4OuOAE3LCj1bFypoVcRahdpkre0/edit?usp=sharing",
       "key": "licensing-your-work-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "licensing-your-work-exemplar-2020"
@@ -9695,11 +9704,11 @@
     },
     {
       "name": "Define Your Webpage",
-      "url": "https://studio.code.org/s/csd2-2020/stage/10/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1jn2gZEwppoUfNQYyV-zdBp4phvA4rJZJENt5nsyzMCk/edit?usp=sharing",
       "key": "define-your-webpage-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "define-your-webpage-2020"
@@ -9768,11 +9777,11 @@
     },
     {
       "name": "Project Guide - Personal Web Page - Prepare",
-      "url": "https://studio.code.org/s/csd2-2020/stage/12/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1zpK8MdquwIvu1yM9RsMqFnDN0bN7qRL3Kwz3MUFtLE4/view",
       "key": "project-guide-personal-web-page-prepare-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "project-guide-personal-web-page-prepare-exemplar-2020"
@@ -9818,11 +9827,11 @@
     },
     {
       "name": "Practices Reflection",
-      "url": "https://studio.code.org/s/csd2-2020/stage/13/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1J7Ghd-A6Y6onQq1zQU-VQ0ic2QV0I06x1ejxohX84RU/view",
       "key": "practices-reflection-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "practices-reflection-exemplar-2020"
@@ -9830,11 +9839,11 @@
     },
     {
       "name": "Project Guide - Personal Web Page - Reflect",
-      "url": "https://studio.code.org/s/csd2-2020/stage/13/puzzle/1/",
+      "url": "https://docs.google.com/document/d/177zgnLZgK8EWy2J_ztV7iAKPmi6uhRk5EZ4PocHBG0Y/view",
       "key": "project-guide-personal-web-page-reflect-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "project-guide-personal-web-page-reflect-exemplar-2020"
@@ -9842,11 +9851,11 @@
     },
     {
       "name": "Peer Review - Personal Website",
-      "url": "https://studio.code.org/s/csd2-2020/stage/13/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1HrCgKzgZ4QqMBU4nqLd9NsDBKvjnbSZQxyhpZpSA92k/view",
       "key": "peer-review-personal-website-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "peer-review-personal-website-exemplar-2020"
@@ -9905,11 +9914,11 @@
     },
     {
       "name": "Websites for a Purpose",
-      "url": "https://studio.code.org/s/csd2-2020/stage/14/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1JjaG3J0Jl2KZtqxCsqP-pMLb0tHSTSjni9NwgftBKNI/edit?usp=sharing",
       "key": "websites-for-a-purpose-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "websites-for-a-purpose-2020"
@@ -9942,11 +9951,11 @@
     },
     {
       "name": "Website Team Plan",
-      "url": "https://studio.code.org/s/csd2-2020/stage/15/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1aiH8sJkWOupnPNC99pgCIUvC9Posjojbx8lrZy-7faM/edit?usp=sharing/edit?usp=sharing",
       "key": "website-team-plan-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "website-team-plan-2020"
@@ -10017,11 +10026,11 @@
     },
     {
       "name": "Links and Research",
-      "url": "https://studio.code.org/s/csd2-2020/stage/16/puzzle/1",
+      "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE",
       "key": "links-and-research-1",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "links-and-research-1"
@@ -10080,11 +10089,11 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Prepare",
-      "url": "https://studio.code.org/s/csd2-2020/stage/18/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1EgfsYO_XPaTznzucxKttsEmuNPOhBnC_ynxDZ1SkN0w/view",
       "key": "project-guide-website-for-a-purpose-prepare-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "project-guide-website-for-a-purpose-prepare-exemplar-2020"
@@ -10154,11 +10163,11 @@
     },
     {
       "name": "Practices Reflection (2020)",
-      "url": "https://studio.code.org/s/csd2-2020/stage/21/puzzle/1/",
+      "url": "https://docs.google.com/document/d/13svaYu3k7WwNYSr8uSgwqQaOIUPPWAzqkhphTP3bNAw/view",
       "key": "practices-reflection-l21-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "practices-reflection-l21-exemplar-2020"
@@ -10166,11 +10175,11 @@
     },
     {
       "name": "Project Guide - Website for a Purpose - Reflect",
-      "url": "https://studio.code.org/s/csd2-2020/stage/21/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1yAw19zO5FfOx5P1inmgYApu9VXH_Bpo8WDlDjoW-RgA/view",
       "key": "project-guide-website-for-a-purpose-reflect-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "project-guide-website-for-a-purpose-reflect-exemplar-2020"
@@ -10178,11 +10187,11 @@
     },
     {
       "name": "Peer Review - Final Personal Website",
-      "url": "https://studio.code.org/s/csd2-2020/stage/21/puzzle/1/",
+      "url": "https://docs.google.com/document/d/1fbZ7Ik_H0r39t5yHEkgrYa5mSbx5BCqfLpuH6G1pP6k/view",
       "key": "peer-review-final-personal-website-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "peer-review-final-personal-website-exemplar-2020"
@@ -10685,6 +10694,9 @@
         "script.name": "csd2-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {

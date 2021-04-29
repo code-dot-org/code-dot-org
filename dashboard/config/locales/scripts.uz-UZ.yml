@@ -25832,6 +25832,8 @@ uz:
                 o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish
                 imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni
                 yaratish vaqti keldi!
+            lesson-1:
+              name: End of Course Project
           lesson_groups:
             csf_digcit:
               display_name: Raqamli Fuqarolik
@@ -25841,6 +25843,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            lessonGroup-5:
+              display_name: End of Course Project
           name: coursea-2021
           student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini
             o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
@@ -25960,6 +25964,8 @@ uz:
                 o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga
                 murojaat qilish imkoniyati mavjud. Yaratuvchan bo‘lish vaqti keldi
                 va Play Labda biron o‘yin yarating!
+            lesson-1:
+              name: End of Course Project
           lesson_groups:
             csf_digcit:
               display_name: Raqamli Fuqarolik
@@ -25971,6 +25977,8 @@ uz:
               display_name: Kompyuterlar ta'siri
             csf_events:
               display_name: Hodisalar
+            lessonGroup-6:
+              display_name: End of Course Project
           name: courseb-2021
           student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini
             o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
@@ -26845,6 +26853,11 @@ uz:
               name: Sprite laboratoriyasi bilan tanishish
             lesson-8:
               name: Spraytlar amalda
+            lesson-2:
+              name: The Power of Words
+              description_student: Bezorilik hech qachon yaxshi bo’lmaydi. Ushbu dars
+                sizga onlaynda nima deyish va nima deyish mumkinligi to’g’risida ma’lumot
+                beradi.
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
@@ -26862,6 +26875,8 @@ uz:
               display_name: O‘zgaruvchilar
             lessonGroup-9:
               display_name: o‘chirish
+            lessonGroup-7:
+              display_name: Raqamli Fuqarolik
           name: Kurs F 2021
           student_description: Learn to use different kinds of loops, events, functions,
             and conditionals. Investigate different problem-solving techniques and

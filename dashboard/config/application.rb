@@ -127,6 +127,7 @@ module Dashboard
       css/*.css
       levels/*.css
       jquery.handsontable.full.css
+      emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
     )

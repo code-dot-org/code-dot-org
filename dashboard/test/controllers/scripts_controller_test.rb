@@ -624,6 +624,29 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
   end
 
+  test 'updates migrated student resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, hidden: true, is_migrated: true
+    stub_file_writes(script.name)
+
+    course_version = create :course_version, content_root: script
+    student_resources = [
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version)
+    ]
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      studentResourceIds: student_resources.map(&:id),
+      is_migrated: true
+    }
+    assert_equal student_resources.map(&:key), Script.find_by_name(script.name).student_resources.map {|r| r[:key]}
+  end
+
   test 'updates pilot_experiment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -966,6 +989,59 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test "view all instructions page for migrated script" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    get :instructions, params: {id: @migrated_script.name}
+    assert_response :success
+  end
+
+  test "view all instructions page for unmigrated script" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    get :instructions, params: {id: @unmigrated_script.name}
+    assert_response :success
+  end
+
+  test "get_rollup_resources return rollups for a script with code, resources, standards, and vocab" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @migrated_script
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    lesson.programming_expressions = [create(:programming_expression)]
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+    lesson.vocabularies = [create(:vocabulary, course_version_id: course_version.id)]
+
+    get :get_rollup_resources, params: {id: @migrated_script.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 4, response_body.length
+    assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
+  end
+
+  test "get_rollup_resources doesn't return rollups if no lesson in a script has the associated object" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @migrated_script
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    # Only add resources and standards, not programming expressions and vocab
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+
+    get :get_rollup_resources, params: {id: @migrated_script.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 2, response_body.length
+    assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
+  end
 
   def stub_file_writes(script_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]

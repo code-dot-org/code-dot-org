@@ -25,7 +25,7 @@ module ViewOptionsHelper
     :server_project_level_id,
     :game_display_name,
     :script_name,
-    :stage_position,
+    :lesson_position,
     :level_position,
     :public_caching,
     :is_13_plus,

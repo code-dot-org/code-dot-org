@@ -7,6 +7,7 @@ import {levelType} from './progressTypes';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
 import i18n from '@cdo/locale';
+import {connect} from 'react-redux';
 
 const styles = {
   table: {
@@ -23,6 +24,9 @@ const styles = {
   },
   col2: {
     paddingLeft: 20
+  },
+  col2RTL: {
+    paddingRight: 20
   },
   linesAndDot: {
     whiteSpace: 'nowrap',
@@ -66,7 +70,9 @@ class ProgressLevelSet extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.string,
-    onBubbleClick: PropTypes.func
+    onBubbleClick: PropTypes.func,
+    // Redux
+    isRtl: PropTypes.bool
   };
 
   render() {
@@ -75,11 +81,16 @@ class ProgressLevelSet extends React.Component {
       levels,
       disabled,
       selectedSectionId,
-      onBubbleClick
+      onBubbleClick,
+      isRtl
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    const url = multiLevelStep ? undefined : levels[0].url;
+    const url = multiLevelStep || onBubbleClick ? undefined : levels[0].url;
+    const onClick = multiLevelStep ? undefined : () => onBubbleClick(levels[0]);
+
+    // Adjust column styles if locale is RTL
+    const col2Style = isRtl ? styles.col2RTL : styles.col2;
 
     let pillText, icon;
     let progressStyle = false;
@@ -115,8 +126,8 @@ class ProgressLevelSet extends React.Component {
                 onSingleLevelClick={onBubbleClick}
               />
             </td>
-            <td style={styles.col2}>
-              <a href={url}>
+            <td style={col2Style}>
+              <a href={url} onClick={onClick}>
                 <div style={{...styles.nameText, ...styles.text}}>{name}</div>
               </a>
             </td>
@@ -146,4 +157,8 @@ class ProgressLevelSet extends React.Component {
   }
 }
 
-export default Radium(ProgressLevelSet);
+export const UnconnectedProgressLevelSet = ProgressLevelSet;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(ProgressLevelSet));

@@ -14,6 +14,10 @@ import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {
+  setVerified,
+  setVerifiedResources
+} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(function() {
   displayLessonOverview();
@@ -68,8 +72,16 @@ function displayLessonOverview() {
   const store = getStore();
   registerReducers({isRtl});
 
+  if (lessonData.hasVerifiedResources) {
+    store.dispatch(setVerifiedResources());
+  }
+
   if (isTeacher) {
     store.dispatch(setViewType(ViewType.Teacher));
+
+    if (lessonData.isVerifiedTeacher) {
+      store.dispatch(setVerified());
+    }
   }
 
   if (lessonData.announcements) {

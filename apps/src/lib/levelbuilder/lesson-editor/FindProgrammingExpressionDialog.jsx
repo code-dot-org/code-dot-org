@@ -10,7 +10,7 @@ import LessonEditorDialog from './LessonEditorDialog';
 import {connect} from 'react-redux';
 import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
-const SearchForm = function(props) {
+export const SearchForm = function(props) {
   return (
     <form className="form-search">
       <input
@@ -41,7 +41,7 @@ SearchForm.propTypes = {
   programmingEnvironments: PropTypes.array
 };
 
-const ProgrammingExpressionTable = function(props) {
+export const ProgrammingExpressionTable = function(props) {
   if (
     !props.programmingExpressions ||
     props.programmingExpressions.length === 0
@@ -100,7 +100,7 @@ ProgrammingExpressionTable.propTypes = {
   handleSelect: PropTypes.func.isRequired
 };
 
-class FindProgrammingExpressionDialog extends Component {
+export class FindProgrammingExpressionDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
@@ -167,7 +167,7 @@ class FindProgrammingExpressionDialog extends Component {
       params.programmingEnvironmentName = this.state.filteredProgrammingEnvironment;
     }
 
-    fetch('/programmingexpressionsearch?' + new URLSearchParams(params))
+    fetch('/programming_expressions/search?' + new URLSearchParams(params))
       .then(response => response.json())
       .then(data => {
         this.setState({

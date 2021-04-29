@@ -185,6 +185,7 @@ class LessonEditor extends Component {
       announcements
     } = this.state;
     const {relatedLessons, standards, opportunityStandards} = this.props;
+    const frameworks = this.props.initialLessonData.frameworks;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
@@ -314,7 +315,11 @@ class LessonEditor extends Component {
             handleMarkdownChange={e =>
               this.setState({overview: e.target.value})
             }
-            features={{imageUpload: true, resourceLink: true}}
+            features={{
+              imageUpload: true,
+              resourceLink: true,
+              programmingExpression: true
+            }}
           />
           <TextareaWithMarkdownPreview
             markdown={studentOverview}
@@ -326,7 +331,7 @@ class LessonEditor extends Component {
             handleMarkdownChange={e =>
               this.setState({studentOverview: e.target.value})
             }
-            features={{imageUpload: true}}
+            features={{imageUpload: true, programmingExpression: true}}
           />
         </CollapsibleEditorSection>
         {hasLessonPlan && (
@@ -351,7 +356,11 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({purpose: e.target.value})
                 }
-                features={{imageUpload: true, resourceLink: true}}
+                features={{
+                  imageUpload: true,
+                  resourceLink: true,
+                  programmingExpression: true
+                }}
               />
               <TextareaWithMarkdownPreview
                 markdown={preparation}
@@ -360,7 +369,11 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({preparation: e.target.value})
                 }
-                features={{imageUpload: true, resourceLink: true}}
+                features={{
+                  imageUpload: true,
+                  resourceLink: true,
+                  programmingExpression: true
+                }}
               />
             </CollapsibleEditorSection>
 
@@ -390,6 +403,8 @@ class LessonEditor extends Component {
                   courseVersionId={
                     this.state.originalLessonData.courseVersionId
                   }
+                  resourceContext="lessonResource"
+                  resources={this.props.resources}
                 />
               ) : (
                 <h4>
@@ -446,11 +461,13 @@ class LessonEditor extends Component {
               <StandardsEditor
                 standardType={'standard'}
                 standards={standards}
+                frameworks={frameworks}
               />
               <h3>Opportunity Standards</h3>
               <StandardsEditor
                 standardType={'opportunityStandard'}
                 standards={opportunityStandards}
+                frameworks={frameworks}
               />
             </CollapsibleEditorSection>
           </div>

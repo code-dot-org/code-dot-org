@@ -4076,14 +4076,14 @@ cs:
               name: Pohled do budoucna s Minecraftem
             Sticker Art with Loops:
               key: Razítka v cyklech
-              name: Razítka v cyklech
+              name: 'Razítka v cyklech'
             'Events: The Big Event':
               name: Velká událost
             Build a Flappy Game:
               key: Vytvoř hru Flappy Bird
               name: Vytvoř hru Flappy Bird
             Events in Play Lab:
-              name: Honička s událostmi
+              name: 'Honička s událostmi'
             Picturing Data:
               key: Zobrazení dat
               name: Zobrazení dat
@@ -4247,6 +4247,8 @@ cs:
               display_name: Proměnné
             lessonGroup-9:
               display_name: odstranit
+            lessonGroup-7:
+              display_name: Digitální občanství
         express-2021:
           title: Rychlý kurz (2021)
           lessons:

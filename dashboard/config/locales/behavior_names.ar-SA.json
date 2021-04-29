@@ -52,19 +52,19 @@
           "running east": "الجري نحو الشرق"
         },
         "behaviors 6": {
-          "rolling": "لف",
+          "rolling": "دحرجة",
           "running east": "الجري نحو الشرق"
         },
         "behaviors 6_2020": {
-          "rolling": "لف",
+          "rolling": "دحرجة",
           "running east": "الجري نحو الشرق"
         },
         "behaviors 7": {
-          "rolling": "لف",
+          "rolling": "دحرجة",
           "running east": "الجري نحو الشرق"
         },
         "behaviors 7_2020": {
-          "rolling": "لف",
+          "rolling": "دحرجة",
           "running east": "الجري نحو الشرق"
         },
         "behaviors free play": {
@@ -121,7 +121,7 @@
           "shrinking": "الانقباض",
           "growing": "النمو",
           "moving south": "التحرك ناحية الجنوب",
-          "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+          "moving left and right": "تحريك إلى اليسار وإلى اليمين",
           "moving north": "التحرك ناحية الشمال",
           "jittering": "الاهتزاز",
           "moving west": "التحرك ناحية الغرب",
@@ -134,17 +134,17 @@
           "moving east": "التحرك ناحية الشرق",
           "spinning left": "الدوران ناحية اليسار",
           "spinning right": "الدوران ناحية اليمين",
-          "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+          "moving left and right": "تحريك إلى اليسار وإلى اليمين",
           "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "outbreak_freeplay": {
           "recovering": "التعافي",
-          "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+          "moving left and right": "تحريك إلى اليسار وإلى اليمين",
           "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "outbreak_freeplay_basic": {
           "recovering": "التعافي",
-          "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+          "moving left and right": "تحريك إلى اليسار وإلى اليمين",
           "moving with arrow keys": "التحرك من خلال الأسهم"
         }
       }

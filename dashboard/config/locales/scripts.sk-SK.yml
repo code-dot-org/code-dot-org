@@ -922,6 +922,10 @@ sk:
               name: Vytvor recept
         allthethings:
           lessons:
+            Anonymous student survey:
+              name: Anonymný študentský dotazník
+            Anonymous student survey 2:
+              name: Anonymný študentský dotazník
             AppLab:
               name: App Lab
             Artist:
@@ -940,12 +944,16 @@ sk:
               name: Game Lab
             Jigsaw:
               name: Skladačka
+            Match:
+              name: Zápas
             Maze:
               name: Bludisko
             Minecraft:
               name: Minecraft
             Studio:
               name: Štúdio
+            Swapped Levels:
+              name: Vymenené levely.
             Text Compression:
               name: Kompresia textu
             Web Lab:
@@ -992,16 +1000,22 @@ sk:
               name: Plánovanie
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
+            0: Kapitola , Deň 1-2 Čo je to počítač?
+            1: Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         algebraPD2:
           lessons:
             Teacher Dashboard:
@@ -1036,28 +1050,40 @@ sk:
               name: Zhrnutie
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
+            0: Kapitola , Deň 1-2 Čo je to počítač?
+            1: Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
+            0: Kapitola , Deň 1-2 Čo je to počítač?
+            1: Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         CSPPD2:
           lessons:
             Getting Started:
@@ -1132,8 +1158,14 @@ sk:
           lessons:
             Designing for Your User:
               name: Navrhovanie pre vášho používateľa
+            How is Data Collected?:
+              name: Ako sa zberajú dáta?
             Privacy in a Digital World:
               name: Súkromie v digitálnom svete
+            What Data Can Tell Us:
+              name: Čo nám vedia povedať dáta?
+            Why Make Apps?:
+              name: Prečo tvoriť applikácie?
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1142,6 +1174,8 @@ sk:
               name: Zhrnutie
         algebraPD3b:
           lessons:
+            Close and Next Steps:
+              name: Zatvoriť & ďalšie kroky
             Getting Started:
               name: Začíname
         CSPPD3-Unit2:
@@ -1252,6 +1286,12 @@ sk:
               name: Vymazanie záznamov
             Final Project:
               name: Záverečný projekt
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Visualizing Data:
+              name: Vizualizovanie dát.
         CSPPD3-Unit5:
           lessons:
             Getting Started:
@@ -1262,6 +1302,12 @@ sk:
               name: Vymazanie záznamov
             Final Project:
               name: Záverečný projekt
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Visualizing Data:
+              name: Vizualizovanie dát.
         AlgebraA:
           lessons:
             'Unplugged: The Design Recipe':
@@ -1644,16 +1690,22 @@ sk:
               name: 'Bez počítača: Písanie pesničiek s parametrami'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
+            0: Kapitola , Deň 1-2 Čo je to počítač?
+            1: Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         ecs-unit2:
           lessons:
             Close & Next Steps:
@@ -2638,6 +2690,12 @@ sk:
           lessons:
             Deleting Records:
               name: Vymazanie záznamov
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Visualizing Data:
+              name: Vizualizovanie dát.
             Final Project:
               name: Záverečný projekt
             Post-Course Survey:
@@ -5731,6 +5789,12 @@ sk:
           lessons:
             Deleting Records:
               name: Vymazanie záznamov
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Visualizing Data:
+              name: Vizualizovanie dát.
             Final Project:
               name: Záverečný projekt
         spritelab:
@@ -6236,6 +6300,14 @@ sk:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programovanie na štvorčekový papier
+              description_teacher: "„Naprogramovaním“ spolužiakov tak, aby kreslili
+                obrázky, žiaci dostanú príležitosť zábavným a prístupným spôsobom
+                na vlastnej koži „zažiť“ a tým aj lepšie pochopiť vzťah medzi napísaným
+                kódom a jeho výsledkom. V hlavnej aktivite žiaci pomocou symbolov
+                vytvoria inštrukcie, podľa ktorých má ich spolužiak vyfarbovať štvorčeky
+                v mriežke tak, aby zreprodukoval existujúci obrázok. Ak vám zostane
+                čas, hodinu môžete zakončiť s obrázkami, ktoré si vytvoria žiaci sami.
+                \ "
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
               description_teacher: V týchto úlohách študenti začnú úvodom (alebo opakovaním
@@ -7707,6 +7779,12 @@ sk:
           lessons:
             Deleting Records:
               name: Vymazanie záznamov
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Visualizing Data:
+              name: Vizualizovanie dát.
             Final Project:
               name: Záverečný projekt
         csp1-pilot:
@@ -8769,6 +8847,7 @@ sk:
             csp_libraries:
               display_name: Knižnice
         csd2-2020:
+          title: CSD Lekcia 2 - Vývoj webových stránok ('20-'21)
           lesson_groups:
             csd2_1:
               display_name: 'Kapitola 1: Obsah webu a HTML'
@@ -8792,7 +8871,7 @@ sk:
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd1-2020:
-          title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
+          title: CSD Lekcia 1 - Riešenie Problémov a Výpočtová Technika ('20-'21)
           description: Riešenie problémov a výpočtová technika je vysoko interaktívny
             a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
             riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
@@ -9419,6 +9498,14 @@ sk:
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
+            Safety in My Online Neighborhood:
+              name: Bezpečný pohyb na internete.
+              description_teacher: V spolupráci s Common Sense Education, táto lekcia
+                oboznámi študentom s tým, že webové stránky často požadú informácie,
+                ktoré sú súkromné a diskutuje s nimi o tom, ako na takého požiadavky
+                zodpovedne reagovať. Študenti tiež zistia, že môžu navštíviť mnohé
+                zaujímavé online miesta, ale nato, aby zostali v bezpečí musia dodržiavať
+                určité pravidlá.
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -9614,6 +9701,14 @@ sk:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programovanie na štvorčekový papier
+              description_teacher: "„Naprogramovaním“ spolužiakov tak, aby kreslili
+                obrázky, žiaci dostanú príležitosť zábavným a prístupným spôsobom
+                na vlastnej koži „zažiť“ a tým aj lepšie pochopiť vzťah medzi napísaným
+                kódom a jeho výsledkom. V hlavnej aktivite žiaci pomocou symbolov
+                vytvoria inštrukcie, podľa ktorých má ich spolužiak vyfarbovať štvorčeky
+                v mriežke tak, aby zreprodukoval existujúci obrázok. Ak vám zostane
+                čas, hodinu môžete zakončiť s obrázkami, ktoré si vytvoria žiaci sami.
+                \ "
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
               description_teacher: V týchto úlohách študenti začnú úvodom (alebo opakovaním
@@ -10567,6 +10662,8 @@ sk:
           lessons:
             AI for Oceans:
               name: AI pomáha oceánom
+            visualizing:
+              name: Vizualizovanie dát.
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -10600,7 +10697,7 @@ sk:
             outbreak:
               display_name: Simulácia napadnutia
         csd1-2021:
-          title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
+          title: CSD Lekcia 1 - Riešenie Problémov a Výpočtová Technika ('20-'21)
           description: Riešenie problémov a výpočtová technika je vysoko interaktívny
             a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte
             riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie
@@ -10925,6 +11022,9 @@ sk:
           description_short: Predstavenie informatiky pre predškolákov.
           description_audience: 'Vek: 4-7'
           lessons:
+            Safety in My Online Neighborhood:
+              key: Bezpečný pohyb na internete.
+              name: Bezpečný pohyb na internete.
             Learn to Drag and Drop:
               key: Nauč sa presunúť a pustiť
               name: Nauč sa presunúť a pustiť
@@ -10985,6 +11085,8 @@ sk:
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
+            lesson-1:
+              name: Záverečný projekt
           lesson_groups:
             csf_digcit:
               display_name: Digitálne občianstvo
@@ -10994,6 +11096,8 @@ sk:
               display_name: Cykly
             csf_events:
               display_name: Udalosti
+            lessonGroup-5:
+              display_name: Záverečný projekt
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -11066,6 +11170,8 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
+            lesson-1:
+              name: Záverečný projekt
           lesson_groups:
             csf_digcit:
               display_name: Digitálne občianstvo
@@ -11077,6 +11183,8 @@ sk:
               display_name: Vplyv Informatiky
             csf_events:
               display_name: Udalosti
+            lessonGroup-6:
+              display_name: Záverečný projekt
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -11529,6 +11637,8 @@ sk:
                 na vytvorenie vlastnej kresby.
             Editing Behaviors:
               name: Správania v Sprite Labe
+            Virtual Pet:
+              name: 'Mini-Projekt: Virtuálny maznáčik'
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
@@ -11536,6 +11646,8 @@ sk:
               name: Predstavenie Sprite Labu
             lesson-8:
               name: Postavy v akcii
+            lesson-2:
+              name: Objav silu slov
           lesson_groups:
             ramp_up:
               display_name: Príprava
@@ -11553,6 +11665,8 @@ sk:
               display_name: Premenné
             lessonGroup-9:
               display_name: odstráň
+            lessonGroup-7:
+              display_name: Digitálne občianstvo
         express-2021:
           title: Zrýchlený kurz (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
@@ -11695,6 +11809,8 @@ sk:
             lesson-1:
               name: Tanečná Párty
           lesson_groups:
+            csf_warmup:
+              display_name: Úvodná aktivita
             csf_sequencing:
               display_name: Postupnosť
             csf_loops:
@@ -11711,6 +11827,8 @@ sk:
               display_name: Objekt "sprite"
             end_of_course_project:
               display_name: Záverečný projekt
+            lessonGroup-9:
+              display_name: Úvodná aktivita
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.

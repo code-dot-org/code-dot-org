@@ -15,7 +15,7 @@
             "name": "ارسم حاجب العين"
           },
           "draw pupil": {
-            "name": "ارسم التلميذ"
+            "name": "ارسم بؤبؤ العين"
           }
         },
         "2-3 Artist 3.4": {
@@ -28,7 +28,7 @@
         },
         "2-3 Artist 7": {
           "draw_rect": {
-            "name": "ارسم_مستطيل",
+            "name": "ارسم_مستطيلاً",
             "parameters": {
               "width": "العرض",
               "height": "الارتفاع"
@@ -37,7 +37,7 @@
         },
         "2-3 Artist Debugging 10": {
           "draw square": {
-            "name": "ارسم مربع",
+            "name": "ارسم مربعاً",
             "parameters": {
               "width": "العرض",
               "height": "الارتفاع"
@@ -53,10 +53,10 @@
             "name": "رسم دائرة"
           },
           "draw a button": {
-            "name": "ارسم زر"
+            "name": "ارسم أيقونةً"
           },
           "draw cord": {
-            "name": "ارسم حبل"
+            "name": "ارسم حبلاً"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -67,10 +67,10 @@
             "name": "ارسم الرجل اليمنى"
           },
           "draw body and arms": {
-            "name": "ارسم جسم وذراعين"
+            "name": "ارسم جسماً وذراعين"
           },
           "draw a head": {
-            "name": "ارسم رأس"
+            "name": "ارسم رأساً"
           }
         },
         "2-3 Artist Debugging 6": {
@@ -81,7 +81,7 @@
             "name": "ارسم شكل عصا جالسة"
           },
           "draw head": {
-            "name": "ارسم رأس"
+            "name": "ارسم رأساً"
           },
           "draw arms": {
             "name": "ارسم ذراعين"
@@ -632,10 +632,10 @@
         },
         "Geometric Sun_2018": {
           "draw a door": {
-            "name": "ارسم باب"
+            "name": "رسم باب"
           },
           "draw grass": {
-            "name": "ارسم عشب"
+            "name": "رسم عشب"
           },
           "draw windows": {
             "name": "ارسم نوافذ"
@@ -1145,7 +1145,7 @@
         },
         "Robot Doodle_2018": {
           "draw head": {
-            "name": "ارسم رأس"
+            "name": "ارسم رأساً"
           }
         },
         "Standalone_Artist_7": {
@@ -1165,7 +1165,7 @@
         },
         "course1_artist_loops_challenge2": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "course3_artist_functions_challenge1": {
@@ -1310,22 +1310,22 @@
         },
         "courseB_artist_loops_challenge2": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseB_artist_loops_challenge2_2018": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseB_artist_loops_challenge2_2019": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseB_artist_loops_challenge2_2020": {
           "potential solution": {
-            "name": "حل محتمل"
+            "name": "حلّ محتمل"
           }
         },
         "courseC_artist_prog3": {
@@ -1831,7 +1831,7 @@
             "name": "أوقِف_كل_شيء"
           },
           "lose": {
-            "name": "اخسر"
+            "name": "خسارة"
           }
         },
         "courseE_artist_concept1": {
@@ -1866,7 +1866,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw a plane of squares": {
-            "name": "ارسم سطح من المربعات"
+            "name": "رسم سطر من المربعات"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1905,10 +1905,10 @@
             "name": "إفعل شيئاً"
           },
           "draw hexagon": {
-            "name": "ارسم شكل سداسي"
+            "name": "رسم شكل سداسي"
           },
           "draw line of hexagons": {
-            "name": "ارسم خط من الأشكال السداسية"
+            "name": "رسم خط من الأشكال السداسية"
           }
         },
         "courseE_artist_functions10_2019": {
@@ -2056,7 +2056,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -2067,7 +2067,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -2078,7 +2078,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -2110,7 +2110,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2121,7 +2121,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2132,7 +2132,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2143,7 +2143,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2154,7 +2154,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2165,7 +2165,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2190,7 +2190,7 @@
             "name": "ارسم مثلث"
           },
           "draw line of triangles": {
-            "name": "ارسم سطر من المثلثات"
+            "name": "رسم سطر من المثلثات"
           }
         },
         "courseE_artist_functions9_2019": {
@@ -2217,16 +2217,16 @@
         },
         "courseE_artist_functionsProj_2018": {
           "draw hexagon": {
-            "name": "ارسم شكل سداسي"
+            "name": "رسم شكل سداسي"
           },
           "draw line of hexagons": {
-            "name": "ارسم خط من الأشكال السداسية"
+            "name": "رسم خط من الأشكال السداسية"
           },
           "draw a line of squares": {
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functionsProj_2019": {
@@ -2240,7 +2240,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functionsProj_2020": {
@@ -2254,7 +2254,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -2359,10 +2359,10 @@
         },
         "courseE_artist_functions_predict2_2018": {
           "draw line of polygons": {
-            "name": "ارسم خط من المضلعات"
+            "name": "رسم خط من المضلعات"
           },
           "draw polygon": {
-            "name": "ارسم مضلع"
+            "name": "رسم مضلع"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2726,7 +2726,7 @@
             "name": "رسم مربع"
           },
           "checker": {
-            "name": "فاحص",
+            "name": "فاحِص",
             "parameters": {
               "size": "الحجم",
               "color": "لون"
@@ -2742,7 +2742,7 @@
             }
           },
           "black outline": {
-            "name": "مخطط تفصيلي أسود",
+            "name": "الخطوط العريضة السوداء",
             "parameters": {
               "length": "الطول"
             }
@@ -2756,7 +2756,7 @@
             }
           },
           "checker": {
-            "name": "فاحص",
+            "name": "فاحِص",
             "parameters": {
               "size": "الحجم",
               "color": "لون"
@@ -2772,7 +2772,7 @@
             }
           },
           "black outline": {
-            "name": "مخطط تفصيلي أسود",
+            "name": "الخطوط العريضة السوداء",
             "parameters": {
               "length": "الطول"
             }
@@ -2800,14 +2800,14 @@
             }
           },
           "filled square": {
-            "name": "مربع معبأ",
+            "name": "مربع مليء",
             "parameters": {
               "size": "الحجم",
               "color": "لون"
             }
           },
           "black outline": {
-            "name": "مخطط تفصيلي أسود",
+            "name": "الخطوط العريضة السوداء",
             "parameters": {
               "length": "الطول"
             }
@@ -2971,7 +2971,7 @@
         },
         "courseF_bee_functions3": {
           "only make honey": {
-            "name": "صنع العسل فقط"
+            "name": "اصنع العسل فقط"
           }
         },
         "courseF_bee_functions3a": {
@@ -3076,7 +3076,7 @@
         },
         "courseF_bee_fwp7": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney",
+            "name": "صف نكتار او عسل",
             "parameters": {
               "width": "العرض"
             }
@@ -3084,7 +3084,7 @@
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney",
+            "name": "صف نكتار او عسل",
             "parameters": {
               "width": "العرض"
             }
@@ -3092,7 +3092,7 @@
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney",
+            "name": "صف نكتار او عسل",
             "parameters": {
               "width": "العرض"
             }

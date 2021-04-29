@@ -94,7 +94,8 @@ class CoursesController < ApplicationController
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
     if unit_group.has_migrated_script? && unit_group.course_version
-      unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)}
+      unit_group.resources = params[:resourceIds].reject(&:empty?).map {|id| Resource.find(id)} if params.key?(:resourceIds)
+      unit_group.student_resources = params[:studentResourceIds].reject(&:empty?).map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
     # Convert checkbox values from a string ("on") to a boolean.
     [:has_verified_resources, :has_numbered_units, :visible, :is_stable].each {|key| params[key] = !!params[key]}
@@ -140,6 +141,30 @@ class CoursesController < ApplicationController
     # Assumes if one unit in a unit group is migrated they all are
     return render :forbidden unless unit_group.default_scripts[0].is_migrated
     @course_summary = unit_group.summarize_for_rollup(@current_user)
+  end
+
+  def get_rollup_resources
+    unit_group = UnitGroup.get_from_cache(params[:course_name])
+    course_version = unit_group.course_version
+    return render status: 400, json: {error: 'Course does not have course version'} unless course_version
+    rollup_pages = []
+    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.programming_expressions.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(unit_group), course_version_id: course_version.id))
+    end
+    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.resources.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_course_path(unit_group), course_version_id: course_version.id))
+    end
+    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.standards.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_course_path(unit_group), course_version_id: course_version.id))
+    end
+    if unit_group.default_scripts.any? {|s| s.lessons.any? {|l| !l.vocabularies.empty?}}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_course_path(unit_group), course_version_id: course_version.id))
+    end
+    rollup_pages.each do |r|
+      r.is_rollup = true
+      r.save! if r.changed?
+    end
+    render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
   end
 
   def i18n_params

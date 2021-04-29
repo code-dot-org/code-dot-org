@@ -19276,7 +19276,7 @@ fr:
             Exploring Web Pages:
               name: Explorer des Pages Web
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Searching and Research:
               name: Être à la Recherche et Rechercher
             Sources and Research:
@@ -20950,7 +20950,7 @@ fr:
             Sources and Research:
               name: Les Sources et la Recherche
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               name: Planifier un Site Web Multi-Pages
             Linking and Navigation:
@@ -24074,7 +24074,7 @@ fr:
             Sources and Research:
               name: Les Sources et la Recherche
             CSS Classes:
-              name: Classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               name: Planifier un Site Web Multi-Pages
             Linking and Navigation:
@@ -24824,8 +24824,8 @@ fr:
               key: Les Sources et la Recherche
               name: Les Sources et la Recherche
             CSS Classes:
-              key: Classes CSS
-              name: Classes CSS
+              key: Les classes CSS
+              name: Les classes CSS
             Planning a Multi-page Website:
               key: Planifier un Site Web Multi-Pages
               name: Planifier un Site Web Multi-Pages
@@ -26957,6 +26957,10 @@ fr:
               name: Introduction au Labo des Lutins
             lesson-8:
               name: Les Lutins en Action
+            lesson-2:
+              name: Le Pouvoir des Mots
+              description_student: Le harcèlement n'est jamais acceptable. Cette leçon
+                vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
           lesson_groups:
             ramp_up:
               display_name: Progression
@@ -26972,6 +26976,8 @@ fr:
               display_name: variables
             lessonGroup-9:
               display_name: supprimer
+            lessonGroup-7:
+              display_name: Citoyenneté Numérique
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.

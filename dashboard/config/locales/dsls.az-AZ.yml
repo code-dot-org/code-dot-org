@@ -229,11 +229,21 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: |-
+            Təkərlər/tərəf: 2
+            Pəncərələr/tərəf: 0
+        - text: |-
+            Təkərlər/tərəf: 2
+            Pəncərələr/tərəf: 1
+        - text: |-
+            Təkərlər/tərəf: 2
+            Pəncərələr/tərəf: 6
+        - text: |-
+            Təkərlər/tərəf: 3
+            Pəncərələr/tərəf: 2
         title: Cütləşdirmə
+        content1: Nəqliyyat vasitələrinin hər biri kiçik parçalara ayrılıb.  Hər bir
+          nəqliyyat vasitəsini onun parçalanmış hissələri ilə uyğunlaşdırın.
       4-5 Computational Thinking Multi 1:
         answers:
         - {}
@@ -363,7 +373,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hansı bloklar tapmacanı həll edir?
       4-5 maze match 1:
         answers:
         - {}
@@ -380,7 +390,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hansı bloklar tapmacanı həll edir?
       CSD Header Size MC:
         answers:
         - {}
@@ -921,7 +931,7 @@ az-AZ:
         - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
-        - {}
+        - text: '4'
         - {}
         - {}
         - {}
@@ -929,7 +939,7 @@ az-AZ:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
-        - {}
+        - text: '4'
         - {}
         - {}
         - {}
@@ -937,7 +947,7 @@ az-AZ:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
-        - {}
+        - text: '4'
         - {}
         - {}
         - {}
@@ -945,7 +955,7 @@ az-AZ:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
-        - {}
+        - text: '4'
         - {}
         - {}
         - {}
@@ -1249,32 +1259,32 @@ az-AZ:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
         - {}
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
         - {}
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
         - {}
         - {}
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
         - {}
         - {}
         questions:
@@ -1767,3 +1777,21 @@ az-AZ:
         - {}
         questions:
         - {}
+      Unit 1 Lesson 1 Overview:
+        markdown: Sinif mümkün qədər qəpiklərə dəstək olacaq alüminium folqa qayıqlar
+          dizayn etmək üçün qrup şəklində işləyir. Dərs sonunda qruplar fəaliyyətdəki
+          təcrübələrini əks etdirir və kursun qalan hissəsi üçün edəcəyi problem həll
+          növləri ilə əlaqələr qurur.
+        teacher_markdown: Sinif mümkün qədər qəpiklərə dəstək olacaq alüminium folqa
+          qayıqlar dizayn etmək üçün qrup şəklində işləyir. Dərs sonunda qruplar fəaliyyətdəki
+          təcrübələrini əks etdirir və kursun qalan hissəsi üçün edəcəyi problem həll
+          növləri ilə əlaqələr qurur.
+      courseD_EOC_2020:
+        description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
+      courseE_EOC_2020:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+      courseExpress_EOC_2020:
+        description: Siz Ekspres Kursun son dərsinə çatdınız! Yaratmaq üçün layihə
+          seçin.
+      courseF_EOC_2020:
+        description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.

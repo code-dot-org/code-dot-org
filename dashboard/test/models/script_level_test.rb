@@ -58,14 +58,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
     summary = sl.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/1$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/levels/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/stage/1/puzzle/2$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/levels/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
@@ -464,12 +464,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'next_level_or_redirect_path_for_user returns to lesson extras for bonus levels' do
     script_level = create_script_level_with_ancestors({bonus: true})
-    assert_equal "/s/#{script_level.script.name}/stage/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
+    assert_equal "/s/#{script_level.script.name}/lessons/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
   test 'next_level_or_redirect_path_for_user returns to bubble choice activity page for BubbleChoice levels' do
     script_level = create_script_level_with_ancestors({levels: [create(:bubble_choice_level)]})
-    assert_equal "/s/#{script_level.script.name}/stage/1/puzzle/1", script_level.next_level_or_redirect_path_for_user(nil)
+    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
   test 'end of stage' do
@@ -507,9 +507,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     assert_equal script_preview_assignments_path(@plc_script), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
     @unit_assignment.destroy
-    assert_equal script_stage_script_level_path(@plc_script, @lesson, @script_level2.position), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
+    assert_equal script_lesson_script_level_path(@plc_script, @lesson, @script_level2.position), @evaluation_script_level.next_level_or_redirect_path_for_user(@user)
 
-    assert_equal script_stage_script_level_path(@plc_script, @lesson, @evaluation_script_level.position), @script_level1.next_level_or_redirect_path_for_user(@user)
+    assert_equal script_lesson_script_level_path(@plc_script, @lesson, @evaluation_script_level.position), @script_level1.next_level_or_redirect_path_for_user(@user)
     assert_equal script_path(@plc_script), @script_level2.next_level_or_redirect_path_for_user(@user)
   end
 
@@ -520,7 +520,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     lesson2 = create :lesson, lesson_group: lesson_group, script: script
     script_level = create :script_level, lesson: lesson1, script: script, bonus: true
 
-    assert_equal script_stage_extras_path(script.name, lesson2.absolute_position),
+    assert_equal script_lesson_extras_path(script.name, lesson2.absolute_position),
       script_level.next_level_or_redirect_path_for_user(@user, lesson2)
   end
 

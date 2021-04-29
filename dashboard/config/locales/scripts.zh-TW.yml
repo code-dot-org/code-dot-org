@@ -2937,7 +2937,7 @@ zh-TW:
             Sequences & Algorithms:
               name: 序列與演算法
             Unspotted Bugs:
-              name: 沒被發現的蟲蟲
+              name: 沒被發現的程式的錯誤（Bug）
             'Debugging: Unspotted Bugs':
               name: 除錯（Debug）- 沒被發現的蟲蟲
             'Events Unplugged: The Big Event':
@@ -4049,7 +4049,7 @@ zh-TW:
             Debugging in Maze:
               name: 在迷宮中除錯
             Loops in Harvester:
-              name: 和收割者一起學迴圈（Loop）
+              name: 與農夫一起學迴圈（Loops）
         coursed-draft:
           title: CS 基本原理：課程 D
           description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
@@ -4137,7 +4137,7 @@ zh-TW:
             More Programming with Scratch:
               name: 更多 Scratch 的編程學習資源
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             Internet:
               name: 網際網路 Internet
             Crowdsourcing:
@@ -5522,7 +5522,7 @@ zh-TW:
             Loops in Maze:
               name: 迷宮裡的迴圈
             Loops in Harvester:
-              name: 和收割者一起學迴圈（Loop）
+              name: 與農夫一起學迴圈（Loops）
             'Events: The Big Event':
               name: 事件：大事件
             Build a Flappy Game:
@@ -6566,7 +6566,7 @@ zh-TW:
             Conditionals:
               name: 條件判斷（Conditionals）
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             Build a Star Wars Game:
               name: 創建一個星際大戰遊戲！
             'Functions: Songwriting':
@@ -6789,7 +6789,7 @@ zh-TW:
             Conditionals:
               name: 條件判斷（Conditionals）
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             Build a Star Wars Game:
               name: 創建一個星際大戰遊戲！
             'Functions: Songwriting':
@@ -7281,7 +7281,7 @@ zh-TW:
             Conditionals:
               name: 條件判斷（Conditionals）
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             'Functions: Songwriting':
               name: 函式：作曲
             MINECRAFT STAGE GOES HERE:
@@ -7737,7 +7737,7 @@ zh-TW:
           description_audience: 年齡：4-7
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 沒被發現的蟲蟲
+              name: 沒被發現的程式的錯誤（Bug）
               description_teacher: 本課將指導學生除錯的步驟。學生會學到步驟「目前發生的事？應該發生的事？這代表什麼？」
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie 和 Big Project
@@ -8307,7 +8307,7 @@ zh-TW:
                 迴圈_ 用於在條件是 true 時繼續重複命令。While 迴圈的使用情況是：程式設計師不知道命令確實需要重複多少次，但是知道哪項條件需要為
                 true，才可讓迴圈繼續重複。「If / Else」陳述句為程式設計提供彈性，程式僅會在某個項目為 true 時執行整個部分，否則便會執行其他項目。
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
               description_teacher: |-
                 本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。
@@ -9568,7 +9568,7 @@ zh-TW:
           description_audience: 年齡：4-8
           lessons:
             'Debugging: Unspotted Bugs':
-              name: 沒被發現的蟲蟲
+              name: 沒被發現的程式的錯誤（Bug）
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie 和 Big Project
             'Real-life Algorithms: Plant a Seed':
@@ -10139,7 +10139,7 @@ zh-TW:
                 迴圈_ 用於在條件是 true 時繼續重複命令。While 迴圈的使用情況是：程式設計師不知道命令確實需要重複多少次，但是知道哪項條件需要為
                 true，才可讓迴圈繼續重複。「If / Else」陳述句為程式設計提供彈性，程式僅會在某個項目為 true 時執行整個部分，否則便會執行其他項目。
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
               description_teacher: "本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。\r\n\r\n瀏覽一些網站時，若網站請求學生取得他們身分的資訊，他們就會學習採取批判性的查詢程序，讓他們能保護自己與家人免遭盜用身分。在本課堂中，學生會學習以批判思考方式，思考部分網站請求或要求取得的使用者資訊。他們會學習私密資訊與個人資訊的分別，並瞭解如何分辦哪些內容可在線上安全分享，哪些內容則不安全。"
             Build a Star Wars Game:
@@ -13780,7 +13780,7 @@ zh-TW:
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             About Me:
               name: 關於我
             Access Ability:
@@ -13931,7 +13931,7 @@ zh-TW:
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             About Me:
               name: 關於我
             Access Ability:
@@ -13975,7 +13975,7 @@ zh-TW:
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             About Me:
               name: 關於我
             Access Ability:
@@ -15539,7 +15539,7 @@ zh-TW:
               description_student: 製作可與同學分享的互動專案。
               description_teacher: 本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
               description_teacher: "本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。\r\n\r\n瀏覽一些網站時，若網站請求學生取得他們身分的資訊，他們就會學習採取批判性的查詢程序，讓他們能保護自己與家人免遭盜用身分。在本課堂中，學生會學習以批判思考方式，思考部分網站請求或要求取得的使用者資訊。他們會學習私密資訊與個人資訊的分別，並瞭解如何分辦哪些內容可在線上安全分享，哪些內容則不安全。"
             About Me:
@@ -17761,6 +17761,8 @@ zh-TW:
               description_student: 創作自己的遊戲或故事。
               description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
                 Play Lab 創造出你的故事！
+            lesson-1:
+              name: 課程結束專案
           lesson_groups:
             csf_digcit:
               display_name: 數位公民
@@ -17770,6 +17772,8 @@ zh-TW:
               display_name: 迴圈
             csf_events:
               display_name: 事件
+            lessonGroup-5:
+              display_name: 課程結束專案
           student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         courseb-2021:
           title: 課程 B（2019）
@@ -17805,7 +17809,7 @@ zh-TW:
               description_student: 在本課堂中，我們會使用重複迴圈舉行舞蹈派對！
               description_teacher: 我們開始設計更長和更有趣味的程式時，程式碼裡通常都會有大量重複內容。在本課堂中，學生會瞭解怎樣使用迴圈，以更簡易的方式傳達含大量重複內容的指令。學生會觀察舞蹈中的重複移動模式。
             Loops in Harvester:
-              key: 和收割者一起學迴圈（Loop）
+              key: 與農夫一起學迴圈（Loops）
               name: 與農夫一起學迴圈（Loops）
               description_student: 使用迴圈，幫助收割者收集更多農作物！
               description_teacher: 這個舞台會以「學習迴圈」中重複指令的概念為基礎，讓學生在 Code.org 上用迴圈更有效率的收集玉米。
@@ -17836,6 +17840,8 @@ zh-TW:
               description_student: 使用事件製作故事或互動遊戲。
               description_teacher: 在這項線上活動中，學生會有機會學習如何在 Play Lab 中使用事件，並套用先前學到的所有程式設計技巧，製作出帶動畫的遊戲。是時候發揮創意，在
                 Play Lab 創造出你的遊戲！
+            lesson-1:
+              name: 課程結束專案
           lesson_groups:
             csf_digcit:
               display_name: 數位公民
@@ -17847,6 +17853,8 @@ zh-TW:
               display_name: 運算的影響
             csf_events:
               display_name: 事件
+            lessonGroup-6:
+              display_name: 課程結束專案
           student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         coursec-2021:
           title: 課程 C（2019）
@@ -17898,7 +17906,7 @@ zh-TW:
               description_student: 使用迴圈（loop），幫助 BB-8 完成各個迷宮！
               description_teacher: 這個舞台會以「學習迴圈」中重複指令的概念為基礎，讓學生用迴圈協助 BB-8 更有效率的遊歷迷宮。
             Loops in Harvester:
-              key: 和收割者一起學迴圈（Loop）
+              key: 與農夫一起學迴圈（Loops）
               name: 使用迴圈（Loop）收割農作物
               description_student: 我們來使用迴圈（loop），幫助收割者收割蔬菜！
             Looking Ahead:
@@ -18123,8 +18131,8 @@ zh-TW:
               description_student: 製作可與同學分享的互動專案。
               description_teacher: 本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。
             Private and Personal Information:
-              key: 私密與個人資訊
-              name: 私密與個人資訊
+              key: 隱私與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
             About Me:
               key: 關於我
@@ -18310,6 +18318,9 @@ zh-TW:
               name: Sprite Lab 簡介
             lesson-8:
               name: 運行中的角色
+            lesson-2:
+              name: 語言的力量
+              description_student: 欺凌絕對是不恰當的行為。本課堂會教導你可以和不可以在線上做些甚麼。
           lesson_groups:
             ramp_up:
               display_name: 提升
@@ -18329,6 +18340,8 @@ zh-TW:
               display_name: 變數
             lessonGroup-9:
               display_name: 移除
+            lessonGroup-7:
+              display_name: 數位公民
           student_description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
             2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
         express-2021:

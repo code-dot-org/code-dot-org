@@ -1,0 +1,17 @@
+{
+  "es-ES": {
+    "data": {
+      "bubble_choice_description": {
+        "outbreak4": "Cambia el funcionamiento de la simulación y haz una predicción sobre lo que ocurrirá.",
+        "courseF_extras_sim": "¡Crea y personaliza tu propia simulación!",
+        "outbreak5": "¡Ayuda a tus sprites a mejorar automáticamente con el paso del tiempo!",
+        "outbreak6": "Un virus no siempre se transmite, y las mascarillas tampoco detienen la transmisión perfectamente. Mejora tu simulación haciendo que las infecciones se produzcan al azar.",
+        "outbreak7": "Evita que tus sprites enfermen, dándoles inmunidad.",
+        "outbreak8": "Utiliza tu proyecto para compartir un mensaje. ¿Qué quieres que aprendan los demás de todo esto?",
+        "outbreak_freeplay": "¡Amplía tu proyecto con funciones, variables y mucho más!",
+        "outbreak_freeplay_basic": "¡Sigue con los mismos bloques que ya has visto!",
+        "spritelab_extras_repeat": "¡Crea muchos sprites iguales rápidamente, usando bucles!"
+      }
+    }
+  }
+}

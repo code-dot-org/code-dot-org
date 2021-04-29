@@ -26191,6 +26191,8 @@ tr:
                 Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin
                 tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın
                 ve yaratıcı olmanın zamanı!
+            lesson-1:
+              name: Ders Projesinin Sonu
           lesson_groups:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
@@ -26200,6 +26202,8 @@ tr:
               display_name: Döngüler
             csf_events:
               display_name: Olaylar
+            lessonGroup-5:
+              display_name: Ders Projesinin Sonu
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
@@ -26325,6 +26329,8 @@ tr:
                 etkinliklerin nasıl kullanılacağını öğrenmek ve öğrendikleri bütün
                 kodlama becerilerini hareketli bir oyun oluşturmak amacıyla uygulamak
                 için fırsat bulacak. Yaratıcı olma ve Play Lab'da bir oyun yapma zamanı!
+            lesson-1:
+              name: Ders Projesinin Sonu
           lesson_groups:
             csf_digcit:
               display_name: Sayısal Vatandaşlık
@@ -26336,6 +26342,8 @@ tr:
               display_name: Bilgisayarın Etkileri
             csf_events:
               display_name: Olaylar
+            lessonGroup-6:
+              display_name: Ders Projesinin Sonu
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
@@ -27016,6 +27024,7 @@ tr:
                 partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
                 edecektir.
             Loops with the Artist:
+              key: Sanatçı ile Döngüler
               name: Döngüler ile çizim
               description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler
                 yapmayı kolaylaştırır.
@@ -27171,6 +27180,7 @@ tr:
               description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak
                 için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
+              name: 'Mini Proje: Sanal Hayvan'
               description_student: Bu derste öğrenciler, istedikleri gibi görünen
                 ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
                 kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
@@ -27217,6 +27227,11 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             lesson-8:
               name: Eylem halindeki Hareketli Nesneler
+            lesson-2:
+              name: Kelimelerin gücü
+              description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
+                çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış
+                olduğunu öğretecektir.
           lesson_groups:
             ramp_up:
               display_name: Arttır
@@ -27236,6 +27251,8 @@ tr:
               display_name: Değişkenler
             lessonGroup-9:
               display_name: kaldır
+            lessonGroup-7:
+              display_name: Sayısal Vatandaşlık
           student_description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları
             kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek
             ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin
@@ -27519,6 +27536,8 @@ tr:
                 programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan
                 dolayı bu aktivite ses gerektirir.
           lesson_groups:
+            csf_warmup:
+              display_name: Isınmak
             csf_sequencing:
               display_name: Sıralama
             csf_loops:
@@ -27535,6 +27554,8 @@ tr:
               display_name: Hareketli Nesneler
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+            lessonGroup-9:
+              display_name: Isınmak
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.

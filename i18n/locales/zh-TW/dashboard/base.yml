@@ -271,6 +271,7 @@ zh-TW:
     invite_sent: '已發送邀請'
     added_teacher: '%{name} 已成為你的老師'
     registered: "你已經註冊了 %{section_name}。"
+    captcha_required: '請填寫驗證碼來加入本學習小組。'
     error:
       signed_in: '操作前請先登出'
       username_not_found: '找不到用戶名稱 %{username}'
@@ -327,6 +328,7 @@ zh-TW:
       game_lab_tutorials: "Game Lab 教程"
       sprite_lab_documentation: "Sprite Lab 說明文件"
       sprite_lab_tutorials: "Sprite Lab 教程"
+      web_lab_documentation: "Web Lab 說明文件"
       educate_overview: "教育工作者概覽"
       educate_elementary: "國小"
       educate_middle: "國中"
@@ -441,6 +443,7 @@ zh-TW:
       worked_with: '工作伙伴'
       update_lock_settings: '在此更新上鎖相關設定。'
       clear_response: '清空回應'
+    student_code_view_diabled: '這個活動無法查看學生程式碼。'
   user:
     email_confirm_needed: '電子信箱地址尚未被確認：'
     email_confirm_needed_required: '您的信箱 %{email} 尚未驗證：'
@@ -523,7 +526,7 @@ zh-TW:
     no_primary_course: "體驗 Code Studio 的課程"
     choose_next_course: "從下方的 Code Studio 課程中選一個體驗"
     print_certificate: "列印證書"
-  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮品，以贊助你學習課程。"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮物，以贊助你學習課程。"
   move_students:
     new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
     section_code_cant_be_current_section: "目前的學習小組不可以和新的學習小組相同。"
@@ -554,6 +557,8 @@ zh-TW:
     art_from_html_old: '當個創世神 Minecraft &#8482; &copy; %{current_year} Microsoft 著作權所有，並保留一切權利。星際大戰 Star Wars &#8482; &copy; %{current_year} 迪士尼和盧卡斯影業著作權所有，並保留一切權利。冰雪奇緣 Frozen &#8482; &copy; %{current_year} 迪士尼著作權所有，並保留一切權利。冰原歷險記 Ice Age &#8482; &copy; %{current_year} 二十世紀福斯影片公司著作權所有，並保留一切權利。憤怒鳥 Angry Birds &#8482; &copy; 2009-%{current_year} Rovio 娛樂有限公司著作權所有，並保留一切權利。植物大戰殭屍 Plants vs. Zombies &#8482; &copy; %{current_year} 美商藝電著作權所有，並保留一切權利。阿甘妙世界 The Amazing World of Gumball &copy; %{current_year} 卡通頻道著作權所有，並保留一切權利。'
     code_from_html: 'Code.org 使用 p5.play 遊戲資源庫，根據 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a> 之許可。'
     powered_by_aws: 'Powered by Amazon Web Services'
+    built_on_github: '構建於 Microsoft 的 Github'
+    google_copyright: '&copy; Google Inc。獲經許可使用。Google Classroom 為 Google Inc. 的商標。'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE 標誌以及 Hour of Code&reg; 都是 Code.org.的商標。'
     copyright: '版權所有'
     more: '更多'
@@ -564,6 +569,7 @@ zh-TW:
     tos_short: '條款'
     tos: '服務條款'
     privacy: '隱私政策'
+    privacy_updated: '隱私政策（更新）'
     secure: '安全版本'
     report_abuse: '檢舉濫用'
     built_on_code_studio: '創建自 Code Studio'
@@ -1081,6 +1087,7 @@ zh-TW:
   page_not_found_description: "你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。"
   page_not_found_button: "返回主頁"
   copy: '複製'
+  confirm: '確認 '
   maker:
     google_oauth:
       login_with_google: '以 Google 登入 Maker App'
@@ -1090,6 +1097,7 @@ zh-TW:
       error_wrong_provider: '提供者錯誤。請確保你以 Google 登入。'
       error_invalid_user: '無效的用戶ID。請嘗試再次登入。'
       error_no_code: '請輸入你的登入代碼。'
+      confirm_login: '選擇「確認」來使用你的 Google 帳戶登入。'
   parent_email_banner:
     text: "**您是否是一位家長或監護人？**將您的電子郵件地址關聯到此帳號，以瞭解孩子的進度和專案的最新資訊！"
     link_your_email: "關聯您的電子郵箱"
@@ -1097,3 +1105,4 @@ zh-TW:
   behaviors:
     this_sprite: "這個角色"
   unit_prefix: "%{n} 個單位"
+  code_org_logo_alt: "Code.org 首頁"

@@ -2,6 +2,7 @@
 sk:
   data:
     parameter_names:
+      "???": "???"
       actor: postava
       color: farba
       counter: počítadlo

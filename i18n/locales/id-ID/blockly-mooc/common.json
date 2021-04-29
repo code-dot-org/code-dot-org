@@ -678,7 +678,7 @@
   "emptyFunctionBlocksErrorMsg": "Blok fungsi membutuhkan blok lain di dalamnya agar dapat bekerja.",
   "emptyFunctionalBlock": "Kamu memiliki blok dengan input yang belum terisi.",
   "emptySection": "Bagian Anda tidak berisi siswa! Buka tab [Kelola Siswa]({url}) untuk menambahkan beberapa.",
-  "emptySurveyOverviewTable": "Karena survei ini anonim, kita hanya bisa menunjukkan hasil gabungan setelah ada setidaknya 5 pengiriman.",
+  "emptySurveyOverviewTable": "Karena survei ini anonim, kita hanya bisa menunjukkan hasil gabungan setelah ada setidaknya 5 survei yang terisi.",
   "emptyAssessmentSubmissions": "Saat ini ada tidak ada kiriman untuk penilaian ini.",
   "emptyTextResponsesTable": "Sebagian besar kelas kami dirancang untuk bekerja pada usia muda dan tidak mengharuskan siswa mengetik respon teks terhadap pertanyaan, jadi anda tidak akan melihat respon teks apapun disini. Kursus untuk siswa di kelas menengah dan kelas atas, Anda bisa melihat kiriman mereka untuk membuka respon teks berakhir dengan pertanyaan memilih kursus yang di tugaskan dari penurunan diatas.",
   "emptyTopLevelBlock": "Tidak ada kotak lagi untuk dijalankan. Kamu harus memasang kotak-kotak tersebut ke dalam kotak {topLevelBlockName}.",

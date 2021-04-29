@@ -14,6 +14,16 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
   csedweek_banner_teachers_text: "Ви вчитель інформатики? Перегляньте інші ресурси з предмету"
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
+  try_hoc_num_served: "<h1>Приєднуйтесь до</h1><h2>Години коду</h2><h3>%{num} вже спробували</h3>"
+  try_hoc_num_served_markdown: |-
+    # Приєднуйтесь до
+
+    ## Години коду
+    ###  %{num}  вже спробували #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Кожен може вчитися."
   learn_now: "Почати навчання"
   petition_message: "Кожен учень у кожній школі повинен мати можливість вивчати інформатику"
@@ -1059,6 +1069,12 @@
   coursed-2019_gradelevel: 8+ класи
   coursee-2019_gradelevel: Вік 8-12
   coursef-2019_gradelevel: Вік 9-13
+  coursea-2020_gradelevel: Вік 4-7
+  courseb-2020_gradelevel: Вік 5-8
+  coursec-2020_gradelevel: Вік 6-10
+  coursed-2020_gradelevel: 8+ класи
+  coursee-2020_gradelevel: Вік 8-12
+  coursef-2020_gradelevel: Вік 9-13
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"

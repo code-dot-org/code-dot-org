@@ -5,6 +5,8 @@ az:
       category:
         hoc_category_name: Kod Saatı
         math_category_name: Riyaziyyat
+        twenty_hour_category_name: 20-Saat
+        tts_category_name: Mətndən nitqə 
         other_category_name: Digər
       name:
         course1:
@@ -186,12 +188,14 @@ az:
               name: dəyişənlər
         algebra:
           lessons:
+            'Eval: Boolean Operators':
+              name: Məntiqi operatorlar
             'Eval: Conditionals':
               name: Şərti ifadələr
         infinity:
           lessons:
             Infinity:
-              name: Sonsuzluq
+              name: Sonsuz sayda
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -739,6 +743,8 @@ az:
               name: Siyahılar
             Map:
               name: Xəritə
+            Arrays:
+              name: Massivlər
             Functions with Parameters:
               name: Parametrli funksiyalar
         workshop-gamelab:
@@ -759,6 +765,8 @@ az:
           lessons:
             Lists:
               name: Siyahılar
+            Arrays:
+              name: Massivlər
             Functions with Parameters:
               name: Parametrli funksiyalar
             Functions with Parameters_:
@@ -899,6 +907,8 @@ az:
               name: 'Proqramlaşdırma: Ulduz Müharibələri'
         subgoal-labels-opt-in:
           lessons:
+            other:
+              name: digər
             Thanks:
               name: Təşəkkürlər,
         e-f-ramp:
@@ -1941,6 +1951,8 @@ az:
               display_name: dəyişənlər
             lessonGroup-9:
               display_name: sil
+            lessonGroup-7:
+              display_name: Rəqəmsal vətəndaşlıq
         express-2021:
           lessons:
             Dance Party:

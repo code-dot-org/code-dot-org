@@ -75,7 +75,8 @@ class EditSectionForm extends Component {
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
-    localeEnglishName: PropTypes.string
+    localeEnglishName: PropTypes.string,
+    localeCode: PropTypes.string
   };
 
   state = {
@@ -152,7 +153,8 @@ class EditSectionForm extends Component {
       textToSpeechScriptIds,
       assignedScriptName,
       localeEnglishName,
-      isNewSection
+      isNewSection,
+      localeCode
     } = this.props;
 
     /**
@@ -238,6 +240,7 @@ class EditSectionForm extends Component {
           />
           {textToSpeechScriptIds.indexOf(section.scriptId) > -1 && (
             <TtsAutoplayField
+              isEnglish={localeCode.startsWith('en')}
               value={section.ttsAutoplayEnabled}
               onChange={ttsAutoplayEnabled => {
                 editSectionProperties({ttsAutoplayEnabled});
@@ -445,10 +448,21 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
 );
 PairProgrammingField.propTypes = FieldProps;
 
-const TtsAutoplayField = ({value, onChange, disabled}) => (
+const TtsAutoplayField = ({value, onChange, disabled, isEnglish}) => (
   <div>
     <FieldName>{i18n.enableTtsAutoplay()}</FieldName>
-    <FieldDescription>{i18n.explainTtsAutoplay()} </FieldDescription>
+    <FieldDescription>
+      {i18n.explainTtsAutoplay()}{' '}
+      {isEnglish && (
+        <a
+          href="https://support.code.org/hc/en-us/articles/360058843692"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {'Learn more about read aloud options on Code.org.'}
+        </a>
+      )}
+    </FieldDescription>
     <YesNoDropdown
       value={value}
       onChange={ttsAutoplayEnabled => onChange(ttsAutoplayEnabled)}
@@ -456,7 +470,10 @@ const TtsAutoplayField = ({value, onChange, disabled}) => (
     />
   </div>
 );
-TtsAutoplayField.propTypes = FieldProps;
+TtsAutoplayField.propTypes = {
+  ...FieldProps,
+  isEnglish: PropTypes.bool.isRequired
+};
 
 const FieldName = props => (
   <div
@@ -504,7 +521,8 @@ let defaultPropsFromState = state => ({
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
   hiddenStageState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state),
-  localeEnglishName: state.locales.localeEnglishName
+  localeEnglishName: state.locales.localeEnglishName,
+  localeCode: state.locales.localeCode
 });
 
 export const UnconnectedEditSectionForm = EditSectionForm;

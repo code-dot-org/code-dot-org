@@ -4796,6 +4796,15 @@ sk-SK:
         teacher_markdown: "* [Náčrt osobnej webovej stránky ](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
           - Príklad([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
+        markdown: "# Prehľad\n\nTáto lekcia predstavuje webstránky ako spôsob osobného
+          vyjadrovania. Trieda najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú
+          a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok
+          pripravených študentami z predošlých kurzov. Na koniec si každý premyslí
+          a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie
+          vlastnej webstránky v priebehu zvyšku kapitoly.\n## Slovník\n\n* **Obsah
+          webovej stránky** -  surový text, obrázky a ostatné prvky zahrnuté na webevej
+          stánke \n\n\n## Materiál\n\n* [Náčrt osobnej webovej stránky  - Sprievodca
+          aktivitami](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)"
       CSD U2 Top Websites:
         markdown: "# Najlepšie webové stránky \n\nNižšie sú najviac navštevované webové
           stánky aj so stručným popisom na čo slúžia . \n\n1. Google.com - vyhľadávač
@@ -4829,6 +4838,10 @@ sk-SK:
           **Podčiarkovníky** -- `Some_people_like_to_use_underscores_to_separate_words`\n*
           **Pomlčky** -- `Others-like-to-use-hyphens-or-dashes`\n\nČokoľvek si vyberiš,
           záleží len na tebe. Je to tvoj štýl. Pomáha to byť dôsledný."
+        teacher_markdown: |
+          #### Rozvoj správnych programovacích návykov
+
+          Dodržiavanie jasných a dôsledných pravidiel pri pomenovaní je dôležitým zvykom, ktorý treba rozvíjať, aj keď výhody z toho nie sú študentom okamžite zrejmé. Z dlhodobého hľadiska sa skutočne oplatí vytvárať správne pomenované ID, najmä preto, že vám ušetrí zdravý rozum, keď príde čas na čítanie programov vašich študentov, ale tiež zjednoduší proces kombinovania obrazovky každého študenta do spoločnej tímovej aplikácie.
       Unit 1 Lesson 4 Overview:
         markdown: "# Prehľad\n\nV tejto lekcii sa zamyslíš ako počítače pomáhajú pri
           riešení určitých problémov a naučíš sa základné funckie každého počítača
@@ -4836,3 +4849,25 @@ sk-SK:
         teacher_markdown: "[Čo je počítač? - Príklad](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
           - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
           | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
+      CSD U2 L3 Overview:
+        markdown: "# Overview\n\nTáto lekcia predstaví  HTML ako prostiedok pri riešení
+          problému pri komunikácii  obsahu a štruktúry webovej stránky smerom k počitaču.
+          Začína sa  so stručnom aktivitou bez počítača prezentujúcou výzvy ako efektívne
+          \ komunikovať  štruktúru webovej stránky.    Tieda sa zameria na stránky
+          HTML vo Web Lab-e a prediskutuje ako HTML označenia pomáhajú pri riešení
+          úloh. Na záver pomocou HTML napíšu prvé webové stránky v rámci tejto kapitoly.
+          \n## Slovník\n\n* **HTML** - Hypertextový značkovací jazyk používaný na
+          vytvorenie webových stánok \n* **HTML Prvok** - časť webovej stránky označená
+          začiatočný tag-om a niekedy uzatvorená záverečným tag-om \n* **HTML Označenie**
+          -  špeciálny set znakov, ktorý určuje začiatok a koniec HTML prvku a jeho
+          typ\n* **Webový obsah** - surový text, obrázky a ostatné prvky zahrnuté
+          na webevej stánke\n* **Webová štruktúra** - zloženie rôznych častí obsahu
+          na webovej stránke, ktorá pomáha počitaču určiť , ako sa má obsah zobraziť.
+          \n\n## Nový kód\n\n* **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`\n*
+          **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`\n*
+          **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n* **[Body](//studio.code.org/docs/weblab/body/)**
+          - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`"
+      CSD U1 Test:
+        title: Počítače a riešenie problémov v postprojektovom testovaní
+      CSD User Centered Design Post-Project Test:
+        title: 'Dizajn zameraný na používateľa: Poprojektové testovanie'

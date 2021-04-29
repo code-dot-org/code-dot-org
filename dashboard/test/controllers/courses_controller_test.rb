@@ -337,6 +337,21 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 1, unit_group.resources.length
   end
 
+  test "update: persists student resources for migrated unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, hidden: true, is_migrated: true
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+    resource = create :resource, course_version: course_version
+
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource.id]}
+    unit_group.reload
+    assert_equal 1, unit_group.student_resources.length
+  end
+
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
@@ -368,5 +383,44 @@ class CoursesControllerTest < ActionController::TestCase
 
     get :edit, params: {course_name: 'csp'}
     assert_template 'courses/edit'
+  end
+
+  # tests for get_rollup_resources
+
+  test "get_rollup_resources return rollups for a script with code, resources, standards, and vocab" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @unit_group_migrated
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    lesson.programming_expressions = [create(:programming_expression)]
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+    lesson.vocabularies = [create(:vocabulary, course_version_id: course_version.id)]
+
+    get :get_rollup_resources, params: {course_name: @unit_group_migrated.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 4, response_body.length
+    assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
+  end
+
+  test "get_rollup_resources doesn't return rollups if no lesson in a script has the associated object" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(@levelbuilder)
+
+    course_version = create :course_version, content_root: @unit_group_migrated
+    lesson_group = create :lesson_group, script: @migrated_script
+    lesson = create :lesson, lesson_group: lesson_group
+    # Only add resources and standards, not programming expressions and vocab
+    lesson.resources = [create(:resource, course_version_id: course_version.id)]
+    lesson.standards = [create(:standard)]
+
+    get :get_rollup_resources, params: {course_name: @unit_group_migrated.name}
+    assert_response :success
+    response_body = JSON.parse(@response.body)
+    assert_equal 2, response_body.length
+    assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
   end
 end
