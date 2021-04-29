@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_02_163219) do
+ActiveRecord::Schema.define(version: 2021_04_29_183952) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -494,6 +494,16 @@ ActiveRecord::Schema.define(version: 2021_04_02_163219) do
     t.datetime "updated_at", null: false
     t.index ["foorm_submission_id"], name: "index_misc_survey_foorm_submissions_on_foorm_id", unique: true
     t.index ["user_id"], name: "index_foorm_misc_surveys_on_user_id"
+  end
+
+  create_table "foorm_simple_survey_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "path"
+    t.string "form_name", null: false
+    t.integer "form_version"
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["path"], name: "index_foorm_simple_survey_forms_on_path", unique: true
   end
 
   create_table "foorm_submissions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
