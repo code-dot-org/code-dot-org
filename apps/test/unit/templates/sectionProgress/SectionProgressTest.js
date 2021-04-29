@@ -5,6 +5,7 @@ import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/Se
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sinon from 'sinon';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -54,40 +55,42 @@ describe('SectionProgress', () => {
     progressLoader.loadScriptProgress.restore();
   });
 
-  it('loading data shows loading icon', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress {...DEFAULT_PROPS} isLoadingProgress={true} />
+  const setUp = (overrideProps = {}) => {
+    return shallow(
+      <UnconnectedSectionProgress {...DEFAULT_PROPS} {...overrideProps} />
     );
+  };
+
+  it('loading data shows loading icon', () => {
+    const wrapper = setUp({isLoadingProgress: true});
     expect(wrapper.find('#uitest-spinner').exists()).to.be.true;
   });
 
   it('done loading data does not show loading icon', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
+    const wrapper = setUp();
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('shows summary view', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    expect(wrapper.find('#uitest-summary-view').exists()).to.be.true;
+  it('renders ProgressTableContainer for detail and summary view only', () => {
+    let wrapper = setUp({currentView: ViewType.DETAIL});
+    expect(wrapper.find(ProgressTableContainer)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.SUMMARY});
+    expect(wrapper.find(ProgressTableContainer)).to.have.length(1);
+
+    wrapper = setUp({currentView: ViewType.STANDARDS});
+    expect(wrapper.find(ProgressTableContainer)).to.have.length(0);
   });
 
-  it('shows detail view', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        currentView={ViewType.DETAIL}
-      />
+  it('passes currentView to ProgressTableContainer', () => {
+    const wrapper = setUp({currentView: ViewType.DETAIL});
+    expect(wrapper.find(ProgressTableContainer).props().currentView).to.equal(
+      ViewType.DETAIL
     );
-    expect(wrapper.find('#uitest-detail-view').exists()).to.be.true;
   });
 
   it('shows standards view', () => {
-    const wrapper = shallow(
-      <UnconnectedSectionProgress
-        {...DEFAULT_PROPS}
-        currentView={ViewType.STANDARDS}
-      />
-    );
+    const wrapper = setUp({currentView: ViewType.STANDARDS});
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
   });
 });

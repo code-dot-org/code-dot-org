@@ -170,7 +170,7 @@ zh-TW:
   personalize_certificate: 在證書上留下你的姓名（可以用中文喲）
   print_batch_certificates: 列印證書
   print_certificates: 列印所有證書
-  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮品，以贊助你學習課程。"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮物，以贊助你學習課程。"
   print_ice_art_from_frozen: 列印冰雪奇緣教程的冰雕藝術
   want_a_blank_certificate_template: 你是否需要空白的證書範本，以寫下你的學生姓名？
   landscape_recommended_certificates: 列印證書時，建議你選擇**水平**列印。
@@ -538,7 +538,7 @@ zh-TW:
   volunteer_engineer_submission_intro_signup_markdown: 如果你是學習電腦科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿
     18 歲才能申請為志工。在本節填寫的所有訊息都會在[志工地圖](/volunteer/local)上公開顯示。_*_為必填。
   volunteer_engineer_submission_intro_links: 需要些志工嗎？在我們的<a href="%{volunteer_local}">志工地圖</a>上尋找本地有哪些志願者。
-  volunteer_engineer_submission_intro_links_markdown: 你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找本地有哪些志願者。
+  volunteer_engineer_submission_intro_links_markdown: 你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找在地有哪些志願者。
   volunteer_engineer_submission_update_information: 更新你的個人資訊
   volunteer_engineer_submission_header_shared: 在志工地圖上分享給老師的資訊
   volunteer_engineer_submission_field_name: 名稱
@@ -998,7 +998,7 @@ zh-TW:
   pre-express-2019_name: 學前兒童的速學課程（2019）
   express-2020_name: 速學課程（2019）
   pre-express-2020_name: 學前兒童的速學課程（2020）
-  csd2_name: 單元 2：Web 開發
+  csd2_name: 單元 2：網頁開發
   csd3_name: 單元 3：動畫與遊戲
   accelerated_name: 速成課程
   express_name: 速學課程
@@ -1795,7 +1795,7 @@ zh-TW:
   homepage_slot_text_link_do_hoc: 試試「一小時玩程式」！
   homepage_slot_text_link_express_course: 嘗試速學課程吧！
   page_not_available_title: 沒有可用的頁面
-  page_not_available_description: 我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎mail 給我們[support@code.org](%{support_email_link})，告知您的需求
+  page_not_available_description: 我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎寄信給我們[support@code.org](%{support_email_link})，告知您的需求
   page_not_available_button: 返回主頁
   hoc2020_mc_available_code_org: 可於 Code.org 取得
   hoc2020_mc_available_mee: 可於 Minecraft 教育版取得
