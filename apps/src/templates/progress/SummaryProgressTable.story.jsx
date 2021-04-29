@@ -88,6 +88,7 @@ export default storybook => {
                   id: '-1',
                   name: 'Link to submitted review',
                   status: LevelStatus.perfect,
+                  isLocked: false,
                   url: '/peer_reviews/1',
                   levelNumber: 1
                 },
@@ -95,6 +96,7 @@ export default storybook => {
                   id: '-1',
                   name: 'Review a new submission',
                   status: LevelStatus.not_tried,
+                  isLocked: false,
                   url: '/pull-review',
                   levelNumber: 2
                 },
@@ -103,6 +105,7 @@ export default storybook => {
                   icon: 'fa-lock',
                   name: 'Reviews unavailable at this time',
                   status: LevelStatus.locked,
+                  isLocked: false,
                   url: '',
                   levelNumber: 3
                 }
@@ -201,7 +204,8 @@ export default storybook => {
               fakeLevels(3),
               fakeLevels(4).map(level => ({
                 ...level,
-                status: LevelStatus.locked
+                status: LevelStatus.locked,
+                isLocked: true
               })),
               fakeLevels(2)
             ]}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {levelTypeWithoutStatus} from '@cdo/apps/templates/progress/progressTypes';
+import {levelSchematicType} from '@cdo/apps/templates/progress/progressTypes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
@@ -81,5 +81,5 @@ export default function ProgressTableLevelIconSet({levels}) {
   return <ProgressTableLevelSpacer items={items} />;
 }
 ProgressTableLevelIconSet.propTypes = {
-  levels: PropTypes.arrayOf(levelTypeWithoutStatus)
+  levels: PropTypes.arrayOf(levelSchematicType)
 };

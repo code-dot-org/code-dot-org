@@ -20,6 +20,7 @@ const levelsByLesson = [
     {
       id: '30',
       status: LevelStatus.not_tried,
+      isLocked: false,
       url: '/step1/level1',
       name: 'First progression',
       levelNumber: 1
@@ -31,6 +32,7 @@ const levelsByLesson = [
     {
       id: '40',
       status: LevelStatus.not_tried,
+      isLocked: false,
       url: '/step3/level1',
       name: 'Last progression',
       levelNumber: 7

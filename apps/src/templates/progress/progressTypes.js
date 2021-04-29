@@ -17,7 +17,7 @@ export const studentType = PropTypes.shape({
 });
 
 /**
- * @typedef {Object} Level
+ * @typedef {Object} LevelSchematic
  *
  * @property {string} id The id of the level. It is intentionally
  *   a string (despite always being numerical) because it gets
@@ -27,14 +27,13 @@ export const studentType = PropTypes.shape({
  * @property {string} icon
  * @property {bool} isUnplugged
  * @property {number} levelNumber
- * @property {bool} isCurrentLevel
  * @property {bool} isConceptLevel
  * @property {string} kind
  * @property {number} pageNumber The page number of the level if
  *   this is a multi-page level, or PUZZLE_PAGE_NONE
  * @property {array} sublevels An optional array of recursive sublevel objects
  */
-const levelWithoutStatusShape = {
+const levelSchematicShape = {
   id: PropTypes.string.isRequired,
   levelNumber: PropTypes.number,
   bubbleText: PropTypes.string,
@@ -43,28 +42,36 @@ const levelWithoutStatusShape = {
   name: PropTypes.string,
   icon: PropTypes.string,
   isUnplugged: PropTypes.bool,
-  isCurrentLevel: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
   pageNumber: PropTypes.number
   /** sublevels: PropTypes.array */ // See below
 };
 // Avoid recursive definition
-levelWithoutStatusShape.sublevels = PropTypes.arrayOf(
-  PropTypes.shape(levelWithoutStatusShape)
+levelSchematicShape.sublevels = PropTypes.arrayOf(
+  PropTypes.shape(levelSchematicShape)
 );
 
-// In the future when the level object does not contain the status object,
-// we can export just levelType without needing levelTypeWithoutStatus.
-export const levelTypeWithoutStatus = PropTypes.shape(levelWithoutStatusShape);
+/**
+ * Going forward, we are moving all user-specific data about a level into
+ * `studentLevelProgressType`, so our `levelType` will just include "schematic"
+ * data that is universal for the level, represented by this type. However, for
+ * now we still need to support the legacy type that includes user-specific
+ * data, which builds on this type.
+ */
+export const levelSchematicType = PropTypes.shape(levelSchematicShape);
 
 /**
- * @typedef {Object} Level
+ * @typedef {Object} LevelWithProgress
  *
  * @property {string} status
+ * @property {bool} isLocked
+ * @property {bool} isCurrentLevel
  */
-export const levelType = PropTypes.shape({
-  ...levelWithoutStatusShape,
-  status: PropTypes.string.isRequired
+export const levelWithProgressType = PropTypes.shape({
+  ...levelSchematicShape,
+  status: PropTypes.string.isRequired,
+  isLocked: PropTypes.bool.isRequired,
+  isCurrentLevel: PropTypes.bool
 });
 
 /**

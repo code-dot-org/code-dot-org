@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
 import i18n from '@cdo/locale';
@@ -67,7 +67,7 @@ const styles = {
 class ProgressLevelSet extends React.Component {
   static propTypes = {
     name: PropTypes.string,
-    levels: PropTypes.arrayOf(levelType).isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.string,
     onBubbleClick: PropTypes.func,
