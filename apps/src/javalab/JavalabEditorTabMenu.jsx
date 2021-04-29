@@ -31,7 +31,8 @@ const styles = {
 class JavalabTabMenuComponent extends Component {
   static propTypes = {
     cancelTabMenu: PropTypes.func.isRequired,
-    renameFromTabMenu: PropTypes.func.isRequired
+    renameFromTabMenu: PropTypes.func.isRequired,
+    deleteFromTabMenu: PropTypes.func.isRequired
   };
 
   state = {
@@ -39,7 +40,7 @@ class JavalabTabMenuComponent extends Component {
   };
 
   render() {
-    const {renameFromTabMenu, cancelTabMenu} = this.props;
+    const {renameFromTabMenu, deleteFromTabMenu, cancelTabMenu} = this.props;
     return (
       <div>
         <button
@@ -49,6 +50,14 @@ class JavalabTabMenuComponent extends Component {
           style={styles.anchor}
         >
           Rename
+        </button>
+        <button
+          type="button"
+          key="delete"
+          onClick={deleteFromTabMenu}
+          style={styles.anchor}
+        >
+          Delete
         </button>
         <button
           type="button"

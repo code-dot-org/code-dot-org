@@ -39,22 +39,6 @@ module LevelsHelper
     end
   end
 
-  # This is a a temporary method to help with moving translations onto the new level urls. To start this will
-  # keep translations on the old URL until foundations can do the work to bring them over to the new url
-  def build_script_level_path_for_translations(script_level)
-    if script_level.script.name == Script::HOC_NAME
-      hoc_chapter_path(script_level.chapter)
-    elsif script_level.script.name == Script::FLAPPY_NAME
-      flappy_chapter_path(script_level.chapter)
-    elsif !script_level.lesson.numbered_lesson?
-      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level)
-    elsif script_level.bonus
-      `/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/extras?level_name=#{script_level.level.name}`
-    else
-      `/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/puzzle/#{script_level.position}`
-    end
-  end
-
   def build_script_level_url(script_level, params = {})
     url_from_path(build_script_level_path(script_level, params))
   end
