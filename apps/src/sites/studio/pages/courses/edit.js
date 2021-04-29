@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
@@ -18,11 +18,19 @@ function showCourseEditor() {
     courseEditorData.course_summary.teacher_resources || []
   ).map(([type, link]) => ({type, link}));
 
-  registerReducers({resources: resourcesEditor});
+  registerReducers({
+    resources: createResourcesReducer('teacherResource'),
+    studentResources: createResourcesReducer('studentResource')
+  });
   const store = getStore();
   store.dispatch(
     initResources(
+      'teacherResource',
       courseEditorData.course_summary.migrated_teacher_resources || []
+    ),
+    initResources(
+      'studentResource',
+      courseEditorData.course_summary.student_resources || []
     )
   );
 

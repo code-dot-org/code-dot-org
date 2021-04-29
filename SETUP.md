@@ -224,6 +224,10 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 
 From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso), _with the following observations_...
 * In step 2, you may run into the error `E: Unable to locate package openjdk-9-jre-headless`. This is because openjdk-9 has been superseded by openjdk-11. Replace `openjdk-9-jre-headless` with `openjdk-11-jre-headless`. If you want, you can first check to see if this replacement package is available on your distro using `sudo apt-cache search openjdk` as per [this StackOverflow thread](https://stackoverflow.com/questions/51141224/how-to-install-openjdk-9-jdk-on-ubuntu-18-04/51141421).
+* `chromium-browser` might not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`. You can instead install chrome by running the following:
+   1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+   2. `sudo apt install ./google-chrome-stable_current_amd64.deb`
+   3. modify step 8 of the Ubuntu instructions to read `export CHROME_BIN=$(which google-chrome)`
 * Before step 9, you may have to restart MySQL using `sudo /etc/init.d/mysql restart`
 
 ...followed by the [overview instructions](#overview), _with the following observation_:
@@ -422,6 +426,14 @@ If you run into error messages about `implicit declaration of function thin_xxx`
 - `gem install thin -v THIN_VERSION -- --with-cflags="-Wno-error=implicit-function-declaration"` where THIN_VERSION is the current version of thin in [Gemfile.lock](./Gemfile.lock)).
 
 (More info [here](https://github.com/macournoyer/thin/pull/364))
+
+#### mimemagic
+
+If you run into an error message about `Could not find MIME type database in the following locations...` while installing the `mimemagic` gem, try:
+
+- `brew install shared-mime-info`
+
+(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
 
 #### Xcode Set Up
 

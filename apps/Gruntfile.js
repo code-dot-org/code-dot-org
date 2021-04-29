@@ -334,9 +334,10 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
-          ['build/package/css/courses.css', 'style/courses.scss'],
-          ['build/package/css/scripts.css', 'style/scripts.scss'],
-          ['build/package/css/lessons.css', 'style/lessons.scss'],
+          ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
+          ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
+          ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
+          ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
@@ -629,7 +630,9 @@ describe('entry tests', () => {
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
     'shared_blockly_functions/edit':
-      './src/sites/studio/pages/shared_blockly_functions/edit.js'
+      './src/sites/studio/pages/shared_blockly_functions/edit.js',
+    'sprite_management/sprite_upload':
+      './src/sites/studio/pages/sprite_management/sprite_upload.js'
   };
 
   var pegasusEntries = {

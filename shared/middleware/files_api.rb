@@ -308,8 +308,21 @@ class FilesApi < Sinatra::Base
     File.extname(filename&.downcase) == '.html'
   end
 
-  def disallowed_html_tags
-    DCDO.get('disallowed_html_tags', ['script', 'iframe'])
+  def valid_html_content?(body)
+    disallowed_tags = DCDO.get('disallowed_html_tags', [])
+
+    # Applicable Nokogiri selector rules:
+    #   Element selectors must start with //
+    #   Attribute selectors must start with @
+    #   (Example: "//div[@name]" will return all <div>s that have a 'name' attribute.)
+    disallowed_tag_selectors = disallowed_tags.map do |tag|
+      tag_dup = tag.dup
+      attr_selector_index = tag_dup.index('[')
+      tag_dup.insert(attr_selector_index + 1, '@') if attr_selector_index
+      '//' + tag_dup
+    end
+
+    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
   end
 
   # Determine whether or not a file is a valid HTML file.
@@ -327,9 +340,7 @@ class FilesApi < Sinatra::Base
     return false unless project
     return true unless project[:projectType]&.downcase == 'weblab'
 
-    # Nokogiri element selector tags must start with //
-    disallowed_tag_selectors = disallowed_html_tags.map {|tag| '//' + tag}
-    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    valid_html_content?(body)
   end
 
   #

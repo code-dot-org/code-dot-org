@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import color from '@cdo/apps/util/color';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   dropdown: {
@@ -12,32 +14,38 @@ const styles = {
   },
   boldText: {
     fontFamily: '"Gotham 7r", sans-serif'
+  },
+  section: {
+    width: 300,
+    fontFamily: '"Gotham 4r", sans-serif',
+    backgroundColor: color.lightest_purple
+  },
+  lesson: {
+    width: 300,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 
-const LESSONS_PER_SECTION = 10;
-
 /*
- Component used to navigate between lesson plans. When the list
- is longer than 11 lessons the list is broken into sections of
- 10 lessons. Each section has its own item in the list. In addition
- one section of lessons will be open meaning that you will see
- those 10 lessons listed and can click to navigate to one of them.
+ Component used to navigate between lesson plans. List
+ is broken into sections based on Lesson Groups. Each section has its own item in the list.
+ In addition one section of lessons will be open meaning that you will see
+ those the lessons in that lesson group listed and can click to navigate to one of them.
  */
 
 export default class LessonNavigationDropdown extends Component {
   static propTypes = {
-    lesson: navigationLessonShape.isRequired
+    lesson: navigationLessonShape.isRequired,
+    isStudentLessonPlan: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
-    const currentLessonNumber =
-      props.lesson.unit.lessons.findIndex(l => l.key === props.lesson.key) + 1;
-    const sectionOfCurrentLesson = Math.ceil(
-      currentLessonNumber / LESSONS_PER_SECTION.toFixed(1)
-    );
+    const sectionOfCurrentLesson =
+      props.lesson.unit.lessonGroups.findIndex(lg =>
+        lg.lessons.some(l => l.key === props.lesson.key)
+      ) + 1;
 
     this.state = {
       currentSection: sectionOfCurrentLesson
@@ -46,21 +54,40 @@ export default class LessonNavigationDropdown extends Component {
 
   handleDropdownClick = listItem => {
     if (listItem.link) {
-      navigateToHref(linkWithQueryParams(listItem.link));
+      firehoseClient.putRecord(
+        {
+          study: 'lesson-plan',
+          study_group: this.props.isStudentLessonPlan
+            ? 'student-lesson-plan'
+            : 'teacher-lesson-plan',
+          event: 'navigate-between-lessons',
+          data_int: this.props.lesson.id,
+          data_json: JSON.stringify({
+            startingLessonId: this.props.lesson.id,
+            endingLessonId: listItem.id
+          })
+        },
+        {
+          includeUserId: true,
+          callback: () => {
+            navigateToHref(linkWithQueryParams(listItem.link));
+          }
+        }
+      );
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }
   };
 
   /*
-    Give a list of lessons will add an item for:
-    1) Each set of 10 lessons
-    2) Each lesson in the open section of lessons
+    Give a list of lesson groups and lessons will add an item for:
+    1) Each lesson group
+    2) Each lesson in the open lesson group
 
-    Example: You have 15 lessons and the second section is open. The
-    list will look like:
-    - Lessons 1 to 10
-    - Lessons 10 to 15
+    Example: You have 2 lesson groups and the second lesson group section is open. The
+    list will look something like:
+    - Lesson Group 1
+    - Lesson Group 2
     - Lesson 11
     - Lesson 12
     - Lesson 13
@@ -69,32 +96,21 @@ export default class LessonNavigationDropdown extends Component {
    */
   createSectionsOfLessons = () => {
     const {lesson} = this.props;
-    const numLessons = lesson.unit.lessons.length;
-    const numSections = Math.ceil(numLessons / LESSONS_PER_SECTION.toFixed(1));
 
     const sectionsAndLessons = [];
-    for (let i = 0; i < numSections; i++) {
-      const numfirstLessonInSection = i * LESSONS_PER_SECTION + 1;
-      const numLastLessonInSection =
-        numLessons > i * LESSONS_PER_SECTION + LESSONS_PER_SECTION
-          ? i * LESSONS_PER_SECTION + LESSONS_PER_SECTION
-          : numLessons;
-
-      sectionsAndLessons.push({
-        displayName: `Lessons ${numfirstLessonInSection} to ${numLastLessonInSection}`,
-        sectionNumber: i + 1
-      });
-
-      if (i + 1 === this.state.currentSection) {
-        for (
-          let j = numfirstLessonInSection - 1;
-          j < numLastLessonInSection;
-          j++
-        ) {
-          sectionsAndLessons.push(lesson.unit.lessons[j]);
-        }
+    lesson.unit.lessonGroups.forEach((lessonGroup, index) => {
+      if (lessonGroup.userFacing) {
+        sectionsAndLessons.push({
+          displayName: lessonGroup.displayName,
+          sectionNumber: index + 1
+        });
       }
-    }
+      if (index + 1 === this.state.currentSection) {
+        lessonGroup.lessons.forEach(lesson => {
+          sectionsAndLessons.push(lesson);
+        });
+      }
+    });
 
     return sectionsAndLessons;
   };
@@ -102,10 +118,7 @@ export default class LessonNavigationDropdown extends Component {
   render() {
     const {lesson} = this.props;
 
-    const lessonsList =
-      lesson.unit.lessons.length < 12
-        ? lesson.unit.lessons
-        : this.createSectionsOfLessons();
+    const lessonsList = this.createSectionsOfLessons();
 
     return (
       <div style={styles.dropdown}>
@@ -119,14 +132,7 @@ export default class LessonNavigationDropdown extends Component {
               key={index}
               onClick={this.handleDropdownClick.bind(this, listItem)}
               className={listItem.link ? 'navigate' : 'no-navigation'} // Used to specify if the dropdown should collapse when clicked
-              style={
-                listItem.link
-                  ? {fontFamily: '"Gotham 4r", sans-serif'}
-                  : {
-                      fontFamily: '"Gotham 4r", sans-serif',
-                      backgroundColor: color.lightest_purple
-                    }
-              }
+              style={listItem.link ? styles.lesson : styles.section}
             >
               {listItem.link && (
                 <span style={{marginLeft: 10}}>

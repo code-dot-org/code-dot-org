@@ -47,6 +47,7 @@ class Resource < ApplicationRecord
     audience
     download_url
     include_in_pdf
+    is_rollup
   )
 
   def generate_key
@@ -73,6 +74,7 @@ class Resource < ApplicationRecord
 
   def summarize_for_lesson_plan
     {
+      id: id,
       key: key,
       name: I18n.t("data.resource.#{key}.name", default: name),
       url: url,
@@ -93,11 +95,12 @@ class Resource < ApplicationRecord
       audience: audience || '',
       type: type || '',
       assessment: assessment || false,
-      includeInPdf: include_in_pdf || false
+      includeInPdf: include_in_pdf || false,
+      isRollup: !!is_rollup
     }
   end
 
-  def summarize_for_teacher_resources_dropdown
+  def summarize_for_resources_dropdown
     {
       id: id,
       key: key,

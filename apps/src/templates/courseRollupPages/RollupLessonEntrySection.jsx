@@ -45,9 +45,12 @@ export default class RollupLessonEntrySection extends Component {
 
     return (
       <div style={styles.main}>
-        <div style={styles.object}>
-          <h4>{this.props.objectToRollUp}</h4>
-        </div>
+        {(this.props.objectToRollUp === 'Resources' ||
+          this.props.objectToRollUp === 'Prep') && (
+          <div style={styles.object}>
+            <h4>{this.props.objectToRollUp}</h4>
+          </div>
+        )}
         <div style={styles.entries}>
           {this.props.objectToRollUp === 'Vocabulary' &&
             this.props.lesson.vocabularies.length > 0 &&
@@ -63,12 +66,15 @@ export default class RollupLessonEntrySection extends Component {
               <p>{i18n.rollupNoVocab()}</p>
             )}
           {this.props.objectToRollUp === 'Code' &&
-            this.props.lesson.programmingExpressions.length > 0 &&
-            this.props.lesson.programmingExpressions.map(expression => (
-              <li key={expression.name}>
-                <StyledCodeBlock programmingExpression={expression} />
-              </li>
-            ))}
+            this.props.lesson.programmingExpressions.length > 0 && (
+              <ul>
+                {this.props.lesson.programmingExpressions.map(expression => (
+                  <li key={expression.name}>
+                    <StyledCodeBlock programmingExpression={expression} />
+                  </li>
+                ))}
+              </ul>
+            )}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length <= 0 && (
               <p>{i18n.rollupNoCode()}</p>
@@ -80,6 +86,7 @@ export default class RollupLessonEntrySection extends Component {
                   <h5>{i18n.forTheTeachers()}</h5>
                   <ResourceList
                     resources={this.props.lesson.resources['Teacher']}
+                    pageType="resources-rollup"
                   />
                 </div>
               )}
@@ -88,6 +95,7 @@ export default class RollupLessonEntrySection extends Component {
                   <h5>{i18n.forTheStudents()}</h5>
                   <ResourceList
                     resources={this.props.lesson.resources['Student']}
+                    pageType="resources-rollup"
                   />
                 </div>
               )}
@@ -96,6 +104,7 @@ export default class RollupLessonEntrySection extends Component {
                   <h5>{i18n.forAll()}</h5>
                   <ResourceList
                     resources={this.props.lesson.resources['All']}
+                    pageType="resources-rollup"
                   />
                 </div>
               )}

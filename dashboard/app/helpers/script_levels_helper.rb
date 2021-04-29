@@ -20,9 +20,9 @@ module ScriptLevelsHelper
               stage_extras: true
             ).any?
         if enabled_for_stage && (enabled_for_user || enabled_for_teacher)
-          response[:redirect] = script_stage_extras_path(
+          response[:redirect] = script_lesson_extras_path(
             script_id: script_level.script.name,
-            stage_position: (@stage || script_level.lesson).absolute_position
+            lesson_position: (@stage || script_level.lesson).absolute_position
           )
         end
       end

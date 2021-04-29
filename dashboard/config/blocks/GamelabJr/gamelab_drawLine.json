@@ -1,0 +1,28 @@
+{
+  "category": "Experimental",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "inline": false,
+    "func": "drawLine",
+    "docFunc": "gamelab_moveToward",
+    "blockText": "draw line {COLOR}  {LOC1}  {LOC2}",
+    "args": [
+      {
+        "name": "COLOR",
+        "type": "Colour"
+      },
+      {
+        "name": "LOC1",
+        "type": "Location"
+      },
+      {
+        "name": "LOC2",
+        "type": "Location"
+      }
+    ]
+  }
+}

@@ -23,12 +23,16 @@ sk-SK:
   csedweek_banner_teachers_text: 'Učíte informatiku? Pozrite sa aj na naše ďalšie
     materiály '
   n_have_learned_an_hoc: "<h1>Skús</h1> <h2>Hodinu Kódu</h2> <h3># účastníkov</h3>"
+  try_hoc_num_served: "<h1>Skús</h1><h2>Hodinu Kódu</h2><h3>%{num} účastníkov</h3>"
   anybody_can_learn: Každý sa môže naučiť.
   learn_now: Nauč sa teraz
   petition_message: Aby každý študent na každej škole dostal možnosť študovať informatiku
   petition_sign_message: 'Ak súhlasíš, zapíš sa a pridaj sa k nášmu mailing listu
     spolu s # ďalšími.'
+  petition_sign_message_num: Ak súhlasíš, zapíš sa a pridaj k nášmu mailing listu
+    spolu s %{num} ďalšími.
   petition_join_others: 'Pridaj sa k # iným'
+  petition_join_others_num: Pridaj sa k %{num} iným
   name: Meno
   email: E-mail
   zipcode: PSČ (ak si v USA) alebo krajina
@@ -58,6 +62,7 @@ sk-SK:
   hoc2014_support: Podporte nás &#x25BE;
   hoc2014_whatishoc: Čo je to Hodina Kódu?
   csedweek_map_header: "# CSEdWeek / aktivity Hodiny Kódu na celkom svete"
+  csedweek_map_header_num: "%{num} CSEdWeek / aktivity Hodiny Kódu na celkom svete"
   csedweek_map_signup: Zaregistrujte Vašu udalosť
   csedweek_map_search_placeholder: Vyhľadať Hour of Code udalosti
   csedweek_map_search_search: Hľadať
@@ -1336,6 +1341,12 @@ sk-SK:
   coursed-2019_gradelevel: Vek 7-11
   coursee-2019_gradelevel: Vek 8-12
   coursef-2019_gradelevel: Vek 9-13
+  coursea-2020_gradelevel: Vek 4-7
+  courseb-2020_gradelevel: Vek 5-8
+  coursec-2020_gradelevel: Vek 6-10
+  coursed-2020_gradelevel: Vek 7-11
+  coursee-2020_gradelevel: Vek 8-12
+  coursef-2020_gradelevel: Vek 9-13
   accelerated_gradelevel: Vek 10-18
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety

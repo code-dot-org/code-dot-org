@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-03-31 14:03:43 UTC",
+    "serialized_at": "2021-04-27 19:28:29 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -71,6 +71,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csf_events",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "End of Course Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "coursea-2021"
       }
     }
@@ -125,7 +137,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "This **context-setting** lesson brings together teams with a simple task: get the \"flurb\" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.",
+        "overview": "This **context-setting** lesson brings together teams with a simple task: get the \"flurb\" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided.",
         "student_overview": "Write instructions to get the Flurb to the fruit.",
         "purpose": "The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.",
         "preparation": " - Print one ***Worksheet** and one set of ***Manipulatives** per group of 2-3.\n - Make sure each student has a Reflection Journal.",
@@ -149,7 +161,7 @@
         "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
         "student_overview": "Program Scrat to reach the acorn.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Cut out direction blocks from ***Manipulatives** to use with the Happy Maps bridging activity.\n - Make sure each student has a journal..",
+        "preparation": " - Cut out direction blocks from ***Manipulatives** to use with the Happy Maps bridging activity.\n - Make sure each student has a  Reflection Journal..",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -206,7 +218,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "This **context-setting** lesson revisits Happy Maps. This time, student will use loops to solve bigger, longer puzzles with their code.",
+        "overview": "This **context-setting** lesson revisits Happy Maps. This time, students will use loops to solve bigger, longer puzzles with their code.",
         "student_overview": "Help the Flurb solve bigger problems using loops.",
         "purpose": "This lesson serves as an introduction to loops. Loops allow for students to simplify their code by grouping commands that need to be repeated. Students will develop critical thinking skills by noticing repetition in movements of their classmates and determining how many times to repeat commands. By seeing \"Happy Maps\" again, students will get the chance to relate old concepts such as sequencing to the new concept of repeat loops.",
         "preparation": " - Print out a ***Worksheet** to display for the class\n - Per each group of 2-3, print one of each: ***Game pieces, *XL Worksheet, and  *Bonus Pack Manipulatives**.\n - Make sure each student has a Reflection Journal.",
@@ -227,10 +239,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will practice the concept of loops in programming puzzles where the goal is to help the squirrel reach the acorn.",
+        "overview": "In this **skill-building** lesson, students will practice loops in programming puzzles where the goal is to help the squirrel reach the acorn.",
         "student_overview": "Help Scrat cover more ground using loops.",
         "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be repeated.",
-        "preparation": " - Review the previous unplugged lesson and develop questions to remind students why loops are used.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Gather supplies from previous Happy Loops to reuse for warm up\r\n - Make sure each student has a journal.",
+        "preparation": " - Review the previous unplugged lesson and develop questions to remind students why loops are used.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Gather supplies from previous Happy Loops to reuse for warm up\n - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -247,7 +259,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "In this **skill-building** lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze. Here, loops are used to collect treasure in open cave spaces.",
+        "overview": "In this **skill-building** lesson, students continue learning the concept of loops. Here, students use loops to collect treasure in open cave spaces.",
         "student_overview": "Help Laurel the adventurer collect the treasure underground.",
         "purpose": "This lesson gives students more practice with loops and introduces a new block, `get treasure`. The block works just like `pick corn` did in Harvester. These puzzles are more open, giving students more flexibility for their final solutions.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**\n - Make sure each student has a reflection journal",
@@ -267,7 +279,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will be given the opportunity to create their own images.",
+        "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.",
         "student_overview": "Use loops and patterns to finish the images.",
         "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of  `repeat` loops.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure each student has a reflection journal.",
@@ -302,13 +314,13 @@
     },
     {
       "key": "Events in Play Lab",
-      "name": "On the Move with Events",
+      "name": "Mini-Project: On the Move with Play Lab",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
+        "overview": "In this **mini-project**, students will use events in Play Lab and apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
         "student_overview": "Create your own game or story.",
         "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure every student has a reflection journal.",
@@ -317,6 +329,25 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "csf_events",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "End of Course Project",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "In this **project** lesson, students apply what they have learned about sequencing and loops with the Artist.",
+        "student_overview": "Tell a story with the Artist!",
+        "purpose": "This lesson gives students one last opportunity to creatively use their new computer science skills.",
+        "preparation": "* Write and code your own story for the Artist in advance to inspire students!\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "coursea-2021"
       }
     }
@@ -1098,6 +1129,48 @@
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2021"
       }
+    },
+    {
+      "key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "71a032af-54cc-494d-8449-f02ce20f8aad",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "cccafe00-da31-43f0-93cb-a49d10d5be0a",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cccafe00-da31-43f0-93cb-a49d10d5be0a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021"
+      }
     }
   ],
   "activity_sections": [
@@ -1289,7 +1362,7 @@
       "key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
       "position": 1,
       "properties": {
-        "description": "*Goal:* Help students reflect on the things they learned in this lesson\n\nYou can give the students a journal prompt to help them process some of the things that they encountered during the day or lead a whole class discussion.\n\n**Prompts:**\n\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
         "name": "Reflection",
         "tips": [
           {
@@ -1675,7 +1748,7 @@
       "key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming  - student video whenever possible\n - Encourage students with questions/challenges to start by asking their partner\n - Unanswered questions can be escalated to a nearby group, who might already know the solution\n - Remind students to use the debugging process before you approach\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own"
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pair Programming**  - student video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
       "seeding_key": {
         "activity_section.key": "bfc6b9c5-a1ca-4d0a-aea3-c691a57b678d",
@@ -1937,7 +2010,7 @@
       "key": "62d22669-d8bd-4e18-a767-8269aa7322f8",
       "position": 3,
       "properties": {
-        "description": "Pull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows from the ***Game Pieces**  and ***Bonus Pack**, have students lay out a pattern that they think will get the Harvester to pick all the corn. Ask the students to share. See how many other students had the same answer!",
+        "description": "Pull a puzzle from the corresponding online puzzles. We recommend puzzle 4. Using arrows, have students lay out a pattern that they think will get *Scrat* to the acorn. Ask the students to share. See how many other students had the same answer!",
         "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
@@ -1961,8 +2034,7 @@
       "key": "bfc26aa9-b856-47f4-86c0-36818d4d9c87",
       "position": 2,
       "properties": {
-        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop.",
-        "name": "Loops with Scrat"
+        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop."
       },
       "seeding_key": {
         "activity_section.key": "bfc26aa9-b856-47f4-86c0-36818d4d9c87",
@@ -1973,7 +2045,7 @@
       "key": "595fbc1f-baf6-446c-97dd-c89fa67a6baf",
       "position": 3,
       "properties": {
-        "progression_name": "Skill Buildingg"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "595fbc1f-baf6-446c-97dd-c89fa67a6baf",
@@ -2466,14 +2538,15 @@
       "key": "40978575-9e16-4760-a200-0678f187ff4c",
       "position": 1,
       "properties": {
-        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- What did we learn?\n- What are some examples of events?\n\n####Reflection \n\n**Prompts:**\n\n- What was today’s lesson about?\n- Draw a face that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
+        "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- *What did we learn?*\n- *What are some examples of events?*\n\n\n**Prompts:**\n\n- What was today’s lesson about?\n- Draw a face that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
         "duration": "10",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Students should demonstrate understanding that events are something that can cause other actions to happen. Refer back to earlier examples from the lesson or encourage students to come up with their own."
           }
-        ]
+        ],
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "40978575-9e16-4760-a200-0678f187ff4c",
@@ -2638,7 +2711,7 @@
       "key": "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001",
       "position": 1,
       "properties": {
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of a face that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote-controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2655,6 +2728,105 @@
       "seeding_key": {
         "activity_section.key": "807c4bfd-ed3e-4400-a83a-a535c56f3155",
         "lesson_activity.key": "98f951f7-63b2-4d62-82c9-d472b3505b68"
+      }
+    },
+    {
+      "key": "4ae60932-ccb3-411c-bfb4-bc9e52149b27",
+      "position": 1,
+      "properties": {
+        "name": "Review",
+        "description": "**Do this:**\n* Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in the earlier lesson using the Artist tools.\n* Review the vocabulary word **loop**.\n* If you created your own project example, share it now.",
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ae60932-ccb3-411c-bfb4-bc9e52149b27",
+        "lesson_activity.key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c"
+      }
+    },
+    {
+      "key": "d07826c3-fe5d-4ffa-a4ff-6bd799a62342",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Pull up level for this lesson on the projector.",
+        "progression_name": "Project",
+        "name": "Telling a story with the Artist"
+      },
+      "seeding_key": {
+        "activity_section.key": "d07826c3-fe5d-4ffa-a4ff-6bd799a62342",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "22c1ade3-49af-45ce-84bb-ba4337206074",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "*Today, we will celebrate how much you have all learned by creating our own projects to tell a story with the Artist.   The Artist will be taking a trip to three places today: a garden, a zoo, and outer space!*\n\n*Your job is to create a path for him and tell a story about what he did and saw.*\n\n*Will he walk through the flowers?*\n\n*Will he build a house for the animals?* \n\n*What else might he see or do?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "22c1ade3-49af-45ce-84bb-ba4337206074",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "76119a2d-a3f8-4c17-b38a-c0194431de25",
+      "position": 3,
+      "properties": {
+        "name": "Planning",
+        "description": "**Do this:** Distribute the **planning guide** handout and review it with students.\nStudents will pick *at least one* place for the artist. They should then draw the path that the artist will follow. (It's like a dot-to-dot puzzle, but without the numbers!)\nNext to the image, students should write their stories. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Stories can be a sentence or two, whatever feels appropriate for your class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76119a2d-a3f8-4c17-b38a-c0194431de25",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "0ab5b62b-a464-4801-a963-d23d293ea5ff",
+      "position": 4,
+      "properties": {
+        "remarks": true,
+        "description": "When you get the activity on your computer, click on any of the chooses to start. Start with your plan, but you can have the artist draw whatever you like! At the end of class, we will share our projects with the class.",
+        "progression_name": "Project",
+        "name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ab5b62b-a464-4801-a963-d23d293ea5ff",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "16e34527-4efe-46f1-970b-f365858958a9",
+      "position": 5,
+      "properties": {
+        "description": "As students work, support them by answering questions and giving ideas. Encourage them to share ideas to make the activity more collaborative.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "All of the choices in this lesson are considered \"Free Play,\" which means there is no single right answer. If a student presses Finish, they will return to the list of choices. You can have students complete just one choice or as many as they are interested in completing as time allows."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16e34527-4efe-46f1-970b-f365858958a9",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "adc355f7-34d5-450e-aa57-e001b2a7973c",
+      "position": 1,
+      "properties": {
+        "name": "Showcase",
+        "description": "To celebrate students' work, spend the last 10 minutes or so, allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects and tell their story in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them. \n* **Pair Storytelling**: If you have a big class or are shorter on time, have students or groups pair up and demo their projects that way. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and run the project there and read the story. When they receive a signal from you, they should move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible."
+      },
+      "seeding_key": {
+        "activity_section.key": "adc355f7-34d5-450e-aa57-e001b2a7973c",
+        "lesson_activity.key": "cccafe00-da31-43f0-93cb-a49d10d5be0a"
       }
     }
   ],
@@ -3915,7 +4087,7 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Skill Buildingg",
+        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops1_2021"
         ]
@@ -3941,7 +4113,7 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Skill Buildingg",
+        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops2_2021"
         ]
@@ -5341,6 +5513,32 @@
       "level_keys": [
         "courseA_playlab_events_challenge1_2021"
       ]
+    },
+    {
+      "chapter": 104,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Project",
+        "level_keys": [
+          "courseAB_EOC_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021",
+        "activity_section.key": "0ab5b62b-a464-4801-a963-d23d293ea5ff"
+      },
+      "level_keys": [
+        "courseAB_EOC_2021"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6579,6 +6777,18 @@
         "script.name": "coursea-2021",
         "activity_section.key": "40ddc694-3a85-4874-b3ad-71810e6a0474"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_EOC_2021",
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021",
+        "activity_section.key": "0ab5b62b-a464-4801-a963-d23d293ea5ff"
+      }
     }
   ],
   "resources": [
@@ -7043,25 +7253,136 @@
       }
     },
     {
-      "name": "Teacher Forum",
-      "url": "http://forum.code.org/c/csf",
-      "key": "teacher_forum",
+      "name": "Artist Project Planning Guide",
+      "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+      "key": "artist_project_planning_guide",
       "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "artist_project_planning_guide"
+      }
+    },
+    {
+      "name": "CSTA Standards Mapping",
+      "url": "https://studio.code.org/s/coursea-2021/standards",
+      "key": "csta_standards_mapping",
+      "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "teacher_forum"
+        "resource.key": "csta_standards_mapping"
+      }
+    },
+    {
+      "name": "Common Core and NGSS Guidance",
+      "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
+      "key": "common_core_and_ngss_guidance",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common_core_and_ngss_guidance"
+      }
+    },
+    {
+      "name": "Cross-Curricular Extension Activities",
+      "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview\t\t",
+      "key": "cross-curricular_extension_activities",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cross-curricular_extension_activities"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://studio.code.org/s/coursea-2021/vocab",
+      "key": "course_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Implementation Guide",
+      "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+      "key": "implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "implementation_guide"
+      }
+    },
+    {
+      "name": "Lesson Type Guide",
+      "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+      "key": "lesson_type_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+      "key": "debugging_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
       }
     },
     {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview",
-      "key": "curriculum_guide",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+      "key": "curriculum_guide_1",
       "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "curriculum_guide"
+        "resource.key": "curriculum_guide_1"
+      }
+    },
+    {
+      "name": "2021 Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "2021_change_log",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2021_change_log"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf/",
+      "key": "teacher_forum_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
       }
     }
   ],
@@ -7365,21 +7686,78 @@
         "lesson.key": "Events in Play Lab",
         "resource.key": "the_big_event_courses_a_b_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "artist_project_planning_guide"
+      }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "csta_standards_mapping",
         "script.name": "coursea-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "curriculum_guide",
+        "resource.key": "common_core_and_ngss_guidance",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "cross-curricular_extension_activities",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "implementation_guide",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_type_guide",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2021_change_log",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "coursea-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {
@@ -7651,6 +8029,16 @@
       "seeding_key": {
         "vocabulary.key": "event"
       }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -7814,6 +8202,12 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "loop"
       }
     }
   ],
@@ -8120,6 +8514,26 @@
         "lesson.key": "Events in Play Lab",
         "objective.key": "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93"
       }
+    },
+    {
+      "key": "7267ef0f-cb1a-42c2-aa5c-40cd949c9479",
+      "properties": {
+        "description": "Apply computer science concepts in an open-ended project."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "7267ef0f-cb1a-42c2-aa5c-40cd949c9479"
+      }
+    },
+    {
+      "key": "0f72a34c-2667-4593-8f6f-ff11b0a92ec8",
+      "properties": {
+        "description": "Overcome obstacles such as time constraints or bugs."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "0f72a34c-2667-4593-8f6f-ff11b0a92ec8"
+      }
     }
   ],
   "lessons_standards": [
@@ -8352,6 +8766,13 @@
         "lesson.key": "Events in Play Lab",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
       }
     }
   ],

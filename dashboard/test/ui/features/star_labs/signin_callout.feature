@@ -2,7 +2,7 @@ Feature: Viewing and dismissing the login callout
 # Build errors on clearing cookies on mobile, ie
 
 Scenario: Should see callout on 20-hour farmer lesson
-  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is visible
@@ -10,7 +10,7 @@ Scenario: Should see callout on 20-hour farmer lesson
 @no_mobile
 @no_ie
 Scenario: Should be able to clear cookies and session storage to see callout again
-  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is visible
@@ -25,14 +25,14 @@ Scenario: Should be able to clear cookies and session storage to see callout aga
 
 @as_student
 Scenario: Should not see callout on farmer lesson if logged in
-  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is not visible
 
 @as_student
 Scenario: Should not see callout on CSF coursea lesson if logged in
-  Given I am on "http://studio.code.org/s/coursea-2020/stage/4/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/coursea-2020/lessons/4/levels/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is not visible
@@ -40,7 +40,7 @@ Scenario: Should not see callout on CSF coursea lesson if logged in
 @no_mobile
 @no_ie
 Scenario: Clicking anywhere should dismiss the login reminder
-  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is visible
@@ -51,7 +51,7 @@ Scenario: Clicking anywhere should dismiss the login reminder
   And I clear session storage
 
 Scenario: See age callout, not signin callout on hour of code
-  Given I am on "http://studio.code.org/s/allthethings/stage/37/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I wait for 3 seconds
@@ -61,7 +61,7 @@ Scenario: See age callout, not signin callout on hour of code
 @no_mobile
 @no_ie
 Scenario: After dismissing the callout, it should not reappear upon refresh
-  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is visible
@@ -74,7 +74,7 @@ Scenario: After dismissing the callout, it should not reappear upon refresh
 @no_mobile
 @no_ie
 Scenario: Nested callouts should work as expected
-  Given I am on "http://studio.code.org/s/coursea-2020/stage/2/puzzle/2?noautoplay=true"
+  Given I am on "http://studio.code.org/s/coursea-2020/lessons/2/levels/2?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And element ".uitest-login-callout" is visible
@@ -84,7 +84,7 @@ Scenario: Nested callouts should work as expected
   And I clear session storage
 
 Scenario: Should be immediately redirected to sign in if pressing sign in button
-  Given I am on "http://studio.code.org/s/20-hour/stage/9/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I wait for the page to fully load
   And I rotate to landscape
   And element ".uitest-login-callout" is visible

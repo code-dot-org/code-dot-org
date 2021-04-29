@@ -1,6 +1,23 @@
 require 'cdo/chat_client'
 require 'dynamic_config/dcdo'
 
+# Overview of all Curriculum PDFs
+#
+# Current:
+# - teacher lesson plans (csp1-2021/20210216001309/teacher-lesson-plans/Welcome to CSP.pdf)
+# - student lesson plans (csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf)
+# - script resources (csp1-2021/20210216001309/resources/CSP Unit 1 - Digital Information ('21-'22) - Resources.pdf)
+# - script overview (csp1-2021/20210216001309/CSP Unit 1 - Digital Information ('21-'22).pdf)
+#
+# Future:
+# - student resources, based on Resource#audience
+# - unit calendar
+# - four rollup pages for unit, unit group, one for each of:
+#   - vocab
+#   - resouces
+#   - standards
+#   - programming expressions
+
 module Services
   # Contains all code related to the generation, storage, and
   # retrieval of Curriculum PDFs.
@@ -8,6 +25,8 @@ module Services
   # Also see curriculum_pdfs.rake for some associated logic
   module CurriculumPdfs
     include LessonPlans
+    include Resources
+    include ScriptOverview
     include Utils
 
     DEBUG = false
@@ -45,7 +64,6 @@ module Services
 
     def self.generate_pdfs(script)
       ChatClient.log "Generating PDFs for #{script.name}"
-
       pdf_dir = Dir.mktmpdir("pdf_generation")
 
       # Individual Lesson Plan and Student Lesson Plan PDFs
@@ -54,21 +72,12 @@ module Services
         generate_lesson_pdf(lesson, pdf_dir, true) if script.include_student_lesson_plans
       end
 
-      # TODO: Script Overview PDFs
-      #
-      # There are still some outstanding questions as to what exactly we
-      # want to do here. We know we want to provide a single PDF containing
-      # all lesson data (so users who want to print all lessons for a script
-      # can do so in a single print job), but it sounds like we also want
-      # some kind of script overview contenet and possibly also a "visual
-      # map" of the lesson plans.
-      #
-      # Notably, we haven't yet moved over course and script overview
-      # content from CurriculumBuilder nor built views for displaying that
-      # content. Once we do, we will be better prepared to figure out what
-      # kind of PDF to construct here.
-      upload_generated_pdfs_to_s3(pdf_dir)
+      # Script Resources and Overview PDFs
+      generate_script_resources_pdf(script, pdf_dir)
+      generate_script_overview_pdf(script, pdf_dir)
 
+      # Persist PDFs to S3
+      upload_generated_pdfs_to_s3(pdf_dir)
       FileUtils.remove_entry_secure(pdf_dir) unless DEBUG
     end
 

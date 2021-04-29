@@ -33,7 +33,7 @@ const styles = {
   }
 };
 
-class ManageStudentActionsCell extends Component {
+class ManageStudentsActionsCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired, // the student's user id
     sectionId: PropTypes.number,
@@ -300,7 +300,7 @@ class ManageStudentActionsCell extends Component {
   }
 }
 
-export const UnconnectedManageStudentActionsCell = ManageStudentActionsCell;
+export const UnconnectedManageStudentsActionsCell = ManageStudentsActionsCell;
 
 export default connect(
   state => ({}),
@@ -324,4 +324,4 @@ export default connect(
       dispatch(setSection(section));
     }
   })
-)(ManageStudentActionsCell);
+)(ManageStudentsActionsCell);

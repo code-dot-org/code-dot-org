@@ -85,7 +85,8 @@ export const resourceShape = PropTypes.shape({
   audience: PropTypes.string,
   assessment: PropTypes.bool,
   includeInPdf: PropTypes.bool,
-  downloadUrl: PropTypes.string
+  downloadUrl: PropTypes.string,
+  isRollup: PropTypes.bool
 });
 
 export const vocabularyShape = PropTypes.shape({
@@ -108,6 +109,11 @@ export const programmingExpressionShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   programmingEnvironmentName: PropTypes.string.isRequired
+});
+
+export const frameworkShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired
 });
 
 export const standardShape = PropTypes.shape({
