@@ -40,6 +40,12 @@ const ALREADY_OWNED = {
   id: 'ABCDEF'
 };
 
+const RESTRICTED_SECTION = {
+  action: 'join',
+  result: 'section_restricted',
+  id: 'ABCDEF'
+};
+
 describe('JoinSectionNotifications', () => {
   it('renders correct component when successfully join a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_JOIN} />);
@@ -71,5 +77,12 @@ describe('JoinSectionNotifications', () => {
   it('renders correct component when teacher already owns the section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...ALREADY_OWNED} />);
     expect(wrapper.find('JoinSectionOwnedNotification')).to.have.lengthOf(1);
+  });
+
+  it('renders correct component when section is restricted to not allow new joiners', () => {
+    let wrapper = shallow(<JoinSectionNotifications {...RESTRICTED_SECTION} />);
+    expect(wrapper.find('JoinSectionRestrictedNotification')).to.have.lengthOf(
+      1
+    );
   });
 });
