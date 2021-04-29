@@ -992,7 +992,11 @@ en:
       gamelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       gamelab_addTarget:
-        text: "[SPRITE][0] gets target [TARGET][1]"
+        text: "[SPRITE][0] gets target [TARGET][1] to [OPT][2]"
+        options:
+          OPT:
+            '"follow"': follow
+            '"avoid"': avoid
       gamelab_allSpritesWithAnimation:
         text: "[ANIMATION][0]"
       gamelab_atTime:
@@ -1001,6 +1005,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_avoidingTargets:
+        text: avoiding targets
       gamelab_beginCollectingData:
         text: begin collecting data [BREAK][0] value [VALUE][1] with label [LABEL][2]
       gamelab_bounceOff:
@@ -1037,6 +1043,8 @@ en:
         text: remove [THIS][0]
       gamelab_draggable:
         text: being draggable
+      gamelab_drawLine:
+        text: draw line [COLOR][0]  [LOC1][1]  [LOC2][2]
       gamelab_edgesDisplace:
         text: edges block [SPRITE][0] from moving
       gamelab_followingTargets:
@@ -1293,6 +1301,16 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"speed"': speed
+      gamelab_setProp_dropdown:
+        text: set [SPRITE][0] [PROPERTY][1] to [SIZE][2]
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setSizes:
         text: set [SPRITE][0] [PROPERTY][1] to [N][2]%
         options:
@@ -1319,8 +1337,12 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_startFollowing:
+        text: "[SPRITE][0] begins following [TARGET][1]"
       gamelab_stopCollectingData:
         text: stop collecting data
+      gamelab_stopFollowing:
+        text: "[SPRITE][0] stops following other sprites"
       gamelab_subjectSpritePointer:
         text: "[SPRITE][0]"
       gamelab_textJoin:
@@ -1337,6 +1359,8 @@ en:
             '"left"': left
       gamelab_updateTitleWithColor:
         text: show title screen [BREAK][0] title [TITLE][1] color [COLOR][2]
+      gamelab_whenAllPromptsAnswered:
+        text: when all prompts answered
       gamelab_whenDownArrow:
         text: when down arrow pressed
       gamelab_whenKey:
@@ -1391,6 +1415,17 @@ en:
         text: |-
           if [NUM][0]% chance
           [STATEMENT][1]
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           [NUM][0] chance
+           [STATEMENT][1]
+        options:
+          NUM:
+            '10': very low
+            '25': low
+            '50': 50/50
+            '75': high
+            '90': very high
       gamelab_xLocationOf:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
@@ -1664,6 +1699,13 @@ en:
             '"direction"': movement direction
       Mikelab_setTint:
         text: change color of [SPRITE][0] to [COLOR][1]
+      Mikelab_setupSim:
+        text: |-
+          setup simulation with
+          [SPRITE1N][0][SPRITE1COSTUME][1]speed[SPRITE1SPEED][2]
+          [SPRITE2N][3][SPRITE2COSTUME][4]speed[SPRITE2SPEED][5]
+          collecting
+          [SPRITE3N][6][SPRITE3COSTUME][7]
       Mikelab_showScoreboard:
         text: scoreboard label [LABEL][0] text color [TEXTCOLOR][1] color [COLOR][2] value [VALUE][3] corner [CORNER][4]
         options:
@@ -1788,49 +1830,60 @@ en:
         options:
           PROPERTY:
             "'shapeColor'": color
-      aalab_addBehaviorForDuration:
-        text: aalab sprite [SPRITE][0] begins [BEHAVIOR][1] for [SECONDS][2] seconds
-      aalab_addBehaviorUntilBoolean:
-        text: sprite [SPRITE][0] begins [BEHAVIOR][1] until [CONDITION][2]
-      aalab_createNewSpriteAnonReturn2:
-        text: new sprite named[SPRITE_NAME][0] with costume[ANIMATION_NAME][1] at location[LOCATION][2]
-      aalab_goToScene:
-        text: go to scene [SCENE][0]
+      aalab_layoutSprites:
+        text: layout monsters as a [FORMAT][0]
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: move [SPRITE][0] [DISTANCE][1] pixels [DIRECTION][2]
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': East
-            '"South"': South
-            '"West"': West
-      aalab_prompt:
-        text: ask question [MESSAGE][0]
-      aalab_scene:
-        text: scene [SCENE][0]
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: setup story
-      aalab_starwars_playSound:
-        text: play[OPTION][0]sound
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grid
+            '"border"': border
+            '"row"': row
             '"random"': random
-            '"R2-D2 random"': R2-D2 random
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_setSpeed:
+        text: set monster speed to [VAL][0]
+      aalab_setupSim:
+        text: setup Monster Town with[COUNT][0]monsters
+      aalab_someGraduallyStartIntervention:
+        text: "[PORTION][0] monsters [RATE][1] begin [BEHAVIOR][2]"
+        options:
+          PORTION:
+            '1': all
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+          RATE:
+            '"immediately"': immediately
+            '"quickly"': quickly
+            '"gradually"': gradually
+            '"slowly"': slowly
+          BEHAVIOR:
+            '"wandering"': wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
+      aalab_someStartIntervention:
+        text: "[PORTION][0] monsters begin [BEHAVIOR][1]"
+        options:
+          PORTION:
+            '1': all
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+          BEHAVIOR:
+            '"wandering"': wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
+      aalab_startIntervention:
+        text: monsters begin [BEHAVIOR][0]
+        options:
+          BEHAVIOR:
+            wandering: wandering randomly
+            '"congregating"': congregating
+            '"quarantining"': quarantining when sick
+            '"avoiding"': social distancing
+            '"none"': staying still
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
