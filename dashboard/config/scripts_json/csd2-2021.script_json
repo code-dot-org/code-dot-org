@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-27 00:53:25 UTC",
+    "serialized_at": "2021-04-29 16:36:48 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -2950,7 +2950,7 @@
             "markdown": "**Goals**\n\n**Key Vocabulary:**\n\n- CSS - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n- CSS Selector - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\nStudents should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page."
           }
         ],
-        "description": "**Questions to Consider with the video: **\n- How is the style of a web page different from structure?\n- Why might you want your web page to have a certain style?"
+        "description": "**Questions to Consider with the video:**\n- How is the style of a web page different from structure?\n- Why might you want your web page to have a certain style?"
       },
       "seeding_key": {
         "activity_section.key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
@@ -2978,7 +2978,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal**\n\nMake sure all the students understand how to link to their stylesheet from each web page."
           }
-        ]
+        ],
+        "description": "**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?"
       },
       "seeding_key": {
         "activity_section.key": "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9",
@@ -4311,7 +4312,8 @@
             "markdown": "**Goal**\n\nThe video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nAs they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written."
           }
         ],
-        "progression_name": "Video: Publishing Your Website"
+        "progression_name": "Video: Publishing Your Website",
+        "description": "**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?"
       },
       "seeding_key": {
         "activity_section.key": "f82407b3-02da-446b-9c56-6e11c8f2df36",
@@ -4856,7 +4858,14 @@
       "key": "3d200812-9df8-42ca-94f5-c1bbda254c45",
       "position": 1,
       "properties": {
-        "progression_name": "Video: Teamwork"
+        "progression_name": "Video: Teamwork",
+        "description": "**Questions to Consider with Video:**\n- What are the advantages to working in a team?\n- What are some tips for teams to work well together?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The goal of this video is to help students come into teamwork with a positive attitude and give them a few suggestions for how to make their teams run more smoothly.\nStudents may have different ideas for the advantages of working on a team, but they should note that people can get more done in a team and that bringing in a diversity of ideas will make a project better.\n\n**Tips mentioned in the video are to:**\n- Have a plan\n- Give everyone a special role\n- Celebrate successes of your teammates\n- Have fun!\n- Figure out everyone's strengths\n- Listen to and respect everyone's ideas\n- Be confident in sharing your ideas"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3d200812-9df8-42ca-94f5-c1bbda254c45",
@@ -4867,7 +4876,14 @@
       "key": "80ca305a-9689-43f6-9086-222cf4a1e287",
       "position": 2,
       "properties": {
-        "progression_name": "Video: Managing Disagreement"
+        "progression_name": "Video: Managing Disagreement",
+        "description": "**Question to Consider with Video:**\n- What are three tips for dealing with disagreement?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students should understand that disagreement is a normal part of teamwork and have strategies for constructively dealing with disagreement in their teams.\n\n**Tips in the video are:**\n- Appreciate that your team has lots of ideas, even if you don't agree with all of them.\n- Be curious about the other ideas, and try to understand what is good about them.\n- Compromise with your teammates, taking good parts of lots of ideas and putting them together."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "80ca305a-9689-43f6-9086-222cf4a1e287",
@@ -9407,18 +9423,6 @@
       }
     },
     {
-      "name": "Intro to HTML",
-      "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
-      "key": "intro-to-html",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "intro-to-html"
-      }
-    },
-    {
       "name": "Exemplar Text Website",
       "url": "https://codeprojects.org/t0CRT-85_y-VLFBO5RF3VQ/",
       "key": "exemplar-text-website",
@@ -9431,15 +9435,15 @@
       }
     },
     {
-      "name": "Headings",
-      "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
-      "key": "headings",
+      "name": "CSD Unit 2 - Web Development",
+      "url": "https://docs.google.com/presentation/d/1rg7Lf6ahVruRMzmYnZuXZZqLUgqK5ahp53tCIPtl8wc/copy",
+      "key": "csd_unit_2_-_web_development",
       "properties": {
         "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "headings"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10269,19 +10273,19 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "resource.key": "intro-to-html"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
         "resource.key": "exemplar-text-website"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Headings",
-        "resource.key": "headings"
+        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
