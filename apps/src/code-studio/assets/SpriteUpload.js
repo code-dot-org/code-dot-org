@@ -1,41 +1,48 @@
 import React from 'react';
+import color from '@cdo/apps/util/color';
 
 export default class SpriteUpload extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fileData: null,
-      filePreviewURL: '',
-      filename: '',
-      category: '',
-      currentCategories: []
-    };
-  }
+  state = {
+    fileData: null,
+    filePreviewURL: '',
+    filename: '',
+    category: '',
+    currentCategories: [],
+    uploadStatus: {
+      success: null,
+      message: ''
+    }
+  };
 
   handleSubmit = event => {
     event.preventDefault();
+
     let destination =
       this.state.category.length === 0
         ? `/level_animations/${this.state.filename}`
         : `/spritelab/category_${this.state.category}/${this.state.filename}`;
-    let xhr = new XMLHttpRequest();
 
-    const onError = function() {
-      console.log(new Error(`${xhr.status} ${xhr.statusText}`));
-    };
-
-    const onSuccess = function() {
-      if (xhr.status >= 400) {
-        onError();
-        return;
-      }
-    };
-
-    xhr.addEventListener('load', onSuccess);
-    xhr.addEventListener('error', onError);
-    xhr.open('POST', `/api/v1/animation-library` + destination, true);
-    xhr.setRequestHeader('Content-type', 'image/png');
-    xhr.send(this.state.fileData);
+    return fetch(`/api/v1/animation-library` + destination, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'image/png'
+      },
+      body: this.state.fileData
+    })
+      .then(response => {
+        let responseMessage = response.ok
+          ? 'Image Successfully Uploaded'
+          : `Error(${response.status}: ${response.statusText})`;
+        this.setState({
+          uploadStatus: {success: response.ok, message: responseMessage}
+        });
+      })
+      .catch(err => {
+        this.setState({
+          uploadStatus: {success: false, message: err.toString()}
+        });
+        console.error(err);
+      });
   };
 
   handleImageChange = event => {
@@ -43,7 +50,8 @@ export default class SpriteUpload extends React.Component {
     this.setState({
       fileData: file,
       filename: file.name,
-      filePreviewURL: URL.createObjectURL(file)
+      filePreviewURL: URL.createObjectURL(file),
+      uploadStatus: {success: null, message: ''}
     });
   };
 
@@ -54,6 +62,7 @@ export default class SpriteUpload extends React.Component {
   };
 
   render() {
+    const {uploadStatus, filePreviewURL, category} = this.state;
     fetch(`/api/v1/animation-library/manifest/spritelab/en_us`)
       .then(response => response.json())
       .then(data =>
@@ -64,7 +73,7 @@ export default class SpriteUpload extends React.Component {
         <h1>Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
-            <h4> Sprite Category: </h4>
+            <h4>Sprite Category:</h4>
             <p>
               Enter the category to which this sprite belongs. Leave blank if
               the sprite should be uploaded to the level-specific animations
@@ -72,12 +81,12 @@ export default class SpriteUpload extends React.Component {
             </p>
             <input
               type="text"
-              value={this.state.category}
+              value={category}
               onChange={this.handleCategoryChange}
             />
           </label>
           <label>
-            <h4> Select Sprite to Add to Library: </h4>
+            <h4>Select Sprite to Add to Library:</h4>
             <input
               type="file"
               accept="image/png"
@@ -87,13 +96,30 @@ export default class SpriteUpload extends React.Component {
           </label>
           <br />
           <label>
-            <h4> Image Preview: </h4>
-            <img src={this.state.filePreviewURL} />
+            <h4>Image Preview:</h4>
+            <img src={filePreviewURL} />
           </label>
           <br />
           <button type="submit">Upload to Library</button>
+          <p
+            style={{
+              ...styles.uploadStatusMessage,
+              ...(!uploadStatus.success && styles.uploadFailure)
+            }}
+          >
+            {uploadStatus.message}
+          </p>
         </form>
       </div>
     );
   }
 }
+
+const styles = {
+  uploadStatusMessage: {
+    fontSize: 20
+  },
+  uploadFailure: {
+    color: color.red
+  }
+};
