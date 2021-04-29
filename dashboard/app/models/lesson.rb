@@ -723,6 +723,72 @@ class Lesson < ApplicationRecord
     resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
+  def self.copy_to_script(original_lesson, destination_script)
+    return if original_lesson.script == destination_script
+    copy_to_lesson_group(original_lesson, destination_script.lesson_groups.last)
+  end
+
+  def self.copy_to_lesson_group(original_lesson, destination_lesson_group)
+    return if original_lesson.script == destination_lesson_group.script
+    ActiveRecord::Base.transaction do
+      copied_lesson = original_lesson.dup
+      copied_lesson.key = copied_lesson.name
+
+      # TODO: these aren't right
+      copied_lesson.absolute_position = destination_lesson_group.lessons.last.absolute_position + 1
+      copied_lesson.relative_position = destination_lesson_group.lessons.last.relative_position + 1
+
+      copied_lesson.save!
+
+      copied_lesson.lesson_activities = original_lesson.lesson_activities.map do |original_lesson_activity|
+        copied_lesson_activity = original_lesson_activity.dup
+        copied_lesson_activity.key = SecureRandom.uuid
+        copied_lesson_activity.activity_sections = original_lesson_activity.activity_sections.map do |original_activity_section|
+          copied_activity_section = original_activity_section.dup
+          copied_activity_section.key = SecureRandom.uuid
+          copied_activity_section
+        end
+        copied_lesson_activity
+      end
+
+      copied_lesson.objectives = original_lesson.objectives.map do |original_objective|
+        copied_objective = original_objective.dup
+        copied_objective.key = SecureRandom.uuid
+        copied_objective
+      end
+
+      copied_lesson.programming_expressions = original_lesson.programming_expressions
+      copied_lesson.standards = original_lesson.standards
+      copied_lesson.opportunity_standards = original_lesson.opportunity_standards
+
+      course_version = destination_lesson_group.script.get_course_version
+      if course_version
+        copied_lesson.resources = original_lesson.resources.map do |original_resource|
+          persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
+          if persisted_resource
+            persisted_resource
+          else
+            copied_resource = Resource.create(original_resource.attributes.merge({course_version_id: course_version.id}).except('id', 'key'))
+            copied_resource
+          end
+        end
+
+        copied_lesson.vocabularies = original_lesson.vocabularies.map do |original_vocab|
+          persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
+          if persisted_vocab && persisted_vocab.common_sense_media == original_vocab.common_sense_media
+            persisted_vocab
+          else
+            copied_vocab = Vocabulary.create(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
+            copied_vocab
+          end
+        end
+      end
+
+      copied_lesson.save!
+      destination_lesson_group.lessons = destination_lesson_group.lessons.concat(copied_lesson)
+    end
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
