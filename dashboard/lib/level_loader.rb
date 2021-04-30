@@ -23,6 +23,14 @@ class LevelLoader
   def self.import_levels(level_file_glob)
     level_file_paths = file_paths_from_glob(level_file_glob)
 
+    # This is only expected to happen when LEVEL_NAME is set and the
+    # filename is not found
+    unless level_file_paths.count > 0
+      raise 'no matching level names found. '\
+        'please check level name for exact case and spelling. '\
+        'the level name is the level filename without the .level suffix.'
+    end
+
     # Use a transaction because loading levels requires two separate imports.
     Level.transaction do
       level_md5s_by_name = Hash[Level.pluck(:name, :md5)]
