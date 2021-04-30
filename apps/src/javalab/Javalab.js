@@ -6,7 +6,8 @@ import JavalabView from './JavalabView';
 import javalab, {
   getSources,
   setAllSources,
-  appendOutputLog
+  appendOutputLog,
+  setIsEditingStartSources
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -111,6 +112,7 @@ Javalab.prototype.init = function(config) {
     showLevelBuilderSaveButton(() => ({
       start_sources: getSources(getStore().getState())
     }));
+    getStore().dispatch(setIsEditingStartSources(true));
   }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
