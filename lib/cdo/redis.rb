@@ -29,7 +29,7 @@ class RedisClient
   # Ref: https://redis.io/topics/data-types#:~:text=The%20max%20length%20of%20a%20list%20is%20232%20-%201%20elements%20(4294967295,%20more%20than%204%20billion%20of%20elements%20per%20list).
   MAX_LIST_LENGTH = 2**32 - 1
 
-  class Buffer < Cdo::Buffer
+  class RedisBuffer < Cdo::Buffer
     # @param stream_name [String] The Redis stream to send records to. Must be defined.
     def initialize(stream_name:)
       super(
@@ -77,7 +77,7 @@ class RedisClient
     unless [:development, :test].include? rack_env
       self.client = Redis.new
     end
-    @buffers = Hash.new {|h, stream_name| h[stream_name] = Buffer.new(stream_name: stream_name)}
+    @buffers = Hash.new {|h, stream_name| h[stream_name] = RedisBuffer.new(stream_name: stream_name)}
   end
 
   # Posts a record to the analytics stream.

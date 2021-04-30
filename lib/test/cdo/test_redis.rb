@@ -29,8 +29,8 @@ class RedisTest < Minitest::Test
 
   def test_redis_single_record
     record = {
-        url: 'http://studio.code.org/courses',
-        string_key: 'home.heading_elementary_markdown'
+      url: 'http://studio.code.org/courses',
+      string_key: 'home.heading_elementary_markdown'
     }
     RedisClient.instance.put_record(@stream, record)
     RedisClient.instance.flush!
@@ -42,8 +42,8 @@ class RedisTest < Minitest::Test
 
   def test_redis_with_multiple_streams
     record = {
-        url: 'http://studio.code.org/courses',
-        string_key: 'home.heading_elementary_markdown'
+      url: 'http://studio.code.org/courses',
+      string_key: 'home.heading_elementary_markdown'
     }
     RedisClient::STREAMS.each do |stream, _|
       RedisClient.instance.put_record(stream, record)
@@ -61,12 +61,12 @@ class RedisTest < Minitest::Test
   # Ensure appending multiple records in Redis works as expected
   def test_redis_multiple_records
     record1 = {
-        url: 'http://studio.code.org/courses',
-        string_key: 'home.heading_elementary_markdown'
+      url: 'http://studio.code.org/courses',
+      string_key: 'home.heading_elementary_markdown'
     }
     record2 = {
-        url: 'test',
-        string_key: 'test'
+      url: 'test',
+      string_key: 'test'
     }
     RedisClient.instance.put_record(@stream, record1)
     RedisClient.instance.put_record(@stream, record2)
