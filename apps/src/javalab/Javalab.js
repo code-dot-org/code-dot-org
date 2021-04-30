@@ -98,8 +98,8 @@ Javalab.prototype.init = function(config) {
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
-    noVisualization: true,
-    visualizationInWorkspace: true,
+    // noVisualization: true,
+    // visualizationInWorkspace: true,
     isProjectLevel: !!config.level.isProjectLevel
   });
 

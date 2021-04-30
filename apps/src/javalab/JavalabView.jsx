@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
+import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
+import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 const style = {
@@ -18,13 +20,21 @@ const style = {
     marginRight: 15,
     color: color.black
   },
+  instructions: {
+    width: '100%',
+    position: 'relative',
+    marginLeft: 0,
+    color: color.black,
+    left: 0
+  },
   editorAndConsole: {
     width: '60%',
     position: 'relative'
   },
   preview: {
     backgroundColor: color.light_gray,
-    height: '200px'
+    height: '200px',
+    marginTop: '13px'
   },
   javalab: {
     display: 'flex',
@@ -121,13 +131,12 @@ class JavalabView extends React.Component {
       <StudioAppWrapper>
         <div style={style.javalab}>
           <div style={style.instructionsAndPreview}>
-            <InstructionsWithWorkspace>
-              <div style={style.preview}>
-                <PaneHeader hasFocus={true}>
-                  <PaneSection>Preview</PaneSection>
-                </PaneHeader>
-              </div>
-            </InstructionsWithWorkspace>
+            <TopInstructions mainStyle={style.instructions} />
+            <div style={style.preview}>
+              <PaneHeader hasFocus={true}>
+                <PaneSection>Preview</PaneSection>
+              </PaneHeader>
+            </div>
           </div>
           <div
             style={{
