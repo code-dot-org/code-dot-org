@@ -4,7 +4,7 @@ import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SublevelCard from './SublevelCard';
-import {levelSchematicType} from '@cdo/apps/templates/progress/progressTypes';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 const MARGIN = 10;
 
@@ -31,7 +31,7 @@ const styles = {
 export default class BubbleChoice extends React.Component {
   // The bubble choice component doesn't need the status. It's
   // only rendering the sublevel cards.
-  static propTypes = {level: levelSchematicType};
+  static propTypes = {level: levelType};
 
   goToUrl = url => {
     navigateToHref(url + location.search);
