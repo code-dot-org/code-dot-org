@@ -32,7 +32,7 @@ class SaveModel extends Component {
   }
 
   toggleColumnDescriptions = () => {
-    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions})
+    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions});
   };
 
   handleChange = (event, field, isColumn) => {
@@ -53,19 +53,27 @@ class SaveModel extends Component {
       });
     }
     return fields;
-  }
+  };
 
   getUsesFields = () => {
     var fields = [];
     fields.push({
       id: "potentialUses",
-      text: "How can this model be used?",
+      text: "Intended Use",
+      description:
+        "Describe the problem you think this model could help solve, or one \
+        potential app someone could make with this model.",
       placeholder: "Write a brief description."
     });
     fields.push({
       id: "potentialMisuses",
-      text: "How can this model be potentially misused?",
-      description: "Consider whether this model was trained on data that can identify subgroups, whether the data has adequate representation of subgroups, and whether this data could be used to inform decisions central to human life.",
+      text: "Warnings",
+      description:
+        "Describe any situations where this model could potentially \
+        be misused, or any places where bias could potentially show up in the \
+        model. Important questions to consider are:",
+      descriptionDetailOne: "Is there enough data to create an accurate model?",
+      descriptionDetailTwo: "Does the data represent all possible users and scenarios?",
       placeholder: "Write a brief description."
     });
 
@@ -96,7 +104,7 @@ class SaveModel extends Component {
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div key={nameField.id} style={styles.cardRow}>
-              <label>{nameField.text}</label>
+              <label style={styles.bold}>{nameField.text}</label>
               <div>
                 <input
                   onChange={event =>
@@ -107,7 +115,7 @@ class SaveModel extends Component {
               </div>
             </div>
             <div key={dataDescriptionField.id} style={styles.cardRow}>
-              <label>{dataDescriptionField.text}</label>
+              <label style={styles.bold}>{dataDescriptionField.text}</label>
               {this.props.isUserUploadedDataset && (
                 <div>
                   <textarea
@@ -126,8 +134,10 @@ class SaveModel extends Component {
             </div>
             <div>
               <span onClick={this.toggleColumnDescriptions}>
-                <i className={arrowIcon}/>
-                <span> Column Descriptions ({columnCount})</span>
+                <i className={arrowIcon} />
+                <span style={styles.bold}>
+                  Column Descriptions ({columnCount})
+                </span>
               </span>
               {this.state.showColumnDescriptions && (
                 <div>
@@ -159,8 +169,14 @@ class SaveModel extends Component {
               {this.getUsesFields().map(field => {
                 return (
                   <div key={field.id} style={styles.cardRow}>
-                    <label>{field.text}</label>
+                    <label style={styles.bold}>{field.text}</label>
                     <div>{field.description}</div>
+                    {field.descriptionDetailOne && (
+                      <div>{field.descriptionDetailOne}</div>
+                    )}
+                    {field.descriptionDetailTwo && (
+                      <div>{field.descriptionDetailTwo}</div>
+                    )}
                     {!field.answer && (
                       <div>
                         <textarea
