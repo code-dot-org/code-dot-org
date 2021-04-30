@@ -105,6 +105,10 @@ export const styles = {
     marginBottom: 8
   },
 
+  smallTextNoMargin: {
+    fontSize: 12
+  },
+
   footerText: {
     fontSize: 13,
     marginTop: 12
@@ -117,7 +121,8 @@ export const styles = {
     height: "100%",
     boxSizing: "border-box",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    position: "relative"
   },
 
   popupPanel: {
@@ -140,7 +145,7 @@ export const styles = {
   },
 
   scrollingContents: {
-    overflow: "scroll",
+    overflow: "auto",
     height: "100%",
     boxSizing: "border-box"
   },
@@ -176,7 +181,7 @@ export const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
     boxSizing: "border-box",
-    overflow: "scroll",
+    overflow: "auto",
     marginTop: 59,
     position: "relative"
   },
@@ -197,11 +202,11 @@ export const styles = {
   },
 
   selectDatasetItemHighlighted: {
-    backgroundColor: "#d6f2fa",
+    backgroundColor: "#d6f2fa"
   },
 
   selectDatasetItemSelected: {
-    backgroundColor: "#94e3fa",
+    backgroundColor: "#94e3fa"
   },
 
   selectDatasetImage: {
@@ -233,7 +238,7 @@ export const styles = {
   },
 
   tableParent: {
-    overflowY: "scroll",
+    overflowY: "auto",
     overflowWrap: "break-word",
     fontSize: 10,
     boxSizing: "border-box",
@@ -331,11 +336,13 @@ export const styles = {
   resultsTableFirstHeader: {
     top: 0,
     backgroundColor: "white",
-    color: "rgb(30, 30, 30)"
+    color: "rgb(30, 30, 30)",
+    verticalAlign: "top",
+    height: 45
   },
 
   resultsTableSecondHeader: {
-    top: "30px",
+    top: "47px",
     color: "white"
   },
 
@@ -392,7 +399,14 @@ export const styles = {
     color: featureColor
   },
 
-  trainModelContainer: { overflow: "hidden", paddingTop: 20 },
+  trainModelContainer: {
+    position: "absolute",
+    overflow: "hidden",
+    paddingTop: 20,
+    width: "calc(50% + 52px)",
+    height: "calc(50% + 66px)",
+    top: 0
+  },
   trainModelDataTable: {
     width: "30%",
     overflow: "hidden",

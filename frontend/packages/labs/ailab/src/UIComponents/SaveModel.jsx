@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 import {
   setTrainedModelDetail,
   getSelectedColumnDescriptions,
-  getDataDescription
+  getDataDescription,
+  isUserUploadedDataset
 } from "../redux";
 import { styles, saveMessages, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
@@ -18,14 +19,15 @@ class SaveModel extends Component {
     labelColumn: PropTypes.string,
     columnDescriptions: PropTypes.array,
     saveStatus: PropTypes.string,
-    dataDescription: PropTypes.string
+    dataDescription: PropTypes.string,
+    isUserUploadedDataset: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      showColumnDescriptions: false
+      showColumnDescriptions: this.props.isUserUploadedDataset
     };
   }
 
@@ -114,7 +116,7 @@ class SaveModel extends Component {
             </div>
             <div key={dataDescriptionField.id} style={styles.cardRow}>
               <label style={styles.bold}>{dataDescriptionField.text}</label>
-              {!dataDescriptionField.answer && (
+              {this.props.isUserUploadedDataset && (
                 <div>
                   <textarea
                     rows="4"
@@ -126,7 +128,7 @@ class SaveModel extends Component {
                   />
                 </div>
               )}
-              {dataDescriptionField.answer && (
+              {!this.props.isUserUploadedDataset && (
                 <div>{dataDescriptionField.answer}</div>
               )}
             </div>
@@ -215,7 +217,8 @@ export default connect(
     labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnDescriptions(state),
     saveStatus: state.saveStatus,
-    dataDescription: getDataDescription(state)
+    dataDescription: getDataDescription(state),
+    isUserUploadedDataset: isUserUploadedDataset(state)
   }),
   dispatch => ({
     setTrainedModelDetail(field, value, isColumn) {
