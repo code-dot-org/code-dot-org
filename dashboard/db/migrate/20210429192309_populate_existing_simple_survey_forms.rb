@@ -45,12 +45,24 @@ class PopulateExistingSimpleSurveyForms < ActiveRecord::Migration[5.2]
       form_name: 'surveys/pd/csd_csp_facilitator_post_survey',
       path: 'facilitator_post_survey',
       allow_multiple_submissions: true
+    },
+    {
+      form_name: 'surveys/pd/virtual_teacher_order_form',
+      path: 'virtual_order_form',
+      allow_multiple_submissions: false
+    },
+    {
+      form_name: 'surveys/pd/pre_csd_p_facilitator_summit_survey',
+      path: 'facilitator_summit_survey',
+      allow_multiple_submissions: false
     }
   ].freeze
 
   def up
-    EXISTING_SIMPLE_SURVEY_FORMS.each do |form_attributes|
-      Foorm::SimpleSurveyForm.create! form_attributes
+    ActiveRecord::Base.transaction do
+      EXISTING_SIMPLE_SURVEY_FORMS.each do |form_attributes|
+        Foorm::SimpleSurveyForm.create! form_attributes
+      end
     end
   end
 end
