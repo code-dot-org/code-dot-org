@@ -871,6 +871,7 @@ class ScriptEditor extends React.Component {
                 useMigratedResources={this.props.isMigrated}
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
+                getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
             {this.props.isMigrated && (

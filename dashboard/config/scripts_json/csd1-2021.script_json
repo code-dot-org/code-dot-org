@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-27 00:43:56 UTC",
+    "serialized_at": "2021-04-29 16:48:27 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -5851,18 +5851,6 @@
       }
     },
     {
-      "name": "Exploring Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "exploring-problem-solving",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "exploring-problem-solving"
-      }
-    },
-    {
       "name": "Solving Problems",
       "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
       "key": "solving-problems-exemplar-2020",
@@ -5885,6 +5873,18 @@
       },
       "seeding_key": {
         "resource.key": "solving-problems-activity-guide-2020"
+      }
+    },
+    {
+      "name": "CSD Unit 1 - Problem Solving and Computing",
+      "url": "https://docs.google.com/presentation/d/1shN8hHC5rgEgb09IU_2eYoU1cDBEee924-E7q6RDUcc/copy",
+      "key": "csd_unit_1_-_problem_solving_and_computing",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6035,18 +6035,6 @@
       },
       "seeding_key": {
         "resource.key": "what-do-computers-do"
-      }
-    },
-    {
-      "name": "Storage",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "storage-1-2",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "storage-1-2"
       }
     },
     {
@@ -6452,12 +6440,6 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving",
-        "resource.key": "exploring-problem-solving"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving",
         "resource.key": "solving-problems-exemplar-2020"
       }
     },
@@ -6465,6 +6447,12 @@
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving",
         "resource.key": "solving-problems-activity-guide-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6542,12 +6530,6 @@
     {
       "seeding_key": {
         "lesson.key": "Storage",
-        "resource.key": "storage-1-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
         "resource.key": "storage-1"
       }
     },
@@ -6555,6 +6537,12 @@
       "seeding_key": {
         "lesson.key": "Storage",
         "resource.key": "storage"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {

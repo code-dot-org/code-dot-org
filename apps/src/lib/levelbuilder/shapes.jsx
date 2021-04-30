@@ -85,7 +85,8 @@ export const resourceShape = PropTypes.shape({
   audience: PropTypes.string,
   assessment: PropTypes.bool,
   includeInPdf: PropTypes.bool,
-  downloadUrl: PropTypes.string
+  downloadUrl: PropTypes.string,
+  isRollup: PropTypes.bool
 });
 
 export const vocabularyShape = PropTypes.shape({

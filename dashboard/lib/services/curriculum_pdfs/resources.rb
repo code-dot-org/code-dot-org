@@ -117,7 +117,7 @@ module Services
               rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
                 ChatClient.log(
                   "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
-                  color: 'red'
+                  color: 'yellow'
                 )
                 return nil
               end
@@ -128,7 +128,7 @@ module Services
           rescue URI::InvalidURIError, OpenURI::HTTPError => e
             ChatClient.log(
               "URI error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
-              color: 'red'
+              color: 'yellow'
             )
             return nil
           end

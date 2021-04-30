@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
+import $ from 'jquery';
 
 const styles = {
   resourceSearch: {
@@ -59,6 +60,7 @@ class ResourcesEditor extends Component {
     courseVersionId: PropTypes.number,
     resourceContext: PropTypes.string.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
+    getRollupsUrl: PropTypes.string,
 
     // Provided by redux
     addResource: PropTypes.func.isRequired,
@@ -73,7 +75,8 @@ class ResourcesEditor extends Component {
       resourceInput: '',
       searchValue: '',
       newResourceDialogOpen: false,
-      confirmRemovalDialogOpen: false
+      confirmRemovalDialogOpen: false,
+      error: ''
     };
   }
 
@@ -254,6 +257,32 @@ class ResourcesEditor extends Component {
     return {options: resources};
   };
 
+  addRollupPages = () => {
+    $.ajax({
+      url: this.props.getRollupsUrl,
+      method: 'GET',
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done(data => {
+        this.props.resources
+          .filter(resource => resource.isRollup)
+          .filter(resource => !data.find(r => r.key === resource.key))
+          .forEach(resource =>
+            this.props.removeResource(this.props.resourceContext, resource)
+          );
+        data
+          .filter(
+            resource => !this.props.resources.find(r => r.key === resource.key)
+          )
+          .forEach(resource =>
+            this.props.addResource(this.props.resourceContext, resource)
+          );
+      })
+      .fail(error => {
+        this.setState({error: 'Could not add rollup resources'});
+      });
+  };
+
   render() {
     const columns = this.getColumns();
     return (
@@ -311,6 +340,16 @@ class ResourcesEditor extends Component {
             <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
             Resource
           </button>
+          {this.props.getRollupsUrl && (
+            <button
+              onClick={this.addRollupPages}
+              style={styles.addButton}
+              type="button"
+            >
+              Add rollup pages
+            </button>
+          )}
+          {this.state.error && <h3>{this.state.error}</h3>}
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
-import ProgressTableDetailView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailView';
-import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {Provider} from 'react-redux';
 import {createStore, wrapTable} from '../sectionProgressTestHelpers';
 
@@ -12,17 +12,17 @@ import {createStore, wrapTable} from '../sectionProgressTestHelpers';
  */
 const INCLUDE_LARGE_STORIES = false;
 
-function buildSmallStories(component) {
+function buildSmallStories(component, currentView) {
   return [
     {
-      name: 'Tiny section, small script',
+      name: `${currentView} - Tiny section, small script`,
       story: () => {
         const store = createStore(3, 10);
         return wrapTable(<Provider store={store}>{component}</Provider>);
       }
     },
     {
-      name: 'Tiny section, large script',
+      name: `${currentView} - Tiny section, large script`,
       story: () => {
         const store = createStore(3, 30);
         return wrapTable(<Provider store={store}>{component}</Provider>);
@@ -31,31 +31,31 @@ function buildSmallStories(component) {
   ];
 }
 
-function buildLargeStories(component) {
+function buildLargeStories(component, currentView) {
   return [
     {
-      name: 'Small section, small script',
+      name: `${currentView} - Small section, small script`,
       story: () => {
         const store = createStore(30, 10);
         return wrapTable(<Provider store={store}>{component}</Provider>);
       }
     },
     {
-      name: 'Small section, large script',
+      name: `${currentView} - Small section, large script`,
       story: () => {
         const store = createStore(30, 30);
         return wrapTable(<Provider store={store}>{component}</Provider>);
       }
     },
     {
-      name: 'Large section, small script',
+      name: `${currentView} - Large section, small script`,
       story: () => {
         const store = createStore(200, 10);
         return wrapTable(<Provider store={store}>{component}</Provider>);
       }
     },
     {
-      name: 'Large section, large script',
+      name: `${currentView} - Large section, large script`,
       story: () => {
         const store = createStore(200, 30);
         return wrapTable(<Provider store={store}>{component}</Provider>);
@@ -64,16 +64,34 @@ function buildLargeStories(component) {
   ];
 }
 
-export let summaryTableStories = buildSmallStories(
-  <ProgressTableSummaryView />
+let summaryViewStories = buildSmallStories(
+  <ProgressTableView currentView={ViewType.SUMMARY} />,
+  ViewType.SUMMARY
 );
-export let detailTableStories = buildSmallStories(<ProgressTableDetailView />);
+let detailViewStories = buildSmallStories(
+  <ProgressTableView currentView={ViewType.DETAIL} />,
+  ViewType.DETAIL
+);
 
 if (INCLUDE_LARGE_STORIES) {
-  summaryTableStories = summaryTableStories.concat(
-    buildLargeStories(<ProgressTableSummaryView />)
+  summaryViewStories = summaryViewStories.concat(
+    buildLargeStories(
+      <ProgressTableView currentView={ViewType.SUMMARY} />,
+      ViewType.SUMMARY
+    )
   );
-  detailTableStories = detailTableStories.concat(
-    buildLargeStories(<ProgressTableDetailView />)
+  detailViewStories = detailViewStories.concat(
+    buildLargeStories(
+      <ProgressTableView currentView={ViewType.DETAIL} />,
+      ViewType.DETAIL
+    )
   );
 }
+
+const progressTableViewStories = summaryViewStories.concat(detailViewStories);
+
+export default storybook => {
+  storybook
+    .storiesOf('SectionProgress/ProgressTableView', module)
+    .addStoryTable(progressTableViewStories);
+};

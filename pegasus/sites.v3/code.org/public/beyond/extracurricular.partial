@@ -2,6 +2,16 @@
 title: Extracurricular opportunities
 video_player: true
 theme: responsive
+social:
+  "og:title": "CS Journeys: Extracurricular activities"
+  "og:description": "Explore hackathons, coding clubs and summer camps"
+  "og:image": ""
+  "og:image:width": 1200
+  "og:image:height": 630
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
 ---
 <a id="top"></a>
 <h1>Extracurricular opportunities</h1>
@@ -36,8 +46,8 @@ theme: responsive
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="congr-app-challenge" href="https://www.congressionalappchallenge.us/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Congressional App Challenge</strong></h3></a>
-  <p>Middle and high school students submit and create original apps. Challenges are specific to congressional districts. Winning teams are recognized and winning apps are put on display in the U.S. Capitol building for a year.</p>
-  <p><i>Sign up in spring; winners announced in December.</i></p>
+  <p>Middle and high school students create and submit original apps to their Members of Congress. Challenges are specific to congressional districts. Winning teams are recognized nationally and winning apps are put on display in the U.S. Capitol Building for one year.</p>
+  <p><i>Applications due by November 1st, winners announced in December.</i></p>
 </div>
 <div style="clear:both"></div>
 <br>
@@ -163,7 +173,7 @@ theme: responsive
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="msft-digigirlz" ref="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Digigirlz at Microsoft</strong></h3></a>
+  <a class="linktag" id="msft-digigirlz" href="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Digigirlz at Microsoft</strong></h3></a>
   <p>Middle and high school girls learn about careers in technology, connect with Microsoft employees, and participate in hands-on computer and technology workshops.</p>
   <p><i>Check calendar for dates.</i></p>
 </div>
