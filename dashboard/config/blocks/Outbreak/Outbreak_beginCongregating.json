@@ -1,7 +1,7 @@
 {
   "category": "",
   "config": {
-    "func": "monstersBeginCongregating",
+    "func": "beginCongregating",
     "blockText": "monsters begin congregating",
     "color": [
       136,
