@@ -1,7 +1,7 @@
 {
   "category": "",
   "config": {
-    "func": "monstersBeginWandering",
+    "func": "beginWandering",
     "blockText": "monsters begin wandering randomly",
     "color": [
       136,

@@ -1,7 +1,7 @@
 {
   "category": "",
   "config": {
-    "func": "monstersBeginQuarantining",
+    "func": "beginQuarantining",
     "blockText": "monsters begin quarantining when sick",
     "color": [
       136,

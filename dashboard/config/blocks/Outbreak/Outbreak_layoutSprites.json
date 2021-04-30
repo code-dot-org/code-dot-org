@@ -1,7 +1,7 @@
 {
   "category": "",
   "config": {
-    "func": "layoutMonsters",
+    "func": "layoutSprites",
     "blockText": "layout monsters as a {FORMAT}",
     "args": [
       {

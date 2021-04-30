@@ -1,8 +1,8 @@
 {
   "category": "",
   "config": {
-    "func": "monstersStopMoving",
-    "blockText": "monsters stop moving",
+    "func": "beginWearingMasks",
+    "blockText": "monsters begin wearing masks",
     "color": [
       136,
       0.84,

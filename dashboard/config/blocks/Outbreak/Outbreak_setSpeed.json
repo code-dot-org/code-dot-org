@@ -1,7 +1,7 @@
 {
   "category": "",
   "config": {
-    "func": "setMonsterSpeed",
+    "func": "setSpeed",
     "blockText": "set monster speed to {VAL}",
     "args": [
       {
