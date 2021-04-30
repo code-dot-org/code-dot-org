@@ -84,10 +84,9 @@ class JavalabView extends React.Component {
     this.props.appendOutputLog('Compiled!');
   };
 
+  // Sends redux call to update dark mode, which handles user preferences
   renderSettings = () => {
-    const {isDarkMode} = this.props.isDarkMode;
-    console.log('current dark mode is: ');
-    console.log(isDarkMode);
+    const {isDarkMode} = this.props;
     this.setIsDarkMode = this.props.setIsDarkMode.bind(this, !isDarkMode);
     return [
       <a onClick={this.setIsDarkMode} key="theme-setting">

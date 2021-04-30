@@ -51,9 +51,8 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
+  // Pulls dark mode from user preferences
   this.isDarkMode = !!config.usingDarkModePref;
-  console.log('first page load has dark mode set at this for javalab.js: ');
-  console.log(this.isDarkMode);
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -127,7 +126,7 @@ Javalab.prototype.init = function(config) {
     getStore().dispatch(setAllSources(startSources));
   }
 
-  // dispatch a redux update of isDarkMode
+  // Dispatches a redux update of isDarkMode
   getStore().dispatch(setIsDarkMode(this.isDarkMode));
 
   ReactDOM.render(
