@@ -13,6 +13,18 @@ import {
 const KNN = require("ml-knn");
 
 export default class KNNTrainer {
+
+  calculatePossibleKValues() {
+    let possibleKValues = [1, 3, 5, 7, 17, 31, 45, 61];
+    const state = store.getState();
+    let datasetSize = state.data.length;
+    const heuristicK = Math.round(Math.sqrt(datasetSize));
+    possibleKValues.push(heuristicK);
+    const oneThird = Math.round(datasetSize/3);
+    possibleKValues.push(oneThird);
+    return possibleKValues;
+  }
+
   startTraining() {
     const state = store.getState();
     const k = isRegression(state) ? 5 : Math.round(0.33 * state.data.length);
