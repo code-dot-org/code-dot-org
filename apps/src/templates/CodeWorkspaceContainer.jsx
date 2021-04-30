@@ -13,14 +13,15 @@ import commonStyles from '../commonStyles';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
-    // redux provided
+    // TODO: REFACTOR THIS PROP AWAY INTO props.style
+    topMargin: PropTypes.number.isRequired,
+    children: PropTypes.node,
+    style: PropTypes.object,
+
+    // Provided by redux
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    noVisualization: PropTypes.bool.isRequired,
-
-    // not in redux
-    topMargin: PropTypes.number.isRequired,
-    children: PropTypes.node
+    noVisualization: PropTypes.bool.isRequired
   };
 
   /**
@@ -38,14 +39,22 @@ class CodeWorkspaceContainer extends React.Component {
   }
 
   render() {
-    const {hidden, isRtl, noVisualization, topMargin, children} = this.props;
+    const {
+      hidden,
+      isRtl,
+      noVisualization,
+      topMargin,
+      children,
+      style
+    } = this.props;
     const mainStyle = {
       ...styles.main,
       top: topMargin,
       ...(noVisualization && styles.noVisualization),
       ...(isRtl && styles.mainRtl),
       ...(noVisualization && isRtl && styles.noVisualizationRtl),
-      ...(hidden && commonStyles.hidden)
+      ...(hidden && commonStyles.hidden),
+      ...style
     };
 
     return (
