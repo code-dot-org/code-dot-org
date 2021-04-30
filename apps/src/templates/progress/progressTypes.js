@@ -158,9 +158,23 @@ export const studentLessonProgressType = PropTypes.shape({
  * @property {array} bigQuestion
  * @property {string} description
  */
-export const lessonGroupType = PropTypes.shape({
+const lessonGroupShape = {
   id: PropTypes.number,
   displayName: PropTypes.string,
   bigQuestions: PropTypes.string,
   description: PropTypes.string
+};
+
+/**
+ * @typedef {Object} GroupedLesson
+ *
+ * @property {lessonGroupShape} lessonGroup
+ * @property {[lessonType]} lessons
+ * @property {[[levelWithProgressType]]} levelsByLesson
+ */
+export const groupedLessonType = PropTypes.shape({
+  lessonGroup: PropTypes.shape(lessonGroupShape),
+  lessons: PropTypes.arrayOf(lessonType).isRequired,
+  levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
+    .isRequired
 });
