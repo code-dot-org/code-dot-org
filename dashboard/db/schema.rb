@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_09_201400) do
+ActiveRecord::Schema.define(version: 2021_04_29_195153) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -486,14 +486,14 @@ ActiveRecord::Schema.define(version: 2021_04_09_201400) do
     t.index ["library_name", "library_version", "question_name"], name: "index_foorm_library_questions_on_multiple_fields", unique: true
   end
 
-  create_table "foorm_misc_surveys", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "foorm_simple_survey_submissions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "foorm_submission_id", null: false
     t.integer "user_id"
     t.string "misc_form_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["foorm_submission_id"], name: "index_misc_survey_foorm_submissions_on_foorm_id", unique: true
-    t.index ["user_id"], name: "index_foorm_misc_surveys_on_user_id"
+    t.index ["foorm_submission_id"], name: "index_foorm_simple_survey_submissions_on_foorm_submission_id", unique: true
+    t.index ["user_id"], name: "index_foorm_simple_survey_submissions_on_user_id"
   end
 
   create_table "foorm_submissions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
