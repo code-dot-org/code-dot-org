@@ -1,0 +1,12 @@
+{
+  "category": "",
+  "config": {
+    "func": "monstersStopMoving",
+    "blockText": "monsters stop moving",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ]
+  }
+}

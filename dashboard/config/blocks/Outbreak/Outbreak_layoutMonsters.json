@@ -1,0 +1,30 @@
+{
+  "category": "",
+  "config": {
+    "func": "layoutMonsters",
+    "blockText": "layout monsters as a {FORMAT}",
+    "args": [
+      {
+        "name": "FORMAT",
+        "options": [
+          [
+            "grid",
+            "\"grid\""
+          ],
+          [
+            "border",
+            "\"border\""
+          ],
+          [
+            "row",
+            "\"row\""
+          ],
+          [
+            "random",
+            "\"random\""
+          ]
+        ]
+      }
+    ]
+  }
+}
