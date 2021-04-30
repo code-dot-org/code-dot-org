@@ -8,6 +8,7 @@ import PiskelApi from '@code-dot-org/piskel';
 import * as shapes from '../shapes';
 import {editAnimation, removePendingFramesAction} from '../animationListModule';
 import {show, Goal} from '../AnimationPicker/animationPickerModule';
+import {getStore} from '@cdo/apps/redux';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -61,6 +62,9 @@ class PiskelEditor extends React.Component {
     this.piskel.onPiskelReady(this.onPiskelReady);
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
+
+    const iframe = document.getElementById('piskelFrame');
+    iframe.contentWindow.locale = getStore().getState().locales.localeCode;
   }
 
   componentWillUnmount() {
@@ -210,6 +214,7 @@ class PiskelEditor extends React.Component {
       <iframe
         ref={iframe => (this.iframe = iframe)}
         style={this.props.style}
+        id="piskelFrame"
         src={PISKEL_PATH}
       />
     );
