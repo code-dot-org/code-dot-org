@@ -92,7 +92,7 @@ class JavalabEditor extends React.Component {
     // tab order is an ordered list of file keys.
     let orderedTabKeys = [];
     Object.keys(props.sources).forEach((file, index) => {
-      if (props.sources[file].visible || window.appOptions.level.editBlocks) {
+      if (props.sources[file].visible || props.isEditingStartSources) {
         let tabKey = this.getTabKey(index);
         fileMetadata[tabKey] = file;
         orderedTabKeys.push(tabKey);
