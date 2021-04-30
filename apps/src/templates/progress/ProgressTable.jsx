@@ -5,11 +5,7 @@ import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
-import {
-  levelWithProgressType,
-  lessonType,
-  lessonGroupType
-} from './progressTypes';
+import {groupedLessonType} from './progressTypes';
 
 export const styles = {
   hidden: {
@@ -21,14 +17,7 @@ class ProgressTable extends React.Component {
   static propTypes = {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
-    groupedLessons: PropTypes.arrayOf(
-      PropTypes.shape({
-        lessonGroup: lessonGroupType,
-        lessons: PropTypes.arrayOf(lessonType).isRequired,
-        levels: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
-          .isRequired
-      })
-    ).isRequired,
+    groupedLessons: PropTypes.arrayOf(groupedLessonType).isRequired,
     minimal: PropTypes.bool
   };
 
@@ -60,16 +49,12 @@ class ProgressTable extends React.Component {
         <div>
           <div style={isSummaryView ? {} : styles.hidden}>
             <SummaryProgressTable
-              lessons={groupedLessons[0].lessons}
-              levelsByLesson={groupedLessons[0].levels}
+              groupedLesson={groupedLessons[0]}
               minimal={minimal}
             />
           </div>
           <div style={isSummaryView ? styles.hidden : {}}>
-            <DetailProgressTable
-              lessons={groupedLessons[0].lessons}
-              levelsByLesson={groupedLessons[0].levels}
-            />
+            <DetailProgressTable groupedLesson={groupedLessons[0]} />
           </div>
         </div>
       );
@@ -80,10 +65,8 @@ class ProgressTable extends React.Component {
             <LessonGroup
               key={group.lessonGroup.displayName}
               isPlc={isPlc}
-              lessonGroup={group.lessonGroup}
+              groupedLesson={group}
               isSummaryView={isSummaryView}
-              lessons={group.lessons}
-              levelsByLesson={group.levels}
             />
           ))}
         </div>

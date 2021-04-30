@@ -739,7 +739,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
         bigQuestions: lessonGroup.big_questions
       },
       lessons: [],
-      levels: []
+      levelsByLesson: []
     };
   });
 
@@ -753,7 +753,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
 
     if (byGroup[group]) {
       byGroup[group].lessons.push(lessonAtIndex);
-      byGroup[group].levels.push(lessonLevels);
+      byGroup[group].levelsByLesson.push(lessonLevels);
     }
   });
 
@@ -770,7 +770,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
         bigQuestions: null
       },
       lessons: [peerReviewLesson(state)],
-      levels: [peerReviewLevels(state)]
+      levelsByLesson: [peerReviewLevels(state)]
     };
   }
 
