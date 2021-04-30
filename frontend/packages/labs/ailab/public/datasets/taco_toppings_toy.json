@@ -1,0 +1,45 @@
+{
+  "card": {
+    "description": "Survey of customers in a taco shop on whether or not they like certain taco combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Help make recommendations for what kind of taco a new customer should buy",
+      "potentialMisuses": "Anything other than taco recommendations"
+    }
+  },
+  "defaultLabelColumn": "Preference",
+  "fields": [
+    {
+      "id": "Ground Beef",
+      "type": "categorical",
+      "description": "Did the taco have ground beef?"
+    },
+    {
+      "id": "Chicken",
+      "type": "categorical",
+      "description": "Did the taco have chicken?"
+    },
+    {
+      "id": "Hot Sauce",
+      "type": "categorical",
+      "description": "Did the taco have hot sauce?"
+    },
+    {
+      "id": "Sour Cream",
+      "type": "categorical",
+      "description": "Did the taco have sour cream?"
+    },
+    {
+      "id": "Cheese",
+      "type": "categorical",
+      "description": "Did the taco have cheese?"
+    },
+    {
+      "id": "Preference",
+      "type": "categorical",
+      "description": "Did you like the taco?"
+    }
+  ]
+}

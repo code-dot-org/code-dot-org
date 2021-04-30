@@ -147,7 +147,8 @@ describe('redux functions', () => {
     expect(accuracy.percentCorrect).toBe('0.00');
   });
 
-  test('getAccuracyRegression', async () => {
+  test("getAccuracyRegression", async () => {
+
     const maxMin = getRange(resultsState, resultsState.labelColumn);
     const range = Math.abs(maxMin.max - maxMin.min);
     expect(range).toBe(3);
@@ -161,7 +162,7 @@ describe('redux functions', () => {
       ResultsGrades.INCORRECT
     ]);
     // error tolerance of +/- 0.09, 4/6 correct
-    expect(accuracy.percentCorrect).toBe('66.67');
+    expect(accuracy.percentCorrect).toBe("66.67");
   });
 });
 

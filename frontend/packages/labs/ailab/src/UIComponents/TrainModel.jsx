@@ -2,85 +2,126 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import train, { availableTrainers } from "../train";
-import {
-  setPercentDataToReserve,
-  readyToTrain,
-  getShowChooseReserve
-} from "../redux";
-import { TRAINING_DATA_PERCENTS, styles } from "../constants";
+import train from "../train";
+import { readyToTrain } from "../redux";
+import { styles } from "../constants";
+import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
+import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
+import labBackground from "@public/images/lab-background-light.png";
+import Statement from "./Statement";
+import DataTable from "./DataTable";
+
+const framesPerCycle = 40;
 
 class TrainModel extends Component {
   static propTypes = {
-    selectedFeatures: PropTypes.array,
-    labelColumn: PropTypes.string,
+    data: PropTypes.array,
     readyToTrain: PropTypes.bool,
-    selectedTrainer: PropTypes.string,
-    percentDataToReserve: PropTypes.number,
-    setPercentDataToReserve: PropTypes.func,
     modelSize: PropTypes.number,
-    showChooseReseve: PropTypes.bool
+    labelColumn: PropTypes.string,
+    selectedFeatures: PropTypes.array
   };
 
-  handleChange = event => {
-    this.props.setPercentDataToReserve(parseInt(event.target.value));
+  state = {
+    frame: 0,
+    animationTimer: undefined,
+    headOpen: false
   };
+
+  componentDidMount() {
+    this.onClickTrainModel();
+  }
 
   onClickTrainModel = () => {
     train.init();
     train.onClickTrain();
+
+    const animationTimer = setInterval(
+      this.updateAnimation.bind(this),
+      1000 / 30
+    );
+
+    this.setState({ animationTimer });
+  };
+
+  updateAnimation = () => {
+    if (this.state.frame === 15) {
+      this.setState({ headOpen: true });
+    }
+
+    this.setState({ frame: this.state.frame + 1 });
+  };
+
+  componentWillUnmount = () => {
+    if (this.state.animationTimer) {
+      clearInterval(this.state.animationTimer);
+      this.setState({ animationTimer: undefined });
+    }
+  };
+
+  getAnimationProgess = () => {
+    return (this.state.frame % framesPerCycle) / framesPerCycle;
+  };
+
+  getAnimationStep = () => {
+    return Math.floor(this.state.frame / framesPerCycle);
   };
 
   render() {
-    const { showChooseReseve } = this.props;
+    const translateX = 15 + this.getAnimationProgess() * (100 - 15);
+    const translateY = 80 - Math.sin(this.getAnimationProgess() * Math.PI) * 30;
+    const rotateZ = this.getAnimationProgess() * 60;
+    const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
 
     return (
-      <div id="train-model" style={styles.panel}>
-        {showChooseReseve && (
-          <div>
-            <div style={styles.largeText}>
-              Are you ready to train the model?
-            </div>
+      <div
+        id="train-model"
+        style={{
+          ...styles.panel,
+          justifyContent: "center",
+          backgroundSize: "cover",
+          backgroundImage: "url(" + labBackground + ")"
+        }}
+      >
+        <Statement/>
 
-            <div>
-              How much of the data would you like to reserve for testing?
-            </div>
-            <form>
-              <label>
-                Percent of dataset to reserve:{" "}
-                <select
-                  value={this.props.percentDataToReserve}
-                  onChange={this.handleChange}
-                >
-                  {TRAINING_DATA_PERCENTS.map((percent, index) => {
-                    return (
-                      <option key={index} value={percent}>
-                        {percent}
-                      </option>
-                    );
-                  })}
-                </select>
-              </label>
-            </form>
+        <div style={styles.trainModelDataTable}>
+          <DataTable
+            reducedColumns={true}
+            startingRow={this.getAnimationStep()}
+          />
+        </div>
+
+        <div style={styles.trainModelContainer}>
+
+          <div
+            style={{
+              position: "absolute",
+              transformOrigin: "center center",
+              top: translateY + "%",
+              left: translateX + "%",
+              transform: transform
+            }}
+          >
+            <DataTable
+              reducedColumns={true}
+              singleRow={this.getAnimationStep()}
+            />
           </div>
-        )}
+        </div>
+
         {this.props.readyToTrain && (
-          <div>
-            <p />
-            <div style={styles.largeText}>Train the Model</div>
-            <p>
-              The machine learning algorithm you selected,{" "}
-              {availableTrainers[this.props.selectedTrainer]["name"]}, is going
-              to look for patterns in these features:{" "}
-              {this.props.selectedFeatures.join(", ")} that might help predict
-              the values of the label: {this.props.labelColumn}.
-            </p>
-            <button type="button" onClick={this.onClickTrainModel}>
-              Train model
-            </button>
-            {this.props.modelSize && (
-              <p>The trained model is {this.props.modelSize} KB big.</p>
-            )}
+          <div style={styles.trainModelBotContainer}>
+            <div style={{ ...styles.trainBot, margin: "0 auto" }}>
+              <img
+                src={aiBotHead}
+                style={{
+                  ...styles.trainBotHead,
+                  ...(this.state.headOpen && styles.trainBotOpen)
+                }}
+              />
+              <img src={aiBotBody} style={styles.trainBotBody} />
+            </div>
           </div>
         )}
       </div>
@@ -88,19 +129,9 @@ class TrainModel extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    selectedFeatures: state.selectedFeatures,
-    labelColumn: state.labelColumn,
-    selectedTrainer: state.selectedTrainer,
-    readyToTrain: readyToTrain(state),
-    percentDataToReserve: state.percentDataToReserve,
-    modelSize: state.modelSize,
-    showChooseReseve: getShowChooseReserve(state)
-  }),
-  dispatch => ({
-    setPercentDataToReserve(percentDataToReserve) {
-      dispatch(setPercentDataToReserve(percentDataToReserve));
-    }
-  })
-)(TrainModel);
+export default connect(state => ({
+  readyToTrain: readyToTrain(state),
+  modelSize: state.modelSize,
+  labelColumn: state.labelColumn,
+  selectedFeatures: state.selectedFeatures
+}))(TrainModel);

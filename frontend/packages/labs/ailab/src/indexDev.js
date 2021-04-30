@@ -1,13 +1,27 @@
-import { initAll } from "./index";
 import "./assetPath";
+import { initAll } from "./index";
 import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes = {
-  load_foods: { datasets: ["foods"] },
+  minimal: {
+    datasets: ["tacos_toy"],
+    hideSpecifyColumns: true,
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true,
+    hideModelCard: true,
+    hideColumnClicking: true,
+    hideSelectLabel: true
+  },
 
-  level_3_1: {
-    datasets: ["candy", "titanic", "foods"],
+  "preload-metadata": {
+    hideSpecifyColumns: true,
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true
+  },
+
+  "intro-ai-tacos": {
+    datasets: ["tacos_toy"],
     hideSelectLabel: true,
     hideSpecifyColumns: true,
     hideChooseReserve: true,
@@ -15,36 +29,64 @@ const sampleModes = {
     hideSave: true
   },
 
-  level_3_3: {
-    datasets: ["candy", "titanic", "foods"],
+  "intro-ai-foods": {
+    datasets: [
+      "boba_toy",
+      "cookies_toy",
+      "naan_toy",
+      "poke_toy",
+      "poutine_toy",
+      "raspado_toy",
+      "salad_toy",
+      "salsa_toy"
+    ],
     hideSelectLabel: true,
     hideSpecifyColumns: true,
     hideChooseReserve: true,
-    hideModelCard: true
+    hideModelCard: true,
+    hideSave: true
   },
 
-  level_4_1: {
-    datasets: ["candy"],
+  safari: {
+    datasets: ["safari_toy"],
+    hideSelectLabel: true,
+    hideSpecifyColumns: true,
     hideChooseReserve: true,
-    hideModelCard: true
+    hideModelCard: true,
+    hideSave: true,
+    hideSelectTrainer: "knnRegress"
   },
 
-  level_4_3: {
-    datasets: ["candy", "titanic", "foods"],
-    hideChooseReserve: true,
-    hideModelCard: true
+  zoo: {
+    datasets: ["zoo"],
+    hideSpecifyColumns: true,
+    hideChooseReserve: true
   },
 
-  level_5_3: {
-    datasets: ["candy", "titanic", "foods"]
-  },
-
-  level_7_6: {}
+  "final-project": {}
 };
 
 // Look for a ?mode= parameter on the URL
 let parameters = queryString.parse(location.search);
 const mode = parameters["mode"] ? sampleModes[parameters["mode"]] : null;
 
+function onContinueStub() {
+  console.log("This would continue to the next level.");
+}
+
+function saveTrainedModelStub(data, response) {
+  console.log("This would save a trained model.", data);
+  response({ id: 303, status: "success" });
+}
+
+function setInstructionsKeyStub(instructionsKey) {
+  document.getElementById("instructions").innerText = instructionsKey;
+}
+
 // Initialize the app.
-initAll({ mode: mode });
+initAll({
+  mode: mode,
+  onContinue: onContinueStub,
+  saveTrainedModel: saveTrainedModelStub,
+  setInstructionsKey: setInstructionsKeyStub
+});

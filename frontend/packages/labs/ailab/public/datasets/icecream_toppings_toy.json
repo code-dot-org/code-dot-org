@@ -1,0 +1,45 @@
+{
+  "card": {
+    "description": "Survey of customers in an ice cream shop on whether or not they like certain ice cream combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Help make recommendations for what kind of ice cream a new customer should buy",
+      "potentialMisuses": "Anything other than ice cream recommendations"
+    }
+  },
+  "defaultLabelColumn": "Preference",
+  "fields": [
+    {
+      "id": "Hot Fudge",
+      "type": "categorical",
+      "description": "Was there hot fudge?"
+    },
+    {
+      "id": "Sprinkles",
+      "type": "categorical",
+      "description": "Were there sprinkles?"
+    },
+    {
+      "id": "Whipped Cream",
+      "type": "categorical",
+      "description": "Was there whipped cream?"
+    },
+    {
+      "id": "Cherry",
+      "type": "categorical",
+      "description": "Was there a cherry?"
+    },
+    {
+      "id": "Waffle Cone",
+      "type": "categorical",
+      "description": "Was there a waffle cone?"
+    },
+    {
+      "id": "Preference",
+      "type": "categorical",
+      "description": "Did you like the ice cream cone?"
+    }
+  ]
+}

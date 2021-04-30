@@ -1,0 +1,70 @@
+{
+  "card": {
+    "description": "Survey of customers in a pizza parlor on whether or not they like certain pizza combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Help make recommendations for what kind of pizza a new customer should buy",
+      "potentialMisuses": "Anything other than pizza recommendations"
+    }
+  },
+  "defaultLabelColumn": "Preference",
+  "fields": [
+    {
+      "id": "Pepperoni",
+      "type": "categorical",
+      "description": "Did the pizza have pepperoni?"
+    },
+    {
+      "id": "Extra Cheese",
+      "type": "categorical",
+      "description": "Did the pizza have extra cheese?"
+    },
+    {
+      "id": "Broccoli",
+      "type": "categorical",
+      "description": "Did the pizza have broccoli?"
+    },
+    {
+      "id": "Olives",
+      "type": "categorical",
+      "description": "Did the pizza have olives?"
+    },
+    {
+      "id": "Sausage",
+      "type": "categorical",
+      "description": "Did the pizza have sausage?"
+    },
+    {
+      "id": "Anchovies",
+      "type": "categorical",
+      "description": "Did the pizza have anchovies?"
+    },
+    {
+      "id": "Fried Chicken",
+      "type": "categorical",
+      "description": "Did the pizza have fried chicken?"
+    },
+    {
+      "id": "Peppers",
+      "type": "categorical",
+      "description": "Did the pizza have peppers?"
+    },
+    {
+      "id": "Ham",
+      "type": "categorical",
+      "description": "Did the pizza have ham?"
+    },
+    {
+      "id": "Bacon",
+      "type": "categorical",
+      "description": "Did the pizza have bacon?"
+    },
+    {
+      "id": "Preference",
+      "type": "categorical",
+      "description": "How did you like the pizza?"
+    }
+  ]
+}

@@ -2,159 +2,234 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
-import SelectFeatures from "./UIComponents/SelectFeatures";
 import ColumnInspector from "./UIComponents/ColumnInspector";
-import SelectTrainer from "./UIComponents/SelectTrainer";
+import PhraseBuilder from "./UIComponents/PhraseBuilder";
+import DataCard from "./UIComponents/DataCard";
+import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import { styles } from "./constants";
 import { connect } from "react-redux";
-import { getPanels, setCurrentPanel, validationMessages } from "./redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquare, faCheckSquare } from "@fortawesome/free-regular-svg-icons";
+import {
+  getPanelButtons,
+  setCurrentPanel,
+  validationMessages,
+  getTrainedModelDataToSave
+} from "./redux";
 
-class PanelTabs extends Component {
+class PanelButtons extends Component {
   static propTypes = {
-    panels: PropTypes.arrayOf(PropTypes.object),
+    panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
-    setCurrentPanel: PropTypes.func
+    setCurrentPanel: PropTypes.func,
+    onContinue: PropTypes.func,
+    startSaveTrainedModel: PropTypes.func,
+    dataToSave: PropTypes.object
   };
 
-  getTabStyle(panel) {
-    if (panel.enabled) {
-      if (panel.id === this.props.currentPanel) {
-        return { ...styles.tab, ...styles.currentTab };
-      } else {
-        return styles.tab;
-      }
+  onClickPrev = () => {
+    this.props.setCurrentPanel(this.props.panelButtons.prev.panel);
+  };
+
+  onClickNext = () => {
+    if (this.props.panelButtons.next.panel === "save") {
+      this.props.startSaveTrainedModel(this.props.dataToSave);
+    } else if (this.props.panelButtons.next.panel === "continue") {
+      this.props.onContinue();
     } else {
-      return { ...styles.tab, ...styles.disabledTab };
+      this.props.setCurrentPanel(this.props.panelButtons.next.panel);
     }
-  }
-
-  render() {
-    const { panels, setCurrentPanel } = this.props;
-
-    return (
-      <div style={styles.tabContainer}>
-        {panels.map(panel => {
-          return (
-            <div
-              key={panel.id}
-              style={this.getTabStyle(panel)}
-              onClick={() => setCurrentPanel(panel.id)}
-            >
-              {panel.label}
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
-}
-
-class Panels extends Component {
-  static propTypes = {
-    currentPanel: PropTypes.string,
-    saveTrainedModel: PropTypes.func
   };
 
   render() {
-    const { currentPanel, saveTrainedModel } = this.props;
+    const { panelButtons } = this.props;
 
     return (
-      <div style={styles.panelContainer}>
-        {currentPanel === "selectDataset" && <SelectDataset />}
-        {currentPanel === "dataDisplay" && <DataDisplay />}
-        {currentPanel === "selectFeatures" && <SelectFeatures />}
-        {currentPanel === "columnInspector" && <ColumnInspector />}
-        {currentPanel === "selectTrainer" && <SelectTrainer />}
-        {currentPanel === "trainModel" && <TrainModel />}
-        {currentPanel === "results" && <Results />}
-        {currentPanel === "predict" && <Predict />}
-        {currentPanel === "saveModel" && (
-          <SaveModel saveTrainedModel={saveTrainedModel} />
+      <div>
+        {panelButtons.prev && (
+          <div style={styles.previousButton}>
+            <button
+              type="button"
+              style={{
+                ...styles.navButton,
+                ...(!panelButtons.prev.enabled
+                  ? styles.disabledButton
+                  : undefined)
+              }}
+              onClick={this.onClickPrev}
+              disabled={!panelButtons.prev.enabled}
+            >
+              {panelButtons.prev.text}
+            </button>
+          </div>
+        )}
+
+        {panelButtons.next && (
+          <div style={styles.nextButton}>
+            <button
+              type="button"
+              style={{
+                ...styles.navButton,
+                ...(!panelButtons.next.enabled
+                  ? styles.disabledButton
+                  : undefined)
+              }}
+              onClick={this.onClickNext}
+              disabled={!panelButtons.next.enabled}
+            >
+              {panelButtons.next.text}
+            </button>
+          </div>
         )}
       </div>
     );
   }
 }
 
-class ValidationMessages extends Component {
-  static propTypes = {
-    currentPanel: PropTypes.string,
-    validationMessages: PropTypes.object
-  };
+const BodyContainer = props => (
+  <div style={styles.bodyContainer}>{props.children}</div>
+);
 
-  render() {
-    const { currentPanel, validationMessages } = this.props;
+BodyContainer.propTypes = {
+  children: PropTypes.node
+};
 
-    return (
-      <div style={styles.validationMessagesLight}>
-        {Object.keys(validationMessages).filter(
-          messageKey => validationMessages[messageKey].panel === currentPanel
-        ).length === 0 && <div>Carry on.</div>}
-        {Object.keys(validationMessages)
-          .filter(
-            messageKey => validationMessages[messageKey].panel === currentPanel
-          )
-          .map((key, index) => {
-            return validationMessages[key].readyToTrain ? (
-              <p key={index} style={styles.ready}>
-                <FontAwesomeIcon icon={faCheckSquare} />
-                &nbsp;
-                {validationMessages[key].successString}{" "}
-              </p>
-            ) : (
-              <p key={index} style={styles.error}>
-                <FontAwesomeIcon icon={faSquare} />
-                &nbsp;
-                {validationMessages[key].errorString}{" "}
-              </p>
-            );
-          })}
-      </div>
-    );
-  }
-}
+const ContainerLeft = props => (
+  <div style={{ ...styles.panelContainer, ...styles.panelContainerLeft }}>
+    {props.children}
+  </div>
+);
+
+ContainerLeft.propTypes = {
+  children: PropTypes.node
+};
+
+const ContainerRight = props => (
+  <div style={{ ...styles.panelContainer, ...styles.panelContainerRight }}>
+    {props.children}
+  </div>
+);
+
+ContainerRight.propTypes = {
+  children: PropTypes.node
+};
+
+const ContainerFullWidth = props => (
+  <div style={styles.panelContainerFullWidth}>{props.children}</div>
+);
+
+ContainerFullWidth.propTypes = {
+  children: PropTypes.node
+};
 
 class App extends Component {
   static propTypes = {
-    panels: PropTypes.arrayOf(PropTypes.object),
+    panelButtons: PropTypes.object,
     currentPanel: PropTypes.string,
     setCurrentPanel: PropTypes.func,
     validationMessages: PropTypes.object,
-    saveTrainedModel: PropTypes.func
+    onContinue: PropTypes.func,
+    resultsPhase: PropTypes.number,
+    startSaveTrainedModel: PropTypes.func,
+    dataToSave: PropTypes.object
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.columnPositions = {};
+  }
+
+  setColumnRef = (columnId, ref) => {
+    if (ref) {
+      const rect = ref.getBoundingClientRect();
+      this.columnPositions[columnId] = rect.left + rect.width;
+    }
   };
 
   render() {
     const {
-      panels,
+      panelButtons,
       currentPanel,
       setCurrentPanel,
-      validationMessages,
-      saveTrainedModel
+      onContinue,
+      resultsPhase,
+      dataToSave,
+      startSaveTrainedModel
     } = this.props;
 
     return (
       <div style={styles.app}>
-        <PanelTabs
-          panels={panels}
+        {currentPanel === "selectDataset" && (
+          <BodyContainer>
+            <ContainerLeft>
+              <SelectDataset />
+            </ContainerLeft>
+            <ContainerRight>
+              <DataCard />
+            </ContainerRight>
+          </BodyContainer>
+        )}
+
+        {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
+          <BodyContainer>
+            <ContainerLeft>
+              <DataDisplay setColumnRef={this.setColumnRef} />
+            </ContainerLeft>
+            <ColumnInspector columnPositions={this.columnPositions} />
+            <ContainerRight>
+              <PhraseBuilder />
+            </ContainerRight>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "trainingSettings" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <TrainingSettings />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "trainModel" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <TrainModel />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "results" && (
+          <BodyContainer>
+            <ContainerLeft>
+              <Results />
+            </ContainerLeft>
+            {resultsPhase === 3 && (
+              <ContainerRight>
+                <Predict />
+              </ContainerRight>
+            )}
+          </BodyContainer>
+        )}
+
+        {currentPanel === "saveModel" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <SaveModel />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        <PanelButtons
+          panelButtons={panelButtons}
           currentPanel={currentPanel}
           setCurrentPanel={setCurrentPanel}
+          onContinue={onContinue}
+          startSaveTrainedModel={startSaveTrainedModel}
+          dataToSave={dataToSave}
         />
-        <div style={styles.bodyContainer}>
-          <Panels
-            currentPanel={currentPanel}
-            saveTrainedModel={saveTrainedModel}
-          />
-          <ValidationMessages
-            currentPanel={currentPanel}
-            validationMessages={validationMessages}
-          />
-        </div>
       </div>
     );
   }
@@ -162,9 +237,11 @@ class App extends Component {
 
 export default connect(
   state => ({
-    panels: getPanels(state),
+    panelButtons: getPanelButtons(state),
     currentPanel: state.currentPanel,
-    validationMessages: validationMessages(state)
+    validationMessages: validationMessages(state),
+    resultsPhase: state.resultsPhase,
+    dataToSave: getTrainedModelDataToSave(state)
   }),
   dispatch => ({
     setCurrentPanel(panel) {

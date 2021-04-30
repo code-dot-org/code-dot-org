@@ -1,0 +1,77 @@
+{
+  "card": {
+    "description": "A dataset compiled by the USDA of various food items and their nutritional content: calories, minerals, vitamins, and a whole lot more.",
+    "source": "CORGIS Datasets Project (https://corgis-edu.github.io/corgis/csv/food/)",
+    "lastUpdated": "2016",
+    "context": {
+      "createdBy": "USDA",
+      "potentialUses": "For example, determine how many calories a food has from its nutritional content.",
+      "potentialMisuses": ""
+    }
+  },
+  "defaultLabelColumn": "Kilocalories",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Category",
+      "description": "The general category of food the item belongs to."
+    },
+    {
+      "type": "categorical",
+      "id": "Description",
+      "description": "A full description of the item."
+    },
+    {
+      "type": "numerical",
+      "id": "Ash",
+      "description": "Ash content represents the total mineral content in foods. Measured in grams (g)."
+    },
+    {
+      "type": "numerical",
+      "id": "Beta Carotene",
+      "description": "A type of lipid molecule, measured in milligrams (mg)."
+    },
+    {
+      "type": "numerical",
+      "id": "Carbohydrate",
+      "description": "Dietary fiber or roughage is the indigestible portion of food derived from plants. It has two main components: soluble fiber and insoluble fiber. Measured in grams (g)."
+    },
+    {
+      "type": "numerical",
+      "id": "Cholesterol",
+      "description": "The total number of kilocalories in this food item. A kilocalorie is a unit of energy of 1000 calories (equal to 1 large calorie)."
+    },
+    { "type": "numerical", "id": "Fiber" },
+    { "type": "numerical", "id": "Kilocalories" },
+    { "type": "numerical", "id": "Lutein and Zeaxanthin" },
+    { "type": "numerical", "id": "Lycopene" },
+    { "type": "numerical", "id": "Manganese" },
+    { "type": "numerical", "id": "Niacin" },
+    { "type": "numerical", "id": "Protein" },
+    { "type": "numerical", "id": "Retinol" },
+    { "type": "numerical", "id": "Riboflavin" },
+    { "type": "numerical", "id": "Selenium" },
+    { "type": "numerical", "id": "Sugar Total" },
+    { "type": "numerical", "id": "Thiamin" },
+    { "type": "numerical", "id": "Water" },
+    { "type": "numerical", "id": "Fat: Monosaturated Fat" },
+    { "type": "numerical", "id": "Fat: Polysaturated Fat" },
+    { "type": "numerical", "id": "Fat: Saturated Fat" },
+    { "type": "numerical", "id": "Fat: Total Lipid" },
+    { "type": "numerical", "id": "Major Minerals: Calcium" },
+    { "type": "numerical", "id": "Major Minerals: Copper" },
+    { "type": "numerical", "id": "Major Minerals: Iron" },
+    { "type": "numerical", "id": "Major Minerals: Magnesium" },
+    { "type": "numerical", "id": "Major Minerals: Phosphorus" },
+    { "type": "numerical", "id": "Major Minerals: Potassium" },
+    { "type": "numerical", "id": "Major Minerals: Sodium" },
+    { "type": "numerical", "id": "Major Minerals: Zinc" },
+    { "type": "numerical", "id": "Vitamins: Vitamin A - IU" },
+    { "type": "numerical", "id": "Vitamins: Vitamin A - RAE" },
+    { "type": "numerical", "id": "Vitamins: Vitamin B12" },
+    { "type": "numerical", "id": "Vitamins: Vitamin B6" },
+    { "type": "numerical", "id": "Vitamins: Vitamin C" },
+    { "type": "numerical", "id": "Vitamins: Vitamin E" },
+    { "type": "numerical", "id": "Vitamins: Vitamin K" }
+  ]
+}

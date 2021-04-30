@@ -5,20 +5,46 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ML Playground</title>
+    <style>
+      body {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #F2F2F2;
+      }
+      #root {
+        position: fixed;
+        top: 40px;
+        bottom: 48px;
+        left: 20px;
+        right: 20px;
+      }
+      #mode-select {
+        position: absolute;
+      }
+      #instructions {
+        text-align: center;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <select onchange="location = '?mode=' + this.options[this.selectedIndex].value">
+    <div id="instructions"></div>
+    <select id="mode-select" onchange="location = '?mode=' + this.options[this.selectedIndex].value">
       <option disabled selected value="/">Jump to mode...</option>
-      <option value="">Default</option>
-      <option value="load_foods">Load Foods</option>
-      <option value="level_3_1">3/1</option>
-      <option value="level_3_3">3/3</option>
-      <option value="level_4_1">4/1</option>
-      <option value="level_4_3">4/3</option>
-      <option value="level_5_3">5/3</option>
-      <option value="level_7_6">7/6</option>
+      <option value="">default</option>
+      <option value="minimal">minimal</option>
+      <option value="preload-metadata">preload metadata</option>
+      <option value="intro-ai-tacos">intro-ai-tacos</option>
+      <option value="intro-ai-foods">intro-ai-foods</option>
+      <option value="safari">safari</option>
+      <option value="zoo">zoo</option>
+      <option value="final-project">final-project</option>
     </select>
-
     <div id="root"></div>
     <script src="mainDev.js"></script>
   </body>

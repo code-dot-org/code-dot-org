@@ -1,0 +1,65 @@
+{
+  "card": {
+    "description": "Survey of customers in an Indian restaurant on whether or not they like certain naan combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Help make recommendations for what kind of naan a new customer should order",
+      "potentialMisuses": "Anything other than recommendations"
+    }
+  },
+  "defaultLabelColumn": "preference",
+  "fields": [
+    {
+      "id": "chicken",
+      "type": "categorical",
+      "description": "Does the naan have chicken baked in?"
+    },
+    {
+      "id": "lamb",
+      "type": "categorical",
+      "description": "Does the naan have lamb baked in?"
+    },
+    {
+      "id": "onion",
+      "type": "categorical",
+      "description": "Does the naan have onion baked in?"
+    },
+    {
+      "id": "potatoes",
+      "type": "categorical",
+      "description": "Does the naan have potatoes baked in?"
+    },
+    {
+      "id": "nuts",
+      "type": "categorical",
+      "description": "Does the naan have nuts baked in?"
+    },
+    {
+      "id": "cherries",
+      "type": "categorical",
+      "description": "Does the naan have cherries baked in?"
+    },
+    {
+      "id": "shaved coconut",
+      "type": "categorical",
+      "description": "Does the naan have shaved coconut baked in?"
+    },
+    {
+      "id": "garlic",
+      "type": "categorical",
+      "description": "Does the naan have garlic baked in?"
+    },
+    {
+      "id": "cheese",
+      "type": "categorical",
+      "description": "Does the naan have cheese baked in?"
+    },
+    {
+      "id": "preference",
+      "type": "categorical",
+      "description": "Do you like or dislike the naan?"
+    }
+  ]
+}
