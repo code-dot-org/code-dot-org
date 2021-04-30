@@ -20,7 +20,7 @@ social:
 <ul>
   <li><a href="#native-students">For Native American students</a></li>
   <li><a href="#black-students">For Black students</a></li>
-  <li><a href="#hispanic-latino-students">For Hispanic / Latino students</a></li>
+  <li><a href="#hispanic-latino-students">For Hispanic / Latino/a/x students</a></li>
   <li><a href="#youngwomen">For young women</a></li>
   <li><a href="#allstudents">For all students</a></li>
 </ul>
@@ -88,7 +88,7 @@ social:
 
 <a id="hispanic-latino-students"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Hispanic / Latino students</h2>
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Hispanic / Latino/a/x students</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="shpe" href="https://shpe.org/" target="_blank">

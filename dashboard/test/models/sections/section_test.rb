@@ -391,6 +391,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -430,6 +431,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -472,6 +474,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -508,6 +511,7 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
