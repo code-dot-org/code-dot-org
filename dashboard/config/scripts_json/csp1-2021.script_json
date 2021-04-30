@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-30 17:25:49 UTC",
+    "serialized_at": "2021-04-30 22:07:26 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -158,7 +158,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and make a \"flippy do pro\" to practice binary-to-decimal number conversions which include fractional place values. ",
+        "overview": "Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. ",
         "student_overview": "Explore the limitations or representing numbers with bits.",
         "purpose": "This lesson introduces students to the practical aspects of using a binary system to represent  numbers in a computing device. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
         "preparation": "\r\n* Print copies of the Flippy Do Pro, 1 per group\r\n* Scissors",
@@ -1895,7 +1895,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "* The Flippy Do Pro is still using 8 bits to represent a number. But this time, the place value of each bit has been assigned in a different way than in the previous Flippy Do or on the Binary Odometer. The bits have been \"shifted\" to the right two times. The value 1 (2^0) is no longer the smallest place value. The value of a bit just to the right of 1 (2^0) is 0.5, which is 2^-1. The value to the right again is 0.25 which is 2^-2.\n\n* Students may struggle with negative exponents. What's more important than emphasizing the math is emphasizing the pattern of place values in the Flippy Do Pro. As you move left, the place value doubles. As you move right, the place value halves. \n\n* Help students see that using the Flippy Do Pro is similar to using the Flippy Do. To form a value, flip the flaps up or down at the bottom of the device to create a sequence of zeros and ones. Note that the range of place values is limited by the largest bit value, 2^5 which is 32, and the smallest bit value, 2^-2 which is 0.25. As with the Flippy Do, adding together all the values for each place value containing a \"1\" produces the total value represented on the Flippy Do Pro. \n\n"
+            "markdown": "Many students may use traditional rounding to decide on the prices for each of the candies. Using that system, the \n\n![](https://images.code.org/6caf4e7ad9a237c49cf5121d0fa337e9-Screen Shot 2021-04-30 at 3.05.54 PM.png)"
           },
           {
             "type": "teachingTip",
@@ -1909,8 +1909,18 @@
       }
     },
     {
-      "key": "2ae35bc7-9480-465a-81a2-5e5cfc6c85bc",
+      "key": "3fae957c-3e12-4c5c-8ffa-f51b62bf6f4c",
       "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3fae957c-3e12-4c5c-8ffa-f51b62bf6f4c",
+        "lesson_activity.key": "6ce45546-2b83-44a0-91fa-37034bc87fab"
+      }
+    },
+    {
+      "key": "2ae35bc7-9480-465a-81a2-5e5cfc6c85bc",
+      "position": 12,
       "properties": {
         "description": "**Prompt:** Why is it a problem for a computer if your answers are different than others?",
         "tips": [
@@ -4023,7 +4033,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Widget: Binary Odometer",
         "level_keys": [

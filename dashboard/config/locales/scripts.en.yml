@@ -19831,7 +19831,7 @@ en:
               key: Overflow and Rounding
               name: Overflow and Rounding
               description_student: Explore the limitations or representing numbers with bits.
-              description_teacher: 'Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and make a "flippy do pro" to practice binary-to-decimal number conversions which include fractional place values. '
+              description_teacher: 'Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. '
             Representing Text:
               key: Representing Text
               name: Representing Text
