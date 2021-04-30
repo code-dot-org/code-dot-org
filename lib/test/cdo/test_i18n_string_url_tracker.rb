@@ -5,6 +5,7 @@ require 'active_support/core_ext/numeric/time'
 class TestI18nStringUrlTracker < Minitest::Test
   def stub_redis
     RedisClient.instance.stubs(:put_record).with do |stream, data|
+      # Capture the data we try to send to Redis so we can verify it is what we expect.
       @redis_stream = stream
       @redis_record = data.dup
       true
