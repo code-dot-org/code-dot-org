@@ -59,13 +59,17 @@ class SaveModel extends Component {
       id: "potentialUses",
       text: "Intended Use",
       description:
-        "Describe the problem you think this model could help solve, or one potential app someone could make with this model.",
+        "Describe the problem you think this model could help solve, or one \
+        potential app someone could make with this model.",
       placeholder: "Write a brief description."
     });
     fields.push({
       id: "potentialMisuses",
       text: "Warnings",
-      description: "Describe any situations where this model could potentially be misused, or any places where bias could potentially show up in the model. Important questions to consider are:",
+      description:
+        "Describe any situations where this model could potentially \
+        be misused, or any places where bias could potentially show up in the \
+        model. Important questions to consider are:",
       descriptionDetailOne: "Is there enough data to create an accurate model?",
       descriptionDetailTwo: "Does the data represent all possible users and scenarios?",
       placeholder: "Write a brief description."
