@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 23:58:46 UTC",
+    "serialized_at": "2021-04-30 19:57:56 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -2767,7 +2767,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal:**\n\nStudents should understand that variables hold information and can be accessed using their labels. With simple drawings, students may not see the power of variables, so you may want them to think of some different apps that they use and what information needs to be stored for the app to work, or think about a more complex program that they want to use variables for.\n\nNumbers, text, and colors can all go into variables, as well as more complicated data structures that students will see later in the course."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- What are variables used to do?\n- How do you create a variable and assign it a value?\n- What can go into a variable?"
       },
       "seeding_key": {
         "activity_section.key": "df26b7e2-cb48-40b2-b360-d0e9770b8802",
@@ -3129,7 +3130,8 @@
             "type": "discussionGoal",
             "markdown": "**Key Vocabulary:**\n\n- **Sprite** - A character on the screen with properties that describe its location, movement, and look.\n- **Property** - A label for a characteristic of a sprite, such as its location and appearance.\n- **Dot Notation** - the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.\n\nSprites are a very complex concept, and students may have difficulty understanding exactly what they are. The most important aspect for students to understand is that sprites allow them to organize a lot of information about something that they want to draw to the screen.\n\nStudents should make the connection between properties and variables, that both hold information that their program needs to run. Properties are accessed through their sprites, and Game Lab sprites already have specific properties that are automatically created when students create each sprite, such as x position, height, and rotation.\n\nSprites solve the problem of organizing a lot of information about how something should be drawn to a screen. Rather than creating new variables to hold all of that information, sprites use properties to hold all of the information about one thing that is drawn to the screen.\n\n**Content Corner:** The sprite is a type of data called an object. While we aren't yet explicitly introducing the concept of objects, students do need to understand that a sprite is a different type of value from the ones we've seen before, one that can hold references to many more values."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- What is a sprite?\n- What are properties?\n- What problem do sprites solve?"
       },
       "seeding_key": {
         "activity_section.key": "f52c22d8-72a7-44d1-91d2-66aacf92c1a8",
@@ -3157,7 +3159,8 @@
             "type": "discussionGoal",
             "markdown": "Make sure students understand that they will need to both create the image (or animation) in the Animation Tab and then add the animation to the sprite using the [`setAnimation`(#f78183)](/docs/gamelab/setAnimation/) block. Students may be confused by the use of the word \"animation\" for single images, but in Game Lab, still images are considered \"animations\" with only one frame.\n\nStudents can use an animation already in the animation tab library, upload one from their computer, or create their own using the provided drawing tools. Additionally, students can use the drawing tools to modify the images they have chosen from the library or uploaded.\n\n**Misconception Alert!**\nMany students may now confuse the concepts of a sprite, its animation, and the image that it draws to the screen. In the next few lessons, watch out for this misconception, and reinforce the idea that a sprite's animation is just one of its properties, the one that controls what image is drawn to the screen. Remind students that a single sprite may have different animations throughout the course of the program, just as other properties can change, and that two or more sprites might share the same animation."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- What are the steps to adding an image to a sprite?\n- What are the different ways to get an image?"
       },
       "seeding_key": {
         "activity_section.key": "8f56a7b9-e17b-4173-bae9-c996824270b4",
@@ -3788,7 +3791,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal:**\n\nThe draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\". This creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\n\n**Misconception Alert!**\n\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously."
           }
-        ]
+        ],
+        "description": "**Question to Consider with Video:**\n- What does the draw function do?"
       },
       "seeding_key": {
         "activity_section.key": "18bcf449-d684-4e93-abbd-5af4e82d1e7b",
@@ -4002,7 +4006,8 @@
             "type": "discussionGoal",
             "markdown": "**Goals:**\n\nStudents may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n\nWhen a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. Students should be able to explain that movement in an animation is just a change in position, and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?"
       },
       "seeding_key": {
         "activity_section.key": "a6ebae49-e1ca-4918-9d7f-4c0e33cdf00e",
@@ -4398,7 +4403,8 @@
             "type": "discussionGoal",
             "markdown": "**Goals:**\n\n**Key Vocabulary:**\n\n- **Boolean Expression** - in programming, an expression that evaluates to True or False.\n\nStudents should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n\nSome examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n\nSome examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?"
       },
       "seeding_key": {
         "activity_section.key": "230cf2d8-bf75-4b73-aa29-4e468f203e78",
@@ -4437,7 +4443,8 @@
             "type": "discussionGoal",
             "markdown": "**Goals:**\n\nThe broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item."
           }
-        ]
+        ],
+        "description": "**Question to Consider with Video:**\n- When would you want to use an if statement?"
       },
       "seeding_key": {
         "activity_section.key": "030bb18c-bfaf-4c13-8ca7-9b251c26c162",
@@ -4728,7 +4735,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal:**\n\nMake sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an `if` block, and when an `ifelse` block is necessary."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?"
       },
       "seeding_key": {
         "activity_section.key": "48c9aa57-b904-4660-b629-e49bf606fad7",
@@ -5106,7 +5114,8 @@
             "type": "teachingTip",
             "markdown": "**Discussion Goals**\n\nIt may not be obvious to students why the velocity block is so powerful. The immediate answer is that the velocity block allows a programmer to set the velocity at the beginning of the program and not have to worry about the counter pattern inside the draw loop (as Game Lab will take care of that). If students are having trouble of thinking of situations in which the velocity block provides a big advantage, assure them that they will tackle some problems in the coming lesson that they will need this block for.\n\nAs students give you examples, try to elicit answers that use both positive and negative numbers, and that use the x and y positions as well as sprite rotation."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- Why might you want to use a velocity block instead of the counter pattern?\n- Give an example of a counter pattern and how you could use a velocity block instead."
       },
       "seeding_key": {
         "activity_section.key": "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560",
@@ -6199,7 +6208,8 @@
             "type": "discussionGoal",
             "markdown": "**Goal:**\n\n**Key Vocabulary:**\n- **Function** - a named bit of programming instructions\n\nMake sure students understand the role of the two steps in using functions, as well as seeing functions as a form of \"chunking\" or abstraction. The function definition should include all of the code that they want to run, and the name of the function should be a short description of the purpose of the code. The function should be called at each place in the program that the student wants that block of code to run."
           }
-        ]
+        ],
+        "description": "**Questions to Consider with Video:**\n- Think of a time when a function might have helped you write a program.\n- What code would go in the **definition** of the function?\n- When would you **call** the function?\n- What would you name it?"
       },
       "seeding_key": {
         "activity_section.key": "52d53651-705c-47ec-a68f-d014f3499a99",
@@ -7642,7 +7652,7 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7668,7 +7678,7 @@
       "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Introduction to Variables",
         "level_keys": [
@@ -7694,7 +7704,7 @@
       "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -7720,7 +7730,7 @@
       "chapter": 28,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -7746,7 +7756,7 @@
       "chapter": 29,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -7772,7 +7782,7 @@
       "chapter": 30,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7824,7 +7834,7 @@
       "chapter": 32,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -8760,7 +8770,7 @@
       "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Introduction to the Draw Loop",
         "level_keys": [
@@ -8786,7 +8796,7 @@
       "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration",
         "level_keys": [
@@ -8812,7 +8822,7 @@
       "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -8838,7 +8848,7 @@
       "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -8864,7 +8874,7 @@
       "chapter": 72,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -8890,7 +8900,7 @@
       "chapter": 73,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -8916,7 +8926,7 @@
       "chapter": 74,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8968,7 +8978,7 @@
       "chapter": 76,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -8994,7 +9004,7 @@
       "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -9020,7 +9030,7 @@
       "chapter": 78,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Sprite Movement",
         "level_keys": [
@@ -9046,7 +9056,7 @@
       "chapter": 79,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9072,7 +9082,7 @@
       "chapter": 80,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9098,7 +9108,7 @@
       "chapter": 81,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9124,7 +9134,7 @@
       "chapter": 82,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9150,7 +9160,7 @@
       "chapter": 83,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -9202,7 +9212,7 @@
       "chapter": 85,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -9410,7 +9420,7 @@
       "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -9436,7 +9446,7 @@
       "chapter": 94,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Booleans",
         "level_keys": [
@@ -9462,7 +9472,7 @@
       "chapter": 95,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Quick Check",
         "level_keys": [
@@ -9488,7 +9498,7 @@
       "chapter": 96,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9514,7 +9524,7 @@
       "chapter": 97,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9540,7 +9550,7 @@
       "chapter": 98,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Conditional Statements",
         "level_keys": [
@@ -9566,7 +9576,7 @@
       "chapter": 99,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9592,7 +9602,7 @@
       "chapter": 100,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -9644,7 +9654,7 @@
       "chapter": 102,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -9852,7 +9862,7 @@
       "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -9878,7 +9888,7 @@
       "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: If/Else Statements",
         "level_keys": [
@@ -9904,7 +9914,7 @@
       "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9930,7 +9940,7 @@
       "chapter": 113,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9956,7 +9966,7 @@
       "chapter": 114,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9982,7 +9992,7 @@
       "chapter": 115,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10008,7 +10018,7 @@
       "chapter": 116,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10060,7 +10070,7 @@
       "chapter": 118,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -10294,7 +10304,7 @@
       "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10320,7 +10330,7 @@
       "chapter": 128,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Velocity",
         "level_keys": [
@@ -10346,7 +10356,7 @@
       "chapter": 129,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10372,7 +10382,7 @@
       "chapter": 130,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10398,7 +10408,7 @@
       "chapter": 131,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10424,7 +10434,7 @@
       "chapter": 132,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10450,7 +10460,7 @@
       "chapter": 133,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -10476,7 +10486,7 @@
       "chapter": 134,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -10528,7 +10538,7 @@
       "chapter": 136,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -11568,7 +11578,7 @@
       "chapter": 176,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Functions",
         "level_keys": [
@@ -11594,7 +11604,7 @@
       "chapter": 177,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11620,7 +11630,7 @@
       "chapter": 178,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -11646,7 +11656,7 @@
       "chapter": 179,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -11672,7 +11682,7 @@
       "chapter": 180,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -11724,7 +11734,7 @@
       "chapter": 182,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Collector Game",
         "level_keys": [
@@ -11750,7 +11760,7 @@
       "chapter": 183,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Collector Game",
         "level_keys": [
@@ -11802,7 +11812,7 @@
       "chapter": 185,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
