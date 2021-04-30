@@ -49,7 +49,6 @@ const styles = {
 
 class Visualization extends React.Component {
   static propTypes = {
-    // Provided by redux
     visualizationHasPadding: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
@@ -59,6 +58,12 @@ class Visualization extends React.Component {
     widgetMode: PropTypes.bool
   };
 
+  state = {
+    appWidth: this.props.widgetMode
+      ? applabConstants.WIDGET_WIDTH
+      : applabConstants.APP_WIDTH
+  };
+
   handleDisableMaker = () => project.setMakerEnabled(null);
 
   handleTryAgain = () => {
@@ -66,30 +71,27 @@ class Visualization extends React.Component {
     studioApp().runButtonClick();
   };
 
-  getVisualizationClassNames = () => {
-    const {widgetMode, isResponsive, visualizationHasPadding} = this.props;
-
-    if (widgetMode) {
-      return classNames('widgetWidth', 'widgetHeight');
-    }
-
-    return classNames({
-      responsive: isResponsive,
-      with_padding: visualizationHasPadding
-    });
-  };
-
   render() {
-    const appWidth = applabConstants.getAppWidth(this.props);
+    const {appWidth} = this.state;
     const appHeight =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
 
     return (
       <div
         id={VISUALIZATION_DIV_ID}
-        className={this.getVisualizationClassNames()}
+        className={
+          this.props.widgetMode
+            ? 'widgetWidth widgetHeight'
+            : classNames({
+                responsive: this.props.isResponsive,
+                with_padding: this.props.visualizationHasPadding
+              })
+        }
         style={[
-          !this.props.isResponsive && styles.nonResponsive,
+          !this.props.isResponsive && {
+            ...styles.nonResponsive,
+            ...{width: appWidth}
+          },
           this.props.isShareView && styles.share,
           this.props.playspacePhoneFrame && styles.phoneFrame,
           this.props.playspacePhoneFrame &&
