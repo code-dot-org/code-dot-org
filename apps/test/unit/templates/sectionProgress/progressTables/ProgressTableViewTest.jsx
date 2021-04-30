@@ -155,7 +155,7 @@ describe('ProgressTableView', () => {
         .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      container.onToggleRow(rowData);
+      container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
       expect(timeSpentFormatterStub.callCount).to.equal(2);
@@ -219,7 +219,7 @@ describe('ProgressTableView', () => {
         .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      container.onToggleRow(rowData);
+      container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
       expect(timeSpentFormatterStub.callCount).to.equal(2);
