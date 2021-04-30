@@ -84,9 +84,11 @@ class ImageResourceCard extends Component {
           <div>
             <div style={styles.titleContainer}>
               <div style={styles.title}>{title}</div>
-              <div style={styles.callout}>
-                <i>{callout}</i>
-              </div>
+              {callout && (
+                <div style={styles.callout}>
+                  <i>{callout}</i>
+                </div>
+              )}
             </div>
             <div style={styles.description}>{description}</div>
           </div>
