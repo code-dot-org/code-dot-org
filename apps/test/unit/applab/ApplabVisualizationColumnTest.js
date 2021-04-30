@@ -7,7 +7,6 @@ import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 describe('AppLabVisualizationColumn', () => {
   describe('in widget mode', () => {
     let visualizationColumn;
-
     beforeEach(() => {
       visualizationColumn = shallow(
         <UnconnectedApplabVisualizationColumn
@@ -18,6 +17,7 @@ describe('AppLabVisualizationColumn', () => {
           nonResponsiveWidth={0}
           isRunning={false}
           hideSource={false}
+          isIframeEmbed={false}
           pinWorkspaceToBottom={false}
           awaitingContainedResponse={false}
           isEditingProject={false}
@@ -25,27 +25,28 @@ describe('AppLabVisualizationColumn', () => {
           onScreenCreate={() => {}}
           isPaused={false}
           // relevant to widget mode tests
-          widgetMode
-          isIframeEmbed
-          playspacePhoneFrame
+          widgetMode={true}
+          playspacePhoneFrame={true}
         />
       );
     });
 
-    it('renders IFrameEmbedOverlay with the correct appWidth', () => {
-      const iframeEmbed = visualizationColumn.find('IFrameEmbedOverlay');
-      expect(iframeEmbed).to.have.lengthOf(1);
-      expect(iframeEmbed.prop('appWidth')).to.equal(WIDGET_WIDTH);
+    afterEach(() => {
+      visualizationColumn = undefined;
     });
 
-    it('className includes widgetWidth', () => {
+    it('rendered width equals widget width', () => {
+      expect(visualizationColumn.state().renderedWidth).to.equal(WIDGET_WIDTH);
+    });
+
+    it('class name is widgetWidth', () => {
       expect(visualizationColumn.instance().getClassNames()).to.include(
         'widgetWidth'
       );
     });
 
     it('does not render a ResetButton', () => {
-      expect(visualizationColumn.find('ResetButton')).to.not.have.length;
+      expect(visualizationColumn.find('ResetButton')).to.be.empty;
     });
 
     it('displays a centered finish button', () => {

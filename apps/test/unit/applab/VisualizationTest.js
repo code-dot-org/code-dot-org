@@ -15,30 +15,21 @@ describe('Visualization', () => {
           isShareView={false}
           isPaused={false}
           isRunning={false}
+          playspacePhoneFrame={true}
           isResponsive={false}
           // relevant to widget mode tests
-          widgetMode
-          playspacePhoneFrame
+          widgetMode={true}
         />
       );
     });
 
-    it('uses the widgetWidth and widgetHeight classes', () => {
-      expect(visualization.instance().getVisualizationClassNames()).to.equal(
-        'widgetWidth widgetHeight'
-      );
+    it('uses the widgetWidth and widgetHeight class', () => {
+      expect(visualization.find('div.widgetWidth')).to.have.lengthOf(1);
+      expect(visualization.find('div.widgetHeight')).to.have.lengthOf(1);
     });
 
-    it('applies the correct width to child elements', () => {
-      const vizOverlay = visualization.find('Connect(VisualizationOverlay)');
-      expect(vizOverlay).to.have.lengthOf(1);
-      expect(vizOverlay.prop('width')).to.equal(WIDGET_WIDTH);
-
-      const makerOverlay = visualization.find(
-        'Connect(UnconnectedMakerStatusOverlay)'
-      );
-      expect(makerOverlay).to.have.lengthOf(1);
-      expect(makerOverlay.prop('width')).to.equal(WIDGET_WIDTH);
+    it('has a width equal to WIDGET_WIDTH', () => {
+      expect(visualization.state().appWidth).to.equal(WIDGET_WIDTH);
     });
   });
 });
