@@ -425,65 +425,6 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not can_view_solution?
   end
 
-  test 'build_script_level_path_for_translations for survey' do
-    input_dsl = <<~DSL
-      lesson 'Survey1', display_name: 'Survey1', has_lesson_plan: false, lockable: true;
-      assessment 'LockableAssessment1';
-    DSL
-
-    create :level, name: 'LockableAssessment1'
-
-    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-
-    script = Script.add_script(
-      {name: 'test_script'},
-      script_data[:lesson_groups]
-    )
-
-    stage = script.lessons[0]
-    assert_equal '/s/test_script/lockable/1/levels/1', build_script_level_path_for_translations(stage.script_levels[0])
-  end
-
-  test 'build_script_level_path_for_translations for bonus' do
-    input_dsl = <<~DSL
-      lesson 'Test bonus level links', display_name: 'Test bonus level links'
-      level 'Level1'
-      level 'BonusLevel1', bonus: true
-    DSL
-
-    create :level, name: 'Level1'
-    create :level, name: 'BonusLevel1'
-
-    script_data, _ = ScriptDSL.parse(input_dsl, 'test_bonus_level_links')
-
-    script = Script.add_script(
-      {name: 'test_bonus_level_links'},
-      script_data[:lesson_groups]
-    )
-
-    bonus_script_level = script.lessons.first.script_levels[1]
-    assert_equal `/s/test_bonus_level_links/stage/1/extras?level_name=BonusLevel1`, build_script_level_path_for_translations(bonus_script_level)
-  end
-
-  test 'build_script_level_path_for_translations for normal level' do
-    input_dsl = <<~DSL
-      lesson 'Test bonus level links', display_name: 'Level Link Test'
-      level 'Level1'
-    DSL
-
-    create :level, name: 'Level1'
-
-    script_data, _ = ScriptDSL.parse(input_dsl, 'test_level_links')
-
-    script = Script.add_script(
-      {name: 'test_level_links'},
-      script_data[:lesson_groups]
-    )
-
-    script_level = script.lessons.first.script_levels[0]
-    assert_equal `/s/test_level_links/stage/1/puzzle/1`, build_script_level_path_for_translations(script_level)
-  end
-
   test 'build_script_level_path differentiates lesson and survey' do
     # (position 1) Survey 1 (lockable: true, has_lesson_plan: false)
     # (position 2) Lesson 1 (lockable: false, has_lesson_plan: false)

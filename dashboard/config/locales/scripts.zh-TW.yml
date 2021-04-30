@@ -4137,7 +4137,7 @@ zh-TW:
             More Programming with Scratch:
               name: 更多 Scratch 的編程學習資源
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             Internet:
               name: 網際網路 Internet
             Crowdsourcing:
@@ -6566,7 +6566,7 @@ zh-TW:
             Conditionals:
               name: 條件判斷（Conditionals）
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             Build a Star Wars Game:
               name: 創建一個星際大戰遊戲！
             'Functions: Songwriting':
@@ -6789,7 +6789,7 @@ zh-TW:
             Conditionals:
               name: 條件判斷（Conditionals）
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             Build a Star Wars Game:
               name: 創建一個星際大戰遊戲！
             'Functions: Songwriting':
@@ -7281,7 +7281,7 @@ zh-TW:
             Conditionals:
               name: 條件判斷（Conditionals）
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             'Functions: Songwriting':
               name: 函式：作曲
             MINECRAFT STAGE GOES HERE:
@@ -8307,7 +8307,7 @@ zh-TW:
                 迴圈_ 用於在條件是 true 時繼續重複命令。While 迴圈的使用情況是：程式設計師不知道命令確實需要重複多少次，但是知道哪項條件需要為
                 true，才可讓迴圈繼續重複。「If / Else」陳述句為程式設計提供彈性，程式僅會在某個項目為 true 時執行整個部分，否則便會執行其他項目。
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
               description_teacher: |-
                 本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。
@@ -10139,7 +10139,7 @@ zh-TW:
                 迴圈_ 用於在條件是 true 時繼續重複命令。While 迴圈的使用情況是：程式設計師不知道命令確實需要重複多少次，但是知道哪項條件需要為
                 true，才可讓迴圈繼續重複。「If / Else」陳述句為程式設計提供彈性，程式僅會在某個項目為 true 時執行整個部分，否則便會執行其他項目。
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
               description_teacher: "本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。\r\n\r\n瀏覽一些網站時，若網站請求學生取得他們身分的資訊，他們就會學習採取批判性的查詢程序，讓他們能保護自己與家人免遭盜用身分。在本課堂中，學生會學習以批判思考方式，思考部分網站請求或要求取得的使用者資訊。他們會學習私密資訊與個人資訊的分別，並瞭解如何分辦哪些內容可在線上安全分享，哪些內容則不安全。"
             Build a Star Wars Game:
@@ -13780,7 +13780,7 @@ zh-TW:
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             About Me:
               name: 關於我
             Access Ability:
@@ -13931,7 +13931,7 @@ zh-TW:
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             About Me:
               name: 關於我
             Access Ability:
@@ -13975,7 +13975,7 @@ zh-TW:
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
             About Me:
               name: 關於我
             Access Ability:
@@ -15539,7 +15539,7 @@ zh-TW:
               description_student: 製作可與同學分享的互動專案。
               description_teacher: 本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。
             Private and Personal Information:
-              name: 私密與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
               description_teacher: "本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。\r\n\r\n瀏覽一些網站時，若網站請求學生取得他們身分的資訊，他們就會學習採取批判性的查詢程序，讓他們能保護自己與家人免遭盜用身分。在本課堂中，學生會學習以批判思考方式，思考部分網站請求或要求取得的使用者資訊。他們會學習私密資訊與個人資訊的分別，並瞭解如何分辦哪些內容可在線上安全分享，哪些內容則不安全。"
             About Me:
@@ -18131,8 +18131,8 @@ zh-TW:
               description_student: 製作可與同學分享的互動專案。
               description_teacher: 本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。
             Private and Personal Information:
-              key: 私密與個人資訊
-              name: 私密與個人資訊
+              key: 隱私與個人資訊
+              name: 隱私與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
             About Me:
               key: 關於我
