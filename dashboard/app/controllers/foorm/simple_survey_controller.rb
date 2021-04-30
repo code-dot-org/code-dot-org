@@ -2,7 +2,7 @@ module Foorm
   class SimpleSurveyController < ApplicationController
     FOORM_SIMPLE_SURVEY_SUBMIT_API = '/dashboardapi/v1/foorm/simple_survey_submission'
 
-    # General misc survey.
+    # General simple survey.
     # GET '/form/:misc_form_path'
     # misc_form_path references the configuration in foorm/simple_survey_submissions, which maps a
     # form path to a set of survey variables and a form name.
