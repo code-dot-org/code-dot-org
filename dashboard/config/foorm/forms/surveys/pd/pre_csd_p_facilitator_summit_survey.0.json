@@ -7,7 +7,7 @@
         {
           "type": "html",
           "name": "intro",
-          "html": "<p><h2>Text Here</h2></p>"
+          "html": "<p>We are interested in learning about all facilitators' sense of readiness to lead high-quality, equity-focused Professional Learning experiences in 2021-2022. Your responses will be shared anonymously with Code.org staff running these workshops. Thank you for taking a few minutes to complete this survey!</p>"
         },
         {
           "type": "radiogroup",
@@ -369,7 +369,7 @@
         {
           "type": "html",
           "name": "question3",
-          "html": "<p><h2>Closing Text</h2></p>"
+          "html": "<p>Thank you for sharing your responses! If you have any questions about this survey, please contact facilitators@code.org</p>"
         }
       ],
       "title": "Page 1"
