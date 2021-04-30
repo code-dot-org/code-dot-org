@@ -17,7 +17,7 @@ export const studentType = PropTypes.shape({
 });
 
 /**
- * @typedef {Object} LevelSchematic
+ * @typedef {Object} Level
  *
  * @property {string} id The id of the level. It is intentionally
  *   a string (despite always being numerical) because it gets
@@ -33,7 +33,7 @@ export const studentType = PropTypes.shape({
  *   this is a multi-page level, or PUZZLE_PAGE_NONE
  * @property {array} sublevels An optional array of recursive sublevel objects
  */
-const levelSchematicShape = {
+const levelShape = {
   id: PropTypes.string.isRequired,
   levelNumber: PropTypes.number,
   bubbleText: PropTypes.string,
@@ -47,18 +47,9 @@ const levelSchematicShape = {
   /** sublevels: PropTypes.array */ // See below
 };
 // Avoid recursive definition
-levelSchematicShape.sublevels = PropTypes.arrayOf(
-  PropTypes.shape(levelSchematicShape)
-);
+levelShape.sublevels = PropTypes.arrayOf(PropTypes.shape(levelShape));
 
-/**
- * Going forward, we are moving all user-specific data about a level into
- * `studentLevelProgressType`, so our `levelType` will just include "schematic"
- * data that is universal for the level, represented by this type. However, for
- * now we still need to support the legacy type that includes user-specific
- * data, which builds on this type.
- */
-export const levelSchematicType = PropTypes.shape(levelSchematicShape);
+export const levelType = PropTypes.shape(levelShape);
 
 /**
  * @typedef {Object} LevelWithProgress
@@ -66,9 +57,14 @@ export const levelSchematicType = PropTypes.shape(levelSchematicShape);
  * @property {string} status
  * @property {bool} isLocked
  * @property {bool} isCurrentLevel
+ *
+ * Note: going forward, we are moving all user-specific data about a level into
+ * `studentLevelProgressType`, so our `levelType` only includes data that is
+ * not user-specific. However, for now we still need to support this legacy
+ * type which does include user-specific data, and builds on `levelType`.
  */
 export const levelWithProgressType = PropTypes.shape({
-  ...levelSchematicShape,
+  ...levelShape,
   status: PropTypes.string.isRequired,
   isLocked: PropTypes.bool.isRequired,
   isCurrentLevel: PropTypes.bool
