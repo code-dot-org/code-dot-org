@@ -3133,10 +3133,10 @@ columns:
     default_function: 
     collation: 
     comment: 
-  foorm_misc_surveys:
+  foorm_simple_survey_submissions:
   - &388 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
-    table_name: foorm_misc_surveys
+    table_name: foorm_simple_survey_submissions
     sql_type_metadata: *8
     'null': false
     default: 
@@ -3145,7 +3145,7 @@ columns:
     comment: 
   - &389 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: foorm_submission_id
-    table_name: foorm_misc_surveys
+    table_name: foorm_simple_survey_submissions
     sql_type_metadata: *3
     'null': false
     default: 
@@ -3154,7 +3154,7 @@ columns:
     comment: 
   - &390 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: user_id
-    table_name: foorm_misc_surveys
+    table_name: foorm_simple_survey_submissions
     sql_type_metadata: *3
     'null': true
     default: 
@@ -3163,7 +3163,7 @@ columns:
     comment: 
   - &391 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: misc_form_path
-    table_name: foorm_misc_surveys
+    table_name: foorm_simple_survey_submissions
     sql_type_metadata: *5
     'null': true
     default: 
@@ -3172,7 +3172,7 @@ columns:
     comment: 
   - &392 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
-    table_name: foorm_misc_surveys
+    table_name: foorm_simple_survey_submissions
     sql_type_metadata: *7
     'null': false
     default: 
@@ -3181,7 +3181,7 @@ columns:
     comment: 
   - &393 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: updated_at
-    table_name: foorm_misc_surveys
+    table_name: foorm_simple_survey_submissions
     sql_type_metadata: *7
     'null': false
     default: 
@@ -13159,7 +13159,7 @@ columns_hash:
     created_at: *385
     updated_at: *386
     published: *387
-  foorm_misc_surveys:
+  foorm_simple_survey_submissions:
     id: *388
     foorm_submission_id: *389
     user_id: *390
@@ -14366,7 +14366,7 @@ primary_keys:
   foorm_forms: id
   foorm_libraries: id
   foorm_library_questions: id
-  foorm_misc_surveys: id
+  foorm_simple_survey_submissions: id
   foorm_submissions: id
   frameworks: id
   games: id
@@ -14532,7 +14532,7 @@ data_sources:
   foorm_forms: true
   foorm_libraries: true
   foorm_library_questions: true
-  foorm_misc_surveys: true
+  foorm_simple_survey_submissions: true
   foorm_submissions: true
   frameworks: true
   games: true
@@ -14654,4 +14654,4 @@ data_sources:
   users_view: true
   videos: true
   vocabularies: true
-version: 20210409201400
+version: 20210429195153
