@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::FoormMiscSurveySubmissionsControllerTest < ::ActionController::TestCase
+class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ::ActionController::TestCase
   self.use_transactional_test_case = true
   setup do
     @user = create :user
@@ -22,6 +22,6 @@ class Api::V1::FoormMiscSurveySubmissionsControllerTest < ::ActionController::Te
     assert_response :created
     response_body = JSON.parse(response.body)
     assert_not_nil response_body['foorm_submission_id']
-    assert_not_nil response_body['misc_survey_submission_id']
+    assert_not_nil response_body['simple_survey_submission_id']
   end
 end
