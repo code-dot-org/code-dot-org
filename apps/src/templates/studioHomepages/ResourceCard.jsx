@@ -30,8 +30,7 @@ const styles = {
     width: '100%',
     display: 'flex',
     alignItems: 'baseline',
-    padding: 20,
-    paddingBottom: 15
+    padding: '20px 20px 15px 20px'
   },
   title: {
     color: color.white,
@@ -41,7 +40,6 @@ const styles = {
     boxSizing: 'border-box'
   },
   titleSmall: {
-    // width: '100%',
     boxSizing: 'border-box'
   },
   titleNoWrap: {
@@ -147,9 +145,11 @@ class ResourceCard extends Component {
       <div style={cardStyles}>
         <div style={styles.titleContainer}>
           <div style={titleStyles}>{title}</div>
-          <div style={styles.callout}>
-            <i>{callout}</i>
-          </div>
+          {callout && (
+            <div style={styles.callout}>
+              <i>{callout}</i>
+            </div>
+          )}
         </div>
         <div style={descriptionStyles}>{descriptionContent}</div>
         <br />
