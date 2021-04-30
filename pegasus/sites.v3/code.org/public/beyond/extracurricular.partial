@@ -3,18 +3,17 @@ title: Extracurricular opportunities
 video_player: true
 theme: responsive
 social:
-  "og:title": "CS Journeys: Extracurricular activities"
+  "og:title": "CS Journeys Resources: Extracurricular activities"
   "og:description": "Explore hackathons, coding clubs and summer camps"
-  "og:image": ""
+  "og:image": "/images/csjourneys/og-extracurricular.jpg"
   "og:image:width": 1200
   "og:image:height": 630
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
+  "twitter:title": "CS Journeys Resources: Extracurricular activities"
+  "twitter:description": "Explore hackathons, coding clubs and summer camps"
+  "twitter:image": "/images/csjourneys/og-extracurricular.jpg"
 ---
 <a id="top"></a>
-<h1>Extracurricular opportunities</h1>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Extracurricular opportunities</h1>
 <p>Extracurricular activities like hackathons, coding clubs, and summer camps are a great way to use and extend what you learn in the classroom and experience the collaborative nature of computer science. Explore the opportunities below to take the next step on your CS Journey.</p>
 
 <ul>
