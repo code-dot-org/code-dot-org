@@ -24,12 +24,10 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Save the using_text_mode user preference
+   * Save the using_dark_mode user preference
    * @param {boolean} darkMode - Whether or not the user should be in dark mode.
    */
   setUsingDarkMode(darkMode) {
-    console.log('user preferences are being updated so dark mode is now: ');
-    console.log(darkMode);
     return $.post(`/api/v1/users/${this.userId}/using_dark_mode`, {
       using_dark_mode: darkMode
     });
