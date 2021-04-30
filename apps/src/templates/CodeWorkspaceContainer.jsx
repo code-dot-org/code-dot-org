@@ -75,7 +75,7 @@ const styles = {
   main: {
     position: 'absolute',
     // left gets set externally :(
-    // top is set in render
+    top: 0,
     right: 0,
     bottom: 0,
     marginLeft: 15 // margin gives space for vertical resizer
