@@ -1,8 +1,8 @@
-class Api::V1::FoormMiscSurveySubmissionsController < ApplicationController
+class Api::V1::FoormSimpleSurveySubmissionsController < ApplicationController
   def create
     answers = params[:answers]
 
-    submission = ::Foorm::MiscSurvey.new(
+    submission = ::Foorm::SimpleSurveySubmission.new(
       user_id: params[:user_id],
       misc_form_path: params[:misc_form_path]
     )
@@ -13,6 +13,6 @@ class Api::V1::FoormMiscSurveySubmissionsController < ApplicationController
       return
     end
 
-    render json: {foorm_submission_id: submission.foorm_submission_id, misc_survey_submission_id: submission.id}, status: :created
+    render json: {foorm_submission_id: submission.foorm_submission_id, simple_survey_submission_id: submission.id}, status: :created
   end
 end
