@@ -13,8 +13,6 @@ import commonStyles from '../commonStyles';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
-    // TODO: REFACTOR THIS PROP AWAY INTO props.style
-    topMargin: PropTypes.number.isRequired,
     children: PropTypes.node,
     style: PropTypes.object,
 
@@ -33,23 +31,15 @@ class CodeWorkspaceContainer extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.topMargin !== prevProps.topMargin) {
+    if (this.props.style?.top !== prevProps.style?.top) {
       utils.fireResizeEvent();
     }
   }
 
   render() {
-    const {
-      hidden,
-      isRtl,
-      noVisualization,
-      topMargin,
-      children,
-      style
-    } = this.props;
+    const {hidden, isRtl, noVisualization, children, style} = this.props;
     const mainStyle = {
       ...styles.main,
-      top: topMargin,
       ...(noVisualization && styles.noVisualization),
       ...(isRtl && styles.mainRtl),
       ...(noVisualization && isRtl && styles.noVisualizationRtl),

@@ -109,8 +109,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
         <TopInstructions mainStyle={instructionsStyle} />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          topMargin={instructionsHeight}
-          style={workspaceStyle}
+          style={{...workspaceStyle, top: instructionsHeight}}
         >
           {children}
         </CodeWorkspaceContainer>

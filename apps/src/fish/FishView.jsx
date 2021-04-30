@@ -154,7 +154,7 @@ class FishView extends React.Component {
 
     return (
       <StudioAppWrapper>
-        <CodeWorkspaceContainer topMargin={0}>
+        <CodeWorkspaceContainer>
           <div
             id="oceans-container"
             style={{
