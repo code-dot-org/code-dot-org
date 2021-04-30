@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 23:58:32 UTC",
+    "serialized_at": "2021-04-30 17:17:00 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -831,18 +831,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982",
-        "lesson.key": "Functions Explore / Investigate",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "key": "28e3a60c-b1e0-4e1b-9689-5957c90449af",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af",
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021"
@@ -2699,7 +2687,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Review the updateScreen pattern with students. Afterwards have them add to their journal definition for a function and a function call.",
-        "name": "Synthesizing Discussion\r"
+        "name": "Synthesizing Discussion\r",
+        "progression_name": "Update Screen Pattern"
       },
       "seeding_key": {
         "activity_section.key": "00f2c766-8cc8-492e-991f-863c6f6c9cb1",
@@ -2710,7 +2699,7 @@
       "key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *Reflecting on today's lesson about functions:*\n\n**Discussion Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *Reflecting on today's lesson about functions:*\n* *What did you learn?*\n* *What are you uncertain about?*\n\n**Discussion Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n ---"
       },
       "seeding_key": {
         "activity_section.key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
@@ -2718,60 +2707,16 @@
       }
     },
     {
-      "key": "0f747047-b335-4aaa-b94d-029b8982f819",
+      "key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54",
       "position": 3,
       "properties": {
-        "description": "* What did you learn?\n* What are you uncertain about?\n",
-        "progression_name": "Update Screen Pattern"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819",
-        "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982"
-      }
-    },
-    {
-      "key": "2d212f5a-63cf-487c-87d2-6deaea8d2def",
-      "position": 4,
-      "properties": {
-        "description": "\n---"
-      },
-      "seeding_key": {
-        "activity_section.key": "2d212f5a-63cf-487c-87d2-6deaea8d2def",
-        "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982"
-      }
-    },
-    {
-      "key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54",
-      "position": 5,
-      "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** In your own words describe the benefits of creating functions in your code.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54",
         "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982"
-      }
-    },
-    {
-      "key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0",
-      "position": 1,
-      "properties": {
-        "progression_name": "Explore Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0",
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af"
-      }
-    },
-    {
-      "key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
-      "position": 2,
-      "properties": {
-        "progression_name": "Check Your Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af"
       }
     },
     {
@@ -4793,7 +4738,7 @@
       "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Explore Functions",
         "level_keys": [
@@ -4819,7 +4764,7 @@
       "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -4845,7 +4790,7 @@
       "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -4871,7 +4816,7 @@
       "chapter": 53,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -4897,12 +4842,9 @@
       "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Update Screen Pattern",
-        "level_keys": [
-          "updateScreen Pattern_2021"
-        ]
+        "progression": "Update Screen Pattern"
       },
       "named_level": null,
       "bonus": null,
@@ -4913,7 +4855,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819"
+        "activity_section.key": "00f2c766-8cc8-492e-991f-863c6f6c9cb1"
       },
       "level_keys": [
         "updateScreen Pattern_2021"
@@ -4925,10 +4867,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding",
-        "level_keys": [
-          "CSP U4 L09 CFU Exit Ticket_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4939,7 +4878,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "a2239dc4-88d1-429c-8dfa-31141c774cad"
+        "activity_section.key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54"
       },
       "level_keys": [
         "CSP U4 L09 CFU Exit Ticket_2021"
@@ -6138,7 +6077,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819"
+        "activity_section.key": "00f2c766-8cc8-492e-991f-863c6f6c9cb1"
       }
     },
     {
@@ -6150,7 +6089,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "a2239dc4-88d1-429c-8dfa-31141c774cad"
+        "activity_section.key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54"
       }
     },
     {
