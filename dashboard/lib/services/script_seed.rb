@@ -712,6 +712,11 @@ module Services
         :seeding_key
       )
 
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
@@ -725,6 +730,11 @@ module Services
         :seeding_key
       )
 
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
@@ -737,6 +747,11 @@ module Services
         :properties,
         :seeding_key
       )
+
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
