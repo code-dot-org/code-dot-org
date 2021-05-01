@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {navigateToHref} from '../../utils';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -297,6 +298,19 @@ export const finishEditingSection = () => (dispatch, getState) => {
           serverSection: result
         });
         resolve(result);
+        /* If user is creating a new section, re-route the user to
+           the appropriate location:
+            - If creating from the teacher home page, send user to
+              the "Manage Students" tab of the newly-created section.
+            - Else send user back to the page where they triggered
+              the Create/Edit Section dialog. */
+        if (section.id < 0) {
+          window.history.back();
+          let lastUrl = window.location.href;
+          if (lastUrl.endsWith('/home')) {
+            navigateToHref(`/teacher_dashboard/sections/${result.id}/manage`);
+          }
+        }
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
