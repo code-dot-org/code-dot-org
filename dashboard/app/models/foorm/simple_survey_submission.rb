@@ -83,6 +83,7 @@ class Foorm::SimpleSurveySubmission < ApplicationRecord
     ]
   end
 
+  # To do: confirm this is no longer used and remove
   def self.find_form_data(misc_form_path)
     all_form_data.detect {|form_data| form_data[:misc_form_path] == misc_form_path}
   end
