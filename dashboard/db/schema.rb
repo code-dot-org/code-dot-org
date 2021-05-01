@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_195153) do
+ActiveRecord::Schema.define(version: 2021_05_01_040241) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1631,7 +1631,6 @@ ActiveRecord::Schema.define(version: 2021_04_29_195153) do
     t.index ["category_id"], name: "index_standards_on_category_id"
     t.index ["description"], name: "index_standards_on_description", type: :fulltext
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
-    t.index ["shortcode", "description"], name: "index_standards_on_shortcode_and_description", type: :fulltext
   end
 
   create_table "state_cs_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
