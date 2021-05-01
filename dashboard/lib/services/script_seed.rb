@@ -756,6 +756,18 @@ module Services
         :level_keys
       )
 
+      def assessment
+        !!object.assessment
+      end
+
+      def named_level
+        !!object.named_level
+      end
+
+      def bonus
+        !!object.bonus
+      end
+
       def seeding_key
         # Just in case the data stored in the level_keys property is out of sync somehow,
         # don't use that data during serialization.
