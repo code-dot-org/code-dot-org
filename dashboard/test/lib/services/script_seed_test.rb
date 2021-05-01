@@ -1089,7 +1089,9 @@ module Services
             (1..num_script_levels_per_section).each do |sl_pos|
               game = create :game, name: "#{name_prefix}_game#{sl_num}"
               level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "1_2_#{sl_num}", game: game
-              create :script_level, activity_section: section, activity_section_position: sl_pos, lesson: lesson, script: script, levels: [level], challenge: sl_num.even?
+              create :script_level, activity_section: section, activity_section_position: sl_pos,
+                     lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
+                     assessment: false, bonus: false, named_level: false
               sl_num += 1
             end
           end
