@@ -192,7 +192,7 @@ class App extends Component {
             <ContainerLeft>
               <Results />
             </ContainerLeft>
-            {resultsPhase === 3 && (
+            {resultsPhase === 1 && (
               <ContainerRight>
                 <Predict />
               </ContainerRight>

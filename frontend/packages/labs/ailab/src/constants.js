@@ -121,6 +121,28 @@ export const styles = {
     position: "relative"
   },
 
+  panelPopupContainer: {
+    position: "absolute",
+    left: 20,
+    top: 20,
+    width: "calc(100% - 40px)",
+    height: "calc(100% - 40px)",
+    zIndex: 10
+  },
+
+  panelPopup: {
+    padding: 10,
+    backgroundColor: "white",
+    overflow: "hidden",
+    height: "100%",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    //opacity: 0.7,
+    border: "solid 1px black",
+    boxShadow: "-5px 5px 10px black"
+  },
+
   scrollableContents: {
     overflow: "hidden"
   },
@@ -210,7 +232,7 @@ export const styles = {
     fontSize: 13.33,
     padding: "2px 6px",
     margin: 0,
-    border: "none",
+    border: "none"
   },
 
   specifyColumnsItem: {
@@ -334,6 +356,38 @@ export const styles = {
     backgroundColor: "rgba(255,100,100, 1)"
   },
 
+  resultsPanelContainer: {
+    width: "100%",
+    height: "100%",
+    position: "relative"
+  },
+
+  resultsStatement: {
+    float: "left",
+    width: "80%"
+  },
+
+  resultsAccuracy: { float: "left", fontSize: 18, width: "10%" },
+
+  resultsDetailsButtonContainer: {
+    float: "left",
+    textAlign: "center",
+    width: "10%"
+  },
+
+  resultsDetailsButton: {
+    fontSize: 14,
+    padding: "4px 12px",
+    margin: 0,
+    border: "none",
+    cursor: "pointer",
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white"
+  },
+
+  resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
+
   resultsTableFirstHeader: {
     top: 0,
     backgroundColor: "white",
@@ -377,6 +431,11 @@ export const styles = {
     fontSize: 32,
     paddingBottom: 15,
     lineHeight: '50px'
+  },
+
+  statementSmall: {
+    fontSize: 18,
+    paddingBottom: 6
   },
 
   statementLabel: {

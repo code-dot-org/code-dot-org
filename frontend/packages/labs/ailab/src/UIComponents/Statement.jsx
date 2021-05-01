@@ -12,12 +12,14 @@ import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 class Statement extends Component {
   static propTypes = {
+    shouldShow: PropTypes.bool,
+    smallFont: PropTypes.bool,
     data: PropTypes.array,
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
-    setLabelColumn: PropTypes.func.isRequired,
-    removeSelectedFeature: PropTypes.func.isRequired
+    setLabelColumn: PropTypes.func,
+    removeSelectedFeature: PropTypes.func
   };
 
   removeLabel = () => {
@@ -29,14 +31,17 @@ class Statement extends Component {
   };
 
   render() {
-    const { data, labelColumn, selectedFeatures, currentPanel } = this.props;
+    const { shouldShow, smallFont, labelColumn, selectedFeatures, currentPanel } = this.props;
 
-    if (data.length === 0) {
+    if (!shouldShow) {
       return null;
     }
 
     return (
-      <div style={styles.statement} id="statement">
+      <div
+        style={smallFont ? styles.statementSmall : styles.statement}
+        id="statement"
+      >
         Predict{" "}
         <div style={styles.statementLabel}>
           {labelColumn || "..."}
@@ -86,8 +91,11 @@ class Statement extends Component {
   }
 }
 
+export const UnconnectedStatement = Statement;
+
 export default connect(
   state => ({
+    shouldShow: state.data.length !== 0,
     data: state.data,
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,

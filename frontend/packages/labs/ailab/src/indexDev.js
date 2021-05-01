@@ -16,7 +16,8 @@ const sampleModes = {
   "preload-metadata": {
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
-    hideChooseReserve: true
+    hideChooseReserve: true,
+    requireAccuracy: 50
   },
 
   "intro-ai-tacos": {

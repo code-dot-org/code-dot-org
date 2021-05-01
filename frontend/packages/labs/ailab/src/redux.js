@@ -57,6 +57,8 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
+const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 
 // Action creators
 export function setMode(mode) {
@@ -200,6 +202,14 @@ export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
+export function setHistoricResult(label, features, accuracy) {
+  return { type: SET_HISTORIC_RESULT, label, features, accuracy };
+}
+
+export function setShowResultsDetails(show) {
+  return {type: SET_SHOW_RESULTS_DETAILS, show};
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -229,7 +239,10 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined
+  saveStatus: undefined,
+  columnRefs: {},
+  historicResults: [],
+  showResultsDetails: false
 };
 
 // Reducer
@@ -520,6 +533,26 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
+  if (action.type === SET_HISTORIC_RESULT) {
+    return {
+      ...state,
+      historicResults: [
+        {
+          label: action.label,
+          features: action.features,
+          accuracy: action.accuracy
+        },
+        ...state.historicResults
+      ]
+    };
+  }
+  if (action.type === SET_SHOW_RESULTS_DETAILS) {
+    return {
+      ...state,
+      showResultsDetails: action.show
+    };
+  }
+
   return state;
 }
 
@@ -1085,6 +1118,20 @@ function isPanelAvailable(state, panelId) {
   return true;
 }
 
+function isAccuracyAcceptable(state) {
+  const mode = state.mode;
+
+  if (
+    mode &&
+    mode.requireAccuracy &&
+    mode.requireAccuracy > state.historicResults[0].accuracy
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
 // Given the current panel, return the appropriate previous & next buttons.
 export function getPanelButtons(state) {
   let prev, next;
@@ -1124,9 +1171,11 @@ export function getPanelButtons(state) {
     }
   } else if (state.currentPanel === "results") {
     prev = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Back" }
+      ? { panel: "dataDisplayFeatures", text: "Try again" }
       : null;
-    next = isPanelAvailable(state, "saveModel")
+    next = !isAccuracyAcceptable(state)
+      ? null
+      : isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
