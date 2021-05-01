@@ -279,7 +279,7 @@ module Services
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
-        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level]
+        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false, named_level: false
       end
 
       ScriptSeed.seed_from_json(json)
