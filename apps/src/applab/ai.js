@@ -6,6 +6,20 @@ function generateCodeDesignElements(modelId, modelData) {
   var x = 20;
   var y = 20;
   var SPACER_PIXELS = 20;
+
+  const modelClass = 'ml_model_' + modelId;
+
+  // Delete any prior DOM elements for this modelId.
+  // (As done in deleteElement() in designMode.js, we might
+  // actually remove the parent which handled resizing.)
+  var existingElements = $('.' + modelClass);
+  existingElements.each((index, element) => {
+    if ($(element.parentNode).is('.ui-resizable')) {
+      element = element.parentNode;
+    }
+    element.remove();
+  });
+
   designMode.onInsertEvent(`var data = {};`);
   var inputFields = [];
   if (modelData.features && modelData.label) {
@@ -15,6 +29,7 @@ function generateCodeDesignElements(modelId, modelData) {
       var alphaNumFeature = stripSpaceAndSpecial(feature.id);
       let fieldId;
       label.id = 'design_' + alphaNumFeature + '_label';
+      label.className = modelClass;
       label.style.width = '300px';
       y = y + SPACER_PIXELS;
       if (feature.values) {
@@ -23,6 +38,7 @@ function generateCodeDesignElements(modelId, modelData) {
         fieldId = alphaNumFeature + '_dropdown';
         var select = designMode.createElement('DROPDOWN', x, y);
         select.id = 'design_' + fieldId;
+        select.className = modelClass;
         // App Lab automatically adds "option 1" and "option 2", remove them.
         select.options.remove(0);
         select.options.remove(0);
@@ -45,6 +61,7 @@ function generateCodeDesignElements(modelId, modelData) {
         var input = designMode.createElement('TEXT_INPUT', x, y);
         fieldId = alphaNumFeature + '_input';
         input.id = 'design_' + fieldId;
+        input.className = modelClass;
         y = y + SPACER_PIXELS;
       }
       var addFeature = `data.${alphaNumFeature} = getText("${fieldId}");`;
@@ -57,6 +74,7 @@ function generateCodeDesignElements(modelId, modelData) {
       var alphaNumFeature = stripSpaceAndSpecial(feature);
       let fieldId;
       label.id = 'design_' + alphaNumFeature + '_label';
+      label.className = modelClass;
       label.style.width = '300px';
       y = y + SPACER_PIXELS;
       if (Object.keys(modelData.featureNumberKey).includes(feature)) {
@@ -65,6 +83,7 @@ function generateCodeDesignElements(modelId, modelData) {
         fieldId = alphaNumFeature + '_dropdown';
         var select = designMode.createElement('DROPDOWN', x, y);
         select.id = 'design_' + fieldId;
+        select.className = modelClass;
         // App Lab automatically adds "option 1" and "option 2", remove them.
         select.options.remove(0);
         select.options.remove(0);
@@ -88,6 +107,7 @@ function generateCodeDesignElements(modelId, modelData) {
         var input = designMode.createElement('TEXT_INPUT', x, y);
         fieldId = alphaNumFeature + '_input';
         input.id = 'design_' + fieldId;
+        input.className = modelClass;
         y = y + SPACER_PIXELS;
       }
       var addFeature = `data.${alphaNumFeature} = getText("${fieldId}");`;
@@ -99,18 +119,16 @@ function generateCodeDesignElements(modelId, modelData) {
   label.textContent = modelData.labelColumn;
   var alphaNumModelName = stripSpaceAndSpecial(modelData.name);
   label.id = 'design_' + alphaNumModelName + '_label';
+  label.className = modelClass;
   label.style.width = '300px';
   y = y + SPACER_PIXELS;
   var predictionId = alphaNumModelName + '_prediction';
-  // Text input field to display prediction.
-  var prediction = designMode.createElement('TEXT_INPUT', x, y);
-  prediction.id = 'design_' + predictionId;
-  prediction.readOnly = true;
-  y = y + 2 * SPACER_PIXELS;
+  // Button to do the prediction.
   var predictButton = designMode.createElement('BUTTON', x, y);
   predictButton.textContent = 'Predict';
   var predictButtonId = alphaNumModelName + '_predict';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
+  predictButton.className = modelClass;
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
     ${inputFields.join('\n\t\t')}
     setText("${predictionId}", '');
@@ -118,6 +136,13 @@ function generateCodeDesignElements(modelId, modelData) {
       setText("${predictionId}", value);
     });
   });`;
+  y = y + 2.5 * SPACER_PIXELS;
+  // Text input field to display prediction.
+  var prediction = designMode.createElement('TEXT_INPUT', x, y);
+  prediction.id = 'design_' + predictionId;
+  prediction.className = modelClass;
+  prediction.readOnly = true;
+
   designMode.onInsertAICode(predictOnClick);
 }
 
