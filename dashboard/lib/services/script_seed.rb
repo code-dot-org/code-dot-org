@@ -760,6 +760,11 @@ module Services
         !!object.assessment
       end
 
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
       def named_level
         !!object.named_level
       end
