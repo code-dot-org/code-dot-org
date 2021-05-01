@@ -11,14 +11,17 @@ import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 const style = {
   instructionsAndPreview: {
-    width: '40%',
-    position: 'relative',
+    width: '100%',
+    position: 'absolute',
     marginRight: 15,
-    color: color.black
+    color: color.black,
+    right: '15px',
+    top: '15px'
   },
   instructions: {
     width: '100%',
@@ -28,8 +31,9 @@ const style = {
     left: 0
   },
   editorAndConsole: {
-    width: '60%',
-    position: 'relative'
+    position: 'absolute',
+    right: '15px',
+    marginLeft: '15px'
   },
   preview: {
     backgroundColor: color.light_gray,
@@ -130,19 +134,22 @@ class JavalabView extends React.Component {
     return (
       <StudioAppWrapper>
         <div style={style.javalab}>
-          <div style={style.instructionsAndPreview}>
-            <TopInstructions mainStyle={style.instructions} />
+          <div id="visualizationColumn" className="with_padding responsive pin_bottom" style={style.instructionsAndPreview}>
+            <TopInstructions mainStyle={style.instructions} standalone={true} />
             <div style={style.preview}>
               <PaneHeader hasFocus={true}>
                 <PaneSection>Preview</PaneSection>
+                  <ProtectedVisualizationDiv />
               </PaneHeader>
             </div>
           </div>
+          <VisualizationResizeBar />
           <div
             style={{
               ...style.editorAndConsole,
               color: isDarkMode ? color.white : color.black
             }}
+            className="editor-column"
           >
             <JavalabEditor onCommitCode={onCommitCode} />
             <div style={style.consoleAndButtons}>

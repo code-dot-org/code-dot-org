@@ -143,7 +143,8 @@ class TopInstructions extends Component {
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
-    collapsible: PropTypes.bool
+    collapsible: PropTypes.bool,
+    standalone: PropTypes.bool
   };
 
   static defaultProps = {
@@ -577,7 +578,8 @@ class TopInstructions extends Component {
       containerStyle,
       resizable,
       documentationUrl,
-      ttsLongInstructionsUrl
+      ttsLongInstructionsUrl,
+      standalone
     } = this.props;
 
     const {
@@ -670,7 +672,7 @@ class TopInstructions extends Component {
     return (
       <div
         style={topInstructionsStyle}
-        className="editor-column"
+        className={!standalone && "editor-column"}
         ref={ref => (this.topInstructions = ref)}
       >
         <TopInstructionsHeader
