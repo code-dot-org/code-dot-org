@@ -49,7 +49,6 @@ class AppLabView extends React.Component {
       isEditingProject,
       screenIds,
       onScreenCreate,
-      autogenerateML,
       hasDesignMode,
       hasDataMode,
       handleVersionHistory
