@@ -1163,6 +1163,8 @@
   "manageStudents": "Manage Students",
   "manageStudentsNotificationFailure": "Something went wrong.",
   "manageStudentsNotificationCannotAdd": "You could not add {numStudents, plural, one {1 student} other {# students}} to your section. Please try again or refresh the page.",
+  "manageStudentsNotificationCannotVerb": "The {numStudents, plural, one {student} other {students}} couldn't be {verb, select, copy {copied} move {moved} other {added}} to this section",
+  "manageStudentsNotificationAtCapacity": "You can’t have more than 500 students in a section. Questions about this limit? [Contact support](https://code.org/contact)",
   "manageStudentsNotificationAddSuccess": "You added {numStudents, plural, one {1 student} other {# students}} to your section.",
   "manageStudentsNotificationSuccess": "Success!",
   "manageYourLibraries": "Manage Your Libraries",
