@@ -12,6 +12,7 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import MazeVisualization from '@cdo/apps/maze/Visualization';
 
 const style = {
   instructionsAndPreview: {
@@ -134,6 +135,14 @@ class JavalabView extends React.Component {
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
+    let visualization = false ? (
+      <PaneHeader hasFocus={true}>
+        <PaneSection>Preview</PaneSection>
+        <ProtectedVisualizationDiv />
+      </PaneHeader>
+    ) : (
+      <MazeVisualization />
+    )
     return (
       <StudioAppWrapper>
         <div style={style.javalab}>
@@ -144,10 +153,7 @@ class JavalabView extends React.Component {
           >
             <TopInstructions mainStyle={style.instructions} standalone={true} />
             <div style={style.preview}>
-              <PaneHeader hasFocus={true}>
-                <PaneSection>Preview</PaneSection>
-                <ProtectedVisualizationDiv />
-              </PaneHeader>
+              {visualization}
             </div>
           </div>
           <VisualizationResizeBar />

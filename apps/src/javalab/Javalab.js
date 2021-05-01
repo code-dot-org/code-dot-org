@@ -14,6 +14,11 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
+const maze = require('@code-dot-org/maze');
+const MazeController = maze.MazeController;
+var skinsBase = require('../skins');
+var tiles = require('@code-dot-org/maze').tiles;
+var Direction = tiles.Direction;
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -76,7 +81,38 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  config.afterInject = () => {
+    this.level.map = [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 2, 1, 1, 3, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0]
+    ];
+    this.level.startDirection = Direction.EAST;
 
+    // skinsBase.pegmanHeight = 50;
+    // skinsBase.pegmanWidth = 50;
+    this.controller = new MazeController(this.level, this.skin, config, {
+      methods: {
+        playAudio: (sound, options) => {
+          this.studioApp_.playAudio(sound, {...options, noOverlap: true});
+        },
+        playAudioOnFailure: this.studioApp_.playAudioOnFailure.bind(this.studioApp_),
+        loadAudio: this.studioApp_.loadAudio.bind(this.studioApp_),
+        getTestResults: this.studioApp_.getTestResults.bind(this.studioApp_)
+      }
+    });
+    const svg = document.getElementById('svgMaze');
+    // this.controller.map.resetDirt();
+    this.controller.subtype.initStartFinish();
+    this.controller.subtype.createDrawer(svg);
+    this.controller.subtype.initWallMap();
+    this.controller.initWithSvg(svg);
+    }
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
@@ -100,13 +136,15 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+    config.afterInject();
   };
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
-    isEditingStartSources: !!config.level.editBlocks
+    isEditingStartSources: !!config.level.editBlocks,
+    isResponsive: true
   });
 
   registerReducers({javalab});
