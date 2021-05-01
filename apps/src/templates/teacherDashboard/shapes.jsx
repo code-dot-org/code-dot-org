@@ -16,8 +16,7 @@ export const sectionShape = PropTypes.shape({
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
   grade: PropTypes.string,
-  providerManaged: PropTypes.bool.isRequired,
-  restrictSection: PropTypes.bool
+  providerManaged: PropTypes.bool.isRequired
 });
 
 // Used on the Teacher Dashboard for components that

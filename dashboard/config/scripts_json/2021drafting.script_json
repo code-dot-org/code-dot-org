@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 20:46:07 UTC",
+    "serialized_at": "2021-04-30 20:47:24 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -103,6 +103,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Argentina",
+      "user_facing": true,
+      "position": 8,
+      "properties": {
+        "display_name": "Argentina"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Argentina",
         "script.name": "2021drafting"
       }
     }
@@ -286,6 +298,21 @@
       "seeding_key": {
         "lesson.key": "video",
         "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "aboutme",
+      "name": "Storytelling with Sprite Lab",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "aboutme",
+        "lesson_group.key": "Argentina",
         "script.name": "2021drafting"
       }
     }
@@ -1720,6 +1747,31 @@
     },
     {
       "chapter": 58,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Draw Shape",
+        "level_keys": [
+          "drawshape"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "drawshape"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "drawshape"
+      ]
+    },
+    {
+      "chapter": 59,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1744,7 +1796,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1769,7 +1821,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1794,7 +1846,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1816,6 +1868,31 @@
       },
       "level_keys": [
         "courseF_variables_loom_sandbox"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Template",
+        "level_keys": [
+          "argentina_aboutme_template"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "argentina_aboutme_template"
+        ],
+        "lesson.key": "aboutme",
+        "lesson_group.key": "Argentina",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "argentina_aboutme_template"
       ]
     }
   ],
@@ -2449,6 +2526,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "drawshape",
+        "script_level.level_keys": [
+          "drawshape"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_events_loom_sandbox",
         "script_level.level_keys": [
           "courseF_events_loom_sandbox"
@@ -2488,6 +2576,17 @@
         ],
         "lesson.key": "video",
         "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "argentina_aboutme_template",
+        "script_level.level_keys": [
+          "argentina_aboutme_template"
+        ],
+        "lesson.key": "aboutme",
+        "lesson_group.key": "Argentina",
         "script.name": "2021drafting"
       }
     }
