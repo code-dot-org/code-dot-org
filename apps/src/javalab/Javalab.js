@@ -76,6 +76,10 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
 
+  Javalab.handleVersionHistory = this.studioApp_.getVersionHistoryHandler(
+    config
+  );
+
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
@@ -103,7 +107,8 @@ Javalab.prototype.init = function(config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
+    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode)
   });
 
   registerReducers({javalab});
@@ -137,6 +142,7 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
+        handleVersionHistory={Javalab.handleVersionHistory}
       />
     </Provider>,
     document.getElementById(config.containerId)
