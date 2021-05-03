@@ -486,6 +486,17 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.index ["library_name", "library_version", "question_name"], name: "index_foorm_library_questions_on_multiple_fields", unique: true
   end
 
+  create_table "foorm_simple_survey_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "path", null: false
+    t.string "kind"
+    t.string "form_name", null: false
+    t.integer "form_version"
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["path"], name: "index_foorm_simple_survey_forms_on_path"
+  end
+
   create_table "foorm_simple_survey_submissions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "foorm_submission_id", null: false
     t.integer "user_id"
