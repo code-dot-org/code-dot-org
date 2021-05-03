@@ -49,7 +49,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test_user_gets_response_for(
-    :post_using_dark_mode,
+    :update_using_dark_mode,
     user: nil,
     params: {user_id: 'me', using_dark_mode: 'true'},
     response: :forbidden
@@ -58,14 +58,14 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   test 'a post request to using_dark_mode updates using_dark_mode' do
     sign_in(@user)
     assert !@user.using_dark_mode
-    post :post_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'true'}
+    post :update_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'true'}
     assert_response :success
     response = JSON.parse(@response.body)
     assert response["using_dark_mode"]
     @user.reload
     assert @user.using_dark_mode
 
-    post :post_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'false'}
+    post :update_using_dark_mode, params: {user_id: 'me', using_dark_mode: 'false'}
     assert_response :success
     response = JSON.parse(@response.body)
     assert_equal false, response["using_dark_mode"]
