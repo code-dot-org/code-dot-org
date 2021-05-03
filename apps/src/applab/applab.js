@@ -477,7 +477,6 @@ Applab.init = function(config) {
   const showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
   const breakpointsEnabled = !config.level.debuggerDisabled;
   const showDebugConsole = !config.hideSource;
-  // TODO: RENAME THIS
   const nonLevelbuilderWidgetMode =
     config.level.widgetMode && !config.isStartMode;
   const hasDesignMode = !(
