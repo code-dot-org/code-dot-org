@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
+import {Heading1, Heading2} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
@@ -40,23 +40,14 @@ class LoginTypePicker extends Component {
   };
 
   render() {
-    const {
-      title,
-      providers,
-      setLoginType,
-      handleImportOpen,
-      handleCancel,
-      disabled
-    } = this.props;
+    const {title, providers, setLoginType, handleCancel, disabled} = this.props;
     const withGoogle =
       providers && providers.includes(OAuthSectionTypes.google_classroom);
     const withMicrosoft =
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
-    const anyImportOptions =
-      (withGoogle || withMicrosoft || withClever) &&
-      typeof handleImportOpen === 'function';
+    const hasThirdParty = withGoogle | withMicrosoft | withClever;
 
     // explicitly constrain the container as a whole to the width of the
     // content. We expect that differing length of translations versus english
@@ -64,40 +55,48 @@ class LoginTypePicker extends Component {
     // should help mitigate some of them.
     const containerStyle = {maxWidth: styleConstants['content-width']};
 
+    // anchor email address policy note to footer just above 'Cancel' button
+    const emailPolicyNoteStyle = {
+      position: 'absolute',
+      top: '0px',
+      zIndex: '600'
+    };
+
     return (
       <div style={containerStyle}>
         <Heading1>{title}</Heading1>
         <Heading2>{i18n.addStudentsToSectionInstructions()}</Heading2>
-        {anyImportOptions && (
-          <Heading3>{i18n.addStudentsManageMyOwn()}</Heading3>
-        )}
-        <CardContainer>
-          <PictureLoginCard onClick={setLoginType} />
-          <WordLoginCard onClick={setLoginType} />
-          <EmailLoginCard onClick={setLoginType} />
-        </CardContainer>
         <div>
-          <b>{i18n.note()}</b>
-          {' ' + i18n.emailAddressPolicy() + ' '}
-          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-            {i18n.moreInfo()}
-          </a>
+          <CardContainer>
+            {withGoogle && (
+              <GoogleClassroomCard onClick={this.openImportDialog} />
+            )}
+            {withMicrosoft && (
+              <MicrosoftClassroomCard onClick={this.openImportDialog} />
+            )}
+            {withClever && <CleverCard onClick={this.openImportDialog} />}
+            <PictureLoginCard onClick={setLoginType} />
+            <WordLoginCard onClick={setLoginType} />
+            <EmailLoginCard onClick={setLoginType} />
+          </CardContainer>
         </div>
-        {anyImportOptions && (
+        {!hasThirdParty && (
           <div>
-            <Heading3>{i18n.addStudentsSyncThirdParty()}</Heading3>
-            <CardContainer>
-              {withGoogle && (
-                <GoogleClassroomCard onClick={this.openImportDialog} />
-              )}
-              {withMicrosoft && (
-                <MicrosoftClassroomCard onClick={this.openImportDialog} />
-              )}
-              {withClever && <CleverCard onClick={this.openImportDialog} />}
-            </CardContainer>
+            {i18n.thirdPartyProviderUpsell() + ' '}
+            <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
+              {i18n.learnHow()}
+            </a>
+            {' ' + i18n.connectAccountThirdPartyProviders()}
           </div>
         )}
         <DialogFooter>
+          <div style={emailPolicyNoteStyle}>
+            <b>{i18n.note()}</b>
+            {' ' + i18n.emailAddressPolicy() + ' '}
+            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+              {i18n.moreInfo()}
+            </a>
+          </div>
           <Button
             __useDeprecatedTag
             onClick={handleCancel}
