@@ -556,12 +556,9 @@ const peerReviewLevels = state =>
   state.peerReviewLessonInfo.levels.map((level, index) => ({
     // These aren't true levels (i.e. we won't have an entry in levelResults),
     // so always use a specific id that won't collide with real levels
+    ...level,
     id: PEER_REVIEW_ID,
-    status: level.locked ? LevelStatus.locked : level.status,
     isLocked: level.locked,
-    url: level.url,
-    name: level.name,
-    icon: level.locked ? level.icon : undefined,
     levelNumber: index + 1
   }));
 
@@ -663,29 +660,18 @@ export function statusForLevel(level, levelResults) {
   // differences from regular levels (such as a separate id namespace). Unlike
   // levels, Peer Reviews store status on the level object (for the time being)
   if (level.kind === LevelKind.peer_review) {
-    if (level.locked) {
-      return LevelStatus.locked;
-    }
     return level.status;
   }
 
   // LevelGroup assessments (multi-page assessments)
   // will have a uid for each page (and a test-result
-  // for each uid). When locked, they will end up not having a per-uid
-  // test result, but will have a LOCKED_RESULT for the LevelGroup (which
-  // is tracked by ids)
+  // for each uid).
   // BubbleChoice sublevels will have a level_id
   // Worth noting that in the majority of cases, ids will be a single
   // id here
   const id =
     level.uid || level.level_id || bestResultLevelId(level.ids, levelResults);
   let status = activityCssClass(levelResults[id]);
-  if (
-    level.uid &&
-    level.ids.every(id => levelResults[id] === TestResults.LOCKED_RESULT)
-  ) {
-    status = LevelStatus.locked;
-  }
 
   // If complete a level that is marked as assessment
   // then mark as completed assessment

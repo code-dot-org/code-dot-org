@@ -189,7 +189,7 @@ export const bubbleStyles = {
 
 /**
  * Computes style for shape/size, and merges with `progressStyle` previously
- * computed by `getProgressStyle` below.
+ * computed by `levelProgressStyle` below.
  */
 export function mainBubbleStyle(shape, size, progressStyle) {
   return {
@@ -232,30 +232,9 @@ function shapeSizeStyle(shape, size) {
  */
 
 /**
- * Get border and background styling based on level and student progress.
- *
- * Note: `levelProgressStyle` below is used by our legacy bubble components,
- * but once those get wrapped into our new components these two functions can
- * be merged into one.
+ * Get border and background styling based on level kind and student progress.
  */
-export function getProgressStyle({
-  levelStatus,
-  levelKind,
-  isDisabled,
-  isBonus
-}) {
-  return {
-    ...(!isDisabled && hoverStyle),
-    ...levelProgressStyle(levelStatus, levelKind, isDisabled),
-    ...(isDisabled && isBonus && bubbleStyles.bonusDisabled)
-  };
-}
-
-/**
- * Given a level object, figure out styling related to its color, border color,
- * and background color
- */
-export const levelProgressStyle = (levelStatus, levelKind, disabled) => {
+export function levelProgressStyle(levelStatus, levelKind) {
   let style = {
     borderWidth: 2,
     borderColor: color.lighter_gray,
@@ -263,17 +242,6 @@ export const levelProgressStyle = (levelStatus, levelKind, disabled) => {
     color: color.charcoal,
     backgroundColor: color.level_not_tried
   };
-
-  // We don't return early for disabled assessments that have been submitted
-  // so that they still show their submitted status.
-  if (
-    (disabled && levelStatus !== LevelStatus.submitted) ||
-    !levelStatus ||
-    levelStatus === levelStatus.not_tried ||
-    levelStatus === LevelStatus.locked
-  ) {
-    return style;
-  }
 
   const statusStyle =
     levelKind === LevelKind.assessment
@@ -284,7 +252,7 @@ export const levelProgressStyle = (levelStatus, levelKind, disabled) => {
     ...style,
     ...statusStyle
   };
-};
+}
 
 const assessmentStatusStyle = {
   [LevelStatus.attempted]: {

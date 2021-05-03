@@ -3,7 +3,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
-import {TestResults} from '@cdo/apps/constants';
 import {
   activityCssClass,
   resultFromStatus
@@ -106,6 +105,10 @@ export function getIconForLevel(level, inProgressView = false) {
 
   if (level.isUnplugged) {
     return 'scissors';
+  }
+
+  if (level.isLocked) {
+    return 'lock';
   }
 
   if (level.icon) {
@@ -262,13 +265,6 @@ export const processedLevel = level => {
 };
 
 export const getLevelResult = serverProgress => {
-  if (serverProgress.status === LevelStatus.locked) {
-    return TestResults.LOCKED_RESULT;
-  }
-  if (serverProgress.submitted) {
-    return TestResults.SUBMITTED_RESULT;
-  }
-
   return serverProgress.result || resultFromStatus(serverProgress.status);
 };
 
@@ -283,6 +279,7 @@ export const levelProgressFromServer = serverProgress => {
   return {
     status: serverProgress.status || LevelStatus.not_tried,
     result: getLevelResult(serverProgress),
+    locked: serverProgress.locked || false,
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
     lastTimestamp: serverProgress.last_progress_at,
