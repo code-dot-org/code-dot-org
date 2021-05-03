@@ -162,8 +162,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     LevelStatus.perfect,
     LevelStatus.submitted,
     LevelStatus.free_play_complete,
-    LevelStatus.completed_assessment,
-    LevelStatus.readonly
+    LevelStatus.completed_assessment
   ];
 
   let attempted = 0;
@@ -265,9 +264,6 @@ export const processedLevel = level => {
 export const getLevelResult = serverProgress => {
   if (serverProgress.status === LevelStatus.locked) {
     return TestResults.LOCKED_RESULT;
-  }
-  if (serverProgress.readonly_answers) {
-    return TestResults.READONLY_SUBMISSION_RESULT;
   }
   if (serverProgress.submitted) {
     return TestResults.SUBMITTED_RESULT;

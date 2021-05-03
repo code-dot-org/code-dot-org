@@ -380,7 +380,7 @@ describe('progressHelpers', () => {
       const studentProgress = fakeProgressForLevels(levels);
       studentProgress[1].status = LevelStatus.perfect;
       studentProgress[2].status = LevelStatus.submitted;
-      studentProgress[3].status = LevelStatus.readonly;
+      studentProgress[3].status = LevelStatus.free_play_complete;
 
       const studentLessonProgress = getStudentLessonProgress(
         studentProgress,

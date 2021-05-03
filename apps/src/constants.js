@@ -108,7 +108,6 @@ export const TestResults = {
   // Eventually, we want to remove these and look at studentlevelProgressType.locked
   // and studentlevelProgressType.readonly instead. (LP-1865)
   LOCKED_RESULT: 1001,
-  READONLY_SUBMISSION_RESULT: 1002,
 
   REVIEW_REJECTED_RESULT: 1500,
   REVIEW_ACCEPTED_RESULT: 2000
