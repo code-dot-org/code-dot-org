@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_195153) do
+ActiveRecord::Schema.define(version: 2021_04_29_232002) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1208,6 +1208,15 @@ ActiveRecord::Schema.define(version: 2021_04_29_195153) do
     t.index ["reviewer_id"], name: "index_peer_reviews_on_reviewer_id"
     t.index ["script_id"], name: "index_peer_reviews_on_script_id"
     t.index ["submitter_id"], name: "index_peer_reviews_on_submitter_id"
+  end
+
+  create_table "pilots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "display_name", null: false
+    t.boolean "allow_joining_via_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_pilots_on_name"
   end
 
   create_table "plc_course_units", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
