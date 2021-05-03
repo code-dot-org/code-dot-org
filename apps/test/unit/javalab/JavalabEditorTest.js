@@ -14,12 +14,15 @@ import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {toggleDarkMode} from '@cdo/apps/javalab/javalabRedux';
 import {setAllSources} from '../../../src/javalab/javalabRedux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('Java Lab Editor Test', () => {
   let defaultProps, store, appOptions;
 
   beforeEach(() => {
     stubRedux();
+    registerReducers(commonReducers);
     registerReducers({javalab});
     store = getStore();
     defaultProps = {
@@ -27,6 +30,11 @@ describe('Java Lab Editor Test', () => {
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
+    store.dispatch(
+      setPageConstants({
+        isEditingStartSources: false
+      })
+    );
   });
 
   afterEach(() => {

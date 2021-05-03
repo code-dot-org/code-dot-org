@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import Radium from 'radium';
 import {
   setSource,
-  setSourceVisibility,
+  sourceVisibilityUpdated,
   renameFile,
   removeFile
 } from './javalabRedux';
@@ -63,7 +63,7 @@ class JavalabEditor extends React.Component {
     onCommitCode: PropTypes.func.isRequired,
     // populated by redux
     setSource: PropTypes.func,
-    setSourceVisibility: PropTypes.func,
+    sourceVisibilityUpdated: PropTypes.func,
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
@@ -189,7 +189,7 @@ class JavalabEditor extends React.Component {
   };
 
   toggleFileVisibility(key) {
-    this.props.setSourceVisibility(
+    this.props.sourceVisibilityUpdated(
       this.state.fileMetadata[key],
       !this.props.sources[this.state.fileMetadata[key]].visible
     );
@@ -517,7 +517,10 @@ class JavalabEditor extends React.Component {
               this.toggleFileVisibility(activeTabKey)
             }
             showVisibilityOption={isEditingStartSources}
-            fileIsVisible={sources[fileMetadata[activeTabKey]].visible}
+            fileIsVisible={
+              sources[fileMetadata[activeTabKey]] &&
+              sources[fileMetadata[activeTabKey]].visible
+            }
           />
         </div>
         <DeleteConfirmationDialog
@@ -559,12 +562,12 @@ export default connect(
   state => ({
     sources: state.javalab.sources,
     isDarkMode: state.javalab.isDarkMode,
-    isEditingStartSources: state.javalab.isEditingStartSources
+    isEditingStartSources: state.pageConstants.isEditingStartSources
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
-    setSourceVisibility: (filename, isVisible) =>
-      dispatch(setSourceVisibility(filename, isVisible)),
+    sourceVisibilityUpdated: (filename, isVisible) =>
+      dispatch(sourceVisibilityUpdated(filename, isVisible)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename))
