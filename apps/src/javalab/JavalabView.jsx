@@ -10,6 +10,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 
 const style = {
   instructionsAndPreview: {
@@ -59,6 +60,7 @@ const style = {
 
 class JavalabView extends React.Component {
   static propTypes = {
+    handleVersionHistory: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
@@ -67,6 +69,7 @@ class JavalabView extends React.Component {
     suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
+    hasDataMode: PropTypes.bool.isRequired,
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
@@ -114,7 +117,9 @@ class JavalabView extends React.Component {
       onCommitCode,
       onContinue,
       onRun,
-      onInputMessage
+      onInputMessage,
+      handleVersionHistory,
+      hasDataMode
     } = this.props;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -131,6 +136,9 @@ class JavalabView extends React.Component {
                   <PaneSection>Preview</PaneSection>
                 </PaneHeader>
               </div>
+              {hasDataMode && (
+                <DataWorkspace handleVersionHistory={handleVersionHistory} />
+              )}
             </InstructionsWithWorkspace>
           </div>
           <div
@@ -194,6 +202,7 @@ class JavalabView extends React.Component {
 export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
+    hasDataMode: state.pageConstants.hasDataMode || false,
     isProjectLevel: state.pageConstants.isProjectLevel,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     channelId: state.pageConstants.channelId,
