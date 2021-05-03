@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {groupedLessonType} from '@cdo/apps/templates/progress/progressTypes';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -58,7 +58,7 @@ const styles = {
  */
 class LessonGroup extends React.Component {
   static propTypes = {
-    groupedLesson: groupedLessonType.isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
 
