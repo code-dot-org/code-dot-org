@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-04-28 17:37:01 UTC",
+    "serialized_at": "2021-05-03 18:40:55 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -4216,7 +4216,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "PrivatePersonalInformation-Unplugged_2021"
@@ -9295,11 +9295,11 @@
       }
     },
     {
-      "name": "Private and Personal Information: Lesson Quiz Answer Key",
-      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/grade-4-private-and-personal-information-lesson-quiz-answers",
+      "name": "Private and Personal Information: Lesson Quiz",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
       "key": "private-and-personal-information-lesson-quiz-answer-key",
       "properties": {
-        "type": "Website",
+        "type": "Answer Key",
         "audience": "Teacher"
       },
       "seeding_key": {
