@@ -1,9 +1,11 @@
+import UserPreferences from '../lib/util/UserPreferences';
+
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
-const TOGGLE_DARK_MODE = 'javalab/TOGGLE_DARK_MODE';
+const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
@@ -47,13 +49,18 @@ export const sourceVisibilityUpdated = (filename, isVisible) => ({
   isVisible
 });
 
+// Updates the user preferences to reflect change
+export const setIsDarkMode = isDarkMode => {
+  new UserPreferences().setUsingDarkMode(isDarkMode);
+  return {
+    isDarkMode: isDarkMode,
+    type: COLOR_PREFERENCE_UPDATED
+  };
+};
+
 export const removeFile = filename => ({
   type: REMOVE_FILE,
   filename
-});
-
-export const toggleDarkMode = () => ({
-  type: TOGGLE_DARK_MODE
 });
 
 // Selectors
@@ -117,10 +124,10 @@ export default function reducer(state = initialState, action) {
       sources: action.sources
     };
   }
-  if (action.type === TOGGLE_DARK_MODE) {
+  if (action.type === COLOR_PREFERENCE_UPDATED) {
     return {
       ...state,
-      isDarkMode: !state.isDarkMode
+      isDarkMode: action.isDarkMode
     };
   }
   return state;

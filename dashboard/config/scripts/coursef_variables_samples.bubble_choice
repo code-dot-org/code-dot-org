@@ -13,5 +13,8 @@ markdown <<MARKDOWN
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+# Choice Level Overview
+Choice levels provide a menu of additional levels for students to complete. Students must complete at least one of the sub-levels here, but may work through as many as they (or you) like.
+
 Students should look at these projects carefully before deciding what they want to create. You can look at them together as a class or have students explore on their own.
 MARKDOWN

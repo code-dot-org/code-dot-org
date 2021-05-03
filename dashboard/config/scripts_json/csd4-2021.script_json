@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 17:38:54 UTC",
+    "serialized_at": "2021-04-29 23:58:48 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -92,16 +92,7 @@
         "purpose": "Students will enter this unit with an understanding of the problem solving process from prior units.\n\nThe problem solving process used throughout CS Discoveries is:\n\n* Define\n* Prepare\n* Try\n* Reflect\n\nIn this lesson, students look at real-world objects to understand how the problem-solving process can be applied to help others. Starting with this lesson, we will be reframing this process to include a layer of empathy, encouraging students to consider how others will experience and use the things they create.\n\nWe are purposefully starting out by looking at non-technical objects to encourage students to think more broadly about what it means to consider the end-user of a product before honing in on how it specifically applies to software design",
         "preparation": "* Print a copy of the activity guide for each student (or prepare to distribute the document digitally).\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Critically evaluate an object for how well its design meets a given set of needs**\n\nIn the discussion at the end of the activity, ensure that students are connecting specifics of the user descriptions to the features of the shoes that they have chosen for those respective users.   \n\n2. **Identify empathy for the user as an important component of the design process**\n\nIn the discussion at the end of the activity, check that students are referencing the user descriptions for their explanations, rather than the general advantages and disadvantages of each shoe.",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/13HE1wjrPN8-YmU35eLty9yaRr8Ccv0LyQsJs4klVROI/view",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "assessment_opportunities": "1. **Critically evaluate an object for how well its design meets a given set of needs**\n\nIn the discussion at the end of the activity, ensure that students are connecting specifics of the user descriptions to the features of the shoes that they have chosen for those respective users.   \n\n2. **Identify empathy for the user as an important component of the design process**\n\nIn the discussion at the end of the activity, check that students are referencing the user descriptions for their explanations, rather than the general advantages and disadvantages of each shoe."
       },
       "seeding_key": {
         "lesson.key": "Analysis of Design",
