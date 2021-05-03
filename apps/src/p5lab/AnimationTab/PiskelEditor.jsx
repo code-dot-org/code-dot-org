@@ -8,7 +8,6 @@ import PiskelApi from '@code-dot-org/piskel';
 import * as shapes from '../shapes';
 import {editAnimation, removePendingFramesAction} from '../animationListModule';
 import {show, Goal} from '../AnimationPicker/animationPickerModule';
-import {getStore} from '@cdo/apps/redux';
 
 /**
  * @const {string} domain-relative URL to Piskel index.html
@@ -36,7 +35,8 @@ class PiskelEditor extends React.Component {
     onNewFrameClick: PropTypes.func.isRequired,
     pendingFrames: PropTypes.object,
     removePendingFrames: PropTypes.func.isRequired,
-    isBlockly: PropTypes.bool
+    isBlockly: PropTypes.bool,
+    locales: PropTypes.object.isRequired
   };
 
   componentDidMount() {
@@ -64,7 +64,7 @@ class PiskelEditor extends React.Component {
     this.piskel.onAddFrame(this.onAddFrame);
 
     const iframe = document.getElementById('piskelFrame');
-    iframe.contentWindow.locale = getStore().getState().locales.localeCode;
+    iframe.contentWindow.locale = this.props.locales.localeCode;
   }
 
   componentWillUnmount() {
@@ -227,7 +227,8 @@ export default connect(
     channelId: state.pageConstants.channelId,
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
     pendingFrames: state.animationList.pendingFrames,
-    isBlockly: state.pageConstants.isBlockly
+    isBlockly: state.pageConstants.isBlockly,
+    locales: state.locales
   }),
   dispatch => ({
     editAnimation: (key, props) => dispatch(editAnimation(key, props)),
