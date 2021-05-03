@@ -1,20 +1,19 @@
 ---
-title: Online courses
+title: CS Journeys Resources - Online courses
 video_player: true
 theme: responsive
 social:
-  "og:title": "CS Journeys: Online courses"
+  "og:title": "CS Journeys Resources: Online courses"
   "og:description": "Extend your learning with online courses"
-  "og:image": ""
+  "og:image": "/images/csjourneys/og-courses.jpg"
   "og:image:width": 1200
   "og:image:height": 630
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
+  "twitter:title": "CS Journeys Resources: Online courses"
+  "twitter:description": "Extend your learning with online courses"
+  "twitter:image": "/images/csjourneys/og-courses.jpg"
 ---
 <a id="top"></a>
-<h1>Online courses</h1>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Online courses</h1>
 <p>Extend your learning with these online courses. Learn Python, JavaScript, and other programming languages. Learn about artificial intelligence (AI), robotics, and data science. The options below feature both beginner and advanced courses.</p>
 
 <ul>
@@ -45,9 +44,9 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/csjourneys/udacity.png" alt="Udacity logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="udacity" href="https://www.udacity.com/course/introduction-to-python--ud1110" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>CS 101</strong></h3></a>
+  <a class="linktag" id="udacity" href="https://www.udacity.com/course/introduction-to-python--ud1110" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Introduction to Python Programming</strong></h3></a>
   <p><strong>Udacity | For university students | For beginners</strong></p>
-  <p>In this course you will learn key concepts in computer science and learn how to write your own computer programs in the context of building a web crawler. There is no prior programming knowledge needed for this course. At the end of this course, you will have learned key concepts in computer science and enough programming to be able to write Python programs to solve problems on your own.</p>
+  <p>In this course, you'll learn the fundamentals of the Python programming language, along with programming best practices. You’ll learn to represent and store data using Python data types and variables, and use conditionals and loops to control the flow of your programs. You’ll harness the power of complex data structures like lists, sets, dictionaries, and tuples to store collections of related data. You’ll define and document your own custom functions, write scripts, and handle errors. Lastly, you’ll learn to find and use modules in the Python Standard Library and other third-party libraries.</p>
   <p><i>Registration period: Start anytime</i></p>
 </div>
 <div style="clear:both"></div>
@@ -151,8 +150,8 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="educative" href="https://www.educative.io/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Educative.io</strong></h3></a>
-  <p><strong>Educative.io | For high school and up | For beginners</strong></p>
-  <p>Text-based courses on a number of computer science concepts. Learn different programming languages in live coding environments.</p>
+  <p><strong>Educative.io | For high school and up | For beginners and advanced students</strong></p>
+  <p>Hands-on, text-based courses that help you expand your skills in half the time, without the hassle of setup or lengthy videos. Get ready for your career in tech by exploring hundreds of our courses on topics like Coding Interview Preparation, Web Development, and top modern technologies like Cloud Computing, Containerization, and Machine Learning. Get started for FREE with our "From Scratch" Programming Language courses.</p>
   <p><i>Registration period: Start anytime</i></p>
 </div>
 <div style="clear:both"></div>
@@ -163,7 +162,7 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="educode" href="https://educode.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>EduCode Academy</strong></h3></a>
-  <p><strong>EduCode Academy | For Grades 5-12 | For beginners</strong></p>
+  <p><strong>EduCode Academy | For Grades 5-12 | For beginners and advanced students</strong></p>
   <p>Coding courses for kids, featuring real code, animated video micro-lessons, and gamified, relatable, real-world projects. Four learning paths are available: JavaScript Programming, Game Development, Web Development, and Data Science.</p>
   <p><i>Registration period: Start anytime</i></p>
 </div>
