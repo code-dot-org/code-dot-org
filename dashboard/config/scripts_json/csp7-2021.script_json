@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 23:58:34 UTC",
+    "serialized_at": "2021-05-03 16:58:50 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -955,7 +955,7 @@
       "key": "2f77b7d8-d62a-470a-87e7-cc96552fe60c",
       "position": 2,
       "properties": {
-        "description": "&fa-desktop;  **Do This:** Students navigate to Level 1 and read and respond to the questions there. If students have extra time, they can try the modify activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 1 and read and respond to the questions there. If students have extra time, they can try the modify activity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2298,7 +2298,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App Investigation",
         "level_keys": [
@@ -2324,7 +2324,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App Investigation",
         "level_keys": [
