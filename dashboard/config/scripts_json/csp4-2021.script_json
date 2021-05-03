@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:06:33 UTC",
+    "serialized_at": "2021-04-30 17:17:00 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -89,15 +89,6 @@
         "purpose": "The warm up activity is designed to provide context for the coming unit and motivate the reasons students will want to learn the concepts covered in Unit 4. The subsequent activity provides students a physical mental model they will be able to use when they start programming with variables in the subsequent lessons.",
         "preparation": "* Collect for each pair of students:\r\n\t* 3 sandwich baggies\r\n\t* packs of red and yellow stickies\r\n\t* pens / pencils\r\n\t* 1 dry erase marker per four students (pairs can share)\r\n* Review the sample apps shown in the warm up\r\n* Review the rules and vocabulary used in the slides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/12Y9UPUi_oeI3cpUtbzYIKXcDsTLJUto9vR9KSeIOVvs/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -118,16 +109,7 @@
         "student_overview": "Investigate and modify sample apps that use variables and learn common programming patterns with variables.",
         "purpose": "After building a conceptual model for variables in the previous lesson, students investigate three working examples of apps that make use of variables. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with variables will come in the following lesson.",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1encxV-jmn168_RHBPGZKNjfD25ooHSOA-WMLvCeos0c/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Variables Investigate",
@@ -147,16 +129,7 @@
         "student_overview": "Practice programming with variables through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with variables in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "preparation": "* Review the video in the level progression that covers global vs. local variables. This is a tricky topic.\r\n* Review other programming levels to be better prepared to support students",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1vHLUAfZI9I9py-Fn8MSox_Ip4uvcjD-xDXg1eRoHMBk/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Variables Practice",
@@ -176,16 +149,7 @@
         "student_overview": "Practice making an app that uses variables and programming patterns with variables.",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* Review the different steps students will be asked to complete as they build the app\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1VgAVSLgXzV7Aapt-TZyGOV_5saDA1WyeszQhJL3Ovpg/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Variables Make",
@@ -206,15 +170,6 @@
         "purpose": "The warm up activity is designed to provide context for the Conditionals progression. The subsequent activity provides students a physical mental model they will be able to use when they start programming with conditionals in the subsequent lessons.",
         "preparation": "* 3 sandwich baggies per pair of students\r\n* packs of red, yellow, and blue stickies\r\n* pens / pencils\r\n* 1 dry erase marker per four students (pairs can share)\r\n* Review the slides and click through all animations",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1DdJ6MIkSSKAzxO3NbbQlI-ofP2hc9jIxjfk2dHQQRCE/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -235,16 +190,7 @@
         "student_overview": "Investigate and modify sample apps that use conditionals and learn common programming patterns with conditionals.",
         "purpose": "After building a conceptual model for boolean expressions and conditional statements in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with conditional statements and boolean expressions will come in the following lesson.",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1GjWO0261hHOiM8TE7pUyyM6Vd4sQGllufG39EGsRdNY/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Conditionals Investigate",
@@ -264,16 +210,7 @@
         "student_overview": "Practice programming with conditionals through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with conditionals in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "preparation": "* Review the programming challenges students will be completing\r\n* Review the Debugging Guide for ideas on how to support your students during the lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/16EvoNjfhtVoQhUqKyi5wOu65g-BNYj_sPXo_SWMDYzk/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Conditionals Practice",
@@ -293,16 +230,7 @@
         "student_overview": "Practice making an app that uses conditionals and programming patterns with conditionals.",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* Review the different steps students will be asked to complete as they build the app\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1s1Ra4YX9G8FdpUi50EaZ0M_fRzAlWwxIES5OdsZ3qg4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Conditional Make",
@@ -322,16 +250,7 @@
         "student_overview": "Develop a mental model for using functions to replace repeated code. Investigate and modify sample apps that use functions. ",
         "purpose": "This lesson is both the Explore and Investigate components of the EIPM sequence for functions. Functions are best understood by actually using them in a program, and so while the Explore component is relatively shorter, students actually are given many opportunities to observe how functions are used in programs. There is a heavy emphasis on running programs slowly to see how functions change the order in which programs run.\r\n\r\nIf you are a teacher with more experience with the concept of functions you may be wondering where other related concepts like parameters, arguments, and return values, will be introduced. In this unit these additional concepts are not learning objectives, and they will not be discussed in detail until later units. For now, it is fine for students to think of functions simply as a way to name a collection of commands so that they can be used in multiple places within your code.",
         "preparation": "* Print copies of the activity guide of song lyrics used in the warm up or determine how you'll project it to the class.\r\n* Review the apps that students will investigate in the app",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qUaK4Pik5FfmgOIfN4HWe1JuacKiExb34EW2hS2zLzE/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Functions Explore / Investigate",
@@ -351,16 +270,7 @@
         "student_overview": "Practice programming with functions through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with functions in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "preparation": "* Review the video in the level progression that covers the topic of global vs. local variables\r\n* Review the map level about \"When to make a function?\"\r\n* Review other programming levels to be better prepared to support students",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1R4PdmvKyDLgUWqLKpxKvNtdkEw4-h-aRJGrI1pLmNsQ/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Functions Practice",
@@ -380,16 +290,7 @@
         "student_overview": "Practice making an app that uses functions and programming patterns with functions.",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* Review the Activity Guide to decide if you will use it with your students",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1bJhdEhFHol9nsVneYODNJxaq8XevbpFILMF3rk8AEkw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Functions Make",
@@ -410,15 +311,6 @@
         "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
         "preparation": "* Review the project guide and make sure students have access to copies",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1gPUcNIzHFRjBVYWP0262VFruO2_jKS_7m6W977p5nbk/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -440,15 +332,6 @@
         "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
         "preparation": "* Make sure students will have access to their project guides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/15_IEElfHrkKEq2_XTM0Fa9gdQvAOJ6NMC5vi8xWAf7M/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -470,15 +353,6 @@
         "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision.",
         "preparation": "* Make sure students will have access to their project guides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/10kAlHjy0UmFjfOx8o1bi3TbCKa9azTHELsVojwwl5uU/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -499,15 +373,6 @@
         "student_overview": "Assessment day to conclude the unit.",
         "preparation": "* Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1ucEizl3hogPKsyXPOsOJPCN5dRrxDpVSmrI_2ULh5JA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -966,18 +831,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982",
-        "lesson.key": "Functions Explore / Investigate",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2021"
-      }
-    },
-    {
-      "key": "28e3a60c-b1e0-4e1b-9689-5957c90449af",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af",
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021"
@@ -2834,7 +2687,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Review the updateScreen pattern with students. Afterwards have them add to their journal definition for a function and a function call.",
-        "name": "Synthesizing Discussion\r"
+        "name": "Synthesizing Discussion\r",
+        "progression_name": "Update Screen Pattern"
       },
       "seeding_key": {
         "activity_section.key": "00f2c766-8cc8-492e-991f-863c6f6c9cb1",
@@ -2845,7 +2699,7 @@
       "key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *Reflecting on today's lesson about functions:*\n\n**Discussion Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *Reflecting on today's lesson about functions:*\n* *What did you learn?*\n* *What are you uncertain about?*\n\n**Discussion Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n ---"
       },
       "seeding_key": {
         "activity_section.key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
@@ -2853,60 +2707,16 @@
       }
     },
     {
-      "key": "0f747047-b335-4aaa-b94d-029b8982f819",
+      "key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54",
       "position": 3,
       "properties": {
-        "description": "* What did you learn?\n* What are you uncertain about?\n",
-        "progression_name": "Update Screen Pattern"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819",
-        "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982"
-      }
-    },
-    {
-      "key": "2d212f5a-63cf-487c-87d2-6deaea8d2def",
-      "position": 4,
-      "properties": {
-        "description": "\n---"
-      },
-      "seeding_key": {
-        "activity_section.key": "2d212f5a-63cf-487c-87d2-6deaea8d2def",
-        "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982"
-      }
-    },
-    {
-      "key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54",
-      "position": 5,
-      "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** In your own words describe the benefits of creating functions in your code.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54",
         "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982"
-      }
-    },
-    {
-      "key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0",
-      "position": 1,
-      "properties": {
-        "progression_name": "Explore Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "a632448d-16fe-42b5-bb3f-e6468b9d67a0",
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af"
-      }
-    },
-    {
-      "key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
-      "position": 2,
-      "properties": {
-        "progression_name": "Check Your Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "a2239dc4-88d1-429c-8dfa-31141c774cad",
-        "lesson_activity.key": "28e3a60c-b1e0-4e1b-9689-5957c90449af"
       }
     },
     {
@@ -3654,7 +3464,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -3680,7 +3490,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -3706,7 +3516,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Apps",
         "level_keys": [
@@ -4928,7 +4738,7 @@
       "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Explore Functions",
         "level_keys": [
@@ -4954,7 +4764,7 @@
       "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -4980,7 +4790,7 @@
       "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -5006,7 +4816,7 @@
       "chapter": 53,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declaring and Calling Functions",
         "level_keys": [
@@ -5032,12 +4842,9 @@
       "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Update Screen Pattern",
-        "level_keys": [
-          "updateScreen Pattern_2021"
-        ]
+        "progression": "Update Screen Pattern"
       },
       "named_level": null,
       "bonus": null,
@@ -5048,7 +4855,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819"
+        "activity_section.key": "00f2c766-8cc8-492e-991f-863c6f6c9cb1"
       },
       "level_keys": [
         "updateScreen Pattern_2021"
@@ -5060,10 +4867,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding",
-        "level_keys": [
-          "CSP U4 L09 CFU Exit Ticket_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -5074,7 +4878,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "a2239dc4-88d1-429c-8dfa-31141c774cad"
+        "activity_section.key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54"
       },
       "level_keys": [
         "CSP U4 L09 CFU Exit Ticket_2021"
@@ -6273,7 +6077,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "0f747047-b335-4aaa-b94d-029b8982f819"
+        "activity_section.key": "00f2c766-8cc8-492e-991f-863c6f6c9cb1"
       }
     },
     {
@@ -6285,7 +6089,7 @@
         "lesson.key": "Functions Explore / Investigate",
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2021",
-        "activity_section.key": "a2239dc4-88d1-429c-8dfa-31141c774cad"
+        "activity_section.key": "5d49e816-4142-40b8-b5d1-7bc454fe2a54"
       }
     },
     {
@@ -6568,10 +6372,10 @@
     },
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
+      "url": "https://docs.google.com/presentation/d/1a4w7xtUqAs-3jxMdcLiwGayVA9r3x7k27oiVfsApRMs/edit?usp=sharing",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

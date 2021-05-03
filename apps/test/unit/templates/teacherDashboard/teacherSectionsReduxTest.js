@@ -73,8 +73,7 @@ const sections = [
     course_id: 29,
     createdAt: createdAt,
     studentCount: 10,
-    hidden: false,
-    restrict_section: false
+    hidden: false
   },
   {
     id: 12,
@@ -94,8 +93,7 @@ const sections = [
     course_id: null,
     createdAt: createdAt,
     studentCount: 1,
-    hidden: false,
-    restrict_section: false
+    hidden: false
   },
   {
     id: 307,
@@ -115,8 +113,7 @@ const sections = [
     course_id: 29,
     createdAt: createdAt,
     studentCount: 0,
-    hidden: false,
-    restrict_section: false
+    hidden: false
   }
 ];
 
@@ -565,8 +562,7 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         scriptId: null,
         hidden: false,
-        isAssigned: undefined,
-        restrictSection: false
+        isAssigned: undefined
       });
     });
   });
@@ -592,8 +588,7 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
-        isAssigned: undefined,
-        restrictSection: false
+        isAssigned: undefined
       });
     });
   });
@@ -732,8 +727,7 @@ describe('teacherSectionsRedux', () => {
       courseId: null,
       scriptId: null,
       createdAt: createdAt,
-      hidden: false,
-      restrict_section: false
+      hidden: false
     };
 
     function successResponse(customProps = {}) {
@@ -883,8 +877,7 @@ describe('teacherSectionsRedux', () => {
           scriptId: null,
           createdAt: createdAt,
           hidden: false,
-          isAssigned: undefined,
-          restrictSection: false
+          isAssigned: undefined
         }
       });
     });
@@ -938,8 +931,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       course_id: null,
       script_id: null,
-      hidden: false,
-      restrict_section: false
+      hidden: false
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1170,8 +1162,7 @@ describe('teacherSectionsRedux', () => {
       course_id: 29,
       createdAt: createdAt,
       studentCount: 10,
-      hidden: false,
-      restrict_section: false
+      hidden: false
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1193,10 +1184,6 @@ describe('teacherSectionsRedux', () => {
       );
       assert.strictEqual(section.course_id, serverSection.courseId);
       assert.strictEqual(section.hidden, serverSection.hidden);
-      assert.strictEqual(
-        section.restrict_section,
-        serverSection.restrictSection
-      );
     });
 
     it('maps from a script object to a script_id', () => {

@@ -80,7 +80,7 @@ function idForExpansionIndex(studentId, index) {
  * `row.expansionIndex`, with `lessonCellFormatters[0]` being the primary
  * formatter for collapsed student rows.
  */
-class ProgressTableContainer extends React.Component {
+class ProgressTableView extends React.Component {
   static propTypes = {
     currentView: PropTypes.oneOf([ViewType.SUMMARY, ViewType.DETAIL]),
 
@@ -96,7 +96,8 @@ class ProgressTableContainer extends React.Component {
     onClickLesson: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
+    showSectionProgressDetails: PropTypes.bool
   };
 
   constructor(props) {
@@ -181,10 +182,11 @@ class ProgressTableContainer extends React.Component {
     );
   }
 
-  onToggleRow(rowData) {
+  onToggleRow(studentId) {
     const rowIndex = this.state.rows.findIndex(
-      row => row.student === rowData.student
+      row => row.student.id === studentId
     );
+    const rowData = this.state.rows[rowIndex];
     if (!rowData.isExpanded) {
       this.expandDetailRows(rowData, rowIndex);
     } else {
@@ -242,7 +244,7 @@ class ProgressTableContainer extends React.Component {
     this.setState({rows});
   }
 
-  onRow = row => {
+  onRow(row) {
     const rowClassName = classnames({
       'dark-row': row.useDarkBackground,
       'primary-row': row.expansionIndex === 0,
@@ -253,7 +255,7 @@ class ProgressTableContainer extends React.Component {
     return {
       className: rowClassName
     };
-  };
+  }
 
   detailContentViewProps() {
     return {
@@ -327,7 +329,7 @@ class ProgressTableContainer extends React.Component {
   }
 }
 
-export const UnconnectedProgressTableContainer = ProgressTableContainer;
+export const UnconnectedProgressTableView = ProgressTableView;
 
 export default connect(
   state => ({
@@ -346,11 +348,12 @@ export default connect(
       state.sectionProgress.studentLastUpdateByScript[
         state.scriptSelection.scriptId
       ],
-    localeCode: state.locales.localeCode
+    localeCode: state.locales.localeCode,
+    showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {
       dispatch(jumpToLessonDetails(lessonPosition));
     }
   })
-)(ProgressTableContainer);
+)(ProgressTableView);
