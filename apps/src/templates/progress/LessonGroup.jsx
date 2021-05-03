@@ -5,11 +5,7 @@ import {connect} from 'react-redux';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  levelWithProgressType,
-  lessonType,
-  lessonGroupType
-} from '@cdo/apps/templates/progress/progressTypes';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -62,10 +58,7 @@ const styles = {
  */
 class LessonGroup extends React.Component {
   static propTypes = {
-    lessonGroup: lessonGroupType,
-    lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
-      .isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
 
@@ -102,7 +95,7 @@ class LessonGroup extends React.Component {
         event: 'view_lesson_group_info',
         data_json: JSON.stringify({
           script_id: this.props.scriptId,
-          lesson_group_id: this.props.lessonGroup.id
+          lesson_group_id: this.props.groupedLesson.lessonGroup.id
         })
       },
       {includeUserId: true}
@@ -114,16 +107,8 @@ class LessonGroup extends React.Component {
   };
 
   render() {
-    const {
-      lessonGroup,
-      lessons,
-      levelsByLesson,
-      isSummaryView,
-      isPlc,
-      lessonIsVisible,
-      viewAs,
-      isRtl
-    } = this.props;
+    const {isSummaryView, isPlc, lessonIsVisible, viewAs, isRtl} = this.props;
+    const {lessonGroup, lessons} = this.props.groupedLesson;
 
     // Adjust styles if locale is RTL
     const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
@@ -181,7 +166,7 @@ class LessonGroup extends React.Component {
               styles.bottom
             ]}
           >
-            <TableType lessons={lessons} levelsByLesson={levelsByLesson} />
+            <TableType groupedLesson={this.props.groupedLesson} />
           </div>
         )}
       </div>

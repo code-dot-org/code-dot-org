@@ -43,16 +43,15 @@ const levelsByLesson = [
   fakeLevels(2)
 ];
 
+const groupedLesson = {lessons, levelsByLesson};
+
 export default storybook => {
   storybook.storiesOf('Progress/DetailProgressTable', module).addStoryTable([
     {
       name: 'simple DetailProgressTable',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-          />
+          <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     },
@@ -61,10 +60,7 @@ export default storybook => {
       description: 'lesson 2 should be white with dashed outline',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-          />
+          <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     },
@@ -73,10 +69,7 @@ export default storybook => {
       description: 'lesson 2 should be invisible',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-          />
+          <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     }

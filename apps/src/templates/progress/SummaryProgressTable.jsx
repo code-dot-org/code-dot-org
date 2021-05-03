@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {levelWithProgressType, lessonType} from './progressTypes';
+import {groupedLessonsType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
 import {lessonIsVisible} from './progressHelpers';
@@ -24,9 +24,7 @@ const styles = {
 
 class SummaryProgressTable extends React.Component {
   static propTypes = {
-    lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
-      .isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     minimal: PropTypes.bool,
 
     // redux provided
@@ -35,7 +33,8 @@ class SummaryProgressTable extends React.Component {
   };
 
   render() {
-    const {lessons, levelsByLesson, viewAs, minimal} = this.props;
+    const {viewAs, minimal} = this.props;
+    const {lessons, levelsByLesson} = this.props.groupedLesson;
 
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
