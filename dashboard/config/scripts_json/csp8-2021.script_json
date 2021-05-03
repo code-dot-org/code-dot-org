@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-29 23:58:34 UTC",
+    "serialized_at": "2021-05-03 23:47:44 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -46,11 +46,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks created by Code.org.\r\n\r\nStudents review the Submission Requirements and Scoring Guidelines for the Create PT. Subsequently they review three example scored Create PT submissions with commentary to better understand how the Submission Requirements and Scoring Guidelines are used together. In a wrap-up conversation they identify a piece of advice, a \"gotcha\", and a remaining question they have about the Create PT.",
-        "student_overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks created by Code.org.",
-        "purpose": "The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. This lesson is designed to introduce what these nuances are, and begin to provide some answers to the questions that will inevitably arise. Keep in mind that the next lesson provides a more structured set of responses to those questions, and so today students are just diving in to what the task looks like.",
         "preparation": "* Print or prepare to distribute digital copies of Create PT Task Instructions\r\n* Briefly review all of the graded sample Explore PTs included in the lesson plan\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. This lesson is designed to introduce what these nuances are, and begin to provide some answers to the questions that will inevitably arise. Keep in mind that the next lesson provides a more structured set of responses to those questions, and so today students are just diving in to what the task looks like.",
+        "student_overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task, how it is scored, and some example tasks created by Code.org."
       },
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
@@ -81,11 +81,11 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson.",
-        "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.",
-        "purpose": "There are no new CS concepts covered in this lesson. It is a review of the processes and requirements of the Create Performance Task before students begin working on it individually. ",
         "preparation": "* [KEY - Create PT - Survival Guide](http://studio.code.org/s/csp8-2020/stage/2/puzzle/1)",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "There are no new CS concepts covered in this lesson. It is a review of the processes and requirements of the Create Performance Task before students begin working on it individually. ",
+        "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project."
       },
       "seeding_key": {
         "lesson.key": "Create PT - Make a Plan",
@@ -101,12 +101,12 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio.",
-        "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 12 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - written responses must be done on your own.",
-        "purpose": "\r\nThere are no new CS concepts covered in this lesson. Students will work individually or with a collaborative partner on the Create Performance Task.",
-        "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\r\n* Review how to create a stand-alone App Lab project to assist students",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio.",
+        "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\r\n* Review how to create a stand-alone App Lab project to assist students",
+        "purpose": "\r\nThere are no new CS concepts covered in this lesson. Students will work individually or with a collaborative partner on the Create Performance Task.",
+        "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 12 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - written responses must be done on your own."
       },
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
@@ -120,8 +120,8 @@
       "key": "504c2d5f-fc17-4fe8-bc19-815d98352fea",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "504c2d5f-fc17-4fe8-bc19-815d98352fea",
@@ -134,8 +134,8 @@
       "key": "14d8bd81-4fab-494f-93a3-5dc58a2f6639",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 25
+        "duration": 25,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "14d8bd81-4fab-494f-93a3-5dc58a2f6639",
@@ -148,8 +148,8 @@
       "key": "8bb6a656-e228-4bf1-86f2-eca2630cc837",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "8bb6a656-e228-4bf1-86f2-eca2630cc837",
@@ -162,8 +162,8 @@
       "key": "d83a5921-3b68-4a8d-874f-d03c0141ffcd",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d83a5921-3b68-4a8d-874f-d03c0141ffcd",
@@ -176,8 +176,8 @@
       "key": "12127a8b-e011-4016-87bf-6bd7712405eb",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb",
@@ -190,8 +190,8 @@
       "key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0",
@@ -204,8 +204,8 @@
       "key": "6e25a224-243e-456f-97bc-7522985d375e",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6e25a224-243e-456f-97bc-7522985d375e",
@@ -218,8 +218,8 @@
       "key": "147366ad-a736-4b77-a4e8-39a6e5be61e1",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "147366ad-a736-4b77-a4e8-39a6e5be61e1",
@@ -232,8 +232,8 @@
       "key": "5ddbc8d6-bf86-4ebc-8464-b69831a640cd",
       "position": 3,
       "properties": {
-        "name": "Wrap-up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap-up"
       },
       "seeding_key": {
         "lesson_activity.key": "5ddbc8d6-bf86-4ebc-8464-b69831a640cd",
@@ -259,8 +259,8 @@
       "key": "21b1acb6-49f6-4b3f-8b00-d7491b2c82b5",
       "position": 2,
       "properties": {
-        "name": "Warm Up",
-        "duration": 20
+        "duration": 20,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "21b1acb6-49f6-4b3f-8b00-d7491b2c82b5",
@@ -273,8 +273,8 @@
       "key": "c5767ca4-fa97-4376-987f-4a7d9e8ba233",
       "position": 3,
       "properties": {
-        "name": "Activity",
-        "duration": 70
+        "duration": 70,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c5767ca4-fa97-4376-987f-4a7d9e8ba233",
@@ -315,8 +315,8 @@
       "position": 1,
       "properties": {
         "description": "Today we're going to start looking more deeply at the Create PT, focusing specifically on understanding: \r\n\r\n* The different components of the Create PT\r\n* How the task will be scored\r\n\r\nDon't worry, you already have much of the knowledge and skills you need to do well on this task. The hardest part might be just understanding what is required of you. \r\n\r\nFirst, we'll quickly read the task description and look a some examples and how they were scored.",
-        "remarks": true,
-        "name": "Introduce the Create PT\r"
+        "name": "Introduce the Create PT\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "e59b50bc-582b-42f5-a27b-2dcd30a94064",
@@ -386,8 +386,8 @@
       "position": 2,
       "properties": {
         "description": "Sample C actually received a 6/6 score. Let's look at the student response side-by-side with the scoring guidelines *and* the annotated notes to see why.\n\n",
-        "remarks": true,
-        "name": "Create PT Annotated Sample 1 (score: 6/6)\r"
+        "name": "Create PT Annotated Sample 1 (score: 6/6)\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "993c8a8a-e4e0-4366-a1d5-944aa547a899",
@@ -410,8 +410,8 @@
       "position": 4,
       "properties": {
         "description": "Let's now take a look at some other samples. To kick things off, we let's watch the student videos for Sample 2 and Sample 3.",
-        "remarks": true,
-        "name": "Create PT Annotated Samples 2 (4/6) and 3 (2/6) \r"
+        "name": "Create PT Annotated Samples 2 (4/6) and 3 (2/6) \r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "8a5059c4-d494-46e2-ada7-e539216411cd",
@@ -746,14 +746,14 @@
       "position": 1,
       "properties": {
         "description": "*   For the next ~12-16 days, you will be completing the Create Performance Task. \n    * Most of the work for this task *must* be done independently - but you are allowed to collaborate with another student to create a program.  However, you must have enough individual contributions to meet all the requirements of the written responses.* I (teacher) can help you with *process* and timeline and keep you on task\n* There are a few other last minute things we should look at to make sure you're clear before we start.",
+        "name": "Ready?",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Creating an App Lab Project:** Before students begin programming, they should make sure that they are creating their program in a new App Lab Project - NOT in a level associated with a previous lesson.\n\nHowever, you can use a previous project as a starting point as long as you add new parts that fulfill the task requirements.\n\n**To build off a program started in a previous lesson:**\n\nMake sure to click “Remix” from the original program level. This will create a new copy of the program that can be accessed from the list of individual student projects found at [https://studio.code.org/projects](https://studio.code.org/projects). Students should indicate using comments what parts of the program are copied from older projects. \n\n**For students who are creating an entirely new program:**\n\nCreate a new App Lab project by visiting [https://studio.code.org/projects/applab/new](https://studio.code.org/projects/applab/new)\n\n**How Can You Help as a Teacher:** Review the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf), in particular pages 170-171  to understand how you as a teacher can and cannot assist on the Create Performance Task.\n"
           }
-        ],
-        "remarks": true,
-        "name": "Ready?"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6ff04afd-97cb-48e2-b54f-48d722bc4e68",
@@ -865,15 +865,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Tech Setup and Tools for Create PT",
         "level_keys": [
           "csp-pt-tech-setup-and-tools_2021"
-        ]
+        ],
+        "progression": "Tech Setup and Tools for Create PT"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2021"
@@ -891,15 +891,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Create PT Coding Workspace",
         "level_keys": [
           "Create PT Workspace 2020_2021"
-        ]
+        ],
+        "progression": "Create PT Coding Workspace"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Create PT Workspace 2020_2021"
@@ -941,6 +941,42 @@
     }
   ],
   "resources": [
+    {
+      "name": "APCSP CT 20-21 Scoring Guidelines",
+      "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
+      "key": "apcsp_ct_20-21_scoring_guidelines",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+      }
+    },
+    {
+      "name": "APCSP CT 20-21 Task Instructions",
+      "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
+      "key": "apcsp_ct_20-21_task_instructions",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "apcsp_ct_20-21_task_instructions"
+      }
+    },
+    {
+      "name": "Create PT Survival Guide 2020-21",
+      "url": "https://docs.google.com/document/d/1jcK8o2w7wPODoHkYy7Tg56EjwnbIOsNEWowWRcfbbl4/edit",
+      "key": "create-pt-survival-guide-20-21",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "create-pt-survival-guide-20-21"
+      }
+    },
     {
       "name": "CSP Create PT College Board Annotated Sample A",
       "url": "https://docs.google.com/document/d/12Uv9n4rpSf3tULTTwfoMQlX4Zz6VZDiCzBscbtC9u_A/edit?usp=sharing",
@@ -994,39 +1030,42 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Create PT Prep",
-      "url": "https://docs.google.com/presentation/d/174nHpIilMIvy5kcnB-jQ6Ai9rajgnUtBrSfNObOKHCk/edit?usp=sharing",
-      "key": "csp_unit_8_-_create_pt_prep",
+      "name": "CSP Create PT Code.org Annotated Sample 1",
+      "url": "https://docs.google.com/document/d/1UFIgYE6RlW0wbLo80JxtrRy-2gy8tzGwDWvp2jOXZIQ/edit?usp=sharing",
+      "key": "csp_create_pt_code_org_annotated_sample_1",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "type": "Annotated Sample",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csp_unit_8_-_create_pt_prep"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
       }
     },
     {
-      "name": "APCSP CT 20-21 Task Instructions",
-      "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
-      "key": "apcsp_ct_20-21_task_instructions",
+      "name": "CSP Create PT Code.org Annotated Sample 2",
+      "url": "https://docs.google.com/document/d/1Fo5pPczV3gDcCujg_dvyneq5anEEeqAZqIvdVt8uQV8/edit?usp=sharing",
+      "key": "csp_create_pt_code_org_annotated_sample_2",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "type": "Annotated Sample",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_task_instructions"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
       }
     },
     {
-      "name": "APCSP CT 20-21 Scoring Guidelines",
-      "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
-      "key": "apcsp_ct_20-21_scoring_guidelines",
+      "name": "CSP Create PT Code.org Annotated Sample 3",
+      "url": "https://docs.google.com/document/d/16eWwTwyYzFJ_7z5Ru0HF9LbqTjS-XFIy4SL_ZW-T7Rg/edit?usp=sharing",
+      "key": "csp_create_pt_code_org_annotated_sample_3",
       "properties": {
-        "type": "Rubric",
-        "audience": "Student"
+        "type": "Annotated Sample",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
+        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
       }
     },
     {
@@ -1105,54 +1144,15 @@
       }
     },
     {
-      "name": "CSP Create PT Code.org Annotated Sample 1",
-      "url": "https://docs.google.com/document/d/1UFIgYE6RlW0wbLo80JxtrRy-2gy8tzGwDWvp2jOXZIQ/edit?usp=sharing",
-      "key": "csp_create_pt_code_org_annotated_sample_1",
+      "name": "CSP Unit 8 - Create PT Prep",
+      "url": "https://docs.google.com/presentation/d/174nHpIilMIvy5kcnB-jQ6Ai9rajgnUtBrSfNObOKHCk/edit?usp=sharing",
+      "key": "csp_unit_8_-_create_pt_prep",
       "properties": {
-        "type": "Annotated Sample",
-        "audience": "Student",
-        "include_in_pdf": true
+        "type": "Slides",
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "csp_create_pt_code_org_annotated_sample_1"
-      }
-    },
-    {
-      "name": "CSP Create PT Code.org Annotated Sample 2",
-      "url": "https://docs.google.com/document/d/1Fo5pPczV3gDcCujg_dvyneq5anEEeqAZqIvdVt8uQV8/edit?usp=sharing",
-      "key": "csp_create_pt_code_org_annotated_sample_2",
-      "properties": {
-        "type": "Annotated Sample",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_create_pt_code_org_annotated_sample_2"
-      }
-    },
-    {
-      "name": "CSP Create PT Code.org Annotated Sample 3",
-      "url": "https://docs.google.com/document/d/16eWwTwyYzFJ_7z5Ru0HF9LbqTjS-XFIy4SL_ZW-T7Rg/edit?usp=sharing",
-      "key": "csp_create_pt_code_org_annotated_sample_3",
-      "properties": {
-        "type": "Annotated Sample",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_create_pt_code_org_annotated_sample_3"
-      }
-    },
-    {
-      "name": "Create PT Survival Guide 2020-21",
-      "url": "https://docs.google.com/document/d/1jcK8o2w7wPODoHkYy7Tg56EjwnbIOsNEWowWRcfbbl4/edit",
-      "key": "create-pt-survival-guide-20-21",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "create-pt-survival-guide-20-21"
+        "resource.key": "csp_unit_8_-_create_pt_prep"
       }
     }
   ],
