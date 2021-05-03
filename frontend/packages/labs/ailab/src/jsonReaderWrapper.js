@@ -25,11 +25,7 @@ const updateData = result => {
   const state = store.getState();
 
   for (const field of metadata.fields) {
-    // Use the metadata's column type if the user will not see the UI to select column type.
-    const fieldType =
-      state.mode && state.mode.hideSpecifyColumns
-        ? field.type
-        : ColumnTypes.CATEGORICAL;
+    const fieldType = field.type ? field.type : ColumnTypes.CATEGORICAL;
     store.dispatch(setColumnsByDataType(field.id, fieldType));
   }
 
