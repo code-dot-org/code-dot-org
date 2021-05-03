@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import {UnconnectedProgressTableStudentName as ProgressTableStudentName} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
+import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import moment from 'moment';
 
