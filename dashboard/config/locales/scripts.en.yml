@@ -20775,7 +20775,7 @@ en:
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
-              name: 'Mini-Project: A Royal Battle with Events'
+              name: A Royal Battle with Events
               description_student: Use events to create a story or make an interactive game.
               description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
             lesson-1:
