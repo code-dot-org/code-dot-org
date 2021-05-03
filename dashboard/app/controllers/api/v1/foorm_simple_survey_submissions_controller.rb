@@ -13,6 +13,10 @@ class Api::V1::FoormSimpleSurveySubmissionsController < ApplicationController
       return
     end
 
-    render json: {foorm_submission_id: submission.foorm_submission_id, simple_survey_submission_id: submission.id}, status: :created
+    render json: {
+      foorm_submission_id: submission.foorm_submission_id,
+      simple_survey_submission_id: submission.id,
+      simple_survey_form_id: submission.simple_survey_form_id
+    }, status: :created
   end
 end
