@@ -4,7 +4,7 @@ import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -194,7 +194,7 @@ class SectionProgress extends Component {
           {levelDataInitialized &&
             (currentView === ViewType.SUMMARY ||
               currentView === ViewType.DETAIL) && (
-              <ProgressTableContainer currentView={currentView} />
+              <ProgressTableView currentView={currentView} />
             )}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>

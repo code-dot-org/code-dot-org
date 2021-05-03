@@ -54,8 +54,7 @@ class CodeWorkspace extends React.Component {
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
-    showMakerToggle: PropTypes.bool,
-    autogenerateML: PropTypes.func
+    showMakerToggle: PropTypes.bool
   };
 
   shouldComponentUpdate(nextProps) {
@@ -109,8 +108,7 @@ class CodeWorkspace extends React.Component {
       runModeIndicators,
       readonlyWorkspace,
       withSettingsCog,
-      showMakerToggle,
-      autogenerateML
+      showMakerToggle
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
@@ -120,9 +118,7 @@ class CodeWorkspace extends React.Component {
     ];
 
     const settingsCog = showSettingsCog && (
-      <SettingsCog
-        {...{isRunning, runModeIndicators, showMakerToggle, autogenerateML}}
-      />
+      <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}} />
     );
 
     return [

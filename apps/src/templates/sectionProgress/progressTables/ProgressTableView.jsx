@@ -80,7 +80,7 @@ function idForExpansionIndex(studentId, index) {
  * `row.expansionIndex`, with `lessonCellFormatters[0]` being the primary
  * formatter for collapsed student rows.
  */
-class ProgressTableContainer extends React.Component {
+class ProgressTableView extends React.Component {
   static propTypes = {
     currentView: PropTypes.oneOf([ViewType.SUMMARY, ViewType.DETAIL]),
 
@@ -327,7 +327,7 @@ class ProgressTableContainer extends React.Component {
   }
 }
 
-export const UnconnectedProgressTableContainer = ProgressTableContainer;
+export const UnconnectedProgressTableView = ProgressTableView;
 
 export default connect(
   state => ({
@@ -353,4 +353,4 @@ export default connect(
       dispatch(jumpToLessonDetails(lessonPosition));
     }
   })
-)(ProgressTableContainer);
+)(ProgressTableView);

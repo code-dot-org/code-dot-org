@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-22 20:23:40 UTC",
+    "serialized_at": "2021-04-29 23:58:35 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -53,15 +53,6 @@
         "purpose": "In this unit students will cover information related to computing innovations needed for the Curricular Requirement for the AP Computer Science Principles exam. This lesson sets the stage for the simulation. ",
         "preparation": "* Prepare the role badges\r\n* Review the Innovation Simulation Planning Guide",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1hurRuONfXpMuAETq_C43UNsyoUmJbNF_bcuWd89WSZk/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -83,15 +74,6 @@
         "purpose": "In this lesson, students investigate computing innovations, as required by the College Board to meet the Curricular Requirement. They will add to their research throughout the unit. ",
         "preparation": "* Organize the badges and nameplates for quick distribution at the beginning of class\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/153JKwrtr5NTtYlQJVuD0wwyBeSlf2YrXdPm0bh2g9R8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -112,16 +94,7 @@
         "student_overview": "Students learn that the apps, websites, and other computing innovations they use every day require a lot of data to run, much of which they might consider to be private or personal. In the warm up students discuss which of a list of possible information types they consider private. Then students read the data policies from a website or service they use or know about. This investigation focuses on the kinds of data that are being collected, the way it's being used, and any potential privacy concerns that arise. A brief second activity reveals that even data that may not seem private, like a birthdate or zipcode, can be combined to uniquely identify them. To conclude the lesson students prepare for a discussion in the following class about the pros and cons of sharing all this data by journaling about their current thoughts on whether the harms of giving up this privacy are outweighed by the benefits of the technology they power.",
         "purpose": "This lesson is closely tied with the one that follows. In today's lesson students focus primarily on understanding the kinds of data that are collected by modern apps, websites, and computing innovations, and the ways that this may sometimes lead to sharing private information. In the following lesson students will specifically discuss the pros and cons of sharing that information.",
         "preparation": "* Check a few popular websites with students in your school to make sure they'll be able to access those sites' data policies over your school network.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1ZepB50utitkesJsnqwXQHAoFEJKCyyLtPzxondqjLKY/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Data Policies and Privacy",
@@ -142,15 +115,6 @@
         "purpose": "The previous lesson exposed students to much of the data that is collected by the services they use, but it didn't ask them to reflect on their own opinions of those practices. This lesson now asks students to form opinions of their own about how a digital world in which more and more important innovations seem to come at the cost of their personal privacy.",
         "preparation": "* Review the videos to make sure you are prepared to lead the subsequent discussions\r\n* Make sure you have access to the activity guides students completed in th previous lesson",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1UpCYqPutad16KjKSNikC-UW2l55wycohAimWae5CZCg/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -172,15 +136,6 @@
         "purpose": "In previous lessons students have been considering the ways that computing innovations may risk their privacy. This lesson further builds on those questions by asking students to think more broadly about the ways computing innovations may have unintended consequences.\r\n\r\nThe next project lesson will be spent primarily working on one-pagers. That lesson and the second half of this one are the largest chunks of class time dedicated to students completing those individual projects.",
         "preparation": "* Ensure students have access to their project guides.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1PLFWL8ygaHf5z-jStCSfBToTTrf2hKx_Rv06ru97hRw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -201,16 +156,7 @@
         "student_overview": "Students investigate three different common security risks (phishing, keylogging, malware) in a jigsaw activity. In groups, students create Public Service Announcement slides warning of the dangers of their assigned security risk. Then students are grouped with students who investigated other security risks and are instructed to share their slide and give a voice over. The activity ends with the class coming together to discuss the security risks as a whole. ",
         "purpose": "In this lesson students are exposed to common security risks. The purpose of this lesson is to dive into the facts and learn how people are targeted. In a future lesson students will explore how they can protect themselves from these security risks. ",
         "preparation": "* Read through the levels on Code Studio to familiarize yourself with the topics.\r\n* Think through the logistics of running the jigsaw activity. ",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1dpG0XOxfWaPOBCObULz2kDwwafgRNDAUpoz_vDEm2QA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Security Risks Part 1",
@@ -231,15 +177,6 @@
         "purpose": "How was Equifax hacked? Why should students care about this? What can we do to protect data in the future? These questions are the focus of this lesson as students consider the reality of security risks that led to millions of people having their private information hacked. ",
         "preparation": "* Listen to the podcast segments and practice starting and stopping at the marked places\r\n* Get the Kahoot quiz set up and ready to go for the Wrap Up",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1oJ0X8XeC1zyY3cD-y7sT-lzw9jtriq2BpLXJTvlz33M/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -260,15 +197,6 @@
         "student_overview": "Complete your one pager for your computing innovation.",
         "preparation": "* Make sure students will have access to the 1-pagers they started in the last project lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qZCS5xOx3EQth-fdy3f0I5hKwjZa7ZgMsI2r-GBIBv8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -289,16 +217,7 @@
         "student_overview": "In this lesson students explore two different encryption widgets: The Caesar Cipher Widget and the Random Substitution Cipher. Afterwards, students watch a video that reviews these types of encryption and introduces a new concept: public key encryption. ",
         "purpose": "The goal of this lesson is for students to gain a working knowledge of the different types of encryption, focusing specifically on symmetrical and asymmetrical encryption. There is a lot of challenging vocabulary in this lesson, and therefore we want students to have a tangible experience with a widget to anchor their knowledge. This lesson is the first in a pair of lessons exploring how data can be protected. ",
         "preparation": "* Explore the encryption widgets\r\n* Watch the video",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1JCVBQxhbrhvTpkkAbKWPbtgM4vjWlKVoOaq6DFQI5oU/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Protecting Data Part 1",
@@ -319,15 +238,6 @@
         "purpose": "This lesson serves two purposes. The first is to provide the final pieces of content students need to know in this unit - related to multifactor authentication and virus scanning software. These are tools students can use to protect the data. The second purpose of this lesson is to introduce students to questions that follow the same format as the questions students will encounter on the AP Multiple Choice Exam.  The specific types of questions students will see in this lesson will help prepare them to answer \"Single-Select Questions with Reading Passage\", or SSQRP.  These types of questions show up on the AP Computer Science Principles Multiple Choice Exam and involve a series of questions about a fictitious computing innovation.  ",
         "preparation": "* Preview the slides\r\n* Read through the stimulus question",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1zECXhOhYByuJaGP3ZN8CQctkn9kqTxZSr4WF1-lxtzw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -349,15 +259,6 @@
         "purpose": "In this lesson students finish writing their one-pagers and meet to begin developing their group presentation. The goal of this collaborative process is to force students to think about the overall collective impact of their innovations, force them to continue to take multiple perspectives, and encourage collaboration for this last major project of the year.",
         "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1dGyToaQ_TjO4ckI6rxLR3s7XRXrBRNggtPhTeglxq-w/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -379,15 +280,6 @@
         "purpose": "This lesson is primarily a work day but students get some early feedback from another group to enable them to make final adjustments to their projects.",
         "preparation": "* Make sure students have access to their project guides if you are collecting them between classes.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1W1ENzPIDI3Aj2aQnKKSKGY4tC7_zpDUtCCP2Pb7ASO4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -409,15 +301,6 @@
         "purpose": "This lesson is an opportunity for students to share their work throughout the unit and wrap up their study of the ways computing innovations can be used to benefit society, even as they pose potential risks. Aim to make this an exciting and celebratory end to the year.",
         "preparation": "* Ensure students have printed their one-pagers or can otherwise make their one-pagers available for their classmates to review during the gallery walk.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1WfAw8uTJoyIXX1JTeNuLjc1LBae75bZoF8YKz_4staE/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -438,15 +321,6 @@
         "student_overview": "Assessment day to conclude the unit.",
         "preparation": "* Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1ROBLvNVc7fR80uKIvo9gevhLQgq-cm2KzAEcnoWlm2s/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -3369,10 +3243,10 @@
     },
     {
       "name": "CSP Unit 10 - Cybersecurity and Global Impacts",
-      "url": "https://docs.google.com/presentation/d/1CFWhRU6Sqrj9KFjLJRDnS2CFJZ_lHufFAweKNZumlic/copy",
+      "url": "https://docs.google.com/presentation/d/13hzCmcAxUal2GpjNj6yjxzAtB58TPPG8tjVZRLvcwf0/edit?usp=sharing",
       "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

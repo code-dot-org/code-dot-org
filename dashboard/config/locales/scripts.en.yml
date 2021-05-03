@@ -18949,6 +18949,8 @@ en:
               name: End of Course Project
             Outbreaklab:
               name: Outbreak Standalone Lab
+            aboutme:
+              name: Storytelling with Sprite Lab
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18972,6 +18974,8 @@ en:
               display_name: Course A and B EOC Project
             debugging:
               display_name: Debugging
+            Argentina:
+              display_name: Argentina
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -18992,17 +18996,22 @@ en:
             Intro to Problem Solving:
               key: Intro to Problem Solving
               name: Intro to Problem Solving
-              description_student: "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\nThe class works in groups to design aluminum foil boats that will support as many pennies as possible. At the end of the lesson, groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course."
+              description_student: "**Question of the Day: What can help us to work together and solve problems as a team?**\n\nYou will work with a group to design and test an aluminum foil boat that will support as many pennies as possible. \n\n*The class works in groups to design aluminum foil boats that will support as many pennies as possible. At the end of the lesson, groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.*"
               description_teacher: "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\nIn this lesson, students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\r\n\r\n**Alternate versions of this lesson are also available.** \r\n\r\n* [Newspaper Table](../9/)\r\n* [Spaghetti Bridge](../10/)\r\n* [Paper Tower](../11/)"
             The Problem Solving Process:
               key: The Problem Solving Process
               name: The Problem Solving Process
-              description_student: "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\r\n\r\nThis lesson introduces the formal problem solving process that the class will use over the course of the year: Define - Prepare - Try - Reflect. The class relates these steps to the problem from the previous lesson, then to a problem they are good at solving, then to a problem they want to improve at solving. At the end of the lesson, the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year."
+              description_student: "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\n\nYou will learn about the Problem Solving Process we use in Computer Science and dive into a few strategies to implement each step. \n\n*This lesson introduces the formal problem solving process that the class will use over the course of the year: Define - Prepare - Try - Reflect. The class relates these steps to the problem from the previous lesson, then to a problem they are good at solving, then to a problem they want to improve at solving. At the end of the lesson, the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.*"
               description_teacher: "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\r\n\r\nThis lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the problem activities from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year."
             Exploring Problem Solving:
               key: Exploring Problem Solving
               name: Exploring Problem Solving
-              description_student: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson, the class applies the problem solving process to three different problems: a word search, a seating arrangement for a birthday party, and planning a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems.\r\n"
+              description_student: |
+                **Question of the Day: How can we apply the problem solving process to many different kinds of problems?**
+
+                Today you will apply the Problem-Solving Process to three different problems which will grow increasingly complex!
+
+                *In this lesson, the class applies the problem solving process to three different problems: a word search, a seating arrangement for a birthday party, and planning a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems.*
               description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and redesign a classroom. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\r\n\r\n\r\n**Alternate versions of this lesson are also available.** \r\n\r\n* [Animal Theme](../12/)\r\n* [Games Theme](../13/)"
             What is a Computer?:
               key: What is a Computer?
@@ -19095,7 +19104,11 @@ en:
             Intro to HTML:
               key: Intro to HTML
               name: Intro to HTML
-              description_student: "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\n\r\nThis lesson introduces HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity that demonstrates the challenges of effectively communicating the structure of a web page. Then, the class looks at an HTML page in Web Lab and discusses how HTML tags help solve this problem, before using HTML to write their first web pages of the unit.\r\n"
+              description_student: |
+                **Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**
+
+
+                You will look at an HTML page in Web Lab and discusses how HTML tags help solve this problem, then  use HTML to write your first web page of the unit.
               description_teacher: "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\nIn this lesson students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson."
             Headings:
               key: Headings
@@ -19405,7 +19418,7 @@ en:
           lessons:
             Analysis of Design:
               key: Analysis of Design
-              name: Designing With Empathy
+              name: Analysis of Design
               description_student: "The class explores a variety of different teapot designs to consider design choices. Building on this, students explore the relationship between users, their needs, and the design of objects they use.\r\n"
               description_teacher: |-
                 **Question of the Day:** How can we choose products based on the needs of a user?
@@ -19818,7 +19831,7 @@ en:
               key: Overflow and Rounding
               name: Overflow and Rounding
               description_student: Explore the limitations or representing numbers with bits.
-              description_teacher: 'Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and make a "flippy do pro" to practice binary-to-decimal number conversions which include fractional place values. '
+              description_teacher: 'Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. '
             Representing Text:
               key: Representing Text
               name: Representing Text
@@ -20762,7 +20775,7 @@ en:
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
-              name: A Royal Battle with Events
+              name: 'Mini-Project: A Royal Battle with Events'
               description_student: Use events to create a story or make an interactive game.
               description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
             lesson-1:
@@ -22145,28 +22158,26 @@ en:
 '
             lesson-16:
               name: 'Project: Personal Symbol - Day 1'
-              description_student: 'For this project, you create a symbol in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create a symbol that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and start creating your program.
+              description_student: 'For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
 '
-              description_teacher: 'For this project, students create a symbol in The Neighborhood using the classes they have developed and extended. Students explore creative expression using computer programs by applying the concepts they have learned in this unit to create a symbol that represents something meaningful and interesting to them. Students experience being software engineers as they brainstorm and plan their projects and begin developing their programs.
-
-'
+              description_teacher: For this project, students use the skills they have developed throughout this unit to create asphalt art in The Neighborhood using the classes they have developed and extended. Students choose a theme or concept for their asphalt art representing something they are interested in or meaningful to them. Students consider how they plan to use existing classes to create their asphalt art. After brainstorming and planning, students develop their programs to create their designs.
             lesson-17:
               name: 'Project: Personal Symbol - Day 2'
-              description_student: 'You are now implementing the classes and commands you have developed throughout the unit and your new class and command to create your symbol. Your software development skills and processes are strengthened when you participate in a code review to give and use feedback as you develop your program.
+              description_student: 'You are now implementing the classes and commands you have developed throughout the unit and your new class and command to create your asphalt art. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
 '
-              description_teacher: "Students planned uses for existing classes in the previous lesson and designed a new class that would provide a needed behavior for creating their symbol. At this stage of the project, students implement the classes and commands they have developed throughout the unit and the new class and command to create their symbol. Software development skills and processes are reinforced as students participate in a code review to give and use feedback as they develop their program. \n"
+              description_teacher: "Students planned uses for existing classes in the previous lesson and designed a new class to provide a needed behavior for creating their asphalt art. At this stage of the project, students implement the classes and commands they have developed throughout the unit and the new class and command to create their design. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program. \n"
             lesson-18:
               name: 'Project: Personal Symbol - Day 3'
-              description_student: 'Using the feedback you received in the previous lesson, you finalize and submit your Personal Symbol Project. You share your final projects with your peers and celebrate your success!
-
-'
+              description_student: Using the feedback you received in the previous lesson, you finalize and submit your Asphalt Art Project. You share your final projects with your peers and celebrate your success!
               description_teacher: "Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes. \n"
             lesson-19:
               name: FRQ Day
             lesson-20:
               name: Assessment Day
+              description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
