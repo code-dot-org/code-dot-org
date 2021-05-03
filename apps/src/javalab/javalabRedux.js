@@ -1,17 +1,15 @@
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
-const SET_SOURCE_VISIBILITY = 'javalab/SET_SOURCE_VISIBILITY';
+const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const TOGGLE_DARK_MODE = 'javalab/TOGGLE_DARK_MODE';
-const SET_IS_EDITING_START_SOURCES = 'javalab/SET_IS_EDITING_START_SOURCES';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
   sources: {'MyClass.java': {text: '', visible: true}},
-  isDarkMode: false,
-  isEditingStartSources: false
+  isDarkMode: false
 };
 
 // Action Creators
@@ -43,8 +41,8 @@ export const setSource = (filename, source, isVisible = true) => ({
   isVisible
 });
 
-export const setSourceVisibility = (filename, isVisible) => ({
-  type: SET_SOURCE_VISIBILITY,
+export const sourceVisibilityUpdated = (filename, isVisible) => ({
+  type: SOURCE_VISIBILITY_UPDATED,
   filename,
   isVisible
 });
@@ -56,11 +54,6 @@ export const removeFile = filename => ({
 
 export const toggleDarkMode = () => ({
   type: TOGGLE_DARK_MODE
-});
-
-export const setIsEditingStartSources = isEditingStartSources => ({
-  type: SET_IS_EDITING_START_SOURCES,
-  isEditingStartSources
 });
 
 // Selectors
@@ -87,7 +80,7 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
-  if (action.type === SET_SOURCE_VISIBILITY) {
+  if (action.type === SOURCE_VISIBILITY_UPDATED) {
     let newSources = {...state.sources};
     newSources[action.filename].visible = action.isVisible;
     return {
@@ -128,12 +121,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isDarkMode: !state.isDarkMode
-    };
-  }
-  if (action.type === SET_IS_EDITING_START_SOURCES) {
-    return {
-      ...state,
-      isEditingStartSources: action.isEditingStartSources
     };
   }
   return state;
