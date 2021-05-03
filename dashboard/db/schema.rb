@@ -504,7 +504,7 @@ ActiveRecord::Schema.define(version: 2021_04_29_232002) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["path"], name: "index_foorm_simple_survey_forms_on_path", unique: true
+    t.index ["path"], name: "index_foorm_simple_survey_forms_on_path"
   end
 
   create_table "foorm_submissions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
