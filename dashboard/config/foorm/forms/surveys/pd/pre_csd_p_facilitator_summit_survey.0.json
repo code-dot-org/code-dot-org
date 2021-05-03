@@ -147,7 +147,7 @@
           "type": "rating",
           "name": "[iFeelCSD]",
           "visibleIf": "{Course} = 'item1'",
-          "title": "I Feel prepared to lead Code.org's CSD Course workshops in 2021-2022",
+          "title": "I feel prepared to lead Code.org's CSD Course workshops in 2021-2022.",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
@@ -155,7 +155,7 @@
           "type": "rating",
           "name": "[iFeelCSP]",
           "visibleIf": "{Course} = 'item2'",
-          "title": "I Feel prepared to lead Code.org's CSP Course workshops in 2021-2022",
+          "title": "I feel prepared to lead Code.org's CSP Course workshops in 2021-2022.",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
@@ -163,7 +163,7 @@
           "type": "rating",
           "name": "[toWhat]",
           "title": "To what extent are the goals and objectives of the {course} summer workshop clear to you as a facilitator?",
-          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "description": "From 1 - Very Unclear to 7 - Very Clear",
           "rateMax": 7
         },
         {

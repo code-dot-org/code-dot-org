@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-05-03 18:40:55 UTC",
+    "serialized_at": "2021-05-03 19:13:28 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -4397,7 +4397,7 @@
       "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Digital Sharing - Unplugged Activity",
         "level_keys": [
@@ -9333,10 +9333,11 @@
     },
     {
       "name": "Digital Sharing Lesson Plan",
-      "url": "https://drive.google.com/file/d/172e_kwEu-5BV3DVtOdefEZTOxBcSx8Xc/view?usp=sharing",
+      "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing",
       "key": "digital-sharing-lesson",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "digital-sharing-lesson"
