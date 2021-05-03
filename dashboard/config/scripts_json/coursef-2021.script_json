@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-28 17:32:31 UTC",
+    "serialized_at": "2021-05-03 18:30:29 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -2438,7 +2438,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "One of the trickiest parts of learning variables is making sure that a variable’s label always matches. In this level, be sure that students notice the difference between the variable **meal** and the variable **food**. Students should understand that the best way to solve this would be to just use one variable, making sure the label always matches.\n\nYou can also walk your class through correcting the bugs in this program by using this [Teacher Sandbox](https://studio.code.org/levels/) level with your projector.\n"
+            "markdown": "One of the trickiest parts of learning variables is making sure that a variable’s label always matches. In this level, be sure that students notice the difference between the variable **meal** and the variable **food**. Students should understand that the best way to solve this would be to just use one variable, making sure the label always matches.\n\nYou can also walk your class through correcting the bugs in this program by using this [Teacher Sandbox](https://studio.code.org/levels/27300) level with your projector.\n"
           }
         ],
         "name": "Review"
@@ -4535,7 +4535,7 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Power of Words - Unplugged Activity",
         "level_keys": [
@@ -4821,7 +4821,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4847,7 +4847,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration: Sample Programs",
         "level_keys": [
@@ -4873,7 +4873,7 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Planning",
         "level_keys": [
@@ -4899,7 +4899,7 @@
       "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Application - Create Your Project",
         "level_keys": [
@@ -7970,7 +7970,7 @@
     },
     {
       "name": "The Power of Words: Lesson Quiz Answer Key",
-      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/grade-3-the-power-of-words-lesson-quiz-answers",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
       "key": "the_power_of_words_lesson_quiz_answer_key",
       "properties": {
         "type": "Answer Key",
@@ -8037,6 +8037,18 @@
       },
       "seeding_key": {
         "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "name": "Teacher Sandbox Level",
+      "url": "https://studio.code.org/levels/27300",
+      "key": "teacher_sandbox_level",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_sandbox_level"
       }
     },
     {
@@ -8534,6 +8546,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "teacher_sandbox_level"
       }
     },
     {
