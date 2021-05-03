@@ -14,6 +14,14 @@ export default class SpriteUpload extends React.Component {
     }
   };
 
+  componentDidMount() {
+    fetch(`/api/v1/animation-library/manifest/spritelab/en_us`)
+      .then(response => response.json())
+      .then(data =>
+        this.setState({currentCategories: Object.keys(data.categories)})
+      );
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
@@ -62,28 +70,22 @@ export default class SpriteUpload extends React.Component {
   };
 
   render() {
-    const {uploadStatus, filePreviewURL, category} = this.state;
-    fetch(`/api/v1/animation-library/manifest/spritelab/en_us`)
-      .then(response => response.json())
-      .then(data =>
-        this.setState({currentCategories: Object.keys(data.categories)})
-      );
+    const {uploadStatus, filePreviewURL, currentCategories} = this.state;
+
     return (
       <div>
         <h1>Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
             <h4>Sprite Category:</h4>
-            <p>
-              Enter the category to which this sprite belongs. Leave blank if
-              the sprite should be uploaded to the level-specific animations
-              folder.
-            </p>
-            <input
-              type="text"
-              value={category}
-              onChange={this.handleCategoryChange}
-            />
+            <p>Select the category in which this sprite should be included.</p>
+            <select onChange={this.handleCategoryChange}>
+              {(currentCategories || []).map(category => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
           </label>
           <label>
             <h4>Select Sprite to Add to Library:</h4>
