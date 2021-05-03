@@ -304,11 +304,6 @@ const assessmentStatusStyle = {
     borderColor: color.level_submitted,
     backgroundColor: color.level_submitted,
     color: color.white
-  },
-  [LevelStatus.readonly]: {
-    borderColor: color.level_submitted,
-    backgroundColor: color.level_submitted,
-    color: color.white
   }
 };
 
@@ -337,12 +332,6 @@ const levelStatusStyle = {
     color: color.white
   },
   [LevelStatus.completed_assessment]: {
-    borderColor: color.level_submitted,
-    backgroundColor: color.level_submitted,
-    color: color.white
-  },
-  // Note: There are submittable levels that are not assessments.
-  [LevelStatus.readonly]: {
     borderColor: color.level_submitted,
     backgroundColor: color.level_submitted,
     color: color.white

@@ -596,8 +596,7 @@ const levelWithProgress = (
     status: statusForLevel(level, levelResults),
     isCurrentLevel: currentLevelId === normalizedLevel.id,
     paired: levelPairing[level.activeId],
-    isLocked: levelProgress?.locked || false,
-    readonlyAnswers: level.readonly_answers
+    isLocked: levelProgress?.locked || false
   };
 };
 
