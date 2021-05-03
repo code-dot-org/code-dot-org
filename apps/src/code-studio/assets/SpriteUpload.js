@@ -1,11 +1,17 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
 
+const spriteAvailability = {
+  LIBRARY: 'library',
+  LEVEL: 'level'
+};
+
 export default class SpriteUpload extends React.Component {
   state = {
     fileData: null,
     filePreviewURL: '',
     filename: '',
+    spriteAvailability: '',
     category: '',
     currentCategories: [],
     uploadStatus: {
@@ -26,7 +32,7 @@ export default class SpriteUpload extends React.Component {
     event.preventDefault();
 
     let destination =
-      this.state.category.length === 0
+      this.state.spriteAvailability === spriteAvailability.LEVEL
         ? `/level_animations/${this.state.filename}`
         : `/spritelab/category_${this.state.category}/${this.state.filename}`;
 
@@ -69,6 +75,10 @@ export default class SpriteUpload extends React.Component {
     });
   };
 
+  handleAvailabilityChange = event => {
+    this.setState({spriteAvailability: event.target.value});
+  };
+
   render() {
     const {uploadStatus, filePreviewURL, currentCategories} = this.state;
 
@@ -77,18 +87,51 @@ export default class SpriteUpload extends React.Component {
         <h1>Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
-            <h4>Sprite Category:</h4>
-            <p>Select the category in which this sprite should be included.</p>
-            <select onChange={this.handleCategoryChange}>
-              {(currentCategories || []).map(category => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              ))}
-            </select>
+            <h3>Sprite Category:</h3>
+            <p>
+              Select whether the sprite should only be available in a specific
+              level or whether it should be available in the sprite library.
+            </p>
+            <div>
+              <label>
+                Level-specific sprite:
+                <input
+                  type="radio"
+                  id="levelSprite"
+                  name="spriteAvailability"
+                  style={styles.radioButton}
+                  value={spriteAvailability.LEVEL}
+                  onChange={this.handleAvailabilityChange}
+                />
+              </label>
+              <label>
+                Library sprite:
+                <input
+                  type="radio"
+                  id="librarySprite"
+                  name="spriteAvailability"
+                  style={styles.radioButton}
+                  value={spriteAvailability.LIBRARY}
+                  onChange={this.handleAvailabilityChange}
+                />
+              </label>
+            </div>
+            {this.state.spriteAvailability === spriteAvailability.LIBRARY && (
+              <div>
+                <label>Category:</label>
+                <select onChange={this.handleCategoryChange}>
+                  <option selected>Select an Option</option>
+                  {(currentCategories || []).map(category => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
           </label>
           <label>
-            <h4>Select Sprite to Add to Library:</h4>
+            <h3>Select Sprite to Add to Library:</h3>
             <input
               type="file"
               accept="image/png"
@@ -98,7 +141,7 @@ export default class SpriteUpload extends React.Component {
           </label>
           <br />
           <label>
-            <h4>Image Preview:</h4>
+            <h3>Image Preview:</h3>
             <img src={filePreviewURL} />
           </label>
           <br />
@@ -123,5 +166,8 @@ const styles = {
   },
   uploadFailure: {
     color: color.red
+  },
+  radioButton: {
+    margin: 10
   }
 };
