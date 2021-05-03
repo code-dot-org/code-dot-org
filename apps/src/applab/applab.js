@@ -480,9 +480,11 @@ Applab.init = function(config) {
   const nonLevelbuilderWidgetMode =
     config.level.widgetMode && !config.isStartMode;
   const hasDesignMode = !(
-    config.level.hideViewDataButton || nonLevelbuilderWidgetMode
+    config.level.hideDesignMode || nonLevelbuilderWidgetMode
   );
-  const hasDataMode = !(config.level.hideDesignMode || config.level.widgetMode);
+  const hasDataMode = !(
+    config.level.hideViewDataButton || config.level.widgetMode
+  );
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
