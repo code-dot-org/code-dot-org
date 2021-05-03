@@ -26,17 +26,20 @@ const styles = {
     paddingRight: 20,
     color: color.white
   },
-  title: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    paddingTop: 20,
-    paddingBottom: 15,
-    fontSize: 27,
+  titleContainer: {
     width: '100%',
-    display: 'inline',
+    display: 'flex',
+    alignItems: 'baseline',
+    padding: '20px 20px 15px 20px'
+  },
+  title: {
+    color: color.white,
+    fontFamily: '"Gotham 7r", sans-serif',
+    fontSize: 27,
+    lineHeight: '29px',
     boxSizing: 'border-box'
   },
   titleSmall: {
-    width: '100%',
     boxSizing: 'border-box'
   },
   titleNoWrap: {
@@ -46,6 +49,13 @@ const styles = {
   },
   titleAllowWrap: {
     lineHeight: '1.1'
+  },
+  callout: {
+    flex: 'none',
+    fontSize: 14,
+    margin: '0px 8px',
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.white
   },
   description: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -79,6 +89,7 @@ const styles = {
 class ResourceCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    callout: PropTypes.string,
     description: PropTypes.string,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
@@ -93,6 +104,7 @@ class ResourceCard extends Component {
   render() {
     const {
       title,
+      callout,
       description,
       buttonText,
       link,
@@ -107,7 +119,7 @@ class ResourceCard extends Component {
 
     const buttonStyles = [styles.button];
     const cardStyles = [styles.card, localeStyle];
-    const titleStyles = [styles.title, styles.text, localeStyle];
+    const titleStyles = [styles.title, localeStyle];
     const descriptionStyles = [styles.text, styles.description, localeStyle];
 
     if (['sm', 'xs'].includes(responsiveSize)) {
@@ -131,7 +143,14 @@ class ResourceCard extends Component {
 
     return (
       <div style={cardStyles}>
-        <div style={titleStyles}>{title}</div>
+        <div style={styles.titleContainer}>
+          <div style={titleStyles}>{title}</div>
+          {callout && (
+            <div style={styles.callout}>
+              <i>{callout}</i>
+            </div>
+          )}
+        </div>
         <div style={descriptionStyles}>{descriptionContent}</div>
         <br />
         <Button

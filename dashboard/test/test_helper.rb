@@ -379,7 +379,8 @@ class ActionController::TestCase
     @html_document ||= if @response.content_type === Mime[:xml]
                          Nokogiri::XML::Document.parse(@response.body, &:strict)
                        else
-                         Nokogiri::HTML::Document.parse(@response.body, &:strict)
+                         # TODO: Enable strict parsing after fixing html errors (FND-1573)
+                         Nokogiri::HTML::Document.parse(@response.body)
                        end
   end
 

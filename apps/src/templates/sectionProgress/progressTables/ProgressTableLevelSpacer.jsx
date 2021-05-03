@@ -42,7 +42,7 @@ SublevelSpacer.propTypes = {
  * for getting a node to properly align with levels that contain sublevels,
  * since in that case we want the node to align with the parent level and leave
  * space for the sublevels. Example uses include laying out level icons in
- * `ProgressTableLevelIconSet`, and laying out text in `ProgressTableContainer`
+ * `ProgressTableLevelIconSet`, and laying out text in `ProgressTableView`
  * expansion rows.
  */
 export default function ProgressTableLevelSpacer({items}) {
