@@ -16,20 +16,21 @@ module Foorm
       return render :no_teacher_email unless current_user.email.present?
 
       form_data = SimpleSurveyForm.find_most_recent_form_for_path(params[:path])
-      return render_404 if !form_data || !form_data.form
+      return render_404 unless form_data
 
       return render :survey_closed if SimpleSurveyForm.form_path_disabled?(params[:path])
 
-      form_questions, latest_version = form_data.form_version.nil? ?
-        ::Foorm::Form.get_questions_and_latest_version_for_name(form_data[:form_name]) :
-        ::Foorm::Form.get_questions_for_name_and_version(form_data[:form_name], form_data[:form_version])
+      form_questions = ::Foorm::Form.get_questions_for_name_and_version(
+        form_data[:form_name],
+        form_data[:form_version] || 0
+      )
 
       return render_404 unless form_questions
 
       # Pass these params to the form to identify unique responses
       key_params = {
         user_id: current_user.id,
-        misc_form_path: params[:path]
+        simple_survey_form_id: form_data[:id]
       }
 
       unless form_data[:allow_multiple_submissions]
@@ -40,7 +41,7 @@ module Foorm
         props: {
           formQuestions: form_questions,
           formName: form_data[:form_name],
-          formVersion: latest_version,
+          formVersion: form_data[:form_version] || 0,
           surveyData: params[:survey_data] || form_data[:survey_data],
           submitApi: FOORM_SIMPLE_SURVEY_SUBMIT_API,
           submitParams: key_params
