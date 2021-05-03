@@ -50,28 +50,33 @@ module Foorm
     end
 
     # Gets a json format of a general misc survey.
-    # GET '/form/:misc_form_path/show'
+    # GET '/form/:path/show'
     # This is intended for surveys that need to be integrated, with custom rendering, into
     # an existing page. One example of this is the NPS survey which is rendered as part
     # of the teacher homepage. The client will handle the custom rendering of the survey.
     def show
       return render json: {}, status: :no_content unless current_user&.teacher? && current_user.email.present?
 
-      form_data = SimpleSurveySubmission.find_form_data(params[:misc_form_path])
-      return render json: {}, status: :no_content if !form_data || !form_data[:form_name] || SimpleSurveySubmission.form_disabled?(params[:misc_form_path])
+      form_data = SimpleSurveyForm.find_most_recent_form_for_path(params[:path])
+      return render json: {}, status: :no_content if !form_data || SimpleSurveyForm.form_path_disabled?(params[:path])
 
-      form_questions, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(form_data[:form_name])
+      form_questions = ::Foorm::Form.get_questions_for_name_and_version(
+        form_data[:form_name],
+        form_data[:form_version] || 0
+      )
+
       key_params = {
         user_id: current_user.id,
-        misc_form_path: params[:misc_form_path]
+        simple_survey_form_id: form_data[:id]
       }
+
       return render json: {}, status: :no_content if !form_questions || (!form_data[:allow_multiple_submissions] && response_exists?(key_params))
 
       render json: @script_data = {
         props: {
           formQuestions: form_questions,
           formName: form_data[:form_name],
-          formVersion: latest_version,
+          formVersion: form_data[:form_version] || 0,
           surveyData: params[:survey_data] || form_data[:survey_data],
           submitApi: FOORM_SIMPLE_SURVEY_SUBMIT_API,
           submitParams: key_params
@@ -84,7 +89,7 @@ module Foorm
     def response_exists?(key_params)
       SimpleSurveySubmission.exists?(
         user_id: key_params[:user_id],
-        misc_form_path: key_params[:misc_form_path]
+        simple_survey_form_id: key_params[:simple_survey_form_id]
       )
     end
   end
