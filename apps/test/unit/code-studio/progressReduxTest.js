@@ -400,18 +400,6 @@ describe('progressReduxTest', () => {
     });
 
     describe('statusForLevel', () => {
-      it('returns LevelStatus.locked for locked assessment level', () => {
-        const level = {
-          ids: ['5275'],
-          uid: '5275_0'
-        };
-        const levelResults = {
-          '5275': TestResults.LOCKED_RESULT
-        };
-        const status = statusForLevel(level, levelResults);
-        assert.strictEqual(status, LevelStatus.locked);
-      });
-
       it('returns LevelStatus.attempted for unlocked assessment level', () => {
         const level = {
           ids: ['5275'],
@@ -446,16 +434,6 @@ describe('progressReduxTest', () => {
         };
         const status = statusForLevel(level, levelResults);
         assert.strictEqual(status, LevelStatus.not_tried);
-      });
-
-      it('returns LevelStatus.locked for a locked peer_review stage', () => {
-        const level = {
-          kind: LevelKind.peer_review,
-          locked: true
-        };
-        const levelResults = {};
-        const status = statusForLevel(level, levelResults);
-        assert.strictEqual(status, LevelStatus.locked);
       });
 
       it('returns LevelStatus.perfect for a completed peer_review stage', () => {
@@ -1263,7 +1241,7 @@ describe('progressReduxTest', () => {
       const levels = peerReviewLevels(state);
       assert.equal(levels.length, 1);
       assert.equal(levels[0].id, PEER_REVIEW_ID);
-      assert.equal(levels[0].status, LevelStatus.locked);
+      assert.equal(levels[0].isLocked, true);
       assert.equal(levels[0].url, '');
       assert.equal(levels[0].name, state.peerReviewLessonInfo.levels[0].name);
       assert.equal(levels[0].icon, 'fa-lock');
@@ -1339,14 +1317,6 @@ describe('progressReduxTest', () => {
         result: TestResults.ALL_PASS
       });
       assert.strictEqual(result, TestResults.ALL_PASS);
-    });
-
-    it('returns LOCKED_RESULT for locked levels', () => {
-      const result = getLevelResult({
-        status: LevelStatus.locked
-        // No result provided by server in this case
-      });
-      assert.strictEqual(result, TestResults.LOCKED_RESULT);
     });
 
     it('returns SUBMITTED_RESULT for a submitted level', () => {

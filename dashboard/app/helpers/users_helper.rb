@@ -199,99 +199,95 @@ module UsersHelper
   #   Whether time_spent should be included in progress summary for a level
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
-  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:, include_timestamp: false)
+  private def merge_user_progress_by_level(
+    script:,
+    user:,
+    user_levels_by_level:,
+    paired_user_levels:,
+    include_timestamp: false
+  )
     progress = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
-        # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
 
         if level.is_a?(BubbleChoice) # we have a parent level
-          bubble_choice_progress = get_bubble_choice_progress(level, user, user_levels_by_level, sl, paired_user_levels, include_timestamp)
-          progress.merge!(bubble_choice_progress.compact)
+          bubble_choice_progress = get_bubble_choice_progress(
+            level, user, user_levels_by_level, sl, paired_user_levels, include_timestamp
+          )
+          if bubble_choice_progress
+            progress.merge!(bubble_choice_progress.compact)
+          end
           next
         end
 
         contained_level_id = level.contained_levels.try(:first).try(:id)
         ul = user_levels_by_level.try(:[], contained_level_id || level_id)
-        level_progress = get_level_progress(ul, sl, paired_user_levels, include_timestamp)
+        level_progress = get_level_progress(
+          ul, sl, paired_user_levels, include_timestamp
+        )
 
-        if level_progress[:status] == LEVEL_STATUS.not_tried
-          # for now, we don't allow authorized teachers to be "locked"
-          if level_progress[:locked] && !user.authorized_teacher?
-            progress[level_id] = {
-              # TODO: Stop sending status here when front-end stops using LEVEL_STATUS.locked (LP-1865)
-              status: LEVEL_STATUS.locked,
-              locked: true
-            }
-          end
-          next
-        end
+        next unless level_progress
 
-        progress[level_id] = level_progress
-
-        # Just in case this level has multiple pages, in which case we add an additional
+        # if the level has multiple pages, we add an additional
         # array of booleans indicating which pages have been completed.
-        pages_completed = get_pages_completed(user, sl)
+        level_progress[:pages_completed] = get_pages_completed(user, sl)
 
-        next unless pages_completed
-
-        progress[level_id][:pages_completed] = pages_completed
-        pages_completed.each_with_index do |result, index|
-          progress["#{level_id}_#{index}"] = {
-            result: result,
-            submitted: level_progress[:submitted],
-            readonly_answers: level_progress[:readonly_answers]
-          }.compact
-        end
+        progress[level_id] = level_progress.compact
       end
     end
     progress
   end
 
   # Summarizes a user's progress on a particular level
-  private def get_level_progress(user_level, script_level, paired_user_levels, include_timestamp)
-    completion_status = activity_css_class(user_level)
-    locked = user_level&.show_as_locked?(script_level.lesson) || script_level.lesson.lockable? && !user_level
-
-    # For levels that are not tried we will either return no progress or a locked status for locked levels.
-    # In either case, we do not need a full set of progress data so we return early here.
-    if completion_status == LEVEL_STATUS.not_tried
-      return {
-        status: completion_status,
-        locked: locked || nil
-      }
+  private def get_level_progress(
+    user_level,
+    script_level,
+    paired_user_levels,
+    include_timestamp
+  )
+    # if we don't have a user level, we don't need to return anything,
+    # unless the lesson is lockable, in which case that means it's locked
+    if user_level.nil?
+      if script_level.lesson.lockable?
+        return {locked: true}
+      else
+        return nil
+      end
     end
 
-    # a user_level is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-    submitted = !!user_level&.submitted &&
-      !(user_level.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(user_level.best_result))
-
     return {
-      status: completion_status,
-      locked: locked || nil,
-      result: user_level&.best_result || 0,
-      submitted: submitted || nil,
-      readonly_answers: !!user_level&.readonly_answers || nil,
-      paired: (paired_user_levels.include? user_level&.id) || nil,
-      last_progress_at: include_timestamp ? user_level&.updated_at&.to_i : nil,
-      time_spent: user_level&.time_spent&.to_i
+      status: activity_css_class(user_level),
+      locked: user_level.show_as_locked?(script_level.lesson) || nil,
+      result: user_level.best_result || nil,
+      paired: (paired_user_levels.include? user_level.id) || nil,
+      last_progress_at: include_timestamp ? user_level.updated_at&.to_i : nil,
+      time_spent: user_level.time_spent&.to_i
     }.compact
   end
 
-  # Summarizes a user's level progress for bubble choice level (parent level and sublevels)
-  private def get_bubble_choice_progress(level, user, user_levels_by_level, script_level, paired_user_levels, include_timestamp)
-    progress = {}
-
+  # Summarizes a user's level progress for bubble choice level
+  # (parent level and sublevels)
+  private def get_bubble_choice_progress(
+    level,
+    user,
+    user_levels_by_level,
+    script_level,
+    paired_user_levels,
+    include_timestamp
+  )
+    # if we don't have a best result, we don't have any progress
     best_sublevel_id = level.best_result_sublevel(user)&.id
-    return progress if best_sublevel_id.nil?
+    return nil if best_sublevel_id.nil?
 
+    progress = {}
     sum_time_spent = 0
 
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
       ul = user_levels_by_level.try(:[], sublevel.id)
       sublevel_progress = get_level_progress(ul, script_level, paired_user_levels, include_timestamp)
+      next unless sublevel_progress
       progress[sublevel.id] = sublevel_progress
       sum_time_spent += sublevel_progress[:time_spent] || 0
     end
