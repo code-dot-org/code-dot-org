@@ -78,7 +78,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import getScriptData from '@cdo/apps/util/getScriptData';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -325,11 +324,11 @@ P5Lab.prototype.init = function(config) {
 
   const onMount = () => {
     try {
-      const localeCode = getScriptData('appoptions').locale;
+      const localeCode = window.appOptions.locale;
       getStore().dispatch(setLocaleCode(localeCode));
     } catch (exception) {
-      console.log('Got an error while trying to parse for the locale code');
-      console.log(exception);
+      console.warn('Unable to retrieve locale code, defaulting to en_us');
+      console.warn(exception);
       getStore().dispatch(setLocaleCode('en_us'));
     }
 
