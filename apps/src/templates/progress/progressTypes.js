@@ -152,10 +152,11 @@ export const studentLessonProgressType = PropTypes.shape({
 
 /**
  * @typedef {Object} LessonGroup
+ * Summary of a LessonGroup ruby model.
  *
  * @property {string} displayName
  * @property {number} id
- * @property {array} bigQuestion
+ * @property {string} bigQuestion
  * @property {string} description
  */
 const lessonGroupShape = {
@@ -166,13 +167,17 @@ const lessonGroupShape = {
 };
 
 /**
- * @typedef {Object} GroupedLesson
+ * @typedef {Object} GroupedLessons
+ * Type of object returned by `progressRedux.groupedLessons()`.
  *
  * @property {lessonGroupShape} lessonGroup
+ * Summary of the LessonGroup ruby model describing this group of lessons.
  * @property {[lessonType]} lessons
+ * Ordered list of lessons in this group.
  * @property {[[levelWithProgressType]]} levelsByLesson
+ * Ordered list of levels for each of the lessons in this group.
  */
-export const groupedLessonType = PropTypes.shape({
+export const groupedLessonsType = PropTypes.shape({
   lessonGroup: PropTypes.shape(lessonGroupShape),
   lessons: PropTypes.arrayOf(lessonType).isRequired,
   levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))

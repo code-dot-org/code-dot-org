@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressLesson from './ProgressLesson';
-import {groupedLessonType} from './progressTypes';
+import {groupedLessonsType} from './progressTypes';
 
 /**
  * A component that shows progress in a course with more detail than the summary
@@ -8,7 +8,7 @@ import {groupedLessonType} from './progressTypes';
  */
 export default class DetailProgressTable extends React.Component {
   static propTypes = {
-    groupedLesson: groupedLessonType.isRequired
+    groupedLesson: groupedLessonsType.isRequired
   };
 
   render() {

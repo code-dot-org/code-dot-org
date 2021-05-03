@@ -5,7 +5,7 @@ import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import SummaryProgressTable from './SummaryProgressTable';
 import DetailProgressTable from './DetailProgressTable';
 import LessonGroup from './LessonGroup';
-import {groupedLessonType} from './progressTypes';
+import {groupedLessonsType} from './progressTypes';
 
 export const styles = {
   hidden: {
@@ -17,7 +17,7 @@ class ProgressTable extends React.Component {
   static propTypes = {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
-    groupedLessons: PropTypes.arrayOf(groupedLessonType).isRequired,
+    groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
     minimal: PropTypes.bool
   };
 

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {groupedLessonType} from './progressTypes';
+import {groupedLessonsType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
 import {lessonIsVisible} from './progressHelpers';
@@ -24,7 +24,7 @@ const styles = {
 
 class SummaryProgressTable extends React.Component {
   static propTypes = {
-    groupedLesson: groupedLessonType.isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     minimal: PropTypes.bool,
 
     // redux provided
