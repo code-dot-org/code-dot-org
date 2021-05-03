@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-03 18:30:29 UTC",
+    "serialized_at": "2021-05-03 19:28:21 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -7969,7 +7969,7 @@
       }
     },
     {
-      "name": "The Power of Words: Lesson Quiz Answer Key",
+      "name": "The Power of Words: Lesson Quiz",
       "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
       "key": "the_power_of_words_lesson_quiz_answer_key",
       "properties": {

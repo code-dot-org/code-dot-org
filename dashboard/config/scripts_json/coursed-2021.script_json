@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-04-27 19:52:52 UTC",
+    "serialized_at": "2021-05-03 20:27:40 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -3563,7 +3563,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "csf_password_power-up_2021"
@@ -9374,11 +9374,11 @@
       }
     },
     {
-      "name": "Password Power-Up: Power-Up Your Password Answer Key",
+      "name": "Password Power-Up: Power-Up Your Password",
       "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
       "key": "password_power-up_power-up_your_password_answer_key",
       "properties": {
-        "type": "Handout",
+        "type": "Answer Key",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -9399,11 +9399,11 @@
       }
     },
     {
-      "name": "Password Power-Up: Lesson Quiz Answer Key",
-      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/grade-3-password-power-up-lesson-quiz-answers",
+      "name": "Password Power-Up: Lesson Quiz",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
       "key": "password_power-up_lesson_quiz_answer_key",
       "properties": {
-        "type": "Resource",
+        "type": "Answer Key",
         "audience": "Teacher"
       },
       "seeding_key": {
@@ -9423,11 +9423,11 @@
       }
     },
     {
-      "name": "Password Power-Up: If...Then...Scenarios Answer Key",
+      "name": "Password Power-Up: If...Then...Scenarios",
       "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
       "key": "password_power-up_if_then_scenarios_answer_key",
       "properties": {
-        "type": "Handout",
+        "type": "Answer Key",
         "audience": "Teacher",
         "include_in_pdf": true
       },
@@ -11299,21 +11299,7 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-18"
+        "standard.shortcode": "1B-NI-05"
       }
     },
     {
