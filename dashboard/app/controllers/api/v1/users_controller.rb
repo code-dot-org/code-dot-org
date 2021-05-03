@@ -77,7 +77,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
   end
 
   # POST /api/v1/users/<user_id>/using_dark_mode
-  def post_using_dark_mode
+  def update_using_dark_mode
     @user.using_dark_mode = !!params[:using_dark_mode].try(:to_bool)
     @user.save
 

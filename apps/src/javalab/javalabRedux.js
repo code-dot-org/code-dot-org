@@ -4,7 +4,7 @@ const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
-const SET_IS_DARK_MODE = 'javalab/SET_IS_DARK_MODE';
+const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
@@ -47,7 +47,7 @@ export const setIsDarkMode = isDarkMode => {
   new UserPreferences().setUsingDarkMode(isDarkMode);
   return {
     isDarkMode: isDarkMode,
-    type: SET_IS_DARK_MODE
+    type: COLOR_PREFERENCE_UPDATED
   };
 };
 
@@ -109,7 +109,7 @@ export default function reducer(state = initialState, action) {
       sources: action.sources
     };
   }
-  if (action.type === SET_IS_DARK_MODE) {
+  if (action.type === COLOR_PREFERENCE_UPDATED) {
     return {
       ...state,
       isDarkMode: action.isDarkMode
