@@ -1,7 +1,7 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
 
-const spriteAvailability = {
+const spriteLocation = {
   LIBRARY: 'library',
   LEVEL: 'level'
 };
@@ -32,7 +32,7 @@ export default class SpriteUpload extends React.Component {
     event.preventDefault();
 
     let destination =
-      this.state.spriteAvailability === spriteAvailability.LEVEL
+      this.state.spriteAvailability === spriteLocation.LEVEL
         ? `/level_animations/${this.state.filename}`
         : `/spritelab/category_${this.state.category}/${this.state.filename}`;
 
@@ -80,7 +80,19 @@ export default class SpriteUpload extends React.Component {
   };
 
   render() {
-    const {uploadStatus, filePreviewURL, currentCategories} = this.state;
+    const {
+      uploadStatus,
+      filePreviewURL,
+      currentCategories,
+      spriteAvailability,
+      category,
+      filename
+    } = this.state;
+
+    const uploadButtonDisabled =
+      spriteAvailability === '' ||
+      (spriteAvailability === spriteLocation.LIBRARY && category === '') ||
+      filename === '';
 
     return (
       <div>
@@ -100,7 +112,7 @@ export default class SpriteUpload extends React.Component {
                   id="levelSprite"
                   name="spriteAvailability"
                   style={styles.radioButton}
-                  value={spriteAvailability.LEVEL}
+                  value={spriteLocation.LEVEL}
                   onChange={this.handleAvailabilityChange}
                 />
               </label>
@@ -111,12 +123,12 @@ export default class SpriteUpload extends React.Component {
                   id="librarySprite"
                   name="spriteAvailability"
                   style={styles.radioButton}
-                  value={spriteAvailability.LIBRARY}
+                  value={spriteLocation.LIBRARY}
                   onChange={this.handleAvailabilityChange}
                 />
               </label>
             </div>
-            {this.state.spriteAvailability === spriteAvailability.LIBRARY && (
+            {this.state.spriteAvailability === spriteLocation.LIBRARY && (
               <div>
                 <label>Category:</label>
                 <select onChange={this.handleCategoryChange}>
@@ -145,7 +157,9 @@ export default class SpriteUpload extends React.Component {
             <img src={filePreviewURL} />
           </label>
           <br />
-          <button type="submit">Upload to Library</button>
+          {!uploadButtonDisabled && (
+            <button type="submit">Upload to Library</button>
+          )}
           <p
             style={{
               ...styles.uploadStatusMessage,
@@ -169,5 +183,8 @@ const styles = {
   },
   radioButton: {
     margin: 10
+  },
+  uploadButtonDisabled: {
+    backgroundColor: color.lightest_gray
   }
 };
