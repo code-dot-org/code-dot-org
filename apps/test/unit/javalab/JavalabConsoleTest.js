@@ -9,7 +9,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import javalab, {toggleDarkMode} from '@cdo/apps/javalab/javalabRedux';
+import javalab, {setIsDarkMode} from '@cdo/apps/javalab/javalabRedux';
 
 describe('Java Lab Console Test', () => {
   let store;
@@ -51,7 +51,7 @@ describe('Java Lab Console Test', () => {
 
     it('Has dark mode', () => {
       const editor = createWrapper();
-      store.dispatch(toggleDarkMode());
+      store.dispatch(setIsDarkMode(true));
       expect(
         editor
           .find('input')

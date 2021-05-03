@@ -33,6 +33,11 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     render json: {using_text_mode: !!@user.using_text_mode}
   end
 
+  # GET /api/v1/users/<user_id>/using_dark_mode
+  def get_using_dark_mode
+    render json: {using_dark_mode: !!@user.using_dark_mode}
+  end
+
   # GET /api/v1/users/<user_id>/get_donor_teacher_banner_details
   def get_donor_teacher_banner_details
     if current_user.teacher?
@@ -69,6 +74,14 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user.save
 
     render json: {using_text_mode: !!@user.using_text_mode}
+  end
+
+  # POST /api/v1/users/<user_id>/using_dark_mode
+  def update_using_dark_mode
+    @user.using_dark_mode = !!params[:using_dark_mode].try(:to_bool)
+    @user.save
+
+    render json: {using_dark_mode: !!@user.using_dark_mode}
   end
 
   # POST /api/v1/users/accept_data_transfer_agreement
