@@ -23,8 +23,6 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
     'allow_multiple_submissions'
   ]
 
-  belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
-
   def self.find_most_recent_form_for_path(path)
     where(path: path).last
   end
