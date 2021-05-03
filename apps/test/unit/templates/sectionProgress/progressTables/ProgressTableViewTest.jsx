@@ -4,9 +4,9 @@ import _ from 'lodash';
 import {Provider} from 'react-redux';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import ProgressTableContainer, {
-  UnconnectedProgressTableContainer
-} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableView, {
+  UnconnectedProgressTableView
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
@@ -56,12 +56,12 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
   );
   return mount(
     <Provider store={store}>
-      <ProgressTableContainer currentView={currentView} />
+      <ProgressTableView currentView={currentView} />
     </Provider>
   );
 };
 
-describe('ProgressTableContainer', () => {
+describe('ProgressTableView', () => {
   it('renders a ProgressTableStudentList', () => {
     const wrapper = setUp();
     expect(wrapper.find(ProgressTableStudentList)).to.have.length(1);
@@ -152,10 +152,10 @@ describe('ProgressTableContainer', () => {
       ]);
 
       const container = setUp(ViewType.SUMMARY)
-        .find(UnconnectedProgressTableContainer)
+        .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      container.onToggleRow(rowData);
+      container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
       expect(timeSpentFormatterStub.callCount).to.equal(2);
@@ -216,10 +216,10 @@ describe('ProgressTableContainer', () => {
       ]);
 
       const container = setUp(ViewType.DETAIL)
-        .find(UnconnectedProgressTableContainer)
+        .find(UnconnectedProgressTableView)
         .instance();
       const rowData = container.state.rows[0];
-      container.onToggleRow(rowData);
+      container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
       expect(timeSpentFormatterStub.callCount).to.equal(2);
@@ -229,7 +229,7 @@ describe('ProgressTableContainer', () => {
 
   it('adds rows to state when a row is toggled', () => {
     const wrapper = setUp()
-      .find(UnconnectedProgressTableContainer)
+      .find(UnconnectedProgressTableView)
       .instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
@@ -237,7 +237,7 @@ describe('ProgressTableContainer', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    wrapper.onToggleRow(rowData);
+    wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(
       STUDENTS.length + numDetailRows
     );
@@ -245,7 +245,7 @@ describe('ProgressTableContainer', () => {
 
   it('restores original rows when a row is toggled twice', () => {
     const wrapper = setUp()
-      .find(UnconnectedProgressTableContainer)
+      .find(UnconnectedProgressTableView)
       .instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
@@ -253,12 +253,11 @@ describe('ProgressTableContainer', () => {
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
-    wrapper.onToggleRow(rowData);
+    wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(
       STUDENTS.length + numDetailRows
     );
-
-    wrapper.onToggleRow(rowData);
+    wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
   });
 });

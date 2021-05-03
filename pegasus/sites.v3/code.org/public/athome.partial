@@ -3,6 +3,8 @@ title: Computer Science at Home
 video_player: true
 theme: responsive
 ---
+<link href="/css/tools.css" rel="stylesheet">
+
 <a id="top"></a>
 <h1>Computer Science at Home</h1>
 

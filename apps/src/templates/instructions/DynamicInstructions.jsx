@@ -70,6 +70,7 @@ class DynamicInstructions extends React.Component {
         <div
           style={{
             marginTop: 10,
+            marginRight: 50,
             position: 'relative',
             height: this.state.dynamicInstructionsHeight
           }}
@@ -85,7 +86,9 @@ class DynamicInstructions extends React.Component {
                 key={key}
                 ref={ref => (this.dynamicInstructionsRefs[key] = ref)}
               >
-                <div>{this.props.dynamicInstructions[key]}</div>
+                <div style={{fontSize: 16}}>
+                  {this.props.dynamicInstructions[key]}
+                </div>
                 <div style={{clear: 'both'}} />
               </div>
             );

@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-04-27 19:44:51 UTC",
+    "serialized_at": "2021-04-30 19:14:03 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -3035,7 +3035,8 @@
       "key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
       "position": 2,
       "properties": {
-        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options."
+        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.",
+        "progression_name": "Video: Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
@@ -6251,7 +6252,30 @@
       "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Play Lab"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_events_2021"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursec-2021",
+        "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0"
+      },
+      "level_keys": [
+        "courseA_video_events_2021"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6274,10 +6298,10 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 2,
+      "chapter": 110,
+      "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6300,10 +6324,10 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 3,
+      "chapter": 111,
+      "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6326,10 +6350,10 @@
       ]
     },
     {
-      "chapter": 111,
-      "position": 4,
+      "chapter": 112,
+      "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6352,10 +6376,10 @@
       ]
     },
     {
-      "chapter": 112,
-      "position": 5,
+      "chapter": 113,
+      "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6378,10 +6402,10 @@
       ]
     },
     {
-      "chapter": 113,
-      "position": 6,
+      "chapter": 114,
+      "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6404,10 +6428,10 @@
       ]
     },
     {
-      "chapter": 114,
-      "position": 7,
+      "chapter": 115,
+      "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6430,10 +6454,10 @@
       ]
     },
     {
-      "chapter": 115,
-      "position": 8,
+      "chapter": 116,
+      "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6456,10 +6480,10 @@
       ]
     },
     {
-      "chapter": 116,
-      "position": 9,
+      "chapter": 117,
+      "position": 10,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6482,10 +6506,10 @@
       ]
     },
     {
-      "chapter": 117,
-      "position": 10,
+      "chapter": 118,
+      "position": 11,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6508,10 +6532,10 @@
       ]
     },
     {
-      "chapter": 118,
-      "position": 11,
+      "chapter": 119,
+      "position": 12,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6534,10 +6558,10 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 12,
+      "chapter": 120,
+      "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6560,10 +6584,10 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 13,
+      "chapter": 121,
+      "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6586,7 +6610,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6612,7 +6636,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6638,7 +6662,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6664,7 +6688,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6690,7 +6714,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -6716,7 +6740,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 4,
       "activity_section_position": 3,
       "assessment": null,
@@ -6742,7 +6766,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 5,
       "activity_section_position": 4,
       "assessment": null,
@@ -6768,7 +6792,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 6,
       "activity_section_position": 5,
       "assessment": null,
@@ -6794,7 +6818,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 7,
       "activity_section_position": 6,
       "assessment": null,
@@ -8103,6 +8127,18 @@
         "lesson_group.key": "csf_events",
         "script.name": "coursec-2021",
         "activity_section.key": "b6624ca7-5ffe-462e-ad60-5580ffb87066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_events_2021",
+        "script_level.level_keys": [
+          "courseA_video_events_2021"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursec-2021",
+        "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0"
       }
     },
     {

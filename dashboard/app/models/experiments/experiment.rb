@@ -118,7 +118,7 @@ class Experiment < ApplicationRecord
     {
       name: 'csa-pilot',
       label: 'CSA Pilot',
-      allow_joining_view_url: false
+      allow_joining_via_url: false
     }
   ]
 
