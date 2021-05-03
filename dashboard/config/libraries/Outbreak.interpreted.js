@@ -1,10 +1,9 @@
-/* -------------- START OF MONSTER BEHAVIOR DEFINITIONS -------------- */
-// Owned By Curriculum
+/* -------------- START OF MONSTER BEHAVIOR DEFINITIONS- Curriculum Owned -------------- */
 function congregatingBehavior(spriteIdArg) {
   var speed = getProp(spriteIdArg, "speed") || 1;
   var targetX = 200 + randomNumber(-20, 20);
   var targetY = 200 + randomNumber(-20, 20);
-  moveToward(spriteIdArg, 1, {x: targetX, y: targetY});
+  moveToward(spriteIdArg, speed, {x: targetX, y: targetY});
 }
 
 function quarantiningBehavior(spriteIdArg) {
@@ -44,11 +43,10 @@ function recoveringBehavior(spriteIdArg) {
     }
   }
 }
+/* ------------------------ END OF MONSTER BEHAVIOR DEFINITIONS ------------------------ */
 
-/* --------------- END OF MONSTER BEHAVIOR DEFINITIONS --------------- */
 
-/* --------------- START OF LIBRARY LOGIC --------------- */
-// Owned By Curriculum
+/* --------------- START OF LIBRARY LOGIC- Curriculum Owned --------------- */
 var RECOVERY_TIME = 250;
 
 function getSickWithProbability(spriteIdArg, probability) {
@@ -72,12 +70,10 @@ checkTouching("when", {costume: "healthy"}, {costume: "sick_mask"}, function (ex
 checkTouching("when", {costume: "healthy_mask"}, {costume: "sick_mask"}, function (extraArgs) {
   getSickWithProbability({id: extraArgs.subjectSprite}, 37.5);
 });
-/* ---------------- END OF LIBRARY LOGIC ---------------- */
+/* ------------------------- END OF LIBRARY LOGIC ------------------------- */
 
 
-/* --------------- START OF BLOCKS API --------------- */
-// Owned By Star Labs
-
+/* --------------- START OF BLOCKS API : Engineering Owned --------------- */
 function setupOutbreak(numMonsters, callback) {
   var percentSick = 10;
   var numSick = Math.round(percentSick * 0.01 * numMonsters);
@@ -89,6 +85,7 @@ function setupOutbreak(numMonsters, callback) {
 }
 
 function layoutSprites(format) {
+  // TODO: Implement layoutSprites
   console.log(format);
 }
 
@@ -123,18 +120,14 @@ function stopMoving() {
   removeBehaviorSimple({costume: "all"}, new Behavior(socialDistancingBehavior, []));
   removeBehaviorSimple({costume: "all"}, new Behavior(wanderingBehavior, []));
 }
-/* ---------------- END OF BLOCKS API ---------------- */
+/* -------------------------- END OF BLOCKS API -------------------------- */
 
-/* --------------- START OF HELPER FUNCTIONS --------------- */
-// Owned By Star Labs
+/* --------------- START OF HELPER FUNCTIONS : Engineering Owned --------------- */
 function getSick(spriteIdArg) {
   setProp(spriteIdArg, "sick", true);
   var isWearingMask = getProp(spriteIdArg, "mask");
-  if (isWearingMask) {
-    setAnimation(spriteIdArg, "sick_mask");
-  } else {
-    setAnimation(spriteIdArg, "sick");
-  }
+  var newAnimation = isWearingMask ? "sick_mask" : "sick";
+  setAnimation(spriteIdArg, newAnimation);
 
   setProp(spriteIdArg, "recovery", RECOVERY_TIME);
   addBehaviorSimple(spriteIdArg, new Behavior(recoveringBehavior, []));
@@ -143,16 +136,13 @@ function getSick(spriteIdArg) {
 function getHealthy(spriteIdArg) {
   setProp(spriteIdArg, "sick", false);
   var isWearingMask = getProp(spriteIdArg, "mask");
-  if (isWearingMask) {
-    setAnimation(spriteIdArg, "healthy_mask");
-  } else {
-    setAnimation(spriteIdArg, "healthy");
-  }
+  var newAnimation = isWearingMask ? "healthy_mask" : "healthy";
+  setAnimation(spriteIdArg, newAnimation);
+
   removeBehaviorSimple(spriteIdArg, new Behavior(recoveringBehavior, []));
 }
 
 function addMonsterBehavior(behaviorFunc) {
   addBehaviorSimple({costume: "all"}, new Behavior(behaviorFunc, []));
 }
-
-/* ---------------- END OF HELPER FUNCTIONS ---------------- */
+/* -------------------------- END OF HELPER FUNCTIONS -------------------------- */
