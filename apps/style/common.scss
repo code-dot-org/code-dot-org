@@ -943,6 +943,15 @@ html[dir="RTL"] .prompt-icon-cell {
   .fa {
     font-size: 18px;
   }
+  /* We don't want some of these styles to affect modal content. */
+  .ml-modal {
+    span {
+      line-height: 12px;
+    }
+    .fa {
+      font-size: 12px;
+    }
+  }
 }
 
 $workspace-header-button-height: 24px;
