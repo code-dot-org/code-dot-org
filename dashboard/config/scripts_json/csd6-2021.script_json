@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-04-30 20:09:03 UTC",
+    "serialized_at": "2021-05-03 23:47:40 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -81,12 +81,12 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.",
-        "student_overview": "In this lesson, students explore a wide variety of new and innovative computing platforms while expanding their understanding of what a computer can be.\r\n",
-        "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
-        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
+        "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used."
+        "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.",
+        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
+        "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
+        "student_overview": "In this lesson, students explore a wide variety of new and innovative computing platforms while expanding their understanding of what a computer can be.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -102,11 +102,11 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).",
-        "student_overview": "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n",
-        "purpose": "This lesson allows students some time to get back into programming with App Lab before introducing the Circuit Playground, but also introduces the useful concept of a _setter_. In Unit 4, students primarily used [`setScreen()`(#fff176)](/docs/applab/setScreen/) to make their apps respond to user interaction. While this is a simple and useful technique, it can lead to a lot of duplication of content across multiple screens. By using _setters_, and later _getters_, students can write apps that actually change the content on a single screen, by showing and hiding or changing the content or look of various elements.\r\n\r\nOnce students have learned about using getters and setters with UI elements, encourage them to think critically about when to use a separate screen in the design phase of an app. If screens are more alike than different, it might be more effective to just change the elements on screen in reaction to input instead of duplicating content across multiple screens. While students are only introduced to [`setProperty()`(#fff176)](/docs/applab/setProperty/) right now, they will later learn the partner command [`getProperty()`(#fff176)](/docs/applab/getProperty/).",
+        "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See rubric on bubble 3\n\n2. **Respond to user input using an event handler**\n\n\tCode Studio: See rubric on bubble 7\n\n3. **Write programs that change multiple elements on a single screen instead of changing screens**\n\n\tCode Studio: See rubric on bubble 12",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See rubric on bubble 3\n\n2. **Respond to user input using an event handler**\n\n\tCode Studio: See rubric on bubble 7\n\n3. **Write programs that change multiple elements on a single screen instead of changing screens**\n\n\tCode Studio: See rubric on bubble 12"
+        "overview": "In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).",
+        "purpose": "This lesson allows students some time to get back into programming with App Lab before introducing the Circuit Playground, but also introduces the useful concept of a _setter_. In Unit 4, students primarily used [`setScreen()`(#fff176)](/docs/applab/setScreen/) to make their apps respond to user interaction. While this is a simple and useful technique, it can lead to a lot of duplication of content across multiple screens. By using _setters_, and later _getters_, students can write apps that actually change the content on a single screen, by showing and hiding or changing the content or look of various elements.\r\n\r\nOnce students have learned about using getters and setters with UI elements, encourage them to think critically about when to use a separate screen in the design phase of an app. If screens are more alike than different, it might be more effective to just change the elements on screen in reaction to input instead of duplicating content across multiple screens. While students are only introduced to [`setProperty()`(#fff176)](/docs/applab/setProperty/) right now, they will later learn the partner command [`getProperty()`(#fff176)](/docs/applab/getProperty/).",
+        "student_overview": "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Designing Screens with Code",
@@ -122,12 +122,12 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.",
-        "student_overview": "In this lesson, students get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, they develop programs that use the Circuit Playground for output.",
-        "purpose": "As the first introduction to using the Circuit Playground, this lesson leaves time for students to get comfortable with getting the hardware plugged in. By leveraging students' existing knowledge of event handling in App Lab, we can quickly get an app up and running that shows the potential of physical computing with little more than a single red LED.",
-        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\r\n* Prepare a board and USB cable for each pair of students",
+        "assessment_opportunities": "1. **Connect and troubleshoot external devices**\n\n\tAt the beginning of the online activity, students should connect the boards themselves, using the setup page to troubleshoot common problems.\n\n2. **Turn on and off an LED with code**\n\n\tCode Studio: See rubric on bubble 7.\n\n3. **Use code to control a physical device**\n\n\tCode Studio: see rubric on bubble 12.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Connect and troubleshoot external devices**\n\n\tAt the beginning of the online activity, students should connect the boards themselves, using the setup page to troubleshoot common problems.\n\n2. **Turn on and off an LED with code**\n\n\tCode Studio: See rubric on bubble 7.\n\n3. **Use code to control a physical device**\n\n\tCode Studio: see rubric on bubble 12."
+        "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.",
+        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\r\n* Prepare a board and USB cable for each pair of students",
+        "purpose": "As the first introduction to using the Circuit Playground, this lesson leaves time for students to get comfortable with getting the hardware plugged in. By leveraging students' existing knowledge of event handling in App Lab, we can quickly get an app up and running that shows the potential of physical computing with little more than a single red LED.",
+        "student_overview": "In this lesson, students get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, they develop programs that use the Circuit Playground for output."
       },
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
@@ -143,12 +143,12 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.",
-        "student_overview": "Students experience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\r\n",
-        "purpose": "This lesson is intended to help students transition from the _draw loop_ and conditional model of input used in Game Lab to the event-driven model used in App Lab. While students have experienced and learned a bit about event-driven programming in Unit 4, a deeper understanding of how the events work will help when it comes to responding to events on the Circuit Playground later in this unit.",
-        "preparation": "* Prepare to display example programs for the whole class.\r\n* A half deck of cards for each group of three students or [deck-of-cards.js.org](https://deck-of-cards.js.org).\r\n* Print one copy of the activity guide for each group of four students.",
+        "assessment_opportunities": "1. **Compare and contrast multiple ways to take input**\r\n\r\n\tWrap Up: Students should distinguish between the draw loop model of Game Lab and the event model of App Lab.\r\n\r\n2. **Model different methods of taking user input**\r\n\r\n\tAs students participate in the activity, circulate the room and ensure that they are following the instructions.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Compare and contrast multiple ways to take input**\r\n\r\n\tWrap Up: Students should distinguish between the draw loop model of Game Lab and the event model of App Lab.\r\n\r\n2. **Model different methods of taking user input**\r\n\r\n\tAs students participate in the activity, circulate the room and ensure that they are following the instructions."
+        "overview": "In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.",
+        "preparation": "* Prepare to display example programs for the whole class.\r\n* A half deck of cards for each group of three students or [deck-of-cards.js.org](https://deck-of-cards.js.org).\r\n* Print one copy of the activity guide for each group of four students.",
+        "purpose": "This lesson is intended to help students transition from the _draw loop_ and conditional model of input used in Game Lab to the event-driven model used in App Lab. While students have experienced and learned a bit about event-driven programming in Unit 4, a deeper understanding of how the events work will help when it comes to responding to events on the Circuit Playground later in this unit.",
+        "student_overview": "Students experience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Input Unplugged",
@@ -164,11 +164,11 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
-        "student_overview": "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n",
-        "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
+        "assessment_opportunities": "1. **Attach an event handler to a hardware input**\n\n\tCode Studio: See rubric on bubble 3.\n\n2. **Choose the appropriate event for a given scenario**\n\n\tWrap Up: Students should describe different scenarios that would be more appropriate for different events.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Attach an event handler to a hardware input**\n\n\tCode Studio: See rubric on bubble 3.\n\n2. **Choose the appropriate event for a given scenario**\n\n\tWrap Up: Students should describe different scenarios that would be more appropriate for different events."
+        "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
+        "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
+        "student_overview": "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Board Events",
@@ -184,11 +184,11 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "This lesson introduces students to the [`getProperty`(#fff176)](/docs/applab/getProperty/) block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use [`getProperty`(#fff176)](/docs/applab/getProperty/) and [`setProperty`(#fff176)](/docs/applab/setProperty/) together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.",
-        "student_overview": "This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code. They first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new screen element, the slider, and a new event trigger, onChange, are also introduced.",
-        "purpose": "So far, students have only used the button press event to gather information from the App Lab screen.  Using [`getProperty`(#fff176)](/docs/applab/getProperty/) opens the students to gathering a wide range of information from the user.  Getting properties also allows students to create programs that don't rely on knowing an element's properties when the code is written, so their programs can be more dynamic and interactive.  These features will be important as students move toward making an interactive game in the next few lessons. ",
+        "assessment_opportunities": "1. **Use getters to access the properties of elements in a system**\n\n\tCode Studio: see rubric on bubble 5",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use getters to access the properties of elements in a system**\n\n\tCode Studio: see rubric on bubble 5"
+        "overview": "This lesson introduces students to the [`getProperty`(#fff176)](/docs/applab/getProperty/) block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use [`getProperty`(#fff176)](/docs/applab/getProperty/) and [`setProperty`(#fff176)](/docs/applab/setProperty/) together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.",
+        "purpose": "So far, students have only used the button press event to gather information from the App Lab screen.  Using [`getProperty`(#fff176)](/docs/applab/getProperty/) opens the students to gathering a wide range of information from the user.  Getting properties also allows students to create programs that don't rely on knowing an element's properties when the code is written, so their programs can be more dynamic and interactive.  These features will be important as students move toward making an interactive game in the next few lessons. ",
+        "student_overview": "This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code. They first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new screen element, the slider, and a new event trigger, onChange, are also introduced."
       },
       "seeding_key": {
         "lesson.key": "Getting Properties",
@@ -204,12 +204,12 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.",
-        "student_overview": "Students get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\r\n",
-        "purpose": "This lesson builds on the previous by introducing analog sensors as a new form of input. These sensors all perform analog-to-digital conversion, allowing programs to sense things as represented by a 10 bit number (0-1023).",
-        "preparation": "* Cue up the [r analog-digital-video/csd/2021]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
+        "assessment_opportunities": "1. **Develop programs that respond to analog input**\n\n\tCode Studio: See rubric on bubble 11\n\n2. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: See rubric on bubble 11\n\n3. **Represent a sensor value in a variety of ways**\n\n\tCode Studio: See rubric on bubble 11",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Develop programs that respond to analog input**\n\n\tCode Studio: See rubric on bubble 11\n\n2. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: See rubric on bubble 11\n\n3. **Represent a sensor value in a variety of ways**\n\n\tCode Studio: See rubric on bubble 11"
+        "overview": "In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.",
+        "preparation": "* Cue up the [r analog-digital-video/csd/2021]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
+        "purpose": "This lesson builds on the previous by introducing analog sensors as a new form of input. These sensors all perform analog-to-digital conversion, allowing programs to sense things as represented by a 10 bit number (0-1023).",
+        "student_overview": "Students get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Analog Input",
@@ -225,12 +225,12 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.",
-        "student_overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide that asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming (a process very similar to the Game Design Process that students used in Unit 3). Students begin by playing a tug o' war style game where the code is hidden. They  discuss what they think the board components, events, and variables would need to be to make the program. Then, they are then given a completed project guide that shows one way to implement the project, and are walked through this process in a series of levels. At the end of the lesson, students have an opportunity to make improvements to the program to make it their own.\r\n",
-        "purpose": "This lesson gives students to practice developing a larger scale program in order to prepare them to do so independently. While previous lessons have focused on building skills around using specific elements of the Circuit Playground and related programming concepts, this lesson focuses on combining everything learned so far into a more complex program. The lesson heavily scaffolds the software development process by providing students a completed project guide, providing starter code, and walking students through its implementation. In the subsequent lessons students will need to complete a greater portion of this guide independently, and for the final project they will follow this process largely independently.",
-        "preparation": "* Provide students with copies of the project guide",
+        "assessment_opportunities": "1. **Implement different features of a program by following a structured project guide**\n\n\tThe final program should reflect the functions, events, and screen design as shown in the project guide.\n\n2. **Develop a program that responds to events from a hardware input**\n\n\tCode Studio: See rubric on bubble 12\n\n3. **Create a function that uses parameters to generalize behavior**\n\n\tCode Studio: See rubric on bubble 12\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Implement different features of a program by following a structured project guide**\n\n\tThe final program should reflect the functions, events, and screen design as shown in the project guide.\n\n2. **Develop a program that responds to events from a hardware input**\n\n\tCode Studio: See rubric on bubble 12\n\n3. **Create a function that uses parameters to generalize behavior**\n\n\tCode Studio: See rubric on bubble 12\n"
+        "overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.",
+        "preparation": "* Provide students with copies of the project guide",
+        "purpose": "This lesson gives students to practice developing a larger scale program in order to prepare them to do so independently. While previous lessons have focused on building skills around using specific elements of the Circuit Playground and related programming concepts, this lesson focuses on combining everything learned so far into a more complex program. The lesson heavily scaffolds the software development process by providing students a completed project guide, providing starter code, and walking students through its implementation. In the subsequent lessons students will need to complete a greater portion of this guide independently, and for the final project they will follow this process largely independently.",
+        "student_overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide that asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming (a process very similar to the Game Design Process that students used in Unit 3). Students begin by playing a tug o' war style game where the code is hidden. They  discuss what they think the board components, events, and variables would need to be to make the program. Then, they are then given a completed project guide that shows one way to implement the project, and are walked through this process in a series of levels. At the end of the lesson, students have an opportunity to make improvements to the program to make it their own.\r\n"
       },
       "seeding_key": {
         "lesson.key": "The Program Design Process",
@@ -246,12 +246,12 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.",
-        "student_overview": "For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.\r\n",
-        "purpose": "This end of chapter assessment is a good place for students to bring together all the pieces they have learned (event handlers, using the board as output, etc.) in one place. This project is purposefully left very open to allow students to think broadly about how physical output might be useful in an app - this is a great opportunity to encourage students to revisit programs they've written earlier in this unit or in Unit 4 that would benefit from using the board to output information.",
-        "preparation": "* Print a copy of the project guide for each group of students\r\n* Print a copy of the rubric for each student",
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter."
+        "overview": "Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.",
+        "preparation": "* Print a copy of the project guide for each group of students\r\n* Print a copy of the rubric for each student",
+        "purpose": "This end of chapter assessment is a good place for students to bring together all the pieces they have learned (event handlers, using the board as output, etc.) in one place. This project is purposefully left very open to allow students to think broadly about how physical output might be useful in an app - this is a great opportunity to encourage students to revisit programs they've written earlier in this unit or in Unit 4 that would benefit from using the board to output information.",
+        "student_overview": "For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
@@ -267,11 +267,11 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.",
-        "student_overview": "In this lesson, students are introduced to the ring of color LEDs, which are exposed as an array called colorLeds. Students learn how to access and control each LED in an array individually, preparing them to access multiple LEDs through iteration later in the chapter. \r\n",
-        "purpose": "Arrays are a common data structure in computer science, used to make storing and accessing information easier. The lesson prepares students to access items within an array, but doesn't yet cover creating and modifying arrays, which will be addressed in the following lesson. Students are also introduced to the ring of color LEDs, which are exposed as an array called [`colorLeds`(#f78183)](/docs/applab/colorLeds/). Students learn how to access and control each LED in the array individually, preparing them to access multiple LEDs though iteration later in the chapter.",
+        "assessment_opportunities": "1. **Access an element in an array using its index**\n\n\tCode Studio: See the rubric on bubble 6 and the quick check on bubble 7\n\n2. **Use the color LED array to individually control each color LED**\n\n\tCode Studio: See the rubric on bubble 14",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Access an element in an array using its index**\n\n\tCode Studio: See the rubric on bubble 6 and the quick check on bubble 7\n\n2. **Use the color LED array to individually control each color LED**\n\n\tCode Studio: See the rubric on bubble 14"
+        "overview": "An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.",
+        "purpose": "Arrays are a common data structure in computer science, used to make storing and accessing information easier. The lesson prepares students to access items within an array, but doesn't yet cover creating and modifying arrays, which will be addressed in the following lesson. Students are also introduced to the ring of color LEDs, which are exposed as an array called [`colorLeds`(#f78183)](/docs/applab/colorLeds/). Students learn how to access and control each LED in the array individually, preparing them to access multiple LEDs though iteration later in the chapter.",
+        "student_overview": "In this lesson, students are introduced to the ring of color LEDs, which are exposed as an array called colorLeds. Students learn how to access and control each LED in an array individually, preparing them to access multiple LEDs through iteration later in the chapter. \r\n"
       },
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
@@ -287,11 +287,11 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.",
-        "student_overview": "In this lesson, students will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of musical notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, and compose simple songs.\r\n",
-        "purpose": "This lesson allows students to get more creative with the buzzer by introducing the concept of a \"note\" and by using arrays to hold sequential collections of notes.  Using notes rather than frequencies provides a layer of abstraction that makes it easier for students to identify sounds that can be used to make music.  Arrays provide a way to group together sounds in sequence, so that they can be played as music.  Using the `playNotes` block to iterate over an array of notes provides a conceptual foundation for working with `for` loops in the next lesson.",
+        "assessment_opportunities": "1. **Create and modify an array**\n\n\tCode Studio: see rubric on bubble 7\n\n2. **Use the buzzer to produce sequences of notes**\n\n\tCode Studio: see rubric on bubble 11\n\n3. **Recognize an array as a list of elements that can be operated on sequentially.**\n\n\tWrap up:  Students should recognize that the `playNotes` block operates on each element of the notes array in sequence.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Create and modify an array**\n\n\tCode Studio: see rubric on bubble 7\n\n2. **Use the buzzer to produce sequences of notes**\n\n\tCode Studio: see rubric on bubble 11\n\n3. **Recognize an array as a list of elements that can be operated on sequentially.**\n\n\tWrap up:  Students should recognize that the `playNotes` block operates on each element of the notes array in sequence."
+        "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.",
+        "purpose": "This lesson allows students to get more creative with the buzzer by introducing the concept of a \"note\" and by using arrays to hold sequential collections of notes.  Using notes rather than frequencies provides a layer of abstraction that makes it easier for students to identify sounds that can be used to make music.  Arrays provide a way to group together sounds in sequence, so that they can be played as music.  Using the `playNotes` block to iterate over an array of notes provides a conceptual foundation for working with `for` loops in the next lesson.",
+        "student_overview": "In this lesson, students will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of musical notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, and compose simple songs.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Making Music",
@@ -307,11 +307,11 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.",
-        "student_overview": "Students learn to combine lists and for-loops in this lesson, which allows them to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, including the list of color LEDs.\r\n",
-        "purpose": "As students start using arrays more frequently, a common pattern emerges wherein you want to run some code on each element of an array. While _for loops_ are a generally useful structure for repeating code, they are a particularly useful for iterating over an array. In this lesson we build on the understanding of arrays that students have developed in the last two lessons by introducing the _for loop_, which combines a variable, the counter pattern, and a conditional all in a single construct.",
+        "assessment_opportunities": "1. **Modify the exit condition of a for loop to control how many times it repeats**\n\n\tCode Studio: see rubric on bubble 12\n\n2. **Use a for loop to iterate over an array**\n\n\tCode Studio: see rubric on bubble 12",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Modify the exit condition of a for loop to control how many times it repeats**\n\n\tCode Studio: see rubric on bubble 12\n\n2. **Use a for loop to iterate over an array**\n\n\tCode Studio: see rubric on bubble 12"
+        "overview": "Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.",
+        "purpose": "As students start using arrays more frequently, a common pattern emerges wherein you want to run some code on each element of an array. While _for loops_ are a generally useful structure for repeating code, they are a particularly useful for iterating over an array. In this lesson we build on the understanding of arrays that students have developed in the last two lessons by introducing the _for loop_, which combines a variable, the counter pattern, and a conditional all in a single construct.",
+        "student_overview": "Students learn to combine lists and for-loops in this lesson, which allows them to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, including the list of color LEDs.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
@@ -327,11 +327,11 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.",
-        "student_overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.",
-        "purpose": "This lesson gives students an opportunity to work with the accelerometer sensor and explore its orientation properties and accelerometer-specific board events. Students will see the purpose and uses of an accelerometer in real world devices and programs and create their own versions of some of these applications. To do this, students will need to refer back to their past knowledge of the counter pattern to create functional accelerometer-based apps. ",
+        "assessment_opportunities": "1. **Recognize the use and need for accelerometer orientation (pitch and roll).**\n\n\tWrap Up:  Students should mention several real world applications for the accelerometer.\n\n2. **Use the data event to continually update an element's properties.**\n\n\tCode Studio: see rubric on bubble 7.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Recognize the use and need for accelerometer orientation (pitch and roll).**\n\n\tWrap Up:  Students should mention several real world applications for the accelerometer.\n\n2. **Use the data event to continually update an element's properties.**\n\n\tCode Studio: see rubric on bubble 7."
+        "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.",
+        "purpose": "This lesson gives students an opportunity to work with the accelerometer sensor and explore its orientation properties and accelerometer-specific board events. Students will see the purpose and uses of an accelerometer in real world devices and programs and create their own versions of some of these applications. To do this, students will need to refer back to their past knowledge of the counter pattern to create functional accelerometer-based apps. ",
+        "student_overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications."
       },
       "seeding_key": {
         "lesson.key": "Accelerometer",
@@ -347,11 +347,11 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.",
-        "student_overview": "This lesson starts with a quick review of parameters in the context of the App Lab blocks that students have seen recently. Students then look at examples of parameters within user-created functions in App Lab, and create and call functions with parameters to control multiple elements on a screen. Afterward, they use for loops to iterate over an array, passing each element into a function. Last, students use what they have learned to create a star catching game.\r\n",
-        "purpose": "In previous lessons, students have used functions to define blocks of code that can be used in multiple places in a program.  In this lesson, students learn how to use parameters to generalize the purpose of a function.  Parameters allow a program to specify the details of how a function works when it is called, rather than when the program is defined.  Although students have seen functions with parameters earlier in the unit, this is the first time that they are expected to define and call their own.  Students also learn how to use a for loop to iteratively pass in the elements of an array as parameters to a function, allowing them to use the same function on multiple elements on the screen.",
+        "assessment_opportunities": "1. **Use parameters to generalize the purpose of a function.**\n\n\tCode Studio: See rubric on bubble 14",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use parameters to generalize the purpose of a function.**\n\n\tCode Studio: See rubric on bubble 14"
+        "overview": "The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.",
+        "purpose": "In previous lessons, students have used functions to define blocks of code that can be used in multiple places in a program.  In this lesson, students learn how to use parameters to generalize the purpose of a function.  Parameters allow a program to specify the details of how a function works when it is called, rather than when the program is defined.  Although students have seen functions with parameters earlier in the unit, this is the first time that they are expected to define and call their own.  Students also learn how to use a for loop to iteratively pass in the elements of an array as parameters to a function, allowing them to use the same function on multiple elements on the screen.",
+        "student_overview": "This lesson starts with a quick review of parameters in the context of the App Lab blocks that students have seen recently. Students then look at examples of parameters within user-created functions in App Lab, and create and call functions with parameters to control multiple elements on a screen. Afterward, they use for loops to iterate over an array, passing each element into a function. Last, students use what they have learned to create a star catching game.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
@@ -367,12 +367,12 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.",
-        "student_overview": "In this lesson, students wire simple circuits to create a physical prototype using low-cost and easily-found materials.\r\n",
-        "purpose": "The goal of this lesson is both to model for students how thinking about the physical design of a product impacts the prototyping process, and to introduce a handful of practical skills that will make creating their final projects easier.",
-        "preparation": "* Gather prototyping materials, such as:\r\n\t* Structural material (cardboard, construction paper, etc)\r\n\t* Connective material (tape, glue, hot glue, etc)\r\n\t* Construction tools (scissors, staplers, etc)\r\n\t* Other materials (cups, binder clips, paper plates, etc)\r\n* Prepare circuit wiring materials, such as:\r\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\r\n\t* LEDs (included in Circuit Playground classroom kit)\r\n\t* Other conductive material (wire, paper clips, foil, etc)\r\n\t* (optional) Buttons or switches\r\n* Print a copy of the project guide for each group of 2-3 students\r\n* Prepare a model button to show the class",
+        "assessment_opportunities": "1. **Create and debug simple circuits**\n\n\tCode Studio: See rubric on bubble 7.  Note that you will need access to the student's physical prototype for this assessment.\n\n2. **Develop an interactive physical protype that combines software and hardware**\n\n\tCode Studio: See rubric on bubble 12.  Note that you will need access to the student's physical prototype for this assessment.\n\n3. **Consider the needs of diverse users when designing a product**\n\n\tWrap Up:  Students should identify multiple target users and how different features of the design might impact them.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Create and debug simple circuits**\n\n\tCode Studio: See rubric on bubble 7.  Note that you will need access to the student's physical prototype for this assessment.\n\n2. **Develop an interactive physical protype that combines software and hardware**\n\n\tCode Studio: See rubric on bubble 12.  Note that you will need access to the student's physical prototype for this assessment.\n\n3. **Consider the needs of diverse users when designing a product**\n\n\tWrap Up:  Students should identify multiple target users and how different features of the design might impact them."
+        "overview": "In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.",
+        "preparation": "* Gather prototyping materials, such as:\r\n\t* Structural material (cardboard, construction paper, etc)\r\n\t* Connective material (tape, glue, hot glue, etc)\r\n\t* Construction tools (scissors, staplers, etc)\r\n\t* Other materials (cups, binder clips, paper plates, etc)\r\n* Prepare circuit wiring materials, such as:\r\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\r\n\t* LEDs (included in Circuit Playground classroom kit)\r\n\t* Other conductive material (wire, paper clips, foil, etc)\r\n\t* (optional) Buttons or switches\r\n* Print a copy of the project guide for each group of 2-3 students\r\n* Prepare a model button to show the class",
+        "purpose": "The goal of this lesson is both to model for students how thinking about the physical design of a product impacts the prototyping process, and to introduce a handful of practical skills that will make creating their final projects easier.",
+        "student_overview": "In this lesson, students wire simple circuits to create a physical prototype using low-cost and easily-found materials.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
@@ -388,12 +388,12 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
-        "student_overview": "This final project challenges students to develop and test a prototype for an innovative computing device that interacts with the physical world through various types of input and output, whichallow for interesting and unique user interactions. This project is an opportunity for students to showcase their technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.\r\n",
-        "purpose": "This lesson is the culmination of Unit 6 and provides students an opportunity to build a Maker Toolkit project of their own from the ground up. This project is an opportunity to showcase technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.",
-        "preparation": "* Collect materials for physical prototyping, eg.\r\n\t* Cardboard\r\n\t* Scissors\r\n\t* Tape\r\n\t* Glue\r\n\t* Foil\r\n* Print a copy of the project guide for each pair of students\r\n* Print a copy of the peer review sheet for each student\r\n* Print a copy of the rubric for each student",
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter. You may also choose to assign the post-project test through Code Studio."
+        "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
+        "preparation": "* Collect materials for physical prototyping, eg.\r\n\t* Cardboard\r\n\t* Scissors\r\n\t* Tape\r\n\t* Glue\r\n\t* Foil\r\n* Print a copy of the project guide for each pair of students\r\n* Print a copy of the peer review sheet for each student\r\n* Print a copy of the rubric for each student",
+        "purpose": "This lesson is the culmination of Unit 6 and provides students an opportunity to build a Maker Toolkit project of their own from the ground up. This project is an opportunity to showcase technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.",
+        "student_overview": "This final project challenges students to develop and test a prototype for an innovative computing device that interacts with the physical world through various types of input and output, whichallow for interesting and unique user interactions. This project is an opportunity for students to showcase their technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.\r\n"
       },
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
@@ -437,8 +437,8 @@
       "key": "83194b44-89d2-4b23-8601-b26ce5caa6af",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "83194b44-89d2-4b23-8601-b26ce5caa6af",
@@ -451,8 +451,8 @@
       "key": "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c71d2e1f-d483-4fe6-adad-2552ce4d1f4f",
@@ -465,8 +465,8 @@
       "key": "098e6ecf-1fe4-459a-acc3-25907450f581",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "098e6ecf-1fe4-459a-acc3-25907450f581",
@@ -492,8 +492,8 @@
       "key": "7b0be7ad-5d23-4932-b902-3a8ecac6de48",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7b0be7ad-5d23-4932-b902-3a8ecac6de48",
@@ -506,8 +506,8 @@
       "key": "2fff60de-5366-470f-ad77-577397a87071",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "2fff60de-5366-470f-ad77-577397a87071",
@@ -520,8 +520,8 @@
       "key": "c79a297c-f83f-4bbc-977a-bf17cf4bb658",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c79a297c-f83f-4bbc-977a-bf17cf4bb658",
@@ -534,8 +534,8 @@
       "key": "0209e705-bb92-4abd-ab05-1d7a5e4a75d7",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "0209e705-bb92-4abd-ab05-1d7a5e4a75d7",
@@ -548,8 +548,8 @@
       "key": "cc88c5f7-4a54-4ec9-b548-194fb175932d",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "cc88c5f7-4a54-4ec9-b548-194fb175932d",
@@ -562,8 +562,8 @@
       "key": "9f6fad32-86fa-4b2a-90eb-bfa0882de7a8",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "9f6fad32-86fa-4b2a-90eb-bfa0882de7a8",
@@ -576,8 +576,8 @@
       "key": "f29a14ec-18f2-432b-bd53-2733dcccf763",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f29a14ec-18f2-432b-bd53-2733dcccf763",
@@ -590,8 +590,8 @@
       "key": "c9774311-07cd-4d0b-ae5e-c487a5e628c0",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c9774311-07cd-4d0b-ae5e-c487a5e628c0",
@@ -604,8 +604,8 @@
       "key": "ab4ccdb8-44eb-47ee-aefd-d7cd635ca363",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ab4ccdb8-44eb-47ee-aefd-d7cd635ca363",
@@ -618,8 +618,8 @@
       "key": "aa94922e-e0f8-4904-8cd8-85deb77c2fb5",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "aa94922e-e0f8-4904-8cd8-85deb77c2fb5",
@@ -632,8 +632,8 @@
       "key": "87a42a0e-c065-49e6-a16d-42c7c66a8374",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "87a42a0e-c065-49e6-a16d-42c7c66a8374",
@@ -646,8 +646,8 @@
       "key": "9510fed3-bbb9-4c12-8242-537177b47a10",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "9510fed3-bbb9-4c12-8242-537177b47a10",
@@ -660,8 +660,8 @@
       "key": "ab9fd0ea-6fb7-4c2f-af28-884019f22f2c",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ab9fd0ea-6fb7-4c2f-af28-884019f22f2c",
@@ -674,8 +674,8 @@
       "key": "994368f3-b53e-4f5a-a1ab-f4a76c265a20",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "994368f3-b53e-4f5a-a1ab-f4a76c265a20",
@@ -688,8 +688,8 @@
       "key": "31b07dbf-9897-4c43-8233-b44e567d0006",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "31b07dbf-9897-4c43-8233-b44e567d0006",
@@ -702,8 +702,8 @@
       "key": "b28bb858-5cd3-4f28-80d3-76cc74628df1",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b28bb858-5cd3-4f28-80d3-76cc74628df1",
@@ -716,8 +716,8 @@
       "key": "a8f87090-0743-4286-86bc-e579a765d277",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "a8f87090-0743-4286-86bc-e579a765d277",
@@ -730,8 +730,8 @@
       "key": "38350fd8-425e-4a88-9d0d-4c6986c36feb",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "38350fd8-425e-4a88-9d0d-4c6986c36feb",
@@ -744,8 +744,8 @@
       "key": "c03168ed-89c2-4ce7-85d2-641c03d490e5",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c03168ed-89c2-4ce7-85d2-641c03d490e5",
@@ -758,8 +758,8 @@
       "key": "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664",
@@ -772,8 +772,8 @@
       "key": "43a9dff6-4565-4408-9623-1f0a529edbb0",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "43a9dff6-4565-4408-9623-1f0a529edbb0",
@@ -786,8 +786,8 @@
       "key": "8392e6dd-4082-4c70-861f-eaff1d89ffd1",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "8392e6dd-4082-4c70-861f-eaff1d89ffd1",
@@ -800,8 +800,8 @@
       "key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 215
+        "duration": 215,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c",
@@ -814,8 +814,8 @@
       "key": "594d3531-8212-4241-979a-17ae94cb6d89",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "594d3531-8212-4241-979a-17ae94cb6d89",
@@ -828,8 +828,8 @@
       "key": "449cef53-c3a4-4edd-8476-31e9df0e87f6",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "449cef53-c3a4-4edd-8476-31e9df0e87f6",
@@ -842,8 +842,8 @@
       "key": "d43f4114-8c37-45a7-b61b-3aca56ee5790",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d43f4114-8c37-45a7-b61b-3aca56ee5790",
@@ -856,8 +856,8 @@
       "key": "4426fb52-6448-4467-8602-49daf6b12bf1",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "4426fb52-6448-4467-8602-49daf6b12bf1",
@@ -870,8 +870,8 @@
       "key": "687f8be1-c863-4391-971d-5ffa5360ed71",
       "position": 1,
       "properties": {
-        "name": "Warm-Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "687f8be1-c863-4391-971d-5ffa5360ed71",
@@ -884,8 +884,8 @@
       "key": "0f9b927e-0931-463c-85dd-f92b58eea3dd",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "0f9b927e-0931-463c-85dd-f92b58eea3dd",
@@ -898,8 +898,8 @@
       "key": "e32a87eb-1d65-4f06-ae77-f9c2f4aaf4ec",
       "position": 3,
       "properties": {
-        "name": "Wrap-Up ",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap-Up "
       },
       "seeding_key": {
         "lesson_activity.key": "e32a87eb-1d65-4f06-ae77-f9c2f4aaf4ec",
@@ -912,8 +912,8 @@
       "key": "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8",
@@ -926,8 +926,8 @@
       "key": "4b4cc069-5970-4809-bb0c-b2f8e1aae26c",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "4b4cc069-5970-4809-bb0c-b2f8e1aae26c",
@@ -940,8 +940,8 @@
       "key": "c4a019fc-d25b-486f-adec-c33a5b86ba5d",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c4a019fc-d25b-486f-adec-c33a5b86ba5d",
@@ -954,8 +954,8 @@
       "key": "1c6474e1-f1d7-4d13-94a0-2657589894ae",
       "position": 1,
       "properties": {
-        "name": "Warm Up ",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up "
       },
       "seeding_key": {
         "lesson_activity.key": "1c6474e1-f1d7-4d13-94a0-2657589894ae",
@@ -968,8 +968,8 @@
       "key": "cdcd4d00-c6df-40db-a0c7-37064a6fcf40",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "cdcd4d00-c6df-40db-a0c7-37064a6fcf40",
@@ -982,8 +982,8 @@
       "key": "3a46632a-43c7-47d3-85b7-e119bf9900ff",
       "position": 3,
       "properties": {
-        "name": "Wrap Up ",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up "
       },
       "seeding_key": {
         "lesson_activity.key": "3a46632a-43c7-47d3-85b7-e119bf9900ff",
@@ -996,8 +996,8 @@
       "key": "1e259b12-ec38-426b-944e-f5778651c422",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "1e259b12-ec38-426b-944e-f5778651c422",
@@ -1010,8 +1010,8 @@
       "key": "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97",
@@ -1024,8 +1024,8 @@
       "key": "b3baf83d-a516-4478-a997-75e530327575",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b3baf83d-a516-4478-a997-75e530327575",
@@ -1038,8 +1038,8 @@
       "key": "26057f9e-5b1c-4617-a7b1-e4e457e863fa",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "26057f9e-5b1c-4617-a7b1-e4e457e863fa",
@@ -1052,8 +1052,8 @@
       "key": "d5a88b8b-de36-473b-8206-46ac7d2801c2",
       "position": 2,
       "properties": {
-        "name": "Activity  1",
-        "duration": 25
+        "duration": 25,
+        "name": "Activity  1"
       },
       "seeding_key": {
         "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2",
@@ -1066,8 +1066,8 @@
       "key": "ca01af5b-36a3-461d-b6b0-9802dc211193",
       "position": 3,
       "properties": {
-        "name": "Activity 2",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity 2"
       },
       "seeding_key": {
         "lesson_activity.key": "ca01af5b-36a3-461d-b6b0-9802dc211193",
@@ -1080,8 +1080,8 @@
       "key": "09284bd4-8906-4775-8b69-db734dde7324",
       "position": 4,
       "properties": {
-        "name": "Activity 3",
-        "duration": 25
+        "duration": 25,
+        "name": "Activity 3"
       },
       "seeding_key": {
         "lesson_activity.key": "09284bd4-8906-4775-8b69-db734dde7324",
@@ -1107,8 +1107,8 @@
       "key": "b3d78956-5557-4142-bd84-3741cc92fb87",
       "position": 6,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b3d78956-5557-4142-bd84-3741cc92fb87",
@@ -1121,8 +1121,8 @@
       "key": "a4a373a9-8067-4100-ac1d-ec5f142fb754",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a4a373a9-8067-4100-ac1d-ec5f142fb754",
@@ -1135,8 +1135,8 @@
       "key": "c61550fb-464b-4871-92d2-f532c0ec62cf",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 210
+        "duration": 210,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c61550fb-464b-4871-92d2-f532c0ec62cf",
@@ -1149,8 +1149,8 @@
       "key": "d411cf59-7c5f-4e4e-8aba-845836bc9658",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d411cf59-7c5f-4e4e-8aba-845836bc9658",
@@ -1486,13 +1486,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
+        "name": "Connecting the Board\r",
         "tips": [
           {
             "type": "assessmentOpportunity",
             "markdown": "Ensure that all students are able to set up their boads correctly.  If they have trouble, encourage them to work with peers to solve the problem with the help of the setup page.  Students should be able to read through the page and follow the instructions on their own.  If not, walk them through the process, but encourage them to troubleshoot their own boards in subsequent lessons.\r\n"
           }
-        ],
-        "name": "Connecting the Board\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dafc849e-b1f0-4767-aa97-69090169177e",
@@ -1515,14 +1515,14 @@
       "key": "9fc2aec4-9f01-4726-82a7-306e613d936e",
       "position": 3,
       "properties": {
+        "description": "**Questions to Consider with Video:**\n- What's the difference between hardware and software?\n- What does the operating system of a computer do?",
         "progression_name": "Hardware and Software",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "**Goal:**\nThe goal of this discussion is to highlight the difference between hardware and software. Students should understand that hardware is the physical part of the computer, such as the chips and the wires, and the software is the programs that are running on the computer. The operating system of the computer allows all the software on the computer to run at the same time, deciding how the different hardware resources will be shared."
           }
-        ],
-        "description": "**Questions to Consider with Video:**\n- What's the difference between hardware and software?\n- What does the operating system of a computer do?"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9fc2aec4-9f01-4726-82a7-306e613d936e",
@@ -1580,13 +1580,13 @@
       "position": 1,
       "properties": {
         "description": "**Discuss:** Yesterday we wrote some apps that took input from a user, but how did the program know _when_ to take input?",
+        "name": "Comparing Input Methods\r",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "**Goal:** This is intended to be a very broad question, and as such could go in a number of different directions. If your students are struggling, encourage them to think about specific programs that they wrote in units 3 and 4.\r\n"
           }
-        ],
-        "name": "Comparing Input Methods\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b297e101-f4cd-4ddd-ae0f-42e87ed683d0",
@@ -1631,8 +1631,8 @@
       "position": 1,
       "properties": {
         "description": "In the previous activity we explored several different kinds of input, but how do our programs actually process that input? As a class, and in small groups, we're going to model how input is taken both in Game Lab and App Lab.",
-        "remarks": true,
-        "name": "Input Unplugged\r"
+        "name": "Input Unplugged\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "5037ffb9-a7e8-4abc-81cc-e72d58b5e31c",
@@ -1695,13 +1695,13 @@
       "position": 1,
       "properties": {
         "description": "**Journal:** What's the difference between the way that Game Lab and App Lab handle inputs?",
+        "name": "Reflection\r",
         "tips": [
           {
             "type": "assessmentOpportunity",
             "markdown": "Students may have different ways of explaining the differences, but Game Lab's draw loop model works sequentially, with each line of code run after the other, and the draw loop code running over and over in sequence.  Inputs are only checked when that line of code is run.   App Lab's event model is continuously checking for inputs once an event handler is created.\r\n"
           }
-        ],
-        "name": "Reflection\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4c3af8fe-b972-410f-a839-00f38e6a51ce",
@@ -1921,13 +1921,13 @@
       "position": 1,
       "properties": {
         "description": "**Think, Pair, Share:** How would you quantify each of your five senses (touch, taste, sight, smell, and hearing). Think back to the previous unit and the various ways you came up with to encode data for a computer.",
+        "name": "Analog and Digital\r",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "The goal here is to get students thinking about how an natural (or analog) value can be converted into a computable format. Encourage students to consider what the upper and lower bounds of each value might be (for example, is there a minimum or maximum amount of sound?).\r\n"
           }
-        ],
-        "name": "Analog and Digital\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f5a1e7d6-5715-4050-bfed-a5e0663486c4",
@@ -2047,6 +2047,7 @@
       "position": 2,
       "properties": {
         "description": "**Discuss:** Students should have individually created a list of board components, events, and functions they would need to make the game they played. Ask students to share their lists with a neighbor before discussing as a class.",
+        "name": "Stop: Review Project Guide\r",
         "tips": [
           {
             "type": "discussionGoal",
@@ -2056,8 +2057,7 @@
             "type": "teachingTip",
             "markdown": "**Keeping Focus:** Students can easily get distracted by the fun of playing the game. Let them play for a while but eventually encourage them to follow the on-screen instructions and make a list of the board components, events, and variables that would be necessary to create the game.\n"
           }
-        ],
-        "name": "Stop: Review Project Guide\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f",
@@ -2428,14 +2428,14 @@
       "key": "701df007-2fc2-4907-bdae-63ea39ea0649",
       "position": 2,
       "properties": {
+        "description": "**Questions to Consider with Video:**\n- When might an array be more useful than a variable?\n- Why do you always need to assign an array to a variable?\n- How can you access the elements in your array?",
         "progression_name": "Video: Introduction to Arrays",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "**Goals:**\n\nThis is the first introduction to arrays, and students will have an opportunity to try them out in the lesson, so understanding why arrays are helpful and the general ways that can use them is more important than the particular syntax or commands in the video. Students should understand that arrays are intended to hold several pieces of information, usually all of the same type. Just like any other piece of information, it needs to be assigned to a variable for a programmer to find it again. Programmers can access each element of the array by its **index**, or its position number in the array. Students will have a chance to practice the exact syntax in the lesson."
           }
-        ],
-        "description": "**Questions to Consider with Video:**\n- When might an array be more useful than a variable?\n- Why do you always need to assign an array to a variable?\n- How can you access the elements in your array?"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "701df007-2fc2-4907-bdae-63ea39ea0649",
@@ -2514,13 +2514,13 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** You have now seen both objects, such as the Sprite object, and arrays. How is an array different from the attributes of an object? When would you use an array? When would you use an object?",
+        "name": "Discussion: Objects Vs Arrays\r",
         "tips": [
           {
             "type": "contentCorner",
             "markdown": "Arrays are frequently used to collect items of the same type (a bunch of numbers, a bunch of strings, a bunch of button names, etc), but in JavaScript all list items need not be of the same type. You can create lists the include numbers, strings, objects, and even other lists.\r\n\r\nAn Object is a data structure that combines many values (such as numbers, strings, and even functions) that represent the attributes of that object (height, width, rotation, name) which are easier to keep track of if done in one place. The attributes can be of many different types but they all describe one object. \r\n"
           }
-        ],
-        "name": "Discussion: Objects Vs Arrays\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "78b871d6-dd5f-4ad8-b32b-97df938ae849",
@@ -2543,13 +2543,13 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** We've been using the buzzer to make sounds, but those buzzes didn't always sound too great.  What do you think you need to make real music on the buzzer?",
+        "name": "Color LEDs vs the Buzzer\r",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "Students may come up with many different ideas, but there are two aspects of this problem that should be highlighted before students move on to the activity.  First, specifying frequencies is not the best way to indicate how high or low a buzz should be, since music only uses a limited number of frequencies, and other frequencies are considered \"out of tune\".  Music is usually written down as specific notes on a scale, which makes it much easier to see which sounds will go well together.  (Students with a musical background will likely have a much better grasp of this issue.)  Second, students will need a way to string sounds, or notes, together to make a song.  This second point should be more universally understood.\r\n"
           }
-        ],
-        "name": "Color LEDs vs the Buzzer\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0d6b1fbb-59d1-4a90-a5f7-e6fdbabcdfb6",
@@ -2629,13 +2629,13 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** Today, instead of just choosing one element from an array, we used the `playNotes` block to do something to every element.  Think back to the other arrays you have seen.  How might doing something to every element in an array be useful there?",
+        "name": "Journal \r",
         "tips": [
           {
             "type": "assessmentOpportunity",
             "markdown": "Students should reconize that the `playNotes` block plays each note in the array in sequence, and extend that idea to other times when operating on each element of an array would be useful.  This will prepare them to for the next lesson, in which for loops are used to operate on each element of a list in sequence.\r\n"
           }
-        ],
-        "name": "Journal \r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "eb895db7-aeb1-4efe-9eb8-c314cd7a2621",
@@ -2658,13 +2658,13 @@
       "position": 1,
       "properties": {
         "description": "**Discuss:** If you had a list full of all of your ToDos and you wanted the computer to print out each one, how might you do it? Don't worry about the specific code, focus on the what information your program would need to know and keep track of. Would your approach still work if you added or removed a ToDo from your list?",
+        "name": "Run Code on All Elements of an Array\r",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "You shouldn't expect students to know how _exactly_ a computer would do this, but to start thinking about what is needed to keep track of where you are in an array (the index), how you would know you've reached the end of the array (the array length), and how you might incrementally increase where you are in the list (the counter pattern).\r\n"
           }
-        ],
-        "name": "Run Code on All Elements of an Array\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0874692e-8e17-4b1d-9232-f11c61106af0",
@@ -2710,14 +2710,14 @@
       "key": "d5b2ea3b-4370-4cf8-a9ed-670e789d812f",
       "position": 3,
       "properties": {
+        "description": "**Questions to Consider with Video:**\n- What are loops used for in programming?\n- Where do loops go in your code?",
         "progression_name": "Video: For Loops",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "**Discussion Questions**\n\nFor-loops are a very powerful construct, but this introduction intentionally only covers a small part of their functionality. As students are more comfortable with loops, more functionality will be introduced. For now, students should know that they can use a for loop to repeat a segment of code multiple times. The segment should go wherever in the program that code will be run. (This aspect of loops is highlighted to keep students from treating loops like functions and placing them at the bottom of the code.)"
           }
-        ],
-        "description": "**Questions to Consider with Video:**\n- What are loops used for in programming?\n- Where do loops go in your code?"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d5b2ea3b-4370-4cf8-a9ed-670e789d812f",
@@ -2769,13 +2769,13 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** Refer back to the analog sensors, what makes a sensor a sensor? Could an accelerometer be a sensor?",
+        "name": "What Makes a Sensor?\r",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "Students have been exposed to sensors in previous lessons but have only seen a few aspects of what a sensor can measure. This discussion gives students a chance to think about the characteristics of a sensor, while also thinking about the other possible characteristics of a sensor they haven’t been exposed to.\r\n   \r\n"
           }
-        ],
-        "name": "What Makes a Sensor?\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8",
@@ -2838,13 +2838,13 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:**  What are some uses for pitch and roll in an everyday app?",
+        "name": "Journal\r",
         "tips": [
           {
             "type": "assessmentOpportunity",
             "markdown": "Students should think of several applications for the accelerometer,  explaining how knowing the pitch and roll could be useful.\r\n\r\n\r\n"
           }
-        ],
-        "name": "Journal\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "83dadfe8-ec04-4986-9e4b-8fcb301bce51",
@@ -2957,13 +2957,13 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** If you could create any kind of computational device, what would it be? What would it do? How would people interact with it?",
+        "name": "Designing a Physical Device\r",
         "tips": [
           {
             "type": "discussionGoal",
             "markdown": "The point of this short discussion is to get students thinking about how we might use a board like the Circuit Playground as part of a larger computing device. It's not important that we're able to completely replicate student's ideas with the board, but that we can start thinking about where the board could be used and where we might need to add additional functionality.\r\n"
           }
-        ],
-        "name": "Designing a Physical Device\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3b0572f2-01eb-48b0-96a1-43739f98575a",
@@ -3059,13 +3059,13 @@
       "position": 1,
       "properties": {
         "description": "**Transition:** At this point students should have put together the two additional LED circuits necessary for their turn signals. Now we're going to transition off of the computers for a bit to work on building that circuit into a physical prototype.",
+        "name": "Building the Prototype\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Sharing Boards?** If you are sharing boards among multiple classes, you'll need to take that into consideration before groups start to build their projects. You may want to add a design constraint that the board must be easily removable from the design, or to create group sizes large enough to ensure that each group in every class has access to a board at all times.\r\n"
           }
-        ],
-        "name": "Building the Prototype\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8521f45a-fff7-43d7-bd5a-d32077c26151",
@@ -3327,13 +3327,13 @@
       "position": 9,
       "properties": {
         "description": "**Group:** Pair up groups to review each other's projects.",
+        "name": "Reflect - Peer Review\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "If you have the time for it, this can be a good opportunity to pull in the user testing process that students learned in Unit 4.\r\n"
           }
-        ],
-        "name": "Reflect - Peer Review\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "44000645-7870-4e71-b27e-75cd70b6dbb9",
@@ -3368,13 +3368,13 @@
       "position": 1,
       "properties": {
         "description": "**Share:** Give students a chance to share their innovations, either within the class or to a broader audience. If you choose to let students do a more formal presentation of their projects the project guide provides students a set of components to include in their presentations including:",
+        "name": "Share\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Celebrate:** As this is the culminating project for the entire course, consider going big with this share out. Bring in parents and administrators, or even host a after school event to provide students with a real audience to share their accomplishments with.\r\n"
           }
-        ],
-        "name": "Share\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a76a28bd-8ddb-4b39-8ce7-6663e81bfd1b",
@@ -3456,13 +3456,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Innovation Research",
         "level_keys": [
           "CSDU6 Innovation_2021"
-        ]
+        ],
+        "progression": "Innovation Research"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 Innovation_2021"
@@ -3482,13 +3482,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Setting Properties",
         "level_keys": [
           "CSD U6 setProperty predict app_2021"
-        ]
+        ],
+        "progression": "Setting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 setProperty predict app_2021"
@@ -3508,13 +3508,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Setting Properties",
         "level_keys": [
           "CSD U6 setProperty Text_2021"
-        ]
+        ],
+        "progression": "Setting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 setProperty Text_2021"
@@ -3534,13 +3534,13 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Setting Properties",
         "level_keys": [
           "CSD U6 setProperty xy_2021"
-        ]
+        ],
+        "progression": "Setting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 setProperty xy_2021"
@@ -3560,13 +3560,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Events and Properties",
         "level_keys": [
           "CSD U6 setProperty xy click_2021"
-        ]
+        ],
+        "progression": "Events and Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 setProperty xy click_2021"
@@ -3586,13 +3586,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Events and Properties",
         "level_keys": [
           "CSD U6 setProperty xy random_2021"
-        ]
+        ],
+        "progression": "Events and Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 setProperty xy random_2021"
@@ -3612,13 +3612,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Events and Properties",
         "level_keys": [
           "CSD U6 setProperty hidden_2021"
-        ]
+        ],
+        "progression": "Events and Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 setProperty hidden_2021"
@@ -3638,13 +3638,13 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Events and Properties",
         "level_keys": [
           "CSD U6 setProperty hidden 2_2021"
-        ]
+        ],
+        "progression": "Events and Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 setProperty hidden 2_2021"
@@ -3664,13 +3664,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Emotion Machine Example",
         "level_keys": [
           "CSD U6 emotion machine example_2021"
-        ]
+        ],
+        "progression": "Emotion Machine Example"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 emotion machine example_2021"
@@ -3690,13 +3690,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Building an App",
         "level_keys": [
           "CSD U6 emotion machine 1_2021"
-        ]
+        ],
+        "progression": "Building an App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 emotion machine 1_2021"
@@ -3716,13 +3716,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Building an App",
         "level_keys": [
           "CSD U6 emotion machine 2_2021"
-        ]
+        ],
+        "progression": "Building an App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 emotion machine 2_2021"
@@ -3742,13 +3742,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Building an App",
         "level_keys": [
           "CSD U6 emotion machine 3_2021"
-        ]
+        ],
+        "progression": "Building an App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 emotion machine 3_2021"
@@ -3768,13 +3768,13 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Building an App",
         "level_keys": [
           "CSD U6 emotion machine 4_2021"
-        ]
+        ],
+        "progression": "Building an App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 emotion machine 4_2021"
@@ -3794,13 +3794,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Hardware and Software",
         "level_keys": [
           "CSD U6 hardware software video_2021"
-        ]
+        ],
+        "progression": "Hardware and Software"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 hardware software video_2021"
@@ -3820,13 +3820,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Using the LED",
         "level_keys": [
           "CSDU6 Circuit Playground Test_2021"
-        ]
+        ],
+        "progression": "Using the LED"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 Circuit Playground Test_2021"
@@ -3846,13 +3846,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Using the LED",
         "level_keys": [
           "CSD U6 test LED_2021"
-        ]
+        ],
+        "progression": "Using the LED"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 test LED_2021"
@@ -3872,13 +3872,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Using the LED",
         "level_keys": [
           "CSD U6 predict LED button_2021"
-        ]
+        ],
+        "progression": "Using the LED"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 predict LED button_2021"
@@ -3898,13 +3898,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Using the LED",
         "level_keys": [
           "CSD U6 add LED button_2021"
-        ]
+        ],
+        "progression": "Using the LED"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 add LED button_2021"
@@ -3924,13 +3924,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Using the LED",
         "level_keys": [
           "CSD U6 LED toggle_2021"
-        ]
+        ],
+        "progression": "Using the LED"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 LED toggle_2021"
@@ -3950,13 +3950,13 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "progression": "Using the LED",
         "level_keys": [
           "CSD U6 LED all_2021"
-        ]
+        ],
+        "progression": "Using the LED"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 LED all_2021"
@@ -3976,13 +3976,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "LED Apps",
         "level_keys": [
           "CSD U6 LED create intro_2021"
-        ]
+        ],
+        "progression": "LED Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 LED create intro_2021"
@@ -4002,13 +4002,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "LED Apps",
         "level_keys": [
           "CSD U6 light show_2021"
-        ]
+        ],
+        "progression": "LED Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 light show_2021"
@@ -4028,13 +4028,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "LED Apps",
         "level_keys": [
           "CSD U6 Catch the Mouse_2021"
-        ]
+        ],
+        "progression": "LED Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 Catch the Mouse_2021"
@@ -4054,13 +4054,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "LED Apps",
         "level_keys": [
           "CSD U6 create LED app_2021"
-        ]
+        ],
+        "progression": "LED Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 create LED app_2021"
@@ -4080,13 +4080,13 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "LED Apps",
         "level_keys": [
           "CSD U6 create LED app 2_2021"
-        ]
+        ],
+        "progression": "LED Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 create LED app 2_2021"
@@ -4106,13 +4106,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Input Examples",
         "level_keys": [
           "CSDU6 GameLab Input 1_2021"
-        ]
+        ],
+        "progression": "Input Examples"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 GameLab Input 1_2021"
@@ -4132,13 +4132,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Input Examples",
         "level_keys": [
           "CSDU6 AppLab Input 1_2021"
-        ]
+        ],
+        "progression": "Input Examples"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 AppLab Input 1_2021"
@@ -4158,13 +4158,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Board Events",
         "level_keys": [
           "CSDU6 - button LED prediction_2021"
-        ]
+        ],
+        "progression": "Board Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - button LED prediction_2021"
@@ -4184,13 +4184,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Board Events",
         "level_keys": [
           "CSDU6 - LED buttonL_2021"
-        ]
+        ],
+        "progression": "Board Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - LED buttonL_2021"
@@ -4210,13 +4210,13 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Board Events",
         "level_keys": [
           "CSDU6 - LED toggle buttonL up_2021"
-        ]
+        ],
+        "progression": "Board Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - LED toggle buttonL up_2021"
@@ -4236,13 +4236,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Using the Switch",
         "level_keys": [
           "CSDU6 - lightswitch toggleswitch_2021"
-        ]
+        ],
+        "progression": "Using the Switch"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - lightswitch toggleswitch_2021"
@@ -4262,13 +4262,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Using the Switch",
         "level_keys": [
           "CSDU6 - toggle state LED prediction_2021"
-        ]
+        ],
+        "progression": "Using the Switch"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - toggle state LED prediction_2021"
@@ -4288,13 +4288,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Using the Switch",
         "level_keys": [
           "CSDU6 - toggleswitch state setProp_2021"
-        ]
+        ],
+        "progression": "Using the Switch"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - toggleswitch state setProp_2021"
@@ -4314,13 +4314,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Buzzer",
         "level_keys": [
           "CSDU6 - buzzer intro_2021"
-        ]
+        ],
+        "progression": "The Buzzer"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - buzzer intro_2021"
@@ -4340,13 +4340,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "The Buzzer",
         "level_keys": [
           "CSDU6 - buzzer duration_2021"
-        ]
+        ],
+        "progression": "The Buzzer"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - buzzer duration_2021"
@@ -4366,13 +4366,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "The Buzzer",
         "level_keys": [
           "CSDU6 - buzzer duration buttons_2021"
-        ]
+        ],
+        "progression": "The Buzzer"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - buzzer duration buttons_2021"
@@ -4392,12 +4392,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Extra Challenge: Sound Board",
         "level_keys": [
           "CSDU6 - board event challenge_2021"
-        ]
+        ],
+        "progression": "Extra Challenge: Sound Board"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4416,15 +4416,15 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Getting Properties",
         "level_keys": [
           "CSD U6 getProperty Demo_2021"
-        ]
+        ],
+        "progression": "Getting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 getProperty Demo_2021"
@@ -4442,15 +4442,15 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Getting Properties",
         "level_keys": [
           "CSD U6 getProperty input_2021"
-        ]
+        ],
+        "progression": "Getting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 getProperty input_2021"
@@ -4468,15 +4468,15 @@
       "chapter": 40,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Getting Properties",
         "level_keys": [
           "CSD U6 getProperty dropdown_2021"
-        ]
+        ],
+        "progression": "Getting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 getProperty dropdown_2021"
@@ -4494,15 +4494,15 @@
       "chapter": 41,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Getting Properties",
         "level_keys": [
           "CSD U6 getProperty board predict_2021"
-        ]
+        ],
+        "progression": "Getting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 getProperty board predict_2021"
@@ -4522,13 +4522,13 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "Getting Properties",
         "level_keys": [
           "CSD U6 getProperty buzzer_2021"
-        ]
+        ],
+        "progression": "Getting Properties"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 getProperty buzzer_2021"
@@ -4546,15 +4546,15 @@
       "chapter": 43,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sliders",
         "level_keys": [
           "CSD U6 slider intro_2021"
-        ]
+        ],
+        "progression": "Sliders"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 slider intro_2021"
@@ -4572,15 +4572,15 @@
       "chapter": 44,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sliders",
         "level_keys": [
           "CSD U6 frequency_2021"
-        ]
+        ],
+        "progression": "Sliders"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 frequency_2021"
@@ -4598,15 +4598,15 @@
       "chapter": 45,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sliders",
         "level_keys": [
           "CSD U6 interval_2021"
-        ]
+        ],
+        "progression": "Sliders"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 interval_2021"
@@ -4624,15 +4624,15 @@
       "chapter": 46,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Change",
         "level_keys": [
           "CSD U6 change_2021"
-        ]
+        ],
+        "progression": "Change"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 change_2021"
@@ -4650,15 +4650,15 @@
       "chapter": 47,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Change",
         "level_keys": [
           "CSD U6 get toggle_2021"
-        ]
+        ],
+        "progression": "Change"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 get toggle_2021"
@@ -4676,15 +4676,15 @@
       "chapter": 48,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Change",
         "level_keys": [
           "CSD U6 getters debug_2021"
-        ]
+        ],
+        "progression": "Change"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 getters debug_2021"
@@ -4702,15 +4702,15 @@
       "chapter": 49,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Motorcycle",
         "level_keys": [
           "CSD U6 move motorcycle_2021"
-        ]
+        ],
+        "progression": "Motorcycle"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 move motorcycle_2021"
@@ -4728,15 +4728,15 @@
       "chapter": 50,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Motorcycle",
         "level_keys": [
           "CSD U6 design motorcycle_2021"
-        ]
+        ],
+        "progression": "Motorcycle"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 design motorcycle_2021"
@@ -4754,14 +4754,14 @@
       "chapter": 51,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Extra Challenge",
         "level_keys": [
           "CSD U6 challenge motorcycle_2021"
-        ]
+        ],
+        "progression": "Extra Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4780,15 +4780,15 @@
       "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sensor Experiment",
         "level_keys": [
           "CSD U6 sensor experiment embedded_2021"
-        ]
+        ],
+        "progression": "Sensor Experiment"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 sensor experiment embedded_2021"
@@ -4806,15 +4806,15 @@
       "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Reading Sensors",
         "level_keys": [
           "CSD U6 analog sound_2021"
-        ]
+        ],
+        "progression": "Reading Sensors"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog sound_2021"
@@ -4832,15 +4832,15 @@
       "chapter": 54,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Reading Sensors",
         "level_keys": [
           "CSD U6 analog light_2021"
-        ]
+        ],
+        "progression": "Reading Sensors"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog light_2021"
@@ -4858,15 +4858,15 @@
       "chapter": 55,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Reading Sensors",
         "level_keys": [
           "CSD U6 analog temp_2021"
-        ]
+        ],
+        "progression": "Reading Sensors"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog temp_2021"
@@ -4884,15 +4884,15 @@
       "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sensor Events",
         "level_keys": [
           "CSD U6 analog predict_2021"
-        ]
+        ],
+        "progression": "Sensor Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog predict_2021"
@@ -4910,15 +4910,15 @@
       "chapter": 57,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sensor Events",
         "level_keys": [
           "CSD U6 analog data_2021"
-        ]
+        ],
+        "progression": "Sensor Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog data_2021"
@@ -4936,15 +4936,15 @@
       "chapter": 58,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sensor Events",
         "level_keys": [
           "CSD U6 analog change_2021"
-        ]
+        ],
+        "progression": "Sensor Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog change_2021"
@@ -4962,15 +4962,15 @@
       "chapter": 59,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sensor Events",
         "level_keys": [
           "CSD U6 analog threshold_2021"
-        ]
+        ],
+        "progression": "Sensor Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog threshold_2021"
@@ -4988,15 +4988,15 @@
       "chapter": 60,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sensors to Colors",
         "level_keys": [
           "CSD U6 analog rbg 1_2021"
-        ]
+        ],
+        "progression": "Sensors to Colors"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog rbg 1_2021"
@@ -5014,15 +5014,15 @@
       "chapter": 61,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sensors to Colors",
         "level_keys": [
           "CSD U6 analog rbg 2_2021"
-        ]
+        ],
+        "progression": "Sensors to Colors"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog rbg 2_2021"
@@ -5042,13 +5042,13 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Sensors to Colors",
         "level_keys": [
           "CSD U6 analog rgb 3_2021"
-        ]
+        ],
+        "progression": "Sensors to Colors"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 analog rgb 3_2021"
@@ -5066,14 +5066,14 @@
       "chapter": 63,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Extra Challenge",
         "level_keys": [
           "CSD U6 analog challenge_2021"
-        ]
+        ],
+        "progression": "Extra Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5094,13 +5094,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Program",
         "level_keys": [
           "CSD U6 emoji race demo_2021"
-        ]
+        ],
+        "progression": "Sample Program"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 emoji race demo_2021"
@@ -5120,13 +5120,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Plan Your Project",
         "level_keys": [
           "CSD U6 tugowar stop_2021"
-        ]
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar stop_2021"
@@ -5146,13 +5146,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Screen Design",
         "level_keys": [
           "CSD U6 tugowar design 1_2021"
-        ]
+        ],
+        "progression": "Screen Design"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar design 1_2021"
@@ -5172,13 +5172,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Screen Design",
         "level_keys": [
           "CSD U6 tugowar design 1.5_2021"
-        ]
+        ],
+        "progression": "Screen Design"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar design 1.5_2021"
@@ -5198,13 +5198,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Screen Design",
         "level_keys": [
           "CSD U6 tugowar design 2_2021"
-        ]
+        ],
+        "progression": "Screen Design"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar design 2_2021"
@@ -5224,13 +5224,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Finishing Functions",
         "level_keys": [
           "CSD U6 tugowar variables 1_2021"
-        ]
+        ],
+        "progression": "Finishing Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar variables 1_2021"
@@ -5250,13 +5250,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Finishing Functions",
         "level_keys": [
           "CSD U6 tugowar variables 2_2021"
-        ]
+        ],
+        "progression": "Finishing Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar variables 2_2021"
@@ -5276,13 +5276,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Finishing Functions",
         "level_keys": [
           "CSD U6 tugowar variables 3_2021"
-        ]
+        ],
+        "progression": "Finishing Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar variables 3_2021"
@@ -5302,13 +5302,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Checking for a Winner",
         "level_keys": [
           "CSD U6 tugowar conditional_2021"
-        ]
+        ],
+        "progression": "Checking for a Winner"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar conditional_2021"
@@ -5328,13 +5328,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Checking for a Winner",
         "level_keys": [
           "CSD U6 tugowar setScreen_2021"
-        ]
+        ],
+        "progression": "Checking for a Winner"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar setScreen_2021"
@@ -5354,13 +5354,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Checking for a Winner",
         "level_keys": [
           "CSD U6 tugowar setProperty_2021"
-        ]
+        ],
+        "progression": "Checking for a Winner"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar setProperty_2021"
@@ -5380,13 +5380,13 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Checking for a Winner",
         "level_keys": [
           "CSD U6 tugowar buzzer_2021"
-        ]
+        ],
+        "progression": "Checking for a Winner"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar buzzer_2021"
@@ -5406,13 +5406,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Make it Your Own",
         "level_keys": [
           "CSD U6 tugowar final_2021"
-        ]
+        ],
+        "progression": "Make it Your Own"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar final_2021"
@@ -5432,13 +5432,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Demo - Bug Grab",
         "level_keys": [
           "CSD U6 tugowar demo_2021"
-        ]
+        ],
+        "progression": "Demo - Bug Grab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 tugowar demo_2021"
@@ -5458,13 +5458,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Plan Your Project",
         "level_keys": [
           "CSD U6 game project stop_2021"
-        ]
+        ],
+        "progression": "Plan Your Project"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 game project stop_2021"
@@ -5484,13 +5484,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Screen Design",
         "level_keys": [
           "CSD U6 game project screens_2021"
-        ]
+        ],
+        "progression": "Screen Design"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 game project screens_2021"
@@ -5510,13 +5510,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Events",
         "level_keys": [
           "CSD U6 game project screen links_2021"
-        ]
+        ],
+        "progression": "Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 game project screen links_2021"
@@ -5536,13 +5536,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Events",
         "level_keys": [
           "CSD U6 game project board events_2021"
-        ]
+        ],
+        "progression": "Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 game project board events_2021"
@@ -5562,13 +5562,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Functions",
         "level_keys": [
           "CSD U6 game project functions define_2021"
-        ]
+        ],
+        "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 game project functions define_2021"
@@ -5588,13 +5588,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Functions",
         "level_keys": [
           "CSD U6 game project functions call_2021"
-        ]
+        ],
+        "progression": "Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 game project functions call_2021"
@@ -5614,13 +5614,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Finishing Touches",
         "level_keys": [
           "CSD U6 game project finish_2021"
-        ]
+        ],
+        "progression": "Finishing Touches"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 game project finish_2021"
@@ -5640,13 +5640,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch1_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch1_2021"
@@ -5666,13 +5666,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Introduction to Arrays",
         "level_keys": [
           "CSD U6 arrays video_2021"
-        ]
+        ],
+        "progression": "Video: Introduction to Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 arrays video_2021"
@@ -5692,13 +5692,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Arrays",
         "level_keys": [
           "CSD U6 arrays select predict_2021"
-        ]
+        ],
+        "progression": "Introduction to Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 arrays select predict_2021"
@@ -5718,13 +5718,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Arrays",
         "level_keys": [
           "CSDU6 arrays select rainbow_2021"
-        ]
+        ],
+        "progression": "Introduction to Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 arrays select rainbow_2021"
@@ -5744,13 +5744,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Arrays",
         "level_keys": [
           "CSDU6 array select days_2021"
-        ]
+        ],
+        "progression": "Introduction to Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 array select days_2021"
@@ -5770,13 +5770,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Arrays",
         "level_keys": [
           "CSDU6 arrays select random_2021"
-        ]
+        ],
+        "progression": "Introduction to Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 arrays select random_2021"
@@ -5796,13 +5796,13 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "Introduction to Arrays",
         "level_keys": [
           "CSDU6 arrays select variable_2021"
-        ]
+        ],
+        "progression": "Introduction to Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 arrays select variable_2021"
@@ -5822,13 +5822,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Using Arrays",
         "level_keys": [
           "CSD U6 array multi_2021"
-        ]
+        ],
+        "progression": "Using Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 array multi_2021"
@@ -5848,13 +5848,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Color LEDs",
         "level_keys": [
           "CSD U6 colorLeds predict_2021"
-        ]
+        ],
+        "progression": "Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 colorLeds predict_2021"
@@ -5874,13 +5874,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Color LEDs",
         "level_keys": [
           "CSD U6 colorLED on_2021"
-        ]
+        ],
+        "progression": "Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 colorLED on_2021"
@@ -5900,13 +5900,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Color LEDs",
         "level_keys": [
           "CSD U6 LEDs color_2021"
-        ]
+        ],
+        "progression": "Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 LEDs color_2021"
@@ -5926,13 +5926,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Color LEDs",
         "level_keys": [
           "CSD U6 colorLeds debug_2021"
-        ]
+        ],
+        "progression": "Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 colorLeds debug_2021"
@@ -5952,13 +5952,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Color LEDs",
         "level_keys": [
           "CSD U6 colorLeds intensity_2021"
-        ]
+        ],
+        "progression": "Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 colorLeds intensity_2021"
@@ -5978,13 +5978,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Light Show",
         "level_keys": [
           "CSD U6 colorLeds light pattern_2021"
-        ]
+        ],
+        "progression": "Light Show"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 colorLeds light pattern_2021"
@@ -6004,13 +6004,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Light Show",
         "level_keys": [
           "CSD U6 light pattern off_2021"
-        ]
+        ],
+        "progression": "Light Show"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 light pattern off_2021"
@@ -6030,12 +6030,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Challenge Levels",
         "level_keys": [
           "CSD U6 light pattern challenge_2021"
-        ]
+        ],
+        "progression": "Challenge Levels"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6054,15 +6054,15 @@
       "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Playing Notes",
         "level_keys": [
           "CSDU6 circuit playground piano_2021"
-        ]
+        ],
+        "progression": "Playing Notes"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 circuit playground piano_2021"
@@ -6080,15 +6080,15 @@
       "chapter": 102,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Playing Notes",
         "level_keys": [
           "CSDU6 frequency modification_2021"
-        ]
+        ],
+        "progression": "Playing Notes"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 frequency modification_2021"
@@ -6106,15 +6106,15 @@
       "chapter": 103,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Playing Notes",
         "level_keys": [
           "CSDU6 frequency creation_2021"
-        ]
+        ],
+        "progression": "Playing Notes"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 frequency creation_2021"
@@ -6132,15 +6132,15 @@
       "chapter": 104,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Playing Notes",
         "level_keys": [
           "CSDU6 piano with notes_2021"
-        ]
+        ],
+        "progression": "Playing Notes"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 piano with notes_2021"
@@ -6158,15 +6158,15 @@
       "chapter": 105,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Musical Arrays",
         "level_keys": [
           "CSD U6 array piano_2021"
-        ]
+        ],
+        "progression": "Musical Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 array piano_2021"
@@ -6184,15 +6184,15 @@
       "chapter": 106,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Musical Arrays",
         "level_keys": [
           "CSD U6 random array notes_2021"
-        ]
+        ],
+        "progression": "Musical Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 random array notes_2021"
@@ -6212,13 +6212,13 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Musical Arrays",
         "level_keys": [
           "CSDU6 making new arrays_2021"
-        ]
+        ],
+        "progression": "Musical Arrays"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 making new arrays_2021"
@@ -6236,15 +6236,15 @@
       "chapter": 108,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Making Songs",
         "level_keys": [
           "CSDU6 play predict code_2021"
-        ]
+        ],
+        "progression": "Making Songs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 play predict code_2021"
@@ -6262,15 +6262,15 @@
       "chapter": 109,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Making Songs",
         "level_keys": [
           "CSDU6 play songs_2021"
-        ]
+        ],
+        "progression": "Making Songs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 play songs_2021"
@@ -6288,15 +6288,15 @@
       "chapter": 110,
       "position": 10,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Making Songs",
         "level_keys": [
           "CSDU6 play null notes_2021"
-        ]
+        ],
+        "progression": "Making Songs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 play null notes_2021"
@@ -6316,13 +6316,13 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Making Songs",
         "level_keys": [
           "CDU U6 Playground Sound Board_2021"
-        ]
+        ],
+        "progression": "Making Songs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CDU U6 Playground Sound Board_2021"
@@ -6340,14 +6340,14 @@
       "chapter": 112,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Extra",
         "level_keys": [
           "CSDU6 buzzer 2d arrays_2021"
-        ]
+        ],
+        "progression": "Extra"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6366,14 +6366,14 @@
       "chapter": 113,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Extra",
         "level_keys": [
           "CSDU6 buzzer.stop_2021"
-        ]
+        ],
+        "progression": "Extra"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -6394,13 +6394,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Programs that Repeat",
         "level_keys": [
           "CSD U6 for loop click predict_2021"
-        ]
+        ],
+        "progression": "Programs that Repeat"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop click predict_2021"
@@ -6420,13 +6420,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Programs that Repeat",
         "level_keys": [
           "CSD U6 for loop click exit_2021"
-        ]
+        ],
+        "progression": "Programs that Repeat"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop click exit_2021"
@@ -6446,13 +6446,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: For Loops",
         "level_keys": [
           "CSD: For Loop_2021"
-        ]
+        ],
+        "progression": "Video: For Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD: For Loop_2021"
@@ -6472,13 +6472,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "For Loops",
         "level_keys": [
           "CSDU6 - for loop - predict print_2021"
-        ]
+        ],
+        "progression": "For Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - for loop - predict print_2021"
@@ -6498,13 +6498,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "For Loops",
         "level_keys": [
           "CSD U6 for loop button array_2021"
-        ]
+        ],
+        "progression": "For Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop button array_2021"
@@ -6524,13 +6524,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "For Loops",
         "level_keys": [
           "CSD U6 for loop list.length_2021"
-        ]
+        ],
+        "progression": "For Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop list.length_2021"
@@ -6550,13 +6550,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "For Loops",
         "level_keys": [
           "CSD U6 for loop images_2021"
-        ]
+        ],
+        "progression": "For Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop images_2021"
@@ -6576,13 +6576,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "For Loops",
         "level_keys": [
           "CSD U6 for loop map_2021"
-        ]
+        ],
+        "progression": "For Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop map_2021"
@@ -6602,13 +6602,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "For Loops and Color LEDs",
         "level_keys": [
           "CSD U6 for loop led on_2021"
-        ]
+        ],
+        "progression": "For Loops and Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop led on_2021"
@@ -6628,13 +6628,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "For Loops and Color LEDs",
         "level_keys": [
           "CSD U6 for loop led off_2021"
-        ]
+        ],
+        "progression": "For Loops and Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop led off_2021"
@@ -6654,13 +6654,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "For Loops and Color LEDs",
         "level_keys": [
           "CSD U6 for loop led color_2021"
-        ]
+        ],
+        "progression": "For Loops and Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop led color_2021"
@@ -6680,13 +6680,13 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "For Loops and Color LEDs",
         "level_keys": [
           "CSD U6 for loop led personalize_2021"
-        ]
+        ],
+        "progression": "For Loops and Color LEDs"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 for loop led personalize_2021"
@@ -6704,15 +6704,15 @@
       "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Orientation",
         "level_keys": [
           "CSD U6 Airplane predict_2021"
-        ]
+        ],
+        "progression": "Orientation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 Airplane predict_2021"
@@ -6730,15 +6730,15 @@
       "chapter": 127,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Orientation",
         "level_keys": [
           "CSD U6 investigate orientation_2021"
-        ]
+        ],
+        "progression": "Orientation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 investigate orientation_2021"
@@ -6756,15 +6756,15 @@
       "chapter": 128,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Orientation",
         "level_keys": [
           "CSD U6 directional leds pitch_2021"
-        ]
+        ],
+        "progression": "Orientation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 directional leds pitch_2021"
@@ -6782,15 +6782,15 @@
       "chapter": 129,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Orientation",
         "level_keys": [
           "CSD U6 directional LEDs roll_2021"
-        ]
+        ],
+        "progression": "Orientation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 directional LEDs roll_2021"
@@ -6808,15 +6808,15 @@
       "chapter": 130,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Accelerometer Events",
         "level_keys": [
           "CSD U6 stillness game predict code_2021"
-        ]
+        ],
+        "progression": "Accelerometer Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 stillness game predict code_2021"
@@ -6834,15 +6834,15 @@
       "chapter": 131,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Accelerometer Events",
         "level_keys": [
           "CSD U6 Pedometer_2021"
-        ]
+        ],
+        "progression": "Accelerometer Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 Pedometer_2021"
@@ -6862,13 +6862,13 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Accelerometer Events",
         "level_keys": [
           "CSD U6 goalie_2021"
-        ]
+        ],
+        "progression": "Accelerometer Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 goalie_2021"
@@ -6886,15 +6886,15 @@
       "chapter": 133,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Accelerometer Events",
         "level_keys": [
           "CSD U6 Driver pt1_2021"
-        ]
+        ],
+        "progression": "Accelerometer Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 Driver pt1_2021"
@@ -6912,15 +6912,15 @@
       "chapter": 134,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Accelerometer Events",
         "level_keys": [
           "CSD U6 Driver pt 2_2021"
-        ]
+        ],
+        "progression": "Accelerometer Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 Driver pt 2_2021"
@@ -6940,13 +6940,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Functions with Parameters",
         "level_keys": [
           "CSD U6 params predict_2021"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params predict_2021"
@@ -6966,13 +6966,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Functions with Parameters",
         "level_keys": [
           "CSD U6 functions paramters video_2021"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 functions paramters video_2021"
@@ -6992,13 +6992,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Functions with Parameters",
         "level_keys": [
           "CSD U6 params modify clouds_2021"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params modify clouds_2021"
@@ -7018,13 +7018,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Functions with Parameters",
         "level_keys": [
           "CSD U6 params modify planes_2021"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params modify planes_2021"
@@ -7044,13 +7044,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Functions with Parameters",
         "level_keys": [
           "CSD U6 params create colors_2021"
-        ]
+        ],
+        "progression": "Functions with Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params create colors_2021"
@@ -7070,13 +7070,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Iteration and Parameters",
         "level_keys": [
           "CSD U6 iter predict bubbles_2021"
-        ]
+        ],
+        "progression": "Iteration and Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 iter predict bubbles_2021"
@@ -7096,13 +7096,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Iteration and Parameters",
         "level_keys": [
           "CSD U6 iter modify bugs_2021"
-        ]
+        ],
+        "progression": "Iteration and Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 iter modify bugs_2021"
@@ -7122,13 +7122,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Iteration and Parameters",
         "level_keys": [
           "CSD U6 iter create notes_2021"
-        ]
+        ],
+        "progression": "Iteration and Parameters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 iter create notes_2021"
@@ -7148,13 +7148,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser intro_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params starchaser intro_2021"
@@ -7174,13 +7174,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser 1_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params starchaser 1_2021"
@@ -7200,13 +7200,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser 2_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params starchaser 2_2021"
@@ -7226,13 +7226,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser 3_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params starchaser 3_2021"
@@ -7252,13 +7252,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser 4_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params starchaser 4_2021"
@@ -7278,13 +7278,13 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser 5_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 params starchaser 5_2021"
@@ -7304,12 +7304,12 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser challenge 1_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7330,12 +7330,12 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Star Chaser",
         "level_keys": [
           "CSD U6 params starchaser challenge 2_2021"
-        ]
+        ],
+        "progression": "Star Chaser"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -7356,13 +7356,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Circuits and Logic",
         "level_keys": [
           "CSD U6 circuit logic video_2021"
-        ]
+        ],
+        "progression": "Circuits and Logic"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit logic video_2021"
@@ -7382,13 +7382,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Simple Circuits",
         "level_keys": [
           "CSD U6 circuit predict_2021"
-        ]
+        ],
+        "progression": "Simple Circuits"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit predict_2021"
@@ -7408,13 +7408,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Simple Circuits",
         "level_keys": [
           "CSD U6 circuit pinMode_2021"
-        ]
+        ],
+        "progression": "Simple Circuits"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit pinMode_2021"
@@ -7434,13 +7434,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Simple Circuits",
         "level_keys": [
           "CSD U6 circuit createLed_2021"
-        ]
+        ],
+        "progression": "Simple Circuits"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit createLed_2021"
@@ -7460,13 +7460,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Simple Circuits",
         "level_keys": [
           "CSD U6 circuit multi led_2021"
-        ]
+        ],
+        "progression": "Simple Circuits"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit multi led_2021"
@@ -7486,13 +7486,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Smart Bike - Blinkers",
         "level_keys": [
           "CSD U6 circuit smart bike blinkers_2021"
-        ]
+        ],
+        "progression": "Smart Bike - Blinkers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinkers_2021"
@@ -7512,13 +7512,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Smart Bike - Blinkers",
         "level_keys": [
           "CSD U6 circuit smart bike blinker buttons_2021"
-        ]
+        ],
+        "progression": "Smart Bike - Blinkers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinker buttons_2021"
@@ -7538,13 +7538,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Smart Bike - Blinkers",
         "level_keys": [
           "CSD U6 circuit smart bike blinker build_2021"
-        ]
+        ],
+        "progression": "Smart Bike - Blinkers"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit smart bike blinker build_2021"
@@ -7564,13 +7564,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Button Circuits",
         "level_keys": [
           "CSD U6 circuit createButton_2021"
-        ]
+        ],
+        "progression": "Button Circuits"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit createButton_2021"
@@ -7590,13 +7590,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Finish the Prototype",
         "level_keys": [
           "CSD U6 circuit smart bike buzzer_2021"
-        ]
+        ],
+        "progression": "Finish the Prototype"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit smart bike buzzer_2021"
@@ -7616,13 +7616,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Finish the Prototype",
         "level_keys": [
           "CSD U6 circuit smart bike light_2021"
-        ]
+        ],
+        "progression": "Finish the Prototype"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit smart bike light_2021"
@@ -7642,13 +7642,13 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Finish the Prototype",
         "level_keys": [
           "CSD U6 circuit smart bike final_2021"
-        ]
+        ],
+        "progression": "Finish the Prototype"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 circuit smart bike final_2021"
@@ -7668,13 +7668,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Design Your Prototype",
         "level_keys": [
           "CSD U6 final intro_2021"
-        ]
+        ],
+        "progression": "Design Your Prototype"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD U6 final intro_2021"
@@ -7694,13 +7694,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "User Interface",
         "level_keys": [
           "CSDU6 - final project 1_2021"
-        ]
+        ],
+        "progression": "User Interface"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - final project 1_2021"
@@ -7720,13 +7720,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "User Interface",
         "level_keys": [
           "CSDU6 - final project 2_2021"
-        ]
+        ],
+        "progression": "User Interface"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - final project 2_2021"
@@ -7746,13 +7746,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Board Input and Output",
         "level_keys": [
           "CSDU6 - final project 3_2021"
-        ]
+        ],
+        "progression": "Board Input and Output"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - final project 3_2021"
@@ -7772,13 +7772,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Board Input and Output",
         "level_keys": [
           "CSDU6 - final project 5_2021"
-        ]
+        ],
+        "progression": "Board Input and Output"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - final project 5_2021"
@@ -7798,13 +7798,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Finishing Touches",
         "level_keys": [
           "CSDU6 - final project 4_2021"
-        ]
+        ],
+        "progression": "Finishing Touches"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - final project 4_2021"
@@ -7824,13 +7824,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Finishing Touches",
         "level_keys": [
           "CSDU6 - final project 6_2021"
-        ]
+        ],
+        "progression": "Finishing Touches"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSDU6 - final project 6_2021"
@@ -7850,13 +7850,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch2_2021"
-        ]
+        ],
+        "progression": "Reflection"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U6Ch2_2021"
@@ -7880,8 +7880,8 @@
           "CSD Physical Computing Post-Project Test_2021"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD Physical Computing Post-Project Test_2021"
@@ -7899,14 +7899,14 @@
       "chapter": 172,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "csd-post-survey-intro-2019_2021"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-post-survey-intro-2019_2021"
@@ -7930,8 +7930,8 @@
           "csd-post-survey-levelgroup_2021"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd-post-survey-levelgroup_2021"
@@ -10026,6 +10026,44 @@
   ],
   "resources": [
     {
+      "name": "Difference between Analog and Digital Signals",
+      "url": "https://www.youtube.com/watch?v=RQc_frX50BA",
+      "key": "analog-digital-video",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "analog-digital-video"
+      }
+    },
+    {
+      "name": "How Computers Work: Circuits & Logic",
+      "url": "https://youtu.be/ZoqMiFKspAA",
+      "key": "circuits-logic-video",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "http://videos.code.org/cs-discoveries/concept/04_CircuitsLogic_sm.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "circuits-logic-video"
+      }
+    },
+    {
+      "name": "Computer Science Practices",
+      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+      "key": "computer-science-practices",
+      "properties": {
+        "type": "Reflection",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "computer-science-practices"
+      }
+    },
+    {
       "name": "Computing Innovations",
       "url": "https://docs.google.com/document/d/1-fvLAoZcGopplA-0bwCFrCRoPFYPCPgSeb2ablNteCg/edit",
       "key": "computing-innovations",
@@ -10039,15 +10077,16 @@
       }
     },
     {
-      "name": "The Internet of Things",
-      "url": "https://youtu.be/xQGsubJNbQw",
-      "key": "internet-of-things-video",
+      "name": "Emoji Race",
+      "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
+      "key": "emoji-race-guide",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "type": "Project Guide",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "internet-of-things-video"
+        "resource.key": "emoji-race-guide"
       }
     },
     {
@@ -10077,41 +10116,15 @@
       }
     },
     {
-      "name": "Difference between Analog and Digital Signals",
-      "url": "https://www.youtube.com/watch?v=RQc_frX50BA",
-      "key": "analog-digital-video",
+      "name": "The Internet of Things",
+      "url": "https://youtu.be/xQGsubJNbQw",
+      "key": "internet-of-things-video",
       "properties": {
         "type": "Video",
         "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "analog-digital-video"
-      }
-    },
-    {
-      "name": "Emoji Race",
-      "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
-      "key": "emoji-race-guide",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "emoji-race-guide"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer-science-practices",
-      "properties": {
-        "type": "Reflection",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "computer-science-practices"
+        "resource.key": "internet-of-things-video"
       }
     },
     {
@@ -10139,28 +10152,27 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY",
-      "key": "sample_marked_rubrics_2_2",
+      "name": "Peer Review 1",
+      "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
+      "key": "peer_review_1_1",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_2"
+        "resource.key": "peer_review_1_1"
       }
     },
     {
-      "name": "How Computers Work: Circuits & Logic",
-      "url": "https://youtu.be/ZoqMiFKspAA",
-      "key": "circuits-logic-video",
+      "name": "Peer Review 2",
+      "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
+      "key": "peer_review_2_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/cs-discoveries/concept/04_CircuitsLogic_sm.mp4"
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "circuits-logic-video"
+        "resource.key": "peer_review_2_1"
       }
     },
     {
@@ -10178,19 +10190,6 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
-      "key": "prototype-an-innovation-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "prototype-an-innovation-1"
-      }
-    },
-    {
-      "name": "Prototype an Innovation",
       "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
       "key": "planning-your-innovation",
       "properties": {
@@ -10200,6 +10199,19 @@
       },
       "seeding_key": {
         "resource.key": "planning-your-innovation"
+      }
+    },
+    {
+      "name": "Prototype an Innovation",
+      "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
+      "key": "prototype-an-innovation-1",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "prototype-an-innovation-1"
       }
     },
     {
@@ -10215,15 +10227,15 @@
       }
     },
     {
-      "name": "Peer Review 1",
-      "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
-      "key": "peer_review_1_1",
+      "name": "Sample Marked Rubrics 2",
+      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY",
+      "key": "sample_marked_rubrics_2_2",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "peer_review_1_1"
+        "resource.key": "sample_marked_rubrics_2_2"
       }
     },
     {
@@ -10236,18 +10248,6 @@
       },
       "seeding_key": {
         "resource.key": "sample_marked_rubrics_2_3"
-      }
-    },
-    {
-      "name": "Peer Review 2",
-      "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
-      "key": "peer_review_2_1",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_2_1"
       }
     },
     {

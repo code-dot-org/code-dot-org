@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-30 17:17:00 UTC",
+    "serialized_at": "2021-05-03 23:47:42 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -84,11 +84,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "To begin the lesson students explore sample apps similar to the ones they'll be able to build by the end of the unit. Then students complete an unplugged activity with plastic baggies and sticky notes to build a mental model of how variables are used to move and store information. The lesson ends with a synthesizing discussion and students adding key vocabulary to their journal.",
-        "student_overview": "Develop a mental model for how information is stored and processed by programs.",
-        "purpose": "The warm up activity is designed to provide context for the coming unit and motivate the reasons students will want to learn the concepts covered in Unit 4. The subsequent activity provides students a physical mental model they will be able to use when they start programming with variables in the subsequent lessons.",
-        "preparation": "* Collect for each pair of students:\r\n\t* 3 sandwich baggies\r\n\t* packs of red and yellow stickies\r\n\t* pens / pencils\r\n\t* 1 dry erase marker per four students (pairs can share)\r\n* Review the sample apps shown in the warm up\r\n* Review the rules and vocabulary used in the slides",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "To begin the lesson students explore sample apps similar to the ones they'll be able to build by the end of the unit. Then students complete an unplugged activity with plastic baggies and sticky notes to build a mental model of how variables are used to move and store information. The lesson ends with a synthesizing discussion and students adding key vocabulary to their journal.",
+        "preparation": "* Collect for each pair of students:\r\n\t* 3 sandwich baggies\r\n\t* packs of red and yellow stickies\r\n\t* pens / pencils\r\n\t* 1 dry erase marker per four students (pairs can share)\r\n* Review the sample apps shown in the warm up\r\n* Review the rules and vocabulary used in the slides",
+        "purpose": "The warm up activity is designed to provide context for the coming unit and motivate the reasons students will want to learn the concepts covered in Unit 4. The subsequent activity provides students a physical mental model they will be able to use when they start programming with variables in the subsequent lessons.",
+        "student_overview": "Develop a mental model for how information is stored and processed by programs.",
         "unplugged": true
       },
       "seeding_key": {
@@ -105,11 +105,11 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate several versions of the \"Thermostat App\" to understand how variables store and update information. To begin, students examine a version of the app where the temperature displayed changes each time a button is clicked. The next two versions of the app demonstrate how variables can store strings. Students learn about the patterns they are observing, specifically \"Counter Pattern with Event\" and \"Variables with String Concatenation Pattern\". To conclude the lesson, students review and discuss the programming patterns that they will make use of in the programs they write. ",
-        "student_overview": "Investigate and modify sample apps that use variables and learn common programming patterns with variables.",
-        "purpose": "After building a conceptual model for variables in the previous lesson, students investigate three working examples of apps that make use of variables. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with variables will come in the following lesson.",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "After building a conceptual model for variables in the previous lesson, students investigate three working examples of apps that make use of variables. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with variables will come in the following lesson.",
+        "student_overview": "Investigate and modify sample apps that use variables and learn common programming patterns with variables."
       },
       "seeding_key": {
         "lesson.key": "Variables Investigate",
@@ -125,11 +125,11 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about variables. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
-        "student_overview": "Practice programming with variables through a set of programming puzzles.",
-        "purpose": "This lesson is students primary opportunity to get hands on with variables in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "preparation": "* Review the video in the level progression that covers global vs. local variables. This is a tricky topic.\r\n* Review other programming levels to be better prepared to support students",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is students primary opportunity to get hands on with variables in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
+        "student_overview": "Practice programming with variables through a set of programming puzzles."
       },
       "seeding_key": {
         "lesson.key": "Variables Practice",
@@ -145,11 +145,11 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Photo Liker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "student_overview": "Practice making an app that uses variables and programming patterns with variables.",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* Review the different steps students will be asked to complete as they build the app\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "student_overview": "Practice making an app that uses variables and programming patterns with variables."
       },
       "seeding_key": {
         "lesson.key": "Variables Make",
@@ -165,11 +165,11 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Students learn the basics of conditionals through an unplugged activity using the sticky notes and plastic baggies from the Variables Explore lesson. Flowcharts are introduced as a way to understand how computers make decisions using Boolean expressions. ",
-        "student_overview": "Develop a mental model for how computers make decisions.",
-        "purpose": "The warm up activity is designed to provide context for the Conditionals progression. The subsequent activity provides students a physical mental model they will be able to use when they start programming with conditionals in the subsequent lessons.",
-        "preparation": "* 3 sandwich baggies per pair of students\r\n* packs of red, yellow, and blue stickies\r\n* pens / pencils\r\n* 1 dry erase marker per four students (pairs can share)\r\n* Review the slides and click through all animations",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students learn the basics of conditionals through an unplugged activity using the sticky notes and plastic baggies from the Variables Explore lesson. Flowcharts are introduced as a way to understand how computers make decisions using Boolean expressions. ",
+        "preparation": "* 3 sandwich baggies per pair of students\r\n* packs of red, yellow, and blue stickies\r\n* pens / pencils\r\n* 1 dry erase marker per four students (pairs can share)\r\n* Review the slides and click through all animations",
+        "purpose": "The warm up activity is designed to provide context for the Conditionals progression. The subsequent activity provides students a physical mental model they will be able to use when they start programming with conditionals in the subsequent lessons.",
+        "student_overview": "Develop a mental model for how computers make decisions.",
         "unplugged": true
       },
       "seeding_key": {
@@ -186,11 +186,11 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students work with partners to investigate three versions of the \"Thermostat App\" to understand how boolean expressions and conditional statements allow programs to make decisions. In each guided investigation students first watch a short video on a concept, then use a working app to predict how new features work, then investigate the code to see how those features are implemented, and finally modify the code to add expanded features. To conclude the lesson, students review and discuss common programming patterns with conditionals.",
-        "student_overview": "Investigate and modify sample apps that use conditionals and learn common programming patterns with conditionals.",
-        "purpose": "After building a conceptual model for boolean expressions and conditional statements in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with conditional statements and boolean expressions will come in the following lesson.",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "After building a conceptual model for boolean expressions and conditional statements in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using variables. Students will have some opportunities to modify working code in this lesson, but the most significant practice with conditional statements and boolean expressions will come in the following lesson.",
+        "student_overview": "Investigate and modify sample apps that use conditionals and learn common programming patterns with conditionals."
       },
       "seeding_key": {
         "lesson.key": "Conditionals Investigate",
@@ -206,11 +206,11 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about conditionals. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
-        "student_overview": "Practice programming with conditionals through a set of programming puzzles.",
-        "purpose": "This lesson is students primary opportunity to get hands on with conditionals in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "preparation": "* Review the programming challenges students will be completing\r\n* Review the Debugging Guide for ideas on how to support your students during the lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is students primary opportunity to get hands on with conditionals in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
+        "student_overview": "Practice programming with conditionals through a set of programming puzzles."
       },
       "seeding_key": {
         "lesson.key": "Conditionals Practice",
@@ -226,11 +226,11 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Museum Ticket Generator app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "student_overview": "Practice making an app that uses conditionals and programming patterns with conditionals.",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* Review the different steps students will be asked to complete as they build the app\r\n* Review the information covered in the slides",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "student_overview": "Practice making an app that uses conditionals and programming patterns with conditionals."
       },
       "seeding_key": {
         "lesson.key": "Conditional Make",
@@ -246,11 +246,11 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students begin the lesson by considering two ways to write out the lyrics of a song, one that includes a lot of repeated text and one that does not. After exploring this example students complete a series of investigate activities in which functions have been used to remove repeated code from a program. At the conclusion of the lesson students discuss the concept of a function to synthesize their learning and add definitions to their journal.",
-        "student_overview": "Develop a mental model for using functions to replace repeated code. Investigate and modify sample apps that use functions. ",
-        "purpose": "This lesson is both the Explore and Investigate components of the EIPM sequence for functions. Functions are best understood by actually using them in a program, and so while the Explore component is relatively shorter, students actually are given many opportunities to observe how functions are used in programs. There is a heavy emphasis on running programs slowly to see how functions change the order in which programs run.\r\n\r\nIf you are a teacher with more experience with the concept of functions you may be wondering where other related concepts like parameters, arguments, and return values, will be introduced. In this unit these additional concepts are not learning objectives, and they will not be discussed in detail until later units. For now, it is fine for students to think of functions simply as a way to name a collection of commands so that they can be used in multiple places within your code.",
         "preparation": "* Print copies of the activity guide of song lyrics used in the warm up or determine how you'll project it to the class.\r\n* Review the apps that students will investigate in the app",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is both the Explore and Investigate components of the EIPM sequence for functions. Functions are best understood by actually using them in a program, and so while the Explore component is relatively shorter, students actually are given many opportunities to observe how functions are used in programs. There is a heavy emphasis on running programs slowly to see how functions change the order in which programs run.\r\n\r\nIf you are a teacher with more experience with the concept of functions you may be wondering where other related concepts like parameters, arguments, and return values, will be introduced. In this unit these additional concepts are not learning objectives, and they will not be discussed in detail until later units. For now, it is fine for students to think of functions simply as a way to name a collection of commands so that they can be used in multiple places within your code.",
+        "student_overview": "Develop a mental model for using functions to replace repeated code. Investigate and modify sample apps that use functions. "
       },
       "seeding_key": {
         "lesson.key": "Functions Explore / Investigate",
@@ -266,11 +266,11 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about functions. At the conclusion of the lesson students discuss remaining questions in anticipation of their Make project in the following lesson.",
-        "student_overview": "Practice programming with functions through a set of programming puzzles.",
-        "purpose": "This lesson is students primary opportunity to get hands on with functions in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "preparation": "* Review the video in the level progression that covers the topic of global vs. local variables\r\n* Review the map level about \"When to make a function?\"\r\n* Review other programming levels to be better prepared to support students",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is students primary opportunity to get hands on with functions in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
+        "student_overview": "Practice programming with functions through a set of programming puzzles."
       },
       "seeding_key": {
         "lesson.key": "Functions Practice",
@@ -286,11 +286,11 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Quote Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
-        "student_overview": "Practice making an app that uses functions and programming patterns with functions.",
-        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* Review the Activity Guide to decide if you will use it with your students",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
+        "student_overview": "Practice making an app that uses functions and programming patterns with functions."
       },
       "seeding_key": {
         "lesson.key": "Functions Make",
@@ -306,12 +306,12 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Using a Project Planning Guide, students work through the stages of creating an app from scratch. This is the first day of a three-day project. This lesson is devoted to the planning phase.",
-        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision.",
-        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
-        "preparation": "* Review the project guide and make sure students have access to copies",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Using a Project Planning Guide, students work through the stages of creating an app from scratch. This is the first day of a three-day project. This lesson is devoted to the planning phase.",
+        "preparation": "* Review the project guide and make sure students have access to copies",
+        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
+        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision."
       },
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 1",
@@ -327,12 +327,12 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "Students translate the plans they documented in Part 1 of the Practice PT to a working program in App Lab through a series of steps. ",
-        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision.",
-        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
-        "preparation": "* Make sure students will have access to their project guides",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students translate the plans they documented in Part 1 of the Practice PT to a working program in App Lab through a series of steps. ",
+        "preparation": "* Make sure students will have access to their project guides",
+        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision. ",
+        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision."
       },
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 2",
@@ -348,12 +348,12 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "The final lesson in the Practice PT progression is devoted to feedback and improvements to the Decision Maker App. Students work with classmates to review and update the functionality of their apps before submitting the final project. ",
-        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision. ",
-        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision.",
-        "preparation": "* Make sure students will have access to their project guides",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "The final lesson in the Practice PT progression is devoted to feedback and improvements to the Decision Maker App. Students work with classmates to review and update the functionality of their apps before submitting the final project. ",
+        "preparation": "* Make sure students will have access to their project guides",
+        "purpose": "The Practice PT gives students the opportunity to design and program an app from scratch. Welcome to The Decision Maker App! Students demonstrate mastery of variables, conditionals, and functions by combining these elements into a useful program designed to solve the problem of making a decision.",
+        "student_overview": "Create an app from scratch that uses variables, conditionals, and functions to help a user make a decision. "
       },
       "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 3",
@@ -369,11 +369,11 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "student_overview": "Assessment day to conclude the unit.",
-        "preparation": "* Preview the assessment questions",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students complete a multiple choice assessment which covers the unit topics.",
+        "preparation": "* Preview the assessment questions",
+        "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
         "lesson.key": "Lesson 15: Assessment Day",
@@ -400,8 +400,8 @@
       "key": "e24c8de8-865e-4df1-8b46-e8121a3d5fb3",
       "position": 2,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e24c8de8-865e-4df1-8b46-e8121a3d5fb3",
@@ -414,8 +414,8 @@
       "key": "0c8d3a4a-a901-437d-b8b8-77ab80dda331",
       "position": 3,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "0c8d3a4a-a901-437d-b8b8-77ab80dda331",
@@ -428,8 +428,8 @@
       "key": "cee0dcb2-21af-48b5-822f-15617dfe0bad",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cee0dcb2-21af-48b5-822f-15617dfe0bad",
@@ -455,8 +455,8 @@
       "key": "91e27497-7900-458f-80f0-c68bf658df07",
       "position": 2,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "91e27497-7900-458f-80f0-c68bf658df07",
@@ -469,8 +469,8 @@
       "key": "c4eb36e1-32dc-4590-8ad2-5121bb841814",
       "position": 3,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814",
@@ -483,8 +483,8 @@
       "key": "9817079b-6797-4c6b-bbe7-3e07da6a2ec2",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "9817079b-6797-4c6b-bbe7-3e07da6a2ec2",
@@ -523,8 +523,8 @@
       "key": "b3c72085-c8f0-4971-beef-af3066cee04a",
       "position": 3,
       "properties": {
-        "name": "Activity",
-        "duration": 40
+        "duration": 40,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "b3c72085-c8f0-4971-beef-af3066cee04a",
@@ -537,8 +537,8 @@
       "key": "f48aba60-09c2-4164-90d7-9c92b1f0567a",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f48aba60-09c2-4164-90d7-9c92b1f0567a",
@@ -564,8 +564,8 @@
       "key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a",
       "position": 2,
       "properties": {
-        "name": "Warm Up",
-        "duration": 2
+        "duration": 2,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "54ccc4b4-0b9d-4c52-b701-40c42cff2d3a",
@@ -578,8 +578,8 @@
       "key": "04056784-fb56-42db-879e-b5cb252a2819",
       "position": 3,
       "properties": {
-        "name": "Activity",
-        "duration": 38
+        "duration": 38,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "04056784-fb56-42db-879e-b5cb252a2819",
@@ -592,8 +592,8 @@
       "key": "43b11cca-1150-45fd-96b9-8fce6090e6ec",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "43b11cca-1150-45fd-96b9-8fce6090e6ec",
@@ -606,8 +606,8 @@
       "key": "f96ab15b-debb-464d-8d56-092112fa2c9f",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f96ab15b-debb-464d-8d56-092112fa2c9f",
@@ -620,8 +620,8 @@
       "key": "e1fa1356-bad3-46ed-9d43-d8b02875654d",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "e1fa1356-bad3-46ed-9d43-d8b02875654d",
@@ -634,8 +634,8 @@
       "key": "68953f65-76c5-4ac0-a779-a645f5f2986d",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "68953f65-76c5-4ac0-a779-a645f5f2986d",
@@ -648,8 +648,8 @@
       "key": "bd1cdef5-5320-4a28-9ebf-f1f2cfc1eeb9",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "bd1cdef5-5320-4a28-9ebf-f1f2cfc1eeb9",
@@ -662,8 +662,8 @@
       "key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "1ec03cdc-1d8b-4e43-9274-9c5b8a2c4b61",
@@ -676,8 +676,8 @@
       "key": "45c43875-1e0d-4904-b19e-1543e38f21b5",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "45c43875-1e0d-4904-b19e-1543e38f21b5",
@@ -702,8 +702,8 @@
       "key": "c002b037-f7f8-48ec-94ec-77ad666440ee",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c002b037-f7f8-48ec-94ec-77ad666440ee",
@@ -716,8 +716,8 @@
       "key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "6b744b8c-502a-4fc0-ace6-aa6f2bcc4033",
@@ -730,8 +730,8 @@
       "key": "cb717252-2d01-4692-83ec-116b1a2291b1",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cb717252-2d01-4692-83ec-116b1a2291b1",
@@ -756,8 +756,8 @@
       "key": "9209743a-77a4-452f-8550-b09c598d0d90",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 2
+        "duration": 2,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "9209743a-77a4-452f-8550-b09c598d0d90",
@@ -770,8 +770,8 @@
       "key": "5b0d405f-8fb2-4d7d-9788-f17fcedc6311",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 38
+        "duration": 38,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "5b0d405f-8fb2-4d7d-9788-f17fcedc6311",
@@ -784,8 +784,8 @@
       "key": "f0b4617d-df01-4d21-a587-3014b7dd1a7a",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f0b4617d-df01-4d21-a587-3014b7dd1a7a",
@@ -798,8 +798,8 @@
       "key": "afaf7d4b-9c31-4bec-80ac-88afa413c7d4",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "afaf7d4b-9c31-4bec-80ac-88afa413c7d4",
@@ -812,8 +812,8 @@
       "key": "f0b840a5-46be-495a-9906-47e5afc0f48f",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "f0b840a5-46be-495a-9906-47e5afc0f48f",
@@ -826,8 +826,8 @@
       "key": "e702b6b2-ad18-4510-867b-4e22edbc6982",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e702b6b2-ad18-4510-867b-4e22edbc6982",
@@ -840,8 +840,8 @@
       "key": "658f2369-87d2-47b0-b34c-80564dc3561d",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "658f2369-87d2-47b0-b34c-80564dc3561d",
@@ -854,8 +854,8 @@
       "key": "da2d05e1-924c-4e8b-bf6c-ca5e8cef154f",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "da2d05e1-924c-4e8b-bf6c-ca5e8cef154f",
@@ -868,8 +868,8 @@
       "key": "cd53058c-e2da-4a7c-91f8-1140084e3a79",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cd53058c-e2da-4a7c-91f8-1140084e3a79",
@@ -894,8 +894,8 @@
       "key": "43bacb97-90f7-40bd-823d-bda956c6692e",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 2
+        "duration": 2,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "43bacb97-90f7-40bd-823d-bda956c6692e",
@@ -908,8 +908,8 @@
       "key": "1d1a6cd3-77cb-4e43-9621-9b3d80635845",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 38
+        "duration": 38,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "1d1a6cd3-77cb-4e43-9621-9b3d80635845",
@@ -922,8 +922,8 @@
       "key": "c832696c-fc93-4fec-9d1e-e2499a18df80",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c832696c-fc93-4fec-9d1e-e2499a18df80",
@@ -936,8 +936,8 @@
       "key": "7e304135-f7ca-4b0c-bdf7-1fdf4db13657",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7e304135-f7ca-4b0c-bdf7-1fdf4db13657",
@@ -950,8 +950,8 @@
       "key": "db4b9346-ba9c-499a-9b28-eff2e3b0b727",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 40
+        "duration": 40,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "db4b9346-ba9c-499a-9b28-eff2e3b0b727",
@@ -977,8 +977,8 @@
       "key": "367be6ca-c5aa-4857-ad5e-ea06918c0a90",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 2
+        "duration": 2,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "367be6ca-c5aa-4857-ad5e-ea06918c0a90",
@@ -991,8 +991,8 @@
       "key": "4aaac0b2-4931-4d5d-a420-bf55e0600807",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 38
+        "duration": 38,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "4aaac0b2-4931-4d5d-a420-bf55e0600807",
@@ -1005,8 +1005,8 @@
       "key": "072e440f-e53e-4bad-bf13-98809d5cf7ac",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "072e440f-e53e-4bad-bf13-98809d5cf7ac",
@@ -1019,8 +1019,8 @@
       "key": "6f1686af-cd1b-48c7-a08b-91c574b5664f",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 2
+        "duration": 2,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6f1686af-cd1b-48c7-a08b-91c574b5664f",
@@ -1033,8 +1033,8 @@
       "key": "06f628a3-f41e-4b21-8c46-18a6f2902aa7",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 33
+        "duration": 33,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "06f628a3-f41e-4b21-8c46-18a6f2902aa7",
@@ -1047,8 +1047,8 @@
       "key": "7bdb4f33-8e9b-460e-a32d-af20240ea5dd",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7bdb4f33-8e9b-460e-a32d-af20240ea5dd",
@@ -1061,8 +1061,8 @@
       "key": "d17f6466-b510-422c-9ad0-93151060d7bc",
       "position": 1,
       "properties": {
-        "name": "Assessment",
-        "duration": 25
+        "duration": 25,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "d17f6466-b510-422c-9ad0-93151060d7bc",
@@ -1075,8 +1075,8 @@
       "key": "e4412b74-ca83-4679-9aa8-e583f8b43f3c",
       "position": 2,
       "properties": {
-        "name": "Assessment Review",
-        "duration": 20
+        "duration": 20,
+        "name": "Assessment Review"
       },
       "seeding_key": {
         "lesson_activity.key": "e4412b74-ca83-4679-9aa8-e583f8b43f3c",
@@ -1114,8 +1114,8 @@
       "key": "bbd31b65-9e49-4875-8d33-4868043f5a24",
       "position": 2,
       "properties": {
-        "name": "Sample Apps",
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
+        "name": "Sample Apps",
         "progression_name": "Sample Apps"
       },
       "seeding_key": {
@@ -1139,8 +1139,8 @@
       "position": 4,
       "properties": {
         "description": "Last unit we built apps that mostly focus on input and output. For example\n\n* When button clicked → show picture\n* When button clicked → change screen\n* When button clicked → play a sound\n\nBut we all want our programs to do more than that! In this unit we’re going to learn how to build apps that keep track of information and use to make decisions and perform calculations. This is going to let us build much more powerful apps! So let's get started by diving in deep on what's involved with programming with information.",
-        "remarks": true,
-        "name": "Preview the Unit"
+        "name": "Preview the Unit",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "4607fd2a-5cef-4a44-b62f-508b009931b2",
@@ -1277,8 +1277,8 @@
       "position": 1,
       "properties": {
         "description": "Yesterday we explored storing information like a computer. Computers store each piece of information in a variable. In Javascript, we name or declare a variable with the keyword `var`. Today we are going to look at a new app that stores information in variables.\n\n",
-        "remarks": true,
-        "name": "Preview the Lesson"
+        "name": "Preview the Lesson",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a1a44fc5-5b83-45fb-a0c6-ceefaac44f03",
@@ -1406,8 +1406,8 @@
       "position": 10,
       "properties": {
         "description": "We are learning two patterns here:\r\n\r\n* Counter Pattern with Event\r\n* Variables with String Concatenation Pattern\r\n\r\nThe Counter Pattern with Event is a common pattern for updating variables that you will use in making many different apps. We call it the **Counter Pattern with Event**.",
-        "remarks": true,
-        "name": "Patterns - 7 mins\r"
+        "name": "Patterns - 7 mins\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "cc54e7e2-9570-4288-984f-531927ddd29b",
@@ -1545,14 +1545,14 @@
       "position": 1,
       "properties": {
         "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "name": "Quick Warm Up",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code."
           }
-        ],
-        "remarks": true,
-        "name": "Quick Warm Up"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4c1abb58-c15b-4ffb-8e35-59c06fe8f43a",
@@ -1604,8 +1604,8 @@
       "key": "2f2a1c92-597a-448b-85c8-d2538610f5a9",
       "position": 4,
       "properties": {
-        "name": "Assigning Numbers and Strings",
         "description": "**Levels 1-2 Assigning Numbers and Strings:** These levels only use the console.log() command which prints commands in the debug console. Some key points in these levels.\n\n* Students should practice using the \"Watch\" area to track how variables change over a program\n* Students are asked to discuss what they see with a partner\n* These levels heavily reinforce language around assigning and creating variables\n* Level 2 is a debugging-heavy level which introduces more rules about syntax.\n",
+        "name": "Assigning Numbers and Strings",
         "progression_name": "Assigning Numbers and Strings"
       },
       "seeding_key": {
@@ -1617,8 +1617,8 @@
       "key": "0aa444f3-dc71-4156-bd82-4dd9384a344f",
       "position": 5,
       "properties": {
-        "name": "Variables and Operators",
         "description": "**Levels 3-7 Variables and Operators:** These levels have students practice writing more complex expressions and using operators. A few tricky things to look out for\n\n* These levels transition from using only [`console.log`(#BB77C7)](/docs/applab/console.log/) to using full apps with user interfaces.\n* Level 5 introduces `\\n`, the new line character\n* Students continue to be encouraged to discuss what they are learning with a neighbor\n* Levels 6 and 7 introduce the use of the counter pattern with numbers and strings. Students may need to consult the Help and Tips tab for support.",
+        "name": "Variables and Operators",
         "progression_name": "Variables and Operators"
       },
       "seeding_key": {
@@ -1647,8 +1647,8 @@
       "key": "a732bd47-4ca3-4bed-abc9-8c322ee19f10",
       "position": 7,
       "properties": {
-        "name": "Debugging Scope Issues",
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside [`onEvent()`(#fff176)](/docs/applab/onEvent/) or `function()` blocks",
+        "name": "Debugging Scope Issues",
         "progression_name": "Debugging Scope Issues"
       },
       "seeding_key": {
@@ -1660,8 +1660,8 @@
       "key": "ee21e1af-4bbd-4689-9f14-40d7e9de55e5",
       "position": 8,
       "properties": {
-        "name": "Putting it Together",
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.",
+        "name": "Putting it Together",
         "progression_name": "Putting it Together"
       },
       "seeding_key": {
@@ -1744,8 +1744,8 @@
       "position": 1,
       "properties": {
         "description": "For the past few days, we've learned a lot about storing and updating information in variables. Today you are going to have an opportunity to demonstrate your learning by making an app.",
-        "remarks": true,
-        "name": "Intro the Project"
+        "name": "Intro the Project",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "c6183ad2-1dbb-4ab2-87d9-5de3097a0271",
@@ -2036,8 +2036,8 @@
       "key": "7224965f-caf3-4d6a-bd67-d0b03548a815",
       "position": 2,
       "properties": {
-        "name": "Investigation 1: If-Statements",
         "duration": "15",
+        "name": "Investigation 1: If-Statements",
         "tips": [
           {
             "type": "teachingTip",
@@ -2055,13 +2055,13 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1 - Video - Conditionals: If Statements** As a class watch the video on if-statements.",
+        "progression_name": "Condi",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Show the Video at the Front:** In order to better keep the group together we recommend you show the videos at the front of the room.\r\n\r\n**Reinforce When vs. If:** As you make your way through these examples model using \"when\" and \"if\" as described in the warm up. For example, \"when\" the buttons are clicked the app is deciding \"if\" the temperature can change.\r\n\r\n"
           }
-        ],
-        "progression_name": "Condi"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3a3fe7fd-c0cf-4816-a366-0d3a729efa1c",
@@ -2116,8 +2116,8 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 5 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
-        "name": "Investigation 2: If-Else Statements",
         "duration": "10",
+        "name": "Investigation 2: If-Else Statements",
         "tips": [
           {
             "type": "teachingTip",
@@ -2157,8 +2157,8 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
-        "name": "Investigation 3: Logical Operators AND OR",
-        "duration": "10"
+        "duration": "10",
+        "name": "Investigation 3: Logical Operators AND OR"
       },
       "seeding_key": {
         "activity_section.key": "084f73ba-22aa-4103-9788-a1b4f5b8dc21",
@@ -2266,14 +2266,14 @@
       "position": 1,
       "properties": {
         "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "name": "Quick Warm Up\r",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code.\r\n"
           }
-        ],
-        "remarks": true,
-        "name": "Quick Warm Up\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "90e81e7a-387d-4e39-b02d-1625637a2544",
@@ -2465,8 +2465,8 @@
       "position": 2,
       "properties": {
         "description": "For the past few days, we've learned a lot about using conditional statements to help apps make decisions. In today's Make Project you'll be practicing both making flow charts and writing complex conditionals statements as you build a Museum Ticket Generator app.",
-        "remarks": true,
-        "name": "Intro the Project\r"
+        "name": "Intro the Project\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "5b1dd648-d91b-47bc-aadb-e2d59f30d8c5",
@@ -2501,13 +2501,13 @@
       "key": "49a6abb2-7c59-41b1-bfb9-67caae9cd568",
       "position": 3,
       "properties": {
+        "name": "Make the Museum Ticket Generator App",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Supporting Students:** While students are working on their apps, circulate the room and check in with students who need a little help. Encourage students to collaborate and discuss bugs with each other.  \r\n\r\n**Debugging:** Review with students steps they can use to debug if they get stuck:\r\n\r\n* Run the code on turtle mode\r\n* Add the variables to the watcher\r\n* Explain the code to a friend\r\n"
           }
-        ],
-        "name": "Make the Museum Ticket Generator App"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "49a6abb2-7c59-41b1-bfb9-67caae9cd568",
@@ -2724,14 +2724,14 @@
       "position": 1,
       "properties": {
         "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. In our next lesson you're going to have to use a lot of these on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
+        "name": "Quick Warm Up\r",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. You may optionally wish to do a quick vocabulary review or address any questions that came up in the last lesson. Otherwise, give students more time to get hands on with some code.\r\n"
           }
-        ],
-        "remarks": true,
-        "name": "Quick Warm Up\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "159c9ce3-099f-4151-9edb-c95dd7ec1aaa",
@@ -2821,13 +2821,13 @@
       "key": "a34eab70-e4bf-4879-b875-48b79b58c242",
       "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Levels 6 - 7 Function Scope:** These two levels return to a topic that was covered in the variables lessons as well: variable scope. While students do not need a deep understanding of scope at this point, they will in some instances encounter debugging challenges that arise because of it.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Level 7 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in the slides prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\n"
           }
-        ],
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Levels 6 - 7 Function Scope:** These two levels return to a topic that was covered in the variables lessons as well: variable scope. While students do not need a deep understanding of scope at this point, they will in some instances encounter debugging challenges that arise because of it."
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a34eab70-e4bf-4879-b875-48b79b58c242",
@@ -2939,8 +2939,8 @@
       "position": 2,
       "properties": {
         "description": "For the past few days, we've learned a lot about using functions to simplify code and make it easy to edit. So far we have learned how to use functions to remove repeated code in our programs. Early on it's common to realize you need a function only after you've completely written the same chunk of code in two places. As you get better, however, you'll realize sooner and sooner in the process that you're likely going to need a function, and will be able avoid writing repeated code before putting it inside a function. Eventually you'll want to anticipate what your functions are going to be even before you start programming. These are the \"during\" and \"before\" levels we read about yesterday.\r\n\r\nIn today's Make lesson and the following project you'll have a chance to practice this. See if sometimes you can work that \"during\" or \"before\" category.",
-        "remarks": true,
-        "name": "Anticipating Functions\r"
+        "name": "Anticipating Functions\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "78069fad-4076-48bc-aa8d-ada6aad298a2",
@@ -3066,13 +3066,13 @@
       "key": "71a5841d-5d3c-4bc7-9356-20b4eaaeee0b",
       "position": 1,
       "properties": {
+        "name": "Intro the Project",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \n"
           }
-        ],
-        "name": "Intro the Project"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "71a5841d-5d3c-4bc7-9356-20b4eaaeee0b",
@@ -3201,13 +3201,13 @@
       "key": "863c85b1-9368-4a33-990b-db7de969db84",
       "position": 1,
       "properties": {
+        "name": "Intro the Project\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \r\n"
           }
-        ],
-        "name": "Intro the Project\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "863c85b1-9368-4a33-990b-db7de969db84",
@@ -3218,8 +3218,8 @@
       "key": "dd01e364-7403-4726-8296-a3b8ddb104e3",
       "position": 2,
       "properties": {
-        "remarks": true,
-        "description": "Today we are continuing work on the Decision Maker App. Each level in Code Studio contains a step to think through while constructing your app."
+        "description": "Today we are continuing work on the Decision Maker App. Each level in Code Studio contains a step to think through while constructing your app.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "dd01e364-7403-4726-8296-a3b8ddb104e3",
@@ -3328,13 +3328,13 @@
       "key": "1965287c-b0b4-4937-8e9c-66d514bc0697",
       "position": 1,
       "properties": {
+        "name": "Intro the Project\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Short Intro:** The Warm Up today is short and light. Students should spend the maximum amount of time working on their projects. \r\n"
           }
-        ],
-        "name": "Intro the Project\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1965287c-b0b4-4937-8e9c-66d514bc0697",
@@ -3345,8 +3345,8 @@
       "key": "504befb8-acb9-4164-93e6-67aaf0680836",
       "position": 2,
       "properties": {
-        "remarks": true,
-        "description": "For the past few days we've been working on an app to help users make a decision. Now you will share that app with others, get feedback, make improvements, and submit for your final project."
+        "description": "For the past few days we've been working on an app to help users make a decision. Now you will share that app with others, get feedback, make improvements, and submit for your final project.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "504befb8-acb9-4164-93e6-67aaf0680836",
@@ -3434,13 +3434,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 4 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 4 Exam",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)\n"
           }
-        ],
-        "progression_name": "Unit 4 Exam"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3ed5adcb-4c30-43e9-a7ef-f7c8c97f1e69",
@@ -3466,13 +3466,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
@@ -3492,13 +3492,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Poetry App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Poetry App_2021"
@@ -3518,13 +3518,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Thermostat App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L01 Thermostat App_2021"
@@ -3544,13 +3544,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1 L02 CYU MC_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L02 CYU MC_2021"
@@ -3568,15 +3568,15 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v1_2021"
-        ]
+        ],
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1_2021"
@@ -3594,15 +3594,15 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
-        ]
+        ],
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
@@ -3620,15 +3620,15 @@
       "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v2_2021"
-        ]
+        ],
+        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v2_2021"
@@ -3646,15 +3646,15 @@
       "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
           "U4 L02 Thermostat App v3_2021"
-        ]
+        ],
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3_2021"
@@ -3672,15 +3672,15 @@
       "chapter": 9,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
-        ]
+        ],
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
@@ -3700,13 +3700,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U4 L02 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L02 CYU Exit Ticket_2021"
@@ -3724,15 +3724,15 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 1_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 1_2021"
@@ -3750,15 +3750,15 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 4_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables numbers practice 4_2021"
@@ -3776,15 +3776,15 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 1_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 1_2021"
@@ -3802,15 +3802,15 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 3_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 3_2021"
@@ -3828,15 +3828,15 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 2_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 2_2021"
@@ -3854,15 +3854,15 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 5_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 5_2021"
@@ -3880,15 +3880,15 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 6_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 6_2021"
@@ -3906,15 +3906,15 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Variable Scope: Local vs. Global_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variable Scope: Local vs. Global_2021"
@@ -3932,15 +3932,15 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Scope Issue_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Scope Issue_2021"
@@ -3958,15 +3958,15 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Putting it Together",
         "level_keys": [
           "U4 L03 Variables operator practice 4_2021"
-        ]
+        ],
+        "progression": "Putting it Together"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L03 Variables operator practice 4_2021"
@@ -3986,13 +3986,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding: AP Practice\r",
         "level_keys": [
           "U4L3 CFU Variables Psuedocode_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 CFU Variables Psuedocode_2021"
@@ -4012,13 +4012,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding: AP Practice\r",
         "level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode_2021"
@@ -4036,15 +4036,15 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Try the Photo Liker app",
         "level_keys": [
           "U4 L04 Variables Make Project_2021"
-        ]
+        ],
+        "progression": "Try the Photo Liker app"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L04 Variables Make Project_2021"
@@ -4064,13 +4064,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Photo Liker app",
         "level_keys": [
           "U4 L04 Variables Make Project Submit_2021"
-        ]
+        ],
+        "progression": "Make the Photo Liker app"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L04 Variables Make Project Submit_2021"
@@ -4088,15 +4088,15 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Conditionals: Boolean Expressions",
         "level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
-        ]
+        ],
+        "progression": "Conditionals: Boolean Expressions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
@@ -4116,13 +4116,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U4 L05 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L05 CYU Exit Ticket_2021"
@@ -4140,15 +4140,15 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L06 Lemon Hunter App v1 Code_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v1 Code_2021"
@@ -4166,15 +4166,15 @@
       "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if Statements_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if Statements_2021"
@@ -4192,15 +4192,15 @@
       "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements_2021"
@@ -4218,15 +4218,15 @@
       "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
@@ -4244,15 +4244,15 @@
       "chapter": 31,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4 L06 Lemon Hunter App v2 Code_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v2 Code_2021"
@@ -4270,15 +4270,15 @@
       "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR",
         "level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
-        ]
+        ],
+        "progression": "Logical Operators: AND OR"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
@@ -4296,15 +4296,15 @@
       "chapter": 33,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Logical Operators: AND OR",
         "level_keys": [
           "U4 L06 Lemon Hunter App v3 Code_2021"
-        ]
+        ],
+        "progression": "Logical Operators: AND OR"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v3 Code_2021"
@@ -4324,13 +4324,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Patterns: If-else-if",
         "level_keys": [
           "U4 L06 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Patterns: If-else-if"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L06 CYU Exit Ticket_2021"
@@ -4348,15 +4348,15 @@
       "chapter": 35,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Check Your Understanding",
         "level_keys": [
           "Checking Multiple Conditions with If-elseif_2021"
-        ]
+        ],
+        "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Checking Multiple Conditions with If-elseif_2021"
@@ -4374,15 +4374,15 @@
       "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 1_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 1_2021"
@@ -4400,15 +4400,15 @@
       "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 2_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 2_2021"
@@ -4426,15 +4426,15 @@
       "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 3_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 3_2021"
@@ -4452,15 +4452,15 @@
       "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 10_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 10_2021"
@@ -4478,15 +4478,15 @@
       "chapter": 40,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 4_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 4_2021"
@@ -4504,15 +4504,15 @@
       "chapter": 41,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 5_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 5_2021"
@@ -4530,15 +4530,15 @@
       "chapter": 42,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 6_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 6_2021"
@@ -4556,15 +4556,15 @@
       "chapter": 43,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice equivalent expressions_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice equivalent expressions_2021"
@@ -4582,15 +4582,15 @@
       "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Logical Operators",
         "level_keys": [
           "U4 L07 Conditionals Practice 7_2021"
-        ]
+        ],
+        "progression": "Logical Operators"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 7_2021"
@@ -4608,15 +4608,15 @@
       "chapter": 45,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Logical Operators",
         "level_keys": [
           "U4 L07 Conditionals Practice 8_2021"
-        ]
+        ],
+        "progression": "Logical Operators"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L07 Conditionals Practice 8_2021"
@@ -4636,13 +4636,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Conditionals Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode_2021"
@@ -4662,13 +4662,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Conditionals Psuedocode 2_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L10 CFU Conditionals Psuedocode 2_2021"
@@ -4686,15 +4686,15 @@
       "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Try to the Museum Ticket Generator App",
         "level_keys": [
           "U4 L08 Conditionals Make Project Sample_2021"
-        ]
+        ],
+        "progression": "Try to the Museum Ticket Generator App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L08 Conditionals Make Project Sample_2021"
@@ -4714,13 +4714,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Museum Ticket Generator App",
         "level_keys": [
           "U4L08 Museum Ticket Generator_2021"
-        ]
+        ],
+        "progression": "Make the Museum Ticket Generator App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L08 Museum Ticket Generator_2021"
@@ -4740,13 +4740,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore Functions",
         "level_keys": [
           "U4 L09 Functions Song_2021"
-        ]
+        ],
+        "progression": "Explore Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L09 Functions Song_2021"
@@ -4766,13 +4766,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4L09 Intro to Functions Video_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L09 Intro to Functions Video_2021"
@@ -4792,13 +4792,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4 L09 Score Clicker Investigate_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L09 Score Clicker Investigate_2021"
@@ -4818,13 +4818,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4 L09 Thermostat App v7_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L09 Thermostat App v7_2021"
@@ -4844,10 +4844,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "updateScreen Pattern_2021"
+        ],
         "progression": "Update Screen Pattern"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "updateScreen Pattern_2021"
@@ -4867,10 +4870,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U4 L09 CFU Exit Ticket_2021"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4 L09 CFU Exit Ticket_2021"
@@ -4888,15 +4894,15 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice Calling Functions 1_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice Calling Functions 1_2021"
@@ -4914,15 +4920,15 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 1_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice 1_2021"
@@ -4940,15 +4946,15 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 2_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice 2_2021"
@@ -4966,15 +4972,15 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 3_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Practice 3_2021"
@@ -4992,15 +4998,15 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Build Practice 2_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Build Practice 2_2021"
@@ -5018,15 +5024,15 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Function Scope",
         "level_keys": [
           "Debugging Variable Scope and Functions_2021"
-        ]
+        ],
+        "progression": "Function Scope"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Debugging Variable Scope and Functions_2021"
@@ -5044,15 +5050,15 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Function Scope",
         "level_keys": [
           "U4 L10 Functions Scope Practice 1 v2_2021"
-        ]
+        ],
+        "progression": "Function Scope"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Functions Scope Practice 1 v2_2021"
@@ -5070,15 +5076,15 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "When to Declare Functions",
         "level_keys": [
           "When to Make Functions Map_2021"
-        ]
+        ],
+        "progression": "When to Declare Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "When to Make Functions Map_2021"
@@ -5096,15 +5102,15 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "When to Declare Functions",
         "level_keys": [
           "U4 L10 Making Functions Practice_2021"
-        ]
+        ],
+        "progression": "When to Declare Functions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L10 Making Functions Practice_2021"
@@ -5124,13 +5130,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Functions Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L10 CFU Functions Psuedocode_2021"
@@ -5148,15 +5154,15 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Quote Maker App",
         "level_keys": [
           "U4 L11 Functions Make 1 2020_2021"
-        ]
+        ],
+        "progression": "Quote Maker App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L11 Functions Make 1 2020_2021"
@@ -5176,13 +5182,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Quote Maker App",
         "level_keys": [
           "U4 L11 Functions Make 2020_2021"
-        ]
+        ],
+        "progression": "Make the Quote Maker App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L11 Functions Make 2020_2021"
@@ -5200,15 +5206,15 @@
       "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L12 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L12 Practice PT 1_2021"
@@ -5226,15 +5232,15 @@
       "chapter": 69,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L12 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L12 Practice PT 2_2021"
@@ -5252,15 +5258,15 @@
       "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Create the Screens",
         "level_keys": [
           "U4 L13 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Create the Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 1_2021"
@@ -5278,15 +5284,15 @@
       "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Create the Variables",
         "level_keys": [
           "U4 L13 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Create the Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 2_2021"
@@ -5304,15 +5310,15 @@
       "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Create the Function",
         "level_keys": [
           "U4 L13 Practice PT 3_2021"
-        ]
+        ],
+        "progression": "Create the Function"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 3_2021"
@@ -5330,15 +5336,15 @@
       "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Add onEvents",
         "level_keys": [
           "U4 L13 Practice PT 4_2021"
-        ]
+        ],
+        "progression": "Add onEvents"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L13 Practice PT 4_2021"
@@ -5358,13 +5364,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test Your Decision Maker App",
         "level_keys": [
           "U4 L14 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Test Your Decision Maker App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L14 Practice PT 1_2021"
@@ -5384,13 +5390,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit Your Decision Maker App",
         "level_keys": [
           "U4 L14 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Submit Your Decision Maker App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4 L14 Practice PT 2_2021"
@@ -5410,13 +5416,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 4 Exam",
         "level_keys": [
           "CSP 20-21 Unit 4 Assessment_2021"
-        ]
+        ],
+        "progression": "Unit 4 Exam"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Unit 4 Assessment_2021"
@@ -6347,6 +6353,143 @@
   ],
   "resources": [
     {
+      "name": "CSP Conditionals Make - Museum Ticket Generator App",
+      "url": "https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit",
+      "key": "conditionals-make-activity-guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "conditionals-make-activity-guide"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "CS Principles: Conditionals - Part 1 Boolean Expressions",
+      "url": "https://www.youtube.com/watch?v=y3rCKJNOwpA&t=6s",
+      "key": "cs-principles-conditionals-part-1-boolean-expressions",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
+      }
+    },
+    {
+      "name": "CSP Functions Make - Quote Maker App",
+      "url": "https://docs.google.com/document/d/1K_0TbgCTNsO52Nm4rzy_o3P0X80SI8nx0KwHhHpFfrk/edit?usp=sharing",
+      "key": "csp_functions_make",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_functions_make"
+      }
+    },
+    {
+      "name": "CSP U4 Practice PT Planning Guide",
+      "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
+      "key": "csp_u4_practice_pt_planning_guide",
+      "properties": {
+        "type": "Planning Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_u4_practice_pt_planning_guide"
+      }
+    },
+    {
+      "name": "CSP U4 Practice PT Rubric",
+      "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
+      "key": "csp_u4_practice_pt_rubric",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_u4_practice_pt_rubric"
+      }
+    },
+    {
+      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
+      "url": "https://docs.google.com/presentation/d/1a4w7xtUqAs-3jxMdcLiwGayVA9r3x7k27oiVfsApRMs/edit?usp=sharing",
+      "key": "csp_unit_4_-_variables_conditionals_and_functions",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
+      }
+    },
+    {
+      "name": "CSP Debugging Guide",
+      "url": "https://docs.google.com/document/d/13wipr2CpR3kHY2_pLoiUtVPqt2prMaTASYr5XaRoy-Q/edit?usp=sharing",
+      "key": "debugging-guide-csp-20-21",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "debugging-guide-csp-20-21"
+      }
+    },
+    {
+      "name": "Debugging Global vs Local Variables",
+      "url": "https://youtu.be/Vlj1_X474to",
+      "key": "debugging_global_vs_local_variables",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_global_vs_local_variables"
+      }
+    },
+    {
+      "name": "Debugging Variable Scope: Functions",
+      "url": "https://drive.google.com/file/d/1f2vmIhT_8di6f_rXusxVzkDfiVRXjgLk/view?usp=sharing",
+      "key": "debugging_variable_scope_functions",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_variable_scope_functions"
+      }
+    },
+    {
+      "name": "EIPM: A Short Introduction",
+      "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
+      "key": "eipm_a_short_introduction",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "eipm_a_short_introduction"
+      }
+    },
+    {
       "name": "Guide to EIPM Lessons",
       "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
       "key": "guide_to_eipm_lessons",
@@ -6371,31 +6514,6 @@
       }
     },
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1a4w7xtUqAs-3jxMdcLiwGayVA9r3x7k27oiVfsApRMs/edit?usp=sharing",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "EIPM: A Short Introduction",
-      "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
-      "key": "eipm_a_short_introduction",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "eipm_a_short_introduction"
-      }
-    },
-    {
       "name": "Guide to Investigate Lessons",
       "url": "https://youtu.be/jC85CeXs3ds",
       "key": "guide_to_investigate_lessons",
@@ -6405,55 +6523,6 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_investigate_lessons"
-      }
-    },
-    {
-      "name": "CSP Debugging Guide",
-      "url": "https://docs.google.com/document/d/13wipr2CpR3kHY2_pLoiUtVPqt2prMaTASYr5XaRoy-Q/edit?usp=sharing",
-      "key": "debugging-guide-csp-20-21",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "debugging-guide-csp-20-21"
-      }
-    },
-    {
-      "name": "Guide to Practice Lessons",
-      "url": "https://youtu.be/Aad0UJXGcR4",
-      "key": "guide_to_practice_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "name": "Debugging Global vs Local Variables",
-      "url": "https://youtu.be/Vlj1_X474to",
-      "key": "debugging_global_vs_local_variables",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "debugging_global_vs_local_variables"
-      }
-    },
-    {
-      "name": "CSP Variables Make - Photo Liker App",
-      "url": "https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit",
-      "key": "variables-make-activity-guide",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "variables-make-activity-guide"
       }
     },
     {
@@ -6469,28 +6538,15 @@
       }
     },
     {
-      "name": "CS Principles: Conditionals - Part 1 Boolean Expressions",
-      "url": "https://www.youtube.com/watch?v=y3rCKJNOwpA&t=6s",
-      "key": "cs-principles-conditionals-part-1-boolean-expressions",
+      "name": "Guide to Practice Lessons",
+      "url": "https://youtu.be/Aad0UJXGcR4",
+      "key": "guide_to_practice_lessons",
       "properties": {
         "type": "Video",
-        "audience": "Student"
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
-      }
-    },
-    {
-      "name": "CSP Conditionals Make - Museum Ticket Generator App",
-      "url": "https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit",
-      "key": "conditionals-make-activity-guide",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "conditionals-make-activity-guide"
+        "resource.key": "guide_to_practice_lessons"
       }
     },
     {
@@ -6507,69 +6563,6 @@
       }
     },
     {
-      "name": "Debugging Variable Scope: Functions",
-      "url": "https://drive.google.com/file/d/1f2vmIhT_8di6f_rXusxVzkDfiVRXjgLk/view?usp=sharing",
-      "key": "debugging_variable_scope_functions",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "debugging_variable_scope_functions"
-      }
-    },
-    {
-      "name": "CSP Functions Make - Quote Maker App",
-      "url": "https://docs.google.com/document/d/1K_0TbgCTNsO52Nm4rzy_o3P0X80SI8nx0KwHhHpFfrk/edit?usp=sharing",
-      "key": "csp_functions_make",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_functions_make"
-      }
-    },
-    {
-      "name": "CSP U4 Practice PT Rubric",
-      "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
-      "key": "csp_u4_practice_pt_rubric",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_u4_practice_pt_rubric"
-      }
-    },
-    {
-      "name": "CSP U4 Practice PT Planning Guide",
-      "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
-      "key": "csp_u4_practice_pt_planning_guide",
-      "properties": {
-        "type": "Planning Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_u4_practice_pt_planning_guide"
-      }
-    },
-    {
-      "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
-      "key": "course_master_vocabulary",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "course_master_vocabulary"
-      }
-    },
-    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -6579,6 +6572,19 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "CSP Variables Make - Photo Liker App",
+      "url": "https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit",
+      "key": "variables-make-activity-guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "variables-make-activity-guide"
       }
     }
   ],
