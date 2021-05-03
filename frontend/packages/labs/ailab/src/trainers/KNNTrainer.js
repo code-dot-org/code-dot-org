@@ -4,6 +4,9 @@ https://github.com/mljs/knn */
 import { store } from "../index.js";
 import {
   isRegression,
+  getAccuracyRegression,
+  getAccuracyClassification,
+  setKValue,
   setModelSize,
   setTrainedModel,
   setPrediction,
@@ -27,27 +30,61 @@ export default class KNNTrainer {
 
   startTraining() {
     const state = store.getState();
-    const k = isRegression(state) ? 5 : Math.round(0.33 * state.data.length);
-    this.knn = new KNN(state.trainingExamples, state.trainingLabels, {k: k});
-    var model = this.knn.toJSON();
-    store.dispatch(setTrainedModel(model));
-    const size = Buffer.byteLength(JSON.stringify(model));
-    const kiloBytes = size / 1024;
-
+    let bestModel = null;
+    let bestPredictedLabels = [];
+    let bestK = -1;
+    let bestAccuracy = -1;
     if (state.accuracyCheckExamples.length > 0) {
-      this.batchPredict(state.accuracyCheckExamples);
+      const kValues = this.calculatePossibleKValues();
+      kValues.forEach(kValue => {
+        this.knn = new KNN(
+          state.trainingExamples,
+          state.trainingLabels,
+          {k: kValue}
+        );
+        var model = this.knn.toJSON();
+        const predictedLabels = this.batchPredict(state.accuracyCheckExamples);
+        const accuracy = this.getAccuracyPercent();
+        if (accuracy > bestAccuracy) {
+          bestAccuracy = accuracy;
+          bestK = kValue;
+          bestModel = model;
+          bestPredictedLabels = predictedLabels;
+        }
+      })
     } else {
-      store.dispatch(setAccuracyCheckPredictedLabels([]));
+      const defaultK = isRegression(state) ?
+        5 : Math.round(state.data.length/3);
+      this.knn = new KNN(
+        state.trainingExamples,
+        state.trainingLabels,
+        {k: defaultK}
+      );
+      bestModel = this.knn.toJSON();
+      bestK = defaultK;
     }
-
+    store.dispatch(setKValue(bestK));
+    store.dispatch(setAccuracyCheckPredictedLabels(bestPredictedLabels));
+    store.dispatch(setTrainedModel(bestModel));
+    const size = Buffer.byteLength(JSON.stringify(bestModel));
+    const kiloBytes = size / 1024;
     setTimeout(() => {
       store.dispatch(setModelSize(kiloBytes));
     }, 3000);
   }
 
+  getAccuracyPercent() {
+    const state = store.getState();
+    const percent = isRegression(state)
+      ? getAccuracyRegression(state).percentCorrect
+      : getAccuracyClassification(state).percentCorrect;
+    return parseFloat(percent);
+  }
+
   batchPredict(accuracyCheckExamples) {
     const predictedLabels = this.knn.predict(accuracyCheckExamples);
     store.dispatch(setAccuracyCheckPredictedLabels(predictedLabels));
+    return predictedLabels;
   }
 
   predict(testValues) {
