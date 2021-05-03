@@ -19,6 +19,9 @@
 class Foorm::SimpleSurveySubmission < ApplicationRecord
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
+  belongs_to :simple_survey_form
+
+  validates :simple_survey_form, presence: true
 
   def save_with_foorm_submission(answers, form_name, form_version)
     ActiveRecord::Base.transaction do
