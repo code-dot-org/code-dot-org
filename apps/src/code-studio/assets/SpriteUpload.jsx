@@ -30,18 +30,19 @@ export default class SpriteUpload extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    const {spriteAvailability, fileData, category, filename} = this.state;
 
     let destination =
-      this.state.spriteAvailability === spriteLocation.LEVEL
-        ? `/level_animations/${this.state.filename}`
-        : `/spritelab/category_${this.state.category}/${this.state.filename}`;
+      spriteAvailability === spriteLocation.LEVEL
+        ? `/level_animations/${filename}`
+        : `/spritelab/category_${category}/${filename}`;
 
     return fetch(`/api/v1/animation-library` + destination, {
       method: 'POST',
       headers: {
         'Content-Type': 'image/png'
       },
-      body: this.state.fileData
+      body: fileData
     })
       .then(response => {
         let responseMessage = response.ok
