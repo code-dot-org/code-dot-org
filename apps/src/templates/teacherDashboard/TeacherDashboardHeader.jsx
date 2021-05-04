@@ -1,6 +1,7 @@
 import FontAwesome from './../FontAwesome';
 import React from 'react';
 import {connect} from 'react-redux';
+import Notification, {NotificationType} from '../Notification';
 import {
   switchToSection,
   recordSwitchToSection,
@@ -77,6 +78,16 @@ class TeacherDashboardHeader extends React.Component {
     return options;
   }
 
+  lockedSectionNotification = ({restrictSection, loginType}) =>
+    restrictSection && (
+      <Notification
+        type={NotificationType.failure}
+        notice={i18n.manageStudentsNotificationLocked()}
+        details={i18n.manageStudentsNotificationLockedDetails({loginType})}
+        dismissable={false}
+      />
+    );
+
   render() {
     return (
       <div>
@@ -85,6 +96,10 @@ class TeacherDashboardHeader extends React.Component {
           linkText={i18n.viewAllSections()}
           isRtl={true}
           chevronSide="left"
+        />
+        <this.lockedSectionNotification
+          restrictSection={this.props.selectedSection.restrictSection}
+          loginType={this.props.selectedSection.loginType}
         />
         <div style={styles.header}>
           <div>
