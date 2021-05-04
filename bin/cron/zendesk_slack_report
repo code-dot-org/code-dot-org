@@ -63,7 +63,7 @@ GROUP_FILTERS = {
 
 # Slack room -> username of a code.org email
 MONITORING_USERS = {
-  'regional_managers' => ['zendesk-outreach'],
+  'pl-team-only' => ['zendesk-pl'],
 }
 
 class Zendesk
