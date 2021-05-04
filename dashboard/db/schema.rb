@@ -500,6 +500,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
   create_table "foorm_simple_survey_submissions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "foorm_submission_id", null: false
     t.integer "user_id"
+    t.bigint "simple_survey_form_id"
     t.string "misc_form_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
