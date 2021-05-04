@@ -168,22 +168,23 @@ function addRecoveryBars() {
   for (var i = 0; i < spriteIds.length; i++) {
     var spriteIdArg = {id: spriteIds[i]};
     var isSick = getProp(spriteIdArg, "sick");
-    if (isSick) {
-      var spriteX = getProp(spriteIdArg, "x");
-      var spriteY = 400 - getProp(spriteIdArg, "y");
-      var recovery = getProp(spriteIdArg, "recovery");
+    if (!isSick) {
+      continue;
+    }
+    var spriteX = getProp(spriteIdArg, "x");
+    var spriteY = 400 - getProp(spriteIdArg, "y");
+    var recovery = getProp(spriteIdArg, "recovery");
 
-      var barWidth = 0.65 * SPRITE_WIDTH;
-      var barY = spriteY - (SPRITE_HEIGHT / 2) - RECOVERY_BAR_HEIGHT * 1.5;
-      var percentFilled = 1 - recovery / RECOVERY_TIME;
+    var barWidth = 0.65 * SPRITE_WIDTH;
+    var barY = spriteY - (SPRITE_HEIGHT / 2) - RECOVERY_BAR_HEIGHT * 1.5;
+    var percentFilled = 1 - recovery / RECOVERY_TIME;
 
-      fill("white");
-      rect(spriteX - barWidth / 2, barY, barWidth, RECOVERY_BAR_HEIGHT);
+    fill("white");
+    rect(spriteX - barWidth / 2, barY, barWidth, RECOVERY_BAR_HEIGHT);
 
-      if (percentFilled > 0) {
-        fill("lime");
-        rect(spriteX - barWidth / 2, barY, percentFilled * barWidth, RECOVERY_BAR_HEIGHT);
-      }
+    if (percentFilled > 0) {
+      fill("lime");
+      rect(spriteX - barWidth / 2, barY, percentFilled * barWidth, RECOVERY_BAR_HEIGHT);
     }
   }
   pop();
