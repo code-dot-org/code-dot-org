@@ -1,6 +1,6 @@
 module SurveyResultsHelper
   DIVERSITY_SURVEY_ENABLED = false
-  NPS_SURVEY_ENABLED = false
+  NPS_SURVEY_ENABLED = true
 
   def show_diversity_survey?(kind)
     return false unless SurveyResultsHelper::DIVERSITY_SURVEY_ENABLED
@@ -18,11 +18,11 @@ module SurveyResultsHelper
     return true
   end
 
-  def show_nps_survey?(kind)
+  def show_nps_survey?
     return false unless SurveyResultsHelper::NPS_SURVEY_ENABLED
     return false unless current_user
-    # Nov 2020: only display to half of teachers
-    return false unless current_user.id.even?
+    # May 2021: only display to teachers with odd ids
+    return false unless current_user.id.odd?
     return false unless language == "en"
     return false if current_user.under_13?
     return false unless country_us?
