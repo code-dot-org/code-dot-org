@@ -65,6 +65,7 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     const {
       levelStatus,
       levelKind,
+      isLocked,
       isUnplugged,
       isConcept,
       isBonus,
@@ -74,12 +75,12 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     } = this.props;
 
     const content = getBubbleContent(
+      isLocked,
       isUnplugged,
       isBonus,
       isPaired,
       title,
-      bubbleSize,
-      levelStatus
+      bubbleSize
     );
 
     return (
