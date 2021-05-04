@@ -19,7 +19,7 @@ const styles = {
   },
   dismiss: {
     position: 'absolute',
-    right: '25px',
+    left: '130px',
     bottom: '40px'
   }
 };
