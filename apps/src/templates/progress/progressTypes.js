@@ -66,7 +66,7 @@ export const levelType = PropTypes.shape(levelShape);
 export const levelWithProgressType = PropTypes.shape({
   ...levelShape,
   status: PropTypes.string.isRequired,
-  isLocked: PropTypes.bool.isRequired,
+  isLocked: PropTypes.bool,
   isCurrentLevel: PropTypes.bool
 });
 
