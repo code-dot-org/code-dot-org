@@ -1,6 +1,32 @@
 module Foorm
+  # Should this be renamed to SimpleSurveyForm(s)Controller?
   class SimpleSurveyController < ApplicationController
+    # Add admin authorization for /new and create and index
+
     FOORM_SIMPLE_SURVEY_SUBMIT_API = '/dashboardapi/v1/foorm/simple_survey_submission'
+
+    def new
+    end
+
+    def create
+      form = Foorm::Form.all.detect {|f| f.key == params[:form_key]}
+
+      # This can probably be less verbose
+      ss = Foorm::SimpleSurveyForm.new(
+        kind: params[:kind],
+        path: params[:path],
+        form_name: form.name,
+        form_version: form.version,
+        allow_multiple_submissions: !!params[:allow_multiple_submissions]
+      )
+
+      # This doesn't work yet
+      if ss.save
+        return render :success
+      else
+        render 'new'
+      end
+    end
 
     # General simple survey.
     # GET '/form/:path'
@@ -42,7 +68,7 @@ module Foorm
           formQuestions: form_questions,
           formName: form_data[:form_name],
           formVersion: form_data[:form_version] || 0,
-          surveyData: params[:survey_data] || form_data[:survey_data],
+          surveyData: params[:survey_data] || form_data.survey_data,
           submitApi: FOORM_SIMPLE_SURVEY_SUBMIT_API,
           submitParams: key_params
         }.to_json
