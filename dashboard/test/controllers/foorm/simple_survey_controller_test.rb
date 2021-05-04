@@ -5,7 +5,7 @@ module Foorm
     setup do
       @teacher = create :teacher
       @user = create :user
-      DCDO.set('foorm_misc_survey_disabled', ['csp_post_course'])
+      DCDO.set('foorm_simple_survey_disabled', ['csp_post_course'])
     end
 
     test 'renders foorm if teacher is logged in' do
