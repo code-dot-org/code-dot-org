@@ -68,8 +68,8 @@ class TrainModel extends Component {
   };
 
   render() {
-    const translateX = 15 + this.getAnimationProgess() * (50 - 15);
-    const translateY = 50 - Math.sin(this.getAnimationProgess() * Math.PI) * 30;
+    const translateX = 15 + this.getAnimationProgess() * (100 - 15);
+    const translateY = 80 - Math.sin(this.getAnimationProgess() * Math.PI) * 30;
     const rotateZ = this.getAnimationProgess() * 60;
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
 
@@ -85,13 +85,14 @@ class TrainModel extends Component {
       >
         <Statement/>
 
+        <div style={styles.trainModelDataTable}>
+          <DataTable
+            reducedColumns={true}
+            startingRow={this.getAnimationStep()}
+          />
+        </div>
+
         <div style={styles.trainModelContainer}>
-          <div style={styles.trainModelDataTable}>
-            <DataTable
-              reducedColumns={true}
-              startingRow={this.getAnimationStep()}
-            />
-          </div>
 
           <div
             style={{

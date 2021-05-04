@@ -644,14 +644,6 @@ export function getUniqueOptionsByColumn(state) {
   return uniqueOptionsByColumn;
 }
 
-export function getExtremumsByColumn(state) {
-  let extremumsByColumn = {};
-  getNumericalColumns(state).map(
-    column => (extremumsByColumn[column] = getRange(state, column, false))
-  );
-  return extremumsByColumn;
-}
-
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
   getNumericalColumns(state).map(
@@ -952,34 +944,12 @@ export function getTrainedModelDataToSave(state) {
 
   dataToSave.name = state.trainedModelDetails.name;
 
-  // If the first column has a description, assume descriptions are in the
-  // metadata for that dataset and use them; otherwise, use manually entered
-  // column descriptions.
-  if (
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields[0].description
-  ) {
-    dataToSave.columns = [];
-    for (const columnDescription of getSelectedColumnDescriptions(state)) {
-      dataToSave.columns.push({
-        id: columnDescription.id,
-        description: columnDescription.description
-      });
-    }
-  } else {
-    dataToSave.columns = state.trainedModelDetails.columns;
-  }
-
   dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
   dataToSave.selectedTrainer = getSelectedTrainer(state);
-  dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
-  dataToSave.extremumsByColumn = getExtremumsByColumn(state);
-  dataToSave.labelColumn = state.labelColumn;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
@@ -1023,6 +993,8 @@ const panelList = [
 ];
 */
 
+// Is a panel ready to be visited?  This determines whether a visible
+// nav button is enabled or disabled.
 function isPanelEnabled(state, panelId) {
   if (panelId === "specifyColumns") {
     if (state.data.length === 0) {
@@ -1091,6 +1063,8 @@ function isPanelEnabled(state, panelId) {
   return true;
 }
 
+// Is a panel available to be shown?  This determines what panels
+// can possibly be visited in the app.
 function isPanelAvailable(state, panelId) {
   const mode = state.mode;
 
@@ -1341,4 +1315,10 @@ function areArraysEqual(array1, array2) {
       return value === array2[index];
     })
   );
+}
+
+export function isUserUploadedDataset(state) {
+  // The csvfile for internally curated datasets are strings; those uploaded by
+  // users are objects. Use data type as a proxy to know which case we're in.
+  return typeof state.csvfile === 'object' && state.csvfile !== null;
 }

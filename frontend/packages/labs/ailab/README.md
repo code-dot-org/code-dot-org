@@ -21,6 +21,8 @@ AI Lab is a highly configurable environment providing a student experience for d
 
 It can be run standalone for more rapid development, though its ultimate destination is to appear in [Code Studio](https://studio.code.org/).  When run standalone, it does not have all of the styling of Code Studio.  It also calls stub functions for completion, saving a trained model, and indicating which [Dynamic](https://github.com/code-dot-org/code-dot-org/pull/39384) [Instruction](https://github.com/code-dot-org/ml-playground/pull/97) should be shown.  The standalone runtime does have a dropdown for selecting which set of level parameters are used, in lieu of a level providing these parameters, and it also shows the current Dynamic Instruction identifier.
 
+The standalone runtime is also deployed to https://code-dot-org.github.io/ml-playground/ though we might vary which branch is published there.
+
 ## Common operations
 
 ### First time:
