@@ -1,7 +1,6 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
 import i18n from '@cdo/locale';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
@@ -61,19 +60,18 @@ describe('ProgressTableStudentList', () => {
   });
 
   it('passes prop showSectionProgressDetails to ProgressTableStudentName', () => {
-    const wrapper = setUp({showSectionProgressDetails: true});
+    const wrapper = mount(
+      <ProgressTableStudentList
+        {...DEFAULT_PROPS}
+        showSectionProgressDetails={true}
+      />
+    );
     expect(
       wrapper.first(ProgressTableStudentName).props().showSectionProgressDetails
     ).to.be.true;
   });
 
   it('displays detail labels if detail rows are passed in', () => {
-    // ProgressTableStudentName is a connected component so we need to stub
-    // the student name formatter to avoid setting up a store
-    sinon
-      .stub(ProgressTableStudentList.prototype, 'studentNameFormatter')
-      .callsFake(_ => <div />);
-
     // reactabular initially only renders three rows, so we use a single
     // student to avoid needing to workaround that.
     const rows = [STUDENT_ROWS[0], ...DETAIL_ROWS];
@@ -84,7 +82,5 @@ describe('ProgressTableStudentList', () => {
     );
     expect(wrapper.contains(i18n.timeSpentMins())).to.be.true;
     expect(wrapper.contains(i18n.lastUpdatedTitle())).to.be.true;
-
-    sinon.restore();
   });
 });
