@@ -19,6 +19,8 @@ export default function JoinSectionNotifications({action, result, name, id}) {
     return <JoinSectionExistsNotification sectionName={name} />;
   } else if (action === 'join' && result === 'section_owned') {
     return <JoinSectionOwnedNotification sectionId={id} />;
+  } else if (action === 'join' && result === 'section_full') {
+    return <JoinSectionFullNotification sectionId={id} />;
   }
   return null;
 }
@@ -61,6 +63,18 @@ const JoinSectionNotFoundNotification = ({sectionId}) => (
   />
 );
 JoinSectionNotFoundNotification.propTypes = {
+  sectionId: PropTypes.string.isRequired
+};
+
+const JoinSectionFullNotification = ({sectionId}) => (
+  <Notification
+    type="failure"
+    notice={i18n.sectionsNotificationFailure()}
+    details={i18n.sectionsNotificationJoinFull({sectionId})}
+    dismissible={true}
+  />
+);
+JoinSectionFullNotification.propTypes = {
   sectionId: PropTypes.string.isRequired
 };
 

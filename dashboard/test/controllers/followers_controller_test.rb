@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'rake'
 
 class FollowersControllerTest < ActionController::TestCase
   setup do
@@ -126,6 +127,33 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to '/'
     expected = I18n.t('follower.error.provider_managed_section', provider: 'Clever')
     assert_equal(expected, flash[:alert])
+  end
+
+  test 'student_user_new errors when joing a section already at capacity' do
+    sign_in @student
+    # get Capacity Section dependant on running
+    # RAILS_ENV=test bundle exec rake seed:restricted_section
+    section = Section.where(name: 'Section Capacity Test').take
+
+    # If the `RAILS_ENV=test bundle exec rake seed:restricted_section`
+    # seeder script has not run:
+    unless section
+      puts 'running'
+      section = create(:section, login_type: 'email')
+
+      500.times do
+        create(:follower, section: section)
+      end
+
+    end
+
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/join'
+    expected = I18n.t('follower.error.full_section', section_code: section.code)
+    assert_equal(expected, flash[:inline_alert])
   end
 
   test "student_user_new does not allow joining your own section" do
