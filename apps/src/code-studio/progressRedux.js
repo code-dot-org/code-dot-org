@@ -557,8 +557,9 @@ const peerReviewLevels = state =>
     // These aren't true levels (i.e. we won't have an entry in levelResults),
     // so always use a specific id that won't collide with real levels
     ...level,
-    id: PEER_REVIEW_ID,
+    id: PEER_REVIEW_ID.toString(),
     isLocked: level.locked,
+    status: level.status || LevelStatus.not_tried,
     levelNumber: index + 1
   }));
 
