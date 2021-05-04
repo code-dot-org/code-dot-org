@@ -6,7 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import autogenerateML from '@cdo/apps/applab/ai';
 
 const DEFAULT_MARGIN = 7;
 
@@ -41,7 +40,7 @@ const styles = {
     whiteSpace: 'pre-wrap'
   },
   spinner: {
-    height: 'calc(80vh - 150px)',
+    height: 'calc(80vh - 140px)',
     color: color.dark_charcoal
   }
 };
@@ -50,6 +49,7 @@ export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
+    autogenerateML: PropTypes.func,
     // Levelbuilders can pre-populate App Lab levels with a pre-trained model.
     levelbuilderModel: PropTypes.object
   };
@@ -111,7 +111,7 @@ export default class ModelManagerDialog extends React.Component {
   importMLModel = async () => {
     this.setState({isImportPending: true});
     const modelId = this.root.value;
-    await autogenerateML(modelId);
+    await this.props.autogenerateML(modelId);
     this.setState({isImportPending: false});
     this.closeModelManager();
   };
@@ -155,7 +155,7 @@ export default class ModelManagerDialog extends React.Component {
       this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
     return (
-      <div className="ml-modal">
+      <div>
         <BaseDialog
           isOpen={isOpen}
           handleClose={this.closeModelManager}
