@@ -97,7 +97,7 @@ describe('ProgressTableView', () => {
       .false;
   });
 
-  it('passes something down to child', () => {
+  it('passes showSectionProgressDetails down to ProgressTableStudentList', () => {
     const overrideState = {sectionProgress: {showSectionProgressDetails: true}};
     const wrapper = setUp(ViewType.SUMMARY, overrideState);
     expect(
