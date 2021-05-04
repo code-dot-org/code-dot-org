@@ -2,7 +2,16 @@
 var RECOVERY_TIME = 250;
 var RECOVERY_BAR_HEIGHT = 5;
 var PERCENT_SICK_AT_SETUP = 10;
+var SPRITE_SIZE = 25;
 /* --------------- END OF CONSTANTS- Curriculum Owned --------------- */
+
+/* -------------- START OF CALCULATED CONSTANTS - Engineering Owned --------------*/
+var ANIMATION_WIDTH = 280; // from animationJson
+var ANIMATION_HEIGHT = 290; // from animationJson
+var BASE_SCALE = 100 / Math.max(ANIMATION_WIDTH, ANIMATION_HEIGHT);
+var SPRITE_WIDTH = ANIMATION_WIDTH * BASE_SCALE * SPRITE_SIZE / 100;
+var SPRITE_HEIGHT = ANIMATION_HEIGHT * BASE_SCALE * SPRITE_SIZE / 100;
+/* --------------- END OF CALCULATED CONSTANTS - Engineering Owned ---------------*/
 
 /* -------------- START OF MONSTER BEHAVIOR DEFINITIONS- Curriculum Owned -------------- */
 function congregatingBehavior(spriteIdArg) {
@@ -81,13 +90,13 @@ repeatForever(function () {
 /* ------------------------- END OF LIBRARY LOGIC ------------------------- */
 
 
-/* --------------- START OF BLOCKS API : Engineering Owned --------------- */
+/* --------------- START OF BLOCKS API - Engineering Owned --------------- */
 function setupOutbreak(numMonsters, callback) {
   var numSick = Math.round(PERCENT_SICK_AT_SETUP * 0.01 * numMonsters);
+  setDefaultSpriteSize(SPRITE_SIZE);
   makeNumSprites(numMonsters - numSick, "healthy");
   makeNumSprites(numSick, "sick");
-  getSick({costume: "sick"}, "sick");
-  setProp({costume: "all"}, "scale", 25);
+  getSick({costume: "sick"});
   callback();
 }
 
@@ -129,7 +138,7 @@ function stopMoving() {
 }
 /* -------------------------- END OF BLOCKS API -------------------------- */
 
-/* --------------- START OF HELPER FUNCTIONS : Engineering Owned --------------- */
+/* --------------- START OF HELPER FUNCTIONS - Engineering Owned --------------- */
 function getSick(spriteIdArg) {
   setProp(spriteIdArg, "sick", true);
   var isWearingMask = getProp(spriteIdArg, "mask");
@@ -160,15 +169,12 @@ function addRecoveryBars() {
     var spriteIdArg = {id: spriteIds[i]};
     var isSick = getProp(spriteIdArg, "sick");
     if (isSick) {
-      var spriteScale = getProp(spriteIdArg, "scale") / 100;
-      var spriteWidth = getProp(spriteIdArg, "width");
-      var spriteHeight = getProp(spriteIdArg, "height");
       var spriteX = getProp(spriteIdArg, "x");
       var spriteY = 400 - getProp(spriteIdArg, "y");
       var recovery = getProp(spriteIdArg, "recovery");
 
-      var barWidth = 0.65 * spriteWidth;
-      var barY = spriteY - (spriteHeight / 2) - RECOVERY_BAR_HEIGHT * 1.5;
+      var barWidth = 0.65 * SPRITE_WIDTH;
+      var barY = spriteY - (SPRITE_HEIGHT / 2) - RECOVERY_BAR_HEIGHT * 1.5;
       var percentFilled = 1 - recovery / RECOVERY_TIME;
 
       fill("white");
