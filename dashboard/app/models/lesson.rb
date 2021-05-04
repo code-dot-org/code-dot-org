@@ -732,7 +732,7 @@ class Lesson < ApplicationRecord
       copied_lesson.script_id = destination_script.id
       copied_lesson.lesson_group_id = destination_script.lesson_groups.last.id
 
-      copied_lesson.absolute_position = destination_script.lessons.last.absolute_position + 1
+      copied_lesson.absolute_position = (destination_script.lessons.last&.absolute_position || 0) + 1
       numbered_lesson = copied_lesson.has_lesson_plan || !copied_lesson.lockable
       copied_lesson.relative_position =
         if numbered_lesson
@@ -781,20 +781,22 @@ class Lesson < ApplicationRecord
           if persisted_resource
             persisted_resource
           else
-            copied_resource = Resource.create(original_resource.attributes.merge({course_version_id: course_version.id}).except('id', 'key'))
+            copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
             copied_resource
           end
-        end
+        end.uniq
 
         copied_lesson.vocabularies = original_lesson.vocabularies.map do |original_vocab|
           persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
-          if persisted_vocab && persisted_vocab.common_sense_media == original_vocab.common_sense_media
+          if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
             persisted_vocab
           else
             copied_vocab = Vocabulary.create(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
             copied_vocab
           end
-        end
+        end.uniq
+      elsif !original_lesson.resources.empty? || !original_lesson.vocabularies.empty?
+        puts 'Could not copy resources and vocabulary as destination script does not have a course version'
       end
 
       copied_lesson.save!
