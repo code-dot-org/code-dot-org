@@ -208,6 +208,8 @@ class LevelDetailsDialog extends Component {
   }
 
   recordSeeFullLevelClick = (level, scriptLevel) => {
+    const baseUrl = level.url || scriptLevel.url;
+    const url = `${baseUrl}?no_redirect=1`;
     firehoseClient.putRecord(
       {
         study: 'lesson-plan',
@@ -220,7 +222,7 @@ class LevelDetailsDialog extends Component {
       {
         includeUserId: true,
         callback: () => {
-          windowOpen(level.url || scriptLevel.url, 'noopener', 'noreferrer');
+          windowOpen(url, 'noopener', 'noreferrer');
         }
       }
     );
