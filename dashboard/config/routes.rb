@@ -840,9 +840,8 @@ Dashboard::Application.routes.draw do
 
   get '/help', to: redirect("https://support.code.org")
 
-  get '/form/:path', to: 'foorm/simple_survey#new'
-
-  get '/form/:path/show', to: 'foorm/simple_survey#show'
+  get '/form/:path/configuration', to: 'foorm/simple_survey#configuration'
+  get '/form/:path', to: 'foorm/simple_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
