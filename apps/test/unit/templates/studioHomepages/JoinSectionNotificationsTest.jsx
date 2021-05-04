@@ -40,6 +40,12 @@ const ALREADY_OWNED = {
   id: 'ABCDEF'
 };
 
+const AT_CAPACITY = {
+  action: 'join',
+  result: 'section_full',
+  id: 'ABCDEF'
+};
+
 describe('JoinSectionNotifications', () => {
   it('renders correct component when successfully join a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_JOIN} />);
@@ -71,5 +77,10 @@ describe('JoinSectionNotifications', () => {
   it('renders correct component when teacher already owns the section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...ALREADY_OWNED} />);
     expect(wrapper.find('JoinSectionOwnedNotification')).to.have.lengthOf(1);
+  });
+
+  it('renders correct component when section is at capacity (already has 500 students)', () => {
+    let wrapper = shallow(<JoinSectionNotifications {...AT_CAPACITY} />);
+    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(1);
   });
 });

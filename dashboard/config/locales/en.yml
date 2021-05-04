@@ -291,11 +291,8 @@ en:
       blank_code: "Please enter a section code"
       cant_join_own_section: "Sorry, you can't join your own section."
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
-<<<<<<< HEAD
-=======
       restricted_section: "We couldn't add you to section %{section_code} because it is locked. Please contact your teacher for help."
       full_section: "We couldn't add you to section %{section_code} because there are already 500 students in it. Please contact your teacher for help."
->>>>>>> cd5c690fec7... Create i18n strings for FDN-1529
     mail:
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
