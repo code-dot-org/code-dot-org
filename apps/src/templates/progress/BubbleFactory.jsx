@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
   bubbleStyles,
   BubbleSize,
@@ -102,12 +101,12 @@ LinkWrapper.propTypes = {
  */
 
 export function getBubbleContent(
+  isLocked,
   isUnplugged,
   isBonus,
   isPaired,
   title,
-  bubbleSize,
-  status
+  bubbleSize
 ) {
   if (bubbleSize === BubbleSize.dot) {
     // dot-sized bubbles are too small for content
@@ -115,7 +114,7 @@ export function getBubbleContent(
   }
   return isUnplugged ? (
     <span>{i18n.unpluggedActivity()}</span>
-  ) : isBubbleLockedForStatus(status) ? (
+  ) : isLocked ? (
     <FontAwesome icon="lock" />
   ) : isPaired ? (
     <FontAwesome icon="users" />
