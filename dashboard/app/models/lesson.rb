@@ -725,29 +725,20 @@ class Lesson < ApplicationRecord
 
   def self.copy_to_script(original_lesson, destination_script)
     return if original_lesson.script == destination_script
-    copied_lesson = copy_to_lesson_group(original_lesson, destination_script.lesson_groups.last)
-    destination_script.write_script_json
-    Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
-    copied_lesson
-  end
 
-  def self.copy_to_lesson_group(original_lesson, destination_lesson_group)
-    return if original_lesson.script == destination_lesson_group.script
-    destination_script = destination_lesson_group.script
     ActiveRecord::Base.transaction do
       copied_lesson = original_lesson.dup
       copied_lesson.key = copied_lesson.name
-      copied_lesson.script_id = destination_lesson_group.script.id
-      copied_lesson.lesson_group_id = destination_lesson_group.id
+      copied_lesson.script_id = destination_script.id
+      copied_lesson.lesson_group_id = destination_script.lesson_groups.last.id
 
-      copied_lesson.absolute_position = destination_lesson_group.lessons.last.absolute_position + 1
-      # TODO: these aren't right
+      copied_lesson.absolute_position = destination_script.lessons.last.absolute_position + 1
       numbered_lesson = copied_lesson.has_lesson_plan || !copied_lesson.lockable
       copied_lesson.relative_position =
         if numbered_lesson
-          destination_lesson_group.script.lessons.select {|l| l.has_lesson_plan || !l.lockable}.reduce(0) { |acc, l| l.relative_position > acc ? l.relative_position : acc} + 1
+          destination_script.lessons.select {|l| l.has_lesson_plan || !l.lockable}.reduce(0) {|acc, l| l.relative_position > acc ? l.relative_position : acc} + 1
         else
-          destination_lesson_group.script.lessons.select {|l| !l.has_lesson_plan && l.lockable}.reduce(0) { |acc, l| l.relative_position > acc ? l.relative_position : acc} + 1
+          destination_script.lessons.select {|l| !l.has_lesson_plan && l.lockable}.reduce(0) {|acc, l| l.relative_position > acc ? l.relative_position : acc} + 1
         end
 
       copied_lesson.save!
@@ -756,22 +747,15 @@ class Lesson < ApplicationRecord
       copied_lesson.lesson_activities = original_lesson.lesson_activities.map do |original_lesson_activity|
         copied_lesson_activity = original_lesson_activity.dup
         copied_lesson_activity.key = SecureRandom.uuid
+        copied_lesson_activity.lesson_id = copied_lesson.id
         copied_lesson_activity.save!
         copied_lesson_activity.activity_sections = original_lesson_activity.activity_sections.map do |original_activity_section|
           copied_activity_section = original_activity_section.dup
           copied_activity_section.key = SecureRandom.uuid
+          copied_activity_section.lesson_activity_id = copied_lesson_activity.id
           copied_activity_section.save!
-          copied_activity_section.script_levels = original_activity_section.script_levels.map do |original_script_level|
-            copied_script_level = original_script_level.dup
-            copied_script_level.activity_section_id = copied_activity_section.id
-            copied_script_level.script_id = destination_lesson_group.script.id
-            copied_script_level.levels = original_script_level.levels
-            copied_script_level.stage_id = copied_lesson.id
-            #seed_context = Services::ScriptSeed::SeedContext.new(script: destination_script, lesson_groups: [destination_lesson_group], lessons: [copied_lesson], lesson_activities: [], activity_sections: [])
-            #seed_key_data = copied_script_level.seeding_key(seed_context, false)
-            #copied_script_level.seed_key = HashingUtils.ruby_hash_to_md5_hash(seed_key_data)
-            copied_script_level
-          end
+          sl_data = original_activity_section.script_levels.map.with_index(1) {|l, pos| JSON.parse({assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: pos}.to_json)}
+          copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
           copied_activity_section
         end
         copied_lesson_activity
@@ -790,7 +774,7 @@ class Lesson < ApplicationRecord
       copied_lesson.opportunity_standards = original_lesson.opportunity_standards
 
       # Copy objects that require course version, i.e. resources and vocab
-      course_version = destination_lesson_group.script.get_course_version
+      course_version = destination_script.get_course_version
       if course_version
         copied_lesson.resources = original_lesson.resources.map do |original_resource|
           persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
@@ -814,6 +798,9 @@ class Lesson < ApplicationRecord
       end
 
       copied_lesson.save!
+      destination_script.fix_script_level_positions
+      destination_script.write_script_json
+      Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
       copied_lesson
     end
   end
