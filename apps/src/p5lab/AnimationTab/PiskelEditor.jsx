@@ -36,7 +36,7 @@ class PiskelEditor extends React.Component {
     pendingFrames: PropTypes.object,
     removePendingFrames: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool,
-    locales: PropTypes.object
+    localeCode: PropTypes.string
   };
 
   componentDidMount() {
@@ -63,7 +63,7 @@ class PiskelEditor extends React.Component {
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
 
-    this.iframe.contentWindow.locale = this.props.locales.localeCode;
+    this.iframe.contentWindow.locale = this.props.localeCode;
   }
 
   componentWillUnmount() {
@@ -226,7 +226,7 @@ export default connect(
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
     pendingFrames: state.animationList.pendingFrames,
     isBlockly: state.pageConstants.isBlockly,
-    locales: state.locales
+    localeCode: state.locales.localeCode
   }),
   dispatch => ({
     editAnimation: (key, props) => dispatch(editAnimation(key, props)),
