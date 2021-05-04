@@ -10,7 +10,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-import DataWorkspace from '../storage/dataBrowser/DataWorkspace';
 
 const style = {
   instructionsAndPreview: {
@@ -69,7 +68,6 @@ class JavalabView extends React.Component {
     suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
-    hasDataMode: PropTypes.bool.isRequired,
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     isDarkMode: PropTypes.bool.isRequired,
@@ -118,7 +116,6 @@ class JavalabView extends React.Component {
       onContinue,
       onRun,
       onInputMessage,
-      hasDataMode,
       handleVersionHistory
     } = this.props;
     if (isDarkMode) {
@@ -144,10 +141,10 @@ class JavalabView extends React.Component {
               color: isDarkMode ? color.white : color.black
             }}
           >
-            {hasDataMode && (
-              <DataWorkspace handleVersionHistory={handleVersionHistory} />
-            )}
-            <JavalabEditor onCommitCode={onCommitCode} />
+            <JavalabEditor
+              handleVersionHistory={handleVersionHistory}
+              onCommitCode={onCommitCode}
+            />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
                 <button
@@ -202,7 +199,6 @@ class JavalabView extends React.Component {
 export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
-    hasDataMode: state.pageConstants.hasDataMode || false,
     isProjectLevel: state.pageConstants.isProjectLevel,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     channelId: state.pageConstants.channelId,

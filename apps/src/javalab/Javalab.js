@@ -109,7 +109,6 @@ Javalab.prototype.init = function(config) {
     noVisualization: true,
     visualizationInWorkspace: true,
     isProjectLevel: !!config.level.isProjectLevel,
-    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
     isEditingStartSources: !!config.level.editBlocks
   });
 
