@@ -1,26 +1,26 @@
 {
-  "https://studio.code.org/s/sports/stage/1/puzzle/1": {
+  "https://studio.code.org/s/sports/lessons/1/levels/1": {
     "short_instructions": "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag."
   },
-  "https://studio.code.org/s/sports/stage/1/puzzle/2": {
+  "https://studio.code.org/s/sports/lessons/1/levels/2": {
     "short_instructions": "There are two flags now! Attach a block to the \"when left arrow\" and \"when right arrow\" blocks to make your player move in two directions."
   },
-  "https://studio.code.org/s/sports/stage/1/puzzle/3": {
+  "https://studio.code.org/s/sports/lessons/1/levels/3": {
     "short_instructions": "The hockey puck is going to fly down toward the player! Attach a block to the \"when ball hits player\" block to hit the flag."
   },
-  "https://studio.code.org/s/sports/stage/1/puzzle/4": {
+  "https://studio.code.org/s/sports/lessons/1/levels/4": {
     "short_instructions": "Now the flag is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle."
   },
-  "https://studio.code.org/s/sports/stage/1/puzzle/5": {
+  "https://studio.code.org/s/sports/lessons/1/levels/5": {
     "short_instructions": "Attach blocks to each of the \"when\" blocks. Bounce the ball until it hits the flag."
   },
-  "https://studio.code.org/s/sports/stage/1/puzzle/6": {
+  "https://studio.code.org/s/sports/lessons/1/levels/6": {
     "short_instructions": "Now there is a goal at the top! Attach the \"score point\" and \"score opponent point\" blocks to the \"when ball in goal\" and \"when ball misses hand\" blocks to make a game. See how many points you can score before your opponent scores twice!"
   },
-  "https://studio.code.org/s/sports/stage/1/puzzle/7": {
+  "https://studio.code.org/s/sports/lessons/1/levels/7": {
     "short_instructions": "You can now attach blocks to the \"when run\" block. You have to attach the new \"throw new ball\" block in more than one place. Also, try changing the scene or the speed of the hand and the ball and see how many points you can score before your opponent scores twice!"
   },
-  "https://studio.code.org/s/sports/stage/1/puzzle/8": {
+  "https://studio.code.org/s/sports/lessons/1/levels/8": {
     "short_instructions": "Create your own game! You're in charge here: you can change all the rules, mix and match sports, get creative! When you're done, click Finish to let friends try your game on their phones."
   }
 }

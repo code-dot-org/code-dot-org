@@ -15,5 +15,8 @@ markdown <<MARKDOWN
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+# Choice Level Overview
+Choice levels provide a menu of additional levels for students to complete. Students must complete at least one of the sub-levels here, but should be encouraged to complete **two** levels for the same project.
+
 Students may need really clear instructions to understand how to navigate the choices here. For each of the project choices, there are two sub-levels here. To begin, students should pick one of the levels marked "Part 1". Once they finish that level they should return here and select "Part 2" of the *same* project. The first level for each choice will provide students with feedback as they put the basic components of their project together. The second level is a "free play" which is intended to allow students to make any changes to their code that they like.
 MARKDOWN
