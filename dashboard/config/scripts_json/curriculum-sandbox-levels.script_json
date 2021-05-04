@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-27 16:20:25 UTC",
+    "serialized_at": "2021-05-03 23:55:52 UTC",
     "seeding_key": {
       "script.name": "curriculum-sandbox-levels"
     }
@@ -115,14 +115,14 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_maze_seq10_predict1_2018"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq10_predict1_2018"
@@ -139,14 +139,14 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_maze_seq1_predict1_2018"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq1_predict1_2018"
@@ -163,14 +163,14 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_collector_loops3_predict1"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops3_predict1"
@@ -187,14 +187,14 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_collector_loops11_predict2"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops11_predict2"
@@ -211,14 +211,14 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_artist_loops11_predict2"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops11_predict2"
@@ -235,14 +235,14 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq2_predict1"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq2_predict1"
@@ -259,14 +259,14 @@
       "chapter": 7,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq12_predict2"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_maze_seq12_predict2"
@@ -283,14 +283,14 @@
       "chapter": 8,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_collector_loops3_predict1"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_collector_loops3_predict1"
@@ -307,14 +307,14 @@
       "chapter": 9,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_artist_loops8_predict1"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_artist_loops8_predict1"
@@ -331,14 +331,14 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "teacherSandboxFish"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "teacherSandboxFish"
@@ -355,14 +355,14 @@
       "chapter": 11,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "Swimming Fish Teacher Sandbox"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Swimming Fish Teacher Sandbox"
@@ -379,14 +379,14 @@
       "chapter": 12,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_label_predict_sandbox2"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_label_predict_sandbox2"
@@ -403,14 +403,14 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged PSP word search big"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd digital unplugged PSP word search big"
@@ -427,14 +427,14 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "csd digital unplugged PSP seating big"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csd digital unplugged PSP seating big"
@@ -451,15 +451,15 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson 2: Bridging Activity",
         "level_keys": [
           "contagion_teachers"
-        ]
+        ],
+        "progression": "Lesson 2: Bridging Activity"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "contagion_teachers"
@@ -476,15 +476,15 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson 3: Dice Roll",
         "level_keys": [
           "6sidedDie"
-        ]
+        ],
+        "progression": "Lesson 3: Dice Roll"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "6sidedDie"
@@ -501,15 +501,15 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson 4: Collecting Data",
         "level_keys": [
           "contagion_teachers2"
-        ]
+        ],
+        "progression": "Lesson 4: Collecting Data"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "contagion_teachers2"

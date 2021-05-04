@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-02-26 22:10:24 UTC",
+    "serialized_at": "2021-05-03 23:55:37 UTC",
     "seeding_key": {
       "script.name": "dlp19-csp-mod-w2"
     }
@@ -100,15 +100,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Background",
         "level_keys": [
           "dlp19_overview1"
-        ]
+        ],
+        "progression": "Background"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19_overview1"
@@ -125,15 +125,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Process",
         "level_keys": [
           "dlp19_overview2"
-        ]
+        ],
+        "progression": "Process"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19_overview2"
@@ -150,15 +150,15 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Preparation",
         "level_keys": [
           "dlp19_overview3"
-        ]
+        ],
+        "progression": "Preparation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19_overview3"
@@ -175,15 +175,15 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Evaluation",
         "level_keys": [
           "dlp19_overview4"
-        ]
+        ],
+        "progression": "Evaluation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19_overview4"
@@ -200,15 +200,15 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Due Dates",
         "level_keys": [
           "dlp19_overview5"
-        ]
+        ],
+        "progression": "Due Dates"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19_overview5"
@@ -225,14 +225,14 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-prework-mod2"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19-csp-prework-mod2"
@@ -249,14 +249,14 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-mod2-q1"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19-csp-mod2-q1"
@@ -273,14 +273,14 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-mod2-q2"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19-csp-mod2-q2"
@@ -297,14 +297,14 @@
       "chapter": 9,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "dlp19-csp-mod2-q3"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "dlp19-csp-mod2-q3"
@@ -425,13 +425,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }
