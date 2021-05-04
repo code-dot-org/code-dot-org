@@ -19,77 +19,6 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
 
-const styles = {
-  outer: {
-    position: 'relative',
-    display: 'table',
-    width: '100%',
-    height: '100%',
-    background: color.lightest_gray,
-    borderColor: color.border_gray,
-    borderStyle: 'solid',
-    borderRadius: 2,
-    // When toggling between hidden and not, we change our border size from 1 to 4.
-    // We want to limit how much toggling this changes our sizing, so we add +3
-    // to each of our non-hidden margins
-    borderWidth: 1,
-    marginTop: 3,
-    marginBottom: 15,
-    marginLeft: 3,
-    marginRight: 3
-  },
-  main: {
-    padding: 20
-  },
-  heading: {
-    fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  headingText: {
-    cursor: 'pointer',
-    flexGrow: 1
-  },
-  buttonStyle: {
-    marginLeft: 'auto'
-  },
-  hiddenOrLocked: {
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    marginTop: 0,
-    marginBottom: 12,
-    marginLeft: 0,
-    marginRight: 0
-  },
-  translucent: {
-    opacity: 0.6
-  },
-  caret: {
-    marginRight: 10
-  },
-  caretRTL: {
-    marginLeft: 10
-  },
-  icon: {
-    marginRight: 5,
-    fontSize: 18,
-    color: color.cyan
-  },
-  unlockedIcon: {
-    color: color.orange
-  },
-  notAuthorizedWarning: {
-    color: color.red,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontStyle: 'italic',
-    marginTop: 10
-  },
-  learnMoreLink: {
-    marginLeft: 5
-  }
-};
-
 class ProgressLesson extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
@@ -290,6 +219,77 @@ class ProgressLesson extends React.Component {
     );
   }
 }
+
+const styles = {
+  outer: {
+    position: 'relative',
+    display: 'table',
+    width: '100%',
+    height: '100%',
+    background: color.lightest_gray,
+    borderColor: color.border_gray,
+    borderStyle: 'solid',
+    borderRadius: 2,
+    // When toggling between hidden and not, we change our border size from 1 to 4.
+    // We want to limit how much toggling this changes our sizing, so we add +3
+    // to each of our non-hidden margins
+    borderWidth: 1,
+    marginTop: 3,
+    marginBottom: 15,
+    marginLeft: 3,
+    marginRight: 3
+  },
+  main: {
+    padding: 20
+  },
+  heading: {
+    fontSize: 18,
+    fontFamily: '"Gotham 5r", sans-serif',
+    display: 'flex',
+    alignItems: 'center'
+  },
+  headingText: {
+    cursor: 'pointer',
+    flexGrow: 1
+  },
+  buttonStyle: {
+    marginLeft: 'auto'
+  },
+  hiddenOrLocked: {
+    borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0
+  },
+  translucent: {
+    opacity: 0.6
+  },
+  caret: {
+    marginRight: 10
+  },
+  caretRTL: {
+    marginLeft: 10
+  },
+  icon: {
+    marginRight: 5,
+    fontSize: 18,
+    color: color.cyan
+  },
+  unlockedIcon: {
+    color: color.orange
+  },
+  notAuthorizedWarning: {
+    color: color.red,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontStyle: 'italic',
+    marginTop: 10
+  },
+  learnMoreLink: {
+    marginLeft: 5
+  }
+};
 
 export const UnconnectedProgressLesson = ProgressLesson;
 

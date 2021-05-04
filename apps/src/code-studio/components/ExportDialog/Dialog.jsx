@@ -36,58 +36,6 @@ function recordExport(type) {
   );
 }
 
-const styles = {
-  modal: {
-    width: 720,
-    marginLeft: -360
-  },
-  abuseStyle: {
-    border: '1px solid',
-    borderRadius: 10,
-    padding: 10,
-    marginBottom: 20
-  },
-  abuseTextStyle: {
-    color: '#b94a48',
-    fontSize: 14
-  },
-  shareWarning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold'
-  },
-  cancelButton: {
-    ...commonStyles.button,
-    backgroundColor: color.gray,
-    color: color.black
-  },
-  actionButton: {
-    ...commonStyles.button,
-    backgroundColor: color.orange,
-    color: color.white
-  },
-  actionButtonDisabled: {
-    ...commonStyles.button,
-    backgroundColor: color.gray,
-    color: color.white
-  },
-  backButton: {
-    ...commonStyles.button,
-    backgroundColor: color.gray,
-    color: color.black
-  },
-  backButtonDisabled: {
-    ...commonStyles.button,
-    backgroundColor: color.gray,
-    color: color.white
-  },
-  buttonRow: {
-    ...commonStyles.section,
-    display: 'flex',
-    justifyContent: 'flex-end'
-  }
-};
-
 /**
  * Export Dialog used by projects
  *
@@ -765,6 +713,58 @@ class ExportDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  modal: {
+    width: 720,
+    marginLeft: -360
+  },
+  abuseStyle: {
+    border: '1px solid',
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 20
+  },
+  abuseTextStyle: {
+    color: '#b94a48',
+    fontSize: 14
+  },
+  shareWarning: {
+    color: color.red,
+    fontSize: 13,
+    fontWeight: 'bold'
+  },
+  cancelButton: {
+    ...commonStyles.button,
+    backgroundColor: color.gray,
+    color: color.black
+  },
+  actionButton: {
+    ...commonStyles.button,
+    backgroundColor: color.orange,
+    color: color.white
+  },
+  actionButtonDisabled: {
+    ...commonStyles.button,
+    backgroundColor: color.gray,
+    color: color.white
+  },
+  backButton: {
+    ...commonStyles.button,
+    backgroundColor: color.gray,
+    color: color.black
+  },
+  backButtonDisabled: {
+    ...commonStyles.button,
+    backgroundColor: color.gray,
+    color: color.white
+  },
+  buttonRow: {
+    ...commonStyles.section,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  }
+};
 
 export const UnconnectedExportDialog = ExportDialog;
 

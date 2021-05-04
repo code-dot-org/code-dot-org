@@ -11,26 +11,6 @@ import LessonStandards, {
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
 import {lessonShape} from './rollupShapes';
 
-const styles = {
-  main: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  object: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
-    padding: '0px 10px'
-  },
-  entries: {
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
-    padding: 10,
-    height: '100%'
-  }
-};
-
 export default class RollupLessonEntrySection extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
@@ -138,3 +118,23 @@ export default class RollupLessonEntrySection extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  object: {
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    border: 'solid 1px' + color.charcoal,
+    padding: '0px 10px'
+  },
+  entries: {
+    color: color.charcoal,
+    border: 'solid 1px' + color.charcoal,
+    padding: 10,
+    height: '100%'
+  }
+};

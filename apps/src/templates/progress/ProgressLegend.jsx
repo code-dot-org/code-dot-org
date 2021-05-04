@@ -7,86 +7,6 @@ import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {connect} from 'react-redux';
 
-const styles = {
-  table: {
-    textAlign: 'center',
-    width: '100%',
-    // Margin to get it to line up with ProgressLesson
-    marginLeft: 3,
-    marginRight: 3,
-    marginTop: 60
-  },
-  tdStyle: {
-    padding: 10,
-    borderStyle: 'none'
-  },
-  header: {
-    backgroundColor: color.white,
-    color: color.charcoal,
-    whiteSpace: 'nowrap'
-  },
-  secondRow: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    borderWidth: 2,
-    borderColor: color.lightest_gray,
-    borderStyle: 'solid',
-    verticalAlign: 'top'
-  },
-  subsequentRow: {
-    backgroundColor: color.white,
-    borderWidth: 2,
-    borderColor: color.lightest_gray,
-    borderStyle: 'solid'
-  },
-  rightBorder: {
-    borderRightStyle: 'solid',
-    borderWidth: 2,
-    borderColor: color.lightest_gray
-  },
-  leftBorder: {
-    borderLeftStyle: 'solid',
-    borderWidth: 2,
-    borderColor: color.lightest_gray
-  },
-  headerCell: {
-    fontWeight: 'bold',
-    fontSize: 18
-  },
-  secondaryText: {
-    fontSize: 10
-  },
-  iconAndText: {
-    whiteSpace: 'nowrap'
-  },
-  iconAndTextDiv: {
-    whiteSpace: 'nowrap',
-    paddingBottom: 16
-  },
-  iconAndTextDivTop: {
-    whiteSpace: 'nowrap',
-    paddingTop: 10,
-    paddingBottom: 16
-  },
-  iconAndTextDivBottom: {
-    whiteSpace: 'nowrap',
-    paddingBottom: 10
-  },
-  icon: {
-    marginRight: 5,
-    size: 20
-  },
-  iconRTL: {
-    marginLeft: 5,
-    size: 20
-  },
-  center: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-};
-
 // Give all of our TDs a padding
 const TD = ({style, ...props}) => (
   <td
@@ -318,6 +238,86 @@ class ProgressLegend extends Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    textAlign: 'center',
+    width: '100%',
+    // Margin to get it to line up with ProgressLesson
+    marginLeft: 3,
+    marginRight: 3,
+    marginTop: 60
+  },
+  tdStyle: {
+    padding: 10,
+    borderStyle: 'none'
+  },
+  header: {
+    backgroundColor: color.white,
+    color: color.charcoal,
+    whiteSpace: 'nowrap'
+  },
+  secondRow: {
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    borderWidth: 2,
+    borderColor: color.lightest_gray,
+    borderStyle: 'solid',
+    verticalAlign: 'top'
+  },
+  subsequentRow: {
+    backgroundColor: color.white,
+    borderWidth: 2,
+    borderColor: color.lightest_gray,
+    borderStyle: 'solid'
+  },
+  rightBorder: {
+    borderRightStyle: 'solid',
+    borderWidth: 2,
+    borderColor: color.lightest_gray
+  },
+  leftBorder: {
+    borderLeftStyle: 'solid',
+    borderWidth: 2,
+    borderColor: color.lightest_gray
+  },
+  headerCell: {
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+  secondaryText: {
+    fontSize: 10
+  },
+  iconAndText: {
+    whiteSpace: 'nowrap'
+  },
+  iconAndTextDiv: {
+    whiteSpace: 'nowrap',
+    paddingBottom: 16
+  },
+  iconAndTextDivTop: {
+    whiteSpace: 'nowrap',
+    paddingTop: 10,
+    paddingBottom: 16
+  },
+  iconAndTextDivBottom: {
+    whiteSpace: 'nowrap',
+    paddingBottom: 10
+  },
+  icon: {
+    marginRight: 5,
+    size: 20
+  },
+  iconRTL: {
+    marginLeft: 5,
+    size: 20
+  },
+  center: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+};
 
 export const UnconnectedProgressLegend = ProgressLegend;
 

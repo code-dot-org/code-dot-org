@@ -17,45 +17,6 @@ import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 
-const styles = {
-  main: {
-    marginBottom: 20
-  },
-  header: {
-    padding: 20,
-    backgroundColor: color.purple,
-    fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: 'white',
-    borderTopLeftRadius: 4,
-    borderTopRightRadius: 4,
-    cursor: 'pointer'
-  },
-  headerBlue: {
-    backgroundColor: color.cyan
-  },
-  headingText: {
-    marginLeft: 10
-  },
-  headingTextRTL: {
-    marginRight: 10
-  },
-  contents: {
-    backgroundColor: color.lighter_purple,
-    padding: 20
-  },
-  contentsBlue: {
-    backgroundColor: color.lightest_cyan
-  },
-  bottom: {
-    borderBottomLeftRadius: 4,
-    borderBottomRightRadius: 4
-  },
-  lessonGroupInfo: {
-    padding: 10
-  }
-};
-
 /**
  * A component that shows a group of lessons. That group has a name and is
  * collapsible. It can show the lessons in either a detail or a summary view.
@@ -187,6 +148,45 @@ class LessonGroup extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    marginBottom: 20
+  },
+  header: {
+    padding: 20,
+    backgroundColor: color.purple,
+    fontSize: 18,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: 'white',
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
+    cursor: 'pointer'
+  },
+  headerBlue: {
+    backgroundColor: color.cyan
+  },
+  headingText: {
+    marginLeft: 10
+  },
+  headingTextRTL: {
+    marginRight: 10
+  },
+  contents: {
+    backgroundColor: color.lighter_purple,
+    padding: 20
+  },
+  contentsBlue: {
+    backgroundColor: color.lightest_cyan
+  },
+  bottom: {
+    borderBottomLeftRadius: 4,
+    borderBottomRightRadius: 4
+  },
+  lessonGroupInfo: {
+    padding: 10
+  }
+};
 
 export const UnconnectedLessonGroup = LessonGroup;
 

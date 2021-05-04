@@ -14,20 +14,6 @@ import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButto
 import LessonEditorDialog from './LessonEditorDialog';
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
-const styles = {
-  dialogContent: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  textArea: {
-    width: '95%'
-  },
-  confirmDeleteButton: {
-    display: 'flex',
-    alignItems: 'center'
-  }
-};
-
 export default class EditTipDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -123,3 +109,17 @@ export default class EditTipDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textArea: {
+    width: '95%'
+  },
+  confirmDeleteButton: {
+    display: 'flex',
+    alignItems: 'center'
+  }
+};
