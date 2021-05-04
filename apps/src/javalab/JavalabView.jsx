@@ -3,7 +3,6 @@ import JavalabConsole from './JavalabConsole';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
-import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import {appendOutputLog, setIsDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -11,8 +10,6 @@ import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
-import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import MazeVisualization from '@cdo/apps/maze/Visualization';
 
 const style = {
   instructionsAndPreview: {
@@ -79,6 +76,7 @@ class JavalabView extends React.Component {
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
+    visualization: PropTypes.object.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -128,21 +126,14 @@ class JavalabView extends React.Component {
       onCommitCode,
       onContinue,
       onRun,
-      onInputMessage
+      onInputMessage,
+      visualization
     } = this.props;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
     } else {
       document.body.style.backgroundColor = color.background_gray;
     }
-    let visualization = false ? (
-      <PaneHeader hasFocus={true}>
-        <PaneSection>Preview</PaneSection>
-        <ProtectedVisualizationDiv />
-      </PaneHeader>
-    ) : (
-      <MazeVisualization />
-    )
     return (
       <StudioAppWrapper>
         <div style={style.javalab}>
@@ -152,9 +143,7 @@ class JavalabView extends React.Component {
             style={style.instructionsAndPreview}
           >
             <TopInstructions mainStyle={style.instructions} standalone={true} />
-            <div style={style.preview}>
-              {visualization}
-            </div>
+            <div style={style.preview}>{visualization}</div>
           </div>
           <VisualizationResizeBar />
           <div
