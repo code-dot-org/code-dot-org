@@ -118,8 +118,8 @@ class JavalabView extends React.Component {
       onContinue,
       onRun,
       onInputMessage,
-      handleVersionHistory,
-      hasDataMode
+      hasDataMode,
+      handleVersionHistory
     } = this.props;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -136,9 +136,6 @@ class JavalabView extends React.Component {
                   <PaneSection>Preview</PaneSection>
                 </PaneHeader>
               </div>
-              {hasDataMode && (
-                <DataWorkspace handleVersionHistory={handleVersionHistory} />
-              )}
             </InstructionsWithWorkspace>
           </div>
           <div
@@ -147,6 +144,9 @@ class JavalabView extends React.Component {
               color: isDarkMode ? color.white : color.black
             }}
           >
+            {hasDataMode && (
+              <DataWorkspace handleVersionHistory={handleVersionHistory} />
+            )}
             <JavalabEditor onCommitCode={onCommitCode} />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
