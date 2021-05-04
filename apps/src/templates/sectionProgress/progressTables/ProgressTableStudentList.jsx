@@ -78,6 +78,7 @@ export default class ProgressTableStudentList extends React.Component {
         studentUrl={studentUrl}
         onToggleExpand={this.props.onToggleRow}
         isExpanded={rowData.isExpanded}
+        showSectionProgressDetails={this.props.showSectionProgressDetails}
       />
     );
   }

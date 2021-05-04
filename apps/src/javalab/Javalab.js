@@ -103,7 +103,8 @@ Javalab.prototype.init = function(config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
+    isEditingStartSources: !!config.level.editBlocks
   });
 
   registerReducers({javalab});
