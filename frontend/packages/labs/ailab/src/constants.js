@@ -560,7 +560,13 @@ export const styles = {
   },
 
   modelSaveMessage: {
-    position: "absolute",
-    bottom: 0
+    bottom: 40,
+    zIndex: 1001,
+    right: "calc(50% - 250px)",
+    textAlign: "center",
+    position: "fixed",
+    width: 500,
+    height: 30,
+    lineHeight: "20px"
   }
 };

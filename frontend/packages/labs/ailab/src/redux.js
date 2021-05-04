@@ -1070,14 +1070,20 @@ function isPanelEnabled(state, panelId) {
     if (
       state.percentDataToReserve === 0 ||
       state.accuracyCheckExamples.length === 0 ||
-      state.saveStatus === "success"
-    ) {
+      ["success", "started"].includes(state.saveStatus)) {
       return false;
     }
   }
 
   if (panelId === "saveModel") {
     if (state.saveStatus === "success") {
+      return false;
+    }
+  }
+
+  if (panelId === "modelSummary") {
+    if (["success", "started"].includes(state.saveStatus) ||
+      state.saveStatus === "started") {
       return false;
     }
   }
@@ -1116,6 +1122,10 @@ function isPanelAvailable(state, panelId) {
     if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
+
+    // if (state.saveStatus === "started") {
+    //   return false;
+    // }
   }
 
   return true;
@@ -1167,10 +1177,8 @@ export function getPanelButtons(state) {
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = state.saveStatus === "success"
-      ? { panel: "modelSummary", text: "Continue" }
-      : isPanelAvailable(state, "modelSummary")
-      ? { panel: "saveModel", text: "Save" }
+    next = isPanelAvailable(state, "modelSummary")
+      ? { panel: "modelSummary", text: "Save" }
       : null;
   } else if (state.currentPanel === "modelSummary") {
     prev = { panel: "saveModel", text: "Back" };

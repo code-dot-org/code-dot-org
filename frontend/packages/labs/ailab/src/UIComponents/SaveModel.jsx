@@ -7,10 +7,8 @@ import {
   getSelectedColumnDescriptions,
   getDataDescription
 } from "../redux";
-import { styles, saveMessages, ModelNameMaxLength } from "../constants";
+import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -19,7 +17,6 @@ class SaveModel extends Component {
     trainedModelDetails: PropTypes.object,
     labelColumn: PropTypes.string,
     columnDescriptions: PropTypes.array,
-    saveStatus: PropTypes.string,
     dataDescription: PropTypes.string
   };
 
@@ -76,7 +73,6 @@ class SaveModel extends Component {
   };
 
   render() {
-    const { saveStatus } = this.props;
 
     const nameField = {
       id: "name",
@@ -95,10 +91,6 @@ class SaveModel extends Component {
       : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
-
-    let loadStatus = saveStatus !== "success"
-      ? ( <FontAwesomeIcon icon={faSpinner} />)
-      : (saveMessages[saveStatus]);
 
     return (
       <div style={styles.panel}>
@@ -193,13 +185,6 @@ class SaveModel extends Component {
                   </div>
                 );
               })}
-              <div>
-              {saveStatus && (
-                <div style={styles.modelSaveMessage}>
-                  {loadStatus}
-                </div>
-              )}
-        </div>
             </div>
           </div>
         </div>
@@ -214,7 +199,6 @@ export default connect(
     trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnDescriptions(state),
-    saveStatus: state.saveStatus,
     dataDescription: getDataDescription(state)
   }),
   dispatch => ({

@@ -8,8 +8,8 @@ import { getSummaryStat,
   getFeaturesToSave,
   getDatasetDetails
 } from "../redux";
-import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
-import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
+import Statement from "./Statement";
+import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
 
 class ModelCard extends Component {
   static propTypes = {
@@ -33,6 +33,7 @@ class ModelCard extends Component {
 
     return (
       <div style={styles.panel}>
+        <Statement />
         <div style={styles.modelCardContainer}>
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
@@ -137,13 +138,9 @@ class ModelCard extends Component {
         </div>
         <div style={styles.summaryScreenBot}>
           <img
-            src={aiBotHead}
-            style={{
-              ...styles.trainBotHead,
-              ...(false && styles.trainBotOpen)
-            }}
+            src={aiBotBorder}
+            style={styles.trainBotBody}
           />
-          <img src={aiBotBody} style={styles.trainBotBody} />
         </div>
       </div>
     );

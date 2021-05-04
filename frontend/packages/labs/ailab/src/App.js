@@ -11,7 +11,7 @@ import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
 import ModelCard from "./UIComponents/ModelCard";
-import { styles } from "./constants";
+import { styles, saveMessages } from "./constants";
 import { connect } from "react-redux";
 import {
   getPanelButtons,
@@ -19,6 +19,8 @@ import {
   validationMessages,
   getTrainedModelDataToSave
 } from "./redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 class PanelButtons extends Component {
   static propTypes = {
@@ -27,7 +29,8 @@ class PanelButtons extends Component {
     setCurrentPanel: PropTypes.func,
     onContinue: PropTypes.func,
     startSaveTrainedModel: PropTypes.func,
-    dataToSave: PropTypes.object
+    dataToSave: PropTypes.object,
+    saveStatus: PropTypes.string
   };
 
   onClickPrev = () => {
@@ -40,16 +43,24 @@ class PanelButtons extends Component {
       return;
     }
 
-    if (this.props.currentPanel === "saveModel" &&
-        this.props.panelButtons.next.panel === "saveModel") {
-          this.props.startSaveTrainedModel(this.props.dataToSave);
+    if (this.props.currentPanel === "saveModel") {
+      this.props.startSaveTrainedModel(this.props.dataToSave);
+      return;
     }
 
     this.props.setCurrentPanel(this.props.panelButtons.next.panel);
   };
 
   render() {
-    const { panelButtons } = this.props;
+    const { panelButtons, saveStatus } = this.props;
+
+    let loadStatus = !["success", "failure"].includes(saveStatus)
+    ? ( <FontAwesomeIcon icon={faSpinner} />)
+    : (saveMessages[saveStatus]);
+
+    let loadStatusDisplay = (this.props.currentPanel === "saveModel" && saveStatus)
+    ? <span style={styles.modelSaveMessage}>{loadStatus}</span>
+    : undefined;
 
     return (
       <div>
@@ -70,6 +81,8 @@ class PanelButtons extends Component {
             </button>
           </div>
         )}
+
+        {loadStatusDisplay}
 
         {panelButtons.next && (
           <div style={styles.nextButton}>
@@ -138,7 +151,8 @@ class App extends Component {
     onContinue: PropTypes.func,
     resultsPhase: PropTypes.number,
     startSaveTrainedModel: PropTypes.func,
-    dataToSave: PropTypes.object
+    dataToSave: PropTypes.object,
+    saveStatus: PropTypes.string
   };
 
   constructor(props) {
@@ -162,7 +176,8 @@ class App extends Component {
       onContinue,
       resultsPhase,
       dataToSave,
-      startSaveTrainedModel
+      startSaveTrainedModel,
+      saveStatus
     } = this.props;
 
     return (
@@ -242,6 +257,7 @@ class App extends Component {
           onContinue={onContinue}
           startSaveTrainedModel={startSaveTrainedModel}
           dataToSave={dataToSave}
+          saveStatus={saveStatus}
         />
       </div>
     );
@@ -254,7 +270,8 @@ export default connect(
     currentPanel: state.currentPanel,
     validationMessages: validationMessages(state),
     resultsPhase: state.resultsPhase,
-    dataToSave: getTrainedModelDataToSave(state)
+    dataToSave: getTrainedModelDataToSave(state),
+    saveStatus: state.saveStatus,
   }),
   dispatch => ({
     setCurrentPanel(panel) {
