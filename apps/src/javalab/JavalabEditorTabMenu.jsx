@@ -5,10 +5,11 @@ import color from '@cdo/apps/util/color';
 
 const styles = {
   anchor: {
-    padding: 10,
+    padding: 5,
     color: color.charcoal,
     backgroundColor: color.white,
     fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
     display: 'block',
     textDecoration: 'none',
     lineHeight: '20px',
@@ -32,7 +33,10 @@ class JavalabTabMenuComponent extends Component {
   static propTypes = {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired,
-    deleteFromTabMenu: PropTypes.func.isRequired
+    deleteFromTabMenu: PropTypes.func.isRequired,
+    changeVisibilityFromTabMenu: PropTypes.func.isRequired,
+    showVisibilityOption: PropTypes.bool.isRequired,
+    fileIsVisible: PropTypes.bool
   };
 
   state = {
@@ -40,7 +44,14 @@ class JavalabTabMenuComponent extends Component {
   };
 
   render() {
-    const {renameFromTabMenu, deleteFromTabMenu, cancelTabMenu} = this.props;
+    const {
+      renameFromTabMenu,
+      deleteFromTabMenu,
+      cancelTabMenu,
+      showVisibilityOption,
+      changeVisibilityFromTabMenu,
+      fileIsVisible
+    } = this.props;
     return (
       <div>
         <button
@@ -59,6 +70,16 @@ class JavalabTabMenuComponent extends Component {
         >
           Delete
         </button>
+        {showVisibilityOption && (
+          <button
+            type="button"
+            key="visibility"
+            onClick={changeVisibilityFromTabMenu}
+            style={styles.anchor}
+          >
+            {fileIsVisible ? 'Make support file' : 'Make starter file'}
+          </button>
+        )}
         <button
           type="button"
           key="cancel"
