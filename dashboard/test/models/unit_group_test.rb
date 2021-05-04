@@ -441,12 +441,12 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'summarize preprocesses markdown' do
-    course_offering = create :course_offering, key: 'offering'
+    course_offering = create :course_offering
     course_version = create :course_version, course_offering: course_offering
-    create :resource, key: 'resource', course_version: course_version
-    create :vocabulary, key: 'vocab', course_version: course_version
+    resource = create :resource, course_version: course_version
+    vocab = create :vocabulary, course_version: course_version
 
-    source = "We support [r resource/offering/2020] resource links and [v vocab/offering/2020] vocabulary definitions"
+    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
     I18n.stubs(:t).returns(source)
 
     expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
