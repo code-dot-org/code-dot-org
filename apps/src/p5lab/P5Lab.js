@@ -327,8 +327,10 @@ P5Lab.prototype.init = function(config) {
       const localeCode = window.appOptions.locale;
       getStore().dispatch(setLocaleCode(localeCode));
     } catch (exception) {
-      console.warn('Unable to retrieve locale code, defaulting to en_us');
-      console.warn(exception);
+      console.warn(
+        'Unable to retrieve locale code, defaulting to en_us',
+        exception
+      );
       getStore().dispatch(setLocaleCode('en_us'));
     }
 
