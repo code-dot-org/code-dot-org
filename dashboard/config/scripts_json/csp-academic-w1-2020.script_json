@@ -9,7 +9,6 @@
       "is_migrated": true,
       "hideable_lessons": true,
       "weekly_instructional_minutes": 420,
-      "show_calendar": true,
       "include_student_lesson_plans": true,
       "announcements": [
         {
@@ -24,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 20:19:09 UTC",
+    "serialized_at": "2021-05-04 03:27:29 UTC",
     "seeding_key": {
       "script.name": "csp-academic-w1-2020"
     }
@@ -52,10 +51,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "student_overview": "Kick off the workshop by reflecting on how things are going and generating a set of topics that participants need to talk about.",
-        "purpose": "The purpose of this session is to bring participants together to kick off the workshop and reflect on how things are going in the classroom. This is a place to check in on specific lessons that people have already taught, as well as pacing and teaching practices that were recommended or discussed in the the summer workshops.  It is common to surface concerns during this session that can be revisited and addressed throughout the workshop.\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Posters are on the wall \n\t* “Where are we now” - On a piece of chart paper or on the board, create a histogram for teachers to add where they are in the curriculum. Remind teachers to take out their [r csp-teal-book-20-21] as a guide to unit progressions.\n\t* Question Parking Lot - For people to put up questions they have.\n\n \n**Facilitator Supplies:**\n\n* [r csp-q1-slides-20-21]\n* [r facilitator-handbook-20-21]\n* [r dashboard]\n\n**Teacher Materials:**\n\n* Journal (Should bring with them.)\n* Post-its\n* [r csp-teal-book-20-21]\n* Computers for attendance\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "The purpose of this session is to bring participants together to kick off the workshop and reflect on how things are going in the classroom. This is a place to check in on specific lessons that people have already taught, as well as pacing and teaching practices that were recommended or discussed in the the summer workshops.  It is common to surface concerns during this session that can be revisited and addressed throughout the workshop.\n",
+        "student_overview": "Kick off the workshop by reflecting on how things are going and generating a set of topics that participants need to talk about."
       },
       "seeding_key": {
         "lesson.key": "session-1",
@@ -71,10 +70,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "student_overview": "Room Setup",
-        "purpose": "This is the first unit where participants are being introduced to the EIPM pedagogy.  It is important to note that we are spending the whole day developing a better understanding of EIPM in context of Unit 4.  In future workshops, we will frequently cover two units at a time because there will be no new Code.org-specific pedagogy introduced.  ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\n\n* None\n\n**Facilitator Supplies**\n\n* [r csp-q1-slides-20-21]\n* [EIPM: A Short Introduction](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit)\n\n**Teacher Materials**\n\n* Printed or linked in shared slides:\n\t* [EIPM: A Short Introduction](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit)",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This is the first unit where participants are being introduced to the EIPM pedagogy.  It is important to note that we are spending the whole day developing a better understanding of EIPM in context of Unit 4.  In future workshops, we will frequently cover two units at a time because there will be no new Code.org-specific pedagogy introduced.  ",
+        "student_overview": "Room Setup"
       },
       "seeding_key": {
         "lesson.key": "session-2",
@@ -90,8 +89,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-3",
@@ -107,9 +106,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "purpose": "Since every programming unit in the curriculum follows the EIPM model, it is important that participants understand the unique role each lesson type plays in building student understanding of the content.  This Model Lesson is intended to teach participants the content in the lesson (variables) but also understand the pedagogy used in Explore lessons. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* None\r\n\r\n**Facilitator Supplies**\r\n\r\n* [r csp-q1-slides-20-21]\r\n* Baggies\r\n* Post-it notes\r\n* Dry erase markers\r\n* Journals\r\n\r\n**Teacher Materials**\r\n\r\nMaterials per-table:\r\n\r\n* Baggies\r\n* Post-it notes\r\n* Dry-erase markers\r\n* Journals",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Since every programming unit in the curriculum follows the EIPM model, it is important that participants understand the unique role each lesson type plays in building student understanding of the content.  This Model Lesson is intended to teach participants the content in the lesson (variables) but also understand the pedagogy used in Explore lessons. "
       },
       "seeding_key": {
         "lesson.key": "session-4",
@@ -125,10 +124,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "student_overview": "Room Setup",
-        "purpose": "In our quest to understand EIPM, the second lesson in Unit 4 helps participants build their understanding of both the content (variables) and of the Investigate lesson type.  The main takeaway participants should have is that the Investigate lesson type requires the teacher to guide the discussion actively.  Learners should not be doing this independently.  The learning is most powerful when done in a community where the teacher can also formatively assess constantly as students are discussing the code between partners and in the whole group.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* None\r\n\r\n**Facilitator Supplies** \r\n\r\n* Computers\r\n* [r csp-q1-slides-20-21]\r\n\r\n**Teacher Materials**\r\n\r\n* Laptops\r\n* Journals",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "In our quest to understand EIPM, the second lesson in Unit 4 helps participants build their understanding of both the content (variables) and of the Investigate lesson type.  The main takeaway participants should have is that the Investigate lesson type requires the teacher to guide the discussion actively.  Learners should not be doing this independently.  The learning is most powerful when done in a community where the teacher can also formatively assess constantly as students are discussing the code between partners and in the whole group.",
+        "student_overview": "Room Setup"
       },
       "seeding_key": {
         "lesson.key": "session-5",
@@ -144,8 +143,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-6",
@@ -161,9 +160,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "purpose": "The Practice lesson type requires less “full room” instruction on the part of the teacher and is noticeably different from the Investigate lesson in the type of work students are doing in class. In this lesson the role of the teacher and student shifts from having the teacher direct the learning in Explore and Investigate to having the students gain more confidence independent from the teacher in the Practice and Make.  While this is not a model lesson, it is time for participants to understand how the Practice lesson type is unique from what they experienced in the Model lesson.  This also helps participants build their understanding of the CS content in Unit 4 on variables.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* None\r\n\r\n**Facilitator Supplies**\r\n\r\n* Computer\r\n* [r csp-q1-slides-20-21]\r\n\r\n\r\n**Teacher Materials**\r\n\r\n* Computer\r\n* Journals\r\n* Physical copies recommended:\r\n\t* [EIPM: A Short Introduction](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit)\r\n\t* [r u4l3]\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "The Practice lesson type requires less “full room” instruction on the part of the teacher and is noticeably different from the Investigate lesson in the type of work students are doing in class. In this lesson the role of the teacher and student shifts from having the teacher direct the learning in Explore and Investigate to having the students gain more confidence independent from the teacher in the Practice and Make.  While this is not a model lesson, it is time for participants to understand how the Practice lesson type is unique from what they experienced in the Model lesson.  This also helps participants build their understanding of the CS content in Unit 4 on variables."
       },
       "seeding_key": {
         "lesson.key": "session-7",
@@ -179,10 +178,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "student_overview": "Room Setup",
-        "purpose": "This session rounds out the first EIPM sequence participants see in the curriculum.  Participants should be familiar with the Make task to understand the full “arc” students will go through during an EIPM sequence.  This should drive home the point that students have multiple opportunities to learn the content in different contexts during a sequence.  It also should be made clear to participants that Make tasks are not intended for summative assessment and that students will continue to use (and learn) the content in each EIPM sequence beyond the sequence it was introduced in.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* None\r\n\r\n\r\n**Facilitator Supplies**\r\n\r\n* Computer\r\n* [r csp-q1-slides-20-21]\r\n\r\n**Teacher Materials**\r\n\r\n* Computer\r\n* Journals\r\n* Physical copies recommended: \r\n\t* [EIPM: A Short Introduction](https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit)\r\n\t* [U4L4 Lesson Plan](http://curriculum.code.org/csp-20/unit4/4)\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session rounds out the first EIPM sequence participants see in the curriculum.  Participants should be familiar with the Make task to understand the full “arc” students will go through during an EIPM sequence.  This should drive home the point that students have multiple opportunities to learn the content in different contexts during a sequence.  It also should be made clear to participants that Make tasks are not intended for summative assessment and that students will continue to use (and learn) the content in each EIPM sequence beyond the sequence it was introduced in.",
+        "student_overview": "Room Setup"
       },
       "seeding_key": {
         "lesson.key": "session-8",
@@ -198,8 +197,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-9",
@@ -215,9 +214,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "purpose": "In the previous sessions, participants got to dive deep into one EIPM sequence.  This session is intended to build and deepen that understanding by looking at the other two EIPM sequences in the unit.  This rounds out our day-long introduction to EIPM for participants.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* None\r\n\r\n**Facilitator Supplies**\r\n\r\n* Computer\r\n* [r csp-q1-slides-20-21]\r\n\r\n**Teacher Materials**\r\n\r\n* Computer\r\n* Journals",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "In the previous sessions, participants got to dive deep into one EIPM sequence.  This session is intended to build and deepen that understanding by looking at the other two EIPM sequences in the unit.  This rounds out our day-long introduction to EIPM for participants."
       },
       "seeding_key": {
         "lesson.key": "session-10",
@@ -233,10 +232,10 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "student_overview": "Consider specific scenarios related to supporting and retaining students in your classroom. ",
-        "purpose": "Most of the day was spent in the weeks of EIPM.  In this session we pull back and look at the bigger picture - not only of Unit 4, but also in the context of “what do we value?”.  Participants brainstorm why they might want students to work collaboratively vs independently while programming.  We then connect this philosophical discussion to the context of Unit 4 and address when participants want to emphasize or encourage collaborative versus independent work. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* Set-up the room with a piece of poster paper behind each group for each group to work with.\r\n\r\n**Facilitator Supplies**\r\n\r\n* Computer\r\n* [r csp-q1-slides-20-21]\r\n* Poster paper\r\n\r\n**Teacher Materials**\r\n\r\n* Poster paper\r\n* Markers\r\n* Journals\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Most of the day was spent in the weeks of EIPM.  In this session we pull back and look at the bigger picture - not only of Unit 4, but also in the context of “what do we value?”.  Participants brainstorm why they might want students to work collaboratively vs independently while programming.  We then connect this philosophical discussion to the context of Unit 4 and address when participants want to emphasize or encourage collaborative versus independent work. ",
+        "student_overview": "Consider specific scenarios related to supporting and retaining students in your classroom. "
       },
       "seeding_key": {
         "lesson.key": "session-11",
@@ -252,10 +251,10 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "student_overview": "Answer any outstanding questions and wrap up the day.",
-        "purpose": "Answer any outstanding questions and wrap up the day.\r\nIn addition it should give time to do the survey in person so that teachers complete it before leaving.\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* None\r\n\r\n**Facilitator Supplies**\r\n\r\n* [Session Planning Template](https://docs.google.com/document/d/14ipvJyGcuUrlBup0RHZfhzXM1EKTvx1w4fzaxxII5rY/)\r\n* Grab and organize the question parking lot\r\n* [r csp-q1-slides-20-21]\r\n* [r dashboard]\r\n\r\n**Teacher Materials**\r\n\r\n* Computer\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Answer any outstanding questions and wrap up the day.\r\nIn addition it should give time to do the survey in person so that teachers complete it before leaving.\r\n",
+        "student_overview": "Answer any outstanding questions and wrap up the day."
       },
       "seeding_key": {
         "lesson.key": "session-12",
@@ -269,8 +268,8 @@
       "key": "f4d71eb7-fc1e-43e4-85fb-7c475b44afea",
       "position": 1,
       "properties": {
-        "name": "Workshop Opening Logistics",
-        "duration": 5
+        "duration": 5,
+        "name": "Workshop Opening Logistics"
       },
       "seeding_key": {
         "lesson_activity.key": "f4d71eb7-fc1e-43e4-85fb-7c475b44afea",
@@ -283,8 +282,8 @@
       "key": "ece686df-9496-4e53-89cf-7cac6052381c",
       "position": 2,
       "properties": {
-        "name": "Reconnect",
-        "duration": 20
+        "duration": 20,
+        "name": "Reconnect"
       },
       "seeding_key": {
         "lesson_activity.key": "ece686df-9496-4e53-89cf-7cac6052381c",
@@ -297,8 +296,8 @@
       "key": "e6a8c553-614e-4299-894f-fa00df387ecf",
       "position": 3,
       "properties": {
-        "name": "Share Out",
-        "duration": 15
+        "duration": 15,
+        "name": "Share Out"
       },
       "seeding_key": {
         "lesson_activity.key": "e6a8c553-614e-4299-894f-fa00df387ecf",
@@ -311,8 +310,8 @@
       "key": "d0ddb8c1-9f26-4186-b7b4-4cd1adb47439",
       "position": 1,
       "properties": {
-        "name": "EIPM Basics",
-        "duration": 9
+        "duration": 9,
+        "name": "EIPM Basics"
       },
       "seeding_key": {
         "lesson_activity.key": "d0ddb8c1-9f26-4186-b7b4-4cd1adb47439",
@@ -325,8 +324,8 @@
       "key": "ddb23348-4bdd-4499-9305-ce2295fa870b",
       "position": 2,
       "properties": {
-        "name": "Introduction to Unit 4",
-        "duration": 5
+        "duration": 5,
+        "name": "Introduction to Unit 4"
       },
       "seeding_key": {
         "lesson_activity.key": "ddb23348-4bdd-4499-9305-ce2295fa870b",
@@ -339,8 +338,8 @@
       "key": "6e4bb713-8a4d-4494-abb3-800d01610da5",
       "position": 3,
       "properties": {
-        "name": "Context for Model Lesson",
-        "duration": 1
+        "duration": 1,
+        "name": "Context for Model Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "6e4bb713-8a4d-4494-abb3-800d01610da5",
@@ -353,8 +352,8 @@
       "key": "8a7f7051-e7cb-42f1-9f5e-69e1825b6aea",
       "position": 1,
       "properties": {
-        "name": "Previously on...",
-        "duration": 5
+        "duration": 5,
+        "name": "Previously on..."
       },
       "seeding_key": {
         "lesson_activity.key": "8a7f7051-e7cb-42f1-9f5e-69e1825b6aea",
@@ -367,8 +366,8 @@
       "key": "8e2371d4-a0aa-4d9c-a9e6-668f2f89bb91",
       "position": 2,
       "properties": {
-        "name": "Model Lesson and Reflection",
-        "duration": 55
+        "duration": 55,
+        "name": "Model Lesson and Reflection"
       },
       "seeding_key": {
         "lesson_activity.key": "8e2371d4-a0aa-4d9c-a9e6-668f2f89bb91",
@@ -381,8 +380,8 @@
       "key": "2e16774f-2349-4506-af92-1ce2eddda1e1",
       "position": 1,
       "properties": {
-        "name": "Previously on...",
-        "duration": 2
+        "duration": 2,
+        "name": "Previously on..."
       },
       "seeding_key": {
         "lesson_activity.key": "2e16774f-2349-4506-af92-1ce2eddda1e1",
@@ -395,8 +394,8 @@
       "key": "90ac6fd1-2797-4bae-9551-a39b93f01850",
       "position": 2,
       "properties": {
-        "name": "Model Lesson and Reflection",
-        "duration": 53
+        "duration": 53,
+        "name": "Model Lesson and Reflection"
       },
       "seeding_key": {
         "lesson_activity.key": "90ac6fd1-2797-4bae-9551-a39b93f01850",
@@ -409,8 +408,8 @@
       "key": "df8b19ad-1dc6-44e6-904c-749b53a0987a",
       "position": 1,
       "properties": {
-        "name": "Documenting questions and transition",
-        "duration": 2
+        "duration": 2,
+        "name": "Documenting questions and transition"
       },
       "seeding_key": {
         "lesson_activity.key": "df8b19ad-1dc6-44e6-904c-749b53a0987a",
@@ -423,8 +422,8 @@
       "key": "a4a5b7f7-d4f5-417b-9093-ab1f67107d8c",
       "position": 2,
       "properties": {
-        "name": "Get to know the Practice Lesson for Variables",
-        "duration": 20
+        "duration": 20,
+        "name": "Get to know the Practice Lesson for Variables"
       },
       "seeding_key": {
         "lesson_activity.key": "a4a5b7f7-d4f5-417b-9093-ab1f67107d8c",
@@ -437,8 +436,8 @@
       "key": "b0dbc9a5-79a5-414b-91fe-6c3296500b81",
       "position": 3,
       "properties": {
-        "name": "Discussion",
-        "duration": 7
+        "duration": 7,
+        "name": "Discussion"
       },
       "seeding_key": {
         "lesson_activity.key": "b0dbc9a5-79a5-414b-91fe-6c3296500b81",
@@ -451,8 +450,8 @@
       "key": "73af5fac-053b-4ab2-8d7d-11ca818feb7b",
       "position": 4,
       "properties": {
-        "name": "Wrap-up",
-        "duration": 1
+        "duration": 1,
+        "name": "Wrap-up"
       },
       "seeding_key": {
         "lesson_activity.key": "73af5fac-053b-4ab2-8d7d-11ca818feb7b",
@@ -465,8 +464,8 @@
       "key": "f5e6d263-30dd-4bee-9535-798f0cf025af",
       "position": 1,
       "properties": {
-        "name": "Get to know the Make Lesson for Variables",
-        "duration": 2
+        "duration": 2,
+        "name": "Get to know the Make Lesson for Variables"
       },
       "seeding_key": {
         "lesson_activity.key": "f5e6d263-30dd-4bee-9535-798f0cf025af",
@@ -479,8 +478,8 @@
       "key": "faf1eec0-42f8-4d97-910d-f5d627f7ae43",
       "position": 2,
       "properties": {
-        "name": "Do the Task",
-        "duration": 20
+        "duration": 20,
+        "name": "Do the Task"
       },
       "seeding_key": {
         "lesson_activity.key": "faf1eec0-42f8-4d97-910d-f5d627f7ae43",
@@ -493,8 +492,8 @@
       "key": "f98cc700-05a5-48e2-ab88-03aba1066693",
       "position": 3,
       "properties": {
-        "name": "Discussion",
-        "duration": 10
+        "duration": 10,
+        "name": "Discussion"
       },
       "seeding_key": {
         "lesson_activity.key": "f98cc700-05a5-48e2-ab88-03aba1066693",
@@ -507,8 +506,8 @@
       "key": "ae87f066-a062-428f-b2a7-bbd2c4d2fcb7",
       "position": 4,
       "properties": {
-        "name": "Differentiation",
-        "duration": 10
+        "duration": 10,
+        "name": "Differentiation"
       },
       "seeding_key": {
         "lesson_activity.key": "ae87f066-a062-428f-b2a7-bbd2c4d2fcb7",
@@ -521,8 +520,8 @@
       "key": "87221945-8668-41c8-9ef9-039c0f3ac006",
       "position": 5,
       "properties": {
-        "name": "Wrap-up",
-        "duration": 3
+        "duration": 3,
+        "name": "Wrap-up"
       },
       "seeding_key": {
         "lesson_activity.key": "87221945-8668-41c8-9ef9-039c0f3ac006",
@@ -535,8 +534,8 @@
       "key": "1387cbe8-0308-43cf-b93a-34f821532dce",
       "position": 1,
       "properties": {
-        "name": "Mental Models Across Units ",
-        "duration": 30
+        "duration": 30,
+        "name": "Mental Models Across Units "
       },
       "seeding_key": {
         "lesson_activity.key": "1387cbe8-0308-43cf-b93a-34f821532dce",
@@ -549,8 +548,8 @@
       "key": "44ce409f-b96f-4ae6-94ac-8e2e5e0e40fe",
       "position": 2,
       "properties": {
-        "name": "Moving to Independent Creation",
-        "duration": 5
+        "duration": 5,
+        "name": "Moving to Independent Creation"
       },
       "seeding_key": {
         "lesson_activity.key": "44ce409f-b96f-4ae6-94ac-8e2e5e0e40fe",
@@ -563,8 +562,8 @@
       "key": "9d6b5899-deab-404b-bb82-66d6988b24e9",
       "position": 1,
       "properties": {
-        "name": "Unit 4 Conclusions and Connections",
-        "duration": 15
+        "duration": 15,
+        "name": "Unit 4 Conclusions and Connections"
       },
       "seeding_key": {
         "lesson_activity.key": "9d6b5899-deab-404b-bb82-66d6988b24e9",
@@ -577,8 +576,8 @@
       "key": "3b635d5c-b21e-4e4a-8844-5d5b04fab706",
       "position": 2,
       "properties": {
-        "name": "Independent vs. collaborative work",
-        "duration": 25
+        "duration": 25,
+        "name": "Independent vs. collaborative work"
       },
       "seeding_key": {
         "lesson_activity.key": "3b635d5c-b21e-4e4a-8844-5d5b04fab706",
@@ -591,8 +590,8 @@
       "key": "edc0f84b-7459-4410-9253-2ebc20f57630",
       "position": 1,
       "properties": {
-        "name": "Parking Lot and Reminders",
-        "duration": 5
+        "duration": 5,
+        "name": "Parking Lot and Reminders"
       },
       "seeding_key": {
         "lesson_activity.key": "edc0f84b-7459-4410-9253-2ebc20f57630",
@@ -605,8 +604,8 @@
       "key": "56fc7ea2-e9e2-4bd7-833f-257d0bbb0802",
       "position": 2,
       "properties": {
-        "name": "Survey",
-        "duration": 10
+        "duration": 10,
+        "name": "Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "56fc7ea2-e9e2-4bd7-833f-257d0bbb0802",
@@ -639,14 +638,14 @@
       "position": 2,
       "properties": {
         "description": "tip!!!tip-0<!-- place where you'd like the icon -->  As participants enter the room, they should add post-its to the following posters:",
+        "name": "(0 minutes) As participants enter the room",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "If your region has districts using different delivery modalities (in-person, hybrid, virtual, distanced learning, etc) you might want to create a poster to capture HOW each attendee is delivering the curriculum as well.  This may help you get a feel for needs in the room.\n\n"
           }
-        ],
-        "name": "(0 minutes) As participants enter the room"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5ab049b1-f0ba-4a30-8f4c-b4c1f226e109",
@@ -780,14 +779,14 @@
       "position": 5,
       "properties": {
         "description": "Have participants “speed network” their responses to the three prompts above. They should be looking for advice, ideas, questions, or issues.",
+        "name": "(10 minutes) Speed network",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "It is recommended that you change one of the three prompts for the reflection and speed dating to allow participants time to talk about their unique implementation style due to COVID or other local scheduling decisions.  Since this will be top of mind for those impacted, it may be helpful to make this the first question instead.  Consider using the following three questions for this reflection and discussion time:\n\n* How has your implementation plan changed from what you had planned from during the summer?  What adjustments have you made?\n* How have your students responded to the lessons you’ve already taught? \n* How would you describe your classroom culture at the moment?  What do you like?  What do you want to change?  (*Facilitator Note: Even virtual classrooms have a culture. Encourage participants to consider this question regardless of implementation style*)\n\n"
           }
-        ],
-        "name": "(10 minutes) Speed network"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a21dc310-d8f0-41ed-a510-83b5f897302b",
@@ -810,14 +809,14 @@
       "position": 7,
       "properties": {
         "description": "Head back to tables and share your concerns and what you learned from others.",
+        "name": "(7 minutes) Table share out",
         "tips": [
           {
             "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Teachers bubble up what needs to be addressed by the whole group. They should jot down questions or topics on post-its and hold up for facilitators to collect.\n\n"
           }
-        ],
-        "name": "(7 minutes) Table share out"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "540e163d-28b7-471c-a698-e56239b2152e",
@@ -922,14 +921,14 @@
       "position": 1,
       "properties": {
         "description": "Use the slides to guide your presentation:",
+        "name": "(5 minutes) How this works in Unit 4",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "This may be a good point to acknowledge that for teachers with a virtual or hybrid setting, how they use EIPM might be different in their learning environment.  However, for this workshop, we are going to get a feel for how the lesson would be implemented in an in-person environment.  Participants will have time to consider alternative implementations when we wrap-up the unit as participants need to know what is in the unit before reading the modifications.\n"
           }
-        ],
-        "name": "(5 minutes) How this works in Unit 4"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c9b08022-f9f6-4a88-93ec-b55ef96808ad",
@@ -1102,8 +1101,8 @@
       "position": 1,
       "properties": {
         "description": "“This lesson follows the lesson you just saw.”",
-        "remarks": true,
-        "name": "(1 minute) Previously on… "
+        "name": "(1 minute) Previously on… ",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "57c4a75d-7fa8-4c63-a9de-421f935c8f78",
@@ -1162,14 +1161,14 @@
       "position": 4,
       "properties": {
         "description": "**Reflection Prompt:**",
+        "name": "Debrief Suggestions",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "For the “Share” portion of this debrief, consider having participants walk around and share their Venn Diagram with other people in a “speed dating” format.\n"
           }
-        ],
-        "name": "Debrief Suggestions"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "aa12ff35-3057-40f2-847f-9b70fdc4a218",
@@ -1568,14 +1567,14 @@
       "position": 5,
       "properties": {
         "description": "Use the slides to guide your voice-over:",
+        "name": "(3 mins) Key points\r",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "Again, only the bolded text is in the slides.\r\n"
           }
-        ],
-        "name": "(3 mins) Key points\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ac0ba4a3-f14e-483e-b152-890b24c6df60",
@@ -1729,8 +1728,8 @@
       "position": 6,
       "properties": {
         "description": "“Now that we have some ideas for “why” we might encourage collaborative or independent work, let’s talk about the “when” we would encourage collaborative or independent work?\"",
-        "remarks": true,
-        "name": "discussion!!!discussion-0<!-- place where you'd like the icon -->(10 minutes) Discussion"
+        "name": "discussion!!!discussion-0<!-- place where you'd like the icon -->(10 minutes) Discussion",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "2ba999bc-ce15-4e03-96ac-502ba3f0bc90",
@@ -1822,27 +1821,14 @@
   ],
   "resources": [
     {
-      "name": "Goals and Objectives",
-      "url": "https://docs.google.com/document/d/1a9LOElvEZX0FvBw6ZzgY0l6PC30skym-PlazC7M-tRM/edit",
-      "key": "goals_and_objectives",
+      "name": "CSP Slides - Workshop 1 - 20-21",
+      "url": "https://docs.google.com/presentation/d/1pTkoWckISs-TiDUKtv8t1hWNQs4KtdnOsagBz3vitm4/edit?usp=sharing",
+      "key": "csp_slides_-_workshop_1_-_20-21",
       "properties": {
-        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "goals_and_objectives"
-      }
-    },
-    {
-      "name": "Opportunities for Equity One-pager",
-      "url": "https://drive.google.com/open?id=1vTrYLfx8apzYWmXsy4uSZKky2PHVffpN-zRfNrP9wLY",
-      "key": "opportunities_for_equity_one-pager",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "opportunities_for_equity_one-pager"
+        "resource.key": "csp_slides_-_workshop_1_-_20-21"
       }
     },
     {
@@ -1858,6 +1844,29 @@
       }
     },
     {
+      "name": "Facilitator Handbook",
+      "url": "https://docs.google.com/document/d/1YWAzrJOH64KswM9X_XL7A901QiPk6Nj8LsJySvuXeXc/edit",
+      "key": "facilitator_handbook",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "facilitator_handbook"
+      }
+    },
+    {
+      "name": "Goals and Objectives",
+      "url": "https://docs.google.com/document/d/1a9LOElvEZX0FvBw6ZzgY0l6PC30skym-PlazC7M-tRM/edit",
+      "key": "goals_and_objectives",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "goals_and_objectives"
+      }
+    },
+    {
       "name": "Google Sheet View of High Level Agenda",
       "url": "https://drive.google.com/open?id=1_d9TYyvDJy3MyeIG6VmsduaWIZiJDKxEum7T0dh4c_g",
       "key": "google_sheet_view_of_high_level_agenda",
@@ -1868,10 +1877,50 @@
       "seeding_key": {
         "resource.key": "google_sheet_view_of_high_level_agenda"
       }
+    },
+    {
+      "name": "Opportunities for Equity One-pager",
+      "url": "https://drive.google.com/open?id=1vTrYLfx8apzYWmXsy4uSZKky2PHVffpN-zRfNrP9wLY",
+      "key": "opportunities_for_equity_one-pager",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "opportunities_for_equity_one-pager"
+      }
+    },
+    {
+      "name": "U4L3 - Lesson Plan",
+      "url": "https://curriculum.code.org/csp-20/unit4/3",
+      "key": "u4l3_-_lesson_plan",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u4l3_-_lesson_plan"
+      }
     }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_slides_-_workshop_1_-_20-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "u4l3_-_lesson_plan"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "facilitator_handbook"
+      }
+    }
   ],
   "scripts_resources": [
     {

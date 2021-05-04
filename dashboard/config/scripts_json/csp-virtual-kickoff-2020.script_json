@@ -8,7 +8,6 @@
       "is_migrated": true,
       "hideable_lessons": true,
       "weekly_instructional_minutes": 60,
-      "show_calendar": true,
       "include_student_lesson_plans": true,
       "announcements": [
         {
@@ -22,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 19:51:05 UTC",
+    "serialized_at": "2021-05-04 03:26:19 UTC",
     "seeding_key": {
       "script.name": "csp-virtual-kickoff-2020"
     }
@@ -50,10 +49,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "student_overview": "This session is designed to kick-off the virtual academic year workshop series on a positive note, setting the tone for a supportive, engaging learning experience for all participants. ",
-        "purpose": "This session is designed to kick-off the virtual academic year workshop series on a positive note, setting the tone for a supportive, engaging learning experience for all participants. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Virtual Room Setup**\n\n* Join Zoom via video and audio\n\n**Facilitator Supplies:**\n\n* [r vpl-ayw-kick-off-slides 20-21]\n* [r vpl-m1-slides]\n* [r vpl-ayw-digital-digest-template 20-21]\n\n* **Note:** Permissions set to \"anyone with the link can edit\"\n\n**Teacher Supplies:**\n\n* Computer with webcam\n* Optional: journal",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session is designed to kick-off the virtual academic year workshop series on a positive note, setting the tone for a supportive, engaging learning experience for all participants. ",
+        "student_overview": "This session is designed to kick-off the virtual academic year workshop series on a positive note, setting the tone for a supportive, engaging learning experience for all participants. "
       },
       "seeding_key": {
         "lesson.key": "session-1",
@@ -67,8 +66,8 @@
       "key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d",
       "position": 1,
       "properties": {
-        "name": "Welcome, norms, and agenda",
-        "duration": 10
+        "duration": 10,
+        "name": "Welcome, norms, and agenda"
       },
       "seeding_key": {
         "lesson_activity.key": "00bdf1cc-423e-4a0c-a5a9-e0dfe30a0d6d",
@@ -81,8 +80,8 @@
       "key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5",
       "position": 2,
       "properties": {
-        "name": "What to Expect from AYWs",
-        "duration": 16
+        "duration": 16,
+        "name": "What to Expect from AYWs"
       },
       "seeding_key": {
         "lesson_activity.key": "dbbd0b2c-f22d-4355-abd0-61f2de7bc2a5",
@@ -95,8 +94,8 @@
       "key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13",
       "position": 3,
       "properties": {
-        "name": "Asynchronous practice",
-        "duration": 22
+        "duration": 22,
+        "name": "Asynchronous practice"
       },
       "seeding_key": {
         "lesson_activity.key": "8cbdb2d1-8a33-4541-ba3b-5b1c79a5db13",
@@ -109,8 +108,8 @@
       "key": "812889ba-3a22-41e0-89f1-fd7b688539fb",
       "position": 4,
       "properties": {
-        "name": "Wrap up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap up"
       },
       "seeding_key": {
         "lesson_activity.key": "812889ba-3a22-41e0-89f1-fd7b688539fb",
@@ -138,8 +137,8 @@
       "position": 2,
       "properties": {
         "description": "Here’s what we’ll be doing in our quick kick-off today:\r\n\tOverview of Academic Year Workshops\r\n\tIntro to the asynchronous work and tools\r\n\tMaking sure you know next steps and where to find support\r\n\r\nNote: We won’t be digging into curriculum content today! However, if you do have curriculum or classroom-specific questions, don’t hesitate to add them to the parking lot at the end of this slide deck, and we will make sure to address your questions asap.",
-        "remarks": true,
-        "name": "(1 min) Today’s agenda ###\r"
+        "name": "(1 min) Today’s agenda ###\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "aa2fdb0f-e9da-4819-9a85-80b727fe5a3d",
@@ -151,8 +150,8 @@
       "position": 3,
       "properties": {
         "description": "To help support this community, we ask that we all honor these engagement norms throughout our year:",
-        "remarks": true,
-        "name": "(1 min) Norms ###\r"
+        "name": "(1 min) Norms ###\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a7179e7e-f1b2-42c1-96b2-6e2c46dfcde0",
@@ -251,8 +250,8 @@
       "position": 6,
       "properties": {
         "description": "We mentioned that each virtual module includes asynchronous work and a synchronous workshop. Here’s a quick overview of the purpose of those components.",
-        "remarks": true,
-        "name": "(3 mins) Components of Virtual AYWs ###\r"
+        "name": "(3 mins) Components of Virtual AYWs ###\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "bace29c5-e64f-4f01-82bc-5898a5776105",
@@ -275,8 +274,8 @@
       "position": 1,
       "properties": {
         "description": "Let’s spend some time digging into the asynchronous work! We’ll walk you through the steps you’ll take to access the materials, and then you’ll get a chance to test it out. By the end of this activity, we want to make sure you know how to find the resources, how to engage with them, and how to make the asynchronous work a valuable part of your experience this year.",
-        "remarks": true,
-        "name": "(5 mins) Demonstration ###\r"
+        "name": "(5 mins) Demonstration ###\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "1bffb23c-ec2e-453e-a611-34a3049c7899",
@@ -299,8 +298,8 @@
       "position": 3,
       "properties": {
         "description": "You’ll have about 10 minutes now to just explore! As you do, make sure to look for a few things:",
-        "remarks": true,
-        "name": "(17 mins) Try it! ###\r"
+        "name": "(17 mins) Try it! ###\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "bcf74b4b-d22d-4e87-848f-e52b6ad11b46",
@@ -362,18 +361,6 @@
   ],
   "resources": [
     {
-      "name": "2020-21 Virtual Academic Year Workshop Kick-Off Slides - Template",
-      "url": "https://docs.google.com/presentation/d/15NZcppIwNyR-hoUMpSGexfTa6cLdyTdQpdjg_a4j-DU/edit",
-      "key": "2020-21_virtual_academic_year_workshop_kick-off_slides_-_template",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "2020-21_virtual_academic_year_workshop_kick-off_slides_-_template"
-      }
-    },
-    {
       "name": "2020-21 CS Principles Virtual Module 1 Slides - Template",
       "url": "https://docs.google.com/presentation/d/1NqyfugF5M3DMQY6KZLC7rc5CZYv5ebS08XMU2ync8BI/edit",
       "key": "2020-21_cs_principles_virtual_module_1_slides_-_template",
@@ -386,15 +373,15 @@
       }
     },
     {
-      "name": "2020-21 Virtual Academic Year Workshops: Digital Digest Template",
-      "url": "https://docs.google.com/document/d/1UEGjOdhdv_Ex22kr1BsLUCPnXadcyyjbcWszqgDxAiw/edit",
-      "key": "2020-21_virtual_academic_year_workshops_digital_digest_template",
+      "name": "2020-21 Virtual Academic Year Workshop Kick-Off Slides - Template",
+      "url": "https://docs.google.com/presentation/d/15NZcppIwNyR-hoUMpSGexfTa6cLdyTdQpdjg_a4j-DU/edit",
+      "key": "2020-21_virtual_academic_year_workshop_kick-off_slides_-_template",
       "properties": {
         "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "2020-21_virtual_academic_year_workshops_digital_digest_template"
+        "resource.key": "2020-21_virtual_academic_year_workshop_kick-off_slides_-_template"
       }
     },
     {
@@ -407,6 +394,18 @@
       },
       "seeding_key": {
         "resource.key": "2020-21_virtual_academic_year_workshop_planning_doc_template"
+      }
+    },
+    {
+      "name": "2020-21 Virtual Academic Year Workshops: Digital Digest Template",
+      "url": "https://docs.google.com/document/d/1UEGjOdhdv_Ex22kr1BsLUCPnXadcyyjbcWszqgDxAiw/edit",
+      "key": "2020-21_virtual_academic_year_workshops_digital_digest_template",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2020-21_virtual_academic_year_workshops_digital_digest_template"
       }
     }
   ],

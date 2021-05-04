@@ -7,7 +7,6 @@
     "properties": {
       "is_migrated": true,
       "weekly_instructional_minutes": 420,
-      "show_calendar": true,
       "version_year": "2020",
       "is_course": true,
       "hideable_lessons": true,
@@ -15,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "pl-csp-summer-in-person",
-    "serialized_at": "2021-04-23 20:42:40 UTC",
+    "serialized_at": "2021-05-04 03:22:09 UTC",
     "seeding_key": {
       "script.name": "csp-summer-2020"
     }
@@ -91,11 +90,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Kick off the week! Get to know the people you are with and understand what will happen during the week.",
-        "student_overview": "Kick off the week! Get to know the people you are with and understand what will happen during the week.",
+        "preparation": "**Room Setup:**\n\n* Introduction Posters, including:\n\t* map of the USA or state (if everyone is from one state) that everyone can put a post it on to say where they are from\n\t* graph number of years of teaching experience\n\t* graph of number of years of computer science experience (any kind)\n* Poster for Question Parking Lot\n* Post-it notes and markers on each table\n* Two pieces of chart paper with the following prompts:\n* What does a positive classroom feel like? What is your best learning environment?\n* What kinds of behaviors do you want to see in your students when they are learning something new?\n* Lay out a CED, Curriculum Guide, and Activity packet for each participant’s seat\n\n\n**Facilitator Supplies:**\n\n* [r csp_summer_workshop_2020_-_monday/pl-csp-summer-in-person/2020]\n* Poster paper\n* Post-its\n* Markers\n\n\n**Teacher Materials:**\n\n* [r csp_curriculum_guide_20-21/pl-csp-summer-in-person/2020]\n* CS Principles Course and Exam Description \n* Computers\n* [r csp_summer_shared_notes_2020/pl-csp-summer-in-person/2020]",
         "purpose": "Kick off the week! Get to know the people you are with and understand what will happen during the week.",
-        "preparation": "**Room Setup:**\r\n\r\n* Introduction Posters, including:\r\n\t* map of the USA or state (if everyone is from one state) that everyone can put a post it on to say where they are from\r\n\t* graph number of years of teaching experience\r\n\t* graph of number of years of computer science experience (any kind)\r\n* Poster for Question Parking Lot\r\n* Post-it notes and markers on each table\r\n* Two pieces of chart paper with the following prompts:\r\n* What does a positive classroom feel like? What is your best learning environment?\r\n* What kinds of behaviors do you want to see in your students when they are learning something new?\r\n* Lay out a CED, Curriculum Guide, and Activity packet for each participant’s seat\r\n\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n* Poster paper\r\n* Post-its\r\n* Markers\r\n\r\n\r\n**Teacher Materials:**\r\n\r\n* [r csp-teal-book-20-21]\r\n* CS Principles Course and Exam Description \r\n* Computers\r\n* [r csp-local-notes-2020]\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "student_overview": "Kick off the week! Get to know the people you are with and understand what will happen during the week."
       },
       "seeding_key": {
         "lesson.key": "session-1",
@@ -111,10 +110,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Overview of CSP, how it was created, and the background on the AP.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n\r\n**Teacher Materials:**\r\n\r\n* [r csp-local-notes-2020]",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Overview of CSP, how it was created, and the background on the AP.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-2",
@@ -130,8 +129,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-3",
@@ -147,10 +146,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "During this session participants engage in a scavenger hunt which serves as a time to explore the CED.  At the end of the session, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n\r\n**Teacher Materials:**\r\n\r\n* [r cs-principles-CED-2020]\r\n* [r csp-local-activity-packet-2020]\r\n* [r csp-teal-book-20-21]\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "During this session participants engage in a scavenger hunt which serves as a time to explore the CED.  At the end of the session, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-4",
@@ -166,10 +165,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Help participants be prepared for the model lesson by going over previous content and roles before starting the lesson.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Journal\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Help participants be prepared for the model lesson by going over previous content and roles before starting the lesson.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-5",
@@ -185,10 +184,10 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "student_overview": "Room Setup",
-        "purpose": "This is the first opportunity to expose teachers to the curriculum and to the feel of a CS Principles classroom.  This shows teachers the teaching practices used in CS Principles lessons.\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* Normal breakout room set-up\r\n\r\n**Facilitator Supplies**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n* Cups and string materials\r\n* Poster paper\r\n\r\n**Teacher Materials**\r\n\r\n* Journal",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This is the first opportunity to expose teachers to the curriculum and to the feel of a CS Principles classroom.  This shows teachers the teaching practices used in CS Principles lessons.\r\n",
+        "student_overview": "Room Setup"
       },
       "seeding_key": {
         "lesson.key": "session-6",
@@ -204,8 +203,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-7",
@@ -221,10 +220,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students.  We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n* Shape cutouts \r\n\r\n**Teacher Materials:**\r\n\r\n* Writing utensil\r\n* Journal\r\n* [r csp-local-activity-packet-2020]\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students.  We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-8",
@@ -240,8 +239,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-9",
@@ -257,10 +256,10 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "student_overview": " Room Setup:",
-        "purpose": "We show that binary numbers don't need to be scary and this doesn't need to be overly math-y.  This session puts a bow on the two previous lessons to show how we build on-ramps to content in order to make it more approachable to students. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "** Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n* Optional - Create large Flippy-do out of chart paper (See facilitator note) \r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n\r\n**Teacher Materials:**\r\n\r\n* [Flippy Do Template - Worksheet (one per person)](https://drive.google.com/file/d/0B6iNirqJ5EuVVTlla0RpR2RIa2s/view?usp=sharing)\r\n* Scissors (if not pre-cut)\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "We show that binary numbers don't need to be scary and this doesn't need to be overly math-y.  This session puts a bow on the two previous lessons to show how we build on-ramps to content in order to make it more approachable to students. ",
+        "student_overview": " Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-10",
@@ -276,10 +275,10 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Before we get to lesson planning, we want to introduce different types of lessons and the importance of mental models in both.  This approach allows us to be more explicit about the teacher's role in each of these lessons - specifically, that the teacher needs to check for understanding in both of these lessons constantly.  This foreshadows tomorrow's topic of “the teacher's role”.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies and Prep:**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n* Join code for your section\r\n\r\n**Teacher Materials:**\r\n\r\n* Group notes\r\n* Computers\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Before we get to lesson planning, we want to introduce different types of lessons and the importance of mental models in both.  This approach allows us to be more explicit about the teacher's role in each of these lessons - specifically, that the teacher needs to check for understanding in both of these lessons constantly.  This foreshadows tomorrow's topic of “the teacher's role”.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-11",
@@ -295,10 +294,10 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "For participants to understand the lesson they have been assigned and the resources available in the lesson.\r\n\r\n* Try activities and tools\r\n* Watch videos\r\n* Read lesson plan\r\n* Review and coordinate the slides with the lesson plan \r\n* Look through linked resources\r\nParticipants get to know what is actually in their lesson and the resources available to them (lesson plans, code studio and slides)\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\nBefore Workshop\r\n\r\n* Both facilitators should be well versed in all lessons. This includes:\r\n\t* Key things (either in terms of content or delivery) about each lesson that you think a teacher should pay attention to when planning.\r\n\t* Planning guiding questions to help participants think about those key things.\r\n\t* Understand what should be modeled in the lesson based on the guidelines in the Activity Packet.\r\n* Build a check in schedule that makes each facilitator responsible for checking in with the same 4 groups. It’s good to see the same people multiple times, which is easier if you’re splitting the room.\r\n* [r csp-local-slides-2020-monday]\r\n\r\n\r\n**Teacher Materials:**\r\n\r\n* Journals\r\n* Computers\r\n* [r csp-local-activity-packet-2020]\r\n* [r csp-teal-book-20-21]\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "For participants to understand the lesson they have been assigned and the resources available in the lesson.\r\n\r\n* Try activities and tools\r\n* Watch videos\r\n* Read lesson plan\r\n* Review and coordinate the slides with the lesson plan \r\n* Look through linked resources\r\nParticipants get to know what is actually in their lesson and the resources available to them (lesson plans, code studio and slides)\r\n",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-12",
@@ -314,10 +313,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "student_overview": "Room Setup",
-        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* Normal Breakout Room Set Up\r\n* Gots and Needs charts around the room\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-monday]\r\n\t* Including updated “Housekeeping slides”\r\n* Gots and Needs Charts\r\n\r\n**Teacher Materials**\r\n\r\n* Post-its\r\n* Computers\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "student_overview": "Room Setup"
       },
       "seeding_key": {
         "lesson.key": "session-13",
@@ -333,10 +332,10 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "We are using this session to kick off the day and proactively discuss the role of the teacher, even in lessons that focus on discovery.  We want new to CS teachers to feel comfortable with their role in the room as “lead learner” but also as one who creates classroom experiences for students while building their own CS knowledge.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-tuesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Journals\r\n* [r csp-teal-book-20-21]\r\n* Laptops\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "We are using this session to kick off the day and proactively discuss the role of the teacher, even in lessons that focus on discovery.  We want new to CS teachers to feel comfortable with their role in the room as “lead learner” but also as one who creates classroom experiences for students while building their own CS knowledge.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-14",
@@ -352,10 +351,10 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Participants bring in previous experiences with teaching to the workshop. We want to leverage those experiences and help teachers consider how they apply their teaching expertise to CSP.  One way they can do that is by using the strategies they already use to formatively assess students.  Teachers who are new to CS can easily get focused on teaching the content without thinking about who is learning the content in the room.  Formative assessment can support teaching and learning.\r\n \r\nThis session also helps set the tone for the next lesson planning session, and how they will be formatively assessing throughout the lesson. \r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal breakout room set up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-tuesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Notebooks\r\n* Laptops\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Participants bring in previous experiences with teaching to the workshop. We want to leverage those experiences and help teachers consider how they apply their teaching expertise to CSP.  One way they can do that is by using the strategies they already use to formatively assess students.  Teachers who are new to CS can easily get focused on teaching the content without thinking about who is learning the content in the room.  Formative assessment can support teaching and learning.\r\n \r\nThis session also helps set the tone for the next lesson planning session, and how they will be formatively assessing throughout the lesson. \r\n",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-15",
@@ -371,8 +370,8 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-16",
@@ -388,10 +387,10 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "In this session, participants will create a plan for how to teach their lesson during a 40 minute TLO session..  This plan should consider contingency plans if the lesson goes faster than expected, and consideration for how the teaching group will use formative assessment throughout the lesson to know that \"learners\" are making the needed progress toward the learning goals.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal breakout room set up\r\n* Everyone is sitting at a table with their lesson planning group\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-tuesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Computers\r\n* [r csp-local-activity-packet-2020]\r\n* [r csp-teal-book-20-21]\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "In this session, participants will create a plan for how to teach their lesson during a 40 minute TLO session..  This plan should consider contingency plans if the lesson goes faster than expected, and consideration for how the teaching group will use formative assessment throughout the lesson to know that \"learners\" are making the needed progress toward the learning goals.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-17",
@@ -407,10 +406,10 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "TLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum.  We use the debrief to discuss important aspects of teaching CS Principles in classrooms.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-tuesday]\n\n**Teacher Materials:**\n\n* Writing utensil\n* Journal\n* [r csp-local-activity-packet-2020]\n* Computers\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "TLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum.  We use the debrief to discuss important aspects of teaching CS Principles in classrooms.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-18",
@@ -426,8 +425,8 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-19",
@@ -443,10 +442,10 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Since this lesson uses the Pixelation Widget differently, we want to provide teachers a space to see how the tool works and connects to the learning objectives.  ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n* Teaching group at a separate table from the learners\n* Facilitators have space toward the back of the room to sit and observe\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-tuesday]\n\n**Teacher Materials:**\n\n* Computers\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Since this lesson uses the Pixelation Widget differently, we want to provide teachers a space to see how the tool works and connects to the learning objectives.  ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-20",
@@ -462,10 +461,10 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "TLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum.  We use the debrief to discuss important aspects of teaching CS Principles in classrooms.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-tuesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Writing utensil\r\n* Journal\r\n* Computers\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "TLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum.  We use the debrief to discuss important aspects of teaching CS Principles in classrooms.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-21",
@@ -481,8 +480,8 @@
       "has_lesson_plan": true,
       "relative_position": 22,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-22",
@@ -498,10 +497,10 @@
       "has_lesson_plan": true,
       "relative_position": 23,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "TLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum.  We use the debrief to discuss important aspects of teaching CS Principles in classrooms.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-tuesday]\r\n\r\nTeacher Materials:\r\n\r\n* Writing utensil\r\n* Journal\r\n* [r csp-local-activity-packet-2020]\r\n* Computers\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "TLOs are intended to help participants experience part of the curriculum as a learner and also practice teaching lessons from the curriculum.  We use the debrief to discuss important aspects of teaching CS Principles in classrooms.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-23",
@@ -517,10 +516,10 @@
       "has_lesson_plan": true,
       "relative_position": 24,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "While participants have seen much of this unit through TLOs, we want to wrap-up the unit by showing teachers lessons they did not see.  We also want to make the “story” of this unit clear and describe how it relates to other units in the curriculum. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-tuesday]\n\n**Teacher Materials:**\n\n* Computers\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "While participants have seen much of this unit through TLOs, we want to wrap-up the unit by showing teachers lessons they did not see.  We also want to make the “story” of this unit clear and describe how it relates to other units in the curriculum. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-24",
@@ -536,10 +535,10 @@
       "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Describe the assessment philosophy of the curriculum where projects are used in tandem with MC assessments.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-tuesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Computer\r\n\r\n\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Describe the assessment philosophy of the curriculum where projects are used in tandem with MC assessments.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-25",
@@ -555,10 +554,10 @@
       "has_lesson_plan": true,
       "relative_position": 26,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n* Gots and Needs charts around the room\n\n**Facilitator Supplies:**\n\n* Survey\n* [r csp-local-slides-2020-tuesday]\n\t* Add housekeeping to the slides as needed\n\n**Teacher Materials:**\n\n* Computers\n* Post-it notes\n\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-26",
@@ -574,10 +573,10 @@
       "has_lesson_plan": true,
       "relative_position": 27,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This begins our discussion around equity.  This morning we start by talking about structural and systemic issues that prevent all students from being able to access to CS.  ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Blank large poster paper arranged on the perimeter of the room (one sheet for every ~4 people in the room)\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-wednesday]\r\n* Large poster paper\r\n* [r csp-local-notes-2020]\r\n\r\n\r\n**Teacher Materials:**\r\n\r\n* One computer per table\r\n* Notebooks\r\n* Post-its\r\n* Markers\r\n* Group notes\r\n\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This begins our discussion around equity.  This morning we start by talking about structural and systemic issues that prevent all students from being able to access to CS.  ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-27",
@@ -593,8 +592,8 @@
       "has_lesson_plan": true,
       "relative_position": 28,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-28",
@@ -610,10 +609,10 @@
       "has_lesson_plan": true,
       "relative_position": 29,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This session gives participants a broad overview of Unit 2 and context for the first TLO of the day.  We want participants to see the Internet Simulator in this session so they will be able to see how the “layers” build up in the next TLO that uses the Internet Simulator. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-wednesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Computers",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session gives participants a broad overview of Unit 2 and context for the first TLO of the day.  We want participants to see the Internet Simulator in this session so they will be able to see how the “layers” build up in the next TLO that uses the Internet Simulator. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-29",
@@ -629,10 +628,10 @@
       "has_lesson_plan": true,
       "relative_position": 30,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "The importance of unplugged lessons are reinforced in this lesson.  This lesson is also a foundational lesson for the unit.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-wednesday]\n\n**Teacher Materials:**\n\n* Writing utensil\n* Journal\n* String\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "The importance of unplugged lessons are reinforced in this lesson.  This lesson is also a foundational lesson for the unit.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-30",
@@ -648,10 +647,10 @@
       "has_lesson_plan": true,
       "relative_position": 31,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This is our first layer of the internet that is introduced to participants.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-wednesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Writing utensil\r\n* Journal\r\n* Computers\r\n\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This is our first layer of the internet that is introduced to participants.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-31",
@@ -667,8 +666,8 @@
       "has_lesson_plan": true,
       "relative_position": 32,
       "properties": {
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-32",
@@ -684,10 +683,10 @@
       "has_lesson_plan": true,
       "relative_position": 33,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Teachers see another layer of the internet.  ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal breakout room set-up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-wednesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Writing utensil\r\n* Journal\r\n* Computers\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Teachers see another layer of the internet.  ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-33",
@@ -703,8 +702,8 @@
       "has_lesson_plan": true,
       "relative_position": 34,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-34",
@@ -720,10 +719,10 @@
       "has_lesson_plan": true,
       "relative_position": 35,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Teachers see another layer of the internet.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-wednesday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Writing utensil\r\n* Journal\r\n* Computers\r\n\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Teachers see another layer of the internet.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-35",
@@ -739,10 +738,10 @@
       "has_lesson_plan": true,
       "relative_position": 36,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "While participants have seen much of this unit through TLOs, we want to wrap-up the unit by showing teachers lessons they did not see.  We also want to make the “story” of this unit clear and describe how it relates to prior and subsequent units. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* csp-local-slides-2020-Wednesday\r\n\r\n**Teacher Materials:**\r\n\r\n* Computers",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "While participants have seen much of this unit through TLOs, we want to wrap-up the unit by showing teachers lessons they did not see.  We also want to make the “story” of this unit clear and describe how it relates to prior and subsequent units. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-36",
@@ -758,9 +757,9 @@
       "has_lesson_plan": true,
       "relative_position": 37,
       "properties": {
-        "purpose": "This curriculum was written with consideration to the barriers students may have to accessing computer science content.  In this session we want to highlight what barriers we have tried to address in the curriculum.  We also ask participants to consider what barriers might still remain, based on what they have seen so far, and then brainstorm ways they can remove or scaffold to those barriers. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\r\n\r\n* Normal Breakout Room Set Up\r\n\r\nFacilitator Supplies and Prep:\r\n\r\n* [r csp-local-slides-2020-Wednesday]\r\n* [r csp-local-notes-2020]\r\n\r\nTeacher Materials:\r\n\r\n* Notebooks\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This curriculum was written with consideration to the barriers students may have to accessing computer science content.  In this session we want to highlight what barriers we have tried to address in the curriculum.  We also ask participants to consider what barriers might still remain, based on what they have seen so far, and then brainstorm ways they can remove or scaffold to those barriers. "
       },
       "seeding_key": {
         "lesson.key": "session-37",
@@ -776,10 +775,10 @@
       "has_lesson_plan": true,
       "relative_position": 38,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal breakout room set-up\r\n* Gots and needs charts on the wall\r\n\r\n**Facilitator Supplies:**\r\n\r\n* Survey\r\n* [r csp-local-slides-2020-wednesday]\r\n\t* Including, updated housekeeping slides\r\n\r\n**Teacher Materials:**\r\n\r\n* Computers\r\n* Post-it notes\r\n\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-38",
@@ -795,10 +794,10 @@
       "has_lesson_plan": true,
       "relative_position": 39,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This session is intended to start to focus on how teachers affect equity in a CS classroom directly.  Participants brainstorm “Who is CSP really for?”, look at the College Board’s policy on AP enrollment, and discuss ways to ensure who is enrolled in their AP CSP classroom reflects their school as a whole.  \r\n \r\nFrom there, we examine the role perspectives and identities play in the classroom.  Participants will see two case studies of scenes from a CSP classroom and then reflect on how blindspots may play a role in how they interpret those scenes.  That leads into a conversation about how we can make students feel like they belong in CS.  This is especially important as we go into the programming unit where some participants (and students) have more experience than others.  We want participants to think about the role they play in creating a culture of belonging in their classrooms.\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\n\n* Prepared definition of “Blindspots” written on poster paper\n* Identify and prepare actors for the case studies\n\n\nFacilitator Supplies:\n\n* [r csp-local-slides-2020-thursday]\n* Chart paper\n\nTeacher Materials:\n\n* Journal\n\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session is intended to start to focus on how teachers affect equity in a CS classroom directly.  Participants brainstorm “Who is CSP really for?”, look at the College Board’s policy on AP enrollment, and discuss ways to ensure who is enrolled in their AP CSP classroom reflects their school as a whole.  \r\n \r\nFrom there, we examine the role perspectives and identities play in the classroom.  Participants will see two case studies of scenes from a CSP classroom and then reflect on how blindspots may play a role in how they interpret those scenes.  That leads into a conversation about how we can make students feel like they belong in CS.  This is especially important as we go into the programming unit where some participants (and students) have more experience than others.  We want participants to think about the role they play in creating a culture of belonging in their classrooms.\r\n",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-39",
@@ -814,8 +813,8 @@
       "has_lesson_plan": true,
       "relative_position": 40,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-40",
@@ -831,10 +830,10 @@
       "has_lesson_plan": true,
       "relative_position": 41,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This session gives participants a broad overview of Unit 3 and context for the first TLO of the day.  We want participants to see what is possible in App Lab and get excited about creating in the environment.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-thursday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Computers\r\n\r\n\r\n\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session gives participants a broad overview of Unit 3 and context for the first TLO of the day.  We want participants to see what is possible in App Lab and get excited about creating in the environment.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-41",
@@ -850,10 +849,10 @@
       "has_lesson_plan": true,
       "relative_position": 42,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "The purpose of this session is to demonstrate how student’s first experiences with “programming” can be very approachable.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n\n**Facilitator Supplies and Prep:**\n\n* [r csp-local-slides-2020-thursday]\n\n**Teacher Materials:**\n\n* Writing utensil\n* Journal\n* Computers\n\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "The purpose of this session is to demonstrate how student’s first experiences with “programming” can be very approachable.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-42",
@@ -869,10 +868,10 @@
       "has_lesson_plan": true,
       "relative_position": 43,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This session gives participants a start on the project that runs through the unit.  In the last model lesson of the day, participants will create this app.  The goal of this session is to ensure that participants have an idea for an app that they and a partner could make.  We want to emphasize the excitement around making your own app.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-thursday]\r\n\r\n\r\n**Teacher Materials:**\r\n\r\n* Writing utensil\r\n* Journal\r\n* Computers\r\n* [r csp-local-activity-packet-2020]\r\n\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session gives participants a start on the project that runs through the unit.  In the last model lesson of the day, participants will create this app.  The goal of this session is to ensure that participants have an idea for an app that they and a partner could make.  We want to emphasize the excitement around making your own app.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-43",
@@ -888,8 +887,8 @@
       "has_lesson_plan": true,
       "relative_position": 44,
       "properties": {
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-44",
@@ -905,10 +904,10 @@
       "has_lesson_plan": true,
       "relative_position": 45,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "To show participants how the role of the teacher is similar and different in programming lessons to other lesson types.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-thursday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Writing utensil\r\n* Journal\r\n* Computers\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "To show participants how the role of the teacher is similar and different in programming lessons to other lesson types.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-45",
@@ -924,8 +923,8 @@
       "has_lesson_plan": true,
       "relative_position": 46,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-46",
@@ -941,10 +940,10 @@
       "has_lesson_plan": true,
       "relative_position": 47,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Participants learn about the debugging process and how debugging is introduced in Lesson 7.  Participants learn about tools within App Lab to support debugging.  ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-Thursday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Computers\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Participants learn about the debugging process and how debugging is introduced in Lesson 7.  Participants learn about tools within App Lab to support debugging.  ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-47",
@@ -960,10 +959,10 @@
       "has_lesson_plan": true,
       "relative_position": 48,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "To show participants what active teaching looks like when teaching programming.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\nFacilitator Supplies:\r\n\r\n* [r csp-local-slides-2020-thursday]\r\n\r\nTeacher Materials:\r\n\r\n* Writing utensil\r\n* Journal\r\n* Computers\r\n\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "To show participants what active teaching looks like when teaching programming.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-48",
@@ -979,10 +978,10 @@
       "has_lesson_plan": true,
       "relative_position": 49,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "While participants have seen much of this unit through TLOs and Previously, On… sessions, we want to wrap-up the unit by showing teachers lessons they did not see.  We also want to make the “story” of this unit clear and describe how it relates to where we are going. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\r\n\r\n* Normal Breakout Room Set Up\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-thursday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Computer\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "While participants have seen much of this unit through TLOs and Previously, On… sessions, we want to wrap-up the unit by showing teachers lessons they did not see.  We also want to make the “story” of this unit clear and describe how it relates to where we are going. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-49",
@@ -998,10 +997,10 @@
       "has_lesson_plan": true,
       "relative_position": 50,
       "properties": {
-        "student_overview": "Room Supplies:",
-        "purpose": "In diverse classrooms, the topic of differentiation is important.  While differentiation can support and/or challenge students, it can also alienate students who feel “targeted” by differentiation or feel like differentiation is sending a message that they do not belong in the classroom.  This session is intended to help teachers consider this dilemma.  ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Supplies:**\r\n\r\n* Normal breakout room set-up\r\n* Pre-made posters with likely groups of students mentioned in the brainstorm.\r\n\r\n**Facilitator Supplies:**\r\n\r\n* Posters\r\n* [r csp-local-slides-2020-thursday]\r\n\r\n**Teacher Materials:**\r\n\r\n* Journals\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "In diverse classrooms, the topic of differentiation is important.  While differentiation can support and/or challenge students, it can also alienate students who feel “targeted” by differentiation or feel like differentiation is sending a message that they do not belong in the classroom.  This session is intended to help teachers consider this dilemma.  ",
+        "student_overview": "Room Supplies:"
       },
       "seeding_key": {
         "lesson.key": "session-50",
@@ -1017,10 +1016,10 @@
       "has_lesson_plan": true,
       "relative_position": 51,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n* Gots and Needs posters up on the wall\n\n**Facilitator Supplies:**\n\n* Survey\n* [r csp-local-slides-2020-thursday]\n\n**Teacher Materials:**\n\n* Computers\n* Post-it notes\n\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Get feedback from teachers about their gots and needs to inform the next day. Clarify housekeeping. Take survey.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-51",
@@ -1036,10 +1035,10 @@
       "has_lesson_plan": true,
       "relative_position": 52,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Participants reflect on their own values for the course and consider how this translates to creating an assessment approach that reflects these values.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-friday]\n\n**Teacher Materials:**\n\n* [r csp-teal-book-20-21]\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Participants reflect on their own values for the course and consider how this translates to creating an assessment approach that reflects these values.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-52",
@@ -1055,10 +1054,10 @@
       "has_lesson_plan": true,
       "relative_position": 53,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "To take things from the “theoretical” to the “real-world” of assessment.  Teachers will decide what they will use for summative assessment with students in Units 1-3.  Then they will share their ideas with other teachers and plan how they will us formative assessment and re-learning/redos/retakes during the year.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout Room Set Up\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-friday]\n\n**Teacher Materials:**\n\n* [r csp-teal-book-20-21]\n* Computers\n* [r csp-local-notes-2020]\n* Notebooks\n\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "To take things from the “theoretical” to the “real-world” of assessment.  Teachers will decide what they will use for summative assessment with students in Units 1-3.  Then they will share their ideas with other teachers and plan how they will us formative assessment and re-learning/redos/retakes during the year.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-53",
@@ -1074,8 +1073,8 @@
       "has_lesson_plan": true,
       "relative_position": 54,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-54",
@@ -1091,10 +1090,10 @@
       "has_lesson_plan": true,
       "relative_position": 55,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Teachers get familiar with navigating the Code.org website, especially how you use it to manage a class.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal breakout room setup\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-friday]\n\n**Teacher Materials:**\n\n* Computers\n* [r csp-local-activity-packet-2020]\n\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Teachers get familiar with navigating the Code.org website, especially how you use it to manage a class.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-55",
@@ -1110,10 +1109,10 @@
       "has_lesson_plan": true,
       "relative_position": 56,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Time for teachers to talk about topics they want to know more about. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal breakout room setup\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-friday]\n\n**Teacher Materials:**\n\n* Computers\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Time for teachers to talk about topics they want to know more about. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-56",
@@ -1129,8 +1128,8 @@
       "has_lesson_plan": true,
       "relative_position": 57,
       "properties": {
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-57",
@@ -1146,10 +1145,10 @@
       "has_lesson_plan": true,
       "relative_position": 58,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Note, this section is included for AP teachers specifically.  For non-AP teachers, it is recommended that you encourage them to continue researching information they learned about in the unconference. \r\n \r\nFocused on AP resources that the College Board offers.  Teachers who are not teaching it as an AP can extend their discussions from the unconference, finish up creating their assessment plan from the morning, or dig deeper into lessons we did not cover earlier in the week.\r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal breakout room setup\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-friday]\n\n**Teacher Materials:**\n\n* Computers\n* [r csp-local-activity-packet-2020]\n\n\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Note, this section is included for AP teachers specifically.  For non-AP teachers, it is recommended that you encourage them to continue researching information they learned about in the unconference. \r\n \r\nFocused on AP resources that the College Board offers.  Teachers who are not teaching it as an AP can extend their discussions from the unconference, finish up creating their assessment plan from the morning, or dig deeper into lessons we did not cover earlier in the week.\r\n",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-58",
@@ -1165,10 +1164,10 @@
       "has_lesson_plan": true,
       "relative_position": 59,
       "properties": {
-        "student_overview": "Room Setup",
-        "purpose": "The goals are twofold:\r\n\r\n* To emphasize the importance of future workshops, especially Workshop 1 where participants will be introduced to a new pedagogical tool used throughout the programming lessons in the curriculum as well as learn key computer science content.  \r\n* To provide participants with space to reflect on their next steps and to make a plan for pacing during the upcoming school year. \r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup**\r\n\r\n* Normal breakout room setup\r\n\r\n**Facilitator Supplies:**\r\n\r\n* [r csp-local-slides-2020-friday]\r\n\r\n**Teacher Materials:**\r\n\r\n* [r csp-teal-book-20-21]\r\n* Computers\r\n\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "The goals are twofold:\r\n\r\n* To emphasize the importance of future workshops, especially Workshop 1 where participants will be introduced to a new pedagogical tool used throughout the programming lessons in the curriculum as well as learn key computer science content.  \r\n* To provide participants with space to reflect on their next steps and to make a plan for pacing during the upcoming school year. \r\n",
+        "student_overview": "Room Setup"
       },
       "seeding_key": {
         "lesson.key": "session-59",
@@ -1184,10 +1183,10 @@
       "has_lesson_plan": true,
       "relative_position": 60,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Celebrate the week. Answer remaining questions. Take final survey",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "**Room Setup:**\n\n* Normal Breakout room setup\n\n**Facilitator Supplies:**\n\n* [r csp-local-slides-2020-friday]\n\n**Teacher Materials:** \n\n* Computers\n* Journals\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Celebrate the week. Answer remaining questions. Take final survey",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-60",
@@ -1201,8 +1200,7 @@
       "key": "4184e35d-a0e4-49d5-a762-caf9cd5258d0",
       "position": 1,
       "properties": {
-        "name": "Prior to the Workshop",
-        "duration": 0
+        "name": "Prior to the Workshop"
       },
       "seeding_key": {
         "lesson_activity.key": "4184e35d-a0e4-49d5-a762-caf9cd5258d0",
@@ -1215,8 +1213,8 @@
       "key": "dc455fd3-7f90-4318-b5ec-4e714064faf8",
       "position": 2,
       "properties": {
-        "name": "Welcome and Introductions",
-        "duration": 18
+        "duration": 18,
+        "name": "Welcome and Introductions"
       },
       "seeding_key": {
         "lesson_activity.key": "dc455fd3-7f90-4318-b5ec-4e714064faf8",
@@ -1229,8 +1227,8 @@
       "key": "5672a91c-18b9-461c-9d0c-5a3eaabfe463",
       "position": 3,
       "properties": {
-        "name": "Creating Norms",
-        "duration": 12
+        "duration": 12,
+        "name": "Creating Norms"
       },
       "seeding_key": {
         "lesson_activity.key": "5672a91c-18b9-461c-9d0c-5a3eaabfe463",
@@ -1243,8 +1241,8 @@
       "key": "4cf0a613-9899-47b9-b101-5e1522d52afd",
       "position": 4,
       "properties": {
-        "name": "Program Overview",
-        "duration": 10
+        "duration": 10,
+        "name": "Program Overview"
       },
       "seeding_key": {
         "lesson_activity.key": "4cf0a613-9899-47b9-b101-5e1522d52afd",
@@ -1257,8 +1255,8 @@
       "key": "e03b5183-c495-42b6-8edc-997d9eaed644",
       "position": 1,
       "properties": {
-        "name": "AP CSP and other AP Courses",
-        "duration": 10
+        "duration": 10,
+        "name": "AP CSP and other AP Courses"
       },
       "seeding_key": {
         "lesson_activity.key": "e03b5183-c495-42b6-8edc-997d9eaed644",
@@ -1271,8 +1269,8 @@
       "key": "407993b4-4d5c-4514-bf08-4df39d859cf8",
       "position": 2,
       "properties": {
-        "name": "AP CSP in comparison to AP CSA",
-        "duration": 10
+        "duration": 10,
+        "name": "AP CSP in comparison to AP CSA"
       },
       "seeding_key": {
         "lesson_activity.key": "407993b4-4d5c-4514-bf08-4df39d859cf8",
@@ -1285,8 +1283,8 @@
       "key": "56349d7c-d30d-4cb9-9f94-49c065a0a34a",
       "position": 1,
       "properties": {
-        "name": "Break",
-        "duration": 15
+        "duration": 15,
+        "name": "Break"
       },
       "seeding_key": {
         "lesson_activity.key": "56349d7c-d30d-4cb9-9f94-49c065a0a34a",
@@ -1299,8 +1297,8 @@
       "key": "e45d3862-e522-49be-8a0a-eb1ca744847e",
       "position": 1,
       "properties": {
-        "name": "Introducing the CED",
-        "duration": 10
+        "duration": 10,
+        "name": "Introducing the CED"
       },
       "seeding_key": {
         "lesson_activity.key": "e45d3862-e522-49be-8a0a-eb1ca744847e",
@@ -1313,8 +1311,8 @@
       "key": "977f91e2-ff1d-46d8-a62e-2ffc1f58a263",
       "position": 2,
       "properties": {
-        "name": "Scavenger Hunt",
-        "duration": 20
+        "duration": 20,
+        "name": "Scavenger Hunt"
       },
       "seeding_key": {
         "lesson_activity.key": "977f91e2-ff1d-46d8-a62e-2ffc1f58a263",
@@ -1327,8 +1325,8 @@
       "key": "5c0a66dd-0d56-4e18-b394-924b582a04e6",
       "position": 3,
       "properties": {
-        "name": "Discussion and Connections to the Curriculum",
-        "duration": 30
+        "duration": 30,
+        "name": "Discussion and Connections to the Curriculum"
       },
       "seeding_key": {
         "lesson_activity.key": "5c0a66dd-0d56-4e18-b394-924b582a04e6",
@@ -1341,8 +1339,8 @@
       "key": "313cf12d-d99a-4f74-987a-cde3706ddea2",
       "position": 1,
       "properties": {
-        "name": "Preparing for our first Model Lesson",
-        "duration": 4
+        "duration": 4,
+        "name": "Preparing for our first Model Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "313cf12d-d99a-4f74-987a-cde3706ddea2",
@@ -1355,8 +1353,8 @@
       "key": "1a6652e4-eac4-42ce-b017-de9ac13443d6",
       "position": 2,
       "properties": {
-        "name": "Previously, On CSP…",
-        "duration": 6
+        "duration": 6,
+        "name": "Previously, On CSP…"
       },
       "seeding_key": {
         "lesson_activity.key": "1a6652e4-eac4-42ce-b017-de9ac13443d6",
@@ -1369,8 +1367,8 @@
       "key": "ac0819e5-ae3c-4028-82ca-81256807ae47",
       "position": 1,
       "properties": {
-        "name": "Teach U1L2 - Representing Information",
-        "duration": 40
+        "duration": 40,
+        "name": "Teach U1L2 - Representing Information"
       },
       "seeding_key": {
         "lesson_activity.key": "ac0819e5-ae3c-4028-82ca-81256807ae47",
@@ -1383,8 +1381,8 @@
       "key": "dbaf3f86-c61a-44be-86ef-2f5c6a3bc18a",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "dbaf3f86-c61a-44be-86ef-2f5c6a3bc18a",
@@ -1397,8 +1395,8 @@
       "key": "b60a20a4-d17e-41e2-985f-115e6df010f8",
       "position": 1,
       "properties": {
-        "name": "Teach U1L3 - Circle Square Patterns",
-        "duration": 45
+        "duration": 45,
+        "name": "Teach U1L3 - Circle Square Patterns"
       },
       "seeding_key": {
         "lesson_activity.key": "b60a20a4-d17e-41e2-985f-115e6df010f8",
@@ -1411,8 +1409,8 @@
       "key": "cfa1ccce-227d-4272-80c4-230c7b7a1d4d",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "cfa1ccce-227d-4272-80c4-230c7b7a1d4d",
@@ -1425,8 +1423,8 @@
       "key": "c225cf8c-52ab-4a25-9407-f2a89b68b447",
       "position": 1,
       "properties": {
-        "name": "Introduction to the Activity",
-        "duration": 2
+        "duration": 2,
+        "name": "Introduction to the Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c225cf8c-52ab-4a25-9407-f2a89b68b447",
@@ -1439,8 +1437,8 @@
       "key": "6d6676db-704f-49ef-90ae-bfe8223a4867",
       "position": 2,
       "properties": {
-        "name": "Connecting Circle/Square with Binary",
-        "duration": 15
+        "duration": 15,
+        "name": "Connecting Circle/Square with Binary"
       },
       "seeding_key": {
         "lesson_activity.key": "6d6676db-704f-49ef-90ae-bfe8223a4867",
@@ -1453,8 +1451,8 @@
       "key": "881ac3ac-b6cb-427c-a07a-78ff3cc63d9f",
       "position": 3,
       "properties": {
-        "name": "Connecting to the Learning Goals",
-        "duration": 8
+        "duration": 8,
+        "name": "Connecting to the Learning Goals"
       },
       "seeding_key": {
         "lesson_activity.key": "881ac3ac-b6cb-427c-a07a-78ff3cc63d9f",
@@ -1467,8 +1465,8 @@
       "key": "2be7bcfa-acf4-43e3-989b-a0c5e45e6296",
       "position": 1,
       "properties": {
-        "name": "Context",
-        "duration": 2
+        "duration": 2,
+        "name": "Context"
       },
       "seeding_key": {
         "lesson_activity.key": "2be7bcfa-acf4-43e3-989b-a0c5e45e6296",
@@ -1481,8 +1479,8 @@
       "key": "a8c95499-ddd6-4370-a8f8-bdc06a907355",
       "position": 2,
       "properties": {
-        "name": "Comparing Unplugged and Plugged Lessons",
-        "duration": 28
+        "duration": 28,
+        "name": "Comparing Unplugged and Plugged Lessons"
       },
       "seeding_key": {
         "lesson_activity.key": "a8c95499-ddd6-4370-a8f8-bdc06a907355",
@@ -1495,8 +1493,8 @@
       "key": "2f955a9c-6683-49be-85f1-18fcac4b84f8",
       "position": 1,
       "properties": {
-        "name": "Getting Started",
-        "duration": 20
+        "duration": 20,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "2f955a9c-6683-49be-85f1-18fcac4b84f8",
@@ -1509,8 +1507,8 @@
       "key": "75bb89f8-4b8c-4995-8906-a29088bbbfec",
       "position": 2,
       "properties": {
-        "name": "Teacher work-time",
-        "duration": 40
+        "duration": 40,
+        "name": "Teacher work-time"
       },
       "seeding_key": {
         "lesson_activity.key": "75bb89f8-4b8c-4995-8906-a29088bbbfec",
@@ -1523,8 +1521,8 @@
       "key": "ab87deb1-142a-4a04-8a24-f98d3c1fd907",
       "position": 1,
       "properties": {
-        "name": "Introduction to Gots and Needs",
-        "duration": 10
+        "duration": 10,
+        "name": "Introduction to Gots and Needs"
       },
       "seeding_key": {
         "lesson_activity.key": "ab87deb1-142a-4a04-8a24-f98d3c1fd907",
@@ -1537,8 +1535,8 @@
       "key": "2deb2a6f-11d1-4935-b380-0a287fd8ed3a",
       "position": 2,
       "properties": {
-        "name": "Housekeeping",
-        "duration": 2
+        "duration": 2,
+        "name": "Housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "2deb2a6f-11d1-4935-b380-0a287fd8ed3a",
@@ -1551,8 +1549,8 @@
       "key": "87f7fbb8-c501-47d5-9342-fcc5d29351d1",
       "position": 3,
       "properties": {
-        "name": "Daily Survey ",
-        "duration": 8
+        "duration": 8,
+        "name": "Daily Survey "
       },
       "seeding_key": {
         "lesson_activity.key": "87f7fbb8-c501-47d5-9342-fcc5d29351d1",
@@ -1565,8 +1563,8 @@
       "key": "7ae65162-4afb-4c09-a1b2-b7a1edd39be2",
       "position": 1,
       "properties": {
-        "name": "Welcome and housekeeping",
-        "duration": 10
+        "duration": 10,
+        "name": "Welcome and housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "7ae65162-4afb-4c09-a1b2-b7a1edd39be2",
@@ -1579,8 +1577,8 @@
       "key": "6b50fddd-20f2-439c-96f0-7f0e323c6e51",
       "position": 2,
       "properties": {
-        "name": "Lead Learner and Teaching and Learning Strategies",
-        "duration": 25
+        "duration": 25,
+        "name": "Lead Learner and Teaching and Learning Strategies"
       },
       "seeding_key": {
         "lesson_activity.key": "6b50fddd-20f2-439c-96f0-7f0e323c6e51",
@@ -1593,8 +1591,8 @@
       "key": "be250a60-ee4f-4802-8f50-7ad53d018994",
       "position": 1,
       "properties": {
-        "name": "Brainstorming Formative Assessment Strategies",
-        "duration": 22
+        "duration": 22,
+        "name": "Brainstorming Formative Assessment Strategies"
       },
       "seeding_key": {
         "lesson_activity.key": "be250a60-ee4f-4802-8f50-7ad53d018994",
@@ -1607,8 +1605,8 @@
       "key": "dd97fc9f-ae8a-4923-82a2-aa05e671f91a",
       "position": 2,
       "properties": {
-        "name": "Formative Assessment in the Curriculum",
-        "duration": 3
+        "duration": 3,
+        "name": "Formative Assessment in the Curriculum"
       },
       "seeding_key": {
         "lesson_activity.key": "dd97fc9f-ae8a-4923-82a2-aa05e671f91a",
@@ -1621,8 +1619,8 @@
       "key": "5fde2a0f-07df-4404-8690-428bf2dbc806",
       "position": 1,
       "properties": {
-        "name": "Review of the Lesson Planning Process",
-        "duration": 2
+        "duration": 2,
+        "name": "Review of the Lesson Planning Process"
       },
       "seeding_key": {
         "lesson_activity.key": "5fde2a0f-07df-4404-8690-428bf2dbc806",
@@ -1635,8 +1633,8 @@
       "key": "2154cf56-613e-4d0c-908a-b76831f7d19c",
       "position": 2,
       "properties": {
-        "name": "Prepare the lesson",
-        "duration": 48
+        "duration": 48,
+        "name": "Prepare the lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "2154cf56-613e-4d0c-908a-b76831f7d19c",
@@ -1649,8 +1647,8 @@
       "key": "677402ec-1765-4d48-b6d0-464ffd31f217",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 45
+        "duration": 45,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "677402ec-1765-4d48-b6d0-464ffd31f217",
@@ -1663,8 +1661,8 @@
       "key": "690fcb5f-7a02-4ae2-8a82-2eb2c620ca7b",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "690fcb5f-7a02-4ae2-8a82-2eb2c620ca7b",
@@ -1677,8 +1675,8 @@
       "key": "3bd03284-0d3e-4b01-891c-3670de5a1ed1",
       "position": 1,
       "properties": {
-        "name": "Lesson 8 Overview",
-        "duration": 5
+        "duration": 5,
+        "name": "Lesson 8 Overview"
       },
       "seeding_key": {
         "lesson_activity.key": "3bd03284-0d3e-4b01-891c-3670de5a1ed1",
@@ -1691,8 +1689,8 @@
       "key": "162e7491-c94d-4f20-9240-119e15e71be0",
       "position": 2,
       "properties": {
-        "name": "Explore the Widget",
-        "duration": 10
+        "duration": 10,
+        "name": "Explore the Widget"
       },
       "seeding_key": {
         "lesson_activity.key": "162e7491-c94d-4f20-9240-119e15e71be0",
@@ -1705,8 +1703,8 @@
       "key": "f836c50e-2daf-4a9e-a925-a3ed8f47befc",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 41
+        "duration": 41,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "f836c50e-2daf-4a9e-a925-a3ed8f47befc",
@@ -1719,8 +1717,8 @@
       "key": "131ea61c-95a4-4c94-8928-67f4f28b75cd",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 19
+        "duration": 19,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "131ea61c-95a4-4c94-8928-67f4f28b75cd",
@@ -1733,8 +1731,8 @@
       "key": "cd97b329-9991-40d3-831f-d1fb494c92a3",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 45
+        "duration": 45,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "cd97b329-9991-40d3-831f-d1fb494c92a3",
@@ -1747,8 +1745,8 @@
       "key": "6ff05418-5f72-44da-ae5b-13cb6a0fafc0",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "6ff05418-5f72-44da-ae5b-13cb6a0fafc0",
@@ -1761,8 +1759,8 @@
       "key": "437a7497-c2c1-4033-8f54-aed4e6113d5d",
       "position": 1,
       "properties": {
-        "name": "What you have seen in Unit 1",
-        "duration": 2
+        "duration": 2,
+        "name": "What you have seen in Unit 1"
       },
       "seeding_key": {
         "lesson_activity.key": "437a7497-c2c1-4033-8f54-aed4e6113d5d",
@@ -1775,8 +1773,8 @@
       "key": "57954908-25bb-4f8b-a1bb-8e3b1e17e813",
       "position": 2,
       "properties": {
-        "name": "What we have not seen - Lesson Overviews",
-        "duration": 22
+        "duration": 22,
+        "name": "What we have not seen - Lesson Overviews"
       },
       "seeding_key": {
         "lesson_activity.key": "57954908-25bb-4f8b-a1bb-8e3b1e17e813",
@@ -1789,8 +1787,8 @@
       "key": "4a5241a4-357d-414f-98dd-1d4a374632bb",
       "position": 3,
       "properties": {
-        "name": "Connections to Unit 2",
-        "duration": 1
+        "duration": 1,
+        "name": "Connections to Unit 2"
       },
       "seeding_key": {
         "lesson_activity.key": "4a5241a4-357d-414f-98dd-1d4a374632bb",
@@ -1803,8 +1801,8 @@
       "key": "be690528-e2df-4fe1-8acf-e604cc788035",
       "position": 1,
       "properties": {
-        "name": "Setting the Scene",
-        "duration": 3
+        "duration": 3,
+        "name": "Setting the Scene"
       },
       "seeding_key": {
         "lesson_activity.key": "be690528-e2df-4fe1-8acf-e604cc788035",
@@ -1817,8 +1815,8 @@
       "key": "8972c284-8bab-4a10-ba12-44cd67cb5957",
       "position": 2,
       "properties": {
-        "name": "Exploring Assessments in Unit 1",
-        "duration": 32
+        "duration": 32,
+        "name": "Exploring Assessments in Unit 1"
       },
       "seeding_key": {
         "lesson_activity.key": "8972c284-8bab-4a10-ba12-44cd67cb5957",
@@ -1831,8 +1829,8 @@
       "key": "27f4ed77-afe3-4297-a348-a1ff1113f681",
       "position": 1,
       "properties": {
-        "name": "Gots and Needs",
-        "duration": 5
+        "duration": 5,
+        "name": "Gots and Needs"
       },
       "seeding_key": {
         "lesson_activity.key": "27f4ed77-afe3-4297-a348-a1ff1113f681",
@@ -1845,8 +1843,8 @@
       "key": "7636aff7-a628-420c-9034-98aaedc36e3a",
       "position": 2,
       "properties": {
-        "name": "Housekeeping",
-        "duration": 5
+        "duration": 5,
+        "name": "Housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "7636aff7-a628-420c-9034-98aaedc36e3a",
@@ -1859,8 +1857,8 @@
       "key": "876913da-3241-461c-8992-3814715f16b8",
       "position": 3,
       "properties": {
-        "name": "Complete Survey",
-        "duration": 5
+        "duration": 5,
+        "name": "Complete Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "876913da-3241-461c-8992-3814715f16b8",
@@ -1873,8 +1871,8 @@
       "key": "30094c61-a7fe-4d59-bb4d-c467ca783c6f",
       "position": 1,
       "properties": {
-        "name": "Welcome and housekeeping",
-        "duration": 5
+        "duration": 5,
+        "name": "Welcome and housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "30094c61-a7fe-4d59-bb4d-c467ca783c6f",
@@ -1887,8 +1885,8 @@
       "key": "ac1fbddf-5e81-4666-af43-031d9057aa39",
       "position": 2,
       "properties": {
-        "name": "Describing Inequities",
-        "duration": 5
+        "duration": 5,
+        "name": "Describing Inequities"
       },
       "seeding_key": {
         "lesson_activity.key": "ac1fbddf-5e81-4666-af43-031d9057aa39",
@@ -1901,8 +1899,8 @@
       "key": "04af9151-9a0f-47bf-bf27-09826ffae7b2",
       "position": 3,
       "properties": {
-        "name": "Identifying barriers and stakeholders",
-        "duration": 45
+        "duration": 45,
+        "name": "Identifying barriers and stakeholders"
       },
       "seeding_key": {
         "lesson_activity.key": "04af9151-9a0f-47bf-bf27-09826ffae7b2",
@@ -1915,8 +1913,8 @@
       "key": "90483b4f-8d6d-4244-879a-2f0ff10f01a7",
       "position": 1,
       "properties": {
-        "name": "Previously, On...",
-        "duration": 10
+        "duration": 10,
+        "name": "Previously, On..."
       },
       "seeding_key": {
         "lesson_activity.key": "90483b4f-8d6d-4244-879a-2f0ff10f01a7",
@@ -1929,8 +1927,8 @@
       "key": "68288d84-773e-4623-a4b5-ac47b01e5f87",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 40
+        "duration": 40,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "68288d84-773e-4623-a4b5-ac47b01e5f87",
@@ -1943,8 +1941,8 @@
       "key": "b6cbdf9b-88d5-4526-be2f-5c77f96826b5",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "b6cbdf9b-88d5-4526-be2f-5c77f96826b5",
@@ -1957,8 +1955,8 @@
       "key": "b9172048-3ba1-437b-9b63-bba75a520111",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 45
+        "duration": 45,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "b9172048-3ba1-437b-9b63-bba75a520111",
@@ -1971,8 +1969,8 @@
       "key": "66f590fb-9598-4c89-89b8-cbf1ae706d8a",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "66f590fb-9598-4c89-89b8-cbf1ae706d8a",
@@ -1985,8 +1983,8 @@
       "key": "4fc65d9d-1074-4da9-b09a-0e795276ff77",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 45
+        "duration": 45,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "4fc65d9d-1074-4da9-b09a-0e795276ff77",
@@ -1999,8 +1997,8 @@
       "key": "4c753f42-d5d2-4927-9cfc-eb6681b6c56f",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "4c753f42-d5d2-4927-9cfc-eb6681b6c56f",
@@ -2013,8 +2011,8 @@
       "key": "e32f1f3b-55aa-4358-9983-903eb33f17a1",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 45
+        "duration": 45,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "e32f1f3b-55aa-4358-9983-903eb33f17a1",
@@ -2027,8 +2025,8 @@
       "key": "e657ac8e-d53a-4999-b753-3ed1153e58f5",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "e657ac8e-d53a-4999-b753-3ed1153e58f5",
@@ -2041,8 +2039,8 @@
       "key": "9913bff6-6c8a-490a-8340-c869ed912b02",
       "position": 1,
       "properties": {
-        "name": "Unit 2 Overview",
-        "duration": 17
+        "duration": 17,
+        "name": "Unit 2 Overview"
       },
       "seeding_key": {
         "lesson_activity.key": "9913bff6-6c8a-490a-8340-c869ed912b02",
@@ -2055,8 +2053,8 @@
       "key": "96ce04ca-6e2a-45c9-b56a-fea947a0e786",
       "position": 2,
       "properties": {
-        "name": "Connections to Unit 1 and Unit 3",
-        "duration": 3
+        "duration": 3,
+        "name": "Connections to Unit 1 and Unit 3"
       },
       "seeding_key": {
         "lesson_activity.key": "96ce04ca-6e2a-45c9-b56a-fea947a0e786",
@@ -2069,8 +2067,8 @@
       "key": "d0ef1dff-18a6-4bcd-8c7c-207582dc0383",
       "position": 1,
       "properties": {
-        "name": "Setting the Scene",
-        "duration": 10
+        "duration": 10,
+        "name": "Setting the Scene"
       },
       "seeding_key": {
         "lesson_activity.key": "d0ef1dff-18a6-4bcd-8c7c-207582dc0383",
@@ -2083,8 +2081,8 @@
       "key": "bf281767-d203-4667-ab1e-75277d61d58b",
       "position": 2,
       "properties": {
-        "name": "Discussion",
-        "duration": 20
+        "duration": 20,
+        "name": "Discussion"
       },
       "seeding_key": {
         "lesson_activity.key": "bf281767-d203-4667-ab1e-75277d61d58b",
@@ -2097,8 +2095,8 @@
       "key": "34af9728-b03c-4e4f-a37a-7c78fdeccf77",
       "position": 1,
       "properties": {
-        "name": "Gots and Needs",
-        "duration": 5
+        "duration": 5,
+        "name": "Gots and Needs"
       },
       "seeding_key": {
         "lesson_activity.key": "34af9728-b03c-4e4f-a37a-7c78fdeccf77",
@@ -2111,8 +2109,8 @@
       "key": "811d771a-3f2c-4550-a0fb-1224f7361726",
       "position": 2,
       "properties": {
-        "name": "Housekeeping",
-        "duration": 5
+        "duration": 5,
+        "name": "Housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "811d771a-3f2c-4550-a0fb-1224f7361726",
@@ -2125,8 +2123,8 @@
       "key": "f26a831b-5602-4a08-8a6a-4273f663cfc8",
       "position": 3,
       "properties": {
-        "name": "Survey",
-        "duration": 5
+        "duration": 5,
+        "name": "Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "f26a831b-5602-4a08-8a6a-4273f663cfc8",
@@ -2139,8 +2137,8 @@
       "key": "019bf711-3250-4b6c-b431-fc73086438c2",
       "position": 1,
       "properties": {
-        "name": "Welcome and Housekeeping",
-        "duration": 5
+        "duration": 5,
+        "name": "Welcome and Housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "019bf711-3250-4b6c-b431-fc73086438c2",
@@ -2153,8 +2151,8 @@
       "key": "e3a53808-394e-4ad7-9b6a-a032d250248a",
       "position": 2,
       "properties": {
-        "name": "Who should take CSP?",
-        "duration": 30
+        "duration": 30,
+        "name": "Who should take CSP?"
       },
       "seeding_key": {
         "lesson_activity.key": "e3a53808-394e-4ad7-9b6a-a032d250248a",
@@ -2167,8 +2165,8 @@
       "key": "ed62052a-4082-4d12-97d8-9e1380ac00f0",
       "position": 3,
       "properties": {
-        "name": "Blindspots",
-        "duration": 25
+        "duration": 25,
+        "name": "Blindspots"
       },
       "seeding_key": {
         "lesson_activity.key": "ed62052a-4082-4d12-97d8-9e1380ac00f0",
@@ -2181,8 +2179,8 @@
       "key": "7f57eeba-6ff5-4b08-9310-232d063986eb",
       "position": 4,
       "properties": {
-        "name": "Belonging In the Classroom",
-        "duration": 15
+        "duration": 15,
+        "name": "Belonging In the Classroom"
       },
       "seeding_key": {
         "lesson_activity.key": "7f57eeba-6ff5-4b08-9310-232d063986eb",
@@ -2195,8 +2193,8 @@
       "key": "aeddefec-5e57-4df2-b287-9f0546a5b6fd",
       "position": 1,
       "properties": {
-        "name": "Overview Unit and Lesson 1",
-        "duration": 5
+        "duration": 5,
+        "name": "Overview Unit and Lesson 1"
       },
       "seeding_key": {
         "lesson_activity.key": "aeddefec-5e57-4df2-b287-9f0546a5b6fd",
@@ -2209,8 +2207,8 @@
       "key": "c98e6930-0b74-414d-b382-c98edce2a8a1",
       "position": 2,
       "properties": {
-        "name": "Exploring Apps in Lesson 1",
-        "duration": 10
+        "duration": 10,
+        "name": "Exploring Apps in Lesson 1"
       },
       "seeding_key": {
         "lesson_activity.key": "c98e6930-0b74-414d-b382-c98edce2a8a1",
@@ -2223,8 +2221,8 @@
       "key": "ed3e2e27-634d-473c-bf88-4aa06e7cc4a8",
       "position": 1,
       "properties": {
-        "name": "Intro and Lesson",
-        "duration": 40
+        "duration": 40,
+        "name": "Intro and Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "ed3e2e27-634d-473c-bf88-4aa06e7cc4a8",
@@ -2237,8 +2235,8 @@
       "key": "335ba813-3268-47f1-bc19-beabf85bbb3f",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "335ba813-3268-47f1-bc19-beabf85bbb3f",
@@ -2251,8 +2249,8 @@
       "key": "73c0b338-995c-4e97-aa0d-345762e3984f",
       "position": 1,
       "properties": {
-        "name": "Introduction to Lessons 3-4",
-        "duration": 4
+        "duration": 4,
+        "name": "Introduction to Lessons 3-4"
       },
       "seeding_key": {
         "lesson_activity.key": "73c0b338-995c-4e97-aa0d-345762e3984f",
@@ -2265,8 +2263,8 @@
       "key": "93a3c839-6602-44be-974e-f13178cf89bd",
       "position": 2,
       "properties": {
-        "name": "Designing Your App with the App Development Planning Guide",
-        "duration": 11
+        "duration": 11,
+        "name": "Designing Your App with the App Development Planning Guide"
       },
       "seeding_key": {
         "lesson_activity.key": "93a3c839-6602-44be-974e-f13178cf89bd",
@@ -2279,8 +2277,8 @@
       "key": "1ff7b421-cf5f-4ea9-9222-51ad6416854d",
       "position": 3,
       "properties": {
-        "name": "Designing your App in App Lab",
-        "duration": 25
+        "duration": 25,
+        "name": "Designing your App in App Lab"
       },
       "seeding_key": {
         "lesson_activity.key": "1ff7b421-cf5f-4ea9-9222-51ad6416854d",
@@ -2293,8 +2291,8 @@
       "key": "981cf035-bf57-4f12-a406-ba6dc0d83210",
       "position": 1,
       "properties": {
-        "name": "Teach U3L6 - Intro to Programming",
-        "duration": 40
+        "duration": 40,
+        "name": "Teach U3L6 - Intro to Programming"
       },
       "seeding_key": {
         "lesson_activity.key": "981cf035-bf57-4f12-a406-ba6dc0d83210",
@@ -2307,8 +2305,8 @@
       "key": "fc672d31-423b-44fd-9c52-b80fb178343b",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "fc672d31-423b-44fd-9c52-b80fb178343b",
@@ -2321,8 +2319,8 @@
       "key": "4dea2130-cce4-4f05-8c28-b9f0cf178bff",
       "position": 1,
       "properties": {
-        "name": "Overview of U3L7",
-        "duration": 7
+        "duration": 7,
+        "name": "Overview of U3L7"
       },
       "seeding_key": {
         "lesson_activity.key": "4dea2130-cce4-4f05-8c28-b9f0cf178bff",
@@ -2335,8 +2333,8 @@
       "key": "d8e6f1e6-641f-4663-9971-8966fca005c3",
       "position": 2,
       "properties": {
-        "name": "You Try!",
-        "duration": 18
+        "duration": 18,
+        "name": "You Try!"
       },
       "seeding_key": {
         "lesson_activity.key": "d8e6f1e6-641f-4663-9971-8966fca005c3",
@@ -2349,8 +2347,8 @@
       "key": "5be65380-2de2-4412-8518-47a2fa37cf3e",
       "position": 1,
       "properties": {
-        "name": "Teach U3L8 - Designing an App - Part 3",
-        "duration": 40
+        "duration": 40,
+        "name": "Teach U3L8 - Designing an App - Part 3"
       },
       "seeding_key": {
         "lesson_activity.key": "5be65380-2de2-4412-8518-47a2fa37cf3e",
@@ -2363,8 +2361,8 @@
       "key": "d9a35137-62ea-4409-a32a-711fca7120e4",
       "position": 2,
       "properties": {
-        "name": "Debrief",
-        "duration": 20
+        "duration": 20,
+        "name": "Debrief"
       },
       "seeding_key": {
         "lesson_activity.key": "d9a35137-62ea-4409-a32a-711fca7120e4",
@@ -2377,8 +2375,8 @@
       "key": "5f676cc8-0196-4378-86b4-c992eee4f501",
       "position": 1,
       "properties": {
-        "name": "Unit 3 Overview",
-        "duration": 10
+        "duration": 10,
+        "name": "Unit 3 Overview"
       },
       "seeding_key": {
         "lesson_activity.key": "5f676cc8-0196-4378-86b4-c992eee4f501",
@@ -2391,8 +2389,8 @@
       "key": "0fbddc3a-a524-4eb2-9b67-17eea2af3e80",
       "position": 2,
       "properties": {
-        "name": "Connections to prior and future units",
-        "duration": 5
+        "duration": 5,
+        "name": "Connections to prior and future units"
       },
       "seeding_key": {
         "lesson_activity.key": "0fbddc3a-a524-4eb2-9b67-17eea2af3e80",
@@ -2405,8 +2403,8 @@
       "key": "996272cd-fa7a-456a-83a7-02600f9d43ae",
       "position": 1,
       "properties": {
-        "name": "Poster session and gallery walk ",
-        "duration": 25
+        "duration": 25,
+        "name": "Poster session and gallery walk "
       },
       "seeding_key": {
         "lesson_activity.key": "996272cd-fa7a-456a-83a7-02600f9d43ae",
@@ -2419,8 +2417,8 @@
       "key": "b7d4b6d2-17c9-4a5d-b28c-b08e206c86f8",
       "position": 2,
       "properties": {
-        "name": "Make a Plan",
-        "duration": 20
+        "duration": 20,
+        "name": "Make a Plan"
       },
       "seeding_key": {
         "lesson_activity.key": "b7d4b6d2-17c9-4a5d-b28c-b08e206c86f8",
@@ -2433,8 +2431,8 @@
       "key": "427428dd-83c0-4b47-aac1-ebb97df3746d",
       "position": 1,
       "properties": {
-        "name": "Gots and Needs",
-        "duration": 5
+        "duration": 5,
+        "name": "Gots and Needs"
       },
       "seeding_key": {
         "lesson_activity.key": "427428dd-83c0-4b47-aac1-ebb97df3746d",
@@ -2447,8 +2445,8 @@
       "key": "2b2502c8-382b-4a8a-b0d2-919646a41308",
       "position": 2,
       "properties": {
-        "name": "Housekeeping",
-        "duration": 5
+        "duration": 5,
+        "name": "Housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "2b2502c8-382b-4a8a-b0d2-919646a41308",
@@ -2461,8 +2459,8 @@
       "key": "f99fbbf5-f51d-4b75-92f7-35a196ead975",
       "position": 3,
       "properties": {
-        "name": "Survey",
-        "duration": 5
+        "duration": 5,
+        "name": "Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "f99fbbf5-f51d-4b75-92f7-35a196ead975",
@@ -2475,8 +2473,8 @@
       "key": "47603869-1988-488e-a750-89923de0a111",
       "position": 1,
       "properties": {
-        "name": "Welcome and housekeeping",
-        "duration": 8
+        "duration": 8,
+        "name": "Welcome and housekeeping"
       },
       "seeding_key": {
         "lesson_activity.key": "47603869-1988-488e-a750-89923de0a111",
@@ -2489,8 +2487,8 @@
       "key": "899d2f0c-21b8-4da4-9787-7e679a676039",
       "position": 2,
       "properties": {
-        "name": "Assessment and Values",
-        "duration": 37
+        "duration": 37,
+        "name": "Assessment and Values"
       },
       "seeding_key": {
         "lesson_activity.key": "899d2f0c-21b8-4da4-9787-7e679a676039",
@@ -2503,8 +2501,8 @@
       "key": "509c4607-8ea7-431e-bb04-d48d00a7b462",
       "position": 3,
       "properties": {
-        "name": "Describing the Assessment Resources Available",
-        "duration": 5
+        "duration": 5,
+        "name": "Describing the Assessment Resources Available"
       },
       "seeding_key": {
         "lesson_activity.key": "509c4607-8ea7-431e-bb04-d48d00a7b462",
@@ -2517,8 +2515,8 @@
       "key": "e4734bc3-3003-423a-851e-89abafc645d6",
       "position": 1,
       "properties": {
-        "name": "Creating your approach",
-        "duration": 50
+        "duration": 50,
+        "name": "Creating your approach"
       },
       "seeding_key": {
         "lesson_activity.key": "e4734bc3-3003-423a-851e-89abafc645d6",
@@ -2531,8 +2529,8 @@
       "key": "4f2b1db8-752d-4acc-a2dc-7105d0428f30",
       "position": 1,
       "properties": {
-        "name": "Guided Tour of the Code.org Platform",
-        "duration": 60
+        "duration": 60,
+        "name": "Guided Tour of the Code.org Platform"
       },
       "seeding_key": {
         "lesson_activity.key": "4f2b1db8-752d-4acc-a2dc-7105d0428f30",
@@ -2545,8 +2543,8 @@
       "key": "c4affef9-ec94-4826-8edb-bdf594c231c4",
       "position": 1,
       "properties": {
-        "name": "Gathering topics",
-        "duration": 5
+        "duration": 5,
+        "name": "Gathering topics"
       },
       "seeding_key": {
         "lesson_activity.key": "c4affef9-ec94-4826-8edb-bdf594c231c4",
@@ -2559,8 +2557,8 @@
       "key": "b327c174-4fc5-42f4-af9a-1433f49e07a4",
       "position": 2,
       "properties": {
-        "name": "Unconference and wrap-up",
-        "duration": 25
+        "duration": 25,
+        "name": "Unconference and wrap-up"
       },
       "seeding_key": {
         "lesson_activity.key": "b327c174-4fc5-42f4-af9a-1433f49e07a4",
@@ -2573,8 +2571,8 @@
       "key": "1b2f5a78-fe4f-4416-96bb-c86095dc9783",
       "position": 1,
       "properties": {
-        "name": "Introduce the Scavenger Hunt and Other Options",
-        "duration": 2
+        "duration": 2,
+        "name": "Introduce the Scavenger Hunt and Other Options"
       },
       "seeding_key": {
         "lesson_activity.key": "1b2f5a78-fe4f-4416-96bb-c86095dc9783",
@@ -2587,8 +2585,8 @@
       "key": "605ac0e2-14cd-4df4-a1d4-a8f6e23c1bdf",
       "position": 2,
       "properties": {
-        "name": "Engage in the Scavenger Hunt",
-        "duration": 43
+        "duration": 43,
+        "name": "Engage in the Scavenger Hunt"
       },
       "seeding_key": {
         "lesson_activity.key": "605ac0e2-14cd-4df4-a1d4-a8f6e23c1bdf",
@@ -2601,8 +2599,8 @@
       "key": "0d0e8cae-6827-483e-a436-579786269d8c",
       "position": 1,
       "properties": {
-        "name": "Review of PL Program",
-        "duration": 5
+        "duration": 5,
+        "name": "Review of PL Program"
       },
       "seeding_key": {
         "lesson_activity.key": "0d0e8cae-6827-483e-a436-579786269d8c",
@@ -2615,8 +2613,8 @@
       "key": "61f8bebf-045b-4811-9b53-4efc1ff08a41",
       "position": 2,
       "properties": {
-        "name": "Planning your Year",
-        "duration": 30
+        "duration": 30,
+        "name": "Planning your Year"
       },
       "seeding_key": {
         "lesson_activity.key": "61f8bebf-045b-4811-9b53-4efc1ff08a41",
@@ -2629,8 +2627,8 @@
       "key": "9b8d36f1-5fb4-4657-821e-2d9e42021695",
       "position": 1,
       "properties": {
-        "name": "Closing Ceremonies",
-        "duration": 20
+        "duration": 20,
+        "name": "Closing Ceremonies"
       },
       "seeding_key": {
         "lesson_activity.key": "9b8d36f1-5fb4-4657-821e-2d9e42021695",
@@ -2643,8 +2641,8 @@
       "key": "d00354c0-907b-4526-a236-e1769cee7265",
       "position": 2,
       "properties": {
-        "name": "Final Survey",
-        "duration": 10
+        "duration": 10,
+        "name": "Final Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "d00354c0-907b-4526-a236-e1769cee7265",
@@ -2672,7 +2670,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Getting to know participants’ names go a long way.  Challenge yourself to know everyone’s first name by lunch.  Strategies to learn names include:\r\n\r\n* Greeting people as they walk in by their name and say their name repeatedly in conversation.  “Hi Carol, Carol, what has been the highlight of your summer so far.  That’s really interesting, Carol.  It was nice to talk with you Carol.”\r\n* Making a seating chart once people have found their seats and constantly practicing when you have some down time.\r\n* Use mnemonic devices such as alliteration to help you remember people “red shirt Robyn”, “laughing Larry”, or “Gary with glasses”\r\n* Share your other favorite ways to learn names in the facilitator slack channel or forum also!\r\n\r\n"
           }
@@ -2737,7 +2734,6 @@
       "properties": {
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This is a good place to also set up norms around computer and phone use in the workshop.  You and your co-facilitator may want to consider how you want to cue participants to use their laptops or other devices.  For example, some facilitators add a norm around phones that can be framed as a “100% or 0% present” norm, meaning, “We want you to be 100% present in the room, if you have to take care of something please feel free to leave the room and make a call or handle what you need to take care of - we understand you may have childcare situations you are managing or other things going on that take your attention and we respect that, but when you are in the room we aim to be present 100% of the time.  This helps the whole room focus during the workshop.”\r\n\r\n"
           }
@@ -2767,7 +2763,6 @@
         "description": "Give an overview of the overall professional learning program, as well as a deep dive into the plan for the week. Overview includes:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Some facilitators create a poster of the different roles to help provide a visual for participants through out the workshop.  You can use this as a tool and point to the different “hats” that participants are wearing throughout the TLOs and Model Lessons.\r\n"
           }
@@ -2875,14 +2870,14 @@
       "position": 2,
       "properties": {
         "description": "Use this time just to give participants a tour of the CED at a high level.  They will dig deeper into the document themselves later but we want to give them an orientation to what they will see.  There will be 6 tabs.  Include information about each tab in your overview, including:",
+        "name": "(8 minutes) Overview of the CED\r",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "Participants may want to follow along during your overview.  You can invite participants to follow along or observe - which ever they prefer. \r\n"
           }
-        ],
-        "name": "(8 minutes) Overview of the CED\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "395b72ec-38ba-4286-8328-0b1fd99e0b23",
@@ -2959,8 +2954,8 @@
       "position": 3,
       "properties": {
         "description": "We know this can be a lot to take in but that is why we have the next 4 days together and 4 more days planned for the school year!  After this, we are going to look at a lesson from the curriculum so you can experience the instructional approaches we used in the curriculum.  If you have questions you want to address now about the CED or anything so far, write them on a post-it note and put it in the Question Parking Lot.  We will be addressing questions from the Question Parking Lot throughout the week.",
-        "remarks": true,
-        "name": "(2 minutes) Wrap-Up\r"
+        "name": "(2 minutes) Wrap-Up\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "353b8352-5759-4541-af78-324bccf09caa",
@@ -2996,8 +2991,8 @@
       "position": 1,
       "properties": {
         "description": "Unit 1 contains 14 lessons and is about digital representation. In this unit, students learn how computers represent information and the problems that representing information digitally presents both technically and ethically.  We start the year with this unit because very few students have any prior knowledge about how information is represented digitally, so every student is starting with a similar amount of background knowledge.  Before we start our first TLO, we are going to look at the first lesson in the unit.",
-        "remarks": true,
-        "name": "(2 minutes) Introduction to the Unit\r"
+        "name": "(2 minutes) Introduction to the Unit\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "318272c5-c4e7-4bbc-bc1a-538ceafd5baa",
@@ -3169,8 +3164,8 @@
       "position": 1,
       "properties": {
         "description": "We just saw in Unit 1 Lessons 2 and 3.  These lessons are hands-on for students and work towards building a “mental model” for the Binary Number system.  A “mental model” is a representation of how something works.   Lesson 4 is on Binary numbers.  We are not going to do a TLO on Lesson 4, but we do want you to see the CS content in that lesson.  So, we will not be needing our “hats” for this activity.",
-        "remarks": true,
-        "name": "(2 minutes) Introducing the Mental Model\r"
+        "name": "(2 minutes) Introducing the Mental Model\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "41415fe8-4da8-43f1-b54d-8232c0426a11",
@@ -3263,8 +3258,8 @@
       "position": 1,
       "properties": {
         "description": "Thus far, all of the lesson you have seen have been “unplugged” in nature, meaning they did not use computers as part of the main activity.  We like to start with unplugged activities to provide all students with a mental model that serves as an on-ramp to the content.  That being said, you will also see “plugged” lessons where students will frequently be using a “widget”, or a digital tool, which provides for a different kind of experience with the content.  In fact, many of the lessons you will see this week are “plugged” and use widgets.  While some of these lessons also contain an “unplugged portion” of the lesson, the widget is intended to further the learning in these cases.\r\n\r\nBefore we start looking at the specific lessons you will be teaching, let’s look further into the philosophy behind these plugged in lessons.",
-        "remarks": true,
-        "name": "(2 minutes) Unplugged vs. plugged lessons\r"
+        "name": "(2 minutes) Unplugged vs. plugged lessons\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ceb31bee-d059-4d87-9350-16c8f0c79c92",
@@ -3334,8 +3329,8 @@
       "position": 5,
       "properties": {
         "description": "To do this, we are going to go to Code.org’s learning platform and join a section.  You already have Code.org accounts because you needed to have an account to register for this workshop and to take attendance this morning.  We just need to get you into our class section.  Your students will do this on the first day of class, too.",
-        "remarks": true,
-        "name": "tip!!!tip-0<!-- place where you'd like the icon --> (3 minutes) Set-up: Get participants into the same section\r"
+        "name": "tip!!!tip-0<!-- place where you'd like the icon --> (3 minutes) Set-up: Get participants into the same section\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a17cb6b6-9d8a-4ac8-91a7-e434a24611c8",
@@ -3422,8 +3417,8 @@
       "position": 12,
       "properties": {
         "description": "Now that you have seen an example of a widget from a Plugged lesson, let’s talk about what a Plugged lesson actually is.  Plugged activities are designed to allow students to get hands-on with tools and concepts. That said, plugged lessons typically have many of the same features of their unplugged counterparts. Lessons will begin and end with discussions or activities that help motivate and synthesize learning. Students are encouraged and often even required to work with one another.",
-        "remarks": true,
-        "name": "(6 minutes) Running a Successful Plugged Lesson\r"
+        "name": "(6 minutes) Running a Successful Plugged Lesson\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "86114a68-871e-4bbb-84e9-4a426ab64c4f",
@@ -3624,8 +3619,8 @@
       "position": 1,
       "properties": {
         "description": "Today’s theme is the role of the teacher in the classroom.  Teachers play a lot of different roles in the classroom from social worker to conflict mediator.  For the next 25 minutes, we are going to scope the role of the teacher to that of an active “lead learner”.",
-        "remarks": true,
-        "name": "(10 minutes) Teacher as Lead Learner \r"
+        "name": "(10 minutes) Teacher as Lead Learner \r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "4026df08-91a5-4958-bedf-5e615996f9f9",
@@ -3827,8 +3822,8 @@
       "position": 2,
       "properties": {
         "description": "You may have noticed, you can be constantly formatively assessing students in the classroom.  As you think about planning your lesson in your next session, consider how you might want to incorporate formative assessment in your lesson.  These don’t need to be “big acts” of formative assessment, but can be little questions you plan to ask individual learners as they are working or small “thumbs up to thumbs down” assessments to know if learners need more time.",
-        "remarks": true,
-        "name": "(2 minutes) Wrap-up\r"
+        "name": "(2 minutes) Wrap-up\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "60115237-ccb6-4e46-b683-df9413725573",
@@ -4260,8 +4255,8 @@
       "position": 1,
       "properties": {
         "description": "On Monday, you saw the flippy-do from Lesson 4 on Binary Numbers.  Following that lesson comes a lesson on Overflow and Rounding, which you saw part of on Monday (with the Odometer Widget).",
-        "remarks": true,
-        "name": "(5 minutes) U1L5 - Overflow and Rounding\r"
+        "name": "(5 minutes) U1L5 - Overflow and Rounding\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "2aa084a3-8acf-441f-a40c-4fbd4a9444c2",
@@ -4356,8 +4351,8 @@
       "position": 1,
       "properties": {
         "description": "In the morning we talked about formative assessment and how important it is in both plugged and unplugged lessons.  Now we are going to talk about summative assessment.\r\n\r\nBefore we get started, we know that each teacher’s individual, school, and district philosophies and requirements around summative assessment are different.  In this session we are going to look at two potential summative assessments that are included in Unit 1.  You may decide to use these tools as formative assessments.  You may decide to modify them for your classroom - these are all choices you as the teacher can make - we just want you to know what is in the Unit.",
-        "remarks": true,
-        "name": "(1 minute) Setting the Scene\r"
+        "name": "(1 minute) Setting the Scene\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "829bb506-b58f-4dc3-8252-e584b7a45f74",
@@ -4369,8 +4364,8 @@
       "position": 2,
       "properties": {
         "description": "As we mentioned earlier there is a 2-day project and a multiple choice assessment.  When developing the curriculum, Code.org planned for the project to be used in tandem with a multiple choice assessment.  As you will see, the project assesses students' abilities to use what they just learned about Digital Information to read and understand a news article about digital information - this means not all the skills or content students learned from the unit is present in the project.  The Multiple Choice assessment is designed to cover all of the learning objectives of the unit.\r\n\r\nLet’s look at these assessments together.",
-        "remarks": true,
-        "name": "(2 minutes) Assessment Philosophy in the Curriculum\r"
+        "name": "(2 minutes) Assessment Philosophy in the Curriculum\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "2f30396d-5f2c-432f-a06f-21c067886156",
@@ -4487,14 +4482,14 @@
       "position": 1,
       "properties": {
         "description": "When we think about access to CS, it can be valuable to describe the current output and results from how access to CS education works right now.  Let’s look at some stats that paint a picture of access to CS education.",
+        "name": "(5 minutes) Looking at the CS Landscape\r",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "You may want to customize this for your region.  Go to https://code.org/promote/ and find your state on the map.  You can use the state fact sheet to find information about your region\r\n"
           }
-        ],
-        "name": "(5 minutes) Looking at the CS Landscape\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "53cbcff1-68c1-4291-bf1c-fead4631288f",
@@ -4697,8 +4692,8 @@
       "position": 1,
       "properties": {
         "description": "Unit 2 is about The Internet.  This unit transitions from talking about how information is represented on a computer to how we send digital information to each other through the internet.  It is a 9 lesson unit where students build up the “layers of the internet” through activities that simulate the same issues the creators of the internet encountered.  The end of the unit contains two lessons where students research a real-world dilemma related to the internet and create a “Policy One Pager” that takes an informed stance on that dilemma. Before we start our first TLO, we are going to look at the first lesson in the unit.",
-        "remarks": true,
-        "name": "(1 minute) Introduction to the Unit\r"
+        "name": "(1 minute) Introduction to the Unit\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "01deb44d-ccd5-4c4d-962e-5a324cd9d85e",
@@ -4721,8 +4716,8 @@
       "position": 3,
       "properties": {
         "description": "With that we are going to do our next TLO Unit 2, Lesson 2 which follows this lesson.  As a reminder, the teaching group will be wearing the “teacher hat” and you will be wearing your “learner hat.”",
-        "remarks": true,
-        "name": "(1 minute) Reminder of roles\r"
+        "name": "(1 minute) Reminder of roles\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "7db0719e-0fea-4741-86b8-f49dc5533863",
@@ -5616,8 +5611,8 @@
       "position": 1,
       "properties": {
         "description": "This is a VERY extended previously on.  We are going to do key parts of these two lessons, but we are not wearing “hats” at this point.  Just be yourself!",
-        "remarks": true,
-        "name": "(4 minutes) Introduction and Context\r"
+        "name": "(4 minutes) Introduction and Context\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "3231041d-c513-469f-bdac-e0efba4e7738",
@@ -5657,8 +5652,8 @@
       "position": 2,
       "properties": {
         "description": "Let’s start designing your app!  Remember, this is an app that we will start making today! We will just work on Steps 1, 2, and 4 now.",
-        "remarks": true,
-        "name": "tip!!!tip-0<!-- place where you'd like the icon --> (11 minutes) Designing your App - Part 1\r"
+        "name": "tip!!!tip-0<!-- place where you'd like the icon --> (11 minutes) Designing your App - Part 1\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "be45a41d-dc63-4333-8b71-7273b1515870",
@@ -5770,8 +5765,8 @@
       "position": 1,
       "properties": {
         "description": "WE have fully aligned our curriculum to College Board Curriculum Framework.  It is important to note that the learning goals are written with the Framework in mind.  For example, our first learning goal ties directly to the LO described here.",
-        "remarks": true,
-        "name": "U3L7 - Debugging - objectives and beats\r"
+        "name": "U3L7 - Debugging - objectives and beats\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a074b0e0-282b-46e4-a0a8-d6e73d40b9b4",
@@ -5972,14 +5967,14 @@
       "position": 1,
       "properties": {
         "description": "(1 minute)",
+        "name": "(5 minutes) Brainstorm\r",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "This may look different by region and teaching context.  Some groups of students we expect to talk about during this session may include:\r\n\r\n* English language learners\r\n* Students with prior background knowledge in CS\r\n* Students with uneven attendance\r\n* Students with disabilities \r\n\r\nIt is recommended to make posters ahead of time with anticipated groups to help with timing.  If participants want to add additional groups, you can make new posters for those groups in the moment.\r\n\r\n"
           }
-        ],
-        "name": "(5 minutes) Brainstorm\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "47683776-5897-460f-bd27-3079144cadd9",
@@ -6247,8 +6242,8 @@
       "position": 1,
       "properties": {
         "description": "We are not here to tell you how to assess your students.  But we do want to make it clear what assessment opportunities are available to you through the curriculum and from the College Board.",
-        "remarks": true,
-        "name": "(5 minutes) Resource Available\r"
+        "name": "(5 minutes) Resource Available\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "e2cfccc9-edcb-44b2-9abb-49062eb94650",
@@ -6271,14 +6266,14 @@
       "position": 1,
       "properties": {
         "description": "Have participants turn to Part C in their Assessment Approach Organizer.  Direct participants to work on Questions 1-3 for the next 20 minutes with the values they discussed earlier in mind as well as district/school requirements for assessment.",
+        "name": "(20 minutes) Identifying Your Summative Assessment Approach\r",
         "tips": [
           {
             "key": "tip",
             "type": "teachingTip",
             "markdown": "It might be helpful to suggest planning by unit (answering the three questions for Unit 1, then for Unit 2, and so on), but other participants may want to focus on one question at a time and answer it for all three units first.  \r\n"
           }
-        ],
-        "name": "(20 minutes) Identifying Your Summative Assessment Approach\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d5ff6d04-d1a7-4060-b0eb-aa35e3598262",
@@ -6290,8 +6285,8 @@
       "position": 2,
       "properties": {
         "description": "Now that you have started to take your values and organize your assessment approach around those values, share your plan with two other people not at your table. Look for commonalities between your approaches.",
-        "remarks": true,
-        "name": "(5 minutes) Re-group\r"
+        "name": "(5 minutes) Re-group\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "415deb93-940d-42fe-a8e2-ad8ceedd5851",
@@ -6439,8 +6434,8 @@
       "position": 10,
       "properties": {
         "description": "Most importantly, feel free to play around on the Code.org platform.  It might take some time to feel comfortable navigating, but soon you will find your favorite tools and features on the site.",
-        "remarks": true,
-        "name": "(1 minute) Wrap-up"
+        "name": "(1 minute) Wrap-up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "1c17b95f-5fb6-4f96-96ef-8a5c9b04be18",
@@ -6475,8 +6470,8 @@
       "position": 2,
       "properties": {
         "description": "I heard a lot of good things from the room today.  Let’s do a 1-minute share out from each group to hear what they learned.",
-        "remarks": true,
-        "name": "(5 minutes) Share-out\r"
+        "name": "(5 minutes) Share-out\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a4af3437-9254-48b7-8a9d-d779f19fe877",
@@ -6570,13 +6565,13 @@
       "position": 2,
       "properties": {
         "description": "We also have 4 more workshops after this to reconnect:",
+        "name": "(3 minutes) Professional Learning Overview\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Add dates to the slides if the dates for the academic year workshops have been decided.\r\n"
           }
-        ],
-        "name": "(3 minutes) Professional Learning Overview\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b15beee1-0d8f-4be5-80cd-cd5ea79c6a76",
@@ -6738,6 +6733,437 @@
   ],
   "resources": [
     {
+      "name": "CS Principles Course and Exam Description 2020",
+      "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf",
+      "key": "cs-principles-ced-2020",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cs-principles-ced-2020"
+      }
+    },
+    {
+      "name": "CSP - Summer Workshop 2020 - Wednesday",
+      "url": "https://drive.google.com/open?id=1LliZgrCGgYyHWbo3EBjQ4P4CnfRQ4tmYtFT63bPMob0",
+      "key": "csp_-_summer_workshop_2020_-_wednesday",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_-_summer_workshop_2020_-_wednesday"
+      }
+    },
+    {
+      "name": " CSP Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview",
+      "key": "csp_curriculum_guide",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide"
+      }
+    },
+    {
+      "name": " CSP Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview",
+      "key": "csp_curriculum_guide_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_1"
+      }
+    },
+    {
+      "name": " CSP Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview",
+      "key": "csp_curriculum_guide_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_2"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide 20-21",
+      "url": "https://docs.google.com/document/d/1KXRZhIWSgKHg458_Hfgii7Fuq8AarmYOOfJI1V47DWU/edit?usp=sharing",
+      "key": "csp_curriculum_guide_20-21",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_20-21"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide 20-21",
+      "url": "https://docs.google.com/document/d/1KXRZhIWSgKHg458_Hfgii7Fuq8AarmYOOfJI1V47DWU/edit?usp=sharing",
+      "key": "csp_curriculum_guide_20-21_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_20-21_1"
+      }
+    },
+    {
+      "name": " CSP Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview",
+      "key": "csp_curriculum_guide_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_3"
+      }
+    },
+    {
+      "name": " CSP Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview",
+      "key": "csp_curriculum_guide_4",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_4"
+      }
+    },
+    {
+      "name": " CSP Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview",
+      "key": "csp_curriculum_guide_5",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_5"
+      }
+    },
+    {
+      "name": " CSP Curriculum Guide ",
+      "url": "https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview",
+      "key": "csp_curriculum_guide_6",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_6"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/document/d/1IG8ntgnsxp1BxHV-Sl295rbb3x4shVIoT6V4S91LXws/edit",
+      "key": "csp_local_summer_workshop_1",
+      "properties": {
+        "type": "Notes Template",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_1"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_10",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_10"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/document/d/1IG8ntgnsxp1BxHV-Sl295rbb3x4shVIoT6V4S91LXws/edit",
+      "key": "csp_local_summer_workshop_11",
+      "properties": {
+        "type": "Notes Template",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_11"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_12",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_12"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_13",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_13"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_14",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_14"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_15",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_15"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_16",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_16"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_17",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_17"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_2",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_2"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/document/d/1IG8ntgnsxp1BxHV-Sl295rbb3x4shVIoT6V4S91LXws/edit",
+      "key": "csp_local_summer_workshop_3",
+      "properties": {
+        "type": "Notes Template",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_3"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_4",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_4"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/document/d/1IG8ntgnsxp1BxHV-Sl295rbb3x4shVIoT6V4S91LXws/edit",
+      "key": "csp_local_summer_workshop_5",
+      "properties": {
+        "type": "Notes Template",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_5"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_6",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_6"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/document/d/1IG8ntgnsxp1BxHV-Sl295rbb3x4shVIoT6V4S91LXws/edit",
+      "key": "csp_local_summer_workshop_7",
+      "properties": {
+        "type": "Notes Template",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_7"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/presentation/d/1w-ik5dqRM16bm1lRqW1k2zGwLNvJFlqPklSotB_acyk/edit#slide=id.g14ffd18b47_6_0",
+      "key": "csp_local_summer_workshop_8",
+      "properties": {
+        "type": "Slides Template",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_8"
+      }
+    },
+    {
+      "name": "CSP Local Summer Workshop",
+      "url": "https://docs.google.com/document/d/1IG8ntgnsxp1BxHV-Sl295rbb3x4shVIoT6V4S91LXws/edit",
+      "key": "csp_local_summer_workshop_9",
+      "properties": {
+        "type": "Notes Template",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_local_summer_workshop_9"
+      }
+    },
+    {
+      "name": "CSP Summer Shared Notes 2020",
+      "url": "https://docs.google.com/document/d/1sevfyRIJRTBmSo_4HPlhCH8VF4mq6WaO26W-QeNWtGg/edit",
+      "key": "csp_summer_shared_notes_2020",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_summer_shared_notes_2020"
+      }
+    },
+    {
+      "name": "CSP Summer Workshop - Activity Packet 2020",
+      "url": "https://docs.google.com/document/d/1yNKVUcRViOBnAyoE3B16mdqB4x9yrgW9dUmE6jSyC2I/edit?usp=sharing",
+      "key": "csp_summer_workshop_-_activity_packet_2020",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_summer_workshop_-_activity_packet_2020"
+      }
+    },
+    {
+      "name": "CSP Summer Workshop 2020 - Friday",
+      "url": "https://drive.google.com/open?id=1qsvRXmqnWnTfZ2luNk9c7BnBAf9_W-yfsS0YJYb6Y3M",
+      "key": "csp_summer_workshop_2020_-_friday",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_summer_workshop_2020_-_friday"
+      }
+    },
+    {
+      "name": "CSP Summer Workshop 2020 - Monday",
+      "url": "https://drive.google.com/open?id=1jIsb1H89RhW2oCXhw3XVyGqMxgAHhe603vLlalbyNSM",
+      "key": "csp_summer_workshop_2020_-_monday",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_summer_workshop_2020_-_monday"
+      }
+    },
+    {
+      "name": "CSP Summer Workshop 2020 - Thursday",
+      "url": "https://drive.google.com/open?id=1D9JvqPjbJcpC5L_H3CiroiYTSKYY08qhb8WFJsokDjQ",
+      "key": "csp_summer_workshop_2020_-_thursday",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_summer_workshop_2020_-_thursday"
+      }
+    },
+    {
+      "name": "CSP Summer Workshop 2020 - Tuesday",
+      "url": "https://drive.google.com/open?id=1p8ERUwZjjaX7QCtKHbY8QrLy8WQzqdNsMdEF_KwZVYo",
+      "key": "csp_summer_workshop_2020_-_tuesday",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_summer_workshop_2020_-_tuesday"
+      }
+    },
+    {
+      "name": "Facilitator Handbook - 2020",
+      "url": "https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/edit?usp=sharing",
+      "key": "facilitator_handbook_-_2020",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "facilitator_handbook_-_2020"
+      }
+    },
+    {
       "name": "High Level Agenda",
       "url": "https://docs.google.com/spreadsheets/d/123uO3Ur60T-A9w2QY1_4aJjZiBdN5r9WJiOnp_XRbcU/edit#gid=620909564",
       "key": "high_level_agenda",
@@ -6751,7 +7177,228 @@
     }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_summer_workshop_2020_-_monday"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "facilitator_handbook_-_2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_summer_shared_notes_2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_curriculum_guide_20-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_summer_workshop_-_activity_packet_2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "cs-principles-ced-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "resource.key": "cs-principles-ced-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "resource.key": "csp_curriculum_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "resource.key": "csp_local_summer_workshop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "resource.key": "csp_local_summer_workshop_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "resource.key": "csp_curriculum_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-4",
+        "resource.key": "csp_local_summer_workshop_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-8",
+        "resource.key": "csp_local_summer_workshop_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-8",
+        "resource.key": "csp_local_summer_workshop_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-10",
+        "resource.key": "csp_local_summer_workshop_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-10",
+        "resource.key": "csp_local_summer_workshop_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-11",
+        "resource.key": "csp_local_summer_workshop_7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-11",
+        "resource.key": "csp_local_summer_workshop_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-12",
+        "resource.key": "csp_local_summer_workshop_9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-12",
+        "resource.key": "csp_local_summer_workshop_10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-14",
+        "resource.key": "csp_local_summer_workshop_11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-14",
+        "resource.key": "csp_summer_workshop_2020_-_tuesday"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-14",
+        "resource.key": "csp_curriculum_guide_20-21_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-18",
+        "resource.key": "csp_local_summer_workshop_12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-27",
+        "resource.key": "csp_-_summer_workshop_2020_-_wednesday"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-31",
+        "resource.key": "csp_local_summer_workshop_13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-35",
+        "resource.key": "csp_curriculum_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-35",
+        "resource.key": "csp_local_summer_workshop_14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-36",
+        "resource.key": "csp_curriculum_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-39",
+        "resource.key": "csp_summer_workshop_2020_-_thursday"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-43",
+        "resource.key": "csp_local_summer_workshop_15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-43",
+        "resource.key": "csp_curriculum_guide_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-52",
+        "resource.key": "csp_summer_workshop_2020_-_friday"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-53",
+        "resource.key": "csp_local_summer_workshop_16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-55",
+        "resource.key": "csp_curriculum_guide_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-56",
+        "resource.key": "csp_curriculum_guide_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-60",
+        "resource.key": "csp_local_summer_workshop_17"
+      }
+    }
   ],
   "scripts_resources": [
     {

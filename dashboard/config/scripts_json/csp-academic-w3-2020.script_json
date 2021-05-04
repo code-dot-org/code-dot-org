@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 14:23:55 UTC",
+    "serialized_at": "2021-05-04 03:34:49 UTC",
     "seeding_key": {
       "script.name": "csp-academic-w3-2020"
     }
@@ -38,11 +38,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Kick off the day by discussing how things are going and generating topics of interest.",
-        "student_overview": "Kick off the day by discussing how things are going and generating topics of interest.",
-        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. This is a place to check in on specific lessons that people have already taught, as well as pacing and teaching practices that were recommended or discussed in the previous workshop.\r\n\r\nIt is common to surface concerns during this session that can be revisited and addressed throughout the workshop.\r\n",
         "preparation": "Room Setup (using the supplies provided by regional partner):\r\n\r\n* Posters up for people to add post-its to as they come in\r\n\t* **“Where are we now”** - On a piece of chart paper or on the board create a histogram for teachers to add where they are in the curriculum. Reminder teachers to take out their Curriculum Guide as a guide to unit progressions.\r\n\t* **Question Parking Lot** - For people to put up questions they have.\r\n \r\nFacilitator Supplies:\r\n\r\n* Your local copy of the [r csp-q3-slides-20]\r\n* [r facilitator-handbook-2019]\r\n* Poster Paper (Regional Partner Provides)\r\n* [r workshop-dashboard]\r\n\r\nTeacher Materials:\r\n\r\n* Journal (Should bring with them.)\r\n* Post-its",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. This is a place to check in on specific lessons that people have already taught, as well as pacing and teaching practices that were recommended or discussed in the previous workshop.\r\n\r\nIt is common to surface concerns during this session that can be revisited and addressed throughout the workshop.\r\n",
+        "student_overview": "Kick off the day by discussing how things are going and generating topics of interest."
       },
       "seeding_key": {
         "lesson.key": "session-1",
@@ -58,10 +58,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This session both provides context for Unit 7 and prepares participants to think about their roles in creating inclusive classrooms during the lessons they look at during the lesson exploration.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\r\n\r\n* None\r\n \r\nFacilitator Supplies:\r\n\r\n* Your local copy of the [r csp-q4-slides-20]\r\n\r\nTeacher Materials:\r\n\r\n* None.\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session both provides context for Unit 7 and prepares participants to think about their roles in creating inclusive classrooms during the lessons they look at during the lesson exploration.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-2",
@@ -77,8 +77,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-3",
@@ -94,10 +94,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "As with all of the Lesson Explorations, this session is intended to help participants understand the content and pedagogy in this lesson and consider how they will implement the lesson in their classrooms.  This lesson was chosen because students need to understand this content in order to engage successfully in the Create PT.  For this reason, the facilitator takes a more active role in this session to describe the mental model used in the lesson.  Once participants understand the concepts of this lesson, they can apply the concept in the following Lesson Exploration sessions.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\r\n\r\n* None.\r\n\r\nFacilitator Supplies:\r\n\r\n* Your local copy of the [r csp-q3-slides-20]\r\n\r\nTeacher Materials:\r\n\r\n* One computer per pair\r\n* Journal \r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "As with all of the Lesson Explorations, this session is intended to help participants understand the content and pedagogy in this lesson and consider how they will implement the lesson in their classrooms.  This lesson was chosen because students need to understand this content in order to engage successfully in the Create PT.  For this reason, the facilitator takes a more active role in this session to describe the mental model used in the lesson.  Once participants understand the concepts of this lesson, they can apply the concept in the following Lesson Exploration sessions.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-4",
@@ -113,10 +113,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Participants will need to understand how to create functions with a parameter and a return to adequately support students in preparing for the Create Performance Task.  This session allows participants the chance to deepen their understanding of the concept, or, if they are already familiar with the concept, better understand what students will see in this unit.\r\n\r\nFinally, after the previous session, participants have started to consider and hear other ideas about creating an inclusive classroom.  This session allows participants to build upon that thinking. \r\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\r\n\r\n* None.\r\n\r\nFacilitator Supplies:\r\n\r\n* Your local copy of the [r csp-q3-slides-20]\r\n\r\nTeacher Materials:\r\n\r\n* Journal \r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Participants will need to understand how to create functions with a parameter and a return to adequately support students in preparing for the Create Performance Task.  This session allows participants the chance to deepen their understanding of the concept, or, if they are already familiar with the concept, better understand what students will see in this unit.\r\n\r\nFinally, after the previous session, participants have started to consider and hear other ideas about creating an inclusive classroom.  This session allows participants to build upon that thinking. \r\n",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-5",
@@ -132,9 +132,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Lunch",
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-6",
@@ -150,10 +150,10 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "This session covers the content not covered in the “Lesson Investigation” sessions from Unit 7.  This also sets-up our discussion about the Create PT later in the afternoon. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\r\n\r\n* None.\r\n\r\nFacilitator Supplies:\r\n\r\n* Your local copy of the [r csp-q3-slides-20]\r\n* (optional) Materials for Libraries Explore lesson - including folder, envelopes, paper\r\n\r\nTeacher Materials:\r\n\r\n* None.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session covers the content not covered in the “Lesson Investigation” sessions from Unit 7.  This also sets-up our discussion about the Create PT later in the afternoon. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-7",
@@ -169,8 +169,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-8",
@@ -186,10 +186,10 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "While participants have heard about the Create Performance Task at a high level, this session is designed to dig deeper into the task so participants understand what students are working toward during this time. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\n\n* None.\n\nFacilitator Supplies:\n\n* Your local copy of the [r csp-q3-slides-20]\n\nTeacher Materials:\n\n* Physical copies of the [Create PT survival guide](https://docs.google.com/document/d/1jcK8o2w7wPODoHkYy7Tg56EjwnbIOsNEWowWRcfbbl4/edit) and [rubric](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf), if available.  Otherwise digital versions are linked in the slides. \n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "While participants have heard about the Create Performance Task at a high level, this session is designed to dig deeper into the task so participants understand what students are working toward during this time. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-9",
@@ -205,11 +205,11 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Score sample student work. After scoring look at the College Board commentary and discuss how the rubric is being applied to student work.",
-        "student_overview": "Score sample student work. After scoring look at the College Board commentary and discuss how the rubric is being applied to student work.",
-        "purpose": "This session is broken up into two key parts:\r\n\r\n1. Practice grading Create PTs using the College Board rubric and knowledge from the previous session. \r\n2. Creating a plan for supporting students before or during the Create PT. \r\n\r\nBy doing this in community with other computer science teachers, participants will be able to bounce ideas off one another during this session. \r\n",
         "preparation": "Room Setup:\r\n\r\n* None\r\n\r\nFacilitator Supplies:\r\n\r\n* None\r\n\r\nTeacher Materials:\r\n\r\n* Physical copies of the [Create PT survival guide](https://docs.google.com/document/d/1jcK8o2w7wPODoHkYy7Tg56EjwnbIOsNEWowWRcfbbl4/edit) and [rubric](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf), if available.  Otherwise digital versions are linked in the slides. \r\n* [r cs-principles-CED-2020]\r\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session is broken up into two key parts:\r\n\r\n1. Practice grading Create PTs using the College Board rubric and knowledge from the previous session. \r\n2. Creating a plan for supporting students before or during the Create PT. \r\n\r\nBy doing this in community with other computer science teachers, participants will be able to bounce ideas off one another during this session. \r\n",
+        "student_overview": "Score sample student work. After scoring look at the College Board commentary and discuss how the rubric is being applied to student work."
       },
       "seeding_key": {
         "lesson.key": "session-10",
@@ -225,11 +225,11 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Answer outstanding questions and wrap up day.",
-        "student_overview": "Answer outstanding questions and wrap up day.",
-        "purpose": "Answer any outstanding questions and wrap up the day.\r\n\r\nIn addition it should give time to do the survey in person so that teachers complete it before leaving.",
         "preparation": "Room Setup:\n\n* None\n\nFacilitator Supplies:\n\n* Grab and organize the question parking lot\n* Your local copy of the [r csp-q3-slides-20]\n* [r facilitator-handbook-2019]\n\nTeacher Materials:\n\n* Computers",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Answer any outstanding questions and wrap up the day.\r\n\r\nIn addition it should give time to do the survey in person so that teachers complete it before leaving.",
+        "student_overview": "Answer outstanding questions and wrap up day."
       },
       "seeding_key": {
         "lesson.key": "session-11",
@@ -243,8 +243,8 @@
       "key": "c226a6b9-7643-4470-9785-48ec3309360c",
       "position": 1,
       "properties": {
-        "name": "As participants enter the room",
-        "duration": 0
+        "duration": 0,
+        "name": "As participants enter the room"
       },
       "seeding_key": {
         "lesson_activity.key": "c226a6b9-7643-4470-9785-48ec3309360c",
@@ -257,8 +257,8 @@
       "key": "2f4c8fd7-59ba-4e9e-a5d3-54458a3c48f0",
       "position": 2,
       "properties": {
-        "name": "Workshop opening logistics",
-        "duration": 5
+        "duration": 5,
+        "name": "Workshop opening logistics"
       },
       "seeding_key": {
         "lesson_activity.key": "2f4c8fd7-59ba-4e9e-a5d3-54458a3c48f0",
@@ -271,8 +271,8 @@
       "key": "766095da-b700-4e12-8949-c949fe746875",
       "position": 3,
       "properties": {
-        "name": "Reconnect",
-        "duration": 20
+        "duration": 20,
+        "name": "Reconnect"
       },
       "seeding_key": {
         "lesson_activity.key": "766095da-b700-4e12-8949-c949fe746875",
@@ -285,8 +285,8 @@
       "key": "0808c806-e2be-4872-8022-239866650043",
       "position": 4,
       "properties": {
-        "name": "Share out",
-        "duration": 15
+        "duration": 15,
+        "name": "Share out"
       },
       "seeding_key": {
         "lesson_activity.key": "0808c806-e2be-4872-8022-239866650043",
@@ -299,8 +299,8 @@
       "key": "7ac8a105-b980-4b36-874f-c03d326ac099",
       "position": 1,
       "properties": {
-        "name": "Introduction to Unit 7",
-        "duration": 5
+        "duration": 5,
+        "name": "Introduction to Unit 7"
       },
       "seeding_key": {
         "lesson_activity.key": "7ac8a105-b980-4b36-874f-c03d326ac099",
@@ -313,8 +313,8 @@
       "key": "46ace169-c0bd-4648-8c9c-d7295e557e34",
       "position": 2,
       "properties": {
-        "name": "Grounding reflections",
-        "duration": 15
+        "duration": 15,
+        "name": "Grounding reflections"
       },
       "seeding_key": {
         "lesson_activity.key": "46ace169-c0bd-4648-8c9c-d7295e557e34",
@@ -327,8 +327,8 @@
       "key": "badc1e00-186b-4744-8ab1-6c150d74fb25",
       "position": 1,
       "properties": {
-        "name": "Functions in Unit 4",
-        "duration": 5
+        "duration": 5,
+        "name": "Functions in Unit 4"
       },
       "seeding_key": {
         "lesson_activity.key": "badc1e00-186b-4744-8ab1-6c150d74fb25",
@@ -341,8 +341,8 @@
       "key": "57902e95-528e-4f6f-bc10-3bbd39dfa3c7",
       "position": 2,
       "properties": {
-        "name": "Lesson demo",
-        "duration": 15
+        "duration": 15,
+        "name": "Lesson demo"
       },
       "seeding_key": {
         "lesson_activity.key": "57902e95-528e-4f6f-bc10-3bbd39dfa3c7",
@@ -355,8 +355,8 @@
       "key": "e8a57138-ce72-4b59-8892-d3aa370e7115",
       "position": 3,
       "properties": {
-        "name": "Reflection",
-        "duration": 15
+        "duration": 15,
+        "name": "Reflection"
       },
       "seeding_key": {
         "lesson_activity.key": "e8a57138-ce72-4b59-8892-d3aa370e7115",
@@ -369,8 +369,8 @@
       "key": "630ae3f2-c723-46c9-a06a-7e705dd3d824",
       "position": 1,
       "properties": {
-        "name": "Previously, On CSP...",
-        "duration": 3
+        "duration": 3,
+        "name": "Previously, On CSP..."
       },
       "seeding_key": {
         "lesson_activity.key": "630ae3f2-c723-46c9-a06a-7e705dd3d824",
@@ -383,8 +383,8 @@
       "key": "d5fc8bbc-3d54-4ab0-9af9-8668d430920a",
       "position": 2,
       "properties": {
-        "name": "Introduce task",
-        "duration": 2
+        "duration": 2,
+        "name": "Introduce task"
       },
       "seeding_key": {
         "lesson_activity.key": "d5fc8bbc-3d54-4ab0-9af9-8668d430920a",
@@ -397,8 +397,8 @@
       "key": "743ff2f4-279d-4305-9eab-b9989d626c7e",
       "position": 3,
       "properties": {
-        "name": "U7L3 - Parameters and Return Practice",
-        "duration": 30
+        "duration": 30,
+        "name": "U7L3 - Parameters and Return Practice"
       },
       "seeding_key": {
         "lesson_activity.key": "743ff2f4-279d-4305-9eab-b9989d626c7e",
@@ -411,8 +411,8 @@
       "key": "367b79a0-caca-49bb-b1f2-cbc8deb4d56a",
       "position": 4,
       "properties": {
-        "name": "U7L4 - Parameters and Return Make",
-        "duration": 25
+        "duration": 25,
+        "name": "U7L4 - Parameters and Return Make"
       },
       "seeding_key": {
         "lesson_activity.key": "367b79a0-caca-49bb-b1f2-cbc8deb4d56a",
@@ -425,8 +425,8 @@
       "key": "391e4714-acd8-48ae-b464-93b4ec34a5d7",
       "position": 5,
       "properties": {
-        "name": "Discussion",
-        "duration": 15
+        "duration": 15,
+        "name": "Discussion"
       },
       "seeding_key": {
         "lesson_activity.key": "391e4714-acd8-48ae-b464-93b4ec34a5d7",
@@ -439,8 +439,8 @@
       "key": "88223f1f-248c-4b07-8d75-0a773b4af7bd",
       "position": 1,
       "properties": {
-        "name": "Overview of Unit 7",
-        "duration": 2
+        "duration": 2,
+        "name": "Overview of Unit 7"
       },
       "seeding_key": {
         "lesson_activity.key": "88223f1f-248c-4b07-8d75-0a773b4af7bd",
@@ -453,8 +453,8 @@
       "key": "f091702b-8c23-4c56-a478-512700cdf7c5",
       "position": 2,
       "properties": {
-        "name": "Introduction to Libraries",
-        "duration": 10
+        "duration": 10,
+        "name": "Introduction to Libraries"
       },
       "seeding_key": {
         "lesson_activity.key": "f091702b-8c23-4c56-a478-512700cdf7c5",
@@ -467,8 +467,8 @@
       "key": "82418ffe-6d53-4502-9f3d-4ae7e8c1987a",
       "position": 3,
       "properties": {
-        "name": "Unit 7 project",
-        "duration": 18
+        "duration": 18,
+        "name": "Unit 7 project"
       },
       "seeding_key": {
         "lesson_activity.key": "82418ffe-6d53-4502-9f3d-4ae7e8c1987a",
@@ -481,8 +481,8 @@
       "key": "d1c6e6b0-fbe9-45b9-89c1-cd45af654bb3",
       "position": 1,
       "properties": {
-        "name": "What is the Create PT?",
-        "duration": 5
+        "duration": 5,
+        "name": "What is the Create PT?"
       },
       "seeding_key": {
         "lesson_activity.key": "d1c6e6b0-fbe9-45b9-89c1-cd45af654bb3",
@@ -495,8 +495,8 @@
       "key": "9c823309-e4ea-4757-8362-691fbff016a2",
       "position": 2,
       "properties": {
-        "name": "Review the rubric",
-        "duration": 10
+        "duration": 10,
+        "name": "Review the rubric"
       },
       "seeding_key": {
         "lesson_activity.key": "9c823309-e4ea-4757-8362-691fbff016a2",
@@ -509,8 +509,8 @@
       "key": "e428fb0c-9f61-47ae-b9c8-f7032dc8eb56",
       "position": 3,
       "properties": {
-        "name": "Breaking down the requirements",
-        "duration": 30
+        "duration": 30,
+        "name": "Breaking down the requirements"
       },
       "seeding_key": {
         "lesson_activity.key": "e428fb0c-9f61-47ae-b9c8-f7032dc8eb56",
@@ -523,8 +523,8 @@
       "key": "fdd5c15b-2c74-46da-8bad-fc94e52edb2c",
       "position": 1,
       "properties": {
-        "name": "Scoring sample Create PTs",
-        "duration": 45
+        "duration": 45,
+        "name": "Scoring sample Create PTs"
       },
       "seeding_key": {
         "lesson_activity.key": "fdd5c15b-2c74-46da-8bad-fc94e52edb2c",
@@ -537,8 +537,8 @@
       "key": "75ce344f-650f-4f68-9157-d092e320939f",
       "position": 2,
       "properties": {
-        "name": "Energizer!",
-        "duration": 5
+        "duration": 5,
+        "name": "Energizer!"
       },
       "seeding_key": {
         "lesson_activity.key": "75ce344f-650f-4f68-9157-d092e320939f",
@@ -551,8 +551,8 @@
       "key": "f531d7fe-12dc-422f-b1a8-668ff3b972de",
       "position": 3,
       "properties": {
-        "name": "Resources for the Create PT",
-        "duration": 5
+        "duration": 5,
+        "name": "Resources for the Create PT"
       },
       "seeding_key": {
         "lesson_activity.key": "f531d7fe-12dc-422f-b1a8-668ff3b972de",
@@ -565,8 +565,8 @@
       "key": "92b3fa23-06dc-4ef4-b9b9-9c4e4bc07a41",
       "position": 4,
       "properties": {
-        "name": "Planning for the Create PT",
-        "duration": 25
+        "duration": 25,
+        "name": "Planning for the Create PT"
       },
       "seeding_key": {
         "lesson_activity.key": "92b3fa23-06dc-4ef4-b9b9-9c4e4bc07a41",
@@ -579,8 +579,8 @@
       "key": "0927a365-a21e-44ae-b473-ee80a19a28dd",
       "position": 1,
       "properties": {
-        "name": "Parking Lot and Reminders",
-        "duration": 5
+        "duration": 5,
+        "name": "Parking Lot and Reminders"
       },
       "seeding_key": {
         "lesson_activity.key": "0927a365-a21e-44ae-b473-ee80a19a28dd",
@@ -593,8 +593,8 @@
       "key": "15695a12-989e-4bd3-9de2-69d78438d8eb",
       "position": 2,
       "properties": {
-        "name": "Survey",
-        "duration": 10
+        "duration": 10,
+        "name": "Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "15695a12-989e-4bd3-9de2-69d78438d8eb",
@@ -889,8 +889,8 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> After the break we are going to start diving into lessons.  As we look at the computer science content and consider how we will implement these lessons in your classrooms, plan for how you can make progress toward making the classroom more inclusive.  Keep the specific area you wanted to focus on in mind.",
-        "remarks": true,
-        "name": "(1 minute) Wrap-up"
+        "name": "(1 minute) Wrap-up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ce649db1-b46b-4cb3-a73d-3bf015517ad2",
@@ -989,8 +989,8 @@
       "position": 5,
       "properties": {
         "description": "We are going to look at two other lessons from this EIPM sequence next.  For these next few lessons, you will have more time to explore the lessons independently or with your table - as facilitator(s), I/we will not be doing quite as much voicing over.  This will allow you to dig into parts of the lesson you want to spend more time with and also allow you more time to consider how the given lesson creates opportunities for an inclusive classroom or consider how your role as the teacher may be able to create an inclusive classroom.  It may be helpful to think about the specific area of inclusion you identified earlier today that you wanted to work on further.",
-        "remarks": true,
-        "name": "(1 minute) Wrap-up"
+        "name": "(1 minute) Wrap-up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "50984ffa-9548-4366-9c68-f8752ef079e7",
@@ -1151,8 +1151,8 @@
       "position": 6,
       "properties": {
         "description": "Your classroom is already inclusive to some students, but most likely there are some students who do not have that same sense of “belonging” in computer science class as others. Last workshop we asked you to identify and recognize skills students bring to the class to help all students feel intellectually included in the classroom space.  As we think of inclusion more broadly, we also need to consider how we include students’ identities in being important contributions to the field of computer science.  In our next workshop, we will be building on this idea further as we discuss data and the impact of computing in society.",
-        "remarks": true,
-        "name": "(1 minute) Wrap-up"
+        "name": "(1 minute) Wrap-up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a7d4b0e9-c60e-4ab5-91ab-07f344de8f22",
@@ -1205,8 +1205,8 @@
       "position": 1,
       "properties": {
         "description": "The “Make” lesson for Libraries doubles as the end of unit project.  This project asks students to make their own library which has the following:\n* Must contain two or more functions\n* At least one function which includes all of the following:\n\t* A loop\n\t* An if-statement\n\t* One or more parameters\n\t* Return\nIn addition to writing the code for a library, students submit written responses as well.  This mirrors some of the requirements of the Create Performance Task.",
-        "remarks": true,
-        "name": "(1 minute) Introduce project"
+        "name": "(1 minute) Introduce project",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "332d2b1a-7358-4357-88dd-dfc43a41c35c",
@@ -1290,8 +1290,8 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Let’s process this together.",
-        "remarks": true,
-        "name": "(5 minutes) Discussion: Generate questions"
+        "name": "(5 minutes) Discussion: Generate questions",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "07298208-8f8a-4afb-b104-5381743d188f",
@@ -1577,8 +1577,8 @@
       "position": 3,
       "properties": {
         "description": "The next 10 minutes are yours to make a plan for getting to the Create Task.",
-        "remarks": true,
-        "name": "(10 minutes) Create your plan"
+        "name": "(10 minutes) Create your plan",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "84757b43-59ea-4a21-bee9-a3eb1e8279a4",
@@ -1657,10 +1657,96 @@
 
   ],
   "resources": [
-
+    {
+      "name": "CSP Slides - Workshop 3 - 20-21",
+      "url": "https://docs.google.com/presentation/d/1cQk_W6UDVHWKz7R6SRAw_dvUHzYIIGMSE3BeFWkwNw4/edit#slide=id.g7eb44bd5f6_0_73",
+      "key": "csp_slides_-_workshop_3_-_20-21",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_slides_-_workshop_3_-_20-21"
+      }
+    },
+    {
+      "name": "CSP Slides - Workshop 3 - 20-21",
+      "url": "https://docs.google.com/presentation/d/1cQk_W6UDVHWKz7R6SRAw_dvUHzYIIGMSE3BeFWkwNw4/edit?usp=sharing",
+      "key": "csp_slides_-_workshop_3_-_20-21_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_slides_-_workshop_3_-_20-21_1"
+      }
+    },
+    {
+      "name": "CSP Workshop 3 Notes Template - 19 - 20",
+      "url": "https://docs.google.com/document/d/1IG0Bo3gdOw3zSHYZRqCEGu4wW3e0DoweC1A025pAyKY/edit?usp=sharing",
+      "key": "csp_workshop_3_notes_template_-_19_-_20",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_workshop_3_notes_template_-_19_-_20"
+      }
+    },
+    {
+      "name": "CSP Workshop 3 Slides Template - 19 - 20",
+      "url": "https://docs.google.com/presentation/d/1w0mFNmcTBmnfrmn4mXMhh6v6NTpRZO7z7UUHbj8N7So/edit?usp=sharing",
+      "key": "csp_workshop_3_slides_template_-_19_-_20",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_workshop_3_slides_template_-_19_-_20"
+      }
+    },
+    {
+      "name": "Facilitator Handbook - 2019",
+      "url": "https://docs.google.com/document/d/1YWAzrJOH64KswM9X_XL7A901QiPk6Nj8LsJySvuXeXc/preview",
+      "key": "facilitator_handbook_-_2019",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "facilitator_handbook_-_2019"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_slides_-_workshop_3_-_20-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_workshop_3_notes_template_-_19_-_20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_workshop_3_slides_template_-_19_-_20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "facilitator_handbook_-_2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "resource.key": "csp_slides_-_workshop_3_-_20-21_1"
+      }
+    }
   ],
   "scripts_resources": [
 

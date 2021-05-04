@@ -22515,6 +22515,8 @@ en:
           lessons:
             session-1:
               name: Welcome to the Workshop!
+              description_student: Kick off the week! Get to know the people you are with and understand what will happen during the week.
+              description_teacher: Kick off the week! Get to know the people you are with and understand what will happen during the week.
             session-2:
               name: Intro to CS Principles
             session-3:

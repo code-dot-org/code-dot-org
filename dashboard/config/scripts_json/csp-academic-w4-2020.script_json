@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 14:25:33 UTC",
+    "serialized_at": "2021-05-04 03:58:11 UTC",
     "seeding_key": {
       "script.name": "csp-academic-w4-2020"
     }
@@ -38,11 +38,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Kick off the day by discussing how things are going and generating topics of interest.",
-        "student_overview": "Kick off the day by discussing how things are going and generating topics of interest.",
-        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. This is a place to check in on specific lessons that people have already taught, as well as pacing and teaching practices that were recommended or discussed in the previous workshop.\n\nIt is common to surface concerns during this session that can be revisited and addressed throughout the workshop.\n",
         "preparation": "Room Setup (using the supplies provided by regional partner):\r\n\r\n* Posters up for people to add post-its to as they come in\r\n\t* **“Where are we now”** - On a piece of chart paper or on the board create a histogram for teachers to add where they are in the curriculum. Reminder teachers to take out their teal books as a guide to unit progressions.\r\n\t* **Question Parking Lot** - For people to put up questions they have.\r\n \r\nFacilitator Supplies:\r\n\r\n* Your local copy of the [r csp-q4-slides-2020]\r\n* [r facilitator-handbook-2019]\r\n* Poster Paper (Regional Partner Provides)\r\n* [r workshop-dashboard]\r\n\r\nTeacher Materials:\r\n\r\n* Journal (Should bring with them.)\r\n* Post-its",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Bring participants together to kick off the workshop and reflect on how things are going in the classroom. This is a place to check in on specific lessons that people have already taught, as well as pacing and teaching practices that were recommended or discussed in the previous workshop.\n\nIt is common to surface concerns during this session that can be revisited and addressed throughout the workshop.\n",
+        "student_overview": "Kick off the day by discussing how things are going and generating topics of interest."
       },
       "seeding_key": {
         "lesson.key": "session-1",
@@ -58,10 +58,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "student_overview": "Setup and preparation:",
-        "purpose": "This session provides participants with an opportunity to reflect on the CS Principles professional learning equity sessions they engaged with throughout the year, as well as the progress they themselves have made in supporting equity in their CS Principles classrooms. This session also supports participants in identifying next steps they want to commit to taking after the workshop as they continue to work towards the equity goal of bringing computer science to all students.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Setup and preparation:\n\n* Recommend making an [equity-access-diversity-inclusion poster](https://drive.google.com/file/d/1ja979_d-EUQvP_gt1SxC3VWCwdPYuVI4/view?usp=sharing) for the front of the room.  \n* Prepare your own example of what you have learned about equitable CS classrooms through this year using the sentence frame “I used to think... but now I think...”\n\n \nFacilitator Supplies:\n\n* Your local copy of the [r csp-q4-slides-2020]\n* Poster Paper (Regional Partner Provides)\n\nTeacher Materials:\n\n* Journal (Should bring with them.)\n* Post-its",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This session provides participants with an opportunity to reflect on the CS Principles professional learning equity sessions they engaged with throughout the year, as well as the progress they themselves have made in supporting equity in their CS Principles classrooms. This session also supports participants in identifying next steps they want to commit to taking after the workshop as they continue to work towards the equity goal of bringing computer science to all students.",
+        "student_overview": "Setup and preparation:"
       },
       "seeding_key": {
         "lesson.key": "session-2",
@@ -77,8 +77,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-3",
@@ -94,10 +94,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Unit 9 contains some new tools in the curriculum such as the Google Trends tool and the data visualizer tool.  This session is intended to help participants understand each lesson at a high level while the facilitator provides the “connective tissue” between the lessons.  Data does provide opportunities to also connect to students’ interests which comes through at the end of the unit project.  We want to emphasize this opportunity to celebrate the diversity of projects that students develop during this unit. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\n\n* None\n \nFacilitator Supplies:\n\n* Your local copy of the [r csp-q4-slides-2020]\n\nTeacher Materials:\n\n* None\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Unit 9 contains some new tools in the curriculum such as the Google Trends tool and the data visualizer tool.  This session is intended to help participants understand each lesson at a high level while the facilitator provides the “connective tissue” between the lessons.  Data does provide opportunities to also connect to students’ interests which comes through at the end of the unit project.  We want to emphasize this opportunity to celebrate the diversity of projects that students develop during this unit. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-4",
@@ -113,8 +113,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "student_overview": "Lunch",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Lunch"
       },
       "seeding_key": {
         "lesson.key": "session-5",
@@ -130,10 +130,10 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "Similar to Unit 3, Unit 10 has a long project that runs through the course of the unit.   For teachers who plan only one less at a time, this project can be difficult to understand since it is not intended to take one class period.  Also, Unit 10 includes important themes and skills that we want students to know to be an informed citizen in the digital world.  At times, teachers find these units as “less essential” because they are not directly building students’ programming skills, but in reality, it is these units that we see as building essential and enduring skills regardless of what passions students decide to pursue next.  ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\n\n* None.\n \nFacilitator Supplies:\n\n* Your local copy of the [r csp-q4-slides-2020]\n* Physical copies of the [Character Bio](https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/) print out.  If these copies are not available, have participants read about their character on the digital version.\n* [Printed name plates](https://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/) if available. If these copies are not available, write down the names of the characters on separate post-its and assign a character to each person through handing out post its. \n\nTeacher Materials:\n\n* Computers\n* Journals\n* Virtual copy of the [Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/)\n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Similar to Unit 3, Unit 10 has a long project that runs through the course of the unit.   For teachers who plan only one less at a time, this project can be difficult to understand since it is not intended to take one class period.  Also, Unit 10 includes important themes and skills that we want students to know to be an informed citizen in the digital world.  At times, teachers find these units as “less essential” because they are not directly building students’ programming skills, but in reality, it is these units that we see as building essential and enduring skills regardless of what passions students decide to pursue next.  ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-6",
@@ -149,8 +149,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "student_overview": "Break",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "student_overview": "Break"
       },
       "seeding_key": {
         "lesson.key": "session-7",
@@ -166,10 +166,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "There is a logical desire to want students to do well on the AP Exam and often teachers are familiar with doing some sort of “test prep” prior to a big test.  This session is designed to provide teachers with a structure and community to create their own plan that meets their students’ needs.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\n\n* None\n\nFacilitator Supplies:\n\n* Your local copy of the [r csp-q4-slides-2020]\n\nTeacher Materials:\n\n* Computers\n* Journal \n* [CSP Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf)",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "There is a logical desire to want students to do well on the AP Exam and often teachers are familiar with doing some sort of “test prep” prior to a big test.  This session is designed to provide teachers with a structure and community to create their own plan that meets their students’ needs.",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-8",
@@ -185,10 +185,10 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "student_overview": "Room Setup:",
-        "purpose": "As this is the last time this group will be coming together, we want to leave the workshop on the note of community and leadership.  This session is designed to make participants aware of opportunities to connect to the larger CS community and ways they can benefit and contribute to those communities. ",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "preparation": "Room Setup:\n\n* None\n\nFacilitator Supplies:\n\n* Your local copy of the [r csp-q4-slides-2020]\n\t* Talk to your Regional Partner prior to this session to understand plans or opportunities they have to keep the cohort connected in the future. \n\nTeacher Materials:\n\n* Journal \n",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "As this is the last time this group will be coming together, we want to leave the workshop on the note of community and leadership.  This session is designed to make participants aware of opportunities to connect to the larger CS community and ways they can benefit and contribute to those communities. ",
+        "student_overview": "Room Setup:"
       },
       "seeding_key": {
         "lesson.key": "session-9",
@@ -204,11 +204,11 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Answer outstanding questions and wrap up day.",
-        "student_overview": "Answer outstanding questions and wrap up day.",
-        "purpose": "Answer any outstanding questions and wrap up the day.\r\n\r\nIn addition it should give time to do the survey in person so that teachers complete it before leaving.",
         "preparation": "Room Setup:\r\n\r\n* None\r\n\r\n\r\nFacilitator Supplies:\r\n\r\n* Grab and organize the question parking lot\r\n* Your local copy of the [r csp-q4-slides-19]\r\n* Your local copy of the [r csp-q4-notes-19]\r\n* For closing the workshop: [r workshop-dashboard]\r\n\r\nTeacher Materials:\r\n\r\n* Computers",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Answer any outstanding questions and wrap up the day.\r\n\r\nIn addition it should give time to do the survey in person so that teachers complete it before leaving.",
+        "student_overview": "Answer outstanding questions and wrap up day."
       },
       "seeding_key": {
         "lesson.key": "session-10",
@@ -222,8 +222,8 @@
       "key": "35f840b0-f836-4493-b20d-043d482d0405",
       "position": 1,
       "properties": {
-        "name": "As Participants Enter the Room",
-        "duration": 5
+        "duration": 5,
+        "name": "As Participants Enter the Room"
       },
       "seeding_key": {
         "lesson_activity.key": "35f840b0-f836-4493-b20d-043d482d0405",
@@ -236,8 +236,8 @@
       "key": "4c9ab067-156c-4329-8ccf-f1af3aeef736",
       "position": 2,
       "properties": {
-        "name": "Reconnect",
-        "duration": 20
+        "duration": 20,
+        "name": "Reconnect"
       },
       "seeding_key": {
         "lesson_activity.key": "4c9ab067-156c-4329-8ccf-f1af3aeef736",
@@ -250,8 +250,8 @@
       "key": "34118b44-41d8-4dda-9b78-82dd63d4905f",
       "position": 1,
       "properties": {
-        "name": "Looking back",
-        "duration": 10
+        "duration": 10,
+        "name": "Looking back"
       },
       "seeding_key": {
         "lesson_activity.key": "34118b44-41d8-4dda-9b78-82dd63d4905f",
@@ -264,8 +264,8 @@
       "key": "d4574a1d-f986-46ef-b08e-fcba275fdc82",
       "position": 2,
       "properties": {
-        "name": "Going forward",
-        "duration": 22
+        "duration": 22,
+        "name": "Going forward"
       },
       "seeding_key": {
         "lesson_activity.key": "d4574a1d-f986-46ef-b08e-fcba275fdc82",
@@ -278,8 +278,8 @@
       "key": "d47d92c9-20ac-4103-a2c6-b70657769f54",
       "position": 3,
       "properties": {
-        "name": "Get and give feedback",
-        "duration": 23
+        "duration": 23,
+        "name": "Get and give feedback"
       },
       "seeding_key": {
         "lesson_activity.key": "d47d92c9-20ac-4103-a2c6-b70657769f54",
@@ -292,8 +292,8 @@
       "key": "bc240116-2275-47e6-919b-b1b8296fc08d",
       "position": 1,
       "properties": {
-        "name": "Introduction to Unit 9",
-        "duration": 7
+        "duration": 7,
+        "name": "Introduction to Unit 9"
       },
       "seeding_key": {
         "lesson_activity.key": "bc240116-2275-47e6-919b-b1b8296fc08d",
@@ -306,8 +306,8 @@
       "key": "de2b37d3-5819-4b07-bb47-52d2788c9320",
       "position": 2,
       "properties": {
-        "name": "Unit 9 Jigsaw",
-        "duration": 30
+        "duration": 30,
+        "name": "Unit 9 Jigsaw"
       },
       "seeding_key": {
         "lesson_activity.key": "de2b37d3-5819-4b07-bb47-52d2788c9320",
@@ -320,8 +320,8 @@
       "key": "e2f9e5ec-4f6a-43f2-80f4-b3b8f9a7232c",
       "position": 3,
       "properties": {
-        "name": "Jigsaw share-out",
-        "duration": 30
+        "duration": 30,
+        "name": "Jigsaw share-out"
       },
       "seeding_key": {
         "lesson_activity.key": "e2f9e5ec-4f6a-43f2-80f4-b3b8f9a7232c",
@@ -334,8 +334,8 @@
       "key": "8d419a5a-dcb9-4058-9ae9-fb96191af797",
       "position": 4,
       "properties": {
-        "name": "Project Overview",
-        "duration": 13
+        "duration": 13,
+        "name": "Project Overview"
       },
       "seeding_key": {
         "lesson_activity.key": "8d419a5a-dcb9-4058-9ae9-fb96191af797",
@@ -348,8 +348,8 @@
       "key": "2d0fc8dc-171a-40c8-a7db-04f7c9ff10e2",
       "position": 1,
       "properties": {
-        "name": "Unit 10 Overview",
-        "duration": 8
+        "duration": 8,
+        "name": "Unit 10 Overview"
       },
       "seeding_key": {
         "lesson_activity.key": "2d0fc8dc-171a-40c8-a7db-04f7c9ff10e2",
@@ -362,8 +362,8 @@
       "key": "0cadba30-1a34-475e-beee-50533619db25",
       "position": 2,
       "properties": {
-        "name": "Do the simulation, but at warp-speed... ",
-        "duration": 45
+        "duration": 45,
+        "name": "Do the simulation, but at warp-speed... "
       },
       "seeding_key": {
         "lesson_activity.key": "0cadba30-1a34-475e-beee-50533619db25",
@@ -376,8 +376,8 @@
       "key": "da514e2f-c9bd-4277-adf8-b00d660fa1a0",
       "position": 3,
       "properties": {
-        "name": "Reflection",
-        "duration": 12
+        "duration": 12,
+        "name": "Reflection"
       },
       "seeding_key": {
         "lesson_activity.key": "da514e2f-c9bd-4277-adf8-b00d660fa1a0",
@@ -390,8 +390,8 @@
       "key": "150dddb7-cb9e-4a22-b3ce-2f999b83f712",
       "position": 1,
       "properties": {
-        "name": "Getting familiar with the multiple choice exam",
-        "duration": 30
+        "duration": 30,
+        "name": "Getting familiar with the multiple choice exam"
       },
       "seeding_key": {
         "lesson_activity.key": "150dddb7-cb9e-4a22-b3ce-2f999b83f712",
@@ -404,8 +404,8 @@
       "key": "a6a959ae-b038-4511-a4b5-43ba47747dd4",
       "position": 2,
       "properties": {
-        "name": "Develop a list of resources",
-        "duration": 20
+        "duration": 20,
+        "name": "Develop a list of resources"
       },
       "seeding_key": {
         "lesson_activity.key": "a6a959ae-b038-4511-a4b5-43ba47747dd4",
@@ -418,8 +418,8 @@
       "key": "7ec75435-980e-4896-b177-f6bf8f1d1ac1",
       "position": 3,
       "properties": {
-        "name": "Develop your plan",
-        "duration": 20
+        "duration": 20,
+        "name": "Develop your plan"
       },
       "seeding_key": {
         "lesson_activity.key": "7ec75435-980e-4896-b177-f6bf8f1d1ac1",
@@ -432,8 +432,8 @@
       "key": "a54bbd36-fdb0-44e6-b385-832932b132a4",
       "position": 1,
       "properties": {
-        "name": "Introduction",
-        "duration": 8
+        "duration": 8,
+        "name": "Introduction"
       },
       "seeding_key": {
         "lesson_activity.key": "a54bbd36-fdb0-44e6-b385-832932b132a4",
@@ -446,8 +446,8 @@
       "key": "7676bfcb-1f6a-4ef7-95d6-978e68a45d16",
       "position": 2,
       "properties": {
-        "name": "Staying connected",
-        "duration": 12
+        "duration": 12,
+        "name": "Staying connected"
       },
       "seeding_key": {
         "lesson_activity.key": "7676bfcb-1f6a-4ef7-95d6-978e68a45d16",
@@ -460,8 +460,8 @@
       "key": "b62c02da-0123-45b9-bd1f-7e724bcf740d",
       "position": 1,
       "properties": {
-        "name": "Parking Lot and Reminders",
-        "duration": 5
+        "duration": 5,
+        "name": "Parking Lot and Reminders"
       },
       "seeding_key": {
         "lesson_activity.key": "b62c02da-0123-45b9-bd1f-7e724bcf740d",
@@ -474,8 +474,8 @@
       "key": "1c21a590-e6dc-44d1-9f96-c30be6c9f9d0",
       "position": 2,
       "properties": {
-        "name": "Complete the Survey",
-        "duration": 5
+        "duration": 5,
+        "name": "Complete the Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "1c21a590-e6dc-44d1-9f96-c30be6c9f9d0",
@@ -748,8 +748,8 @@
       "position": 2,
       "properties": {
         "description": "You will all be making a poster with other participants which answers the question of “What does an inclusive classroom look and sound like?”  You can be as creative as you want with your poster but should still be “understood” without any additional narration since, after ~7 minutes we are going to do a gallery walk to look at other posters.",
-        "remarks": true,
-        "name": "(7 minutes) Introduce and do task"
+        "name": "(7 minutes) Introduce and do task",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a6795664-4058-4886-8209-e5583a0fb179",
@@ -796,8 +796,8 @@
       "position": 6,
       "properties": {
         "description": "Now that you have identified your goal for creating an even more inclusive classroom next year, in your journal, write down your plan for how you will accomplish that goal.  Consider what challenges you faced this year in getting to that goal and how you might plan to overcome those challenges.  You will share this out with your table.",
-        "remarks": true,
-        "name": "(5 minutes) Have participants make their plan "
+        "name": "(5 minutes) Have participants make their plan ",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "17617613-24dc-4ca0-8d67-47d11da37b99",
@@ -826,8 +826,8 @@
       "position": 2,
       "properties": {
         "description": "Next we are going to engage in a timed protocol to discuss goals and plans.  For this, you will get into triads.  \n\nIn triads we will do three rounds of the timed protocol.  Each round will have a different presenter.  The protocol will look like this:\n\n* 2 minutes - The presenter shares their goal and their plan.  The rest of the team will be silent and may take notes.\n* 3 minutes - The rest of the team will give warm and cool feedback. The team offers warm (positive) and cool (productive) feedback and suggestions for improving the plan while the presenter silently takes notes.\n* 1 minute - the presenter will reflect on what they have heard. The rest of the team is silent.",
-        "remarks": true,
-        "name": "(20 minutes) Introduce and engage with the feedback protocol"
+        "name": "(20 minutes) Introduce and engage with the feedback protocol",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "063cd4ec-484a-4669-af22-91b71ed872e3",
@@ -898,8 +898,8 @@
       "position": 1,
       "properties": {
         "description": "We are going to look at each lesson in Unit 9 in a “Jigsaw format”.  We will break up into 5 groups and assign each group a lesson to look at.  Your goal is to share the “big picture” of the lesson with the group and point out aspects of the lesson you and your group found particularly important.  You will have 4 minutes to share out about your lesson.",
-        "remarks": true,
-        "name": "(5 minutes) Introduce task"
+        "name": "(5 minutes) Introduce task",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "7f0f8597-fe6b-4d66-935b-0b228e1edb13",
@@ -996,8 +996,8 @@
       "position": 1,
       "properties": {
         "description": "This unit ends with a project that spans two lessons in the unit.  Students will use an activity guide to help them with the task which walks them through the Data Analysis Process.  Please open and review the activity guide linked in the slides.  As you review the task consider the following:\n* How does the project itself lend itself to building an inclusive learning environment for students?  How might you modify it for your students to make it more of an inclusive learning experience for students?\n* What actions can you take during the project to build an inclusive classroom?",
-        "remarks": true,
-        "name": "(5 minutes) Review the task"
+        "name": "(5 minutes) Review the task",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "5d38ae77-204b-4b54-b5cb-7dc26a9bad4c",
@@ -1061,8 +1061,8 @@
       "position": 1,
       "properties": {
         "description": "As we mentioned, most of this unit is an extended simulation.  In the slides, you will see a banner showing you and students that we are in simulation mode.  We are going to engage with this project on warp-speed to get a feel for what students will be doing.  We expect students will be doing much more research at each of these steps, but here we are going to focus more on the steps of the project rather than the CS content.  You have all been assigned a role in this simulation.  You are now this new character and you are planning on proposing a new concept for the “Future school”.  Before we start, \r\n\r\n* Read a bit about your new character on your character sheet we handed out or online.  Introduce yourself to your table as your new character.  \r\n* Make a copy of the (Activity Guide)[https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/] linked in the slides.\r\n \r\nLet’s get started.",
-        "remarks": true,
-        "name": "(5 minutes) Introduce the task\r"
+        "name": "(5 minutes) Introduce the task\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "c2b0ed2f-25a3-445f-ab2e-cc344ca63fdc",
@@ -1091,8 +1091,8 @@
       "position": 3,
       "properties": {
         "description": "We are so excited to have all of you participate in the “Future School Convention”!  You each have a lot to bring to the conversation!   To start, look at step 1 of your Activity Guide and write a bit about what YOU (in your character) would want in a Future School.",
-        "remarks": true,
-        "name": "(3 minutes) Step 1 - Reflect\r"
+        "name": "(3 minutes) Step 1 - Reflect\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "fce1095c-93b6-4040-b6e1-6bc33ff4cefe",
@@ -1152,8 +1152,8 @@
       "position": 1,
       "properties": {
         "description": "You can see we REALLY rushed this project.  In the classroom many things would be different:\r\n\r\n* Students would actually do research on their innovations.\r\n* Students would create a one-pager on ONE of their innovations\r\n* Groups would get feedback on their ideas.\r\n* All groups would share out and vote on best innovation and best vision/theme at the “convention”",
-        "remarks": true,
-        "name": "(2 minutes) Context\r"
+        "name": "(2 minutes) Context\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "170a5ba1-e584-4ddf-82c9-db10f887fee2",
@@ -1205,8 +1205,8 @@
       "position": 1,
       "properties": {
         "description": "Throughout this year we have talked about helping prepare students for the Create Performance task, but the fact remains that the largest part of their AP score will come from the Multiple Choice assessment they will take on May 13th. The multiple choice assessment makes up 70% of their final score.",
-        "remarks": true,
-        "name": "(5 minutes) Introduction"
+        "name": "(5 minutes) Introduction",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "107464e9-683d-4cdf-b7df-8945bf031391",
@@ -1276,8 +1276,8 @@
       "position": 1,
       "properties": {
         "description": "So far we have discussed WHAT we want to do to prepare students for the exam, and HOW we can do that.  Next, we want to consider WHEN we will do these things.  The next 10 minutes will be yours to make a plan for your students.  During this time:\n\n* **Check your timing.**  Look at where you are in the curriculum and how much time is left before the exam.  How are things looking for covering the content overall?  How much time do you have to review?  Consider building out a calendar for any review time you do have space for.\n* **Prioritize what you want to work on with students.** Consider what resources you have already used or taken advantage of in your classroom. Which skills and content do you see your students needing the most support with?  How can you get the biggest “bang for your buck” when it comes to utilizing the review time?\n* **Think about engagement.**  How will you balance engagement and motivation during the end of the year?",
-        "remarks": true,
-        "name": "(10 minutes) Introduce task"
+        "name": "(10 minutes) Introduce task",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "46ab34df-428f-4ce7-b36b-53b77d4bec46",
@@ -1437,10 +1437,61 @@
 
   ],
   "resources": [
-
+    {
+      "name": "CSP Slides - Workshop 4 - 20-21",
+      "url": "https://docs.google.com/presentation/d/1_hU2auaMpggnTK4inXCUt_pwqL4UMiupJcMbM-HStjI/edit#slide=id.g7eb44bd5f6_0_73",
+      "key": "csp_slides_-_workshop_4_-_20-21",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_slides_-_workshop_4_-_20-21"
+      }
+    },
+    {
+      "name": "CSP Workshop 4 - Group Notes Template 2019 - 2020",
+      "url": "https://docs.google.com/document/d/1XtFWuSUEREUpixSSRTFdU03kLMjS_hCkz_hCSuUrezM/edit?usp=sharing",
+      "key": "csp_workshop_4_-_group_notes_template_2019_-_2020",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_workshop_4_-_group_notes_template_2019_-_2020"
+      }
+    },
+    {
+      "name": "CSP Workshop 4 - Slides Template 2019-2020",
+      "url": "https://docs.google.com/presentation/d/1IsEl9jFKYsRa_WDC0Aq28QW9GCHYKeJAMA1vrId5QhE/edit?usp=sharing",
+      "key": "csp_workshop_4_-_slides_template_2019-2020",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csp_workshop_4_-_slides_template_2019-2020"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_workshop_4_-_group_notes_template_2019_-_2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-1",
+        "resource.key": "csp_workshop_4_-_slides_template_2019-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "session-2",
+        "resource.key": "csp_slides_-_workshop_4_-_20-21"
+      }
+    }
   ],
   "scripts_resources": [
 

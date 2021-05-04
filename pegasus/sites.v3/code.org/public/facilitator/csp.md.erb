@@ -1,0 +1,167 @@
+---
+title: CS Fundamentals for grades K-5
+video_player: true
+theme: responsive
+style_min: true
+---
+
+<link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+<style>
+  .backgroundimage {
+    background-image: url(<%= CDO.code_org_url('/shared/images/banners/small-teal-icons.png') %>);
+    background-size: cover;
+    padding:10px;
+  }
+
+  ul li:before {
+    color: black;
+  }
+</style>
+
+<h1 class="backgroundimage" style="color:white;">
+CS Principles Facilitator Landing Page
+</h1>
+
+# Quick Links
+
+<div class="row">
+<div style="width:90%;margin:2%;">
+<div style="width:7%;float:left;">
+<a href="https://studio.code.org/home", target=_"blank"><i class="fa fa-dashboard fa-2x" style="color: #7665a0;"></i></a></div>
+<div style="width:90%;padding:0 0 0 10px;float:left;"><a href="https://studio.code.org/pd/workshop_dashboard/workshops" target="_blank">Workshop Dashboard</a><p>Head to the Workshop Dashboard to see your scheduled workshops, take attendance, and view your survey feedback.</p></div>
+</div>
+</div>
+
+<div class="row">
+<div style="width:90%;margin:2%;">
+<div style="width:7%;float:left;">
+<a href="https://curriculum.code.org/csp-20/", target=_"blank"><i class="fa fa-pencil fa-2x" style="color: #7665a0;"></i></a></div>
+<div style="width:90%;padding:0 0 0 10px;float:left;"><a href="https://curriculum.code.org/csp-20/" target="_blank">CS Principles Curriculum</a><p>Access the full CS Principles curriculum, including plugged and unplugged activities, lesson plans, pacing guides, and more.</p></div>
+</div>
+</div>
+
+<div class="row">
+<div style="width:90%;margin:2%;">
+<div style="width:7%;float:left;">
+<a href="https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/preview/", target=_"blank"><i class="fa fa-book fa-2x" style="color: #7665a0;"></i></a></div>
+<div style="width:90%;padding:0 0 0 10px;float:left;"><a href="https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/preview" target="_blank">Facilitator Handbook</a><p>The handbook contains resources and materials to help you be a successful Code.org facilitator.</p></div>
+</div>
+</div>
+
+<div class="row">
+<div style="width:90%;margin:2%;">
+<div style="width:7%;float:left;">
+<a href="https://docs.google.com/document/d/1JS2HDBPTWJ_TNqrTVemmwNtUB3XL-vmLaQLP23YUyEo/preview", target=_"blank"><i class="fa fa-briefcase fa-2x" style="color: #7665a0;"></i></a></div>
+<div style="width:90%;padding:0 0 0 10px;float:left;"><a href="https://docs.google.com/document/d/1JS2HDBPTWJ_TNqrTVemmwNtUB3XL-vmLaQLP23YUyEo/preview" target="_blank">Facilitator Tools Guide</a><p>Check out our Facilitator Tools Guide for details (plus screenshots!) about navigating the workshop dashboard, surveys, and more.</p></div>
+</div>
+</div>
+
+
+<div style="clear:both"></div>
+
+<h1 class="backgroundimage" style="color:white;">
+Summer Workshops
+</h1>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/s/csp-summer-2020'), cta_text: 'View Workshop', img: '/images/458x70/green.png', title: 'CSP In-Person Summer Workshop', description: '5-day in person summer workshop for CSP.'%>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+# Resources for Summer Workshops
+
+<div class="row">
+  <div style="width:45%;margin:2%;float:left;">
+    <div style="width:7%;margin-right:6%;float:left;">
+      <a href="https://docs.google.com/document/d/1odHdMlorMwS7x2VA-e1S6otQgQg2K8iC-Vhm6bFParI/preview", target=_"blank">
+        <i class="fa fa-mortar-board fa-2x" style="color: #7665a0;"></i>
+      </a>
+    </div>
+    <div style="width:80%;padding:0 0 0 10px;float:left;">
+      <a href="https://docs.google.com/document/d/1odHdMlorMwS7x2VA-e1S6otQgQg2K8iC-Vhm6bFParI/preview" target="_blank">TLO Guide</a>
+      <p>Visit the 2020-21 TLO Guide for tips about how to run these role-play sessions.</p>
+    </div>
+  </div>
+  <div style="width:45%;margin:2%;float:left;">
+    <div style="width:7%;margin-right:6%;float:left;">
+      <a href="https://docs.google.com/spreadsheets/d/1ljGPGqAWpaghqFivsxLaT3td6rXywA-R8pSjWhCLCx0/edit#gid=904631244", target=_"blank">
+        <i class="fa fa-globe fa-2x" style="color: #7665a0;"></i>
+      </a>
+    </div>
+    <div style="width:80%;padding:0 0 0 10px;float:left;"><a href="https://docs.google.com/spreadsheets/d/1ljGPGqAWpaghqFivsxLaT3td6rXywA-R8pSjWhCLCx0/edit#gid=904631244" target="_blank">Network-Curated Resources</a>
+      <p>Prepping for a virtual summer workshop? Check out this bank of network-curated resources from facilitators and Regional Partners.</p>
+    </div>
+  </div>
+</div>
+
+<div style="clear:both"></div>
+
+<h1 class="backgroundimage" style="color:white;">
+Academic Year Workshops
+</h1>
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp-academic-2020'), cta_text: 'View Program', img: '/images/458x70/orange.png', title: 'CSP In-Person Academic Year', description: 'Progression of workshops for CSP teachers who are doing the academic year workshops in-person.'%>
+
+[/col-50]
+
+[col-50]
+
+<%= view :course_wide_block, cta_link: CDO.studio_url('/courses/csp-virtual-2020'), cta_text: 'View Program', img: CDO.code_org_url('/images/458x70/light-orange.png'), title: 'CSP Virtual Academic Year', description: 'Progression of workshops for CSP teachers who are doing the academic year workshops virtually.'%>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+# Resources for Academic Year Workshops (AYWs)
+
+<div class="row">
+  <div style="width:45%;margin:2%;float:left;">
+    <div style="width:7%;margin-right:6%;float:left;">
+      <a href="https://docs.google.com/document/d/1e4GLvv3WcMH4Ov2_qN3RIsOLjnQCrd3rSoMqTy35xqo/preview", target=_"blank">
+        <i class="fa fa-question-circle fa-2x" style="color: #7665a0;"></i>
+      </a>
+    </div>
+    <div style="width:80%;padding:0 0 0 10px;float:left;">
+      <a href="https://docs.google.com/document/d/1e4GLvv3WcMH4Ov2_qN3RIsOLjnQCrd3rSoMqTy35xqo/preview" target="_blank">FAQs</a>
+      <p>Have questions about running your AYW? Visit our FAQs</p>
+    </div>
+  </div>
+  <div style="width:45%;margin:2%;float:left;">
+  <div style="width:7%;margin-right:6%;float:left;">
+    <a href="https://docs.google.com/document/d/1RfSAJ9Ck1wBII9fiJZet3wUqRhs4_HOZzhRGe2yP1NE/preview", target=_"blank">
+      <i class="fa fa-file-text fa-2x" style="color: #7665a0;"></i>
+    </a>
+  </div>
+  <div style="width:80%;padding:0 0 0 10px;float:left;">
+    <a href="https://docs.google.com/document/d/1RfSAJ9Ck1wBII9fiJZet3wUqRhs4_HOZzhRGe2yP1NE/preview" target="_blank">2-day Workshop Guide</a>
+    <p>If you are hosting a 2-day AYW, be sure to review the Crafting 2-day Academic Year Workshop Guide.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div style="width:45%;margin:2%;float:left;">
+    <div style="width:7%;margin-right:6%;float:left;">
+      <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/preview", target=_"blank">
+        <i class="fa fa-plane fa-2x" style="color: #7665a0;"></i>
+      </a>
+    </div>
+    <div style="width:80%;padding:0 0 0 10px;float:left;">
+      <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/preview" target="_blank">Travel Policy</a>
+      <p>Be sure to review the Travel Policy if you know that you'll be traveling at least 25 miles (or more than one hour) to an Academic Year Workshop this year, and <b>always check in with your Regional Partner before making any arrangements.</b></p>
+    </div>
+  </div>
+  <div style="width:45%;margin:2%;float:left;">
+  <div style="width:7%;margin-right:6%;float:left;">
+  <a href="https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview", target=_"blank">
+    <i class="fa fa-briefcase fa-2x" style="color: #7665a0;"></i>
+  </a>
+</div>
+<div style="width:80%;padding:0 0 0 10px;float:left;">
+  <a href="https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s/preview" target="_blank">Facilitator Tools Guide</a>
+  <p>Check out our Facilitator Tools Guide for details (plus screenshots!) about navigating the workshop dashboard, surveys, and more.</p>
+</div>
