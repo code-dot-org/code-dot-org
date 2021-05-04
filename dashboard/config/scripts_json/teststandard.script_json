@@ -5,10 +5,10 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:56:12 UTC",
     "seeding_key": {
       "script.name": "teststandard"
     }
@@ -37,13 +37,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-14 18:00:00 UTC",
+    "serialized_at": "2021-05-03 23:56:13 UTC",
     "seeding_key": {
       "script.name": "ai-classroom-test"
     }
@@ -54,15 +54,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Explore AI Lab",
         "level_keys": [
           "ml-class test-ai lab 1"
-        ]
+        ],
+        "progression": "Explore AI Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-class test-ai lab 1"
@@ -79,15 +79,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Importing into App Lab",
         "level_keys": [
           "ml-class test-app lab 1"
-        ]
+        ],
+        "progression": "Importing into App Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-class test-app lab 1"
