@@ -1,7 +1,7 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
 
-const spriteLocation = {
+const SpriteLocation = {
   LIBRARY: 'library',
   LEVEL: 'level'
 };
@@ -32,10 +32,16 @@ export default class SpriteUpload extends React.Component {
     event.preventDefault();
     const {spriteAvailability, fileData, category, filename} = this.state;
 
-    let destination =
-      spriteAvailability === spriteLocation.LEVEL
-        ? `/level_animations/${filename}`
-        : `/spritelab/category_${category}/${filename}`;
+    let destination = null;
+
+    switch (spriteAvailability) {
+      case SpriteLocation.LEVEL:
+        destination = `/level_animations/${filename}`;
+        break;
+      case SpriteLocation.LIBRARY:
+        destination = `/spritelab/category_${category}/${filename}`;
+        break;
+    }
 
     return fetch(`/api/v1/animation-library` + destination, {
       method: 'POST',
@@ -92,7 +98,7 @@ export default class SpriteUpload extends React.Component {
 
     const uploadButtonDisabled =
       spriteAvailability === '' ||
-      (spriteAvailability === spriteLocation.LIBRARY && category === '') ||
+      (spriteAvailability === SpriteLocation.LIBRARY && category === '') ||
       filename === '';
 
     return (
@@ -113,7 +119,7 @@ export default class SpriteUpload extends React.Component {
                   id="levelSprite"
                   name="spriteAvailability"
                   style={styles.radioButton}
-                  value={spriteLocation.LEVEL}
+                  value={SpriteLocation.LEVEL}
                   onChange={this.handleAvailabilityChange}
                 />
               </label>
@@ -124,12 +130,12 @@ export default class SpriteUpload extends React.Component {
                   id="librarySprite"
                   name="spriteAvailability"
                   style={styles.radioButton}
-                  value={spriteLocation.LIBRARY}
+                  value={SpriteLocation.LIBRARY}
                   onChange={this.handleAvailabilityChange}
                 />
               </label>
             </div>
-            {this.state.spriteAvailability === spriteLocation.LIBRARY && (
+            {spriteAvailability === SpriteLocation.LIBRARY && (
               <div>
                 <label>Category:</label>
                 <select onChange={this.handleCategoryChange}>
