@@ -246,8 +246,10 @@ module UsersHelper
     paired_user_levels,
     include_timestamp
   )
-    # if we don't have a user level, we don't need to return anything,
-    # unless the lesson is lockable, in which case that means it's locked
+    # if we don't have a user level, that means the user doesn't have any
+    # progress on this level, so the client interprets a nil value as not_tried.
+    # however, the default state of a lockable level is locked, so if the
+    # lesson is lockable, we need to indicate that the level is locked.
     if user_level.nil?
       if script_level.lesson.lockable?
         return {locked: true}
