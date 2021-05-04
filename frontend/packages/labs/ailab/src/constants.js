@@ -553,10 +553,12 @@ export const styles = {
   },
 
   summaryScreenBot: {
-    width: 300,
+    margin: 0,
     position: "absolute",
-    bottom: 20,
-    marginLeft: 20
+    top: "50%",
+    transform: "translateY(-50%)",
+    left: "calc(35% - 185px)",
+    width: "150px"
   },
 
   modelSaveMessage: {

@@ -34,6 +34,10 @@ class ModelCard extends Component {
     return (
       <div style={styles.panel}>
         <Statement />
+        <img
+          src={aiBotBorder}
+          style={styles.summaryScreenBot}
+        />
         <div style={styles.modelCardContainer}>
           <h3 style={styles.modelCardHeader}>{trainedModelDetails.name}</h3>
           <div style={styles.modelCardSubpanel}>
@@ -135,12 +139,6 @@ class ModelCard extends Component {
               )}
             </div>
         </div>
-        </div>
-        <div style={styles.summaryScreenBot}>
-          <img
-            src={aiBotBorder}
-            style={styles.trainBotBody}
-          />
         </div>
       </div>
     );
