@@ -1,7 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Radium from 'radium';
-import {setSource, renameFile, removeFile} from './javalabRedux';
+import {
+  setSource,
+  sourceVisibilityUpdated,
+  renameFile,
+  removeFile
+} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
   PaneSection,
@@ -42,6 +47,9 @@ const style = {
   },
   darkFileMenuToggleButton: {
     color: color.white
+  },
+  fileTypeIcon: {
+    margin: 5
   }
 };
 
@@ -55,10 +63,12 @@ class JavalabEditor extends React.Component {
     onCommitCode: PropTypes.func.isRequired,
     // populated by redux
     setSource: PropTypes.func,
+    sourceVisibilityUpdated: PropTypes.func,
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
-    isDarkMode: PropTypes.bool
+    isDarkMode: PropTypes.bool,
+    isEditingStartSources: PropTypes.bool
   };
 
   constructor(props) {
@@ -74,6 +84,7 @@ class JavalabEditor extends React.Component {
     this.onCreateFile = this.onCreateFile.bind(this);
     this.onDeleteFile = this.onDeleteFile.bind(this);
     this.onOpenFile = this.onOpenFile.bind(this);
+    this.toggleFileVisibility = this.toggleFileVisibility.bind(this);
     this._codeMirrors = {};
 
     // fileMetadata is a dictionary of file key -> filename.
@@ -81,7 +92,7 @@ class JavalabEditor extends React.Component {
     // tab order is an ordered list of file keys.
     let orderedTabKeys = [];
     Object.keys(props.sources).forEach((file, index) => {
-      if (props.sources[file].visible) {
+      if (props.sources[file].visible || props.isEditingStartSources) {
         let tabKey = this.getTabKey(index);
         fileMetadata[tabKey] = file;
         orderedTabKeys.push(tabKey);
@@ -177,6 +188,17 @@ class JavalabEditor extends React.Component {
     };
   };
 
+  toggleFileVisibility(key) {
+    this.props.sourceVisibilityUpdated(
+      this.state.fileMetadata[key],
+      !this.props.sources[this.state.fileMetadata[key]].visible
+    );
+    this.setState({
+      showMenu: false,
+      contextTarget: null
+    });
+  }
+
   getTabKey(index) {
     return `file-${index}`;
   }
@@ -248,6 +270,7 @@ class JavalabEditor extends React.Component {
   }
 
   onRenameFile(newFilename) {
+    const {fileMetadata, editTabKey} = this.state;
     // check for duplicate filename
     if (Object.keys(this.props.sources).includes(newFilename)) {
       this.setState({
@@ -257,11 +280,12 @@ class JavalabEditor extends React.Component {
     }
 
     // update file metadata with new filename
-    const newFileMetadata = {...this.state.fileMetadata};
-    newFileMetadata[this.state.editTabKey] = newFilename;
+    const newFileMetadata = {...fileMetadata};
+    newFileMetadata[editTabKey] = newFilename;
+    const oldFilename = fileMetadata[editTabKey];
 
     // update sources with new filename
-    this.props.renameFile(this.state.editTabFilename, newFilename);
+    this.props.renameFile(oldFilename, newFilename);
     projectChanged();
     this.setState({
       fileMetadata: newFileMetadata,
@@ -381,7 +405,12 @@ class JavalabEditor extends React.Component {
       renameFileError,
       newFileError
     } = this.state;
-    const {onCommitCode, isDarkMode} = this.props;
+    const {
+      onCommitCode,
+      isDarkMode,
+      sources,
+      isEditingStartSources
+    } = this.props;
 
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',
@@ -429,6 +458,16 @@ class JavalabEditor extends React.Component {
               {orderedTabKeys.map(tabKey => {
                 return (
                   <NavItem eventKey={tabKey} key={`${tabKey}-tab`}>
+                    {isEditingStartSources && (
+                      <FontAwesome
+                        style={style.fileTypeIcon}
+                        icon={
+                          sources[fileMetadata[tabKey]].visible
+                            ? 'eye'
+                            : 'eye-slash'
+                        }
+                      />
+                    )}
                     <span>{fileMetadata[tabKey]}</span>
                     {activeTabKey === tabKey && (
                       <button
@@ -474,6 +513,14 @@ class JavalabEditor extends React.Component {
             cancelTabMenu={this.cancelTabMenu}
             renameFromTabMenu={this.renameFromTabMenu}
             deleteFromTabMenu={this.deleteFromTabMenu}
+            changeVisibilityFromTabMenu={() =>
+              this.toggleFileVisibility(activeTabKey)
+            }
+            showVisibilityOption={isEditingStartSources}
+            fileIsVisible={
+              sources[fileMetadata[activeTabKey]] &&
+              sources[fileMetadata[activeTabKey]].visible
+            }
           />
         </div>
         <DeleteConfirmationDialog
@@ -514,10 +561,13 @@ class JavalabEditor extends React.Component {
 export default connect(
   state => ({
     sources: state.javalab.sources,
-    isDarkMode: state.javalab.isDarkMode
+    isDarkMode: state.javalab.isDarkMode,
+    isEditingStartSources: state.pageConstants.isEditingStartSources
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
+    sourceVisibilityUpdated: (filename, isVisible) =>
+      dispatch(sourceVisibilityUpdated(filename, isVisible)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename))
