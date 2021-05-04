@@ -1,3 +1,9 @@
+/* -------------- START OF CONSTANTS- Curriculum Owned -------------- */
+var RECOVERY_TIME = 250;
+var RECOVERY_BAR_HEIGHT = 5;
+var PERCENT_SICK_AT_SETUP = 10;
+/* --------------- END OF CONSTANTS- Curriculum Owned --------------- */
+
 /* -------------- START OF MONSTER BEHAVIOR DEFINITIONS- Curriculum Owned -------------- */
 function congregatingBehavior(spriteIdArg) {
   var speed = getProp(spriteIdArg, "speed") || 1;
@@ -47,8 +53,6 @@ function recoveringBehavior(spriteIdArg) {
 
 
 /* --------------- START OF LIBRARY LOGIC- Curriculum Owned --------------- */
-var RECOVERY_TIME = 250;
-
 function getSickWithProbability(spriteIdArg, probability) {
   if (randomNumber(0, 100) < probability) {
     getSick(spriteIdArg);
@@ -70,13 +74,16 @@ checkTouching("when", {costume: "healthy"}, {costume: "sick_mask"}, function (ex
 checkTouching("when", {costume: "healthy_mask"}, {costume: "sick_mask"}, function (extraArgs) {
   getSickWithProbability({id: extraArgs.subjectSprite}, 37.5);
 });
+
+repeatForever(function () {
+  addRecoveryBars();
+});
 /* ------------------------- END OF LIBRARY LOGIC ------------------------- */
 
 
 /* --------------- START OF BLOCKS API : Engineering Owned --------------- */
 function setupOutbreak(numMonsters, callback) {
-  var percentSick = 10;
-  var numSick = Math.round(percentSick * 0.01 * numMonsters);
+  var numSick = Math.round(PERCENT_SICK_AT_SETUP * 0.01 * numMonsters);
   makeNumSprites(numMonsters - numSick, "healthy");
   makeNumSprites(numSick, "sick");
   getSick({costume: "sick"}, "sick");
@@ -144,5 +151,35 @@ function getHealthy(spriteIdArg) {
 
 function addMonsterBehavior(behaviorFunc) {
   addBehaviorSimple({costume: "all"}, new Behavior(behaviorFunc, []));
+}
+
+function addRecoveryBars() {
+  push();
+  var spriteIds = getSpriteIdsInUse();
+  for (var i = 0; i < spriteIds.length; i++) {
+    var spriteIdArg = {id: spriteIds[i]};
+    var isSick = getProp(spriteIdArg, "sick");
+    if (isSick) {
+      var spriteScale = getProp(spriteIdArg, "scale") / 100;
+      var spriteWidth = getProp(spriteIdArg, "width");
+      var spriteHeight = getProp(spriteIdArg, "height");
+      var spriteX = getProp(spriteIdArg, "x");
+      var spriteY = 400 - getProp(spriteIdArg, "y");
+      var recovery = getProp(spriteIdArg, "recovery");
+
+      var barWidth = 0.65 * spriteWidth;
+      var barY = spriteY - (spriteHeight / 2) - RECOVERY_BAR_HEIGHT * 1.5;
+      var percentFilled = 1 - recovery / RECOVERY_TIME;
+
+      fill("white");
+      rect(spriteX - barWidth / 2, barY, barWidth, RECOVERY_BAR_HEIGHT);
+
+      if (percentFilled > 0) {
+        fill("lime");
+        rect(spriteX - barWidth / 2, barY, percentFilled * barWidth, RECOVERY_BAR_HEIGHT);
+      }
+    }
+  }
+  pop();
 }
 /* -------------------------- END OF HELPER FUNCTIONS -------------------------- */
