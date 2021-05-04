@@ -463,7 +463,12 @@ class LessonEditor extends Component {
                 standards={standards}
                 frameworks={frameworks}
               />
-              <h3>Opportunity Standards</h3>
+            </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Opportunity Standards"
+              collapsed={true}
+              fullwidth={true}
+            >
               <StandardsEditor
                 standardType={'opportunityStandard'}
                 standards={opportunityStandards}

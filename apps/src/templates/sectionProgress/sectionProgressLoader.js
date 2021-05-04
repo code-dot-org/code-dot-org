@@ -55,7 +55,7 @@ export function loadScriptProgress(scriptId, sectionId) {
     .then(response => response.json())
     .then(scriptData => {
       sectionProgress.scriptDataByScript = {
-        [scriptId]: postProcessDataByScript(scriptData)
+        [scriptId]: postProcessDataByScript(scriptData, sectionData.stageExtras)
       };
 
       if (
@@ -113,7 +113,7 @@ export function loadScriptProgress(scriptId, sectionId) {
   });
 }
 
-function postProcessDataByScript(scriptData) {
+function postProcessDataByScript(scriptData, includeBonusLevels) {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
     id: scriptData.id,
@@ -131,11 +131,18 @@ function postProcessDataByScript(scriptData) {
   }
   return {
     ...filteredScriptData,
-    stages: filteredScriptData.stages.map(stage => {
-      return {
-        ...stage,
-        levels: stage.levels.map(level => processedLevel(level))
-      };
-    })
+    stages: filteredScriptData.stages.map(lesson =>
+      postProcessLessonData(lesson, includeBonusLevels)
+    )
+  };
+}
+
+function postProcessLessonData(lesson, includeBonusLevels) {
+  const levels = includeBonusLevels
+    ? lesson.levels
+    : lesson.levels.filter(level => !level.bonus);
+  return {
+    ...lesson,
+    levels: levels.map(level => processedLevel(level))
   };
 }
