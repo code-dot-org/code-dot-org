@@ -4838,6 +4838,10 @@ sk-SK:
           **Podčiarkovníky** -- `Some_people_like_to_use_underscores_to_separate_words`\n*
           **Pomlčky** -- `Others-like-to-use-hyphens-or-dashes`\n\nČokoľvek si vyberiš,
           záleží len na tebe. Je to tvoj štýl. Pomáha to byť dôsledný."
+        teacher_markdown: |
+          #### Rozvoj správnych programovacích návykov
+
+          Dodržiavanie jasných a dôsledných pravidiel pri pomenovaní je dôležitým zvykom, ktorý treba rozvíjať, aj keď výhody z toho nie sú študentom okamžite zrejmé. Z dlhodobého hľadiska sa skutočne oplatí vytvárať správne pomenované ID, najmä preto, že vám ušetrí zdravý rozum, keď príde čas na čítanie programov vašich študentov, ale tiež zjednoduší proces kombinovania obrazovky každého študenta do spoločnej tímovej aplikácie.
       Unit 1 Lesson 4 Overview:
         markdown: "# Prehľad\n\nV tejto lekcii sa zamyslíš ako počítače pomáhajú pri
           riešení určitých problémov a naučíš sa základné funckie každého počítača
@@ -4850,11 +4854,11 @@ sk-SK:
           problému pri komunikácii  obsahu a štruktúry webovej stránky smerom k počitaču.
           Začína sa  so stručnom aktivitou bez počítača prezentujúcou výzvy ako efektívne
           \ komunikovať  štruktúru webovej stránky.    Tieda sa zameria na stránky
-          HTML vo Web Lab-e a prediskutuje ako HTML tag-y pomáhajú pri riešení úloh.
-          Na záver pomocou HTML napíšu prvé webové stránky v rámci tejto kapitoly.
+          HTML vo Web Lab-e a prediskutuje ako HTML označenia pomáhajú pri riešení
+          úloh. Na záver pomocou HTML napíšu prvé webové stránky v rámci tejto kapitoly.
           \n## Slovník\n\n* **HTML** - Hypertextový značkovací jazyk používaný na
           vytvorenie webových stánok \n* **HTML Prvok** - časť webovej stránky označená
-          začiatočný tag-om a niekedy uzatvorená záverečným tag-om \n* **HTML Tag**
+          začiatočný tag-om a niekedy uzatvorená záverečným tag-om \n* **HTML Označenie**
           -  špeciálny set znakov, ktorý určuje začiatok a koniec HTML prvku a jeho
           typ\n* **Webový obsah** - surový text, obrázky a ostatné prvky zahrnuté
           na webevej stánke\n* **Webová štruktúra** - zloženie rôznych častí obsahu
@@ -4863,3 +4867,7 @@ sk-SK:
           **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`\n*
           **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n* **[Body](//studio.code.org/docs/weblab/body/)**
           - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`"
+      CSD U1 Test:
+        title: Počítače a riešenie problémov v postprojektovom testovaní
+      CSD User Centered Design Post-Project Test:
+        title: 'Dizajn zameraný na používateľa: Poprojektové testovanie'

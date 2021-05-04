@@ -59,6 +59,9 @@ class ActivitySection < ApplicationRecord
     summary = summarize
     summary[:scriptLevels] = script_levels.map {|sl| sl.summarize_for_lesson_show(can_view_teacher_markdown)}
     Services::MarkdownPreprocessor.process!(summary[:description])
+    summary[:tips]&.each do |tip|
+      Services::MarkdownPreprocessor.process!(tip["markdown"])
+    end
     summary
   end
 

@@ -9901,6 +9901,7 @@ en:
             CS Principles Post-Course Survey:
               name: CS Principles Post-Course Survey
           student_description: This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.
+          name: csp3-2018
         csp-explore-2018:
           title: Explore - AP Performance Task Prep ('18-'19)
           description: 'These lessons are here to help you understand, prepare for, and do the AP Explore Performance Task.  Each "lesson" contains links to helpful documents that your teacher can help walk you through. NOTE: the second item in the first lesson is not related to the Explore PT directly, but covers general tech setup and tools you need to do various elements of both the Explore and Create tasks.'
@@ -15790,6 +15791,8 @@ en:
               display_name: Functions
             csp_project:
               display_name: Project
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Variables Explore:
               name: Variables Explore
@@ -15821,6 +15824,8 @@ en:
               name: Project - Decision Maker App Part 3
             'Lesson 15: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           name: csp4-2020
         csp5-2020:
@@ -15837,6 +15842,8 @@ en:
               display_name: Traversals
             csp_project:
               display_name: Project
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Lists Explore:
               name: Lists Explore
@@ -15878,6 +15885,8 @@ en:
               name: Unit 5 STUDENT Survey
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           name: csp5-2020
         csp7-2020:
@@ -15890,6 +15899,8 @@ en:
               display_name: Parameters and Return Values
             csp_libraries:
               display_name: Libraries
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Parameters and Return Explore:
               name: Parameters and Return Explore
@@ -15921,6 +15932,8 @@ en:
               name: Variables Make Demo
             'Lesson 11: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp7-2020
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
         csd2-projects-temp:
@@ -17472,6 +17485,8 @@ en:
               display_name: 'Unit 1: Digital Information'
             cspSurvey:
               display_name: Survey
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17505,6 +17520,8 @@ en:
               name: Assessment Day
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           name: csp1-2020
         csp2-2020:
@@ -17515,6 +17532,8 @@ en:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17536,6 +17555,8 @@ en:
               name: Project - Internet Dilemmas Part 2
             'Lesson 9: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           name: csp2-2020
         csp3-2020:
@@ -17546,6 +17567,8 @@ en:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17571,6 +17594,8 @@ en:
               name: Project - Designing an App Part 5
             'Lesson 11: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp3-2020
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
         csp6-2020:
@@ -17581,6 +17606,8 @@ en:
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithms'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17596,6 +17623,8 @@ en:
               name: Parallel and Distributed Algorithms
             'Lesson 6: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           name: csp6-2020
         csp8-2020:
@@ -17623,6 +17652,8 @@ en:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17644,6 +17675,8 @@ en:
               name: Project - Tell a Data Story - Part 2
             'Lesson 9: Assessment Day':
               name: Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project you''ll analyze a dataset of your choosing and present your findings. '
           name: csp9-2020
         csp10-2020:
@@ -17654,6 +17687,8 @@ en:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -17691,6 +17726,8 @@ en:
               name: 'Project: Innovation Simulation Part 7'
             'Lesson 14: Unit Assessment Day':
               name: Unit Assessment Day
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
           name: csp10-2020
         csp-march-virtual:
@@ -18606,6 +18643,8 @@ en:
               name: Module 8
             'CS Principles: Functions':
               name: 'CS Principles: Functions'
+            'CS Principles: Variables Practice - Choice Test':
+              name: Variables Practice - Choice Test
           lesson_groups:
             lesson group:
               display_name: display name
@@ -18681,7 +18720,7 @@ en:
             lesson group:
               display_name: display name
           title: Curriculum Sandbox Levels
-          description_audience: Internal
+          description_audience: 'Internal - Do not delete. This script houses important curriculum levels that would otherwise not have a script. '
           description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
           description: ''
           student_description: ''
@@ -18908,6 +18947,10 @@ en:
               name: Haiku Bot
             End of Course Project:
               name: End of Course Project
+            Outbreaklab:
+              name: Outbreak Standalone Lab
+            aboutme:
+              name: Storytelling with Sprite Lab
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18931,6 +18974,8 @@ en:
               display_name: Course A and B EOC Project
             debugging:
               display_name: Debugging
+            Argentina:
+              display_name: Argentina
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -18951,17 +18996,22 @@ en:
             Intro to Problem Solving:
               key: Intro to Problem Solving
               name: Intro to Problem Solving
-              description_student: "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\nThe class works in groups to design aluminum foil boats that will support as many pennies as possible. At the end of the lesson, groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course."
+              description_student: "**Question of the Day: What can help us to work together and solve problems as a team?**\n\nYou will work with a group to design and test an aluminum foil boat that will support as many pennies as possible. \n\n*The class works in groups to design aluminum foil boats that will support as many pennies as possible. At the end of the lesson, groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.*"
               description_teacher: "**Question of the Day: What can help us to work together and solve problems as a team?**\r\n\r\nIn this lesson, students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\r\n\r\n**Alternate versions of this lesson are also available.** \r\n\r\n* [Newspaper Table](../9/)\r\n* [Spaghetti Bridge](../10/)\r\n* [Paper Tower](../11/)"
             The Problem Solving Process:
               key: The Problem Solving Process
               name: The Problem Solving Process
-              description_student: "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\r\n\r\nThis lesson introduces the formal problem solving process that the class will use over the course of the year: Define - Prepare - Try - Reflect. The class relates these steps to the problem from the previous lesson, then to a problem they are good at solving, then to a problem they want to improve at solving. At the end of the lesson, the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year."
+              description_student: "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\n\nYou will learn about the Problem Solving Process we use in Computer Science and dive into a few strategies to implement each step. \n\n*This lesson introduces the formal problem solving process that the class will use over the course of the year: Define - Prepare - Try - Reflect. The class relates these steps to the problem from the previous lesson, then to a problem they are good at solving, then to a problem they want to improve at solving. At the end of the lesson, the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.*"
               description_teacher: "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\r\n\r\nThis lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the problem activities from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year."
             Exploring Problem Solving:
               key: Exploring Problem Solving
               name: Exploring Problem Solving
-              description_student: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson, the class applies the problem solving process to three different problems: a word search, a seating arrangement for a birthday party, and planning a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems.\r\n"
+              description_student: |
+                **Question of the Day: How can we apply the problem solving process to many different kinds of problems?**
+
+                Today you will apply the Problem-Solving Process to three different problems which will grow increasingly complex!
+
+                *In this lesson, the class applies the problem solving process to three different problems: a word search, a seating arrangement for a birthday party, and planning a trip. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems.*
               description_teacher: "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\r\n\r\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and redesign a classroom. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\r\n\r\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\r\n\r\n\r\n**Alternate versions of this lesson are also available.** \r\n\r\n* [Animal Theme](../12/)\r\n* [Games Theme](../13/)"
             What is a Computer?:
               key: What is a Computer?
@@ -19054,7 +19104,11 @@ en:
             Intro to HTML:
               key: Intro to HTML
               name: Intro to HTML
-              description_student: "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\n\r\nThis lesson introduces HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity that demonstrates the challenges of effectively communicating the structure of a web page. Then, the class looks at an HTML page in Web Lab and discusses how HTML tags help solve this problem, before using HTML to write their first web pages of the unit.\r\n"
+              description_student: |
+                **Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**
+
+
+                You will look at an HTML page in Web Lab and discusses how HTML tags help solve this problem, then  use HTML to write your first web page of the unit.
               description_teacher: "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\nIn this lesson students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson."
             Headings:
               key: Headings
@@ -19285,7 +19339,7 @@ en:
               key: Collision Detection
               name: Collision Detection
               description_student: "**Question of the Day: How can programming help make complicated problems more simple?**\r\n\r\nIn this lesson, the class learns about collision detection on the computer. Working in pairs, they explore how a computer could use math, along with the sprite location and size properties, to detect whether two sprites are touching. They then use the isTouching() block to create different effects when sprites collide, and practice using the block to model various interactions."
-              description_teacher: "**Question of the Day: How can programming help make complicated problems more simple?**\r\n\r\nStudents learn about collision detection on the computer. Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching. They then use the `isTouching()` block to create different effects when sprites collide, and practice using the block to model various interactions."
+              description_teacher: "**Question of the Day: How can programming help make complicated problems more simple?**\r\n\r\nStudents learn about collision detection on the computer. Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching. They then use the [`isTouching()`(#f78183)](/docs/gamelab/isTouching/) block to create different effects when sprites collide, and practice using the block to model various interactions."
             'Mini-Project: Side Scroller':
               key: 'Mini-Project: Side Scroller'
               name: Mini-Project - Side Scroller
@@ -19642,7 +19696,7 @@ en:
               key: Designing Screens with Code
               name: Designing Screens with Code
               description_student: "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n"
-              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using `setProperty()`.
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).
             The Circuit Playground:
               key: The Circuit Playground
               name: The Circuit Playground
@@ -19777,7 +19831,7 @@ en:
               key: Overflow and Rounding
               name: Overflow and Rounding
               description_student: Explore the limitations or representing numbers with bits.
-              description_teacher: 'Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and make a "flippy do pro" to practice binary-to-decimal number conversions which include fractional place values. '
+              description_teacher: 'Students extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. '
             Representing Text:
               key: Representing Text
               name: Representing Text
@@ -20567,7 +20621,7 @@ en:
           student_description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security, and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\r\n\r\n"
         coursea-2021:
           title: Course A (2021)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
           lessons:
@@ -20590,7 +20644,7 @@ en:
               key: 'Programming: Happy Maps'
               name: Happy Maps
               description_student: Write instructions to get the Flurb to the fruit.
-              description_teacher: 'This **context-setting** lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.'
+              description_teacher: 'This **context-setting** lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided.'
             Sequencing with Scrat:
               key: Sequencing with Scrat
               name: Sequencing with Scrat
@@ -20610,22 +20664,22 @@ en:
               key: 'Loops: Happy Loops'
               name: Happy Loops
               description_student: Help the Flurb solve bigger problems using loops.
-              description_teacher: This **context-setting** lesson revisits Happy Maps. This time, student will use loops to solve bigger, longer puzzles with their code.
+              description_teacher: This **context-setting** lesson revisits Happy Maps. This time, students will use loops to solve bigger, longer puzzles with their code.
             Loops in Ice Age:
               key: Loops in Ice Age
               name: Loops with Scrat
               description_student: Help Scrat cover more ground using loops.
-              description_teacher: In this **skill-building** lesson, students will practice the concept of loops in programming puzzles where the goal is to help the squirrel reach the acorn.
+              description_teacher: In this **skill-building** lesson, students will practice loops in programming puzzles where the goal is to help the squirrel reach the acorn.
             Loops in Collector:
               key: Loops in Collector
               name: Loops with Laurel
               description_student: Help Laurel the adventurer collect the treasure underground.
-              description_teacher: In this **skill-building** lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze. Here, loops are used to collect treasure in open cave spaces.
+              description_teacher: In this **skill-building** lesson, students continue learning the concept of loops. Here, students use loops to collect treasure in open cave spaces.
             Ocean Scene with Loops:
               key: Ocean Scene with Loops
               name: Ocean Scene with Loops
               description_student: Use loops and patterns to finish the images.
-              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will be given the opportunity to create their own images.
+              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event Jr.
@@ -20633,13 +20687,13 @@ en:
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
-              name: On the Move with Events
+              name: 'Mini-Project: On the Move with Play Lab'
               description_student: Create your own game or story.
-              description_teacher: In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_teacher: In this **mini-project**, students will use events in Play Lab and apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             lesson-1:
               name: End of Course Project
               description_student: Tell a story with the Artist!
-              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and loops in an open-ended project with the Artist.
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and loops with the Artist.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20655,7 +20709,7 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb-2021:
           title: Course B (2021)
-          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
           lessons:
@@ -20673,7 +20727,7 @@ en:
               key: Move It, Move It
               name: Move It, Move It
               description_student: Program your classmates to step carefully from place to place.
-              description_teacher: This **context-setting** lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course.  In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.
+              description_teacher: Students will program their classmates to step carefully around a large grid on the floor in this **context-setting** lesson.
             Sequencing in Maze:
               key: Sequencing in Maze
               name: Sequencing with Angry Birds
@@ -20688,12 +20742,12 @@ en:
               key: Programming in Harvester
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
-              description_teacher: 'In this **skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. '
+              description_teacher: Students will apply the programming concepts that they have learned to the Harvester environment in this **skill-building** lesson. Students will continue to develop sequential algorithm skills and start using the debugging process.
             'Loops: Getting Loopy':
               key: 'Loops: Getting Loopy'
               name: Getting Loopy
               description_student: In this lesson, we'll have a dance party using repeat loops!
-              description_teacher: In this **context-setting** lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.
+              description_teacher: In this **context-setting** lesson, students will learn to use loops to more easily communicate instructions by looking at the repeated patterns of a dance.
             Loops in Harvester:
               key: Loops in Harvester
               name: Loops with Harvester
@@ -20708,12 +20762,12 @@ en:
               key: Loops in Artist
               name: Drawing Gardens with Loops
               description_student: Use patterns and loops to finish the images.
-              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. At the end of this lesson, students will be given the opportunity to create their own images.
+              description_teacher: 'In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. '
             The Right App:
               key: The Right App
               name: The Right App
               description_student: Sketch your own smartphone app.
-              description_teacher: 'This **exploratory** lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. '
+              description_teacher: In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event Jr.
@@ -20723,7 +20777,7 @@ en:
               key: Events in Play Lab
               name: A Royal Battle with Events
               description_student: Use events to create a story or make an interactive game.
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+              description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
             lesson-1:
               name: End of Course Project
               description_student: Create your own story or game.
@@ -20749,7 +20803,7 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec-2021:
           title: Course C (2021)
-          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
           lessons:
@@ -20780,7 +20834,7 @@ en:
               key: Debugging in Maze
               name: Debugging in Maze
               description_student: Find problems in puzzles and practice your debugging skills.
-              description_teacher: In this **skill-building** lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.
+              description_teacher: In this **skill-building** lesson, students will encounter pre-written code that contains mistakes. They will need to step through the existing code to identify errors.
             Programming in Collector:
               key: Programming in Collector
               name: Collecting Treasure with Laurel
@@ -20800,17 +20854,17 @@ en:
               key: 'Loops: My Loopy Robotic Friends'
               name: My Loopy Robotic Friends Jr.
               description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
-              description_teacher: This **context-setting** lesson builds on the initial "My Robotic Friends" activity, featuring larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.
+              description_teacher: 'This **context-setting** lesson builds on the initial "My Robotic Friends" activity, featuring larger and more complicated designs. '
             Loops with Rey and BB-8:
               key: Loops with Rey and BB-8
               name: Loops with Rey and BB-8
               description_student: 'Help _BB-8_ through mazes using loops! '
-              description_teacher: This **skill-building** lesson builds has students using loops to help _BB-8_ traverse a maze more efficiently than before.
+              description_teacher: This **skill-building** lesson has students using loops to help BB-8 efficiently traverse a maze.
             Loops in Harvester:
               key: Loops in Harvester
               name: Harvesting Crops with Loops
               description_student: Let's use loops to help the harvester collect some veggies!
-              description_teacher: In this **skill-building** lesson, students loop new actions in order to help the harvester collect multiple veggies growing in large bunches.
+              description_teacher: Students loop new actions to help the harvester collect multiple veggies growing in large bunches in this **skill-building** lesson.
             Looking Ahead:
               key: Looking Ahead
               name: Looking Ahead with Minecraft
@@ -20820,7 +20874,9 @@ en:
               key: Sticker Art with Loops
               name: 'Mini-Project: Sticker Art'
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
-              description_teacher: This **mini-project** lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_teacher: 'This **mini-project** lesson builds on the understanding of loops from previous lessons. Students will create unique artwork with the Artist.
+
+'
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event
@@ -20840,12 +20896,12 @@ en:
               key: Picturing Data
               name: Picturing Data
               description_student: 'Data can be used to understand our world and answer interesting questions. '
-              description_teacher: 'In this **exploratory** lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs. Data can be used to help students understand their world and answer interesting questions. '
+              description_teacher: Students will collect data from a Play Lab project and visualize it using different graphs in this **exploratory** lesson.
             'End of Course Project: Create a Play Lab Game':
               key: 'End of Course Project: Create a Play Lab Game'
               name: End of Course Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: 'This **project** lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
+              description_teacher: This **project** lesson takes students through designing, developing, and showcasing new Play Lab projects.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20865,7 +20921,7 @@ en:
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed-2021:
           title: Course D (2021)
-          description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
           lessons:
@@ -20893,22 +20949,22 @@ en:
               key: Events in Bounce
               name: Events in Bounce
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
-              description_teacher: In this **context-setting**/**skill-building** lesson, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.
             Build a Star Wars Game:
               key: Build a Star Wars Game
               name: Build a Star Wars Game
               description_student: Feel the force as you build your own Star Wars game in this lesson.
-              description_teacher: In this **skill-building** lesson, students will practice using events to build a game that they can share online. Featuring _R2-D2_ and other _Star Wars_ characters, students will be guided through events, then given space to create their own game.
+              description_teacher: In this **skill-building** lesson, students will practice using events to build a game that they can share.
             Dance Party:
               key: Dance Party
               name: Dance Party
               description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
-              description_teacher: In this **skill-building** lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
+              description_teacher: 'In this **skill-building** lesson, students will program an interactive dance party. '
             Loops in Ice Age:
               key: Loops in Ice Age
               name: Loops in Ice Age
               description_student: In this lesson you'll use the repeat block to help Scrat reach the acorn as efficiently as possible.
-              description_teacher: This **context-setting** and **skill-building** lesson will quickly introduce studenst to *loops*, then have students using the repeat block to get Scrat to the acorn more efficiently.
+              description_teacher: This **context-setting/skill-building** lesson will quickly introduce students to loops.
             Loops in Artist:
               key: Loops in Artist
               name: Drawing Shapes with Loops
@@ -20918,12 +20974,12 @@ en:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
               description_student: This lesson will teach you what happens when you put loops inside loops inside loops.
-              description_teacher: 'In this **skill-building** lesson, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a loop to be inside of another loop. '
+              description_teacher: In this **skill-building** lesson, students will learn how to program a loop inside of another loop.
             Conditionals with Cards:
               key: Conditionals with Cards
               name: Conditionals with Cards
               description_student: It's time to play a game where you earn points only under certain conditions!
-              description_teacher: 'In this **context-setting** lesson, students will *conditional (if/else) statements* to state the rules of simple card games. '
+              description_teacher: 'In this **context-setting** lesson, students will write *conditional (if/else) statements* to state the rules of simple card games. '
             Conditionals in Bee:
               key: Conditionals in Bee
               name: If/Else with Bee
@@ -20933,7 +20989,7 @@ en:
               key: While Loops in Farmer
               name: While Loops in Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
-              description_teacher: In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but hey will not know the size of the holes or the height of the mountains of dirt. To solve these puzzles, students will use a new kind of loop.
+              description_teacher: In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.
             Until Loops in Maze:
               key: Until Loops in Maze
               name: Until Loops in Maze
@@ -20968,11 +21024,11 @@ en:
               key: End of Course Project
               name: End of Course Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
             lesson-6:
               name: Looking Ahead with Minecraft
               description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
-              description_teacher: This **skill-building** lesson was originally created alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting their first experience with conditionals!
+              description_teacher: This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!
             lesson-5:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
@@ -21009,10 +21065,10 @@ en:
             lessonGroup-6:
               display_name: Digital Citizenship
           name: coursed-2021
-          student_description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+          student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
         coursee-2021:
           title: Course E (2021)
-          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
           lessons:
@@ -21025,12 +21081,12 @@ en:
               key: Programming and Loops with the Artist
               name: Drawing with Loops
               description_student: In this lesson, **loops** make it easy to make cool images with Artist!
-              description_teacher: 'This **context-setting** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the course.  '
+              description_teacher: 'This **context-setting** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.  '
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditionals in Minecraft: Voyage Aquatic'
               name: 'Conditionals in Minecraft: Voyage Aquatic'
               description_student: Here you will learn about conditionals in the world of _Minecraft_.
-              description_teacher: In this **context-setting** lesson, students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_teacher: In this **context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!
             Conditionals:
               key: Conditionals
               name: Conditionals with the Farmer
@@ -21040,17 +21096,17 @@ en:
               key: Simon Says
               name: Follow the Algorithm
               description_student: Play a game and think about what commands are needed to get the right result.
-              description_teacher: 'In this **context-setting** lesson, students will play a game intended to get them thinking about the way commands need to be given to produce the right result. This will help them more easily carry over to Sprite Lab in the upcoming lessons. '
+              description_teacher: In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.
             Learning Sprites with Sprite Lab:
               key: Learning Sprites with Sprite Lab
               name: Swimming Fish with Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: In this **skill-building** lesson, students will be introduced to Sprite Lab by learning to program a simple animated underwater scene.
+              description_teacher: Students will program a simple animated underwater scene in this **skill-building** lesson.
             Alien Dance Party with Sprite Lab:
               key: Alien Dance Party with Sprite Lab
               name: Alien Dance Party with Sprite Lab
               description_student: Create an interactive project that can be shared with classmates.
-              description_teacher: 'In this **skill-building** lesson, students will use events to make sprites move around the screen based on user input. '
+              description_teacher: Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.
             Private and Personal Information:
               key: Private and Personal Information
               name: Private and Personal Information
@@ -21065,14 +21121,14 @@ en:
               key: About Me
               name: 'Mini-Project: About Me'
               description_student: Creating an interactive poster, but think carefully about what information is safe to share online.
-              description_teacher: 'In this **mini-project** lesson, students will apply their understanding of sharing personal and private information on the web by creating an interactive poster.
+              description_teacher: 'Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.
 
 '
             Digital Sharing:
               key: Digital Sharing
               name: Digital Sharing
               description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
-              description_teacher: This **exploratory** lesson, developed by the team over at [Copyright and Creativity](https://www.copyrightandcreativity.org/), exists to help students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+              description_teacher: 'This **exploratory** lesson helps students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. '
             Nested Loops in Bee:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
@@ -21082,17 +21138,17 @@ en:
               key: Nested Loops in Artist
               name: Fancy Shapes using Nested Loops
               description_student: More nested loops! This time, you get to make some AMAZING drawing with nested loops.
-              description_teacher: In this **skill-building** lesson, students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the lesson.
+              description_teacher: In this **skill-building** lesson, students will create intricate designs using the Artist. The lesson ends with an opportunity for students to create their own designs.
             Nested Loops in Frozen:
               key: Nested Loops in Frozen
               name: 'Mini-Project: Design a Snowflake'
               description_student: '_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. '
-              description_teacher: This **mini-project** lesson takes students through a series of exercises to help them create their own portfolio-ready images using _Anna_ and _Elsa's_ excellent ice-skating skills!
+              description_teacher: This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the *Frozen* movies.
             'Functions: Songwriting':
               key: 'Functions: Songwriting'
               name: Songwriting
               description_student: Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.
-              description_teacher: This **context-setting** lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.
+              description_teacher: This **context-setting** lesson will help students understand why combining chunks of code into functions can be a helpful practice.
             Functions in Minecraft:
               key: Functions in Minecraft
               name: Functions in Minecraft
@@ -21107,7 +21163,7 @@ en:
               key: Functions in Artist
               name: Functions with Artist
               description_student: Make complex drawings more easily with functions!
-              description_teacher: In this **skill-building** lesson, students will be introduced to using functions with the Artist.
+              description_teacher: In this **skill-building** lesson, students will use functions with the Artist.
             Designing for Accessibility:
               key: Designing for Accessibility
               name: Designing for Accessibility
@@ -21117,7 +21173,7 @@ en:
               key: End of Course Project
               name: End of Course Project
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
-              description_teacher: 'This longer lesson provides an opportunity for students to put their coding skills to use in a capstone project. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. '
+              description_teacher: 'This **project** lesson takes students through the process of designing, developing, and showcasing new projects! '
             lesson-4:
               name: Be A Super Digital Citizen
               description_student: Learn how you can be an upstander when you see cyberbullying.
@@ -21151,10 +21207,10 @@ en:
             lessonGroup-7:
               display_name: Impacts of Computing
           name: coursee-2021
-          student_description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+          student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
         coursef-2021:
           title: Course F (2021)
-          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn more advanced concepts, including variables and “for” loops. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects and artwork to share with their friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
           lessons:
@@ -21177,12 +21233,12 @@ en:
               key: Loops with the Artist
               name: Drawing with Loops
               description_student: In this lesson, **loops** make it easy to make cool images with Artist!
-              description_teacher: 'This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the course.  '
+              description_teacher: This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.
             Nested Loops in the Maze:
               key: Nested Loops in the Maze
               name: Programming with the Bee
               description_student: This lesson will teach you what happens when you place a loop inside another loop.
-              description_teacher: In this **skill-building** lesson, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
+              description_teacher: In this **skill-building** lesson, students will be encouraged to figure out how minor changes in loops will affect their program.
             The Power of Words:
               key: The Power of Words
               name: The Power of Words
@@ -21207,42 +21263,42 @@ en:
               key: Variables that Change in Bee
               name: Variables with the Bee
               description_student: This bee loves variables!
-              description_teacher: 'This **skill-building** lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. '
+              description_teacher: This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.
             Variables that Change in Artist:
               key: Variables that Change in Artist
               name: Using Variables with the Artist
               description_student: In this lesson, you'll make drawings using variables that change as the program runs.
-              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.
+              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
             Simulating Experiments:
               key: Simulating Experiments
               name: Simulating Experiments
               description_student: Run simulations on the computer and experiment by changing variables.
-              description_teacher: In this **context-setting** lessons, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.
+              description_teacher: In this **context-setting** lesson, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to predict how changing a variable in the simulation might impact the outcome and test that hypothesis.
             AI for Oceans:
               key: AI for Oceans
               name: AI For Oceans
               description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
-              description_teacher: In this **exploratory** lesson, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: In this **exploratory** lesson, students will train a machine learning model by classifying fish and other objects.
             Internet:
               key: Internet
               name: The Internet
               description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
-              description_teacher: In this **exploratory** lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
+              description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
             For Loop Fun:
               key: For Loop Fun
               name: For Loop Fun
               description_student: You're going to have loads of fun learning about `for` loops!
-              description_teacher: 'In this **skill-building** lessons, students will use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. '
+              description_teacher: In this **skill-building** lesson, students will use loops with a powerful, new structure.
             For Loops in Bee:
               key: For Loops in Bee
               name: For Loops with Bee
               description_student: In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
-              description_teacher: This **skill-building** lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.
+              description_teacher: 'This **skill-building** lesson focuses on “for” loops and using an incrementing variable to solve more complicated puzzles. '
             For Loops in Artist:
               key: For Loops in Artist
               name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
-              description_teacher: In this **skill-building** lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a free play level.
+              description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
             Editing Behaviors:
               key: Editing Behaviors
               name: Behaviors in Sprite Lab
@@ -21252,12 +21308,12 @@ en:
               key: Virtual Pet
               name: 'Mini-Project: Virtual Pet'
               description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
-              description_teacher: In this **mini-project** lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_teacher: Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
-              description_teacher: 'This longer **project** lesson provide an opportunity for students to put their coding skills to use in a capstone project. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. '
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
             lesson-1:
               name: Designing for Accessibility
               description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
@@ -21265,29 +21321,31 @@ en:
             lesson-6:
               name: Introducing Sprite Lab
               description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
-              description_teacher: In this **context-setting** lesson, students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.
+              description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
+
+'
             lesson-7:
               name: Making Sprites
               description_student: |2-
 
                 In this lesson you will write programs and learn about sprites and behaviors.
-              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs, and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
             lesson-8:
               name: Sprites in Action
               description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
               description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
             lesson-9:
               name: Blank Space Stories
-              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
-              description_teacher: 'In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs®) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_teacher: 'In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
             lesson-10:
               name: Text and Prompts
               description_student: In this lesson you will practice with variables in Sprite Lab.
-              description_teacher: In this **skill-building** lesson, students will get practice with variables in Sprite Lab. Students will work with user input to set the values of their variables, then print those values alongside other text.
+              description_teacher: 'In this **skill-building** lesson, students will get practice with variables in Sprite Lab. '
             lesson-5:
               name: Outbreak
               description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
-              description_teacher: 'In this **skill-building** lesson, students will create an outbreak simulator. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow a contagion down. '
+              description_teacher: In this **skill-building** lesson, students will model an outbreak simulator. Students will study the simulation to understand how a virus can spread and how to slow it down.
             lesson-2:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
@@ -21300,7 +21358,7 @@ en:
             lesson-11:
               name: 'Mini-Project: User Input Programs'
               description_student: Apply your new skills with variables to one of three open-ended projects.
-              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, then create a plan for their own project, and finally program it from scratch.
+              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -21323,7 +21381,7 @@ en:
             lessonGroup-7:
               display_name: Digital Citizenship
           name: coursef-2021
-          student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          student_description: Learn to code with sprites, variables, and loops and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
         express-2021:
           title: Express Course (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -21339,67 +21397,67 @@ en:
               key: Programming with Angry Birds
               name: Programming with Angry Birds
               description_student: Learn about sequences and algorithms with _Angry Birds_.
-              description_teacher: Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig on the other side. To do this, they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
             Debugging with Scrat:
               key: Debugging with Scrat
-              name: Debugging with Scrat
+              name: Debugging in Maze
               description_student: Find problems in puzzles and practice your debugging skills.
-              description_teacher: Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.
+              description_teacher: In this **skill-building** lesson, students will encounter pre-written code that contains mistakes. They will need to step through the existing code to identify errors.
             Collecting Treasure with Laurel:
               key: Collecting Treasure with Laurel
               name: Collecting Treasure with Laurel
-              description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
-              description_teacher: In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+              description_student: Write algorithms to help *Laurel the Adventurer* collect lots of gems!
+              description_teacher: In this **skill-building** lesson, students will continue to develop their understanding of algorithms and debugging. With a new character, *Laurel the Adventurer*, students will create sequential algorithms to get *Laurel* to pick up treasure as she walks along a path.
             Creating Art with Code:
               key: Creating Art with Code
               name: Creating Art with Code
               description_student: Create beautiful images by programming the Artist.
-              description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
+              description_teacher: In this **skill-building** lesson, students will take control of the Artist to complete drawings on the screen.
             Loops with Rey and BB-8:
               key: Loops with Rey and BB-8
               name: Loops with Rey and BB-8
               description_student: 'Help _BB-8_ through mazes using loops! '
-              description_teacher: This stage will have students using loops to help _BB-8_ traverse a maze efficiently.
+              description_teacher: This **skill-building** lesson has students using loops to help the *Star Wars* character *BB-8* efficiently traverse a maze.
             Sticker Art with Loops:
               key: Sticker Art with Loops
-              name: Sticker Art with Loops
+              name: 'Mini-Project: Sticker Art'
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_teacher: This **mini-project** lesson builds on the understanding of loops. Students will create unique artwork with the Artist.
             Nested Loops in Maze:
               key: Nested Loops in Maze
               name: Nested Loops in Maze
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
-              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
+              description_teacher: In this **skill-building** lesson, students will learn how to program a loop inside of another loop.
             Snowflakes with Anna and Elsa:
               key: Snowflakes with Anna and Elsa
               name: Snowflakes with Anna and Elsa
               description_student: '_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. '
-              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using the excellent ice-skating skills of _Anna_ and _Elsa_ from _Frozen_!
+              description_teacher: This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the _Frozen_ movies.
             'Looking Ahead with Minecraft ':
               key: 'Looking Ahead with Minecraft '
               name: Looking Ahead with Minecraft
               description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_teacher: This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!
             If/Else with Bee:
               key: If/Else with Bee
               name: If/Else with Bee
               description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
-              description_teacher: Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
+              description_teacher: In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
             While Loops with the Farmer:
               key: While Loops with the Farmer
               name: While Loops with the Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\nWhile loops are loops that continue to repeat commands while a condition is met. While loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
+              description_teacher: In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditionals in Minecraft: Voyage Aquatic'
               name: 'Conditionals in Minecraft: Voyage Aquatic'
               description_student: Here you will use conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point!
+              description_teacher: In this **context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!
             Until Loops in Maze:
               key: Until Loops in Maze
               name: Until Loops in Maze
               description_student: You can do some amazing things when you use `until` loops!
-              description_teacher: In this lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.
+              description_teacher: In this **skill-building** lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions until they reach their desired stopping point.
             Harvesting with Conditionals:
               key: Harvesting with Conditionals
               name: Harvesting with Conditionals
@@ -21409,52 +21467,52 @@ en:
               key: Functions in Minecraft
               name: Functions in Minecraft
               description_student: Can you figure out how to use functions for the most efficient code?
-              description_teacher: Students will begin to understand how functions can be helpful in this fun and interactive _Minecraft_ adventure!
+              description_teacher: In this **skill-building** lesson, students will begin to understand how functions can be helpful!
             Functions with Harvester:
               key: Functions with Harvester
               name: Functions with Harvester
               description_student: Functions will save you lots of work as you help the farmer with her harvest!
-              description_teacher: Students will use functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.
+              description_teacher: In this **skill-building** lesson, students will use conditionals with functions to harvest crops in Harvester.
             Functions with Artist:
               key: Functions with Artist
               name: Functions with Artist
               description_student: Make complex drawings more easily with functions!
-              description_teacher: Students will be using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.
+              description_teacher: In this **skill-building** lesson, students will use functions with the Artist.
             Variables with Artist:
               key: Variables with Artist
-              name: Variables with Artist
+              name: Using Variables with Artist
               description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.
-              description_teacher: In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read, even when the values don't change at runtime.
+              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
             Changing Variables with Bee:
               key: Changing Variables with Bee
-              name: Changing Variables with Bee
+              name: Variables with the Bee
               description_student: This bee loves variables!
-              description_teacher: 'This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. '
+              description_teacher: This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.
             Changing Variables with Artist:
               key: Changing Variables with Artist
               name: Changing Variables with Artist
               description_student: In this lesson, you'll make drawings using variables that change as the program runs.
-              description_teacher: In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.
+              description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.
             For Loops with Bee:
               key: For Loops with Bee
               name: For Loops with Bee
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
-              description_teacher: Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will walk through an introduction to `for` loops so they can more effectively solve complicated problems.
+              description_teacher: 'This **skill-building** lesson focuses on “for” loops and using an incrementing variable to solve more complicated puzzles. '
             For Loops with Artist:
               key: For Loops with Artist
               name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
-              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a free play level.
+              description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
             Swimming Fish in Sprite Lab:
               key: Swimming Fish in Sprite Lab
               name: Swimming Fish in Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+              description_teacher: Students will program a simple animated underwater scene in this **skill-building lesson**.
             Alien Dance Party:
               key: Alien Dance Party
               name: Alien Dance Party
               description_student: Create an interactive project that can be shared with classmates.
-              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an "alien dance party".  '
+              description_teacher: Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab
@@ -21464,16 +21522,16 @@ en:
               key: Virtual Pet with Sprite Lab
               name: Virtual Pet with Sprite Lab
               description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
-              description_teacher: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_teacher: Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
             lesson-1:
               name: Dance Party
               description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
-              description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
+              description_teacher: 'In this **skill-building** lesson, students will program an interactive dance party. '
           lesson_groups:
             csf_warmup:
               display_name: Warm Up
@@ -21551,13 +21609,13 @@ en:
             On the Move with Events:
               key: On the Move with Events
               name: On the Move with Events
-              description_student: 
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_student: Create your own game or story.
+              description_teacher: In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             A Royal Battle with Events:
               key: A Royal Battle with Events
               name: A Royal Battle with Events
-              description_student: 
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+              description_student: Use events to create a story or make an interactive game.
+              description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -22100,28 +22158,26 @@ en:
 '
             lesson-16:
               name: 'Project: Personal Symbol - Day 1'
-              description_student: 'For this project, you create a symbol in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create a symbol that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and start creating your program.
+              description_student: 'For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
 '
-              description_teacher: 'For this project, students create a symbol in The Neighborhood using the classes they have developed and extended. Students explore creative expression using computer programs by applying the concepts they have learned in this unit to create a symbol that represents something meaningful and interesting to them. Students experience being software engineers as they brainstorm and plan their projects and begin developing their programs.
-
-'
+              description_teacher: For this project, students use the skills they have developed throughout this unit to create asphalt art in The Neighborhood using the classes they have developed and extended. Students choose a theme or concept for their asphalt art representing something they are interested in or meaningful to them. Students consider how they plan to use existing classes to create their asphalt art. After brainstorming and planning, students develop their programs to create their designs.
             lesson-17:
               name: 'Project: Personal Symbol - Day 2'
-              description_student: 'You are now implementing the classes and commands you have developed throughout the unit and your new class and command to create your symbol. Your software development skills and processes are strengthened when you participate in a code review to give and use feedback as you develop your program.
+              description_student: 'You are now implementing the classes and commands you have developed throughout the unit and your new class and command to create your asphalt art. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
 '
-              description_teacher: "Students planned uses for existing classes in the previous lesson and designed a new class that would provide a needed behavior for creating their symbol. At this stage of the project, students implement the classes and commands they have developed throughout the unit and the new class and command to create their symbol. Software development skills and processes are reinforced as students participate in a code review to give and use feedback as they develop their program. \n"
+              description_teacher: "Students planned uses for existing classes in the previous lesson and designed a new class to provide a needed behavior for creating their asphalt art. At this stage of the project, students implement the classes and commands they have developed throughout the unit and the new class and command to create their design. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program. \n"
             lesson-18:
               name: 'Project: Personal Symbol - Day 3'
-              description_student: 'Using the feedback you received in the previous lesson, you finalize and submit your Personal Symbol Project. You share your final projects with your peers and celebrate your success!
-
-'
+              description_student: Using the feedback you received in the previous lesson, you finalize and submit your Asphalt Art Project. You share your final projects with your peers and celebrate your success!
               description_teacher: "Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes. \n"
             lesson-19:
               name: FRQ Day
             lesson-20:
               name: Assessment Day
+              description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -23016,3 +23072,39 @@ en:
         ai-ml-test:
           lessons: {}
           lesson_groups: {}
+        outbreakmodule:
+          lessons:
+            how things spread:
+              name: How Things Spread
+            contagion simulator setup:
+              name: Contagion Simulator Setup
+            sometimes but not always:
+              name: Sometimes, but Not Always
+            modifying your model:
+              name: Modifying Your model
+            telling a data story:
+              name: Telling a Data Story
+            intro monster town:
+              name: Outbreak in Monster Town
+          lesson_groups:
+            Outbreak Module:
+              display_name: Outbreak Module
+          name: outbreakmodule
+          title: Outbreak Module_V2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: CSP Post-Course Survey
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Survey
+          name: csp-post-survey-2020
+          title: CSP Student Post-Course Survey ('20-'21)
+          description_audience: CSP Students
+          description_short: CSP Student Post Course Survey
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
+          student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.

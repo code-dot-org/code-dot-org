@@ -55,6 +55,7 @@ export default function initPage(scriptEditorData) {
         i18nData={scriptEditorData.i18n}
         initialHidden={valueOr(scriptData.hidden, true)}
         initialIsStable={scriptData.is_stable}
+        initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
         initialStudentDetailProgressView={
@@ -62,6 +63,9 @@ export default function initPage(scriptEditorData) {
         }
         initialProfessionalLearningCourse={
           scriptData.professionalLearningCourse || ''
+        }
+        initialOnlyInstructorReviewRequired={
+          scriptData.only_instructor_review_required
         }
         initialPeerReviewsRequired={scriptData.peerReviewsRequired}
         initialWrapupVideo={scriptData.wrapupVideo || ''}

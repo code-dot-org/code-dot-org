@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 23:15:20 UTC",
+    "serialized_at": "2021-04-29 23:58:33 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -53,15 +53,6 @@
         "purpose": "This lesson is an approachable and interactive introduction to the main concepts of this short unit. Students have been writing a lot of code, and now they are ready to think on a high level about the patterns that make two different problems, or two different algorithms, similar or different. This mindset will be important as they tackle the more challenging material later in the unit where students will learn to compare different algorithms that address the same problem.",
         "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1kqjEEt3yFw4-sDO_RUsVc-ygADJDae6UOEz_etiviZU/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -83,15 +74,6 @@
         "purpose": "In the previous lesson students learned that there are many different ways to write an algorithm to solve a problem. However, not all solutions are good options, and some algorithms require many fewer steps to run than others. This lesson focuses on comparing Linear Search to Binary Search. The longer the length of the list being searched, the more efficient Binary Search is compared to Linear Search. That said, Binary Search has a constraint: the list must first be sorted. This lesson more broadly introduces students to thinking about the efficiency of an algorithm, an idea that will be explored more in future lessons.",
         "preparation": "* Preview the slides and click through all animations\r\n* Practice running Binary Search yourself",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1mMIezZLpLujx5stXWpjfS4P_4zR7e1r7S8pt-t3_FVw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -113,15 +95,6 @@
         "purpose": "This lesson explores some tricky mathematical concepts in a hands on and interactive way. Building off the raffle analogy used in the previous lesson, it gives students an experience with two types of problems that grow quickly in size, though as they'll see one grows much faster than the other. This lesson should give students a sense of how computer scientists use mathematics to think about problems without relying too heavily on mathematical background that not all students may have.",
         "preparation": "* Review the slides to make sure you are prepared to lead the different discussions in this lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qH-J19PbzZyWgx9RgfHbtn5ysb4fsTi8Hdxif0Iph5c/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -142,16 +115,7 @@
         "student_overview": "Explore two different kinds of problems at the limits of what a computer is capable of solving and learn the difference in how computer scientists respond.",
         "purpose": "Prior to this lesson students have learned about the efficiencies of different algorithms and have considered the difference between reasonable and unreasonable algorithms. In this lesson they explore what happens when you reach that limit. In one instance the response is to accept good enough solutions that run more reasonably. In the other case the problem simply can't be solved at all.",
         "preparation": "* Read through the slides\r\n* Preview the Traveling Salesman widgets",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1bm0C7Mz5AY_a8SFbqoB4PjK9_Waywkbv06UMqRNiD8g/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
@@ -172,15 +136,6 @@
         "purpose": "This lesson is a quick tour of the challenges and benefits of parallel and distributed computing. It caps off the unit to showcase ways these techniques are being used to push the boundaries of how efficiently computer can solve problems. ",
         "preparation": "* Collect the manipulatives you will use for the main activity. While decks of cards are suggested, other manipulatives are possible. See the teaching tip in the main activity for suggestions.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1bPzMdVp5Xo0YGHlXDbKaA9ToLXlaDF3fwJoNc0rsFsA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -201,15 +156,6 @@
         "student_overview": "Assessment day to conclude the unit.",
         "preparation": "* Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1ge6-Xwl3vkPOxcpP65WhRNtIQ11UKYRmEEGcKP36ges/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -1169,7 +1115,7 @@
       "key": "4a09b0ee-fe1e-42f0-9a73-38966b00a2dd",
       "position": 8,
       "properties": {
-        "description": "**Distribute:** Distribute copies of [r unreasonable-time-activity-guide]"
+        "description": "**Distribute:** Distribute copies of [r unreasonable-time-activity-guide/csp/2021]"
       },
       "seeding_key": {
         "activity_section.key": "4a09b0ee-fe1e-42f0-9a73-38966b00a2dd",
@@ -2282,10 +2228,10 @@
   "resources": [
     {
       "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
+      "url": "https://docs.google.com/presentation/d/1gL5WpBPqyrQqATGO8IIP5DsI3T0xLfCZE-jG5mBxS1o/edit?usp=sharing",
       "key": "csp_unit_6_-_algorithms",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

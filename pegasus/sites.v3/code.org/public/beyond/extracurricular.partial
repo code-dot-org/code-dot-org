@@ -1,0 +1,219 @@
+---
+title: Extracurricular opportunities
+video_player: true
+theme: responsive
+social:
+  "og:title": "CS Journeys Resources: Extracurricular activities"
+  "og:description": "Explore hackathons, coding clubs and summer camps"
+  "og:image": "/images/csjourneys/og-extracurricular.jpg"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:title": "CS Journeys Resources: Extracurricular activities"
+  "twitter:description": "Explore hackathons, coding clubs and summer camps"
+  "twitter:image": "/images/csjourneys/og-extracurricular.jpg"
+---
+<a id="top"></a>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Extracurricular opportunities</h1>
+<p>Extracurricular activities like hackathons, coding clubs, and summer camps are a great way to use and extend what you learn in the classroom and experience the collaborative nature of computer science. Explore the opportunities below to take the next step on your CS Journey.</p>
+
+<ul>
+  <li><a href="#hackathons">Hackathons and competitions</a></li>
+  <li><a href="#clubs">Clubs and afterschool</a></li>
+  <li><a href="#camps">Camps and immersion programs</a></li>
+</ul>
+
+<br>
+
+<a id="hackathons"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Hackathons and competitions</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/bgc-hackathons.html" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="bcg-hackathons" href="https://www.blackgirlscode.com/bgc-hackathons.html" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls Code hackathons</strong></h3></a>
+  <p>Community oriented "girls only" hackathons for girls between the ages of 12 and 17. Students participate in creating solutions to social issues within their communities while they build their skills, confidence, experience and have lots of fun!</p>
+  <p><i>Check event calendar for dates.</i></p>
+</div>
+<div style="clear: both"></div>
+<br>
+
+<a class="linktag" id="congr-app-challenge" href="https://www.congressionalappchallenge.us/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/congressional_app_challenge.png" alt="Congressional App Challenge logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="congr-app-challenge" href="https://www.congressionalappchallenge.us/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Congressional App Challenge</strong></h3></a>
+  <p>Middle and high school students create and submit original apps to their Members of Congress. Challenges are specific to congressional districts. Winning teams are recognized nationally and winning apps are put on display in the U.S. Capitol Building for one year.</p>
+  <p><i>Applications due by November 1st, winners announced in December.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="coolest-project" href="https://online.coolestprojects.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/coolest-projects.png" alt="Coolest Projects logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="coolest-project" href="https://online.coolestprojects.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Coolest Projects</strong></h3></a>
+  <p>Coolest Projects online is the world’s leading technology showcase for young people. Whether your project is a work in progress, a prototype, or completely finished, you can join in! Entry is free, and open to anyone up to the age of 18.</p>
+  <p><i>Registration ends in early May.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="microsoft-imagine-cup" href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="microsoft-imagine-cup" href="https://imaginecup.microsoft.com/en-us/junior" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Microsoft’s Imagine Cup Jr.</strong></h3></a>
+  <p>This global AI for Good challenge introduces students to Microsoft’s AI for Good initiatives, empowering them to solve a problem in the world with the power of AI.</p>
+  <p><i>Submission deadline is May 21.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="technovation" href="https://technovationchallenge.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/technovation.png" alt="Technovation logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="technovation" href="https://technovationchallenge.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Technovation Challenge</strong></h3></a>
+  <p>With the support of volunteer mentors, girls work in teams to code mobile apps that address real-world problems. Open to girls and young women ages 10-18.</p>
+  <p><i>Register between October and March. Winners announced in late June or early July.</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="clubs"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Clubs and afterschool</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+
+<div class="col-100" style="padding:25px; background-color: #0094ca; border-radius:15px">
+  <a class="linktag" id="local-clubs" href="https://code.org/learn/local" target="_blank">
+    <img style="width: 10%; float: left; margin-top: -1%; margin-right: 2%" src="/images/beyond/maps.png" alt="Map icon">
+  </a>
+  <div style="width: 87%; margin-top: 1%; float: left">
+    <a class="linktag" id="local-clubs" href="https://code.org/learn/local" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong>Find a local club</strong></h3></a>
+    <p style="color:#ffffff">Use our map to find a club or afterschool program in your area.</p>
+  </div>
+  <div style="clear:both"></div>
+</div>
+<div style="clear:both"></div>
+<br>
+<br>
+
+<a class="linktag" id="coderdojo" href="https://coderdojo.com/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/coderdojo.png" alt="CoderDojo logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="coderdojo" href="https://coderdojo.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>CoderDojo</strong></h3></a>
+  <p>A global network of free, volunteer-led, community-based programming clubs for young people. Anyone aged 7-17 can visit a Dojo where they can learn to code, build a website, create an app or a game, and explore technology in an informal, creative, and social environment.</p>
+  <p><i>Join anytime.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="girlswhocode-clubs" href="https://girlswhocode.com/programs/clubs-program" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/girls_who_code.png" alt="Girls Who Code logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="girlswhocode-clubs" href="https://girlswhocode.com/programs/clubs-program" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Girls Who Code</strong></h3></a>
+  <p>Clubs are free after-school programs for 3rd-5th and 6th-12th grade girls to join our sisterhood of supportive peers and role models using computer science to change the world. There are Clubs in all 50 states and applications are open year-round! Start a Club by visiting <a href="https://girlswhocode.com/clubsapply" target="_blank">girlswhocode.com/clubsapply</a> or find one to join in your local area at <a href="https://girlswhocode/locations" target="_blank">girlswhocode.com/locations</a></p>
+  <p><i>Join anytime.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="google-codenext" href="https://codenext.withgoogle.com/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/google.png" alt="Google logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="google-codenext" href="https://codenext.withgoogle.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Google Code Next</strong></h3></a>
+  <p>Code Next is a free, computer science education program that meets Black and Latinx high school students in their own communities and provides the skills and inspiration they need for long and rewarding careers in computer science-related fields. Learn computer science, plug in with a mentor, and work on impactful projects.</p>
+  <p><i>Clubs run quarterly and last approximately 9 weeks.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="techgirlz" href="https://www.techgirlz.org/techshopz/category/workshops/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/techgirlz.png" alt=" logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="techgirlz" href="https://www.techgirlz.org/techshopz/category/workshops/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Techgirlz Workshops</strong></h3></a>
+  <p>TechShopz are free, hands-on technology workshops for middle school girls. There are 50 topics to choose including coding, movie editing, jewelry design, digital marketing, cybersecurity, and more!​</p>
+  <p><i>View calendar for workshop dates.</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="camps"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Camps and immersion programs</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="ai4all" href="https://ai-4-all.org/summer-programs/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/ai4all.png" alt="AI4All logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="ai4all" href="https://ai-4-all.org/summer-programs/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>AI4All Summer Programs</strong></h3></a>
+  <p>AI4All summer programs include hands-on learning, mentorship by top AI practitioners, and supportive peer networks at top universities. No coding experience is necessary. For high school students from groups historically excluded from AI.</p>
+  <p><i>Program dates vary.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="msft-digigirlz" href="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="msft-digigirlz" href="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Digigirlz at Microsoft</strong></h3></a>
+  <p>Middle and high school girls learn about careers in technology, connect with Microsoft employees, and participate in hands-on computer and technology workshops.</p>
+  <p><i>Check calendar for dates.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="girlswhocode-immersion" href="https://girlswhocode.com/programs/summer-immersion-program" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/girls_who_code.png" alt="Girls Who Code logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="girlswhocode-immersion" href="https://girlswhocode.com/programs/summer-immersion-program" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Girls Who Code Summer Immersion</strong></h3></a>
+  <p>Girls Who Code's Summer Immersion Program is a 2-week opportunity available to rising sophomore, junior, and seniors. Participants learn the computer science skills they need to make an impact in their community while preparing for a career in tech. They will get exposure to tech jobs, meet women in tech careers, and join a supportive sisterhood of girls in tech. No prior computer science experience is required.</p>
+  <p><i>Applications are open in the spring.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="google-cssi" href="https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute/#!?detail-content-tabby_activeEl=overview" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/google.png" alt="Google logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="google-cssi" href="https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute/#!?detail-content-tabby_activeEl=overview" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Google’s Computer Science Summer Institute</strong></h3></a>
+  <p>At CSSI: Online, students will learn programming fundamentals directly from Google engineers, get an inside look at some of Google's most exciting technologies, and even design and develop their very own application with fellow participants that will be showcased to Googlers. Open to rising college freshmen.</p>
+  <p><i>Applications are open in the spring.</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="hackthehood" href="https://www.hackthehood.org/tech-education.html" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/hack-the-hood.png" alt="Hack the Hood logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="hackthehood" href="https://www.hackthehood.org/tech-education.html" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Hack the Hood</strong></h3></a>
+  <p>Learn in-demand tech skills and launch your career with Hack the Hood’s two immersion programs: Using Tech for Social Justice and Web Development & Data Literacy. For Black, Latinx, and Indigenous learners aged 16-25.</p>
+  <p><i>Program dates vary. Applications are open April-June.</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<hr>
+
+<p>"Maps" icon made by Freepik. Sourced from flaticon.com</p>

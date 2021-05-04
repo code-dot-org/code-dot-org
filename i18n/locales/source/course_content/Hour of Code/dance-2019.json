@@ -1,5 +1,5 @@
 {
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/1": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/1": {
     "short_instructions": "Drag the [blockly block][0] block into the workspace, and connect it inside the [blockly block][1] block.",
     "long_instructions": "Drag the [blockly block][0] block into the workspace, and connect it inside the [blockly block][1]\n block. \n\n Choose `cat` or `sloth` to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._",
     "authored_hints": {
@@ -10,7 +10,7 @@
       "dance_callout_01": "Choose the type of dancer here."
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/2": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/2": {
     "short_instructions": "Make the cat do a dance move when you press a key.",
     "long_instructions": "The [blockly block][0] block lets you run code when you press the arrow buttons. \nUse the [blockly block][1] block to make the cat clap!\n\n_Make sure to press your \"up arrow\" key or [][2] after clicking the Run button!_",
     "authored_hints": {
@@ -22,7 +22,7 @@
       "arrow_buttons": "Press the arrow buttons to control your dancer."
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/3": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/3": {
     "short_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to \"(Random)\" for something totally unpredictable! ",
     "long_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to `(Random)` for something totally unpredictable!",
     "authored_hints": {
@@ -30,7 +30,7 @@
       "challenges": "**Optional Challenge**\n\n-   Make a dancer respond to the left and right arrow keys."
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/4": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/4": {
     "short_instructions": "Make your dancer start a new move after the fourth measure.",
     "long_instructions": "Let's get the dancers moving in time with the music!\n\nConnect the [blockly block][0] block to a [blockly block][1] block from the toolbox. \n\nYour dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
     "authored_hints": {
@@ -40,7 +40,7 @@
       "dance_callout_02": "Add this block to your program!"
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/5": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/5": {
     "short_instructions": "Now make the dancer start a new move after 6 measures!",
     "long_instructions": "_Now we're grooving!_ \n\nAdd an [blockly block][0] block to your workspace. Make the dancer start a new move after 6 measures.",
     "authored_hints": {
@@ -51,7 +51,7 @@
       "dance_callout_05": "Add a new event to your program."
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/6": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/6": {
     "short_instructions": "Set up a group of backup dancers around the lead dancer in the middle.",
     "long_instructions": "Use this new block to set up a group of smaller backup dancers around a lead dancer in the middle. \n\n  [blockly block][0]\n\nNow you can create a bunch of backup dancers all at once!",
     "authored_hints": {
@@ -62,7 +62,7 @@
       "dance_party_11_5_groups": "New block!"
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/7": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/7": {
     "short_instructions": "Change the size of the group of backup dancers.",
     "long_instructions": "Every dancer has a set of _properties_ that controls what it looks like.\n\nUse [blockly block][0] under a green event block to make dancers appear closer or farther away.",
     "authored_hints": {
@@ -73,7 +73,7 @@
       "setprop_hint": "New block!"
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/8": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/8": {
     "short_instructions": "Try changing the tint of one of your dancers (or an entire group)!",
     "long_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers (or an entire group)!",
     "authored_hints": {
@@ -81,7 +81,7 @@
       "tint_hint": "Did you notice that your dancers don't change to the exact color you choose? This is because **tints** mix the color you choose with the colors of the dancer."
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/9": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/9": {
     "short_instructions": "Be creative with these new blocks!",
     "long_instructions": "This **new block** is a special kind of event that is triggered over and over.\n\n[blockly block][0]\n\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\n\n_When you are done press the Finish button._",
     "authored_hints": {
@@ -94,7 +94,7 @@
       "new_block_4": "New block!"
     }
   },
-  "https://studio.code.org/s/dance-2019/stage/1/puzzle/10": {
+  "https://studio.code.org/s/dance-2019/lessons/1/levels/10": {
     "short_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "long_instructions": "Get your groove on! Create a dance of your own to share with your friends."
   }

@@ -98,6 +98,7 @@
   "setSpeed": "postavi brzinu",
   "setSpeedTooltip": "postavi brzinu nivoa",
   "shareFlappyTwitter": "Pogledaj Flappy igru koju sam osobno napravio uz pomoć @codeorg",
+  "shareFlappyTwitterDonor": "Pogledaj Flappy igru koju sam osobno napravio. ({donor}, hvala što podržavaši @codeorg)",
   "shareGame": "Podijeli svoju igru:",
   "soundRandom": "slučajno odabran",
   "soundBounce": "odskočiti",

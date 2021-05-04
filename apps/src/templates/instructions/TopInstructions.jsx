@@ -27,7 +27,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 import {hasInstructions} from './utils';
 import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
@@ -140,7 +139,6 @@ class TopInstructions extends Component {
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
@@ -190,12 +188,17 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {user, serverLevelId, serverScriptId} = this.props;
+    const {
+      user,
+      serverLevelId,
+      serverScriptId,
+      dynamicInstructions
+    } = this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
-    if (!this.props.dynamicInstructions) {
+    if (!dynamicInstructions) {
       const maxNeededHeight = this.adjustMaxNeededHeight();
 
       // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
@@ -568,7 +571,6 @@ class TopInstructions extends Component {
       isRtl,
       height,
       isEmbedView,
-      widgetMode,
       levelVideos,
       mapReference,
       referenceLinks,
@@ -596,17 +598,15 @@ class TopInstructions extends Component {
     // instead of inferring it from noInstructionsWhenCollapsed
     const isCSF = !noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
-    const widgetWidth = WIDGET_WIDTH + 'px';
 
     const topInstructionsStyle = [
-      !mainStyle && (isRtl ? styles.mainRtl : styles.main),
+      isRtl ? styles.mainRtl : styles.main,
       mainStyle,
       {
         height: height - RESIZER_HEIGHT
       },
       noVisualization && styles.noViz,
-      isEmbedView && styles.embedView,
-      widgetMode && (isRtl ? {right: widgetWidth} : {left: widgetWidth})
+      isEmbedView && styles.embedView
     ];
 
     const instructionsContainerStyle = [
@@ -744,7 +744,7 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!isEmbedView && resizable && (
+          {!isEmbedView && resizable && !dynamicInstructions && (
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={height}
@@ -789,7 +789,6 @@ export default connect(
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey
   }),

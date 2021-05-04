@@ -29,13 +29,16 @@ class ScriptDSL < BaseDSL
     @project_sharing = nil
     @curriculum_umbrella = nil
     @tts = false
+    @deprecated = false
     @is_course = false
     @background = nil
     @is_migrated = false
   end
 
   integer :id
+
   string :professional_learning_course
+  boolean :only_instructor_review_required
   integer :peer_reviews_to_complete
 
   boolean :hidden
@@ -48,6 +51,7 @@ class ScriptDSL < BaseDSL
   boolean :is_stable
   boolean :project_sharing
   boolean :tts
+  boolean :deprecated
   boolean :is_course
   boolean :is_migrated
 
@@ -145,6 +149,7 @@ class ScriptDSL < BaseDSL
       hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
+      only_instructor_review_required: @only_instructor_review_required,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
       lesson_extras_available: @lesson_extras_available,
@@ -163,6 +168,7 @@ class ScriptDSL < BaseDSL
       project_sharing: @project_sharing,
       curriculum_umbrella: @curriculum_umbrella,
       tts: @tts,
+      deprecated: @deprecated,
       lesson_groups: @lesson_groups,
       is_course: @is_course,
       background: @background,
@@ -327,6 +333,7 @@ class ScriptDSL < BaseDSL
     s << "id '#{legacy_script_ids[script.name]}'" if legacy_script_ids[script.name]
 
     s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
+    s << "only_instructor_review_required #{script.only_instructor_review_required}" if script.only_instructor_review_required
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
     s << 'hidden false' unless script.hidden
@@ -351,6 +358,7 @@ class ScriptDSL < BaseDSL
     s << 'project_sharing true' if script.project_sharing
     s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
     s << 'tts true' if script.tts
+    s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
     s << "background '#{script.background}'" if script.background
     s << 'is_migrated true' if script.is_migrated

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 16:58:03 UTC",
+    "serialized_at": "2021-05-03 16:58:50 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -65,15 +65,6 @@
         "purpose": "In this Exlore lesson, students follow a presentation and use manipulatives to understand the basics of creating a function with parameters and return values. ",
         "preparation": "* Collect various sizes of sticky notes. Small sticky notes are particularly useful for this activity. \r\n* Two envelopes per group\r\n* Pencils/pens\r\n* One baggy for a teacher demonstration (optional)\r\n* Print out copies of the Activity Guide for students\r\n* Review the Unit 7, Lesson 1 slides prior to the class",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1DHgSDaVBpmcnlHlG-pH6gDPoTbFM8wm7aFY2QXGOXgY/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -94,16 +85,7 @@
         "student_overview": "Investigate and modify sample apps that use parameters and return values. ",
         "purpose": "As with all Investigate lessons, this is an opportunity for students to dig into programs that use a new concept, in this case parameters and return, in the context of working apps. Encourage students to read the code carefully, discuss their findings with classmates, make connections to the Explore activity from the day before, and start making simple modifications to the program. Students will not leave this lesson as experts in writing programs with parameters and return, but they should understand the high level context and know they can refer back to the code in these investigate projects when they need help getting unstuck in the coming Practice and Make lessons.",
         "preparation": "* Review the two apps that students will investigate in the lesson and make sure you understand the goals of the discussion prompts ",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1-nQmUIX8d0Li4ToebGSgXHgjNejmqWtRPS5WoE_EAoA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Parameters and Return Investigate",
@@ -123,16 +105,7 @@
         "student_overview": "Practice programming with parameters and return values through a set of programming puzzles.",
         "purpose": "This is students' opportunity to practice using parameters and return values in a variety of contexts. The progression of levels builds in complexity from students merely calling functions with parameters to designing functions and debugging complex programs that use parameters and return values. This lesson should build students familiarity with these concepts as they prepare for the Make project in the next lesson.",
         "preparation": "* Review the programming levels students will complete",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1kflHq2rpdSmqMgEGbirky_OvfN0GAHmR8xVtZ6IfPiw/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Parameters and Return Practice",
@@ -152,16 +125,7 @@
         "student_overview": "Make an app that uses functions with parameters and return.",
         "purpose": "Make lessons typically ask students to take on an entirely blank screen when writing their program. In this instance students have to take on the \"blank function\" which needs to fit within the larger program they're developing. This is part of a broader mindset shift that students develop in this unit. Functions with parameters and return values operate like their own \"mini programs\" which can be written and tested independently. There is actually less difference than students might think between previous make projects, in which students get the user interface elements and no code, and this project, in which they get some starter code but blank functions with parameters. In each case they need to develop programs that integrate into a larger portion of the project. The focus of this unit is how functions with parameters and return values help further split programs into logical chunks like this.",
         "preparation": "* Review the app students will need to make and ideally spend some time working on the project yourself to anticipate the challenges students will encounter",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1YvAPPGF3zy2__el1e01gSR6wG3wFrIKVx6SYWSnstpU/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Parameters and Return Make",
@@ -182,15 +146,6 @@
         "purpose": "The mental model of a folder containing a group of functions is used to introduce the concept of a library. Throughout this lesson student explore the requirements for working with libraries and documentation. ",
         "preparation": "* Review the slides and click through all the animations\r\n* Watch the Libraries video which introduces the Libraries tool in App Lab",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1-MXo8o-rzkJujEnk-_Pp8hNP5JjWU-0Mjw0G3caRP2E/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -211,16 +166,7 @@
         "student_overview": "Investigate and modify sample apps that use libraries learn how libraries help programmers simplify and reuse their code.",
         "purpose": "Students get a chance to see how libraries are used in actual apps before they begin building libraries themselves in the subsequent project. The sample apps are written in a clean and simple manner, helping students understand the usefulness of well-documented libraries. ",
         "preparation": "* Read the code for both sample apps and their associated libraries\r\n* Practice sharing and importing libraries yourself in order to understand the process",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qKQ0yUG8F1_PLLPSZdXViQAIu8V9R2cIKC0FhR3YpE0/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Libraries Investigate",
@@ -240,16 +186,7 @@
         "student_overview": "Practice programming with libraries through a set of programming puzzles.",
         "purpose": "Using libraries highlights a number of important concepts, skills, and mindsets. Here is a short list\r\n\r\n* Testing: Before sharing a library it is critical to make sure your functions actually work as intended. The best way to do this is to write tests that try out different cases of your program. By doing this like testing positive and negative numbers, or testing out edge cases, it's possible to assure yourself that your code works as you expect.\r\n* Debugging: Closely related to the point above, debugging libraries can be tricky once the program is shared with another student. While students can test functions that were shared with them, it will be up to the original author of the code to make the changes and ensure their library is bug free.\r\n* Abstraction: Libraries allow you to make blocks that are \"higher level\" than other blocks in the toolbox. The result is that the actual programs you write either will be shorter, since library code does the heavy lifting, or more complex, because library code allows you to focus on bigger problems. In either case, libraries help you focus on the high level problem you're solving rather than focus on the low level details, and this is an example of abstraction in programming.",
         "preparation": "* Review the programming levels students will complete",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1orma_-qsgLWMGEpTTiV73jdv3ZhXU5gOF0uiZEF3mTQ/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Libraries Practice",
@@ -270,15 +207,6 @@
         "purpose": "This project caps off everything students have learned about programming as they head into the Create PT. Students are literally \"building blocks\" that classmates will literally have access to in order to create projects of their own. This kind of thinking requires not only a mastery of programming concepts and skills, but the ability to think more abstractly about how programs are built. Students need to identify common situations or problems that they and other programmers may encounter, and help build commands to address that problem.\r\n\r\nThis project also caps off a unit that is all about abstraction. On one level students are thinking about procedural abstraction, and simply learning how to design functions. On another level, however, they're learning to think abstractly. They're not merely designing a function, but they're thinking about the entire process of how programs are developed and common problems or situations that arise. This mental approach to thinking about why to build a function is just as important as knowing the steps to design one.",
         "preparation": "* Review the Project Guide to make sure you understand what students will be expected to do in the project\r\n* Review the Examples Submission for the Project found in the last lesson of this project",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1Bq3P1TAVgi6K56ugejlSMQU6vUCLU3d1yKP0XlaGeZ4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -300,15 +228,6 @@
         "purpose": "In this lesson students continue to write the code for their libraries, but a big focus is on making sure it works as expected. Through writing tests of their own students practice thinking through how different inputs into a function lead to expected outputs. Sharing their libraries with classmates helps check not only that their code works as expected, but that their library is clear, approachable, and useful, to someone else.",
         "preparation": "* Ensure students have access to their project guides from last class.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1mRNHJoHlQVoDfkQiJUEn1-fAMag_Cf6kuFm8WyVZn60/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -330,15 +249,6 @@
         "purpose": "This lesson wraps up this quick project but also gives students a chance to practice responding to questions that appear in the Create PT. This lesson and project should therefore serve as a cap on students' study of procedural abstraction and if you are teaching this class as an AP, prepare them for the Create Task that they will complete in the following unit.",
         "preparation": "* Ensure students have access to their project guides\n* Review the [Example Project Guide Submission](https://studio.code.org/s/csp7-2020/stage/10/puzzle/1)\n and [Example Library](https://studio.code.org/s/csp7-2020/stage/10/puzzle/2) (in the blue teacher panel) ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1MOkxhenOAlvvvtIHluT26blxLI-1SHAmvjYDGiAnfsQ/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -359,15 +269,6 @@
         "student_overview": "Students complete a multiple choice assessment which covers the unit topics. ",
         "preparation": "Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1DAERXPiGgRBI9_8AfRT-G2ckcM9ikBHek4bpO5qx-8w/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -1054,7 +955,7 @@
       "key": "2f77b7d8-d62a-470a-87e7-cc96552fe60c",
       "position": 2,
       "properties": {
-        "description": "&fa-desktop;  **Do This:** Students navigate to Level 1 and read and respond to the questions there. If students have extra time, they can try the modify activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 1 and read and respond to the questions there. If students have extra time, they can try the modify activity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1450,7 +1351,7 @@
       "key": "c6b30149-a1a1-4c69-b302-70ba089b312e",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** Give students copies of [r parameters-and-return-make-activity-guide] if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [r parameters-and-return-make-activity-guide/csp/2021] if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Rock Paper Scissors App"
       },
       "seeding_key": {
@@ -2397,7 +2298,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App Investigation",
         "level_keys": [
@@ -2423,7 +2324,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "App Investigation",
         "level_keys": [
@@ -3513,10 +3414,10 @@
   "resources": [
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
+      "url": "https://docs.google.com/presentation/d/1J5SBGz5EXZH1BQu_3FoARNNLadq9osgjr-IrgPuhEsw/edit?usp=sharing",
       "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

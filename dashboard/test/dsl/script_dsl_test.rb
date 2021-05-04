@@ -14,9 +14,10 @@ class ScriptDslTest < ActiveSupport::TestCase
     wrapup_video: nil,
     login_required: false,
     professional_learning_course: nil,
+    only_instructor_review_required: nil,
+    peer_reviews_to_complete: nil,
     hideable_lessons: false,
     student_detail_progress_view: false,
-    peer_reviews_to_complete: nil,
     teacher_resources: [],
     lesson_extras_available: false,
     has_verified_resources: false,
@@ -34,6 +35,7 @@ class ScriptDslTest < ActiveSupport::TestCase
     project_sharing: nil,
     curriculum_umbrella: nil,
     tts: false,
+    deprecated: false,
     is_course: false,
     background: nil,
     is_migrated: false
@@ -390,6 +392,19 @@ endvariants
     assert_equal true, output[:tts]
   end
 
+  test 'can set deprecated' do
+    input_dsl = <<~DSL
+      deprecated 'true'
+
+      lesson 'Lesson1', display_name: 'Lesson1'
+      level 'Level 1'
+      lesson 'Lesson2', display_name: 'Lesson2'
+      level 'Level 2'
+    DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:deprecated]
+  end
+
   test 'can set teacher_resources' do
     input_dsl = <<~DSL
       teacher_resources [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']]
@@ -410,6 +425,17 @@ endvariants
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:announcements]
+  end
+
+  test 'can set only_instructor_review_required' do
+    input_dsl = <<~DSL
+      only_instructor_review_required true
+
+      lesson 'Lesson1', display_name: 'Lesson1'
+      level 'Level 1'
+    DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:only_instructor_review_required]
   end
 
   test 'can set pilot_experiment' do

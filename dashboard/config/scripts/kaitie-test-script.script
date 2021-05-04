@@ -97,3 +97,19 @@ level 'CSP - Module 8 Wrap Up', progression: 'Module 8 asynchronous wrap-up (~10
 lesson 'CS Principles: Functions', display_name: 'CS Principles: Functions', has_lesson_plan: false
 level 'CS Principles: Functions', progression: 'CS Principles: Functions'
 
+lesson 'CS Principles: Variables Practice - Choice Test', display_name: 'Variables Practice - Choice Test', has_lesson_plan: false
+level 'CSP U4L3 SFLP 20-21', progression: 'Lesson Overview'
+level 'U4 L03 Variables numbers practice 1', progression: 'Assigning Numbers and Strings'
+level 'U4 L03 Variables numbers practice 4', progression: 'Assigning Numbers and Strings'
+level 'U4 L03 Variables operator practice 1', progression: 'Variables and Operators'
+level 'U4 L03 Variables operator practice 3', progression: 'Variables and Operators'
+level 'U4 L03 Variables operator practice 2', progression: 'Variables and Operators'
+level 'U4 L03 Variables operator practice 5', progression: 'Variables and Operators'
+level 'U4 L03 Variables operator practice 6', progression: 'Variables and Operators'
+level 'U4 L03 Variable Scope: Local vs. Global', progression: 'Debugging Scope Issues'
+level 'U4 L03 Scope Issue', progression: 'Debugging Scope Issues'
+level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
+level 'csp-choice-test', progression: 'Putting It Together'
+level 'U4L3 CFU Variables Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
+level 'U4L3 CFU Variables Randomness Psuedocode', progression: 'Check for Understanding: AP Practice', assessment: true
+

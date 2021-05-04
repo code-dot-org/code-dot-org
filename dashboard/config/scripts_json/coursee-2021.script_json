@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-04-15 13:59:54 UTC",
+    "serialized_at": "2021-05-03 18:40:55 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -120,7 +120,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this **context-setting** lesson, students will play a game intended to get them thinking about the way commands need to be given to produce the right result. This will help them more easily carry over to Sprite Lab in the upcoming lessons. ",
+        "overview": "In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.",
         "student_overview": "Play a game and think about what commands are needed to get the right result.",
         "purpose": "This lesson is designed to prepare students to think about one of the core programming concepts in Sprite Lab, behaviors. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -141,7 +141,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will be introduced to Sprite Lab by learning to program a simple animated underwater scene.",
+        "overview": "Students will program a simple animated underwater scene in this **skill-building** lesson.",
         "student_overview": "Learn how to create and edit sprites.",
         "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -161,7 +161,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will use events to make sprites move around the screen based on user input. ",
+        "overview": "Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.",
         "student_overview": "Create an interactive project that can be shared with classmates.",
         "purpose": "This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -223,7 +223,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this **mini-project** lesson, students will apply their understanding of sharing personal and private information on the web by creating an interactive poster.\n",
+        "overview": "Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.\n",
         "student_overview": "Creating an interactive poster, but think carefully about what information is safe to share online.",
         "purpose": "This lesson is meant to make the previous lesson on personal and private information personally relevant for students. With SAFE (personal) and UNSAFE (private) examples in mind, students practice safe self-expression on the web, using SpriteLab to fashion their own sprite costumes and generate text.",
         "preparation": " - (Optional) Print copies of the ***planning guide** for students, or distribute digital copies.\n - Consider making an example project yourself to share with the class. \n - Make sure every student has a reflection journal.",
@@ -243,7 +243,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "This **exploratory** lesson, developed by the team over at [Copyright and Creativity](https://www.copyrightandcreativity.org/), exists to help students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.",
+        "overview": "This **exploratory** lesson helps students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. ",
         "student_overview": "In this lesson, you'll learn about the challenges and benefits of ownership and copyright. ",
         "purpose": "Students will soon be creating projects to share and most of these projects will contain either code or imagery that students did not create themselves. This lesson is here to show students the proper way to handle the use of content that is not their own.",
         "preparation": "- Locate the ***Copyright Sharing video** in \"Links\" below\n- Download and review the complete ***Digital Sharing Lesson Plan** from Copyright and Creativity\n- As the teacher, create a piece of art for the lesson (picture, song, slideshow, etc.) \n- Make sure every student has a reflection journal.\n- You will need a tablet or smart phone to replicate the sharing of that item",
@@ -264,7 +264,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "This **context-setting** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the course.  ",
+        "overview": "This **context-setting** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.  ",
         "student_overview": "In this lesson, **loops** make it easy to make cool images with Artist!",
         "purpose": "Students will practice using loops, a concept that will be revisited throughout upcoming lessons.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -284,7 +284,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the lesson.",
+        "overview": "In this **skill-building** lesson, students will create intricate designs using the Artist. The lesson ends with an opportunity for students to create their own designs.",
         "student_overview": "More nested loops! This time, you get to make some AMAZING drawing with nested loops.",
         "purpose": "In this online activity, students will create designs in Artist that they can proudly share with their loved ones.  \n\nThe purpose of this activity is to utilize nested loops as a way to inspire students with artistic minds to see coding as another creative outlet. This set of puzzles was built to develop critical thinking skills, an understanding of elementary geometry, and creativity -- all within the scope of nested loops!",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.\n - Consider what supports your students might need with turns and angles. ",
@@ -304,7 +304,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "This **mini-project** lesson takes students through a series of exercises to help them create their own portfolio-ready images using _Anna_ and _Elsa's_ excellent ice-skating skills!",
+        "overview": "This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the *Frozen* movies.",
         "student_overview": "_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
         "purpose": "In this lesson, students will get apply their skills with nested loops to create images that they will be excited to share. ",
         "preparation": " - Play through the puzzles to find and potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -324,7 +324,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "This **context-setting** lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.",
+        "overview": "This **context-setting** lesson will help students understand why combining chunks of code into functions can be a helpful practice.",
         "student_overview": "Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.",
         "purpose": "The use of functions helps simplify code and develop the student's ability to organize their program. Students will quickly recognize that writing functions can make their long programs easier to read and easier to debug if something goes wrong. ",
         "preparation": "- (Optional) Watch the ***Lesson in Action** Video.\n- Print several ***worksheets** for each group.\n- Print one ***assessment** for each student.\n- Secure access to songs and lyrics for activity.\n- Make sure every student has a journal.",
@@ -365,7 +365,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this **skill-building** lesson, students will be introduced to using functions with the Artist.",
+        "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
         "student_overview": "Make complex drawings more easily with functions!",
         "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident and proud of their hard work.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -385,7 +385,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "In this **context-setting** lesson, students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
+        "overview": "In this **context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!",
         "student_overview": "Here you will learn about conditionals in the world of _Minecraft_.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -464,7 +464,7 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "overview": "This longer lesson provides an opportunity for students to put their coding skills to use in a capstone project. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. ",
+        "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects! ",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
         "purpose": "Students may be ready to jump straight into building their projects, but this lesson will help shape their ideas into plans. This structure will keep the dreamers grounded and illuminate a path for those feeling left in the dark. Provide students with ample time to build and revise their projects. The trial and error inevitably involved in this lesson will teach problem solving and persistence.",
         "preparation": " - Spend time making your own project with both the Artist and Sprite Lab. Familiarize yourself with the capabilities and limitations of each tool.\n - Modify the ***rubric** to fit your class goals and print out a copy for each student.\n - Modify the ***project design worksheet** to fit your class and print one packet for each student.",
@@ -1623,7 +1623,7 @@
       "key": "51b3125a-1efe-4f25-a05e-3e5250ceff18",
       "position": 2,
       "properties": {
-        "description": "**Prompt:**\nThink back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
+        "description": "**Prompt:**\n\nThink back to the activity or hobby you discussed at the beginning of class. Using \"begin\" and \"stop\" commands write down the instructions you could give someone if you wanted them to act like they were they were doing it. Be sure to remember when they might need to stop something before beginning something new.",
         "name": "Reflection",
         "tips": [
           {
@@ -1810,7 +1810,7 @@
       "key": "aad9aa38-56b3-42ef-b751-03065c308d0e",
       "position": 1,
       "properties": {
-        "description": "Today students will visit events in programming.\n\n####A Series of Events####\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.",
+        "description": "Today students will visit events in programming.\n\n####A Series of Events\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2274,7 +2274,7 @@
       "key": "88611b79-3f86-44ac-95fa-54bd59d8ba5a",
       "position": 2,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Give an example of a way that you have seen other creators share or remix someone's work. Do you believe that was fair?  Why or why not?"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Give an example of a way that you have seen other creators share or remix someone's work. Do you believe that was fair?  Why or why not?"
       },
       "seeding_key": {
         "activity_section.key": "88611b79-3f86-44ac-95fa-54bd59d8ba5a",
@@ -2777,7 +2777,7 @@
       "key": "41faed4d-716c-40d1-aab9-3125f7a8a917",
       "position": 3,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a function and how do you use it?\n - Can you think of another activity where you might want to call a special group of instructions several times?"
+        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a function and how do you use it?\n - Can you think of another activity where you might want to call a special group of instructions several times?"
       },
       "seeding_key": {
         "activity_section.key": "41faed4d-716c-40d1-aab9-3125f7a8a917",
@@ -4216,7 +4216,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "PrivatePersonalInformation-Unplugged_2021"
@@ -7367,12 +7367,15 @@
       "chapter": 143,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Designing for Accessibility"
+        "progression": "Designing for Accessibility",
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel_2021"
@@ -9212,7 +9215,7 @@
       "key": "sprite_lab_documentation",
       "properties": {
         "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
@@ -9292,11 +9295,11 @@
       }
     },
     {
-      "name": "Private and Personal Information: Lesson Quiz Answer Key",
-      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/grade-4-private-and-personal-information-lesson-quiz-answers",
+      "name": "Private and Personal Information: Lesson Quiz",
+      "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
       "key": "private-and-personal-information-lesson-quiz-answer-key",
       "properties": {
-        "type": "Website",
+        "type": "Answer Key",
         "audience": "Teacher"
       },
       "seeding_key": {
@@ -9526,36 +9529,145 @@
       }
     },
     {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csf",
-      "key": "teacher_forum",
+      "name": "CSTA Standards Mapping",
+      "url": "https://studio.code.org/s/coursee-2021/standards",
+      "key": "csta_standards_mapping",
       "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "teacher_forum"
+        "resource.key": "csta_standards_mapping"
+      }
+    },
+    {
+      "name": "Common Core and NGSS Guidance",
+      "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
+      "key": "common_core_and_ngss_guidance",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common_core_and_ngss_guidance"
+      }
+    },
+    {
+      "name": "Cross-Curricular Extension Activities",
+      "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+      "key": "cross-curricular_extension_activities",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cross-curricular_extension_activities"
+      }
+    },
+    {
+      "name": "Course Vocabulary\t",
+      "url": "https://studio.code.org/s/coursee-2021/vocab",
+      "key": "course_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Implementation Guide",
+      "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+      "key": "implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "implementation_guide"
+      }
+    },
+    {
+      "name": "Lesson Type Guide",
+      "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+      "key": "lesson_type_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+      "key": "debugging_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
       }
     },
     {
       "name": "Curriculum Guide",
       "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-      "key": "curriculum_guide",
+      "key": "curriculum_guide_1",
       "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "curriculum_guide"
+        "resource.key": "curriculum_guide_1"
       }
     },
     {
-      "name": "Change Log",
+      "name": "2021 Change Log",
       "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "change_log",
+      "key": "2021_change_log",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2021_change_log"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf/",
+      "key": "teacher_forum_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
+      }
+    },
+    {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation_1",
       "properties": {
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "change_log"
+        "resource.key": "sprite_lab_documentation_1"
+      }
+    },
+    {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation_2",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_2"
       }
     }
   ],
@@ -9762,25 +9874,78 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "csta_standards_mapping",
         "script.name": "coursee-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "curriculum_guide",
+        "resource.key": "common_core_and_ngss_guidance",
         "script.name": "coursee-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "change_log",
+        "resource.key": "cross-curricular_extension_activities",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "implementation_guide",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_type_guide",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2021_change_log",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
+        "script.name": "coursee-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_1",
         "script.name": "coursee-2021"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_2",
+        "script.name": "coursee-2021"
+      }
+    }
   ],
   "vocabularies": [
     {

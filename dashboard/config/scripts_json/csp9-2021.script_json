@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-21 16:56:36 UTC",
+    "serialized_at": "2021-04-29 23:58:35 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -52,16 +52,7 @@
         "student_overview": "Explore the Google Trends tool in order to tell a \"data story\".",
         "purpose": "The three main purposes of this lesson are:\r\n\r\n1. Navigating and using a real data tool (Google Trends, see below) that is external to the course\r\n2. Getting acquainted with talking and writing about data. In particular we want to:\r\n\t* Draw a distinction between describing what the data shows and describing why it might be that way\r\n\t* In other words: describe connections and trends in data separate from drawing conclusions.\r\n\t* We want students to get in the habit of separating the what from the why when it comes to talking and writing about data\r\n3. Introduce the concept of metadata. We want students to understand the value of data about data, that can be used to find, organize, and manage information. It also increases effective use of data by providing extra information. \r\n",
         "preparation": "* Preview Google Trends and prepare for the demo",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1UwzCdBnV1Qx6lIYhpFb58COwDBSMZtmq1xUAIkD2L_w/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Learning From Data",
@@ -81,16 +72,7 @@
         "student_overview": "Create a bar chart and a histogram in App Lab's Data Visualizer.",
         "purpose": "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types, a bar chart, and a histogram. Students will build skills in using this tool and reading data that they will continue to develop throughout the unit.\r\n\r\nIn the Wrap Up of this lesson students are introduced to the Data Analysis Process, a set of steps that can be used to use data to answer questions. Students will continue to refer to this process throughout the remainder of the unit.",
         "preparation": "* Try using the Data Visualizer yourself to make some of the charts students will create as part of completing the lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1Ftkd3XfkO-J-f5BN8SHRPpJiR29gAk2jGlD7GtOt3Vo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Exploring One Column",
@@ -110,16 +92,7 @@
         "student_overview": "Clean data and use the filtering tools in the Data Visualizer to be able to analyze data.",
         "purpose": "The goal of this lesson is to introduce two crucial concepts when working with data: cleaning and filtering. The datasets in App Lab are generally clean, so a \"messy\" dataset is imported to a level for students to explore. After discovering why datsets need to be cleaned, students manually clean the dataset. \r\n\r\nWhen working with a dataset to answer a question, the user may want to focus on a subset of the data. In this lesson, students are introduced to the filtering tools in the Data Visualizer so they can accurately filter for the information they are looking for. ",
         "preparation": "* Preview the filter tool in the Data Visualizer\r\n* Prepare for the demo in the Activity",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1lBfEl10nK2EnmHMxuBsqtiIsNAF1t-bFqpFfeAYBp00/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Filtering and Cleaning Data",
@@ -139,16 +112,7 @@
         "student_overview": "Create and analyze crosstab and scatter charts in App Lab's Data Visualizer.",
         "purpose": "This lesson introduces students to two new ways of make visualizations in the Data Visualizer. The crosstab and scatter chart are new in that they allow students to see patterns across multiple variables, noticing how one might seem to change (or correlate) with another. This is good preparation for their unit project in which they'll need to make and interpret a data visualization of their own.",
         "preparation": "* Review how to make crosstab and scatter charts in the Data Visualizer",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1rR93ofDtDKZM7yYuwDZOBdAx7qBeqfYlqsb3LVINWk0/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Exploring Two Columns",
@@ -169,15 +133,6 @@
         "purpose": "This lesson zooms back out from the data analysis process to the ways that is applied in a wide variety of contexts. Students learn how big data, open data, and crowdsourcing apply this process in interesting ways that cleverly modify this process. For a summary of key points of this lesson review the key takeaways in the slides. In short however:\r\n\r\n* Big data: \"Collect huge amounts of data so we can learn even more from it\"\r\n* Open data: \"sharing data with others so they can can analyze it\"\r\n* Crowdsourcing: \"collecting data from others so you can analyze it\"\r\n\r\nThis lesson further builds towards the following lesson on machine learning which explores a different application of the data analysis process.",
         "preparation": "* Ensure students will be able to access all of the videos / articles linked in the lesson.\r\n* Review at least the key takeaways and ideally some of the content from each topic to ensure you understand how these topics relate to what students have studied in previous lessons.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/15DLAmMWSu4i73kmCNWd10CnMMGCr-IkF_JI0YXaDo00/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -198,16 +153,7 @@
         "student_overview": "In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
         "purpose": "This tutorial is designed to quickly introduce students to machine learning, a type of artificial intelligence. Students will explore how training data is used to enable a machine learning model to classify new data. ",
         "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. ",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1CDkUeEZNOrbgvulr-ZTJpWglC8yAfHSdBl1PVvNWE0g/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
@@ -228,15 +174,6 @@
         "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit.",
         "preparation": "* Preview the Project Guide",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1WHmX4Fese0cJg8o560m9hFykkftUn2aQ7KDA5A6cYYM/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -258,15 +195,6 @@
         "purpose": "The goal of this lesson is for students to put into use all of the data analysis skills they have practiced throughout this unit. ",
         "preparation": "* Review the rubric in the Project Guide",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1l3s2pBrv1raHIFXWq8zfGS7olo0BW9t2icZq3kpjLeo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -287,15 +215,6 @@
         "student_overview": "Students complete a multiple choice assessment which covers the unit topics. ",
         "preparation": "Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1uECaXPB9ykBuFupiRywH4gvf6VRyOPaFlFkUJAfIJX8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -1950,7 +1869,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploring Metadata",
         "level_keys": [
@@ -2761,10 +2680,10 @@
     },
     {
       "name": "CSP Unit 9 - Data",
-      "url": "https://docs.google.com/presentation/d/1MhiMuy55XgoRgKCTk6vS_ZXoCVH_Qr2soOVBuipc3eU/copy",
+      "url": "https://docs.google.com/presentation/d/1z00nnZbPBrVkJ_iFoGYx722LbYhBD1qmap2dNt7HuCE/edit?usp=sharing",
       "key": "csp-u9-presentation",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {
