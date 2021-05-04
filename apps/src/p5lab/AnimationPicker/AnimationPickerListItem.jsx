@@ -10,53 +10,6 @@ import AnimationPreview from './AnimationPreview';
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
 
-const styles = {
-  root: {
-    float: 'left',
-    width: THUMBNAIL_SIZE,
-    textAlign: 'center',
-    marginRight: 10,
-    marginBottom: 10
-  },
-  thumbnail: {
-    height: THUMBNAIL_SIZE,
-    borderStyle: 'solid',
-    borderColor: color.light_gray,
-    borderWidth: THUMBNAIL_BORDER_WIDTH,
-    borderRadius: 12,
-    cursor: 'pointer',
-    ':hover': {
-      borderColor: color.purple
-    }
-  },
-  thumbnailIcon: {
-    color: color.white,
-    backgroundColor: color.purple,
-    borderColor: color.purple,
-    fontSize: THUMBNAIL_SIZE / 2,
-    lineHeight: THUMBNAIL_SIZE + 'px',
-    ':hover': {
-      backgroundColor: color.light_purple,
-      borderColor: color.light_purple
-    }
-  },
-  label: {
-    marginTop: 3,
-    fontSize: '90%',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden'
-  },
-  noLabel: {
-    paddingBottom: 10
-  },
-  labelIcon: {
-    fontStyle: 'italic'
-  },
-  categoryImage: {
-    borderRadius: 10
-  }
-};
-
 class AnimationPickerListItem extends React.Component {
   static propTypes = {
     animationProps: shapes.AnimationProps,
@@ -128,5 +81,52 @@ class AnimationPickerListItem extends React.Component {
     );
   }
 }
+
+const styles = {
+  root: {
+    float: 'left',
+    width: THUMBNAIL_SIZE,
+    textAlign: 'center',
+    marginRight: 10,
+    marginBottom: 10
+  },
+  thumbnail: {
+    height: THUMBNAIL_SIZE,
+    borderStyle: 'solid',
+    borderColor: color.light_gray,
+    borderWidth: THUMBNAIL_BORDER_WIDTH,
+    borderRadius: 12,
+    cursor: 'pointer',
+    ':hover': {
+      borderColor: color.purple
+    }
+  },
+  thumbnailIcon: {
+    color: color.white,
+    backgroundColor: color.purple,
+    borderColor: color.purple,
+    fontSize: THUMBNAIL_SIZE / 2,
+    lineHeight: THUMBNAIL_SIZE + 'px',
+    ':hover': {
+      backgroundColor: color.light_purple,
+      borderColor: color.light_purple
+    }
+  },
+  label: {
+    marginTop: 3,
+    fontSize: '90%',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
+  },
+  noLabel: {
+    paddingBottom: 10
+  },
+  labelIcon: {
+    fontStyle: 'italic'
+  },
+  categoryImage: {
+    borderRadius: 10
+  }
+};
 
 export default Radium(AnimationPickerListItem);

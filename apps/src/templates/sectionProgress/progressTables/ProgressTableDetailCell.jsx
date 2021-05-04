@@ -10,24 +10,6 @@ import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import _ from 'lodash';
 
-const styles = {
-  container: {
-    ...progressStyles.flexBetween,
-    position: 'relative',
-    whiteSpace: 'nowrap'
-  },
-  background: {
-    height: 10,
-    backgroundColor: color.lighter_gray,
-    position: 'absolute',
-    left: 10,
-    right: 10
-  },
-  sublevelContainer: {
-    position: 'relative',
-    display: 'inline-block'
-  }
-};
 export default class ProgressTableDetailCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
@@ -137,3 +119,22 @@ export default class ProgressTableDetailCell extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    ...progressStyles.flexBetween,
+    position: 'relative',
+    whiteSpace: 'nowrap'
+  },
+  background: {
+    height: 10,
+    backgroundColor: color.lighter_gray,
+    position: 'absolute',
+    left: 10,
+    right: 10
+  },
+  sublevelContainer: {
+    position: 'relative',
+    display: 'inline-block'
+  }
+};

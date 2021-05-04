@@ -14,64 +14,6 @@ import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import $ from 'jquery';
 
-const styles = {
-  container: {
-    backgroundColor: color.lightest_gray,
-    border: `1px solid ${color.lighter_gray}`,
-    borderRadius: 5,
-    height: 40,
-    position: 'relative',
-    overflow: 'hidden'
-  },
-  outer: {
-    position: 'absolute',
-    paddingLeft: 4,
-    paddingRight: 4,
-    height: '100%',
-    whiteSpace: 'nowrap'
-  },
-  inner: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%'
-  },
-  headerVignette: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none'
-  },
-  headerVignetteLeftRight: {
-    background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
-  },
-  headerVignetteLeft: {
-    background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
-  },
-  headerVignetteRight: {
-    background:
-      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
-  },
-  spacer: {
-    marginRight: 'auto'
-  },
-  lessonTrophyContainer: {
-    border: 0,
-    borderRadius: 20,
-    paddingLeft: 8,
-    paddingRight: 0,
-    minWidth: 350,
-    marginLeft: 48
-  },
-  pillContainer: {
-    // Vertical padding is so that this lines up with other bubbles
-    paddingTop: 4,
-    paddingBottom: 4
-  }
-};
-
 /**
  * Lesson progress component used in level header and course overview.
  */
@@ -243,6 +185,64 @@ class LessonProgress extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    backgroundColor: color.lightest_gray,
+    border: `1px solid ${color.lighter_gray}`,
+    borderRadius: 5,
+    height: 40,
+    position: 'relative',
+    overflow: 'hidden'
+  },
+  outer: {
+    position: 'absolute',
+    paddingLeft: 4,
+    paddingRight: 4,
+    height: '100%',
+    whiteSpace: 'nowrap'
+  },
+  inner: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
+  },
+  headerVignette: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none'
+  },
+  headerVignetteLeftRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+  },
+  headerVignetteLeft: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px'
+  },
+  headerVignetteRight: {
+    background:
+      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)'
+  },
+  spacer: {
+    marginRight: 'auto'
+  },
+  lessonTrophyContainer: {
+    border: 0,
+    borderRadius: 20,
+    paddingLeft: 8,
+    paddingRight: 0,
+    minWidth: 350,
+    marginLeft: 48
+  },
+  pillContainer: {
+    // Vertical padding is so that this lines up with other bubbles
+    paddingTop: 4,
+    paddingBottom: 4
+  }
+};
 
 export const UnconnectedLessonProgress = LessonProgress;
 

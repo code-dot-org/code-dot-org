@@ -12,19 +12,6 @@ import {
 } from '../foormEditorRedux';
 import FoormFormSaveBar from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 
-const styles = {
-  surveyTitle: {
-    marginBottom: 0
-  },
-  surveyState: {
-    marginTop: 0
-  },
-  loadError: {
-    fontWeight: 'bold',
-    padding: '1em'
-  }
-};
-
 /*
 Parent component for editing Foorm forms. Will initially show a choice
 between loading an existing form or an empty form.
@@ -246,6 +233,19 @@ class FoormFormEditorManager extends React.Component {
     );
   }
 }
+
+const styles = {
+  surveyTitle: {
+    marginBottom: 0
+  },
+  surveyState: {
+    marginTop: 0
+  },
+  loadError: {
+    fontWeight: 'bold',
+    padding: '1em'
+  }
+};
 
 export default connect(
   state => ({
