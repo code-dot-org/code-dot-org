@@ -2,7 +2,8 @@ require_relative '../test_helper'
 require 'cdo/i18n_string_url_tracker'
 require 'active_support/core_ext/numeric/time'
 
-class TestI18nStringUrlTracker < Minitest::Test
+# Common setup/teardown for test/benchmark classes.
+module SetupI18nStringUrlTracker
   # We don't want to make actual calls to the AWS Firehose apis, so stub it and verify we are trying to send the right
   # data.
   def stub_firehose
@@ -40,6 +41,10 @@ class TestI18nStringUrlTracker < Minitest::Test
     unstub_dcdo
     I18nStringUrlTracker.instance.send(:shutdown)
   end
+end
+
+class TestI18nStringUrlTracker < Minitest::Test
+  include SetupI18nStringUrlTracker
 
   def test_instance_not_empty
     assert I18nStringUrlTracker.instance
@@ -236,5 +241,20 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.send(:flush)
     assert_equal(:i18n, @firehose_stream)
     assert_equal(expected_record, @firehose_record)
+  end
+end
+
+require 'minitest/benchmark'
+class BenchI18nStringUrlTracker < Minitest::Benchmark
+  include SetupI18nStringUrlTracker
+
+  def self.bench_range
+    [1, 1, 1_000, 1_000, 2_000, 5_000, 10_000]
+  end
+
+  def bench_linear_performance
+    assert_performance_linear do |n|
+      n.times {|m| I18nStringUrlTracker.instance.log(m.to_s, n.to_s, n.to_s)}
+    end
   end
 end
