@@ -3,6 +3,7 @@ import UserPreferences from '../lib/util/UserPreferences';
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
+const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
@@ -42,6 +43,12 @@ export const setSource = (filename, source, isVisible = true) => ({
   isVisible
 });
 
+export const sourceVisibilityUpdated = (filename, isVisible) => ({
+  type: SOURCE_VISIBILITY_UPDATED,
+  filename,
+  isVisible
+});
+
 // Updates the user preferences to reflect change
 export const setIsDarkMode = isDarkMode => {
   new UserPreferences().setUsingDarkMode(isDarkMode);
@@ -75,6 +82,14 @@ export default function reducer(state = initialState, action) {
       text: action.source,
       visible: action.isVisible
     };
+    return {
+      ...state,
+      sources: newSources
+    };
+  }
+  if (action.type === SOURCE_VISIBILITY_UPDATED) {
+    let newSources = {...state.sources};
+    newSources[action.filename].visible = action.isVisible;
     return {
       ...state,
       sources: newSources
