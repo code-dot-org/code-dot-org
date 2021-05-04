@@ -18715,10 +18715,35 @@ en:
             CS Discoveries:
               name: CS Discoveries
             contagions:
-              name: 'Content Integration: Contagions'
+              name: CS Connections
+            Course E:
+              name: Course E
+            Course F:
+              name: Course F
+            csf:
+              name: CS Fundamentals
+            sprites_in_action_2021:
+              name: 'Sprite Lab: Sprites in Action'
+            text_and_prompts_2021:
+              name: 'Sprite Lab: Text and Prompts'
+            csp_functions_2021:
+              name: 'CS Principles: Functions'
+            minitoolbox_2021:
+              name: 'Sprite Lab: Lots of Sprites'
+            csf_slides:
+              name: CS Fundamentals Slides
+            playlab_2021:
+              name: Play Lab Intro
           lesson_groups:
             lesson group:
-              display_name: display name
+              display_name: Teacher Levels
+              description: These are teaching-facing levels that are linked to lesson plans. The levels do not appear in other scripts.
+            slides:
+              display_name: Translator Levels
+              description: These levels contain editable start code that aligns to curriculum slide decks.
+            video:
+              display_name: Video Capture Levels
+              description: These levels are for use by video creators.
           title: Curriculum Sandbox Levels
           description_audience: 'Internal - Do not delete. This script houses important curriculum levels that would otherwise not have a script. '
           description_short: 'Levels that are linked directly in lesson plans but do not appear in other scripts. '
@@ -20775,7 +20800,7 @@ en:
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
-              name: 'Mini-Project: A Royal Battle with Events'
+              name: A Royal Battle with Events
               description_student: Use events to create a story or make an interactive game.
               description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
             lesson-1:

@@ -96,7 +96,8 @@ class ProgressTableView extends React.Component {
     onClickLesson: PropTypes.func.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
+    showSectionProgressDetails: PropTypes.bool
   };
 
   constructor(props) {
@@ -181,10 +182,11 @@ class ProgressTableView extends React.Component {
     );
   }
 
-  onToggleRow(rowData) {
+  onToggleRow(studentId) {
     const rowIndex = this.state.rows.findIndex(
-      row => row.student === rowData.student
+      row => row.student.id === studentId
     );
+    const rowData = this.state.rows[rowIndex];
     if (!rowData.isExpanded) {
       this.expandDetailRows(rowData, rowIndex);
     } else {
@@ -242,7 +244,7 @@ class ProgressTableView extends React.Component {
     this.setState({rows});
   }
 
-  onRow = row => {
+  onRow(row) {
     const rowClassName = classnames({
       'dark-row': row.useDarkBackground,
       'primary-row': row.expansionIndex === 0,
@@ -253,7 +255,7 @@ class ProgressTableView extends React.Component {
     return {
       className: rowClassName
     };
-  };
+  }
 
   detailContentViewProps() {
     return {
@@ -300,6 +302,7 @@ class ProgressTableView extends React.Component {
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
               onToggleRow={this.onToggleRow}
+              showSectionProgressDetails={this.props.showSectionProgressDetails}
             />
           </div>
           <div style={styles.contentView} className="content-view">
@@ -346,7 +349,8 @@ export default connect(
       state.sectionProgress.studentLastUpdateByScript[
         state.scriptSelection.scriptId
       ],
-    localeCode: state.locales.localeCode
+    localeCode: state.locales.localeCode,
+    showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
   }),
   dispatch => ({
     onClickLesson(lessonPosition) {
