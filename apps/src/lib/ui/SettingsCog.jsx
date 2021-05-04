@@ -45,7 +45,8 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
+    autogenerateML: PropTypes.func
   };
 
   componentDidMount() {
@@ -184,6 +185,7 @@ class SettingsCog extends Component {
           <ModelManagerDialog
             isOpen={this.state.managingModels}
             onClose={this.closeModelManager}
+            autogenerateML={this.props.autogenerateML}
             levelbuilderModel={this.levelbuilderModel()}
           />
         )}
