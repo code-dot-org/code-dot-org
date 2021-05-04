@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:03 UTC",
+    "serialized_at": "2021-05-04 03:06:03 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -667,18 +667,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "9a273981-d878-457f-825a-5b80bad286a0",
-        "lesson.key": "Security Risks Part 2",
-        "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2021"
-      }
-    },
-    {
-      "key": "ebedde81-c1c6-4b86-855f-b2c32e5c1909",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ebedde81-c1c6-4b86-855f-b2c32e5c1909",
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "csp_unit10_2020",
         "script.name": "csp10-2021"
@@ -1853,7 +1841,7 @@
       "key": "ca22849e-3ce5-45fc-a2f1-ce78e9f7a112",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What information does Equifax store? Why should I care?*\n\n**Prompt #1:** Equifax stores information on everyone who has a credit score. This information includes private data like social security numbers and whether or not you pay your bills on time. This information is often used when consumers want to make purchases and determines whether or not they are eligible and how high interest rates will be for loans. This can affect your family's ability to buy a house or a car.\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What information does Equifax store? Why should I care?*\n\n**Discussion Goal:** Equifax stores information on everyone who has a credit score. This information includes private data like social security numbers and whether or not you pay your bills on time. This information is often used when consumers want to make purchases and determines whether or not they are eligible and how high-interest rates will be for loans. This can affect your family's ability to buy a house or a car.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ca22849e-3ce5-45fc-a2f1-ce78e9f7a112",
@@ -1864,7 +1852,7 @@
       "key": "9231a94f-3dd5-455f-8018-faf0dbb7f44e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *As a computing innovation what are the benefits of Equifax? What are the potential harms?* \n\n**Prompt #2:** *Benefits:* companies are able to use data to make decisions when deciding who to lend money to or how much a person can be trusted to pay back a loan. With this system, we can purchase large items on loan like cars or houses, which would be out of reach for many people if they had to pay outright. *Harms:* Decisions made are not always fair or equitable. In addition, sometimes information is incorrect and difficult to get changed. A lot of trust is put in a small number of companies who are making a profit making these decisions. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the security risks?*\n\n**Prompt #3:** Data that Equifax stores can be hacked and distributed for malicious purposes. With the personal information that Equifax stores, hackers can commit identity theft and make purchases, drain bank accounts, or ruin people's financial history. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *As a computing innovation what are the benefits of Equifax? What are the potential harms?* \n\n**Discussion Goal:** *Benefits:* companies are able to use data to make decisions when deciding who to lend money to or how much a person can be trusted to pay back a loan. With this system, we can purchase large items on loan like cars or houses, which would be out of reach for many people if they had to pay outright. *Harms:* Decisions made are not always fair or equitable. In addition, sometimes information is incorrect and difficult to get changed. A lot of trust is put in a small number of companies who are making a profit-making these decisions. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the security risks?*\n\n**Discussion Goal:** Data that Equifax stores can be hacked and distributed for malicious purposes. With the personal information that Equifax stores, hackers can commit identity theft and make purchases, drain bank accounts, or ruin people's financial history. "
       },
       "seeding_key": {
         "activity_section.key": "9231a94f-3dd5-455f-8018-faf0dbb7f44e",
@@ -1887,13 +1875,7 @@
       "key": "14c480b2-e641-4213-ae32-811b3e95af03",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What rules or regulations would you recommend be put in place to control how data is collected and shared? What role (if any) should the government play?*",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This discussion is open ended. There is no right or wrong answer here - prompt student be thoughtful in the types of change they would like to see in how companies like Equifax are regulated. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What rules or regulations would you recommend be put in place to control how data is collected and shared? What role (if any) should the government play?*\n\n**Discussion Goal:** This discussion is open-ended. There is no right or wrong answer here - prompt students to be thoughtful in the types of change they would like to see in how companies like Equifax are regulated. \n"
       },
       "seeding_key": {
         "activity_section.key": "14c480b2-e641-4213-ae32-811b3e95af03",
@@ -1928,22 +1910,12 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How does human error relate to security risks?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "a13f0bd0-d7cc-45bf-a584-b4ed3b8450ac",
         "lesson_activity.key": "9a273981-d878-457f-825a-5b80bad286a0"
-      }
-    },
-    {
-      "key": "1f61d207-37f6-4024-bc10-5b3ff43f7876",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "1f61d207-37f6-4024-bc10-5b3ff43f7876",
-        "lesson_activity.key": "ebedde81-c1c6-4b86-855f-b2c32e5c1909"
       }
     },
     {
@@ -2856,9 +2828,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U10 L08 CFU security risks_2021"
-        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
@@ -2870,7 +2839,7 @@
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "csp_unit10_2020",
         "script.name": "csp10-2021",
-        "activity_section.key": "1f61d207-37f6-4024-bc10-5b3ff43f7876"
+        "activity_section.key": "a13f0bd0-d7cc-45bf-a584-b4ed3b8450ac"
       },
       "level_keys": [
         "U10 L08 CFU security risks_2021"
@@ -3101,7 +3070,7 @@
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "csp_unit10_2020",
         "script.name": "csp10-2021",
-        "activity_section.key": "1f61d207-37f6-4024-bc10-5b3ff43f7876"
+        "activity_section.key": "a13f0bd0-d7cc-45bf-a584-b4ed3b8450ac"
       }
     },
     {

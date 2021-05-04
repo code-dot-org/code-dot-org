@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:52 UTC",
+    "serialized_at": "2021-05-04 14:11:48 UTC",
     "seeding_key": {
       "script.name": "curriculum-sandbox-levels"
     }
@@ -19,18 +19,45 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "display name"
+        "display_name": "Teacher Levels",
+        "description": "These are teaching-facing levels that are linked to lesson plans. The levels do not appear in other scripts."
       },
       "seeding_key": {
         "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "video",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Video Capture Levels",
+        "description": "These levels are for use by video creators."
+      },
+      "seeding_key": {
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "slides",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Translator Levels",
+        "description": "These levels contain editable start code that aligns to curriculum slide decks."
+      },
+      "seeding_key": {
+        "lesson_group.key": "slides",
         "script.name": "curriculum-sandbox-levels"
       }
     }
   ],
   "lessons": [
     {
-      "key": "Course A",
-      "name": "Course A",
+      "key": "csf",
+      "name": "CS Fundamentals",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -38,37 +65,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Course A",
-        "lesson_group.key": "lesson group",
-        "script.name": "curriculum-sandbox-levels"
-      }
-    },
-    {
-      "key": "Course B",
-      "name": "Course B",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Course B",
-        "lesson_group.key": "lesson group",
-        "script.name": "curriculum-sandbox-levels"
-      }
-    },
-    {
-      "key": "Course E/F",
-      "name": "Course E/F",
-      "absolute_position": 3,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Course E/F",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -76,10 +73,10 @@
     {
       "key": "CS Discoveries",
       "name": "CS Discoveries",
-      "absolute_position": 4,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 4,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -90,7 +87,37 @@
     },
     {
       "key": "contagions",
-      "name": "Content Integration: Contagions",
+      "name": "CS Connections",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "sprites_in_action_2021",
+      "name": "Sprite Lab: Sprites in Action",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "sprites_in_action_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "text_and_prompts_2021",
+      "name": "Sprite Lab: Text and Prompts",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -98,8 +125,68 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "contagions",
-        "lesson_group.key": "lesson group",
+        "lesson.key": "text_and_prompts_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "minitoolbox_2021",
+      "name": "Sprite Lab: Lots of Sprites",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "minitoolbox_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "playlab_2021",
+      "name": "Play Lab Intro",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "playlab_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "csp_functions_2021",
+      "name": "CS Principles: Functions",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "csp_functions_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "csf_slides",
+      "name": "CS Fundamentals Slides",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "csf_slides",
+        "lesson_group.key": "slides",
         "script.name": "curriculum-sandbox-levels"
       }
     }
@@ -119,7 +206,8 @@
       "properties": {
         "level_keys": [
           "courseB_maze_seq10_predict1_2018"
-        ]
+        ],
+        "progression": "Course A"
       },
       "named_level": false,
       "bonus": false,
@@ -127,7 +215,7 @@
         "script_level.level_keys": [
           "courseB_maze_seq10_predict1_2018"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -143,7 +231,8 @@
       "properties": {
         "level_keys": [
           "courseB_maze_seq1_predict1_2018"
-        ]
+        ],
+        "progression": "Course A"
       },
       "named_level": false,
       "bonus": false,
@@ -151,7 +240,7 @@
         "script_level.level_keys": [
           "courseB_maze_seq1_predict1_2018"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -167,7 +256,8 @@
       "properties": {
         "level_keys": [
           "courseA_collector_loops3_predict1"
-        ]
+        ],
+        "progression": "Course A"
       },
       "named_level": false,
       "bonus": false,
@@ -175,7 +265,7 @@
         "script_level.level_keys": [
           "courseA_collector_loops3_predict1"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -191,7 +281,8 @@
       "properties": {
         "level_keys": [
           "courseA_collector_loops11_predict2"
-        ]
+        ],
+        "progression": "Course A"
       },
       "named_level": false,
       "bonus": false,
@@ -199,7 +290,7 @@
         "script_level.level_keys": [
           "courseA_collector_loops11_predict2"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -215,7 +306,8 @@
       "properties": {
         "level_keys": [
           "courseA_artist_loops11_predict2"
-        ]
+        ],
+        "progression": "Course A"
       },
       "named_level": false,
       "bonus": false,
@@ -223,7 +315,7 @@
         "script_level.level_keys": [
           "courseA_artist_loops11_predict2"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -233,13 +325,14 @@
     },
     {
       "chapter": 6,
-      "position": 1,
+      "position": 6,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq2_predict1"
-        ]
+        ],
+        "progression": "Course B"
       },
       "named_level": false,
       "bonus": false,
@@ -247,7 +340,7 @@
         "script_level.level_keys": [
           "courseA_maze_seq2_predict1"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -257,13 +350,14 @@
     },
     {
       "chapter": 7,
-      "position": 2,
+      "position": 7,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseA_maze_seq12_predict2"
-        ]
+        ],
+        "progression": "Course B"
       },
       "named_level": false,
       "bonus": false,
@@ -271,7 +365,7 @@
         "script_level.level_keys": [
           "courseA_maze_seq12_predict2"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -281,13 +375,14 @@
     },
     {
       "chapter": 8,
-      "position": 3,
+      "position": 8,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_collector_loops3_predict1"
-        ]
+        ],
+        "progression": "Course B"
       },
       "named_level": false,
       "bonus": false,
@@ -295,7 +390,7 @@
         "script_level.level_keys": [
           "courseB_collector_loops3_predict1"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -305,13 +400,14 @@
     },
     {
       "chapter": 9,
-      "position": 4,
+      "position": 9,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseB_artist_loops8_predict1"
-        ]
+        ],
+        "progression": "Course B"
       },
       "named_level": false,
       "bonus": false,
@@ -319,7 +415,7 @@
         "script_level.level_keys": [
           "courseB_artist_loops8_predict1"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -329,13 +425,14 @@
     },
     {
       "chapter": 10,
-      "position": 1,
+      "position": 10,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "teacherSandboxFish"
-        ]
+        ],
+        "progression": "Course E"
       },
       "named_level": false,
       "bonus": false,
@@ -343,7 +440,7 @@
         "script_level.level_keys": [
           "teacherSandboxFish"
         ],
-        "lesson.key": "Course E/F",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -353,13 +450,14 @@
     },
     {
       "chapter": 11,
-      "position": 2,
+      "position": 11,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "Swimming Fish Teacher Sandbox"
-        ]
+        ],
+        "progression": "Course E"
       },
       "named_level": false,
       "bonus": false,
@@ -367,7 +465,7 @@
         "script_level.level_keys": [
           "Swimming Fish Teacher Sandbox"
         ],
-        "lesson.key": "Course E/F",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -377,13 +475,14 @@
     },
     {
       "chapter": 12,
-      "position": 3,
+      "position": 12,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_label_predict_sandbox2"
-        ]
+        ],
+        "progression": "Course F"
       },
       "named_level": false,
       "bonus": false,
@@ -391,7 +490,7 @@
         "script_level.level_keys": [
           "courseF_label_predict_sandbox2"
         ],
-        "lesson.key": "Course E/F",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       },
@@ -407,7 +506,8 @@
       "properties": {
         "level_keys": [
           "csd digital unplugged PSP word search big"
-        ]
+        ],
+        "progression": "Problem Solving Widgets"
       },
       "named_level": false,
       "bonus": false,
@@ -431,7 +531,8 @@
       "properties": {
         "level_keys": [
           "csd digital unplugged PSP seating big"
-        ]
+        ],
+        "progression": "Problem Solving Widgets"
       },
       "named_level": false,
       "bonus": false,
@@ -456,7 +557,7 @@
         "level_keys": [
           "contagion_teachers"
         ],
-        "progression": "Lesson 2: Bridging Activity"
+        "progression": "Contagion - Guided Practice"
       },
       "named_level": false,
       "bonus": false,
@@ -481,7 +582,7 @@
         "level_keys": [
           "6sidedDie"
         ],
-        "progression": "Lesson 3: Dice Roll"
+        "progression": "Contagion - Guided Practice"
       },
       "named_level": false,
       "bonus": false,
@@ -506,7 +607,7 @@
         "level_keys": [
           "contagion_teachers2"
         ],
-        "progression": "Lesson 4: Collecting Data"
+        "progression": "Contagion - Guided Practice"
       },
       "named_level": false,
       "bonus": false,
@@ -521,6 +622,281 @@
       "level_keys": [
         "contagion_teachers2"
       ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "progression": "Events/Insects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "lesson.key": "sprites_in_action_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseF_text_events_loom"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "progression": "Events/Creatures"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "lesson.key": "sprites_in_action_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseF_events_loom_sandbox"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Sprites in Action Video Projects"
+        ],
+        "progression": " Project Links"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Sprites in Action Video Projects"
+        ],
+        "lesson.key": "sprites_in_action_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "Sprites in Action Video Projects"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_concat_loom"
+        ],
+        "progression": "Prompts/Concatenation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat_loom"
+        ],
+        "lesson.key": "text_and_prompts_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseF_text_concat_loom"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Text and Prompts Video Projects"
+        ],
+        "progression": "Project Links"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Text and Prompts Video Projects"
+        ],
+        "lesson.key": "text_and_prompts_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "Text and Prompts Video Projects"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_apps_card"
+        ],
+        "progression": "Birthday card"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_apps_card"
+        ],
+        "lesson.key": "minitoolbox_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseF_apps_card"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Lots of Sprites Video Projects"
+        ],
+        "progression": "Project Links"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Lots of Sprites Video Projects"
+        ],
+        "lesson.key": "minitoolbox_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "Lots of Sprites Video Projects"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PlayLab Video Projects"
+        ],
+        "progression": "Project Links"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PlayLab Video Projects"
+        ],
+        "lesson.key": "playlab_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "PlayLab Video Projects"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CS Principles: Functions"
+        ],
+        "progression": "CS Principles: Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CS Principles: Functions"
+        ],
+        "lesson.key": "csp_functions_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "CS Principles: Functions"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "translation_prompt_name"
+        ],
+        "progression": "Course F: Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "translation_prompt_name"
+        ],
+        "lesson.key": "csf_slides",
+        "lesson_group.key": "slides",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "translation_prompt_name"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "translation_prompt_username"
+        ],
+        "progression": "Course F: Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "translation_prompt_username"
+        ],
+        "lesson.key": "csf_slides",
+        "lesson_group.key": "slides",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "translation_prompt_username"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -530,7 +906,7 @@
         "script_level.level_keys": [
           "courseB_maze_seq10_predict1_2018"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -541,7 +917,7 @@
         "script_level.level_keys": [
           "courseB_maze_seq1_predict1_2018"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -552,7 +928,7 @@
         "script_level.level_keys": [
           "courseA_collector_loops3_predict1"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -563,7 +939,7 @@
         "script_level.level_keys": [
           "courseA_collector_loops11_predict2"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -574,7 +950,7 @@
         "script_level.level_keys": [
           "courseA_artist_loops11_predict2"
         ],
-        "lesson.key": "Course A",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -585,7 +961,7 @@
         "script_level.level_keys": [
           "courseA_maze_seq2_predict1"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -596,7 +972,7 @@
         "script_level.level_keys": [
           "courseA_maze_seq12_predict2"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -607,7 +983,7 @@
         "script_level.level_keys": [
           "courseB_collector_loops3_predict1"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -618,7 +994,7 @@
         "script_level.level_keys": [
           "courseB_artist_loops8_predict1"
         ],
-        "lesson.key": "Course B",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -629,7 +1005,7 @@
         "script_level.level_keys": [
           "teacherSandboxFish"
         ],
-        "lesson.key": "Course E/F",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -640,7 +1016,7 @@
         "script_level.level_keys": [
           "Swimming Fish Teacher Sandbox"
         ],
-        "lesson.key": "Course E/F",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -651,7 +1027,7 @@
         "script_level.level_keys": [
           "courseF_label_predict_sandbox2"
         ],
-        "lesson.key": "Course E/F",
+        "lesson.key": "csf",
         "lesson_group.key": "lesson group",
         "script.name": "curriculum-sandbox-levels"
       }
@@ -708,6 +1084,127 @@
         ],
         "lesson.key": "contagions",
         "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events_loom",
+        "script_level.level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "lesson.key": "sprites_in_action_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_loom_sandbox",
+        "script_level.level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "lesson.key": "sprites_in_action_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Sprites in Action Video Projects",
+        "script_level.level_keys": [
+          "Sprites in Action Video Projects"
+        ],
+        "lesson.key": "sprites_in_action_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat_loom",
+        "script_level.level_keys": [
+          "courseF_text_concat_loom"
+        ],
+        "lesson.key": "text_and_prompts_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Text and Prompts Video Projects",
+        "script_level.level_keys": [
+          "Text and Prompts Video Projects"
+        ],
+        "lesson.key": "text_and_prompts_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_apps_card",
+        "script_level.level_keys": [
+          "courseF_apps_card"
+        ],
+        "lesson.key": "minitoolbox_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Lots of Sprites Video Projects",
+        "script_level.level_keys": [
+          "Lots of Sprites Video Projects"
+        ],
+        "lesson.key": "minitoolbox_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PlayLab Video Projects",
+        "script_level.level_keys": [
+          "PlayLab Video Projects"
+        ],
+        "lesson.key": "playlab_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CS Principles: Functions",
+        "script_level.level_keys": [
+          "CS Principles: Functions"
+        ],
+        "lesson.key": "csp_functions_2021",
+        "lesson_group.key": "video",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "translation_prompt_name",
+        "script_level.level_keys": [
+          "translation_prompt_name"
+        ],
+        "lesson.key": "csf_slides",
+        "lesson_group.key": "slides",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "translation_prompt_username",
+        "script_level.level_keys": [
+          "translation_prompt_username"
+        ],
+        "lesson.key": "csf_slides",
+        "lesson_group.key": "slides",
         "script.name": "curriculum-sandbox-levels"
       }
     }
