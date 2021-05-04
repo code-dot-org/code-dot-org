@@ -672,7 +672,7 @@ class TopInstructions extends Component {
     return (
       <div
         style={topInstructionsStyle}
-        className={!standalone && "editor-column"}
+        className={!standalone && 'editor-column'}
         ref={ref => (this.topInstructions = ref)}
       >
         <TopInstructionsHeader
