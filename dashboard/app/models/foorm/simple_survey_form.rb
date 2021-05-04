@@ -16,4 +16,10 @@
 #  index_foorm_simple_survey_forms_on_path  (path)
 #
 class Foorm::SimpleSurveyForm < ApplicationRecord
+  include SerializedProperties
+
+  serialized_attrs [
+    'survey_data',
+    'allow_multiple_submissions'
+  ]
 end
