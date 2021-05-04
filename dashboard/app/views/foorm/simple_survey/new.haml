@@ -1,0 +1,30 @@
+%h1 Create a Foorm Simple Survey
+
+%p
+  Note that any simple survey you create here that uses a URL
+  that is already in use will become the survey visible at that URL.
+  Check out
+  = link_to 'this page', CDO.studio_url("forms", CDO.default_scheme)
+  for the list of URLs currently in use.
+
+= form_with model: @simple_survey_form, url: '/form/create' do |f|
+  -# - if @simple_survey_form.errors.any?
+  -#   #error_explanation
+  -#     %h2 Error
+  -#     %ul
+  -#       %li= raw @simple_survey_form.errors.full_message(name, message).html_safe
+
+  .field
+    = f.label :path, 'Path suffix where survey will appear (studio.code.org/form/your_path_here). No spaces, no slashes.'
+    = f.text_field :path
+  .field
+    = f.label :kind, 'Survey identifier (optional, for analysis)'
+    = f.text_field :kind
+  .field
+    = f.label :form_key, 'Form to appear on page:'
+    = select_tag :form_key,
+      options_from_collection_for_select(Foorm::Form.where(published: true), 'key', 'key')
+  .field
+    = f.check_box :allow_multiple_submissions
+    = f.label :allow_multiple_submissions, 'Allow multiple submissions by the same user?'
+  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Create
