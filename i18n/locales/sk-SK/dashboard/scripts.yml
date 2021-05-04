@@ -863,6 +863,10 @@ sk:
               name: Vytvor recept
         allthethings:
           lessons:
+            Anonymous student survey:
+              name: Anonymný študentský dotazník
+            Anonymous student survey 2:
+              name: Anonymný študentský dotazník
             AppLab:
               name: App Lab
             Artist:
@@ -881,12 +885,16 @@ sk:
               name: Game Lab
             Jigsaw:
               name: Skladačka
+            Match:
+              name: Zápas
             Maze:
               name: Bludisko
             Minecraft:
               name: Minecraft
             Studio:
               name: Štúdio
+            Swapped Levels:
+              name: Vymenené levely.
             Text Compression:
               name: Kompresia textu
             Web Lab:
@@ -933,16 +941,24 @@ sk:
               name: Plánovanie
         ECSPD2:
           lessons:
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         algebraPD2:
           lessons:
             Teacher Dashboard:
@@ -977,28 +993,44 @@ sk:
               name: Zhrnutie
         ECSPD2-iZone:
           lessons:
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         ECSPD2-NexTech:
           lessons:
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         CSPPD2:
           lessons:
             Getting Started:
@@ -1073,8 +1105,14 @@ sk:
           lessons:
             Designing for Your User:
               name: Navrhovanie pre vášho používateľa
+            How is Data Collected?:
+              name: Ako sa zberajú dáta?
             Privacy in a Digital World:
               name: Súkromie v digitálnom svete
+            What Data Can Tell Us:
+              name: Čo nám vedia povedať dáta?
+            Why Make Apps?:
+              name: Prečo tvoriť applikácie?
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1083,6 +1121,8 @@ sk:
               name: Zhrnutie
         algebraPD3b:
           lessons:
+            Close and Next Steps:
+              name: Zatvoriť & ďalšie kroky
             Getting Started:
               name: Začíname
         CSPPD3-Unit2:
@@ -1185,6 +1225,12 @@ sk:
               name: Vymazanie záznamov
             Final Project:
               name: Záverečný projekt
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Visualizing Data:
+              name: Vizualizovanie dát.
         CSPPD3-Unit5:
           lessons:
             Getting Started:
@@ -1195,6 +1241,12 @@ sk:
               name: Vymazanie záznamov
             Final Project:
               name: Záverečný projekt
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Visualizing Data:
+              name: Vizualizovanie dát.
         AlgebraA:
           lessons:
             'Unplugged: The Design Recipe':
@@ -1576,16 +1628,24 @@ sk:
               name: 'Bez počítača: Písanie pesničiek s parametrami'
         ecs-unit1:
           lessons:
+            Unit 1, Day 10 Telling a Story with Data:
+              name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
+            Unit 1, Day 11-14 Data Modeling and Design:
+              name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
             0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
             1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+              Kapitola , Deň 1-2 Čo je to počítač?
+            Unit 1, Days 3-4 Buying a Computer:
+              name: Kapitola 1 , Deň 3-4 Kúpa počítača.
+            Unit 1, Days 5-7 Searching and Web 2:
+              name: Kapitola 1, Deň 5-7 Vyhľadávanie a internet 2.
             Welcome!:
               name: Vitajte!
             Wrap-up:
               name: Zhrnutie
+            Unit 1, Days 1-2 What Is a Computer?:
+              name: Kapitola , Deň 1-2 Čo je to počítač?
         ecs-unit2:
           lessons:
             Close & Next Steps:
@@ -2295,6 +2355,12 @@ sk:
           lessons:
             Deleting Records:
               name: Vymazanie záznamov
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Visualizing Data:
+              name: Vizualizovanie dát.
             Final Project:
               name: Záverečný projekt
             Post-Course Survey:
@@ -4631,6 +4697,12 @@ sk:
           lessons:
             Deleting Records:
               name: Vymazanie záznamov
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Visualizing Data:
+              name: Vizualizovanie dát.
             Final Project:
               name: Záverečný projekt
         spritelab:
@@ -5971,6 +6043,12 @@ sk:
           lessons:
             Deleting Records:
               name: Vymazanie záznamov
+            Updating Records:
+              name: Aktualizovanie záznamov.
+            Importing and Exporting Data:
+              name: Importovanie a exportovanie dát.
+            Visualizing Data:
+              name: Vizualizovanie dát.
             Final Project:
               name: Záverečný projekt
         csp1-pilot:
@@ -7760,6 +7838,8 @@ sk:
           lessons:
             AI for Oceans:
               name: AI pomáha oceánom
+            visualizing:
+              name: Vizualizovanie dát.
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -8584,6 +8664,8 @@ sk:
             lesson-1:
               name: Tanečná Párty
           lesson_groups:
+            csf_warmup:
+              display_name: Úvodná aktivita
             csf_sequencing:
               display_name: Postupnosť
             csf_loops:
@@ -8600,6 +8682,8 @@ sk:
               display_name: Objekt "sprite"
             end_of_course_project:
               display_name: Záverečný projekt
+            lessonGroup-9:
+              display_name: Úvodná aktivita
           student_description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
         pre-express-2021:
           title: Zrýchlený kurz pre predškolákov (2020)

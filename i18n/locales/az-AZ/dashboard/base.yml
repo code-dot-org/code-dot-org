@@ -19,9 +19,13 @@ az:
     errors:
       messages:
         blank: "zəruridir"
+        blank_plural: "zəruridir"
+        invalid: "səhvdir"
+        invalid_plural: "səhvdir"
     attributes:
       user:
         name: 'Göstərilən adınız'
+        name_example: 'Görünən Adınız (məs. Super Koder və ya Filankəs F.)'
         email: 'E-poçt'
         username: 'istifadəçi adı'
         password: 'Parol'
@@ -98,6 +102,7 @@ az:
     age: 'Yaşınız'
     user_type: 'Siz tələbəsiniz ya müəllim?'
     submit: 'Qeydiyyatdan keçin'
+    go_to_account: 'Hesabıma qayıt'
     teacher: 'Müəllimsiniz?'
     valid_username: "Olar!"
     invalid_username: "İstifadəçi adı ən azı 5 simvoldan ibarət olmalıdır"

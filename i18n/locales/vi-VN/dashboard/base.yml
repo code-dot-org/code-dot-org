@@ -362,6 +362,7 @@ vi:
       playlab: 'Phòng trò chơi'
       playlab_k1: 'Kho trò chơi (dành cho trẻ chưa biết đọc)'
       scratch: 'Scratch'
+      sports: 'Thể thao'
       starwars: 'Cuộc Chiến Giữa Các Vì Sao'
       weblab: 'Kho Web'
       view_all: 'Xem tất cả các dự án ...'
@@ -604,6 +605,7 @@ vi:
       audience: "13 tuổi trở lên"
       cta: "Học cách làm"
     hoc-encryption:
+      title: "Mã hóa đơn giản"
       body: "Học sinh sẽ học các kỹ thuật tạo và giải mã các tin nhắn được mã hóa."
     weblab:
       title: "Phòng thí nghiệm web (beta)"
@@ -629,6 +631,7 @@ vi:
       title: "Minecraft"
       body: "Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã."
     sports:
+      title: "Thể thao"
       body: "Thực hiện một trò chơi bóng rổ hoặc trộn lẫn và kết hợp với thể thao."
     text-compression:
       title: "Nén văn bản"
@@ -825,6 +828,8 @@ vi:
     title: 'Tải giờ của mã'
     instructions_headline: 'Không có Internet?'
     minecraft_name: 'Minecraft Hour of Code'
+    starwars_blocks_name: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh (Khối)'
+    starwars_javascript_name: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh (JavaScript)'
     download_in_Albanian: 'Tải xuống bằng Tiếng Albania:'
     download_in_Arabic: 'Tải xuống bằng tiếng Ả Rập:'
     download_in_Azerbaijani: 'Tải về tại Azerbaijan:'

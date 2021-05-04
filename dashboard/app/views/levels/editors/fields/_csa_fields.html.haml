@@ -1,0 +1,7 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#csa_features"}}
+  CSA Features
+
+#csa_features.in.collapse
+  .field
+    Select the desired CSA view:
+    = f.select :csa_view_mode, options_for_select([['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']])

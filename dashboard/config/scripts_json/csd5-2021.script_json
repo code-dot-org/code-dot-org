@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-24 15:52:24 UTC",
+    "serialized_at": "2021-04-30 20:01:06 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -2331,7 +2331,14 @@
       "key": "38317c40-2286-4bdc-ae50-584849b6baed",
       "position": 2,
       "properties": {
-        "progression_name": "Binary and Data"
+        "progression_name": "Binary and Data",
+        "description": "**Questions to Consider with Video:**\n- Why are all the types of data on the computer stored as numbers?\n- If everything is stored as a number, how do you think the computer tell the difference between numbers, letters, images, and sound?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The goal of this discussion is to have the students think more deeply about the purpose of binary. \n\nFor the first question, they may want to return to their ASCII character sheets and see how the computer would interpret the same binary sequence as a number. For their image representation, they may wonder whether it is even useful to interpret the binary sequences as numbers. In the end, the purpose of defining all data as numbers is less about the \"reality\" of what the ones and zeros represent, and more about how binary is traditionally interpreted.\n\nFor the second question, allow students to think of different ways that the computer would distinguish between different types of data. While it's not necessary for students to come up with any specific answer, challenge them in any ways that involve human interpretation of context, such as knowing that a name is most likely text and age is most likely a number. Assure them that they will look at the problem again in a couple of lessons."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "38317c40-2286-4bdc-ae50-584849b6baed",
@@ -5993,8 +6000,8 @@
   ],
   "resources": [
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
+      "name": "CSD Unit 5 - Data & Society",
+      "url": "https://docs.google.com/presentation/d/1qAf-Nt78JMDtvqh837cyP8dtudTv5o2AvAsWiUH2YJs/copy",
       "key": "unit-5-data-society",
       "properties": {
         "type": "Slides",

@@ -64,9 +64,9 @@ level 'courseF_text_practice', progression: 'Practice'
 
 lesson 'lesson-11', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: true
 level 'courseF_label_predict', progression: 'Prediction'
-level 'courseF_variables_samples', progression: 'Exploration: Sample Apps'
+level 'courseF_variables_samples', progression: 'Exploration: Sample Programs'
 level 'courseF_variables_stop', progression: 'Planning'
-level 'courseF_variables_projects', progression: 'Mini-Project: User Input Programs'
+level 'courseF_variables_projects', progression: 'Application - Create Your Project'
 
 lesson 'Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
 level 'courseC_video_artist_2021', progression: 'Video: Artist Intro with JR Hildebrande'
@@ -139,15 +139,7 @@ level 'simconfig_2021', progression: 'Modify simulation variables'
 level 'simcustom_2021', progression: 'Customize'
 
 lesson 'lesson-5', display_name: 'Outbreak', has_lesson_plan: true
-level 'contagion_story', progression: 'Outbreak'
-level 'contagion_setup', progression: 'Outbreak'
-level 'contagion_events', progression: 'Outbreak'
-level 'contagion_data', progression: 'Outbreak'
-level 'contagion_masks', progression: 'Outbreak'
-level 'contagion_chance', progression: 'Outbreak'
-level 'contagion_more chance', progression: 'Outbreak'
-level 'contagion_modify_chance', progression: 'Outbreak'
-level 'contagion_vaccine', progression: 'Outbreak'
+level 'CourseF_outbreak_story'
 
 lesson 'AI for Oceans', display_name: 'AI For Oceans', has_lesson_plan: true
 level 'CourseF_Oceans_Video_Machine_Learning_2021', progression: 'Video: AI: What is Machine Learning?'

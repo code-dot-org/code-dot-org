@@ -1803,20 +1803,20 @@ pl-PL:
           każdej literze alfabetu przypadkową inną literę alfabetu? Nosi to nazwę
           **szyfru losowego podstawienia.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nZamiast
           tajnej wiadomości zakodowanej przy pomocy prostego przesunięcia alfabetu,
-          skonfrontujesz się z wiadomościami zakodowanymi przy pomocy **losowego podstawienia.\n\nJest
-          to dużo trudniejsze do złamania i wymaga dużo bardziej skomplikowanego narzędzia,
-          zatem ...\n\nGdy klikniesz \"Kontynuuj\", zobaczysz **nową, bardziej zaawansowaną
-          wersję narzędzia do szyfrowania **, która pokazuje Ci więcej różnych rzeczy.\n\nPewną
-          tajemnicą pozostaje jednak zasada jego działania\n\n### Twoje zadanie:\n\n
-          * Wymyśl, co dzieje się w tej nowej wersji narzędzia \n * Jakie informacje
-          są Ci przedstawiane?\n * Wymyśl, co umożliwia Ci to narzędzie\n * Jak zwykle:
-          nie da się tego zniszczyć. Zatem klikaj, szperaj .\n * Jeśli wymyślisz,
-          jak to działa, możesz być w stanie złamać wiadomość zakodowaną przy pomocy
-          losowego podstawienia.\n \n### Wskazówka\n\n* Czy wiedziałeś, że **E** jest
-          najpopularniejszą literą stosowaną w języku angielskim?\n\n### Zbierzcie
-          się ponownie i omówcie\n Po jakimś czasie zabawy należy zebrać pewne grono
-          osób - partnera, małą grupę, całą klasę, aby omówić swoje ustalenia i zweryfikować
-          czy wiesz, o co chodzi oraz czy znasz różne sposoby wykorzystania narzędzia.\n\n\n"
+          otrzymasz wiadomości zakodowane przy pomocy **losowego podstawienia**.\n\nJest
+          to dużo trudniejsze do złamania i wymaga dużo bardziej wyszukanego narzędzia,
+          zatem ...\n\nGdy klikniesz Kontynuuj, zobaczysz **nową, bardziej zaawansowaną
+          wersję narzędzia do szyfrowania**, która pokazuje Ci więcej różnych rzeczy.\n\nAle
+          to, cop robi, jest pewną zagadką!\n\n### Twoje zadanie:\n\n * Wymyśl, co
+          dzieje się w tej nowej wersji narzędzia \n * Jakie informacje są Ci przedstawiane?\n
+          * Wymyśl, co umożliwia Ci to narzędzie\n * Jak zwykle: nie da się tego zniszczyć.
+          Zatem klikaj, szperaj .\n * Jeśli wymyślisz, jak to działa, możesz być w
+          stanie złamać wiadomość zakodowaną przy pomocy losowego podstawienia.\n
+          \n### Wskazówka\n\n* Czy wiedziałeś, że **E** jest najpopularniejszą literą
+          występującą w języku angielskim?\n\n### Zbierzcie się ponownie i omówcie\n
+          Po zabawie z tym przez jakiś czas, zbierzcie grono osób - partnera, małą
+          grupę, całą klasę - aby omówić swoje ustalenia i zweryfikować czy wiecie,
+          jak to działa oraz różne sposoby wykorzystania tego narzędzia.\n\n\n"
       OPD-K5 Reviewing Reflections:
         content1: opis tutaj
       OPD-K5 Stage3aGo:
@@ -1945,38 +1945,38 @@ pl-PL:
           Czas na zaprezentowanie Waszych projektów! Twój nauczyciel poda Ci więcej szczegółów na temat tego,, jak będziesz prezentować swoją pracę kolegom z klasy.
       'Technique: Frequency Analysis':
         content1: opis tutaj
-        markdown: "# Łamanie szyfrów podstawieniowych\n\nNajlepszą techniką łamania
-          losowego kodu podstawieniowego jest znana jako **analiza częstotliwości**
+        markdown: "# Łamanie szyfrów podstawieniowych\n\nNajlepsza technika łamania
+          losowego szyfru podstawieniowego jest znana jako **analiza częstotliwości**
           \n\nSparafrazowane z serwisu: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
           **Analiza częstotliwości** jest techniką, której podstawę stanowi to, jak
           *często* pewne litery pojawiają się w języku angielskim w porównaniu do
-          innych.\n* Na przykład w danym fragmencie tekstu w języku angielskim *E*,
-          *T*, *A* i *O* są najpopularniejsze, natomiast *Z*, *Q* i *X* występują
-          rzadko. Podobnie, *TH*, *ER*, *ON* i *AN* stanowią najpopularniejsze pary
-          liter, które występują obok siebie.\n* W rzeczywistości rozkład liter jest
-          w przybliżeniu taki sam dla prawie *wszystkich* próbek tekstu w języku angielskim.
-          \n\n\nWersja widgetu na poprzedniej stronie ma pomóc w **łamaniu szyfru
-          podstawieniowego rzy pomocy analizy częstotliwości**.\n\nPoprzez analizę
-          częstotliwości występowania liter w zaszyfrowanej wiadomości w porównaniu
+          innych liter. \n* Na przykład, w danym fragmencie tekstu w języku angielskim
+          litery *E*, *T*, *A* i *O* są najpopularniejsze, natomiast *Z*, *Q* i *X*
+          występują rzadko. Podobnie, *TH*, *ER*, *ON* i *AN* stanowią najpopularniejsze
+          pary liter, które występują obok siebie.\n* W rzeczywistości, rozkład liter
+          jest w przybliżeniu taki sam dla prawie *wszystkich* próbek tekstu w języku
+          angielskim. \n\nWersja widgetu na poprzedniej stronie ma pomóc Ci w **łamaniu
+          szyfru podstawieniowego przy pomocy analizy częstotliwości**.\n\nPoprzez
+          analizę częstotliwości występowania liter w zaszyfrowanej wiadomości w porównaniu
           do częstotliwości liter w typowym fragmencie prozy w języku angielskim,
           możesz rozpocząć zawężanie zakresu części odwzorowania liter. \n\nNarzędzi
-          pokazuje jak wypada porównanie częstotliwości występowania liter w zaszyfrowanym
+          pokazuje Ci, jak wypada porównanie częstotliwości występowania liter w zaszyfrowanym
           tekście (w kolorze pomarańczowym) do częstotliwości ich występowania w typowym
           tekście w języku angielskim (w kolorze niebieskim).\n\n### Wskazówka: Gdzie
-          rozpocząć?\n\n1. Znajdź krótkie wyrazy i \"złam\" je jako pierwsze. Jak
-          wiele znasz słów jednoliterowych? (\"a\").  Bardzo popularnym słowem trzyliterowym
-          jest wyraz \"the\".\n2. Gdy już skończysz masz zastąpienia niektórych najpopularniejszych
-          liter. Powinieneś mieć możliwość posłużenia się intuicją, aby przyjrzeć
-          się innym słowom dzięki tym częściowym podstawieniom oraz dobrze odgadywać.\n3.
+          rozpocząć?\n\n1. Znajdź krótkie wyrazy i \"złam\" je jako pierwsze. Ile
+          znasz słów jednoliterowych? (\"a\").  Bardzo popularnym słowem trzyliterowym
+          jest wyraz \"the\".\n2. Gdy już skończysz, masz już podstawienia niektórych
+          najpopularniejszych liter. Powinieneś umieć posłużyć się intuicją, aby przyjrzeć
+          się innym słowom dzięki tym częściowym podstawieniom, by dalej dobrze odgadywać.\n3.
           Po znalezieniu, nawet z trudem, zaledwie kilku liter, reszta poukłada się
           już szybko.\n4. Porównanie częstotliwości występowania liter daje dobry
-          ogląd jak sensownie zgadywać.\n\n### Wypróbuj tego:\nPoniższa animacja pokazuje
+          ogląd, jak sensownie zgadywać.\n\n### Wypróbuj to:\nPoniższa animacja pokazuje
           kogoś, kto zaczyna. Ich próba przebiegała następująco\n\n* Najpierw pogrupuj
-          znaki według częstotliwości. \n* Identyfikuj grupy znaków, które mogą odwzorowywać
-          słowo `the`.  \nTo jest dobry start!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          znaki według częstotliwości. \n* Identyfikuj grupy znaków, które mogą odpowiadać
+          słowu `the`.  \nTo jest dobry pocztek!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
           Czy losowe podstawianie się sprawdza?\n* Po zdobyciu pewnej praktyki, jak
           długo zabiera Ci złamanie losowego szyfru podstawieniowego?\n* Czy to się
-          sprawdza czy nie?\n\n\n"
+          sprawdza, czy nie?\n\n\n"
       Terminology Recap:
         content1: opis tutaj
         markdown: "# Zrób przerwę i powtórz\n\nWiadomości zaszyfrowane przy pomocy
@@ -4938,7 +4938,7 @@ pl-PL:
 
           Możesz również udostępnić swój model symulacyjny innym lub podzielić się informacją, co Twoim zdaniem możemy zrobić, aby pomóc innym zachować zdrowie, gdy wirus pojawi się w mieście.
       CSD U1 Test:
-        title: "\nTest: Komputery i rozwiązywanie problemów "
+        title: "\nTest po projekcie: Komputery i rozwiązywanie problemów "
       'Overview: If Statements':
         markdown: |+
           # Instrukcja warunkowa
