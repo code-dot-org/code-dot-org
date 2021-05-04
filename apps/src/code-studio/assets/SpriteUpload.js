@@ -183,8 +183,5 @@ const styles = {
   },
   radioButton: {
     margin: 10
-  },
-  uploadButtonDisabled: {
-    backgroundColor: color.lightest_gray
   }
 };
