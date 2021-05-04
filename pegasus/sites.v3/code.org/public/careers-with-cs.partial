@@ -72,9 +72,9 @@ social:
 <div class="col-33" style="background-color:#00adbc; text-align:center; margin-top:15px; padding:15px; padding-left:25px; padding-right:25px; overflow: hidden; position: relative; border-radius:15px">
   <h3 style="color:#ffffff"><strong>Viewing Guide and Reflection Worksheet</strong></h3>
   <p style="color:#ffffff">Teachers, check out our viewing guide for using these videos in class. Guide also includes reflection worksheet for students in grade 6 and up.</p>
-  <a class="linktag" id="viewing-guide" href><img src="/images/csjourneys/viewing-guide.png" style="width:90%" alt="Careers with CS video viewing guide"></a>
-  <br>
-  <p style="color:#ffffff; margin-top:10px">View our <a class="linktag" id="csjourneys" href="/csjourneys" target="_blank" style="color:#ffffff">CS Journeys page</a> for more resources connecting classroom learning to real-world CS pathways.</p>
+  <a class="linktag" id="viewing-guide" href="/files/Careers-in-Tech-guide-worksheets.pdf" target="_blank"><img src="/images/csjourneys/viewing-guide.png" style="width:90%" alt="Careers with CS video viewing guide"></a>
+  <p style="color:#ffffff"><i>Click image to view file as PDF</i></p>
+  <p style="color:#ffffff; margin-top:5px">View our <a class="linktag" id="csjourneys" href="/csjourneys" target="_blank" style="color:#ffffff">CS Journeys page</a> for more resources connecting classroom learning to real-world CS pathways.</p>
   <br>
   <br>
 </div>
