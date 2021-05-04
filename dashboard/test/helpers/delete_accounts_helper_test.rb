@@ -501,6 +501,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.authentication_options
   # Note: acts_as_paranoid
   #
+
   test "removes the user primary_contact_info" do
     # Problem noticed on 11/29/2018
     # Account purged failed on a user account that had no authentication_options
@@ -570,7 +571,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty AuthenticationOption.with_deleted.where(id: ids)
   end
 
-  test "purges user with duplicated authentication option" do
+  test "purges user with duplicate authentication option" do
     # Create an user with an Google authentication option,
     # then destroy (soft-delete) the authentication option.
     user = create :user
