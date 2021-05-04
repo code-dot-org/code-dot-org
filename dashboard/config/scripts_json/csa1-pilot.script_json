@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:12 UTC",
+    "serialized_at": "2021-05-04 18:54:46 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -475,7 +475,7 @@
       "key": "6c381443-2693-40ec-a35e-d3e7f57a4ff2",
       "position": 3,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -517,6 +517,7 @@
       "key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -572,6 +573,7 @@
       "key": "544a54c1-d1eb-416d-870c-56e02be3e8e5",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -683,6 +685,7 @@
       "key": "cbdd952c-dd9f-4393-afee-4a13cf710f65",
       "position": 2,
       "properties": {
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -724,7 +727,7 @@
       "key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -735,24 +738,10 @@
       }
     },
     {
-      "key": "337dee6e-1d9e-473c-899d-5f8017167016",
+      "key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
       "position": 3,
       "properties": {
         "duration": 5,
-        "name": "Review Request"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016",
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-pilot"
-      }
-    },
-    {
-      "key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
-      "position": 4,
-      "properties": {
-        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1073,6 +1062,7 @@
       "key": "545c156f-dbea-4ee6-9ea7-2bbd65ec78c8",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -2858,20 +2848,22 @@
       }
     },
     {
-      "key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
-      "position": 1,
+      "key": "10a09b13-49a7-4ef6-abf6-4e6f8189a83b",
+      "position": 5,
       "properties": {
         "description": "\nAfter several commits, a developer may be ready to share their code with others to get feedback about the program. ",
+        "duration": "5",
+        "name": "Review Request",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
-        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+        "activity_section.key": "10a09b13-49a7-4ef6-abf6-4e6f8189a83b",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
-      "key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
-      "position": 2,
+      "key": "78b0fadd-aa0d-45c9-b8f9-4b119e2bdbe0",
+      "position": 6,
       "properties": {
         "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of feedback requests. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of requesting feedback, focusing on the importance of writing a clear and specific message about what they are asking the reviewer to look for. Highlight the fact that this is often called a pull request in industry.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return students to Code Studio and walk them through writing a message to their group and requesting feedback.\n",
         "tips": [
@@ -2882,13 +2874,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
-        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+        "activity_section.key": "78b0fadd-aa0d-45c9-b8f9-4b119e2bdbe0",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
-      "key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
-      "position": 3,
+      "key": "075b4bb4-3b1a-4730-a61b-c26fc1787b7b",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The next step of the code review is to review the author’s program actively. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the human who wrote it.",
         "duration": "14",
@@ -2896,13 +2888,13 @@
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
-        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+        "activity_section.key": "075b4bb4-3b1a-4730-a61b-c26fc1787b7b",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
-      "key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
-      "position": 4,
+      "key": "f2f82814-3e7a-49df-b377-8b188570b512",
+      "position": 8,
       "properties": {
         "description": "**Do This:** Use the slides to give an overview of writing comments.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews - by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share ART - a mnemonic to help them craft their feedback statements.\n  * Ask questions\n  * Raise flags about confusing code\n  * Tag awesome code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice Activity Guide to each review group. Students are not working directly in the guide at the beginning of this activity, but having the document allows them to see the entire code segment while working with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** This activity gradually releases students to writing comments independently using the following steps:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click to display three sample feedback statements to the students asking each time whether they are valuable comments. Students should expand on their answers, explaining why or why not. If not, can they think of a better way of phrasing the information?\n  * Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n  * Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n  * Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a whole class, students share additional feedback that they may leave for the code on the screen and how that feedback is valuable to the developer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students transition to working in pairs, writing additional comments for the developer on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students review one member of their review group’s work in Code Studio, returning to Level 1.\n",
         "tips": [
@@ -2913,13 +2905,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
-        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+        "activity_section.key": "f2f82814-3e7a-49df-b377-8b188570b512",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
-      "key": "df6356e7-a386-4541-a0ce-15062d79cabe",
-      "position": 5,
+      "key": "6b87bb46-5a1c-42ed-8da2-a745ab9d3c85",
+      "position": 9,
       "properties": {
         "description": "**Do This:** Review the next three slides to discuss the process of returning feedback and the nature of code review as a process:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of returning feedback. Address both:\n  * How to return feedback on Code Studio.\n  * Before returning feedback, students should get in the habit of re-reading their review and doing a quick self-check: Are the notes true, necessary, and kind?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Returning feedback is not the end of the process!\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that code review is a process and often occurs as a cycle. Developers request and receive feedback, then implement the changes and request more feedback. This process of improving the code step by step can happen several times before completing the product. Note that they will not be revising their code today but will take a moment to read through the comments left by their reviewer. In the future, they will continue this process by revising and resubmitting their code for review.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer.\n",
         "duration": "4",
@@ -2932,8 +2924,8 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "df6356e7-a386-4541-a0ce-15062d79cabe",
-        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+        "activity_section.key": "6b87bb46-5a1c-42ed-8da2-a745ab9d3c85",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
       }
     },
     {
