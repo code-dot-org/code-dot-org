@@ -1,9 +1,5 @@
 <Maze>
   <config><![CDATA[{
-  "game_id": 25,
-  "created_at": "2020-12-04T22:35:35.000Z",
-  "level_num": "custom",
-  "user_id": 19,
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,4,0,0,0],[0,0,0,1,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
@@ -26,7 +22,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.\",\"hint_id\":\"courseC_maze_programming4_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5c55befcabf4ef9eeaa660ba09d84e93/courseD_maze_ramp4_2019.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.\",\"hint_id\":\"courseC_maze_programming4_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/02300d3fa5f8081a49622345df54a194/courseD_maze_ramp4_2019.mp3\"}]",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming4_1\",\r\n  \"callout_text\": \"This is your block limit.  It tells you how many of these blocks you have left to use.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 7,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming4_1\",\r\n  \"callout_text\": \"This is your block limit.  It tells you how many of these blocks you have left to use.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 7,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -38,11 +34,17 @@
     "shape_shift": "false",
     "short_instructions": "Help Scrat reach the acorn.",
     "long_instructions": "*\"Trace the path and lead me to the acorn.\"* ",
+    "encrypted": "false",
+    "maze_data": null,
     "preload_asset_list": null
   },
+  "game_id": 25,
   "published": true,
+  "created_at": "2020-12-04T22:35:35.000Z",
+  "level_num": "custom",
+  "user_id": 19,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-03-01 23:14:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-26 19:30:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-11-16 20:09:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-12-11 15:48:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-03-01 23:14:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-26 19:30:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-11-16 20:09:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-12-11 15:48:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"skin\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-04 18:40:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":890,\"changed_by_email\":\"amanda+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>
