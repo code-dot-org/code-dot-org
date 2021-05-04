@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-03-02 01:06:08 UTC",
+    "serialized_at": "2021-05-03 23:56:13 UTC",
     "seeding_key": {
       "script.name": "allthemigratedthings"
     }
@@ -70,11 +70,6 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Teacher overview of the lesson",
-        "student_overview": "Student overview of the lesson",
-        "assessment_opportunities": "Assessment opportunities are everywhere",
-        "purpose": "Purpose of this lesson is learning",
-        "preparation": "* Do this\n* Now do this",
         "announcements": [
           {
             "notice": "Teacher Notice",
@@ -97,7 +92,12 @@
             "type": "information",
             "visibility": "Teacher and student"
           }
-        ]
+        ],
+        "assessment_opportunities": "Assessment opportunities are everywhere",
+        "overview": "Teacher overview of the lesson",
+        "preparation": "* Do this\n* Now do this",
+        "purpose": "Purpose of this lesson is learning",
+        "student_overview": "Student overview of the lesson"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -145,10 +145,6 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.",
-        "assessment_opportunities": "assessment opp",
-        "purpose": "purpose",
-        "preparation": "prep",
         "announcements": [
           {
             "notice": "Announcements should not show up",
@@ -157,7 +153,11 @@
             "type": "information",
             "visibility": "Teacher and student"
           }
-        ]
+        ],
+        "assessment_opportunities": "assessment opp",
+        "overview": "This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.",
+        "preparation": "prep",
+        "purpose": "purpose"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -171,8 +171,8 @@
       "key": "fc27dc07-873f-49a3-bed6-9bf30a76a84b",
       "position": 1,
       "properties": {
-        "name": "Activity 1",
-        "duration": 10
+        "duration": 10,
+        "name": "Activity 1"
       },
       "seeding_key": {
         "lesson_activity.key": "fc27dc07-873f-49a3-bed6-9bf30a76a84b",
@@ -224,8 +224,8 @@
       "key": "f48d977f-0ba1-42c5-9af1-9e7205c45bfb",
       "position": 1,
       "properties": {
-        "name": "Do Levels",
         "duration": "5",
+        "name": "Do Levels",
         "progression_name": "Levels are Cool"
       },
       "seeding_key": {
@@ -237,9 +237,9 @@
       "key": "5679a26c-e149-40a6-899e-3291cc8cf6a1",
       "position": 2,
       "properties": {
-        "name": "Discuss",
-        "duration": "5",
         "description": "Discuss the levels you just did",
+        "duration": "5",
+        "name": "Discuss",
         "tips": [
           {
             "type": "discussionGoal",
@@ -276,8 +276,8 @@
       "key": "5fe8f5c7-49ff-4274-be32-731fad0dda5a",
       "position": 1,
       "properties": {
-        "name": "This is a basic example of UI content",
-        "description": "We've just got in here examples of a bunch of the stuff you can include on the page."
+        "description": "We've just got in here examples of a bunch of the stuff you can include on the page.",
+        "name": "This is a basic example of UI content"
       },
       "seeding_key": {
         "activity_section.key": "5fe8f5c7-49ff-4274-be32-731fad0dda5a",
@@ -305,8 +305,8 @@
       "key": "a85c218f-7269-4b2f-b29b-91da44794ace",
       "position": 3,
       "properties": {
-        "name": "image",
-        "description": "![](https://images.code.org/d6f923cd0dac99c974331cd458d6684b-lorem-ipsum.jpg)"
+        "description": "![](https://images.code.org/d6f923cd0dac99c974331cd458d6684b-lorem-ipsum.jpg)",
+        "name": "image"
       },
       "seeding_key": {
         "activity_section.key": "a85c218f-7269-4b2f-b29b-91da44794ace",
@@ -321,9 +321,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
         "progression": "Levels are Cool"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
@@ -355,19 +358,6 @@
   ],
   "resources": [
     {
-      "name": "Teacher Resource",
-      "url": "fake/url/",
-      "key": "teacher_resource",
-      "properties": {
-        "assessment": true,
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "teacher_resource"
-      }
-    },
-    {
       "name": "Student Resource",
       "url": "fake/url/",
       "key": "student_resource",
@@ -378,6 +368,19 @@
       },
       "seeding_key": {
         "resource.key": "student_resource"
+      }
+    },
+    {
+      "name": "Teacher Resource",
+      "url": "fake/url/",
+      "key": "teacher_resource",
+      "properties": {
+        "assessment": true,
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_resource"
       }
     }
   ],
@@ -395,11 +398,19 @@
       }
     }
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
     {
       "key": "word",
       "word": "Word",
       "definition": "This is a definition of the word word",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "word"
       }
@@ -433,5 +444,11 @@
         "objective.key": "a1419708-f12c-4bc0-ab6b-827dd9136255"
       }
     }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
