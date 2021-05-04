@@ -87,7 +87,6 @@ import {setExportGeneratedProperties} from '../code-studio/components/exportDial
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
-import autogenerateML from '@cdo/apps/applab/ai';
 
 /**
  * Create a namespace for the application.
@@ -149,15 +148,7 @@ function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
-
-  // Historically, appWidth and appHeight were customizable on a per level basis.
-  // This led to lots of hackery in the code to properly scale the visualization
-  // area. Width/height are now constant, but much of the hackery still remains
-  // since I don't understand it well enough.
-  Applab.appWidth = level.widgetMode
-    ? applabConstants.WIDGET_WIDTH
-    : applabConstants.APP_WIDTH;
-
+  Applab.appWidth = applabConstants.getAppWidth(level);
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -998,8 +989,7 @@ Applab.render = function() {
     isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
     onScreenCreate: designMode.createScreen,
-    handleVersionHistory: Applab.handleVersionHistory,
-    autogenerateML: autogenerateML
+    handleVersionHistory: Applab.handleVersionHistory
   });
   ReactDOM.render(
     <Provider store={getStore()}>

@@ -128,7 +128,7 @@ class I18nScriptUtils
 
   def self.get_level_url_key(script, level)
     script_level = level.script_levels.find_by_script_id(script.id)
-    path = script_level.build_script_level_path_for_translations(script_level)
+    path = script_level.build_script_level_path(script_level)
     URI.join("https://studio.code.org", path)
   end
 

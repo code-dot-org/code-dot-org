@@ -39,12 +39,26 @@
           "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
           "type": "bullhorn",
           "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Student-only"
         }
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-04-29 22:28:05 UTC",
     "seeding_key": {
       "script.name": "csp2-2020"
     }
@@ -59,6 +73,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "cspSurvey2020",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey2020",
         "script.name": "csp2-2020"
       }
     }
@@ -186,16 +212,31 @@
     },
     {
       "key": "Lesson 9: Assessment Day",
-      "name": "Lesson 9: Assessment Day",
+      "name": "Assessment Day",
       "absolute_position": 9,
       "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
+      "has_lesson_plan": true,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "Lesson 9: Assessment Day",
         "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2020"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
         "script.name": "csp2-2020"
       }
     }
@@ -806,6 +847,31 @@
       "level_keys": [
         "CSP Unit 2 MC Assessment _2020"
       ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "progression": "Post-Course Survey Instructions",
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp2-2020"
+      },
+      "level_keys": [
+        "csp-post-survey-2020-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1072,6 +1138,17 @@
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2020"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2020-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp2-2020"
+      }
     }
   ],
   "resources": [
@@ -1080,13 +1157,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

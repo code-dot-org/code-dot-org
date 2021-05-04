@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-04-21 23:29:30 UTC",
+    "serialized_at": "2021-04-30 19:14:03 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -3035,7 +3035,8 @@
       "key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
       "position": 2,
       "properties": {
-        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options."
+        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.",
+        "progression_name": "Video: Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
@@ -3854,7 +3855,7 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video:  Debugging with the Step Button",
         "level_keys": [
@@ -3880,7 +3881,7 @@
       "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3906,7 +3907,7 @@
       "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3932,7 +3933,7 @@
       "chapter": 19,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3958,7 +3959,7 @@
       "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3984,7 +3985,7 @@
       "chapter": 21,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4010,7 +4011,7 @@
       "chapter": 22,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4036,7 +4037,7 @@
       "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4063,7 +4064,7 @@
       "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4089,7 +4090,7 @@
       "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4115,7 +4116,7 @@
       "chapter": 26,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4141,7 +4142,7 @@
       "chapter": 27,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4871,7 +4872,7 @@
       "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "My Loopy Robotic Friends - Unplugged Activity",
         "level_keys": [
@@ -4897,7 +4898,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Programming with Rey and BB-8",
         "level_keys": [
@@ -4923,7 +4924,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4949,7 +4950,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4975,7 +4976,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Repeat Blocks with BB-8",
         "level_keys": [
@@ -5001,7 +5002,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5027,7 +5028,7 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5053,7 +5054,7 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5079,7 +5080,7 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5105,7 +5106,7 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5131,7 +5132,7 @@
       "chapter": 65,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5158,7 +5159,7 @@
       "chapter": 66,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5184,7 +5185,7 @@
       "chapter": 67,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5210,7 +5211,7 @@
       "chapter": 68,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5236,7 +5237,7 @@
       "chapter": 69,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5262,7 +5263,7 @@
       "chapter": 70,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5288,7 +5289,7 @@
       "chapter": 71,
       "position": 16,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5314,7 +5315,7 @@
       "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: The Harvester",
         "level_keys": [
@@ -5340,7 +5341,7 @@
       "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5366,7 +5367,7 @@
       "chapter": 74,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5392,7 +5393,7 @@
       "chapter": 75,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5418,7 +5419,7 @@
       "chapter": 76,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5444,7 +5445,7 @@
       "chapter": 77,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5470,7 +5471,7 @@
       "chapter": 78,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5496,7 +5497,7 @@
       "chapter": 79,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5522,7 +5523,7 @@
       "chapter": 80,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5549,7 +5550,7 @@
       "chapter": 81,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5575,7 +5576,7 @@
       "chapter": 82,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5601,7 +5602,7 @@
       "chapter": 83,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5627,7 +5628,7 @@
       "chapter": 84,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5653,7 +5654,7 @@
       "chapter": 85,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5679,7 +5680,7 @@
       "chapter": 86,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5705,7 +5706,7 @@
       "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5731,7 +5732,7 @@
       "chapter": 88,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5757,7 +5758,7 @@
       "chapter": 89,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5783,7 +5784,7 @@
       "chapter": 90,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5809,7 +5810,7 @@
       "chapter": 91,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5835,7 +5836,7 @@
       "chapter": 92,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5861,7 +5862,7 @@
       "chapter": 93,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5887,7 +5888,7 @@
       "chapter": 94,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5913,7 +5914,7 @@
       "chapter": 95,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6251,7 +6252,30 @@
       "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Play Lab"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_events_2021"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursec-2021",
+        "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0"
+      },
+      "level_keys": [
+        "courseA_video_events_2021"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6274,10 +6298,10 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 2,
+      "chapter": 110,
+      "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6300,10 +6324,10 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 3,
+      "chapter": 111,
+      "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6326,10 +6350,10 @@
       ]
     },
     {
-      "chapter": 111,
-      "position": 4,
+      "chapter": 112,
+      "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6352,10 +6376,10 @@
       ]
     },
     {
-      "chapter": 112,
-      "position": 5,
+      "chapter": 113,
+      "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6378,10 +6402,10 @@
       ]
     },
     {
-      "chapter": 113,
-      "position": 6,
+      "chapter": 114,
+      "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6404,10 +6428,10 @@
       ]
     },
     {
-      "chapter": 114,
-      "position": 7,
+      "chapter": 115,
+      "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6430,10 +6454,10 @@
       ]
     },
     {
-      "chapter": 115,
-      "position": 8,
+      "chapter": 116,
+      "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6456,10 +6480,10 @@
       ]
     },
     {
-      "chapter": 116,
-      "position": 9,
+      "chapter": 117,
+      "position": 10,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6482,10 +6506,10 @@
       ]
     },
     {
-      "chapter": 117,
-      "position": 10,
+      "chapter": 118,
+      "position": 11,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6508,10 +6532,10 @@
       ]
     },
     {
-      "chapter": 118,
-      "position": 11,
+      "chapter": 119,
+      "position": 12,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6534,10 +6558,10 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 12,
+      "chapter": 120,
+      "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6560,10 +6584,10 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 13,
+      "chapter": 121,
+      "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6586,10 +6610,10 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Picturing Data",
         "level_keys": [
@@ -6612,7 +6636,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6638,10 +6662,10 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Exploration: Sample Project",
         "level_keys": [
@@ -6664,10 +6688,10 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6690,10 +6714,10 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6716,10 +6740,10 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6742,10 +6766,10 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6768,10 +6792,10 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6794,10 +6818,10 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -8107,6 +8131,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseA_video_events_2021",
+        "script_level.level_keys": [
+          "courseA_video_events_2021"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursec-2021",
+        "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseC_PlayLab_events1_2021",
         "script_level.level_keys": [
           "courseC_PlayLab_events1_2021"
@@ -8761,36 +8797,123 @@
       }
     },
     {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csf",
-      "key": "teacher_forum",
+      "name": "CSTA Standards Mapping",
+      "url": "https://studio.code.org/s/coursec-2021/standards",
+      "key": "csta_standards_mapping",
       "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "teacher_forum"
+        "resource.key": "csta_standards_mapping"
+      }
+    },
+    {
+      "name": "Common Core and NGSS Guidance",
+      "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
+      "key": "common_core_and_ngss_guidance",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common_core_and_ngss_guidance"
+      }
+    },
+    {
+      "name": "Cross-Curricular Extension Activities",
+      "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+      "key": "cross-curricular_extension_activities",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cross-curricular_extension_activities"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://studio.code.org/s/coursec-2021/vocab",
+      "key": "course_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Implementation Guide",
+      "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+      "key": "implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "implementation_guide"
+      }
+    },
+    {
+      "name": "Lesson Type Guide",
+      "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+      "key": "lesson_type_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+      "key": "debugging_guide_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide_1"
       }
     },
     {
       "name": "Curriculum Guide",
       "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-      "key": "curriculum_guide",
+      "key": "curriculum_guide_1",
       "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "curriculum_guide"
+        "resource.key": "curriculum_guide_1"
       }
     },
     {
-      "name": "Change Log",
+      "name": "2021 Change Log",
       "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "change_log",
+      "key": "2021_change_log",
       "properties": {
+        "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "change_log"
+        "resource.key": "2021_change_log"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf/",
+      "key": "teacher_forum_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
       }
     }
   ],
@@ -9045,19 +9168,61 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "csta_standards_mapping",
         "script.name": "coursec-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "curriculum_guide",
+        "resource.key": "common_core_and_ngss_guidance",
         "script.name": "coursec-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "change_log",
+        "resource.key": "cross-curricular_extension_activities",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "implementation_guide",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_type_guide",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide_1",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2021_change_log",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "coursec-2021"
       }
     }

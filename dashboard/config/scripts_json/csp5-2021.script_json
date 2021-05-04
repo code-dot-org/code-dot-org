@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-15 18:09:55 UTC",
+    "serialized_at": "2021-05-03 16:55:56 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -89,15 +89,6 @@
         "purpose": "In the warmup, students brainstorm different lists of information that they encounter on a daily basis. Then in the activity, students return to baggies and sticky notes from the previous unit to build a concrete model of a list before seeing how lists are programmed in Javascript. Students are exposed to different ways of interacting with a list like accessing, removing, appending, and inserting elements. The wrap up concludes the lesson with a summary video and a journal vocabulary exercise. ",
         "preparation": "* 7+ sandwich baggies per pair of students\r\n* 1 gallon-sized baggy per pair of students\r\n* packs of red and orange stickies\r\n* pens / pencils\r\n* 1 dry erase marker per four students (pairs can share)\r\n* Review the slides and click through all animations",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1qD09yWcP0TmiM_nEdhuyeknypZ1OqgC1N5_kSWAmI_4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -118,16 +109,7 @@
         "student_overview": "Investigate and modify sample apps that use lists learn common programming patterns with lists.",
         "purpose": "After building a conceptual model for list and list operations in the previous lesson, this lesson allows students to see how they are actually implemented in code. This lesson also introduces common programming patterns when using lists. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists will come in the following lesson.",
         "preparation": "* Review the three apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1xWHSnqmMDNLYjKnaO_KCyUP3NLa59RDY6PXH5W2cJzA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lists Investigate",
@@ -147,16 +129,7 @@
         "student_overview": "Practice programming with lists through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "* Review the slide on string indexes which you'll cover at the beginning of the lesson\r\n* Review the programming progression to understand what students will be asked to do. ",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1NOoAflVmsQBwwbbZrpMJzkJ0gEOCvmSj6555SgSAtcM/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lists Practice",
@@ -175,16 +148,7 @@
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Reminder app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with a blank screen. Students use an Activity Guide to go through the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
         "student_overview": "Make an app that uses lists and programming patterns with lists.",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1xFKqhqHGkIzkZwOX9LZR8gNtbDFPIXs0x_ATtS-Ej9s/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Lists Make",
@@ -205,15 +169,6 @@
         "purpose": "Students are introduced to the concept of loops through a robot maze activity. This unplugged lessons provides students a physical mental model they will be able to use when they start programming with loops in the subsequent lessons.",
         "preparation": "* 1 game board per pair of students\r\n* 1 \"robot\" per pair of students\r\n* Game pieces, markers, or tokens that can be used to represent barriers\r\n* Review the Intro to Loops presentation and click through all animations",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1UwGrwFKRLxS-ZH8N9uoHEVajCCn89HrJ9RqUCPKFVvA/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -234,16 +189,7 @@
         "student_overview": "Investigate and modify sample apps that use loops and learn common programming patterns with loops.",
         "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Practice activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "Review the two apps that students will be investigating and the questions about them. Note that there are target responses to each of these questions on the levels.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1vJtmSemCbt_y9zdBi0nG3P9sLAK9GQxq4RmrwHdyRHo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Loops Investigate",
@@ -263,16 +209,7 @@
         "student_overview": "Practice programming with loops through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with loops in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "* Review the programming progression to understand what students will be asked to do",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1a16RcOBPCi77G7nuhxXmEXalfNl27QhdnBeCxVuGbWk/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Loops Practice",
@@ -291,16 +228,7 @@
         "overview": "Using Programming Patterns and a step-by-step approach students make their own version of a Lock Screen Maker app. At the beginning of the lesson students are able to explore a working version of the app. They are then given the design elements of the app but begin with minimal starting code. A progression of levels guides students on the high level steps they should use to develop their app but leaves it to them to decide how to write the code. At the end students submit their apps which can be assessed using a provided rubric.",
         "student_overview": "Practice making an app that uses loops and programming patterns with loops.",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1RPF2VsxIrvlhjoF9JL8XyoCK8oLaCVAu6z7uOtpPzg8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Loops Make",
@@ -321,15 +249,6 @@
         "purpose": "Students are introduced to the concept of traversal using the Traversal Machine. This unplugged lessons provides students a physical mental model they will be able to use when they transition to programming traversals in App Lab. ",
         "preparation": "Per pair of students:\r\n\r\n* 1 Traversal Machine \r\n\r\n\t* The index sheet contains enough sections to divide between six students\r\n\r\n* Preview the Intro to Traversals slideshow. Click through all animations.  ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1k8RDuZXj4m99BbMjS9aKP6clvHc1Txjw413K2e8RADs/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "unplugged": true
       },
       "seeding_key": {
@@ -349,16 +268,7 @@
         "overview": "In this lesson students work with partners to investigate three different apps that use traversal to access items in a lists. Students first explore all three apps without seeing the code to notice similarities and predict how they will work. Then they explore the code itself and make additions and modifications to the apps. To conclude the lesson, students review and discuss common programming patterns with traversals.",
         "student_overview": "Investigate and modify sample apps that use traversals.",
         "purpose": "After building a conceptual model using a for loop to traverse a list in the previous lesson, this lesson allows students to see how this is actually implemented in code. This lesson also introduces common programming patterns when using lists and traverals. Students will have some opportunities to modify working code in this lesson, but the most significant practice with lists and traversals will come in the following lesson.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1vbD47mqxEn-LweN1y_1UBBq__UKANPEuOW9LzfFjHK0/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
@@ -378,16 +288,7 @@
         "student_overview": "Practice programming with list traversals through a set of programming puzzles.",
         "purpose": "This lesson is students primary opportunity to get hands on with lists in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. ",
         "preparation": "* Review the levels that students will be completing with an eye for how you will encourage them to use the debugging practices emphasized in today's lesson.",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1N137MOwyCgbD4YQdHVdJwQl3zt83yVPG3__ZrYp0jd8/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Traversals Practice",
@@ -407,16 +308,7 @@
         "student_overview": "Practice making an app that processes a list from a data set using traversal. ",
         "purpose": "This lesson is an opportunity for students to take on the \"blank screen\" and build the code that runs an app entirely from scratch. Guidance provided throughout the lesson helps students break down the large task of \"building an app\" into more incremental steps that they can use on future projects, including this unit's final project and the Create PT.",
         "preparation": "* If time allows, try to build all or part of the Random Forecaster app yourself to understand the challenges involved\r\n* Review the debugging practices you intend to reinforce and resources you'll direct students towards as they get stuck",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1HfFQZy7EkhDXFbkbhFZgFEcigbdnal5M3HixYAm4oo4/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ]
+        "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
         "lesson.key": "Traversals Make",
@@ -437,15 +329,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines\r\n* Go to the last lesson of the project to review the [Example Written Response Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/1)\r\n and [Example Project App Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/10B7nztCcB40WHaZVhHoVYbnAGqCFHKsquKgNazg9q0M/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -467,15 +350,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide, paying particular focus to the Scoring Guidelines",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1WqaVwyT2x8WZ5jtT1bugUGfLq8geqRrPWjhOERA6O60/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -497,15 +371,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide\r\n\t* Pay particular focus to the Scoring Guidelines",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1kur2pn96K572Y4Jr4482cbZH8-GDMfl_AF-XtIZhhlo/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -527,15 +392,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide\r\n\t* Pay particular focus to the Scoring Guidelines",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1k3XrYsIRuwBwmj__tL5IW4dF66BIx_UQbrMGBLV52HY/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -557,15 +413,6 @@
         "purpose": "Students will demonstrate their app design and programming skills throughout this five day project. In addition, students work with a dataset as this ensures students will be using the types of programming constructs required for the Create Performance Task, which this project is designed as a practice for. Students complete the project by individually filling out a Written Response, modeled after the Create PT. \r\n\r\nThis project can be used as a unit project, or as an end cap to the first semester of the course. ",
         "preparation": "* Read through the Planning Guide paying particular focus to the Scoring Guidelines\n* Review the [Example Written Response Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/1)\n and [Example Project App Submission](https://studio.code.org/s/csp5-2020/stage/17/puzzle/2) (in the blue teacher panel) ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1kRKv8LF-F1uaThc21Kr5OKg6zRUhCpZnaqROrK0RoJQ/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -586,15 +433,6 @@
         "student_overview": "Assessment day to conclude the unit.",
         "preparation": "* Preview the assessment questions",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "announcements": [
-          {
-            "notice": "Lesson Modifications",
-            "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our guidelines for modifications.",
-            "link": "https://docs.google.com/document/d/1vD78ljpckeNa3BhwLbouGEUfn4ht11o-G17Jwq2f1Bg/edit?usp=sharing",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "assessment": true
       },
       "seeding_key": {
@@ -2010,7 +1848,7 @@
       "key": "0955ca3f-4dce-4124-a915-53a3ede87355",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \r\n\r\n\r\n\r\n\r\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: [`moveForward()`(#4dd0e1)](/docs/applab/moveForward/). <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command [`turnRight()`(#4dd0e1)](/docs/applab/turnRight/) <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command [`turnLeft()`(#4dd0e1)](/docs/applab/turnLeft/)  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\r\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Loops. \n\n\n\n\n| Slides | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops1.png) | **Say:** Today we are going to explore Loops. You will move a robot around a game board following commands. Here's the first one: [`moveForward()`(#4dd0e1)](/docs/applab/moveForward/). <br><br> **Do This:** Use this command to write a program to move the robot to the purple box. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to reveal the answer.** |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops2.png) | **Say:** This code is repetitive. How can we simplify it? By using a While Loop. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops3.png) | **Say:** Here's how a While Loop works. While something is true, the code in the while loop runs, over and over until that thing is no longer true. Let's try it together! |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops4.png) | **Say:** Let's run this program together. Set up your board with the robot in the same place as the robot on the screen. We are going to run each step of the loop together. First you will try it on your board, and then we will look at the answers on the screen. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops5.png) | **Say:** Read the code with your partner and complete the first round of the loop. You may want a sticky note or a scrap piece of paper out to keep track of the value in the variable. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops6.png) | **Say:** Let's continue on with the second round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops7.png) | **Say:** Now on to the third round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops8.png) | **Say:** Time for the fourth round. You do it first. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops9.png) | **Say:** What happens here? Discuss with your partner. <br><br> **Click through to view the answer after students have had a chance to follow the code on their own board. Discuss each part of the code as it is running. The main thing to point out here is that the loop ends because the Boolean expression evaluates to false. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops10.png) | **Do This: ** With your partner, run this program on your board. What happens?  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Discuss:** Why does the robot run off the board? <br><br> - this is an example of an infinite loop. The program never ends, because steps will always be less than 4.|\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops11.png) | **Say:** You have a new command [`turnRight()`(#4dd0e1)](/docs/applab/turnRight/) <br><br> **Do This:** Run this program on yoru board. Where will the robot end up? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation to see the answer** |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops12.png) | **Say:** A While Loop has three distinct parts. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Read each step as the animation highlights the program code. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops13.png) | **Say:** A For Loop combines all three of these parts into one statement. <br><br> **Click for animation:** Read each step as the animation highlights the program code. <br><br> **Say:** A loop is an example of iteration: a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met.|\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops14.png) | **Say:** You have another new command [`turnLeft()`(#4dd0e1)](/docs/applab/turnLeft/)  <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** With your partner, follow the code with your robot. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops15.png) |  ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops16.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops17.png) | **Say:** We're going to add some new commands to make things more challenging: `canMove(left)` `canMove(right)` `canMove(forward)` `canMove(backward)` . These evaluate to true or false and are dependent on the direction that the robot is facing. If a barrier or a wall is in the way, the Boolean expression evaluates to False. |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops18.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops19.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer** |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops20.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops21.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click to reveal the program code** <br><br> **Do This:** Run the program on your board. Where will the robot end up?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through the animation to see the answer**|\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops22.png) | **Say:** Now it's your turn to write your own programs! <br><br> **Do This:** With a partner, set up a game board and add as many barriers as you'd like. Write a program using a for loop to navigate the board. Figure out the starting and ending points of the robot. Share your board and code with another group. See if you agree on the ending point of the robot! |\n| ![](https://curriculum.code.org/media/uploads/CSPU5_Lists_Loops_Traversals_Loops23.png) | ![](https://curriculum.code.org/media/uploads/animation.png) **Do This:** Review the key takeaways with students.  |"
       },
       "seeding_key": {
         "activity_section.key": "0955ca3f-4dce-4124-a915-53a3ede87355",
@@ -2893,17 +2731,7 @@
       "position": 3,
       "properties": {
         "name": "Traversal Practice",
-        "progression_name": "Traversal Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b",
-        "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888"
-      }
-    },
-    {
-      "key": "2e9ff7bf-15fc-4249-abe1-61284bd73ec4",
-      "position": 4,
-      "properties": {
+        "progression_name": "Traversal Practice",
         "description": "These levels have students perform simple traversals over lists that are created inside their code (not with the data import tools). In each program sample code is provided which students can use to help writing the code of their own.\n\n* **Level 1:** traverse over a list and console.log every element\n* **Level 2:** traverse over a list and console.log every element and its position\n* **Level 3:** traverse over two parallel lists and print elements from both",
         "tips": [
           {
@@ -2913,16 +2741,17 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2e9ff7bf-15fc-4249-abe1-61284bd73ec4",
+        "activity_section.key": "49501848-9943-42dd-8c20-530a2ed0bd3b",
         "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888"
       }
     },
     {
       "key": "bb02b05a-f863-4127-a5d0-69ce27763cb2",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "Reduce and Filter Practice",
-        "progression_name": "Reduce and Filter Practice"
+        "progression_name": "Reduce and Filter Practice",
+        "description": "Students practice the reduce and filter patterns introduced in the previous lesson. In each program sample code is provided which students can use to help writing the code of their own.\n\n* **Level 4:** filter a list of students to keep only those with more than 6 letters in their names. \n* **Level 5:** reduce a list to find the maximum price inside of it.\n* **Level 6:** filter a list of countries to find those in the \"Central America\" region. This program makes use of the data import tools."
       },
       "seeding_key": {
         "activity_section.key": "bb02b05a-f863-4127-a5d0-69ce27763cb2",
@@ -2931,9 +2760,8 @@
     },
     {
       "key": "7a5a32fe-a2dd-4efb-997a-9d581b0dd282",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "Students practice the reduce and filter patterns introduced in the previous lesson. In each program sample code is provided which students can use to help writing the code of their own.\n\n* **Level 4:** filter a list of students to keep only those with more than 6 letters in their names. \n* **Level 5:** reduce a list to find the maximum price inside of it.\n* **Level 6:** filter a list of countries to find those in the \"Central America\" region. This program makes use of the data import tools."
       },
       "seeding_key": {
         "activity_section.key": "7a5a32fe-a2dd-4efb-997a-9d581b0dd282",
@@ -2942,10 +2770,11 @@
     },
     {
       "key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694",
-      "position": 7,
+      "position": 6,
       "properties": {
         "name": "App Practice",
-        "progression_name": "App Practice"
+        "progression_name": "App Practice",
+        "description": "In this level, students use the reduce pattern to finish building an app.\n\n* **Level 7:** Write code for the \"reduce\" pattern to calculate a student's average grade"
       },
       "seeding_key": {
         "activity_section.key": "92ed293f-2ee1-4d6e-b597-2dd8da45e694",
@@ -2953,27 +2782,10 @@
       }
     },
     {
-      "key": "65304653-7959-4728-8abd-0f22e025917b",
-      "position": 8,
-      "properties": {
-        "description": "In this level, students use the reduce pattern to finish building an app.\n\n* **Level 8:** Write code for the \"reduce\" pattern to calculate a student's average grade"
-      },
-      "seeding_key": {
-        "activity_section.key": "65304653-7959-4728-8abd-0f22e025917b",
-        "lesson_activity.key": "6410b5d4-7c92-4d43-8000-0bfa5647b888"
-      }
-    },
-    {
       "key": "2d033dca-a945-4080-8dff-23e5d1c9c87d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What aspects of working with traversals do you feel like clicked today? What do you still feel like you have trouble with?\n\n",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \r\n\r\n"
-          }
-        ],
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with traversals do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n",
         "name": "Synthesizing Discussion\r"
       },
       "seeding_key": {
@@ -3005,22 +2817,12 @@
       }
     },
     {
-      "key": "e4e7997b-8ea7-449e-933b-45fc031c9244",
+      "key": "7b30b568-3d27-4348-a419-ef64439690c3",
       "position": 4,
       "properties": {
-        "name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "e4e7997b-8ea7-449e-933b-45fc031c9244",
-        "lesson_activity.key": "a901616d-689e-468f-ae88-e1a12f43111c"
-      }
-    },
-    {
-      "key": "7b30b568-3d27-4348-a419-ef64439690c3",
-      "position": 5,
-      "properties": {
-        "name": "Check For Understanding: AP Practice",
-        "progression_name": "Check For Understanding: AP Practice"
+        "name": "Assessment: Check For Understanding - AP Practice",
+        "progression_name": "Check For Understanding: AP Practice",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What is stored in `studentScores` after running the program code?\n\n![](https://images.code.org/7230ff7b6b25659600501141472cf036-image-1572026118949.png)"
       },
       "seeding_key": {
         "activity_section.key": "7b30b568-3d27-4348-a419-ef64439690c3",
@@ -3029,9 +2831,8 @@
     },
     {
       "key": "40078008-ed70-4be5-ae76-756fe236f447",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What is stored in `studentScores` after running the program code?\n\n![](https://images.code.org/7230ff7b6b25659600501141472cf036-image-1572026118949.png)"
       },
       "seeding_key": {
         "activity_section.key": "40078008-ed70-4be5-ae76-756fe236f447",
@@ -3062,7 +2863,8 @@
       "position": 1,
       "properties": {
         "name": "Try the Random Forecaster App",
-        "progression_name": "Try the Random Forecaster App"
+        "progression_name": "Try the Random Forecaster App",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students explore the working Random Forecaster app in Level 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* *What information is needed to create this app?*\n* *What list filtering patterns might be used?*\n\n**Discussion Goal:** \n* What information is needed to create this app?\n    * The weather forecast for tomorrow for random cities, including the weather condition, high and low temperatures, and a weather icon.\n* What list filtering patterns might be used?\n    * The List Filter Pattern: Filtering Multiple Lists is used."
       },
       "seeding_key": {
         "activity_section.key": "950b263d-5cd3-4b62-b2fd-68ff6aa22701",
@@ -3070,39 +2872,12 @@
       }
     },
     {
-      "key": "5fe8f6f0-b064-4223-8895-240b4043a0ab",
+      "key": "ee815a14-786a-44e1-a5a8-67cec05b9bea",
       "position": 2,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Have students explore the working Random Forecaster app in Level 2."
-      },
-      "seeding_key": {
-        "activity_section.key": "5fe8f6f0-b064-4223-8895-240b4043a0ab",
-        "lesson_activity.key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53"
-      }
-    },
-    {
-      "key": "d42a6d0e-182e-4ed5-baa7-5c66680c1133",
-      "position": 3,
-      "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Prompt:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* What information is needed to create this app?\n* What list filtering patterns might be used?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "* What information is needed to create this app?\n\t* The weather forecast for tomorrow for random cities, including the weather condition, high and low temperatures, and a weather icon.\n\n* What list filtering patterns might be used?\n\t* The List Filter Pattern: Filtering Multiple Lists is used."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d42a6d0e-182e-4ed5-baa7-5c66680c1133",
-        "lesson_activity.key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53"
-      }
-    },
-    {
-      "key": "ee815a14-786a-44e1-a5a8-67cec05b9bea",
-      "position": 4,
-      "properties": {
         "name": "Make the Random Forecaster App",
-        "progression_name": "Make the Random Forecaster App"
+        "remarks": true,
+        "description": "Now let's build this app. The screen has been set up for you - it's your job to add the code!"
       },
       "seeding_key": {
         "activity_section.key": "ee815a14-786a-44e1-a5a8-67cec05b9bea",
@@ -3110,22 +2885,10 @@
       }
     },
     {
-      "key": "8a1a3a92-ce91-40c7-b6b1-618725ac37cf",
-      "position": 5,
-      "properties": {
-        "description": "Now let's build the this app. The screen has been set up for you - it's your job to add the code!",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "8a1a3a92-ce91-40c7-b6b1-618725ac37cf",
-        "lesson_activity.key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53"
-      }
-    },
-    {
       "key": "35324849-d62b-421f-84e5-31292766e246",
-      "position": 6,
+      "position": 3,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/singleslide.svg) **Do This:** Direct students to level three where they complete the Random Forecaster app. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n![](https://curriculum.code.org/media/uploads/singleslide.svg) **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to level three where they complete the Random Forecaster app. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3142,7 +2905,7 @@
       "key": "01f88ee0-ea02-4755-a58e-7d0ffeafed98",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
+        "description": "Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
             "type": "teachingTip",
@@ -3171,22 +2934,11 @@
       "key": "980179f6-8887-4a78-b1cb-42b52de5b427",
       "position": 3,
       "properties": {
-        "name": "Assessment"
+        "name": "Assessment: Make Project",
+        "description": "Use the rubric provided with the project to assess student projects."
       },
       "seeding_key": {
         "activity_section.key": "980179f6-8887-4a78-b1cb-42b52de5b427",
-        "lesson_activity.key": "5b113b1c-bea3-43d0-bf00-88b8f6e6be8b"
-      }
-    },
-    {
-      "key": "6eff5dba-43ef-4aab-8214-6a9714efa960",
-      "position": 4,
-      "properties": {
-        "description": "Use the rubric provided with the project to assess student projects.",
-        "name": "Make Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "6eff5dba-43ef-4aab-8214-6a9714efa960",
         "lesson_activity.key": "5b113b1c-bea3-43d0-bf00-88b8f6e6be8b"
       }
     },
@@ -3681,7 +3433,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -3707,7 +3459,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Lists",
         "level_keys": [
@@ -4331,7 +4083,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Loops",
         "level_keys": [
@@ -4799,7 +4551,7 @@
       "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Traversal",
         "level_keys": [
@@ -5243,10 +4995,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Random Forecaster App",
-        "level_keys": [
-          "U5 Traversals Make Project 2020_2021"
-        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5257,7 +5005,7 @@
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "ee815a14-786a-44e1-a5a8-67cec05b9bea"
+        "activity_section.key": "35324849-d62b-421f-84e5-31292766e246"
       },
       "level_keys": [
         "U5 Traversals Make Project 2020_2021"
@@ -6124,7 +5872,7 @@
         "lesson.key": "Traversals Make",
         "lesson_group.key": "csp_traversals",
         "script.name": "csp5-2021",
-        "activity_section.key": "ee815a14-786a-44e1-a5a8-67cec05b9bea"
+        "activity_section.key": "35324849-d62b-421f-84e5-31292766e246"
       }
     },
     {
@@ -6191,10 +5939,10 @@
   "resources": [
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1qQPTgZxJnYZRl-9Do2UB_hM882QtouLclWfCsw8jDBw/copy",
+      "url": "https://docs.google.com/presentation/d/1DABkbjVXjTM7FkPeNN1PavV3BWKsOWFyNksWW4UDdQk/edit?usp=sharing",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
-        "type": "Presentation",
+        "type": "Slides",
         "audience": "Teacher"
       },
       "seeding_key": {

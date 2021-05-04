@@ -33,14 +33,20 @@ class SchoolTest < ActiveSupport::TestCase
     # Populate school districts, since schools depends on them as a foreign key.
     SchoolDistrict.seed_all(stub_school_data: true, force: true)
 
-    School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true)
-    assert_equal 0, School.count
+    begin
+      School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true)
+    rescue => error
+      assert_includes error.to_s, 'This was a dry run'
+      assert_equal 0, School.count
+    end
   end
 
   test 'merge_from_csv in dry run mode with existing rows makes no database writes' do
     # Populate school districts, since schools depends on them as a foreign key.
     SchoolDistrict.seed_all(stub_school_data: true, force: true)
     School.merge_from_csv(School.get_seed_filename(true))
+
+    before_count = School.count
 
     # Arbitrary change that should result in an update to each row.
     parse_row = proc do |row|
@@ -51,10 +57,12 @@ class SchoolTest < ActiveSupport::TestCase
       }
     end
 
-    School.any_instance.expects(:save!).never
-    School.any_instance.expects(:update!).never
-
-    School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
+    begin
+      School.merge_from_csv(School.get_seed_filename(true), is_dry_run: true, &parse_row)
+    rescue => error
+      assert_includes error.to_s, 'This was a dry run'
+      assert_equal before_count, School.count
+    end
   end
 
   test 'reload_state_cs_offerings' do
