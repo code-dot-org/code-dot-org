@@ -36,7 +36,7 @@ class PiskelEditor extends React.Component {
     pendingFrames: PropTypes.object,
     removePendingFrames: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool,
-    locales: PropTypes.object.isRequired
+    locales: PropTypes.object
   };
 
   componentDidMount() {
