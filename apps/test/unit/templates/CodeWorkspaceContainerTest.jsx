@@ -43,6 +43,9 @@ describe('CodeWorkspaceContainer', () => {
 
     wrapper.setProps({isRtl: true});
     expect(utils.fireResizeEvent).not.to.have.been.called;
+
+    wrapper.setProps({style: {left: 100}});
+    expect(utils.fireResizeEvent).not.to.have.been.called;
   });
 
   it('hidden hides the outer div', () => {
