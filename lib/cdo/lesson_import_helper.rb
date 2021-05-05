@@ -80,7 +80,7 @@ module LessonImportHelper
       raise unless cb_resource['slug']
       resource = Resource.find_or_initialize_by(
         course_version_id: course_version_id,
-        key: cb_resource['slug']
+        key: cb_resource['slug'].downcase.tr(" ", "_")
       )
       resource.name = cb_resource['name']
       resource.url = cb_resource['url']
