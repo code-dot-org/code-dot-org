@@ -1,7 +1,7 @@
 import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import progressTableStyles from '@cdo/apps/templates/sectionProgress/progressTables/progressTableStyles.scss';
+import styles from './styles.scss';
 
 /**
  * ======================================
@@ -57,7 +57,7 @@ export const cellContent = {
 };
 
 export const studentListContent = {
-  height: parseInt(progressTableStyles.ROW_HEIGHT),
+  height: parseInt(styles.ROW_HEIGHT),
   boxSizing: 'border-box',
   padding: 10,
   fontSize: 14,
@@ -176,10 +176,6 @@ export const bubbleStyles = {
   },
   diamondContentTransform: {
     transform: 'rotate(-45deg)'
-  },
-  bonusDisabled: {
-    backgroundColor: color.lighter_gray,
-    color: color.white
   },
   link: {
     ...inlineBlock,
