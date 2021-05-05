@@ -15,9 +15,8 @@ import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import * as Neighborhood from './Neighborhood';
-import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
+import DefaultVisualization from './DefaultVisualization';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -86,12 +85,7 @@ Javalab.prototype.init = function(config) {
       Neighborhood.afterInject(this.level, this.skin, config, this.studioApp_);
     visualization = <MazeVisualization />;
   } else {
-    visualization = (
-      <PaneHeader hasFocus={true}>
-        <PaneSection>Preview</PaneSection>
-        <ProtectedVisualizationDiv />
-      </PaneHeader>
-    );
+    visualization = <DefaultVisualization />;
   }
 
   const onMount = () => {
