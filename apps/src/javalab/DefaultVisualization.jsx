@@ -5,7 +5,7 @@ import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizatio
 export default class DefaultVisualization extends React.Component {
   render() {
     return (
-      <PaneHeader hasFocus={true}>
+      <PaneHeader hasFocus>
         <PaneSection>Preview</PaneSection>
         <ProtectedVisualizationDiv />
       </PaneHeader>
