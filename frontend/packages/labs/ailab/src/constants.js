@@ -529,7 +529,7 @@ export const styles = {
     borderRadius: 5,
     padding: 20,
     whiteSpace: "normal",
-    overflowY: "scroll",
+    overflowY: "auto",
     width: "30%",
     margin: "0 auto"
   },

@@ -88,10 +88,8 @@ const startSaveTrainedModel = dataToSave => {
     store.dispatch(setSaveStatus(response.status));
     if (response.status === "success") {
       store.dispatch(setCurrentPanel("modelSummary"));
-      return;
-    } else if (response.status === "failure") {
+    } else {
       store.dispatch(setCurrentPanel("saveModel"));
-      return;
     }
   });
 };

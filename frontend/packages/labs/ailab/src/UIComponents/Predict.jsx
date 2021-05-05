@@ -46,14 +46,12 @@ class Predict extends Component {
           <div style={styles.scrollingContents}>
             <form>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
-                // toFixed converts a number to a string and rounds to two decimal places.
                 let min = this.props.rangesByColumn[feature].min.toFixed(2);
                 let max = this.props.rangesByColumn[feature].max.toFixed(2);
 
                 return (
                   <div style={styles.cardRow} key={index}>
                     <label>
-                      {/* The unary plus operator converts the operand to a number and truncates any trailing zeroes.  */}
                       {feature} {`(min: ${+min}, max: ${+max})`}
                       : &nbsp;
                       <input

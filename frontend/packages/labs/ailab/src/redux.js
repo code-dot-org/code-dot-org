@@ -229,7 +229,8 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined,
+  // Possible enum values for saveStatus: notStarted, started, success, and failure.
+  saveStatus: "notStarted",
   columnRefs: {}
 };
 
@@ -1047,15 +1048,8 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  if (panelId === "saveModel") {
-    if (state.saveStatus === "success") {
-      return false;
-    }
-  }
-
   if (panelId === "modelSummary") {
-    if (["success", "started"].includes(state.saveStatus) ||
-      state.saveStatus === "started") {
+    if (state.saveStatus === "started") {
       return false;
     }
   }
@@ -1087,7 +1081,7 @@ function isPanelAvailable(state, panelId) {
   }
 
   if (panelId === "saveModel") {
-    if (mode && mode.hideSave) {
+    if (mode && mode.hideSave || state.saveStatus === "success") {
       return false;
     }
   }
@@ -1096,10 +1090,6 @@ function isPanelAvailable(state, panelId) {
     if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
-
-    // if (state.saveStatus === "started") {
-    //   return false;
-    // }
   }
 
   return true;
@@ -1155,7 +1145,9 @@ export function getPanelButtons(state) {
       ? { panel: "modelSummary", text: "Save" }
       : null;
   } else if (state.currentPanel === "modelSummary") {
-    prev = { panel: "saveModel", text: "Back" };
+    prev = isPanelAvailable(state, "saveModel")
+      ? { panel: "saveModel", text: "Back" }
+      : null;
     next = isPanelAvailable(state, "finish")
       ? { panel: "finish", text: "Finish" }
       : null;
@@ -1321,4 +1313,12 @@ export function isUserUploadedDataset(state) {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
   return typeof state.csvfile === 'object' && state.csvfile !== null;
+}
+
+export function isSaveComplete(saveStatus) {
+  return ["success", "failure"].includes(saveStatus);
+}
+
+export function shouldDisplaySaveStatus(saveStatus) {
+  return ["success", "failure", "started"].includes(saveStatus);
 }
