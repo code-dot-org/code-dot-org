@@ -22933,6 +22933,8 @@ en:
           lessons:
             session-1:
               name: 'Virtual AYW Cohort Kick Off '
+              description_student: Kick-off the virtual academic year workshop series!
+              description_teacher: 'This session is designed to kick-off the virtual academic year workshop series on a positive note, setting the tone for a supportive, engaging learning experience for all participants. '
           lesson_groups:
             day-1:
               display_name: Kickoff Call
