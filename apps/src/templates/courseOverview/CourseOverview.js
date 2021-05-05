@@ -262,18 +262,20 @@ class CourseOverview extends Component {
             isTeacher={isTeacher}
           />
         </div>
-        {scripts.map((script, index) => (
-          <CourseScript
-            key={index}
-            title={script.title}
-            name={script.name}
-            id={script.id}
-            description={script.description}
-            assignedSectionId={script.assigned_section_id}
-            courseId={id}
-            showAssignButton={showAssignButton}
-          />
-        ))}
+        {scripts
+          .filter(script => !script.hidden)
+          .map((script, index) => (
+            <CourseScript
+              key={index}
+              title={script.title}
+              name={script.name}
+              id={script.id}
+              description={script.description}
+              assignedSectionId={script.assigned_section_id}
+              courseId={id}
+              showAssignButton={showAssignButton}
+            />
+          ))}
       </div>
     );
   }
