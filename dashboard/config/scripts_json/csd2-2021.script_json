@@ -2,7 +2,7 @@
   "script": {
     "name": "csd2-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -10752,7 +10752,7 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "html"
+        "programming_expression.key": "head"
       }
     },
     {
@@ -10766,6 +10766,13 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "programming_environment.name": "weblab",
+        "programming_expression.key": "P"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_environment.name": "weblab",
         "programming_expression.key": "body"
       }
     },
@@ -10773,14 +10780,7 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "head"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "P"
+        "programming_expression.key": "html"
       }
     },
     {
@@ -10794,7 +10794,7 @@
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "font-family"
+        "programming_expression.key": "color"
       }
     },
     {
@@ -10808,14 +10808,7 @@
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "color"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Text with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "Text-Dec"
+        "programming_expression.key": "font-family"
       }
     },
     {
@@ -10823,6 +10816,13 @@
         "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
         "programming_expression.key": "text-align"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "Text-Dec"
       }
     },
     {
@@ -10836,28 +10836,7 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-width"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "background-color"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "margin"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "float"
+        "programming_expression.key": "width"
       }
     },
     {
@@ -10871,14 +10850,28 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "width"
+        "programming_expression.key": "margin"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-color"
+        "programming_expression.key": "border-radius"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "background-color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "float"
       }
     },
     {
@@ -10892,7 +10885,14 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-radius"
+        "programming_expression.key": "border-color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "border-width"
       }
     },
     {
