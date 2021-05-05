@@ -279,7 +279,7 @@ module UsersHelper
     include_timestamp
   )
     # if we don't have a best result, we don't have any progress
-    best_sublevel_id = level.best_result_sublevel(user)&.id
+    best_sublevel_id = level.best_result_sublevel(user, script_level.script)&.id
     return nil if best_sublevel_id.nil?
 
     progress = {}
