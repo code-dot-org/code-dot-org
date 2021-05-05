@@ -68,15 +68,15 @@ const VisibleInTeacherDashboard = props => (
       {!props.disabled && (
         <div>
           <p>
-            If this is a standalone course and checked this script will show up
-            in the dropdown on the Teacher Dashboard, for teachers to assign to
-            students.
+            If this is a standalone course and this setting is checked this
+            course will show up in the dropdown on the Teacher Dashboard, for
+            teachers to assign to students.
           </p>
           <p>
-            If this unit is included in a course and checked this script will
-            show up on the course overview page and in the dropdown on the
-            Teacher Dashboard for teachers to assign to students, if the course
-            is also visible.
+            If this unit is included in a course and this setting is checked,
+            this unit will show up on the course overview page. If the course is
+            visible the unit will show in the dropdown on the Teacher Dashboard
+            for teachers to assign to students.
           </p>
         </div>
       )}
