@@ -174,7 +174,7 @@ class P5LabVisualizationColumn extends React.Component {
     const showPauseButton = isSpritelab && !this.props.hidePauseButton;
 
     return (
-      <div style={{position: 'relative'}}>
+      <div>
         <div style={{position: 'relative'}}>
           <ProtectedVisualizationDiv>
             <Pointable

@@ -1,25 +1,25 @@
 {
-  "https://studio.code.org/s/pixelation/stage/1/puzzle/1": {
+  "https://studio.code.org/s/pixelation/lessons/1/levels/1": {
     "short_instructions": "The width and height are now encoded in the pixel data. Can you figure out how to adjust the dimensions?",
     "long_instructions": "The width and height are now encoded in the pixel data. Can you figure out how to adjust the dimensions?"
   },
-  "https://studio.code.org/s/pixelation/stage/3/puzzle/1": {
+  "https://studio.code.org/s/pixelation/lessons/3/levels/1": {
     "short_instructions": "We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. Finish off the image by figuring out which two colors are missing and encode them.",
     "long_instructions": "# Color Pixelation: Task 1\n\n**Directions:**\n\n-   We start you with the 4x2 image Maddie was creating, but we've left out the last two squares. \n-   Finish off the image by figuring out which two colors are missing and encode them."
   },
-  "https://studio.code.org/s/pixelation/stage/3/puzzle/2": {
+  "https://studio.code.org/s/pixelation/lessons/3/levels/2": {
     "short_instructions": "We start you out with the row of shades of red that Maddie created in the video. Experiment with 6-bit color by filling in the bottom row of the image with shades of a different color. Here is an example with some shades of blue. Try your own color!",
     "long_instructions": "# Color Pixelation: Task 2\n\n**Directions:**\n<img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png' style=\"width: 150px; float:right\">We start you out with the row of shades of red that Maddie created in the video. Experiment with 6-bit color by filling in the bottom row of the image with shades of a different color.  Here is an example with some shades of blue.  Try your own color!"
   },
-  "https://studio.code.org/s/pixelation/stage/3/puzzle/3": {
+  "https://studio.code.org/s/pixelation/lessons/3/levels/3": {
     "short_instructions": "We start you out with the 4x4 image Maddie created in the video. Your task is to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements: Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of blue. Row 4 - shades of gray.",
     "long_instructions": "# Pixelation: Task 3\n\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" style=\"float:right; margin:0 20px\" width=200>\n\n**Directions:**\nWe start you out with the 4x4 image Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors using _12-bits per pixel_. The result should look something like (but not exactly) the image shown at right.  \n\nHere are the requirements:\n\n-   Row 1 - fill with shades of red. \n-   Row 2 - shades of green. \n-   Row 3 - shades of blue. \n-   Row 4 - shades of gray."
   },
-  "https://studio.code.org/s/pixelation/stage/4/puzzle/1": {
+  "https://studio.code.org/s/pixelation/lessons/4/levels/1": {
     "short_instructions": "Here is a bigger image at 9 bits per pixel. With 9 bits per pixel you can express 512 different colors. Click through to see the next image which is even more sophisticated, but easier to understand.",
     "long_instructions": "# Example of more bits per pixel\n\nHere is a bigger image at 9 bits per pixel. With 9 bits per pixel you can express 512 different colors. Click through to see the next image which is even more sophisticated, but easier to understand."
   },
-  "https://studio.code.org/s/pixelation/stage/4/puzzle/2": {
+  "https://studio.code.org/s/pixelation/lessons/4/levels/2": {
     "short_instructions": "This larger image of a bee encodes color with 12 bits per pixel, but viewing in hex makes it easier to see the color of each pixel. If you switch to binary mode - hold on to your hat - it's a lot of bits. Here's another mind-blowing thing to try: slide the bits per pixel up to 24 bits per pixel. What happens? Can you explain this behavior?",
     "long_instructions": "# Example of 12 bits per pixel\n\n-   This larger image of a bee encodes color with 12 bits per pixel, but viewing in hex makes it easier to see the color of each pixel.\n-   If you switch to binary mode - hold on to your hat - it's a lot of bits.\n-   Here's another mind-blowing thing to try: slide the bits per pixel up to 24 bits per pixel. What happens? Can you explain this behavior?"
   }

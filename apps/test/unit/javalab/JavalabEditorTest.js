@@ -12,14 +12,17 @@ import {
 } from '@cdo/apps/redux';
 import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
-import javalab, {toggleDarkMode} from '@cdo/apps/javalab/javalabRedux';
+import javalab, {setIsDarkMode} from '@cdo/apps/javalab/javalabRedux';
 import {setAllSources} from '../../../src/javalab/javalabRedux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('Java Lab Editor Test', () => {
   let defaultProps, store, appOptions;
 
   beforeEach(() => {
     stubRedux();
+    registerReducers(commonReducers);
     registerReducers({javalab});
     store = getStore();
     defaultProps = {
@@ -27,6 +30,11 @@ describe('Java Lab Editor Test', () => {
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
+    store.dispatch(
+      setPageConstants({
+        isEditingStartSources: false
+      })
+    );
   });
 
   afterEach(() => {
@@ -193,11 +201,11 @@ describe('Java Lab Editor Test', () => {
       const firstEditor = Object.values(javalabCodeMirrors)[0];
 
       const dispatchSpy = sinon.spy(firstEditor, 'dispatch');
-      store.dispatch(toggleDarkMode());
+      store.dispatch(setIsDarkMode(true));
       expect(dispatchSpy).to.have.been.calledWith({
         reconfigure: {style: oneDark}
       });
-      store.dispatch(toggleDarkMode());
+      store.dispatch(setIsDarkMode(false));
       expect(dispatchSpy).to.have.been.calledWith({
         reconfigure: {style: lightMode}
       });
