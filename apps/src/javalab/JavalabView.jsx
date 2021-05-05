@@ -142,8 +142,8 @@ class JavalabView extends React.Component {
             }}
           >
             <JavalabEditor
-              handleVersionHistory={handleVersionHistory}
               onCommitCode={onCommitCode}
+              handleVersionHistory={handleVersionHistory}
             />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
