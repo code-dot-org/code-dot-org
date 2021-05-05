@@ -55,7 +55,7 @@ export default class VisibleAndPilotExperiment extends React.Component {
 
 const VisibleInTeacherDashboard = props => (
   <label style={props.disabled ? {opacity: 0.5} : {}}>
-    Visible in Teacher Dashboard
+    Visible
     <input
       name={props.paramName}
       type="checkbox"
@@ -65,13 +65,24 @@ const VisibleInTeacherDashboard = props => (
       style={styles.checkbox}
     />
     <HelpTip>
-      <p>
-        If checked this script will show up in the dropdown on the Teacher
-        Dashboard, for teachers to assign to students.
-        {props.disabled && (
-          <em>Disabled because a pilot experiment has been specified below.</em>
-        )}
-      </p>
+      {!props.disabled && (
+        <div>
+          <p>
+            If this is a standalone course and checked this script will show up
+            in the dropdown on the Teacher Dashboard, for teachers to assign to
+            students.
+          </p>
+          <p>
+            If this unit is included in a course and checked this script will
+            show up on the course overview page and in the dropdown on the
+            Teacher Dashboard for teachers to assign to students, if the course
+            is also visible.
+          </p>
+        </div>
+      )}
+      {props.disabled && (
+        <em>Disabled because a pilot experiment has been specified below.</em>
+      )}
     </HelpTip>
   </label>
 );
