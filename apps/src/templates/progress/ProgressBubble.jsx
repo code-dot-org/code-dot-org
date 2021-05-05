@@ -69,6 +69,7 @@ class ProgressBubble extends React.Component {
   render() {
     const {
       level,
+      disabled,
       smallBubble,
       selectedSectionId,
       selectedStudentId,
@@ -86,7 +87,6 @@ class ProgressBubble extends React.Component {
     const levelName = level.name || level.progressionDisplayName;
     const levelIcon = getIconForLevel(level);
 
-    const disabled = this.props.disabled || level.isLocked;
     const hideNumber =
       level.letter || level.isLocked || level.paired || level.bonus;
 
