@@ -103,7 +103,6 @@ class HttpCache
           {
             path: '/api/hour/*',
             headers: ALLOWLISTED_HEADERS,
-            query: true,
             # Allow the company cookie to be read and set to track company users for tutorials.
             cookies: allowlisted_cookies + ['company']
           },
@@ -111,7 +110,6 @@ class HttpCache
           {
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
             headers: [],
-            query: false,
             cookies: 'none'
           },
           # Dashboard-based API paths in Pegasus are session-specific, allowlist all cookies.
@@ -133,14 +131,12 @@ class HttpCache
               /poste*
             ),
             headers: ALLOWLISTED_HEADERS,
-            query: true,
             cookies: allowlisted_cookies
           },
           {
             path: '/dashboardapi/*',
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            query: true,
             cookies: allowlisted_cookies
           },
           {
@@ -148,30 +144,6 @@ class HttpCache
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
-          },
-          # Cached paths that vary based on query-parameters.
-          {
-            path: %w(
-              /curriculum/*
-              /advocacy*
-              /yourschool
-              /certificates
-              /congrats
-              /custom-certificates
-              /printcertificate*
-            ),
-            query: true,
-            headers: ALLOWLISTED_HEADERS,
-            cookies: default_cookies
-          },
-          # Cached paths that specifically filter query-parameters.
-          {
-            path: %w(
-              /
-            ),
-            query: false,
-            headers: ALLOWLISTED_HEADERS,
-            cookies: default_cookies
           }
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
@@ -188,14 +160,12 @@ class HttpCache
             path: '/assets/*',
             proxy: 'cdo-assets',
             headers: [],
-            query: false,
             cookies: 'none'
           },
           {
             path: '/restricted/*',
             proxy: 'cdo-restricted',
             headers: [],
-            query: false,
             cookies: 'none',
             trusted_signer: true,
           },
@@ -207,7 +177,6 @@ class HttpCache
               /v3/libraries/*
             ),
             headers: ALLOWLISTED_HEADERS,
-            query: true,
             cookies: allowlisted_cookies
           },
           {
@@ -220,7 +189,6 @@ class HttpCache
               /milestone/*
             ),
             headers: ALLOWLISTED_HEADERS + ['User-Agent'],
-            query: true,
             cookies: allowlisted_cookies
           },
           # Some script levels in cacheable scripts are project-backed and
@@ -250,21 +218,18 @@ class HttpCache
           {
             path: '/api/*',
             headers: ALLOWLISTED_HEADERS,
-            query: true,
             cookies: allowlisted_cookies
           },
           {
-            # For static-asset paths, don't forward any cookies, query params or additional headers.
+            # For static-asset paths, don't forward any cookies or additional headers.
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/*),
             headers: [],
-            query: false,
             cookies: 'none'
           },
           {
             path: '/v2/*',
             proxy: 'pegasus',
             headers: ALLOWLISTED_HEADERS,
-            query: true,
             cookies: allowlisted_cookies
           },
           {
@@ -273,26 +238,22 @@ class HttpCache
               /v3/sources-public/*
             ),
             headers: [],
-            query: false,
             cookies: 'none'
           },
           {
             path: '/xhr*',
             headers: ALLOWLISTED_HEADERS + ALLOWED_WEB_REQUEST_HEADERS,
-            query: true,
             cookies: allowlisted_cookies
           },
           {
             path: '/curriculum_tracking_pixel',
             headers: [],
-            query: true,
             cookies: allowlisted_cookies
           }
         ],
         # Default Dashboard paths are session-specific, allowlist all session cookies and language header.
         default: {
           headers: ALLOWLISTED_HEADERS,
-          query: true,
           cookies: allowlisted_cookies
         }
       }
