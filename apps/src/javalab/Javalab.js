@@ -17,7 +17,7 @@ import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBa
 import Neighborhood from './Neighborhood';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
 import DefaultVisualization from './DefaultVisualization';
-import {csaViewMode} from './constants';
+import {CsaViewMode} from './constants';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -81,7 +81,7 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   let visualization;
-  if (this.level.csaViewMode === csaViewMode.neighborhood) {
+  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     const miniApp = new Neighborhood();
     config.afterInject = () =>
       miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
