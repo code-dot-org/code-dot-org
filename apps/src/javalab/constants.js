@@ -1,5 +1,5 @@
-export const csaViewMode = {
-  neighborhood: 'neighborhood',
-  console: 'console',
-  theater: 'theater'
+export const CsaViewMode = {
+  NEIGHBORHOOD: 'neighborhood',
+  CONSOLE: 'console',
+  THEATER: 'theater'
 };
