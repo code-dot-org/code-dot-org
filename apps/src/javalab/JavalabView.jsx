@@ -139,7 +139,7 @@ class JavalabView extends React.Component {
         <div style={style.javalab}>
           <div
             id="visualizationColumn"
-            className="with_padding responsive pin_bottom"
+            className="responsive"
             style={style.instructionsAndPreview}
           >
             <TopInstructions mainStyle={style.instructions} standalone={true} />

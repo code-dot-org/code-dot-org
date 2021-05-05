@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
@@ -677,7 +678,7 @@ class TopInstructions extends Component {
     return (
       <div
         style={topInstructionsStyle}
-        className={!standalone && 'editor-column'}
+        className={classNames({'editor-column': !standalone})}
         ref={ref => (this.topInstructions = ref)}
       >
         <TopInstructionsHeader
