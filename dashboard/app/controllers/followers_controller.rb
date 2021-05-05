@@ -100,6 +100,23 @@ class FollowersController < ApplicationController
 
     # Redirect and provide an error for sections at capacity.
     if @section&.at_capacity? && current_user && !Follower.find_by(section: @section, student_user: current_user)
+
+      # Trigger a FireHose record if add_student returns a capacity error.
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'section capacity restriction',
+          event: (current_user.id == @section.user_id ? 'Section owner attempted to add a student to a full section' : 'Student attempted to join a full section').to_s,
+          data_json: {
+            section_id: @section.id,
+            section_code: @section.code,
+            date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
+            joiner_id: current_user.id,
+            section_teacher_id: @section.user_id
+          }.to_json
+        }
+      )
+
       redirect_url = "#{root_url}join" # Keeps user on the join page.
       redirect_to redirect_url, inline_alert: I18n.t('follower.error.full_section', section_code: params[:section_code])
       return
