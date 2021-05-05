@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
@@ -22,7 +22,7 @@ const styles = {
 export default class ProgressLessonContent extends React.Component {
   static propTypes = {
     description: PropTypes.string,
-    levels: PropTypes.arrayOf(levelType).isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.string
   };

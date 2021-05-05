@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 import {connect} from 'react-redux';
 
@@ -62,7 +62,7 @@ const styles = {
 // component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606
 class ProgressBubbleSet extends React.Component {
   static propTypes = {
-    levels: PropTypes.arrayOf(levelType).isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
     //TODO: (ErinB) probably change to use just number during post launch clean-up.

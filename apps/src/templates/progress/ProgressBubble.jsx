@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {
   DOT_SIZE,
   DIAMOND_DOT_SIZE,
@@ -92,7 +92,7 @@ const styles = {
 
 class ProgressBubble extends React.Component {
   static propTypes = {
-    level: levelType.isRequired,
+    level: levelWithProgressType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
     //TODO: (ErinB) probably change to use just number during post launch clean-up.

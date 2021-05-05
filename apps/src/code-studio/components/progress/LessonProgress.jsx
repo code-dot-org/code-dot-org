@@ -10,7 +10,7 @@ import {
   getPercentPerfect
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import $ from 'jquery';
 
@@ -77,7 +77,7 @@ const styles = {
  */
 class LessonProgress extends Component {
   static propTypes = {
-    levels: PropTypes.arrayOf(levelType).isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     lessonExtrasUrl: PropTypes.string,
     isLessonExtras: PropTypes.bool,
     lessonTrophyEnabled: PropTypes.bool,

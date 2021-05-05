@@ -34,6 +34,7 @@ export const fakeLevel = (overrides = {}) => {
   return {
     id: id,
     status: LevelStatus.not_tried,
+    isLocked: false,
     levelNumber: levelNumber,
     bubbleText: levelNumber.toString(),
     url: `/level${levelNumber}`,
