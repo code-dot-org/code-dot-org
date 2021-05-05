@@ -27,9 +27,7 @@ class ProgressBubbleSet extends React.Component {
       PropTypes.number
     ]),
     hideToolTips: PropTypes.bool,
-    pairingIconEnabled: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool,
     showSublevels: PropTypes.bool,
     onBubbleClick: PropTypes.func,
     // Redux
@@ -48,13 +46,7 @@ class ProgressBubbleSet extends React.Component {
   };
 
   renderBubble = (level, index, isSublevel) => {
-    const {
-      levels,
-      selectedSectionId,
-      selectedStudentId,
-      hideAssessmentIcon,
-      isRtl
-    } = this.props;
+    const {levels, selectedSectionId, selectedStudentId, isRtl} = this.props;
 
     // Adjust background styles if locale is RTL
     const backgroundFirstStyle = isRtl
@@ -93,8 +85,6 @@ class ProgressBubbleSet extends React.Component {
             selectedSectionId={selectedSectionId}
             selectedStudentId={selectedStudentId}
             hideToolTips={this.props.hideToolTips}
-            pairingIconEnabled={this.props.pairingIconEnabled}
-            hideAssessmentIcon={hideAssessmentIcon}
             onClick={this.props.onBubbleClick}
           />
         </div>

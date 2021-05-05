@@ -4,7 +4,7 @@ import {LevelKind} from '@cdo/apps/util/sharedConstants';
 import {BubbleSize} from '@cdo/apps/templates/progress/progressStyles';
 import {
   BasicBubble,
-  LinkWrapper,
+  BubbleLink,
   getBubbleContent,
   getBubbleClassNames,
   getBubbleShape
@@ -51,13 +51,13 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
 
   render() {
     return (
-      <LinkWrapper url={this.props.url}>
+      <BubbleLink url={this.props.url}>
         <CachedElement
           elementType={'BasicBubble'}
           cacheKey={this.getCacheKey()}
           createElement={this.createBubbleElement}
         />
-      </LinkWrapper>
+      </BubbleLink>
     );
   }
 

@@ -35,7 +35,7 @@ const SUMMARY_VIEW_COLUMN_WIDTH = 40;
  * Since our progress tables are built out of standard HTML table elements,
  * we can leverage CSS classes for laying out and styling those elements.
  */
-import progressTableStyles from './progressTableStyles.scss';
+import progressStyles from '@cdo/apps/templates/progress/styles.scss';
 
 function idForExpansionIndex(studentId, index) {
   return `${studentId}.${index}`;
@@ -140,7 +140,7 @@ class ProgressTableView extends React.Component {
 
   // override the default initial number of rows to render
   setRowsToRender() {
-    const initialRows = parseInt(progressTableStyles.MAX_ROWS);
+    const initialRows = parseInt(progressStyles.MAX_ROWS);
 
     // amountOfRowsToRender is a reactabular internal
     this.studentList &&
@@ -163,8 +163,7 @@ class ProgressTableView extends React.Component {
   // account for the horizontal space used by the vertical scrollbar.
   needsContentHeaderGutter() {
     return (
-      this.props.section.students.length >
-      parseInt(progressTableStyles.MAX_ROWS)
+      this.props.section.students.length > parseInt(progressStyles.MAX_ROWS)
     );
   }
 
@@ -326,7 +325,7 @@ const styles = {
   },
   contentView: {
     display: 'inline-block',
-    width: parseInt(progressTableStyles.CONTENT_VIEW_WIDTH)
+    width: parseInt(progressStyles.CONTENT_VIEW_WIDTH)
   }
 };
 
