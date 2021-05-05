@@ -936,69 +936,68 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_url, lesson.course_version_standards_url
   end
 
-  test "can clone lesson into another script" do
-    script = create :script, is_migrated: true
-    course_version = create :course_version, content_root: script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    lesson_activity = create :lesson_activity, lesson: lesson
-    activity_section = create :activity_section, lesson_activity: lesson_activity
-    level1 = create :maze, name: 'level 1'
-    level2 = create :maze, name: 'level 2'
-    create :script_level, script: script, lesson: lesson, levels: [level1],
-      activity_section: activity_section, activity_section_position: 1
-    create :script_level, script: script, lesson: lesson, levels: [level2],
-      activity_section: activity_section, activity_section_position: 2
-    create :resource, name: 'resource1', course_version: course_version, lessons: [lesson]
-    create :resource, name: 'resource2', course_version: course_version, lessons: [lesson]
-    create :vocabulary, word: 'word one', course_version: course_version, lessons: [lesson]
-    create :vocabulary, word: 'word two', course_version: course_version, lessons: [lesson]
-    create :objective, lesson: lesson, description: 'objective 1'
-    create :objective, lesson: lesson, description: 'objective 2'
-    lesson.standards = [create(:standard)]
-    lesson.opportunity_standards = [create(:standard)]
-    lesson.programming_expressions = [create(:programming_expression)]
+  class LessonCopyTests < ActiveSupport::TestCase
+    setup do
+      Script.any_instance.stubs(:write_script_json)
+      Script.stubs(:merge_and_write_i18n)
 
-    destination_script = create :script, is_migrated: true
-    create :course_version, content_root: destination_script
-    create :lesson_group, script: destination_script
-    copied_lesson = Lesson.copy_to_script(lesson, destination_script)
-    assert_equal destination_script, copied_lesson.script
-    assert_equal 2, copied_lesson.script_levels.length
-    assert_equal 2, lesson.script_levels.length
-    assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)
-    assert_equal 2, copied_lesson.resources.length
-    assert_equal lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
-    assert_equal 2, copied_lesson.vocabularies.length
-    assert_equal lesson.vocabularies.map(&:word), copied_lesson.vocabularies.map(&:word)
-    assert_equal 2, copied_lesson.objectives.length
-    assert_equal lesson.objectives.map(&:description), copied_lesson.objectives.map(&:description)
-    assert_equal lesson.standards, copied_lesson.standards
-    assert_equal lesson.opportunity_standards, copied_lesson.opportunity_standards
-    assert_equal lesson.programming_expressions, copied_lesson.programming_expressions
-  end
+      @original_script = create :script, is_migrated: true
+      @original_script.expects(:write_script_json).never
+      @original_course_version = create :course_version, content_root: @original_script
+      @original_lesson_group = create :lesson_group, script: @original_script
+      @original_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_script
 
-  test "can clone lesson with duplicated resources and vocab into another script" do
-    script = create :script, is_migrated: true, is_course: true
-    course_version = create :course_version, content_root: script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-    lesson_activity = create :lesson_activity, lesson: lesson
-    activity_section = create :activity_section, lesson_activity: lesson_activity
-    level1 = create :maze, name: 'level 1'
-    create :script_level, script: script, lesson: lesson, levels: [level1],
-      activity_section: activity_section, activity_section_position: 1
-    create :resource, name: 'resource1', course_version: course_version, lessons: [lesson]
-    create :vocabulary, word: 'word one', course_version: course_version, lessons: [lesson]
+      @destination_script = create :script, is_migrated: true
+      @destination_course_version = create :course_version, content_root: @destination_script
+      create :lesson_group, script: @destination_script
+    end
 
-    destination_script = create :script, is_migrated: true
-    destination_course_version = create :course_version, content_root: destination_script
-    destination_resource = create :resource, name: 'resource1', course_version: destination_course_version
-    destination_vocab = create :vocabulary, word: 'word one', course_version: destination_course_version
-    create :lesson_group, script: destination_script
-    copied_lesson = Lesson.copy_to_script(lesson, destination_script)
-    assert_equal destination_script, copied_lesson.script
-    assert_equal [destination_resource], copied_lesson.resources
-    assert_equal [destination_vocab], copied_lesson.vocabularies
+    test "can clone lesson into another script" do
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+      level1 = create :maze, name: 'level 1'
+      level2 = create :maze, name: 'level 2'
+      create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
+        activity_section: activity_section, activity_section_position: 1
+      create :script_level, script: @original_script, lesson: @original_lesson, levels: [level2],
+        activity_section: activity_section, activity_section_position: 2
+      create :resource, name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
+      create :resource, name: 'resource2', course_version: @original_course_version, lessons: [@original_lesson]
+      create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
+      create :vocabulary, word: 'word two', course_version: @original_course_version, lessons: [@original_lesson]
+      create :objective, lesson: @original_lesson, description: 'objective 1'
+      create :objective, lesson: @original_lesson, description: 'objective 2'
+      @original_lesson.standards = [create(:standard)]
+      @original_lesson.opportunity_standards = [create(:standard)]
+      @original_lesson.programming_expressions = [create(:programming_expression)]
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 2, copied_lesson.script_levels.length
+      assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)
+      assert_equal 2, copied_lesson.resources.length
+      assert_equal @original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
+      assert_equal 2, copied_lesson.vocabularies.length
+      assert_equal @original_lesson.vocabularies.map(&:word), copied_lesson.vocabularies.map(&:word)
+      assert_equal 2, copied_lesson.objectives.length
+      assert_equal @original_lesson.objectives.map(&:description), copied_lesson.objectives.map(&:description)
+      assert_equal @original_lesson.standards, copied_lesson.standards
+      assert_equal @original_lesson.opportunity_standards, copied_lesson.opportunity_standards
+      assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
+    end
+
+    test "can clone lesson with duplicated resources and vocab into another script" do
+      create :resource, name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
+      create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
+
+      @destination_script.expects(:write_script_json).once
+      destination_resource = create :resource, name: 'resource1', course_version: @destination_course_version
+      destination_vocab = create :vocabulary, word: 'word one', course_version: @destination_course_version
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal [destination_resource], copied_lesson.resources
+      assert_equal [destination_vocab], copied_lesson.vocabularies
+    end
   end
 end
