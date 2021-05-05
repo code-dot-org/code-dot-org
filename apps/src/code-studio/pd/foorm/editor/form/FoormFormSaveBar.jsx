@@ -23,42 +23,6 @@ import {
   setLastSavedQuestions
 } from '../foormEditorRedux';
 
-const publishedSaveWarning = (
-  <div>
-    <span style={styles.warning}>Warning: </span>You are editing a published
-    survey. Please only make safe edits as described in the{' '}
-    <a
-      href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      How To
-    </a>
-    .
-    <br />
-    <br />
-    Are you sure you want to save your changes?
-  </div>
-);
-
-const aboutToPublishWarning = (
-  <div>
-    <span style={styles.warning}>Warning: </span>You are about to publish a new
-    survey. Once a survey is published, it may be put into active use.{' '}
-    <span style={styles.warning}>
-      A published survey cannot be returned to draft mode!
-    </span>
-    <br />
-    <br />
-    Are you sure you want to publish?
-  </div>
-);
-
-const confirmationDialogNames = {
-  save: 'save',
-  publish: 'publish'
-};
-
 // Save bar that stays at bottom of the screen of the Foorm Editor when editing forms.
 // Shows last saved time, any errors, and requires confirmation for published forms.
 class FoormFormSaveBar extends Component {
@@ -407,6 +371,42 @@ const styles = {
     color: color.red,
     fontWeight: 'bold'
   }
+};
+
+const publishedSaveWarning = (
+  <div>
+    <span style={styles.warning}>Warning: </span>You are editing a published
+    survey. Please only make safe edits as described in the{' '}
+    <a
+      href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      How To
+    </a>
+    .
+    <br />
+    <br />
+    Are you sure you want to save your changes?
+  </div>
+);
+
+const aboutToPublishWarning = (
+  <div>
+    <span style={styles.warning}>Warning: </span>You are about to publish a new
+    survey. Once a survey is published, it may be put into active use.{' '}
+    <span style={styles.warning}>
+      A published survey cannot be returned to draft mode!
+    </span>
+    <br />
+    <br />
+    Are you sure you want to publish?
+  </div>
+);
+
+const confirmationDialogNames = {
+  save: 'save',
+  publish: 'publish'
 };
 
 export const UnconnectedFoormFormSaveBar = FoormFormSaveBar;

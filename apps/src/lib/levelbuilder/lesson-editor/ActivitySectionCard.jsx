@@ -30,13 +30,6 @@ const SCROLL_THRESHOLD = 100;
 // the cursor has moved beyond the threshold.
 const SCROLL_RATIO = 0.2;
 
-styles.targetActivitySectionCard = {
-  ...styles.activitySectionCard,
-  borderWidth: 5,
-  borderColor: color.cyan,
-  padding: 16
-};
-
 /*
 An activity section is a chunk of an activity. This could be a section
 of text that explains to the teacher what to say or do to run the lesson or
@@ -594,6 +587,13 @@ const styles = {
   durationInput: {
     width: 50
   }
+};
+
+styles.targetActivitySectionCard = {
+  ...styles.activitySectionCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
 };
 
 export const UnconnectedActivitySectionCard = ActivitySectionCard;

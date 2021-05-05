@@ -19,13 +19,6 @@ import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
-styles.targetLessonGroupCard = {
-  ...styles.lessonGroupCard,
-  borderWidth: 5,
-  borderColor: color.cyan,
-  padding: 16
-};
-
 class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: lessonGroupShape.isRequired,
@@ -368,6 +361,13 @@ const styles = {
   title: {
     marginRight: 5
   }
+};
+
+styles.targetLessonGroupCard = {
+  ...styles.lessonGroupCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
 };
 
 export const UnconnectedLessonGroupCard = LessonGroupCard;
