@@ -98,9 +98,10 @@ module LessonImportHelper
     return [] if cb_vocab.blank?
     cb_vocab.map do |cb_vocabulary|
       raise unless cb_vocabulary['word']
+      key = cb_vocabulary['word'].downcase.tr(" ", "_")
       vocab = Vocabulary.find_or_initialize_by(
         course_version_id: course_version_id,
-        key: cb_vocabulary['word']
+        key: key
       )
       vocab.word = cb_vocabulary['word']
       vocab.definition =
