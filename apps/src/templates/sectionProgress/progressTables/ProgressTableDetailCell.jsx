@@ -4,6 +4,7 @@ import {
   levelType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
+import {getBubbleUrl} from '@cdo/apps/templates/progress/BubbleFactory';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import {lessonHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
@@ -45,11 +46,7 @@ export default class ProgressTableDetailCell extends React.Component {
   }
 
   buildBubbleUrl(level) {
-    if (!level.url) {
-      return null;
-    }
-    const {studentId, sectionId} = this.props;
-    return `${level.url}?section_id=${sectionId}&user_id=${studentId}`;
+    return getBubbleUrl(level.url, this.props.studentId, this.props.sectionId);
   }
 
   renderSublevels(level) {

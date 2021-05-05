@@ -2,14 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
+import TooltipWithIcon from './TooltipWithIcon';
+import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {
   bubbleStyles,
   BubbleSize,
   BubbleShape,
   mainBubbleStyle,
-  diamondContainerStyle
-} from '@cdo/apps/templates/progress/progressStyles';
+  diamondContainerStyle,
+  inlineBlock
+} from './progressStyles';
+import {levelWithProgressType} from './progressTypes';
 
 /**
  * Base bubble component defined in terms of shape, size, and style, as opposed
@@ -82,15 +87,48 @@ DiamondContainer.propTypes = {
   children: PropTypes.node
 };
 
-export function LinkWrapper({url, children}) {
+export function BubbleLink({url, onClick, children}) {
   return (
-    <a href={url} style={bubbleStyles.link}>
+    <a href={url} onClick={onClick} style={bubbleStyles.link}>
       {children}
     </a>
   );
 }
-LinkWrapper.propTypes = {
-  url: PropTypes.string.isRequired,
+BubbleLink.propTypes = {
+  url: PropTypes.string,
+  onClick: PropTypes.func,
+  children: PropTypes.element.isRequired
+};
+
+export function BubbleTooltip({level, children}) {
+  let tooltipText = level.isSublevel
+    ? level.display_name
+    : level.isUnplugged
+    ? i18n.unpluggedActivity()
+    : level.name || level.progressionDisplayName || '';
+  if (level.levelNumber) {
+    tooltipText = `${level.levelNumber}. ${tooltipText}`;
+  }
+  const tooltipId = _.uniqueId();
+  return (
+    <div
+      data-tip
+      data-for={tooltipId}
+      aria-describedby={tooltipId}
+      style={inlineBlock}
+    >
+      {children}
+      <TooltipWithIcon
+        tooltipId={tooltipId}
+        icon={getIconForLevel(level)}
+        text={tooltipText}
+        includeAssessmentIcon={isLevelAssessment(level)}
+      />
+    </div>
+  );
+}
+BubbleTooltip.propTypes = {
+  level: levelWithProgressType.isRequired,
   children: PropTypes.element.isRequired
 };
 
@@ -135,6 +173,22 @@ export function getBubbleShape(isUnplugged, isConcept) {
 
 export function getBubbleClassNames(isEnabled) {
   return classNames('progress-bubble', {enabled: isEnabled});
+}
+
+export function getBubbleUrl(levelUrl, studentId, sectionId) {
+  if (!levelUrl) {
+    return null;
+  } else if (!studentId && !sectionId) {
+    return levelUrl;
+  }
+  const params = [];
+  if (sectionId) {
+    params.push(`section_id=${sectionId}`);
+  }
+  if (studentId) {
+    params.push(`user_id=${studentId}`);
+  }
+  return `${levelUrl}?${params.join('&')}`;
 }
 
 export const unitTestExports = {
