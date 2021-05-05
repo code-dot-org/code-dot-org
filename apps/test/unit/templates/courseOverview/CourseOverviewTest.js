@@ -27,14 +27,24 @@ const defaultProps = {
       id: 112,
       title: 'CSP Unit 1',
       name: 'csp1',
-      description: 'desc'
+      description: 'desc',
+      hidden: false
     },
     {
       course_id: 30,
       id: 113,
       title: 'CSP Unit 2',
       name: 'csp2',
-      description: 'desc'
+      description: 'desc',
+      hidden: false
+    },
+    {
+      course_id: 30,
+      id: 114,
+      title: 'CSP Unit 3',
+      name: 'csp3',
+      description: 'desc',
+      hidden: true
     }
   ],
   isVerifiedTeacher: true,
@@ -120,7 +130,7 @@ describe('CourseOverview', () => {
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
   });
 
-  it('renders a CourseScript for each script', () => {
+  it('renders a CourseScript for each visible script', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
     assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
   });
