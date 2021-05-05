@@ -1,0 +1,86 @@
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+project_sharing true
+curriculum_umbrella 'CSD'
+is_migrated true
+
+lesson 'lesson1', display_name: 'Introduction to Machine Learning', has_lesson_plan: true
+level 'Oceans_FishVTrash'
+level 'Oceans_Short'
+level 'Oceans_Long'
+
+lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
+level 'ml-L2 unsupervised - 1'
+level 'ml-L2 supervised - green glass door'
+
+lesson 'lesson3', display_name: 'Patterns in Data', has_lesson_plan: true
+level 'ml-models-shoes random'
+level 'ml-models-shoes decision tree'
+level 'ml-models-shoes data'
+level 'ml-models-shoes points'
+
+lesson 'lesson4', display_name: 'Classification with Machine Learning', has_lesson_plan: true
+
+lesson 'lesson5', display_name: 'Training a Model with Features', has_lesson_plan: true
+level 'ml-intro categorical-tacos'
+level 'ml-intro categorical-ice cream'
+level 'ml-intro categorical-pizza'
+level 'ml-intro categorical-food choices'
+
+lesson 'lesson6', display_name: 'Importing a Model in App Lab', has_lesson_plan: true
+level 'Full Year Pilot Experiments Dashboard - AI Models'
+level 'ml-models in applab-vacation example'
+level 'ml-models in applab-import 1'
+level 'ml-models in applab-screens-2'
+level 'ml-models in applab-screens-1'
+level 'ml-models in applab-screens-3'
+level 'ml-models in applab-practice choice'
+
+lesson 'lesson7', display_name: 'The Need for Model Cards', has_lesson_plan: true
+level 'ml-model card-medical app v2'
+level 'ml-model card-medical-1'
+level 'ml-model card-medical-2'
+level 'ml-model card-medical-3'
+
+lesson 'lesson8', display_name: 'Numerical Data in AI Lab', has_lesson_plan: true
+level 'ml-numerical ai lab-safari 1'
+
+lesson 'lesson9', display_name: 'Regression with Machine Learning', has_lesson_plan: true
+
+lesson 'lesson10', display_name: 'Using Model Cards in App Lab', has_lesson_plan: true
+level 'ml-use model card-example1A'
+level 'ml-use model card-pet model card'
+level 'ml-use model card-example1B'
+level 'ml-use model card-example1C'
+level 'ml-use model card-example1D'
+level 'ml-use model card-example1E'
+level 'ml-use models applab-practice choice'
+
+lesson 'lesson11', display_name: 'Customizing Your App', has_lesson_plan: true
+level 'ml-customize-raspado'
+level 'ml-use model card-example3A'
+level 'ml-use model card-example3_EditA'
+level 'ml-use model card-example3_EditB'
+level 'ml-use model card-example3_EditC'
+level 'ml-use model card-example3C'
+level 'ml-use model card-example3D'
+level 'ml-use model card-example3E'
+level 'ml-customize apps-practice choice'
+
+lesson 'lesson12', display_name: 'Making Data Decisions', has_lesson_plan: true
+level 'ml-data decisions-zoo1'
+level 'ml-data decisions- import app'
+level 'ml-data decisions- customize app'
+
+lesson 'lesson13', display_name: 'AI for Social Good', has_lesson_plan: true
+
+lesson 'lesson14', display_name: 'AI Code of Ethics', has_lesson_plan: true
+
+lesson 'lesson15', display_name: 'Planning Your App', has_lesson_plan: true
+level 'ml-planning app-ai lab'
+
+lesson 'lesson16', display_name: 'Make an "AI for Social Good" App', has_lesson_plan: true
+level 'ml-final project-ai lab'
+level 'ml-final project-app lab'
+
