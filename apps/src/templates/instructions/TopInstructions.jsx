@@ -145,6 +145,8 @@ class TopInstructions extends Component {
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
     collapsible: PropTypes.bool,
+    // Use this if the instructions will be somewhere other than over the code workspace.
+    // This will allow instructions to be resized separately from the workspace.
     standalone: PropTypes.bool
   };
 
