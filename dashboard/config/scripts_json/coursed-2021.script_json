@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-05-03 23:56:06 UTC",
+    "serialized_at": "2021-05-05 18:26:47 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -11418,28 +11418,28 @@
       "seeding_key": {
         "lesson.key": "Loops in Artist",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
+        "standard.shortcode": "1B-AP-09"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Artist",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Artist",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
+        "standard.shortcode": "1B-AP-11"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Artist",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -11502,28 +11502,35 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-12"
+        "standard.shortcode": "1B-AP-12"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-13"
+        "standard.shortcode": "1B-AP-14"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-15"
+        "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
       }
     }
   ],
