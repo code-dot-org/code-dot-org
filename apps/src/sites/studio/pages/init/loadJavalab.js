@@ -9,8 +9,8 @@ export default function loadJavalab(options) {
   const javalab = new Javalab();
 
   javalab.injectStudioApp(studioApp());
-  // TODO: Update this to "neighborhood" once the skin has been created.
+  // TODO: Update this to "neighborhood" once the skin has been created. Create a const for the skinId.
   options.skinsModule = skins;
-  options.skinId = "birds";
+  options.skinId = 'birds';
   appMain(javalab, levels, options);
 }

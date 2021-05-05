@@ -11,7 +11,7 @@ import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
-const style = {
+const styles = {
   instructionsAndPreview: {
     width: '100%',
     position: 'absolute',
@@ -112,11 +112,11 @@ class JavalabView extends React.Component {
   getButtonStyles = isSettingsButton => {
     const {isDarkMode} = this.props;
     if (isDarkMode) {
-      return style.singleButton;
+      return styles.singleButton;
     } else if (isSettingsButton) {
-      return {...style.singleButton, backgroundColor: color.orange};
+      return {...styles.singleButton, backgroundColor: color.orange};
     } else {
-      return {...style.singleButton, backgroundColor: color.cyan};
+      return {...styles.singleButton, backgroundColor: color.cyan};
     }
   };
 
@@ -136,26 +136,26 @@ class JavalabView extends React.Component {
     }
     return (
       <StudioAppWrapper>
-        <div style={style.javalab}>
+        <div style={styles.javalab}>
           <div
             id="visualizationColumn"
             className="responsive"
-            style={style.instructionsAndPreview}
+            style={styles.instructionsAndPreview}
           >
-            <TopInstructions mainStyle={style.instructions} standalone={true} />
-            <div style={style.preview}>{visualization}</div>
+            <TopInstructions mainStyle={styles.instructions} standalone />
+            <div style={styles.preview}>{visualization}</div>
           </div>
           <VisualizationResizeBar />
           <div
             style={{
-              ...style.editorAndConsole,
+              ...styles.editorAndConsole,
               color: isDarkMode ? color.white : color.black
             }}
             className="editor-column"
           >
             <JavalabEditor onCommitCode={onCommitCode} />
-            <div style={style.consoleAndButtons}>
-              <div style={style.buttons}>
+            <div style={styles.consoleAndButtons}>
+              <div style={styles.buttons}>
                 <button
                   type="button"
                   style={this.getButtonStyles(false)}
@@ -175,7 +175,7 @@ class JavalabView extends React.Component {
                   Continue
                 </button>
               </div>
-              <div style={style.buttons}>
+              <div style={styles.buttons}>
                 <JavalabSettings
                   style={this.getButtonStyles(true /* isSettingsButton */)}
                 >
@@ -191,7 +191,7 @@ class JavalabView extends React.Component {
                   Run
                 </button>
               </div>
-              <div style={style.consoleStyle}>
+              <div style={styles.consoleStyle}>
                 <JavalabConsole onInputMessage={onInputMessage} />
               </div>
             </div>

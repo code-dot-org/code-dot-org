@@ -14,9 +14,10 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
-import * as Neighborhood from './Neighborhood';
+import Neighborhood from './Neighborhood';
 import MazeVisualization from '@cdo/apps/maze/Visualization';
 import DefaultVisualization from './DefaultVisualization';
+import {csaViewMode} from './constants';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -80,9 +81,10 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   let visualization;
-  if (this.level.csaViewMode === 'neighborhood') {
+  if (this.level.csaViewMode === csaViewMode.neighborhood) {
+    const miniApp = new Neighborhood();
     config.afterInject = () =>
-      Neighborhood.afterInject(this.level, this.skin, config, this.studioApp_);
+      miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
     visualization = <MazeVisualization />;
   } else {
     visualization = <DefaultVisualization />;
@@ -111,7 +113,7 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
-    config.afterInject && config.afterInject();
+    config.afterInject?.();
   };
 
   // Push initial level properties into the Redux store
