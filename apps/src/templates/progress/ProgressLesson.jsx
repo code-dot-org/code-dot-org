@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import ProgressLessonContent from './ProgressLessonContent';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import {levelType, lessonType} from './progressTypes';
+import {levelWithProgressType, lessonType} from './progressTypes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
@@ -93,7 +93,7 @@ const styles = {
 class ProgressLesson extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
-    levels: PropTypes.arrayOf(levelType).isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
 
     // redux provided
     scriptId: PropTypes.number,
