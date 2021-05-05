@@ -248,7 +248,7 @@ DSL
     create :user_level, user: student, level: @sublevel2, best_result: 100
     create :user_level, user: student, level: @sublevel1, best_result: 20
 
-    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student, @script_level.script)
+    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student, nil)
   end
 
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do

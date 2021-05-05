@@ -617,7 +617,6 @@ describe('progressReduxTest', () => {
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
-            readonlyAnswers: undefined,
             kind: LevelKind.unplugged,
             icon: null,
             isUnplugged: true,
@@ -639,7 +638,6 @@ describe('progressReduxTest', () => {
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
-            readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
             isUnplugged: false,
@@ -661,7 +659,6 @@ describe('progressReduxTest', () => {
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
-            readonlyAnswers: undefined,
             kind: LevelKind.assessment,
             icon: null,
             isUnplugged: false,
@@ -685,7 +682,6 @@ describe('progressReduxTest', () => {
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
-            readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
@@ -707,7 +703,6 @@ describe('progressReduxTest', () => {
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
-            readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
@@ -729,7 +724,6 @@ describe('progressReduxTest', () => {
             name: undefined,
             progression: undefined,
             progressionDisplayName: undefined,
-            readonlyAnswers: undefined,
             kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
@@ -1222,7 +1216,7 @@ describe('progressReduxTest', () => {
   describe('peerReviewLevels', () => {
     const {peerReviewLevels, PEER_REVIEW_ID} = __testonly__;
 
-    it('sets status and icon to locked when locked', () => {
+    it('sets icon to locked when locked', () => {
       const state = {
         peerReviewLessonInfo: {
           levels: [
@@ -1252,7 +1246,7 @@ describe('progressReduxTest', () => {
         peerReviewLessonInfo: {
           levels: [
             {
-              icon: 'fa-lock',
+              icon: '',
               id: '1',
               ids: ['0'],
               kind: LevelKind.peer_review,
@@ -1272,7 +1266,7 @@ describe('progressReduxTest', () => {
       assert.equal(levels[0].status, LevelStatus.perfect);
       assert.equal(levels[0].url, '/peer_reviews/1');
       assert.equal(levels[0].name, state.peerReviewLessonInfo.levels[0].name);
-      assert.equal(levels[0].icon, undefined);
+      assert.equal(levels[0].icon, '');
     });
   });
 
@@ -1319,25 +1313,12 @@ describe('progressReduxTest', () => {
       assert.strictEqual(result, TestResults.ALL_PASS);
     });
 
-    it('returns SUBMITTED_RESULT for a submitted level', () => {
+    it('gets result from status if no result provided', () => {
       const result = getLevelResult({
         status: LevelStatus.submitted,
-        result: TestResults.ALL_PASS,
-        submitted: true,
         pages_completed: [-50, null, null, null, null]
       });
       assert.strictEqual(result, TestResults.SUBMITTED_RESULT);
-    });
-
-    it('returns READONLY_SUBMISSION_RESULT for a readonly submitted level', () => {
-      const result = getLevelResult({
-        status: LevelStatus.submitted,
-        result: TestResults.ALL_PASS,
-        submitted: true,
-        readonly_answers: true,
-        pages_completed: [-50, null, null, null, null]
-      });
-      assert.strictEqual(result, TestResults.READONLY_SUBMISSION_RESULT);
     });
   });
 
