@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
@@ -62,7 +62,7 @@ const styles = {
  */
 class ProgressPill extends React.Component {
   static propTypes = {
-    levels: PropTypes.arrayOf(levelType),
+    levels: PropTypes.arrayOf(levelWithProgressType),
     icon: PropTypes.string,
     text: PropTypes.string,
     tooltip: PropTypes.element,
