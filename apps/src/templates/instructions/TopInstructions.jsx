@@ -189,12 +189,17 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {user, serverLevelId, serverScriptId} = this.props;
+    const {
+      user,
+      serverLevelId,
+      serverScriptId,
+      dynamicInstructions
+    } = this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
-    if (!this.props.dynamicInstructions) {
+    if (!dynamicInstructions) {
       const maxNeededHeight = this.adjustMaxNeededHeight();
 
       // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
@@ -741,7 +746,7 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!isEmbedView && resizable && (
+          {!isEmbedView && resizable && !dynamicInstructions && (
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={height}

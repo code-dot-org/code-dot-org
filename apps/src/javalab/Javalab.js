@@ -6,6 +6,7 @@ import JavalabView from './JavalabView';
 import javalab, {
   getSources,
   setAllSources,
+  setIsDarkMode,
   appendOutputLog
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -51,6 +52,8 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
+  // Pulls dark mode from user preferences
+  this.isDarkMode = !!config.usingDarkModePref;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -102,7 +105,8 @@ Javalab.prototype.init = function(config) {
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
+    isEditingStartSources: !!config.level.editBlocks
   });
 
   registerReducers({javalab});
@@ -124,6 +128,9 @@ Javalab.prototype.init = function(config) {
   ) {
     getStore().dispatch(setAllSources(startSources));
   }
+
+  // Dispatches a redux update of isDarkMode
+  getStore().dispatch(setIsDarkMode(this.isDarkMode));
 
   ReactDOM.render(
     <Provider store={getStore()}>

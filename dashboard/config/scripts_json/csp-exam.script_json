@@ -11,6 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:19 UTC",
     "seeding_key": {
       "script.name": "csp-exam"
     }
@@ -34,6 +35,7 @@
       "name": "Unit 1 Assessment 1 - Binary and Ascii ",
       "absolute_position": 1,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -48,6 +50,7 @@
       "name": "Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc",
       "absolute_position": 2,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -62,6 +65,7 @@
       "name": "Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression",
       "absolute_position": 3,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -76,6 +80,7 @@
       "name": "Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts",
       "absolute_position": 4,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -90,6 +95,7 @@
       "name": "Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction",
       "absolute_position": 5,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -104,6 +110,7 @@
       "name": "Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption",
       "absolute_position": 6,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -118,6 +125,7 @@
       "name": "Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review",
       "absolute_position": 7,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -132,6 +140,7 @@
       "name": "Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings",
       "absolute_position": 8,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -146,6 +155,7 @@
       "name": "Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists",
       "absolute_position": 9,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
       },
@@ -160,6 +170,7 @@
       "name": "Unit 5 Assessment 4 - List Algorithms, Functions with Return Values",
       "absolute_position": 10,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
@@ -174,6 +185,7 @@
       "name": "Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)",
       "absolute_position": 11,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
       },
@@ -184,15 +196,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep"
@@ -208,11 +230,15 @@
     {
       "chapter": 2,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep"
@@ -228,11 +254,15 @@
     {
       "chapter": 3,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep"
@@ -248,11 +278,15 @@
     {
       "chapter": 4,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep"
@@ -268,11 +302,15 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep"
@@ -288,11 +326,15 @@
     {
       "chapter": 6,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep"
@@ -308,11 +350,15 @@
     {
       "chapter": 7,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 1 MC_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 1 MC_exam_prep"
@@ -328,11 +374,15 @@
     {
       "chapter": 8,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 2 MC_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 2 MC_exam_prep"
@@ -348,11 +398,15 @@
     {
       "chapter": 9,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 3 MC_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 3 MC_exam_prep"
@@ -368,11 +422,15 @@
     {
       "chapter": 10,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 Cumulative Assessment 4 MC_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 5 Cumulative Assessment 4 MC_exam_prep"
@@ -388,11 +446,15 @@
     {
       "chapter": 11,
       "position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Cumulative Assess A_exam_prep"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Cumulative Assess A_exam_prep"
@@ -528,5 +590,35 @@
         "script.name": "csp-exam"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

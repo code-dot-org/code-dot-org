@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {Provider} from 'react-redux';
 import {createStore, wrapTable} from '../sectionProgressTestHelpers';
@@ -65,35 +65,33 @@ function buildLargeStories(component, currentView) {
 }
 
 let summaryViewStories = buildSmallStories(
-  <ProgressTableContainer currentView={ViewType.SUMMARY} />,
+  <ProgressTableView currentView={ViewType.SUMMARY} />,
   ViewType.SUMMARY
 );
 let detailViewStories = buildSmallStories(
-  <ProgressTableContainer currentView={ViewType.DETAIL} />,
+  <ProgressTableView currentView={ViewType.DETAIL} />,
   ViewType.DETAIL
 );
 
 if (INCLUDE_LARGE_STORIES) {
   summaryViewStories = summaryViewStories.concat(
     buildLargeStories(
-      <ProgressTableContainer currentView={ViewType.SUMMARY} />,
+      <ProgressTableView currentView={ViewType.SUMMARY} />,
       ViewType.SUMMARY
     )
   );
   detailViewStories = detailViewStories.concat(
     buildLargeStories(
-      <ProgressTableContainer currentView={ViewType.DETAIL} />,
+      <ProgressTableView currentView={ViewType.DETAIL} />,
       ViewType.DETAIL
     )
   );
 }
 
-const progressTableContainerStories = summaryViewStories.concat(
-  detailViewStories
-);
+const progressTableViewStories = summaryViewStories.concat(detailViewStories);
 
 export default storybook => {
   storybook
-    .storiesOf('SectionProgress/ProgressTableContainer', module)
-    .addStoryTable(progressTableContainerStories);
+    .storiesOf('SectionProgress/ProgressTableView', module)
+    .addStoryTable(progressTableViewStories);
 };
