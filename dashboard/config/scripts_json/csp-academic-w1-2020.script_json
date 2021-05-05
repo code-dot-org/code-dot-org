@@ -19,11 +19,12 @@
           "visibility": "Teacher-only"
         }
       ],
-      "curriculum_umbrella": "PL-CSP"
+      "curriculum_umbrella": "PL-CSP",
+      "show_calendar": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-04 03:27:29 UTC",
+    "serialized_at": "2021-05-05 01:30:45 UTC",
     "seeding_key": {
       "script.name": "csp-academic-w1-2020"
     }

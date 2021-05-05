@@ -10,11 +10,12 @@
       "version_year": "2020",
       "is_course": true,
       "hideable_lessons": true,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "show_calendar": true
     },
     "new_name": null,
     "family_name": "pl-csp-summer-in-person",
-    "serialized_at": "2021-05-04 03:22:09 UTC",
+    "serialized_at": "2021-05-05 01:29:59 UTC",
     "seeding_key": {
       "script.name": "csp-summer-2020"
     }

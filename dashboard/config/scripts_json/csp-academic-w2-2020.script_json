@@ -9,11 +9,12 @@
       "is_migrated": true,
       "hideable_lessons": true,
       "weekly_instructional_minutes": 420,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "show_calendar": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-04 03:31:59 UTC",
+    "serialized_at": "2021-05-05 01:32:04 UTC",
     "seeding_key": {
       "script.name": "csp-academic-w2-2020"
     }

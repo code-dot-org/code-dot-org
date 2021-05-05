@@ -6,11 +6,13 @@
     "login_required": false,
     "properties": {
       "student_detail_progress_view": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "weekly_instructional_minutes": 420,
+      "show_calendar": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-04 03:34:49 UTC",
+    "serialized_at": "2021-05-05 01:33:07 UTC",
     "seeding_key": {
       "script.name": "csp-academic-w3-2020"
     }
