@@ -133,6 +133,20 @@ describe('CourseOverview', () => {
   it('renders a CourseScript for each visible script', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
     assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
+    assert.equal(
+      wrapper
+        .find('Connect(CourseScript)')
+        .at(0)
+        .props().title,
+      'CSP Unit 1'
+    );
+    assert.equal(
+      wrapper
+        .find('Connect(CourseScript)')
+        .at(1)
+        .props().title,
+      'CSP Unit 2'
+    );
   });
 
   describe('VerifiedResourcesNotification', () => {
