@@ -57,6 +57,7 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_K_VALUE = "SET_K_VALUE";
 
 // Action creators
 export function setMode(mode) {
@@ -200,6 +201,10 @@ export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
+export function setKValue(kValue) {
+  return { type: SET_K_VALUE, kValue };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -231,7 +236,8 @@ const initialState = {
   resultsPhase: undefined,
   // Possible enum values for saveStatus: notStarted, started, success, and failure.
   saveStatus: "notStarted",
-  columnRefs: {}
+  columnRefs: {},
+  kValue: null
 };
 
 // Reducer
@@ -524,6 +530,12 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
+  if (action.type === SET_K_VALUE) {
+    return {
+      ...state,
+      kValue: action.kValue
+    };
+  }
   return state;
 }
 
@@ -738,7 +750,7 @@ export function getConvertedPredictedLabel(state) {
   return getConvertedLabel(state, state.prediction.predictedLabel);
 }
 
-export function getConvertedLabels(state, rawLabels) {
+export function getConvertedLabels(state, rawLabels = []) {
   return rawLabels.map(label => getConvertedLabel(state, label));
 }
 
@@ -758,7 +770,7 @@ export function getAccuracyClassification(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels ?  state.accuracyCheckPredictedLabels.length : 0;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
       state.accuracyCheckLabels[i].toString() ===
@@ -955,6 +967,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
+  dataToSave.kValue = state.kValue;
 
   return dataToSave;
 }
