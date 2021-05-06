@@ -28,7 +28,6 @@ import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
-import FinishDialog from './templates/FinishDialog';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
@@ -328,10 +327,6 @@ StudioApp.prototype.init = function(config) {
             showInstructionsDialog={autoClose => {
               this.showInstructionsDialog_(config.level, autoClose);
             }}
-          />
-          <FinishDialog
-            onContinue={() => this.onContinue()}
-            getShareUrl={() => this.lastShareUrl}
           />
         </div>
       </Provider>,

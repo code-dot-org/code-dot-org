@@ -1,6 +1,6 @@
-@as_student
 Feature: App Lab Level Options
 
+@as_student
 Scenario: Table data in level definition appears in data browser
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/16"
   And I wait for the page to fully load
@@ -12,7 +12,7 @@ Scenario: Table data in level definition appears in data browser
   And I wait until element "td:contains(Seattle)" is visible
 
 Scenario: Level defaults to design mode, students see design mode and teachers see code mode when viewing student work
-  #As student
+  # As student
   Given I create a teacher-associated student named "Lillian"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/21"
   And I wait for the page to fully load
@@ -20,7 +20,7 @@ Scenario: Level defaults to design mode, students see design mode and teachers s
   Then I rotate to landscape
   And I wait to see "#runButton"
 
-  #As teacher
+  # As teacher
   Then I sign in as "Teacher_Lillian"
   Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/21"
   And I wait for the page to fully load
