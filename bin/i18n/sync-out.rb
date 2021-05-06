@@ -90,7 +90,9 @@ def rename_from_crowdin_name_to_locale
   # Now, any remaining directories named after the language name (rather than
   # the four-letter language code) represent languages downloaded from crowdin
   # that aren't in our system. Remove them.
-  FileUtils.rm_r Dir.glob("i18n/locales/[A-Z]*")
+  # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
+  # character case on file systems which are case insensitive by default, such as OSX.
+  FileUtils.rm_r Dir.glob("i18n/locales/*").select {|path| path =~ /i18n\/locales\/[A-Z].*/}
 end
 
 def find_malformed_links_images(locale, file_path)
