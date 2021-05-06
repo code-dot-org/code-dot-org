@@ -179,13 +179,13 @@ class UsersHelperTest < ActionView::TestCase
     # No user level exists, show locked progress
     assert UserLevel.find_by(user: user, level: level).nil?
     assert_equal(
-      {level.id => {locked: true, pages_completed: [nil, nil]}},
+      {level.id => {locked: true}},
       summarize_user_progress(script, user)[:progress]
     )
 
     # Now "unlock" it by creating a non-submitted UserLevel
     user_level = create :user_level, user: user, best_result: nil, level: level, script: script, locked: false, readonly_answers: false, submitted: false
-    assert_equal({level.id => {status: "not_tried", pages_completed: [nil, nil]}}, summarize_user_progress(script, user)[:progress], 'not_tried status since we dont have a result')
+    assert_equal({level.id => {status: "not_tried"}}, summarize_user_progress(script, user)[:progress], 'not_tried status since we dont have a result')
 
     # put in in "view answers" mode
     user_level.delete
