@@ -945,11 +945,11 @@ class LessonTest < ActiveSupport::TestCase
       @original_script.expects(:write_script_json).never
       @original_course_version = create :course_version, content_root: @original_script
       @original_lesson_group = create :lesson_group, script: @original_script
-      @original_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_script
+      @original_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_script, has_lesson_plan: true
 
       @destination_script = create :script, is_migrated: true
       @destination_course_version = create :course_version, content_root: @destination_script
-      create :lesson_group, script: @destination_script
+      @destination_lesson_group = create :lesson_group, script: @destination_script
     end
 
     test "can clone lesson into another script" do
@@ -998,6 +998,78 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @destination_script, copied_lesson.script
       assert_equal [destination_resource], copied_lesson.resources
       assert_equal [destination_vocab], copied_lesson.vocabularies
+    end
+
+    test "can clone lesson into another script with lessons" do
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+      level1 = create :maze, name: 'level 1'
+      create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
+        activity_section: activity_section, activity_section_position: 1
+
+      existing_lesson = create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: true
+      existing_lesson_activity = create :lesson_activity, lesson: existing_lesson
+      existing_activity_section = create :activity_section, lesson_activity: existing_lesson_activity
+      level2 = create :maze, name: 'level 2'
+      create :script_level, script: @destination_script, lesson: existing_lesson, levels: [level2],
+        activity_section: existing_activity_section, activity_section_position: 1
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      @destination_script.reload
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 2, @destination_script.script_levels.length
+      assert_equal [level2, level1], @destination_script.script_levels.map(&:level)
+      assert_equal 1, copied_lesson.script_levels.length
+      assert_equal [level1], copied_lesson.script_levels.map(&:level)
+      assert_equal 2, copied_lesson.absolute_position
+      assert_equal 2, copied_lesson.relative_position
+    end
+
+    test "can clone lesson and set absolute/relative position on non-lockable lesson with lesson plan" do
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: true, absolute_position: 1, relative_position: 1
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: true, absolute_position: 2, relative_position: 2
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      @destination_script.reload
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 4, copied_lesson.absolute_position
+      assert_equal 3, copied_lesson.relative_position
+    end
+
+    test "can clone lesson and set absolute/relative position on non-lockable lesson without lesson plan" do
+      @original_lesson.has_lesson_plan = false
+      @original_lesson.save!
+
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: true, absolute_position: 1, relative_position: 1
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: true, absolute_position: 2, relative_position: 2
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      @destination_script.reload
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 4, copied_lesson.absolute_position
+      assert_equal 3, copied_lesson.relative_position
+    end
+
+    test "can clone lesson and set absolute/relative position on lockable lesson without lesson plan" do
+      @original_lesson.has_lesson_plan = false
+      @original_lesson.lockable = true
+      @original_lesson.save!
+
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: true, absolute_position: 1, relative_position: 1
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: true, absolute_position: 2, relative_position: 2
+      create :lesson, script: @destination_script, lesson_group: @destination_lesson_group, has_lesson_plan: false, lockable: true, absolute_position: 3, relative_position: 1
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      @destination_script.reload
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 4, copied_lesson.absolute_position
+      assert_equal 2, copied_lesson.relative_position
     end
   end
 end
