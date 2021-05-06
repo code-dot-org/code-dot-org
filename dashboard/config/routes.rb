@@ -848,13 +848,12 @@ Dashboard::Application.routes.draw do
 
   # These really belong in the foorm namespace,
   # but we leave them outside so that we can easily use the simple "/form" paths.
-  get '/form/:path/configuration', to: 'foorm/simple_survey#configuration'
-  get '/form/new', to: 'foorm/simple_survey#new'
-  get '/form/:path', to: 'foorm/simple_survey#show'
-  get '/forms', to: 'foorm/simple_survey#index'
-  post '/form/create', to: 'foorm/simple_survey#create'
+  get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
+  get '/form/:path', to: 'foorm/simple_survey_forms#show'
 
   namespace :foorm do
+    resources :simple_survey_forms, only: [:index, :new, :create]
+
     resources :forms, only: [:create] do
       member do
         put :update_questions

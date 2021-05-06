@@ -23,7 +23,7 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
     'allow_multiple_submissions'
   ]
 
-  validate :path_has_no_spaces_or_forward_slashes
+  validates :path, presence: true, format: {with: /\A[a-z0-9-]+\z/}
 
   def self.find_most_recent_form_for_path(path)
     where(path: path).last
@@ -32,11 +32,5 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
   def self.form_path_disabled?(path)
     disabled_forms = DCDO.get('foorm_simple_survey_disabled', [])
     disabled_forms && disabled_forms.include?(path)
-  end
-
-  def path_has_no_spaces_or_forward_slashes
-    if path.include?(' ') || path.include?('/')
-      errors.add(:path, 'Path cannot contain spaces or forward slashes')
-    end
   end
 end
