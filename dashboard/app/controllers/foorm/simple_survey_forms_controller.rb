@@ -1,31 +1,28 @@
 module Foorm
-  # Should this be renamed to SimpleSurveyForm(s)Controller?
-  class SimpleSurveyController < ApplicationController
+  class SimpleSurveyFormsController < ApplicationController
     # Add admin authorization for /new and create and index
+    before_action :require_admin, only: [:index, :new, :create]
 
     FOORM_SIMPLE_SURVEY_SUBMIT_API = '/dashboardapi/v1/foorm/simple_survey_submission'
 
-    def new
-    end
-
     def create
       form = Foorm::Form.all.detect {|f| f.key == params[:form_key]}
+      return head :bad_request unless form
 
-      # This can probably be less verbose
-      ss = Foorm::SimpleSurveyForm.new(
-        kind: params[:kind],
-        path: params[:path],
-        form_name: form.name,
-        form_version: form.version,
-        allow_multiple_submissions: !!params[:allow_multiple_submissions]
-      )
-
-      # This doesn't work yet
-      if ss.save
-        return render :success
-      else
-        render 'new'
+      # Admin only page, so return any errors in plain text.
+      begin
+        Foorm::SimpleSurveyForm.create!(
+          kind: params[:kind],
+          path: params[:path],
+          form_name: form.name,
+          form_version: form.version,
+          allow_multiple_submissions: params[:allow_multiple_submissions] == '1'
+        )
+      rescue StandardError => e
+        return render status: :bad_request, json: {error: e.message}
       end
+
+      render 'index'
     end
 
     # General simple survey.

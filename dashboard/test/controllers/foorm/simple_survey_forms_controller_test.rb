@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module Foorm
-  class SimpleSurveyControllerTest < ActionDispatch::IntegrationTest
+  class SimpleSurveyFormsControllerTest < ActionDispatch::IntegrationTest
     setup do
       @teacher = create :teacher
       @user = create :user
