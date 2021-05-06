@@ -7,22 +7,6 @@ import {convertXmlToBlockly} from './utils';
 
 import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
 
-const styles = {
-  standard: {
-    marginBottom: 35,
-    paddingTop: 19
-  },
-  inTopPane: {
-    marginTop: 10,
-    marginBottom: 10,
-    paddingTop: 0
-  },
-  inTopPaneCanCollapse: {
-    marginTop: 0,
-    marginBottom: 0
-  }
-};
-
 class MarkdownInstructions extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
@@ -110,5 +94,21 @@ class MarkdownInstructions extends React.Component {
     );
   }
 }
+
+const styles = {
+  standard: {
+    marginBottom: 35,
+    paddingTop: 19
+  },
+  inTopPane: {
+    marginTop: 10,
+    marginBottom: 10,
+    paddingTop: 0
+  },
+  inTopPaneCanCollapse: {
+    marginTop: 0,
+    marginBottom: 0
+  }
+};
 
 export default Radium(MarkdownInstructions);

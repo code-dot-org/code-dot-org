@@ -8,14 +8,6 @@ import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 class ControlProjectSharingDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -65,6 +57,14 @@ class ControlProjectSharingDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
 

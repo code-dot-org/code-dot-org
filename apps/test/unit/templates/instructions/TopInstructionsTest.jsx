@@ -31,6 +31,18 @@ const DEFAULT_PROPS = {
 };
 
 describe('TopInstructions', () => {
+  it('uses the editor-column class if not in standalone mode', () => {
+    const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
+    expect(wrapper.hasClass('editor-column')).to.be.true;
+  });
+
+  it('does not use the editor-column class if in standalone mode', () => {
+    const wrapper = shallow(
+      <TopInstructions {...DEFAULT_PROPS} standalone={true} />
+    );
+    expect(wrapper.hasClass('editor-column')).to.be.false;
+  });
+
   it('is an empty div if passed the "hidden" property', () => {
     const wrapper = shallow(
       <TopInstructions {...DEFAULT_PROPS} hidden={true} />

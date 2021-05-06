@@ -1,0 +1,12 @@
+require 'rake/testtask'
+
+desc 'Run tests for bin/i18n directory'
+task :test do
+  puts 'starting bin/i18n test task'
+  Rake::TestTask.new do |t|
+    t.warning = false
+    t.test_files = FileList["test/**/test_*.rb"]
+  end
+end
+
+task default: :test

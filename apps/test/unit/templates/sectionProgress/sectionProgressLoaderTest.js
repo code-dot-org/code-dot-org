@@ -1,5 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
+import _ from 'lodash';
 import {loadScriptProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
@@ -334,6 +335,7 @@ describe('sectionProgressLoader.loadScript', () => {
     });
 
     describe('the first time', () => {
+      let stageExtras = true;
       beforeEach(() => {
         reduxStub.returns({
           getState: () => {
@@ -345,7 +347,8 @@ describe('sectionProgressLoader.loadScript', () => {
               },
               sectionData: {
                 section: {
-                  students: ['student']
+                  students: ['student'],
+                  stageExtras: stageExtras
                 }
               }
             };
@@ -425,6 +428,59 @@ describe('sectionProgressLoader.loadScript', () => {
         });
         loadScriptProgress(123, 0);
         expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+        progressHelpers.processedLevel.restore();
+      });
+
+      it('filters out bonus levels when section.stageExtras is false', () => {
+        stageExtras = false;
+        const scriptResponse = _.cloneDeep(serverScriptResponse);
+        scriptResponse.lessons[0].levels.push({bonus: true});
+
+        sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
+        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+
+        fetchStub.onCall(0).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, scriptResponse)
+          })
+        });
+        fetchStub.onCall(1).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, serverProgressResponse)
+          })
+        });
+        loadScriptProgress(123, 0);
+        expect(addDataByScriptStub).to.have.been.calledWith(fullExpectedResult);
+        progressHelpers.processedLevel.restore();
+      });
+
+      it('does not filter bonus levels when section.stageExtras is true', () => {
+        stageExtras = true;
+        const bonusLevel = {id: '2002', bonus: true};
+
+        const scriptResponse = _.cloneDeep(serverScriptResponse);
+        scriptResponse.lessons[0].levels.push(bonusLevel);
+
+        const expectedResult = _.cloneDeep(fullExpectedResult);
+        expectedResult.scriptDataByScript[123].stages[0].levels.push(
+          bonusLevel
+        );
+
+        sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
+        addDataByScriptStub = sinon.spy(sectionProgress, 'addDataByScript');
+
+        fetchStub.onCall(0).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, scriptResponse)
+          })
+        });
+        fetchStub.onCall(1).returns({
+          then: sinon.stub().returns({
+            then: sinon.stub().callsArgWith(0, serverProgressResponse)
+          })
+        });
+        loadScriptProgress(123, 0);
+        expect(addDataByScriptStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
     });

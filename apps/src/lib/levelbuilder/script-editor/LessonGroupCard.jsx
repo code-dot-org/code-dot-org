@@ -19,50 +19,6 @@ import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
-const styles = {
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  lessonGroupCard: {
-    fontSize: 18,
-    background: 'white',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#ccc',
-    borderRadius: borderRadius,
-    padding: 20,
-    margin: 10
-  },
-  lessonGroupCardHeader: {
-    color: '#5b6770',
-    marginBottom: 15,
-    minHeight: 10
-  },
-  bottomControls: {
-    height: 30
-  },
-  addButton: {
-    fontSize: 14,
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
-  },
-  input: {
-    width: '100%'
-  },
-  title: {
-    marginRight: 5
-  }
-};
-
-styles.targetLessonGroupCard = {
-  ...styles.lessonGroupCard,
-  borderWidth: 5,
-  borderColor: color.cyan,
-  padding: 16
-};
-
 class LessonGroupCard extends Component {
   static propTypes = {
     lessonGroup: lessonGroupShape.isRequired,
@@ -369,6 +325,50 @@ class LessonGroupCard extends Component {
     );
   }
 }
+
+const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  lessonGroupCard: {
+    fontSize: 18,
+    background: 'white',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ccc',
+    borderRadius: borderRadius,
+    padding: 20,
+    margin: 10
+  },
+  lessonGroupCardHeader: {
+    color: '#5b6770',
+    marginBottom: 15,
+    minHeight: 10
+  },
+  bottomControls: {
+    height: 30
+  },
+  addButton: {
+    fontSize: 14,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    margin: '0 5px 0 0'
+  },
+  input: {
+    width: '100%'
+  },
+  title: {
+    marginRight: 5
+  }
+};
+
+styles.targetLessonGroupCard = {
+  ...styles.lessonGroupCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
+};
 
 export const UnconnectedLessonGroupCard = LessonGroupCard;
 

@@ -17240,6 +17240,7 @@ tr:
               description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje oluşturun.
               description_teacher: 'Bu ders, öğrencilerin kendi etkileşimli animasyonlarını ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil edecektir.'
             Loops with the Artist:
+              key: Sanatçı ile Döngüler
               name: Döngüler ile çizim
               description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır.
               description_teacher: 'Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.'
@@ -17308,6 +17309,7 @@ tr:
               description_student: Kendi hareketli nesne laboratuvarını programlamayı öğrenin!
               description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
+              name: 'Mini Proje: Sanal Hayvan'
               description_student: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
               description_teacher: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
             End of Course Project:
@@ -17498,6 +17500,8 @@ tr:
               description_student: Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız.
               description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.
           lesson_groups:
+            csf_warmup:
+              display_name: Isınmak
             csf_sequencing:
               display_name: Sıralama
             csf_loops:
@@ -17514,6 +17518,8 @@ tr:
               display_name: Hareketli Nesneler
             end_of_course_project:
               display_name: Ders Projesinin Sonu
+            lessonGroup-9:
+              display_name: Isınmak
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         pre-express-2021:
           title: Okul Öncesi Çocuklar için Hızlandırılmış (2020)

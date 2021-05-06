@@ -109,7 +109,7 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
-      lessonLevelData: @script_file,
+      lessonLevelData: @script_dsl_text,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
@@ -163,10 +163,34 @@ class ScriptsController < ApplicationController
     @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
+  def get_rollup_resources
+    script = Script.get_from_cache(params[:id])
+    course_version = script.get_course_version
+    return render status: 400, json: {error: 'Script does not have course version'} unless course_version
+    rollup_pages = []
+    if script.lessons.any? {|l| !l.programming_expressions.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.resources.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.standards.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.vocabularies.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(script), course_version_id: course_version.id))
+    end
+    rollup_pages.each do |r|
+      r.is_rollup = true
+      r.save! if r.changed?
+    end
+    render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
+  end
+
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_lesson_groups(@script)
+    @script_dsl_text = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake

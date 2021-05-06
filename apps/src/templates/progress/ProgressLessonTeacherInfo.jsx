@@ -20,19 +20,6 @@ import TeacherInfoBox from './TeacherInfoBox';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SendLesson from './SendLesson';
 
-const styles = {
-  buttonContainer: {
-    marginTop: 5,
-    marginLeft: 15,
-    marginRight: 15
-  },
-  button: {
-    width: '100%',
-    paddingLeft: 0,
-    paddingRight: 0
-  }
-};
-
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
@@ -162,6 +149,19 @@ class ProgressLessonTeacherInfo extends React.Component {
     );
   }
 }
+
+const styles = {
+  buttonContainer: {
+    marginTop: 5,
+    marginLeft: 15,
+    marginRight: 15
+  },
+  button: {
+    width: '100%',
+    paddingLeft: 0,
+    paddingRight: 0
+  }
+};
 
 export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
 

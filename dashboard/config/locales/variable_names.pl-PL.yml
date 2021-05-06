@@ -26,6 +26,7 @@ pl:
       buttonMargin: margines przycisku
       buttonWidth: szerokość przycisku
       cat_score: wynik kota
+      cat_speed: cat_speed
       cats: koty
       centerToPadLeft: środek do padu w lewo
       choice: wybór

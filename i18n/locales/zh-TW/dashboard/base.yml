@@ -526,7 +526,7 @@ zh-TW:
     no_primary_course: "體驗 Code Studio 的課程"
     choose_next_course: "從下方的 Code Studio 課程中選一個體驗"
     print_certificate: "列印證書"
-  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮品，以贊助你學習課程。"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮物，以贊助你學習課程。"
   move_students:
     new_section_dne: "抱歉，學習小組 %{new_section_code} 不存在。請輸入其他的學習小組代碼。"
     section_code_cant_be_current_section: "目前的學習小組不可以和新的學習小組相同。"

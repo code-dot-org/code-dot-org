@@ -28,30 +28,6 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
-const styles = {
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  dropdown: {
-    margin: '0 6px'
-  },
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  }
-};
-
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
 const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
@@ -871,6 +847,7 @@ class ScriptEditor extends React.Component {
                 useMigratedResources={this.props.isMigrated}
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
+                getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
             {this.props.isMigrated && (
@@ -1027,6 +1004,30 @@ class ScriptEditor extends React.Component {
     );
   }
 }
+
+const styles = {
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  }
+};
 
 export const UnconnectedScriptEditor = ScriptEditor;
 

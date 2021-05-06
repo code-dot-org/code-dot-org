@@ -25,7 +25,14 @@
         "courseD_maze_nestedLoops4": "Odvedi me do suncokreta!",
         "courseD_maze_nestedLoops4_2018": "Odvedi me do suncokreta!",
         "courseD_maze_nestedLoops4_2019": "Odvedi me do suncokreta!",
-        "courseD_maze_nestedLoops4_2020": "Odvedi me do suncokreta!"
+        "courseD_maze_nestedLoops4_2020": "Odvedi me do suncokreta!",
+        "spritelab_extras_repeat": "<img src=\"https://images.code.org/a364f402e2052a73c513e0606d658cf7-image-1593014310879.2020-06-24 11_58_08.gif\" style=\"float:right\">\n\n# Previše spriteova!\n\nUžurbanu scenu možete brzo stvoriti izradom spriteova u <xml><block type=\"gamelab_randomLocation\" block-text=\"random location\"></block></xml> i upotrebom bloka <xml><block type=\"controls_repeat_ext\" block-text=\"repeat\"><value name=\"TIMES\"><block type=\"math_number\"><title name=\"NUM\">???</title></block></value></block></xml>.\n\nStvorite puno spriteova, a zatim ih potaknite na ponašanje. Koristite barem dvije različite vrste riba.\n\n\\*\\* Savjet: \\*\\* Treba vam samo jedan blok <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"sprite begins\"></block></xml> kako bi svi spriteovi s odgovarajućim kostimom započeli isto ponašanje.",
+        "CourseD_EOC_artist": "Stvori vlastiti crtež!",
+        "CourseD_EOC_bounce1": "Stvori vlastitu košarkašku utakmicu!",
+        "CourseD_EOC_dance": "Stvori vlastiti ples!",
+        "CourseD_EOC_starwars": "Stvori vlastitu igru Star Wars!",
+        "courseA_playLab_events3_2020": "Pomozite psu Jorgeu da se pokrene tako što ćete povezati blok [blockly block][0] s blokom događaja [blockly block][1] koji je već u radnom prostoru.\n\nUpotrijebite strelice na tastaturi ili pritisnite tipke sa strelicama da premjestite Jorgea do zastave i završite razinu!",
+        "courseF_extras_sim": "# Stvori osobnu simulaciju!\n\nEvo još jedne verzije simulacije. Pokušaj unijeti neke promjene u kostime spritea ili u kod. Zabavi se prilagođavajući osobnu simulaciju!"
       }
     }
   }

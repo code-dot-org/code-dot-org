@@ -15,29 +15,6 @@ import ResourceType, {
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 
-const styles = {
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  dropdown: {
-    margin: '0 6px'
-  },
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  }
-};
-
 class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -301,6 +278,7 @@ class CourseEditor extends Component {
               }
               courseVersionId={this.props.courseVersionId}
               useMigratedResources={this.props.useMigratedResources}
+              getRollupsUrl={`/courses/${this.props.name}/get_rollup_resources`}
             />
           </div>
           {this.props.useMigratedResources && (
@@ -335,6 +313,29 @@ class CourseEditor extends Component {
     );
   }
 }
+
+const styles = {
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  }
+};
 
 export const UnconnectedCourseEditor = CourseEditor;
 

@@ -16,37 +16,6 @@ import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import * as dom from '../dom';
 
-const styles = {
-  completion: {
-    display: 'inline'
-  },
-  phoneFrameCompletion: {
-    display: 'block',
-    width: '100%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    textAlign: 'center'
-  },
-  resetButtonWrapper: {
-    position: 'absolute',
-    bottom: 5,
-    textAlign: 'center',
-    width: '100%'
-  },
-  resetButton: {
-    display: 'inline-block',
-    backgroundColor: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    marginLeft: 5,
-    position: 'relative',
-    left: 2,
-    bottom: 2
-  },
-  containedInstructions: {
-    marginTop: 10
-  }
-};
-
 class ApplabVisualizationColumn extends React.Component {
   static propTypes = {
     isEditingProject: PropTypes.bool.isRequired,
@@ -180,6 +149,37 @@ class ApplabVisualizationColumn extends React.Component {
     );
   }
 }
+
+const styles = {
+  completion: {
+    display: 'inline'
+  },
+  phoneFrameCompletion: {
+    display: 'block',
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    textAlign: 'center'
+  },
+  resetButtonWrapper: {
+    position: 'absolute',
+    bottom: 5,
+    textAlign: 'center',
+    width: '100%'
+  },
+  resetButton: {
+    display: 'inline-block',
+    backgroundColor: color.dark_charcoal,
+    borderColor: color.dark_charcoal,
+    marginLeft: 5,
+    position: 'relative',
+    left: 2,
+    bottom: 2
+  },
+  containedInstructions: {
+    marginTop: 10
+  }
+};
 
 export const UnconnectedApplabVisualizationColumn = ApplabVisualizationColumn;
 

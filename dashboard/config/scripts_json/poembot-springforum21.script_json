@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 15:46:31 UTC",
+    "serialized_at": "2021-05-03 23:56:13 UTC",
     "seeding_key": {
       "script.name": "poembot-springforum21"
     }
@@ -55,15 +55,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Poem Bot Prototype",
         "level_keys": [
           "haiku_prototype_choice1"
-        ]
+        ],
+        "progression": "Poem Bot Prototype"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "haiku_prototype_choice1"
@@ -80,15 +80,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Build a Poem Bot",
         "level_keys": [
           "Poem Bot_Choice1_Background"
-        ]
+        ],
+        "progression": "Build a Poem Bot"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Poem Bot_Choice1_Background"

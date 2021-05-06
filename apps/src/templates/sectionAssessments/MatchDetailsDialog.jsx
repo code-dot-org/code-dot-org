@@ -9,21 +9,6 @@ import {getCurrentQuestion, QuestionType} from './sectionAssessmentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {matchDetailsQuestionPropType} from './assessmentDataShapes';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  instructions: {
-    marginTop: 20
-  },
-  answers: {
-    float: 'left',
-    width: 250
-  }
-};
-
 class MatchDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -93,6 +78,21 @@ class MatchDetailsDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  instructions: {
+    marginTop: 20
+  },
+  answers: {
+    float: 'left',
+    width: 250
+  }
+};
 
 export const UnconnectedMatchDetailsDialog = MatchDetailsDialog;
 
