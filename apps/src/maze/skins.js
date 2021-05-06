@@ -183,7 +183,9 @@ var CONFIGS = {
     pegmanXOffset: -12,
     pegmanYOffset: -30,
     turnAfterVictory: true
-  }
+  },
+
+  neighborhood: {}
 };
 
 // night skins are effectively the same, but will have some different assets
