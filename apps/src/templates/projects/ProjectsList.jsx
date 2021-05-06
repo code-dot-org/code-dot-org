@@ -28,21 +28,6 @@ export const COLUMNS_WITHOUT_THUMBNAILS = {
   LAST_EDITED: 3
 };
 
-const styles = {
-  thumbnailCell: {
-    border: '1px solid gray',
-    width: THUMBNAIL_SIZE,
-    minWidth: THUMBNAIL_SIZE,
-    padding: 0
-  },
-  thumbnailWrapper: {
-    height: THUMBNAIL_SIZE,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-};
-
 const typeFormatter = type => {
   return PROJECT_TYPE_MAP[type];
 };
@@ -237,5 +222,20 @@ class ProjectsList extends React.Component {
     );
   }
 }
+
+const styles = {
+  thumbnailCell: {
+    border: '1px solid gray',
+    width: THUMBNAIL_SIZE,
+    minWidth: THUMBNAIL_SIZE,
+    padding: 0
+  },
+  thumbnailWrapper: {
+    height: THUMBNAIL_SIZE,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+};
 
 export default ProjectsList;

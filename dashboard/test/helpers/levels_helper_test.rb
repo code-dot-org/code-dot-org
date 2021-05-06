@@ -32,7 +32,7 @@ class LevelsHelperTest < ActionView::TestCase
     end
   end
 
-  test "should parse maze level with non string array" do
+  test "blockly_options should parse maze level with non string array" do
     @level.properties["maze"] = [[0, 0], [2, 3]]
     options = blockly_options
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
@@ -44,7 +44,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
   end
 
-  test "non-custom level displays localized instruction after locale switch" do
+  test "blockly_options non-custom level displays localized instruction after locale switch" do
     default_locale = 'en-US'
     new_locale = 'es-ES'
     @level.short_instructions = nil
@@ -62,7 +62,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['shortInstructions']
   end
 
-  test "custom level displays english instruction" do
+  test "blockly_options custom level displays english instruction" do
     default_locale = 'en-US'
     @level.short_instructions = "English instructions"
 
@@ -72,7 +72,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal @level.short_instructions, options[:level]['shortInstructions']
   end
 
-  test "custom level displays localized instruction if exists" do
+  test "blockly_options custom level displays localized instruction if exists" do
     @level.short_instructions = "English instructions"
     new_locale = 'es-ES'
     new_instructions = "Spanish instructions"
@@ -96,6 +96,23 @@ class LevelsHelperTest < ActionView::TestCase
     @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
     assert_equal @level.short_instructions, options[:level]['shortInstructions']
+  end
+
+  test "blockly_options 'embed' is true for embed levels" do
+    @level.embed = true
+    assert blockly_options[:embed]
+  end
+
+  test "blockly_options 'embed' is true for widget levels not in start mode" do
+    @level = create(:applab, embed: false, widget_mode: true)
+    @is_start_mode = false
+    assert blockly_options[:embed]
+  end
+
+  test "blockly_options 'embed' is false for widget levels in start mode" do
+    @level = create(:applab, embed: false, widget_mode: true)
+    @is_start_mode = true
+    refute blockly_options[:embed]
   end
 
   test "get video choices" do
@@ -423,65 +440,6 @@ class LevelsHelperTest < ActionView::TestCase
 
     sign_out user
     assert_not can_view_solution?
-  end
-
-  test 'build_script_level_path_for_translations for survey' do
-    input_dsl = <<~DSL
-      lesson 'Survey1', display_name: 'Survey1', has_lesson_plan: false, lockable: true;
-      assessment 'LockableAssessment1';
-    DSL
-
-    create :level, name: 'LockableAssessment1'
-
-    script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
-
-    script = Script.add_script(
-      {name: 'test_script'},
-      script_data[:lesson_groups]
-    )
-
-    stage = script.lessons[0]
-    assert_equal '/s/test_script/lockable/1/levels/1', build_script_level_path_for_translations(stage.script_levels[0])
-  end
-
-  test 'build_script_level_path_for_translations for bonus' do
-    input_dsl = <<~DSL
-      lesson 'Test bonus level links', display_name: 'Test bonus level links'
-      level 'Level1'
-      level 'BonusLevel1', bonus: true
-    DSL
-
-    create :level, name: 'Level1'
-    create :level, name: 'BonusLevel1'
-
-    script_data, _ = ScriptDSL.parse(input_dsl, 'test_bonus_level_links')
-
-    script = Script.add_script(
-      {name: 'test_bonus_level_links'},
-      script_data[:lesson_groups]
-    )
-
-    bonus_script_level = script.lessons.first.script_levels[1]
-    assert_equal `/s/test_bonus_level_links/stage/1/extras?level_name=BonusLevel1`, build_script_level_path_for_translations(bonus_script_level)
-  end
-
-  test 'build_script_level_path_for_translations for normal level' do
-    input_dsl = <<~DSL
-      lesson 'Test bonus level links', display_name: 'Level Link Test'
-      level 'Level1'
-    DSL
-
-    create :level, name: 'Level1'
-
-    script_data, _ = ScriptDSL.parse(input_dsl, 'test_level_links')
-
-    script = Script.add_script(
-      {name: 'test_level_links'},
-      script_data[:lesson_groups]
-    )
-
-    script_level = script.lessons.first.script_levels[0]
-    assert_equal `/s/test_level_links/stage/1/puzzle/1`, build_script_level_path_for_translations(script_level)
   end
 
   test 'build_script_level_path differentiates lesson and survey' do

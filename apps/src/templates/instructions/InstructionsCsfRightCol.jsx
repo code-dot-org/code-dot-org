@@ -12,40 +12,6 @@ import {getOuterHeight} from './utils';
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const styles = {
-  column: {
-    display: 'flex',
-    justifyContent: 'center'
-  },
-  collapserButton: {
-    position: 'absolute',
-    right: 0,
-    marginTop: 5,
-    marginRight: 5
-  },
-  scrollButtons: {
-    margin: '0px 5px',
-    minWidth: '40px'
-  },
-  scrollButtonsBelowCollapser: {
-    position: 'relative',
-    top: 50,
-    margin: '0px'
-  },
-  craftStyles: {
-    collapserButton: {
-      padding: 5,
-      marginBottom: 0
-    },
-    scrollButtons: {
-      left: 38
-    },
-    scrollButtonsRtl: {
-      right: 38
-    }
-  }
-};
-
 class InstructionsCsfRightCol extends React.Component {
   static propTypes = {
     shouldDisplayHintPrompt: PropTypes.func.isRequired,
@@ -169,6 +135,40 @@ class InstructionsCsfRightCol extends React.Component {
     );
   }
 }
+
+const styles = {
+  column: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  collapserButton: {
+    position: 'absolute',
+    right: 0,
+    marginTop: 5,
+    marginRight: 5
+  },
+  scrollButtons: {
+    margin: '0px 5px',
+    minWidth: '40px'
+  },
+  scrollButtonsBelowCollapser: {
+    position: 'relative',
+    top: 50,
+    margin: '0px'
+  },
+  craftStyles: {
+    collapserButton: {
+      padding: 5,
+      marginBottom: 0
+    },
+    scrollButtons: {
+      left: 38
+    },
+    scrollButtonsRtl: {
+      right: 38
+    }
+  }
+};
 
 export const UnconnectedInstructionsCsfRightCol = Radium(
   InstructionsCsfRightCol

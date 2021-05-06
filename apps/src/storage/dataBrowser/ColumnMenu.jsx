@@ -6,13 +6,6 @@ import FontAwesome from '../../templates/FontAwesome';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const styles = {
-  icon: {
-    color: 'white',
-    cursor: 'pointer'
-  }
-};
-
 export default class ColumnMenu extends React.Component {
   static propTypes = {
     coerceColumn: PropTypes.func.isRequired,
@@ -58,3 +51,10 @@ export default class ColumnMenu extends React.Component {
     );
   }
 }
+
+const styles = {
+  icon: {
+    color: 'white',
+    cursor: 'pointer'
+  }
+};

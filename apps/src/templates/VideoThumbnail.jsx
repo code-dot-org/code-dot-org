@@ -3,23 +3,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {videoDataShape} from './types';
 
-const styles = {
-  videoLink: {
-    display: 'inline-block',
-    margin: 8,
-    fontWeight: 'bold',
-    fontSize: 16,
-    lineHeight: '25px',
-    cursor: 'pointer'
-  },
-  videoThumbnail: {
-    borderRadius: 5,
-    height: 40,
-    width: 'auto',
-    marginRight: 8
-  }
-};
-
 export default class VideoThumbnail extends Component {
   static propTypes = {
     video: videoDataShape,
@@ -57,3 +40,20 @@ export default class VideoThumbnail extends Component {
     );
   }
 }
+
+const styles = {
+  videoLink: {
+    display: 'inline-block',
+    margin: 8,
+    fontWeight: 'bold',
+    fontSize: 16,
+    lineHeight: '25px',
+    cursor: 'pointer'
+  },
+  videoThumbnail: {
+    borderRadius: 5,
+    height: 40,
+    width: 'auto',
+    marginRight: 8
+  }
+};

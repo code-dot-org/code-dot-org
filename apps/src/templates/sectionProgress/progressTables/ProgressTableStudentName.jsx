@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import firehoseClient from '../../../lib/util/firehose';
@@ -9,23 +8,7 @@ import color from '@cdo/apps/util/color';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
-const styles = {
-  link: {
-    color: color.teal,
-    verticalAlign: 'middle'
-  },
-  tooltip: {
-    display: 'flex',
-    textAlign: 'center'
-  },
-  collapser: {
-    paddingRight: '8px',
-    fontSize: '20px',
-    verticalAlign: 'middle',
-    width: '11px'
-  }
-};
-class ProgressTableStudentName extends React.PureComponent {
+export default class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     studentId: PropTypes.number.isRequired,
@@ -35,14 +18,17 @@ class ProgressTableStudentName extends React.PureComponent {
     studentUrl: PropTypes.string.isRequired,
     onToggleExpand: PropTypes.func.isRequired,
     isExpanded: PropTypes.bool.isRequired,
-
-    // redux provided
     showSectionProgressDetails: PropTypes.bool
   };
 
   constructor(props) {
     super(props);
+    this.toggleExpand = this.toggleExpand.bind(this);
     this.recordStudentNameClick = this.recordStudentNameClick.bind(this);
+  }
+
+  toggleExpand() {
+    this.props.onToggleExpand(this.props.studentId);
   }
 
   recordStudentNameClick() {
@@ -88,7 +74,7 @@ class ProgressTableStudentName extends React.PureComponent {
   }
 
   render() {
-    const {name, studentUrl, onToggleExpand, isExpanded} = this.props;
+    const {name, studentUrl, isExpanded} = this.props;
     const tooltipId = this.tooltipId();
 
     return (
@@ -101,7 +87,7 @@ class ProgressTableStudentName extends React.PureComponent {
         {this.props.showSectionProgressDetails && (
           <CollapserIcon
             isCollapsed={!isExpanded}
-            onClick={onToggleExpand}
+            onClick={this.toggleExpand}
             collapsedIconClass="fa-caret-right"
             expandedIconClass="fa-caret-down"
             style={styles.collapser}
@@ -120,8 +106,19 @@ class ProgressTableStudentName extends React.PureComponent {
   }
 }
 
-export const UnconnectedProgressTableStudentName = ProgressTableStudentName;
-
-export default connect(state => ({
-  showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
-}))(ProgressTableStudentName);
+const styles = {
+  link: {
+    color: color.teal,
+    verticalAlign: 'middle'
+  },
+  tooltip: {
+    display: 'flex',
+    textAlign: 'center'
+  },
+  collapser: {
+    paddingRight: '8px',
+    fontSize: '20px',
+    verticalAlign: 'middle',
+    width: '11px'
+  }
+};

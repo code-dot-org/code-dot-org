@@ -1,0 +1,59 @@
+---
+title: Take the next step on your CS Journey
+video_player: true
+theme: responsive
+---
+<a id="top"></a>
+<h1>Take the next step on your CS Journey</h1>
+
+<br>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0; text-align:center">
+  <a class="linktag" id="careers-with-cs" href="/careers-with-cs" style="text-decoration:none" target="_blank">
+  <h3 style="color:#ffffff; margin-top:12px"><strong>Career Exploration</strong></h3>
+  <img src="/images/csjourneys/careers-in-tech.jpg" style="width:100%" alt="careers in tech">
+  </a>
+</div>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca; text-align:center">
+  <a class="linktag" id="internships" href="/beyond/internships" style="text-decoration:none" target="_blank">
+  <h3 style="color:#ffffff; margin-top:12px"><strong>Internships</strong></h3>
+  <img src="/images/csjourneys/internships.jpg" style="width:100%" alt="internships">
+  </a>
+</div>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#ffa400; text-align:center">
+  <a class="linktag" id="scholarships" href="/beyond/scholarships" style="text-decoration:none" target="_blank">
+  <h3 style="color:#ffffff; margin-top:12px"><strong>CS-focused scholarships</strong></h3>
+  <img src="/images/csjourneys/scholarships.jpg" style="width:100%" alt="scholarships">
+  </a>
+</div>
+
+<div style="clear: both"></div>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#b9bf15; text-align:center">
+  <a class="linktag" id="mentorships" href="/beyond/mentors-and-community" style="text-decoration:none" target="_blank">
+  <h3 style="color:#ffffff; margin-top:12px"><strong>Mentorships and community</strong></h3>
+  <img src="/images/csjourneys/mentorships.jpg" style="width:100%" alt="mentorships">
+  </a>
+</div>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#ffb81d; text-align:center">
+  <a class="linktag" id="extracurricular" href="/beyond/extracurricular" style="text-decoration:none" target="_blank">
+  <h3 style="color:#ffffff; margin-top:12px"><strong>Extracurricular opportunities</strong></h3>
+  <img src="/images/csjourneys/extracurricular.jpg" style="width:100%" alt="young women working on a project">
+  </a>
+</div>
+
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc; text-align:center">
+  <a class="linktag" id="extended-learning" href="/beyond/extended-learning" style="text-decoration:none" target="_blank">
+  <h3 style="color:#ffffff; margin-top:12px"><strong>Online courses</strong></h3>
+  <img src="/images/csjourneys/online-courses.jpg" style="width:100%" alt="young man working on tablet">
+  </a>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<hr>
+
+"Interships" by Andrea Piacquadio from <a href="https://www.pexels.com/photo/woman-sitting-on-concrete-stairs-using-laptop-3775128/" target="_blank">Pexels</a>, "Scholarships" by Karolina Grabowska from <a href="https://www.pexels.com/photo/stack-of-books-beside-a-shopping-cart-with-cash-money-5632400/" target="_blank">Pexels</a>, "Mentorships" by Christina Morillo from <a href="https://www.pexels.com/photo/woman-wearing-red-top-holding-silver-macbook-1181722/" target="_blank">Pexels</a>, "Extracurricular" by RF._.studio from <a href="https://www.pexels.com/photo/women-at-the-meeting-3810758/" target="_blank">Pexels</a>, "Online education" by Julia M Cameron from <a href="https://www.pexels.com/photo/man-in-yellow-crew-neck-t-shirt-while-using-tablet-4144096/" target="_blank">Pexels</a>

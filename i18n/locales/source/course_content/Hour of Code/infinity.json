@@ -1,45 +1,45 @@
 {
-  "https://studio.code.org/s/infinity/stage/1/puzzle/1": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/1": {
     "short_instructions": "Hiro is \"actor 1\".  Use the Move block to move Hiro right to touch Baymax.",
     "callouts": {
       "Infinity_move_right_runbutton": "Add move block here"
     }
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/2": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/2": {
     "short_instructions": "Make Anna say \"Hi there.\" by using the Say block."
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/3": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/3": {
     "short_instructions": "Baymax is \"actor 2\".  Add Move blocks and then move Baymax using the arrows.  Make him touch the two other characters.",
     "callouts": {
       "Infinity_move_directions_callout": "Which block will make Baymax move up when the up arrow is pressed?",
       "Infinity_move_directions_callout_arrow": "Use these arrows to steer"
     }
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/4": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/4": {
     "short_instructions": "Hiro is \"actor 1\".  Move him right to Baymax, and play a sound when they touch.",
     "callouts": {
       "Infinity_move_collide_callout": "Play a sound when this event occurs."
     }
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/5": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/5": {
     "short_instructions": "Make Anna score a point when she touches a snowflake.  Then click \"Run\" and steer her to touch each snowflake once."
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/6": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/6": {
     "short_instructions": "Baymax is \"actor 2\".  Make Baymax throw a rocket at Hiro."
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/7": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/7": {
     "short_instructions": "Hiro is \"actor 3\".  Make Hiro throw a projectile to each of the four characters.  Wait one second between each throw."
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/8": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/8": {
     "short_instructions": "Use a \"repeat forever\" block to make Anna move up and down 400 pixels.",
     "callouts": {
       "Infinity_repeat_callout": "Place Move blocks inside here"
     }
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/9": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/9": {
     "short_instructions": "Can you make Elsa (\"actor 2\") catch up with Anna by using the arrow keys?"
   },
-  "https://studio.code.org/s/infinity/stage/1/puzzle/10": {
+  "https://studio.code.org/s/infinity/lessons/1/levels/10": {
     "short_instructions": "Create anything you like and share it!"
   }
 }

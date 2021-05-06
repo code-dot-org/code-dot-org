@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
@@ -27,7 +28,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 import {hasInstructions} from './utils';
 import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
@@ -53,58 +53,6 @@ const craftStyles = {
   headerBar: {
     color: color.white,
     backgroundColor: '#3b3b3b'
-  }
-};
-
-const styles = {
-  main: {
-    position: 'absolute',
-    marginLeft: 15,
-    top: 0,
-    right: 0
-    // left handled by media queries for .editor-column
-  },
-  mainRtl: {
-    position: 'absolute',
-    marginRight: 15,
-    top: 0,
-    left: 0
-    // right handled by media queries for .editor-column
-  },
-  noViz: {
-    left: 0,
-    right: 0,
-    marginRight: 0,
-    marginLeft: 0
-  },
-  body: {
-    backgroundColor: 'white',
-    paddingLeft: 10,
-    paddingRight: 10,
-    position: 'absolute',
-    top: HEADER_HEIGHT,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    overflowY: 'scroll'
-  },
-  csfBody: {
-    backgroundColor: '#ddd',
-    position: 'absolute',
-    top: HEADER_HEIGHT,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    overflow: 'hidden'
-  },
-  embedView: {
-    height: undefined,
-    bottom: 0
-  },
-  title: {
-    textAlign: 'center',
-    height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT + 'px'
   }
 };
 
@@ -140,12 +88,14 @@ class TopInstructions extends Component {
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
-    collapsible: PropTypes.bool
+    collapsible: PropTypes.bool,
+    // Use this if the instructions will be somewhere other than over the code workspace.
+    // This will allow instructions to be resized separately from the workspace.
+    standalone: PropTypes.bool
   };
 
   static defaultProps = {
@@ -190,12 +140,17 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {user, serverLevelId, serverScriptId} = this.props;
+    const {
+      user,
+      serverLevelId,
+      serverScriptId,
+      dynamicInstructions
+    } = this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
-    if (!this.props.dynamicInstructions) {
+    if (!dynamicInstructions) {
       const maxNeededHeight = this.adjustMaxNeededHeight();
 
       // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
@@ -568,7 +523,6 @@ class TopInstructions extends Component {
       isRtl,
       height,
       isEmbedView,
-      widgetMode,
       levelVideos,
       mapReference,
       referenceLinks,
@@ -580,7 +534,8 @@ class TopInstructions extends Component {
       containerStyle,
       resizable,
       documentationUrl,
-      ttsLongInstructionsUrl
+      ttsLongInstructionsUrl,
+      standalone
     } = this.props;
 
     const {
@@ -596,17 +551,15 @@ class TopInstructions extends Component {
     // instead of inferring it from noInstructionsWhenCollapsed
     const isCSF = !noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
-    const widgetWidth = WIDGET_WIDTH + 'px';
 
     const topInstructionsStyle = [
-      !mainStyle && (isRtl ? styles.mainRtl : styles.main),
+      isRtl ? styles.mainRtl : styles.main,
       mainStyle,
       {
         height: height - RESIZER_HEIGHT
       },
       noVisualization && styles.noViz,
-      isEmbedView && styles.embedView,
-      widgetMode && (isRtl ? {right: widgetWidth} : {left: widgetWidth})
+      isEmbedView && styles.embedView
     ];
 
     const instructionsContainerStyle = [
@@ -675,7 +628,7 @@ class TopInstructions extends Component {
     return (
       <div
         style={topInstructionsStyle}
-        className="editor-column"
+        className={classNames({'editor-column': !standalone})}
         ref={ref => (this.topInstructions = ref)}
       >
         <TopInstructionsHeader
@@ -744,7 +697,7 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!isEmbedView && resizable && (
+          {!isEmbedView && resizable && !dynamicInstructions && (
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={height}
@@ -756,6 +709,58 @@ class TopInstructions extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    position: 'absolute',
+    marginLeft: 15,
+    top: 0,
+    right: 0
+    // left handled by media queries for .editor-column
+  },
+  mainRtl: {
+    position: 'absolute',
+    marginRight: 15,
+    top: 0,
+    left: 0
+    // right handled by media queries for .editor-column
+  },
+  noViz: {
+    left: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 0
+  },
+  body: {
+    backgroundColor: 'white',
+    paddingLeft: 10,
+    paddingRight: 10,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflowY: 'scroll'
+  },
+  csfBody: {
+    backgroundColor: '#ddd',
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflow: 'hidden'
+  },
+  embedView: {
+    height: undefined,
+    bottom: 0
+  },
+  title: {
+    textAlign: 'center',
+    height: HEADER_HEIGHT,
+    lineHeight: HEADER_HEIGHT + 'px'
+  }
+};
 // Note: ususally the unconnected component is only used for tests, in this case it is used
 // in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
 export const UnconnectedTopInstructions = Radium(TopInstructions);
@@ -789,7 +794,6 @@ export default connect(
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey
   }),

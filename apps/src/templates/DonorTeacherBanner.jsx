@@ -6,20 +6,6 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {putRecord} from '../lib/util/firehose';
 import TeacherInfoBanner from './TeacherInfoBanner';
 
-const styles = {
-  paragraph: {
-    marginBottom: 10
-  },
-  label: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    cursor: 'pointer'
-  },
-  radio: {
-    verticalAlign: 'top',
-    marginRight: 10,
-    cursor: 'pointer'
-  }
-};
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     showPegasusLink: PropTypes.bool,
@@ -189,3 +175,18 @@ export default class DonorTeacherBanner extends Component {
     return mainForm;
   }
 }
+
+const styles = {
+  paragraph: {
+    marginBottom: 10
+  },
+  label: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    cursor: 'pointer'
+  },
+  radio: {
+    verticalAlign: 'top',
+    marginRight: 10,
+    cursor: 'pointer'
+  }
+};

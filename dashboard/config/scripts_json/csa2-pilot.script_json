@@ -9,15 +9,41 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-06 18:47:24 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "lesson group display name"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "new lesson",
+      "name": "lesson display name",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    }
   ],
   "lesson_activities": [
 
@@ -37,13 +63,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }
