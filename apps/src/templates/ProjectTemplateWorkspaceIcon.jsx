@@ -5,21 +5,6 @@ var msg = require('@cdo/locale');
 
 const IMAGE_BASE_URL = '/blockly/media/';
 
-const styles = {
-  container: {
-    display: 'inline'
-  },
-  tooltip: {
-    maxWidth: 200,
-    lineHeight: '20px',
-    whiteSpace: 'normal'
-  },
-  projectTemplateIcon: {
-    marginRight: 5,
-    marginTop: -1
-  }
-};
-
 export default class ProjectTemplateWorkspaceIcon extends React.Component {
   constructor(props) {
     super(props);
@@ -51,3 +36,18 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'inline'
+  },
+  tooltip: {
+    maxWidth: 200,
+    lineHeight: '20px',
+    whiteSpace: 'normal'
+  },
+  projectTemplateIcon: {
+    marginRight: 5,
+    marginTop: -1
+  }
+};

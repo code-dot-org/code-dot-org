@@ -20,7 +20,8 @@ describe('Java Lab View Test', () => {
       onInputMessage: () => {},
       isProjectLevel: false,
       isReadOnlyWorkspace: false,
-      isDarkMode: false
+      isDarkMode: false,
+      visualization: <div />
     };
   });
 
