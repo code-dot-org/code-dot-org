@@ -1173,7 +1173,7 @@
   "manageStudentsNotificationAddSuccess": "You added {numStudents, plural, one {1 student} other {# students}} to your section.",
   "manageStudentsNotificationSuccess": "Success!",
   "manageStudentsNotificationLocked": "You have locked this section",
-  "manageStudentsNotificationLockedDetails": "Students cannot join this section using the section code. {loginType, select, email {You can still add students to the section manually by moving or copying them from another section} other {You can still add students manually on the Manage Students tab}}. You can unlock this section by clicking \"Edit Section Details\".",
+  "manageStudentsNotificationLockedDetails": "Students cannot join this section using the section code. You can still add students {loginType, select, google_classroom {by syncing with Google Classroom} clever {by syncing with Clever} email {manually by moving or copying them from another section} other {manually on the Manage Students tab}}. You can unlock this section by clicking \"Edit Section Details\".",
   "manageYourLibraries": "Manage Your Libraries",
   "map": "Map",
   "mapsToCSTAStandards": "Maps to [CSTA Standards]({cstaLink})",
