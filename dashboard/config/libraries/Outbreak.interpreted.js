@@ -3,6 +3,8 @@ var RECOVERY_TIME = 250;
 var RECOVERY_BAR_HEIGHT = 5;
 var PERCENT_SICK_AT_SETUP = 10;
 var SPRITE_SIZE = 25;
+var MIN_XY = 20;
+var MAX_XY = 380;
 /* --------------- END OF CONSTANTS- Curriculum Owned --------------- */
 
 /* -------------- START OF CALCULATED CONSTANTS - Engineering Owned --------------*/
@@ -100,9 +102,106 @@ function setupOutbreak(numMonsters, callback) {
   callback();
 }
 
-function layoutSprites(format) {
-  // TODO: Implement layoutSprites
-  console.log(format);
+function layoutBorder() {
+  var spriteIds = getSpriteIdsInUse();
+  var count = spriteIds.length;
+
+  // Layout monster in each corner first
+  if (count > 0) {
+    jumpTo({id: spriteIds[0]}, {x: MIN_XY, y: MIN_XY});
+  }
+  if (count > 1) {
+    jumpTo({id: spriteIds[1]}, {x: MAX_XY, y: MIN_XY});
+  }
+  if (count > 2) {
+    jumpTo({id: spriteIds[2]}, {x: MIN_XY, y: MAX_XY});
+  }
+  if (count > 3) {
+    jumpTo({id: spriteIds[3]}, {x: MAX_XY, y: MAX_XY});
+  }
+
+  // Fill in the sides with however many monsters are left
+  if (count > 4) {
+    var topCount = Math.ceil((count - 4 - 0) / 4);
+    var rightCount = Math.ceil((count - 4 - 1) / 4);
+    var bottomCount = Math.ceil((count - 4 - 2) / 4);
+    var leftCount = Math.ceil((count - 4 - 3) / 4);
+    var i, x, y, frac;
+
+    for (i = 0; i < topCount; i++) {
+      var sprite = World.allSprites[4 + i];
+      frac = (i + 1) / (topCount + 1);
+      x = MIN_XY + frac * (MAX_XY - MIN_XY);
+      y = MIN_XY;
+      jumpTo({id: spriteIds[4 + i]}, {x: x, y: y});
+    }
+
+    for (i = 0; i < rightCount; i++) {
+      frac = (i + 1) / (rightCount + 1);
+      x = MAX_XY;
+      y = MIN_XY + frac * (MAX_XY - MIN_XY);
+      jumpTo({id: spriteIds[4 + topCount + i]}, {x: x, y: y});
+    }
+
+    for (i = 0; i < bottomCount; i++) {
+      frac = (i + 1) / (bottomCount + 1);
+      x = MIN_XY + frac * (MAX_XY - MIN_XY);
+      y = MAX_XY;
+      jumpTo({id: spriteIds[4 + topCount + rightCount + i]}, {x: x, y: y});
+    }
+
+    for (i = 0; i < leftCount; i++) {
+      frac = (i + 1) / (leftCount + 1);
+      y = MIN_XY + frac * (MAX_XY - MIN_XY);
+      x = MIN_XY;
+      jumpTo({id: spriteIds[4 + topCount + rightCount + bottomCount + i]}, {x: x, y: y});
+    }
+  }
+}
+
+function layoutClusters(clusterSize) {
+  var spriteIds = getSpriteIdsInUse();
+  var count = spriteIds.length;
+  var numClusters = Math.ceil(count / clusterSize);
+  for (var i = 0; i < numClusters; i++) {
+    var clusterX = randomNumber(MIN_XY, MAX_XY);
+    var clusterY = randomNumber(MIN_XY, MAX_XY);
+    for (var j = 0; j < clusterSize; j++) {
+      var sprite = World.allSprites[i * clusterSize + j];
+      if (!sprite) {
+        continue;
+      }
+      sprite.x = clusterX + randomNumber(-10, 10);
+      sprite.y = clusterY + randomNumber(-10, 10);
+    }
+  }
+}
+
+function layoutGrid() {
+  var spriteIds = getSpriteIdsInUse();
+  var count = spriteIds.length;
+  var numRows = Math.ceil(Math.sqrt(count));
+  var numCols = Math.ceil(count / numRows);
+  for (var i = 0; i < count; i++) {
+    var spriteIdArg = {id: spriteIds[i]};
+    var row = Math.floor(i / numCols);
+    var col = i % numCols;
+	var colFraction = col / (numCols - 1) || 0;
+    var x = MIN_XY + colFraction * (MAX_XY - MIN_XY);
+
+    var rowFraction = row / (numRows - 1) || 0;
+    var y = MIN_XY + rowFraction * (MAX_XY - MIN_XY);
+
+    jumpTo(spriteIdArg, {x: x, y: y});
+  }
+}
+
+function layoutRandom() {
+  var spriteIds = getSpriteIdsInUse();
+  for (var i = 0; i < spriteIds.length; i++) {
+    var spriteIdArg = {id: spriteIds[i]};
+    jumpTo(spriteIdArg, randomLocation());
+  }
 }
 
 function setSpeed(speed) {
