@@ -2,12 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Modal, Button} from 'react-bootstrap';
 
-const styles = {
-  warning: {
-    color: 'red'
-  }
-};
-
 export default class MoveEnrollmentsDialog extends React.Component {
   static propTypes = {
     selectedEnrollments: PropTypes.array,
@@ -64,6 +58,12 @@ export default class MoveEnrollmentsDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  warning: {
+    color: 'red'
+  }
+};
 
 const EnrollmentList = ({enrollments}) => {
   return (

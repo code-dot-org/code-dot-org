@@ -149,15 +149,7 @@ function loadLevel() {
   Applab.timeoutFailureTick = level.timeoutFailureTick || Infinity;
   Applab.minWorkspaceHeight = level.minWorkspaceHeight;
   Applab.softButtons_ = level.softButtons || {};
-
-  // Historically, appWidth and appHeight were customizable on a per level basis.
-  // This led to lots of hackery in the code to properly scale the visualization
-  // area. Width/height are now constant, but much of the hackery still remains
-  // since I don't understand it well enough.
-  Applab.appWidth = level.widgetMode
-    ? applabConstants.WIDGET_WIDTH
-    : applabConstants.APP_WIDTH;
-
+  Applab.appWidth = applabConstants.getAppWidth(level);
   Applab.appHeight = applabConstants.APP_HEIGHT;
 
   // In share mode we need to reserve some number of pixels for our in-app
@@ -482,9 +474,17 @@ Applab.init = function(config) {
     config.level.sliderSpeed = 1.0;
   }
 
-  var showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
-  var breakpointsEnabled = !config.level.debuggerDisabled;
-  var showDebugConsole = !config.hideSource;
+  const showDebugButtons = !config.hideSource && !config.level.debuggerDisabled;
+  const breakpointsEnabled = !config.level.debuggerDisabled;
+  const showDebugConsole = !config.hideSource;
+  const nonLevelbuilderWidgetMode =
+    config.level.widgetMode && !config.isStartMode;
+  const hasDesignMode = !(
+    config.level.hideDesignMode || nonLevelbuilderWidgetMode
+  );
+  const hasDataMode = !(
+    config.level.hideViewDataButton || config.level.widgetMode
+  );
 
   // Construct a logging observer for interpreter events
   if (!config.hideSource) {
@@ -626,6 +626,12 @@ Applab.init = function(config) {
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
 
+  // Skip onAttempt for levelbuilders in start mode. This method sends a progress report
+  // to the server and breaks the levelbuilder's start code in AppLab.
+  if (config.isStartMode) {
+    delete config.onAttempt;
+  }
+
   var onMount = function() {
     studioApp().init(config);
 
@@ -684,8 +690,8 @@ Applab.init = function(config) {
     ),
     nonResponsiveVisualizationColumnWidth: applabConstants.APP_WIDTH,
     visualizationHasPadding: !config.noPadding,
-    hasDataMode: !(config.level.hideViewDataButton || config.level.widgetMode),
-    hasDesignMode: !(config.level.hideDesignMode || config.level.widgetMode),
+    hasDataMode,
+    hasDesignMode,
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,

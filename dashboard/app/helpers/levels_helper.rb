@@ -39,22 +39,6 @@ module LevelsHelper
     end
   end
 
-  # This is a a temporary method to help with moving translations onto the new level urls. To start this will
-  # keep translations on the old URL until foundations can do the work to bring them over to the new url
-  def build_script_level_path_for_translations(script_level)
-    if script_level.script.name == Script::HOC_NAME
-      hoc_chapter_path(script_level.chapter)
-    elsif script_level.script.name == Script::FLAPPY_NAME
-      flappy_chapter_path(script_level.chapter)
-    elsif !script_level.lesson.numbered_lesson?
-      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level)
-    elsif script_level.bonus
-      `/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/extras?level_name=#{script_level.level.name}`
-    else
-      `/s/#{script_level.script.name}/stage/#{script_level.lesson.relative_position}/puzzle/#{script_level.position}`
-    end
-  end
-
   def build_script_level_url(script_level, params = {})
     url_from_path(build_script_level_path(script_level, params))
   end
@@ -311,6 +295,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:usingDarkModePref] = !!current_user.using_dark_mode
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
@@ -536,9 +521,13 @@ module LevelsHelper
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
 
+    # Allow levelbuilders building AppLab widgets in start mode to access Applab as usual.
+    # Everywhere else, widgets should be treated as embedded levels.
+    treat_widget_as_embed = level_options['widgetMode'] && !@is_start_mode
+
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
-    level_options['embed'] = level_options['embed'] || level_options['widgetMode']
+    level_options['embed'] = level_options['embed'] || treat_widget_as_embed
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true

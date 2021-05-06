@@ -15,43 +15,6 @@ import DataVisualizer from './DataVisualizer';
 import Snapshot from './Snapshot';
 import placeholderImage from './placeholder.png';
 
-const styles = {
-  container: {
-    display: 'inline-block'
-  },
-  modalBody: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: '100%'
-  },
-  h2: {
-    margin: '0 0 10px 0'
-  },
-  input: {
-    ...rowStyle.container,
-    float: 'left'
-  },
-  chartArea: {
-    flexGrow: 1
-  },
-  placeholderContainer: {
-    position: 'relative',
-    height: '100%',
-    textAlign: 'center',
-    backgroundImage: `url('${placeholderImage}')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  },
-  placeholderText: {
-    position: 'absolute',
-    width: '100%',
-    bottom: '50%',
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
-    fontSize: 20,
-    color: color.dark_charcoal
-  }
-};
-
 export const OperatorType = {
   EQUAL: 0,
   LESS_THAN: 1,
@@ -452,6 +415,43 @@ class VisualizerModal extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'inline-block'
+  },
+  modalBody: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%'
+  },
+  h2: {
+    margin: '0 0 10px 0'
+  },
+  input: {
+    ...rowStyle.container,
+    float: 'left'
+  },
+  chartArea: {
+    flexGrow: 1
+  },
+  placeholderContainer: {
+    position: 'relative',
+    height: '100%',
+    textAlign: 'center',
+    backgroundImage: `url('${placeholderImage}')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center'
+  },
+  placeholderText: {
+    position: 'absolute',
+    width: '100%',
+    bottom: '50%',
+    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    fontSize: 20,
+    color: color.dark_charcoal
+  }
+};
 
 export const UnconnectedVisualizerModal = VisualizerModal;
 export default connect(state => ({

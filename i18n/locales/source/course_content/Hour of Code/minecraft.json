@@ -1,45 +1,45 @@
 {
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/1": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/1": {
     "short_instructions": "The chicken is frozen. Place `move` and `turn` blocks in the `when spawned` slot to get it to move.",
     "callouts": {
       "craft2_run_button_callout": "When you are ready, hit \"Run\" to try your program."
     }
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/2": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/2": {
     "short_instructions": "Great, the chicken moved! But then she stopped. In games, chickens walk forever. Use a `forever do` loop to keep these chickens moving."
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/3": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/3": {
     "short_instructions": "Now the chickens look weird moving the same way. Games use random moves to make things look real. Make the chickens `turn random`."
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/4": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/4": {
     "short_instructions": "Let's explore our world! Move with the arrows, and press the space bar or tap the game board to use items. Use the door to get inside the house.",
     "callouts": {
       "MC_HOC_2016_New_Walk_callout2": "Hit \"Run\" to start moving."
     }
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/5": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/5": {
     "short_instructions": "In Minecraft, sheep drop wool. Place the `drop` block in `when used`, then walk over and use the sheep to drop an item."
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/6": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/6": {
     "short_instructions": "These cows are lost! Lead them to the grass with the `move a step toward` block in a `forever do` loop."
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/7": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/7": {
     "short_instructions": "The path to your sheep is blocked by a stone wall. Luckily there is a Creeper here. Creepers explode after you touch them. Get the Creeper to explode the wall so you can reach your sheep!"
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/8": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/8": {
     "short_instructions": "Oh no! Zombies have trapped you inside! Code the Iron Golem to chase and attack the zombies!"
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/9": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/9": {
     "short_instructions": "Now you can fill the world with what you want! Place`spawn` blocks under `when run` to spawn things when the game starts."
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/10": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/10": {
     "short_instructions": "Now you make the zombies. Use the `spawn` block to make 3 zombies when night falls. Get them to move towards you. Survive until morning."
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/11": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/11": {
     "short_instructions": "Some games let you keep score. Play tag with these Iron Golems and use the `add 1 to score` block to give yourself a point when you tag them. Reach five points to win!",
     "long_instructions": "Some games let you keep score. Play tag with these Iron Golems and use the [blockly block][0] block to give yourself a point when you tag them.  \n\n  Reach five points to win!"
   },
-  "https://studio.code.org/s/minecraft/stage/1/puzzle/12": {
+  "https://studio.code.org/s/minecraft/lessons/1/levels/12": {
     "short_instructions": "It's time to make your own Minecraft! Spawn creatures and then make them do whatever you want. Have fun!"
   }
 }

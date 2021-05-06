@@ -420,6 +420,7 @@ Dashboard::Application.routes.draw do
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
   get '/admin/pilots/', to: 'admin_search#pilots', as: 'pilots'
+  post '/admin/pilots/', to: 'admin_search#create_pilot', as: 'create_pilot'
   get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
   post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
 
@@ -590,7 +591,7 @@ Dashboard::Application.routes.draw do
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
-  post '/dashboardapi/v1/foorm/misc_survey_submission', action: :create, controller: 'api/v1/foorm_misc_survey_submissions'
+  post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -731,7 +732,9 @@ Dashboard::Application.routes.draw do
       concerns :api_v1_pd_routes
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
+      post 'users/:user_id/using_dark_mode', to: 'users#update_using_dark_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
+      get 'users/:user_id/using_dark_mode', to: 'users#get_using_dark_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
@@ -838,9 +841,9 @@ Dashboard::Application.routes.draw do
 
   get '/help', to: redirect("https://support.code.org")
 
-  get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
+  get '/form/:misc_form_path', to: 'foorm/simple_survey#new'
 
-  get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
+  get '/form/:misc_form_path/show', to: 'foorm/simple_survey#show'
 
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 

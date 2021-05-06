@@ -11,15 +11,6 @@ import i18n from '@cdo/locale';
 import {CSVLink} from 'react-csv';
 import Button from '../Button';
 
-const styles = {
-  buttonContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end'
-  }
-};
-
 export const studentExportableDataPropType = PropTypes.shape({
   studentName: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number,
@@ -70,6 +61,15 @@ class SubmissionStatusAssessmentsContainer extends Component {
     );
   }
 }
+
+const styles = {
+  buttonContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end'
+  }
+};
 
 export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
 

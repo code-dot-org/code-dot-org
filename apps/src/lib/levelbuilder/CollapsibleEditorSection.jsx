@@ -3,21 +3,6 @@ import React, {Component} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '@cdo/apps/styleConstants';
 
-const styles = {
-  header: {
-    borderBottom: '1px solid rgb(204, 204, 204)'
-  },
-  icon: {
-    marginRight: 10
-  },
-  editors: {
-    padding: 10
-  },
-  title: {
-    fontSize: 20
-  }
-};
-
 export default class CollapsibleEditorSection extends Component {
   static propTypes = {
     title: PropTypes.string,
@@ -63,3 +48,18 @@ export default class CollapsibleEditorSection extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    borderBottom: '1px solid rgb(204, 204, 204)'
+  },
+  icon: {
+    marginRight: 10
+  },
+  editors: {
+    padding: 10
+  },
+  title: {
+    fontSize: 20
+  }
+};

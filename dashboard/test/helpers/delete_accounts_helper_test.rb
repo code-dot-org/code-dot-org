@@ -571,6 +571,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty AuthenticationOption.with_deleted.where(id: ids)
   end
 
+  test "purges user with duplicate authentication option" do
+    # Create an user with an Google authentication option,
+    # then destroy (soft-delete) the authentication option.
+    user = create :user
+    auth_id = SecureRandom.uuid
+    google_auth = create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    google_auth.destroy
+
+    # Recreate the same Google authentication option.
+    # Now the user has duplicate authentication options, one active, one soft-deleted.
+    create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    user.reload
+
+    assert_nothing_raised do
+      purge_user user
+    end
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -1449,15 +1467,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: pegasus.contact_rollups
-  #
-  # TODO: To interact correctly with contact_rollups (a table controlled only
-  #   by a nightly batch job) we may want to update our user purge to be a
-  #   long-running operation; we'll queue a contact purge that the contact
-  #   rollups job will take care of, and when all deferred work is done we
-  #   will report that the hard-delete is completed.
-
-  #
   # Table: pegasus.forms
   # Table: pegasus.form_geos
   #
@@ -1820,26 +1829,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # pegasus.contact_rollups (V1)
-  #
-
-  test "contact_rollups: Deletes user records" do
-    teacher_a = create :teacher
-    teacher_b = create :teacher
-    with_contact_rollup_for(teacher_a) do |contact_rollups_id_a|
-      with_contact_rollup_for(teacher_b) do |contact_rollups_id_b|
-        refute_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-
-        purge_user teacher_a
-
-        assert_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-      end
-    end
-  end
-
-  #
   # contact rollups V2
   #
 
@@ -2069,21 +2058,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_includes @log.string, expected_message
   end
 
-  def with_contact_rollup_for(user)
-    pardot_id = user.id
-    contact_rollups_id = contact_rollups.insert(
-      {
-        email: user.email,
-        dashboard_user_id: user.id,
-        pardot_id: pardot_id,
-        name: user.name
-      }
-    )
-    yield contact_rollups_id, pardot_id
-  ensure
-    contact_rollups.where(id: contact_rollups_id).delete if contact_rollups_id
-  end
-
   #
   # Helper to make this specific set of tests more readable
   # Performs our account purge on the provided user instance, and then reloads
@@ -2222,9 +2196,5 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ensure
       PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
     end
-  end
-
-  def contact_rollups
-    PEGASUS_DB[:contact_rollups]
   end
 end

@@ -1,0 +1,128 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+CDO.log = Logger.new(STDOUT)
+
+SURVEY_YEAR = '2019-2020'.freeze
+
+DRY_RUN = false
+
+VIRTUAL_SCHOOL_MAP = {
+  'Full Virtual' => 'Yes',
+  'Not Virtual' => 'No',
+  'Supplemental Virtual' => 'No',
+  'Virtual with face to face options' => 'Yes',
+  '–' => nil,
+  '†' => nil
+}.freeze
+
+TITLE_I_MAP = {
+  '1-Title I targeted assistance eligible school-No program' => '1',
+  '2-Title I targeted assistance school' => '2',
+  '3-Title I schoolwide eligible-Title I targeted assistance program' => '3',
+  '4-Title I schoolwide eligible school-No program' => '4',
+  '5-Title I schoolwide school' => '5',
+  '6-Not a Title I school' => '6',
+  '–' => nil,
+  '†' => nil
+}.freeze
+
+COMMUNITY_TYPE_MAP = {
+  '11' => 'city_large',
+  '12' => 'city_midsize',
+  '13' => 'city_small',
+  '21' => 'suburban_large',
+  '22' => 'suburban_midsize',
+  '23' => 'suburban_small',
+  '31' => 'town_fringe',
+  '32' => 'town_distant',
+  '33' => 'town_remote',
+  '41' => 'rural_fringe',
+  '42' => 'rural_distant',
+  '43' => 'rural_remote'
+}.freeze
+
+GRADES_MAP = {
+  'Prekindergarten' => 'PK',
+  'Kindergarten' => 'KG',
+  '1st Grade' => '01',
+  '2nd Grade' => '02',
+  '3rd Grade' => '03',
+  '4th Grade' => '04',
+  '5th Grade' => '05',
+  '6th Grade' => '06',
+  '7th Grade' => '07',
+  '8th Grade' => '08',
+  '9th Grade' => '09',
+  '10th Grade' => '10',
+  '11th Grade' => '11',
+  '12th Grade' => '12',
+  '13th Grade' => '13',
+  'Adult Education' => 'AE',
+  'Ungraded' => 'UG',
+  '–' => 'M',
+  '†' => 'N'
+}
+
+# @param unsanitized [String, nil] the unsanitized string
+# @returns [String, nil] the sanitized version of the string, with equal signs and double
+#   quotations removed. Returns nil on nil input.
+def sanitize_string_for_db(unsanitized)
+  unsanitized&.tr('="', '')
+end
+
+# –, † .to_i will return 0
+
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools.csv") do |filename|
+  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: DRY_RUN) do |row|
+    # remove quote and eq sign from ="12345"
+    row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+
+    {
+      school_id:          row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
+      school_year:        SURVEY_YEAR,
+      grades_offered_lo:  GRADES_MAP[row['Lowest Grade Offered [Public School] 2019-20']],
+      grades_offered_hi:  GRADES_MAP[row['Highest Grade Offered [Public School] 2019-20']],
+      grade_pk_offered:   row['Prekindergarten offered [Public School] 2019-20'] == '1-Yes',
+      grade_kg_offered:   row['Kindergarten offered [Public School] 2019-20'] == '1-Yes',
+      grade_01_offered:   row['Grade 1 offered [Public School] 2019-20'] == '1-Yes',
+      grade_02_offered:   row['Grade 2 offered [Public School] 2019-20'] == '1-Yes',
+      grade_03_offered:   row['Grade 3 offered [Public School] 2019-20'] == '1-Yes',
+      grade_04_offered:   row['Grade 4 offered [Public School] 2019-20'] == '1-Yes',
+      grade_05_offered:   row['Grade 5 offered [Public School] 2019-20'] == '1-Yes',
+      grade_06_offered:   row['Grade 6 offered [Public School] 2019-20'] == '1-Yes',
+      grade_07_offered:   row['Grade 7 offered [Public School] 2019-20'] == '1-Yes',
+      grade_08_offered:   row['Grade 8 offered [Public School] 2019-20'] == '1-Yes',
+      grade_09_offered:   row['Grade 9 offered [Public School] 2019-20'] == '1-Yes',
+      grade_10_offered:   row['Grade 10 offered [Public School] 2019-20'] == '1-Yes',
+      grade_11_offered:   row['Grade 11 offered [Public School] 2019-20'] == '1-Yes',
+      grade_12_offered:   row['Grade 12 offered [Public School] 2019-20'] == '1-Yes',
+      grade_13_offered:   row['Grade 13 offered [Public School] 2019-20'] == '1-Yes',
+
+      virtual_status:     VIRTUAL_SCHOOL_MAP[row['Virtual School Status (SY 2018-19 onward) [Public School] 2019-20']],
+      students_total:     row['Total Students All Grades (Excludes AE) [Public School] 2019-20'].presence.try {|v| v.to_i == 0 ? nil : v.to_i},
+      student_am_count:   row['American Indian/Alaska Native Students [Public School] 2019-20'].to_i,
+      student_as_count:   row['Asian or Asian/Pacific Islander Students [Public School] 2019-20'].to_i,
+      student_hi_count:   row['Hispanic Students [Public School] 2019-20'].to_i,
+      student_bl_count:   row['Black or African American Students [Public School] 2019-20'].to_i,
+      student_wh_count:   row['White Students [Public School] 2019-20'].to_i,
+      student_hp_count:   row['Nat. Hawaiian or Other Pacific Isl. Students [Public School] 2019-20'].to_i,
+      student_tr_count:   row['Two or More Races Students [Public School] 2019-20'].to_i,
+      title_i_status:     TITLE_I_MAP[row['Title I School Status [Public School] 2019-20']],
+      frl_eligible_total: row['Free and Reduced Lunch Students [Public School] 2019-20'].to_i
+    }
+  end
+end
+
+# URL where source was found ("Public School File" under 2018-19 tab): https://nces.ed.gov/programs/edge/Geographic/SchoolLocations
+# Download link: https://nces.ed.gov/programs/edge/data/EDGE_GEOCODE_PUBLICSCH_1819.zip
+AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/locale.csv") do |filename|
+  SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'UTF-8'}, dry_run: DRY_RUN) do |row|
+    {
+      school_id:      row['NCESSCH'].to_i.to_s,
+      school_year:    SURVEY_YEAR,
+      community_type: COMMUNITY_TYPE_MAP[row['LOCALE']]
+    }
+  end
+end
