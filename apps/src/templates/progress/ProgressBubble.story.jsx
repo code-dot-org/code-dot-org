@@ -15,6 +15,7 @@ export default storybook => {
               id: '1',
               levelNumber: 3,
               status: status,
+              isLocked: false,
               url: '/foo/bar',
               icon: status === LevelStatus.locked ? 'fa-lock' : 'fa-document'
             }}
@@ -31,6 +32,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document'
               }}
@@ -47,6 +49,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document'
               }}
@@ -80,6 +83,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document',
                 paired: true
@@ -99,6 +103,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.attempted,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document',
                 paired: true

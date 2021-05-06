@@ -326,8 +326,10 @@ class Script < ApplicationRecord
 
     def visible_scripts
       visible_scripts = Rails.cache.fetch('valid_scripts/valid') do
-        Script.all.reject(&:hidden).to_a
+        # Scripts that are hidden or are in a course which is hidden should not be visible
+        Script.all.reject(&:hidden).reject! {|script| !script.is_course && !script.unit_group&.visible}.to_a
       end
+
       visible_scripts.freeze
     end
   end
