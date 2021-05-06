@@ -59,6 +59,7 @@
       cronjob at:'0 19 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
+      cronjob at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
     end
 
     if node.chef_environment == 'test' && node.name == 'staging-next'
@@ -98,7 +99,6 @@
       cronjob at:'0 7 * * *', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
-      cronjob at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
       cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
       cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
