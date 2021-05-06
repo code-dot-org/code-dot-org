@@ -17,6 +17,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
   overwriteResults,
+  setScriptProgress,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
@@ -144,9 +145,9 @@ function populateProgress(store, signedIn, progressData, scriptName) {
     if (data.usingDbProgress) {
       store.dispatch(useDbProgress());
       clientState.clearProgress();
-    }
-
-    if (data.levelResults) {
+      store.dispatch(setScriptProgress(data.progressData.progress));
+      store.dispatch(overwriteResults(extractLevelResults(data.progressData)));
+    } else if (data.levelResults) {
       store.dispatch(overwriteResults(data.levelResults));
     }
 
@@ -182,7 +183,7 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       // User is signed in, return a resolved promise with the given progress data
       return Promise.resolve({
         usingDbProgress: true,
-        levelResults: extractLevelResults(progressData)
+        progressData
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
@@ -199,7 +200,7 @@ function getLevelProgress(signedIn, progressData, scriptName) {
           if (data.signedIn) {
             return {
               usingDbProgress: true,
-              levelResults: extractLevelResults(data)
+              progressData
             };
           } else {
             return {
