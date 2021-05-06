@@ -571,6 +571,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty AuthenticationOption.with_deleted.where(id: ids)
   end
 
+  test "purges user with duplicate authentication option" do
+    # Create an user with an Google authentication option,
+    # then destroy (soft-delete) the authentication option.
+    user = create :user
+    auth_id = SecureRandom.uuid
+    google_auth = create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    google_auth.destroy
+
+    # Recreate the same Google authentication option.
+    # Now the user has duplicate authentication options, one active, one soft-deleted.
+    create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    user.reload
+
+    assert_nothing_raised do
+      purge_user user
+    end
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #

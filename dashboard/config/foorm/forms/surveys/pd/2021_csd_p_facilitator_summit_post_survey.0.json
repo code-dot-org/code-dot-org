@@ -1,0 +1,253 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "Intro",
+          "html": "<p>We are interested in learning about all facilitators' experiences during Day 2 of the 2021 Summit.  Your responses will be shared anonymously with Code.org staff and co-leads running these workshops to help inform summits and other professional learning opportunities in the future.  Thank you for taking a few minutes to complete this survey! </p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "Course",
+          "title": "For which course did you attend the Summit?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "CSD"
+            },
+            {
+              "value": "item2",
+              "text": "CSP"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "cohort-CSP",
+          "visibleIf": "{[Course]} = 'item2'",
+          "title": "Which Cohort were you a part of?",
+          "description": "Please visit /bit.ly/ if you are unsure.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Cohort 1"
+            },
+            {
+              "value": "2",
+              "text": "Cohort 2"
+            },
+            {
+              "value": "3",
+              "text": "Cohort 3"
+            },
+            {
+              "value": "4",
+              "text": "Cohort 4"
+            },
+            {
+              "value": "5",
+              "text": "Cohort 5"
+            },
+            {
+              "value": "6",
+              "text": "Cohort 6"
+            },
+            {
+              "value": "7",
+              "text": "Cohort 7"
+            }
+          ]
+        },
+        {
+          "type": "dropdown",
+          "name": "question1",
+          "visibleIf": "{[Course]} = 'item1'",
+          "title": "Which Cohort were you a part of?",
+          "description": "Please visit /bit.ly/ if you are unsure.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Cohort 1"
+            },
+            {
+              "value": "2",
+              "text": "Cohort 2"
+            },
+            {
+              "value": "3",
+              "text": "Cohort 3"
+            },
+            {
+              "value": "4",
+              "text": "Cohort 4"
+            },
+            {
+              "value": "5",
+              "text": "Cohort 5"
+            },
+            {
+              "value": "6",
+              "text": "Cohort 6"
+            },
+            {
+              "value": "7",
+              "text": "Cohort 7"
+            },
+            {
+              "value": "8",
+              "text": "Cohort 8"
+            },
+            {
+              "value": "9",
+              "text": "Cohort 9"
+            },
+            {
+              "value": "10",
+              "text": "Cohort 10"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "iFeelCSP",
+          "visibleIf": "{[Course]} = 'item2'",
+          "title": "I feel more prepared to lead Code.org's CS Principles Professional Learning workshops in 2021-22 than I did before today.",
+          "description": "(1) Strongly Disagree - (7) Strongly Agree\n",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "iFeelCSD",
+          "visibleIf": "{[Course]} = 'item1'",
+          "title": "I feel more prepared to lead Code.org's CS Discoveries Professional Learning workshops in 2021-22 than I did before today.",
+          "description": "(1) Strongly Disagree - (7) Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "comment",
+          "name": "usefulPractice",
+          "title": "What was the most useful thing you learned today and why?"
+        },
+        {
+          "type": "rating",
+          "name": "overallTo",
+          "title": "Overall, to what extent did you find the activities today engaging?",
+          "description": "(1) Not at all engaging - (7) Very engaging",
+          "rateMax": 7
+        },
+        {
+          "type": "comment",
+          "name": "whatWas93",
+          "title": "What was most engaging for you today?"
+        },
+        {
+          "type": "comment",
+          "name": "whatWas94",
+          "title": "What was least engaging for you today?"
+        },
+        {
+          "type": "rating",
+          "name": "choiceSessionNew1",
+          "title": "This is the first time we’ve offered a “choice session” at a facilitator development event. How satisfied were you with the variety of choices offered for this session?",
+          "description": "(1) Very unsatisfied - (7) Very satisfied",
+          "rateMax": 7
+        },
+        {
+          "type": "checkbox",
+          "name": "choiceSessionNew2",
+          "title": "Would you recommend that we offer a similar opportunity at future facilitator development events?",
+          "choices": [
+            {
+              "value": "item1",
+              "text": "Yes"
+            },
+            {
+              "value": "item2",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "choiceSessionNew3",
+          "title": "If we were to offer choice sessions at future facilitator development events, how likely would you be to accept the opportunity to lead a choice session.",
+          "description": "(1) Very unlikely - (7) Very likely",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "newQuestion1",
+          "title": "I can describe how equity is supported throughout the summer workshop. ",
+          "description": "(1) Strongly Disagree - (7) Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "newQuestion2",
+          "title": "I can describe strategies I will use to support equity throughout the summer workshop.",
+          "description": "(1) Strongly Disagree - (7) Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "newQuestion3",
+          "title": "I can identify facilitation practices I need to strengthen in support of leading high-quality, equity-focused CS workshops.",
+          "description": "(1) Strongly Disagree - (7) Strongly Agree",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "overallTo52",
+          "title": "Overall, to what extent are you feeling connected to the facilitator community after this event?",
+          "description": "(1) Not at all connected - (7) Very connected",
+          "rateMax": 7
+        },
+        {
+          "type": "rating",
+          "name": "newQuestion4",
+          "title": "To what extent has your experience at this event supported your understanding of the role and opportunity you have as a Code.org facilitator to support equity in your workshops?",
+          "description": "(1) Not at all - (7) To a great extent",
+          "rateMax": 7
+        },
+        {
+          "type": "comment",
+          "name": "newQuestion5",
+          "title": "During this event, we asked you to identify a commitment you are making as a facilitator this year in support of equity. Please share that commitment here."
+        },
+        {
+          "type": "comment",
+          "name": "ifThere23",
+          "title": "If there is anything you would like us to know, please use this space to share."
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give Code.org permission to quote me and use my name."
+            },
+            {
+              "value": "yes-anon",
+              "text": "Yes, I give Code.org permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give Code.org my permission."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "question2",
+          "html": "<p>Thank you for sharing your responses! If you have any questions about this survey, please contact facilitators@code.org.</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

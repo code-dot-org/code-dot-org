@@ -5,22 +5,6 @@ import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporterConstants';
 import experiments from '../../../util/experiments';
 import commonStyles from './styles';
 
-const styles = {
-  radioLabel: {
-    ...commonStyles.text,
-    display: 'inline-block'
-  },
-  radioLabelDisabled: {
-    ...commonStyles.text,
-    display: 'inline-block',
-    color: color.light_gray
-  },
-  radioInput: {
-    height: 18,
-    verticalAlign: 'middle'
-  }
-};
-
 /**
  * Platform Page in Export Dialog
  */
@@ -88,3 +72,19 @@ export default class PlatformPage extends React.Component {
     );
   }
 }
+
+const styles = {
+  radioLabel: {
+    ...commonStyles.text,
+    display: 'inline-block'
+  },
+  radioLabelDisabled: {
+    ...commonStyles.text,
+    display: 'inline-block',
+    color: color.light_gray
+  },
+  radioInput: {
+    height: 18,
+    verticalAlign: 'middle'
+  }
+};

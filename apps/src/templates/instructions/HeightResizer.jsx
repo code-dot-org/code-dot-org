@@ -11,25 +11,6 @@ import styleConstants from '../../styleConstants';
 
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const styles = {
-  main: {
-    position: 'absolute',
-    height: RESIZER_HEIGHT,
-    left: 0,
-    right: 0
-  },
-  ellipsis: {
-    width: '100%',
-    color: color.lighter_gray,
-    fontSize: 24,
-    textAlign: 'center',
-    cursor: 'ns-resize',
-    whiteSpace: 'nowrap',
-    lineHeight: RESIZER_HEIGHT + 'px',
-    paddingTop: 1 // results in a slightly better centering
-  }
-};
-
 class HeightResizer extends React.Component {
   static propTypes = {
     /**
@@ -139,5 +120,24 @@ class HeightResizer extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    position: 'absolute',
+    height: RESIZER_HEIGHT,
+    left: 0,
+    right: 0
+  },
+  ellipsis: {
+    width: '100%',
+    color: color.lighter_gray,
+    fontSize: 24,
+    textAlign: 'center',
+    cursor: 'ns-resize',
+    whiteSpace: 'nowrap',
+    lineHeight: RESIZER_HEIGHT + 'px',
+    paddingTop: 1 // results in a slightly better centering
+  }
+};
 
 export default Radium(HeightResizer);

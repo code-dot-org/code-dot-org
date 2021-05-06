@@ -21,7 +21,8 @@ describe('Java Lab View Test', () => {
       handleVersionHistory: () => {},
       isProjectLevel: false,
       isReadOnlyWorkspace: false,
-      isDarkMode: false
+      isDarkMode: false,
+      visualization: <div />
     };
   });
 

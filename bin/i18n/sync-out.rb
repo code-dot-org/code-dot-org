@@ -143,11 +143,20 @@ def restore_redacted_files
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
         end
-      elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
+        plugins = []
+        if original_path == 'i18n/locales/original/dashboard/blocks.yml'
+          plugins << 'blockfield'
+        elsif [
+          'i18n/locales/original/dashboard/scripts.yml',
+          'i18n/locales/original/dashboard/courses.yml'
+        ].include? original_path
+          plugins << 'resourceLink'
+          plugins << 'vocabularyDefinition'
+        end
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins, 'txt')
       end
+
       find_malformed_links_images(locale, translated_path)
     end
     I18nScriptUtils.upload_malformed_restorations(locale)
