@@ -868,7 +868,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "soft-deletes pd_applications for user" do
     # The user soft-delete actually does this.
-    application = create :pd_teacher1819_application
+    application = create :pd_teacher_application
     refute application.deleted?
 
     purge_user application.user
@@ -878,7 +878,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears form_data from pd_applications for user" do
-    application = create :pd_teacher1819_application
+    application = create :pd_teacher_application
     refute_equal '{}', application.form_data
 
     purge_user application.user
@@ -888,7 +888,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears notes from pd_applications for user" do
-    application = create :pd_teacher1819_application, notes: 'Test notes'
+    application = create :pd_teacher_application, notes: 'Test notes'
     refute_nil application.notes
 
     purge_user application.user

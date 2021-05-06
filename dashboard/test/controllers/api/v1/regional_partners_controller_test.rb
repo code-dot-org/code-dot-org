@@ -75,7 +75,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
@@ -124,7 +124,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
@@ -172,7 +172,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
@@ -196,7 +196,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
@@ -220,7 +220,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csd',
         regional_partner: @regional_partner,
         user: @serializing_teacher,

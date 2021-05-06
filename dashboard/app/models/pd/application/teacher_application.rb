@@ -35,7 +35,7 @@
 #
 
 module Pd::Application
-  class Teacher2122Application < TeacherApplicationBase
+  class TeacherApplication < TeacherApplicationBase
     include Pd::Teacher2122ApplicationConstants
 
     PRINCIPAL_APPROVAL_STATE = [

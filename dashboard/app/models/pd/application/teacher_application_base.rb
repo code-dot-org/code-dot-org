@@ -268,7 +268,7 @@ module Pd::Application
     end
 
     def principal_approval_state
-      principal_approval = Pd::Application::PrincipalApproval1819Application.find_by(application_guid: application_guid)
+      principal_approval = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
 
       if principal_approval
         if principal_approval.placeholder?

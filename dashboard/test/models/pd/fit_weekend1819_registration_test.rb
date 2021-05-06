@@ -47,7 +47,7 @@ class Pd::FitWeekend1819RegistrationTest < ActiveSupport::TestCase
       accepted: 'accepted',
       declined: 'withdrawn'
     }.each do |registration_status, expected_application_status|
-      application = create(:pd_teacher1819_application, :locked)
+      application = create(:pd_teacher_application, :locked)
 
       create(:pd_fit_weekend1819_registration, pd_application: application, status: registration_status)
       assert_equal expected_application_status, application.reload.status
