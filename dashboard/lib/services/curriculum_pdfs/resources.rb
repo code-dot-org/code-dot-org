@@ -83,23 +83,11 @@ module Services
           return path
         end
 
-        def export_from_google(url, path)
+        def google_drive_file_by_url(url)
           @google_drive_session ||= GoogleDrive::Session.from_service_account_key(
             StringIO.new(CDO.gdrive_export_secret&.to_json || "")
           )
-          file = @google_drive_session.file_by_url(url)
-
-          # If file is already a PDF, we can just download it; otherwise, we
-          # need to export to convert it.
-          if file.available_content_types.include? "application/pdf"
-            file.download_to_file(path)
-          else
-            # The intuitive option here would be to use
-            # file.export_as_file(path, "application/pdf"); unfortunately, that
-            # method applies some restrictive file size limits that for
-            # whatever reason hitting the URI directly does not.
-            IO.copy_stream(URI.open("https://docs.google.com/document/d/#{file.id}/export?format=pdf"), path)
-          end
+          @google_drive_session.file_by_url(url)
         end
 
         def fetch_resource_pdf(resource, directory="/tmp/")
@@ -108,23 +96,25 @@ module Services
           return path if File.exist?(path)
 
           begin
-            if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
-              # We don't want to export forms
-              return nil if resource.url.start_with?("https://docs.google.com/forms")
-              begin
-                export_from_google(resource.url, path)
-                return path
-              rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
-                ChatClient.log(
-                  "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
-                  color: 'yellow'
-                )
-                return nil
-              end
+            if resource.url.start_with?("https://docs.google.com/document/d/")
+              file = google_drive_file_by_url(resource.url)
+              file.export_as_file(path, "application/pdf")
+              return path
+            elsif resource.url.start_with?("https://drive.google.com/")
+              file = google_drive_file_by_url(resource.url)
+              return nil unless file.available_content_types.include? "application/pdf"
+              file.download_to_file(path)
+              return path
             elsif resource.url.end_with?(".pdf")
               IO.copy_stream(URI.open(resource.url), path)
               return path
             end
+          rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+            ChatClient.log(
+              "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+              color: 'yellow'
+            )
+            return nil
           rescue URI::InvalidURIError, OpenURI::HTTPError => e
             ChatClient.log(
               "URI error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
