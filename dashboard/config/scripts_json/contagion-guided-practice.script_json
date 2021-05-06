@@ -10,11 +10,11 @@
           "lessonPlans",
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:56:12 UTC",
     "seeding_key": {
       "script.name": "contagion-guided-practice"
     }
@@ -121,15 +121,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson 2: Bridging Activity",
         "level_keys": [
           "contagion_teachers"
-        ]
+        ],
+        "progression": "Lesson 2: Bridging Activity"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "contagion_teachers"
@@ -146,15 +146,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson 4: Collecting Data",
         "level_keys": [
           "contagion_teachers2"
-        ]
+        ],
+        "progression": "Lesson 4: Collecting Data"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "contagion_teachers2"
@@ -171,15 +171,15 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson 3: Dice Roll",
         "level_keys": [
           "6sidedDie"
-        ]
+        ],
+        "progression": "Lesson 3: Dice Roll"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "6sidedDie"
@@ -234,13 +234,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

@@ -1,9 +1,5 @@
 <Studio>
   <config><![CDATA[{
-  "game_id": 33,
-  "created_at": "2015-02-10T19:51:02.000Z",
-  "level_num": "custom",
-  "user_id": 16,
   "properties": {
     "skin": "studio",
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
@@ -51,11 +47,21 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "remove_items_when_actor_collides": "false",
-    "contained_level_names": null
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "preload_asset_list": null
   },
+  "game_id": 33,
   "published": true,
+  "created_at": "2015-02-10T19:51:02.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-16 19:36:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-02 20:46:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-10-16 19:36:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-11-02 20:46:25 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2021-04-29 20:24:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:24:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-29 20:25:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"background\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

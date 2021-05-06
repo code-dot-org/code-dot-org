@@ -16,35 +16,6 @@ import {SelectStyleProps} from '../../../constants.js';
 import DatePicker from '../../components/date_picker.jsx';
 import FontAwesome from '../../../../../templates/FontAwesome.jsx';
 
-const styles = {
-  modalHeader: {
-    padding: 15,
-    height: 30,
-    borderBottom: 'none'
-  },
-  modalBody: {
-    padding: 20,
-    fontSize: 14,
-    lineHeight: '14px',
-    clear: 'both'
-  },
-  downloadButton: {
-    margin: '25px 0px 25px 0px',
-    float: 'right'
-  },
-  selectRow: {
-    margin: '5px 0px 5px 0px'
-  },
-  questionTooltip: {
-    cursor: 'pointer',
-    marginLeft: '0.5em',
-    marginRight: '0.5em'
-  },
-  tooltipText: {
-    maxWidth: 200
-  }
-};
-
 export default class SubmissionsDownloadForm extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -283,3 +254,32 @@ export default class SubmissionsDownloadForm extends React.Component {
     );
   }
 }
+
+const styles = {
+  modalHeader: {
+    padding: 15,
+    height: 30,
+    borderBottom: 'none'
+  },
+  modalBody: {
+    padding: 20,
+    fontSize: 14,
+    lineHeight: '14px',
+    clear: 'both'
+  },
+  downloadButton: {
+    margin: '25px 0px 25px 0px',
+    float: 'right'
+  },
+  selectRow: {
+    margin: '5px 0px 5px 0px'
+  },
+  questionTooltip: {
+    cursor: 'pointer',
+    marginLeft: '0.5em',
+    marginRight: '0.5em'
+  },
+  tooltipText: {
+    maxWidth: 200
+  }
+};

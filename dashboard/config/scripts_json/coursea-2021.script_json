@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-04-27 16:59:01 UTC",
+    "serialized_at": "2021-05-05 18:18:18 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -96,11 +96,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
-        "student_overview": "Learn how to go places safely online.",
-        "purpose": "Common Sense Education created this lesson to teach students how they can go places safely online.",
-        "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- (Optional) Print poem poster for classroom display.",
         "creative_commons_license": "Creative Commons BY-NC-ND",
+        "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nThe power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.",
+        "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.\r\n- (Optional) Print poem poster for classroom display.",
+        "purpose": "Common Sense Education created this lesson to teach students how they can go places safely online.",
+        "student_overview": "Learn how to go places safely online.",
         "unplugged": true
       },
       "seeding_key": {
@@ -117,11 +117,11 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
-        "student_overview": "Click and drag to finish the puzzles.",
-        "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
         "preparation": "- Watch the ***How to Make a Class Section** on Code.org - Teacher Video. Create your own class section on Code.org and make sure every student has a card with their passcode on it.\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\n- Have the school IT person add a quick link for your class section to the computer desktop.\n- Review the Common Sense Education website for more online safety content.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
+        "student_overview": "Click and drag to finish the puzzles."
       },
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
@@ -137,11 +137,11 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "This **context-setting** lesson brings together teams with a simple task: get the \"flurb\" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided.",
-        "student_overview": "Write instructions to get the Flurb to the fruit.",
-        "purpose": "The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.",
-        "preparation": " - Print one ***Worksheet** and one set of ***Manipulatives** per group of 2-3.\n - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **context-setting** lesson brings together teams with a simple task: get the \"flurb\" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided.",
+        "preparation": " - Print one ***Worksheet** and one set of ***Manipulatives** per group of 2-3.\n - Make sure each student has a Reflection Journal.",
+        "purpose": "The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.",
+        "student_overview": "Write instructions to get the Flurb to the fruit.",
         "unplugged": true
       },
       "seeding_key": {
@@ -158,11 +158,11 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
-        "student_overview": "Program Scrat to reach the acorn.",
-        "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
         "preparation": " - Cut out direction blocks from ***Manipulatives** to use with the Happy Maps bridging activity.\n - Make sure each student has a  Reflection Journal..",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
+        "student_overview": "Program Scrat to reach the acorn."
       },
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
@@ -178,11 +178,11 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will continue to develop sequential algorithms.",
-        "student_overview": "Write programs to help Scrat reach the acorn.",
-        "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a reflection journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
+        "student_overview": "Write programs to help Scrat reach the acorn."
       },
       "seeding_key": {
         "lesson.key": "Programming in Ice Age",
@@ -198,11 +198,11 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with _BB-8_.",
-        "student_overview": "Help BB-8 collect the scrap metal.",
-        "purpose": "With transfer of knowledge in mind, this lesson gives students a new environment to practice the skills that they have been cultivating. _Star Wars_ fans will jump for joy when they see these puzzles. Each puzzle in this series has been added to provide a deeper understanding of the basic concepts that they will be using throughout the rest of this course.",
         "preparation": " - Play through the puzzles corresponding with this lesson to find any potential problem areas for your class.\n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Make sure every student has a Reflection Journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "With transfer of knowledge in mind, this lesson gives students a new environment to practice the skills that they have been cultivating. _Star Wars_ fans will jump for joy when they see these puzzles. Each puzzle in this series has been added to provide a deeper understanding of the basic concepts that they will be using throughout the rest of this course.",
+        "student_overview": "Help BB-8 collect the scrap metal."
       },
       "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
@@ -218,11 +218,11 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "This **context-setting** lesson revisits Happy Maps. This time, students will use loops to solve bigger, longer puzzles with their code.",
-        "student_overview": "Help the Flurb solve bigger problems using loops.",
-        "purpose": "This lesson serves as an introduction to loops. Loops allow for students to simplify their code by grouping commands that need to be repeated. Students will develop critical thinking skills by noticing repetition in movements of their classmates and determining how many times to repeat commands. By seeing \"Happy Maps\" again, students will get the chance to relate old concepts such as sequencing to the new concept of repeat loops.",
-        "preparation": " - Print out a ***Worksheet** to display for the class\n - Per each group of 2-3, print one of each: ***Game pieces, *XL Worksheet, and  *Bonus Pack Manipulatives**.\n - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **context-setting** lesson revisits Happy Maps. This time, students will use loops to solve bigger, longer puzzles with their code.",
+        "preparation": " - Print out a ***Worksheet** to display for the class\n - Per each group of 2-3, print one of each: ***Game pieces, *XL Worksheet, and  *Bonus Pack Manipulatives**.\n - Make sure each student has a Reflection Journal.",
+        "purpose": "This lesson serves as an introduction to loops. Loops allow for students to simplify their code by grouping commands that need to be repeated. Students will develop critical thinking skills by noticing repetition in movements of their classmates and determining how many times to repeat commands. By seeing \"Happy Maps\" again, students will get the chance to relate old concepts such as sequencing to the new concept of repeat loops.",
+        "student_overview": "Help the Flurb solve bigger problems using loops.",
         "unplugged": true
       },
       "seeding_key": {
@@ -239,11 +239,11 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will practice loops in programming puzzles where the goal is to help the squirrel reach the acorn.",
-        "student_overview": "Help Scrat cover more ground using loops.",
-        "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be repeated.",
         "preparation": " - Review the previous unplugged lesson and develop questions to remind students why loops are used.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Gather supplies from previous Happy Loops to reuse for warm up\n - Make sure each student has a Reflection Journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be repeated.",
+        "student_overview": "Help Scrat cover more ground using loops."
       },
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
@@ -259,11 +259,11 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students continue learning the concept of loops. Here, students use loops to collect treasure in open cave spaces.",
-        "student_overview": "Help Laurel the adventurer collect the treasure underground.",
-        "purpose": "This lesson gives students more practice with loops and introduces a new block, `get treasure`. The block works just like `pick corn` did in Harvester. These puzzles are more open, giving students more flexibility for their final solutions.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**\n - Make sure each student has a reflection journal",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson gives students more practice with loops and introduces a new block, `get treasure`. The block works just like `pick corn` did in Harvester. These puzzles are more open, giving students more flexibility for their final solutions.",
+        "student_overview": "Help Laurel the adventurer collect the treasure underground."
       },
       "seeding_key": {
         "lesson.key": "Loops in Collector",
@@ -279,11 +279,11 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.",
-        "student_overview": "Use loops and patterns to finish the images.",
-        "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of  `repeat` loops.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure each student has a reflection journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of  `repeat` loops.",
+        "student_overview": "Use loops and patterns to finish the images."
       },
       "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
@@ -299,11 +299,11 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.",
-        "student_overview": "Move and shout when your teachers presses buttons on a giant remote.",
-        "purpose": "Today, students will learn to distinguish events from actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
-        "preparation": "- Prepare to project ***The Controller Image**.\n- Print one ***Assessment** per student.\n- Make sure each student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.",
+        "preparation": "- Prepare to project ***The Controller Image**.\n- Print one ***Assessment** per student.\n- Make sure each student has a reflection journal.",
+        "purpose": "Today, students will learn to distinguish events from actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
+        "student_overview": "Move and shout when your teachers presses buttons on a giant remote.",
         "unplugged": true
       },
       "seeding_key": {
@@ -320,11 +320,11 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **mini-project**, students will use events in Play Lab and apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
-        "student_overview": "Create your own game or story.",
-        "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure every student has a reflection journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
+        "student_overview": "Create your own game or story."
       },
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
@@ -341,9 +341,9 @@
       "relative_position": 13,
       "properties": {
         "overview": "In this **project** lesson, students apply what they have learned about sequencing and loops with the Artist.",
-        "student_overview": "Tell a story with the Artist!",
+        "preparation": "* Write and code your own story for the Artist in advance to inspire students!\n",
         "purpose": "This lesson gives students one last opportunity to creatively use their new computer science skills.",
-        "preparation": "* Write and code your own story for the Artist in advance to inspire students!\n"
+        "student_overview": "Tell a story with the Artist!"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -357,8 +357,8 @@
       "key": "09eb0525-dfae-44f2-831f-5c1f2ffee133",
       "position": 1,
       "properties": {
-        "name": "Watch: My Online Neighborhood",
-        "duration": 5
+        "duration": 5,
+        "name": "Watch: My Online Neighborhood"
       },
       "seeding_key": {
         "lesson_activity.key": "09eb0525-dfae-44f2-831f-5c1f2ffee133",
@@ -383,8 +383,8 @@
       "key": "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb",
       "position": 3,
       "properties": {
-        "name": "Read: Safety, It Rules!",
-        "duration": 5
+        "duration": 5,
+        "name": "Read: Safety, It Rules!"
       },
       "seeding_key": {
         "lesson_activity.key": "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb",
@@ -397,8 +397,8 @@
       "key": "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9",
       "position": 4,
       "properties": {
-        "name": "Explore: Internet Field Trip",
-        "duration": 15
+        "duration": 15,
+        "name": "Explore: Internet Field Trip"
       },
       "seeding_key": {
         "lesson_activity.key": "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9",
@@ -411,8 +411,8 @@
       "key": "df8b3513-c2f8-4db5-bb6b-93e60a3826d7",
       "position": 5,
       "properties": {
-        "name": "Pause & Think Moment",
-        "duration": 15
+        "duration": 15,
+        "name": "Pause & Think Moment"
       },
       "seeding_key": {
         "lesson_activity.key": "df8b3513-c2f8-4db5-bb6b-93e60a3826d7",
@@ -438,8 +438,8 @@
       "key": "07c33815-2515-4a63-91f1-51db34b0a00e",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "07c33815-2515-4a63-91f1-51db34b0a00e",
@@ -464,8 +464,8 @@
       "key": "86881655-9660-42ab-92ea-aa38d08cdeff",
       "position": 3,
       "properties": {
-        "name": "Main Activity",
-        "duration": 20
+        "duration": 20,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "86881655-9660-42ab-92ea-aa38d08cdeff",
@@ -478,8 +478,8 @@
       "key": "de46f4b1-acce-419e-9508-f9e6293b5ba8",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "de46f4b1-acce-419e-9508-f9e6293b5ba8",
@@ -518,8 +518,8 @@
       "key": "f03fc05c-d123-4c38-bde0-0bbbaf397b94",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f03fc05c-d123-4c38-bde0-0bbbaf397b94",
@@ -532,8 +532,8 @@
       "key": "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 40
+        "duration": 40,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e",
@@ -546,8 +546,8 @@
       "key": "3290a55e-fedd-4672-8b81-dfac2115a13b",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 8
+        "duration": 8,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "3290a55e-fedd-4672-8b81-dfac2115a13b",
@@ -573,8 +573,8 @@
       "key": "3c9570d2-fe30-4242-a735-9a2a4ee66bf0",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "3c9570d2-fe30-4242-a735-9a2a4ee66bf0",
@@ -587,8 +587,8 @@
       "key": "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Choose One",
-        "duration": 10
+        "duration": 10,
+        "name": "Bridging Activity - Choose One"
       },
       "seeding_key": {
         "lesson_activity.key": "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975",
@@ -601,8 +601,8 @@
       "key": "2a7f3c27-943a-415a-bdb1-1fbef4249074",
       "position": 3,
       "properties": {
-        "name": "Main Activity",
-        "duration": 20
+        "duration": 20,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "2a7f3c27-943a-415a-bdb1-1fbef4249074",
@@ -615,8 +615,8 @@
       "key": "3f38c955-4e54-4c3b-a446-92f78ed8c109",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "3f38c955-4e54-4c3b-a446-92f78ed8c109",
@@ -642,8 +642,8 @@
       "key": "ad255314-ba48-44b7-a6b8-1f0cc1e24157",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 3
+        "duration": 3,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ad255314-ba48-44b7-a6b8-1f0cc1e24157",
@@ -656,8 +656,8 @@
       "key": "774eb8ca-0c20-467c-9f25-0d454403dfc3",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "774eb8ca-0c20-467c-9f25-0d454403dfc3",
@@ -682,8 +682,8 @@
       "key": "785c0d5e-8bb0-4e62-b57f-636eb000c961",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "785c0d5e-8bb0-4e62-b57f-636eb000c961",
@@ -722,8 +722,8 @@
       "key": "7ca483b4-722a-4ed3-aa26-501375f59ab8",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 15
+        "duration": 15,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7ca483b4-722a-4ed3-aa26-501375f59ab8",
@@ -736,8 +736,8 @@
       "key": "fe01455d-0a26-4c9c-9031-25490a38f95e",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "fe01455d-0a26-4c9c-9031-25490a38f95e",
@@ -750,8 +750,8 @@
       "key": "f589d41f-0064-4e89-bc57-b6815763792f",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 15
+        "duration": 15,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f589d41f-0064-4e89-bc57-b6815763792f",
@@ -764,8 +764,8 @@
       "key": "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740",
       "position": 1,
       "properties": {
-        "name": "Warm-Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740",
@@ -778,8 +778,8 @@
       "key": "9e4b93ba-099d-4c47-b962-d47f961599bb",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 20
+        "duration": 20,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "9e4b93ba-099d-4c47-b962-d47f961599bb",
@@ -792,8 +792,8 @@
       "key": "bf1be38a-3e18-4158-8364-0de3124ff833",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 8
+        "duration": 8,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "bf1be38a-3e18-4158-8364-0de3124ff833",
@@ -819,8 +819,8 @@
       "key": "e0f98e02-d388-4fa9-8f14-0774fe44df3b",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e0f98e02-d388-4fa9-8f14-0774fe44df3b",
@@ -833,8 +833,8 @@
       "key": "6008d4fa-44e5-48b8-9a9e-a07541b36f3a",
       "position": 2,
       "properties": {
-        "name": " Bridging Activity - Choose One",
-        "duration": 10
+        "duration": 10,
+        "name": " Bridging Activity - Choose One"
       },
       "seeding_key": {
         "lesson_activity.key": "6008d4fa-44e5-48b8-9a9e-a07541b36f3a",
@@ -847,8 +847,8 @@
       "key": "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b",
       "position": 3,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b",
@@ -861,8 +861,8 @@
       "key": "647827d3-b6a3-4697-9cb8-fec35c819d12",
       "position": 4,
       "properties": {
-        "name": " Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": " Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "647827d3-b6a3-4697-9cb8-fec35c819d12",
@@ -901,8 +901,8 @@
       "key": "6aab5f16-5596-4536-b404-f46152246d24",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6aab5f16-5596-4536-b404-f46152246d24",
@@ -915,8 +915,8 @@
       "key": "9513331c-917a-4e11-a63a-9c53ef1e708c",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "9513331c-917a-4e11-a63a-9c53ef1e708c",
@@ -929,8 +929,8 @@
       "key": "f706eaa2-1f56-468e-b034-b8b4ddb9eddb",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f706eaa2-1f56-468e-b034-b8b4ddb9eddb",
@@ -943,8 +943,8 @@
       "key": "b6b94275-4d8a-4564-86ee-65c63e153d33",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b6b94275-4d8a-4564-86ee-65c63e153d33",
@@ -957,8 +957,8 @@
       "key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "dc4d4171-f55a-4ed3-a799-469b6932d7d7",
@@ -971,8 +971,8 @@
       "key": "450f879a-a14d-4d47-93fd-2916bbf46caa",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "450f879a-a14d-4d47-93fd-2916bbf46caa",
@@ -998,8 +998,8 @@
       "key": "e1843002-564c-4803-9eaa-44f48a8e4159",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 15
+        "duration": 15,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e1843002-564c-4803-9eaa-44f48a8e4159",
@@ -1012,8 +1012,8 @@
       "key": "9a383162-e9c7-47d0-be4d-582abaef1ae8",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 15
+        "duration": 15,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "9a383162-e9c7-47d0-be4d-582abaef1ae8",
@@ -1026,8 +1026,8 @@
       "key": "10660ca3-5263-479f-a685-3e067185468a",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 15
+        "duration": 15,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "10660ca3-5263-479f-a685-3e067185468a",
@@ -1065,8 +1065,8 @@
       "key": "2b650fd5-765d-4989-8e47-e21de2cdd0d5",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "2b650fd5-765d-4989-8e47-e21de2cdd0d5",
@@ -1079,8 +1079,8 @@
       "key": "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85",
       "position": 2,
       "properties": {
-        "name": "Bridging Activity - Events - Choose One",
-        "duration": 10
+        "duration": 10,
+        "name": "Bridging Activity - Events - Choose One"
       },
       "seeding_key": {
         "lesson_activity.key": "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85",
@@ -1093,8 +1093,8 @@
       "key": "c92853be-b1ed-4b05-afe9-79928330a3a3",
       "position": 3,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c92853be-b1ed-4b05-afe9-79928330a3a3",
@@ -1107,8 +1107,8 @@
       "key": "75370025-0071-498b-8e43-3e57a3ce5a78",
       "position": 4,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "75370025-0071-498b-8e43-3e57a3ce5a78",
@@ -1134,8 +1134,8 @@
       "key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c",
@@ -1148,8 +1148,8 @@
       "key": "71a032af-54cc-494d-8449-f02ce20f8aad",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad",
@@ -1162,8 +1162,8 @@
       "key": "cccafe00-da31-43f0-93cb-a49d10d5be0a",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cccafe00-da31-43f0-93cb-a49d10d5be0a",
@@ -1431,8 +1431,8 @@
       "key": "7719a51a-42d9-41f0-bc30-c5475b18af7c",
       "position": 1,
       "properties": {
-        "progression_name": "Video: Happy Maps - Unplugged Activity",
-        "name": "Happy Maps Programming"
+        "name": "Happy Maps Programming",
+        "progression_name": "Video: Happy Maps - Unplugged Activity"
       },
       "seeding_key": {
         "activity_section.key": "7719a51a-42d9-41f0-bc30-c5475b18af7c",
@@ -1499,13 +1499,13 @@
       "key": "fadfd6a5-099f-427c-aa1f-345ee17ca150",
       "position": 2,
       "properties": {
+        "description": "**Discuss:** Have a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Some possible things to cover:**\n\n- Use calm bodies in the lab.\n - Remember not to chew gum or candy.\n - Sanitize your hands.\n - Sit with your partner at one computer.\n - Make sure that the first \"driver\" can reach the mouse.\n - When you get frustrated, don't hit or shake the computer or monitor.\n - Follow the ***20/20/20 Rule**\n - How to deal with the ***Wiggles** every 20-30 minutes (requires a free login on GoNoodle).\n - Ask your partner before you ask the teacher.\n - Keep volume down so everyone else can hear their partners.\n - Use your journal for keeping track of feelings and solutions.\n\n"
           }
-        ],
-        "description": "**Discuss:** Have a good discussion around your computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\n\n - Is running in the computer lab okay?\n - How loudly should we walk when we are in the computer lab?\n - What should you do if you get stuck on a puzzle?\n - If you get frustrated, will it help to hit the computer?\n - When we're about to go to the computer lab, how should we get ready?"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fadfd6a5-099f-427c-aa1f-345ee17ca150",
@@ -1563,13 +1563,13 @@
       "key": "30ab6f6d-deb2-4b1c-8974-136be2f6852e",
       "position": 2,
       "properties": {
+        "description": "###Online Puzzles\n\nThis will teach students how to use Code.org to complete online puzzles.\n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Show the students the right way to help classmates:**\n\n - Don’t sit in the classmate’s chair.\n - Don’t use the classmate’s keyboard.\n - Don’t touch  the classmate’s mouse.\n - Make sure the classmate can describe the solution to you out loud before you walk away.\n"
           }
-        ],
-        "description": "###Online Puzzles\n\nThis will teach students how to use Code.org to complete online puzzles.\n\nWatch the ***Pair Programming** video with your students, then assign them to pairs.  This should help students start off in the right direction.\n\nTeachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+        ]
       },
       "seeding_key": {
         "activity_section.key": "30ab6f6d-deb2-4b1c-8974-136be2f6852e",
@@ -1615,13 +1615,13 @@
       "position": 1,
       "properties": {
         "description": "###Review Unplugged Activity\nThis lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.",
+        "name": "The Unplugged Foundation",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
-        ],
-        "name": "The Unplugged Foundation"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7119f518-386e-44e7-893d-eff0fbc5a87d",
@@ -1643,8 +1643,8 @@
       "key": "82d24278-d63c-4e22-921d-b92f4f1f8cd8",
       "position": 1,
       "properties": {
-        "name": "Programming With Scrat",
-        "description": "If you are looking for some extra puzzles to cover with your class, here are some \"prediction\" puzzles that will allow you to walk through existing code with your students to predict what _Scrat_ will do.  It is a good idea to cover them together before letting students loose on their own computers.\n\n####Prediction Levels:\n\n - [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n - [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
+        "description": "If you are looking for some extra puzzles to cover with your class, here are some \"prediction\" puzzles that will allow you to walk through existing code with your students to predict what _Scrat_ will do.  It is a good idea to cover them together before letting students loose on their own computers.\n\n####Prediction Levels:\n\n - [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n - [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)",
+        "name": "Programming With Scrat"
       },
       "seeding_key": {
         "activity_section.key": "82d24278-d63c-4e22-921d-b92f4f1f8cd8",
@@ -1885,8 +1885,8 @@
       "key": "8c303a82-3674-4b12-bb78-bcd85a423249",
       "position": 1,
       "properties": {
-        "progression_name": "Happy Loops Unplugged Activity",
-        "name": "Happy Loops"
+        "name": "Happy Loops",
+        "progression_name": "Happy Loops Unplugged Activity"
       },
       "seeding_key": {
         "activity_section.key": "8c303a82-3674-4b12-bb78-bcd85a423249",
@@ -1954,13 +1954,13 @@
       "position": 1,
       "properties": {
         "description": "This lesson relies on the concept of `repeat` loops that students learned in the previous unplugged activity, Happy Loops.  It is important to bring this idea from the real world into digital form so that students understand how to use Blockly blocks to repeat a task multiple times.",
+        "name": "The Unplugged Foundation",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "If your class has already learned cardinal directions, then changing \"Up\" and \"Down\" to \"North\" and \"South\" shouldn't be a problem.  If they have not, we have provided a handy worksheet with the Code.org Compass Rose that you can use to get students onboard.  This conversion will come in handy for nearly all of the online puzzles aimed at kindergarten and first grade.\n\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nLet students know that they will see those letters in their online programs next to the direction arrows.  \n"
           }
-        ],
-        "name": "The Unplugged Foundation"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cb522975-96ad-44b4-942c-601fc373771c",
@@ -2022,8 +2022,8 @@
       "key": "bce76535-3424-40bc-a71b-acafda6a3b62",
       "position": 1,
       "properties": {
-        "name": "Loops with Scrat",
-        "description": "\n\n####Online Foundation - Preview Loops in Ice Age\nTo finish the connection, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 8, Puzzle 5.  Point out the \"Play Area\" with *Scrat* and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help *Scrat* get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that *Scrat* (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
+        "description": "\n\n####Online Foundation - Preview Loops in Ice Age\nTo finish the connection, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Lesson 8, Puzzle 5.  Point out the \"Play Area\" with *Scrat* and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help *Scrat* get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that *Scrat* (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own.",
+        "name": "Loops with Scrat"
       },
       "seeding_key": {
         "activity_section.key": "bce76535-3424-40bc-a71b-acafda6a3b62",
@@ -2424,8 +2424,8 @@
       "key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
       "position": 10,
       "properties": {
-        "progression_name": "Challenge",
-        "name": "Lesson Extras"
+        "name": "Lesson Extras",
+        "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "cfcb405b-99fc-4686-bd02-4e37b3f5c337",
@@ -2509,14 +2509,14 @@
       "key": "6ffda847-c078-4edf-b7ca-4499b1d9249e",
       "position": 2,
       "properties": {
+        "description": "- _Do you remember helping the flurbs find fruit?_\n\t- _In that exercise, you knew in advance exactly where you wanted your flurb to end up, so you could make a program that took them from start to finish without any interruptions._\n\t- _In most real programs, we can't do that because we want to have options, depending on what the user needs._\n\t\t- _Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone._\n\t\t- _Putting my finger on the screen would then become an event that tells my character to move._\n",
+        "name": "The Big Event",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.\n"
           }
-        ],
-        "name": "The Big Event",
-        "description": "- _Do you remember helping the flurbs find fruit?_\n\t- _In that exercise, you knew in advance exactly where you wanted your flurb to end up, so you could make a program that took them from start to finish without any interruptions._\n\t- _In most real programs, we can't do that because we want to have options, depending on what the user needs._\n\t\t- _Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone._\n\t\t- _Putting my finger on the screen would then become an event that tells my character to move._\n"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6ffda847-c078-4edf-b7ca-4499b1d9249e",
@@ -2540,13 +2540,13 @@
       "properties": {
         "description": "*Discuss*: Ask students to reflect on what they have learned through the following prompts:\n\n- *What did we learn?*\n- *What are some examples of events?*\n\n\n**Prompts:**\n\n- What was today’s lesson about?\n- Draw a face that shows how you felt about today's lesson in the corner of your journal page.\n- Draw an event that caused an action today.\n- Draw an action that was caused by an event that happened today.",
         "duration": "10",
+        "name": "Reflection",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Students should demonstrate understanding that events are something that can cause other actions to happen. Refer back to earlier examples from the lesson or encourage students to come up with their own."
           }
-        ],
-        "name": "Reflection"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "40978575-9e16-4760-a200-0678f187ff4c",
@@ -2558,8 +2558,8 @@
       "position": 1,
       "properties": {
         "description": "\n**Distribute**: Hand out one ***Assessment** to each student and allow them to complete it independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities.",
-        "name": "Assessment",
-        "duration": "5"
+        "duration": "5",
+        "name": "Assessment"
       },
       "seeding_key": {
         "activity_section.key": "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5",
@@ -2734,8 +2734,8 @@
       "key": "4ae60932-ccb3-411c-bfb4-bc9e52149b27",
       "position": 1,
       "properties": {
-        "name": "Review",
         "description": "**Do this:**\n* Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in the earlier lesson using the Artist tools.\n* Review the vocabulary word **loop**.\n* If you created your own project example, share it now.",
+        "name": "Review",
         "progression_name": "Project"
       },
       "seeding_key": {
@@ -2748,8 +2748,8 @@
       "position": 1,
       "properties": {
         "description": "**Do This:** Pull up level for this lesson on the projector.",
-        "progression_name": "Project",
-        "name": "Telling a story with the Artist"
+        "name": "Telling a story with the Artist",
+        "progression_name": "Project"
       },
       "seeding_key": {
         "activity_section.key": "d07826c3-fe5d-4ffa-a4ff-6bd799a62342",
@@ -2760,8 +2760,8 @@
       "key": "22c1ade3-49af-45ce-84bb-ba4337206074",
       "position": 2,
       "properties": {
-        "remarks": true,
-        "description": "*Today, we will celebrate how much you have all learned by creating our own projects to tell a story with the Artist.   The Artist will be taking a trip to three places today: a garden, a zoo, and outer space!*\n\n*Your job is to create a path for him and tell a story about what he did and saw.*\n\n*Will he walk through the flowers?*\n\n*Will he build a house for the animals?* \n\n*What else might he see or do?*"
+        "description": "*Today, we will celebrate how much you have all learned by creating our own projects to tell a story with the Artist.   The Artist will be taking a trip to three places today: a garden, a zoo, and outer space!*\n\n*Your job is to create a path for him and tell a story about what he did and saw.*\n\n*Will he walk through the flowers?*\n\n*Will he build a house for the animals?* \n\n*What else might he see or do?*",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "22c1ade3-49af-45ce-84bb-ba4337206074",
@@ -2772,8 +2772,8 @@
       "key": "76119a2d-a3f8-4c17-b38a-c0194431de25",
       "position": 3,
       "properties": {
-        "name": "Planning",
         "description": "**Do this:** Distribute the **planning guide** handout and review it with students.\nStudents will pick *at least one* place for the artist. They should then draw the path that the artist will follow. (It's like a dot-to-dot puzzle, but without the numbers!)\nNext to the image, students should write their stories. ",
+        "name": "Planning",
         "tips": [
           {
             "type": "teachingTip",
@@ -2790,10 +2790,10 @@
       "key": "0ab5b62b-a464-4801-a963-d23d293ea5ff",
       "position": 4,
       "properties": {
-        "remarks": true,
         "description": "When you get the activity on your computer, click on any of the chooses to start. Start with your plan, but you can have the artist draw whatever you like! At the end of class, we will share our projects with the class.",
+        "name": "Project",
         "progression_name": "Project",
-        "name": "Project"
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "0ab5b62b-a464-4801-a963-d23d293ea5ff",
@@ -2821,8 +2821,8 @@
       "key": "adc355f7-34d5-450e-aa57-e001b2a7973c",
       "position": 1,
       "properties": {
-        "name": "Showcase",
-        "description": "To celebrate students' work, spend the last 10 minutes or so, allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects and tell their story in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them. \n* **Pair Storytelling**: If you have a big class or are shorter on time, have students or groups pair up and demo their projects that way. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and run the project there and read the story. When they receive a signal from you, they should move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible."
+        "description": "To celebrate students' work, spend the last 10 minutes or so, allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects and tell their story in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them. \n* **Pair Storytelling**: If you have a big class or are shorter on time, have students or groups pair up and demo their projects that way. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and run the project there and read the story. When they receive a signal from you, they should move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "name": "Showcase"
       },
       "seeding_key": {
         "activity_section.key": "adc355f7-34d5-450e-aa57-e001b2a7973c",
@@ -2835,15 +2835,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "My Online Neighborhood",
         "level_keys": [
           "csf_safety_in_my_online_neighborhood_2021"
-        ]
+        ],
+        "progression": "My Online Neighborhood"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csf_safety_in_my_online_neighborhood_2021"
@@ -2861,15 +2861,15 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:1"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:1"
@@ -2887,15 +2887,15 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:2"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:2"
@@ -2913,15 +2913,15 @@
       "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:3"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:3"
@@ -2939,15 +2939,15 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:4"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:4"
@@ -2965,15 +2965,15 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:5"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:5"
@@ -2991,15 +2991,15 @@
       "chapter": 7,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:6"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:6"
@@ -3017,15 +3017,15 @@
       "chapter": 8,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:7"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:7"
@@ -3043,15 +3043,15 @@
       "chapter": 9,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:8"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:8"
@@ -3069,15 +3069,15 @@
       "chapter": 10,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:9"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:9"
@@ -3095,15 +3095,15 @@
       "chapter": 11,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:10"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:10"
@@ -3121,15 +3121,15 @@
       "chapter": 12,
       "position": 11,
       "activity_section_position": 11,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:11"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:11"
@@ -3147,15 +3147,15 @@
       "chapter": 13,
       "position": 12,
       "activity_section_position": 12,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "blockly:Jigsaw:12"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:Jigsaw:12"
@@ -3173,15 +3173,15 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Happy Maps - Unplugged Activity",
         "level_keys": [
           "HappyMaps-Unplugged_2021"
-        ]
+        ],
+        "progression": "Video: Happy Maps - Unplugged Activity"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "HappyMaps-Unplugged_2021"
@@ -3199,15 +3199,15 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Programming with Blocks",
         "level_keys": [
           "courseAB_video_NewIntro_2021"
-        ]
+        ],
+        "progression": "Video: Programming with Blocks"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseAB_video_NewIntro_2021"
@@ -3225,15 +3225,15 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_Scrat_ramp1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_Scrat_ramp1_2021"
@@ -3251,15 +3251,15 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_Scrat_ramp2_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_Scrat_ramp2_2021"
@@ -3277,15 +3277,15 @@
       "chapter": 18,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_Scrat_ramp3a_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_Scrat_ramp3a_2021"
@@ -3303,15 +3303,15 @@
       "chapter": 19,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_Scrat_ramp3b_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_Scrat_ramp3b_2021"
@@ -3329,15 +3329,15 @@
       "chapter": 20,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_Scrat_ramp4a_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_Scrat_ramp4a_2021"
@@ -3355,15 +3355,15 @@
       "chapter": 21,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_Scrat_ramp5a_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_Scrat_ramp5a_2021"
@@ -3381,15 +3381,15 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Pair Programming ",
         "level_keys": [
           "elementary_video_pairProgramming_2021"
-        ]
+        ],
+        "progression": "Video: Pair Programming "
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "elementary_video_pairProgramming_2021"
@@ -3407,15 +3407,15 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_maze_seq1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq1_2021"
@@ -3433,15 +3433,15 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_maze_seq4_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq4_2021"
@@ -3459,15 +3459,15 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_maze_seq5_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq5_2021"
@@ -3485,15 +3485,15 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_maze_seq6_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq6_2021"
@@ -3511,15 +3511,15 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Debugging with the Step Button",
         "level_keys": [
           "courseAB_video_debugging_2021"
-        ]
+        ],
+        "progression": "Video: Debugging with the Step Button"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseAB_video_debugging_2021"
@@ -3537,15 +3537,15 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_maze_seq7_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq7_2021"
@@ -3563,15 +3563,15 @@
       "chapter": 29,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_maze_seq8_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq8_2021"
@@ -3589,16 +3589,16 @@
       "chapter": 30,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseB_maze_seq9_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq9_2021"
@@ -3616,15 +3616,15 @@
       "chapter": 31,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq10_2021"
@@ -3642,15 +3642,15 @@
       "chapter": 32,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq11_2021"
@@ -3668,15 +3668,15 @@
       "chapter": 33,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_maze_seq12_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_maze_seq12_2021"
@@ -3694,14 +3694,14 @@
       "chapter": 34,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseB_maze_seq_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3720,14 +3720,14 @@
       "chapter": 35,
       "position": 14,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseB_maze_seq_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3746,15 +3746,15 @@
       "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Programming with Rey and BB-8",
         "level_keys": [
           "bb8_skinOverview_K-1_video_2021"
-        ]
+        ],
+        "progression": "Video: Programming with Rey and BB-8"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "bb8_skinOverview_K-1_video_2021"
@@ -3772,15 +3772,15 @@
       "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_starWars_prog1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog1_2021"
@@ -3798,15 +3798,15 @@
       "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_starWars_prog2_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog2_2021"
@@ -3824,15 +3824,15 @@
       "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_starWars_prog3_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog3_2021"
@@ -3850,15 +3850,15 @@
       "chapter": 40,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_starWars_prog4_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog4_2021"
@@ -3876,15 +3876,15 @@
       "chapter": 41,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_starWars_prog5_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog5_2021"
@@ -3902,15 +3902,15 @@
       "chapter": 42,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_starWars_prog6_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog6_2021"
@@ -3928,15 +3928,15 @@
       "chapter": 43,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_starWars_prog7_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog7_2021"
@@ -3954,16 +3954,16 @@
       "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseB_starWars_prog8_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog8_2021"
@@ -3981,15 +3981,15 @@
       "chapter": 45,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog9_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog9_2021"
@@ -4007,15 +4007,15 @@
       "chapter": 46,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog10_2021"
@@ -4033,15 +4033,15 @@
       "chapter": 47,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_starWars_prog11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_starWars_prog11_2021"
@@ -4059,41 +4059,15 @@
       "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Happy Loops Unplugged Activity",
-        "level_keys": [
-          "HappyLoops-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HappyLoops-Unplugged_2021"
-        ],
-        "lesson.key": "Loops: Happy Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursea-2021",
-        "activity_section.key": "8c303a82-3674-4b12-bb78-bcd85a423249"
-      },
-      "level_keys": [
-        "HappyLoops-Unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops1_2021"
@@ -4108,18 +4082,18 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops2_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops2_2021"
@@ -4134,18 +4108,18 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Ice Age Loops",
         "level_keys": [
           "courseB_iceage_loops_video_2021"
-        ]
+        ],
+        "progression": "Video: Ice Age Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops_video_2021"
@@ -4160,18 +4134,18 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops3_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops3_2021"
@@ -4186,18 +4160,18 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops4_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops4_2021"
@@ -4212,18 +4186,18 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops6_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops6_2021"
@@ -4238,18 +4212,18 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops7_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops7_2021"
@@ -4264,18 +4238,18 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops8_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops8_2021"
@@ -4290,18 +4264,18 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 9,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseB_iceage_loops9_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops9_2021"
@@ -4316,19 +4290,19 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseB_iceage_loops10_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops10_2021"
@@ -4343,18 +4317,18 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops11_2021"
@@ -4369,18 +4343,18 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseB_iceage_loops12_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_iceage_loops12_2021"
@@ -4395,18 +4369,18 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: The Collector",
         "level_keys": [
           "courseAB_video_collector_2021"
-        ]
+        ],
+        "progression": "Video: The Collector"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseAB_video_collector_2021"
@@ -4421,18 +4395,18 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops1_2021"
@@ -4447,18 +4421,18 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops2_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops2_2021"
@@ -4473,18 +4447,18 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Using the Repeat Block",
         "level_keys": [
           "courseA_video_Loops_2021"
-        ]
+        ],
+        "progression": "Video: Using the Repeat Block"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_video_Loops_2021"
@@ -4499,18 +4473,18 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops3_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops3_2021"
@@ -4525,18 +4499,18 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops4_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops4_2021"
@@ -4551,18 +4525,18 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops5_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops5_2021"
@@ -4577,18 +4551,18 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops6_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops6_2021"
@@ -4603,18 +4577,18 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops7_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops7_2021"
@@ -4629,18 +4603,18 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 10,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_collector_loops8_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops8_2021"
@@ -4655,19 +4629,19 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseA_collector_loops9_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops9_2021"
@@ -4682,18 +4656,18 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops10_2021"
@@ -4708,18 +4682,18 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops11_2021"
@@ -4734,18 +4708,18 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 14,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_collector_loops12_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_collector_loops12_2021"
@@ -4760,17 +4734,17 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseA_collector_loops_challenge2kp_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4786,17 +4760,17 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 16,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseA_collector_loops_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -4812,18 +4786,18 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: The Artist in Code Studio",
         "level_keys": [
           "courseB_video_ArtistIntro_2021"
-        ]
+        ],
+        "progression": "Video: The Artist in Code Studio"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseB_video_ArtistIntro_2021"
@@ -4838,18 +4812,18 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops1_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops1_2021"
@@ -4864,18 +4838,18 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops2_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops2_2021"
@@ -4890,18 +4864,18 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops3_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops3_2021"
@@ -4916,18 +4890,18 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Loops in Artist",
         "level_keys": [
           "courseA_video_loops1_2021"
-        ]
+        ],
+        "progression": "Video: Loops in Artist"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_video_loops1_2021"
@@ -4942,18 +4916,18 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops4_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops4_2021"
@@ -4968,18 +4942,18 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops5_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops5_2021"
@@ -4994,18 +4968,18 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 83,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops6_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops6_2021"
@@ -5020,18 +4994,18 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 84,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops7_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops7_2021"
@@ -5046,18 +5020,18 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 85,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Skill Building",
         "level_keys": [
           "courseA_artist_loops8_2021"
-        ]
+        ],
+        "progression": "Skill Building"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops8_2021"
@@ -5072,19 +5046,19 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 86,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseA_artist_loops9_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops9_2021"
@@ -5099,18 +5073,18 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 87,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops10_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops10_2021"
@@ -5125,18 +5099,18 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 88,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_artist_loops11_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops11_2021"
@@ -5151,18 +5125,18 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseA_artist_loops12_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_artist_loops12_2021"
@@ -5177,17 +5151,17 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseA_artist_loops_challenge2a_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5203,17 +5177,17 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 16,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseA_artist_loops_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5229,18 +5203,18 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "The Big Event - Unplugged Activity",
         "level_keys": [
           "BigEvent-Unplugged_2021"
-        ]
+        ],
+        "progression": "The Big Event - Unplugged Activity"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "BigEvent-Unplugged_2021"
@@ -5255,18 +5229,18 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Create a Story",
         "level_keys": [
           "courseA_video_events_2021"
-        ]
+        ],
+        "progression": "Video: Create a Story"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_video_events_2021"
@@ -5281,18 +5255,18 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseA_playLab_events1_2021"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_playLab_events1_2021"
@@ -5307,18 +5281,18 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseA_playLab_events2_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_playLab_events2_2021"
@@ -5333,18 +5307,18 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events3_2021"
-        ]
+        ],
+        "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_playLab_events3_2021"
@@ -5359,18 +5333,18 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 97,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events4_2021"
-        ]
+        ],
+        "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_playLab_events4_2021"
@@ -5385,18 +5359,18 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 98,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events5_2021"
-        ]
+        ],
+        "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_playLab_events5_2021"
@@ -5411,18 +5385,18 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 99,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events6_2021"
-        ]
+        ],
+        "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_playLab_events6_2021"
@@ -5437,18 +5411,18 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 100,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
           "courseA_playLab_events7_2021"
-        ]
+        ],
+        "progression": "Mini-project: Jorge the Dog"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseA_playLab_events7_2021"
@@ -5463,17 +5437,17 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 101,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseA_playlab_events_challenge2_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5489,17 +5463,17 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 102,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "level_keys": [
           "courseA_playlab_events_challenge1_2021"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -5515,18 +5489,18 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 103,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Project",
         "level_keys": [
           "courseAB_EOC_2021"
-        ]
+        ],
+        "progression": "Project"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseAB_EOC_2021"
@@ -6104,18 +6078,6 @@
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2021",
         "activity_section.key": "33708a97-a66a-4797-9349-7a1fc9325c26"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "HappyLoops-Unplugged_2021",
-        "script_level.level_keys": [
-          "HappyLoops-Unplugged_2021"
-        ],
-        "lesson.key": "Loops: Happy Loops",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursea-2021",
-        "activity_section.key": "8c303a82-3674-4b12-bb78-bcd85a423249"
       }
     },
     {
@@ -6793,6 +6755,473 @@
   ],
   "resources": [
     {
+      "name": "2021 Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "2021_change_log",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "2021_change_log"
+      }
+    },
+    {
+      "name": "20/20/20 Rule",
+      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+      "key": "20_20_20_rule",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "name": "20/20/20 Rule",
+      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+      "key": "20_20_20_rule_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "20_20_20_rule_1"
+      }
+    },
+    {
+      "name": "Happy Map Cards",
+      "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit",
+      "key": "activity-answer-happy-maps",
+      "properties": {
+        "type": "Worksheet Answer Key",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "activity-answer-happy-maps"
+      }
+    },
+    {
+      "name": "Artist Project Planning Guide",
+      "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+      "key": "artist_project_planning_guide",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "artist_project_planning_guide"
+      }
+    },
+    {
+      "name": "The Big Event",
+      "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+      "key": "assessment-answer-big-event",
+      "properties": {
+        "type": "Assessment Answer Key",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "assessment-answer-big-event"
+      }
+    },
+    {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "common-sense-media-pause-think",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "name": "Common Core and NGSS Guidance",
+      "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
+      "key": "common_core_and_ngss_guidance",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "common_core_and_ngss_guidance"
+      }
+    },
+    {
+      "name": "Unplugged Blockly Blocks (Grades K-1)",
+      "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+      "key": "course-ab-blockly-blocks",
+      "properties": {
+        "type": "Manipulatives",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "course-ab-blockly-blocks"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://studio.code.org/s/coursea-2021/vocab",
+      "key": "course_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Cross-Curricular Extension Activities",
+      "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview\t\t",
+      "key": "cross-curricular_extension_activities",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cross-curricular_extension_activities"
+      }
+    },
+    {
+      "name": "CS Fundamentals Main Activity Tips",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf-lesson-recommend",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "name": "The Big Event",
+      "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+      "key": "csf-the-big-event-assessment",
+      "properties": {
+        "type": "Assessment",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csf-the-big-event-assessment"
+      }
+    },
+    {
+      "name": "Debugging With the Step Button",
+      "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+      "key": "csf_debugging_k1_blocks",
+      "properties": {
+        "download_url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csf_debugging_k1_blocks"
+      }
+    },
+    {
+      "name": "CSF Lesson Recommendations",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf_lesson_recommendations",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csf_lesson_recommendations"
+      }
+    },
+    {
+      "name": "CSF Lesson Recommendations",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf_lesson_recommendations_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csf_lesson_recommendations_1"
+      }
+    },
+    {
+      "name": "CSF Lesson Recommendations",
+      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+      "key": "csf_lesson_recommendations_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csf_lesson_recommendations_2"
+      }
+    },
+    {
+      "name": "CSTA Standards Mapping",
+      "url": "https://studio.code.org/s/coursea-2021/standards",
+      "key": "csta_standards_mapping",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csta_standards_mapping"
+      }
+    },
+    {
+      "name": "Curriculum Guide",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+      "key": "curriculum_guide_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1"
+      }
+    },
+    {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+      "key": "debugging_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
+      "name": "Feeling Faces",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+      "key": "feeling-faces-image",
+      "properties": {
+        "type": "Emotion Images",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "feeling-faces-image"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image_1"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image_2"
+      }
+    },
+    {
+      "name": "Feeling Faces - Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_-_emotion_image_3",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_-_emotion_image_3"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image_1"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image_2"
+      }
+    },
+    {
+      "name": "Feeling Faces Emotion Image",
+      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+      "key": "feeling_faces_emotion_image_3",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "feeling_faces_emotion_image_3"
+      }
+    },
+    {
+      "name": "Happy Map Cards",
+      "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
+      "key": "happy-map-cards",
+      "properties": {
+        "type": "Worksheet",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "happy-map-cards"
+      }
+    },
+    {
+      "name": "Happy Map Cards XL",
+      "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
+      "key": "happy-map-cards-xl",
+      "properties": {
+        "type": "Worksheet",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "happy-map-cards-xl"
+      }
+    },
+    {
+      "name": "Happy Map Game Pieces",
+      "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+      "key": "happy-map-game-pieces",
+      "properties": {
+        "type": "Manipulatives",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "happy-map-game-pieces"
+      }
+    },
+    {
+      "name": "Happy Map Game Pieces Bonus Pack",
+      "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
+      "key": "happy-map-game-pieces-bonus-pack",
+      "properties": {
+        "type": "Manipulatives",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "happy-map-game-pieces-bonus-pack"
+      }
+    },
+    {
+      "name": "How to Make a Class Section on Code.org",
+      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "key": "how_to_make_a_class_section_on_code_org",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_make_a_class_section_on_code_org"
+      }
+    },
+    {
+      "name": "Implementation Guide",
+      "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+      "key": "implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "implementation_guide"
+      }
+    },
+    {
+      "name": "Lesson Type Guide",
+      "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+      "key": "lesson_type_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Pair-Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair-programming",
+      "properties": {
+        "download_url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pair-programming"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair-programming-vid",
+      "properties": {
+        "type": "Student Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pair-programming-vid"
+      }
+    },
+    {
       "name": "Safety in My Online Neighborhood: Lesson Slides",
       "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
       "key": "safety-in-my-online-neighborhood-lesson-slides",
@@ -6818,19 +7247,6 @@
       }
     },
     {
-      "name": "Safety in My Online Neighborhood: Safety: It Rules!",
-      "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
-      "key": "safety-in-my-online-neighborhood-safety-it-rules",
-      "properties": {
-        "type": "Poem Poster",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "safety-in-my-online-neighborhood-safety-it-rules"
-      }
-    },
-    {
       "name": "Safety in My Online Neighborhood: Pause and Think Moment",
       "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
       "key": "safety-in-my-online-neighborhood-pause-and-think-moment",
@@ -6844,363 +7260,28 @@
       }
     },
     {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming-vid",
+      "name": "Safety in My Online Neighborhood: Safety: It Rules!",
+      "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+      "key": "safety-in-my-online-neighborhood-safety-it-rules",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "type": "Poem Poster",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "pair-programming-vid"
+        "resource.key": "safety-in-my-online-neighborhood-safety-it-rules"
       }
     },
     {
-      "name": "20/20/20 Rule",
-      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-      "key": "20_20_20_rule",
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf/",
+      "key": "teacher_forum_1",
       "properties": {
         "type": "Resource",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "20_20_20_rule"
-      }
-    },
-    {
-      "name": "Wiggles-Go Noodle",
-      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-      "key": "wiggles-go_noodle",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "wiggles-go_noodle"
-      }
-    },
-    {
-      "name": "How to Make a Class Section on Code.org",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
-      "key": "how_to_make_a_class_section_on_code_org",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_make_a_class_section_on_code_org"
-      }
-    },
-    {
-      "name": "Happy Maps",
-      "url": "https://youtu.be/hrnhiKAQ1_k",
-      "key": "unplugged-video-happy-maps",
-      "properties": {
-        "type": "Unplugged Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-happy-maps-unplugged.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged-video-happy-maps"
-      }
-    },
-    {
-      "name": "Happy Map Cards",
-      "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
-      "key": "happy-map-cards",
-      "properties": {
-        "type": "Worksheet",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-cards"
-      }
-    },
-    {
-      "name": "Happy Map Cards",
-      "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit",
-      "key": "activity-answer-happy-maps",
-      "properties": {
-        "type": "Worksheet Answer Key",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "activity-answer-happy-maps"
-      }
-    },
-    {
-      "name": "Happy Map Game Pieces",
-      "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
-      "key": "happy-map-game-pieces",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-game-pieces"
-      }
-    },
-    {
-      "name": "Feeling Faces - Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit)https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_-_emotion_image",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_-_emotion_image"
-      }
-    },
-    {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "name": "20/20/20 Rule",
-      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
-      "key": "20_20_20_rule_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "20_20_20_rule_1"
-      }
-    },
-    {
-      "name": "Wiggles - GoNoodle",
-      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
-      "key": "wiggles_-_gonoodle",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "wiggles_-_gonoodle"
-      }
-    },
-    {
-      "name": "Debugging With the Step Button",
-      "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
-      "key": "csf_debugging_k1_blocks",
-      "properties": {
-        "download_url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "csf_debugging_k1_blocks"
-      }
-    },
-    {
-      "name": "Feeling Faces Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion_image",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
-      "name": "Feeling Faces - Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_-_emotion_image_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_-_emotion_image_1"
-      }
-    },
-    {
-      "name": "Happy Map Cards XL",
-      "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
-      "key": "happy-map-cards-xl",
-      "properties": {
-        "type": "Worksheet",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-cards-xl"
-      }
-    },
-    {
-      "name": "Happy Map Game Pieces Bonus Pack",
-      "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
-      "key": "happy-map-game-pieces-bonus-pack",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-game-pieces-bonus-pack"
-      }
-    },
-    {
-      "name": "Feeling Faces Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion_image_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion_image_1"
-      }
-    },
-    {
-      "name": "Feeling Faces",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-      "key": "feeling-faces-image",
-      "properties": {
-        "type": "Emotion Images",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "name": "Pair-Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming",
-      "properties": {
-        "download_url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pair-programming"
-      }
-    },
-    {
-      "name": "Feeling Faces Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion_image_2",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion_image_2"
-      }
-    },
-    {
-      "name": "CSF Lesson Recommendations",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "csf_lesson_recommendations",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csf_lesson_recommendations"
-      }
-    },
-    {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "common-sense-media-pause-think",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "common-sense-media-pause-think"
-      }
-    },
-    {
-      "name": "Feeling Faces Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion_image_3",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion_image_3"
-      }
-    },
-    {
-      "name": "CSF Lesson Recommendations",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "csf_lesson_recommendations_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csf_lesson_recommendations_1"
-      }
-    },
-    {
-      "name": "The Big Event",
-      "url": "https://youtu.be/u0WV9shCoak",
-      "key": "unplugged-video-big-event",
-      "properties": {
-        "type": "Unplugged Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged-video-big-event"
-      }
-    },
-    {
-      "name": "The Big Event",
-      "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
-      "key": "csf-the-big-event-assessment",
-      "properties": {
-        "type": "Assessment",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-the-big-event-assessment"
-      }
-    },
-    {
-      "name": "The Big Event",
-      "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-      "key": "assessment-answer-big-event",
-      "properties": {
-        "type": "Assessment Answer Key",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "assessment-answer-big-event"
-      }
-    },
-    {
-      "name": "Feeling Faces - Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_-_emotion_image_2",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_-_emotion_image_2"
+        "resource.key": "teacher_forum_1"
       }
     },
     {
@@ -7217,85 +7298,53 @@
       }
     },
     {
-      "name": "CS Fundamentals Main Activity Tips",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "csf-lesson-recommend",
+      "name": "The Big Event",
+      "url": "https://youtu.be/u0WV9shCoak",
+      "key": "unplugged-video-big-event",
       "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-lesson-recommend"
-      }
-    },
-    {
-      "name": "Feeling Faces - Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_-_emotion_image_3",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_-_emotion_image_3"
-      }
-    },
-    {
-      "name": "CSF Lesson Recommendations",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "csf_lesson_recommendations_2",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csf_lesson_recommendations_2"
-      }
-    },
-    {
-      "name": "Artist Project Planning Guide",
-      "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
-      "key": "artist_project_planning_guide",
-      "properties": {
-        "type": "Handout",
+        "type": "Unplugged Video",
         "audience": "Student",
-        "include_in_pdf": true
+        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4"
       },
       "seeding_key": {
-        "resource.key": "artist_project_planning_guide"
+        "resource.key": "unplugged-video-big-event"
       }
     },
     {
-      "name": "Teacher Forum",
-      "url": "http://forum.code.org/c/csf",
-      "key": "teacher_forum",
+      "name": "Happy Maps",
+      "url": "https://youtu.be/hrnhiKAQ1_k",
+      "key": "unplugged-video-happy-maps",
       "properties": {
-        "audience": "Teacher"
+        "type": "Unplugged Video",
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2014/C1-happy-maps-unplugged.mp4"
       },
       "seeding_key": {
-        "resource.key": "teacher_forum"
+        "resource.key": "unplugged-video-happy-maps"
       }
     },
     {
-      "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
-      "key": "curriculum_guide",
+      "name": "Wiggles-Go Noodle",
+      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+      "key": "wiggles-go_noodle",
       "properties": {
+        "type": "Video",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "curriculum_guide"
+        "resource.key": "wiggles-go_noodle"
       }
     },
     {
-      "name": "Change Log",
-      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "change_log",
+      "name": "Wiggles - GoNoodle",
+      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+      "key": "wiggles_-_gonoodle",
       "properties": {
+        "type": "Video",
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "change_log"
+        "resource.key": "wiggles_-_gonoodle"
       }
     }
   ],
@@ -7610,19 +7659,61 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "teacher_forum",
+        "resource.key": "csta_standards_mapping",
         "script.name": "coursea-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "curriculum_guide",
+        "resource.key": "common_core_and_ngss_guidance",
         "script.name": "coursea-2021"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "change_log",
+        "resource.key": "cross-curricular_extension_activities",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "implementation_guide",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_type_guide",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide_1",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2021_change_log",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
         "script.name": "coursea-2021"
       }
     }
@@ -8408,6 +8499,13 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-16"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",

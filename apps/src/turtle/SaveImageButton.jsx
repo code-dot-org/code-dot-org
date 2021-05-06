@@ -4,6 +4,26 @@ import i18n from '@cdo/locale';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import color from '@cdo/apps/util/color';
 
+export default class SaveImageButton extends React.Component {
+  static propTypes = {
+    displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired
+  };
+
+  save = async () => {
+    const blob = await imageUtils.canvasToBlob(this.props.displayCanvas);
+    imageUtils.downloadBlobAsPng(blob);
+  };
+
+  render() {
+    return (
+      <button type="button" style={styles.button} onClick={this.save}>
+        <i style={styles.icon} className="fa fa-fw fa-camera" />
+        {i18n.save()}
+      </button>
+    );
+  }
+}
+
 const styles = {
   icon: {
     lineHeight: 'inherit',
@@ -26,23 +46,3 @@ const styles = {
     color: color.white
   }
 };
-
-export default class SaveImageButton extends React.Component {
-  static propTypes = {
-    displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired
-  };
-
-  save = async () => {
-    const blob = await imageUtils.canvasToBlob(this.props.displayCanvas);
-    imageUtils.downloadBlobAsPng(blob);
-  };
-
-  render() {
-    return (
-      <button type="button" style={styles.button} onClick={this.save}>
-        <i style={styles.icon} className="fa fa-fw fa-camera" />
-        {i18n.save()}
-      </button>
-    );
-  }
-}
