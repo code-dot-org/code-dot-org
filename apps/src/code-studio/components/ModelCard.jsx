@@ -11,7 +11,7 @@ const styles = {
     padding: 20,
     whiteSpace: 'normal',
     lineHeight: 1.5,
-    maxHeight: 'calc(80vh - 140px)',
+    maxHeight: 'calc(80vh - 150px)',
     overflow: 'scroll'
   },
   subPanel: {
