@@ -15,12 +15,6 @@ import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
 
-const styles = {
-  container: {
-    overflowX: 'auto'
-  }
-};
-
 export default class WorkshopTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.shape({
@@ -378,3 +372,9 @@ export default class WorkshopTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    overflowX: 'auto'
+  }
+};

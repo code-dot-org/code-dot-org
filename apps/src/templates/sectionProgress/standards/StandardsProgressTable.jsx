@@ -16,24 +16,6 @@ export const COLUMNS = {
   LESSONS_COMPLETED: 3
 };
 
-const styles = {
-  mainColumnHeader: {
-    width: 80,
-    textAlign: 'center'
-  },
-  descriptionColumnHeader: {
-    textAlign: 'center'
-  },
-  mainColumnCell: {
-    width: 80,
-    textAlign: 'center'
-  },
-  descriptionCell: {
-    maxWidth: 470,
-    padding: '10px 10px 0px 10px'
-  }
-};
-
 class StandardsProgressTable extends Component {
   static propTypes = {
     style: PropTypes.object,
@@ -205,6 +187,24 @@ class StandardsProgressTable extends Component {
     );
   }
 }
+
+const styles = {
+  mainColumnHeader: {
+    width: 80,
+    textAlign: 'center'
+  },
+  descriptionColumnHeader: {
+    textAlign: 'center'
+  },
+  mainColumnCell: {
+    width: 80,
+    textAlign: 'center'
+  },
+  descriptionCell: {
+    maxWidth: 470,
+    padding: '10px 10px 0px 10px'
+  }
+};
 
 export const UnconnectedStandardsProgressTable = StandardsProgressTable;
 

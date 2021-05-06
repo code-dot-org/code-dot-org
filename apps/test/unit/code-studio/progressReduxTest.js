@@ -650,7 +650,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            locked: undefined,
+            isLocked: false,
             bonus: false,
             sublevels: []
           },
@@ -672,7 +672,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            locked: undefined,
+            isLocked: false,
             bonus: false,
             sublevels: []
           },
@@ -694,7 +694,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            locked: undefined,
+            isLocked: false,
             bonus: true,
             sublevels: []
           }
@@ -718,7 +718,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            locked: undefined,
+            isLocked: false,
             bonus: false,
             sublevels: []
           },
@@ -740,7 +740,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            locked: undefined,
+            isLocked: false,
             bonus: false,
             sublevels: []
           },
@@ -762,7 +762,7 @@ describe('progressReduxTest', () => {
             isCurrentLevel: false,
             isConceptLevel: false,
             paired: undefined,
-            locked: undefined,
+            isLocked: false,
             bonus: false,
             sublevels: []
           }
@@ -1145,14 +1145,14 @@ describe('progressReduxTest', () => {
 
       let groups = groupedLessons(state, false);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].levels.length, 1);
-      assert.equal(groups[0].levels[0].length, 0);
+      assert.equal(groups[0].levelsByLesson.length, 1);
+      assert.equal(groups[0].levelsByLesson[0].length, 0);
 
       groups = groupedLessons(state, true);
       assert.equal(groups.length, 1);
-      assert.equal(groups[0].levels.length, 1);
-      assert.equal(groups[0].levels[0].length, 1);
-      assert.equal(groups[0].levels[0][0]['bonus'], true);
+      assert.equal(groups[0].levelsByLesson.length, 1);
+      assert.equal(groups[0].levelsByLesson[0].length, 1);
+      assert.equal(groups[0].levelsByLesson[0][0]['bonus'], true);
     });
   });
 

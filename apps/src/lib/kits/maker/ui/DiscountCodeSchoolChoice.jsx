@@ -6,18 +6,6 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import {styles as censusFormStyles} from '@cdo/apps/templates/census2017/censusFormStyles';
 import SafeMarkdown from '../../../../templates/SafeMarkdown';
 
-const styles = {
-  confirmed: {
-    marginBottom: 5
-  },
-  button: {
-    marginTop: 10
-  },
-  errorText: {
-    color: 'red'
-  }
-};
-
 const eligibilitySchoolUnknown = `
 Because your school isn’t listed, we were not able to look up the data on what percent of your
 students are eligible for free/reduced-price lunches. If you participated in the 2019-20 CS
@@ -133,3 +121,15 @@ export default class DiscountCodeSchoolChoice extends Component {
     );
   }
 }
+
+const styles = {
+  confirmed: {
+    marginBottom: 5
+  },
+  button: {
+    marginTop: 10
+  },
+  errorText: {
+    color: 'red'
+  }
+};
