@@ -58,7 +58,7 @@ class Api::V1::Pd::FitCohortViewSerializer < ActiveModel::Serializer
   end
 
   def role
-    if object.is_a? Pd::Application::Teacher1819Application
+    if object.is_a? Pd::Application::TeacherApplicationBase
       'Teacher'
     elsif object.is_a? Pd::Application::Facilitator1819Application
       'New Facilitator'
