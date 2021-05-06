@@ -5,6 +5,7 @@ class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ::ActionController::
   setup do
     @user = create :user
     @foorm_form = create :foorm_form
+    @simple_survey_form = create :foorm_simple_survey_form
 
     @params = {
       answers: {
@@ -13,7 +14,7 @@ class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ::ActionController::
       user_id: @user.id,
       form_name: @foorm_form.name,
       form_version: @foorm_form.version,
-      simple_survey_form_id: 1
+      simple_survey_form_id: @simple_survey_form.id
     }
   end
 
@@ -26,6 +27,6 @@ class Api::V1::FoormSimpleSurveySubmissionsControllerTest < ::ActionController::
 
     assert_not_nil response_body['foorm_submission_id']
     assert_not_nil response_body['simple_survey_submission_id']
-    assert_equal 1, response_body['simple_survey_form_id']
+    assert_equal @simple_survey_form.id, response_body['simple_survey_form_id']
   end
 end
