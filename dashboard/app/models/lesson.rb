@@ -725,6 +725,7 @@ class Lesson < ApplicationRecord
 
   def self.copy_to_script(original_lesson, destination_script)
     return if original_lesson.script == destination_script
+    return unless original_lesson.script.is_migrated? && destination_script.is_migrated?
 
     ActiveRecord::Base.transaction do
       copied_lesson = original_lesson.dup
