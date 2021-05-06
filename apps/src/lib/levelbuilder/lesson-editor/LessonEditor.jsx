@@ -29,33 +29,6 @@ import {
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
-const styles = {
-  editor: {
-    width: '100%'
-  },
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  dropdown: {
-    margin: '0 6px',
-    width: 300
-  },
-  warning: {
-    fontSize: 20,
-    fontStyle: 'italic',
-    padding: 10
-  }
-};
-
 class LessonEditor extends Component {
   static propTypes = {
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
@@ -491,6 +464,33 @@ class LessonEditor extends Component {
     );
   }
 }
+
+const styles = {
+  editor: {
+    width: '100%'
+  },
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px',
+    width: 300
+  },
+  warning: {
+    fontSize: 20,
+    fontStyle: 'italic',
+    padding: 10
+  }
+};
 
 export const UnconnectedLessonEditor = LessonEditor;
 

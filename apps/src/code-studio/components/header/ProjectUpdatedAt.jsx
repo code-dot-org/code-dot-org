@@ -8,13 +8,6 @@ import TimeAgo from '@cdo/apps/templates/TimeAgo';
 import {projectUpdatedStatuses as statuses} from '../../headerRedux';
 import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 
-const styles = {
-  container: {
-    display: 'block',
-    textAlign: 'left'
-  }
-};
-
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
     status: PropTypes.oneOf(Object.values(statuses)),
@@ -61,6 +54,13 @@ class ProjectUpdatedAt extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'block',
+    textAlign: 'left'
+  }
+};
 
 export default connect(state => ({
   status: state.header.projectUpdatedStatus,

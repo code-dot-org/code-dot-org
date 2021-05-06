@@ -20,30 +20,6 @@ export const COLUMNS = {
 const ANSWER_COLUMN_WIDTH = 70;
 const PADDING = 20;
 
-const styles = {
-  answerColumnHeader: {
-    width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
-  },
-  answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH,
-    padding: 0,
-    height: 40
-  },
-  notAnsweredCell: {
-    padding: 0,
-    height: 40
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  },
-  link: {
-    color: color.teal
-  }
-};
-
 const NOT_ANSWERED = 'notAnswered';
 
 const answerColumnsFormatter = (
@@ -239,6 +215,30 @@ class MultipleChoiceAssessmentsOverviewTable extends Component {
     );
   }
 }
+
+const styles = {
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center'
+  },
+  answerColumnCell: {
+    width: ANSWER_COLUMN_WIDTH,
+    padding: 0,
+    height: 40
+  },
+  notAnsweredCell: {
+    padding: 0,
+    height: 40
+  },
+  questionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
+  },
+  link: {
+    color: color.teal
+  }
+};
 
 export const UnconnectedMultipleChoiceAssessmentsOverviewTable = MultipleChoiceAssessmentsOverviewTable;
 

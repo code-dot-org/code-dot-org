@@ -56,58 +56,6 @@ const craftStyles = {
   }
 };
 
-const styles = {
-  main: {
-    position: 'absolute',
-    marginLeft: 15,
-    top: 0,
-    right: 0
-    // left handled by media queries for .editor-column
-  },
-  mainRtl: {
-    position: 'absolute',
-    marginRight: 15,
-    top: 0,
-    left: 0
-    // right handled by media queries for .editor-column
-  },
-  noViz: {
-    left: 0,
-    right: 0,
-    marginRight: 0,
-    marginLeft: 0
-  },
-  body: {
-    backgroundColor: 'white',
-    paddingLeft: 10,
-    paddingRight: 10,
-    position: 'absolute',
-    top: HEADER_HEIGHT,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    overflowY: 'scroll'
-  },
-  csfBody: {
-    backgroundColor: '#ddd',
-    position: 'absolute',
-    top: HEADER_HEIGHT,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    overflow: 'hidden'
-  },
-  embedView: {
-    height: undefined,
-    bottom: 0
-  },
-  title: {
-    textAlign: 'center',
-    height: HEADER_HEIGHT,
-    lineHeight: HEADER_HEIGHT + 'px'
-  }
-};
-
 class TopInstructions extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
@@ -761,6 +709,58 @@ class TopInstructions extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    position: 'absolute',
+    marginLeft: 15,
+    top: 0,
+    right: 0
+    // left handled by media queries for .editor-column
+  },
+  mainRtl: {
+    position: 'absolute',
+    marginRight: 15,
+    top: 0,
+    left: 0
+    // right handled by media queries for .editor-column
+  },
+  noViz: {
+    left: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 0
+  },
+  body: {
+    backgroundColor: 'white',
+    paddingLeft: 10,
+    paddingRight: 10,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflowY: 'scroll'
+  },
+  csfBody: {
+    backgroundColor: '#ddd',
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflow: 'hidden'
+  },
+  embedView: {
+    height: undefined,
+    bottom: 0
+  },
+  title: {
+    textAlign: 'center',
+    height: HEADER_HEIGHT,
+    lineHeight: HEADER_HEIGHT + 'px'
+  }
+};
 // Note: ususally the unconnected component is only used for tests, in this case it is used
 // in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
 export const UnconnectedTopInstructions = Radium(TopInstructions);

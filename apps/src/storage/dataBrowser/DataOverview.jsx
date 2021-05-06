@@ -16,29 +16,6 @@ import color from '../../util/color';
 
 const tableWidth = 400;
 
-const styles = {
-  table: {
-    width: tableWidth,
-    marginTop: 10,
-    marginBottom: 10
-  },
-  container: {
-    position: 'absolute',
-    width: '100%',
-    top: 0,
-    bottom: 0,
-    backgroundColor: color.white
-  },
-  dataBrowser: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 270,
-    right: 0,
-    padding: 10
-  }
-};
-
 class DataOverview extends React.Component {
   static propTypes = {
     // from redux state
@@ -86,6 +63,29 @@ class DataOverview extends React.Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    width: tableWidth,
+    marginTop: 10,
+    marginBottom: 10
+  },
+  container: {
+    position: 'absolute',
+    width: '100%',
+    top: 0,
+    bottom: 0,
+    backgroundColor: color.white
+  },
+  dataBrowser: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 270,
+    right: 0,
+    padding: 10
+  }
+};
 
 export default connect(
   state => ({

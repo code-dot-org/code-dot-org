@@ -7,46 +7,6 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  weekColumn: {
-    width: 100,
-    backgroundColor: color.purple,
-    color: 'white',
-    textAlign: 'center',
-    border: '1px solid ' + color.purple,
-    borderCollapse: 'collapse',
-    fontWeight: 'bold',
-    minHeight: 50
-  },
-  scheduleColumn: {
-    border: '1px solid ' + color.purple,
-    borderCollapse: 'collapse',
-    display: 'flex',
-    minHeight: 50,
-    margin: 0
-  },
-  table: {
-    borderCollapse: 'collapse',
-    width: '100%'
-  },
-  key: {
-    border: '1px solid ' + color.purple,
-    borderCollapse: 'collapse',
-    width: '100%',
-    marginTop: 20
-  },
-  keyIcon: {
-    marginRight: 5
-  },
-  keySection: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    width: '90%',
-    alignItems: 'center',
-    fontSize: 15
-  }
-};
-
 export default class UnitCalendar extends React.Component {
   static propTypes = {
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
@@ -187,3 +147,43 @@ export default class UnitCalendar extends React.Component {
     );
   }
 }
+
+const styles = {
+  weekColumn: {
+    width: 100,
+    backgroundColor: color.purple,
+    color: 'white',
+    textAlign: 'center',
+    border: '1px solid ' + color.purple,
+    borderCollapse: 'collapse',
+    fontWeight: 'bold',
+    minHeight: 50
+  },
+  scheduleColumn: {
+    border: '1px solid ' + color.purple,
+    borderCollapse: 'collapse',
+    display: 'flex',
+    minHeight: 50,
+    margin: 0
+  },
+  table: {
+    borderCollapse: 'collapse',
+    width: '100%'
+  },
+  key: {
+    border: '1px solid ' + color.purple,
+    borderCollapse: 'collapse',
+    width: '100%',
+    marginTop: 20
+  },
+  keyIcon: {
+    marginRight: 5
+  },
+  keySection: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    width: '90%',
+    alignItems: 'center',
+    fontSize: 15
+  }
+};
