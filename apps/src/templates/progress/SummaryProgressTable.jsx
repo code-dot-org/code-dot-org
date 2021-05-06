@@ -8,20 +8,6 @@ import {connect} from 'react-redux';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-const styles = {
-  table: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderLeftColor: color.border_gray,
-    borderTopColor: color.border_gray,
-    borderBottomColor: color.border_light_gray,
-    borderRightColor: color.border_light_gray
-  },
-  headerRow: {
-    backgroundColor: color.table_header
-  }
-};
-
 class SummaryProgressTable extends React.Component {
   static propTypes = {
     groupedLesson: groupedLessonsType.isRequired,
@@ -73,6 +59,20 @@ class SummaryProgressTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderLeftColor: color.border_gray,
+    borderTopColor: color.border_gray,
+    borderBottomColor: color.border_light_gray,
+    borderRightColor: color.border_light_gray
+  },
+  headerRow: {
+    backgroundColor: color.table_header
+  }
+};
 
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({

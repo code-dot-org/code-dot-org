@@ -5,81 +5,6 @@ import color from '@cdo/apps/util/color';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
 import {lessonShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  lessonToken: {
-    fontSize: 13,
-    position: 'relative',
-    background: '#eee',
-    borderRadius: borderRadius,
-    margin: `${tokenMargin}px 0`
-  },
-  reorder: {
-    fontSize: 16,
-    display: 'table-cell',
-    background: '#ddd',
-    border: '1px solid #bbb',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
-    padding: '7px 15px',
-    borderTopLeftRadius: borderRadius,
-    borderBottomLeftRadius: borderRadius,
-    cursor: 'ns-resize'
-  },
-  lessonTokenName: {
-    padding: 7,
-    display: 'table-cell',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    width: '100%',
-    borderTop: '1px solid #ddd',
-    borderBottom: '1px solid #ddd',
-    cursor: 'pointer'
-  },
-  tag: {
-    color: 'white',
-    background: color.purple,
-    padding: '3px 5px',
-    lineHeight: '12px',
-    borderRadius: 5,
-    marginLeft: 3
-  },
-  remove: {
-    fontSize: 14,
-    display: 'table-cell',
-    color: 'white',
-    background: '#c00',
-    border: '1px solid #a00',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
-    padding: '7px 13px',
-    borderTopRightRadius: borderRadius,
-    borderBottomRightRadius: borderRadius,
-    cursor: 'pointer'
-  },
-  edit: {
-    fontSize: 14,
-    display: 'table-cell',
-    color: 'white',
-    background: color.teal,
-    border: '1px solid #00adbc',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
-    padding: '7px 13px',
-    cursor: 'pointer'
-  },
-  lessonArea: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  lessonDetails: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-end'
-  },
-  lessonTitle: {
-    marginLeft: 5
-  }
-};
-
 /**
  * Component for editing lessons
  */
@@ -180,3 +105,78 @@ export default class LessonToken extends Component {
     );
   }
 }
+
+const styles = {
+  lessonToken: {
+    fontSize: 13,
+    position: 'relative',
+    background: '#eee',
+    borderRadius: borderRadius,
+    margin: `${tokenMargin}px 0`
+  },
+  reorder: {
+    fontSize: 16,
+    display: 'table-cell',
+    background: '#ddd',
+    border: '1px solid #bbb',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 15px',
+    borderTopLeftRadius: borderRadius,
+    borderBottomLeftRadius: borderRadius,
+    cursor: 'ns-resize'
+  },
+  lessonTokenName: {
+    padding: 7,
+    display: 'table-cell',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    width: '100%',
+    borderTop: '1px solid #ddd',
+    borderBottom: '1px solid #ddd',
+    cursor: 'pointer'
+  },
+  tag: {
+    color: 'white',
+    background: color.purple,
+    padding: '3px 5px',
+    lineHeight: '12px',
+    borderRadius: 5,
+    marginLeft: 3
+  },
+  remove: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: 'white',
+    background: '#c00',
+    border: '1px solid #a00',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    borderTopRightRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
+    cursor: 'pointer'
+  },
+  edit: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: 'white',
+    background: color.teal,
+    border: '1px solid #00adbc',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    cursor: 'pointer'
+  },
+  lessonArea: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  lessonDetails: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end'
+  },
+  lessonTitle: {
+    marginLeft: 5
+  }
+};

@@ -45,22 +45,6 @@ const CSTA_CONSENT_BODY = (
   </span>
 );
 
-const styles = {
-  wrong_school: {
-    textAlign: 'right'
-  },
-  sectionBreak: {
-    borderColor: color.teal
-  },
-  consentIndent: {
-    marginLeft: '25px'
-  },
-  button: {
-    backgroundColor: color.orange,
-    color: color.white
-  }
-};
-
 export default class AmazonFutureEngineerEligibilityForm extends React.Component {
   static propTypes = {
     email: PropTypes.string,
@@ -327,6 +311,22 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     );
   }
 }
+
+const styles = {
+  wrong_school: {
+    textAlign: 'right'
+  },
+  sectionBreak: {
+    borderColor: color.teal
+  },
+  consentIndent: {
+    marginLeft: '25px'
+  },
+  button: {
+    backgroundColor: color.orange,
+    color: color.white
+  }
+};
 
 const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
   const renderedStateOptions = STATES.map(state => (

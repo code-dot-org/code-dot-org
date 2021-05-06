@@ -4,16 +4,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Foorm from '../../Foorm';
 import {connect} from 'react-redux';
 
-const styles = {
-  previewBox: {
-    border: '1px solid #eee'
-  },
-  errorMessage: {
-    fontWeight: 'bold',
-    padding: '1em'
-  }
-};
-
 // Preview panel for Foorm editor.
 class FoormEntityEditorPreview extends Component {
   static propTypes = {
@@ -60,6 +50,16 @@ class FoormEntityEditorPreview extends Component {
     );
   }
 }
+
+const styles = {
+  previewBox: {
+    border: '1px solid #eee'
+  },
+  errorMessage: {
+    fontWeight: 'bold',
+    padding: '1em'
+  }
+};
 
 export default connect(state => ({
   hasJSONError: state.foorm.hasJSONError
