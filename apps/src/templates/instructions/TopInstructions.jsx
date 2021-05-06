@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
+import classNames from 'classnames';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
@@ -143,7 +144,10 @@ class TopInstructions extends Component {
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
-    collapsible: PropTypes.bool
+    collapsible: PropTypes.bool,
+    // Use this if the instructions will be somewhere other than over the code workspace.
+    // This will allow instructions to be resized separately from the workspace.
+    standalone: PropTypes.bool
   };
 
   static defaultProps = {
@@ -582,7 +586,8 @@ class TopInstructions extends Component {
       containerStyle,
       resizable,
       documentationUrl,
-      ttsLongInstructionsUrl
+      ttsLongInstructionsUrl,
+      standalone
     } = this.props;
 
     const {
@@ -675,7 +680,7 @@ class TopInstructions extends Component {
     return (
       <div
         style={topInstructionsStyle}
-        className="editor-column"
+        className={classNames({'editor-column': !standalone})}
         ref={ref => (this.topInstructions = ref)}
       >
         <TopInstructionsHeader
