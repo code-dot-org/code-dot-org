@@ -18,43 +18,6 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const styles = {
-  main: {
-    display: 'table',
-    width: '100%',
-    height: '100%',
-    background: color.background_gray,
-    borderWidth: 1,
-    borderColor: color.border_gray,
-    borderStyle: 'solid',
-    borderRadius: 2,
-    marginBottom: 12
-  },
-  content: {
-    padding: 20
-  },
-  description: {
-    marginTop: 20,
-    marginBottom: 20
-  },
-  title: {
-    fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  // TODO: share better with ProgressLesson
-  hidden: {
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    marginTop: 0,
-    marginBottom: 12,
-    marginLeft: 0,
-    marginRight: 0
-  },
-  flex: {
-    display: 'flex'
-  }
-};
-
 class CourseScript extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
@@ -178,6 +141,43 @@ class CourseScript extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    display: 'table',
+    width: '100%',
+    height: '100%',
+    background: color.background_gray,
+    borderWidth: 1,
+    borderColor: color.border_gray,
+    borderStyle: 'solid',
+    borderRadius: 2,
+    marginBottom: 12
+  },
+  content: {
+    padding: 20
+  },
+  description: {
+    marginTop: 20,
+    marginBottom: 20
+  },
+  title: {
+    fontSize: 18,
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  // TODO: share better with ProgressLesson
+  hidden: {
+    borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0
+  },
+  flex: {
+    display: 'flex'
+  }
+};
 export const UnconnectedCourseScript = CourseScript;
 
 export default connect(

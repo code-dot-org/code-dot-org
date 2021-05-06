@@ -5,20 +5,6 @@ import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import msg from '@cdo/locale';
 
-const styles = {
-  collapseButton: {
-    backgroundColor: color.cyan,
-    color: color.white,
-    whiteSpace: 'nowrap'
-  },
-  collapseIcon: {
-    marginRight: 5
-  },
-  collapseIconRtl: {
-    marginLeft: 5
-  }
-};
-
 /**
  * A button for toggling the collapse state of instructions in CSF
  */
@@ -65,5 +51,19 @@ class CollapserButton extends Component {
     );
   }
 }
+
+const styles = {
+  collapseButton: {
+    backgroundColor: color.cyan,
+    color: color.white,
+    whiteSpace: 'nowrap'
+  },
+  collapseIcon: {
+    marginRight: 5
+  },
+  collapseIconRtl: {
+    marginLeft: 5
+  }
+};
 
 export default Radium(CollapserButton);

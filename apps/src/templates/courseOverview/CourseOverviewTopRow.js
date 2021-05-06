@@ -6,16 +6,6 @@ import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigne
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
-const styles = {
-  main: {
-    marginBottom: 10,
-    position: 'relative'
-  },
-  dropdown: {
-    display: 'inline-block'
-  }
-};
-
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -71,3 +61,13 @@ export default class CourseOverviewTopRow extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    marginBottom: 10,
+    position: 'relative'
+  },
+  dropdown: {
+    display: 'inline-block'
+  }
+};

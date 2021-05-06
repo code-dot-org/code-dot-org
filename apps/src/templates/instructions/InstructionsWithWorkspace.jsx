@@ -16,8 +16,8 @@ import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
 export class UnwrappedInstructionsWithWorkspace extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    style: PropTypes.object,
     instructionsStyle: PropTypes.object,
+    workspaceStyle: PropTypes.object,
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
@@ -97,14 +97,19 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {style, instructionsStyle, instructionsHeight, children} = this.props;
+    const {
+      instructionsStyle,
+      workspaceStyle,
+      instructionsHeight,
+      children
+    } = this.props;
 
     return (
-      <span style={style}>
+      <span>
         <TopInstructions mainStyle={instructionsStyle} />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          topMargin={instructionsHeight}
+          style={{...workspaceStyle, top: instructionsHeight}}
         >
           {children}
         </CodeWorkspaceContainer>

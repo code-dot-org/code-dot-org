@@ -8,29 +8,6 @@ import _ from 'lodash';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
-const styles = {
-  foormEditor: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    width: '100%',
-    marginBottom: 10
-  },
-  editor: {
-    minWidth: 560,
-    width: '48%',
-    marginRight: 12
-  },
-  options: {
-    minWidth: 215,
-    marginLeft: 5
-  },
-  preview: {
-    width: '48%',
-    marginRight: 12
-  }
-};
-
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 
@@ -280,6 +257,29 @@ class FoormEntityEditor extends React.Component {
     );
   }
 }
+
+const styles = {
+  foormEditor: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    width: '100%',
+    marginBottom: 10
+  },
+  editor: {
+    minWidth: 560,
+    width: '48%',
+    marginRight: 12
+  },
+  options: {
+    minWidth: 215,
+    marginLeft: 5
+  },
+  preview: {
+    width: '48%',
+    marginRight: 12
+  }
+};
 
 export default connect(state => ({
   questions: state.foorm.questions || {}
