@@ -6,40 +6,6 @@ import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/Pr
 import {activitySectionShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import i18n from '@cdo/locale';
 
-const styles = {
-  activitySection: {
-    display: 'flex',
-    flexDirection: 'row',
-    width: '100%'
-  },
-  tipIcons: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: 20,
-    padding: 5,
-    alignItems: 'center'
-  },
-  tips: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  remarks: {
-    marginLeft: 5,
-    fontStyle: 'italic'
-  },
-  remarksHeader: {
-    marginTop: 0
-  },
-  textAndProgression: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%' // If there are tips for the activity section this is updated below
-  },
-  progression: {
-    marginBottom: 5
-  }
-};
-
 export default class ActivitySection extends Component {
   static propTypes = {
     section: activitySectionShape
@@ -101,3 +67,37 @@ export default class ActivitySection extends Component {
     );
   }
 }
+
+const styles = {
+  activitySection: {
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%'
+  },
+  tipIcons: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: 20,
+    padding: 5,
+    alignItems: 'center'
+  },
+  tips: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  remarks: {
+    marginLeft: 5,
+    fontStyle: 'italic'
+  },
+  remarksHeader: {
+    marginTop: 0
+  },
+  textAndProgression: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%' // If there are tips for the activity section this is updated below
+  },
+  progression: {
+    marginBottom: 5
+  }
+};

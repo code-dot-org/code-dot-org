@@ -7,19 +7,6 @@ import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import {ViewType, changeViewType} from '../../viewAsRedux';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 
-const styles = {
-  main: {
-    textAlign: 'center'
-  },
-  viewAs: {
-    fontSize: 16,
-    margin: 10
-  },
-  toggleGroup: {
-    margin: 10
-  }
-};
-
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the
  * student sees it
@@ -89,6 +76,19 @@ class ViewAsToggle extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    textAlign: 'center'
+  },
+  viewAs: {
+    fontSize: 16,
+    margin: 10
+  },
+  toggleGroup: {
+    margin: 10
+  }
+};
 export const UnconnectedViewAsToggle = ViewAsToggle;
 export default connect(
   state => ({

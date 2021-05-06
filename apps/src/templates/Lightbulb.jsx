@@ -2,17 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../util/color';
 
-const styles = {
-  count: {
-    fontWeight: 'bold',
-    fontSize: '400px',
-    fill: color.white,
-    stroke: color.black,
-    strokeWidth: '30px',
-    fontFamily: 'Verdana, Geneva, sans-serif'
-  }
-};
-
 export default class Lightbulb extends React.Component {
   static propTypes = {
     shouldAnimate: PropTypes.bool,
@@ -269,3 +258,14 @@ export default class Lightbulb extends React.Component {
     );
   }
 }
+
+const styles = {
+  count: {
+    fontWeight: 'bold',
+    fontSize: '400px',
+    fill: color.white,
+    stroke: color.black,
+    strokeWidth: '30px',
+    fontFamily: 'Verdana, Geneva, sans-serif'
+  }
+};

@@ -7,29 +7,6 @@ import LessonExtrasNotification from './LessonExtrasNotification';
 import Button from '@cdo/apps/templates/Button';
 import BonusLevels from './BonusLevels';
 
-const styles = {
-  header: {
-    fontSize: 24
-  },
-  headerAndButton: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  button: {
-    margin: '10px 0px'
-  },
-  subHeader: {
-    fontSize: 24,
-    color: 'rgb(91, 103, 112)',
-    fontFamily: 'Gotham 4r',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
-    paddingTop: 10,
-    paddingBottom: 20
-  }
-};
-
 export default class LessonExtras extends React.Component {
   static propTypes = {
     lessonNumber: PropTypes.number.isRequired,
@@ -95,3 +72,26 @@ export default class LessonExtras extends React.Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    fontSize: 24
+  },
+  headerAndButton: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  button: {
+    margin: '10px 0px'
+  },
+  subHeader: {
+    fontSize: 24,
+    color: 'rgb(91, 103, 112)',
+    fontFamily: 'Gotham 4r',
+    fontWeight: 'normal',
+    fontStyle: 'normal',
+    paddingTop: 10,
+    paddingBottom: 20
+  }
+};
