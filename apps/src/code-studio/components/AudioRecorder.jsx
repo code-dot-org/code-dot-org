@@ -10,29 +10,6 @@ import {AudioErrorType} from './AssetManager';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import vmsg from 'vmsg';
 
-const styles = {
-  buttonRow: {
-    display: 'flex',
-    flexFlow: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  recordingIcon: {
-    color: 'red',
-    margin: 5
-  },
-  warning: {
-    textAlign: 'left',
-    color: color.red
-  },
-  spinner: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    marginTop: '16px',
-    marginRight: '10px'
-  }
-};
-
 const RECORD_MAX_TIME = 30000;
 
 export default class AudioRecorder extends React.Component {
@@ -193,3 +170,26 @@ export default class AudioRecorder extends React.Component {
     );
   }
 }
+
+const styles = {
+  buttonRow: {
+    display: 'flex',
+    flexFlow: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  recordingIcon: {
+    color: 'red',
+    margin: 5
+  },
+  warning: {
+    textAlign: 'left',
+    color: color.red
+  },
+  spinner: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    marginTop: '16px',
+    marginRight: '10px'
+  }
+};

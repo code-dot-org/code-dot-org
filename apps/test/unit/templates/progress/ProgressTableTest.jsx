@@ -14,18 +14,18 @@ const FAKE_LEVELS = [];
 const FAKE_LESSON_1 = {
   lessonGroup: {displayName: 'jazz', userFacing: false},
   lessons: FAKE_LESSONS,
-  levels: FAKE_LEVELS
+  levelsByLesson: FAKE_LEVELS
 };
 const FAKE_LESSON_2 = {
   lessonGroup: {displayName: 'samba', userFacing: true},
   lessons: FAKE_LESSONS,
-  levels: FAKE_LEVELS
+  levelsByLesson: FAKE_LEVELS
 };
 
 const FAKE_LESSON_3 = {
   lessonGroup: {displayName: 'dance', userFacing: true},
   lessons: FAKE_LESSONS,
-  levels: FAKE_LEVELS
+  levelsByLesson: FAKE_LEVELS
 };
 
 const DEFAULT_PROPS = {
@@ -47,10 +47,8 @@ describe('ProgressTable', () => {
         <LessonGroup
           key={FAKE_LESSON_3.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          lessonGroup={FAKE_LESSON_3.lessonGroup}
+          groupedLesson={FAKE_LESSON_3}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_3.lessons}
-          levelsByLesson={FAKE_LESSON_3.levels}
         />
       </div>
     );
@@ -64,16 +62,10 @@ describe('ProgressTable', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div style={styles.hidden}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <SummaryProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
         <div style={{}}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <DetailProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
       </div>
     );
@@ -87,16 +79,10 @@ describe('ProgressTable', () => {
     expect(wrapper).to.containMatchingElement(
       <div>
         <div style={{}}>
-          <SummaryProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <SummaryProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
         <div style={styles.hidden}>
-          <DetailProgressTable
-            lessons={FAKE_LESSONS}
-            levelsByLesson={FAKE_LEVELS}
-          />
+          <DetailProgressTable groupedLesson={FAKE_LESSON_1} />
         </div>
       </div>
     );
@@ -115,18 +101,14 @@ describe('ProgressTable', () => {
         <LessonGroup
           key={FAKE_LESSON_3.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          lessonGroup={FAKE_LESSON_3.lessonGroup}
+          groupedLesson={FAKE_LESSON_3}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_3.lessons}
-          levelsByLesson={FAKE_LESSON_3.levels}
         />
         <LessonGroup
           key={FAKE_LESSON_2.lessonGroup.displayName}
           isPlc={DEFAULT_PROPS.isPlc}
-          lessonGroup={FAKE_LESSON_2.lessonGroup}
+          groupedLesson={FAKE_LESSON_2}
           isSummaryView={DEFAULT_PROPS.isSummaryView}
-          lessons={FAKE_LESSON_2.lessons}
-          levelsByLesson={FAKE_LESSON_2.levels}
         />
       </div>
     );

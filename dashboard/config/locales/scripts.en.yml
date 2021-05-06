@@ -21370,7 +21370,7 @@ en:
             lesson-5:
               name: Outbreak
               description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
-              description_teacher: In this **skill-building** lesson, students will model an outbreak simulator. Students will study the simulation to understand how a virus can spread and how to slow it down.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
             lesson-2:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
@@ -22199,6 +22199,8 @@ en:
               description_teacher: "Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes. \n"
             lesson-19:
               name: FRQ Day
+              description_student: Today you complete your first Free Response Question (FRQ)! This means that you write code by hand to complete a large task. You do this with a partner by moving around the room and completing parts of the task at each location, checking your work as you go.
+              description_teacher: "Students complete their first Free Response Question (FRQ) style problem in this lesson. They annotate the question as a class, then implement a full `SpiralPainter` class in pairs through an \"Around the World\" style activity.\n\nThe goals of this lesson are threefold: \n* Create a sense of excitement and accomplishment around completing FRQs\n* Practice an FRQ style question (written by hand)\n* Serve as a summative assessment of the content from Unit 1\n\nWhile the format of this FRQ is not the same as an FRQ on the AP exam, it is a building block to help students prepare to tackle these types of questions. As students progress through the course, the FRQ questions they encounter slowly become closer to the real thing.\n"
             lesson-20:
               name: Assessment Day
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
@@ -22222,7 +22224,7 @@ en:
             lesson group:
               display_name: lesson group display name
           name: csa2-pilot
-          title: ''
+          title: Giving Objects State
           description_audience: ''
           description_short: ''
           description: ''

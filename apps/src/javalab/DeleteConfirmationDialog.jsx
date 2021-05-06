@@ -3,44 +3,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  dialog: {
-    textAlign: 'left',
-    padding: 20,
-    color: color.black,
-    width: 500
-  },
-  darkDialog: {
-    backgroundColor: color.dark_slate_gray,
-    color: color.white
-  },
-  dialogContent: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  buttons: {
-    display: 'flex'
-  },
-  button: {
-    width: 100,
-    textAlign: 'center',
-    padding: 6
-  },
-  darkButton: {
-    backgroundColor: color.darkest_gray,
-    color: 'white'
-  },
-  lightConfirm: {
-    backgroundColor: color.cyan,
-    color: color.white
-  },
-  lightCancel: {
-    backgroundColor: color.light_gray,
-    color: color.black
-  }
-};
-
 export default class DeleteConfirmationDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -103,3 +65,41 @@ export default class DeleteConfirmationDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    textAlign: 'left',
+    padding: 20,
+    color: color.black,
+    width: 500
+  },
+  darkDialog: {
+    backgroundColor: color.dark_slate_gray,
+    color: color.white
+  },
+  dialogContent: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  buttons: {
+    display: 'flex'
+  },
+  button: {
+    width: 100,
+    textAlign: 'center',
+    padding: 6
+  },
+  darkButton: {
+    backgroundColor: color.darkest_gray,
+    color: 'white'
+  },
+  lightConfirm: {
+    backgroundColor: color.cyan,
+    color: color.white
+  },
+  lightCancel: {
+    backgroundColor: color.light_gray,
+    color: color.black
+  }
+};
