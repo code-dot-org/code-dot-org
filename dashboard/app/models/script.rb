@@ -1266,7 +1266,7 @@ class Script < ApplicationRecord
         script.write_script_dsl
 
         # Also save in JSON format for "new seeding". This is how we currently
-        # sync data across environments for non-migrated scripts. As part of
+        # sync data across environments for migrated scripts. As part of
         # pre-launch testing, we also generate these files for legacy scripts in
         # addition to the old .script files.
         script.write_script_json
