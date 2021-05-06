@@ -20,7 +20,7 @@ export default class SpriteUpload extends React.Component {
   };
 
   componentDidMount() {
-    getManifest().then(data =>
+    getManifest('spritelab', 'en_us').then(data =>
       this.setState({currentCategories: Object.keys(data.categories)})
     );
   }

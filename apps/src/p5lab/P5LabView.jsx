@@ -18,6 +18,7 @@ import {allowAnimationMode, showVisualizationHeader} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
+import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 /**
  * Top-level React wrapper for GameLab
@@ -60,11 +61,9 @@ class P5LabView extends React.Component {
     this.props.onMount();
     const locale = window.appOptions.locale;
     const app = this.props.spriteLab ? 'spritelab' : 'gamelab';
-    fetch(`/api/v1/animation-library/manifest/${app}/${locale}`)
-      .then(response => response.json())
-      .then(libraryManifest => {
-        this.setState({libraryManifest});
-      });
+    getManifest(app, locale).then(libraryManifest => {
+      this.setState({libraryManifest});
+    });
   }
 
   renderCodeMode() {
