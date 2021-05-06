@@ -10,7 +10,7 @@
 
 = form_with model: @foorm_simple_survey_form, url: foorm_simple_survey_forms_path do |f|
   .field
-    = f.label :path, 'Path suffix where survey will appear (studio.code.org/form/your_path_here). No spaces, no slashes.'
+    = f.label :path, 'Path suffix where survey will appear (studio.code.org/form/your_path_here). Lower case letters, numbers, and underscores only.'
     = f.text_field :path
   .field
     = f.label :kind, 'Survey identifier (optional, for analysis)'
