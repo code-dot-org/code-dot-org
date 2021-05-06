@@ -16,10 +16,6 @@ import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import * as dom from '../dom';
 
-/**
- * Equivalent of visualizationColumn.html.ejs. Initially only supporting
- * portions used by App Lab
- */
 class ApplabVisualizationColumn extends React.Component {
   static propTypes = {
     isEditingProject: PropTypes.bool.isRequired,
