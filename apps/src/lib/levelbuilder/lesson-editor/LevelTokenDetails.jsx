@@ -6,30 +6,6 @@ import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 
-const styles = {
-  levelTokenActive: {
-    padding: 7,
-    background: '#f4f4f4',
-    border: '1px solid #ddd',
-    borderTop: 0
-  },
-  checkboxLabel: {
-    display: 'inline-block',
-    marginRight: 10,
-    marginBottom: 0
-  },
-  checkboxInput: {
-    marginTop: 0,
-    verticalAlign: 'middle'
-  },
-  checkboxText: {
-    verticalAlign: 'middle'
-  },
-  tooltip: {
-    maxWidth: 450
-  }
-};
-
 const tooltipText = {
   bonus: 'Include in lesson extras at the end of the lesson',
   assessment:
@@ -116,6 +92,30 @@ class LevelTokenDetails extends Component {
     );
   }
 }
+
+const styles = {
+  levelTokenActive: {
+    padding: 7,
+    background: '#f4f4f4',
+    border: '1px solid #ddd',
+    borderTop: 0
+  },
+  checkboxLabel: {
+    display: 'inline-block',
+    marginRight: 10,
+    marginBottom: 0
+  },
+  checkboxInput: {
+    marginTop: 0,
+    verticalAlign: 'middle'
+  },
+  checkboxText: {
+    verticalAlign: 'middle'
+  },
+  tooltip: {
+    maxWidth: 450
+  }
+};
 
 export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 

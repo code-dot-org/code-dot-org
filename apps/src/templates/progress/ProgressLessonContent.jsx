@@ -7,18 +7,6 @@ import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-const styles = {
-  summary: {
-    marginTop: 20,
-    marginBottom: 30,
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif'
-  },
-  noLevelsWarning: {
-    fontSize: 13
-  }
-};
-
 export default class ProgressLessonContent extends React.Component {
   static propTypes = {
     description: PropTypes.string,
@@ -68,3 +56,15 @@ export default class ProgressLessonContent extends React.Component {
     );
   }
 }
+
+const styles = {
+  summary: {
+    marginTop: 20,
+    marginBottom: 30,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
+  noLevelsWarning: {
+    fontSize: 13
+  }
+};

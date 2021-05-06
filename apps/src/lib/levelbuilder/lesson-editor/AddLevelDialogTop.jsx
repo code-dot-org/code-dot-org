@@ -9,44 +9,6 @@ import queryString from 'query-string';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {connect} from 'react-redux';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    width: 1100,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
-    marginLeft: -600
-  },
-  dialogContent: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  topArea: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 15
-  },
-  bottomArea: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 15
-  },
-  textArea: {
-    width: '95%'
-  },
-  levelsBox: {
-    border: '1px solid black',
-    width: '95%',
-    height: '100%',
-    padding: 10
-  },
-  filtersAndLevels: {
-    display: 'flex',
-    flexDirection: 'column'
-  }
-};
-
 class AddLevelDialogTop extends Component {
   static propTypes = {
     addLevel: PropTypes.func.isRequired,
@@ -193,6 +155,44 @@ class AddLevelDialogTop extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+    width: 1100,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    marginLeft: -600
+  },
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  topArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 15
+  },
+  bottomArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 15
+  },
+  textArea: {
+    width: '95%'
+  },
+  levelsBox: {
+    border: '1px solid black',
+    width: '95%',
+    height: '100%',
+    padding: 10
+  },
+  filtersAndLevels: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
+};
 
 export const UnconnectedAddLevelDialogTop = AddLevelDialogTop;
 

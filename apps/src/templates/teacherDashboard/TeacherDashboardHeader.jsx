@@ -19,27 +19,6 @@ import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
 
-const styles = {
-  sectionPrompt: {
-    fontWeight: 'bold'
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: '5px'
-  },
-  rightColumn: {
-    display: 'flex',
-    flexDirection: 'column-reverse'
-  },
-  buttonSection: {
-    display: 'flex'
-  },
-  buttonWithMargin: {
-    marginRight: '5px'
-  }
-};
-
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionShape).isRequired,
@@ -132,6 +111,27 @@ class TeacherDashboardHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  sectionPrompt: {
+    fontWeight: 'bold'
+  },
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginBottom: '5px'
+  },
+  rightColumn: {
+    display: 'flex',
+    flexDirection: 'column-reverse'
+  },
+  buttonSection: {
+    display: 'flex'
+  },
+  buttonWithMargin: {
+    marginRight: '5px'
+  }
+};
 
 export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
 

@@ -25,53 +25,6 @@ import LessonStandards, {ExpandMode} from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
-const styles = {
-  frontPage: {
-    display: 'flex',
-    flexDirection: 'row',
-    marginTop: 40
-  },
-  left: {
-    width: '60%',
-    paddingRight: 20
-  },
-  right: {
-    width: '40%',
-    padding: '0px 10px 10px 20px',
-    borderLeft: 'solid 1px #333'
-  },
-  header: {
-    margin: '10px 0px',
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-    margin: '10px 0px'
-  },
-  copyResourceWarningArea: {
-    color: '#8a6d3b',
-    backgroundColor: '#fcf8e3',
-    border: '2px solid #f5e79e',
-    borderRadius: 4,
-    padding: '10px 10px 0px 10px'
-  },
-  titleNoTopMargin: {
-    marginTop: 0
-  },
-  dropdowns: {
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  standardsHeaderAndButton: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  }
-};
-
 class LessonOverview extends Component {
   static propTypes = {
     lesson: lessonShape.isRequired,
@@ -356,6 +309,53 @@ class LessonOverview extends Component {
     );
   }
 }
+
+const styles = {
+  frontPage: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 40
+  },
+  left: {
+    width: '60%',
+    paddingRight: 20
+  },
+  right: {
+    width: '40%',
+    padding: '0px 10px 10px 20px',
+    borderLeft: 'solid 1px #333'
+  },
+  header: {
+    margin: '10px 0px',
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
+  },
+  copyResourceWarningArea: {
+    color: '#8a6d3b',
+    backgroundColor: '#fcf8e3',
+    border: '2px solid #f5e79e',
+    borderRadius: 4,
+    padding: '10px 10px 0px 10px'
+  },
+  titleNoTopMargin: {
+    marginTop: 0
+  },
+  dropdowns: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  standardsHeaderAndButton: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  }
+};
 
 export const UnconnectedLessonOverview = LessonOverview;
 

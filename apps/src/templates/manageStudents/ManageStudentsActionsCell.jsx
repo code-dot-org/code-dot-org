@@ -24,15 +24,6 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  xIcon: {
-    paddingRight: 5
-  },
-  saveButton: {
-    marginRight: 5
-  }
-};
-
 class ManageStudentsActionsCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired, // the student's user id
@@ -299,6 +290,15 @@ class ManageStudentsActionsCell extends Component {
     );
   }
 }
+
+const styles = {
+  xIcon: {
+    paddingRight: 5
+  },
+  saveButton: {
+    marginRight: 5
+  }
+};
 
 export const UnconnectedManageStudentsActionsCell = ManageStudentsActionsCell;
 

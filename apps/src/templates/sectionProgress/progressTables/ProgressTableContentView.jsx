@@ -17,12 +17,6 @@ const gutterHeader = {
   header: {props: {style: {width: scrollbarWidth, minWidth: scrollbarWidth}}}
 };
 
-const styles = {
-  headerContainer: {
-    height: '100%'
-  }
-};
-
 // This class contains contains code that is common between the summary view
 // and detail view of the progress table. Each view has different cell formatters
 // which are passed in through props.
@@ -193,3 +187,9 @@ export default class ProgressTableContentView extends React.Component {
     );
   }
 }
+
+const styles = {
+  headerContainer: {
+    height: '100%'
+  }
+};

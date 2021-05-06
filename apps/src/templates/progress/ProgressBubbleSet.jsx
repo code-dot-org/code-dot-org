@@ -10,54 +10,6 @@ import {levelWithProgressType} from './progressTypes';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 import {connect} from 'react-redux';
 
-const styles = {
-  main: {
-    position: 'relative',
-    display: 'inline-block'
-  },
-  withBackground: {
-    display: 'inline-block',
-    position: 'relative'
-  },
-  background: {
-    height: 10,
-    backgroundColor: color.lighter_gray,
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    // dot size, plus borders, plus margin, minus our height of "background"
-    top: (DOT_SIZE + 4 + 6 - 10) / 2
-  },
-  backgroundDiamond: {
-    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2
-  },
-  backgroundPill: {
-    // pill has height of 18, border of 2, padding of 6, margin of 3
-    top: (18 + 4 + 12 + 6 - 10) / 2
-  },
-  backgroundSublevel: {
-    top: 4
-  },
-  backgroundFirst: {
-    left: 15
-  },
-  backgroundLast: {
-    right: 15
-  },
-  container: {
-    position: 'relative'
-  },
-  diamondContainer: {
-    // Height needed only by IE to get diamonds to line up properly
-    height: 36
-  },
-  pillContainer: {
-    marginRight: 2,
-    // Height needed only by IE to get pill to line up properly
-    height: 37
-  }
-};
-
 // Deprecated in favor of ProgressTableDetailCell
 // component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606
 class ProgressBubbleSet extends React.Component {
@@ -174,6 +126,54 @@ class ProgressBubbleSet extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    position: 'relative',
+    display: 'inline-block'
+  },
+  withBackground: {
+    display: 'inline-block',
+    position: 'relative'
+  },
+  background: {
+    height: 10,
+    backgroundColor: color.lighter_gray,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    // dot size, plus borders, plus margin, minus our height of "background"
+    top: (DOT_SIZE + 4 + 6 - 10) / 2
+  },
+  backgroundDiamond: {
+    top: (DIAMOND_DOT_SIZE + 4 + 12 - 10) / 2
+  },
+  backgroundPill: {
+    // pill has height of 18, border of 2, padding of 6, margin of 3
+    top: (18 + 4 + 12 + 6 - 10) / 2
+  },
+  backgroundSublevel: {
+    top: 4
+  },
+  backgroundFirst: {
+    left: 15
+  },
+  backgroundLast: {
+    right: 15
+  },
+  container: {
+    position: 'relative'
+  },
+  diamondContainer: {
+    // Height needed only by IE to get diamonds to line up properly
+    height: 36
+  },
+  pillContainer: {
+    marginRight: 2,
+    // Height needed only by IE to get pill to line up properly
+    height: 37
+  }
+};
 
 export const UnconnectedProgressBubbleSet = ProgressBubbleSet;
 

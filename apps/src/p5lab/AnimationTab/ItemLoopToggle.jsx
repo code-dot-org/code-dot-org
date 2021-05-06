@@ -4,13 +4,6 @@ import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-const styles = {
-  loopToggleStyle: {
-    cursor: 'pointer',
-    float: 'left'
-  }
-};
-
 /**
  * The toggle that controls whether the animation loops frames.
  */
@@ -46,5 +39,12 @@ class ItemLoopToggle extends React.Component {
     );
   }
 }
+
+const styles = {
+  loopToggleStyle: {
+    cursor: 'pointer',
+    float: 'left'
+  }
+};
 
 export default Radium(ItemLoopToggle);

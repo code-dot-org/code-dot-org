@@ -7,32 +7,6 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import FontAwesome from '../../templates/FontAwesome';
 
-const styles = {
-  outerContainer: {
-    marginBottom: 8,
-    width: 240
-  },
-  description: {
-    paddingLeft: 2,
-    paddingBottom: 2
-  },
-  label: {
-    paddingLeft: 4
-  },
-  icon: {
-    marginTop: 4,
-    marginBottom: 4
-  },
-  dropdownLabel: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingRight: '10px',
-    cursor: 'pointer'
-  }
-};
-
 export default class ThemeDropdown extends React.Component {
   static propTypes = {
     initialValue: PropTypes.string.isRequired,
@@ -88,3 +62,29 @@ export default class ThemeDropdown extends React.Component {
     );
   }
 }
+
+const styles = {
+  outerContainer: {
+    marginBottom: 8,
+    width: 240
+  },
+  description: {
+    paddingLeft: 2,
+    paddingBottom: 2
+  },
+  label: {
+    paddingLeft: 4
+  },
+  icon: {
+    marginTop: 4,
+    marginBottom: 4
+  },
+  dropdownLabel: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingRight: '10px',
+    cursor: 'pointer'
+  }
+};
