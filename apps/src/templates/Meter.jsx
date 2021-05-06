@@ -2,26 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  label: {
-    margin: '0 10px'
-  },
-  meter: {
-    width: 100,
-    height: 10,
-    borderRadius: 8,
-    backgroundColor: color.white,
-    overflow: 'hidden'
-  },
-  meterValue: {
-    height: '100%'
-  }
-};
-
 export default class Meter extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
@@ -62,3 +42,23 @@ export default class Meter extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  label: {
+    margin: '0 10px'
+  },
+  meter: {
+    width: 100,
+    height: 10,
+    borderRadius: 8,
+    backgroundColor: color.white,
+    overflow: 'hidden'
+  },
+  meterValue: {
+    height: '100%'
+  }
+};

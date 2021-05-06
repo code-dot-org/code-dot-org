@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-05-04 02:13:53 UTC",
+    "serialized_at": "2021-05-05 18:18:18 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -8499,6 +8499,13 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-16"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",

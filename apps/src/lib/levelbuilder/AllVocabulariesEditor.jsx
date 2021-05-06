@@ -12,37 +12,6 @@ import {
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import Dialog from '@cdo/apps/templates/Dialog';
 
-const styles = {
-  actionsColumn: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'white'
-  },
-  remove: {
-    fontSize: 14,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: '50%',
-    lineHeight: '30px'
-  },
-  edit: {
-    fontSize: 14,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: '50%',
-    lineHeight: '30px'
-  },
-  addButton: {
-    fontSize: 18,
-    marginTop: 'auto',
-    marginBottom: 'auto'
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between'
-  }
-};
-
 class AllVocabulariesEditor extends Component {
   static propTypes = {
     // Provided by redux
@@ -208,6 +177,37 @@ class AllVocabulariesEditor extends Component {
     );
   }
 }
+
+const styles = {
+  actionsColumn: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
+  remove: {
+    fontSize: 14,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
+  edit: {
+    fontSize: 14,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
+  addButton: {
+    fontSize: 18,
+    marginTop: 'auto',
+    marginBottom: 'auto'
+  },
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  }
+};
 
 export const UnconnectedAllVocabulariesEditor = AllVocabulariesEditor;
 

@@ -3,12 +3,6 @@ import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import trophy from '!!file-loader!./images/trophy.svg';
 
-const styles = {
-  main: {
-    marginLeft: 'auto'
-  }
-};
-
 export default class LessonTrophyProgressBubble extends Component {
   static propTypes = {
     percentPerfect: PropTypes.number.isRequired
@@ -74,3 +68,9 @@ export default class LessonTrophyProgressBubble extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    marginLeft: 'auto'
+  }
+};

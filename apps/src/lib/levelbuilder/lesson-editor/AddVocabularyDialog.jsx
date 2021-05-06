@@ -8,45 +8,6 @@ import $ from 'jquery';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  inputAndLabel: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  textInput: {
-    width: '98%'
-  },
-  checkboxAndLabel: {
-    display: 'flex'
-  },
-  checkboxInput: {
-    marginRight: 5
-  },
-  submitButton: {
-    color: 'white',
-    backgroundColor: color.orange,
-    borderColor: color.orange,
-    borderRadius: 3,
-    fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 5,
-    paddingBottom: 5
-  }
-};
-
 const initialState = {
   word: '',
   definition: '',
@@ -231,3 +192,42 @@ export default class AddVocabularyDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  inputAndLabel: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textInput: {
+    width: '98%'
+  },
+  checkboxAndLabel: {
+    display: 'flex'
+  },
+  checkboxInput: {
+    marginRight: 5
+  },
+  submitButton: {
+    color: 'white',
+    backgroundColor: color.orange,
+    borderColor: color.orange,
+    borderRadius: 3,
+    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 5,
+    paddingBottom: 5
+  }
+};

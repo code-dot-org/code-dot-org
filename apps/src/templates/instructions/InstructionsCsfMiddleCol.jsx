@@ -15,20 +15,6 @@ import Instructions from './Instructions';
 
 var instructions = require('../../redux/instructions');
 
-const styles = {
-  instructions: {
-    padding: '5px 0'
-  },
-  instructionsWithTips: {
-    width: 'calc(100% - 20px)',
-    float: 'right'
-  },
-  instructionsWithTipsRtl: {
-    width: 'calc(100% - 20px)',
-    float: 'left'
-  }
-};
-
 class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {
     dismissHintPrompt: PropTypes.func.isRequired,
@@ -231,6 +217,20 @@ class InstructionsCsfMiddleCol extends React.Component {
     );
   }
 }
+
+const styles = {
+  instructions: {
+    padding: '5px 0'
+  },
+  instructionsWithTips: {
+    width: 'calc(100% - 20px)',
+    float: 'right'
+  },
+  instructionsWithTipsRtl: {
+    width: 'calc(100% - 20px)',
+    float: 'left'
+  }
+};
 
 export const UnconnectedInstructionsCsfMiddleCol = InstructionsCsfMiddleCol;
 

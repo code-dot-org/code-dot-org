@@ -7,15 +7,6 @@ import styleConstants from '../../styleConstants';
 
 const contentWidth = styleConstants['content-width'];
 
-const styles = {
-  container: {
-    width: contentWidth,
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
-};
-
 export default class TeacherResources extends Component {
   render() {
     return (
@@ -55,3 +46,12 @@ export default class TeacherResources extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    width: contentWidth,
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  }
+};
