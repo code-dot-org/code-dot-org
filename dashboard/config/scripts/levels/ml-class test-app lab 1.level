@@ -4,7 +4,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Importing Models to App Lab\r\n\r\nPress the Gear icon in the toolbox, then select \"Manage AI Models\". A window should appear and you can select your model. One model has been pre-loaded before you, but your other AI Models from the last level should also appear here.\r\n\r\n<img src=\"https://images.code.org/0f4c8a3c78d7fc7a124ba6f4fe580e74-image-1617037750545.png\" width=\"200px\">\r\n\r\n*Note: If \"Manage AI Models\" doesn't appear in the gear dropdown, [try clicking here](https://studio.code.org/s/ai-classroom-test/stage/1/puzzle/4?enableExperiments=applab-ml). This will reload the page and enable some special features*\r\n\r\n",
+    "long_instructions": "# Importing Models to App Lab\r\n\r\nPress the Gear icon in the toolbox, then select \"Manage AI Models\". A window should appear and you can select your model. One model has been pre-loaded before you, but your other AI Models from the last level should also appear here.\r\n\r\n<img src=\"https://images.code.org/0f4c8a3c78d7fc7a124ba6f4fe580e74-image-1617037750545.png\" width=\"200px\">\r\n\r\n*Note: If \"Manage AI Models\" doesn't appear in the gear dropdown, [try clicking here](https://studio.code.org/s/ai-classroom-test/lessons/1/levels/4?enableExperiments=applab-ml). This will reload the page and enable some special features*\r\n\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
