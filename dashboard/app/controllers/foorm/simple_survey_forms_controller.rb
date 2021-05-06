@@ -1,6 +1,7 @@
 module Foorm
   class SimpleSurveyFormsController < ApplicationController
-    # Add admin authorization for /new and create and index
+    # Admin authorization is not used in other Foorm contexts (eg, creating new Form content in levelbuilder).
+    # Admin is the most straightforward way to allow staff to publish surveys, so we use it here.
     before_action :require_admin, only: [:index, :new, :create]
 
     FOORM_SIMPLE_SURVEY_SUBMIT_API = '/dashboardapi/v1/foorm/simple_survey_submission'
@@ -100,7 +101,7 @@ module Foorm
           formQuestions: form_questions,
           formName: form_data[:form_name],
           formVersion: form_data[:form_version] || 0,
-          surveyData: params[:survey_data] || form_data[:survey_data],
+          surveyData: params[:survey_data] || form_data.survey_data,
           submitApi: FOORM_SIMPLE_SURVEY_SUBMIT_API,
           submitParams: key_params
         }.to_json
