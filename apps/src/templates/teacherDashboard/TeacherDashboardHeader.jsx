@@ -2,6 +2,7 @@ import FontAwesome from './../FontAwesome';
 import React from 'react';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {
   switchToSection,
   recordSwitchToSection,
@@ -79,14 +80,16 @@ class TeacherDashboardHeader extends React.Component {
   }
 
   lockedSectionNotification = ({restrictSection, loginType}) =>
-    restrictSection && (
+    restrictSection &&
+    (loginType !==
+      (SectionLoginType.google_classroom || SectionLoginType.clever) && (
       <Notification
         type={NotificationType.failure}
         notice={i18n.manageStudentsNotificationLocked()}
         details={i18n.manageStudentsNotificationLockedDetails({loginType})}
         dismissable={false}
       />
-    );
+    ));
 
   render() {
     return (
