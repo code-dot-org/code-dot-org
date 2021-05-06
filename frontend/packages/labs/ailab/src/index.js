@@ -10,7 +10,8 @@ import rootReducer, {
   setSelectedJSON,
   setSelectedTrainer,
   setInstructionsKeyCallback,
-  setSaveStatus
+  setSaveStatus,
+  setReserveLocation
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
