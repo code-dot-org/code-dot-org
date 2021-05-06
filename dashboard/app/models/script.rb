@@ -1261,12 +1261,14 @@ class Script < ApplicationRecord
     begin
       if Rails.application.config.levelbuilder_mode
         script = Script.find_by_name(script_name)
-        # Save in our custom Script DSL format. This is still what we're using currently to sync data
-        # across environments. The CPlat team is working on replacing it a new JSON-based approach.
+        # Save in our custom Script DSL format. This is how we currently sync
+        # data across environments for non-migrated scripts.
         script.write_script_dsl
 
-        # Also save in JSON format for "new seeding". This has not been launched yet for most scripts, but as part of
-        # pre-launch testing, we'll start generating these files in addition to the old .script files.
+        # Also save in JSON format for "new seeding". This is how we currently
+        # sync data across environments for non-migrated scripts. As part of
+        # pre-launch testing, we also generate these files for legacy scripts in
+        # addition to the old .script files.
         script.write_script_json
       end
       true
