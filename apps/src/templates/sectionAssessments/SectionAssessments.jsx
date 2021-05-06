@@ -54,36 +54,6 @@ const CSV_SURVEY_HEADERS = [
   {label: i18n.count(), key: 'numberAnswered'}
 ];
 
-const styles = {
-  header: {
-    marginBottom: 0
-  },
-  tableContent: {
-    marginTop: 10,
-    clear: 'both'
-  },
-  selectors: {
-    clear: 'both'
-  },
-  scriptSelection: {
-    float: 'left',
-    marginRight: 20
-  },
-  assessmentSelection: {
-    float: 'left',
-    marginBottom: 10
-  },
-  download: {
-    marginTop: 10
-  },
-  loading: {
-    clear: 'both'
-  },
-  empty: {
-    clear: 'both'
-  }
-};
-
 class SectionAssessments extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
@@ -303,6 +273,36 @@ class SectionAssessments extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    marginBottom: 0
+  },
+  tableContent: {
+    marginTop: 10,
+    clear: 'both'
+  },
+  selectors: {
+    clear: 'both'
+  },
+  scriptSelection: {
+    float: 'left',
+    marginRight: 20
+  },
+  assessmentSelection: {
+    float: 'left',
+    marginBottom: 10
+  },
+  download: {
+    marginTop: 10
+  },
+  loading: {
+    clear: 'both'
+  },
+  empty: {
+    clear: 'both'
+  }
+};
 
 export const UnconnectedSectionAssessments = SectionAssessments;
 

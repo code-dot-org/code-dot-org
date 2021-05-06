@@ -7,33 +7,6 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {hideShareDialog} from './shareDialogRedux';
 
-const styles = {
-  container: {
-    margin: 20,
-    color: color.charcoal
-  },
-  heading: {
-    fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
-  },
-  middle: {
-    marginTop: 20,
-    marginBottom: 20,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    display: 'flex'
-  },
-  bottom: {
-    display: 'flex',
-    justifyContent: 'space-between'
-  }
-};
 class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -70,6 +43,34 @@ class ShareDisallowedDialog extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: 20,
+    color: color.charcoal
+  },
+  heading: {
+    fontSize: 16,
+    fontFamily: "'Gotham 5r', sans-serif"
+  },
+  middle: {
+    marginTop: 20,
+    marginBottom: 20,
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    display: 'flex'
+  },
+  bottom: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  }
+};
 
 export const UnconnectedShareDisallowedDialog = ShareDisallowedDialog;
 

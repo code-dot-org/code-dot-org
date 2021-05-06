@@ -22,46 +22,6 @@ const ctaButtonStyle = {
   fontSize: 14,
   padding: '8px 20px'
 };
-const styles = {
-  title: {
-    position: 'absolute',
-    left: 20,
-    color: color.dark_charcoal,
-    margin: '15px 0'
-  },
-  content: {
-    position: 'absolute',
-    left: 20,
-    top: 50,
-    right: 20,
-    bottom: 70,
-    overflowY: 'scroll'
-  },
-  classroomRow: {
-    padding: 10,
-    cursor: 'pointer'
-  },
-  highlightRow: {
-    backgroundColor: color.default_blue,
-    color: color.white
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 15,
-    right: 20,
-    left: 20
-  },
-  buttonPrimary: {
-    ...ctaButtonStyle,
-    float: 'right'
-  },
-  buttonSecondary: {
-    float: 'left',
-    background: '#eee',
-    color: '#5b6770',
-    border: '1px solid #c5c5c5'
-  }
-};
 
 const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
   classrooms.length ? (
@@ -276,6 +236,47 @@ class RosterDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    position: 'absolute',
+    left: 20,
+    color: color.dark_charcoal,
+    margin: '15px 0'
+  },
+  content: {
+    position: 'absolute',
+    left: 20,
+    top: 50,
+    right: 20,
+    bottom: 70,
+    overflowY: 'scroll'
+  },
+  classroomRow: {
+    padding: 10,
+    cursor: 'pointer'
+  },
+  highlightRow: {
+    backgroundColor: color.default_blue,
+    color: color.white
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 15,
+    right: 20,
+    left: 20
+  },
+  buttonPrimary: {
+    ...ctaButtonStyle,
+    float: 'right'
+  },
+  buttonSecondary: {
+    float: 'left',
+    background: '#eee',
+    color: '#5b6770',
+    border: '1px solid #c5c5c5'
+  }
+};
 export const UnconnectedRosterDialog = RosterDialog;
 export default connect(
   state => ({

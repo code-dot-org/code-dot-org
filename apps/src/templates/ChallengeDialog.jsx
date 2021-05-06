@@ -9,67 +9,6 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';
 import {getStore} from '@cdo/apps/redux';
 
-const styles = {
-  dialog: {
-    top: '20%',
-    border: `5px solid ${color.purple}`,
-    borderRadius: 10
-  },
-  banner: {
-    backgroundPosition: 'top center',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: `url(${assetUrl('media/dialog/challenge_target.svg')})`,
-    position: 'relative',
-    marginTop: -85,
-    height: 135
-  },
-  bannerComplete: {
-    backgroundImage: `url(${assetUrl(
-      'media/dialog/challenge_target_complete.svg'
-    )})`,
-    marginTop: -99,
-    height: 149
-  },
-  content: {
-    color: color.purple,
-    position: 'relative',
-    textAlign: 'center',
-    marginBottom: 30
-  },
-  text: {
-    margin: '0px 40px 20px',
-    textAlign: 'center',
-    fontSize: 18
-  },
-  title: {
-    textAlign: 'center',
-    position: 'absolute',
-    bottom: 0,
-    color: '#fff',
-    backgroundColor: color.purple,
-    border: '3px solid white',
-    minWidth: '50%',
-    left: '25%',
-    fontSize: '150%',
-    height: 30,
-    lineHeight: '30px'
-  },
-  confetti: {
-    top: 150
-  },
-  primaryButton: {
-    float: 'right'
-  },
-  primaryButtonRtl: {
-    float: 'left'
-  },
-  footer: {
-    marginTop: 20,
-    paddingTop: 20,
-    borderTop: '2px solid #ccc'
-  }
-};
-
 class ChallengeDialog extends React.Component {
   static propTypes = {
     avatar: PropTypes.string,
@@ -170,5 +109,66 @@ class ChallengeDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    top: '20%',
+    border: `5px solid ${color.purple}`,
+    borderRadius: 10
+  },
+  banner: {
+    backgroundPosition: 'top center',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${assetUrl('media/dialog/challenge_target.svg')})`,
+    position: 'relative',
+    marginTop: -85,
+    height: 135
+  },
+  bannerComplete: {
+    backgroundImage: `url(${assetUrl(
+      'media/dialog/challenge_target_complete.svg'
+    )})`,
+    marginTop: -99,
+    height: 149
+  },
+  content: {
+    color: color.purple,
+    position: 'relative',
+    textAlign: 'center',
+    marginBottom: 30
+  },
+  text: {
+    margin: '0px 40px 20px',
+    textAlign: 'center',
+    fontSize: 18
+  },
+  title: {
+    textAlign: 'center',
+    position: 'absolute',
+    bottom: 0,
+    color: '#fff',
+    backgroundColor: color.purple,
+    border: '3px solid white',
+    minWidth: '50%',
+    left: '25%',
+    fontSize: '150%',
+    height: 30,
+    lineHeight: '30px'
+  },
+  confetti: {
+    top: 150
+  },
+  primaryButton: {
+    float: 'right'
+  },
+  primaryButtonRtl: {
+    float: 'left'
+  },
+  footer: {
+    marginTop: 20,
+    paddingTop: 20,
+    borderTop: '2px solid #ccc'
+  }
+};
 
 export default Radium(ChallengeDialog);

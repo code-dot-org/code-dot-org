@@ -4,64 +4,6 @@ import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendar
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const styles = {
-  box: {
-    margin: 5,
-    color: '#333',
-    textDecorationLine: 'none',
-    boxSizing: 'border-box'
-  },
-  boxContent: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    fontFamily: '"Gotham 4r", sans-serif',
-    height: '100%'
-  },
-  assessment: {
-    border: '2px solid ' + color.purple
-  },
-  assessmentHover: {
-    border: '2px solid ' + color.purple,
-    backgroundColor: color.purple,
-    color: 'white'
-  },
-  instructional: {
-    border: '2px solid ' + color.teal
-  },
-  instructionalHover: {
-    border: '2px solid ' + color.teal,
-    backgroundColor: color.teal,
-    color: color.white
-  },
-  isNotStart: {
-    borderLeftStyle: 'dashed'
-  },
-  isStart: {
-    borderLeftStyle: 'solid'
-  },
-  isNotEnd: {
-    borderRightStyle: 'dashed'
-  },
-  isEnd: {
-    borderRightStyle: 'solid'
-  },
-  titleText: {
-    width: '100%'
-  },
-  iconSection: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100%',
-    paddingLeft: 2,
-    paddingTop: 2,
-    paddingBottom: 2,
-    boxSizing: 'border-box'
-  }
-};
-
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
     minuteWidth: PropTypes.number.isRequired,
@@ -160,5 +102,63 @@ class UnitCalendarLessonChunk extends Component {
     );
   }
 }
+
+const styles = {
+  box: {
+    margin: 5,
+    color: '#333',
+    textDecorationLine: 'none',
+    boxSizing: 'border-box'
+  },
+  boxContent: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    fontFamily: '"Gotham 4r", sans-serif',
+    height: '100%'
+  },
+  assessment: {
+    border: '2px solid ' + color.purple
+  },
+  assessmentHover: {
+    border: '2px solid ' + color.purple,
+    backgroundColor: color.purple,
+    color: 'white'
+  },
+  instructional: {
+    border: '2px solid ' + color.teal
+  },
+  instructionalHover: {
+    border: '2px solid ' + color.teal,
+    backgroundColor: color.teal,
+    color: color.white
+  },
+  isNotStart: {
+    borderLeftStyle: 'dashed'
+  },
+  isStart: {
+    borderLeftStyle: 'solid'
+  },
+  isNotEnd: {
+    borderRightStyle: 'dashed'
+  },
+  isEnd: {
+    borderRightStyle: 'solid'
+  },
+  titleText: {
+    width: '100%'
+  },
+  iconSection: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '100%',
+    paddingLeft: 2,
+    paddingTop: 2,
+    paddingBottom: 2,
+    boxSizing: 'border-box'
+  }
+};
 
 export default UnitCalendarLessonChunk;

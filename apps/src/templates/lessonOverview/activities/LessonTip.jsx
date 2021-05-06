@@ -6,33 +6,6 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import Radium from 'radium';
 
-const styles = {
-  tab: {
-    // borders everywhere except the bottom
-    borderStyle: 'solid solid none solid',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-    borderWidth: 1,
-    padding: '5px 10px',
-    width: 200
-  },
-  box: {
-    borderStyle: 'solid',
-    borderWidth: 1,
-    padding: 10
-  },
-  icon: {
-    marginLeft: 7,
-    marginRight: 5
-  },
-  caret: {
-    float: 'right'
-  },
-  tip: {
-    marginBottom: 5
-  }
-};
-
 export const tipTypes = {
   teachingTip: {
     displayName: i18n.teachingTip(),
@@ -118,5 +91,32 @@ class LessonTip extends Component {
     );
   }
 }
+
+const styles = {
+  tab: {
+    // borders everywhere except the bottom
+    borderStyle: 'solid solid none solid',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderWidth: 1,
+    padding: '5px 10px',
+    width: 200
+  },
+  box: {
+    borderStyle: 'solid',
+    borderWidth: 1,
+    padding: 10
+  },
+  icon: {
+    marginLeft: 7,
+    marginRight: 5
+  },
+  caret: {
+    float: 'right'
+  },
+  tip: {
+    marginBottom: 5
+  }
+};
 
 export default Radium(LessonTip);

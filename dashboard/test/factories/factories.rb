@@ -52,6 +52,12 @@ FactoryGirl.define do
     end
   end
 
+  factory :pilot do
+    sequence(:name) {|n| "test-pilot-#{n}"}
+    sequence(:display_name) {|n| "Test Pilot #{n}"}
+    allow_joining_via_url 0
+  end
+
   factory :section_hidden_lesson do
     section
     lesson
