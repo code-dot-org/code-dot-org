@@ -8,6 +8,51 @@ const TRIANGLE_HEIGHT = 15;
 const CALLOUT_Z_INDEX = 1040;
 const CALLOUT_TOP = 30;
 
+/*
+ * This is a callout attached to the sign-in button that's used on CSF level
+ * pages to remind the user to sign-in.  Note that the sign-in button is
+ * defined in shared/haml/user_header.haml and is not a React component.
+ * This component is injected into the page by src/code-studio/header.js.
+ */
+export default class SignInCallout extends React.Component {
+  static propTypes = {
+    handleClose: PropTypes.func.isRequired
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.renderContent = this.renderContent.bind(this);
+  }
+
+  renderContent() {
+    return (
+      <div style={styles.contentContainer}>
+        <img
+          style={styles.imageContainer}
+          src="/shared/images/user-not-signed-in.png"
+        />
+        <div style={styles.textContainer}>
+          <h2 style={styles.textHeader}>{i18n.notSignedInHeader()}</h2>
+          <p> {i18n.notSignedInBody()}</p>
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div style={styles.container} onClick={this.props.handleClose}>
+        <div className="modal-backdrop" style={styles.modalBackdrop} />
+        <div style={styles.upTriangle} />
+        <div className="uitest-login-callout" style={styles.content}>
+          {this.renderContent()}
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   container: {
     // The outermost div is relatively positioned so it can be used as a positional
@@ -68,48 +113,3 @@ const styles = {
     marginTop: 0
   }
 };
-
-/*
- * This is a callout attached to the sign-in button that's used on CSF level
- * pages to remind the user to sign-in.  Note that the sign-in button is
- * defined in shared/haml/user_header.haml and is not a React component.
- * This component is injected into the page by src/code-studio/header.js.
- */
-export default class SignInCallout extends React.Component {
-  static propTypes = {
-    handleClose: PropTypes.func.isRequired
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.renderContent = this.renderContent.bind(this);
-  }
-
-  renderContent() {
-    return (
-      <div style={styles.contentContainer}>
-        <img
-          style={styles.imageContainer}
-          src="/shared/images/user-not-signed-in.png"
-        />
-        <div style={styles.textContainer}>
-          <h2 style={styles.textHeader}>{i18n.notSignedInHeader()}</h2>
-          <p> {i18n.notSignedInBody()}</p>
-        </div>
-      </div>
-    );
-  }
-
-  render() {
-    return (
-      <div style={styles.container} onClick={this.props.handleClose}>
-        <div className="modal-backdrop" style={styles.modalBackdrop} />
-        <div style={styles.upTriangle} />
-        <div className="uitest-login-callout" style={styles.content}>
-          {this.renderContent()}
-        </div>
-      </div>
-    );
-  }
-}

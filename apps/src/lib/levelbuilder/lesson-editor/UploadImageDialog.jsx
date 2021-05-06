@@ -7,15 +7,6 @@ import i18n from '@cdo/locale';
 import LessonEditorDialog from './LessonEditorDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-const styles = {
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  label: {
-    margin: '10px 0'
-  }
-};
-
 export default class UploadImageDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -130,3 +121,12 @@ export default class UploadImageDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  label: {
+    margin: '10px 0'
+  }
+};

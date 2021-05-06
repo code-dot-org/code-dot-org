@@ -8,7 +8,7 @@
 import _ from 'lodash';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
-  levelProgressFromStatus,
+  levelProgressFromServer,
   lessonProgressForSection
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {createStore} from 'redux';
@@ -34,6 +34,7 @@ export const fakeLevel = (overrides = {}) => {
   return {
     id: id,
     status: LevelStatus.not_tried,
+    isLocked: false,
     levelNumber: levelNumber,
     bubbleText: levelNumber.toString(),
     url: `/level${levelNumber}`,
@@ -57,11 +58,15 @@ export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
 
 export const fakeProgressForLevels = (
   levels,
-  status = LevelStatus.not_tried
+  status = LevelStatus.not_tried,
+  serverProgressOverrides = {}
 ) => {
   const progress = {};
   levels.forEach(level => {
-    progress[level.id] = levelProgressFromStatus(status);
+    progress[level.id] = levelProgressFromServer({
+      status: status,
+      ...serverProgressOverrides
+    });
   });
   return progress;
 };
@@ -176,8 +181,16 @@ export const fakeScriptData = (overrideFields = {}) => {
   };
 };
 
-export const fakeStudentLevelProgress = (levels, students) => {
-  const progressOnLessons = fakeProgressForLevels(levels);
+export const fakeStudentLevelProgress = (
+  levels,
+  students,
+  serverProgressOverrides = {}
+) => {
+  const progressOnLessons = fakeProgressForLevels(
+    levels,
+    serverProgressOverrides.status,
+    serverProgressOverrides
+  );
 
   const studentProgress = {};
   students.forEach(student => {

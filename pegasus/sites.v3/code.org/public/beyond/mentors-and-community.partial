@@ -2,15 +2,24 @@
 title: Mentorships and Community
 video_player: true
 theme: responsive
----
+social:
+  "og:title": "CS Journeys Resources: Mentorship and community"
+  "og:description": "Find support and guidance on your CS Journey"
+  "og:image": "/images/csjourneys/og-mentorships.jpg"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:title": "CS Journeys Resources: Mentorship and community"
+  "twitter:description": "Find support and guidance on your CS Journey"
+  "twitter:image": "/images/csjourneys/og-mentorships.jpg"
+---  
 <a id="top"></a>
-<h1>Mentorships and Community</h1>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Mentorships and Community</h1>
 <p>Mentors and communities can support you on your CS Journey in a number of ways — they can provide guidance and support, and connect you to opportunities and resources like networking events, internship and job opportunities, and professional development.</p>
 
 <ul>
   <li><a href="#native-students">For Native American students</a></li>
   <li><a href="#black-students">For Black students</a></li>
-  <li><a href="#hispanic-latino-students">For Hispanic / Latino students</a></li>
+  <li><a href="#hispanic-latino-students">For Hispanic / Latino/a/x students</a></li>
   <li><a href="#youngwomen">For young women</a></li>
   <li><a href="#allstudents">For all students</a></li>
 </ul>
@@ -78,7 +87,7 @@ theme: responsive
 
 <a id="hispanic-latino-students"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Hispanic / Latino students</h2>
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Hispanic / Latino/a/x students</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
 <a class="linktag" id="shpe" href="https://shpe.org/" target="_blank">
@@ -189,7 +198,7 @@ theme: responsive
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="codepath" href="https://codepath.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>CodePath.org</strong></h3></a>
-  <p>Offers embedded CS courses at a number of US universities and, for students in those courses, a number of resources like mentorships and career fairs</p>
+  <p>CodePath transforms computer science education for women and underrepresented minorities across over 200 colleges and universities. By working closely with partners like Andreessen Horowitz, Cognizant, Facebook, Microsoft, and Walmart, we offer supplemental CS courses and career services to create successful pathways for students to enter and prosper in tech. To learn more, visit <a href="http://www.codepath.org/" target="_blank">www.codepath.org</a>.</p>
   <p><i>Application period: Varies</i></p>
 </div>
 <div style="clear:both"></div>

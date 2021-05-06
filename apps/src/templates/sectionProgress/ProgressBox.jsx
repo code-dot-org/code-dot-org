@@ -4,29 +4,6 @@ import color from '@cdo/apps/util/color';
 
 const PROGRESS_BOX_SIZE = 20;
 
-const styles = {
-  box: {
-    height: PROGRESS_BOX_SIZE,
-    width: PROGRESS_BOX_SIZE,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    boxSizing: 'content-box',
-    position: 'relative'
-  },
-  filler: {
-    width: PROGRESS_BOX_SIZE,
-    position: 'absolute'
-  },
-  lessonNumber: {
-    position: 'absolute',
-    zIndex: 2,
-    paddingTop: 2,
-    textAlign: 'center',
-    width: PROGRESS_BOX_SIZE,
-    fontFamily: '"Gotham 4r", sans-serif'
-  }
-};
-
 export default class ProgressBox extends Component {
   static propTypes = {
     started: PropTypes.bool,
@@ -102,3 +79,26 @@ export default class ProgressBox extends Component {
     );
   }
 }
+
+const styles = {
+  box: {
+    height: PROGRESS_BOX_SIZE,
+    width: PROGRESS_BOX_SIZE,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    boxSizing: 'content-box',
+    position: 'relative'
+  },
+  filler: {
+    width: PROGRESS_BOX_SIZE,
+    position: 'absolute'
+  },
+  lessonNumber: {
+    position: 'absolute',
+    zIndex: 2,
+    paddingTop: 2,
+    textAlign: 'center',
+    width: PROGRESS_BOX_SIZE,
+    fontFamily: '"Gotham 4r", sans-serif'
+  }
+};

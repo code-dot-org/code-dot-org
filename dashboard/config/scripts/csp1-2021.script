@@ -51,7 +51,7 @@ level 'U1L5 CFU adding bits_2021', progression: 'Check for Understanding', asses
 level 'U1L5 CFU bin dec similarities_2021', progression: 'Check for Understanding', assessment: true
 
 lesson 'Overflow and Rounding', display_name: 'Overflow and Rounding', has_lesson_plan: true, unplugged: true
-level 'Widget: Binary Odometer_2021', progression: 'Odometer Activity'
+level 'Widget: Binary Odometer_2021', progression: 'Widget: Binary Odometer'
 level 'U1L6 CFU beyond odometer_2021', progression: 'Check For Understanding', assessment: true
 level 'U1L6 CFU representing fractions_2021', progression: 'Check For Understanding', assessment: true
 
@@ -59,12 +59,12 @@ lesson 'Representing Text', display_name: 'Representing Text', has_lesson_plan: 
 level 'U1L8 Reflection Multiple Representations CSP_2021', progression: 'Check for Understanding', assessment: true
 
 lesson 'Black and White Images', display_name: 'Black and White Images', has_lesson_plan: true
-level 'U1 L9 Introduction to Pixelation_2021', progression: 'Pixelation Widget Video '
+level 'U1 L9 Introduction to Pixelation_2021', progression: 'Video: Intro to Pixelation Encoding B&W'
 level 'U1L9 Pixelation - Make the Letter A_2021', progression: 'Pixelation Widget: B&W'
 level 'U1L9 Pixelation Widget Fix bit offset_2021', progression: 'Pixelation Widget: B&W'
-level 'U1L9 Pixelation Widget challenge a_2021', progression: 'Pixelation Widget: B&W'
-level 'U1L9 Pixelation Widget challenge B_2021', progression: 'Pixelation Widget: B&W'
-level 'U1L9 Pixelation Widget challenge C_2021', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget challenge a_2021', progression: 'Sampling an Analog Image'
+level 'U1L9 Pixelation Widget challenge B_2021', progression: 'Sampling an Analog Image'
+level 'U1L9 Pixelation Widget challenge C_2021', progression: 'Sampling an Analog Image'
 level 'U1L9 CFU pixel data_2021', progression: 'Check For Understanding', assessment: true
 level 'U1L9 Multiple Choice Digital Analog_2021', progression: 'Check For Understanding', assessment: true
 level 'U1L9 CFU Sampling_2021', progression: 'Check For Understanding', assessment: true

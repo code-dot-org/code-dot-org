@@ -16,29 +16,6 @@ import {lessonEditorTableStyles} from './TableConstants';
 import Button from '@cdo/apps/templates/Button';
 import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 
-const styles = {
-  search: {
-    paddingBottom: 10
-  },
-  actionsColumn: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'white'
-  },
-  remove: {
-    fontSize: 14,
-    color: 'white',
-    background: color.dark_red,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: '100%',
-    lineHeight: '30px'
-  },
-  dropdown: {
-    width: '100%'
-  }
-};
-
 class ProgrammingExpressionsEditor extends Component {
   static propTypes = {
     // Provided by redux
@@ -213,6 +190,29 @@ class ProgrammingExpressionsEditor extends Component {
     );
   }
 }
+
+const styles = {
+  search: {
+    paddingBottom: 10
+  },
+  actionsColumn: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
+  remove: {
+    fontSize: 14,
+    color: 'white',
+    background: color.dark_red,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '100%',
+    lineHeight: '30px'
+  },
+  dropdown: {
+    width: '100%'
+  }
+};
 
 export const UnconnectedProgrammingExpressionsEditor = ProgrammingExpressionsEditor;
 
