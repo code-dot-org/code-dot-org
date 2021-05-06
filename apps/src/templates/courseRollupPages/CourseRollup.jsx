@@ -6,18 +6,6 @@ import i18n from '@cdo/locale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import {courseShape} from './rollupShapes';
 
-const styles = {
-  h1: {
-    color: color.teal
-  },
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-    margin: '10px 0px'
-  }
-};
-
 export default class CourseRollup extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
@@ -67,3 +55,15 @@ export default class CourseRollup extends Component {
     );
   }
 }
+
+const styles = {
+  h1: {
+    color: color.teal
+  },
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
+  }
+};

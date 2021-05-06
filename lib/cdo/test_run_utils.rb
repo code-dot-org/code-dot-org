@@ -80,4 +80,12 @@ module TestRunUtils
       end
     end
   end
+
+  def self.run_bin_i18n_tests
+    Dir.chdir(bin_i18n_dir) do
+      ChatClient.wrap('bin/i18n tests') do
+        RakeUtils.rake_stream_output 'test'
+      end
+    end
+  end
 end

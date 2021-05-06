@@ -4,25 +4,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 
-const styles = {
-  filters: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  input: {
-    width: 195,
-    margin: 5
-  },
-  dropdown: {
-    width: 150,
-    margin: 5
-  },
-  label: {
-    marginRight: 15
-  }
-};
-
 class AddLevelFilters extends Component {
   static propTypes = {
     handleSearch: PropTypes.func.isRequired,
@@ -112,6 +93,25 @@ class AddLevelFilters extends Component {
     );
   }
 }
+
+const styles = {
+  filters: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  input: {
+    width: 195,
+    margin: 5
+  },
+  dropdown: {
+    width: 150,
+    margin: 5
+  },
+  label: {
+    marginRight: 15
+  }
+};
 
 export const UnconnectedAddLevelFilters = AddLevelFilters;
 

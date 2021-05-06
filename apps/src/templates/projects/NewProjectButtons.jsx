@@ -112,52 +112,6 @@ const PROJECT_INFO = {
   }
 };
 
-const styles = {
-  fullsize: {
-    width: styleConstants['content-width'],
-    marginTop: 20,
-    marginBottom: 10
-  },
-  row: {
-    marginBottom: 10
-  },
-  tile: {
-    width: 214,
-    height: 70,
-    border: '1px solid ' + color.lighter_gray,
-    borderRadius: 2,
-    float: 'left',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: color.white
-  },
-  tilePadding: {
-    marginRight: 35
-  },
-  thumbnail: {
-    borderTopLeftRadius: 2,
-    borderBottomLeftRadius: 2,
-    marginRight: 10
-  },
-  thumbnailRtl: {
-    borderTopRightRadius: 2,
-    borderBottomRightRadius: 2,
-    marginLeft: 10
-  },
-  label: {
-    paddingRight: 5,
-    color: color.teal
-  },
-  description: {
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 14,
-    fontFamily: '"Gotham 5r"',
-    color: color.charcoal
-  }
-};
-
 const TILES_PER_ROW = 4;
 
 class NewProjectButtons extends React.Component {
@@ -203,6 +157,52 @@ class NewProjectButtons extends React.Component {
     );
   }
 }
+
+const styles = {
+  fullsize: {
+    width: styleConstants['content-width'],
+    marginTop: 20,
+    marginBottom: 10
+  },
+  row: {
+    marginBottom: 10
+  },
+  tile: {
+    width: 214,
+    height: 70,
+    border: '1px solid ' + color.lighter_gray,
+    borderRadius: 2,
+    float: 'left',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: color.white
+  },
+  tilePadding: {
+    marginRight: 35
+  },
+  thumbnail: {
+    borderTopLeftRadius: 2,
+    borderBottomLeftRadius: 2,
+    marginRight: 10
+  },
+  thumbnailRtl: {
+    borderTopRightRadius: 2,
+    borderBottomRightRadius: 2,
+    marginLeft: 10
+  },
+  label: {
+    paddingRight: 5,
+    color: color.teal
+  },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 10,
+    fontSize: 14,
+    fontFamily: '"Gotham 5r"',
+    color: color.charcoal
+  }
+};
 
 export default connect(state => ({
   isRtl: state.isRtl

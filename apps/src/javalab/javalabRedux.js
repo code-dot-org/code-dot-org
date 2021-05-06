@@ -1,8 +1,12 @@
+import UserPreferences from '../lib/util/UserPreferences';
+
 const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
+const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
-const TOGGLE_DARK_MODE = 'javalab/TOGGLE_DARK_MODE';
+const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
+const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
@@ -39,8 +43,24 @@ export const setSource = (filename, source, isVisible = true) => ({
   isVisible
 });
 
-export const toggleDarkMode = () => ({
-  type: TOGGLE_DARK_MODE
+export const sourceVisibilityUpdated = (filename, isVisible) => ({
+  type: SOURCE_VISIBILITY_UPDATED,
+  filename,
+  isVisible
+});
+
+// Updates the user preferences to reflect change
+export const setIsDarkMode = isDarkMode => {
+  new UserPreferences().setUsingDarkMode(isDarkMode);
+  return {
+    isDarkMode: isDarkMode,
+    type: COLOR_PREFERENCE_UPDATED
+  };
+};
+
+export const removeFile = filename => ({
+  type: REMOVE_FILE,
+  filename
 });
 
 // Selectors
@@ -67,6 +87,14 @@ export default function reducer(state = initialState, action) {
       sources: newSources
     };
   }
+  if (action.type === SOURCE_VISIBILITY_UPDATED) {
+    let newSources = {...state.sources};
+    newSources[action.filename].visible = action.isVisible;
+    return {
+      ...state,
+      sources: newSources
+    };
+  }
   if (action.type === RENAME_FILE) {
     const source = state.sources[action.oldFilename];
     if (source !== undefined) {
@@ -82,16 +110,24 @@ export default function reducer(state = initialState, action) {
       return state;
     }
   }
+  if (action.type === REMOVE_FILE) {
+    let newSources = {...state.sources};
+    delete newSources[action.filename];
+    return {
+      ...state,
+      sources: newSources
+    };
+  }
   if (action.type === SET_ALL_SOURCES) {
     return {
       ...state,
       sources: action.sources
     };
   }
-  if (action.type === TOGGLE_DARK_MODE) {
+  if (action.type === COLOR_PREFERENCE_UPDATED) {
     return {
       ...state,
-      isDarkMode: !state.isDarkMode
+      isDarkMode: action.isDarkMode
     };
   }
   return state;

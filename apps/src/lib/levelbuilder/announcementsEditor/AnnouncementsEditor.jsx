@@ -9,12 +9,6 @@ import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
 
-const styles = {
-  preview: {
-    marginTop: 10
-  }
-};
-
 export default class AnnouncementsEditor extends Component {
   static propTypes = {
     announcements: PropTypes.arrayOf(announcementShape),
@@ -95,3 +89,9 @@ export default class AnnouncementsEditor extends Component {
     );
   }
 }
+
+const styles = {
+  preview: {
+    marginTop: 10
+  }
+};

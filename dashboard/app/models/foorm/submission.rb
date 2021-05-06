@@ -14,7 +14,7 @@ class Foorm::Submission < ApplicationRecord
   include Pd::Foorm::Constants
 
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
-  has_one :misc_survey, foreign_key: :foorm_submission_id
+  has_one :simple_survey_submission, foreign_key: :foorm_submission_id
 
   belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 

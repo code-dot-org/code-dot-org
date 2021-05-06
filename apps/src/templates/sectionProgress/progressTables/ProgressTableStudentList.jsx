@@ -13,16 +13,6 @@ import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
-const styles = {
-  detailText: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    height: '100%',
-    paddingRight: '10px'
-  }
-};
-
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
     rows: PropTypes.arrayOf(studentTableRowType).isRequired,
@@ -31,7 +21,8 @@ export default class ProgressTableStudentList extends React.Component {
     scriptData: scriptDataPropType.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
-    onToggleRow: PropTypes.func.isRequired
+    onToggleRow: PropTypes.func.isRequired,
+    showSectionProgressDetails: PropTypes.bool
   };
 
   constructor(props) {
@@ -75,10 +66,9 @@ export default class ProgressTableStudentList extends React.Component {
         scriptId={scriptData.id}
         lastTimestamp={studentTimestamps[rowData.student.id]}
         studentUrl={studentUrl}
-        onToggleExpand={() => {
-          this.props.onToggleRow(rowData);
-        }}
+        onToggleExpand={this.props.onToggleRow}
         isExpanded={rowData.isExpanded}
+        showSectionProgressDetails={this.props.showSectionProgressDetails}
       />
     );
   }
@@ -129,3 +119,13 @@ export default class ProgressTableStudentList extends React.Component {
     );
   }
 }
+
+const styles = {
+  detailText: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: '100%',
+    paddingRight: '10px'
+  }
+};

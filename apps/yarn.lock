@@ -1637,10 +1637,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.26":
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.26.tgz#4a30d982cfad3a361759fcfb19798d935cad83f4"
-  integrity sha512-7gKQ3q/z8QnN4wE9ILHSp/mt+zLBy2yYa+JDdTx7ROnb99WvJ9YtzImrb8Z+tDYgsY42D9OasCWeANmF9375zA==
+"@code-dot-org/ml-playground@0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.27.tgz#3577424341768fb112b7d48efd5a8d831f11b8d5"
+  integrity sha512-e/L2/e0bOnk+R5fNnmCXezwCU9vwjI3zsWoUX/eQQqBScM5xuFBZp7qNtZ8o05vGOgvL9RAhn+f5Aq2kiA5Otw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-regular-svg-icons" "^5.11.2"
@@ -6381,6 +6381,9 @@ eslint-config-prettier@^3.6.0:
 eslint-plugin-babel@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-babel/-/eslint-plugin-babel-4.1.2.tgz#79202a0e35757dd92780919b2336f1fa2fe53c1e"
+
+"eslint-plugin-cdo-custom-rules@file:./eslint":
+  version "1.0.0"
 
 eslint-plugin-mocha@^4.12.1:
   version "4.12.1"
