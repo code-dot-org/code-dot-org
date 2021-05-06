@@ -8,6 +8,8 @@ export const MLTypes = {
   REGRESSION: "regression"
 };
 
+export const REGRESSION_ERROR_TOLERANCE = 5;
+
 export const ResultsGrades = {
   CORRECT: "correct",
   INCORRECT: "incorrect"
