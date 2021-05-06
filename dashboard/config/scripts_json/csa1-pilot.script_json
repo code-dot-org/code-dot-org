@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-04 18:54:46 UTC",
+    "serialized_at": "2021-05-06 00:58:18 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -375,6 +375,9 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
+        "overview": "Students complete their first Free Response Question (FRQ) style problem in this lesson. They annotate the question as a class, then implement a full `SpiralPainter` class in pairs through an \"Around the World\" style activity.\n\nThe goals of this lesson are threefold: \n* Create a sense of excitement and accomplishment around completing FRQs\n* Practice an FRQ style question (written by hand)\n* Serve as a summative assessment of the content from Unit 1\n\nWhile the format of this FRQ is not the same as an FRQ on the AP exam, it is a building block to help students prepare to tackle these types of questions. As students progress through the course, the FRQ questions they encounter slowly become closer to the real thing.\n",
+        "preparation": "* Read through the Print Outs document, which contains setup instructions for the \"Around the World\" activity.\n* Print out the station instructions and the manipulatives in the Print Outs document.\n* Cut out the manipulatives.\n* Optional: For each student, provide a blue, orange, and pink colored pencil or marker.\n",
+        "student_overview": "Today you complete your first Free Response Question (FRQ)! This means that you write code by hand to complete a large task. You do this with a partner by moving around the room and completing parts of the task at each location, checking your work as you go."
       },
       "seeding_key": {
         "lesson.key": "lesson-19",
@@ -1180,6 +1183,61 @@
       "seeding_key": {
         "lesson_activity.key": "c51ed06b-0a79-4104-808c-4931b67cc06c",
         "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "56389124-b9ba-465b-95e9-3d4d79b85f63",
+      "position": 1,
+      "properties": {
+        "name": "Setup (before class)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "56389124-b9ba-465b-95e9-3d4d79b85f63",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c76b64e3-5d63-4f16-9a9c-66297c5f80e2",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c76b64e3-5d63-4f16-9a9c-66297c5f80e2",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "1219ebde-f773-4422-ab11-9305a7e6bdb5",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1219ebde-f773-4422-ab11-9305a7e6bdb5",
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "26c176ce-480b-47cb-9931-e66e1d10014d",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26c176ce-480b-47cb-9931-e66e1d10014d",
+        "lesson.key": "lesson-19",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-pilot"
       }
@@ -4585,6 +4643,144 @@
       }
     },
     {
+      "key": "94c1b407-c863-4dfa-a493-6f10dffc7f0c",
+      "position": 1,
+      "properties": {
+        "description": "Read through the setup instructions in the Print Outs document prior to the class. There are a lot of pieces to print out and organize. These items can be reused for future classes.  "
+      },
+      "seeding_key": {
+        "activity_section.key": "94c1b407-c863-4dfa-a493-6f10dffc7f0c",
+        "lesson_activity.key": "56389124-b9ba-465b-95e9-3d4d79b85f63"
+      }
+    },
+    {
+      "key": "d2b6a5e5-7b62-4b59-9fbd-27d127909997",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Share with a partner: *Describe one new thing you have learned about Java through this course.*\n\n**Discussion Goal:** Students practice a Free Response Question (FRQ) in this class to begin preparing for the AP exam. This question reminds students of prior successes to put them in a positive mindset when starting the day’s task. Students do not need to share as a whole class."
+      },
+      "seeding_key": {
+        "activity_section.key": "d2b6a5e5-7b62-4b59-9fbd-27d127909997",
+        "lesson_activity.key": "c76b64e3-5d63-4f16-9a9c-66297c5f80e2"
+      }
+    },
+    {
+      "key": "a013e8aa-e12e-43d0-bd53-0c79d6778b9e",
+      "position": 2,
+      "properties": {
+        "description": "\nToday we will spend some time celebrating the growth you have made thus far by practicing a Free Response Question or an FRQ. We will have an FRQ day at the end of each unit that lets you practice the programming skills you have learned in the context of a problem written like the free response questions that are part of the AP exam. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a013e8aa-e12e-43d0-bd53-0c79d6778b9e",
+        "lesson_activity.key": "c76b64e3-5d63-4f16-9a9c-66297c5f80e2"
+      }
+    },
+    {
+      "key": "9d3608f9-e461-4e9c-8325-6e5444bd7230",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Describe the structure of an FRQ. You should identify:\n* There are always four FRQs on the exam, each of which focuses on one skill. Today we will practice the skill of writing a `class`.\n* FRQs are graded with the Scoring Guidelines (a rubric).\n* FRQ questions are completed on paper, so students write code by hand.\n* If a student’s handwriting is illegible, they will not get points for the FRQ.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There will be more time in the future to talk about the AP exam and the role of FRQs. If students ask questions about the exam, remind them that it is a long way off and that after the class has experienced a few FRQ days together, they will be better equipped to discuss the exam.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9d3608f9-e461-4e9c-8325-6e5444bd7230",
+        "lesson_activity.key": "c76b64e3-5d63-4f16-9a9c-66297c5f80e2"
+      }
+    },
+    {
+      "key": "f310894c-1a3e-4535-888a-90a01166613c",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Pair students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  Distribute a copy of the U1L19 Activity Guide to each pair.\n\n**Do This:** Describe the structure of today’s activity while moving through the slides. There are three parts:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning - annotate the FRQ.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \"Around the World\" - code implementation and review. Students move around the classroom, write one code segment per location, and get signatures from their peers on correctly implemented code. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection - after all signatures are collected, students pick up the Scoring Guidelines, check their code and reflect on the process. \n",
+        "duration": "2",
+        "name": "Activity Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "f310894c-1a3e-4535-888a-90a01166613c",
+        "lesson_activity.key": "1219ebde-f773-4422-ab11-9305a7e6bdb5"
+      }
+    },
+    {
+      "key": "76c0596b-9384-4069-9295-206890f905fd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the first page, “Planning (annotate).” Students annotate the question at the bottom of the page based on the annotation guide on the slide (also repeated in the Activity Guide).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which parts of the problem did you highlight pink or underline? Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students may have questions about the prompt. This discussion allows students to understand the prompt better before continuing the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which parts of the problem did you highlight blue or star? Which parts did you highlight orange or box? How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students may be unsure about where to begin with the problem. This task and discussion help provide a structure for working with FRQs in the future.",
+        "duration": "5",
+        "name": "FRQ Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nFuture FRQ Day lessons will implement a three-part close reading that includes annotation.  More about this format is available in the [CSA FRQ Close Reading](https://docs.google.com/document/d/1gqiKLoq95DwC8-hgr7gy7scG0lutLFZiLq3OKbbDxvI/edit) document.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76c0596b-9384-4069-9295-206890f905fd",
+        "lesson_activity.key": "1219ebde-f773-4422-ab11-9305a7e6bdb5"
+      }
+    },
+    {
+      "key": "2e7b772f-3534-41ab-8623-4cb86e4c25b7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show video that explains the next activity, “Around the World.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students remain in pairs during this activity:\n1. Students find a station. (Students do not need to go in order.)\n2. Students follow instructions at the station. There is an added page in the Activity Guide for stations B and C where students can write down pseudocode before writing their answers on the \"FRQ Written Response\" page. \n3. Students find another group who has completed the same station and explain their solution to that group.\n\n       a. If the second group agrees that the code segment was written correctly, they sign off on it on the guide. \n       \n    b. If they believe something was not written correctly, the pair revises their work and asks the peer group to review it again.\n\n4. Pairs repeat steps two and three, completing the entire Class in their Activity Guide. \n5. Once pairs have all three signatures, they bring their Activity Guide to the teacher to get a copy of the Scoring Guidelines (rubric). They then evaluate their work using the Scoring Guidelines and complete the reflection on the Activity Guide's last page.\n\n**Note:** If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.",
+        "duration": "22",
+        "name": "Around the World & Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, circulate the room and make sure they are successfully following the Around the World steps and not getting stuck with the problem. You may choose to use a five or ten-minute timer to help students pace themselves (though it is helpful to recognize that some of these tasks may take longer than others). If students are unable to complete a part, you may want to suggest:\n* Write comments for each \"Do this\" item necessary to complete the task.\n* Return to the manipulatives and trace through their pseudocode again.\n\nDifferentiation Suggestions:\n* Tell pairs who may need more time on each part that they need two signatures instead of three.  They should complete the constructor and choose one of the methods (`paintL()` or `paintSpiral()`)\n* Encourage those who finish early to write full responses in their reflections and serve as reviewers checking off their peers’ code and giving helpful suggestions (like completing a formal code review).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2e7b772f-3534-41ab-8623-4cb86e4c25b7",
+        "lesson_activity.key": "1219ebde-f773-4422-ab11-9305a7e6bdb5"
+      }
+    },
+    {
+      "key": "44672786-256b-4f8c-a178-88f782556160",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to their seats and display a solution on the screen. Ask student questions about particular parts of the solution or Scoring Guidelines and help resolve any misconceptions in these areas.\n",
+        "duration": "5",
+        "name": "Solution"
+      },
+      "seeding_key": {
+        "activity_section.key": "44672786-256b-4f8c-a178-88f782556160",
+        "lesson_activity.key": "1219ebde-f773-4422-ab11-9305a7e6bdb5"
+      }
+    },
+    {
+      "key": "7c4b2792-4edd-4893-be09-39a6e3a58d38",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What were you confident about? What would you like to practice?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Help students process FRQ format questions as a whole, not the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations. Today's lesson is the first time they have tried to complete an FRQ — they will get better at it with time and practice!",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c4b2792-4edd-4893-be09-39a6e3a58d38",
+        "lesson_activity.key": "26c176ce-480b-47cb-9931-e66e1d10014d"
+      }
+    },
+    {
+      "key": "cdce7eae-0926-4afc-a2dc-e3bb399451df",
+      "position": 2,
+      "properties": {
+        "description": "Closing The Loop is a strategy to help students synthesize the day’s material and provide a formative assessment for the teacher. Additional prompts to help metacognitive reflection:\n* *What strategies for coding and debugging did you use to complete your FRQ?*\n* *How did your mindset affect how you approached your work?*\n* *What were some helpful ways you saw members of the class communicating their learning?*\n* *How are you progressing as a learner?*\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdce7eae-0926-4afc-a2dc-e3bb399451df",
+        "lesson_activity.key": "26c176ce-480b-47cb-9931-e66e1d10014d"
+      }
+    },
+    {
       "key": "389af5ca-159b-4bef-9445-96f259167722",
       "position": 1,
       "properties": {
@@ -5150,6 +5346,36 @@
         "lesson.key": "lesson-18",
         "objective.key": "00446f93-48bf-49f4-8da3-67ab1b131dc4"
       }
+    },
+    {
+      "key": "db45b6ef-bc46-4938-a3c1-6bd36eb65a36",
+      "properties": {
+        "description": "Implement a class using inheritance based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "objective.key": "db45b6ef-bc46-4938-a3c1-6bd36eb65a36"
+      }
+    },
+    {
+      "key": "64c5479b-b873-43dd-9bbb-ae1a4156b5df",
+      "properties": {
+        "description": "Implement methods with parameters based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "objective.key": "64c5479b-b873-43dd-9bbb-ae1a4156b5df"
+      }
+    },
+    {
+      "key": "0f873d22-051b-452c-af2e-cfe45266e6a0",
+      "properties": {
+        "description": "Trace and validate the code of peers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "objective.key": "0f873d22-051b-452c-af2e-cfe45266e6a0"
+      }
     }
   ],
   "lessons_standards": [
@@ -5690,6 +5916,41 @@
         "lesson.key": "lesson-18",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.6"
       }
     }
   ],
