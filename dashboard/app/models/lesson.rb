@@ -733,7 +733,7 @@ class Lesson < ApplicationRecord
       copied_lesson.script_id = destination_script.id
       copied_lesson.lesson_group_id = destination_script.lesson_groups.last.id
 
-      copied_lesson.absolute_position = (destination_script.lessons.last&.absolute_position || 0) + 1
+      copied_lesson.absolute_position = destination_script.lessons.count + 1
       numbered_lesson = copied_lesson.has_lesson_plan || !copied_lesson.lockable
       copied_lesson.relative_position =
         if numbered_lesson
@@ -792,7 +792,7 @@ class Lesson < ApplicationRecord
           if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
             persisted_vocab
           else
-            copied_vocab = Vocabulary.create(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
+            copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
             copied_vocab
           end
         end.uniq
