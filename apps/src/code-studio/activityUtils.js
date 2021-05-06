@@ -23,9 +23,6 @@ export const activityCssClass = result => {
   if (result === TestResults.SUBMITTED_RESULT) {
     return LevelStatus.submitted;
   }
-  if (result === TestResults.FREE_PLAY) {
-    return LevelStatus.free_play_complete;
-  }
   if (result >= TestResults.MINIMUM_OPTIMAL_RESULT) {
     return LevelStatus.perfect;
   }

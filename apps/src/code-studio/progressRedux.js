@@ -9,6 +9,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {
   processedLevel,
+  processServerStudentProgress,
   getLevelResult
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
@@ -114,7 +115,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_SCRIPT_PROGRESS) {
     return {
       ...state,
-      scriptProgress: action.scriptProgress
+      scriptProgress: processServerStudentProgress(action.scriptProgress)
     };
   }
 
@@ -586,15 +587,35 @@ const levelWithProgress = (
       );
     }
   }
-
   const normalizedLevel = processedLevel(level);
-  const levelProgress = scriptProgress[normalizedLevel.id];
+
+  // default values
+  let status = LevelStatus.not_tried;
+  let locked = false;
+
+  let levelProgress = scriptProgress[normalizedLevel.id];
+  if (levelProgress?.pages) {
+    levelProgress = levelProgress.pages[normalizedLevel.pageNumber - 1];
+  }
+  if (levelProgress) {
+    // if we have levelProgress, overwrite default values
+    status = levelProgress.status;
+    locked = levelProgress.locked;
+  } else if (level.kind !== LevelKind.assessment) {
+    // if we don't have levelProgress, get the status from `levelResults`.
+    // however, `levelResults` doesn't track per-page results for multi-page
+    // assessments, so for assessments we leave default values.
+    //
+    // note: if we're not using levelProgress, `isLocked` will always be false.
+    status = activityCssClass(levelResults[normalizedLevel.id]);
+  }
+
   return {
     ...normalizedLevel,
-    status: statusForLevel(level, levelResults),
+    status: status,
     isCurrentLevel: currentLevelId === normalizedLevel.id,
     paired: levelPairing[level.activeId],
-    isLocked: levelProgress?.locked || false
+    isLocked: locked
   };
 };
 
@@ -648,46 +669,6 @@ export const lessonExtrasUrl = (state, stageId) =>
 export const isPerfect = (state, levelId) =>
   !!state.levelResults &&
   state.levelResults[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT;
-
-/**
- * Given a level and levelResults (both from our redux store state), determine
- * the status for that level.
- * @param {object} level - Level object from state.stages.levels
- * @param {object<number, TestResult>} levelResults - Mapping from levelId to
- *   TestResult
- */
-export function statusForLevel(level, levelResults) {
-  // Peer Reviews use a level object to track their state, but have some subtle
-  // differences from regular levels (such as a separate id namespace). Unlike
-  // levels, Peer Reviews store status on the level object (for the time being)
-  if (level.kind === LevelKind.peer_review) {
-    return level.status;
-  }
-
-  // LevelGroup assessments (multi-page assessments)
-  // will have a uid for each page (and a test-result
-  // for each uid).
-  // BubbleChoice sublevels will have a level_id
-  // Worth noting that in the majority of cases, ids will be a single
-  // id here
-  const id =
-    level.uid || level.level_id || bestResultLevelId(level.ids, levelResults);
-  let status = activityCssClass(levelResults[id]);
-
-  // If complete a level that is marked as assessment
-  // then mark as completed assessment
-  if (
-    level.kind === LevelKind.assessment &&
-    [
-      LevelStatus.free_play_complete,
-      LevelStatus.perfect,
-      LevelStatus.passed
-    ].includes(status)
-  ) {
-    return LevelStatus.completed_assessment;
-  }
-  return status;
-}
 
 /**
  * Groups lessons according to LessonGroup.
