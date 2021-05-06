@@ -3,21 +3,19 @@ require 'cdo/i18n_string_url_tracker'
 require 'active_support/core_ext/numeric/time'
 
 class TestI18nStringUrlTracker < Minitest::Test
-  # We don't want to make actual calls to the AWS Firehose apis, so stub it and verify we are trying to send the right
-  # data.
-  def stub_firehose
-    FirehoseClient.instance.stubs(:put_record).with do |stream, data|
-      # Capture the data we try to send to firehose so we can verify it is what we expect.
-      @firehose_stream = stream
-      @firehose_record = data.dup
+  def stub_redis
+    RedisClient.instance.stubs(:put_record).with do |stream, data|
+      # Capture the data we try to send to Redis so we can verify it is what we expect.
+      @redis_stream = stream
+      @redis_record = data.dup
       true
     end
   end
 
-  def unstub_firehose
-    FirehoseClient.instance.unstub(:put_record)
-    @firehose_stream = nil
-    @firehose_record = nil
+  def unstub_redis
+    RedisClient.instance.unstub(:put_record)
+    @redis_stream = nil
+    @redis_record = nil
   end
 
   def stub_dcdo(flag)
@@ -30,13 +28,13 @@ class TestI18nStringUrlTracker < Minitest::Test
 
   def setup
     super
-    stub_firehose
+    stub_redis
     stub_dcdo(true)
   end
 
   def teardown
     super
-    unstub_firehose
+    unstub_redis
     unstub_dcdo
     I18nStringUrlTracker.instance.send(:shutdown)
   end
@@ -45,54 +43,54 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert I18nStringUrlTracker.instance
   end
 
-  def test_log_given_no_string_key_should_not_call_firehose
-    unstub_firehose
-    FirehoseClient.instance.expects(:put_record).never
+  def test_log_given_no_string_key_should_not_call_redis
+    unstub_redis
+    RedisClient.instance.expects(:put_record).never
     test_record = {string_key: nil, url: 'https://code.org', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
   end
 
-  def test_log_given_no_url_should_not_call_firehose
-    unstub_firehose
-    FirehoseClient.instance.expects(:put_record).never
+  def test_log_given_no_url_should_not_call_redis
+    unstub_redis
+    RedisClient.instance.expects(:put_record).never
     test_record = {string_key: 'string.key', url: nil, source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
   end
 
-  def test_log_given_no_source_should_not_call_firehose
-    unstub_firehose
-    FirehoseClient.instance.expects(:put_record).never
+  def test_log_given_no_source_should_not_call_redis
+    unstub_redis
+    RedisClient.instance.expects(:put_record).never
     test_record = {string_key: 'string.key', url: 'https://code.org', source: nil}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
   end
 
-  def test_log_given_data_should_call_firehose
+  def test_log_given_data_should_call_redis
     test_record = {string_key: 'string.key', url: 'https://code.org', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(test_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(test_record, @redis_record)
   end
 
-  def test_log_given_url_with_query_string_should_call_firehose_without_query_string
+  def test_log_given_url_with_query_string_should_call_redis_without_query_string
     test_record = {string_key: 'string.key', url: 'https://code.org/?query=true', source: 'test'}
     expected_record = {string_key: 'string.key', url: 'https://code.org', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
-  def test_log_given_url_with_anchor_tag_should_call_firehose_without_anchor_tag
+  def test_log_given_url_with_anchor_tag_should_call_redis_without_anchor_tag
     test_record = {string_key: 'string.key', url: 'https://code.org/#tag-youre-it', source: 'test'}
     expected_record = {string_key: 'string.key', url: 'https://code.org', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
   def test_log_given_projects_url_should_only_log_the_project_type
@@ -100,33 +98,33 @@ class TestI18nStringUrlTracker < Minitest::Test
     expected_record = {string_key: 'string.key', url: 'https://studio.code.org/projects/flappy', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
-  def test_log_given_false_dcdo_flag_should_not_call_firehose
-    unstub_firehose
+  def test_log_given_false_dcdo_flag_should_not_call_redis
+    unstub_redis
     unstub_dcdo
     stub_dcdo(false)
-    FirehoseClient.instance.expects(:put_record).never
+    RedisClient.instance.expects(:put_record).never
     test_record = {string_key: 'string.key', url: 'https://code.org', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
   end
 
-  def test_log_given_http_url_should_call_firehose_with_https_url
+  def test_log_given_http_url_should_call_redis_with_https_url
     test_record = {string_key: 'string.key', url: 'http://code.org', source: 'test'}
     expected_record = test_record.dup
     expected_record[:url] = 'https://code.org'
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
   def test_log_given_unknown_studio_url_should_not_be_logged
-    unstub_firehose
-    FirehoseClient.instance.expects(:put_record).never
+    unstub_redis
+    RedisClient.instance.expects(:put_record).never
     test_record = {string_key: 'string.key', url: 'https://studio.code.org/unknown/url', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
@@ -137,16 +135,16 @@ class TestI18nStringUrlTracker < Minitest::Test
     expected_record = {string_key: 'string.key', url: 'https://studio.code.org/s/dance-2019', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
   def test_log_given_hour_of_code_url_should_be_logged
     test_record = {string_key: 'string.key', url: 'https://hourofcode.com', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(test_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(test_record, @redis_record)
   end
 
   def test_log_given_url_with_trailing_slash_should_log_without_trailing_slash
@@ -154,16 +152,16 @@ class TestI18nStringUrlTracker < Minitest::Test
     expected_record = {string_key: 'string.key', url: 'https://code.org', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
   def test_log_given_home_url_should_be_logged
     test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(test_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(test_record, @redis_record)
   end
 
   def test_log_given_teacher_dashboard_url_should_only_log_teacher_dashboard
@@ -171,8 +169,8 @@ class TestI18nStringUrlTracker < Minitest::Test
     expected_record = {string_key: 'string.key', url: 'https://studio.code.org/teacher_dashboard', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
   def test_log_given_courses_url_should_only_log_courses
@@ -180,8 +178,8 @@ class TestI18nStringUrlTracker < Minitest::Test
     expected_record = {string_key: 'string.key', url: 'https://studio.code.org/courses', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
   def test_log_given_users_url_should_only_log_users
@@ -189,8 +187,8 @@ class TestI18nStringUrlTracker < Minitest::Test
     expected_record = {string_key: 'string.key', url: 'https://studio.code.org/users', source: 'test'}
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 
   def test_log_given_interval_should_log_data_after_the_given_time_has_passed
@@ -198,31 +196,31 @@ class TestI18nStringUrlTracker < Minitest::Test
     interval = 0.2
     I18nStringUrlTracker.instance.send(:set_flush_interval, interval)
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
-    # verify that no firehose information has been logged because the interval has not passed yet
-    assert_nil(@firehose_stream)
-    assert_nil(@firehose_record)
+    # verify that no redis information has been logged because the interval has not passed yet
+    assert_nil(@redis_stream)
+    assert_nil(@redis_record)
     # wait a little bit longer than the interval before checking if any data has been logged
     sleep(interval * 2)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(test_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(test_record, @redis_record)
   end
 
   def test_log_given_too_much_data_should_be_automatically_flushed
     test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
     I18nStringUrlTracker.instance.send(:set_buffer_size_max, 0)
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(test_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(test_record, @redis_record)
   end
 
   def test_log_given_duplicate_data_should_only_log_once
     test_record = {string_key: 'string.key', url: 'https://studio.code.org/home', source: 'test'}
-    FirehoseClient.instance.expects(:put_record).once
+    RedisClient.instance.expects(:put_record).once
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(test_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(test_record, @redis_record)
   end
 
   def test_log_given_url_with_special_symbol_should_log_the_special_symbol
@@ -231,10 +229,10 @@ class TestI18nStringUrlTracker < Minitest::Test
     # a normal whitespace in order to make the data easier to read by analysts.
     test_record = {string_key: 'string.key', url: 'https://code.org/url%20with%20spaces', source: 'test'}
     expected_record = {string_key: 'string.key', url: 'https://code.org/url with spaces', source: 'test'}
-    FirehoseClient.instance.expects(:put_record).once
+    RedisClient.instance.expects(:put_record).once
     I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal(:i18n, @firehose_stream)
-    assert_equal(expected_record, @firehose_record)
+    assert_equal(:i18n, @redis_stream)
+    assert_equal(expected_record, @redis_record)
   end
 end

@@ -618,6 +618,12 @@ Applab.init = function(config) {
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
 
+  // Skip onAttempt for levelbuilders in start mode. This method sends a progress report
+  // to the server and breaks the levelbuilder's start code in AppLab.
+  if (config.isStartMode) {
+    delete config.onAttempt;
+  }
+
   var onMount = function() {
     studioApp().init(config);
 
