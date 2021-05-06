@@ -22,7 +22,7 @@ Feature: Viewing and Printing Standards Progress
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things!"
 
     # Check that you can't switch to standards when not on CSF course
     And I wait until element "#uitest-toggle-detail-view" is visible
