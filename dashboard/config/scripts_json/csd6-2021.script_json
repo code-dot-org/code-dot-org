@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-03 23:55:58 UTC",
+    "serialized_at": "2021-05-06 16:58:50 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -1272,7 +1272,13 @@
       "key": "fe954bee-319a-49ec-a2d1-033dd539a59b",
       "position": 4,
       "properties": {
-        "progression_name": "Innovation Research"
+        "progression_name": "Innovation Research",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are some recommended sites for students to start their research.  Although these sites are generally appropriate for school, the content within them changes frequently, so **we strongly suggest you check each site for inappropriate content before sharing it with students**.\n\n### Wearable Technology\n\n* [Warable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](https://www.industryweek.com/technology-and-iiot)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fe954bee-319a-49ec-a2d1-033dd539a59b",
