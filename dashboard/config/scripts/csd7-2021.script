@@ -1,0 +1,86 @@
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+project_sharing true
+curriculum_umbrella 'CSD'
+is_migrated true
+
+lesson 'lesson1', display_name: 'Introduction to Machine Learning', has_lesson_plan: true
+level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
+level 'Oceans_Short', progression: 'Recognizing Fish Features'
+level 'Oceans_Long', progression: 'Recognizing Expressions'
+
+lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
+level 'ml-L2 unsupervised - 1', progression: 'Looking for Patterns'
+level 'ml-L2 supervised - green glass door', progression: 'Green Glass Door'
+
+lesson 'lesson3', display_name: 'Patterns in Data', has_lesson_plan: true
+level 'ml-models-shoes random', progression: 'Shoe Recommender'
+level 'ml-models-shoes decision tree', progression: 'Improved Shoe Recommender'
+level 'ml-models-shoes data', progression: 'Ultimate Shoe Recommender'
+level 'ml-models-shoes points', progression: 'Ultimate Shoe Recommender'
+
+lesson 'lesson4', display_name: 'Classification with Machine Learning', has_lesson_plan: true
+
+lesson 'lesson5', display_name: 'Training a Model with Features', has_lesson_plan: true
+level 'ml-intro categorical-tacos', progression: 'Dataset #1: Tacos'
+level 'ml-intro categorical-ice cream', progression: 'Dataset #2: Ice Cream'
+level 'ml-intro categorical-pizza', progression: 'Dataset #3: Pizza'
+level 'ml-intro categorical-food choices', progression: 'You Choose: Restaurant Recommendations'
+
+lesson 'lesson6', display_name: 'Importing a Model in App Lab', has_lesson_plan: true
+level 'Full Year Pilot Experiments Dashboard - AI Models', progression: '(Enable AI Models)'
+level 'ml-models in applab-vacation example', progression: 'What is your Ideal Vacation?'
+level 'ml-models in applab-import 1', progression: 'Import Your Model'
+level 'ml-models in applab-screens-2', progression: 'Changing Screens'
+level 'ml-models in applab-screens-1', progression: 'Changing Screens'
+level 'ml-models in applab-screens-3', progression: 'Changing Screens'
+level 'ml-models in applab-practice choice', progression: 'You Choose: Quiz Apps'
+
+lesson 'lesson7', display_name: 'The Need for Model Cards', has_lesson_plan: true
+level 'ml-model card-medical app v2', progression: 'Medical Priority App'
+level 'ml-model card-medical-1', progression: 'Medical Dataset Model Cards'
+level 'ml-model card-medical-2', progression: 'Medical Dataset Model Cards'
+level 'ml-model card-medical-3', progression: 'Medical Dataset Model Cards'
+
+lesson 'lesson8', display_name: 'Numerical Data in AI Lab', has_lesson_plan: true
+level 'ml-numerical ai lab-safari 1', progression: 'Safari Planner'
+
+lesson 'lesson9', display_name: 'Regression with Machine Learning', has_lesson_plan: true
+
+lesson 'lesson10', display_name: 'Using Model Cards in App Lab', has_lesson_plan: true
+level 'ml-use model card-example1A', progression: 'Pet Recommender'
+level 'ml-use model card-pet model card', progression: 'Pet Recommender'
+level 'ml-use model card-example1B', progression: 'Pet Recommender'
+level 'ml-use model card-example1C', progression: 'Pet Recommender'
+level 'ml-use model card-example1D', progression: 'Pet Recommender'
+level 'ml-use model card-example1E', progression: 'Pet Recommender'
+level 'ml-use models applab-practice choice', progression: 'You Choose: Improve Your App'
+
+lesson 'lesson11', display_name: 'Customizing Your App', has_lesson_plan: true
+level 'ml-customize-raspado', progression: 'Raspado Recommender'
+level 'ml-use model card-example3A', progression: 'Driver Alert System'
+level 'ml-use model card-example3_EditA', progression: 'Driver Alert System'
+level 'ml-use model card-example3_EditB', progression: 'Driver Alert System'
+level 'ml-use model card-example3_EditC', progression: 'Driver Alert System'
+level 'ml-use model card-example3C', progression: 'Driver Alert System'
+level 'ml-use model card-example3D', progression: 'Driver Alert System'
+level 'ml-use model card-example3E', progression: 'Driver Alert System'
+level 'ml-customize apps-practice choice', progression: 'You Choose: Improve Your App'
+
+lesson 'lesson12', display_name: 'Making Data Decisions', has_lesson_plan: true
+level 'ml-data decisions-zoo1', progression: 'Zoo Predictions'
+level 'ml-data decisions- import app', progression: 'Importing Your Model'
+level 'ml-data decisions- customize app', progression: 'Customizing Your App'
+
+lesson 'lesson13', display_name: 'AI for Social Good', has_lesson_plan: true
+
+lesson 'lesson14', display_name: 'AI Code of Ethics', has_lesson_plan: true
+
+lesson 'lesson15', display_name: 'Planning Your App', has_lesson_plan: true
+level 'ml-planning app-ai lab', progression: 'Planning Your App - AI Lab'
+
+lesson 'lesson16', display_name: 'Make an "AI for Social Good" App', has_lesson_plan: true
+level 'ml-final project-ai lab', progression: 'App with Real-World Data - AI Lab'
+level 'ml-final project-app lab', progression: 'App with Real-World Data - App Lab'
+
