@@ -39,6 +39,7 @@ const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
 const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
+const SET_RESERVE_LOCATION = "SET_RESERVE_LOCATION";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
 const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
 const SET_ACCURACY_CHECK_PREDICTED_LABELS =
@@ -127,6 +128,10 @@ export function setFeatureNumberKey(featureNumberKey) {
 
 export function setPercentDataToReserve(percentDataToReserve) {
   return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
+}
+
+export function setReserveLocation(reserveLocation) {
+  return { type: SET_RESERVE_LOCATION, reserveLocation };
 }
 
 export function setAccuracyCheckExamples(accuracyCheckExamples) {
@@ -354,6 +359,12 @@ export default function rootReducer(state = initialState, action) {
       percentDataToReserve: action.percentDataToReserve
     };
   }
+  if (action.type === SET_RESERVE_LOCATION) {
+   return {
+     ...state,
+     reserveLocation: action.reserveLocation
+   };
+ }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
     return {
       ...state,

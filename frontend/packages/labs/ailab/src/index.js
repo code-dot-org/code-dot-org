@@ -15,6 +15,7 @@ import rootReducer, {
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
 import { parseJSON } from "./jsonReaderWrapper";
+import { TestDataLocations } from "./constants";
 
 export const store = createStore(rootReducer);
 
@@ -73,6 +74,10 @@ const processMode = mode => {
     // Select a trainer immediately.
     if (mode.hideSelectTrainer) {
       store.dispatch(setSelectedTrainer(mode.hideSelectTrainer));
+    }
+
+    if (mode.randomizeTestData) {
+      store.dispatch(setReserveLocation(TestDataLocations.RANDOM))
     }
   }
 
