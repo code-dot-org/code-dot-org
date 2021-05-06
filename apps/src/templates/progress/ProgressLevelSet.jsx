@@ -9,58 +9,6 @@ import ProgressPill from './ProgressPill';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 
-const styles = {
-  table: {
-    marginTop: 12
-  },
-  nameText: {
-    color: color.charcoal
-  },
-  text: {
-    display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 14,
-    letterSpacing: -0.12
-  },
-  col2: {
-    paddingLeft: 20
-  },
-  col2RTL: {
-    paddingRight: 20
-  },
-  linesAndDot: {
-    whiteSpace: 'nowrap',
-    marginLeft: '50%',
-    marginRight: 14
-  },
-  verticalLine: {
-    display: 'inline-block',
-    backgroundColor: color.lighter_gray,
-    height: 15,
-    width: 3,
-    position: 'relative',
-    bottom: 2
-  },
-  horizontalLine: {
-    display: 'inline-block',
-    backgroundColor: color.lighter_gray,
-    position: 'relative',
-    top: -2,
-    height: 3,
-    width: '100%'
-  },
-  dot: {
-    display: 'inline-block',
-    position: 'relative',
-    left: -2,
-    top: 1,
-    backgroundColor: color.lighter_gray,
-    height: 10,
-    width: 10,
-    borderRadius: 10
-  }
-};
-
 /**
  * A set of one or more levels that are part of the same progression
  */
@@ -156,6 +104,58 @@ class ProgressLevelSet extends React.Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    marginTop: 12
+  },
+  nameText: {
+    color: color.charcoal
+  },
+  text: {
+    display: 'inline-block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    letterSpacing: -0.12
+  },
+  col2: {
+    paddingLeft: 20
+  },
+  col2RTL: {
+    paddingRight: 20
+  },
+  linesAndDot: {
+    whiteSpace: 'nowrap',
+    marginLeft: '50%',
+    marginRight: 14
+  },
+  verticalLine: {
+    display: 'inline-block',
+    backgroundColor: color.lighter_gray,
+    height: 15,
+    width: 3,
+    position: 'relative',
+    bottom: 2
+  },
+  horizontalLine: {
+    display: 'inline-block',
+    backgroundColor: color.lighter_gray,
+    position: 'relative',
+    top: -2,
+    height: 3,
+    width: '100%'
+  },
+  dot: {
+    display: 'inline-block',
+    position: 'relative',
+    left: -2,
+    top: 1,
+    backgroundColor: color.lighter_gray,
+    height: 10,
+    width: 10,
+    borderRadius: 10
+  }
+};
 
 export const UnconnectedProgressLevelSet = ProgressLevelSet;
 
