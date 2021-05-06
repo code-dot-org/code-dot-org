@@ -43,7 +43,7 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 6980,
     "name_suffix": "_2018",
-    "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 20 Puzzle 13](../../20/puzzle/13) as an example.",
+    "long_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 20 Puzzle 13](../../20/levels/13) as an example.",
     "contained_level_names": null,
     "preload_asset_list": null
   },
