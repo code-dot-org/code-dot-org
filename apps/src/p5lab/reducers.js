@@ -13,6 +13,7 @@ import animationTab from './AnimationTab/animationTabModule';
 import locationPicker from './spritelab/locationPickerModule';
 import textConsole from './spritelab/textConsoleModule';
 import spritelabInputList from './spritelab/spritelabInputModule';
+import locales from '@cdo/apps/redux/localesRedux';
 var errorDialogStack = require('./errorDialogStackModule').default;
 var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
 
@@ -62,5 +63,6 @@ module.exports = {
   gridOverlay,
   locationPicker,
   textConsole,
-  spritelabInputList
+  spritelabInputList,
+  locales
 };

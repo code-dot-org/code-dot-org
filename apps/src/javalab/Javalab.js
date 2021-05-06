@@ -13,6 +13,11 @@ import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
+import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import Neighborhood from './Neighborhood';
+import MazeVisualization from '@cdo/apps/maze/Visualization';
+import DefaultVisualization from './DefaultVisualization';
+import {CsaViewMode} from './constants';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -75,10 +80,22 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  let visualization;
+  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
+    const miniApp = new Neighborhood();
+    config.afterInject = () =>
+      miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+    visualization = <MazeVisualization />;
+  } else {
+    visualization = <DefaultVisualization />;
+  }
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
+    window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
+      this.studioApp_.resizeVisualization(e.detail);
+    });
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
@@ -96,15 +113,15 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+    config.afterInject?.();
   };
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
-    noVisualization: true,
-    visualizationInWorkspace: true,
     isProjectLevel: !!config.level.isProjectLevel,
-    isEditingStartSources: !!config.level.editBlocks
+    isEditingStartSources: !!config.level.editBlocks,
+    isResponsive: true
   });
 
   registerReducers({javalab});
@@ -138,6 +155,7 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
+        visualization={visualization}
       />
     </Provider>,
     document.getElementById(config.containerId)

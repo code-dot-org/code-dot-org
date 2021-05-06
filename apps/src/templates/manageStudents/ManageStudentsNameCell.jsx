@@ -7,15 +7,6 @@ import {editStudent} from './manageStudentsRedux';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
-const styles = {
-  inputBox: {
-    width: 225
-  },
-  details: {
-    fontSize: 12
-  }
-};
-
 class ManageStudentNameCell extends Component {
   static propTypes = {
     id: PropTypes.number.isRequired,
@@ -87,6 +78,15 @@ class ManageStudentNameCell extends Component {
     );
   }
 }
+
+const styles = {
+  inputBox: {
+    width: 225
+  },
+  details: {
+    fontSize: 12
+  }
+};
 
 export default connect(
   state => ({

@@ -2,26 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 const fontSize = 18;
-const styles = {
-  form: {
-    background: '#fff'
-  },
-  wrapper: {
-    margin: 20
-  },
-  question: {
-    fontSize: fontSize
-  },
-  input: {
-    fontSize: fontSize,
-    width: '100%',
-    height: '2em',
-    boxSizing: 'border-box'
-  },
-  submit: {
-    fontSize: fontSize
-  }
-};
 
 /**
  * Simple input dialog to prompt for user input.
@@ -61,3 +41,24 @@ export default class InputPrompt extends Component {
     );
   }
 }
+
+const styles = {
+  form: {
+    background: '#fff'
+  },
+  wrapper: {
+    margin: 20
+  },
+  question: {
+    fontSize: fontSize
+  },
+  input: {
+    fontSize: fontSize,
+    width: '100%',
+    height: '2em',
+    boxSizing: 'border-box'
+  },
+  submit: {
+    fontSize: fontSize
+  }
+};

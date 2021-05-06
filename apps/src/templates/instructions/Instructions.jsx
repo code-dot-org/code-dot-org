@@ -7,15 +7,6 @@ import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
 import i18n from '@cdo/locale';
 
-const styles = {
-  inTopPane: {
-    overflow: 'hidden'
-  },
-  notInTopPane: {
-    overflow: 'auto'
-  }
-};
-
 /**
  * A component for displaying our level instructions text, and possibly also
  * authored hints UI and/or an anigif. These instructions can appear in the top
@@ -98,5 +89,14 @@ class Instructions extends React.Component {
     );
   }
 }
+
+const styles = {
+  inTopPane: {
+    overflow: 'hidden'
+  },
+  notInTopPane: {
+    overflow: 'auto'
+  }
+};
 
 module.exports = Instructions;

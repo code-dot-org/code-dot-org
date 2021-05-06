@@ -5,15 +5,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {WorkshopPropType} from './enrollmentConstants';
 
-const styles = {
-  label: {
-    textAlign: 'right'
-  },
-  notes: {
-    whiteSpace: 'pre-wrap'
-  }
-};
-
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
@@ -152,3 +143,12 @@ export default class WorkshopDetails extends React.Component {
     );
   }
 }
+
+const styles = {
+  label: {
+    textAlign: 'right'
+  },
+  notes: {
+    whiteSpace: 'pre-wrap'
+  }
+};
