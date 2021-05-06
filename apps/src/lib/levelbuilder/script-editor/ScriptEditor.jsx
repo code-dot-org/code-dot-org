@@ -718,24 +718,6 @@ class ScriptEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
-              <label>
-                Deprecated
-                <input
-                  type="checkbox"
-                  checked={this.state.deprecated}
-                  style={styles.checkbox}
-                  onChange={() =>
-                    this.setState({deprecated: !this.state.deprecated})
-                  }
-                />
-                <HelpTip>
-                  <p>
-                    Used only for Professional Learning Courses. Deprecation
-                    prevents Peer Reviews conducted as part of this Script from
-                    being displayed in the admin-only Peer Review Dashboard.
-                  </p>
-                </HelpTip>
-              </label>
               <VisibleAndPilotExperiment
                 visible={!this.state.hidden}
                 updateVisible={() =>
@@ -934,8 +916,26 @@ class ScriptEditor extends React.Component {
           </CollapsibleEditorSection>
         )}
 
-        <CollapsibleEditorSection title="Professional Learning Settings">
-          {this.props.isLevelbuilder && (
+        {this.props.isLevelbuilder && (
+          <CollapsibleEditorSection title="Professional Learning Settings">
+            <label>
+              Deprecated
+              <input
+                type="checkbox"
+                checked={this.state.deprecated}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({deprecated: !this.state.deprecated})
+                }
+              />
+              <HelpTip>
+                <p>
+                  Used only for Professional Learning Courses. Deprecation
+                  prevents Peer Reviews conducted as part of this Script from
+                  being displayed in the admin-only Peer Review Dashboard.
+                </p>
+              </HelpTip>
+            </label>
             <label>
               Professional Learning Course
               <HelpTip>
@@ -954,54 +954,57 @@ class ScriptEditor extends React.Component {
                 }
               />
             </label>
-          )}
-          <label>
-            Only Require Review from Instructor (no Peer Reviews)
-            <input
-              id="only_instructor_review_checkbox"
-              type="checkbox"
-              checked={this.state.onlyInstructorReviewRequired}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({
-                  onlyInstructorReviewRequired: !this.state
-                    .onlyInstructorReviewRequired,
-                  peerReviewsRequired: 0
-                })
-              }
-            />
-            <HelpTip>
-              <p>
-                Our Professional Learning Courses solicit self-reflections from
-                participants, which are then typically shown to other
-                participants enrolled in the course for feedback. This is known
-                as "peer review". The instructor of the course also sees these
-                self-reflections and can provide feedback as well.
-                <br />
-                <br />
-                This setting allows you to collect those same reflections from
-                from workshop participants and have the workshop instructor
-                review them <strong>without</strong> soliciting peer reviews of
-                those reflections by other participants in the workshop.
-              </p>
-            </HelpTip>
-          </label>
-          <label>
-            Number of Peer Reviews to Complete
-            <HelpTip>
-              <p>Currently only supported for professional learning courses</p>
-            </HelpTip>
-            <input
-              id={'number_peer_reviews_input'}
-              value={this.state.peerReviewsRequired}
-              style={styles.input}
-              onChange={e =>
-                this.setState({peerReviewsRequired: e.target.value})
-              }
-              disabled={this.state.onlyInstructorReviewRequired}
-            />
-          </label>
-        </CollapsibleEditorSection>
+            <h4>Peer Reviews</h4>
+            <label>
+              Only Require Review from Instructor (no Peer Reviews)
+              <input
+                id="only_instructor_review_checkbox"
+                type="checkbox"
+                checked={this.state.onlyInstructorReviewRequired}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    onlyInstructorReviewRequired: !this.state
+                      .onlyInstructorReviewRequired,
+                    peerReviewsRequired: 0
+                  })
+                }
+              />
+              <HelpTip>
+                <p>
+                  Our Professional Learning Courses solicit self-reflections
+                  from participants, which are then typically shown to other
+                  participants enrolled in the course for feedback. This is
+                  known as "peer review". The instructor of the course also sees
+                  these self-reflections and can provide feedback as well.
+                  <br />
+                  <br />
+                  This setting allows you to collect those same reflections from
+                  from workshop participants and have the workshop instructor
+                  review them <strong>without</strong> soliciting peer reviews
+                  of those reflections by other participants in the workshop.
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Number of Peer Reviews to Complete
+              <HelpTip>
+                <p>
+                  Currently only supported for professional learning courses
+                </p>
+              </HelpTip>
+              <input
+                id={'number_peer_reviews_input'}
+                value={this.state.peerReviewsRequired}
+                style={styles.input}
+                onChange={e =>
+                  this.setState({peerReviewsRequired: e.target.value})
+                }
+                disabled={this.state.onlyInstructorReviewRequired}
+              />
+            </label>
+          </CollapsibleEditorSection>
+        )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
           {this.props.isMigrated ? (
