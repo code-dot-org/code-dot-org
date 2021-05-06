@@ -44,6 +44,8 @@ module LessonImportHelper
         lesson.creative_commons_license = cb_lesson_data['creative_commons_license']
         lesson.assessment_opportunities = cb_lesson_data['assessment'] unless cb_lesson_data['assessment'].blank?
         lesson.save!
+
+        Script.merge_and_write_i18n(lesson.i18n_hash, lesson.script.name)
       end
       if models_to_import.include?('Objective')
         lesson.objectives = cb_lesson_data['objectives'].map do |o|
@@ -326,7 +328,7 @@ module LessonImportHelper
   def self.create_activity_section_with_levels(script_levels, lesson_activity_id, progression_name="")
     return nil if script_levels.empty?
     activity_section = ActivitySection.new
-    activity_section.name = progression_name
+    activity_section.progression_name = progression_name
     activity_section.key ||= SecureRandom.uuid
     activity_section.position = 0
     activity_section.lesson_activity_id = lesson_activity_id
