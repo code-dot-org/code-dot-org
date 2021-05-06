@@ -736,9 +736,9 @@ class Lesson < ApplicationRecord
       numbered_lesson = copied_lesson.has_lesson_plan || !copied_lesson.lockable
       copied_lesson.relative_position =
         if numbered_lesson
-          destination_script.lessons.select {|l| l.has_lesson_plan || !l.lockable}.reduce(0) {|acc, l| l.relative_position > acc ? l.relative_position : acc} + 1
+          destination_script.lessons.select {|l| l.has_lesson_plan || !l.lockable}.length + 1
         else
-          destination_script.lessons.select {|l| !l.has_lesson_plan && l.lockable}.reduce(0) {|acc, l| l.relative_position > acc ? l.relative_position : acc} + 1
+          destination_script.lessons.select {|l| !l.has_lesson_plan && l.lockable}.length + 1
         end
 
       copied_lesson.save!
@@ -800,9 +800,9 @@ class Lesson < ApplicationRecord
       end
 
       copied_lesson.save!
+      Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
       destination_script.fix_script_level_positions
       destination_script.write_script_json
-      Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
       copied_lesson
     end
   end
