@@ -1,10 +1,9 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 
-const SpriteLocation = {
-  LIBRARY: 'library',
-  LEVEL: 'level'
-};
+const SpriteLocation = makeEnum('library', 'level');
 
 export default class SpriteUpload extends React.Component {
   state = {
@@ -21,11 +20,9 @@ export default class SpriteUpload extends React.Component {
   };
 
   componentDidMount() {
-    fetch(`/api/v1/animation-library/manifest/spritelab/en_us`)
-      .then(response => response.json())
-      .then(data =>
-        this.setState({currentCategories: Object.keys(data.categories)})
-      );
+    getManifest().then(data =>
+      this.setState({currentCategories: Object.keys(data.categories)})
+    );
   }
 
   handleSubmit = event => {
@@ -35,10 +32,10 @@ export default class SpriteUpload extends React.Component {
     let destination = null;
 
     switch (spriteAvailability) {
-      case SpriteLocation.LEVEL:
+      case SpriteLocation.level:
         destination = `/level_animations/${filename}`;
         break;
-      case SpriteLocation.LIBRARY:
+      case SpriteLocation.library:
         destination = `/spritelab/category_${category}/${filename}`;
         break;
     }
@@ -83,7 +80,7 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleAvailabilityChange = event => {
-    this.setState({spriteAvailability: event.target.value});
+    this.setState({spriteAvailability: event.target.value, category: ''});
   };
 
   render() {
@@ -98,7 +95,7 @@ export default class SpriteUpload extends React.Component {
 
     const uploadButtonDisabled =
       spriteAvailability === '' ||
-      (spriteAvailability === SpriteLocation.LIBRARY && category === '') ||
+      (spriteAvailability === SpriteLocation.library && category === '') ||
       filename === '';
 
     return (
@@ -116,10 +113,9 @@ export default class SpriteUpload extends React.Component {
                 Level-specific sprite:
                 <input
                   type="radio"
-                  id="levelSprite"
                   name="spriteAvailability"
                   style={styles.radioButton}
-                  value={SpriteLocation.LEVEL}
+                  value={SpriteLocation.level}
                   onChange={this.handleAvailabilityChange}
                 />
               </label>
@@ -127,19 +123,18 @@ export default class SpriteUpload extends React.Component {
                 Library sprite:
                 <input
                   type="radio"
-                  id="librarySprite"
                   name="spriteAvailability"
                   style={styles.radioButton}
-                  value={SpriteLocation.LIBRARY}
+                  value={SpriteLocation.library}
                   onChange={this.handleAvailabilityChange}
                 />
               </label>
             </div>
-            {spriteAvailability === SpriteLocation.LIBRARY && (
+            {spriteAvailability === SpriteLocation.library && (
               <div>
                 <label>Category:</label>
                 <select onChange={this.handleCategoryChange}>
-                  <option selected>Select an Option</option>
+                  <option value="">Select an Option</option>
                   {(currentCategories || []).map(category => (
                     <option key={category} value={category}>
                       {category}
