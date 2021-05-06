@@ -8,22 +8,6 @@ import color from '@cdo/apps/util/color';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
-const styles = {
-  link: {
-    color: color.teal,
-    verticalAlign: 'middle'
-  },
-  tooltip: {
-    display: 'flex',
-    textAlign: 'center'
-  },
-  collapser: {
-    paddingRight: '8px',
-    fontSize: '20px',
-    verticalAlign: 'middle',
-    width: '11px'
-  }
-};
 export default class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -121,3 +105,20 @@ export default class ProgressTableStudentName extends React.PureComponent {
     );
   }
 }
+
+const styles = {
+  link: {
+    color: color.teal,
+    verticalAlign: 'middle'
+  },
+  tooltip: {
+    display: 'flex',
+    textAlign: 'center'
+  },
+  collapser: {
+    paddingRight: '8px',
+    fontSize: '20px',
+    verticalAlign: 'middle',
+    width: '11px'
+  }
+};

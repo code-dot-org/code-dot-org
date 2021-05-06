@@ -6,26 +6,6 @@ import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {isUnit6IntentionEligible} from '../util/discountLogic';
 import Unit6ValidationStep from './Unit6ValidationStep';
 
-const styles = {
-  title: {
-    fontSize: 32
-  },
-  teacherContainer: {
-    display: 'flex',
-    marginTop: 5
-  },
-  teacherInput: {
-    marginRight: 10,
-    padding: '0 10px'
-  },
-  radioContainer: {
-    margin: '5px 0'
-  },
-  radio: {
-    marginRight: 5
-  }
-};
-
 export default class DiscountAdminOverride extends Component {
   state = {
     submitting: false,
@@ -281,3 +261,23 @@ export default class DiscountAdminOverride extends Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    fontSize: 32
+  },
+  teacherContainer: {
+    display: 'flex',
+    marginTop: 5
+  },
+  teacherInput: {
+    marginRight: 10,
+    padding: '0 10px'
+  },
+  radioContainer: {
+    margin: '5px 0'
+  },
+  radio: {
+    marginRight: 5
+  }
+};

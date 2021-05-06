@@ -11,39 +11,6 @@ import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
-const styles = {
-  heading: {
-    width: '100%'
-  },
-  container: {
-    marginBottom: 50,
-    float: 'left'
-  },
-  mobileHeading: {
-    fontSize: 24,
-    lineHeight: 1.5
-  },
-  desktopHalf: {
-    width: '50%',
-    float: 'left'
-  },
-  mobileFull: {
-    width: '100%',
-    float: 'left'
-  },
-  nameInput: {
-    height: 32,
-    margin: 0
-  },
-  submit: {
-    background: color.orange,
-    color: color.white
-  },
-  confetti: {
-    top: 100
-  }
-};
-
 const blankCertificates = {
   hourOfCode: require('@cdo/static/hour_of_code_certificate.jpg'),
   oceans: require('@cdo/static/oceans_hoc_certificate.png'),
@@ -198,6 +165,39 @@ class Certificate extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    width: '100%'
+  },
+  container: {
+    marginBottom: 50,
+    float: 'left'
+  },
+  mobileHeading: {
+    fontSize: 24,
+    lineHeight: 1.5
+  },
+  desktopHalf: {
+    width: '50%',
+    float: 'left'
+  },
+  mobileFull: {
+    width: '100%',
+    float: 'left'
+  },
+  nameInput: {
+    height: 32,
+    margin: 0
+  },
+  submit: {
+    background: color.orange,
+    color: color.white
+  },
+  confetti: {
+    top: 100
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

@@ -10,44 +10,6 @@ import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
 import i18n from '@cdo/locale';
 
-const styles = {
-  grid: {
-    width: styleConstants['content-width']
-  },
-  labHeading: {
-    textAlign: 'left',
-    fontSize: 24,
-    color: color.charcoal,
-    marginBottom: 0,
-    paddingBottom: 0,
-    paddingTop: 0,
-    float: 'left'
-  },
-  viewMore: {
-    color: color.teal,
-    float: 'right',
-    marginTop: 35,
-    cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  viewMoreButtons: {
-    float: 'right',
-    marginRight: 22
-  },
-  buttonRightMargin: {
-    marginRight: 20
-  },
-  iconPaddingLeft: {
-    paddingLeft: 6
-  },
-  iconPaddingRight: {
-    paddingRight: 6
-  },
-  clear: {
-    clear: 'both'
-  }
-};
-
 const NUM_PROJECTS_TO_ADD = 12;
 
 class ProjectAppTypeArea extends React.Component {
@@ -235,6 +197,44 @@ class ProjectAppTypeArea extends React.Component {
     );
   }
 }
+
+const styles = {
+  grid: {
+    width: styleConstants['content-width']
+  },
+  labHeading: {
+    textAlign: 'left',
+    fontSize: 24,
+    color: color.charcoal,
+    marginBottom: 0,
+    paddingBottom: 0,
+    paddingTop: 0,
+    float: 'left'
+  },
+  viewMore: {
+    color: color.teal,
+    float: 'right',
+    marginTop: 35,
+    cursor: 'pointer',
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  viewMoreButtons: {
+    float: 'right',
+    marginRight: 22
+  },
+  buttonRightMargin: {
+    marginRight: 20
+  },
+  iconPaddingLeft: {
+    paddingLeft: 6
+  },
+  iconPaddingRight: {
+    paddingRight: 6
+  },
+  clear: {
+    clear: 'both'
+  }
+};
 
 export default connect(
   (state, ownProps) => ({

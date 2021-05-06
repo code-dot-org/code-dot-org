@@ -7,29 +7,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment';
 import {connect} from 'react-redux';
 
-const styles = {
-  validationInfo: {
-    marginTop: 10,
-    marginLeft: 10
-  },
-  validateButton: {
-    marginLeft: 0
-  },
-  spinner: {
-    marginTop: 5
-  },
-  validation: {
-    display: 'flex'
-  },
-  helperButtons: {
-    marginTop: 15,
-    marginBottom: 15
-  },
-  livePreview: {
-    marginTop: 8
-  }
-};
-
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
 const TIME_FORMAT = 'h:mm a';
@@ -139,6 +116,29 @@ class FoormEntityEditorHeader extends Component {
     );
   }
 }
+
+const styles = {
+  validationInfo: {
+    marginTop: 10,
+    marginLeft: 10
+  },
+  validateButton: {
+    marginLeft: 0
+  },
+  spinner: {
+    marginTop: 5
+  },
+  validation: {
+    display: 'flex'
+  },
+  helperButtons: {
+    marginTop: 15,
+    marginBottom: 15
+  },
+  livePreview: {
+    marginTop: 8
+  }
+};
 
 export default connect(state => ({
   questions: state.foorm.questions || {}

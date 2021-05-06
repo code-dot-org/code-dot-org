@@ -33,15 +33,6 @@ import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MODAL_Z_INDEX = 1050;
 
-const styles = {
-  containedInstructions: {
-    marginTop: 10
-  },
-  selectStyle: {
-    width: APP_WIDTH
-  }
-};
-
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
@@ -235,6 +226,15 @@ class P5LabVisualizationColumn extends React.Component {
     );
   }
 }
+
+const styles = {
+  containedInstructions: {
+    marginTop: 10
+  },
+  selectStyle: {
+    width: APP_WIDTH
+  }
+};
 
 export default connect(
   state => ({

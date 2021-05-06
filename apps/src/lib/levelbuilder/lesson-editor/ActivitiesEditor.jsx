@@ -10,19 +10,6 @@ import {
 import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  activityEditAndPreview: {
-    margin: 10
-  },
-  addActivity: {
-    fontSize: 14,
-    color: 'white',
-    background: color.cyan,
-    border: `1px solid ${color.cyan}`,
-    boxShadow: 'none'
-  }
-};
-
 /*
  A GUI for editing activities in a lesson. Shows
  the editing fields side by side with a preview of how they will
@@ -175,6 +162,19 @@ class ActivitiesEditor extends Component {
     );
   }
 }
+
+const styles = {
+  activityEditAndPreview: {
+    margin: 10
+  },
+  addActivity: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none'
+  }
+};
 
 export const UnconnectedActivitiesEditor = ActivitiesEditor;
 

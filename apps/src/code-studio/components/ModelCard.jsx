@@ -2,44 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  container: {
-    color: color.black,
-    textAlign: 'left',
-    backgroundColor: color.lighter_gray,
-    borderRadius: 5,
-    padding: 20,
-    whiteSpace: 'normal',
-    lineHeight: 1.5,
-    maxHeight: 'calc(80vh - 150px)',
-    overflow: 'scroll'
-  },
-  subPanel: {
-    backgroundColor: color.lightest_gray,
-    borderRadius: 5,
-    borderColor: color.gray,
-    marginBottom: 10,
-    padding: 10
-  },
-  bold: {
-    fontFamily: "'Gotham 7r', sans-serif"
-  },
-  header: {
-    fontFamily: "'Gotham 7r', sans-serif",
-    marginTop: 0,
-    lineHeight: '20px'
-  },
-  heading: {
-    fontFamily: "'Gotham 7r', sans-serif",
-    fontSize: 14,
-    marginBottom: 5,
-    textAlign: 'center'
-  },
-  details: {
-    marginBottom: 0
-  }
-};
-
 class FeatureDetails extends React.Component {
   static propTypes = {
     feature: PropTypes.object
@@ -133,3 +95,41 @@ export default class ModelCard extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    color: color.black,
+    textAlign: 'left',
+    backgroundColor: color.lighter_gray,
+    borderRadius: 5,
+    padding: 20,
+    whiteSpace: 'normal',
+    lineHeight: 1.5,
+    maxHeight: 'calc(80vh - 150px)',
+    overflow: 'scroll'
+  },
+  subPanel: {
+    backgroundColor: color.lightest_gray,
+    borderRadius: 5,
+    borderColor: color.gray,
+    marginBottom: 10,
+    padding: 10
+  },
+  bold: {
+    fontFamily: "'Gotham 7r', sans-serif"
+  },
+  header: {
+    fontFamily: "'Gotham 7r', sans-serif",
+    marginTop: 0,
+    lineHeight: '20px'
+  },
+  heading: {
+    fontFamily: "'Gotham 7r', sans-serif",
+    fontSize: 14,
+    marginBottom: 5,
+    textAlign: 'center'
+  },
+  details: {
+    marginBottom: 0
+  }
+};
