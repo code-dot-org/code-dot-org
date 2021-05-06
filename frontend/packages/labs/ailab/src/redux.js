@@ -1143,7 +1143,7 @@ export function getPanelButtons(state) {
       : null;
     next = isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
-      : { panel: "continue", text: "Continue" };
+      : { panel: "continue", text: "Finish" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
     next = isPanelAvailable(state, "save")
