@@ -80,6 +80,11 @@ Javalab.prototype.init = function(config) {
     config
   );
 
+  config.afterClearPuzzle = function() {
+    getStore().dispatch(setAllSources(config.level.startSources));
+    project.autosave();
+  }.bind(this);
+
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
@@ -92,6 +97,7 @@ Javalab.prototype.init = function(config) {
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
     this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
