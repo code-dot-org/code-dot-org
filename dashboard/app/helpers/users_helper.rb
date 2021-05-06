@@ -229,9 +229,13 @@ module UsersHelper
 
         next unless level_progress
 
-        # if the level has multiple pages, we add an additional
-        # array of booleans indicating which pages have been completed.
-        level_progress[:pages_completed] = get_pages_completed(user, sl)
+        # if status is nil or not_tried, we don't need to get pages completed
+        status = level_progress[:status]
+        unless status.nil? || status == LEVEL_STATUS.not_tried
+          # if the level has multiple pages, we add an additional
+          # array of booleans indicating which pages have been completed.
+          level_progress[:pages_completed] = get_pages_completed(user, sl)
+        end
 
         progress[level_id] = level_progress.compact
       end
@@ -278,23 +282,27 @@ module UsersHelper
     paired_user_levels,
     include_timestamp
   )
-    # if we don't have a best result, we don't have any progress
-    best_sublevel_id = level.best_result_sublevel(user, script_level.script)&.id
-    return nil if best_sublevel_id.nil?
-
     progress = {}
     sum_time_spent = 0
+    best_progress = nil
 
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
       ul = user_levels_by_level.try(:[], sublevel.id)
       sublevel_progress = get_level_progress(ul, script_level, paired_user_levels, include_timestamp)
       next unless sublevel_progress
+
       progress[sublevel.id] = sublevel_progress
       sum_time_spent += sublevel_progress[:time_spent] || 0
+      if !best_progress || sublevel_progress[:result] > best_progress[:result]
+        best_progress = sublevel_progress
+      end
     end
 
-    progress[level.id] = progress[best_sublevel_id].clone
+    # if we don't have a best progress, we don't have any progress
+    return nil if best_progress.nil?
+
+    progress[level.id] = best_progress.clone
     progress[level.id][:time_spent] = sum_time_spent if sum_time_spent > 0
     progress
   end
