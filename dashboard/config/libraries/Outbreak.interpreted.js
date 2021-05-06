@@ -3,8 +3,9 @@ var RECOVERY_TIME = 250;
 var RECOVERY_BAR_HEIGHT = 5;
 var PERCENT_SICK_AT_SETUP = 10;
 var SPRITE_SIZE = 25;
-var MIN_XY = 20;
-var MAX_XY = 380;
+// min and max coordinates to prevent sprites from going off the edge
+var MIN_XY = SPRITE_SIZE / 2 + 5;
+var MAX_XY = 400 - MIN_XY;
 /* --------------- END OF CONSTANTS- Curriculum Owned --------------- */
 
 /* -------------- START OF CALCULATED CONSTANTS - Engineering Owned --------------*/
@@ -126,35 +127,42 @@ function layoutBorder() {
     var rightCount = Math.ceil((count - 4 - 1) / 4);
     var bottomCount = Math.ceil((count - 4 - 2) / 4);
     var leftCount = Math.ceil((count - 4 - 3) / 4);
-    var i, x, y, frac;
+    var i, frac;
 
     for (i = 0; i < topCount; i++) {
-      var sprite = World.allSprites[4 + i];
+      // add 1 to i and count to account for the sprites in the corners
       frac = (i + 1) / (topCount + 1);
-      x = MIN_XY + frac * (MAX_XY - MIN_XY);
-      y = MIN_XY;
-      jumpTo({id: spriteIds[4 + i]}, {x: x, y: y});
+      jumpTo(
+        {id: spriteIds[4 + i]},
+        {x: MIN_XY + frac * (MAX_XY - MIN_XY), y: MIN_XY}
+      );
     }
 
     for (i = 0; i < rightCount; i++) {
+      // add 1 to i and count to account for the sprites in the corners
       frac = (i + 1) / (rightCount + 1);
-      x = MAX_XY;
-      y = MIN_XY + frac * (MAX_XY - MIN_XY);
-      jumpTo({id: spriteIds[4 + topCount + i]}, {x: x, y: y});
+      jumpTo(
+        {id: spriteIds[4 + topCount + i]},
+        {x: MAX_XY, y: MIN_XY + frac * (MAX_XY - MIN_XY)}
+      );
     }
 
     for (i = 0; i < bottomCount; i++) {
+      // add 1 to i and count to account for the sprites in the corners
       frac = (i + 1) / (bottomCount + 1);
-      x = MIN_XY + frac * (MAX_XY - MIN_XY);
-      y = MAX_XY;
-      jumpTo({id: spriteIds[4 + topCount + rightCount + i]}, {x: x, y: y});
+      jumpTo(
+        {id: spriteIds[4 + topCount + rightCount + i]},
+        {x: MIN_XY + frac * (MAX_XY - MIN_XY), y: MAX_XY}
+      );
     }
 
     for (i = 0; i < leftCount; i++) {
+      // add 1 to i and count to account for the sprites in the corners
       frac = (i + 1) / (leftCount + 1);
-      y = MIN_XY + frac * (MAX_XY - MIN_XY);
-      x = MIN_XY;
-      jumpTo({id: spriteIds[4 + topCount + rightCount + bottomCount + i]}, {x: x, y: y});
+      jumpTo(
+        {id: spriteIds[4 + topCount + rightCount + bottomCount + i]},
+        {x: MIN_XY, y: MIN_XY + frac * (MAX_XY - MIN_XY)}
+      );
     }
   }
 }
@@ -167,12 +175,11 @@ function layoutClusters(clusterSize) {
     var clusterX = randomNumber(MIN_XY, MAX_XY);
     var clusterY = randomNumber(MIN_XY, MAX_XY);
     for (var j = 0; j < clusterSize; j++) {
-      var sprite = World.allSprites[i * clusterSize + j];
-      if (!sprite) {
-        continue;
-      }
-      sprite.x = clusterX + randomNumber(-10, 10);
-      sprite.y = clusterY + randomNumber(-10, 10);
+      var spriteId = spriteIds[i * clusterSize + j];
+      jumpTo(
+        {id: spriteId},
+        {x: clusterX + randomNumber(-10, 10), y: clusterY + randomNumber(-10, 10)}
+      );
     }
   }
 }
@@ -186,7 +193,7 @@ function layoutGrid() {
     var spriteIdArg = {id: spriteIds[i]};
     var row = Math.floor(i / numCols);
     var col = i % numCols;
-	var colFraction = col / (numCols - 1) || 0;
+    var colFraction = col / (numCols - 1) || 0;
     var x = MIN_XY + colFraction * (MAX_XY - MIN_XY);
 
     var rowFraction = row / (numRows - 1) || 0;
@@ -199,8 +206,7 @@ function layoutGrid() {
 function layoutRandom() {
   var spriteIds = getSpriteIdsInUse();
   for (var i = 0; i < spriteIds.length; i++) {
-    var spriteIdArg = {id: spriteIds[i]};
-    jumpTo(spriteIdArg, randomLocation());
+    jumpTo({id: spriteIds[i]}, randomLocation());
   }
 }
 
