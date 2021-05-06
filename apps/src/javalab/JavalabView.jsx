@@ -11,52 +11,6 @@ import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
-const style = {
-  instructionsAndPreview: {
-    width: '40%',
-    position: 'relative',
-    marginRight: 15,
-    color: color.black
-  },
-  editorAndConsole: {
-    width: '60%',
-    position: 'relative'
-  },
-  preview: {
-    backgroundColor: color.light_gray,
-    height: '200px'
-  },
-  javalab: {
-    display: 'flex',
-    margin: 15
-  },
-  consoleAndButtons: {
-    marginTop: 15,
-    display: 'flex'
-  },
-  consoleStyle: {
-    flexGrow: 1
-  },
-  buttons: {
-    marginRight: 15,
-    height: 75,
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  singleButton: {
-    // this matches the current code mirror theme we are using
-    // TODO: either add to color.scss or use a color from there depending
-    // on final theme choice.
-    backgroundColor: color.darkest_gray,
-    color: color.white,
-    width: 95,
-    textAlign: 'center'
-  },
-  clear: {
-    clear: 'both'
-  }
-};
-
 class JavalabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
@@ -192,6 +146,52 @@ class JavalabView extends React.Component {
     );
   }
 }
+
+const style = {
+  instructionsAndPreview: {
+    width: '40%',
+    position: 'relative',
+    marginRight: 15,
+    color: color.black
+  },
+  editorAndConsole: {
+    width: '60%',
+    position: 'relative'
+  },
+  preview: {
+    backgroundColor: color.light_gray,
+    height: '200px'
+  },
+  javalab: {
+    display: 'flex',
+    margin: 15
+  },
+  consoleAndButtons: {
+    marginTop: 15,
+    display: 'flex'
+  },
+  consoleStyle: {
+    flexGrow: 1
+  },
+  buttons: {
+    marginRight: 15,
+    height: 75,
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  singleButton: {
+    // this matches the current code mirror theme we are using
+    // TODO: either add to color.scss or use a color from there depending
+    // on final theme choice.
+    backgroundColor: color.darkest_gray,
+    color: color.white,
+    width: 95,
+    textAlign: 'center'
+  },
+  clear: {
+    clear: 'both'
+  }
+};
 
 // We use the UnconnectedJavalabView to make this component's methods testable.
 // This is a deprecated pattern but calling shallow().dive().instance() on the
