@@ -652,20 +652,6 @@ export const isPerfect = (state, levelId) =>
   !!state.levelResults &&
   state.levelResults[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT;
 
-export const getPercentPerfect = levels => {
-  const puzzleLevels = levels.filter(level => !level.isConceptLevel);
-  if (puzzleLevels.length === 0) {
-    return 0;
-  }
-
-  const perfected = puzzleLevels.reduce(
-    (accumulator, level) =>
-      accumulator + (level.status === LevelStatus.perfect),
-    0
-  );
-  return perfected / puzzleLevels.length;
-};
-
 /**
  * Given a level and levelResults (both from our redux store state), determine
  * the status for that level.
