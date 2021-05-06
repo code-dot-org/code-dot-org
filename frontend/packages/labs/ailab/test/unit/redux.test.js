@@ -36,7 +36,7 @@ const resultsState = {
   labelColumn: 'height',
   labelColumnCategorical: 'sun',
   accuracyCheckPredictedLabels: [4.0, 3.75, 2.63, 2.46, 1.6, 1.0],
-  accuracyCheckLabels: [3.9, 3.8, 2.6, 2.5, 1.6, 0.9]
+  accuracyCheckLabels: [5.9, 3.8, 2.6, 2.5, 1.6, 0.7]
 };
 
 const resultsStateClassification = {
@@ -161,8 +161,7 @@ describe('redux functions', () => {
       ResultsGrades.CORRECT,
       ResultsGrades.INCORRECT
     ]);
-    // error tolerance of +/- 0.09, 4/6 correct
+    // error tolerance of +/- 0.15, 4/6 correct
     expect(accuracy.percentCorrect).toBe("66.67");
   });
 });
-
