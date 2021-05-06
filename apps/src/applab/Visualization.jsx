@@ -17,36 +17,6 @@ import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
 import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
 
-const styles = {
-  nonResponsive: {
-    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
-  },
-  share: {
-    // overrides nonReponsive
-    height: applabConstants.APP_HEIGHT
-  },
-  phoneFrame: {
-    marginBottom: 0,
-    borderColor: color.lighter_gray
-  },
-  phoneFrameRunning: {
-    borderColor: color.charcoal
-  },
-  screenBlock: {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
-    overflow: 'hidden',
-    // layer 1 is design mode/div applab
-    // layer 2 is items being dragged out from toolbox
-    // layer 3 is cross-hair overlay
-    // layer 4 is this
-    zIndex: 4,
-    position: 'absolute',
-    top: 0,
-    left: 0
-  }
-};
-
 class Visualization extends React.Component {
   static propTypes = {
     // Provided by redux
@@ -128,6 +98,36 @@ class Visualization extends React.Component {
     );
   }
 }
+
+const styles = {
+  nonResponsive: {
+    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT
+  },
+  share: {
+    // overrides nonReponsive
+    height: applabConstants.APP_HEIGHT
+  },
+  phoneFrame: {
+    marginBottom: 0,
+    borderColor: color.lighter_gray
+  },
+  phoneFrameRunning: {
+    borderColor: color.charcoal
+  },
+  screenBlock: {
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    height: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
+    overflow: 'hidden',
+    // layer 1 is design mode/div applab
+    // layer 2 is items being dragged out from toolbox
+    // layer 3 is cross-hair overlay
+    // layer 4 is this
+    zIndex: 4,
+    position: 'absolute',
+    top: 0,
+    left: 0
+  }
+};
 
 export const UnconnectedVisualization = Visualization;
 

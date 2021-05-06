@@ -25,17 +25,6 @@ const VIDEO_MODAL_WIDTH = 720;
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const MAX_LEVEL_HEIGHT = 550;
 
-const styles = {
-  sublevelCards: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  },
-  scrollContainer: {
-    maxHeight: '60vh',
-    overflow: 'auto'
-  }
-};
-
 class LevelDetailsDialog extends Component {
   static propTypes = {
     scriptLevel: PropTypes.object.isRequired,
@@ -320,6 +309,17 @@ class LevelDetailsDialog extends Component {
     );
   }
 }
+
+const styles = {
+  sublevelCards: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  scrollContainer: {
+    maxHeight: '60vh',
+    overflow: 'auto'
+  }
+};
 
 export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
 

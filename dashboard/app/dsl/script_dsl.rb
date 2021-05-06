@@ -320,6 +320,9 @@ class ScriptDSL < BaseDSL
   end
 
   def self.serialize_to_string(script)
+    # the serialized data for migrated scripts lives in the .script_json file
+    return "is_migrated true\n" if script.is_migrated
+
     s = []
     # Legacy script IDs
     legacy_script_ids = {
@@ -361,7 +364,6 @@ class ScriptDSL < BaseDSL
     s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
     s << "background '#{script.background}'" if script.background
-    s << 'is_migrated true' if script.is_migrated
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)

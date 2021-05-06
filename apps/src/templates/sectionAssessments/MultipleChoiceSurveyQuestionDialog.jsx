@@ -8,36 +8,6 @@ import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  instructions: {
-    marginTop: 20
-  },
-  answers: {
-    float: 'left',
-    width: 550
-  },
-  icon: {
-    color: color.level_perfect
-  },
-  iconSpace: {
-    width: 40,
-    float: 'left'
-  },
-  answerBlock: {
-    width: '100%'
-  },
-  answerLetter: {
-    width: 30,
-    float: 'left',
-    fontWeight: 'bold'
-  }
-};
-
 class MultipleChoiceSurveyQuestionDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -95,5 +65,35 @@ class MultipleChoiceSurveyQuestionDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  instructions: {
+    marginTop: 20
+  },
+  answers: {
+    float: 'left',
+    width: 550
+  },
+  icon: {
+    color: color.level_perfect
+  },
+  iconSpace: {
+    width: 40,
+    float: 'left'
+  },
+  answerBlock: {
+    width: '100%'
+  },
+  answerLetter: {
+    width: 30,
+    float: 'left',
+    fontWeight: 'bold'
+  }
+};
 
 export default MultipleChoiceSurveyQuestionDialog;
