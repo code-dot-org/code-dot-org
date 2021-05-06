@@ -429,8 +429,18 @@ def restore_markdown_headers
       # that extension unless we check both with and without.
       source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
     end
-    source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    begin
+      source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
+    rescue Exception => err
+      puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
+      raise err
+    end
+    begin
+      header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    rescue Exception => err
+      puts "Error parsing yaml header path=#{path}"
+      raise err
+    end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)
     I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
