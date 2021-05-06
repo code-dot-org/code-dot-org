@@ -5,11 +5,7 @@ import {connect} from 'react-redux';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  levelType,
-  lessonType,
-  lessonGroupType
-} from '@cdo/apps/templates/progress/progressTypes';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -17,54 +13,13 @@ import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 
-const styles = {
-  main: {
-    marginBottom: 20
-  },
-  header: {
-    padding: 20,
-    backgroundColor: color.purple,
-    fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: 'white',
-    borderTopLeftRadius: 4,
-    borderTopRightRadius: 4,
-    cursor: 'pointer'
-  },
-  headerBlue: {
-    backgroundColor: color.cyan
-  },
-  headingText: {
-    marginLeft: 10
-  },
-  headingTextRTL: {
-    marginRight: 10
-  },
-  contents: {
-    backgroundColor: color.lighter_purple,
-    padding: 20
-  },
-  contentsBlue: {
-    backgroundColor: color.lightest_cyan
-  },
-  bottom: {
-    borderBottomLeftRadius: 4,
-    borderBottomRightRadius: 4
-  },
-  lessonGroupInfo: {
-    padding: 10
-  }
-};
-
 /**
  * A component that shows a group of lessons. That group has a name and is
  * collapsible. It can show the lessons in either a detail or a summary view.
  */
 class LessonGroup extends React.Component {
   static propTypes = {
-    lessonGroup: lessonGroupType,
-    lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
 
@@ -101,7 +56,7 @@ class LessonGroup extends React.Component {
         event: 'view_lesson_group_info',
         data_json: JSON.stringify({
           script_id: this.props.scriptId,
-          lesson_group_id: this.props.lessonGroup.id
+          lesson_group_id: this.props.groupedLesson.lessonGroup.id
         })
       },
       {includeUserId: true}
@@ -113,16 +68,8 @@ class LessonGroup extends React.Component {
   };
 
   render() {
-    const {
-      lessonGroup,
-      lessons,
-      levelsByLesson,
-      isSummaryView,
-      isPlc,
-      lessonIsVisible,
-      viewAs,
-      isRtl
-    } = this.props;
+    const {isSummaryView, isPlc, lessonIsVisible, viewAs, isRtl} = this.props;
+    const {lessonGroup, lessons} = this.props.groupedLesson;
 
     // Adjust styles if locale is RTL
     const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
@@ -180,13 +127,52 @@ class LessonGroup extends React.Component {
               styles.bottom
             ]}
           >
-            <TableType lessons={lessons} levelsByLesson={levelsByLesson} />
+            <TableType groupedLesson={this.props.groupedLesson} />
           </div>
         )}
       </div>
     );
   }
 }
+
+const styles = {
+  main: {
+    marginBottom: 20
+  },
+  header: {
+    padding: 20,
+    backgroundColor: color.purple,
+    fontSize: 18,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: 'white',
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
+    cursor: 'pointer'
+  },
+  headerBlue: {
+    backgroundColor: color.cyan
+  },
+  headingText: {
+    marginLeft: 10
+  },
+  headingTextRTL: {
+    marginRight: 10
+  },
+  contents: {
+    backgroundColor: color.lighter_purple,
+    padding: 20
+  },
+  contentsBlue: {
+    backgroundColor: color.lightest_cyan
+  },
+  bottom: {
+    borderBottomLeftRadius: 4,
+    borderBottomRightRadius: 4
+  },
+  lessonGroupInfo: {
+    padding: 10
+  }
+};
 
 export const UnconnectedLessonGroup = LessonGroup;
 

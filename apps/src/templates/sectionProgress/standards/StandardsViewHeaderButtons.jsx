@@ -15,17 +15,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import firehoseClient from '../../../lib/util/firehose';
 import {TeacherScores} from './standardsConstants';
 
-const styles = {
-  buttonsGroup: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end'
-  },
-  button: {
-    marginLeft: 20
-  }
-};
-
 class StandardsViewHeaderButtons extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -199,6 +188,17 @@ class StandardsViewHeaderButtons extends Component {
     );
   }
 }
+
+const styles = {
+  buttonsGroup: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end'
+  },
+  button: {
+    marginLeft: 20
+  }
+};
 
 export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 

@@ -38,50 +38,6 @@ const VOICES = {
 
 const TTS_URL = 'https://tts.code.org';
 
-const styles = {
-  error: {
-    display: 'inline-block',
-    marginLeft: 10,
-    marginBottom: 0,
-    padding: '5px 10px'
-  },
-
-  wrapper: {
-    marginLeft: '3px',
-    marginRight: '3px'
-  },
-
-  button: {
-    cursor: 'pointer',
-    float: 'left',
-    backgroundColor: color.lightest_purple,
-    border: 'none',
-    outline: 'none',
-    width: 33,
-    boxSizing: 'border-box'
-  },
-
-  volumeButton: {
-    borderRadius: '4px 0px 0px 4px'
-  },
-
-  playPauseButton: {
-    borderRadius: '0px 4px 4px 0px'
-  },
-
-  buttonImg: {
-    opacity: 1,
-    float: 'left',
-    paddingRight: 8,
-    paddingLeft: 8,
-    color: '#4d575f'
-  },
-
-  hover: {
-    backgroundColor: color.cyan
-  }
-};
-
 // pulled from the example here https://developers.google.com/web/updates/2018/11/web-audio-autoplay
 const AUDIO_ENABLING_DOM_EVENTS = [
   'click',
@@ -351,6 +307,50 @@ class InlineAudio extends React.Component {
     return null;
   }
 }
+
+const styles = {
+  error: {
+    display: 'inline-block',
+    marginLeft: 10,
+    marginBottom: 0,
+    padding: '5px 10px'
+  },
+
+  wrapper: {
+    marginLeft: '3px',
+    marginRight: '3px'
+  },
+
+  button: {
+    cursor: 'pointer',
+    float: 'left',
+    backgroundColor: color.lightest_purple,
+    border: 'none',
+    outline: 'none',
+    width: 33,
+    boxSizing: 'border-box'
+  },
+
+  volumeButton: {
+    borderRadius: '4px 0px 0px 4px'
+  },
+
+  playPauseButton: {
+    borderRadius: '0px 4px 4px 0px'
+  },
+
+  buttonImg: {
+    opacity: 1,
+    float: 'left',
+    paddingRight: 8,
+    paddingLeft: 8,
+    color: '#4d575f'
+  },
+
+  hover: {
+    backgroundColor: color.cyan
+  }
+};
 
 InlineAudio.defaultProps = {
   ttsAutoplayEnabled: false

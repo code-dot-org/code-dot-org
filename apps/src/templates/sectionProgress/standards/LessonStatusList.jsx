@@ -10,17 +10,6 @@ import {
 import firehoseClient from '../../../lib/util/firehose';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  lessonListItem: {
-    display: 'flex',
-    flexDirection: 'row'
-  },
-  links: {
-    paddingLeft: 10,
-    color: color.teal
-  }
-};
-
 class LessonStatusList extends Component {
   static propTypes = {
     dialog: PropTypes.string,
@@ -74,6 +63,17 @@ class LessonStatusList extends Component {
     );
   }
 }
+
+const styles = {
+  lessonListItem: {
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  links: {
+    paddingLeft: 10,
+    color: color.teal
+  }
+};
 
 const handleLessonLinkClick = function(lesson) {
   firehoseClient.putRecord(

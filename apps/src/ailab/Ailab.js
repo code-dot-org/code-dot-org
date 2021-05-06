@@ -168,7 +168,7 @@ Ailab.prototype.initMLActivities = function() {
           return resolve();
         })
         .fail((jqHXhr, status) => {
-          callback(JSON.stringify({status: 'failure'}));
+          callback({status: 'failure'});
           return reject();
         });
     });

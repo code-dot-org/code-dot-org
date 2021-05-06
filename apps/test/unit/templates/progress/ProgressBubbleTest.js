@@ -10,6 +10,7 @@ const defaultProps = {
     id: '1',
     levelNumber: 1,
     status: LevelStatus.perfect,
+    isLocked: false,
     url: '/foo/bar',
     name: 'level_name',
     progression: 'progression_name',
@@ -300,6 +301,7 @@ describe('ProgressBubble', () => {
     const unpluggedLevel = {
       id: '1',
       status: LevelStatus.perfect,
+      isLocked: false,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true
@@ -319,6 +321,7 @@ describe('ProgressBubble', () => {
     const unpluggedLevel = {
       id: '1',
       status: LevelStatus.perfect,
+      isLocked: false,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true

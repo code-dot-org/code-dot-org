@@ -17,23 +17,6 @@ import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import StyledCodeBlock from './StyledCodeBlock';
 
-const styles = {
-  header: {
-    margin: '10px 0px',
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-    margin: '10px 0px'
-  },
-  titleNoTopMargin: {
-    marginTop: 0
-  }
-};
-
 class StudentLessonOverview extends Component {
   static propTypes = {
     lesson: studentLessonShape.isRequired,
@@ -135,6 +118,23 @@ class StudentLessonOverview extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    margin: '10px 0px',
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
+  },
+  titleNoTopMargin: {
+    marginTop: 0
+  }
+};
 
 export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 

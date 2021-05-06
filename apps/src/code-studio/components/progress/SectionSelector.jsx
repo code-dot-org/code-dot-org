@@ -10,12 +10,6 @@ import {
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const styles = {
-  select: {
-    width: 180
-  }
-};
-
 class SectionSelector extends React.Component {
   static propTypes = {
     style: PropTypes.object,
@@ -91,6 +85,12 @@ class SectionSelector extends React.Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    width: 180
+  }
+};
 
 export const UnconnectedSectionSelector = SectionSelector;
 

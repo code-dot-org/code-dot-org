@@ -6,6 +6,56 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
 
+class SetUpMessage extends Component {
+  static propTypes = {
+    isRtl: PropTypes.bool,
+    headingText: PropTypes.string.isRequired,
+    descriptionText: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    buttonText: PropTypes.string.isRequired,
+    buttonUrl: PropTypes.string,
+    buttonClass: PropTypes.string,
+    onClick: PropTypes.func,
+    solidBorder: PropTypes.bool
+  };
+
+  render() {
+    const {
+      isRtl,
+      headingText,
+      descriptionText,
+      className,
+      buttonText,
+      buttonUrl,
+      buttonClass,
+      onClick,
+      solidBorder
+    } = this.props;
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
+    const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
+    const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
+
+    return (
+      <div style={[styles.outerBox, borderStyle]} className={className}>
+        <div style={[styles.wordBox, localeStyle]}>
+          <div style={[styles.heading, localeStyle]}>{headingText}</div>
+          <div style={[styles.description, localeStyle]}>{descriptionText}</div>
+        </div>
+        <Button
+          __useDeprecatedTag
+          href={buttonUrl}
+          onClick={onClick}
+          className={buttonClass}
+          color={Button.ButtonColor.gray}
+          text={buttonText}
+          style={[styles.button, buttonLocaleStyle]}
+        />
+        <div style={styles.clear} />
+      </div>
+    );
+  }
+}
+
 const styles = {
   outerBox: {
     width: styleConstants['content-width'],
@@ -57,56 +107,6 @@ const styles = {
     clear: 'both'
   }
 };
-
-class SetUpMessage extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool,
-    headingText: PropTypes.string.isRequired,
-    descriptionText: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    buttonText: PropTypes.string.isRequired,
-    buttonUrl: PropTypes.string,
-    buttonClass: PropTypes.string,
-    onClick: PropTypes.func,
-    solidBorder: PropTypes.bool
-  };
-
-  render() {
-    const {
-      isRtl,
-      headingText,
-      descriptionText,
-      className,
-      buttonText,
-      buttonUrl,
-      buttonClass,
-      onClick,
-      solidBorder
-    } = this.props;
-    const localeStyle = isRtl ? styles.rtl : styles.ltr;
-    const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
-    const borderStyle = solidBorder ? styles.solidBorder : styles.dashedBorder;
-
-    return (
-      <div style={[styles.outerBox, borderStyle]} className={className}>
-        <div style={[styles.wordBox, localeStyle]}>
-          <div style={[styles.heading, localeStyle]}>{headingText}</div>
-          <div style={[styles.description, localeStyle]}>{descriptionText}</div>
-        </div>
-        <Button
-          __useDeprecatedTag
-          href={buttonUrl}
-          onClick={onClick}
-          className={buttonClass}
-          color={Button.ButtonColor.gray}
-          text={buttonText}
-          style={[styles.button, buttonLocaleStyle]}
-        />
-        <div style={styles.clear} />
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   isRtl: state.isRtl

@@ -3,59 +3,13 @@ import JavalabConsole from './JavalabConsole';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
-import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
 import {appendOutputLog, setIsDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
-import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-
-const style = {
-  instructionsAndPreview: {
-    width: '40%',
-    position: 'relative',
-    marginRight: 15,
-    color: color.black
-  },
-  editorAndConsole: {
-    width: '60%',
-    position: 'relative'
-  },
-  preview: {
-    backgroundColor: color.light_gray,
-    height: '200px'
-  },
-  javalab: {
-    display: 'flex',
-    margin: 15
-  },
-  consoleAndButtons: {
-    marginTop: 15,
-    display: 'flex'
-  },
-  consoleStyle: {
-    flexGrow: 1
-  },
-  buttons: {
-    marginRight: 15,
-    height: 75,
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  singleButton: {
-    // this matches the current code mirror theme we are using
-    // TODO: either add to color.scss or use a color from there depending
-    // on final theme choice.
-    backgroundColor: color.darkest_gray,
-    color: color.white,
-    width: 95,
-    textAlign: 'center'
-  },
-  clear: {
-    clear: 'both'
-  }
-};
+import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
+import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -65,6 +19,7 @@ class JavalabView extends React.Component {
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
+    visualization: PropTypes.object.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -100,11 +55,11 @@ class JavalabView extends React.Component {
   getButtonStyles = isSettingsButton => {
     const {isDarkMode} = this.props;
     if (isDarkMode) {
-      return style.singleButton;
+      return styles.singleButton;
     } else if (isSettingsButton) {
-      return {...style.singleButton, backgroundColor: color.orange};
+      return {...styles.singleButton, backgroundColor: color.orange};
     } else {
-      return {...style.singleButton, backgroundColor: color.cyan};
+      return {...styles.singleButton, backgroundColor: color.cyan};
     }
   };
 
@@ -114,7 +69,8 @@ class JavalabView extends React.Component {
       onCommitCode,
       onContinue,
       onRun,
-      onInputMessage
+      onInputMessage,
+      visualization
     } = this.props;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -123,25 +79,26 @@ class JavalabView extends React.Component {
     }
     return (
       <StudioAppWrapper>
-        <div style={style.javalab}>
-          <div style={style.instructionsAndPreview}>
-            <InstructionsWithWorkspace>
-              <div style={style.preview}>
-                <PaneHeader hasFocus={true}>
-                  <PaneSection>Preview</PaneSection>
-                </PaneHeader>
-              </div>
-            </InstructionsWithWorkspace>
+        <div style={styles.javalab}>
+          <div
+            id="visualizationColumn"
+            className="responsive"
+            style={styles.instructionsAndPreview}
+          >
+            <TopInstructions mainStyle={styles.instructions} standalone />
+            <div style={styles.preview}>{visualization}</div>
           </div>
+          <VisualizationResizeBar />
           <div
             style={{
-              ...style.editorAndConsole,
+              ...styles.editorAndConsole,
               color: isDarkMode ? color.white : color.black
             }}
+            className="editor-column"
           >
             <JavalabEditor onCommitCode={onCommitCode} />
-            <div style={style.consoleAndButtons}>
-              <div style={style.buttons}>
+            <div style={styles.consoleAndButtons}>
+              <div style={styles.buttons}>
                 <button
                   type="button"
                   style={this.getButtonStyles(false)}
@@ -161,7 +118,7 @@ class JavalabView extends React.Component {
                   Continue
                 </button>
               </div>
-              <div style={style.buttons}>
+              <div style={styles.buttons}>
                 <JavalabSettings
                   style={this.getButtonStyles(true /* isSettingsButton */)}
                 >
@@ -177,7 +134,7 @@ class JavalabView extends React.Component {
                   Run
                 </button>
               </div>
-              <div style={style.consoleStyle}>
+              <div style={styles.consoleStyle}>
                 <JavalabConsole onInputMessage={onInputMessage} />
               </div>
             </div>
@@ -204,3 +161,60 @@ export default connect(
     setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
   })
 )(UnconnectedJavalabView);
+
+const styles = {
+  instructionsAndPreview: {
+    width: '100%',
+    position: 'absolute',
+    marginRight: 15,
+    color: color.black,
+    right: '15px',
+    top: '15px'
+  },
+  instructions: {
+    width: '100%',
+    position: 'relative',
+    marginLeft: 0,
+    color: color.black,
+    left: 0
+  },
+  editorAndConsole: {
+    position: 'absolute',
+    right: '15px',
+    marginLeft: '15px'
+  },
+  preview: {
+    backgroundColor: color.light_gray,
+    height: '200px',
+    marginTop: '13px'
+  },
+  javalab: {
+    display: 'flex',
+    margin: 15
+  },
+  consoleAndButtons: {
+    marginTop: 15,
+    display: 'flex'
+  },
+  consoleStyle: {
+    flexGrow: 1
+  },
+  buttons: {
+    marginRight: 15,
+    height: 75,
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  singleButton: {
+    // this matches the current code mirror theme we are using
+    // TODO: either add to color.scss or use a color from there depending
+    // on final theme choice.
+    backgroundColor: color.darkest_gray,
+    color: color.white,
+    width: 95,
+    textAlign: 'center'
+  },
+  clear: {
+    clear: 'both'
+  }
+};
