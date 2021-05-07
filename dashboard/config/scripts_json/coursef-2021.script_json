@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-06 19:54:33 UTC",
+    "serialized_at": "2021-05-07 21:21:14 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -6539,6 +6539,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak4"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
