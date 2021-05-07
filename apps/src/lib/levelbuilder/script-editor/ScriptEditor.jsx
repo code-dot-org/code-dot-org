@@ -28,30 +28,6 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
-const styles = {
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  dropdown: {
-    margin: '0 6px'
-  },
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  }
-};
-
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
 const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
@@ -72,6 +48,7 @@ class ScriptEditor extends React.Component {
     initialStudentDetailProgressView: PropTypes.bool,
     initialProfessionalLearningCourse: PropTypes.string,
     initialPeerReviewsRequired: PropTypes.number,
+    initialOnlyInstructorReviewRequired: PropTypes.bool,
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
@@ -141,6 +118,8 @@ class ScriptEditor extends React.Component {
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
       professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      onlyInstructorReviewRequired: this.props
+        .initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
@@ -282,6 +261,7 @@ class ScriptEditor extends React.Component {
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
       professional_learning_course: this.state.professionalLearningCourse,
+      only_instructor_review_required: this.state.onlyInstructorReviewRequired,
       peer_reviews_to_complete: this.state.peerReviewsRequired,
       wrapup_video: this.state.wrapupVideo,
       project_widget_visible: this.state.projectWidgetVisible,
@@ -867,6 +847,7 @@ class ScriptEditor extends React.Component {
                 useMigratedResources={this.props.isMigrated}
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
+                getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
               />
             </div>
             {this.props.isMigrated && (
@@ -951,16 +932,49 @@ class ScriptEditor extends React.Component {
             </label>
           )}
           <label>
+            Only Require Review from Instructor (no Peer Reviews)
+            <input
+              id="only_instructor_review_checkbox"
+              type="checkbox"
+              checked={this.state.onlyInstructorReviewRequired}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  onlyInstructorReviewRequired: !this.state
+                    .onlyInstructorReviewRequired,
+                  peerReviewsRequired: 0
+                })
+              }
+            />
+            <HelpTip>
+              <p>
+                Our Professional Learning Courses solicit self-reflections from
+                participants, which are then typically shown to other
+                participants enrolled in the course for feedback. This is known
+                as "peer review". The instructor of the course also sees these
+                self-reflections and can provide feedback as well.
+                <br />
+                <br />
+                This setting allows you to collect those same reflections from
+                from workshop participants and have the workshop instructor
+                review them <strong>without</strong> soliciting peer reviews of
+                those reflections by other participants in the workshop.
+              </p>
+            </HelpTip>
+          </label>
+          <label>
             Number of Peer Reviews to Complete
             <HelpTip>
               <p>Currently only supported for professional learning courses</p>
             </HelpTip>
             <input
+              id={'number_peer_reviews_input'}
               value={this.state.peerReviewsRequired}
               style={styles.input}
               onChange={e =>
                 this.setState({peerReviewsRequired: e.target.value})
               }
+              disabled={this.state.onlyInstructorReviewRequired}
             />
           </label>
         </CollapsibleEditorSection>
@@ -990,6 +1004,30 @@ class ScriptEditor extends React.Component {
     );
   }
 }
+
+const styles = {
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  }
+};
 
 export const UnconnectedScriptEditor = ScriptEditor;
 

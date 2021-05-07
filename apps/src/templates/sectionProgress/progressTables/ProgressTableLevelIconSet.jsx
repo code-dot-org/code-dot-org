@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {levelTypeWithoutStatus} from '@cdo/apps/templates/progress/progressTypes';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
@@ -30,8 +30,8 @@ const placeholderUnpluggedBubble = (
     <div>
       <ProgressTableLevelBubble
         levelStatus={LevelStatus.not_tried}
-        unplugged={true}
-        disabled={true}
+        isUnplugged={true}
+        isDisabled={true}
         url=""
       />
     </div>
@@ -81,5 +81,5 @@ export default function ProgressTableLevelIconSet({levels}) {
   return <ProgressTableLevelSpacer items={items} />;
 }
 ProgressTableLevelIconSet.propTypes = {
-  levels: PropTypes.arrayOf(levelTypeWithoutStatus)
+  levels: PropTypes.arrayOf(levelType)
 };

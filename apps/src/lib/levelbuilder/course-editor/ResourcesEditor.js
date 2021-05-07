@@ -9,18 +9,6 @@ import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder
 import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
-const styles = {
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  },
-  error: {
-    color: 'red'
-  }
-};
-
 const defaultLinks = {
   '': '',
   [ResourceType.teacherForum]: 'https://forum.code.org/',
@@ -43,7 +31,8 @@ export default class ResourcesEditor extends Component {
     useMigratedResources: PropTypes.bool.isRequired,
     studentFacing: PropTypes.bool,
     updateResources: PropTypes.func,
-    courseVersionId: PropTypes.number
+    courseVersionId: PropTypes.number,
+    getRollupsUrl: PropTypes.string
   };
 
   constructor(props) {
@@ -103,6 +92,7 @@ export default class ResourcesEditor extends Component {
               this.props.studentFacing ? 'studentResource' : 'teacherResource'
             }
             resources={this.props.migratedResources}
+            getRollupsUrl={this.props.getRollupsUrl}
           />
         ) : (
           resources
@@ -133,6 +123,18 @@ export default class ResourcesEditor extends Component {
     );
   }
 }
+
+const styles = {
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  },
+  error: {
+    color: 'red'
+  }
+};
 
 const Resource = ({
   id,

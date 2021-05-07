@@ -35,6 +35,17 @@
   border-bottom-color: transparent;
 }
 
+  // Unselected tabs
+  ul > li > a {
+    color: $charcoal;
+  }
+
+  // On hover over a tab
+  ul > li > a:hover {
+    color: $charcoal;
+    background-color: black;
+  }
+
 // This class is used in the editor tabs when we're in dark mode
 .darkmode {
   // The selected tab

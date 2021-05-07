@@ -61,6 +61,7 @@ export default function createResourcesReducer(resourceContext) {
       case ADD_RESOURCE: {
         validateResource(action.newResource, action.type);
         newState = newState.concat([action.newResource]);
+        newState.sort((r1, r2) => r1.isRollup - r2.isRollup);
         break;
       }
       case EDIT_RESOURCE: {

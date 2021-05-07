@@ -3,14 +3,6 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const styles = {
-  text: {
-    fontStyle: 'italic',
-    textAlign: 'center',
-    paddingTop: 10
-  }
-};
-
 export default class EmptySection extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired
@@ -30,3 +22,11 @@ export default class EmptySection extends React.Component {
     );
   }
 }
+
+const styles = {
+  text: {
+    fontStyle: 'italic',
+    textAlign: 'center',
+    paddingTop: 10
+  }
+};

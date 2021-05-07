@@ -36,7 +36,9 @@ class ScriptDSL < BaseDSL
   end
 
   integer :id
+
   string :professional_learning_course
+  boolean :only_instructor_review_required
   integer :peer_reviews_to_complete
 
   boolean :hidden
@@ -147,6 +149,7 @@ class ScriptDSL < BaseDSL
       hideable_lessons: @hideable_lessons,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
+      only_instructor_review_required: @only_instructor_review_required,
       peer_reviews_to_complete: @peer_reviews_to_complete,
       teacher_resources: @teacher_resources,
       lesson_extras_available: @lesson_extras_available,
@@ -317,6 +320,9 @@ class ScriptDSL < BaseDSL
   end
 
   def self.serialize_to_string(script)
+    # the serialized data for migrated scripts lives in the .script_json file
+    return "is_migrated true\n" if script.is_migrated
+
     s = []
     # Legacy script IDs
     legacy_script_ids = {
@@ -330,6 +336,7 @@ class ScriptDSL < BaseDSL
     s << "id '#{legacy_script_ids[script.name]}'" if legacy_script_ids[script.name]
 
     s << "professional_learning_course '#{script.professional_learning_course}'" if script.professional_learning_course
+    s << "only_instructor_review_required #{script.only_instructor_review_required}" if script.only_instructor_review_required
     s << "peer_reviews_to_complete #{script.peer_reviews_to_complete}" if script.peer_reviews_to_complete.try(:>, 0)
 
     s << 'hidden false' unless script.hidden
@@ -357,7 +364,6 @@ class ScriptDSL < BaseDSL
     s << 'deprecated true' if script.deprecated
     s << 'is_course true' if script.is_course
     s << "background '#{script.background}'" if script.background
-    s << 'is_migrated true' if script.is_migrated
 
     s << '' unless s.empty?
     s << serialize_lesson_groups(script)

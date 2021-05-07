@@ -1,0 +1,9 @@
+hidden false
+login_required true
+hideable_lessons true
+has_verified_resources true
+
+lesson_group 'cspSurvey2020', display_name: 'Survey'
+lesson 'CSP post-course survey', display_name: 'CSP Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-levelgroup-2020', progression: 'CS Principles Post-course Survey', assessment: true
+

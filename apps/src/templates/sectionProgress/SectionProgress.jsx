@@ -4,8 +4,7 @@ import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
-import ProgressTableDetailView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailView';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -24,38 +23,6 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
-
-const styles = {
-  heading: {
-    marginBottom: 0
-  },
-  topRowContainer: {
-    display: 'flex',
-    alignItems: 'flex-end',
-    marginBottom: 10
-  },
-  chevronLink: {
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'flex-end'
-  },
-  icon: {
-    paddingRight: 5
-  },
-  toggle: {
-    margin: '0px 30px'
-  },
-  show: {
-    display: 'block'
-  },
-  hide: {
-    display: 'none'
-  },
-  studentTooltip: {
-    display: 'flex',
-    textAlign: 'center'
-  }
-};
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -154,10 +121,6 @@ class SectionProgress extends Component {
     const lessons = scriptData ? scriptData.stages : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
-    const summaryStyle =
-      currentView === ViewType.SUMMARY ? styles.show : styles.hide;
-    const detailStyle =
-      currentView === ViewType.DETAIL ? styles.show : styles.hide;
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
     return (
@@ -196,16 +159,11 @@ class SectionProgress extends Component {
               className="fa-pulse fa-3x"
             />
           )}
-          {levelDataInitialized && currentView === ViewType.SUMMARY && (
-            <div id="uitest-summary-view" style={summaryStyle}>
-              <ProgressTableSummaryView />
-            </div>
-          )}
-          {levelDataInitialized && currentView === ViewType.DETAIL && (
-            <div id="uitest-detail-view" style={detailStyle}>
-              <ProgressTableDetailView />
-            </div>
-          )}
+          {levelDataInitialized &&
+            (currentView === ViewType.SUMMARY ||
+              currentView === ViewType.DETAIL) && (
+              <ProgressTableView currentView={currentView} />
+            )}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
@@ -218,6 +176,38 @@ class SectionProgress extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    marginBottom: 0
+  },
+  topRowContainer: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    marginBottom: 10
+  },
+  chevronLink: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'flex-end'
+  },
+  icon: {
+    paddingRight: 5
+  },
+  toggle: {
+    margin: '0px 30px'
+  },
+  show: {
+    display: 'block'
+  },
+  hide: {
+    display: 'none'
+  },
+  studentTooltip: {
+    display: 'flex',
+    textAlign: 'center'
+  }
+};
 
 export const UnconnectedSectionProgress = SectionProgress;
 

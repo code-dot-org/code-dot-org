@@ -6,15 +6,6 @@ import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
 import LessonStatusList from './LessonStatusList';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
-};
-
 export default class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -46,3 +37,12 @@ export default class LessonStatusDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
+  }
+};

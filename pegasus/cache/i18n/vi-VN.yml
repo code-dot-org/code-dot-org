@@ -203,6 +203,7 @@ vi-VN:
   if_you_enjoyed: Nếu bạn cảm thấy việc học Code thật thú vị thì hãy rủ bạn bè cùng
     tham gia nhé! Chúng tớ mong muốn cả thế giới có thể học về nó.
   personalize_certificate: Cá nhân hoá chứng chỉ của bạn
+  print_ice_art_from_frozen: Hướng dẫn in hình ảnh băng từ Frozen
   share_achievement: Chia sẻ thành tích của bạn
   beyond_hour_message: Tiếp tục với <a href='http://studio.code.org'>other courses</a>,
     hoặc tham khảo thêm một vài lựa chọn ở <a href='/learn/beyond'>Learn beyond One
@@ -443,6 +444,10 @@ vi-VN:
   class_submission_level_college: Đại học và cao đẳng
   class_submission_level_vocational: Dạy nghề
   class_submission_languages_other: Ngôn ngữ khác
+  videos_more: Thêm <a href='%{inspiring_videos_playlist}'>video truyền cảm hứng</a>
+    với sự góp mặt của các thần tượng và người nổi tiếng
+  videos_more_markdown: Thêm [video truyền cảm hứng](%{inspiring_videos_playlist})
+    với sự góp mặt của các thần tượng và người nổi tiếng
   playlab_choose_theme: Chọn chủ đề cho Play Lab của bạn
   playlab_classic_title: Cổ điển
   playlab_gumball_title: Thế giới kì diệu của Gumball
@@ -466,6 +471,7 @@ vi-VN:
     6-106
   minecraft_agent: 'Minecraft: Hero''s Journey'
   minecraft_designer: Nhà thiết kế Minecraft
+  minecraft_tutorials: Bài hướng dẫn Giờ lập trình Minecraft
   minecraft_agent_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới
     cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
   minecraft_agent_button: Bắt đầu
@@ -474,6 +480,8 @@ vi-VN:
   minecraft_designer_button: Bắt đầu
   minecraft_adventurer_button: Bắt đầu
   minecraft_no_internet: Không có Internet?
+  minecraft_download_adventurer: Tải về các phiên bản ngoại tuyến của Nhà phiêu lưu
+    Minecraft.
   minecraft_subtitle: Minecraft Hour of Code
   minecraft_join_online_training: Bạn đã sẵn sàng để thực hiện Giờ lập trình với Minecraft,
     nhưng không biết bắt đầu từ đâu? Hãy tham gia webinar của chúng tôi <a href='%{minecraft_webinar_url}'>tại
@@ -481,14 +489,34 @@ vi-VN:
     hành trình Hero's Journey từ Minecraft team. Hãy bắt đầu bằng suy nghĩ sẽ mang
     Giờ lập trình đến với các bạn trẻ trong tuần lễ giáo dục khoa học máy tính (từ
     ngày 4/12 - 10/12) và hơn thế nữa.
+  minecraft_og_designer: Minecraft đã trở lại với Giờ lập trình cùng một hoạt động
+    hoàn toàn mới! Hãy lập trình cho động vật và các sinh vật Minecraft khác trong
+    phiên bản Minecraft của riêng bạn.
   minecraft_og_agent: Minecaft là nền tảng của Giờ lập trình, và bạn chính là anh
     hùng! Hãy viết các câu lệnh để lập trình hành trình trong thế giới Minecraft.
+  sports_page_title: Thể thao Giờ lập trình
+  sports_og_title: Hãy tự thúc đẩy bản thân. Bất cứ ai cũng có thể học.
   sports_watch_video: Xem video
+  sports_video_title: Hãy tự thúc đẩy bản thân. Bất cứ ai cũng có thể học.
+  sports_select_theme: Chọn chủ đề cho bài hướng dẫn
+  sports_basketball_title: Làm game bóng rổ
+  sports_featured_athletes: Xem các vận động viên tham dự
+  sports_athletes_title: Các vận động viên tham dự
+  watch_inspirational_videos: Trước khi bạn bắt đầu, hãy xem một trong những video
+    truyền cảm hứng này
   video_title_cs_is_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
   video_title_inspire_girl: Truyền cảm hứng cho một cô gái
+  video_title_cs_intro: Giới thiệu Khoa học máy tính
+  video_title_schools_dont_teach: Những gì hầu hết các trường không dạy
+  video_title_obama: Tổng thống Obama với khoa học máy tính
+  video_title_hoc_is_here: Giờ lập trình đã tới - Bất cứ ai cũng có thể học
+  video_title_anybody_can_learn: Bất cứ ai cũng có thể học
+  video_title_steph_curry: Giờ lập trình với Steph Curry
+  video_title_my_name_is_aracely: Tên tôi là Aracely
   video_5min: 5 phút
   help_translate: Giúp chúng tôi dịch.
   no_internet: Không có Internet?
+  download_offline: Tải xuống phiên bản ngoại tuyến.
   are_you_teacher: Bạn có phải là giáo viên?
   volunteer_engineer_submission_title: Truyền cảm hứng cho sinh viên và tình nguyện
     viên
@@ -856,9 +884,11 @@ vi-VN:
   classicmaze_name: Mê cung cổ điển
   iceage_name: Kỉ băng hà
   minecraft_name: Minecraft
+  hoc-encryption_name: Mã hóa đơn giản
   text-compression_name: Nén văn bản
   applab_name: Phòng thí nghiệm ứng dụng
   gamelab_name: Phòng thí nghiệm trò chơi
+  basketball_name: Làm game bóng rổ
   applab_gradelevel: 13 tuổi trở lên
   lightbot_gradelevel: Mọi lứa tuổi
   thinkersmith_gradelevel: Mọi lứa tuổi
@@ -872,6 +902,8 @@ vi-VN:
   makeschool_gradelevel: Trung học phổ thông
   touchdevelop_gradelevel: Trung học phổ thông
   blockly_gradelevel: Mọi lứa tuổi
+  frozen_gradelevel: Độ tuổi 8-108
+  artist_gradelevel: Độ tuổi 8-108
   boxisland_gradelevel: Tiểu học
   course1_gradelevel: Tuổi từ 4-6
   course2_gradelevel: Lứa tuổi 6 + (yêu cầu biết đọc)
@@ -988,6 +1020,9 @@ vi-VN:
     với bạn bè của bạn!
   starwars_longdescription: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
     của riêng bạn trong một thiên hà xa xôi.
+  playlab_longdescription: Sáng tác truyện hoặc làm game với Play Lab! Hãy tạo chuyển
+    động cho động vật, cướp biển, zombie, ninja và nhiều nhân vật khác, tạo âm thanh,
+    điểm số và thậm chí là ném quả cầu lửa!
   scratch_beyond_name: Hãy sáng tạo trong lập trình
   robomind_beyond_name: Lập trình một robot ảo
   codehs_beyond_name: Học cách lập trình cùng cún Karel
@@ -1085,6 +1120,9 @@ vi-VN:
   user_header_view_my_projects: Xem chương trình của tôi
   view_all_sections: Xem tất cả các phần
   hero_name: 'Minecraft: Hero''s Journey'
+  applab_tile_subtitle: Hãy sáng tạo ứng dụng JavaScript của riêng mình bằng lập trình
+    dạng khối. Hoặc là đưa kỹ năng của bản thân lên một đẳng cấp mới với lập trình
+    dạng văn bản. (Chỉ bằng tiếng Anh)
   applab_tile_start_tutorial: Bắt đầu
   applab_tile_teacher_guide: Xem hướng dẫn cho giáo viên
   aquatic_name: Minecraft Chuyến thám hiểm đại dương
@@ -1100,6 +1138,11 @@ vi-VN:
   hoc_overview_dance_2019_subtitle: Code một Bữa Tiệc Khiêu Vũ để chia sẻ với bạn
     bè của bạn. Với sự góp mặt của Katy Perry, Shawn Mendes, Panic! At The Disco,
     Lil Nas X, Jonas Brothers, Nicki Minaj, và 34 nghệ sĩ khác!
+  hoc_overview_title: Các hoạt động Giờ lập trình đến từ Code.org
+  hoc_overview_subtitle_markdown: "[Giờ lập trình](https://hourofcode.com) là phong
+    trào toàn cầu với sự tham gia của hàng chục triệu học sinh tại hơn 180 quốc gia.
+    Bất kỳ ai, dù ở bất kỳ đâu cũng đều có thể tổ chức sự kiện Giờ lập trình hoặc
+    thử một trong hơn 500 bài hướng dẫn kéo dài một giờ với hơn 45 ngôn ngữ."
   hoc_overview_partner_activities_title: Nhiều hoạt động hơn từ các đối tác
   hoc_overview_partner_activities_body: Trang web The Hour of Code có hơn 100 hoạt
     động khoa học máy tính cho tất cả các lứa tuổi và các mức độ kinh nghiệm, phát
@@ -1201,6 +1244,7 @@ vi-VN:
     trình.
   hoc2018_mc_journey: Hành trình thông qua Minecraft với lập trình.
   hoc2018_dance_party_main_heading: Bữa Tiệc Khiêu Vũ
+  hoc2018_dance_party_subheading: Giúp dịch Bữa tiệc Khiêu vũ
   hoc2018_dance_create_your_own_dance_title: Tạo Bữa tiệc Khiêu vũ của riêng bạn
   hoc2018_dance_party_box_title: Bữa Tiệc Khiêu Vũ
   hoc2018_dance_party_box_description: Viết mã cho Bữa tiệc Khiêu vũ để chia sẻ với
@@ -1209,6 +1253,7 @@ vi-VN:
   hoc2018_dance_keep_on_dancing_box_title: Hãy Tiếp tục Nhảy
   hoc2018_dance_keep_on_dancing_description: Hãy làm nhiều hơn nữa so với giờ đầu
     tiên với các ý tưởng dự án mở rộng.
+  hoc2018_dance_keep_on_dancing_specs: Ngôn ngữ | Định dạng | Độ tuổi 13+
   hoc2018_dance_keep_on_dancing_button: Bắt đầu phần 2
   hoc2018_dance_teacher_resources_title: Tài nguyên giáo viên
   hoc2018_dance_teacher_resources_tile1_description: Kế hoạch bài học, chứng chỉ và
@@ -1218,14 +1263,55 @@ vi-VN:
   hoc2018_dance_teacher_resources_tile2_description: Không cần máy tính!  Tìm hiểu
     các khái niệm mã hóa để cùng nhau dàn dựng một bữa tiệc khiêu vũ.
   hoc2018_dance_teacher_resources_tile2_button: Hoạt động không dùng máy
+  hoc2018_dance_featured_student_creations_title: Đính kèm tác phẩm của học sinh
+  hoc2018_dance_videos_section_heading: Khơi dậy nguồn cảm hứng
+  hoc2018_dance_video_title_what_is_creativity: Sáng tạo là gì?
+  hoc2018_dance_view_creativity_video_playlist: Sáng tạo là gì? Xem toàn bộ sêri (5
+    phút)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: Hợp tác cùng
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* (Kỹ sư tương lai Amazon) là chương trình hướng nghiệp toàn diện cho
+    trẻ em nhằm truyền cảm hứng, giáo dục và đào tạo trẻ em cũng như những thanh niên
+    có thu nhập thấp và hoàn cảnh thiệt thòi khác để theo đuổi sự nghiệp trong ngành
+    khoa học máy tính. <a href='%{amazon_future_engineer_link}' target='_blank'>Tìm
+    hiểu thêm</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* (Kỹ sư tương lai Amazon) là chương trình hướng nghiệp toàn diện
+    cho trẻ em nhằm truyền cảm hứng, giáo dục và đào tạo trẻ em cũng như những thanh
+    niên có thu nhập thấp và hoàn cảnh thiệt thòi khác để theo đuổi sự nghiệp trong
+    ngành khoa học máy tính. [Tìm hiểu thêm](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Tìm hiểu thêm
+    về Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Hãy tìm hiểu về chương trình
+    hướng nghiệp từ bậc mầm non của Amazon để tăng cường tiếp cận giáo dục khoa học
+    máy tính. Hãy tìm thông tin về cách tham gia trại hè, lớp KHMT bậc trung học,
+    học bổng và khóa thực tập của chúng tôi.
   hoc2018_dance_amazon_about_future_engineer_button: Tìm hiểu thêm
   hoc2018_dance_amazon_scholarship_programs_button: Đăng ký ngay
+  hoc2018_dance_amazon_future_engineer_footer: "* Nghệ sĩ có bản nhạc được sử dụng
+    trong bài hướng dẫn này không tài trợ hoặc ủng hộ Amazon theo nội dung sử dụng
+    giấy phép âm nhạc của họ trên Code.org."
   hoc2018_dance_measure: Nhịp
   hoc2018_dance_measure_colon: 'Nhịp:'
   hoc2018_mc_with_microsoft: Hợp tác cùng
   hoc2018_mc_thank_microsoft: Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng
     tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ
     năng cần thiết để thành công trong thế kỷ 21.
+  hoc2019_mc_mee_description1: 'Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên
+    Minecraft: Education Edition dành cho Windows, Mac và iPad. Hãy tìm hiểu những
+    căn bản về viết mã lệnh và khám phá AI cùng các em học sinh!'
+  hoc2019_mc_more_coding_resources: Xem thêm nguồn hỗ trợ viết mã
+  hoc2019_dance_previous_versions: |-
+    Bạn đang tìm phiên bản trước của Bữa tiệc Khiêu vũ?
+    Nhấn vào đây để bắt đầu [Phần 1](%{dance_2018_link}) và [Phần 2](%{dance_extras_2018_link}) từ năm 2018.
+  hoc2020_mc_available_code_org: Có trên Code.org
+  hoc2020_mc_available_mee: 'Có trong Minecraft: Education Edition'
+  hoc2020_mc_mee_description: 'Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên
+    Minecraft: Education Edition dành cho Windows, Mac, Chromebook và iPad. Hãy tìm
+    hiểu những căn bản về viết mã lệnh và khám phá sự đa dạng cũng như hòa nhập của
+    các em học sinh! Hãy truy cập những nguồn hỗ trợ miễn phí, bao gồm thời khóa biểu,
+    video, chương trình đào tạo khoa học máy tính, bài học về sự công bằng và các
+    khóa đào tạo giáo viên.'
   footer_powered_by_aws: Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là
     các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và
     / hoặc các quốc gia khác.

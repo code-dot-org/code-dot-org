@@ -174,21 +174,6 @@ class DeleteAccountsHelper
     @pegasus_db[:contacts].where(id: contact_ids).delete
   end
 
-  # TODO: Fully remove the deprecated V1 of contact rollups,
-  # (ie, remove the contact_rollups table), at which point this step can be removed.
-  # @param [Integer] The user ID to purge from deprecated contact rollups table.
-  def remove_from_deprecated_contact_rollups_by_user_id(user_id)
-    @log.puts "Removing from deprecated contact rollups"
-    @pegasus_db[:contact_rollups].where(dashboard_user_id: user_id).delete
-  end
-
-  # TODO: Fully remove the deprecated V1 of contact rollups,
-  # (ie, remove the contact_rollups table), at which point this step can be removed.
-  # @param [Integer] The email to purge from deprecated contact rollups table.
-  def remove_from_deprecated_contact_rollups_by_email(email)
-    @pegasus_db[:contact_rollups].where(email: email).delete
-  end
-
   # Marks emails for deletion from Pardot via contact rollups process.
   def set_pardot_deletion_via_contact_rollups(email)
     if User.find_by_email(email)
@@ -295,6 +280,11 @@ class DeleteAccountsHelper
     end
   end
 
+  def purge_user_authentications(user)
+    # Delete most recently destroyed (soft-deleted) record first
+    user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -320,6 +310,13 @@ class DeleteAccountsHelper
     # If the user account was already soft-deleted, then fallback to the :email attribute.
     user_email = (user.email&.blank?) ? user.read_attribute(:email) : user.email
 
+    # There is a bug in our system that causes a user to have duplicate
+    # authentication options, one active and one soft-deleted.
+    # Purging that user will fail because of ActiveRecord::RecordNotUnique
+    # (Mysql2::Error: Duplicate entry) exception.
+    # To prevent that issue, hard-deleting authentication options first.
+    purge_user_authentications user
+
     user.destroy
 
     purge_teacher_feedbacks(user.id)
@@ -333,7 +330,6 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
-    remove_from_deprecated_contact_rollups_by_user_id(user.id)
     set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -359,7 +355,6 @@ class DeleteAccountsHelper
     migrated_users.or(unmigrated_users).each {|u| purge_user u}
 
     remove_poste_data(email)
-    remove_from_deprecated_contact_rollups_by_email(email)
     set_pardot_deletion_via_contact_rollups(email)
     clean_pegasus_forms_for_email(email)
   end

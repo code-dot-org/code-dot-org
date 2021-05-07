@@ -4492,7 +4492,7 @@
           "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3": {
-          "courseC_maze_debugging3_a": "要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2018": {
@@ -4525,7 +4525,7 @@
         },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
-          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的程式碼相同嗎？出了什麼問題？"
+          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的代碼相同嗎？出了什麼問題？"
         },
         "courseC_maze_debugging5_2018": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
