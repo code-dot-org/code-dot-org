@@ -234,7 +234,7 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  // Possible enum values for saveStatus: notStarted, started, success, and failure.
+  // Possible values for saveStatus: notStarted, started, success, and failure.
   saveStatus: "notStarted",
   columnRefs: {},
   kValue: null
