@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {studentLessonProgressType} from '@cdo/apps/templates/progress/progressTypes';
 
-const styles = {
-  container: {
-    height: 20,
-    margin: 10,
-    boxSizing: 'border-box',
-    borderWidth: 1,
-    borderStyle: 'solid'
-  }
-};
-
 function BorderedBox({borderColor, onClick, children}) {
   const boxStyle = {
     ...styles.container,
@@ -87,6 +77,16 @@ export default class ProgressTableSummaryCell extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    height: 20,
+    margin: 10,
+    boxSizing: 'border-box',
+    borderWidth: 1,
+    borderStyle: 'solid'
+  }
+};
 
 export const unitTestExports = {
   BorderedBox

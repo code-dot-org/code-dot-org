@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-05-03 23:56:04 UTC",
+    "serialized_at": "2021-05-05 18:19:54 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -8179,14 +8179,14 @@
       "seeding_key": {
         "lesson.key": "Digital Trails",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-18"
+        "standard.shortcode": "1A-NI-04"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Digital Trails",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-NI-04"
+        "standard.shortcode": "1A-IC-16"
       }
     },
     {

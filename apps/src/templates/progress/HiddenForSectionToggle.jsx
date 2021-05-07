@@ -4,37 +4,6 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 
-const styles = {
-  main: {
-    wrap: 'nowrap',
-    marginTop: 5,
-    marginLeft: 15,
-    marginRight: 15
-  },
-  disabled: {
-    opacity: 0.5
-  },
-  button: {
-    display: 'inline-block',
-    paddingLeft: 0,
-    paddingRight: 0,
-    boxSizing: 'border-box',
-    width: '50%'
-  },
-  leftButton: {
-    borderTopRightRadius: 0,
-    borderBottomRightRadius: 0
-  },
-  rightButton: {
-    borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 0
-  },
-  reverseButtons: {
-    display: 'flex',
-    flexDirection: 'row-reverse'
-  }
-};
-
 /**
  * A component that provides a toggle that goes between visible and hidden that
  * can be used be teachers to hide/show scripts or stages on a per section basis.
@@ -82,6 +51,37 @@ class HiddenForSectionToggle extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    wrap: 'nowrap',
+    marginTop: 5,
+    marginLeft: 15,
+    marginRight: 15
+  },
+  disabled: {
+    opacity: 0.5
+  },
+  button: {
+    display: 'inline-block',
+    paddingLeft: 0,
+    paddingRight: 0,
+    boxSizing: 'border-box',
+    width: '50%'
+  },
+  leftButton: {
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0
+  },
+  rightButton: {
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0
+  },
+  reverseButtons: {
+    display: 'flex',
+    flexDirection: 'row-reverse'
+  }
+};
 
 export const UnconnectedHiddenForSectionToggle = HiddenForSectionToggle;
 

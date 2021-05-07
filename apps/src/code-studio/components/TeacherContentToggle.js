@@ -7,15 +7,6 @@ import {ViewType} from '../viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
 import {isStageHiddenForSection} from '../hiddenStageRedux';
 
-const styles = {
-  container: {
-    height: '100%'
-  },
-  hidden: {
-    display: 'none'
-  }
-};
-
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
  * student would see and what they see as a teacher. In some cases (such as
@@ -117,6 +108,15 @@ class TeacherContentToggle extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    height: '100%'
+  },
+  hidden: {
+    display: 'none'
+  }
+};
 
 export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
 

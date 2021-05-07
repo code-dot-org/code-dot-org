@@ -8,7 +8,7 @@ module Foorm
       @user = create :user
       @foorm_form = create :foorm_form
       @simple_survey_form = create :foorm_simple_survey_form, form_name: @foorm_form.name
-      @disabled_simple_survey_form = create :foorm_simple_survey_form, path: 'disabled_path'
+      @disabled_simple_survey_form = create :foorm_simple_survey_form, form_name: @foorm_form.name, path: 'disabled_path'
 
       DCDO.set('foorm_simple_survey_disabled', [@disabled_simple_survey_form.path])
     end

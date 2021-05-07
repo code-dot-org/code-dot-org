@@ -90,7 +90,9 @@ def rename_from_crowdin_name_to_locale
   # Now, any remaining directories named after the language name (rather than
   # the four-letter language code) represent languages downloaded from crowdin
   # that aren't in our system. Remove them.
-  FileUtils.rm_r Dir.glob("i18n/locales/[A-Z]*")
+  # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
+  # character case on file systems which are case insensitive by default, such as OSX.
+  FileUtils.rm_r Dir.glob("i18n/locales/*").select {|path| path =~ /i18n\/locales\/[A-Z].*/}
 end
 
 def find_malformed_links_images(locale, file_path)
@@ -143,11 +145,20 @@ def restore_redacted_files
         File.open(translated_path, "w") do |file|
           file.write(JSON.pretty_generate(translated_data.deep_merge(restored_data)))
         end
-      elsif original_path == 'i18n/locales/original/dashboard/blocks.yml'
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
       else
-        RedactRestoreUtils.restore(original_path, translated_path, translated_path)
+        plugins = []
+        if original_path == 'i18n/locales/original/dashboard/blocks.yml'
+          plugins << 'blockfield'
+        elsif [
+          'i18n/locales/original/dashboard/scripts.yml',
+          'i18n/locales/original/dashboard/courses.yml'
+        ].include? original_path
+          plugins << 'resourceLink'
+          plugins << 'vocabularyDefinition'
+        end
+        RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins, 'txt')
       end
+
       find_malformed_links_images(locale, translated_path)
     end
     I18nScriptUtils.upload_malformed_restorations(locale)
