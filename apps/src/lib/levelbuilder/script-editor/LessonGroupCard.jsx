@@ -223,7 +223,6 @@ class LessonGroupCard extends Component {
     const {lessonGroup, targetLessonGroupPos} = this.props;
     const {draggedLessonPos} = this.state;
     const isTargetLessonGroup = targetLessonGroupPos === lessonGroup.position;
-    console.log(lessonGroup.lessons);
     return (
       <div
         style={

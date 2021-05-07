@@ -29,7 +29,6 @@ export default class LessonToken extends Component {
   };
 
   handleClone = () => {
-    console.log(this.props.lesson.position);
     this.props.cloneLesson(this.props.lesson.position);
   };
 
