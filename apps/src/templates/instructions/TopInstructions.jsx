@@ -556,7 +556,8 @@ class TopInstructions extends Component {
       isRtl ? styles.mainRtl : styles.main,
       mainStyle,
       {
-        height: height - RESIZER_HEIGHT
+        height: height - RESIZER_HEIGHT,
+        zIndex: 1021
       },
       noVisualization && styles.noViz,
       isEmbedView && styles.embedView
