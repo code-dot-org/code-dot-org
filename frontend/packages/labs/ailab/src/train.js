@@ -13,7 +13,7 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels
 } from "./redux";
-import { ColumnTypes, TestDataLocations } from "./constants.js";
+import { TestDataLocations } from "./constants.js";
 
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.
