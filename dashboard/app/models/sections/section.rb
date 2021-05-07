@@ -45,7 +45,8 @@ class Section < ApplicationRecord
     end
   end
 
-  ## Sets a class variable for student limit.
+  # Sets a class variable for student limit.
+  # Is passed to React and HAML 'add_student' alerts.
   @@section_capacity = 500
 
   include Rails.application.routes.url_helpers
@@ -293,6 +294,10 @@ class Section < ApplicationRecord
 
   def at_capacity?
     students.distinct(&:id).size >= @@section_capacity
+  end
+
+  def capacity
+    @@section_capacity
   end
 
   # Hide or unhide a stage for this section
