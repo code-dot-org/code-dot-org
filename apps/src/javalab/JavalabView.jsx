@@ -152,18 +152,29 @@ class JavalabView extends React.Component {
 
 const styles = {
   instructionsAndPreview: {
-    width: '40%',
-    position: 'relative',
+    width: '100%',
+    position: 'absolute',
     marginRight: 15,
-    color: color.black
+    color: color.black,
+    right: '15px',
+    top: '15px'
+  },
+  instructions: {
+    width: '100%',
+    position: 'relative',
+    marginLeft: 0,
+    color: color.black,
+    left: 0
   },
   editorAndConsole: {
-    width: '60%',
-    position: 'relative'
+    position: 'absolute',
+    right: '15px',
+    marginLeft: '15px'
   },
   preview: {
     backgroundColor: color.light_gray,
-    height: '200px'
+    height: '200px',
+    marginTop: '13px'
   },
   javalab: {
     display: 'flex',

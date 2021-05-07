@@ -81,6 +81,7 @@ Javalab.prototype.init = function(config) {
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
   let visualization;
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     const miniApp = new Neighborhood();
@@ -90,8 +91,6 @@ Javalab.prototype.init = function(config) {
   } else {
     visualization = <DefaultVisualization />;
   }
-
-  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
