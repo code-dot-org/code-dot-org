@@ -16,6 +16,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/CloneLessonDialog';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
@@ -222,6 +223,7 @@ class LessonGroupCard extends Component {
     const {lessonGroup, targetLessonGroupPos} = this.props;
     const {draggedLessonPos} = this.state;
     const isTargetLessonGroup = targetLessonGroupPos === lessonGroup.position;
+    console.log(lessonGroup.lessons);
     return (
       <div
         style={
@@ -295,6 +297,7 @@ class LessonGroupCard extends Component {
             delta={this.state.currentPositions[lesson.position - 1] || 0}
             handleDragStart={this.handleDragStart}
             removeLesson={this.handleRemoveLesson}
+            cloneLesson={pos => this.setState({lessonPosToClone: pos})}
           />
         ))}
         <div style={styles.bottomControls}>
@@ -320,6 +323,16 @@ class LessonGroupCard extends Component {
           }
           lessonPosToRemove={this.state.lessonPosToRemove}
           handleClose={this.handleCloseRemoveLesson}
+        />
+
+        <CloneLessonDialog
+          lessonId={
+            this.state.lessonPosToClone
+              ? this.props.lessonGroup.lessons[this.state.lessonPosToClone - 1]
+                  .id
+              : null
+          }
+          handleClose={() => this.setState({lessonPosToClone: null})}
         />
       </div>
     );
