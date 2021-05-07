@@ -144,7 +144,8 @@ class JoinSection extends React.Component {
           'join',
           result,
           null,
-          normalizedSectionCode
+          normalizedSectionCode,
+          data.responseJSON.sectionCapacity
         );
       });
   };
