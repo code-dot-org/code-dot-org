@@ -16,7 +16,8 @@ export default class DesignModeHeaders extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    showMakerToggle: PropTypes.bool.isRequired
+    showMakerToggle: PropTypes.bool.isRequired,
+    autogenerateML: PropTypes.func
   };
 
   onToggleToolbox = () => this.props.onToggleToolbox();
@@ -100,6 +101,7 @@ export default class DesignModeHeaders extends React.Component {
         isRunning={this.props.isRunning}
         showMakerToggle={this.props.showMakerToggle}
         runModeIndicators
+        autogenerateML={this.props.autogenerateML}
       />
     );
 
