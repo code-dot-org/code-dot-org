@@ -1,7 +1,10 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
-import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {
+  getManifest,
+  uploadSpriteToAnimationLibrary
+} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const SpriteLocation = makeEnum('library', 'level');
 
@@ -40,27 +43,29 @@ export default class SpriteUpload extends React.Component {
         break;
     }
 
-    return fetch(`/api/v1/animation-library` + destination, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'image/png'
-      },
-      body: fileData
-    })
-      .then(response => {
-        let responseMessage = response.ok
-          ? 'Image Successfully Uploaded'
-          : `Error(${response.status}: ${response.statusText})`;
-        this.setState({
-          uploadStatus: {success: response.ok, message: responseMessage}
-        });
-      })
-      .catch(err => {
-        this.setState({
-          uploadStatus: {success: false, message: err.toString()}
-        });
-        console.error(err);
-      });
+    return uploadSpriteToAnimationLibrary(
+      destination,
+      fileData,
+      this.onSuccess,
+      this.onError
+    );
+  };
+
+  onSuccess = response => {
+    let responseMessage = response.ok
+      ? 'Image Successfully Uploaded'
+      : `Error(${response.status}: ${response.statusText})`;
+    this.setState({
+      uploadStatus: {success: response.ok, message: responseMessage}
+    });
+  };
+
+  onError = error => {
+    console.log(error);
+    this.setState({
+      uploadStatus: {success: false, message: error.toString()}
+    });
+    console.error(error);
   };
 
   handleImageChange = event => {
