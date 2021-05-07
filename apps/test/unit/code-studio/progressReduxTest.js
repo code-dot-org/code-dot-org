@@ -19,7 +19,6 @@ import reducer, {
   levelsForLessonId,
   progressionsFromLevels,
   groupedLessons,
-  statusForLevel,
   processedStages,
   setCurrentStageId,
   lessonExtrasUrl,
@@ -397,66 +396,6 @@ describe('progressReduxTest', () => {
       };
       const nextState = reducer(state, setCurrentStageId(222));
       assert.strictEqual(nextState.currentStageId, 111);
-    });
-
-    describe('statusForLevel', () => {
-      it('returns LevelStatus.attempted for unlocked assessment level', () => {
-        const level = {
-          ids: ['5275'],
-          uid: '5275_0'
-        };
-        const levelResults = {
-          '5275': TestResults.UNSUBMITTED_ATTEMPT,
-          '5275_0': TestResults.UNSUBMITTED_ATTEMPT,
-          '5275_1': TestResults.GENERIC_FAIL
-        };
-        const status = statusForLevel(level, levelResults);
-        assert.strictEqual(status, LevelStatus.attempted);
-      });
-
-      it('returns LevelStatus.perfect for completed level', () => {
-        const level = {
-          ids: ['123']
-        };
-        const levelResults = {
-          '123': TestResults.ALL_PASS
-        };
-        const status = statusForLevel(level, levelResults);
-        assert.strictEqual(status, LevelStatus.perfect);
-      });
-
-      it('returns LevelStatus.not_tried for level with no progress', () => {
-        const level = {
-          ids: ['123']
-        };
-        const levelResults = {
-          '999': TestResults.ALL_PASS
-        };
-        const status = statusForLevel(level, levelResults);
-        assert.strictEqual(status, LevelStatus.not_tried);
-      });
-
-      it('returns LevelStatus.perfect for a completed peer_review stage', () => {
-        const level = {
-          kind: LevelKind.peer_review,
-          locked: false,
-          status: LevelStatus.perfect
-        };
-        const levelResults = {};
-        const status = statusForLevel(level, levelResults);
-        assert.strictEqual(status, LevelStatus.perfect);
-      });
-      it('returns LevelStatus.completed_assessment for assessment level', () => {
-        const level = {
-          ids: ['123'],
-          kind: LevelKind.assessment
-        };
-        const levelResults = {
-          '123': TestResults.ALL_PASS
-        };
-        const status = statusForLevel(level, levelResults);
-        assert.strictEqual(status, LevelStatus.completed_assessment);
-      });
     });
   });
 
