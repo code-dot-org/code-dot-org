@@ -269,6 +269,27 @@ export const getLevelResult = serverProgress => {
 };
 
 /**
+ * `studentLevelProgressType.pages` is used by multi-page assessments,
+ * and its presence (or absence) is how we distinguish those from single-page
+ * assessments. `pages_completed` is an optional array of individual results
+ * for each page (or null). Since we only have the results for the pages, we
+ * need to create a `studentLevelProgressType` object from the results then
+ * set the `locked` value from the parent progress.
+ */
+const getPagesProgress = serverProgress => {
+  if (serverProgress.pages_completed?.length > 1) {
+    return serverProgress.pages_completed.map(pageResult => {
+      const pageProgress =
+        (pageResult && levelProgressFromResult(pageResult)) ||
+        levelProgressFromStatus(LevelStatus.not_tried);
+      pageProgress.locked = serverProgress.locked;
+      return pageProgress;
+    });
+  }
+  return null;
+};
+
+/**
  * Parse a level progress object that we get from the server using either
  * /api/user_progress or /dashboardapi/section_level_progress into our
  * canonical studentLevelProgressType shape.
@@ -283,17 +304,7 @@ export const levelProgressFromServer = serverProgress => {
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
     lastTimestamp: serverProgress.last_progress_at,
-    // `pages` is used by multi-page assessments, and its presence
-    // (or absence) is how we distinguish those from single-page assessments
-    pages:
-      serverProgress.pages_completed &&
-      serverProgress.pages_completed.length > 1
-        ? serverProgress.pages_completed.map(
-            pageResult =>
-              (pageResult && levelProgressFromResult(pageResult)) ||
-              levelProgressFromStatus(LevelStatus.not_tried)
-          )
-        : null
+    pages: getPagesProgress(serverProgress)
   };
 };
 
