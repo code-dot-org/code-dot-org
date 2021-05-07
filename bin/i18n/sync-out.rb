@@ -90,7 +90,9 @@ def rename_from_crowdin_name_to_locale
   # Now, any remaining directories named after the language name (rather than
   # the four-letter language code) represent languages downloaded from crowdin
   # that aren't in our system. Remove them.
-  FileUtils.rm_r Dir.glob("i18n/locales/[A-Z]*")
+  # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
+  # character case on file systems which are case insensitive by default, such as OSX.
+  FileUtils.rm_r Dir.glob("i18n/locales/*").select {|path| path =~ /i18n\/locales\/[A-Z].*/}
 end
 
 def find_malformed_links_images(locale, file_path)
@@ -436,8 +438,18 @@ def restore_markdown_headers
       # that extension unless we check both with and without.
       source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
     end
-    source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    begin
+      source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
+    rescue Exception => err
+      puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
+      raise err
+    end
+    begin
+      header, content, _line = Documents.new.helpers.parse_yaml_header(path)
+    rescue Exception => err
+      puts "Error parsing yaml header path=#{path}"
+      raise err
+    end
     I18nScriptUtils.sanitize_header!(header)
     restored_header = source_header.merge(header)
     I18nScriptUtils.write_markdown_with_header(content, restored_header, path)

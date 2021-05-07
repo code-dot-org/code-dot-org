@@ -76,10 +76,12 @@ Javalab.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
 
   config.getCode = this.getCode.bind(this);
+  config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
   let visualization;
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     const miniApp = new Neighborhood();
@@ -104,6 +106,8 @@ Javalab.prototype.init = function(config) {
     bodyElement.style.overflow = 'hidden';
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
+    this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
@@ -155,6 +159,7 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
+        handleVersionHistory={handleVersionHistory}
         visualization={visualization}
       />
     </Provider>,
@@ -213,6 +218,11 @@ Javalab.prototype.onContinue = function() {
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
   return getSources(storeState);
+};
+
+Javalab.prototype.afterClearPuzzle = function() {
+  getStore().dispatch(setAllSources(this.level.startSources));
+  project.autosave();
 };
 
 Javalab.prototype.onCommitCode = function() {
