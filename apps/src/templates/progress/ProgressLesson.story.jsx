@@ -67,6 +67,7 @@ export default storybook => {
                 id: '-1',
                 name: 'Link to submitted review',
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/peer_reviews/1',
                 levelNumber: 1
               },
@@ -74,6 +75,7 @@ export default storybook => {
                 id: '-1',
                 name: 'Review a new submission',
                 status: LevelStatus.not_tried,
+                isLocked: false,
                 url: '/pull-review',
                 levelNumber: 2
               },
@@ -82,6 +84,7 @@ export default storybook => {
                 icon: 'fa-lock',
                 name: 'Reviews unavailable at this time',
                 status: LevelStatus.locked,
+                isLocked: true,
                 url: '',
                 levelNumber: 3
               },
@@ -90,6 +93,7 @@ export default storybook => {
                 icon: 'fa-lock',
                 name: 'Reviews unavailable at this time',
                 status: LevelStatus.locked,
+                isLocked: true,
                 url: '',
                 levelNumber: 4
               }
@@ -172,7 +176,8 @@ export default storybook => {
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
-              status: LevelStatus.locked
+              status: LevelStatus.locked,
+              isLocked: true
             }))}
             lessonIsLockedForUser={() => true}
           />

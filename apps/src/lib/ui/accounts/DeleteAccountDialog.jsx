@@ -9,44 +9,6 @@ import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const GUTTER = 20;
-const styles = {
-  container: {
-    margin: GUTTER,
-    color: color.charcoal
-  },
-  bodyContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingTop: GUTTER / 2,
-    paddingBottom: GUTTER
-  },
-  icon: {
-    color: color.red,
-    fontSize: 100
-  },
-  text: {
-    paddingLeft: GUTTER
-  },
-  dangerText: {
-    color: color.red
-  },
-  italicText: {
-    fontStyle: 'italic'
-  },
-  section: {
-    paddingBottom: GUTTER
-  },
-  checkboxContainer: {
-    display: 'flex',
-    paddingTop: GUTTER / 2
-  },
-  label: {
-    paddingLeft: GUTTER / 2
-  },
-  input: {
-    width: 490
-  }
-};
 
 export default class DeleteAccountDialog extends React.Component {
   static propTypes = {
@@ -197,3 +159,42 @@ export default class DeleteAccountDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    margin: GUTTER,
+    color: color.charcoal
+  },
+  bodyContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: GUTTER / 2,
+    paddingBottom: GUTTER
+  },
+  icon: {
+    color: color.red,
+    fontSize: 100
+  },
+  text: {
+    paddingLeft: GUTTER
+  },
+  dangerText: {
+    color: color.red
+  },
+  italicText: {
+    fontStyle: 'italic'
+  },
+  section: {
+    paddingBottom: GUTTER
+  },
+  checkboxContainer: {
+    display: 'flex',
+    paddingTop: GUTTER / 2
+  },
+  label: {
+    paddingLeft: GUTTER / 2
+  },
+  input: {
+    width: 490
+  }
+};

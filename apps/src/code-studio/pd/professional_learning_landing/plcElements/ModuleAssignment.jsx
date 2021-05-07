@@ -2,6 +2,33 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../../../util/color';
 
+export default class ModuleAssignment extends React.Component {
+  static propTypes = {
+    moduleAssignmentData: PropTypes.object
+  };
+
+  render() {
+    return (
+      <a href={this.props.moduleAssignmentData.link}>
+        <div style={styles.moduleAssignmentSection}>
+          {this.props.moduleAssignmentData.category}
+          <div style={styles.ribbonWrapper}>
+            <div
+              style={Object.assign(
+                {},
+                styles.ribbon,
+                styles.ribbonStylesForStatus[
+                  `${this.props.moduleAssignmentData.status}`
+                ]
+              )}
+            />
+          </div>
+        </div>
+      </a>
+    );
+  }
+}
+
 const styles = {
   moduleAssignmentSection: {
     borderRadius: '5px',
@@ -35,30 +62,3 @@ const styles = {
     completed: {backgroundColor: '#0EBE0E'}
   }
 };
-
-export default class ModuleAssignment extends React.Component {
-  static propTypes = {
-    moduleAssignmentData: PropTypes.object
-  };
-
-  render() {
-    return (
-      <a href={this.props.moduleAssignmentData.link}>
-        <div style={styles.moduleAssignmentSection}>
-          {this.props.moduleAssignmentData.category}
-          <div style={styles.ribbonWrapper}>
-            <div
-              style={Object.assign(
-                {},
-                styles.ribbon,
-                styles.ribbonStylesForStatus[
-                  `${this.props.moduleAssignmentData.status}`
-                ]
-              )}
-            />
-          </div>
-        </div>
-      </a>
-    );
-  }
-}

@@ -4,7 +4,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# App Lab\r\n\r\nUse this screen to import your new models into App Lab and create an app.\r\n\r\n*Note: If \"Import Models\" doesn't appear in the gear dropdown, [try clicking here](https://studio.code.org/s/ai-classroom-test/stage/1/puzzle/4?enableExperiments=applab-ml). This will reload the page and enable some special features*\r\n",
+    "long_instructions": "# App Lab\r\n\r\nUse this screen to import your new models into App Lab and create an app.\r\n\r\n*Note: If \"Import Models\" doesn't appear in the gear dropdown, [try clicking here](https://studio.code.org/s/ai-classroom-test/lessons/1/levels/4?enableExperiments=applab-ml). This will reload the page and enable some special features*\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
