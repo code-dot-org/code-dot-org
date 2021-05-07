@@ -73,7 +73,6 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
       title,
       bubbleSize
     } = this.props;
-
     const content = getBubbleContent(
       isLocked,
       isUnplugged,
@@ -82,12 +81,24 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
       title,
       bubbleSize
     );
+    return this.renderBasicBubble(
+      getBubbleShape(isUnplugged, isConcept),
+      bubbleSize,
+      levelProgressStyle(levelStatus, levelKind),
+      content
+    );
+  }
 
+  /**
+   * We use this helper as a testing hook to intercept the explicit props used
+   * to render the `BasicBubble`.
+   */
+  renderBasicBubble(shape, size, progressStyle, content) {
     return (
       <BasicBubble
-        shape={getBubbleShape(isUnplugged, isConcept)}
-        size={bubbleSize}
-        progressStyle={levelProgressStyle(levelStatus, levelKind)}
+        shape={shape}
+        size={size}
+        progressStyle={progressStyle}
         classNames={getBubbleClassNames(true)}
       >
         {content}
