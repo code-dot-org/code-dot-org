@@ -129,6 +129,16 @@ class LessonsController < ApplicationController
     render(status: :not_acceptable, plain: e.message)
   end
 
+  def clone
+    puts params.permit(:destinationScriptName)
+    puts params.inspect
+    destination_script = Script.find_by_name(params[:destinationScriptName])
+    puts destination_script.inspect
+    return render :not_found unless destination_script
+    Lesson.copy_to_script(@lesson, destination_script)
+    return :success
+  end
+
   private
 
   def lesson_params
