@@ -177,7 +177,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
   if (action.type === SET_DYNAMIC_INSTRUCTIONS_KEY) {
     return Object.assign({}, state, {
-      dynamicInstructionsKey: action.dynamicInstructionsKey
+      dynamicInstructionsKey: action.dynamicInstructionsKey,
+      overlayVisible: true
     });
   }
 
