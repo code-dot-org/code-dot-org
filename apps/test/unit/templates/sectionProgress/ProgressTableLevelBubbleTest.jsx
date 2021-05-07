@@ -12,7 +12,10 @@ import {
   BubbleSize,
   BubbleShape
 } from '@cdo/apps/templates/progress/progressStyles';
-import {LinkWrapper} from '@cdo/apps/templates/progress/BubbleFactory';
+import {
+  BasicBubble,
+  LinkWrapper
+} from '@cdo/apps/templates/progress/BubbleFactory';
 
 const TITLE = '1';
 
@@ -55,12 +58,12 @@ const assessmentBackgrounds = {
  * style, and cache key for an underlying BasicBubble. Consequently many of our
  * tests need to verify properties of the underlying BasicBubble. However,
  * since what the component actually renders is the cached HTML representation
- * of the BasicBubble, we use a spy to intercept the BasicBubble returned from
- * ProgressTableLevelBubble.createBubbleElement for easier verification.
+ * of the BasicBubble, we use a spy to intercept the props used to render the
+ * BasicBubble so we can render it here for easier verification.
  */
-const elementSpy = sinon.spy(
+const renderPropsSpy = sinon.spy(
   ProgressTableLevelBubble.prototype,
-  'createBubbleElement'
+  'renderBasicBubble'
 );
 
 /**
@@ -69,16 +72,20 @@ const elementSpy = sinon.spy(
  */
 function getFirstRenderedBasicBubble(propOverrides = {}) {
   // first we render the bubble we want to test, which will call
-  // `createBubbleElement` in the process
+  // `renderBasicBubble` in the process
   mount(<ProgressTableLevelBubble {...defaultProps} {...propOverrides} />);
 
-  // next we get the rendered `BasicBubble` returned by `createBubbleElement`
-  const renderedBubble = elementSpy.returnValues[0];
+  // next we get the args passed to `renderBasicBubble` to render the bubble
+  const [shape, size, progressStyle, content] = [...renderPropsSpy.args[0]];
 
   // finally we render the `BasicBubble` itself so we can verifty its props
   // (since the underlying `CachedElement` rendered it as raw HTML when
   // rendering the `ProgressTableLevelBubble`)
-  return mount(renderedBubble);
+  return mount(
+    <BasicBubble shape={shape} size={size} progressStyle={progressStyle}>
+      {content}
+    </BasicBubble>
+  );
 }
 
 /**
@@ -99,12 +106,12 @@ function getCacheSize() {
 
 describe('ProgressTableLevelBubble', () => {
   beforeEach(() => {
-    elementSpy.resetHistory();
+    renderPropsSpy.resetHistory();
     cacheExports.clearElementsCache();
   });
 
   after(() => {
-    elementSpy.resetHistory();
+    renderPropsSpy.resetHistory();
     cacheExports.clearElementsCache();
   });
 
@@ -229,14 +236,14 @@ describe('ProgressTableLevelBubble', () => {
     it('only caches one element when rendering two identical bubbles', () => {
       mount(<ProgressTableLevelBubble {...defaultProps} />);
       mount(<ProgressTableLevelBubble {...defaultProps} />);
-      expect(elementSpy.calledOnce).to.be.true;
+      expect(renderPropsSpy.calledOnce).to.be.true;
       expect(getCacheSize()).to.equal(1);
     });
 
     it('caches two elements when rendering two different bubbles', () => {
       mount(<ProgressTableLevelBubble {...defaultProps} />);
       mount(<ProgressTableLevelBubble {...defaultProps} isUnplugged={true} />);
-      expect(elementSpy.calledTwice).to.be.true;
+      expect(renderPropsSpy.calledTwice).to.be.true;
       expect(getCacheSize()).to.equal(2);
     });
 
@@ -248,7 +255,7 @@ describe('ProgressTableLevelBubble', () => {
       const wrapperB = mount(
         <ProgressTableLevelBubble {...defaultProps} title="2" isPaired={true} />
       );
-      expect(elementSpy.calledOnce).to.be.true;
+      expect(renderPropsSpy.calledOnce).to.be.true;
       expect(getCacheSize()).to.equal(1);
       expect(
         wrapperA.find('div').props().dangerouslySetInnerHTML.__html
@@ -260,7 +267,7 @@ describe('ProgressTableLevelBubble', () => {
       mount(
         <ProgressTableLevelBubble {...defaultProps} url={'/foo/bar/baz'} />
       );
-      expect(elementSpy.calledOnce).to.be.true;
+      expect(renderPropsSpy.calledOnce).to.be.true;
       expect(getCacheSize()).to.equal(1);
     });
   });
