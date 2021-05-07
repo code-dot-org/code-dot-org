@@ -78,11 +78,12 @@ class I18nStringUrlTracker
   def add_to_buffer(string_key, url, source)
     # make sure this is the only thread modifying @buffer
     @buffer.synchronize do
+      # update the buffer size if we are adding any new data to it
+      # duplicate data will not increase the buffer size
+      buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
+      buffer_string_key = buffer_url[string_key] ||= Set.new.tap {@buffer_size += string_key.bytesize}
       # add the new data to the buffer
-      ((@buffer[url] ||= {})[string_key] ||= Set.new).add?(source) &&
-        # update the buffer size if we are adding any new data to it
-        # duplicate data will not increase the buffer size
-        @buffer_size += (url.bytesize + string_key.bytesize + source.bytesize)
+      @buffer_size += source.bytesize if buffer_string_key.add?(source)
     end
 
     # if the buffer is too large, trigger an early flush
