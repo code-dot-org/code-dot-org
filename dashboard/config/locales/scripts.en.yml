@@ -22208,26 +22208,63 @@ en:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+              description: Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
             lessonGroup-3:
               display_name: Show What You Know
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
           description_short: ''
-          description: ''
+          description: 'Believing in one''s own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
+
+'
           student_description: ''
         csa2-pilot:
           lessons:
             new lesson:
-              name: lesson display name
+              name: Defining Attributes
+              description_student: "Through our experiences in The Neighborhood, we know that classes and objects are key components of the Java programming language. But just how exactly do classes create objects? In this lesson, you explore how an object is created and learn about a process called data encapsulation. \n"
+              description_teacher: In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.
+            lesson-2:
+              name: Using Variables
+            lesson-3:
+              name: Writing Constructors
+            lesson-4:
+              name: Adding Multiple Constructors
+            lesson-5:
+              name: Manipulating Variables and Object Data
+            lesson-6:
+              name: Minimizing Errors in Initialization
+            lesson-7:
+              name: Writing Constructors for Hierarchies
+            lesson-8:
+              name: Accessing Object Data
+            lesson-9:
+              name: Modifying Object Data
+            lesson-10:
+              name: Displaying Object Information
+            lesson-11:
+              name: The Neighborhood Store Management Project - Day 1
+            lesson-12:
+              name: The Neighborhood Store Management Project - Day 2
+            lesson-13:
+              name: The Neighborhood Store Management Project - Day 3
+            lesson-14:
+              name: FRQ Day
+            lesson-15:
+              name: Assessment Day
           lesson_groups:
             lesson group:
-              display_name: lesson group display name
+              display_name: Content
+            lessonGroup-2:
+              display_name: Show What You Know
           name: csa2-pilot
           title: Giving Objects State
           description_audience: ''
           description_short: ''
-          description: ''
+          description: 'Students access the Java Lab to explore The Neighborhood and are introduced to the Painter class. Using starter code, students make simple modifications to achieve different outcomes with a Painter object and practice creating a Painter object to identify the relationship between a class and an object.
+
+'
           student_description: ''
         csa3-pilot:
           lessons: {}
