@@ -8,7 +8,6 @@ import {
   fakeLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from '@cdo/apps/util/color';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('ProgressLesson', () => {
   const defaultProps = {
@@ -362,7 +361,7 @@ describe('ProgressLesson', () => {
         {...defaultProps}
         levels={defaultProps.levels.map(level => ({
           ...level,
-          status: LevelStatus.locked
+          isLocked: true
         }))}
         lesson={{
           ...defaultProps.lesson,
