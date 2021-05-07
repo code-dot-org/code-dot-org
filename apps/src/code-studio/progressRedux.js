@@ -571,23 +571,14 @@ const peerReviewLevels = state =>
  * state.levelResults
  */
 const levelWithProgress = (
-  {
-    levelResults,
-    scriptProgress,
-    levelPairing = {},
-    currentLevelId,
-    isSublevel = false
-  },
+  {levelResults, scriptProgress, levelPairing = {}, currentLevelId},
   level
 ) => {
-  if (level.kind !== LevelKind.unplugged && !isSublevel) {
-    if (!level.title || typeof level.title !== 'number') {
-      throw new Error(
-        'Expect all non-unplugged, non-bubble choice sublevel, levels to have a numerical title'
-      );
-    }
-  }
   const normalizedLevel = processedLevel(level);
+  if (level.ids) {
+    // make sure we're using the id with best progress
+    normalizedLevel.id = bestResultLevelId(level.ids, levelResults);
+  }
 
   // default values
   let status = LevelStatus.not_tried;
@@ -609,11 +600,14 @@ const levelWithProgress = (
     // note: if we're not using levelProgress, `isLocked` will always be false.
     status = activityCssClass(levelResults[normalizedLevel.id]);
   }
+  const isCurrent =
+    normalizedLevel.id === currentLevelId ||
+    !!level.ids?.includes[currentLevelId];
 
   return {
     ...normalizedLevel,
     status: status,
-    isCurrentLevel: currentLevelId === normalizedLevel.id,
+    isCurrentLevel: isCurrent,
     paired: levelPairing[level.activeId],
     isLocked: locked
   };
@@ -638,13 +632,7 @@ export const levelsByLesson = ({
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
           levelWithProgress(
-            {
-              levelResults,
-              scriptProgress,
-              levelPairing,
-              currentLevelId,
-              isSublevel: true
-            },
+            {levelResults, scriptProgress, levelPairing, currentLevelId},
             sublevel
           )
         );
