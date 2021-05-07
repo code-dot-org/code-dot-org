@@ -4,20 +4,6 @@ import _ from 'lodash';
 import {Row, Col, FormControl, Panel} from 'react-bootstrap';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
-const styles = {
-  lineItem: {
-    fontFamily: '"Gotham 7r"',
-    marginRight: '10px',
-    display: 'inline-block'
-  },
-  panel: {
-    width: '66%',
-    minWidth: 500,
-    marginTop: '10px',
-    marginBottom: '10px'
-  }
-};
-
 const Question = props => {
   const suffix =
     '?:.'.indexOf(props.text[props.text.length - 1]) >= 0 ? '' : ':';
@@ -126,3 +112,17 @@ export default class DetailViewResponse extends React.Component {
     }
   }
 }
+
+const styles = {
+  lineItem: {
+    fontFamily: '"Gotham 7r"',
+    marginRight: '10px',
+    display: 'inline-block'
+  },
+  panel: {
+    width: '66%',
+    minWidth: 500,
+    marginTop: '10px',
+    marginBottom: '10px'
+  }
+};

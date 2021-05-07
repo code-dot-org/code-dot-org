@@ -3,13 +3,6 @@ import React from 'react';
 import Alert from '@cdo/apps/templates/alert';
 import $ from 'jquery';
 
-const styles = {
-  alertContainer: {
-    position: 'absolute',
-    right: 0
-  }
-};
-
 export default class WorkspaceAlert extends React.Component {
   static propTypes = {
     type: PropTypes.oneOf(['error', 'warning', 'notification']).isRequired,
@@ -62,3 +55,10 @@ export default class WorkspaceAlert extends React.Component {
     );
   }
 }
+
+const styles = {
+  alertContainer: {
+    position: 'absolute',
+    right: 0
+  }
+};

@@ -7,72 +7,6 @@ import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
 
-const styles = {
-  main: {
-    display: 'flex',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.border_gray,
-    width: styleConstants['content-width'],
-    backgroundColor: color.white,
-    marginTop: 25
-  },
-  mainDashed: {
-    borderWidth: 5,
-    borderStyle: 'dashed',
-    borderColor: color.border_gray,
-    boxSizing: 'border-box'
-  },
-  heading: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 20,
-    fontWeight: 'bold',
-    backgroundColor: color.white,
-    color: color.teal
-  },
-  details: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 14,
-    marginTop: 5,
-    color: color.charcoal
-  },
-  wordBox: {
-    width: styleConstants['content-width'] - 475,
-    flexGrow: 1,
-    marginLeft: 25,
-    marginTop: 25,
-    marginBottom: 25,
-    float: 'left',
-    borderWidth: 1,
-    borderColor: 'red'
-  },
-  wordBoxRTL: {
-    marginLeft: 0,
-    marginRight: 25
-  },
-  actionBox: {
-    float: 'right',
-    display: 'flex'
-  },
-  inputBox: {
-    float: 'left',
-    marginTop: 27,
-    borderRadius: 0,
-    height: 26,
-    paddingLeft: 25,
-    width: 200
-  },
-  button: {
-    float: 'right',
-    marginTop: 28,
-    marginLeft: 20,
-    marginRight: 25
-  },
-  clear: {
-    clear: 'both'
-  }
-};
-
 const INITIAL_STATE = {
   sectionCode: ''
 };
@@ -192,6 +126,72 @@ class JoinSection extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    display: 'flex',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    width: styleConstants['content-width'],
+    backgroundColor: color.white,
+    marginTop: 25
+  },
+  mainDashed: {
+    borderWidth: 5,
+    borderStyle: 'dashed',
+    borderColor: color.border_gray,
+    boxSizing: 'border-box'
+  },
+  heading: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 20,
+    fontWeight: 'bold',
+    backgroundColor: color.white,
+    color: color.teal
+  },
+  details: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    marginTop: 5,
+    color: color.charcoal
+  },
+  wordBox: {
+    width: styleConstants['content-width'] - 475,
+    flexGrow: 1,
+    marginLeft: 25,
+    marginTop: 25,
+    marginBottom: 25,
+    float: 'left',
+    borderWidth: 1,
+    borderColor: 'red'
+  },
+  wordBoxRTL: {
+    marginLeft: 0,
+    marginRight: 25
+  },
+  actionBox: {
+    float: 'right',
+    display: 'flex'
+  },
+  inputBox: {
+    float: 'left',
+    marginTop: 27,
+    borderRadius: 0,
+    height: 26,
+    paddingLeft: 25,
+    width: 200
+  },
+  button: {
+    float: 'right',
+    marginTop: 28,
+    marginLeft: 20,
+    marginRight: 25
+  },
+  clear: {
+    clear: 'both'
+  }
+};
 
 export const UnconnectedJoinSection = JoinSection;
 
