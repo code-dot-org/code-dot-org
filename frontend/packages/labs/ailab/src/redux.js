@@ -21,7 +21,8 @@ import {
   ColumnTypes,
   MLTypes,
   TestDataLocations,
-  ResultsGrades
+  ResultsGrades,
+  REGRESSION_ERROR_TOLERANCE
 } from "./constants.js";
 
 // Action types
@@ -805,7 +806,7 @@ export function getAccuracyRegression(state) {
   let grades = [];
   const maxMin = getRange(state, state.labelColumn);
   const range = Math.abs(maxMin.max - maxMin.min);
-  const errorTolerance = range * 0.03;
+  const errorTolerance = range * REGRESSION_ERROR_TOLERANCE/100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     const diff = Math.abs(

@@ -8,7 +8,12 @@ import {
   getAccuracyGrades,
   isRegression
 } from "../redux";
-import { styles, colors, ResultsGrades } from "../constants";
+import {
+  styles,
+  colors,
+  ResultsGrades,
+  REGRESSION_ERROR_TOLERANCE
+} from "../constants";
 
 class ResultsTable extends Component {
   static propTypes = {
@@ -49,7 +54,9 @@ class ResultsTable extends Component {
                 >
                   <span style={styles.largeText}>{"Actual"}</span>
                   {this.props.isRegression && (
-                    <div style={styles.smallTextNoMargin}>{"+/- 3% of range"}</div>
+                    <div style={styles.smallTextNoMargin}>
+                      {`+/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
+                    </div>
                   )}
                 </th>
                 <th
