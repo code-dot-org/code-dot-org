@@ -102,8 +102,8 @@ class JavalabView extends React.Component {
               onCommitCode={onCommitCode}
               handleVersionHistory={handleVersionHistory}
             />
-            <div style={style.consoleAndButtons}>
-              <div style={style.buttons}>
+            <div style={styles.consoleAndButtons}>
+              <div style={styles.buttons}>
                 <button
                   type="button"
                   style={this.getButtonStyles(false)}
@@ -150,7 +150,7 @@ class JavalabView extends React.Component {
   }
 }
 
-const style = {
+const styles = {
   instructionsAndPreview: {
     width: '40%',
     position: 'relative',
@@ -212,60 +212,3 @@ export default connect(
     setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
   })
 )(UnconnectedJavalabView);
-
-const styles = {
-  instructionsAndPreview: {
-    width: '100%',
-    position: 'absolute',
-    marginRight: 15,
-    color: color.black,
-    right: '15px',
-    top: '15px'
-  },
-  instructions: {
-    width: '100%',
-    position: 'relative',
-    marginLeft: 0,
-    color: color.black,
-    left: 0
-  },
-  editorAndConsole: {
-    position: 'absolute',
-    right: '15px',
-    marginLeft: '15px'
-  },
-  preview: {
-    backgroundColor: color.light_gray,
-    height: '200px',
-    marginTop: '13px'
-  },
-  javalab: {
-    display: 'flex',
-    margin: 15
-  },
-  consoleAndButtons: {
-    marginTop: 15,
-    display: 'flex'
-  },
-  consoleStyle: {
-    flexGrow: 1
-  },
-  buttons: {
-    marginRight: 15,
-    height: 75,
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  singleButton: {
-    // this matches the current code mirror theme we are using
-    // TODO: either add to color.scss or use a color from there depending
-    // on final theme choice.
-    backgroundColor: color.darkest_gray,
-    color: color.white,
-    width: 95,
-    textAlign: 'center'
-  },
-  clear: {
-    clear: 'both'
-  }
-};
