@@ -8,6 +8,7 @@ import {
 
 const SpriteLocation = makeEnum('library', 'level');
 
+// Levelbuilder tool for adding sprites to the Spritelab animation library.
 export default class SpriteUpload extends React.Component {
   state = {
     fileData: null,
@@ -61,7 +62,6 @@ export default class SpriteUpload extends React.Component {
   };
 
   onError = error => {
-    console.log(error);
     this.setState({
       uploadStatus: {success: false, message: error.toString()}
     });
