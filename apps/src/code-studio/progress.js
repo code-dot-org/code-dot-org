@@ -145,9 +145,10 @@ function populateProgress(store, signedIn, progressData, scriptName) {
     if (data.usingDbProgress) {
       store.dispatch(useDbProgress());
       clientState.clearProgress();
-      store.dispatch(setScriptProgress(data.progressData.progress));
-      store.dispatch(overwriteResults(extractLevelResults(data.progressData)));
-    } else if (data.levelResults) {
+      store.dispatch(setScriptProgress(data.scriptProgress));
+    }
+
+    if (data.levelResults) {
       store.dispatch(overwriteResults(data.levelResults));
     }
 
@@ -183,7 +184,8 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       // User is signed in, return a resolved promise with the given progress data
       return Promise.resolve({
         usingDbProgress: true,
-        progressData
+        levelResults: extractLevelResults(progressData),
+        scriptProgress: progressData.progress
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
@@ -200,7 +202,8 @@ function getLevelProgress(signedIn, progressData, scriptName) {
           if (data.signedIn) {
             return {
               usingDbProgress: true,
-              progressData
+              levelResults: extractLevelResults(data),
+              scriptProgress: data.progress
             };
           } else {
             return {
