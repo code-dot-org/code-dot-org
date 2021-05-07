@@ -1,8 +1,8 @@
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
  * @param appType {String} "gamelab" or "spritelab"
- * @param locale {String} language locale
+ * @param locale {String} language locale, defaults to 'en_us'
  */
-export function getManifest(appType, locale) {
+export function getManifest(appType, locale = 'en_us') {
   return fetch(`/api/v1/animation-library/manifest/${appType}/${locale}`).then(
     response => response.json()
   );
