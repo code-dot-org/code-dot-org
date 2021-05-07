@@ -13,33 +13,7 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels
 } from "./redux";
-import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
-
-export const availableTrainers = {
-  knnClassify: {
-    name: "KNN Classifier",
-    description:
-      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.",
-    mlType: MLTypes.CLASSIFICATION,
-    labelType: ColumnTypes.CATEGORICAL
-  },
-  knnRegress: {
-    name: "KNN Regression",
-    description:
-      "Uses the K-Nearest Neighbor algorithm to predict a floating point label.",
-    mlType: MLTypes.REGRESSION,
-    labelType: ColumnTypes.NUMERICAL
-  }
-};
-
-export const defaultRegressionTrainer = "knnRegress";
-export const defaultClassificationTrainer = "knnClassify";
-
-export const getMLType = trainerName => {
-  if (availableTrainers[trainerName]) {
-    return availableTrainers[trainerName].mlType;
-  }
-};
+import { ColumnTypes, TestDataLocations } from "./constants.js";
 
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.

@@ -8,6 +8,9 @@ export const MLTypes = {
   REGRESSION: "regression"
 };
 
+export const RegressionTrainer = "knnRegress";
+export const ClassificationTrainer = "knnClassify";
+
 export const REGRESSION_ERROR_TOLERANCE = 5;
 
 export const ResultsGrades = {
