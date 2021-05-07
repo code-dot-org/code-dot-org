@@ -14,16 +14,6 @@ import {
 } from '../foormEditorRedux';
 import FoormLibrarySaveBar from './FoormLibrarySaveBar';
 
-const styles = {
-  surveyTitle: {
-    marginBottom: 0
-  },
-  loadError: {
-    fontWeight: 'bold',
-    padding: '1em'
-  }
-};
-
 const JSONErrorMessage =
   'There is a parsing error in the JSON being edited. Errors are noted on the left side of the editor.';
 
@@ -294,6 +284,16 @@ class FoormLibraryEditorManager extends React.Component {
     );
   }
 }
+
+const styles = {
+  surveyTitle: {
+    marginBottom: 0
+  },
+  loadError: {
+    fontWeight: 'bold',
+    padding: '1em'
+  }
+};
 
 export const UnconnectedFoormLibraryEditorManager = FoormLibraryEditorManager;
 

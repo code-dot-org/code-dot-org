@@ -7,35 +7,6 @@ import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import color from '@cdo/apps/util/color';
 import {cstaStandardsURL} from './standardsConstants';
 
-const styles = {
-  currentCourse: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    width: '100%'
-  },
-  classProgress: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginLeft: 30
-  },
-  courseOverview: {
-    width: '75%'
-  },
-  scriptLink: {
-    color: color.teal
-  },
-  statsRow: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  lessonNote: {
-    marginTop: 10
-  }
-};
-
 export default class StandardsReportCurrentCourseInfo extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
@@ -91,3 +62,32 @@ export default class StandardsReportCurrentCourseInfo extends Component {
     );
   }
 }
+
+const styles = {
+  currentCourse: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    width: '100%'
+  },
+  classProgress: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 30
+  },
+  courseOverview: {
+    width: '75%'
+  },
+  scriptLink: {
+    color: color.teal
+  },
+  statsRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  lessonNote: {
+    marginTop: 10
+  }
+};

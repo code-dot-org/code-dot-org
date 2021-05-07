@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  levelTypeWithoutStatus,
+  levelType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
@@ -10,29 +10,11 @@ import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import _ from 'lodash';
 
-const styles = {
-  container: {
-    ...progressStyles.flexBetween,
-    position: 'relative',
-    whiteSpace: 'nowrap'
-  },
-  background: {
-    height: 10,
-    backgroundColor: color.lighter_gray,
-    position: 'absolute',
-    left: 10,
-    right: 10
-  },
-  sublevelContainer: {
-    position: 'relative',
-    display: 'inline-block'
-  }
-};
 export default class ProgressTableDetailCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    levels: PropTypes.arrayOf(levelTypeWithoutStatus).isRequired,
+    levels: PropTypes.arrayOf(levelType).isRequired,
     studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
     stageExtrasEnabled: PropTypes.bool
   };
@@ -137,3 +119,22 @@ export default class ProgressTableDetailCell extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    ...progressStyles.flexBetween,
+    position: 'relative',
+    whiteSpace: 'nowrap'
+  },
+  background: {
+    height: 10,
+    backgroundColor: color.lighter_gray,
+    position: 'absolute',
+    left: 10,
+    right: 10
+  },
+  sublevelContainer: {
+    position: 'relative',
+    display: 'inline-block'
+  }
+};
