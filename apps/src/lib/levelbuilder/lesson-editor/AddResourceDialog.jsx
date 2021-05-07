@@ -9,50 +9,6 @@ import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 import LessonEditorDialog from './LessonEditorDialog';
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  dropdownRow: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  inputAndLabel: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  textInput: {
-    width: '98%'
-  },
-  selectAndLabel: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '45%'
-  },
-  selectInput: {
-    width: '100%'
-  },
-  checkboxInput: {
-    marginTop: 0,
-    marginLeft: 10
-  },
-  submitButton: {
-    color: 'white',
-    backgroundColor: color.orange,
-    borderColor: color.orange,
-    borderRadius: 3,
-    fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 5,
-    paddingBottom: 5
-  }
-};
-
 const TYPE_OPTIONS = [
   'Activity Guide',
   'Answer Key',
@@ -289,3 +245,47 @@ export default class AddResourceDialog extends Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  dropdownRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  inputAndLabel: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textInput: {
+    width: '98%'
+  },
+  selectAndLabel: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '45%'
+  },
+  selectInput: {
+    width: '100%'
+  },
+  checkboxInput: {
+    marginTop: 0,
+    marginLeft: 10
+  },
+  submitButton: {
+    color: 'white',
+    backgroundColor: color.orange,
+    borderColor: color.orange,
+    borderRadius: 3,
+    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 5,
+    paddingBottom: 5
+  }
+};

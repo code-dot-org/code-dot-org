@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  levelTypeWithoutStatus,
+  levelType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
@@ -10,29 +10,11 @@ import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import _ from 'lodash';
 
-const styles = {
-  container: {
-    ...progressStyles.flexBetween,
-    position: 'relative',
-    whiteSpace: 'nowrap'
-  },
-  background: {
-    height: 10,
-    backgroundColor: color.lighter_gray,
-    position: 'absolute',
-    left: 10,
-    right: 10
-  },
-  sublevelContainer: {
-    position: 'relative',
-    display: 'inline-block'
-  }
-};
 export default class ProgressTableDetailCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    levels: PropTypes.arrayOf(levelTypeWithoutStatus).isRequired,
+    levels: PropTypes.arrayOf(levelType).isRequired,
     studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
     stageExtrasEnabled: PropTypes.bool
   };
@@ -84,10 +66,10 @@ export default class ProgressTableDetailCell extends React.Component {
             >
               <ProgressTableLevelBubble
                 levelStatus={subStatus}
-                disabled={!!level.bonus && !this.props.stageExtrasEnabled}
-                smallBubble={true}
-                bonus={sublevel.bonus}
-                concept={sublevel.isConceptLevel}
+                isDisabled={!!level.bonus && !this.props.stageExtrasEnabled}
+                bubbleSize={progressStyles.BubbleSize.letter}
+                isBonus={sublevel.bonus}
+                isConcept={sublevel.isConceptLevel}
                 title={sublevel.bubbleText}
                 url={this.buildBubbleUrl(sublevel)}
               />
@@ -111,11 +93,11 @@ export default class ProgressTableDetailCell extends React.Component {
           <ProgressTableLevelBubble
             levelStatus={status}
             levelKind={level.kind}
-            disabled={!!level.bonus && !stageExtrasEnabled}
-            unplugged={level.isUnplugged}
-            bonus={level.bonus}
-            paired={paired}
-            concept={level.isConceptLevel}
+            isDisabled={!!level.bonus && !stageExtrasEnabled}
+            isUnplugged={level.isUnplugged}
+            isBonus={level.bonus}
+            isPaired={paired}
+            isConcept={level.isConceptLevel}
             title={level.bubbleText}
             url={url}
           />
@@ -137,3 +119,22 @@ export default class ProgressTableDetailCell extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    ...progressStyles.flexBetween,
+    position: 'relative',
+    whiteSpace: 'nowrap'
+  },
+  background: {
+    height: 10,
+    backgroundColor: color.lighter_gray,
+    position: 'absolute',
+    left: 10,
+    right: 10
+  },
+  sublevelContainer: {
+    position: 'relative',
+    display: 'inline-block'
+  }
+};

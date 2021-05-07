@@ -10,13 +10,6 @@ import {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  dropdown: {
-    display: 'inline-block',
-    marginRight: 5
-  }
-};
-
 export default class ResourcesDropdown extends React.Component {
   static propTypes = {
     resources: PropTypes.arrayOf(resourceShape),
@@ -137,3 +130,10 @@ export default class ResourcesDropdown extends React.Component {
     );
   }
 }
+
+const styles = {
+  dropdown: {
+    display: 'inline-block',
+    marginRight: 5
+  }
+};

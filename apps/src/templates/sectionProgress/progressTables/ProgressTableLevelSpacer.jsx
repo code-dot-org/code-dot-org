@@ -9,7 +9,8 @@ const styles = {
   },
   node: {
     ...progressStyles.inlineBlock,
-    minWidth: progressStyles.BUBBLE_CONTAINER_WIDTH,
+    minWidth:
+      progressStyles.bubbleContainerWidths[progressStyles.BubbleSize.full],
     textAlign: 'center'
   }
 };
@@ -24,7 +25,9 @@ function SublevelSpacer({sublevelCount}) {
   return (
     <span
       style={{
-        width: sublevelCount * progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH
+        width:
+          sublevelCount *
+          progressStyles.bubbleContainerWidths[progressStyles.BubbleSize.letter]
       }}
     />
   );
@@ -39,7 +42,7 @@ SublevelSpacer.propTypes = {
  * for getting a node to properly align with levels that contain sublevels,
  * since in that case we want the node to align with the parent level and leave
  * space for the sublevels. Example uses include laying out level icons in
- * `ProgressTableLevelIconSet`, and laying out text in `ProgressTableContainer`
+ * `ProgressTableLevelIconSet`, and laying out text in `ProgressTableView`
  * expansion rows.
  */
 export default function ProgressTableLevelSpacer({items}) {

@@ -4,12 +4,6 @@ import $ from 'jquery';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  input: {
-    marginLeft: 5
-  }
-};
-
 export default class CreateNewLevelInputs extends Component {
   static propTypes = {
     levelOptions: PropTypes.array.isRequired,
@@ -116,3 +110,9 @@ export default class CreateNewLevelInputs extends Component {
     );
   }
 }
+
+const styles = {
+  input: {
+    marginLeft: 5
+  }
+};

@@ -14,9 +14,10 @@ class ScriptDslTest < ActiveSupport::TestCase
     wrapup_video: nil,
     login_required: false,
     professional_learning_course: nil,
+    only_instructor_review_required: nil,
+    peer_reviews_to_complete: nil,
     hideable_lessons: false,
     student_detail_progress_view: false,
-    peer_reviews_to_complete: nil,
     teacher_resources: [],
     lesson_extras_available: false,
     has_verified_resources: false,
@@ -424,6 +425,17 @@ endvariants
     DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal [{"notice": "NoticeHere", "details": "DetailsHere", "link": "/foo/bar", "type": "information"}], output[:announcements]
+  end
+
+  test 'can set only_instructor_review_required' do
+    input_dsl = <<~DSL
+      only_instructor_review_required true
+
+      lesson 'Lesson1', display_name: 'Lesson1'
+      level 'Level 1'
+    DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:only_instructor_review_required]
   end
 
   test 'can set pilot_experiment' do
@@ -889,13 +901,7 @@ level 'Level 3'
       }
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
-      hidden false
-      new_name 'new name'
-      family_name 'family name'
-      version_year '2001'
-      is_course true
       is_migrated true
-
     SCRIPT
     assert_equal expected, script_text
   end

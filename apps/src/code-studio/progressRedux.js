@@ -558,6 +558,7 @@ const peerReviewLevels = state =>
     // so always use a specific id that won't collide with real levels
     id: PEER_REVIEW_ID,
     status: level.locked ? LevelStatus.locked : level.status,
+    isLocked: level.locked,
     url: level.url,
     name: level.name,
     icon: level.locked ? level.icon : undefined,
@@ -565,23 +566,12 @@ const peerReviewLevels = state =>
   }));
 
 /**
- * Determine whether the passed in level is our current level (i.e. in the dots
- * in our header
- * @returns {boolean}
- */
-const isCurrentLevel = (currentLevelId, level) => {
-  return (
-    !!currentLevelId && (level.id && level.id.indexOf(currentLevelId) !== -1)
-  );
-};
-
-/**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This (a) filters to the parts our views care
  * about and (b) determines current status based on the current state of
  * state.levelResults
  */
-const levelWithStatus = (
+const levelWithProgress = (
   {
     levelResults,
     scriptProgress,
@@ -604,9 +594,9 @@ const levelWithStatus = (
   return {
     ...normalizedLevel,
     status: statusForLevel(level, levelResults),
-    isCurrentLevel: isCurrentLevel(currentLevelId, normalizedLevel),
+    isCurrentLevel: currentLevelId === normalizedLevel.id,
     paired: levelPairing[level.activeId],
-    locked: levelProgress?.locked,
+    isLocked: levelProgress?.locked || false,
     readonlyAnswers: level.readonly_answers
   };
 };
@@ -623,13 +613,13 @@ export const levelsByLesson = ({
 }) =>
   stages.map(stage =>
     stage.levels.map(level => {
-      let statusLevel = levelWithStatus(
+      let statusLevel = levelWithProgress(
         {levelResults, scriptProgress, levelPairing, currentLevelId},
         level
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
-          levelWithStatus(
+          levelWithProgress(
             {
               levelResults,
               scriptProgress,
@@ -651,7 +641,7 @@ export const levelsByLesson = ({
 export const levelsForLessonId = (state, lessonId) =>
   state.stages
     .find(stage => stage.id === lessonId)
-    .levels.map(level => levelWithStatus(state, level));
+    .levels.map(level => levelWithProgress(state, level));
 
 export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
@@ -749,7 +739,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
         bigQuestions: lessonGroup.big_questions
       },
       lessons: [],
-      levels: []
+      levelsByLesson: []
     };
   });
 
@@ -763,7 +753,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
 
     if (byGroup[group]) {
       byGroup[group].lessons.push(lessonAtIndex);
-      byGroup[group].levels.push(lessonLevels);
+      byGroup[group].levelsByLesson.push(lessonLevels);
     }
   });
 
@@ -780,7 +770,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
         bigQuestions: null
       },
       lessons: [peerReviewLesson(state)],
-      levels: [peerReviewLevels(state)]
+      levelsByLesson: [peerReviewLevels(state)]
     };
   }
 

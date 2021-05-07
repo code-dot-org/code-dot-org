@@ -30,68 +30,6 @@ const SCROLL_THRESHOLD = 100;
 // the cursor has moved beyond the threshold.
 const SCROLL_RATIO = 0.2;
 
-const styles = {
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  activitySectionCard: {
-    fontSize: 18,
-    background: 'white',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#ccc',
-    borderRadius: borderRadius,
-    padding: 20,
-    margin: 10
-  },
-  activitySectionCardHeader: {
-    color: '#5b6770',
-    marginBottom: 15,
-    overflow: 'hidden'
-  },
-  labelAndCheckbox: {
-    fontSize: 13,
-    marginTop: 3,
-    marginRight: 10
-  },
-  input: {
-    width: '100%'
-  },
-  bottomControls: {
-    height: 30,
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  checkboxesAndButtons: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  checkboxes: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  title: {
-    marginRight: 5
-  },
-  titleInput: {
-    width: 275,
-    marginRight: 10
-  },
-  durationInput: {
-    width: 50
-  }
-};
-
-styles.targetActivitySectionCard = {
-  ...styles.activitySectionCard,
-  borderWidth: 5,
-  borderColor: color.cyan,
-  padding: 16
-};
-
 /*
 An activity section is a chunk of an activity. This could be a section
 of text that explains to the teacher what to say or do to run the lesson or
@@ -595,6 +533,68 @@ class ActivitySectionCard extends Component {
     );
   }
 }
+
+const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  activitySectionCard: {
+    fontSize: 18,
+    background: 'white',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ccc',
+    borderRadius: borderRadius,
+    padding: 20,
+    margin: 10
+  },
+  activitySectionCardHeader: {
+    color: '#5b6770',
+    marginBottom: 15,
+    overflow: 'hidden'
+  },
+  labelAndCheckbox: {
+    fontSize: 13,
+    marginTop: 3,
+    marginRight: 10
+  },
+  input: {
+    width: '100%'
+  },
+  bottomControls: {
+    height: 30,
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  checkboxesAndButtons: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  checkboxes: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  title: {
+    marginRight: 5
+  },
+  titleInput: {
+    width: 275,
+    marginRight: 10
+  },
+  durationInput: {
+    width: 50
+  }
+};
+
+styles.targetActivitySectionCard = {
+  ...styles.activitySectionCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
+};
 
 export const UnconnectedActivitySectionCard = ActivitySectionCard;
 

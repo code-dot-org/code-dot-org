@@ -5,40 +5,9 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const DEFAULT_MARGIN = 7;
-
-const styles = {
-  dialog: {
-    padding: '0 15px',
-    cursor: 'default'
-  },
-  left: {
-    float: 'left',
-    width: '40%',
-    padding: 20,
-    boxSizing: 'border-box'
-  },
-  right: {
-    float: 'left',
-    width: '60%',
-    padding: 20,
-    boxSizing: 'border-box'
-  },
-  header: {
-    textAlign: 'center',
-    fontSize: 24,
-    marginTop: 20
-  },
-  message: {
-    color: color.dark_charcoal,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    overflow: 'hidden',
-    lineHeight: '15px',
-    whiteSpace: 'pre-wrap'
-  }
-};
 
 export default class ModelManagerDialog extends React.Component {
   static propTypes = {
@@ -71,6 +40,7 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   getModelList = () => {
+    this.setState({isModelListPending: true});
     $.ajax({
       url: '/api/v1/ml_models/names',
       method: 'GET'
@@ -157,47 +127,56 @@ export default class ModelManagerDialog extends React.Component {
           style={styles.dialog}
         >
           <h1 style={styles.header}>AI Trained Models</h1>
-          <div style={styles.left}>
-            <select
-              name="model"
-              ref={element => (this.root = element)}
-              onChange={this.handleChange}
-              style={{marginBottom: 0}}
-            >
-              {this.state.models.map(model => (
-                <option key={model.id} value={model.id}>
-                  {model.name}
-                </option>
-              ))}
-            </select>
-            {noModels && (
-              <div style={styles.message}>
-                You have not trained any AI models yet.
+          {this.state.isModelListPending && (
+            <div style={styles.spinner}>
+              <Spinner />
+            </div>
+          )}
+          {!this.state.isModelListPending && (
+            <div>
+              <div style={styles.left}>
+                <select
+                  name="model"
+                  ref={element => (this.root = element)}
+                  onChange={this.handleChange}
+                  style={{marginBottom: 0}}
+                >
+                  {this.state.models.map(model => (
+                    <option key={model.id} value={model.id}>
+                      {model.name}
+                    </option>
+                  ))}
+                </select>
+                {noModels && (
+                  <div style={styles.message}>
+                    You have not trained any AI models yet.
+                  </div>
+                )}
+                <br />
+                <Button
+                  text={'Import'}
+                  color={Button.ButtonColor.orange}
+                  onClick={this.importMLModel}
+                  disabled={noModels}
+                  isPending={this.state.isImportPending}
+                  pendingText={'Importing...'}
+                />
+                {showDeleteButton && (
+                  <Button
+                    text={'Delete'}
+                    color={Button.ButtonColor.red}
+                    onClick={this.showDeleteConfirmation}
+                    disabled={noModels}
+                    icon={'trash'}
+                    iconClassName={'fa-trash'}
+                  />
+                )}
               </div>
-            )}
-            <br />
-            <Button
-              text={'Import'}
-              color={Button.ButtonColor.orange}
-              onClick={this.importMLModel}
-              disabled={noModels}
-              isPending={this.state.isImportPending}
-              pendingText={'Importing...'}
-            />
-            {showDeleteButton && (
-              <Button
-                text={'Delete'}
-                color={Button.ButtonColor.red}
-                onClick={this.showDeleteConfirmation}
-                disabled={noModels}
-                icon={'trash'}
-                iconClassName={'fa-trash'}
-              />
-            )}
-          </div>
-          <div style={styles.right}>
-            <ModelCard model={this.state.selectedModel} />
-          </div>
+              <div style={styles.right}>
+                <ModelCard model={this.state.selectedModel} />
+              </div>
+            </div>
+          )}
         </BaseDialog>
         <BaseDialog
           isOpen={this.state.confirmDialogOpen}
@@ -239,3 +218,39 @@ export default class ModelManagerDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: '0 15px',
+    cursor: 'default'
+  },
+  left: {
+    float: 'left',
+    width: '40%',
+    padding: 20,
+    boxSizing: 'border-box'
+  },
+  right: {
+    float: 'left',
+    width: '60%',
+    padding: 20,
+    boxSizing: 'border-box'
+  },
+  header: {
+    textAlign: 'center',
+    fontSize: 24,
+    marginTop: 20
+  },
+  message: {
+    color: color.dark_charcoal,
+    textAlign: 'left',
+    margin: DEFAULT_MARGIN,
+    overflow: 'hidden',
+    lineHeight: '15px',
+    whiteSpace: 'pre-wrap'
+  },
+  spinner: {
+    height: 'calc(80vh - 140px)',
+    color: color.dark_charcoal
+  }
+};

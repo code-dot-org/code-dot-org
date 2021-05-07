@@ -14,59 +14,6 @@ import {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  activityHeader: {
-    fontSize: 18,
-    color: 'white',
-    background: color.cyan,
-    borderTopLeftRadius: borderRadius,
-    borderTopRightRadius: borderRadius,
-    padding: 10
-  },
-  activityHeaderComponents: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-    overflow: 'hidden'
-  },
-  activityBody: {
-    background: color.lightest_cyan,
-    borderBottomLeftRadius: borderRadius,
-    borderBottomRightRadius: borderRadius,
-    padding: 10,
-    marginBottom: 20
-  },
-  addButton: {
-    fontSize: 14,
-    color: '#5b6770',
-    background: 'white',
-    border: '1px solid #ccc',
-    boxShadow: 'none',
-    margin: '0 10px 10px 10px'
-  },
-  button: {
-    marginLeft: 10
-  },
-  label: {
-    fontSize: 18,
-    marginRight: 5
-  },
-  labelAndInput: {
-    marginLeft: 10,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-start'
-  },
-  inputsAndIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    flexWrap: 'wrap',
-    flex: '1 1'
-  }
-};
-
 /*
   Part of the Activity Editor GUI that allows you to edit all
   the details of an Activity.
@@ -224,6 +171,59 @@ class ActivityCard extends Component {
     );
   }
 }
+
+const styles = {
+  activityHeader: {
+    fontSize: 18,
+    color: 'white',
+    background: color.cyan,
+    borderTopLeftRadius: borderRadius,
+    borderTopRightRadius: borderRadius,
+    padding: 10
+  },
+  activityHeaderComponents: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    overflow: 'hidden'
+  },
+  activityBody: {
+    background: color.lightest_cyan,
+    borderBottomLeftRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
+    padding: 10,
+    marginBottom: 20
+  },
+  addButton: {
+    fontSize: 14,
+    color: '#5b6770',
+    background: 'white',
+    border: '1px solid #ccc',
+    boxShadow: 'none',
+    margin: '0 10px 10px 10px'
+  },
+  button: {
+    marginLeft: 10
+  },
+  label: {
+    fontSize: 18,
+    marginRight: 5
+  },
+  labelAndInput: {
+    marginLeft: 10,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
+  },
+  inputsAndIcon: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap',
+    flex: '1 1'
+  }
+};
 
 export const UnconnectedActivityCard = ActivityCard;
 

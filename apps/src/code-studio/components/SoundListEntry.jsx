@@ -4,42 +4,6 @@ import Radium from 'radium';
 import * as color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  root: {
-    float: 'left',
-    width: 215,
-    height: 35,
-    cursor: 'pointer',
-    margin: 5,
-    padding: 6,
-    border: 'solid 0px',
-    borderRadius: 5
-  },
-  selected: {
-    backgroundColor: color.lighter_purple
-  },
-  notSelected: {
-    backgroundColor: color.white
-  },
-  icon: {
-    float: 'left',
-    padding: '6px 10px 6px 2px'
-  },
-  metadata: {
-    float: 'left',
-    width: 175,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
-  },
-  soundName: {
-    fontSize: 14
-  },
-  time: {
-    color: color.charcoal,
-    fontSize: 11
-  }
-};
-
 /**
  * Component for a single sound tile in the Sound Library.
  * Used in App Lab and Game Lab
@@ -133,6 +97,42 @@ class SoundListEntry extends React.Component {
     );
   }
 }
+
+const styles = {
+  root: {
+    float: 'left',
+    width: 215,
+    height: 35,
+    cursor: 'pointer',
+    margin: 5,
+    padding: 6,
+    border: 'solid 0px',
+    borderRadius: 5
+  },
+  selected: {
+    backgroundColor: color.lighter_purple
+  },
+  notSelected: {
+    backgroundColor: color.white
+  },
+  icon: {
+    float: 'left',
+    padding: '6px 10px 6px 2px'
+  },
+  metadata: {
+    float: 'left',
+    width: 175,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  soundName: {
+    fontSize: 14
+  },
+  time: {
+    color: color.charcoal,
+    fontSize: 11
+  }
+};
 
 export default Radium(SoundListEntry);
 
