@@ -23,15 +23,16 @@ export default class ResourcesDropdown extends React.Component {
   };
 
   handleDropdownClick = () => {
+    const study = !!this.props.studentFacing
+      ? 'student-resources'
+      : 'teacher-resources';
     if (this.props.unitGroupId) {
-      this.recordFirehose('unit-group', 'click-dropdown', {
-        unitGroupId: this.props.unitGroupId,
-        studentFacing: !!this.props.studentFacing
+      this.recordFirehose(study, 'unit-group', 'click-dropdown', {
+        unitGroupId: this.props.unitGroupId
       });
     } else if (this.props.unitId) {
-      this.recordFirehose('unit', 'click-dropdown', {
-        unitId: this.props.unitId,
-        studentFacing: !!this.props.studentFacing
+      this.recordFirehose(study, 'unit', 'click-dropdown', {
+        unitId: this.props.unitId
       });
     }
   };
@@ -39,41 +40,48 @@ export default class ResourcesDropdown extends React.Component {
   handleItemClick = (e, resource) => {
     // Needed so that we can keep the href on the link to allow for standard link interactions
     e.preventDefault();
-    const callback = () => {
-      window.open(resource.url, 'noopener', 'noreferrer');
-    };
+    const study = !!this.props.studentFacing
+      ? 'student-resources'
+      : 'teacher-resources';
     const resourceKey = this.props.useMigratedResources
       ? resource.key
       : resource.type;
+    const resourceUrl = this.props.useMigratedResources
+      ? resource.url
+      : resource.link;
+    const callback = () => {
+      window.open(resourceUrl, 'noopener', 'noreferrer');
+    };
+
     if (this.props.unitGroupId) {
       this.recordFirehose(
+        study,
         'unit-group',
         'click-resource',
         {
           unitGroupId: this.props.unitGroupId,
-          resourceKey: resourceKey,
-          studentFacing: !!this.props.studentFacing
+          resourceKey: resourceKey
         },
         callback
       );
     } else if (this.props.unitId) {
       this.recordFirehose(
+        study,
         'unit',
         'click-resource',
         {
           unitId: this.props.unitId,
-          resourceKey: resourceKey,
-          studentFacing: !!this.props.studentFacing
+          resourceKey: resourceKey
         },
         callback
       );
     }
   };
 
-  recordFirehose = (study_group, event, data_json, callback) => {
+  recordFirehose = (study, study_group, event, data_json, callback) => {
     firehoseClient.putRecord(
       {
-        study: 'teacher-resources',
+        study,
         study_group: study_group,
         event: event,
         data_json: JSON.stringify(data_json)
