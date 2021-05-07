@@ -26,6 +26,7 @@ import {getStore} from '../redux';
 import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
 import {ImageMode} from '../code-studio/components/AssetManager';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 var designMode = {};
 export default designMode;
@@ -1722,7 +1723,8 @@ designMode.renderDesignWorkspace = function(element) {
     handleScreenChange: designMode.onPropertyChange.bind(
       this,
       designMode.activeScreen()
-    )
+    ),
+    autogenerateML
   };
   ReactDOM.render(
     <Provider store={getStore()}>
