@@ -7,10 +7,11 @@ module SetupI18nStringUrlTracker
   # We don't want to make actual calls to the AWS Firehose apis, so stub it and verify we are trying to send the right
   # data.
   def stub_firehose
+    @firehose_records = []
     FirehoseClient.instance.stubs(:put_record).with do |stream, data|
       # Capture the data we try to send to firehose so we can verify it is what we expect.
       @firehose_stream = stream
-      @firehose_record = data.dup
+      @firehose_records << @firehose_record = data.dup
       true
     end
   end
@@ -19,6 +20,7 @@ module SetupI18nStringUrlTracker
     FirehoseClient.instance.unstub(:put_record)
     @firehose_stream = nil
     @firehose_record = nil
+    @firehose_records.clear
   end
 
   def stub_dcdo(flag)
@@ -242,6 +244,14 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal(:i18n, @firehose_stream)
     assert_equal(expected_record, @firehose_record)
   end
+
+  def test_log_multiple_sources
+    test_record = {string_key: 'string.key', url: 'https://code.org/url', source: 'test'}
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source])
+    I18nStringUrlTracker.instance.log(test_record[:string_key], test_record[:url], test_record[:source] + '2')
+    I18nStringUrlTracker.instance.send(:flush)
+    assert_equal %w(test test2), @firehose_records.map {|x| x[:source]}
+  end
 end
 
 require 'minitest/benchmark'
@@ -254,7 +264,7 @@ class BenchI18nStringUrlTracker < Minitest::Benchmark
 
   def bench_linear_performance
     assert_performance_linear do |n|
-      n.times {|m| I18nStringUrlTracker.instance.log(m.to_s, n.to_s, n.to_s)}
+      n.times {|m| I18nStringUrlTracker.instance.log(m.to_s, n.to_s, m.to_s)}
     end
   end
 end
