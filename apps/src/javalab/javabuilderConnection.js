@@ -1,4 +1,8 @@
 /* globals dashboard */
+import {WebSocketMessageType} from './constants';
+import Neighborhood from './Neighborhood';
+import {handleException} from './javabuilderExceptionHandler';
+
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
   constructor(channelId, javabuilderUrl, onMessage) {
@@ -44,7 +48,27 @@ export default class JavabuilderConnection {
     };
 
     this.socket.onmessage = event => {
-      this.onOutputMessage(event.data);
+      const data = JSON.parse(event.data);
+      switch (data.type) {
+        case WebSocketMessageType.SYSTEM_OUT:
+          this.onOutputMessage(data.value);
+          break;
+        case WebSocketMessageType.NEIGHBORHOOD:
+          Neighborhood.handleSignal(data);
+          break;
+        case WebSocketMessageType.EXCEPTION:
+          handleException(data, this.onOutputMessage);
+          break;
+        case WebSocketMessageType.DEBUBG:
+          this.onOutputMessage('--- Localhost debugging message ---');
+          this.onOutputMessage(data.value);
+          break;
+        default:
+          console.log(data);
+          break;
+      }
+      // debugger;
+      // this.onOutputMessage(event.data);
     };
 
     this.socket.onclose = event => {
