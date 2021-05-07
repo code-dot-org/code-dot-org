@@ -144,6 +144,15 @@ class HttpCache
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
+          },
+          # Cached paths that specifically filter query-parameters.
+          {
+            path: %w(
+              /
+            ),
+            query: false,
+            headers: ALLOWLISTED_HEADERS,
+            cookies: default_cookies
           }
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
