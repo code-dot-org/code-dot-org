@@ -76,7 +76,10 @@ function getFirstRenderedBasicBubble(propOverrides = {}) {
   mount(<ProgressTableLevelBubble {...defaultProps} {...propOverrides} />);
 
   // next we get the args passed to `renderBasicBubble` to render the bubble
-  const [shape, size, progressStyle, content] = [...renderPropsSpy.args[0]];
+  const shape = renderPropsSpy.args[0][0];
+  const size = renderPropsSpy.args[0][1];
+  const progressStyle = renderPropsSpy.args[0][2];
+  const content = renderPropsSpy.args[0][3];
 
   // finally we render the `BasicBubble` itself so we can verifty its props
   // (since the underlying `CachedElement` rendered it as raw HTML when
