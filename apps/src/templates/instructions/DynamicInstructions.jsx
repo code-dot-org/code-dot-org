@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
 import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
+import Typist from 'react-typist';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -87,7 +88,19 @@ class DynamicInstructions extends React.Component {
                 ref={ref => (this.dynamicInstructionsRefs[key] = ref)}
               >
                 <div style={{fontSize: 16}}>
-                  {this.props.dynamicInstructions[key]}
+                  <div style={{top: 10, position: 'absolute'}}>
+                    <Typist
+                      avgTypingDelay={35}
+                      stdTypingDelay={15}
+                      cursor={{show: false}}
+                      key={this.props.dynamicInstructionsKey}
+                    >
+                      {this.props.dynamicInstructions[key]}
+                    </Typist>
+                  </div>
+                  <div style={{opacity: 0, paddingBottom: 10}}>
+                    {this.props.dynamicInstructions[key]}
+                  </div>
                 </div>
                 <div style={{clear: 'both'}} />
               </div>
