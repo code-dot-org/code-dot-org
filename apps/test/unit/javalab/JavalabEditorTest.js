@@ -26,7 +26,8 @@ describe('Java Lab Editor Test', () => {
     registerReducers({javalab});
     store = getStore();
     defaultProps = {
-      onCommitCode: () => {}
+      onCommitCode: () => {},
+      handleVersionHistory: () => {}
     };
     appOptions = window.appOptions;
     window.appOptions = {level: {}};
