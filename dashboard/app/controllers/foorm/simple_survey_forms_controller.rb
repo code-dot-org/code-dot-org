@@ -10,6 +10,8 @@ module Foorm
       form = Foorm::Form.all.detect {|f| f.key == params[:form_key]}
       return head :bad_request unless form
 
+      survey_data = parse_survey_data
+
       # Admin only page, so return any errors in plain text.
       begin
         Foorm::SimpleSurveyForm.create!(
@@ -17,7 +19,8 @@ module Foorm
           path: params[:path],
           form_name: form.name,
           form_version: form.version,
-          allow_multiple_submissions: params[:allow_multiple_submissions] == '1'
+          allow_multiple_submissions: params[:allow_multiple_submissions] == '1',
+          survey_data: survey_data
         )
       rescue StandardError => e
         return render status: :bad_request, json: {error: e.message}
@@ -115,6 +118,25 @@ module Foorm
         user_id: key_params[:user_id],
         simple_survey_form_id: key_params[:simple_survey_form_id]
       )
+    end
+
+    def parse_survey_data
+      survey_data = Hash.new
+
+      (0..2).to_a.each do |id|
+        key = "survey_data_name_#{id}".to_sym
+        value = "survey_data_value_#{id}".to_sym
+
+        unless params[key].empty?
+          if !params[value].empty?
+            survey_data[params[key]] = params[value]
+          else
+            raise 'grrr, no value for key'
+          end
+        end
+      end
+
+      survey_data
     end
   end
 end
