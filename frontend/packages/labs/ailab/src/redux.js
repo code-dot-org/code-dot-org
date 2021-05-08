@@ -21,7 +21,8 @@ import {
   ColumnTypes,
   MLTypes,
   TestDataLocations,
-  ResultsGrades
+  ResultsGrades,
+  REGRESSION_ERROR_TOLERANCE
 } from "./constants.js";
 
 // Action types
@@ -34,7 +35,6 @@ const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
 const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
-const SET_SELECTED_FEATURES = "SET_SELECTED_FEATURES";
 const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
@@ -51,7 +51,6 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
-const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
@@ -60,7 +59,7 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
-const SET_COLUMN_REF = "SET_COLUMN_REF";
+const SET_K_VALUE = "SET_K_VALUE";
 
 // Action creators
 export function setMode(mode) {
@@ -96,10 +95,6 @@ export const setColumnsByDataType = (column, dataType) => ({
   column,
   dataType
 });
-
-export function setSelectedFeatures(selectedFeatures) {
-  return { type: SET_SELECTED_FEATURES, selectedFeatures };
-}
 
 export function addSelectedFeature(selectedFeature) {
   return { type: ADD_SELECTED_FEATURE, selectedFeature };
@@ -180,10 +175,6 @@ export function setTrainedModel(trainedModel) {
   return { type: SET_TRAINED_MODEL, trainedModel };
 }
 
-export function setTrainedModelDetails(trainedModelDetails) {
-  return { type: SET_TRAINED_MODEL_DETAILS, trainedModelDetails };
-}
-
 export function setTrainedModelDetail(field, value, isColumn) {
   return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
@@ -216,8 +207,8 @@ export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
-export function setColumnRef(columnId, ref) {
-  return { type: SET_COLUMN_REF, columnId, ref };
+export function setKValue(kValue) {
+  return { type: SET_K_VALUE, kValue };
 }
 
 const initialState = {
@@ -250,7 +241,8 @@ const initialState = {
   currentColumn: undefined,
   resultsPhase: undefined,
   saveStatus: undefined,
-  columnRefs: {}
+  columnRefs: {},
+  kValue: null
 };
 
 // Reducer
@@ -317,12 +309,6 @@ export default function rootReducer(state = initialState, action) {
       }
     };
   }
-  if (action.type === SET_SELECTED_FEATURES) {
-    return {
-      ...state,
-      selectedFeatures: action.selectedFeatures
-    };
-  }
 
   if (action.type === ADD_SELECTED_FEATURE) {
     if (!state.selectedFeatures.includes(action.selectedFeature)) {
@@ -375,11 +361,11 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_RESERVE_LOCATION) {
-    return {
-      ...state,
-      reserveLocation: action.reserveLocation
-    };
-  }
+   return {
+     ...state,
+     reserveLocation: action.reserveLocation
+   };
+ }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
     return {
       ...state,
@@ -429,12 +415,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       trainedModel: action.trainedModel
-    };
-  }
-  if (action.type === SET_TRAINED_MODEL_DETAILS) {
-    return {
-      ...state,
-      trainedModelDetails: action.trainedModelDetails
     };
   }
   if (action.type === SET_TRAINED_MODEL_DETAIL) {
@@ -561,14 +541,10 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
-  if (action.type === SET_COLUMN_REF) {
+  if (action.type === SET_K_VALUE) {
     return {
       ...state,
-      columnRefs: {
-        ...state.columnRefs,
-        action: action.columnId,
-        ref: action.ref
-      }
+      kValue: action.kValue
     };
   }
   return state;
@@ -684,29 +660,12 @@ export function getOptionFrequencies(state, column) {
   return optionFrequencies;
 }
 
-export function getOptionFrequenciesByColumn(state) {
-  let optionFrequenciesByColumn = {};
-  getSelectedCategoricalColumns(state).map(
-    column =>
-      (optionFrequenciesByColumn[column] = getOptionFrequencies(state, column))
-  );
-  return optionFrequenciesByColumn;
-}
-
 export function getUniqueOptionsByColumn(state) {
   let uniqueOptionsByColumn = {};
   getSelectedCategoricalColumns(state).map(
     column => (uniqueOptionsByColumn[column] = getUniqueOptions(state, column))
   );
   return uniqueOptionsByColumn;
-}
-
-export function getExtremumsByColumn(state) {
-  let extremumsByColumn = {};
-  getNumericalColumns(state).map(
-    column => (extremumsByColumn[column] = getRange(state, column, false))
-  );
-  return extremumsByColumn;
 }
 
 export function getRangesByColumn(state) {
@@ -802,7 +761,7 @@ export function getConvertedPredictedLabel(state) {
   return getConvertedLabel(state, state.prediction.predictedLabel);
 }
 
-export function getConvertedLabels(state, rawLabels) {
+export function getConvertedLabels(state, rawLabels = []) {
   return rawLabels.map(label => getConvertedLabel(state, label));
 }
 
@@ -822,7 +781,7 @@ export function getAccuracyClassification(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels ?  state.accuracyCheckPredictedLabels.length : 0;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
       state.accuracyCheckLabels[i].toString() ===
@@ -847,7 +806,7 @@ export function getAccuracyRegression(state) {
   let grades = [];
   const maxMin = getRange(state, state.labelColumn);
   const range = Math.abs(maxMin.max - maxMin.min);
-  const errorTolerance = range * 0.03;
+  const errorTolerance = range * REGRESSION_ERROR_TOLERANCE/100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     const diff = Math.abs(
@@ -1009,47 +968,19 @@ export function getTrainedModelDataToSave(state) {
 
   dataToSave.name = state.trainedModelDetails.name;
 
-  // If the first column has a description, assume descriptions are in the
-  // metadata for that dataset and use them; otherwise, use manually entered
-  // column descriptions.
-  if (
-    state.metadata &&
-    state.metadata.fields &&
-    state.metadata.fields[0].description
-  ) {
-    dataToSave.columns = [];
-    for (const columnDescription of getSelectedColumnDescriptions(state)) {
-      dataToSave.columns.push({
-        id: columnDescription.id,
-        description: columnDescription.description
-      });
-    }
-  } else {
-    dataToSave.columns = state.trainedModelDetails.columns;
-  }
-
   dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
   dataToSave.selectedTrainer = getSelectedTrainer(state);
-  dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
-  dataToSave.extremumsByColumn = getExtremumsByColumn(state);
-  dataToSave.labelColumn = state.labelColumn;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
+  dataToSave.kValue = state.kValue;
 
   return dataToSave;
-}
-
-export function getShowSelectLabels(state) {
-  return (
-    !(state.mode && state.mode.hideSelectLabel) &&
-    getSelectableLabels(state).length > 0
-  );
 }
 
 export function getSpecifiedDatasets(state) {
@@ -1062,10 +993,6 @@ export function getShowColumnClicking(state) {
 
 export function getShowChooseReserve(state) {
   return !(state.mode && state.mode.hideChooseReserve);
-}
-
-export function getShowSelectTrainer(state) {
-  return !(state.mode && state.mode.hideSelectTrainer);
 }
 
 export function getPredictAvailable(state) {
@@ -1090,6 +1017,8 @@ const panelList = [
 ];
 */
 
+// Is a panel ready to be visited?  This determines whether a visible
+// nav button is enabled or disabled.
 function isPanelEnabled(state, panelId) {
   if (panelId === "specifyColumns") {
     if (state.data.length === 0) {
@@ -1151,6 +1080,8 @@ function isPanelEnabled(state, panelId) {
   return true;
 }
 
+// Is a panel available to be shown?  This determines what panels
+// can possibly be visited in the app.
 function isPanelAvailable(state, panelId) {
   const mode = state.mode;
 
@@ -1229,7 +1160,7 @@ export function getPanelButtons(state) {
       : null;
     next = isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
-      : { panel: "continue", text: "Continue" };
+      : { panel: "continue", text: "Finish" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
     next = isPanelAvailable(state, "save")
@@ -1391,4 +1322,10 @@ function areArraysEqual(array1, array2) {
       return value === array2[index];
     })
   );
+}
+
+export function isUserUploadedDataset(state) {
+  // The csvfile for internally curated datasets are strings; those uploaded by
+  // users are objects. Use data type as a proxy to know which case we're in.
+  return typeof state.csvfile === 'object' && state.csvfile !== null;
 }
