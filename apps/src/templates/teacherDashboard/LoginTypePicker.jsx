@@ -115,13 +115,34 @@ export default connect(state => ({
   providers: state.teacherSections.providers
 }))(LoginTypePicker);
 
+/**
+ * Following is for Optimizely experiment "Visual and re-wording updates
+ * to teachers creating sections".
+ * Once the experiment is complete:
+ *    1) Delete the NON-commented-out code below between the "TO DELETE"
+ *        comments
+ *    2) Delete the function 'optimizelyCountLoginTypeClick' directly below
+ *        (it is also contained within the "TO DELETE" comments)
+ *    3) Un-comment the big block of commented code below
+ *    4) Delete this comment
+ */
+
+// TO DELETE (start)
+function optimizelyCountLoginTypeClick(currLoginType) {
+  window['optimizely'] = window['optimizely'] || [];
+  window['optimizely'].push({type: 'event', eventName: currLoginType});
+  return true;
+}
 const PictureLoginCard = props => (
   <LoginTypeCard
     className="uitest-pictureLogin"
     title={i18n.loginTypePicture()}
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}
-    onClick={() => props.onClick('picture')}
+    onClick={() =>
+      optimizelyCountLoginTypeClick('pictureLoginType') &&
+      props.onClick('picture')
+    }
   />
 );
 PictureLoginCard.propTypes = {
@@ -135,7 +156,9 @@ const WordLoginCard = props => (
     title={i18n.loginTypeWord()}
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
-    onClick={() => props.onClick('word')}
+    onClick={() =>
+      optimizelyCountLoginTypeClick('wordLoginType') && props.onClick('word')
+    }
   />
 );
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -146,7 +169,9 @@ const EmailLoginCard = props => (
     title={i18n.loginTypePersonal()}
     subtitle={i18n.loginTypeEmailAgeGroup()}
     description={i18n.loginTypeEmailDescription()}
-    onClick={() => props.onClick('email')}
+    onClick={() =>
+      optimizelyCountLoginTypeClick('emailLoginType') && props.onClick('email')
+    }
   />
 );
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -155,7 +180,10 @@ const GoogleClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeGoogleClassroom()}
     description={i18n.loginTypeGoogleClassroomDescription()}
-    onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
+    onClick={() =>
+      optimizelyCountLoginTypeClick('googleClassroomLoginType') &&
+      props.onClick(OAuthSectionTypes.google_classroom)
+    }
   />
 );
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -164,7 +192,10 @@ const MicrosoftClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeMicrosoftClassroom()}
     description={i18n.loginTypeMicrosoftClassroomDescription()}
-    onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
+    onClick={() =>
+      optimizelyCountLoginTypeClick('microsoftClassroomLoginType') &&
+      props.onClick(OAuthSectionTypes.microsoft_classroom)
+    }
   />
 );
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -173,7 +204,74 @@ const CleverCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeClever()}
     description={i18n.loginTypeCleverDescription()}
-    onClick={() => props.onClick(OAuthSectionTypes.clever)}
+    onClick={() =>
+      optimizelyCountLoginTypeClick('cleverLoginType') &&
+      props.onClick(OAuthSectionTypes.clever)
+    }
   />
 );
 CleverCard.propTypes = PictureLoginCard.propTypes;
+// TO DELETE (end)
+
+// const PictureLoginCard = props => (
+//   <LoginTypeCard
+//     className="uitest-pictureLogin"
+//     title={i18n.loginTypePicture()}
+//     subtitle={i18n.loginTypePictureAgeGroup()}
+//     description={i18n.loginTypePictureDescription()}
+//     onClick={() => props.onClick('picture')}
+//   />
+// );
+// PictureLoginCard.propTypes = {
+//   onClick: PropTypes.func.isRequired,
+//   disabled: PropTypes.bool
+// };
+
+// const WordLoginCard = props => (
+//   <LoginTypeCard
+//     className="uitest-wordLogin"
+//     title={i18n.loginTypeWord()}
+//     subtitle={i18n.loginTypeWordAgeGroup()}
+//     description={i18n.loginTypeWordDescription()}
+//     onClick={() => props.onClick('word')}
+//   />
+// );
+// WordLoginCard.propTypes = PictureLoginCard.propTypes;
+
+// const EmailLoginCard = props => (
+//   <LoginTypeCard
+//     className="uitest-emailLogin"
+//     title={i18n.loginTypePersonal()}
+//     subtitle={i18n.loginTypeEmailAgeGroup()}
+//     description={i18n.loginTypeEmailDescription()}
+//     onClick={() => props.onClick('email')}
+//   />
+// );
+// EmailLoginCard.propTypes = PictureLoginCard.propTypes;
+//
+// const GoogleClassroomCard = props => (
+//   <LoginTypeCard
+//     title={i18n.loginTypeGoogleClassroom()}
+//     description={i18n.loginTypeGoogleClassroomDescription()}
+//     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
+//   />
+// );
+// GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
+
+// const MicrosoftClassroomCard = props => (
+//   <LoginTypeCard
+//     title={i18n.loginTypeMicrosoftClassroom()}
+//     description={i18n.loginTypeMicrosoftClassroomDescription()}
+//     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
+//   />
+// );
+// MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
+
+// const CleverCard = props => (
+//   <LoginTypeCard
+//     title={i18n.loginTypeClever()}
+//     description={i18n.loginTypeCleverDescription()}
+//     onClick={() => props.onClick(OAuthSectionTypes.clever)}
+//   />
+// );
+// CleverCard.propTypes = PictureLoginCard.propTypes;
