@@ -940,8 +940,8 @@ export function getTrainedModelDataToSave(state) {
 
   dataToSave.selectedTrainer =
     isRegression(state)
-    ? RegressionTrainer
-    : ClassificationTrainer;
+      ? RegressionTrainer
+      : ClassificationTrainer;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
