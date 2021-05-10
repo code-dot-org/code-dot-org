@@ -104,15 +104,8 @@ class LoginTypePicker extends Component {
     // Opt-new style const (end) (Optimizely-related)
 
     // TO DELETE (start) (Optimizely-related)
-    // Event listener to determine if user should see the original version or the
-    // variant version for the Optimizely experiment.
-    document.dispatchEvent(new Event('variantStatus'));
-    let userInOptVariant = false; // Keeps track of whether user is seeing normal site or Optimizely variant
-    document.addEventListener('variantStatus', function(e) {
-      userInOptVariant = true;
-      console.log('V: ' + userInOptVariant);
-    });
-    console.log('Start: ' + window.userInOptVariant);
+    const userInOptVariant =
+      sessionStorage.getItem('inTeacherSectionOptimizelyVariant') === 'true'; // Keeps track of whether user is seeing normal site or Optimizely variant
     // TO DELETE (end) (Optimizely-related)
 
     return (
