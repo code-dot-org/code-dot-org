@@ -659,6 +659,7 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
+            '"speed"': скорост
       gamelab_checkTouching:
         options:
           CONDITION:

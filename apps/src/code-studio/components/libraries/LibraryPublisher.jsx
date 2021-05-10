@@ -9,52 +9,6 @@ import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
 import {findProfanity} from '@cdo/apps/utils';
 
-const styles = {
-  alert: {
-    color: color.red,
-    width: '90%',
-    paddingTop: 8,
-    fontStyle: 'italic'
-  },
-  functionSelector: {
-    display: 'flex',
-    alignItems: 'center',
-    margin: '10px 10px 10px 0'
-  },
-  largerCheckbox: {
-    width: 20,
-    height: 20
-  },
-  selectAllFunctionsLabel: {
-    margin: 0,
-    fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  functionLabel: {
-    margin: 0,
-    fontSize: 20
-  },
-  info: {
-    fontSize: 12,
-    fontStyle: 'italic',
-    lineHeight: 1.2
-  },
-  textInput: {
-    fontSize: 14,
-    padding: 6,
-    color: color.dimgray
-  },
-  description: {
-    width: '98%',
-    resize: 'vertical'
-  },
-  unpublishButton: {
-    right: 0,
-    marginTop: 20,
-    position: 'absolute'
-  }
-};
-
 /**
  * @readonly
  * @enum {string}
@@ -166,10 +120,7 @@ export default class LibraryPublisher extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
-        if (
-          error.message ===
-          'httpStatusCode: 413; status: error; error: Request Entity Too Large'
-        ) {
+        if (error.message.includes('httpStatusCode: 413')) {
           this.setState({publishState: PublishState.TOO_LONG});
         } else {
           this.setState({publishState: PublishState.ERROR_PUBLISH});
@@ -457,3 +408,49 @@ export default class LibraryPublisher extends React.Component {
     );
   }
 }
+
+const styles = {
+  alert: {
+    color: color.red,
+    width: '90%',
+    paddingTop: 8,
+    fontStyle: 'italic'
+  },
+  functionSelector: {
+    display: 'flex',
+    alignItems: 'center',
+    margin: '10px 10px 10px 0'
+  },
+  largerCheckbox: {
+    width: 20,
+    height: 20
+  },
+  selectAllFunctionsLabel: {
+    margin: 0,
+    fontSize: 20,
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  functionLabel: {
+    margin: 0,
+    fontSize: 20
+  },
+  info: {
+    fontSize: 12,
+    fontStyle: 'italic',
+    lineHeight: 1.2
+  },
+  textInput: {
+    fontSize: 14,
+    padding: 6,
+    color: color.dimgray
+  },
+  description: {
+    width: '98%',
+    resize: 'vertical'
+  },
+  unpublishButton: {
+    right: 0,
+    marginTop: 20,
+    position: 'absolute'
+  }
+};

@@ -1,0 +1,13 @@
+lt:
+  data:
+    parameter_names:
+      actor: veikėjas
+      counter: skaitiklis
+      height: aukštis
+      honey: medus
+      left: kairėn
+      length: "n"
+      min: min
+      points: taškai
+      size: dydis
+      speed: greitis

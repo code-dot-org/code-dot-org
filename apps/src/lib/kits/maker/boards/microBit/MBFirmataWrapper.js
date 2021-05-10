@@ -1,6 +1,6 @@
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
 import {SAMPLE_INTERVAL} from './MicroBitConstants';
-import {isNodeSerialAvailable} from '../../portScanning';
+import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 export const ACCEL_EVENT_ID = 27;
 
@@ -29,7 +29,7 @@ export default class MicrobitFirmataWrapper extends MBFirmataClient {
   }
 
   setSerialPort(port) {
-    if (isNodeSerialAvailable()) {
+    if (!isChromeOS()) {
       return super.setSerialPort(port);
     } else {
       // Use the given port. Assume the port has been opened by the caller.

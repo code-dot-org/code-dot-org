@@ -17,6 +17,12 @@
 class CourseOffering < ApplicationRecord
   has_many :course_versions
 
+  KEY_CHAR_RE = /[a-z\-]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters and dashes; got \"%{value}\"."
+
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
   #

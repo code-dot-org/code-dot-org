@@ -1,0 +1,15 @@
+hi:
+  data:
+    parameter_names:
+      actor: अभिनेता
+      color: रंग
+      counter: काउंटर
+      height: ऊंचाई
+      honey: शहद
+      left: बाएं
+      length: लंबाई
+      min: न्यूनतम
+      points: अंक
+      size: आकार
+      speed: गति
+      width: चौड़ाई

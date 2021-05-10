@@ -1106,13 +1106,13 @@ hu:
           fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy
           gombokat használja.
       6:
-        text: A "ha van felfelé nyíl" esemény blokkot fogjuk használni, és hozzácsatoljuk
-          a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a "ha
-          van felfelé nyíl"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk
-          csinálni, hogy R2-D2 lefelé mozogjon.
+        text: A "felfelé nyíl megnyomásakor" esemény blokkot fogjuk használni, és
+          hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat,
+          akkor a "felfelé nyíl megnyomásakor"-hoz kapcsolódó blokk elkezd futni.
+          És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon.
       7:
-        text: Ehhez a "ha van felfelé nyíl" whenUp() parancsot fogjuk használni. Amikor
-          a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy
+        text: Ehhez a "felfelé nyíl megnyomásakor" whenUp() parancsot fogjuk használni.
+          Amikor a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy
           kapcsos zárójellel kezdődik és végződik a pontosvessző helyett. Ez lehetővé
           teszi, hogy középre más parancsokat illesszünk. Minden olyan parancs, amit
           ide beteszünk lefut majd, amikor a játékos megnyomja a felfelé mutató nyilat.
@@ -1216,12 +1216,12 @@ hu:
           fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy
           gombokat használja.
       6:
-        text: A "ha van felfelé nyíl" esemény blokkot fogjuk használni, és hozzácsatoljuk
-          a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a "ha
-          van felfelé nyíl"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk
-          csinálni, hogy R2-D2 lefelé mozogjon. Így ahelyett, hogy a kóddal előre
-          meghatároznánk a droid mozgását, R2-D2 a gombok nyomására fog reagálni és
-          így fog mozogni a képernyőn.
+        text: A "felfelé nyíl megnyomásakor" esemény blokkot fogjuk használni, és
+          hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat,
+          akkor a "felfelé nyíl megnyomásakor"-hoz kapcsolódó blokk elkezd futni.
+          És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon. Így ahelyett, hogy
+          a kóddal előre meghatároznánk a droid mozgását, R2-D2 a gombok nyomására
+          fog reagálni és így fog mozogni a képernyőn.
       7:
         text: Lépésről lépésre egyre interaktívabb lesz a játék.
     starwars_blocks_congrats:

@@ -151,8 +151,9 @@ function initProjects() {
       },
       getLevelSource: function() {
         return {
-          // this method is expected to return a Promise. Since this file does not go through our
+          // This method is expected to return a Promise. Since this file does not go through our
           // pipeline and can't be ES6, return a "then" method with a Promise-like interface
+          // that returns a "catch" method.
           then: function(callback) {
             var studentCode = '';
             // Store the source in whichever format the level specifies.
@@ -183,6 +184,10 @@ function initProjects() {
             });
 
             callback(studentCode);
+
+            return {
+              catch: function() {}
+            }
           }
         };
       },

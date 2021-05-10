@@ -1,0 +1,17 @@
+{
+  "func": "setBlue",
+  "category": "Canvas",
+  "paletteParams": [
+    "imgData",
+    "x",
+    "y",
+    "b"
+  ],
+  "params": [
+    "imgData",
+    "0",
+    "0",
+    "255"
+  ],
+  "dontMarshal": true
+}

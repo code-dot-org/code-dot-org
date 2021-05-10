@@ -718,6 +718,7 @@ ca:
             '"scale"': mida
             '"rotation"': rotació
             '"direction"': direcció del moviment
+            '"speed"': velocitat
       gamelab_checkTouching:
         options:
           CONDITION:

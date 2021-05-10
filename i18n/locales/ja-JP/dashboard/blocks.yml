@@ -976,6 +976,7 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+            '"speed"': スピード
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} 触れる {SPRITE2}"
         options:

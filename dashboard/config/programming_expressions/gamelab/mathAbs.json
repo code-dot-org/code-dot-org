@@ -1,0 +1,5 @@
+{
+  "func": "mathAbs",
+  "block": "Math.abs(__)",
+  "category": "Math"
+}

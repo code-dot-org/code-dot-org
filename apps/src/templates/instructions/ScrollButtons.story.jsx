@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {UnconnectedScrollButtons as ScrollButtons} from './ScrollButtons';
+import ScrollButtons from './ScrollButtons';
 
 export default storybook => {
   return storybook.storiesOf('ScrollButtons', module).addStoryTable([

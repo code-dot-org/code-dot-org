@@ -961,6 +961,7 @@ mi:
             '"scale"': te rahi
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
+            '"speed"': terenga
       gamelab_checkTouching:
         text: "{CONDITION} pā {SPRITE1} ki {SPRITE2}"
         options:

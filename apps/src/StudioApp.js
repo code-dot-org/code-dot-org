@@ -28,7 +28,6 @@ import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
-import FinishDialog from './templates/FinishDialog';
 import InstructionsDialogWrapper from './templates/instructions/InstructionsDialogWrapper';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
@@ -64,7 +63,6 @@ import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
-import {mergeProgress} from './code-studio/progressRedux';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import {
   setAchievements,
@@ -330,10 +328,6 @@ StudioApp.prototype.init = function(config) {
               this.showInstructionsDialog_(config.level, autoClose);
             }}
           />
-          <FinishDialog
-            onContinue={() => this.onContinue()}
-            getShareUrl={() => this.lastShareUrl}
-          />
         </div>
       </Provider>,
       document.body.appendChild(document.createElement('div'))
@@ -478,7 +472,9 @@ StudioApp.prototype.init = function(config) {
   if (config.locale !== 'en_us' && config.skinId === 'letters') {
     this.displayWorkspaceAlert(
       'error',
-      <div>{msg.englishOnlyWarning({nextStage: config.stagePosition + 1})}</div>
+      <div>
+        {msg.englishOnlyWarning({nextStage: config.lessonPosition + 1})}
+      </div>
     );
   }
 
@@ -560,7 +556,7 @@ StudioApp.prototype.init = function(config) {
     document.body.appendChild(startDialogDiv);
     const progress = getStore().getState().progress;
     const isComplete =
-      progress.levelProgress[progress.currentLevelId] >=
+      progress.levelResults[progress.currentLevelId] >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
     ReactDOM.render(
       <ChallengeDialog
@@ -1158,7 +1154,7 @@ StudioApp.prototype.stopLoopingAudio = function(name) {
 StudioApp.prototype.inject = function(div, options) {
   var defaults = {
     assetUrl: this.assetUrl,
-    rtl: getStore().getState().isRtl,
+    rtl: options.isBlocklyRtl, // Set to false for RTL
     toolbox: document.getElementById('toolbox'),
     trashcan: true,
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_)
@@ -1655,16 +1651,6 @@ StudioApp.prototype.displayFeedback = function(options) {
     options.feedbackType = TestResults.EDIT_BLOCKS;
   }
 
-  // Write updated progress to Redux.
-  const store = getStore();
-  if (this.config) {
-    // Some apps (Weblab, Oceans) don't have a config. Skip this step
-    // for those.
-    store.dispatch(
-      mergeProgress({[this.config.serverLevelId]: options.feedbackType})
-    );
-  }
-
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
     // Track whether this experiment is in use. If not, delete this and similar
     // sections of code. If it is, create a non-experiment flag.
@@ -1686,6 +1672,7 @@ StudioApp.prototype.displayFeedback = function(options) {
     const hasNewFinishDialog = newFinishDialogApps[this.config.app];
 
     if (hasNewFinishDialog && !this.hasContainedLevels) {
+      const store = getStore();
       const generatedCodeProperties = this.feedback_.getGeneratedCodeProperties(
         this.config.appStrings
       );
@@ -2760,7 +2747,6 @@ StudioApp.prototype.enableBreakpoints = function() {
             activeBreakpoint,
             projectLevelId: this.config.serverProjectLevelId,
             scriptId: this.config.scriptId,
-            scriptLevelId: this.config.serverScriptLevelId,
             scriptName: this.config.scriptName,
             studentUserId: queryParams('user_id'),
             url: window.location.toString()
@@ -2929,7 +2915,9 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     readOnly: utils.valueOr(config.readonlyWorkspace, false),
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
-    typeHints: utils.valueOr(config.level.showTypeHints, false)
+    typeHints: utils.valueOr(config.level.showTypeHints, false),
+    isBlocklyRtl:
+      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw' // disable RTL for blockly on jigsaw
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always
@@ -3429,7 +3417,7 @@ StudioApp.prototype.isNotStartedLevel = function(config) {
   } else {
     return (
       config.readonlyWorkspace &&
-      progress.levelProgress[progress.currentLevelId] === undefined
+      progress.levelResults[progress.currentLevelId] === undefined
     );
   }
 };
@@ -3485,8 +3473,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
         !config.level.isK1 &&
         !config.readonlyWorkspace,
       serverScriptId: config.serverScriptId,
-      serverLevelId: config.serverLevelId,
-      serverScriptLevelId: config.serverScriptLevelId
+      serverLevelId: config.serverLevelId
     },
     appSpecificConstants
   );

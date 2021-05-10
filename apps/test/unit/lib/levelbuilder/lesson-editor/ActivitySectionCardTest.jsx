@@ -15,7 +15,7 @@ import {sampleActivities, searchOptions} from './activitiesTestData';
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
@@ -39,13 +39,13 @@ describe('ActivitySectionCard', () => {
     stubRedux();
     registerReducers({
       ...reducers,
-      resources: resourcesEditor,
+      resources: createResourcesReducer('lessonResource'),
       vocabularies: vocabulariesEditor
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions));
-    store.dispatch(initResources(resourceTestData));
+    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(initResources('lessonResource', resourceTestData));
     store.dispatch(initVocabularies([]));
 
     setTargetActivitySection = sinon.spy();
@@ -271,5 +271,49 @@ describe('ActivitySectionCard', () => {
     down.simulate('mouseDown');
 
     expect(moveActivitySection).to.not.have.been.called;
+  });
+
+  it('can insert at text cusor positon with insertMarkdownSyntaxAtSelection', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard {...defaultProps} />
+      </Provider>
+    );
+    const instance = wrapper.find('ActivitySectionCard').instance();
+
+    // inserting without a cursor position will insert at the beginning
+    instance.insertMarkdownSyntaxAtSelection('new syntax ');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'new syntax Simple text'
+    );
+
+    // inserting with a cursor position will insert at that position
+    instance.editorTextAreaRef.selectionStart = 6;
+    instance.insertMarkdownSyntaxAtSelection(' new syntax');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'Simple new syntax text'
+    );
+  });
+
+  it('can replace selected text with insertMarkdownSyntaxAtSelection', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <ActivitySectionCard {...defaultProps} />
+      </Provider>
+    );
+    const instance = wrapper.find('ActivitySectionCard').instance();
+    instance.editorTextAreaRef.selectionStart = 0;
+    instance.editorTextAreaRef.selectionEnd = 6;
+    instance.insertMarkdownSyntaxAtSelection('Basic insertion');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'Basic insertion text'
+    );
+
+    instance.editorTextAreaRef.selectionStart = 7;
+    instance.editorTextAreaRef.selectionEnd = 11;
+    instance.insertMarkdownSyntaxAtSelection('example');
+    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+      'Simple example'
+    );
   });
 });

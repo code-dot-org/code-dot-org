@@ -5,10 +5,10 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-03 23:55:51 UTC",
     "seeding_key": {
       "script.name": "kaitie-test-script"
     }
@@ -32,6 +32,7 @@
       "name": "Module 1",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -46,6 +47,7 @@
       "name": "Module 2",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -60,6 +62,7 @@
       "name": "Module 3",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -74,6 +77,7 @@
       "name": "Module 4",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -88,6 +92,7 @@
       "name": "Module 5",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -102,6 +107,7 @@
       "name": "Module 6",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -116,6 +122,7 @@
       "name": "Module 7",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -130,6 +137,7 @@
       "name": "Module 8",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -138,18 +146,58 @@
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
       }
+    },
+    {
+      "key": "CS Principles: Functions",
+      "name": "CS Principles: Functions",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles: Functions",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "CS Principles: Variables Practice - Choice Test",
+      "name": "Variables Practice - Choice Test",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
     }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS1 Workshop Overview"
+        ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL AYWS1 Workshop Overview"
@@ -165,12 +213,16 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 3 Context"
+        ],
         "progression": "Wrapping up Unit 3 (~20 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Module 1 Unit 3 Context"
@@ -186,12 +238,16 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Unit 4 tasks overview"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Unit 4 tasks overview"
@@ -207,12 +263,16 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL - U4 L12 Practice PT 1"
@@ -228,12 +288,16 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL U4 L12 Practice PT 2"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL U4 L12 Practice PT 2"
@@ -249,12 +313,16 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 4 Reflection"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Module 1 Unit 4 Reflection"
@@ -270,12 +338,16 @@
     {
       "chapter": 7,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 EIPM Reflection"
+        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Module 1 EIPM Reflection"
@@ -291,12 +363,16 @@
     {
       "chapter": 8,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 EIPM goes virtual"
+        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Module 1 EIPM goes virtual"
@@ -312,12 +388,16 @@
     {
       "chapter": 9,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 1 Wrap Up"
+        ],
         "progression": "Module 1 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 1 Wrap Up"
@@ -333,12 +413,16 @@
     {
       "chapter": 10,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS2 Workshop Overview"
+        ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL AYWS2 Workshop Overview"
@@ -354,12 +438,16 @@
     {
       "chapter": 11,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Practice overview"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Variables Practice overview"
@@ -375,12 +463,16 @@
     {
       "chapter": 12,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L03 Variables numbers practice 1"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL - U4 L03 Variables numbers practice 1"
@@ -396,12 +488,16 @@
     {
       "chapter": 13,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables numbers practice 4"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables numbers practice 4"
@@ -417,12 +513,16 @@
     {
       "chapter": 14,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 1"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 1"
@@ -438,12 +538,16 @@
     {
       "chapter": 15,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 3"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 3"
@@ -459,12 +563,16 @@
     {
       "chapter": 16,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 2"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 2"
@@ -480,12 +588,16 @@
     {
       "chapter": 17,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 5"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - U4 L03 Variables operator practice 5"
@@ -501,12 +613,16 @@
     {
       "chapter": 18,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL8 - U4 L03 Variables operator practice 6"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL8 - U4 L03 Variables operator practice 6"
@@ -522,12 +638,16 @@
     {
       "chapter": 19,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
@@ -543,12 +663,16 @@
     {
       "chapter": 20,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Practice Reflection"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - Practice Reflection"
@@ -564,12 +688,16 @@
     {
       "chapter": 21,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Make overview"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Variables Make overview"
@@ -585,12 +713,16 @@
     {
       "chapter": 22,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL U4 L04 Variables Make Project_2020"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL U4 L04 Variables Make Project_2020"
@@ -606,12 +738,16 @@
     {
       "chapter": 23,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L04 Variables Make Project Submit_2020"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - U4 L04 Variables Make Project Submit_2020"
@@ -627,12 +763,16 @@
     {
       "chapter": 24,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Make Reflection"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - Make Reflection"
@@ -648,12 +788,16 @@
     {
       "chapter": 25,
       "position": 16,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - Unit 4 Wrap-up"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL - Unit 4 Wrap-up"
@@ -669,12 +813,16 @@
     {
       "chapter": 26,
       "position": 17,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Collaboration Reflection"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - PL - Collaboration Reflection"
@@ -690,12 +838,16 @@
     {
       "chapter": 27,
       "position": 18,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 2 Wrap Up"
+        ],
         "progression": "Module 2 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 2 Wrap Up"
@@ -711,12 +863,16 @@
     {
       "chapter": 28,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS3 Workshop Overview"
+        ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL AYWS3 Workshop Overview"
@@ -732,12 +888,16 @@
     {
       "chapter": 29,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Understanding the context for the Model Lesson overview"
@@ -753,12 +913,16 @@
     {
       "chapter": 30,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 1"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Synch3 - Reflection 1"
@@ -774,12 +938,16 @@
     {
       "chapter": 31,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 2"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Synch3 - Reflection 2"
@@ -795,12 +963,16 @@
     {
       "chapter": 32,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Intro to CI"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch3 - Intro to CI"
@@ -816,12 +988,16 @@
     {
       "chapter": 33,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Broadening the def"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch3 - Broadening the def"
@@ -837,12 +1013,16 @@
     {
       "chapter": 34,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Feedback in CI"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch3 - Feedback in CI"
@@ -858,12 +1038,16 @@
     {
       "chapter": 35,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Practice feedback"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch3 - Practice feedback"
@@ -879,12 +1063,16 @@
     {
       "chapter": 36,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 3 Wrap Up"
+        ],
         "progression": "Module 3 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 3 Wrap Up"
@@ -900,12 +1088,16 @@
     {
       "chapter": 37,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWA4 Workshop Overview"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL AYWA4 Workshop Overview"
@@ -921,12 +1113,16 @@
     {
       "chapter": 38,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence"
+        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Understanding the content of the Lists EIPM sequence"
@@ -942,12 +1138,16 @@
     {
       "chapter": 39,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Lists EIPM reflection"
+        ],
         "progression": "The Lists EIPM sequence (~25 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Lists EIPM reflection"
@@ -963,12 +1163,16 @@
     {
       "chapter": 40,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5"
+        ],
         "progression": "Mental models in Unit 5 (~35 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP AYW4 - Mental Models in Unit 5"
@@ -984,12 +1188,16 @@
     {
       "chapter": 41,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - Intro to Traversals"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch4 - Intro to Traversals"
@@ -1005,12 +1213,16 @@
     {
       "chapter": 42,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
@@ -1026,12 +1238,16 @@
     {
       "chapter": 43,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch4 - U5L10 Traversals Investigate"
@@ -1047,12 +1263,16 @@
     {
       "chapter": 44,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
@@ -1068,12 +1288,16 @@
     {
       "chapter": 45,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Reflection on datasets"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP AYW4 - Reflection on datasets"
@@ -1089,12 +1313,16 @@
     {
       "chapter": 46,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 4 Wrap Up"
+        ],
         "progression": "Module 4 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 4 Wrap Up"
@@ -1110,12 +1338,16 @@
     {
       "chapter": 47,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 5 - Workshop Overview"
+        ],
         "progression": "Module 5 overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL Module 5 - Workshop Overview"
@@ -1131,12 +1363,16 @@
     {
       "chapter": 48,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Intro to Unit 7"
+        ],
         "progression": "Understanding Unit 7 (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M5 - Intro to Unit 7"
@@ -1152,12 +1388,16 @@
     {
       "chapter": 49,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Explore"
+        ],
         "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M5 - Param Explore"
@@ -1173,12 +1413,16 @@
     {
       "chapter": 50,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 1"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M5 - Param Prac 1"
@@ -1194,12 +1438,16 @@
     {
       "chapter": 51,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 1"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 1"
@@ -1215,12 +1463,16 @@
     {
       "chapter": 52,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 2"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 2"
@@ -1236,12 +1488,16 @@
     {
       "chapter": 53,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 4"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 4"
@@ -1257,12 +1513,16 @@
     {
       "chapter": 54,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 3"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 3"
@@ -1278,12 +1538,16 @@
     {
       "chapter": 55,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 5"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PL U7 Param Return Practice Part 5"
@@ -1299,12 +1563,16 @@
     {
       "chapter": 56,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Investigate Calculator App"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PL U7 Param Investigate Calculator App"
@@ -1320,12 +1588,16 @@
     {
       "chapter": 57,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Practice App 2"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PL U7 Param Practice App 2"
@@ -1341,12 +1613,16 @@
     {
       "chapter": 58,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 10"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M5 - Param Prac 10"
@@ -1362,12 +1638,16 @@
     {
       "chapter": 59,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Inclusive Classrooms"
+        ],
         "progression": "Creating inclusive classrooms (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M5 - Inclusive Classrooms"
@@ -1383,12 +1663,16 @@
     {
       "chapter": 60,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 5 Wrap Up"
+        ],
         "progression": "Module 5 Asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 5 Wrap Up"
@@ -1404,12 +1688,16 @@
     {
       "chapter": 61,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 6 - Workshop Overview"
+        ],
         "progression": "Module 6 overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL Module 6 - Workshop Overview"
@@ -1425,12 +1713,16 @@
     {
       "chapter": 62,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Create PT Reqs"
+        ],
         "progression": "Requirements of the Create Performance Task (~20 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M6 - Create PT Reqs"
@@ -1446,12 +1738,16 @@
     {
       "chapter": 63,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Survival Guide"
+        ],
         "progression": "Digging into the Create PT Survival Guide (~40 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M6 - Survival Guide"
@@ -1467,12 +1763,16 @@
     {
       "chapter": 64,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Role of teacher"
+        ],
         "progression": "Role of the teacher during the Create PT (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M6 - Role of teacher"
@@ -1488,12 +1788,16 @@
     {
       "chapter": 65,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 6 Wrap Up"
+        ],
         "progression": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 6 Wrap Up"
@@ -1509,12 +1813,16 @@
     {
       "chapter": 66,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 7 - Workshop Overview"
+        ],
         "progression": "Module 7 overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL Module 7 - Workshop Overview"
@@ -1530,12 +1838,16 @@
     {
       "chapter": 67,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Unit 9 Overview"
+        ],
         "progression": "Overview of Unit 9 - Data (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M7 - Unit 9 Overview"
@@ -1551,12 +1863,16 @@
     {
       "chapter": 68,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ],
         "progression": "Using the Google Trends tool (~20 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M7 - Google Trends"
@@ -1572,12 +1888,16 @@
     {
       "chapter": 69,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M7 - Data Viz 1"
@@ -1593,12 +1913,16 @@
     {
       "chapter": 70,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M7 - Data Viz 2"
@@ -1614,12 +1938,16 @@
     {
       "chapter": 71,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M7 - Data Viz 3"
@@ -1635,12 +1963,16 @@
     {
       "chapter": 72,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M7 - Data Viz 4"
@@ -1656,12 +1988,16 @@
     {
       "chapter": 73,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ],
         "progression": "Module 7 asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 7 Wrap Up"
@@ -1677,12 +2013,16 @@
     {
       "chapter": 74,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
+        ],
         "progression": "Module 8 overview (~5 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL Module 8 - Workshop Overview"
@@ -1698,12 +2038,16 @@
     {
       "chapter": 75,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Community 1"
+        ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M8 - Community 1"
@@ -1719,12 +2063,16 @@
     {
       "chapter": 76,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Community 2"
+        ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M8 - Community 2"
@@ -1740,12 +2088,16 @@
     {
       "chapter": 77,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M8 - MC Exam 1"
@@ -1761,12 +2113,16 @@
     {
       "chapter": 78,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M8 - Exam 2"
@@ -1782,12 +2138,16 @@
     {
       "chapter": 79,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP-PL M8 - Exam 3"
@@ -1803,12 +2163,16 @@
     {
       "chapter": 80,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 8 Wrap Up"
+        ],
         "progression": "Module 8 asynchronous wrap-up (~10 minutes)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP - Module 8 Wrap Up"
@@ -1819,6 +2183,381 @@
       },
       "level_keys": [
         "CSP - Module 8 Wrap Up"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CS Principles: Functions"
+        ],
+        "progression": "CS Principles: Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CS Principles: Functions"
+        ],
+        "lesson.key": "CS Principles: Functions",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "CS Principles: Functions"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U4L3 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L3 SFLP 20-21"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "CSP U4L3 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 1"
+        ],
+        "progression": "Assigning Numbers and Strings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 1"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables numbers practice 1"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 4"
+        ],
+        "progression": "Assigning Numbers and Strings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 4"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables numbers practice 4"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 1"
+        ],
+        "progression": "Variables and Operators"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 1"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 1"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 3"
+        ],
+        "progression": "Variables and Operators"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 3"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 3"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 2"
+        ],
+        "progression": "Variables and Operators"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 2"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 2"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 5"
+        ],
+        "progression": "Variables and Operators"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 5"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 5"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 6"
+        ],
+        "progression": "Variables and Operators"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 6"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 6"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global"
+        ],
+        "progression": "Debugging Scope Issues"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variable Scope: Local vs. Global"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Scope Issue"
+        ],
+        "progression": "Debugging Scope Issues"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Scope Issue"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Scope Issue"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 4"
+        ],
+        "progression": "Putting it Together"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 4"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 4"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-choice-test"
+        ],
+        "progression": "Putting It Together"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-choice-test"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "csp-choice-test"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Psuedocode"
+        ],
+        "progression": "Check For Understanding: AP Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Psuedocode"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4L3 CFU Variables Psuedocode"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode"
+        ],
+        "progression": "Check for Understanding: AP Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "U4L3 CFU Variables Randomness Psuedocode"
       ]
     }
   ],
@@ -2702,6 +3441,201 @@
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CS Principles: Functions",
+        "script_level.level_keys": [
+          "CS Principles: Functions"
+        ],
+        "lesson.key": "CS Principles: Functions",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L3 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U4L3 SFLP 20-21"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables numbers practice 1",
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 1"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables numbers practice 4",
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 4"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 1",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 1"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 3",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 3"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 2",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 2"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 5",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 5"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 6",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 6"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variable Scope: Local vs. Global",
+        "script_level.level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Scope Issue",
+        "script_level.level_keys": [
+          "U4 L03 Scope Issue"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 4",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 4"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-choice-test",
+        "script_level.level_keys": [
+          "csp-choice-test"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L3 CFU Variables Psuedocode",
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Psuedocode"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L3 CFU Variables Randomness Psuedocode",
+        "script_level.level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode"
+        ],
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

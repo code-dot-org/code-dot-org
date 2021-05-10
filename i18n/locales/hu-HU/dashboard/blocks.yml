@@ -978,6 +978,7 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
+            '"speed"': sebesség
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} érinti {SPRITE2} szereplőt"
         options:

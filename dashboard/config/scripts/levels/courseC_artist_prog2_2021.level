@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2020-12-04T22:23:41.000Z",
-  "level_num": "custom",
-  "user_id": 6,
   "properties": {
     "skin": "artist",
     "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
@@ -12,7 +8,7 @@
     "start_direction": "90",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "images": "[{\"filename\":\"https://images.code.org/c1c91824a192ede98044977e92d21923-image-1475778715698.png\",\"position\":[160,155]}]",
+    "images": "[{\"filename\":\"https://images.code.org/79dd27ec29d3c3adb192a8e4972a9015-image-1615563259377.png\",\"position\":[160,160]}]",
     "free_play": "false",
     "ideal": "4",
     "slider_speed": "0.4",
@@ -35,7 +31,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"*\\\"If you use the <xml><block type=\\\"draw_move_by_constant\\\"><title name=\\\"DIR\\\">moveForward</title><title name=\\\"VALUE\\\">100</title></block></xml> block, I will draw a line.\\\"*\",\"hint_id\":\"courseC_artist_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2ee067549ab6c08c7cac7c3c35484046/courseC_artist_prog2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Having trouble turning the corner? Use the <xml><block type=\\\"draw_turn_by_constant_dropdown\\\"><title name=\\\"DIR\\\">turnRight</title><title name=\\\"VALUE\\\" config=\\\"45,60,90,120,180\\\">90</title></block></xml> block.\",\"hint_id\":\"courseC_artist_prog2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0b7b280fdcd17acbb406f4d48c3176d4/courseC_artist_prog2.mp3\"}]",
-    "callout_json": "[]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"slider\",\r\n  \"callout_text\": \"You can slow your program down here.\",\r\n  \"element_id\": \"#slider\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "discard_background": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
@@ -43,11 +39,22 @@
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2021",
     "parent_level_id": 21187,
+    "encrypted": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "show_type_hints": "false",
+    "validation_enabled": "false",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2020-12-04T22:23:41.000Z",
+  "level_num": "custom",
+  "user_id": 6,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-23 15:40:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:49:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:50:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-07-24 18:13:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-23 15:40:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:49:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-23 15:50:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-07-24 18:13:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-03-12 15:31:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"images\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 15:32:30 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 15:33:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 15:34:39 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 15:35:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-15 19:22:41 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-15 19:24:01 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"callout_json\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>

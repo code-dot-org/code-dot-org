@@ -3,6 +3,7 @@ import i18n from '@cdo/locale';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 // Note: The UnconnectedTeacherDashboadHeader assumes the sections it receives
@@ -13,6 +14,7 @@ const MOCK_SECTIONS = [
     name: 'intro to computer science III',
     stageExtras: true,
     pairingAllowed: true,
+    ttsAutoplayEnabled: false,
     studentCount: 5,
     code: 'VQGSJR',
     providerManaged: false
@@ -22,6 +24,7 @@ const MOCK_SECTIONS = [
     name: 'intro to computer science II',
     stageExtras: true,
     pairingAllowed: true,
+    ttsAutoplayEnabled: false,
     studentCount: 4,
     code: 'TQGSJR',
     providerManaged: false
@@ -31,6 +34,7 @@ const MOCK_SECTIONS = [
     name: 'intro to computer science I',
     stageExtras: true,
     pairingAllowed: true,
+    ttsAutoplayEnabled: false,
     studentCount: 6,
     code: 'XQGSJR',
     providerManaged: false
@@ -72,7 +76,7 @@ describe('TeacherDashboardHeader', () => {
 
   it('renders dropdown button with links to sections, highlighting current section', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
-    let dropdownButton = wrapper.find('DropdownButton');
+    let dropdownButton = wrapper.find(DropdownButton);
     expect(dropdownButton).to.have.lengthOf(1);
 
     let dropdownLinks = dropdownButton.find('a');

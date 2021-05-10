@@ -26,8 +26,8 @@ vi:
             người khác, phát triển các kỹ năng giải quyết vấn đề, và nỗ lực vượt qua
             các việc khó. Học viên sẽ có thể tạo ra một trò chơi hoặc câu chuyện riêng
             mà họ có thể chia sẻ. Phù hợp cho lớp K-1 (6 tuổi).
-          description_short: Khóa học 1 được thiết kế cho trẻ mới biết đọc.
-          description_audience: 4-6 tuổi
+          description_short: Giới thiệu về khoa học máy tính cho người đọc sớm.
+          description_audience: Tuổi từ 4-6
           lessons:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
@@ -78,9 +78,8 @@ vi:
             nghiệm lập trình. Trong khóa học này, học viên sẽ tạo ra các chương trình
             để giải quyết vấn đề và phát triển các trò chơi tương tác hoặc chia sẻ
             những mẩu chuyện. Khuyến khích cho học sinh từ lớp 2 đến lớp 5.
-          description_short: Khóa học 2 được thiết kế dành cho những sinh viên có
-            khả năng đọc.
-          description_audience: Lứa tuổi 6 + (yêu cầu biết đọc)
+          description_short: Giới thiệu về khoa học máy tính cho học sinh có thể đọc.
+          description_audience: 6 tuổi trở lên (yêu cầu đọc)
           lessons:
             'Artist: Debugging':
               name: 'Nghệ sĩ: gỡ lỗi'
@@ -134,8 +133,9 @@ vi:
             phức tạp hơn. Cuối khóa học này, học viên tạo cốt truyện và trò chơi có
             tương tác mà họ muốn chia sẻ với bất cứ ai. Khuyến khích cho học sinh
             các lớp 4-5.
-          description_short: Khóa học 3 là kháo học sau khóa học 2.
-          description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+          description_short: Đi sâu hơn nữa vào lập trình trong khi xây dựng trò chơi
+            và câu chuyện tương tác. Đây là phần tiếp theo của Khóa học 2.
+          description_audience: 8-18 tuổi
           lessons:
             Artist:
               name: Họa sĩ
@@ -221,6 +221,8 @@ vi:
             kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn
             trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có
             thể chia sẻ với bạn bè của bạn!
+          description_short: Hãy sử dụng mã để tham gia cùng Anna và Elsa khi họ khám
+            phá sự kỳ diệu và vẻ đẹp của băng.
           lessons:
             Artist:
               name: Họa sĩ
@@ -236,9 +238,10 @@ vi:
             quyết các thách thức. Khi hoàn tất khóa học này, học sinh sẽ tạo ra chương
             trình sử dụng nhiều kỹ năng, bao gồm vòng lặp, hàm có tham số. Khuyến
             nghị cho lớp 4-8.
-          description_short: Sinh viên tham gia khóa học 4 cần phải hoàn thành các
-            khóa học 2 và 3.
-          description_audience: Lứa tuổi 10 + (sau khóa học 3)
+          description_short: Xây dựng các chương trình phức tạp hơn với các khái niệm
+            như vòng lặp và các hàm với các tham số. Đây là phần tiếp theo của Khóa
+            học 3.
+          description_audience: 9-18 tuổi
           lessons:
             Artist:
               name: Họa sĩ
@@ -2100,6 +2103,8 @@ vi:
               name: Mật mã khóa chìa khoá chung
             Rapid Research - Data Innovations:
               name: Nghiên cứu nhanh chóng - Đổi mới dữ liệu
+            Simple Encryption:
+              name: Mã hóa đơn giản
             The Cost of Free:
               name: Chi phí cho miễn phí
             What is Big Data?:
@@ -2319,7 +2324,7 @@ vi:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
         CSF_Secret_Sample:
-          description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+          description_audience: 8-18 tuổi
           lessons:
             Sample Stage:
               name: Giai đoạn mẫu
@@ -2445,7 +2450,7 @@ vi:
             Contained Levels:
               name: Các cấp độ có chứa
             Game Lab:
-              name: Kho Trò chơi
+              name: Phòng thí nghiệm trò chơi
         cspunit1-support-test:
           lessons:
             Unit 1 Overview:
@@ -2590,13 +2595,16 @@ vi:
             Sample Stage:
               name: Giai đoạn mẫu
         artistExemplar:
-          description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+          description_audience: 8-18 tuổi
         teachercon:
           lesson_groups:
             required:
               display_name: Tổng quan
             content:
               display_name: Nội dung
+          lessons:
+            Lesson 2,2:
+              name: 'Bài 2.2: Nén văn bản'
         kinderTest:
           lessons:
             'Bee: Conditionals':
@@ -2619,6 +2627,8 @@ vi:
           lessons:
             Digital Citizenship:
               name: Công dân số
+            'New Artist: Functions':
+              name: 'Artist mới: Hàm'
             Songwriting:
               name: Sáng tác với tham số
         grade1:
@@ -3146,6 +3156,10 @@ vi:
           lessons:
             Controlling Memory with Variables:
               name: Bộ nhớ kiểm soát với các biến số
+        hoc-encryption:
+          lessons:
+            Simple Encryption:
+              name: Mã hóa đơn giản
         csd2-2017:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."
@@ -3283,6 +3297,8 @@ vi:
               name: 'Thuật toán đời sống: Trồng một hạt giống'
             Programming in Maze:
               name: Lập trình trong mê cung
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Going Places Safely:
               name: Đến nơi an toàn
             'Debugging: Unspotted Bugs':
@@ -3293,6 +3309,8 @@ vi:
               name: 'Gỡ lội: Những chú bọ không đốm'
             Programming in Maze:
               name: Lập trình trong mê cung
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             More Computer Science:
               name: Khoa học máy tính thêm nữa
             'Real-life Algorithms: Plant a Seed':
@@ -3300,11 +3318,15 @@ vi:
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số
         coursec-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lessons:
             Programming in Maze:
               name: Lập trình trong mê cung
             'Real-life Algorithms: Paper Planes':
               name: 'Thuật toán trong đời sống: Máy bay giấy'
+            Programming in Artist:
+              name: Lập trình trong Artist
             Online Internet Safety:
               name: An toàn Internet trực tuyến
             More CS with Run Marco:
@@ -3316,7 +3338,11 @@ vi:
             Building a Foundation:
               name: Xây dựng nền tảng
         coursed-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lessons:
+            Nested Loops in Artist:
+              name: Vòng lặp lồng nhau trong Artist
             More Programming with CS4FN:
               name: Lập trình nhiều hơn với CS4FN
             Digital Citizenship:
@@ -3329,13 +3355,19 @@ vi:
               name: Vòng lặp lồng nhau
             Introduction:
               name: Giới thiệu
+            Nested Loops Project in Artist:
+              name: Dự án Vòng lặp lồng nhau trong Artist
         coursee-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lesson_groups:
             content:
               display_name: Nội dung
           lessons:
             Digital Citizenship:
               name: Công dân số
+            Functions in Artist:
+              name: Hàm trong Artist
             Internet:
               name: internet
             Crowdsourcing:
@@ -3345,6 +3377,8 @@ vi:
             Conditionals:
               name: Điều kiện
         coursef-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lesson_groups:
             content:
               display_name: Nội dung
@@ -3353,8 +3387,14 @@ vi:
               name: Công dân số
             Envelope Variables:
               name: Các biến phong bì
+            Variables in Artist:
+              name: Biến trong Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
             Try programming with Khan Academy:
               name: Cố gắng lập trình với Học viện Khan
             Songwriting with Parameters:
@@ -3375,6 +3415,10 @@ vi:
           lessons:
             Hour of Code 2013:
               name: Giờ Lập trình 2013
+        sports:
+          lessons:
+            Sports:
+              name: Thể thao
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3475,6 +3519,8 @@ vi:
             content:
               display_name: Nội dung
           lessons:
+            Functions in Artist:
+              name: Hàm trong Artist
             Binary:
               name: Nhị phân
         sciencepd5:
@@ -3797,11 +3843,19 @@ vi:
               name: 'Dự án: Trang web danh mục đầu tư cá nhân'
         artist-and-bb8:
           lessons:
+            C9 Artist Loops:
+              name: Vòng lặp Artist C9
+            D6 Frozen Artist:
+              name: D6 Frozen Artist
             Ice Age Play Lab:
               name: Kho dữ liệu trò chơi Kỷ băng hà
             Bounce:
               name: Bật lại
         coursea-2017:
+          title: Khóa học A
+          assignment_family_title: Khóa học A
+          description_audience: 'Tuổi: 4-7'
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -3809,7 +3863,14 @@ vi:
               name: 'Thuật toán đời sống: Trồng một hạt giống'
             Programming in Maze:
               name: Lập trình trong mê cung
+            Loops in Artist:
+              name: Vòng lặp trong Artist
         courseb-2017:
+          title: Khóa học B
+          assignment_family_title: Khóa học B
+          description_audience: 'Tuổi: 5-8'
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+            (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -3817,32 +3878,70 @@ vi:
               name: 'Thuật toán đời sống: Trồng một hạt giống'
             Programming in Maze:
               name: Lập trình trong mê cung
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Programming with Rey and BB-8:
               name: Lập trình cùng Rey và robot BB-8
         coursec-2017:
+          title: Khóa học C
+          assignment_family_title: Khóa học C
+          description_audience: 'Tuổi: 6-10'
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lessons:
             Programming in Maze:
               name: Lập trình trong mê cung
             'Real-life Algorithms: Paper Planes':
               name: 'Thuật toán trong đời sống: Máy bay giấy'
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
         coursed-2017:
+          title: Khóa học D
+          assignment_family_title: Khóa học D
+          description_audience: 'Tuổi: 7-11'
+          description_short: Nhanh chóng bao quát các khái niệm từ Khóa học C, sau
+            đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+            thế nữa.
           lessons:
             Nested Loops:
               name: Vòng lặp lồng nhau
+            Nested Loops in Artist:
+              name: Vòng lặp lồng nhau trong Artist
+            Artist Binary:
+              name: Nhị phân trong Artist
         coursee-2017:
+          title: Khóa học E
+          assignment_family_title: Khóa học E
+          description_audience: 'Tuổi: 8-12'
+          description_short: Nhanh chóng bao gồm các khái niệm trong Khóa học C &
+            D và sau đó đi xa hơn với các chức năng.
           lessons:
             Ice Age Play Lab:
               name: Kho dữ liệu trò chơi Kỷ băng hà
             Envelope Variables:
               name: Các biến phong bì
+            Variables in Artist:
+              name: Biến trong Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Songwriting with Parameters:
               name: Sáng tác với tham số
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
+            Functions in Artist:
+              name: Hàm trong Artist
             Building a Foundation:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops in Bee/Zombie:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
@@ -3850,11 +3949,27 @@ vi:
             Nested Loops:
               name: Vòng lặp lồng nhau
         coursef-2017:
+          title: Khóa học F
+          assignment_family_title: Khóa học F
+          description_audience: 'Tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
           lessons:
+            Variables in Artist:
+              name: Biến trong Artist
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
             Building a Foundation:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops in Bee/Zombie:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
@@ -4117,27 +4232,44 @@ vi:
             Complete Unit 2 Deeper Learning Reflections:
               name: Hoàn thành Phần 2 Cảm tưởng về việc học sâu hơn
         express-2017:
+          description_short: 'Giới thiệu về khoa học máy tính: kết hợp những gì tốt
+            nhất của chương trình giảng dạy tiểu học của chúng tôi dành cho học sinh
+            lớn hơn.'
           lesson_groups:
             content:
               display_name: Nội dung
           lessons:
             Introduction:
               name: Giới thiệu
+            Loops in Artist:
+              name: Vòng lặp trong Artist
+            Nested Loops Project in Artist:
+              name: Dự án Vòng lặp lồng nhau trong Artist
             Internet:
               name: internet
             Digital Citizenship:
               name: Công dân số
             Envelope Variables:
               name: Các biến phong bì
+            Variables in Artist:
+              name: Biến trong Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Songwriting with Parameters:
               name: Sáng tác với tham số
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
             Building a Foundation:
               name: Xây dựng nền tảng
             Nested Loops:
               name: Vòng lặp lồng nhau
         pre-express-2017:
+          title: Đọc trước
+          description_short: 'Giới thiệu về khoa học máy tính cho người đọc trước:
+            kết hợp những gì tốt nhất của các khóa học mẫu giáo và lớp một của chúng
+            tôi.'
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -4145,6 +4277,8 @@ vi:
               name: 'Thuật toán đời sống: Trồng một hạt giống'
             Programming in Maze:
               name: Lập trình trong mê cung
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Spelling Bee:
               name: Ong tìm chữ
         subgoal-labels-opt-in:
@@ -4241,6 +4375,10 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops:
               name: Vòng lặp lồng nhau
             Nested Loops with Frozen:
@@ -4251,6 +4389,8 @@ vi:
               name: Khoá học E Giới thiệu
             Conditionals:
               name: Điều kiện
+            Functions in Artist:
+              name: Hàm trong Artist
             Internet:
               name: internet
             Crowdsourcing:
@@ -4264,6 +4404,10 @@ vi:
               name: Giới thiệu
             Nested Loops:
               name: Vòng lặp lồng nhau
+            Nested Loops in Artist:
+              name: Vòng lặp lồng nhau trong Artist
+            Nested Loops Project in Artist:
+              name: Dự án Vòng lặp lồng nhau trong Artist
             Digital Citizenship:
               name: Công dân số
             'Unplugged: Binary':
@@ -4272,6 +4416,8 @@ vi:
               name: Nghệ sĩ nhị phân
             Building a Foundation:
               name: Xây dựng nền tảng
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Loops in Ice Age:
               name: Vòng lặp trong Kỷ băng hà
         csp3-a:
@@ -4289,6 +4435,8 @@ vi:
           lessons:
             Introduction:
               name: Giới thiệu
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops Project in Frozen:
               name: Dự án vòng lặp lồng nhau trong Frozen
             'How it Works: The Internet':
@@ -4299,6 +4447,12 @@ vi:
               name: 'Giáo dục ý thức phổ biến: Trên màn hình trung bình'
             Conditional Loops in Maze:
               name: Vòng lặp điều kiện trong Mê cung
+            Variables in Artist:
+              name: Biến trong Artist
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
             Building a Foundation:
               name: Xây dựng nền tảng
             Debugging with Scrat:
@@ -4312,6 +4466,8 @@ vi:
         new-stages-sept-2017:
           title: Các giai đoạn mới nhất 9/17
           lessons:
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Sequences with Scrat:
               name: Học về chuỗi tuần tự cùng sóc Scrat
             Testing Template:
@@ -4323,6 +4479,10 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops in Bee/Zombie:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
@@ -4331,6 +4491,8 @@ vi:
               name: Khoá học E Giới thiệu
             Conditionals:
               name: Điều kiện
+            Functions in Artist:
+              name: Hàm trong Artist
             Internet:
               name: internet
             Crowdsourcing:
@@ -4342,6 +4504,10 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops in Bee/Zombie:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
@@ -4352,10 +4518,16 @@ vi:
               name: Kho dữ liệu trò chơi Kỷ băng hà
             Envelope Variables:
               name: Các biến phong bì
+            Variables in Artist:
+              name: Biến trong Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Songwriting with Parameters:
               name: Sáng tác với tham số
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
         subgoals-assessment-staging:
           lessons:
             subgoal assessments:
@@ -4431,8 +4603,12 @@ vi:
               name: Đổi mới sáng tạo cá nhân
             What is a Computer?:
               name: Máy tính là gì?
+            Simple Encryption:
+              name: Mã hóa đơn giản
             Intro to App Lab:
               name: Giới thiệu về AppLab
+            Intro to App Lab (13+):
+              name: Giới thiệu App Lab (13+)
         hero:
           title: 'Minecraft: Hero''s Journey'
           description_short: Minecraft đã trở lại với hoạt động mới cho Giờ Lập Trình!
@@ -4495,6 +4671,10 @@ vi:
           lessons:
             new stage:
               name: giai đoạn mới
+        halloween:
+          lessons:
+            Halloween Artist:
+              name: Artist Halloween
         colehoc17:
           lessons:
             new stage:
@@ -4505,6 +4685,10 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops:
               name: Vòng lặp lồng nhau
             Nested Loops with Frozen:
@@ -4513,6 +4697,8 @@ vi:
               name: Giới thiệu
             Conditionals:
               name: Điều kiện
+            Functions in Artist:
+              name: Hàm trong Artist
             Internet:
               name: internet
             Crowdsourcing:
@@ -4523,6 +4709,10 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops in Bee/Zombie:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
@@ -4533,10 +4723,16 @@ vi:
               name: Kho dữ liệu trò chơi Kỷ băng hà
             Envelope Variables:
               name: Các biến phong bì
+            Variables in Artist:
+              name: Biến trong Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Songwriting with Parameters:
               name: Sáng tác với tham số
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
         csd6-old:
           lessons:
             Lists:
@@ -4717,6 +4913,9 @@ vi:
                 CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
         coursea-2018:
+          assignment_family_title: Khóa học A
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lessons:
             'Programming: Happy Maps':
               name: Bản đồ thú vị
@@ -4748,16 +4947,30 @@ vi:
               name: Sự kiện lớn
             Conditional Loops in Maze:
               name: Vòng lặp điều kiện trong Mê cung
+            Variables in Artist:
+              name: Biến trong Artist
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
             Debugging in Maze:
               name: Gỡ lỗi với Scrat
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
             'Concept Practice with Minecraft ':
               name: Nhìn về phía trước
+            Nested Loops in Frozen:
+              name: Vòng lặp lồng nhau với Anna và Elsa
             'Functions: Songwriting':
               name: Sáng tác với tham số
+            Functions in Artist:
+              name: Hàm trong Artist
             Envelope Variables:
               name: Các biến phong bì
+            Variables as Constant in Artist:
+              name: Biến trong Artist
+            Variables that Change in Artist:
+              name: Thay đổi biến với Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
             Binary Bracelets:
@@ -4775,6 +4988,8 @@ vi:
             Graph Paper Programming:
               name: lập trình đồ thị trên giấy
         courseb-2018:
+          assignment_family_title: Khóa học B
+          description_audience: 'Tuổi: 5-8'
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -4792,6 +5007,8 @@ vi:
               name: Di chuyển nó, di chuyển nó
         coursed-2018:
           title: Kịch bản khóa D mới
+          assignment_family_title: Khóa học D
+          description_audience: 'Tuổi: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -4812,6 +5029,10 @@ vi:
             Relay Programming:
               name: Chương trình chuyển tiếp
         coursec-2018:
+          assignment_family_title: Khóa học C
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lessons:
             Building a Foundation:
               name: Xây dựng nền tảng
@@ -4833,6 +5054,8 @@ vi:
             Functions with Parameters:
               name: Hàm và tham số
         coursee-2018:
+          assignment_family_title: Khóa học E
+          description_audience: 'Tuổi: 8-12'
           lessons:
             'Programming: My Robotic Friends':
               name: Bạn bè robot của tôi
@@ -4846,6 +5069,8 @@ vi:
               name: Giới thiệu
             'Functions: Songwriting':
               name: Sáng tác với tham số
+            Functions in Artist:
+              name: Hàm trong Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -4853,6 +5078,11 @@ vi:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
+          assignment_family_title: Khóa học F
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lessons:
             'Programming: My Robotic Friends':
               name: Bạn bè robot của tôi
@@ -4868,10 +5098,20 @@ vi:
               name: Kho dữ liệu trò chơi Kỷ băng hà
             Envelope Variables:
               name: Các biến phong bì
+            Variables in Artist:
+              name: Biến trong Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Songwriting with Parameters:
               name: Sáng tác với tham số
+            Functions with Parameters in Artist:
+              name: Hàm và Tham số trong Artist
+            Variables as Constant in Artist:
+              name: Biến trong Artist
+            Variables that Change in Artist:
+              name: Thay đổi biến với Artist
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -5056,6 +5296,8 @@ vi:
               name: Xác định người bằng dữ liệu
             The Cost of Free:
               name: Chi phí cho miễn phí
+            Simple Encryption:
+              name: Mã hóa đơn giản
             Encryption with Keys and Passwords:
               name: Mã hóa với phím và mật khẩu
             Public Key Crypto:
@@ -5423,17 +5665,19 @@ vi:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
         frozen-2018:
+          title: Kịch bản Frozen mới
           lessons:
             Artist:
               name: Họa sĩ
         frozen-2018-test:
+          title: Kịch bản Frozen mới
           lessons:
             Artist:
               name: Họa sĩ
         dance:
           title: Bữa tiệc khiêu vũ
-          description_short: Với Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara, và 25 nghệ sĩ khác!
+          description_short: Có Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara và 25 người khác!
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
             bè của mình!
           lessons:
@@ -5444,13 +5688,14 @@ vi:
           student_description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ
             với bạn bè của mình!
         frozen-2018-test-b:
+          title: Kịch bản Frozen mới
           lessons:
             Artist:
               name: Họa sĩ
         aquatic:
           title: Minecraft Chuyến thám hiểm đại dương
-          description_short: Minecraft đã trở lại với một hoạt động hoàn toàn mới
-            cho Giờ Lập trình!
+          description_short: Sử dụng khả năng sáng tạo và giải quyết vấn đề của bạn
+            để khám phá và xây dựng thế giới dưới nước bằng mã!
           lessons:
             Aquatic:
               name: Minecraft
@@ -5471,11 +5716,16 @@ vi:
             csp_functions:
               display_name: Các hàm
         dance-extras:
+          title: Nhảy tiếp đi (2018)
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
           student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
             tưởng dự án mở rộng.
         coursef-2019:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lesson_groups:
             csf_variables:
               display_name: Các biến
@@ -5490,14 +5740,24 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops in Bee/Zombie:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
             Envelope Variables:
               name: Các biến phong bì
+            Variables as Constant in Artist:
+              name: Biến trong Artist
+            Variables that Change in Artist:
+              name: Thay đổi biến với Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             The Artist:
               name: nghệ sĩ
             Sequencing in the Maze:
@@ -5507,10 +5767,13 @@ vi:
             Crowdsourcing:
               name: Đa nguồn
         dance-low:
+          description_short: Hãy tự viết mã lệnh cho bữa tiệc khiêu vũ của mình để
+            chia sẻ với bạn bè nhé! (Phiên bản này dành cho kết nối chậm)
           lessons:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursed-2019:
+          description_audience: 'Tuổi: 7-11'
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -5531,6 +5794,8 @@ vi:
               name: Chương trình chuyển tiếp
             Loops in Ice Age:
               name: Vòng lặp trong Kỷ băng hà
+            Nested Loops in Artist:
+              name: Vòng lặp lồng nhau trong Artist
             Digital Citizenship:
               name: Công dân số
             'Unplugged: Binary':
@@ -5540,6 +5805,7 @@ vi:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursee-2019:
+          description_audience: 'Tuổi: 8-12'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -5552,12 +5818,18 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops:
               name: Vòng lặp lồng nhau
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
             'Functions: Songwriting':
               name: Sáng tác với tham số
+            Functions in Artist:
+              name: Hàm trong Artist
             Internet:
               name: internet
             Crowdsourcing:
@@ -5589,10 +5861,18 @@ vi:
               name: Gỡ lỗi với Scrat
             'Concept Practice with Minecraft ':
               name: Nhìn về phía trước
+            Functions in Artist:
+              name: Hàm trong Artist
             Envelope Variables:
               name: Các biến phong bì
+            Variables as Constant in Artist:
+              name: Biến trong Artist
+            Variables that Change in Artist:
+              name: Thay đổi biến với Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Binary Bracelets:
               name: Vòng đeo tay nhị phân
             'Unplugged: Binary':
@@ -5642,6 +5922,9 @@ vi:
           student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
             tưởng dự án mở rộng.
         coursec-2019:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -5656,6 +5939,8 @@ vi:
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Thuật toán trong đời sống: Máy bay giấy'
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             'Events: The Big Event':
               name: Sự kiện lớn
             Looking Ahead:
@@ -5667,8 +5952,10 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         gamelab:
-          title: Kho Trò chơi
+          title: Phòng thí nghiệm trò chơi
         coursea-2019:
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -5687,6 +5974,8 @@ vi:
               name: Lập trình trong mê cung
             Going Places Safely:
               name: Đến nơi an toàn
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Ocean Scene with Loops:
               name: Vòng lặp trong câu chuyện về biển
             Programming with Rey and BB-8:
@@ -5695,6 +5984,7 @@ vi:
               name: Học về chuỗi tuần tự cùng sóc Scrat
               description_student: Viết chương trình để Scrat tìm đến hạt sồi.
         courseb-2019:
+          description_audience: 'Tuổi: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -6032,6 +6322,8 @@ vi:
               name: Xác định người bằng dữ liệu
             The Cost of Free:
               name: Chi phí cho miễn phí
+            Simple Encryption:
+              name: Mã hóa đơn giản
             Encryption with Keys and Passwords:
               name: Mã hóa với phím và mật khẩu
             Public Key Crypto:
@@ -6181,10 +6473,16 @@ vi:
               name: Xây dựng nền tảng
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops in Bee/Zombie:
               name: Vòng lặp lồng nhau trong Con ong/Thây ma
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
+            Functions in Artist:
+              name: Hàm trong Artist
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -6600,6 +6898,8 @@ vi:
               name: giai đoạn mới
             Introduction:
               name: Giới thiệu
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Nested Loops:
               name: Vòng lặp lồng nhau
             Nested Loops Project in Frozen:
@@ -6662,6 +6962,7 @@ vi:
             For Loops:
               name: Cho vòng lặp
         dance-extras-2019:
+          title: Nhảy tiếp đi (2019)
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
           student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
@@ -6700,10 +7001,16 @@ vi:
           lessons:
             Crowdsourcing:
               name: Đa nguồn
+            Nested Loops in Artist:
+              name: Vòng lặp lồng nhau trong Artist
+            Functions in Artist:
+              name: Hàm trong Artist
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
+            Functions with Artist:
+              name: Hàm trong Artist
         time4cs-control-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -6951,6 +7258,8 @@ vi:
             Text:
               name: Văn bản
         coursea-2020:
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -6973,6 +7282,7 @@ vi:
             Ocean Scene with Loops:
               name: Vòng lặp trong câu chuyện về biển
         courseb-2020:
+          description_audience: 'Tuổi: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -6992,6 +7302,9 @@ vi:
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
         coursec-2020:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7011,6 +7324,7 @@ vi:
             'Events: The Big Event':
               name: Sự kiện lớn
         coursed-2020:
+          description_audience: 'Tuổi: 7-11'
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -7040,6 +7354,7 @@ vi:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursee-2020:
+          description_audience: 'Tuổi: 8-12'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7054,7 +7369,13 @@ vi:
               name: Vòng lặp lồng với Frozen
             'Functions: Songwriting':
               name: Sáng tác với tham số
+            Functions in Artist:
+              name: Hàm trong Artist
         coursef-2020:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7065,8 +7386,14 @@ vi:
           lessons:
             Envelope Variables:
               name: Các biến phong bì
+            Variables as Constant in Artist:
+              name: Biến trong Artist
+            Variables that Change in Artist:
+              name: Thay đổi biến với Artist
             For Loop Fun:
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Internet:
               name: Internet
             Crowdsourcing:
@@ -7092,8 +7419,24 @@ vi:
               name: Bữa Tiệc Khiêu Vũ
             Programming in Maze:
               name: Lập trình trong mê cung
+            Programming in Artist:
+              name: Lập trình trong Artist
+            Loops in Artist:
+              name: Vòng lặp trong Artist
+            Functions in Artist:
+              name: Hàm trong Artist
+            For Loops in Artist:
+              name: Dành cho Vòng lặp trong Artist
             Debugging with Scrat:
               name: Gỡ lỗi với Scrat
+            Functions with Artist:
+              name: Hàm trong Artist
+            Variables with Artist:
+              name: Biến trong Artist
+            Changing Variables with Artist:
+              name: Thay đổi biến với Artist
+            For Loops with Artist:
+              name: Dành cho Vòng lặp trong Artist
         pre-express-2020:
           lesson_groups:
             csf_sequencing:
@@ -7115,6 +7458,8 @@ vi:
               name: Vòng lặp trong Kỷ băng hà
             Ocean Scene with Loops:
               name: Vòng lặp trong câu chuyện về biển
+            Loops in Artist:
+              name: Vòng lặp trong Artist
             Tell a Story in Play Lab:
               name: Kể chuyện bằng Play Lab
         csp1-2020:
@@ -7478,6 +7823,12 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Khóa học A
+            Course B:
+              name: Khóa học B
         virustest:
           title: Mô phỏng dịch bệnh bùng phát
           description_short: Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh
@@ -7544,6 +7895,14 @@ vi:
             Styling Text with CSS:
               key: Tạo phong cách cho văn bản với CSS
               name: Tạo phong cách cho văn bản với CSS
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong
+                cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho
+                bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành
+                phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ
+                lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
+                được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
+                về phong cách cho các thành phần văn bản để thêm vào các trang web
+                cá nhân của họ. \r \r \n"
             Intellectual Property:
               key: Sở hữu trí tuệ
               name: Sở hữu trí tuệ
@@ -7559,6 +7918,12 @@ vi:
             Drawing in Game Lab:
               key: Bản vẽ trong Kho trò chơi
               name: Bản vẽ trong Kho trò chơi
+              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi,
+                môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định
+                vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc
+                xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối
+                của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những
+                gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
             Variables:
               key: Các biến
               name: Các biến
@@ -7571,6 +7936,13 @@ vi:
             Project - Interactive Card:
               key: 'Dự án: Thẻ tương tác'
               name: 'Dự án: Thẻ tương tác'
+            Velocity:
+              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô
+                hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được
+                giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay
+                một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách
+                khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi
+                với thanh cuộn cơ bản.
             Collision Detection:
               key: Phát hiện va chạm
               name: Phát hiện va chạm
@@ -7686,12 +8058,15 @@ vi:
               key: Tạo PT - hoàn thành nhiệm vụ
               name: Tạo PT - hoàn thành nhiệm vụ
         coursea-2021:
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lessons:
             'Programming: Happy Maps':
               name: Bản đồ thú vị
             Sequencing with Scrat:
               key: Học về chuỗi tuần tự cùng sóc Scrat
               name: Học về chuỗi tuần tự cùng sóc Scrat
+              description_student: Viết chương trình để Scrat tìm đến hạt sồi.
             Programming with Rey and BB-8:
               key: Lập trình cùng Rey và robot BB-8
               name: Lập trình cùng Rey và robot BB-8
@@ -7710,6 +8085,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
         courseb-2021:
+          description_audience: 'Tuổi: 5-8'
           lessons:
             Move It, Move It:
               key: Di chuyển nó, di chuyển nó
@@ -7721,6 +8097,8 @@ vi:
               key: Lập trình trong mê cung
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
+            Loops in Artist:
+              key: Vòng lặp trong Artist
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7731,9 +8109,14 @@ vi:
             csf_events:
               display_name: Các sự kiện
         coursec-2021:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lessons:
             Programming in Maze:
               key: Lập trình trong mê cung
+            Programming in Artist:
+              key: Lập trình trong Artist
             Binary Bracelets:
               key: Vòng đeo tay nhị phân
               name: Vòng đeo tay nhị phân
@@ -7754,6 +8137,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
         coursed-2021:
+          description_audience: 'Tuổi: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -7766,6 +8150,8 @@ vi:
             Loops in Ice Age:
               key: Vòng lặp trong Kỷ băng hà
               name: Vòng lặp trong Kỷ băng hà
+            Loops in Artist:
+              key: Vòng lặp trong Artist
             'Unplugged: Binary':
               key: 'Chưa hoạt động: nhị phân'
               name: Hình ảnh Nhị phân
@@ -7787,20 +8173,28 @@ vi:
               display_name: Nhị phân
             csf_digcit:
               display_name: Công dân số
+            lessonGroup-6:
+              display_name: Công dân số
         coursee-2021:
+          description_audience: 'Tuổi: 8-12'
           lessons:
             Sequencing in the Maze:
               key: Chuỗi tuần tự trong mê cung
               name: Chuỗi tuần tự trong mê cung
             Conditionals:
               key: Điều kiện
+            Nested Loops in Artist:
+              key: Vòng lặp lồng nhau trong Artist
             Nested Loops in Frozen:
               name: Vòng lặp lồng với Frozen
             'Functions: Songwriting':
               name: Sáng tác với tham số
+            Functions in Artist:
+              key: Hàm trong Artist
+              name: Hàm trong Artist
           lesson_groups:
             ramp_up:
-              display_name: Vòng lặp
+              display_name: Vòng lặp lồng nhau
             csf_digcit:
               display_name: Công dân số
             csf_nested_loops:
@@ -7808,10 +8202,16 @@ vi:
             csf_functions:
               display_name: Các hàm
         coursef-2021:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lessons:
             Envelope Variables:
               key: Các biến phong bì
               name: Các biến phong bì
+            Variables as Constant in Artist:
+              name: Biến trong Artist
             AI for Oceans:
               key: Trí Tuệ Nhân Tạo cho Đại Dương
               name: Trí Tuệ Nhân Tạo cho Đại Dương
@@ -7821,13 +8221,22 @@ vi:
             For Loop Fun:
               key: Cho vòng lặp vui vẻ
               name: Cho vòng lặp vui vẻ
+            For Loops in Artist:
+              key: Dành cho Vòng lặp trong Artist
+              name: Dành cho Vòng lặp trong Artist
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
             csf_variables:
-              display_name: Các biến
+              display_name: Cho vòng lặp
             csf_for_loops:
               display_name: Cho vòng lặp
+            lessonGroup-8:
+              display_name: Các biến
+            lessonGroup-9:
+              display_name: xóa
+            lessonGroup-7:
+              display_name: Công dân số
         express-2021:
           lessons:
             Dance Party:
@@ -7838,6 +8247,20 @@ vi:
               name: Gỡ lỗi với Scrat
             'Looking Ahead with Minecraft ':
               name: Nhìn về phía trước
+            Functions with Artist:
+              key: Hàm trong Artist
+              name: Hàm trong Artist
+            Variables with Artist:
+              key: Biến trong Artist
+              name: Biến trong Artist
+            Changing Variables with Artist:
+              key: Thay đổi biến với Artist
+              name: Thay đổi biến với Artist
+            For Loops with Artist:
+              key: Dành cho Vòng lặp trong Artist
+              name: Dành cho Vòng lặp trong Artist
+            lesson-1:
+              name: Bữa Tiệc Khiêu Vũ
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -7879,6 +8302,8 @@ vi:
             outbreak:
               display_name: Mô phỏng dịch bệnh bùng phát
             lessonGroup-3:
+              display_name: Các biến
+            variables:
               display_name: Các biến
         csd4-preview-2021:
           lessons:
@@ -7930,3 +8355,43 @@ vi:
               name: Bài học 14
             lesson15:
               name: Bài học 15
+            lesson17:
+              name: Bài học 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Giới thiệu
+            Sequencing:
+              key: Chuỗi tuần tự
+              name: Chuỗi tuần tự
+            Loops:
+              key: Vòng lặp
+              name: Vòng lặp
+            Events:
+              key: Các sự kiện
+              name: Các sự kiện
+            Conditionals:
+              key: Điều kiện
+              name: Điều kiện
+            Functions:
+              key: Các hàm
+              name: Các hàm
+            Variables:
+              key: Các biến
+              name: Các biến
+            For Loops:
+              key: Cho vòng lặp
+              name: Cho vòng lặp
+            Getting Started:
+              name: Bắt đầu
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Giới thiệu
+            k5_next_steps_1:
+              display_name: Bước tiếp theo
+            Introduction:
+              display_name: Giới thiệu

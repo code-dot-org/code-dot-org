@@ -1063,6 +1063,12 @@ in-tl:
   coursed-2019_gradelevel: crwdns1783038:0crwdne1783038:0
   coursee-2019_gradelevel: crwdns1783040:0crwdne1783040:0
   coursef-2019_gradelevel: crwdns1783042:0crwdne1783042:0
+  coursea-2020_gradelevel: crwdns2485830:0crwdne2485830:0
+  courseb-2020_gradelevel: crwdns2485832:0crwdne2485832:0
+  coursec-2020_gradelevel: crwdns2485834:0crwdne2485834:0
+  coursed-2020_gradelevel: crwdns2485836:0crwdne2485836:0
+  coursee-2020_gradelevel: crwdns2485838:0crwdne2485838:0
+  coursef-2020_gradelevel: crwdns2485840:0crwdne2485840:0
   accelerated_gradelevel: crwdns56094:0crwdne56094:0
   codeorg_platformtext: crwdns21807:0crwdne21807:0
   codeintl_platformtext: crwdns23749:0crwdne23749:0
@@ -1189,6 +1195,12 @@ in-tl:
   coursed-2019_shortdescription_congrats: crwdns1783050:0crwdne1783050:0
   coursee-2019_shortdescription_congrats: crwdns1783052:0crwdne1783052:0
   coursef-2019_shortdescription_congrats: crwdns1783054:0crwdne1783054:0
+  coursea-2020_shortdescription_congrats: crwdns2485700:0crwdne2485700:0
+  courseb-2020_shortdescription_congrats: crwdns2485702:0crwdne2485702:0
+  coursec-2020_shortdescription_congrats: crwdns2485704:0crwdne2485704:0
+  coursed-2020_shortdescription_congrats: crwdns2485706:0crwdne2485706:0
+  coursee-2020_shortdescription_congrats: crwdns2485708:0crwdne2485708:0
+  coursef-2020_shortdescription_congrats: crwdns2485710:0crwdne2485710:0
   codeorg_longdescription: crwdns21574:0crwdne21574:0
   codeintl_longdescription: crwdns23751:0crwdne23751:0
   thinkersmithspanish_longdescription: crwdns25939:0crwdne25939:0
@@ -1701,3 +1713,12 @@ in-tl:
   codebytes_skinny_banner_description: crwdns2475104:0crwdne2475104:0
   codebytes_skinny_banner_english_only: crwdns2475106:0crwdne2475106:0
   codebytes_skinny_banner_learn: crwdns2475108:0%{code_bytes_url}crwdne2475108:0
+  footer_privacy_policy: crwdns2484086:0crwdne2484086:0
+  footer_privacy_policy_updated: crwdns2484088:0crwdne2484088:0
+  footer_about: crwdns2484090:0crwdne2484090:0
+  footer_partners: crwdns2484092:0crwdne2484092:0
+  footer_blog: crwdns2484094:0crwdne2484094:0
+  footer_donate: crwdns2484096:0crwdne2484096:0
+  footer_store: crwdns2484098:0crwdne2484098:0
+  footer_support: crwdns2484100:0crwdne2484100:0
+  footer_terms: crwdns2484102:0crwdne2484102:0

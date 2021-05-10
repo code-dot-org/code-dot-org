@@ -27,6 +27,7 @@ zh-TW:
       Challenge: 挑戰
       Challenge Levels: 挑戰等級
       Challenges: 挑戰
+      Chance: 機會
       Change: 改變
       Checking for a Winner: 確認誰是贏家
       Code Your Own Flappy Game: 實作你自己的像素鳥遊戲
@@ -41,6 +42,7 @@ zh-TW:
       Create Your Own Animation: 建立你自己的動畫
       Create a Story: 新增故事
       Create your project: 創建你的專案
+      Creating a Simulation: 設計模擬
       Data Visualization: 資料視覺化
       De-bugging with the Step Button: 透過步驟按鈕進行除錯
       Debugging: 除錯
@@ -87,6 +89,7 @@ zh-TW:
       Keyboard Input: 鍵盤輸入
       LED Apps: 發光二極管 應用程式
       Layout with CSS: CSS佈局
+      Learning from Simulations: 從模擬中學習
       Lesson Extras: 額外關卡
       Light Show: 燈光表演
       Linking Pages: 鏈接頁面
@@ -117,6 +120,7 @@ zh-TW:
       'Mini-project: Sticker Design': '小專案: 設計貼紙'
       Modify simulation variables: 修改模擬變數
       More Input: 更多輸入
+      More Monsters: 更多怪物
       More Parameters: 更多參數
       Motorcycle: 摩托車
       Movement with the Counter Pattern: 使用計數器來移動
@@ -136,6 +140,7 @@ zh-TW:
       Practice: 練習
       Prediction: 預測
       Problem Solving: 問題解決
+      Programming with Events: 用事件編程
       Programming with Rey and BB-8: 和 BB-8 與 Rey 一起寫程式
       Programs that Repeat: 重複執行的程式
       Project: 專案
@@ -146,6 +151,7 @@ zh-TW:
       Publishing Your Website: Publishing Your Website
       RGB Exploration: 三原色的探索
       Reading Sensors: 讀取感測器
+      Recovery: 恢復
       Reflection: 反思
       Repeat Blocks: 重複區塊
       Repeat Blocks with BB-8: BB-8機器人的重複區塊
@@ -161,6 +167,7 @@ zh-TW:
       Setting Properties: 設定屬性
       Shapes and the Draw Loop: 形狀跟畫迴圈
       Share Your App: 分享您的手機應用程式
+      Share Your Message: 分享你的訊息
       Side Scroller: 側邊捲軸
       Simple Circuits: 簡易電路
       Sliders: 滑塊
@@ -175,7 +182,7 @@ zh-TW:
       The Artist in Code Studio: 在程式碼工作室裡面的畫家
       The Buzzer: 蜂鳴器
       The Collector: 搜集者
-      The Harvester: 收割者
+      The Harvester: 農夫
       UI Element Properties: 操作介面元素屬性
       User Interface: 使用者介面
       Using Getters and Setters: 使用 取屬性函式（Getters） 跟設定屬性函式（Setters）
@@ -184,10 +191,12 @@ zh-TW:
       Using the LED: 使用彩色顯示器
       Using the Repeat Block: 使用「重複」積木
       Using the Switch: 使用開關
+      Vaccines: 疫苗
       Velocity: 速度
       Video: 影片
       Warm Up: 熱身
       Website Project: 網站專案
+      Welcome to Monster Town: 歡迎來到怪物鎮
       While Loops with the Farmer: 與農夫一起嘗試 while（當）迴圈
       Wrap-up: 總結
       Your Personal Website: 你的個人主頁

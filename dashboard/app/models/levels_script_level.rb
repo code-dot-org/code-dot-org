@@ -38,6 +38,10 @@ class LevelsScriptLevel < ApplicationRecord
     script_level_seeding_key = my_script_level.seeding_key(seed_context)
 
     my_key.merge!(script_level_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
-    my_key.stringify_keys
+    my_key = my_key.stringify_keys
+    unless my_key['script_level.level_keys'].include?(my_key['level.key'])
+      raise "invalid levels_script_levels seeding key. level.key not contained in script_level.level_keys: #{my_key}"
+    end
+    my_key
   end
 end

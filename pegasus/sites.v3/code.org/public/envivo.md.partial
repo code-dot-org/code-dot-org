@@ -21,18 +21,21 @@ social:
 
 <p>Cada episodio es presentado por el Vicepresidente de Alianzas Internacionales, <a href="https://code.org/about/leadership/leonardo_ortiz_villacorta">Leonardo Ortiz Villacorta</a>, y Directora de Alianzas Internacionales para las Américas, Lara Sepúlveda Machado, quienes enseñan conceptos de ciencias de computación acompañados de diversos invitados especiales.</p>
 
-<a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Ver episodios</button></a>
-
-<p><br>Los episodios en vivo ya acabaron, pero aún puedes ver los episodios anteriores y completar las actividades. Para seguir aprendiendo, también puedes intentar hacer proyectos o actividades para <a href="https://code.org/athome">aprender en casa</a>.</p>
+<div style="clear: both;"></div>
+<div style="max-width:100%;">
+<h2>Regístrate para participar</h2>
+  <p>Los invitamos a participar en un episodio especial de la Hora del Código En Vivo con el productor <a href="https://miamiart.house">Julio Reyes Copello</a> y la cantante <a href="https://twitter.com/solamentejoy"> Joy</a>. Este episodio es el primero de una serie especial en torno a la creatividad, la música y la programación. ¡No te lo pierdas! Regístrate <a href="https://bit.ly/3bMXzeY">aquí.<a/></p>
 <br>
 
-<div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>
+<div style="max-width:490px; position:relative;"><a href="https://code.zoom.us/webinar/register/WN_-aAyNBxFTQS30hLV-dpaOg"><img style="max-width:100%;" src=images/hdcenvivo_joy.jpg></a><style="max-width:490px; position:relative;"></div>
 <p>Síguenos en <a href="http://facebook.com/code.org">Facebook</a> o en <a href="http://twitter.com/codeorg">Twitter</a>.</p>
+
 </div>
 
-<div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
+</div><div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
 <img src="/images/marketing/code-break-callout-episode-0.jpg" style="max-width:100%">
 <a id="signup"></a>
+
 <div style="padding:8px 18px 0 8px;">
 <p style="margin: 10px 0 0 0;">¡Manténgase informado! Únase a nuestra lista de distribución para recibir noticias de Code.org y para ser el primero en conocer sobre recursos para continuar el aprendizaje en casa.</p>
 <iframe src="http://go.pardot.com/l/153401/2020-09-30/nwvb6j" width="100%" height="305" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>

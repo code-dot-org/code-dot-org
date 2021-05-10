@@ -1,0 +1,9 @@
+name 'ml-class test-exit ticket'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Exit Ticket
+
+### Please take a minute to fill out [this form (click here)](https://docs.google.com/forms/d/e/1FAIpQLSfMW7ynAhJam7PSKoiPdMYFB2jZbiUYYg1AJ8VEhHqxEDcTgQ/viewform?usp=sf_link)
+MARKDOWN

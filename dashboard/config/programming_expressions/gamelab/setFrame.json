@@ -1,0 +1,11 @@
+{
+  "func": "setFrame",
+  "category": "Sprites",
+  "paletteParams": [
+    "frame"
+  ],
+  "params": [
+    "0"
+  ],
+  "modeOptionName": "*.setFrame"
+}

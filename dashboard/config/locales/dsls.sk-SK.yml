@@ -278,9 +278,11 @@ sk-SK:
         - text: _____ je _____ _____.
         - text: Eugene je _____ mesto.
         questions:
-        - text: Seattle je veľké mesto.<br/>Eugene je stredne veľké mesto<br/>Hillview
-            je malé mesto.
+        - text: "Seattle je veľké mesto.  \nEugene je stredne veľké mesto.  \nHillview
+            je malé mesto.  "
         title: Vyber správnu odpoveď
+        content1: Tu sú tri vety. Ktoré z nižšie uvedených šablón správne zodpovedajú
+          rovnakému vzoru , ako majú tri vety?
       4-5 Crowdsourcing Multi 1:
         answers:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
@@ -598,43 +600,76 @@ sk-SK:
         - {}
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Priraď zoznam ku správnemu kódu
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Priraď zoznam ku správnemu kódu
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        content1: Priraď zoznam ku správnemu kódu
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -929,15 +964,15 @@ sk-SK:
           * [Pracovný zošit](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
       CSD U3 Lesson Overview 11:
         markdown: "# Prehľad\n\nV tejto lekcii použijeme logické výrazy na porovnanie
-          aktuálnej hodnoty vlastnosti „sprite“ objektu s jej cieľovou hodnotou. Toto
-          porovnanie použijeme na určenie toho, či „sprite“ dosiahol určený bod na
-          obrazovke, narástol do definovanej veľkosti alebo dosiahol inú hodnotu.
-          Nakoniec pridáme podmienkové výroky, \"if\", v ktorých logické výrazy použíjeme
+          aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou.
+          Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený
+          bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu.
+          Nakoniec pridáme podmienkové výroky, \"ak\", v ktorých logické výrazy použijeme
           ako základ pre rozhodovanie\n\n## Slovník\n\n* **Logický výraz** - v programovaní
           ide o výraz, ktorý hodnotí, či ide o pravdu alebo nepravdu. \n* **Podmienkový
-          výrok („If“ výrok)** - bežný programovací nástroj, ktorý definuje podmienky.\n\n##
+          výrok („Ak“ výrok)** - bežný programovací nástroj, ktorý definuje podmienky.\n\n##
           Nový kód\n\n* [If statement](//studio.code.org/docs/gamelab/ifBlock/) –
-          „if“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
+          „ak“ výrok\n* [Less than operator](//studio.code.org/docs/gamelab/lessThanOperator/)
           – znamienko „menší ako“\n* [Inequality operator](//studio.code.org/docs/gamelab/inequalityOperator/)
           – znamienko „nerovná sa“\n* [Less than or equal operator](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
           – znamienko „menší alebo rovný ako“\n* [Greater than operator](//studio.code.org/docs/gamelab/greaterThanOperator/)
@@ -1078,7 +1113,7 @@ sk-SK:
           [Vytvor svoju vlastnú hru - Spätná väzba](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)\n"
       CSD U3 SFLP Velocity:
         markdown: "# Prehľad\n\nPo krátkom zopakovaní toho, ako sa kód pre počítanie
-          používa na nastavenie pohybu „sprite“ objektu, spoznáš  vlastnosti, ktoré
+          používa na nastavenie pohybu  objektu „postava“, spoznáš  vlastnosti, ktoré
           priamo určujú jeho rýchlosť a spôsob otáčania sa. Používaním týchto vlastností
           sa naučíš všetko potrebné na vytvorenie jednoduchej plošinovky. \n\n## Nový
           kód\n* [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)\n*
@@ -1618,13 +1653,15 @@ sk-SK:
         title: Vyber správnu odpoveď
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - text: Ktorá šípka dostane Flurb k pokladu?
         title: Vyber správnu odpoveď
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
       K-1 Keep it Private Multi 1:
         answers:
         - correct: true
@@ -1682,13 +1719,15 @@ sk-SK:
         title: Bludisko
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
         questions:
         - text: Akým algoritmom sa Flurb dostane ku kvetinám?
         title: Vyber správnu odpoveď
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
       K-1 Plant a Seed Multi 1:
         answers:
         - {}
@@ -3636,7 +3675,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018:
@@ -3655,7 +3694,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -3674,7 +3713,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_for10_predict1_2018_2019_2020:
@@ -3693,7 +3732,7 @@ sk-SK:
           feedback: Nesprávne. Za každým cyklom „pre“ umelec nakreslí dlhšiu čiaru,
             ktorá je tiež hrubšia.
         markdown: 'Na zmenu šírky štetca pre túto kresbu sme použili počítadlo z nášho
-          `for` cyklu.  '
+          cyklu `pre`.  '
         questions:
         - text: Čo sa stane, ked stlačíš "Spustiť"?
       courseF_multi_artist_fwp2_predict1:
@@ -4491,3 +4530,344 @@ sk-SK:
           znakov, ktoré môžu byť namapované na slovo `the`.  \nDobrý začiatok!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
           Je náhodná substitúcia dobrá? \n* Ako dlho ti trvá po krátkej praxi, prelomiť
           náhodnú substitučnú šifru?\n* Je to dobre alebo zle?"
+      'Overview: Design Mode':
+        markdown: |-
+          # Vitajte v dizajnovom režime App Labu
+          V aplikácii App Lab ti "dizajnový režim" umožňuje presúvať prvky používateľského rozhrania do aplikácie.
+
+          ### Slovná zásoba
+          * **Používateľské rozhranie (UI)** - Spôsob interakcie osoby (používateľa) s počítačom alebo aplikáciou.
+          * **Prvky používateľského rozhrania** alebo objekty, ako sú tlačidlá, obrázky, textové polia, rozbaľovacie ponuky, obrazovky atď.
+
+          ## Príklad
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Nad oblasťou aplikácie sa zobrazí nová skupina prepínačov, ktorá ti umožní prepínať medzi "dizajnovým režimom" a programovacím režimom.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Pridanie prvku je také ľahké ako jeho presunutie do aplikácie, kamkoľvek chceš. Akonáhle je na obrazovke aplikácie, môžeš ho upraviť, zmeniť jeho veľkosť a mnoho ďalších vlastností </p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>Karta <em>Vlastnosti</em> zobrazuje všetko, čo môžeš zmeniť vo vzhľade prvku používateľského rozhrania.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span> <strong>ID prvku</strong> je dôležité, pretože to je spôsob, akým odkazuješ na prvok v kóde. O ID prvkov budeme diskutovať neskôr.</p>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Môžeš vytvoriť ľubovoľný text, ktorý používateľ uvidí v texte tlačidla.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Poznámka:</strong> Posunutím nadol zobrazíš ďalšie vlastnosti prvku UI, ktorý sa môže "skrývať" dole.</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **Teraz si to vyskúšaj!**
+      'Overview: Images':
+        markdown: "# Obrázky\n\n## Zadaj URL adresu obrázka na webe\n\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nExistuje niekoľko spôsobov, ako
+          získať URL adresu obrázka.  \n\nBežnou technikou (zobrazená vpravo) je nájsť
+          obrázok, ktorý sa ti páči, na webovej stránke a potom kliknúť pravým tlačidlom
+          myši (alebo ctrl-kliknúť) a zvoliť možnosť, ktorá hovorí niečo ako \"Kopírovať
+          adresu obrázka\", potom ho môžeš vložiť do textového pola v App Labe.\n\nAk
+          nevieš na isto, môžeš zvoliť aj možnosť \"Otvoriť obrázok v novej karte\",
+          ktorá obrázok izoluje a v paneli s adresou sa zobrazí URL adresa, ktorú
+          môžeš skopírovať a vložiť do App Labu.\n\n**Bežná chyba**: Namiesto URL
+          adresy samotného obrázka sa používa URL adresa *webovej stránky na vyhľadávanie
+          obrázkov*.\n\n* Uisti sa, že máš cestu k aktuálnemu obrázkovému súboru -
+          niečo, čo končí **.jpg**, **.gif** alebo **.png**.\n* URL adresa, ktorá
+          začína takto: `https://www.google.com/search?q=cat&espv=2&biw=1497....`,
+          je pravdepodobne nesprávna.\n\n\n## Nahraj si svoje vlastné obrázky\n\nAk
+          máš obrázky uložené v počítači, môžeš ich nahrať do **správcu súborov**
+          v App Labe. Stačí **kliknúť na možnosť Nahrať súbor** a postupovať podľa
+          dialógových okien na obrazovke.\n\nPre obrázky musí byť súbor typu: **.jpg**,
+          **.png**, or **.gif**\n\nPo nahraní obrázka ho musíš **zvoliť**, aby sa
+          obrázok nastavil pre daný súbor. Ak pridáš viac obrázkov, všetky sa zobrazia
+          pri každom nahraní súboru. Môžeš sa rozhodnúť použiť *akýkoľvek* súbor,
+          ktorý už máš nahraný.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          Vyskúšaj to kliknutím na Pokračovať!\n"
+      'Overview: onEvent':
+        markdown: |-
+          # Reakcia na vstup používateľa
+
+          Budeš sa musieť ponoriť do programovacieho režimu, aby skutočne reagoval na používateľov. App Lab čaká s reakciou na určité **udalosti**, ktoré sa vyskytnú v programe. Blok `priUdalosti` určuje, na ktorom prvku používateľského rozhrania sa má čakať na udalosť.
+
+          ## PriUdalosti
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Prepni sa do programovacieho režimu</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Presuň blok <code>priUdalosti</code> z panela nástrojov do pracovného priestoru.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          V rozbaľovacej ponuke vyber <em>ID</em> prvku používateľského rozhrania, ktoré chceš nastaviť tak, aby reagovalo na určitú udalosť. Tu budú uvedené ID všetkých prvkov používateľského rozhrania pridaných v dizajnovom režime.</p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Pomocou rozbaľovacej ponuky vyber <em>typ</em> udalosti, na ktorú chceš odpovedať. (Zatiaľ stačí kliknúť).</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Pridaj kód do funkcie, ktorú chceš spustiť, <em>keď</em> používateľ spustí udalosť. Funkcia sa spustí vždy, keď používateľ spustí konkrétnu udalosť.</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      'Overview: setPosition':
+        markdown: "# nastavPozíciu a rozmery obrazovky\n\nPríkaz `nastavPozíciu` umožňuje
+          presunúť prvky používateľského rozhrania na ľubovoľné miesto na obrazovke.\n\n<img
+          src=\"https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12
+          AM.png\" style=\"display: block; margin: auto\">\n\nAk to má mať efekt,
+          musíš (pravdepodobne) do týchto parametrov `nastavPozíciu` zapojiť skutočné
+          čísla. Čísla pre nastavPozíciu sú **súradnice obrazovky x a y**.\n\n**Tipy:**\n\n*
+          0,0 je ľavý horný roh.\n* Zadaj umiestnenie o koľko pixelov to je od **ľavej
+          a dolnej časti** z hornej časti obrazovky.  \n* Obrazovka má **320 x 450
+          pixelov**.  \n* Môžeš **umiestniť kurzor myši nad obrazovku** a zobraziť
+          súradnice x,y ktoréhokoľvek bodu.\n\n<div style=\"width: 100%; text-align:
+          center\">\n<img src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
+          src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>"
+      'Overview: If Statements':
+        markdown: |-
+          # Podmienka Ak
+
+          ## Ako fungujú podmienky Ak
+
+          <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
+          Podmienky Ak ti umožňujú *urobiť rozhodnutie, ktoré určí, ktoré riadky kódu sa majú spustiť ako ďalšie.*
+
+          Vpravo je schéma zobrazujúca prvky základnej podmienky `ak` v JavaScripte.
+
+          Podmienka ak obsahuje dve základné časti.
+
+          1. Podmienka, ktorá sa má vyhodnotiť (Booleovský výraz, ktorý sa vyhodnotí ako **pravda** alebo **nepravda**)
+          2. Kód, ktorý by sa mal spustiť, *ak* bol výraz pravdivý - uzavretý v zložených zátvorkách
+
+          ## Ukážkový príklad
+          <img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+          Program sa spúšťa riadok po riadku tak, ako čakáš. Zobrazí správu a potom vyzve používateľa na zadanie čísla. Čokoľvek používateľ napíše, sa uloží do premennej <code>vek</code> a potom prejde na ďalší riadok...
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+          Keď sa vyskytne podmienka <code>ak</code>, <em>prvé</em> čo program spraví, je vyhodnotenie podmienky v zátvorkách. V tomto okamihu program skontroluje, či je hodnota v premennej <code>vek</code> väčšia alebo rovná 18. Ak je, potom hovoríme výraz "<strong>pravda</strong>". V opačnom prípade vráti hodnotu nepravda.
+          </p
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+          Tieto príkazy console.log sa vykonajú <em>iba</em>, ak bol výraz pravdivý. Skladané zložené zátvorky obklopujú celý kód, ktorý by sa mal vykonať, len ak bol výraz pravdivý. V opačnom prípade je celá časť kódu vnorená do podmienky ak <em>preskočená</em>.
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+          Exekúcia sa začína tu, v prvom riadku po záverečnej zloženej zátvorke podmienky ak. Tento riadok sa <em>vždy</em> vykoná, ale všimni si, že ak by používateľ zadal vek menší ako 18 rokov, celá podmienka ak by bola preskočená a bolo by iba povedané "Ďakujeme za overenie". (Túto nepríjemnosť čoskoro napravíme).
+
+          </p>
+
+          <div style="clear: both">&nbsp;</div>
+      Unit 1 Lesson 1 Overview:
+        markdown: "#  Prehľad\n\nV tejto lekcii študenti pracujú v skupinách na navrhovaní
+          člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
+          drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+          s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú
+          riešiť po zvyšok kurzu\n\nTrieda pracuje v skupinách \n\n## Materiál\n*[
+          Hliníkove člny](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          -Sprievodca aktivitami(ulož ako[MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))"
+        teacher_markdown: "*  [Hliníkove člny - Príklad]\n(https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)-
+          Sprievodca akvitami  \n(https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)\n(https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+      Unit 1 Lesson 2 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa naučíš všeobecný proces riešenia
+          problémov ,ktorý ti pomôže vhodne zvoliť prístup pri riešení najrôznejších
+          problémov \n\n## Materiál\n\n* [Proces riešenia problémov- Sprievodca aktivitami
+          ](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)\n"
+        teacher_markdown: "* [Proces riešenia problémov](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
+      Unit 1 Lesson 3 Overview:
+        teacher_markdown: "[Riešenie problémov KĽÚČ](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
+        markdown: "# Prehľad\nV tejto lekcii sa naučíš uplatniť proces riešenia na
+          najrôznejšie problémy, aby si odhadil ako ti  jednotlivé kroky  pomôžu k
+          vybudovaniu a vylepšeniu procesu \n\n## Materiály\n\n* [Riešenie problémov
+          - Sprievodca aktivitami](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)\n"
+      Building a UI with Design Mode:
+        markdown: "# Vitaj v dizajnovom móde App Labu \nV aplikácii App Lab ti \"dizajnový
+          mód\" umožňuje presúvať prvky používateľského rozhrania do aplikácie.\n\n###
+          Slovná zásoba\n**Používateľské rozhranie  (UI)** - Používateľské rozhranie
+          aplikácie alebo **UI** označuje spôsob interakcie osoby (používateľa) s
+          počítačom alebo aplikáciou. Existujú bežné vzory používateľských rozhraní,
+          o ktorých pravdepodobne viete len zo skúseností:\n\n* **Prvky používateľského
+          rozhrania** alebo objekty, ako sú tlačidlá, obrázky, textové polia, rozbaľovacie
+          ponuky, obrazovky atď. \n* **Udalosti používateľského rozhrania** alebo
+          ovládacie prvky, ako *klik*, *skrolovanie*, *pohyb myšou*, *zadanie klávesovej
+          skratky*, atď. \n\nApp Lab ti umožní ľahko pridať do aplikácie prvky používateľského
+          rozhrania a potom pridať kód, ktorý bude reagovať na interakciu používateľa
+          s týmito prvkami. Jedná sa o dvojkrokový proces, ale všetko sa o ňom dozvieš
+          v tejto lekcii.\n\nNa začiatok sa pozrime do Dizajnového režimu a pridáme
+          jeden prvok používateľského rozhrania (tlačidlo) do našej aplikácie. Neskôr
+          pridáme kód.\n\n<div style=\"column-count: 4; column-gap: 20px; column-rule:
+          0.5px solid #00adbc; -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">1.</span>\nNad
+          oblasťou aplikácie sa zobrazí nová skupina prepínačov, ktorá ti umožní prepínať
+          medzi \"dizajnovým módom\" a \"programovacím módom\".</p>\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">2.</span>Pridanie
+          prvku je také ľahké ako jeho presunutie do aplikácie, kamkoľvek chceš. Akonáhle
+          je na obrazovke aplikácie, môžeš ho upraviť, zmeniť jeho veľkosť a mnoho
+          ďalších vlastností. </p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\"><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">3.</span> Karta <em>Vlastnosti</em>
+          zobrazuje všetko, čo môžeš zmeniť vo vzhľade prvku používateľského rozhrania.</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">4.</span>
+          <strong>ID elementu</strong> je dôležité, pretože to je spôsob, akým odkazuješ
+          na prvok v kóde. O ID prvkov budeme diskutovať neskôr.</p>\n</div>\n\n![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)\n\n\n<div
+          style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 66%; float: right\">\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">5.</span>Môžeš
+          vytvoriť ľubovoľný text, ktorý používateľ uvidí v texte tlačidla.</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">6.</span><strong>Poznámka:</strong>
+          Posunutím nadol zobrazíš ďalšie vlastnosti prvku UI, ktorý sa môže \"skrývať\"
+          dole.</p>\n</div>\n\n<div style=\"clear: both\"></div>\n<hr>\n\n**Teraz
+          si to vyskúšaj!**\n"
+        teacher_markdown: |
+          ### Najprv dizajn
+
+          Niektorí študenti môžu byť v pokušení začať sa hrať v programovacom režime príliš skoro, ale v tejto lekcii sa zameriame výlučne na simuláciu používateľského rozhrania. Dajte študentom vedieť, že sa ku kódu čoskoro dostanú. Týchto prvých pár úrovní umožní študentom zostaviť obrazovku ich vlastného dizajnu pomocou všetkých prvkov dostupných v App Lab bez obáv o skutočnú aplikáciu, ktorú vytvárajú.
+      CSD U1 Lesson 5 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa naučíš o rôznych typoch vstupných
+          a výstupných zariadení , ktoré počítač využíva  a typoch informácií ,ktoré
+          posiela  a prijíma . \n\n## Slovník\n\n* **Vstup** - Zariadenie alebo súčiastka
+          , ktorá  umožní , aby sa informácia dostala do počítača \n* **Výstup** -
+          Ktorékoľvek zariadenia alebo súčiastka, ktorá prijme informáciu z počítača
+          \n\n\n## Materiály \n\n* [Vstup a výstup- Sprievodca aktivitami](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)\n"
+        teacher_markdown: "[Vstup a výstup- Príklad](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))"
+      CSD U1 Lesson 6 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa naučíš ako ľudia a počítače využívanie
+          spracovanie na premenu vstupv na výstupy.  \n\n## Slovník\n\n* **Algoritmus**
+          - Presná postupnosť  príkazov na spracovanie , ktoré ma počítač vykonať
+          \n\n## Materiály \n\n* [Algoritmus na triedenie kariet - Sprievodca aktivitami](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)"
+        teacher_markdown: "* [Algoritmus na triedenie kariet](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Príklad([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))"
+      CSD U1 Lesson 7 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa dozvieš o informáciách,  ktoré si
+          počítač uchováva a ako je pamäť  rozhodujúca súčasť pri spracovávaní informácií
+          \n\n## Materiály \n\n* [Pamäť a spracovanie - Sprievodca aktivitami](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)"
+        teacher_markdown: "* [Pamäť a spracovanie - Príklad ](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))"
+      CSD U1 Lesson 8 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa dozvieš akými spôsobmi aplikácia
+          spracováva rôzne informácie, aby vyriešila problémy \n\n## Materiály\n\n*
+          [Objavovanie aplikácie - Sprievodca aktivitami](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)\n"
+        teacher_markdown: "* [Objavovanie aplikácie KĽÚČ](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)"
+      CSD U1 Lesson 9 Overview:
+        markdown: "# Prehľad\n\nV rámci tohto projektu si vytvoríš svoju vlastnú aplikáciu
+          , ktorá   vyrieši tebou zadefinovaný problém.  \n\n## Materiály \n\n* [Aplikácia
+          a riešenie problémov - Sprievodca projektu ](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)\n*
+          [Aplikácia a riešenie problémov -Hodnotenie spolužiakov](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)\n*
+          [Aplikácia a riešenie problémov - Formulár](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)"
+        teacher_markdown: |
+          * [Aplikácia a riešenie problémov](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Príklad sprievodcu projektom ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Aplikácia a Riešenie problému](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) -Príklad hodnotenia spolužiakov  ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+      CSD U2 L1 Overview:
+        markdown: "# Prehľad\n\nTáto lekcia sa zaoberá účelmi  webových stránok, ktoré
+          môžu slúžiť pre užívateľov a tvorcov . Trieda  sa oboznámi s najpoužívateľnejšími
+          webovými stránkami a diskutujú, ako sú tieto stánky pre používateľov užitočné
+          \ a ako by mohli slúžiť ich tvorcom. \n## Slovník\n\n* **Webová stránka**
+          -miesto pripojené na internet ktoré obsluhuje jednu alebo viac stránok na
+          \ svetovej webovej sieti (WWW)\n\n\n## Materiál\n\n* [Účel webovej stránky
+          - Sprievodca aktivitami](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)\n"
+        teacher_markdown: "* [Účel webovej stránky - Príklad](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
+      CSD U2 L2 Overview:
+        teacher_markdown: "* [Náčrt osobnej webovej stránky ](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Príklad([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
+        markdown: "# Prehľad\n\nTáto lekcia predstavuje webstránky ako spôsob osobného
+          vyjadrovania. Trieda najskôr preberá rôzne spôsoby akými sa ľudia vyjadrujú
+          a zdieľajú svoje záujmy a nápady, potom sa pozerá na zopár príkladov webstránok
+          pripravených študentami z predošlých kurzov. Na koniec si každý premyslí
+          a podelí sa o zoznam tém a záujmov, ktoré bu´du tvoriť zdroj pre vytvorenie
+          vlastnej webstránky v priebehu zvyšku kapitoly.\n## Slovník\n\n* **Obsah
+          webovej stránky** -  surový text, obrázky a ostatné prvky zahrnuté na webevej
+          stánke \n\n\n## Materiál\n\n* [Náčrt osobnej webovej stránky  - Sprievodca
+          aktivitami](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)"
+      CSD U2 Top Websites:
+        markdown: "# Najlepšie webové stránky \n\nNižšie sú najviac navštevované webové
+          stánky aj so stručným popisom na čo slúžia . \n\n1. Google.com - vyhľadávač
+          stránok, obrázkov, videí a ostatných sietí\n2. Youtube.com - užívateľom
+          zadané video s hodnoteniami a komentármi \n3. Facebook.com - sociálna sieť,
+          ktorá umožňuje zdieľať informácie s priateľmi \n4. Amazon.com - stránka
+          na online nákup rôznych tovarov \n4. Yahoo.com - vyhľadávač, poskytovateľ
+          účtu (email) , spravodajský zdroj \n5. Wikipedia.org - voľná encyklopédia
+          vytvorená užívateľmi \n"
+      Choosing Good IDs:
+        markdown: "# Vyberanie správneho ID\n\n**Správne ID** sú **zmysluplné a popisné**.\n\nRovnako
+          ako chceš dobré názvy pre funkcie, budeš potrebovať ID, ktoré správne popisuje
+          zamýšľaný účel prvku.\n\nNapríklad ak máš vo svojom programe veľa tlačidiel,
+          každému z nich budeš chcieť dať ID, ktoré popisuje, čo dané tlačidlo robí.\n\nTakže
+          namiesto tohto popisu:\n \n * `button1` a `button2`\n\nmôžeš vytvoriť ID,
+          ktoré naznačujú nielen to, že ide o tlačidlo, ale aj to, na čo chceš toto
+          tlačidlo použiť. Napríklad:\n\n * `homeButton` a `saveButton` alebo\n *
+          `buttonHome` a `buttonSave` alebo\n * `homeBtn` a `saveBtn`\n * je to na
+          tebe!\n\n<img src=\"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
+          style=\"display: block; margin: auto;\">\n\n# Pravidlá pri ID\nPri vytváraní
+          popisných a zmysluplných ID **existujú určité pravidlá týkajúce sa ID**,
+          ktoré musíš vedieť. ID...\n\n* rozlišuje veľké a malé písmená.\n* nemôže
+          obsahovať medzery.\n* * musí * začínať písmenom (A-Z alebo a-z) a môže za
+          ním nasledovať ľubovoľný počet číslic a písmen.\n* môže obsahovať pomlčky
+          (\"-\"), podčiarkovníky (\"_\"), dvojbodky (\":\") alebo bodky (\".\").\n\n**Rozlišuje
+          veľké a malé písmená?**\n\nTo znamená, že existuje rozdiel medzi `HomeButton`
+          a `homeButton` (všimni si pri prvom veľké písmeno H).\n\nTieto rozdiely
+          sa spočiatku zdajú byť nepríjemné, ale zvykneš si a budeš rád, že počítač
+          vyžaduje takúto presnosť.\n\nExistuje niekoľko bežných štýlov písania veľkých
+          a malých písmen vo viacslovných ID:\n\n* **\"Camelcase\"** -- `aCamelcaseNameMightLookLikeThis`\n*
+          **Podčiarkovníky** -- `Some_people_like_to_use_underscores_to_separate_words`\n*
+          **Pomlčky** -- `Others-like-to-use-hyphens-or-dashes`\n\nČokoľvek si vyberiš,
+          záleží len na tebe. Je to tvoj štýl. Pomáha to byť dôsledný."
+        teacher_markdown: |
+          #### Rozvoj správnych programovacích návykov
+
+          Dodržiavanie jasných a dôsledných pravidiel pri pomenovaní je dôležitým zvykom, ktorý treba rozvíjať, aj keď výhody z toho nie sú študentom okamžite zrejmé. Z dlhodobého hľadiska sa skutočne oplatí vytvárať správne pomenované ID, najmä preto, že vám ušetrí zdravý rozum, keď príde čas na čítanie programov vašich študentov, ale tiež zjednoduší proces kombinovania obrazovky každého študenta do spoločnej tímovej aplikácie.
+      Unit 1 Lesson 4 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa zamyslíš ako počítače pomáhajú pri
+          riešení určitých problémov a naučíš sa základné funckie každého počítača
+          . \n\n## Materiály \n\n* [Čo je počítač ? - Sprievodca aktivitami](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)"
+        teacher_markdown: "[Čo je počítač? - Príklad](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
+      CSD U2 L3 Overview:
+        markdown: "# Overview\n\nTáto lekcia predstaví  HTML ako prostiedok pri riešení
+          problému pri komunikácii  obsahu a štruktúry webovej stránky smerom k počitaču.
+          Začína sa  so stručnom aktivitou bez počítača prezentujúcou výzvy ako efektívne
+          \ komunikovať  štruktúru webovej stránky.    Tieda sa zameria na stránky
+          HTML vo Web Lab-e a prediskutuje ako HTML označenia pomáhajú pri riešení
+          úloh. Na záver pomocou HTML napíšu prvé webové stránky v rámci tejto kapitoly.
+          \n## Slovník\n\n* **HTML** - Hypertextový značkovací jazyk používaný na
+          vytvorenie webových stánok \n* **HTML Prvok** - časť webovej stránky označená
+          začiatočný tag-om a niekedy uzatvorená záverečným tag-om \n* **HTML Označenie**
+          -  špeciálny set znakov, ktorý určuje začiatok a koniec HTML prvku a jeho
+          typ\n* **Webový obsah** - surový text, obrázky a ostatné prvky zahrnuté
+          na webevej stánke\n* **Webová štruktúra** - zloženie rôznych častí obsahu
+          na webovej stránke, ktorá pomáha počitaču určiť , ako sa má obsah zobraziť.
+          \n\n## Nový kód\n\n* **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`\n*
+          **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`\n*
+          **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n* **[Body](//studio.code.org/docs/weblab/body/)**
+          - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`"
+      CSD U1 Test:
+        title: Počítače a riešenie problémov v postprojektovom testovaní
+      CSD User Centered Design Post-Project Test:
+        title: 'Dizajn zameraný na používateľa: Poprojektové testovanie'

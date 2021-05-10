@@ -1,0 +1,31 @@
+---
+uz:
+  data:
+    variable_names:
+      Blue: ko‘k
+      Green: yashil
+      Red: qizil
+      actor: aktyor
+      cats: mushuklar
+      color: rang
+      counter: counter (hisoblovchi)
+      dogs: itlar
+      height: balandlik
+      honey: asal bor
+      i: i
+      left: chap
+      length: uzunlik
+      name: ism
+      nectar: nektar
+      points: ballar
+      random: tasodifiy
+      repeat: takrorlash
+      right: o‘ng
+      score: Hisob
+      sides: tomonlar
+      size: kattalik
+      speed: tezlik
+      variable: o‘zgaruvchi
+      width: kenglik
+      wizard: sehrgar
+      x: x

@@ -1,0 +1,29 @@
+sv:
+  data:
+    variable_names:
+      Blue: Blå
+      Green: Grön
+      Red: Röd
+      actor: aktör
+      cats: alla katter
+      color: färg
+      counter: räknare
+      dogs: alla hundar
+      height: höjd
+      honey: honung
+      i: i
+      left: vänster
+      length: längd
+      name: namn
+      nectar: nektar
+      points: poäng
+      random: slumpad
+      repeat: upprepa
+      right: höger
+      score: poäng
+      size: storlek
+      speed: hastighet
+      variable: variabel
+      width: bredd
+      wizard: trollkarl
+      x: x

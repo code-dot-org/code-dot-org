@@ -1,0 +1,32 @@
+---
+uk:
+  data:
+    variable_names:
+      Blue: Синя
+      Green: Зелена
+      Red: Червона
+      actor: персонаж
+      birds: птахи
+      cats: коти
+      color: колір
+      counter: лічильник
+      dogs: собаки
+      height: висота
+      honey: мед
+      i: i
+      left: ліворуч
+      length: довжина
+      name: ім’я
+      nectar: нектар
+      points: балів
+      random: випадковий
+      repeat: повторити
+      right: праворуч
+      score: рахунок
+      sides: сторони
+      size: розмір
+      speed: швидкість
+      variable: змінна
+      width: ширина
+      wizard: чарівник
+      x: x

@@ -153,7 +153,6 @@ while date < options[:end_date]
   batch_start_id = 0
   batch_end_time = (date + 1).to_time
   batch_number = 0
-  batch_rows_updated = 0
 
   while batch_start_time < batch_end_time
     ids_to_cleanup = []
@@ -189,6 +188,7 @@ while date < options[:end_date]
     break if last_row.nil?
 
     # Wrap the update in a transaction so we can rollback the changes on a dry run
+    batch_rows_updated = 0
     DB.transaction do
       batch_rows_updated = HOC_ACTIVITY.where(id: ids_to_cleanup).update(name: nil) unless ids_to_cleanup.empty?
       raise Sequel::Rollback if options[:dry_run]
@@ -214,11 +214,12 @@ while date < options[:end_date]
 end
 
 # Send message to #cron-daily
-summary = '*HoC Student Name Cleanup*\n'
-summary += 'Dry-run (no changes written to database)\n' if options[:dry_run]
+summary = "*HoC Student Name Cleanup*\n"
+summary += "Dry-run (no changes written to database)\n" if options[:dry_run]
 summary += "Script ran for #{(Time.now - script_start_time).round(1)} seconds. " \
-  "#{total_rows_processed} rows processed, #{total_rows_updated} rows updated.\n"
-summary += "Script options: #{options}\n"
+  "#{total_rows_processed} rows processed, #{total_rows_updated} rows updated. " \
+  "Script options:\n"
+summary += "```#{options}```"
 
 ChatClient.message 'cron-daily', summary if options[:notify_slack]
 CDO.log.info summary

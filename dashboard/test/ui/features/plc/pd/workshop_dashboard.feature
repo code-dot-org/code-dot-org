@@ -23,6 +23,12 @@ Scenario: New workshop: CSF intro
   And I press keys "These are my CSF notes" for element "textarea#notes"
   And I select the "Test CSF Facilitator" facilitator at index 0
 
+  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
+  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
+  # and cause the eyes check to fail.
+  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
+  And I focus selector "select#facilitator0"
+
   And I see no difference for "new workshop details: CSF"
 
   And I press "button:contains('Publish')" using jQuery
@@ -56,6 +62,12 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
   And I press the first "#add-facilitator-btn" element
   And I select the "Test CSD Facilitator 2" facilitator at index 1
 
+  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
+  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
+  # and cause the eyes check to fail.
+  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
+  And I focus selector "select#facilitator1"
+
   And I see no difference for "new workshop details: CSD"
 
   And I press "button:contains('Publish')" using jQuery
@@ -84,6 +96,12 @@ Scenario: New workshop: CSP local summer with 1 facilitator
 
   And I press keys "These are my CSP notes" for element "textarea#notes"
   And I select the "Test CSP Facilitator" facilitator at index 0
+
+  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
+  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
+  # and cause the eyes check to fail.
+  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
+  And I focus selector "select#facilitator0"
 
   And I see no difference for "new workshop details: CSP"
 

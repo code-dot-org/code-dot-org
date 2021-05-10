@@ -15,39 +15,18 @@ import ResourceType, {
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
-import {navigateToHref} from '@cdo/apps/utils';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
   getSerializedLessonGroups,
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
-import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {
+  lessonGroupShape,
+  resourceShape as migratedResourceShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-
-const styles = {
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  dropdown: {
-    margin: '0 6px'
-  },
-  box: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 10
-  }
-};
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -63,11 +42,13 @@ class ScriptEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialHidden: PropTypes.bool,
     initialIsStable: PropTypes.bool,
+    initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
     initialStudentDetailProgressView: PropTypes.bool,
     initialProfessionalLearningCourse: PropTypes.string,
     initialPeerReviewsRequired: PropTypes.number,
+    initialOnlyInstructorReviewRequired: PropTypes.bool,
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
@@ -96,20 +77,27 @@ class ScriptEditor extends React.Component {
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
+    initialCourseVersionId: PropTypes.number,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     levelKeyList: PropTypes.object.isRequired,
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
+      .isRequired,
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.initialTeacherResources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
+    const teacherResources = [...props.initialTeacherResources];
+
+    if (!props.isMigrated) {
+      // add empty entries to get to max
+      while (teacherResources.length < Object.keys(ResourceType).length) {
+        teacherResources.push({type: '', link: ''});
+      }
     }
 
     this.state = {
@@ -130,6 +118,8 @@ class ScriptEditor extends React.Component {
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
       professionalLearningCourse: this.props.initialProfessionalLearningCourse,
+      onlyInstructorReviewRequired: this.props
+        .initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
       wrapupVideo: this.props.initialWrapupVideo,
       projectWidgetVisible: this.props.initialProjectWidgetVisible,
@@ -152,10 +142,11 @@ class ScriptEditor extends React.Component {
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
-      teacherResources: resources,
+      teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
-      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      deprecated: this.props.initialDeprecated
     };
   }
 
@@ -265,10 +256,12 @@ class ScriptEditor extends React.Component {
       announcements: JSON.stringify(this.state.announcements),
       visible_to_teachers: !this.state.hidden,
       is_stable: this.state.isStable,
+      deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
       professional_learning_course: this.state.professionalLearningCourse,
+      only_instructor_review_required: this.state.onlyInstructorReviewRequired,
       peer_reviews_to_complete: this.state.peerReviewsRequired,
       wrapup_video: this.state.wrapupVideo,
       project_widget_visible: this.state.projectWidgetVisible,
@@ -296,6 +289,12 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
+      resourceIds: this.props.migratedTeacherResources.map(
+        resource => resource.id
+      ),
+      studentResourceIds: this.props.studentResources.map(
+        resource => resource.id
+      ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
@@ -313,7 +312,7 @@ class ScriptEditor extends React.Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(`${data.scriptPath}${window.location.search}`);
+          navigateToHref(linkWithQueryParams(data.scriptPath));
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
@@ -385,6 +384,7 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({description: e.target.value})
             }
+            features={{imageUpload: true}}
           />
           <TextareaWithMarkdownPreview
             markdown={this.state.studentDescription}
@@ -394,6 +394,7 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({studentDescription: e.target.value})
             }
+            features={{imageUpload: true}}
           />
         </CollapsibleEditorSection>
 
@@ -793,7 +794,7 @@ class ScriptEditor extends React.Component {
           )}
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Teacher Resources Settings">
+        <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
             Has Resources for Verified Teachers
             <input
@@ -813,19 +814,40 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
+          Select the resources you'd like to have show up in the dropdown at the
+          top of the script overview page:
           <div>
             <h4>Teacher Resources</h4>
             <div>
-              Select the Teacher Resources buttons you'd like to have show up on
-              the top of the script overview page
+              <div />
+              <ResourcesEditor
+                inputStyle={styles.input}
+                resources={this.state.teacherResources}
+                updateResources={teacherResources =>
+                  this.setState({teacherResources})
+                }
+                useMigratedResources={this.props.isMigrated}
+                courseVersionId={this.props.initialCourseVersionId}
+                migratedResources={this.props.migratedTeacherResources}
+                getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
+              />
             </div>
-            <ResourcesEditor
-              inputStyle={styles.input}
-              resources={this.state.teacherResources}
-              updateTeacherResources={teacherResources =>
-                this.setState({teacherResources})
-              }
-            />
+            {this.props.isMigrated && (
+              <div>
+                <h4>Student Resources</h4>
+                <div>
+                  Select the Student Resources buttons you'd like to have show
+                  up on the top of the script overview page
+                </div>
+                <ResourcesEditor
+                  inputStyle={styles.input}
+                  useMigratedResources
+                  courseVersionId={this.props.initialCourseVersionId}
+                  migratedResources={this.props.studentResources}
+                  studentFacing
+                />
+              </div>
+            )}
           </div>
         </CollapsibleEditorSection>
         {this.props.isMigrated && (
@@ -870,8 +892,26 @@ class ScriptEditor extends React.Component {
           </CollapsibleEditorSection>
         )}
 
-        <CollapsibleEditorSection title="Professional Learning Settings">
-          {this.props.isLevelbuilder && (
+        {this.props.isLevelbuilder && (
+          <CollapsibleEditorSection title="Professional Learning Settings">
+            <label>
+              Deprecated
+              <input
+                type="checkbox"
+                checked={this.state.deprecated}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({deprecated: !this.state.deprecated})
+                }
+              />
+              <HelpTip>
+                <p>
+                  Used only for Professional Learning Courses. Deprecation
+                  prevents Peer Reviews conducted as part of this Script from
+                  being displayed in the admin-only Peer Review Dashboard.
+                </p>
+              </HelpTip>
+            </label>
             <label>
               Professional Learning Course
               <HelpTip>
@@ -890,21 +930,57 @@ class ScriptEditor extends React.Component {
                 }
               />
             </label>
-          )}
-          <label>
-            Number of Peer Reviews to Complete
-            <HelpTip>
-              <p>Currently only supported for professional learning courses</p>
-            </HelpTip>
-            <input
-              value={this.state.peerReviewsRequired}
-              style={styles.input}
-              onChange={e =>
-                this.setState({peerReviewsRequired: e.target.value})
-              }
-            />
-          </label>
-        </CollapsibleEditorSection>
+            <h4>Peer Reviews</h4>
+            <label>
+              Only Require Review from Instructor (no Peer Reviews)
+              <input
+                id="only_instructor_review_checkbox"
+                type="checkbox"
+                checked={this.state.onlyInstructorReviewRequired}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    onlyInstructorReviewRequired: !this.state
+                      .onlyInstructorReviewRequired,
+                    peerReviewsRequired: 0
+                  })
+                }
+              />
+              <HelpTip>
+                <p>
+                  Our Professional Learning Courses solicit self-reflections
+                  from participants, which are then typically shown to other
+                  participants enrolled in the course for feedback. This is
+                  known as "peer review". The instructor of the course also sees
+                  these self-reflections and can provide feedback as well.
+                  <br />
+                  <br />
+                  This setting allows you to collect those same reflections from
+                  from workshop participants and have the workshop instructor
+                  review them <strong>without</strong> soliciting peer reviews
+                  of those reflections by other participants in the workshop.
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Number of Peer Reviews to Complete
+              <HelpTip>
+                <p>
+                  Currently only supported for professional learning courses
+                </p>
+              </HelpTip>
+              <input
+                id={'number_peer_reviews_input'}
+                value={this.state.peerReviewsRequired}
+                style={styles.input}
+                onChange={e =>
+                  this.setState({peerReviewsRequired: e.target.value})
+                }
+                disabled={this.state.onlyInstructorReviewRequired}
+              />
+            </label>
+          </CollapsibleEditorSection>
+        )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
           {this.props.isMigrated ? (
@@ -932,12 +1008,38 @@ class ScriptEditor extends React.Component {
   }
 }
 
+const styles = {
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  dropdown: {
+    margin: '0 6px'
+  },
+  box: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 10
+  }
+};
+
 export const UnconnectedScriptEditor = ScriptEditor;
 
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList
+    levelKeyList: state.levelKeyList,
+    migratedTeacherResources: state.resources,
+    studentResources: state.studentResources
   }),
   {
     init

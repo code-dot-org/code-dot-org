@@ -1,0 +1,23 @@
+name 'courseE_aboutMe_stop'
+title 'Contagion: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Stop!
+
+## Are you sure you're ready to move on? 
+
+
+In the next level, you will begin writing the code for your project. This works best if you already have a plan.
+
+
+
+<img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+<br/><br/>
+<p>
+Your completed plan should include facts about you that are SAFE to share with others.
+</p>
+
+<br/><br/>
+If you are not sure if you are ready to move on, check with your teacher!
+MARKDOWN

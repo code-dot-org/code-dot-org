@@ -1,9 +1,5 @@
 <Karel>
   <config><![CDATA[{
-  "game_id": 25,
-  "created_at": "2020-12-04T22:28:20.000Z",
-  "level_num": "custom",
-  "user_id": 6,
   "properties": {
     "skin": "bee",
     "short_instructions": "Make all of the honey.",
@@ -18,7 +14,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,4,0,0,0],[0,0,0,0,-4,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "6",
-    "long_instructions": "Make all of the honey.",
+    "long_instructions": "Make all of the honey.\r\n\r\n![]()",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",
@@ -43,11 +39,21 @@
     "disable_procedure_autopopulate": "false",
     "name_suffix": "_2021",
     "parent_level_id": 21360,
+    "encrypted": "false",
+    "display_name": "Make the honey.",
+    "hint_prompt_attempts_threshold": "1",
+    "bubble_choice_description": "Make all of the honey.",
+    "show_type_hints": "false",
+    "thumbnail_url": "https://images.code.org/b66a8729e49ee179a1d10188b4ba04ea-image-1615582199416.png",
     "preload_asset_list": null
   },
+  "game_id": 25,
   "published": true,
+  "created_at": "2020-12-04T22:28:20.000Z",
+  "level_num": "custom",
+  "user_id": 6,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-11 19:32:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-13 01:09:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-22 01:44:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-31 19:44:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-11 19:32:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-13 01:09:56 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-22 01:44:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-31 19:44:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-03-12 20:49:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 20:50:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>

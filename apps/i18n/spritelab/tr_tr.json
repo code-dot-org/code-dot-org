@@ -1,4 +1,12 @@
 {
+  "clicked": "tıklandı",
+  "clickedSprite": "sprite tıklandı",
+  "new": "yeni ",
+  "newSprite": "yeni sprite",
+  "subject": "konu",
+  "subjectSprite": "sprite konu",
+  "object": "nesne",
+  "objectSprite": "sprite nesne",
   "errorLoadingAnimation": "Görünüşe bakılırsa ''{animationName}'' adlı animasyonunuzu yüklerken sorun yaşıyoruz. İnternet bağlantı kalitenizin yüksek olduğundan emin olun ve sayfayı yeniden yüklemeyi deneyin. Eğer sorun devam ediyorsa, animasyonun bozuk olması muhtemel. Böyle bir durumda, animasyonu kaldırarak devam etmeniz gerekebilir.",
   "reinfFeedbackMsg": "Başardın! Sonraki bölüme geçmek için ''Devam et''e tıkla.",
   "shareGame": "Oyununu paylaş:",
@@ -38,5 +46,13 @@
   "outbreakCostumeTab": "Projenize yeni bir hareketli nesne kostümü eklemek için oyun alanının üzerindeki \"Kostümler\" sekmesine tıklayın.",
   "outbreakUseCostume": "Yeni hareketli nesne kostümünüz simülasyonda görünmedi. İpucu almak isterseniz ampule tıklayın.",
   "outbreakReplaySuccess": "Devam etmeden önce simülasyonu mutlaka birkaç kez oynatın!",
-  "outbreakSuccess": "Bu seviyeyi tamamladınız. Bir sonraki göreve hazır olduğunuzda Devam düğmesine basın."
+  "outbreakSuccess": "Bu seviyeyi tamamladınız. Bir sonraki göreve hazır olduğunuzda Devam düğmesine basın.",
+  "noSprites": "Bir sprite yapmanız gerekiyor",
+  "noBehavior": "Sprite'ın bir davranışa ihtiyacı var",
+  "noNewBehavior": "Sprite'ın yeni bir davranışa başlamadı",
+  "genericSuccess": "Bölümü bitirdin! İlerlemek için Devam Et 'e bas",
+  "genericReplay": "Devam etmeden önce programınızı birkaç kez tekrar ettiğinizden emin olun!",
+  "genericExplore": "İyi! Kodunuzda değişiklik yapmak ve tekrar çalıştırmak için \"Oynamaya Devam Et\" i tıklayın. Bir sonraki sınava hazır olduğunuzda Devam Et'a basın.",
+  "genericBonusSuccess": "İyi iş! Ekstra meydan okuma dahil seviyeyi bitirdiniz!",
+  "debugSprites": "Sprite ile ilgili bir hatanız var."
 }

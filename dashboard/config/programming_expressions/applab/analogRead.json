@@ -1,0 +1,12 @@
+{
+  "func": "analogRead",
+  "category": "Maker",
+  "type": "value",
+  "nativeIsAsync": true,
+  "paletteParams": [
+    "pin"
+  ],
+  "params": [
+    "5"
+  ]
+}

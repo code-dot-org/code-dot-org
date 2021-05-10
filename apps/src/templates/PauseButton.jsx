@@ -5,6 +5,57 @@ import color from '@cdo/apps/util/color';
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 
+class PauseButton extends React.Component {
+  static propTypes = {
+    pauseHandler: PropTypes.func.isRequired,
+    marginRight: PropTypes.number,
+    // from redux
+    togglePause: PropTypes.func.isRequired,
+    setArrowButtonDisabled: PropTypes.func.isRequired,
+    isPaused: PropTypes.bool.isRequired,
+    isAttached: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired
+  };
+
+  state = {
+    pauseStart: 0
+  };
+
+  togglePause = () => {
+    this.props.pauseHandler(this.props.isPaused);
+    this.props.setArrowButtonDisabled(!this.props.isPaused);
+    this.props.togglePause();
+  };
+
+  render() {
+    const buttonStyle = {
+      ...styles.button,
+      ...(this.props.isRunning && styles.runningColor),
+      ...(this.props.isPaused && styles.pausedColor),
+      ...(this.props.marginRight && {marginRight: this.props.marginRight})
+    };
+
+    return (
+      <button
+        type="button"
+        onClick={this.togglePause}
+        style={buttonStyle}
+        disabled={!this.props.isRunning}
+        className="no-focus-outline"
+      >
+        <div style={styles.container}>
+          <i
+            style={styles.icon}
+            className={
+              this.props.isPaused ? 'fa fa-fw fa-play' : 'fa fa-fw fa-pause'
+            }
+          />
+        </div>
+      </button>
+    );
+  }
+}
+
 const styles = {
   icon: {
     lineHeight: 'inherit',
@@ -32,54 +83,6 @@ const styles = {
     borderColor: color.orange
   }
 };
-
-class PauseButton extends React.Component {
-  static propTypes = {
-    pauseHandler: PropTypes.func.isRequired,
-    // from redux
-    togglePause: PropTypes.func.isRequired,
-    setArrowButtonDisabled: PropTypes.func.isRequired,
-    isPaused: PropTypes.bool.isRequired,
-    isAttached: PropTypes.bool.isRequired,
-    isRunning: PropTypes.bool.isRequired
-  };
-
-  state = {
-    pauseStart: 0
-  };
-
-  togglePause = () => {
-    this.props.pauseHandler(this.props.isPaused);
-    this.props.setArrowButtonDisabled(!this.props.isPaused);
-    this.props.togglePause();
-  };
-
-  render() {
-    const buttonStyle = {
-      ...styles.button,
-      ...(this.props.isRunning && styles.runningColor),
-      ...(this.props.isPaused && styles.pausedColor)
-    };
-
-    return (
-      <button
-        type="button"
-        onClick={this.togglePause}
-        style={buttonStyle}
-        disabled={!this.props.isRunning}
-      >
-        <div style={styles.container}>
-          <i
-            style={styles.icon}
-            className={
-              this.props.isPaused ? 'fa fa-fw fa-play' : 'fa fa-fw fa-pause'
-            }
-          />
-        </div>
-      </button>
-    );
-  }
-}
 
 export default connect(
   state => ({

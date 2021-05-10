@@ -13,10 +13,11 @@ theme: responsive
 </style>
 
 # Professional Learning for Middle and High School Teachers
+ <%= view :professional_learning_apply_banner, :link_suffix => "program-information", :style => {"padding-bottom" => "32px"} %>	
 
 <a name="scholarships"></a>
 <div class="col-50">
-  <%= view :regional_partner_zip_form_alt %>
+  <%= view :regional_partner_zip_form %>
 </div>
 
 <div class="col-50" width="75%" style='padding: 17px 25px 17px 25px; border-radius: 5px; background-color: #a69bc1; color: #ffffff'>
@@ -28,6 +29,19 @@ theme: responsive
 <br>
 <br>
 <strong>No computer science experience is necessary!</strong> More details below.
+</div>
+
+<div style="clear: both; margin-bottom: 40px"></div>
+
+<div class="col-100" style="border:1px solid #00adbc; border-radius:10px; padding:20px">
+  <img src="/images/marketing/arne-duncan-2.jpg" style="float:right; width:20%; margin-left:20px; border-radius: 50%; border: 6px solid #59cad3">
+  <h2 style="color:#00adbc; margin-top:0">Join us for a special event featuring <span style="white-space:nowrap">Arne Duncan</span>, former U.S. Secretary of Education</h2>
+  <h3>Thursday, April 15th, 10 am PST / 1 pm EST, Zoom webinar
+  <p>Hear from former U.S. Secretary of Education Arne Duncan and Code.org founder Hadi Partovi about why it’s so important for students to learn computer science, and learn how you can expand computer science in your school without a major hit to your budget. Session also features an overview of the Code.org Professional Learning Program.</p>
+  <a href="https://code.zoom.us/webinar/register/4916161960887/WN_qFnbt1YPTeWzNlAE_LVJoA"><button>Register now</button></a>
+  <br>
+  <br>
+  <p><a href="#questions">I can't attend, but I would like to learn more about bringing computer science to my school/district.</a></p>
 </div>
 
 <div style="clear: both; margin-bottom: 40px"></div>
@@ -131,8 +145,13 @@ The program supports teachers with diverse teaching backgrounds as they prepare 
 
 <div style="clear: both;"></div>
 
-<br/>
-
+<%@show_csa = DCDO.get('courses_show_csa', CDO.default_courses_show_csa)%>
+<% if @show_csa %>
+  <p><strong>Coming in 2022</strong>: Computer Science A! In Computer Science A, students learn object-oriented programming using Java. Students take on the role of software engineers, and practice skills that are used in the field.</p> 
+  <a href="/educate/csa" target="_blank"><button>Learn more</button></a>
+<% end %>
+<br>
+<br>
 Teach a different grade level or have fewer hours available with your students? <a href="https://code.org/files/course-pl-options.pdf", target="_blank">Find the right course for your classroom.</a>
 
 <a name="features"></a>
@@ -181,6 +200,19 @@ Participants will engage with the curriculum both as instructors and as learners
   <br/>
 All teachers have access to the Code.org forum, an online professional learning community that offers continued support with tools and content, introduces new and helpful resources for teaching the course, and lets teachers continue to explore the curriculum.
 <br/>
+<br/>
+To help you say connected, we've also partnered with ISTE to offer all Code.org teachers discounted membership when they sign up for the first time.
+
+<img style="margin-top:-8px; margin-bottom:-20px; margin-left:-25px; float:left;" src="/images/avatars/fit-200/iste.png"/>
+
+Code.org and ISTE are partnering to expand teacher community and learning opportunities beyond Code.org’s professional learning. Through this partnership, <a href="https://www.iste.org/membership/code-org", target="_blank">we can offer an ISTE membership</a> exclusively to Code.org teachers at the special price of $65 (regularly $75).
+
+<br>
+Check out these 3 key benefits of ISTE membership:
+
+- Professional Learning Networks made up of peer experts, including computer science educators
+- Hundreds of webinar and ISTE Conference & Expo recordings on coding and other edtech topics
+- Empowered Learner, ISTE’s digital newsletter for members, covering the most important topics in edtech
 </details>
 
 <a href="/educate/professional-learning/values" target="_blank">Check out our professional learning values</a> for more information about our goals and approach to professional learning. <br><br>
@@ -192,7 +224,7 @@ Want to help spread the word? <a href="https://code.org/files/PLProgramsOverview
 The Code.org Professional Learning Program is open to educators who are interested in teaching Code.org courses - no prior computer science experience required! In order to participate in this program, we ask that applicants:
 
 * Commit to participating in the full, year-long professional learning program
-* Plan to teach the course in the 2020-21 school year
+* Plan to teach the course in the 2021-22 school year
 * For CS Discoveries, teach students between 6th and 10th grade
 * For CS Principles, teach students between 9th and 12th grade
 * Support the recruitment and enrollment of a diverse group of students in the course, representative of the school's student population

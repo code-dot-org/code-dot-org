@@ -4,21 +4,6 @@ import {connect} from 'react-redux';
 import {h3Style} from '../../lib/ui/Headings';
 import i18n from '@cdo/locale';
 
-const styles = {
-  dropdown: {
-    display: 'block',
-    boxSizing: 'border-box',
-    fontSize: 'medium',
-    height: 34,
-    paddingLeft: 5,
-    paddingRight: 5,
-    width: 300
-  },
-  heading: {
-    marginBottom: 0
-  }
-};
-
 class LessonSelector extends Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -48,6 +33,21 @@ class LessonSelector extends Component {
     );
   }
 }
+
+const styles = {
+  dropdown: {
+    display: 'block',
+    boxSizing: 'border-box',
+    fontSize: 'medium',
+    height: 34,
+    paddingLeft: 5,
+    paddingRight: 5,
+    width: 300
+  },
+  heading: {
+    marginBottom: 0
+  }
+};
 
 export const UnconnectedLessonSelector = LessonSelector;
 

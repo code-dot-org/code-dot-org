@@ -76,8 +76,12 @@
 
 %p
   (1)
-  = get_random_donor_email_message.html_safe
+  - donor = get_random_donor_name_and_twitter
+  - tweet = "I just signed up to teach computer science using Code.org! Thanks #{donor[:twitter]} for supporting @codeorg."
+  %a{href: "https://twitter.com/intent/tweet?text=#{tweet}"} Tweet a message of thanks
+  to #{donor[:name]}, one of our donors.
   %br
+
   (2) If you shop at Amazon,
   %a{href: "https://code.org/donate/amazonsmile"}use Amazon Smile
   to donate proceeds to Code.org.

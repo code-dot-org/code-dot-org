@@ -1,0 +1,30 @@
+ru:
+  data:
+    variable_names:
+      Blue: Синий
+      Green: Зеленый
+      Red: Красный
+      actor: персонаж
+      cats: все кошки
+      color: цвет
+      counter: счетчик
+      dogs: все собаки
+      height: высота
+      honey: мед
+      i: Я
+      left: влево
+      length: длина
+      name: наименование
+      nectar: нектар
+      points: очки
+      random: случайный
+      repeat: повторить
+      right: вправо
+      score: очки
+      sides: стороны
+      size: размер
+      speed: скорость
+      variable: переменная
+      width: ширина
+      wizard: волшебник
+      x: x

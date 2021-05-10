@@ -1,8 +1,10 @@
 class LessonsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
+
+  include LevelsHelper
 
   # Script levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
@@ -23,8 +25,23 @@ class LessonsController < ApplicationController
       l.has_lesson_plan && l.relative_position == params[:position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
+    return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
+  end
+
+  # GET /s/script-name/lessons/1/student
+  def student_lesson_plan
+    script = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+    return render :forbidden unless can?(:read, @lesson)
+
+    @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
 
   # GET /lessons/1/edit
@@ -47,6 +64,20 @@ class LessonsController < ApplicationController
       current_lesson_data[:resources]&.map! {|v| v[:id]}
       old_lesson_data['resources']&.map! {|v| v['id']}
       if old_lesson_data.to_json != current_lesson_data.to_json
+        # Log error details to firehose instead of honeybadger to minimize the
+        # chances of the data being truncated.
+        FirehoseClient.instance.put_record(
+          :analysis,
+          {
+            study: 'lesson-update',
+            event: "server-data-mismatch",
+            data_string: request.path,
+            data_json: {
+              old_lesson_data: old_lesson_data,
+              current_lesson_data: current_lesson_data
+            }.to_json
+          }
+        )
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
         raise msg
       end
@@ -59,10 +90,17 @@ class LessonsController < ApplicationController
       resources = (lesson_params['resources'] || []).map {|key| Resource.find_by(course_version_id: course_version.id, key: key)}
       vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by(course_version_id: course_version.id, key: key)}
     end
+
+    standards = fetch_standards(lesson_params['standards'] || [])
+    opportunity_standards = fetch_standards(lesson_params['opportunity_standards'] || [])
+    programming_expressions = fetch_programming_expressions(lesson_params['programming_expressions'] || [])
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
       @lesson.vocabularies = vocabularies.compact
-      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :original_lesson_data))
+      @lesson.standards = standards.compact
+      @lesson.opportunity_standards = opportunity_standards.compact
+      @lesson.programming_expressions = programming_expressions.compact
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :opportunity_standards, :programming_expressions, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
@@ -118,11 +156,31 @@ class LessonsController < ApplicationController
       :announcements,
       :resources,
       :vocabularies,
-      :objectives
+      :programming_expressions,
+      :objectives,
+      :standards,
+      :opportunity_standards
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
+    lp[:programming_expressions] = JSON.parse(lp[:programming_expressions]) if lp[:programming_expressions]
+    lp[:standards] = JSON.parse(lp[:standards]) if lp[:standards]
+    lp[:opportunity_standards] = JSON.parse(lp[:opportunity_standards]) if lp[:opportunity_standards]
     lp
+  end
+
+  def fetch_standards(standards_data)
+    standards_data.map do |s|
+      framework = Framework.find_by!(shortcode: s['frameworkShortcode'])
+      Standard.find_by!(framework: framework, shortcode: s['shortcode'])
+    end
+  end
+
+  def fetch_programming_expressions(expressions_data)
+    expressions_data.map do |e|
+      environment = ProgrammingEnvironment.find_by!(name: e['programmingEnvironmentName'])
+      ProgrammingExpression.find_by!(programming_environment: environment, key: e['key'])
+    end
   end
 end

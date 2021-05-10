@@ -1,0 +1,29 @@
+ja:
+  data:
+    variable_names:
+      Blue: 青
+      Green: 緑
+      Red: 赤
+      actor: キャラ
+      cats: すべてのネコ
+      color: 色
+      counter: カウンタ変数
+      dogs: すべてのイヌ
+      height: 高さ
+      honey: ハチミツ
+      i: i
+      left: 左 に
+      length: 長さ
+      name: 名前
+      nectar: 花のミツ
+      points: ポイント
+      random: ランダム に
+      repeat: くりかえし
+      right: 右 に
+      score: スコア
+      size: 大きさ
+      speed: スピード
+      variable: "変数\n"
+      width: 幅
+      wizard: 魔法使い
+      x: x

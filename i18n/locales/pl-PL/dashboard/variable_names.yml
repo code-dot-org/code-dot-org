@@ -1,0 +1,92 @@
+pl:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Licznik_Postaci_1
+      Actor_2_Counter: Licznik_Postaci_2
+      Blue: Niebieska/Niebieskie
+      Green: Zielona/Zielone
+      Red: Czerwona/Czerwone
+      actor: postać
+      age: wiek
+      animal1score: wynik zwierzaka 1
+      animal1speed: prędkość zwierzaka 1
+      animal2score: wynik zwierzaka 2
+      animal2speed: prędkość zwierzaka 1
+      answer: odpowiedź
+      armlength: armlength
+      binary: binarny
+      birds: ptaki
+      bit: bit
+      blue1: niebieski1
+      blue2: niebieski2
+      bodylength: bodylength
+      buttonHeight: wysokość przycisku
+      buttonMargin: margines przycisku
+      buttonWidth: szerokość przycisku
+      cat_score: wynik kota
+      cat_speed: cat_speed
+      cats: koty
+      centerToPadLeft: środek do padu w lewo 
+      choice: wybór
+      circ: okrąg
+      codeName: kryptonim
+      color: kolor
+      controllerHeight: kontroler wysokości
+      controllerWidth: kontroler szerokości
+      counter: licznik
+      counter2: licznik2
+      currentActor: bieżąca postać
+      direction: kierunek
+      dog_score: wynik psa
+      dog_speed: prędkość psa
+      dogs: psy
+      dragons: smoki
+      enemy_speed: prędkość wroga
+      energy: energia
+      firstName: pierwsze imię
+      footlength: długość stopy
+      gather: zbierz
+      green1: zielony1
+      green2: zielony2
+      guess: zgadnij
+      height: wysokość
+      honey: miód
+      i: i
+      left: w lewo
+      legangle: kąt nogi 
+      leglength: długość nogi
+      length: długość
+      level: poziom
+      marginX: margines X
+      marginY: margines Y 
+      myName: moje imię
+      name: nazwa
+      nectar: nektar
+      nectars: nektary
+      padYOffset: padYOffset
+      player_score: wynik gracza
+      points: punkty
+      punchLine: linia ciosów
+      random: losowy
+      red1: czerwony1
+      red2: czerwony2
+      repeat: powtarzaj
+      repetitions: powtórzenia
+      right: w prawo
+      score: wynik
+      screenHeight: wysokość ekranu
+      screenWidth: szerokość ekranu
+      set sides: ustaw boki
+      shout: krzyczeć
+      sides: boki
+      size: rozmiar
+      speed: prędkość
+      startX: początek X
+      startY: początek Y
+      variable: zmienna
+      width: szerokość
+      wizard: kreator
+      x: x
+      your var 1: Twoja zmienna 1
+      your var 2: Twoja zmienna 2

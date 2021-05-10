@@ -139,6 +139,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
       gamelab_checkTouching:
         options:
           CONDITION:

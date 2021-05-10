@@ -1,0 +1,23 @@
+bg:
+  data:
+    variable_names:
+      actor: актьор
+      cats: всички котки
+      counter: брояч
+      dogs: всички кучета
+      height: височина
+      honey: мед
+      left: наляво
+      length: дължина
+      name: Име
+      nectar: нектар
+      points: точки
+      random: случаен
+      repeat: повтори
+      right: надясно
+      score: точки
+      size: размер
+      speed: скорост
+      variable: променлива
+      wizard: магьосник
+      x: x

@@ -32,6 +32,7 @@
   ];
   var fishWidths = ['45px', '30px', '100px', '80px', '100px', '30px']
   $(document).ready(function() {
+    var isRtl = $('div[dir=rtl]').length != 0;
     setInterval(function() {
       $(".sea-creature").each(function(index) {
         var swayValue =
@@ -45,7 +46,13 @@
         } else {
           y = fishLocations[index].y + swayOffsetY;
         }
-        $(this).css({left: x, top: y, display: 'block', width: fishWidths[index]});
+        var seaCreateStyle = {top: y, display: 'block', width: fishWidths[index]}
+        if (isRtl) {
+          seaCreateStyle.right = x;
+        } else {
+          seaCreateStyle.left = x;
+        }
+        $(this).css(seaCreateStyle);
       });
     }, 1000 / 30);
   });

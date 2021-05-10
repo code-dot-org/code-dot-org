@@ -976,6 +976,7 @@ ru:
             '"x"': позиция на оси абсцисс (x)
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
+            '"speed"': скорость
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} Касается {SPRITE2}"
         options:

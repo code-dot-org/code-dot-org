@@ -6,27 +6,6 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
 
-const styles = {
-  container: {
-    position: 'relative',
-    margin: '0 auto',
-    userSelect: 'none',
-    overflow: 'scroll',
-    width: '100%',
-    height: 'calc(100% - 35px)'
-  },
-  containerReact: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    margin: '0 auto',
-    userSelect: 'none',
-    fontFamily: '"Gotham 4r", arial, sans-serif',
-    color: 'rgb(30,30,30)',
-    lineHeight: 1.3
-  }
-};
-
 /**
  * Top-level React wrapper for Ailab
  */
@@ -51,7 +30,7 @@ class AilabView extends React.Component {
     return (
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
-          <CodeWorkspaceContainer topMargin={0}>
+          <CodeWorkspaceContainer>
             <div style={styles.container}>
               <div id="root" style={styles.containerReact} />
             </div>
@@ -61,6 +40,27 @@ class AilabView extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    position: 'relative',
+    margin: '0 auto',
+    userSelect: 'none',
+    overflow: 'scroll',
+    width: '100%',
+    height: 'calc(100% - 35px)'
+  },
+  containerReact: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    margin: '0 auto',
+    userSelect: 'none',
+    fontFamily: '"Gotham 4r", arial, sans-serif',
+    color: 'rgb(30,30,30)',
+    lineHeight: 1.3
+  }
+};
 
 export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,

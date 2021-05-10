@@ -2987,7 +2987,7 @@
         "courseF_video_createFunctions": "Non abbiamo ancora un video per creare le funzioni. Questo è un segnaposto.",
         "ramp_artist_loops4_2019": "Crea questo schema della stella con un ciclo continuo di una sequenza di blocchi \"vai avanti\" e \"gira a destra di 144 gradi\".",
         "ramp_artist_loops4_2020": "Crea questo schema della stella con un ciclo continuo di una sequenza di blocchi \"vai avanti\" e \"gira a destra di 144 gradi\".",
-        "outbreak1": "Crea 10 personaggi sani e 1 personaggio malato. Cambia le loro dimensioni e falli vagare.",
+        "outbreak1": "Crea 10 personaggi sani e 1 personaggio malato. Cambia le loro dimensioni e muovere in modo casuale.",
         "outbreak2": "Trasforma i mostri sani in mostri malati quando si toccano.",
         "outbreak3": "Cambia i mostri in mostri con le mascherine quando fai clic su di essi.",
         "outbreak4": "Cambia il numero e la dimensione dei personaggi mostri per la tua simulazione.",
@@ -3009,7 +3009,11 @@
         "courseA_video_events": "Serve una miglior combinazione laboratorio/eventi",
         "courseA_video_events_2018": "Serve una miglior combinazione laboratorio/eventi",
         "courseA_video_events_2019": "Serve una miglior combinazione laboratorio/eventi",
-        "courseA_video_events_2020": "Serve una miglior combinazione laboratorio/eventi"
+        "courseA_video_events_2020": "Serve una miglior combinazione laboratorio/eventi",
+        "AB_Debug_PlayLab3": "Sposta il cavaliere verso ogni bandiera. Se qualcosa va storto, cerca i bug!",
+        "CDEF_debugging_flappy2": "Perché questo gioco non funziona?",
+        "Frequency Analysis": "Test",
+        "Vigenere": "Test"
       }
     }
   }

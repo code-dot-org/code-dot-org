@@ -1,0 +1,29 @@
+---
+da:
+  data:
+    variable_names:
+      Blue: Blå
+      Green: Grøn
+      Red: Rød
+      actor: spiller
+      cats: katte
+      color: farve
+      counter: tæller
+      dogs: hunde
+      height: højde
+      honey: honning
+      i: i
+      left: venstre
+      length: længde
+      name: name
+      nectar: nektar
+      points: point
+      random: tilfældig
+      repeat: gentag
+      right: højre
+      score: score
+      size: størrelse
+      speed: hastighed
+      variable: variabel
+      wizard: troldmand
+      x: x

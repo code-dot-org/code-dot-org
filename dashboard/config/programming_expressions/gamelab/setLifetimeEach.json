@@ -1,0 +1,11 @@
+{
+  "func": "setLifetimeEach",
+  "category": "Groups",
+  "paletteParams": [
+    "lifetime"
+  ],
+  "params": [
+    "5"
+  ],
+  "modeOptionName": "*.setLifetimeEach"
+}

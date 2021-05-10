@@ -491,6 +491,14 @@ When /^I click "([^"]*)"( once it exists)?(?: to load a new (page|tab))?$/ do |s
   page_load(load) {element.click}
 end
 
+When /^I click "([^"]*)" if it is visible$/ do |selector|
+  if @browser.execute_script(jquery_is_element_visible(selector))
+    find = -> {@browser.find_element(:css, selector)}
+    element = find.call
+    element.click
+  end
+end
+
 When /^I select the end of "([^"]*)"$/ do |selector|
   @browser.execute_script("document.querySelector(\"#{selector}\").setSelectionRange(9999, 9999);")
 end
@@ -509,8 +517,9 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it(?: to load a new (page|tab))?$/ do |selector, load|
+  wait_for_jquery
   wait_until do
-    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+    @browser.execute_script(jquery_is_element_visible(selector))
   end
   page_load(load) do
     @browser.execute_script("$(\"#{selector}\")[0].click();")
@@ -1721,6 +1730,13 @@ Then /^I unlock the stage for students$/ do
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
+Then /^I lock the stage for students$/ do
+  # lock assessment
+  @browser.execute_script('$(".modal-body button:contains(Lock)").click()')
+  # save
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
+end
+
 Then /^I show stage answers for students$/ do
   @browser.execute_script("$('.modal-body button:contains(Show answers)').click()")
   @browser.execute_script('$(".modal-body button:contains(Save)").click()')
@@ -1870,7 +1886,7 @@ end
 Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/stage/#{stage_num}/extras?section_id=#{@section_id}"
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{stage_num}/extras?section_id=#{@section_id}"
   }
 end
 

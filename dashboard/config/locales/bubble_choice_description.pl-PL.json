@@ -1,0 +1,17 @@
+{
+  "pl-PL": {
+    "data": {
+      "bubble_choice_description": {
+        "courseF_extras_sim": "Stwórz i dostosuj własną symulację! ",
+        "spritelab_extras_repeat": "Szybko stwórz wiele pasujących duszków za pomocą pętli! ",
+        "outbreak4": "Zmień sposób działania symulacji i postaraj się przewidzieć, co się stanie. ",
+        "outbreak5": "Pomóż swoim duszkom automatycznie stawać się coraz lepszymi z upływem czas",
+        "outbreak6": "Wirus nie zawsze jest przenoszony, a maski nie zatrzymują transmisji doskonale. Ulepsz swoją symulację, powodując przypadkowe infekcje.",
+        "outbreak7": "Chroń swoje duszki przed zachorowaniem, dając im odporność. ",
+        "outbreak8": "Użyj swojego projektu, aby udostępnić wiadomość. Czego chcesz, aby inni się z tego nauczyli? ",
+        "outbreak_freeplay": "Rozszerz swój projekt o funkcje, zmienne i nie tylko! ",
+        "outbreak_freeplay_basic": "Kontynuuj z tymi samymi blokami, które już widziałeś! "
+      }
+    }
+  }
+}

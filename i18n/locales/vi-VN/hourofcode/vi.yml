@@ -67,7 +67,7 @@ vi:
   oceans_landing_description: Cùng học về Trí Tuệ Nhân Tạo và cách sử dụng nó cho
     những điều tốt.
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Tiếng Việt | Học sinh lớp 3 trở lên
+  oceans_landing_specs: Có sẵn 25+ ngôn ngữ | Lớp 3+
   oceans_landing_explanation: Khoa học máy tính bao gồm rất nhiều lĩnh vực và không
     chỉ có lập trình. Hãy cùng học về Trí Tuệ Nhân Tạo (AI), Học Máy (Machine Learning),
     dữ liệu, định kiến, và cách sử dụng AI cho những điều tốt và xử lý các vấn đề
@@ -89,7 +89,7 @@ vi:
   oceans_landing_cs_for_good: Khoa học máy tính vì điều tốt
   oceans_landing_cs_for_good_desc: Các tài liệu giúp học sinh hiểu về vai trò của
     khoa học máy tính trong việc tạo ra một thế giới công bằng hơn.
-  oceans_landing_videos: Các video về AI và Học Máy
+  oceans_landing_videos: Video về trí tuệ nhân tạo và học máy
   oceans_behind_the_scenes: 'Trí tuệ nhân tạo cho đại dương: Hậu trường'
   oceans_behind_the_scenes_1: Bài 2-4 sử dụng mô hình đã được dạy trước bởi <a href="https://www.tensorflow.org/">TensorFlow</a>
     <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">MobileNet</a>.
@@ -154,56 +154,58 @@ vi:
   hoc_overview_oceans_tutorial_desc: Hãy tìm hiểu về trí tuệ nhân tạo (AI), học máy,
     dữ liệu đào tạo và định kiến, đồng thời khám phá các vấn đề đạo đức và cách sử
     dụng AI để giải quyết các vấn đề toàn cầu.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
+  ai_video_title_what_is_ai: Trí tuệ nhân tạo là gì?
+  ai_video_title_algorithm_bias: Xử lý định kiến trong thuật toán
+  ai_video_title_phone_knows_dog: Làm cách nào mà điện thoại biết được đây là con
+    chó?
+  ai_video_title_what_is_ml: Học máy là gì?
+  ai_video_title_ml_big_small_prickly: 'Học máy: Xử lý vấn đề lớn, nhỏ và khó chịu'
+  ai_video_title_ethics_of_ai: Đạo đức trí tuệ nhân tạo
+  ai_video_title_ml_human_bias: Học máy và định kiến của con người
+  ai_video_title_seeing_ai: 'Quan sát trí tuệ nhân tạo: Để tiếp cận thế giới hình
+    ảnh dễ dàng hơn'
+  activity: Hoạt động
   name: Name
-  description: Description
+  description: Mô tả
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resource_header: Dạy và học về trí tuệ nhân tạo
+  ai_resource_minecraft: Minecraft Trí tuệ nhân tạo để làm điều có ích
+  ai_resource_minecraft_desc: 'Truy cập các nguồn hỗ trợ miễn phí, bao gồm thời khóa
+    biểu, video, chương trình đào tạo khoa học máy tính và các khóa đào tạo giáo viên.
+    (Cần có Minecraft: Education Edition)'
+  ai_resource_ml_for_kids: Học máy cho trẻ em
+  ai_resource_ml_for_kids_desc: Đào tạo mô hình học máy bằng văn bản, số hoặc hình
+    ảnh và sử dụng để làm game trong Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: Học máy cho trẻ em'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
+  ai_resource_ecs: 'ECS: Trí tuệ nhân tạo (AI)'
+  ai_resource_ecs_desc: Học phần thay thế mới để Khám phá chương trình đào tạo khoa
+    học máy tính (ECS).
+  ai_resource_elements_ai: Các yếu tố của trí tuệ nhân tạo
+  ai_resource_elements_ai_desc: Chuỗi các khóa học trực tuyến miễn phí do Reaktor
+    và Đại học Helsinki tổ chức.
   ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
+  ai_resource_cognimates_desc: Nền tảng giáo dục về trí tuệ nhân tạo để làm game,
+    lập trình robot và đào tạo.
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_header: Các hoạt động có sự hỗ trợ của trí tuệ nhân tạo và học máy
+  ai_activity_seeing_ai: Quan sát trí tuệ nhân tạo
+  ai_activity_seeing_ai_desc: Ứng dụng miễn phí mô tả thế giới quanh bạn bằng một
+    nhóm ngôn ngữ đa dạng.
+  ai_activity_quick_draw: Nhanh lên, Vẽ đi!
+  ai_activity_quick_draw_desc: Mạng lưới thần kinh có thể học cách nhận ra bản vẽ
+    nháp không?
   ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_teachable_desc: Đào tạo máy tính để nhận ra hình ảnh, âm thanh và tư
+    thế của bạn.
+  ai_activity_experiments: Thí nghiệm trí tuệ nhân tạo với Google
+  ai_activity_experiments_desc: Bắt đầu khám phá học máy thông qua tranh ảnh, hình
+    vẽ, ngôn ngữ, âm nhạc, v.v.
+  ai_activity_zooniverse: Zooniverse - Chụp hình ngựa vằn núi
+  ai_activity_zooniverse_desc: Giúp bảo vệ Ngựa vằn núi Cape bằng cách xác định các
+    loài động vật khác nhau trong ảnh.
   codeorg_homepage_hoc2018_curriculum: Tiến xa hơn với <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">các khóa học tại Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Tạo buổi <span class="highlight-word"> Khiêu
@@ -651,19 +653,17 @@ vi:
     of Code tại trường học hoặc trong cộng đồng của mình – ví dụ như trong câu lạc
     bộ ngoại khóa, tổ chức phi lợi nhuận hoặc tại nơi làm việc. Ngoài ra, bạn có thể
     tự mình trải nghiệm vào ngày %{campaign_date}."
-  hoc_faq_behind_hoc_q: Những ai đã làm nên Hour of Code?
-  hoc_faq_behind_hoc_a: Giờ mã được tổ chức bởi <a href='http://code.org'> Code.org</a>,
-    một khu vực 501 c 3 phi lợi nhuận chuyên dụng để mở rộng sự tham gia trong khoa
-    học máy tính bằng cách làm cho nó có sẵn trong các trường học thêm, và tăng sự
-    tham gia của phụ nữ và các sinh viên underrepresented của màu sắc. Một <a href='http://code.org/about/partners'>
-    liên minh chưa từng có của các đối tác</a> đã đến với nhau để hỗ trợ giờ mã, quá
-    &mdash; bao gồm Microsoft, Apple, Amazon, chàng trai và cô gái câu lạc bộ của
-    Mỹ và hội đồng quản trị trường cao đẳng.
-  hoc_faq_behind_hoc_a_markdown: Chương trình Hour of Code được thực hiện bởi Hour
-    of Code và [Ủy ban Tư vấn và Đánh giá](%{partner_url}) Tuần Giáo Dục Khoa Học
+  hoc_faq_behind_hoc_q: Những ai đã làm nên Giờ lập trình?
+  hoc_faq_behind_hoc_a: Giờ lập trình được thực hiện bởi Ủy ban Tư vấn và Đánh giá
+    của Giờ Lập trình và Tuần lễ Giáo dục Khoa học máy tính <a href='%{partner_url}'>
+    </a> cũng như một liên minh rộng lớn các đối tác cùng hợp tác hỗ trợ Giờ Lập trình
+    &mdash; bao gồm Microsoft, Apple, Amazon, câu lạc bộ các chàng trai và cô gái
+    của Mỹ và hội đồng quản trị các trường cao đẳng.
+  hoc_faq_behind_hoc_a_markdown: Chương trình Giờ lập trình được thực hiện bởi Giờ
+    lập trình và [Ủy ban Tư vấn và Đánh giá](%{partner_url}) Tuần Giáo Dục Khoa Học
     Máy Tính cũng như một liên minh chưa từng có giữa các đối tác cùng nhau hỗ trợ
-    Hour of Code – bao gồm Microsoft, Apple, Amazon, Hội Nam Sinh và Nữ Sinh Hoa Kỳ
-    và Hội đồng Đại học.
+    Giờ lập trình – bao gồm Microsoft, Apple, Amazon, Hội Nam Sinh và Nữ Sinh Hoa
+    Kỳ và Hội đồng Đại học.
   hoc_faq_host_q: Tôi không biết điều gì hết về coding/ lập trình. Tôi vẫn có thể
     đến tham dự sự kiện?
   hoc_faq_host_a: Tất nhiên. Các hoạt động Hour of Code đều có hướng dẫn tự động trên
@@ -3936,14 +3936,15 @@ vi:
     drag and drop programming. This is a game-like, self-directed tutorial starring
     video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies.
     Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
-  tutorial_itchstop_longdescription: We'll be using Itch to build our own stop frame
-    animation projects. Note that headphones are recommended for this course. We will
-    use some existing sprites that support animations and show the code we need to
-    add to animate our characters. We'll also go over how to create our very own animation
-    effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly
-    for animation effects (similar to a flip-book animation) and the code behind it.
-    All instruction is contained within the Itch environment so there is no need to
-    be switching screens to follow along with the project.
+  tutorial_itchstop_longdescription: Chúng ta sẽ sử dụng Itch để xây dựng dự án hoạt
+    hình tĩnh vật của riêng bạn. Hãy lưu ý rằng bạn nên sử dụng tai nghe trong khóa
+    học này. Chúng ta sẽ sử dụng một số nhân vật có sẵn để hỗ trợ chuyển động hoạt
+    hình và trình bày mã lệnh mà chúng ta cần thêm để tạo chuyển động cho nhân vật
+    của mình. Chúng ta cũng sẽ tìm hiểu cách tự tạo hiệu ứng và hình vẽ hoạt họa.
+    Chúng ta sẽ tìm hiểu cách liên tục thay đổi trang phục cho nhân vật từ bước sơ
+    đẳng nhất để tạo hiệu ứng hoạt hình (tương tự với hoạt hình dạng sách lật) và
+    mã lệnh đằng sau hiệu ứng đó. Tất cả hướng dẫn đều gói gọn trong môi trường Itch
+    để bạn không cần chuyển màn hình khi theo dõi dự án.
   tutorial_tynkerpn_longdescription: Follow Peep as he explores the big wide world!
     In this project, you'll create an interactive scene in which Peep goes on a nature
     walk and sees lots of interesting items. You'll make different items show up or
@@ -5230,30 +5231,30 @@ vi:
     similar to a very bad player shooting darts at a dart board. The percentage of
     darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
-  tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
-    Asteroids and Lunar Lander games is simpler than you might think? Did you know
-    that both of these games have accurate physics? In this activity you will fix
-    a broken asteroids game where the ship only moves in a straight line. Then you
-    will add gravity to the game and try to land the ship on the moon! Works with
-    chromebooks and other devices!
-  tutorial_stempong_longdescription: Did you know that the code behind the popular
-    game Bonk.io and the classic Pong game is simpler than you might think? Did you
-    know that both of these games have accurate physics? In this activity you will
-    fix a broken version of the Pong game so that objects bounce like they should.
-    Then you will add gravity to create a Bonk.io clone. Works with chromebooks and
-    other devices!
+  tutorial_stemplanetoids_longdescription: Bạn có biết rằng mã lệnh đằng sau các tựa
+    game cổ điển như Asteroids và Lunar Lander đơn giản hơn bạn tưởng không? Bạn có
+    biết rằng cả hai tựa game này đều tuân thủ quy tắc vật lý chính xác không? Trong
+    hoạt động này, bạn sẽ sửa game Asteroids bị hỏng, khi mà tàu chỉ di chuyển theo
+    đường thẳng. Sau đó bạn sẽ thêm trọng lực vào game và thử hạ cánh tàu trên mặt
+    trăng! Hãy làm trên Chromebook và các thiết bị khác nhé!
+  tutorial_stempong_longdescription: Bạn có biết rằng mã lệnh đằng sau các tựa game
+    nổi tiếng như Bonk.io đơn giản hơn bạn tưởng không? Bạn có biết rằng các tựa game
+    này đều tuân thủ quy tắc vật lý chính xác không? Trong hoạt động này, bạn sẽ sửa
+    phiên bản game Pong bị hỏng để các vật thể nảy lên đúng cách. Sau đó bạn sẽ thêm
+    trọng lực để tạo ra bản sao của Bonk.io. Hãy làm trên Chromebook và các thiết
+    bị khác nhé!
   tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
     Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
     wrong. Players command AlgoBot, a smart little service droid, and learn to use
     a visual programming language to help him contain the crisis!
   tutorial_thunkableapps_longdescription: 'Learn how to build your own apps with blocks-based
     coding! '
-  tutorial_toxicodedot_longdescription: 'Select a card from your deck and interpret
-    its code in order to progress through the world. Use your intuitive abilities
-    to guess the rules and learn from your own mistakes. Made with care by the team
-    behind Compute it and Silent Teacher, with the same fundamentals: trial-and-error
-    instead of verbose explanations, smooth progression, no code to type, accessibility
-    to absolute beginners.'
+  tutorial_toxicodedot_longdescription: 'Chọn một lá bài trong bộ bài của bạn và giải
+    thích mã lệnh trên đó để chu du trong thế giới này. Hãy sử dụng khả năng trực
+    giác để đoán các quy tắc và học hỏi từ sai lầm của chính mình. Đây là sản phẩm
+    chỉn chu của đội ngũ chịu trách nhiệm cho các hoạt động Compute it và Silent Teacher
+    với các nguyên tắc tương tự: thử và sai thay vì giải thích dài dòng, tiến triển
+    trôi chảy, không gõ mã lệnh, trợ năng cho người vừa mới bắt đầu.'
   tutorial_gcactions_longdescription: Discover actions, one of the key building blocks
     in coding, and use them to code a video game! Explore digital culture and learn
     about robots and what they can actually do.
@@ -7920,13 +7921,13 @@ vi:
   tutorial_mbbuttons_string_platforms: Windows, Mac OS, Linux, or Chromebook
   tutorial_meteor_string_platforms: Windows, Mac OS, Linux, or Chromebook
   tutorial_ballbounce_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_mitcodi_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_mitdoodle_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_talktome_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_mobilecspmap_string_platforms: Chrome, Firefox, Android tablet, Android
     phone
   tutorial_ozorandom_string_platforms: ''

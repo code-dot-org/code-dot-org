@@ -1,0 +1,21 @@
+sq:
+  data:
+    variable_names:
+      actor: personazh
+      birds: zogjtë
+      counter: numërues
+      height: gjatësia
+      honey: mjaltë
+      left: majtas
+      length: gjatesi
+      name: emri
+      nectar: nektar
+      points: pikët
+      random: zakonshëm
+      repeat: përsërit
+      right: djathtas
+      score: rezultati
+      size: madhësia
+      speed: shpejtësia
+      wizard: magjistar
+      x: x

@@ -149,7 +149,22 @@
         "Dance_Party_extras_speed": "Tezlashtiring, sekinlashtiring",
         "Dance_Party_extras_speed_2019": "Tezlashtiring, sekinlashtiring",
         "Dance_Party_extras_visible": "Ular qayga boradi?",
-        "Dance_Party_extras_visible_2019": "Ular qayga boradi?"
+        "Dance_Party_extras_visible_2019": "Ular qayga boradi?",
+        "App Lab Intro 8 - Video Design Mode": "Video: Dizayn rejimi",
+        "App Lab Intro 8 - Video Getting Started": "Video: Boshlash",
+        "App Lab Intro 8 - Video Images and Sounds": "Video: Tasvirlar va tovushlar",
+        "App Lab Intro 8 - Video Make It Interactive": "Video: Interfaol qiling",
+        "App Lab Intro 8 - Video Share Your App": "Video: Ilovangizga ko'rinish bering",
+        "AppLab Intro 7 - Change Screen Color": "Ekran rangini o'zgartirish",
+        "AppLab Intro 7 - Change Text 2": "Matnni o'zgartirish",
+        "AppLab Intro 7 - Full Text": "Ikkita tugma",
+        "AppLab Intro 7 - onEvent intro": "Tugmalar ishlasin",
+        "AppLab Intro 7 - onEvent twoButtons": "onEvent hodisasi bilan ko'proq amaliyot",
+        "AppLab Intro 7 - playSound": "playSound-dan foydalanish",
+        "AppLab Intro 7 - thisOrThatAddButton": "U yoki bu",
+        "AppLab Intro 7 - thisOrThatAddScreen": "U yoki bu",
+        "AppLab Intro 7 - thisOrThatPersonalize": "U yoki bu",
+        "AppLab Intro 7 - thisOrThatSetScreen": "U yoki bu"
       }
     }
   }

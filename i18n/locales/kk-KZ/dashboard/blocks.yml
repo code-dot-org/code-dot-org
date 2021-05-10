@@ -135,6 +135,7 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+            '"speed"': жылдамдық
       gamelab_checkTouching:
         options:
           CONDITION:

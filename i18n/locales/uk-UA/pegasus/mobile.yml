@@ -14,6 +14,16 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
   csedweek_banner_teachers_text: "Ви вчитель інформатики? Перегляньте інші ресурси з предмету"
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
+  try_hoc_num_served: "<h1>Приєднуйтесь до</h1><h2>Години коду</h2><h3>%{num} вже спробували</h3>"
+  try_hoc_num_served_markdown: |-
+    # Приєднуйтесь до
+
+    ## Години коду
+    ###  %{num}  вже спробували #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Кожен може вчитися."
   learn_now: "Почати навчання"
   petition_message: "Кожен учень у кожній школі повинен мати можливість вивчати інформатику"
@@ -517,6 +527,7 @@
   volunteer_engineer_submission_intro_guide: "Дізнайтеся більше про нашу <a href=\"%{volunteer_guide}\">волонтерську програму тут</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Дізнайтеся більше про нашу [програму волонтерів тут] (%{volunteer_guide}). "
   volunteer_engineer_submission_intro_signup: "Вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span class=\"form-required-field\">*</span> є обов'язковими для заповнення."
+  volunteer_engineer_submission_intro_signup_markdown: "Будь ласка, вкажіть наступну інформацію, якщо ви студент галузі комп'ютерних наук чи професійний програміст.  Вам має бути щонайменше 18 років, щоб зареєструватися добровольцем. Зверніть увагу, що всі поля, заповнені в цьому розділі, будуть загальнодоступними для всіх, хто переглядає [карту волонтерів](/добровольців/місцевих). Поля, позначені символом _ * _, є обов’язковими для заповнення. "
   volunteer_engineer_submission_intro_links: "Не шукаєте волонтера? <a href=\"%{learn_more}\">Дізнайтесь більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів на нашій <a href=\"%{volunteer_local}\">карті волонтерів</a>."
   volunteer_engineer_submission_intro_links_markdown: "Ви - вчитель і шукаєте волонтерів? Знайдіть місцевого волонтера на нашій [карті волонтерів](%{volunteer_local}). "
   volunteer_engineer_submission_update_information: "Оновіть свої дані"
@@ -861,6 +872,7 @@
   how_to_teach_hoc: "Як викладати \"Годину коду\""
   more_resources_educators: "Більше ресурсів для вчителів та освітян"
   beyond_submission: "Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте критерії та форму подання."
+  third_party_submission: "Хочете запропонувати навчальний посібник для переліку тут? <a href=\"%{submission_url}\"> Перегляньте критерії та форму подання. </a>"
   participants: "учасники"
   teachers_notes: "Інформація для вчителя"
   teachers_notes_hoc: 'Вчителі: ознайомтесь із вказівками для вчителів'
@@ -1057,6 +1069,12 @@
   coursed-2019_gradelevel: 8+ класи
   coursee-2019_gradelevel: Вік 8-12
   coursef-2019_gradelevel: Вік 9-13
+  coursea-2020_gradelevel: Вік 4-7
+  courseb-2020_gradelevel: Вік 5-8
+  coursec-2020_gradelevel: Вік 6-10
+  coursed-2020_gradelevel: 8+ класи
+  coursee-2020_gradelevel: Вік 8-12
+  coursef-2020_gradelevel: Вік 9-13
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"
@@ -1427,6 +1445,7 @@
   user_header_logout: "Вийти"
   user_header_signin: "Увійти"
   user_header_create: 'Творіть '
+  user_header_artist: 'Художник'
   user_header_gamelab: "Ігрова лабораторія"
   user_header_playlab: "Ігрова студія"
   user_header_dance: "Танцювальна вечірка"
@@ -1436,8 +1455,11 @@
   user_header_view_project_gallery: "Переглянути галерею проекту"
   view_section: "Переглянути секцію"
   privacy_doc_explanation: "Клацніть тут, щоб отримати наші документи про конфіденційність, якими можна поділитися або роздрукувати для студентів. "
+  signing_in: "Увійти"
   sign_in_overview: 'Ваші студенти можуть увійти в свої Code.org акаунти, виконавши наступні дії: '
+  sign_in_instruct_website: "Перейти до%{code_org_url}."
   sign_in_instruct_secret: "Виберіть їх секрет %{secret}."
+  sign_in_instruct_button: "Натисніть кнопку «Увійти»."
   reset_student_password: "Скинути паролів учнів"
   syncing_students: "Синхронізація ваших учнів"
   applab_tile_title: "Вступ до App Lab (Вік13+)"
@@ -1567,3 +1589,9 @@
   footer_powered_by_aws: "На потужностях Amazon Web Services"
   codebytes_skinny_banner_english_only: "Лише англійська"
   codebytes_skinny_banner_learn: "Дізнатися більше на [code.org/codebytes](%{code_bytes_url}). "
+  footer_privacy_policy: "Політика конфіденційності"
+  footer_about: "Про"
+  footer_partners: "Партнери"
+  footer_donate: "Підтримати"
+  footer_support: "Довідка та спільнота"
+  footer_terms: "Умови"

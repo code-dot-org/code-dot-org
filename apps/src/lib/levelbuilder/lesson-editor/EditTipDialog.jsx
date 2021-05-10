@@ -12,21 +12,7 @@ import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
 import LessonEditorDialog from './LessonEditorDialog';
-import TextareaWithImageUpload from '@cdo/apps/lib/levelbuilder/TextareaWithImageUpload';
-
-const styles = {
-  dialogContent: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  textArea: {
-    width: '95%'
-  },
-  confirmDeleteButton: {
-    display: 'flex',
-    alignItems: 'center'
-  }
-};
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 export default class EditTipDialog extends Component {
   static propTypes = {
@@ -94,11 +80,12 @@ export default class EditTipDialog extends Component {
               );
             })}
           </select>
-          <TextareaWithImageUpload
+          <MarkdownEnabledTextarea
             markdown={this.state.tip.markdown}
             name={'callout'}
             inputRows={5}
             handleMarkdownChange={this.handleTextChange}
+            features={{imageUpload: true}}
           />
           <LessonTip tip={this.state.tip} />
         </div>
@@ -122,3 +109,17 @@ export default class EditTipDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  textArea: {
+    width: '95%'
+  },
+  confirmDeleteButton: {
+    display: 'flex',
+    alignItems: 'center'
+  }
+};

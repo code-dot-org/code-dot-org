@@ -100,6 +100,7 @@ class User < ApplicationRecord
     ops_school
     ops_gender
     using_text_mode
+    using_dark_mode
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
@@ -622,6 +623,19 @@ class User < ApplicationRecord
       authentication_id: id,
       data: data
     )
+  end
+
+  # Get information for an SSO provider.
+  # @param [String] type A credential type / provider type.
+  # @returns [AuthenticationOption|Hash|nil] Returns an AuthenticationOption for migrated
+  #   users, a Hash for non-migrated users, or nil if there is no matching credential.
+  def find_credential(type)
+    if migrated?
+      authentication_options.find_by(credential_type: type)
+    else
+      return nil unless provider == type
+      {authentication_id: uid, credential_type: provider}
+    end
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -1766,7 +1780,15 @@ class User < ApplicationRecord
       user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
+
       user_level.submitted = submitted
+      # We only lock levels of type LevelGroup
+      # When the student submits an assessment, lock the level so they no
+      # longer have access for the remainder of the autolock period
+      is_level_group = user_level.level.type === 'LevelGroup'
+      if submitted && is_level_group
+        user_level.locked = true
+      end
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id
       end

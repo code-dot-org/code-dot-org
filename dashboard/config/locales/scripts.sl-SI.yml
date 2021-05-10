@@ -2167,6 +2167,8 @@ sl:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno državljanstvo
+            lessonGroup-6:
+              display_name: Digitalno državljanstvo
         coursee-2021:
           lessons:
             Conditionals:
@@ -2175,7 +2177,7 @@ sl:
               name: Napiši pesem
           lesson_groups:
             ramp_up:
-              display_name: Zanke
+              display_name: Gnezdenje zank
             csf_digcit:
               display_name: Digitalno državljanstvo
             csf_nested_loops:
@@ -2196,8 +2198,12 @@ sl:
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
-            csf_variables:
+            lessonGroup-8:
               display_name: Spremenljivke
+            lessonGroup-9:
+              display_name: odstrani
+            lessonGroup-7:
+              display_name: Digitalno državljanstvo
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2220,3 +2226,33 @@ sl:
               display_name: Uvod
             lessonGroup-3:
               display_name: Spremenljivke
+            variables:
+              display_name: Spremenljivke
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Uvod
+            Loops:
+              key: Zanke
+              name: Zanke
+            Events:
+              key: Dogodki
+              name: Dogodki
+            Conditionals:
+              key: Pogoji
+              name: Pogoji
+            Functions:
+              key: Funkcije
+              name: Funkcije
+            Variables:
+              key: Spremenljivke
+              name: Spremenljivke
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Uvod
+            Introduction:
+              display_name: Uvod

@@ -976,6 +976,7 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+            '"speed"': kecepatan
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} menyentuh {SPRITE2}"
         options:

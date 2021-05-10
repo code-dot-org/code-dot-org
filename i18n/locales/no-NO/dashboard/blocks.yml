@@ -845,6 +845,7 @@
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
+            '"speed"': fart
       gamelab_checkTouching:
         options:
           CONDITION:

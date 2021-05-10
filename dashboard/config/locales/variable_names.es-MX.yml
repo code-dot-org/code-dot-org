@@ -1,0 +1,93 @@
+---
+es-MX:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Jugador_1_Contador
+      Actor_2_Counter: Jugador_2_Contador
+      Blue: Azul
+      Green: Verde
+      Red: Rojo
+      actor: actor
+      age: edad
+      animal1score: animal1puntuación
+      animal1speed: animal1velocidad
+      animal2score: animal2puntuación
+      animal2speed: animal2velocidad
+      answer: respuesta
+      armlength: Longitud de brazo
+      binary: binario
+      birds: pájaros
+      bit: bit
+      blue1: azul1
+      blue2: azul2
+      bodylength: Longitud de cuerpo
+      buttonHeight: Altura_botón
+      buttonMargin: Margen_botón
+      buttonWidth: Ancho_botón
+      cat_score: puntuación_gato
+      cat_speed: velocidad_gato
+      cats: gatos
+      centerToPadLeft: centerToPadLeft
+      choice: elección
+      circ: circ
+      codeName: códigoNombre
+      color: color
+      controllerHeight: controladorAltura
+      controllerWidth: controladorAnchura
+      counter: contador
+      counter2: contador2
+      currentActor: actualJugador
+      direction: dirección
+      dog_score: perro_puntuación
+      dog_speed: perro_velocidad
+      dogs: perros
+      dragons: dragones
+      enemy_speed: enemigo_velocidad
+      energy: energía
+      firstName: Nombre
+      footlength: tamaño_del_pie
+      gather: recoger
+      green1: green1
+      green2: green2
+      guess: adivinar
+      height: altura
+      honey: miel
+      i: i
+      left: izquierda
+      legangle: angulopierna
+      leglength: longitudpierna
+      length: longitud
+      level: nivel
+      marginX: margenX
+      marginY: margenY
+      myName: miNombre
+      name: nombre
+      nectar: néctar
+      nectars: néctares
+      padYOffset: desplazamientoYpad
+      player_score: puntuación_jugador
+      points: puntos
+      punchLine: lineagolpe
+      random: al azar
+      red1: rojo1
+      red2: rojo2
+      repeat: repetir
+      repetitions: repeticiones
+      right: derecha
+      score: puntuación
+      screenHeight: alturaPantalla
+      screenWidth: anchoPantalla
+      set sides: fijar lados
+      shout: gritar
+      sides: lados
+      size: tamaño
+      speed: velocidad
+      startX: inicioX
+      startY: inicioY
+      variable: variable
+      width: ancho
+      wizard: mago
+      x: x
+      your var 1: tu var 1
+      your var 2: tu var 2

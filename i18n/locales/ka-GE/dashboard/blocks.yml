@@ -362,6 +362,7 @@ ka:
             '"x"': x პოზიცია
             '"y"': y პოზიცია
             '"direction"': მოძრაობის მიმართულება
+            '"speed"': სიჩქარე
       gamelab_checkTouching:
         options:
           CONDITION:

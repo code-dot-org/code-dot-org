@@ -74,8 +74,8 @@
 
 .videothumbnail{:onclick => "return showVideo_#{id}()", class: "play-button-#{play_button}"}
   %div.thumbnail-wrapper
-    %img.thumbnail-image{:src => image}
-    %img.play{:src => "/shared/images/play-button.png"}
+    %img.thumbnail-image{:src => image, :alt => "video thumbnail"}
+    %img.play{:src => "/shared/images/play-button.png", :alt => "play button"}
     .video_caption_link= caption
 
 = view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path

@@ -1,0 +1,14 @@
+---
+ne:
+  data:
+    parameter_names:
+      actor: नायक
+      counter: counter
+      height: height
+      honey: honey
+      left: बाँया
+      length: length
+      min: min
+      points: points
+      size: size
+      speed: speed

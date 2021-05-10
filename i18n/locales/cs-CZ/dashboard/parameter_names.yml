@@ -1,0 +1,16 @@
+cs:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: postava
+      color: barva
+      counter: počítadlo
+      height: výška
+      honey: med
+      left: vlevo
+      length: délka
+      min: min
+      points: body
+      size: velikost
+      speed: rychlost
+      width: šířka

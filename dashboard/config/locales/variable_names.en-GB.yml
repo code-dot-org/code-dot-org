@@ -1,0 +1,12 @@
+---
+en-GB:
+  data:
+    variable_names:
+      actor: actor
+      height: height
+      honey: honey
+      nectar: nectar
+      random: random
+      repeat: repeat
+      score: score
+      x: x

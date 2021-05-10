@@ -346,6 +346,7 @@
   coursee-2017_gradelevel: Umur 8-12 tahun
   coursee-2018_gradelevel: Umur 8-12 tahun
   coursee-2019_gradelevel: Umur 8-12 tahun
+  coursee-2020_gradelevel: Umur 8-12 tahun
   codeorg_beyond_gradelevel: "Peringkat umur 4-104 tahun"
   khan_beyond_gradelevel: "Sekolah Menengah +"
   tynker_beyond_gradelevel: "Umur 5-13 tahun"
@@ -405,3 +406,8 @@
   hoc2018_dance_measure: "Corak Berirama"
   hoc2018_dance_measure_colon: 'Corak Berirama:'
   hoc2018_mc_thank_microsoft: "  Kami mengucapkan terima kasih kepada Microsoft kerana menyokong wawasan dan misi kami untuk memastikan setiap kanak-kanak mempunyai peluang mempelajari sains komputer dan kemahiran untuk berjaya pada abad ke-21.  "
+  footer_privacy_policy: "Dasar Privasi"
+  footer_about: "Tentang"
+  footer_donate: "Derma"
+  footer_support: "Bantuan dan Komuniti"
+  footer_terms: "Terma"

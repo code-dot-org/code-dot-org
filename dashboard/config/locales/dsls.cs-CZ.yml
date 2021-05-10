@@ -765,10 +765,11 @@ cs-CZ:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 drawSprites placement match:
@@ -2670,7 +2671,7 @@ cs-CZ:
         markdown: |
           # Sleduj digitální stopu
 
-          ## Jaké informace můžeš zanechávat ve svojí digitální stopě?
+          ## Jaké informace můžeš zanechávat ve své digitální stopě?
       csf_safety_in_my_online_neighborhood:
         markdown: |
           # Mé online sousedství
@@ -2906,3 +2907,30 @@ cs-CZ:
           programování (stejně jako lidi, kteří se tím živí), je skvělým zdrojem informací
           o různých způsobech, jak si amatéři hrají s programováním. \n\n### Relevantní
           oblasti\n\n* Vše\n\n[/key]\n"
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Zkrať své programy pomocí smyček!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Zkrať své programy pomocí smyček!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Nauč se programovat psaním kódu pro své přátele!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Nauč se programovat psaním kódu pro své přátele!
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Silná hesla
+
+          Prozkoumej, proč lidé používají hesla, zjisti výhody používání hesel a najdi způsob, jak vytvářet a uchovávat silná, bezpečná hesla.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)

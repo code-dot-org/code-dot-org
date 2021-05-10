@@ -38,6 +38,7 @@ class Artist < Blockly
     solution_image_url
     auto_run
     validation_enabled
+    enable_download_image
   )
 
   def xml_blocks
@@ -55,7 +56,8 @@ class Artist < Blockly
         user: params[:user],
         game: Game.custom_artist,
         level_num: 'custom',
-        validation_enabled: true
+        validation_enabled: true,
+        enable_download_image: false
       )
     )
   end

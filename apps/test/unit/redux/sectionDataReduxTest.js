@@ -17,7 +17,8 @@ const fakeSectionData = {
     id: 300,
     name: 'csp2'
   },
-  lesson_extras: false
+  lesson_extras: false,
+  tts_autoplay_enabled: false
 };
 
 const sortedFakeSectionData = {
@@ -36,7 +37,8 @@ const sortedFakeSectionData = {
     id: 300,
     name: 'csp2'
   },
-  stageExtras: false
+  stageExtras: false,
+  ttsAutoplayEnabled: false
 };
 
 describe('sectionDataRedux', () => {

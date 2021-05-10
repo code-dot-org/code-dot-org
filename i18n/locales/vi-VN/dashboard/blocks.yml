@@ -968,6 +968,7 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
+            '"speed"': tốc độ
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} chạm {SPRITE2} 123_321"
         options:

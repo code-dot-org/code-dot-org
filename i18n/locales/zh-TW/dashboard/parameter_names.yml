@@ -1,0 +1,21 @@
+zh-TW:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: 角色
+      color: 顏色
+      counter: counter
+      direction: 方向
+      height: 高度
+      honey: 蜂蜜
+      left: ' 向左'
+      length: 長度
+      min: 最小值
+      nectar units: 花蜜單位
+      nectars: 花蜜
+      points: 分
+      radius: 半徑
+      sides: 邊
+      size: 尺寸
+      speed: 速度
+      width: 寬度

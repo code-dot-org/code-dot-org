@@ -1,0 +1,5 @@
+{
+  "func": "World.width",
+  "category": "World",
+  "type": "readonlyproperty"
+}

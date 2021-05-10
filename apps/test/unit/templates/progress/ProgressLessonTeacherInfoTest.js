@@ -12,7 +12,8 @@ const MOCK_SECTION = {
   pairingAllowed: true,
   studentCount: 4,
   code: 'TQGSJR',
-  providerManaged: false
+  providerManaged: false,
+  ttsAutoplayEnabled: false
 };
 
 describe('ProgressLessonTeacherInfo', () => {
@@ -39,6 +40,7 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          lockableAuthorized={false}
         />
       )
     );
@@ -47,7 +49,45 @@ describe('ProgressLessonTeacherInfo', () => {
     assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
   });
 
-  it('renders our StageLock button when lesson is lockable', () => {
+  it('renders a purple Button if and only if we have a student lesson plan', () => {
+    const lessonWithoutPlan = {
+      ...fakeLesson('Maze', 1)
+    };
+    const lessonWithPlan = {
+      ...fakeLesson('Maze', 1),
+      student_lesson_plan_html_url: 'foo/bar/student'
+    };
+
+    const [wrapperWithoutPlan, wrapperWithPlan] = [
+      lessonWithoutPlan,
+      lessonWithPlan
+    ].map(lesson =>
+      shallow(
+        <ProgressLessonTeacherInfo
+          lesson={lesson}
+          section={MOCK_SECTION}
+          lessonUrl={'code.org'}
+          scriptAllowsHiddenStages={false}
+          hiddenStageState={Immutable.fromJS({
+            stagesBySection: {11: {}}
+          })}
+          scriptName="My Script"
+          hasNoSections={false}
+          toggleHiddenStage={() => {}}
+          lockableAuthorized={false}
+        />
+      )
+    );
+
+    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
+    assert.equal(wrapperWithPlan.find('Button').props().color, 'purple');
+    assert.equal(
+      wrapperWithPlan.find('Button').props().href,
+      'foo/bar/student'
+    );
+  });
+
+  it('renders our StageLock button when lesson is lockable and teacher is lockable authorized', () => {
     const lockableLesson = fakeLesson('Maze', 1, true);
     const unlockableLesson = fakeLesson('Maze', 1, false);
 
@@ -67,11 +107,41 @@ describe('ProgressLessonTeacherInfo', () => {
           scriptName="My Script"
           hasNoSections={false}
           toggleHiddenStage={() => {}}
+          lockableAuthorized={true}
         />
       )
     );
 
     assert.equal(wrapperLockable.find('Connect(StageLock)').length, 1);
+    assert.equal(wrapperUnlockable.find('Connect(StageLock)').length, 0);
+  });
+
+  it('does not render StageLock button when lesson is lockable and teacher is not lockable authorized', () => {
+    const lockableLesson = fakeLesson('Maze', 1, true);
+    const unlockableLesson = fakeLesson('Maze', 1, false);
+
+    const [wrapperLockable, wrapperUnlockable] = [
+      lockableLesson,
+      unlockableLesson
+    ].map(lesson =>
+      shallow(
+        <ProgressLessonTeacherInfo
+          lesson={lesson}
+          section={MOCK_SECTION}
+          lessonUrl={'code.org'}
+          scriptAllowsHiddenStages={false}
+          hiddenStageState={Immutable.fromJS({
+            stagesBySection: {11: {}}
+          })}
+          scriptName="My Script"
+          hasNoSections={false}
+          toggleHiddenStage={() => {}}
+          lockableAuthorized={false}
+        />
+      )
+    );
+
+    assert.equal(wrapperLockable.find('Connect(StageLock)').length, 0);
     assert.equal(wrapperUnlockable.find('Connect(StageLock)').length, 0);
   });
 
@@ -90,6 +160,7 @@ describe('ProgressLessonTeacherInfo', () => {
         scriptName="My Script"
         hasNoSections={true}
         toggleHiddenStage={() => {}}
+        lockableAuthorized={true}
       />
     );
 
@@ -111,10 +182,33 @@ describe('ProgressLessonTeacherInfo', () => {
         scriptName="My Script"
         hasNoSections={true}
         toggleHiddenStage={() => {}}
+        lockableAuthorized={true}
       />
     );
 
     assert.equal(wrapper.find('SendLesson').length, 1);
+  });
+
+  it('does not render SendLessonDialog when lockable lesson and teacher is not authorized', () => {
+    const lockableLesson = fakeLesson('Maze', 1, true);
+
+    const wrapper = shallow(
+      <ProgressLessonTeacherInfo
+        lesson={lockableLesson}
+        section={MOCK_SECTION}
+        lessonUrl={'code.org'}
+        scriptAllowsHiddenStages={false}
+        hiddenStageState={Immutable.fromJS({
+          stagesBySection: {11: {}}
+        })}
+        scriptName="My Script"
+        hasNoSections={true}
+        toggleHiddenStage={() => {}}
+        lockableAuthorized={false}
+      />
+    );
+
+    assert.equal(wrapper.find('SendLesson').length, 0);
   });
 
   it('renders our HiddenForSectionToggle when we have a section', () => {
@@ -132,11 +226,15 @@ describe('ProgressLessonTeacherInfo', () => {
             scriptName="My Script"
             hasNoSections={false}
             toggleHiddenStage={() => {}}
+            lockableAuthorized={false}
           />
         )
     );
 
-    assert.equal(withSection.find('HiddenForSectionToggle').length, 1);
-    assert.equal(withoutSection.find('HiddenForSectionToggle').length, 0);
+    assert.equal(withSection.find('Connect(HiddenForSectionToggle)').length, 1);
+    assert.equal(
+      withoutSection.find('Connect(HiddenForSectionToggle)').length,
+      0
+    );
   });
 });

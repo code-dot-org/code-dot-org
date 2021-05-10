@@ -10,6 +10,9 @@ import reducers, {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import createResourcesReducer, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
 
@@ -20,12 +23,26 @@ export default function initPage(scriptEditorData) {
 
   const locales = scriptEditorData.locales;
 
-  registerReducers({...reducers, isRtl});
+  registerReducers({
+    ...reducers,
+    resources: createResourcesReducer('teacherResource'),
+    studentResources: createResourcesReducer('studentResource'),
+    isRtl
+  });
   const store = getStore();
   store.dispatch(init(lessonGroups, scriptEditorData.levelKeyList));
-
   const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({type, link})
+    ([type, link]) => ({
+      type,
+      link
+    })
+  );
+  store.dispatch(
+    initResources(
+      'teacherResource',
+      scriptData.migrated_teacher_resources || []
+    ),
+    initResources('studentResource', scriptData.student_resources || [])
   );
 
   let announcements = scriptData.announcements || [];
@@ -38,6 +55,7 @@ export default function initPage(scriptEditorData) {
         i18nData={scriptEditorData.i18n}
         initialHidden={valueOr(scriptData.hidden, true)}
         initialIsStable={scriptData.is_stable}
+        initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
         initialStudentDetailProgressView={
@@ -45,6 +63,9 @@ export default function initPage(scriptEditorData) {
         }
         initialProfessionalLearningCourse={
           scriptData.professionalLearningCourse || ''
+        }
+        initialOnlyInstructorReviewRequired={
+          scriptData.only_instructor_review_required
         }
         initialPeerReviewsRequired={scriptData.peerReviewsRequired}
         initialWrapupVideo={scriptData.wrapupVideo || ''}
@@ -77,6 +98,7 @@ export default function initPage(scriptEditorData) {
         initialWeeklyInstructionalMinutes={
           scriptData.weeklyInstructionalMinutes
         }
+        initialCourseVersionId={scriptData.courseVersionId}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false

@@ -1,35 +1,41 @@
 name 'OPD-K5 About_copy_2021'
 skip_dialog true
 markdown <<MARKDOWN
-# Welcome to 'Teaching Computer Science Fundamentals'
+# What is Computer Science?
 
 <img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
 
-## What is this online course for? 
-This online course is intended as an introduction to Code.org's Computer Science Fundamentals curriculum and resources for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding of how to teach Computer Science Fundamentals in your classroom.
+## CS is learning about...
 
-## Who is this online course for?
-This online course is designed for **elementary school educators who are interested in teaching Computer Science Fundamentals to their students**. This can range from classroom teachers, to STEM teachers, to librarians, and everyone in between.
+**“The study of computers and algorithmic processes, including their principles, their hardware and software designs, their implementation, and their impact on society.”** -Computer Science Teacher Association (CSTA) 
+
+Let’s breakdown this  definition.  
+
+* **Algorithms** - step-by-step processes to complete a task 
+	* e.g. brushing your teeth, playing a game, opening a file
+* **Hardware** 
+	* e.g. mouse, keyboard, monitor
+* **Software** 
+	* e.g. Android, Microsoft Windows, internet browsers like Google Chrome
+* **Design and use** of hardware and software and their effect on us and others 
+	* e.g. apps for social change, artificial intelligence, colors displayed on a monitor
+
+## CS is about... 
+
+* Creativity
+	* CS is not technology, like the cell phone we use.  CS is a process that can create technology.
+    * CS teaches students to create new technology instead of only being consumers of technology.
+* Problem solving
+	* CS helps students think differently about solving problems in any context.
+    * CS uses a problem solving process that can be applied to any field of study and to any problem.
+* Using code
+	* CS is not only coding.  CS uses code like a tool similar to how arithmetic is a tool for math and words are a tool for English.
+	* CS teaches students to break down big, ambiguous problems into smaller chunks. Recognizing what is important and what needs to be solved first are critical thinking skills that are valuable in ANY context.
+    
+
+
+
 
 If you are a <a href="https://code.org/educate/csd" target="blank">middle school</a> or <a href="https://code.org/educate/csp" target="blank">high school</a> teacher interested in teaching our middle school or high school courses, we recommend you pursue more <a href="https://code.org/educate/professional-learning/middle-high" target="blank">in-depth, ongoing professional development opportunities</a>.
 
-## Will I learn computer science through this online course?
-While there are opportunities to learn and practice basic coding concepts and see how they are presented to students in the curriculum, it is not meant to be a comprehensive introduction to computer science for adults. At the end of the course, we will provide other resources that can help you go deeper into computer science concepts.
-
-## Do I need to have any experience in order to take this online course?
-No previous experience with coding or computer science education is assumed. 
-
-## How long does this online course take? 
-Completing this online course should take between 4-6 hours.
-
-## Can I change the font size of the text in this course?
-We know that the text on this platform can appear small! 
-
-To make the font size bigger:
-- On Mac, click "Command" and "+"
-- On Windows, click "Control" and "+"
-
-To make the size smaller: 
-- On Mac, click "Command" and "-"
-- On Windows, click "Control" and "-"
 MARKDOWN

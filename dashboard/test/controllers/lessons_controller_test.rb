@@ -9,7 +9,7 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1', is_migrated: true, hidden: true
+    @script = create :script, name: 'unit-1', is_migrated: true
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -67,6 +67,43 @@ class LessonsControllerTest < ActionController::TestCase
     }
 
     @levelbuilder = create :levelbuilder
+
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', is_migrated: true, include_student_lesson_plans: true
+    pilot_lesson_group = create :lesson_group, script: @pilot_script
+    @pilot_lesson = create(
+      :lesson,
+      script_id: @pilot_script.id,
+      lesson_group: pilot_lesson_group,
+      name: 'Pilot Lesson 1',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+      properties: {
+        overview: 'lesson overview',
+        student_overview: 'student overview'
+      }
+    )
+    @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
+    @pilot_student = create(:follower, section: @pilot_section).student_user
+
+    @login_req_script = create :script, name: 'signed-in-script', is_migrated: true, include_student_lesson_plans: true, login_required: true
+    login_req_lesson_group = create :lesson_group, script: @login_req_script
+    @login_req_lesson = create(
+      :lesson,
+      script_id: @login_req_script.id,
+      lesson_group: login_req_lesson_group,
+      name: 'Lesson 1 In Login Required Script',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+      properties: {
+        overview: 'lesson overview',
+        student_overview: 'student overview'
+      }
+    )
   end
 
   # anyone can show lesson with lesson plan
@@ -74,6 +111,62 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :student, response: :success
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
+
+  # anyone can show lesson in a script that has login required
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: nil, response: :success, name: 'signed out user can view lesson on script where login is required'
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: :student, response: :success, name: 'student can view lesson on script where login is required'
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view lesson on script where login is required'
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view lesson on script where login is required'
+
+  # anyone can show student lesson plan in a script that has login required
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: nil, response: :success, name: 'signed out user can view student lesson plan on script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: :student, response: :success, name: 'student can view student lesson plan on script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view student lesson plan on script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on script where login is required'
+
+  # limit access to lesson plans in pilots
+  test_user_gets_response_for :show, response: :not_found, user: nil,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
+                              name: 'signed out user cannot view pilot lesson'
+
+  test_user_gets_response_for :show, response: :not_found, user: :student,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot lesson'
+
+  test_user_gets_response_for :show, response: :not_found, user: :teacher,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
+                              name: 'teacher without pilot access cannot view pilot lesson'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot lesson'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot lesson'
+
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
+
+  # limit access to student lesson plans in pilots
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              name: 'signed out user cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :student,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :teacher,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              name: 'teacher without pilot access cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_teacher},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
+                              name: 'pilot teacher can view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_student},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot student lesson plan'
 
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do
@@ -107,7 +200,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'show lesson when lesson is the only lesson in script' do
-    script = create :script, name: 'one-lesson-script', is_migrated: true, hidden: true
+    script = create :script, name: 'one-lesson-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
     @solo_lesson_in_script = create(
       :lesson,
@@ -187,6 +280,73 @@ class LessonsControllerTest < ActionController::TestCase
 
     assert_includes @response.body, activity.name
     assert_includes @response.body, section.name
+  end
+
+  test 'can not show student lesson plan when lesson is in a non-migrated script' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'unmigrated-course'
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'unmigrated lesson',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response 404
+  end
+
+  test 'can not show student lesson plan when lesson is in a script without student lesson plans' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: false
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'course',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response 404
+  end
+
+  test 'show student lesson plan' do
+    sign_in @levelbuilder
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: true
+    lesson_group2 = create :lesson_group, script: script2
+    unmigrated_lesson = create(
+      :lesson,
+      script_id: script2.id,
+      lesson_group: lesson_group2,
+      name: 'course',
+      absolute_position: 1,
+      relative_position: 1,
+      has_lesson_plan: true,
+      lockable: false,
+    )
+
+    get :student_lesson_plan, params: {
+      script_id: script2.name,
+      lesson_position: unmigrated_lesson.relative_position
+    }
+    assert_response :ok
+    assert_includes @response.body, script2.name
   end
 
   # only levelbuilders can edit
@@ -677,6 +837,61 @@ class LessonsControllerTest < ActionController::TestCase
     assert @lesson.vocabularies.include?(vocab_to_keep)
     assert @lesson.vocabularies.include?(vocab_to_add)
     refute @lesson.vocabularies.include?(vocab_to_remove)
+  end
+
+  test 'update lesson by removing and adding programming expressions' do
+    expression_to_keep = create :programming_expression
+    expression_to_remove = create :programming_expression
+    expression_to_add = create :programming_expression
+    @lesson.programming_expressions = [expression_to_keep, expression_to_remove]
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({programming_expressions: [expression_to_keep.summarize_for_lesson_edit, expression_to_add.summarize_for_lesson_edit].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 2, @lesson.programming_expressions.count
+    assert @lesson.programming_expressions.include?(expression_to_keep)
+    assert @lesson.programming_expressions.include?(expression_to_add)
+    refute @lesson.programming_expressions.include?(expression_to_remove)
+  end
+
+  test 'update lesson removing and adding standards' do
+    standard_to_keep = create :standard
+    standard_to_add = create :standard
+    standard_to_remove = create :standard
+
+    @lesson.standards << standard_to_keep
+    @lesson.standards << standard_to_remove
+
+    sign_in @levelbuilder
+    new_standards_data = [standard_to_add, standard_to_keep].map(&:summarize_for_lesson_edit).to_json
+    new_update_params = @update_params.merge({standards: new_standards_data})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 2, @lesson.standards.count
+    assert @lesson.standards.include?(standard_to_add)
+    assert @lesson.standards.include?(standard_to_keep)
+    refute @lesson.standards.include?(standard_to_remove)
+  end
+
+  test 'update lesson removing and adding opportunity standards' do
+    standard_to_keep = create :standard
+    standard_to_add = create :standard
+    standard_to_remove = create :standard
+
+    @lesson.opportunity_standards << standard_to_keep
+    @lesson.opportunity_standards << standard_to_remove
+
+    sign_in @levelbuilder
+    new_standards_data = [standard_to_add, standard_to_keep].map(&:summarize_for_lesson_edit).to_json
+    new_update_params = @update_params.merge({opportunityStandards: new_standards_data})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 2, @lesson.opportunity_standards.count
+    assert @lesson.opportunity_standards.include?(standard_to_add)
+    assert @lesson.opportunity_standards.include?(standard_to_keep)
+    refute @lesson.opportunity_standards.include?(standard_to_remove)
   end
 
   test 'lesson is not partially updated if any data is bad' do

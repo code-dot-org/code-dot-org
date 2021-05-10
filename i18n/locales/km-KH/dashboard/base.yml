@@ -145,6 +145,7 @@ km:
     mismatch_password: "ពាក្យ​សម្ងាត់​ទាំង​ពីរ​ដែល​អ្នក​បាន​បញ្ចូល គឺ​មិន​ត្រូវ​គ្នា​ទេ"
     additional_information: "ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។"
     user_type_label: "ប្រភេទនៃគណនេយ្យ"
+    user_type_teacher: "គ្រូបង្រៀន"
     user_type_student: "សិស្ស"
     field_is_required: "ត្រូវការ"
     accept_terms: "អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ"
@@ -285,6 +286,12 @@ km:
       report_abuse: "រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ"
       teacher_community: "សមាគមគ្រូបង្រៀន"
       professional_learning: "ការរៀនដោយមានវិជ្ជាជីវ"
+      app_lab_documentation: "ឯកសារ App Lab"
+      app_lab_tutorials: "មេរៀនណែនាំ App Lab"
+      game_lab_documentation: "ឯកសារ Game Lab"
+      game_lab_tutorials: "មេរៀនណែនាំ Game Lab"
+      sprite_lab_documentation: "ឯកសារ Sprite Lab"
+      sprite_lab_tutorials: "មេរៀនណែនាំ Sprite Lab"
       educate_elementary: "កម្រិតបឋមសិក្សា"
       educate_middle: "អនុវិទ្យាល័យ"
       educate_high: "វិទ្យាល័យ"
@@ -306,6 +313,7 @@ km:
       help_us: "ជួយពួកយើង"
       teach: "បង្រៀន"
       about: "អំពី"
+      legal: "ភាពឯកជននិងច្បាប់"
       legal_privacy: "គោលការណ៍ឯកជនភាព"
       legal_tos: "លក្ខខណ្ឌ"
     user:
@@ -324,15 +332,18 @@ km:
       artist_k1: 'សិល្បករ (អ្នកដែលទើបតែរៀនអាន)'
       basketball: 'កីឡាបាល់បោះ'
       bounce: 'បាល់​លោត'
+      dance: 'Dance Party'
       gamelab_jr: 'បន្ទប់ហ្គេម (beta)'
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
       infinity: 'អនន្ត'
       minecraft_adventurer: 'Minecraft Adventurer'
       playlab_k1: 'បន្ទប់លេង (សម្រាប់អ្នកដែលទើបរៀនអាន)'
+      spritelab: 'Sprite Lab'
       starwarsblocks: 'Star Wars (ប្លុក)'
       starwarsblocks_hour: 'Star Wars (ប្លុក)'
       weblab: 'បន្ទប់វេប'
+      view_all: 'មើលគម្រោងទាំងអស់'
     popup:
       progress_for_user: "ដំណើរការរបស់%{name}"
       progress: 'ដំណើរការ​របស់​អ្នក'
@@ -412,6 +423,7 @@ km:
     view_course: មើលបន្ថែមអំពីមុខវិជ្ជា
     trynow: 'សាកល្បងឥឡូវនេះ'
     try_beta_courses: 'ថ្មី! សាកល្បងវគ្គសិក្សាសាកល្បងរបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥ ។'
+  certificate_sponsor_message: "%{sponsor_name} បានជូនកាដូដល់អ្នក ដើម្បីឧបត្ថម្ភការសិក្សារបស់អ្នក ។"
   share:
     title: "រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម"
     description: "រាល់គ្នាអាចរៀនបាននូវមុខវិជ្ជាវិទ្យាសាស្រ្តកំុព្យូទ័រ។​ អាចបង្កើតហ្គេម កម្មវិធីនិងគូររូបផ្សេងៗជាមួយការសរសេរកូដ។"
@@ -422,6 +434,7 @@ km:
     none: 'សម្រេច​ចិត្ត​មិន​ឆ្លើយ'
   user_type:
     student: 'សិស្ស'
+    teacher: 'គ្រូបង្រៀន'
   footer:
     built_on_github: 'បង្កើតឡើងលើ GitHub ដោយ Microsoft'
     copyright: 'រក្សាសិទ្ធដោយ'
@@ -429,9 +442,10 @@ km:
     feedback: 'ផ្ដល់​មតិ​កែ​លម្អ'
     translate: 'ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក'
     support: 'ការ​គាំទ្រ'
-    tos_short: 'លក្ខណ'
+    tos_short: 'លក្ខខណ្ឌ'
     tos: 'លក្ខខណ្ឌ'
     privacy: 'គោលការណ៍ឯកជនភាព'
+    privacy_updated: 'គោលការណ៍ភាពឯកជន (បានធ្វើបច្ចុប្បន្នភាព)'
     secure: 'កំណែ​សុវត្ថិភាព'
     report_abuse: 'រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ'
     try_hour_of_code: 'សាកល្បងរៀនជាមួយHour of Code!'
@@ -463,6 +477,10 @@ km:
       current: "កម្រិត​បច្ចុប្បន្ន"
       unused: "កម្រិត​ដែល​មិន​បាន​ប្រើ"
   upsell:
+    dance:
+      title: 'Dance Party'
+    dance-2019:
+      title: 'Dance Party'
     hoc:
       body: 'សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។'
     flappy:
@@ -544,6 +562,10 @@ km:
         math: 'គណិត​វិទ្យា'
         science: 'វិទ្យាសាស្រ្ត'
         la: 'អក្សរសាស្រ្ត'
+      resources:
+        kodable: 'Kodable'
+      robotics:
+        kodable: 'Kodable'
       email_opt_in:
         opt_in_yes: 'យល់ព្រម'
         opt_in_no: 'ទេ'
@@ -551,5 +573,6 @@ km:
     accept: 'ខ្ញុំ​យល់​ព្រម'
   page_not_found_title: "រកទំព័រពុំឃើញ"
   page_not_found_header: '៤០៤៖ រកទំព័រពុំឃើញ'
+  page_not_found_description: "ទំព័រដែលអ្នកកំពុងរកមិនមាននៅក្នុងអាសយដ្ឋាននេះទេ។ សូមពិនិត្យអាសយដ្ឋានគេហទំព័រ ហើយដាក់ស្នើម្ដងទៀត ឬត្រឡប់ទៅទំព័រដើមរបស់យើងវិញ។"
   page_not_found_button: "ត្រឡប់ទៅទំព័រដើម"
   copy: 'ចម្លង'

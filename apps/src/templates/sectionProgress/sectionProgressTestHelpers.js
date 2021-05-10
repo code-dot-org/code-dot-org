@@ -3,7 +3,8 @@ import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress, {
   addDataByScript,
-  setLessonOfInterest
+  setLessonOfInterest,
+  setShowSectionProgressDetails
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection, {
   setValidScripts
@@ -11,6 +12,27 @@ import scriptSelection, {
 import locales from '@cdo/apps/redux/localesRedux';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
+import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
+
+export function fakeRowsForStudents(students) {
+  const rows = [];
+  students.forEach(student => {
+    rows.push({
+      id: `${student.id}.0`,
+      student: student,
+      expansionIndex: 0,
+      isExpanded: false
+    });
+  });
+  return rows;
+}
+
+export function fakeDetailRowsForStudent(student) {
+  return [
+    {id: `${student.id}.1`, student: student, expansionIndex: 1},
+    {id: `${student.id}.2`, student: student, expansionIndex: 2}
+  ];
+}
 
 export function wrapTable(table) {
   return (
@@ -54,6 +76,7 @@ export function createStore(numStudents, numLessons) {
     addDataByScript(buildSectionProgress(section.students, scriptData))
   );
   store.dispatch(setLessonOfInterest(0));
+  store.dispatch(setShowSectionProgressDetails(true));
   return store;
 }
 
@@ -79,6 +102,9 @@ function buildSectionProgress(students, scriptData) {
   return {
     scriptDataByScript: {[scriptData.id]: scriptData},
     studentLevelProgressByScript: {[scriptData.id]: progress},
+    studentLessonProgressByScript: {
+      [scriptData.id]: lessonProgressForSection(progress, scriptData.stages)
+    },
     studentLastUpdateByScript: {[scriptData.id]: lastUpdates}
   };
 }
@@ -86,35 +112,37 @@ function buildSectionProgress(students, scriptData) {
 function randomProgress() {
   const rand = Math.floor(Math.random() * 4);
   const paired = Math.floor(Math.random() * 10) === 0;
+  const timeSpent = Math.random() * 60 * 60;
   switch (rand) {
     case 0:
       return {
         status: LevelStatus.perfect,
+        locked: false,
         result: TestResults.MINIMUM_OPTIMAL_RESULT,
         paired: paired,
-        time_spent: 5
+        timeSpent: timeSpent,
+        lastTimestamp: Date.now()
       };
     case 1:
       return {
         status: LevelStatus.attempted,
+        locked: false,
         result: TestResults.LEVEL_STARTED,
         paired: paired,
-        time_spent: 3
+        timeSpent: timeSpent,
+        lastTimestamp: Date.now()
       };
     case 2:
       return {
         status: LevelStatus.passed,
+        locked: false,
         result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
-        time_spent: 3
+        timeSpent: undefined,
+        lastTimestamp: Date.now()
       };
     default:
-      return {
-        status: LevelStatus.not_tried,
-        result: TestResults.NO_TESTS_RUN,
-        paired: paired,
-        time_spent: 0
-      };
+      return null;
   }
 }
 

@@ -7,7 +7,11 @@ import {testLessonSchedule, testLessons} from './unitCalendarTestData';
 describe('UnitCalendar', () => {
   it('creates lesson chunks for all of the pieces of the schedule across weeks', () => {
     const wrapper = shallow(
-      <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={90} />
+      <UnitCalendar
+        lessons={testLessons}
+        weeklyInstructionalMinutes={90}
+        weekWidth={585}
+      />
     );
     expect(wrapper.instance().generateSchedule()).to.deep.equal(
       testLessonSchedule

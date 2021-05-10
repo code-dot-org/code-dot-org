@@ -35,6 +35,7 @@ import StudentSelector from './StudentSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import FeedbackDownload from './FeedbackDownload';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -52,36 +53,6 @@ const CSV_SURVEY_HEADERS = [
   {label: i18n.response(), key: 'answer'},
   {label: i18n.count(), key: 'numberAnswered'}
 ];
-
-const styles = {
-  header: {
-    marginBottom: 0
-  },
-  tableContent: {
-    marginTop: 10,
-    clear: 'both'
-  },
-  selectors: {
-    clear: 'both'
-  },
-  scriptSelection: {
-    float: 'left',
-    marginRight: 20
-  },
-  assessmentSelection: {
-    float: 'left',
-    marginBottom: 10
-  },
-  download: {
-    marginTop: 10
-  },
-  loading: {
-    clear: 'both'
-  },
-  empty: {
-    clear: 'both'
-  }
-};
 
 class SectionAssessments extends Component {
   static propTypes = {
@@ -272,7 +243,7 @@ class SectionAssessments extends Component {
                   </div>
                 )}
                 {totalStudentSubmissions <= 0 && (
-                  <div>{i18n.emptySurveyOverviewTable()}</div>
+                  <SafeMarkdown markdown={i18n.emptySurveyOverviewTable()} />
                 )}
               </div>
             )}
@@ -302,6 +273,36 @@ class SectionAssessments extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    marginBottom: 0
+  },
+  tableContent: {
+    marginTop: 10,
+    clear: 'both'
+  },
+  selectors: {
+    clear: 'both'
+  },
+  scriptSelection: {
+    float: 'left',
+    marginRight: 20
+  },
+  assessmentSelection: {
+    float: 'left',
+    marginBottom: 10
+  },
+  download: {
+    marginTop: 10
+  },
+  loading: {
+    clear: 'both'
+  },
+  empty: {
+    clear: 'both'
+  }
+};
 
 export const UnconnectedSectionAssessments = SectionAssessments;
 

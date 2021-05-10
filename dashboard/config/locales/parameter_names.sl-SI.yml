@@ -1,0 +1,14 @@
+---
+sl:
+  data:
+    parameter_names:
+      actor: igralec
+      counter: števec
+      height: višina
+      honey: med
+      left: levo
+      length: dolžina
+      min: min
+      points: točk
+      size: velikost
+      speed: hitrost

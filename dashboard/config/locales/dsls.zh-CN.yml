@@ -714,6 +714,12 @@ zh-CN:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: 快速检查标题
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **关卡类型：** 这道选择题要求学生选择如何在网页上显示HTML标题。您可以通过转到相应关卡并从右侧拉出“教师面板”来查看哪些学生正确回答了该问题。成功回答问题的学生将有一个绿色泡泡。学生有尽可能多的机会回答正确，所以猜测和检查也可以得出正确的答案。
+
+          <div class="clear"></div>
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -733,6 +739,12 @@ zh-CN:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: 快速检查标题
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **关卡类型：** 这道选择题要求学生选择如何在网页上显示HTML标题。您可以通过转到相应关卡并从右侧拉出“教师面板”来查看哪些学生正确回答了该问题。成功回答问题的学生将有一个绿色泡泡。学生有尽可能多的机会回答正确，所以猜测和检查也可以得出正确的答案。
+
+          <div class="clear"></div>
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -824,6 +836,12 @@ zh-CN:
           完成网页后，与草稿作比较，确保没有忘了什么内容。也请伙伴们看看，思考一下他们的反馈，是否应该做一些改动。
 
 
+        teacher_markdown: |-
+          # 个人网站项目
+
+          这一关启动了个人网站项目，学生将在整个单元中继续学习。您可以要求他们在回到代码工作室之前先向您展示一份日记草图，或者让他们准备好的时候自己决定。
+
+          如果学生提前完成，可以鼓励他们在页面中添加新内容或修改他们的已有内容。
       CSD U2 Design Project_2018:
         content1: 描述
         markdown: |+
@@ -852,6 +870,12 @@ zh-CN:
           完成网页后，与草稿作比较，确保没有忘了什么内容。也请伙伴们看看，思考一下他们的反馈，是否应该做一些改动。
 
 
+        teacher_markdown: |-
+          # 个人网站项目
+
+          这一关启动了个人网站项目，学生将在整个单元中继续学习。您可以要求他们在回到代码工作室之前先向您展示一份日记草图，或者让他们准备好的时候自己决定。
+
+          如果学生提前完成，可以鼓励他们在页面中添加新内容或修改他们的已有内容。
       CSD U2 Design Project_2018_2019:
         content1: 描述
         markdown: |+
@@ -880,6 +904,12 @@ zh-CN:
           完成网页后，与草稿作比较，确保没有忘了什么内容。也请伙伴们看看，思考一下他们的反馈，是否应该做一些改动。
 
 
+        teacher_markdown: |-
+          # 个人网站项目
+
+          这一关启动了个人网站项目，学生将在整个单元中继续学习。您可以要求他们在回到代码工作室之前先向您展示一份日记草图，或者让他们准备好的时候自己决定。
+
+          如果学生提前完成，可以鼓励他们在页面中添加新内容或修改他们的已有内容。
       CSD U2 Expression Exemplars:
         markdown: |
           # 个人网站示例
@@ -921,6 +951,8 @@ zh-CN:
           ## 资源
 
           * [网站的目的 - 活动指南](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [网站的目的-示例](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L12 Overview:
         markdown: |
           # 概述
@@ -938,6 +970,9 @@ zh-CN:
 
           * [网络寻宝 - 活动指南](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
           * [奇怪的真实动物 - 活动指南](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
+        teacher_markdown: "[奇怪而真实的动物-Key](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/edit)
+          ([PDF](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=doc))"
       CSD U2 L2 Overview:
         content1: 描述
         markdown: |
@@ -949,6 +984,9 @@ zh-CN:
 
           ## 资源
           * [个人网站草图 - 课堂活动指南](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+        teacher_markdown: "* [个人网站梗概](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
       CSD U2 L3 Overview:
         content1: 描述
         markdown: |
@@ -998,6 +1036,9 @@ zh-CN:
 
           * [为什么个人隐私很重要？ - 活动指导](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
           * [社交侦探 - 活动指导](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |-
+          * [什么时候你的隐私很重要?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [社交足迹](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Activity Guide ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
       CSD U2 L6 Overview:
         content1: 描述
         markdown: |+
@@ -1033,6 +1074,7 @@ zh-CN:
 
           * [作品共享许可概述](https://www.youtube.com/watch?v=HKfqoPYJdVc) - Video
           * [许可你的作品 - 活动指南](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [授权您的工作-活动指南范例](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)"
       CSD U2 Lesson 6 Overview:
         content1: 描述
         markdown: |
@@ -1057,6 +1099,9 @@ zh-CN:
           资源\n\n* [个人网站 - 项目指南](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)\n*
           [个人网站 - 相互评审](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)\n*
           [个人网站 - 专栏](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n"
+        teacher_markdown: |-
+          * [个人网站](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+          * [个人网站](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
       CSD U2 PSP Programming:
         markdown: |+
           # 编程中解决问题的流程
@@ -1092,6 +1137,10 @@ zh-CN:
           * 找到一些能在下一次迭代中增量改动的东西
 
 
+        teacher_markdown: |-
+          # 回顾问题解决过程
+
+          在课堂上回顾问题解决过程的四个步骤。
       CSD U2 PSP Programming_2018:
         markdown: |+
           # 编程中解决问题的流程
@@ -1127,6 +1176,10 @@ zh-CN:
           * 找到一些能在下一次迭代中增量改动的东西
 
 
+        teacher_markdown: |-
+          # 回顾问题解决过程
+
+          在课堂上回顾问题解决过程的四个步骤。
       CSD U2 PSP Programming_2018_2019:
         markdown: |+
           # 编程中解决问题的流程
@@ -1162,6 +1215,10 @@ zh-CN:
           * 找到一些能在下一次迭代中增量改动的东西
 
 
+        teacher_markdown: |-
+          # 回顾问题解决过程
+
+          在课堂上回顾问题解决过程的四个步骤。
       CSD U2 Top Websites:
         markdown: |
           # 美国最多访问量的网站
@@ -1218,6 +1275,7 @@ zh-CN:
           | 配方 |  有趣的事实 | 帮助指南 |
           |---------|--------------|--------------|
           | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: 这些扩展学生网站的说明可以显示在黑板上，这样您就可以在课堂上浏览它们。 单击以显示给学生示例网页。
       CSD U2 expand project_2018:
         content1: 描述
         markdown: |
@@ -1241,6 +1299,7 @@ zh-CN:
           | 配方 |  有趣的事实 | 帮助指南 |
           |---------|--------------|--------------|
           | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: 这些扩展学生网站的说明可以显示在黑板上，这样您就可以在课堂上浏览它们。 单击以显示给学生示例网页。
       CSD U2 expand project_2018_2019:
         content1: 描述
         markdown: |
@@ -1264,6 +1323,7 @@ zh-CN:
           | 配方 |  有趣的事实 | 帮助指南 |
           |---------|--------------|--------------|
           | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: 这些扩展学生网站的说明可以显示在黑板上，这样您就可以在课堂上浏览它们。 单击以显示给学生示例网页。
       CSD U2 image debug match:
         answers:
         - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -1383,6 +1443,10 @@ zh-CN:
           ## 示例
 
           [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # 计划检查点
+
+          在允许学生继续学习其他关卡之前，检查他们的计划。
       CSD U2 project guide_2018:
         content1: 描述
         markdown: |
@@ -1405,6 +1469,10 @@ zh-CN:
           ## 示例
 
           [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # 计划检查点
+
+          在允许学生继续学习其他关卡之前，检查他们的计划。
       CSD U2 project guide_2018_2019:
         content1: 描述
         markdown: |
@@ -1427,6 +1495,10 @@ zh-CN:
           ## 示例
 
           [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # 计划检查点
+
+          在允许学生继续学习其他关卡之前，检查他们的计划。
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -1632,6 +1704,53 @@ zh-CN:
           要了解计算机科学和编程是如何在娱乐中发挥作用的，需要做一些调查。搜索 "计算机科学和娱乐"，还可以找找不同类型的娱乐，比如电影，电视，音乐，游戏，动画，时尚等等。
 
 
+        teacher_markdown: |-
+          这里有一些网站可以让学生开始学习。这些网站通常适合学校，但其内容经常变化，因此 **我们强烈建议您在与学生分享之前检查每个网站的不适当内容** 。
+
+          ## 在魔法中——[insidethemagic.net](http://www.insidethemagic.net)
+
+          ### 概述
+
+          这个网站主要关注迪斯尼的新闻，但是你可能会惊讶于CS在他们所有不同娱乐形式中扮演的重要角色。因为这不是一个以CS为中心的站点，所以您需要使用搜索功能来查找相关的文章。
+
+          ### 相关领域
+
+          * 电影/电视
+          * 动画
+          * 机器人学/动画电子技术
+          * 游戏
+
+          ## 关键路径视频——[criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### 概述
+
+          视频中有一系列在游戏行业不同领域工作的人，谈论他们的工作。
+
+          ### 相关领域
+
+          * 游戏
+          * 动画
+          * 艺术
+
+          ## 音乐智库——[musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### 概述
+
+          音乐智库是一个博客，目标是在音乐行业工作的人。这不是一个CS特定的网站，但搜索“计算机科学”或“编程”会发现一些有趣的文章。
+
+          ### 相关领域
+
+          * 音乐
+
+          ## 创意编码播客——[creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### 概述
+
+          虽然这个播客在正式的专业编程方面没有太多的特色（比如，以编程为生的人），但它是一个很好的资源，可以看到业余爱好者用代码进行娱乐的各种方式。
+
+          ### 相关领域
+
+          * 所有
       CSD U3 Entertainment_2018_2019:
         markdown: |+
           # 开始搜索
@@ -1747,6 +1866,9 @@ zh-CN:
           ## 资源
 
           * [娱乐中的计算机科学 - 活动指南](https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: "* [娱乐中的计算机科学](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit)
+          - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))"
       CSD U3 Lesson Overview 10:
         markdown: |
           # 概述
@@ -1826,6 +1948,9 @@ zh-CN:
           * [交互卡片 - 项目指南](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
           * [交互卡片 - 专栏](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
           * [交互卡片 - 相互评审](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+        teacher_markdown: |-
+          * [交互式卡片](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Project Guide Exemplar([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+          * [交互式卡片](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
       CSD U3 Lesson Overview 2:
         markdown: |
           # 概述
@@ -1836,6 +1961,12 @@ zh-CN:
           ## 资源
 
           * [画图形 - 活动指南](https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * [绘制几何图形](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+          [/key]
       CSD U3 Lesson Overview 3:
         markdown: |+
           # 概述
@@ -1905,6 +2036,9 @@ zh-CN:
           ## 资源
 
           * [精灵图场景 - 活动指南](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+        teacher_markdown: "* [精灵场景规划](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit)
+          - Activity Guide Exemplar ([PDF](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=doc))"
       CSD U3 Lesson Overview 7:
         markdown: |+
           # 概述
@@ -1937,6 +2071,9 @@ zh-CN:
 
           * [线下的变量 - 活动指南](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
           * [线下的变量板 - 操作](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+        teacher_markdown: "* [变量未插入](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY)
+          - Activity Guide Key ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))"
       CSD U3 Lesson Overview 9:
         markdown: |+
           # 概述
@@ -1966,6 +2103,9 @@ zh-CN:
           * [制作自己的游戏 - 项目指南](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
           * [制作自己的游戏 - 专栏](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
           * [制作自己的游戏 - 相互评审](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
+        teacher_markdown: |-
+          * [制作自己的游戏](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))
+          * [制作自己的游戏](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))
       CSD U3 SFLP Velocity:
         markdown: |
           # 概述
@@ -2041,6 +2181,9 @@ zh-CN:
           ## 资源
 
           * [计划平台游戏 - 项目指南](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
+        teacher_markdown: "* [规划您的平台游戏](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit)
+          - Project Guide ([PDF](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))"
       CSD U3 combining rep:
         content1: 描述
         markdown: |+
@@ -2463,6 +2606,7 @@ zh-CN:
 
           * [表示数据](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - 活动指南
           * [表示数据](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - 资源
+        teacher_markdown: "* 解释数据-范例 ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
       CSD U5 crosstab warmup:
         content1: 描述
         markdown: |+
@@ -3009,6 +3153,9 @@ zh-CN:
           是任何计算机都认可并理解的原始的文本格式。\n* **二进制（binary）** - 只用两个选项表达信息的一种方法。\n* **比特（bit）**
           - \"二进制数字（Binary Digit）\" 的缩写。一个比特是计算机上信息的最小单元，一般用 0 或 1 来表示。\n\n## 资源\n\n*
           [ASCII - 活动指南](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)\n"
+        teacher_markdown: "* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing)
+          - 示例 ([PDF](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))"
       CSD-U5-SFLP Automating Data Decisions:
         markdown: |
           # 概述
@@ -3019,6 +3166,7 @@ zh-CN:
 
           * [自动的数据决策](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - 资源 (版本 [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
           * [自动的数据决策](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - 活动指南 (版本 [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+        teacher_markdown: "* 自动化数据决策-示例 ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))"
       CSD-U5-SFLP Combining Representations:
         markdown: |
           # 概述
@@ -3030,6 +3178,8 @@ zh-CN:
 
           * [宠物记录 - 活动指南](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
           * [ASCII 到二进制表格 - 参考](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+        teacher_markdown: "* [宠物记录](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/)
+          - 示例 ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))"
       CSD-U5-SFLP Create a Representation:
         markdown: |
           # 概述
@@ -3039,6 +3189,8 @@ zh-CN:
           ## 资源
 
           * [创建表示 - 项目指南](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+        teacher_markdown: "* 创建表达-项目指南 ([谷歌文档](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit)
+          | [PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))"
       CSD-U5-SFLP Interpreting Data:
         markdown: |
           # 概述
@@ -3048,6 +3200,7 @@ zh-CN:
           ## 资源
 
           * [结构化数据](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - 活动指南
+        teacher_markdown: "* 结构化数据-示例 ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))"
       CSD-U5-SFLP Making Decisions with Data:
         markdown: |
           # 概述
@@ -3057,6 +3210,9 @@ zh-CN:
           ## Resources
 
           * [用数据做决定](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - 活动指南
+        teacher_markdown: "* [用数据做决策](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - 示例 ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))"
       CSD-U5-SFLP Patterns and Representation:
         markdown: |
           # 概述
@@ -3071,6 +3227,9 @@ zh-CN:
           ## 资源
 
           * [表示信息](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - 活动指南 (复制为 [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google 文档](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+        teacher_markdown: |-
+          * [代表信息](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - 示例 1([PDF](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+          * [代表信息](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - 示例 2 ([PDF](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
       CSD-U5-SFLP Problem Solving and Data:
         markdown: |
           # 概述
@@ -3080,6 +3239,7 @@ zh-CN:
           ## 资源
 
           * [数据和解决问题](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - 活动指南
+        teacher_markdown: "* 用数据解决问题 - 范例 ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))"
       CSD-U5-SFLP Problem Solving with Big Data:
         markdown: |
           # 概述
@@ -3099,6 +3259,13 @@ zh-CN:
           ## 资源
 
           * [表达的重要性 - 活动指南](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * [代表事项](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - 示例([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+          * [膳食数据](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - 资源([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/key]
       CSD-U5-SFLP Representing Images:
         markdown: |+
           # 概述
@@ -3119,6 +3286,12 @@ zh-CN:
           ## 资源
           * [表示数字 - 活动指南](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
           * [数字卡片 - 可操作](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * 代表数字-范例([谷歌文档](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/key]
       CSD-U5-SFLP Representing Numbers Part 2:
         markdown: |
           # 概述
@@ -3129,6 +3302,7 @@ zh-CN:
           ## 资源
 
           * [数据保密 - 活动指南](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+        teacher_markdown: "* 数据保密-示例([PDF](https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))"
       CSD-U5-SFLP Solve a Data Problem:
         markdown: |
           # 概述
@@ -3139,6 +3313,9 @@ zh-CN:
 
           * [进行推荐](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - 项目指南
           * [进行推荐](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - 相互评审
+        teacher_markdown: |-
+          * 提出建议-项目指南范例 ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+          * 提出建议-同行评议范例 ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
       'CSD: getText vs getNumber':
         markdown: "# getText 与 getNumber\n\n计算机用不同的方法来存储数据。两种计算机存储数据的方法是字符串和数字。 \n\n`getNumber()`
           会试图返回数字。\n\n`getText()` 的返回会是字符串。通常，程序中的字符串会用 `\" \"` 标记。例如，所有标识名称都是字符串。可以用
@@ -5285,6 +5462,9 @@ zh-CN:
           ## 资源
 
           * [RGB 颜色 - 活动指南](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+        teacher_markdown: "* [RGB颜色](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/edit?copiedFromTrash)
+          - Activity Guide ([PDF](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=doc))"
       Unit 2 Lesson 16 Overview:
         markdown: |
           # 概述
@@ -5297,6 +5477,13 @@ zh-CN:
           * [完成个人网站 - 同伴评审](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
           * [完成个人网站 - 项目指南](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
           * [完成个人网站 - 专栏](https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * [最终个人网站](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/edit?usp=sharing) - Project Guide Exemplar ([PDF](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=doc))
+          * [最终个人网站](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - Peer Review Exemplar ([PDF](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=doc))
+
+          [/key]
       Unit 2 Lesson 7 Overview:
         markdown: |+
           # 概述
@@ -7610,6 +7797,17 @@ zh-CN:
 
 
 
+        teacher_markdown: |-
+          **请让您的学生完成这个调查！！！**
+
+          * 您可以在教师仪表板上看到匿名的调查结果
+          * 结果对我们(Code.org)维持课程并作出改进至关重要。
+          * 也会有一个教师调查，在那里你可以提供自己的意见，这将通过电子邮件通知你。
+
+          **注：**
+
+          * 此页面上的按钮重定向到[studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * 如果您愿意，可以从教师仪表板的下拉菜单中将“学生课程后调查”设置为您所在小组的当前单位。
       csd-post-survey-intro-2019:
         markdown: |+
           # 计算机科学发现 课后问卷

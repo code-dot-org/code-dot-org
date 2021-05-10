@@ -771,6 +771,7 @@ et:
             '"x"': x asukoht
             '"y"': y asukoht
             '"direction"': liikumise suund
+            '"speed"': kiirus
       gamelab_checkTouching:
         options:
           CONDITION:

@@ -378,6 +378,7 @@ ka:
       example: 'მაგალითის ამოხსნა'
       example_with_number: 'მაგალითის ამოხსნა %{solution_number}'
       submitted_on: 'ჩაბარების თარიღი:'
+      last_updated: 'ბოლო განახლება:'
       unsubmit: 'ჩაბარების გაუქმება'
       worked_with: 'იმუშავა'
       update_lock_settings: 'დახურვის პარამეტრები განაახლეთ აქ.'

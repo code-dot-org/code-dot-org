@@ -4925,6 +4925,12 @@ uk:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+        csp10-2021:
+          lessons:
+            'Project: Innovation Simulation Part 6':
+              description_student: Огляд уроку
+            'Project: Innovation Simulation Part 7':
+              description_student: Огляд уроку
         coursea-2021:
           title: Курс А (2020)
           description_audience: 'Вік: 4-7'
@@ -5014,6 +5020,8 @@ uk:
             Artist Binary:
               key: 'Художник: двійкова система'
               name: 'Художник: двійкова система'
+            lesson-1:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
           lesson_groups:
             csf_sequencing:
               display_name: Послідовність дій
@@ -5026,6 +5034,8 @@ uk:
             csf_binary:
               display_name: Двійкова система
             csf_digcit:
+              display_name: Цифрове громадянство
+            lessonGroup-6:
               display_name: Цифрове громадянство
         coursee-2021:
           title: Курс Е (2020)
@@ -5057,6 +5067,8 @@ uk:
           lessons:
             Loops with the Artist:
               key: Петлі з художником
+            The Power of Words:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
             Envelope Variables:
               key: Конвертні змінні
               name: Конвертні змінні
@@ -5066,22 +5078,36 @@ uk:
             For Loop Fun:
               key: Ігри з циклами
               name: Ігри з циклами
+            Virtual Pet:
+              name: 'Міні-проект: Віртуальний вихованець'
+            lesson-6:
+              name: Представляємо Лабораторію спрайтів
+            lesson-8:
+              name: Спрайт в Дії
+            lesson-2:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
           lesson_groups:
             ramp_up:
               display_name: Просунутися
             csf_digcit:
               display_name: Цифрове громадянство
             csf_variables:
-              display_name: Змінні
+              display_name: Цикли For
             csf_for_loops:
               display_name: Цикли For
-            csf_sprites:
-              display_name: Спрайти
+            lessonGroup-8:
+              display_name: Змінні
+            lessonGroup-9:
+              display_name: видалити
+            lessonGroup-7:
+              display_name: Цифрове громадянство
         express-2021:
           description_audience: 'Вік: 9-18'
           lessons:
             Dance Party:
               key: Танцювальна вечірка
+              name: Танцювальна вечірка
+            lesson-1:
               name: Танцювальна вечірка
           lesson_groups:
             csf_warmup:
@@ -5100,6 +5126,8 @@ uk:
               display_name: Цикли For
             csf_sprites:
               display_name: Спрайти
+            lessonGroup-9:
+              display_name: Розминка
         pre-express-2021:
           description_audience: 'Вік: 4-8'
           lesson_groups:
@@ -5117,6 +5145,8 @@ uk:
               name: Представляємо Лабораторію спрайтів
             Sprites in Action:
               name: Спрайт в Дії
+            introducing-spritelab:
+              name: Представляємо Лабораторію спрайтів
           lesson_groups:
             ramp_up:
               display_name: Вступ
@@ -5126,6 +5156,8 @@ uk:
               display_name: Змінні
             Sprites:
               display_name: Спрайти
+            variables:
+              display_name: Змінні
         csd4-preview-2021:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає потребам користувачів."
           lessons:
@@ -5177,3 +5209,49 @@ uk:
               name: Урок 14
             lesson15:
               name: Урок 15
+            lesson17:
+              name: Урок 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        k5-onlinepd-2021:
+          title: Викладання основ інформатики
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Вступ
+            Sequencing:
+              key: Послідовність дій
+              name: Послідовність дій
+            Loops:
+              key: Цикли
+              name: Цикли
+            Events:
+              key: Події
+              name: Події
+            Conditionals:
+              key: Умови
+              name: Умови
+            Functions:
+              key: Функції
+              name: Функції
+            Variables:
+              key: Змінні
+              name: Змінні
+            For Loops:
+              key: Цикли For
+              name: Цикли For
+            Next steps:
+              key: Наступні кроки
+              name: Наступні кроки
+            Getting Started:
+              name: Починаємо
+            Lesson Planning:
+              name: Планування уроку
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Вступ
+            k5_next_steps_1:
+              display_name: Наступні Кроки
+            Introduction:
+              display_name: Вступ

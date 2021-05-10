@@ -7,6 +7,7 @@
       0.74
     ],
     "func": "setAnimation",
+    "docFunc": "gamelab_setAnimation",
     "blockText": "change {THIS} costume to {ANIMATION}",
     "args": [
       {

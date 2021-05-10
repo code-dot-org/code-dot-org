@@ -1,0 +1,21 @@
+{
+  "func": "triangle",
+  "category": "Drawing",
+  "paletteParams": [
+    "x1",
+    "y1",
+    "x2",
+    "y2",
+    "x3",
+    "y3"
+  ],
+  "params": [
+    "200",
+    "0",
+    "0",
+    "400",
+    "400",
+    "400"
+  ],
+  "noAutocomplete": true
+}

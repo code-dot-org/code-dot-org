@@ -27,36 +27,6 @@ export const COLUMNS = {
   EDIT_DELETE: 6
 };
 
-const styles = {
-  currentUnit: {
-    marginTop: 10
-  },
-  //Hides a column so that we can sort by a value not displayed
-  hiddenCol: {
-    width: 0,
-    padding: 0,
-    border: 0
-  },
-  //Assigned to a column with the hidden column to the left
-  leftHiddenCol: {
-    borderLeft: 0
-  },
-  unsortableHeader: tableLayoutStyles.unsortableHeader,
-  colButton: {
-    paddingTop: 20,
-    paddingLeft: 20,
-    paddingBottom: 20,
-    width: 40
-  },
-  sectionCol: {
-    paddingLeft: 20
-  },
-  sectionCodeNone: {
-    color: color.light_gray,
-    fontSize: 16
-  }
-};
-
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
   return (
@@ -169,7 +139,8 @@ class OwnedSectionsTable extends Component {
     onEdit: PropTypes.func.isRequired,
 
     //Provided by redux
-    sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired
+    sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
+    isRtl: PropTypes.bool
   };
 
   state = {
@@ -212,6 +183,9 @@ class OwnedSectionsTable extends Component {
 
   getColumns = sortable => {
     const colStyle = {...tableLayoutStyles.cell, ...styles.sectionCol};
+    const unsortableHeaderStyle = this.props.isRtl
+      ? styles.unsortableHeaderRTL
+      : styles.unsortableHeader;
     return [
       {
         //displays nothing, but used as initial sort
@@ -254,7 +228,7 @@ class OwnedSectionsTable extends Component {
         header: {
           label: i18n.course(),
           props: {
-            style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}
+            style: {...tableLayoutStyles.headerCell, ...unsortableHeaderStyle}
           }
         },
         cell: {
@@ -279,7 +253,7 @@ class OwnedSectionsTable extends Component {
         header: {
           label: i18n.loginInfo(),
           props: {
-            style: {...tableLayoutStyles.headerCell, ...styles.unsortableHeader}
+            style: {...tableLayoutStyles.headerCell, ...unsortableHeaderStyle}
           }
         },
         cell: {
@@ -324,8 +298,40 @@ class OwnedSectionsTable extends Component {
   }
 }
 
+const styles = {
+  currentUnit: {
+    marginTop: 10
+  },
+  //Hides a column so that we can sort by a value not displayed
+  hiddenCol: {
+    width: 0,
+    padding: 0,
+    border: 0
+  },
+  //Assigned to a column with the hidden column to the left
+  leftHiddenCol: {
+    borderLeft: 0
+  },
+  unsortableHeader: tableLayoutStyles.unsortableHeader,
+  unsortableHeaderRTL: tableLayoutStyles.unsortableHeaderRTL,
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
+    paddingBottom: 20,
+    width: 40
+  },
+  sectionCol: {
+    paddingLeft: 20
+  },
+  sectionCodeNone: {
+    color: color.light_gray,
+    fontSize: 16
+  }
+};
+
 export const UnconnectedOwnedSectionsTable = OwnedSectionsTable;
 
 export default connect((state, ownProps) => ({
-  sectionRows: getSectionRows(state, ownProps.sectionIds)
+  sectionRows: getSectionRows(state, ownProps.sectionIds),
+  isRtl: state.isRtl
 }))(OwnedSectionsTable);

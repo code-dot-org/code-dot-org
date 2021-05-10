@@ -1,0 +1,11 @@
+{
+  "func": "setMirrorXEach",
+  "category": "Groups",
+  "paletteParams": [
+    "dir"
+  ],
+  "params": [
+    "-1"
+  ],
+  "modeOptionName": "*.setMirrorXEach"
+}

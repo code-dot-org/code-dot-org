@@ -1,0 +1,21 @@
+---
+lt:
+  data:
+    variable_names:
+      actor: veikėjas
+      counter: skaitiklis
+      height: aukštis
+      honey: medus
+      left: kairėn
+      length: n
+      name: pavadinimas
+      nectar: nektaras
+      points: taškai
+      random: atsitiktinis
+      repeat: kartok
+      right: dešinėn
+      score: rezultatas
+      size: dydis
+      speed: greitis
+      wizard: burtininkas
+      x: x

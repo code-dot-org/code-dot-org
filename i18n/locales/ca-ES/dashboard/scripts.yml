@@ -2261,6 +2261,8 @@ ca:
               display_name: Binari
             csf_digcit:
               display_name: Ciutadania digital
+            lessonGroup-6:
+              display_name: Ciutadania digital
         coursee-2021:
           description_audience: 'De 8 a 12 anys'
           lessons:
@@ -2270,7 +2272,7 @@ ca:
               name: Composició de cançons
           lesson_groups:
             ramp_up:
-              display_name: Bucles
+              display_name: Bucles imbricats
             csf_digcit:
               display_name: Ciutadania digital
             csf_nested_loops:
@@ -2288,13 +2290,21 @@ ca:
             csf_digcit:
               display_name: Ciutadania digital
             csf_variables:
-              display_name: Variables
+              display_name: Per bucles
             csf_for_loops:
               display_name: Per bucles
+            lessonGroup-8:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: eliminar
+            lessonGroup-7:
+              display_name: Ciutadania digital
         express-2021:
           lessons:
             Dance Party:
               key: Festa de ball
+              name: Festa de ball
+            lesson-1:
               name: Festa de ball
           lesson_groups:
             csf_loops:
@@ -2319,3 +2329,35 @@ ca:
               display_name: Introducció
             lessonGroup-3:
               display_name: Variables
+            variables:
+              display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introducció
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Esdeveniments
+              name: Esdeveniments
+            Conditionals:
+              key: Condicionals
+              name: Condicionals
+            Functions:
+              key: Funcions
+              name: Funcions
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Per bucles
+              name: Per bucles
+            Sprite Lab:
+              key: Laboratori de personatges
+              name: Laboratori de personatges
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introducció
+            Introduction:
+              display_name: Introducció

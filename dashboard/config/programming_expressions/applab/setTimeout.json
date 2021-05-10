@@ -1,0 +1,16 @@
+{
+  "func": "setTimeout",
+  "category": "Control",
+  "type": "either",
+  "paletteParams": [
+    "callback",
+    "ms"
+  ],
+  "params": [
+    "function() {\n  \n}",
+    "1000"
+  ],
+  "allowFunctionDrop": {
+    "0": true
+  }
+}

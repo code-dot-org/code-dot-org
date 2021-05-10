@@ -1,0 +1,36 @@
+name 'OPD-K5 CSTeachingLearning1'
+skip_dialog true
+markdown <<MARKDOWN
+# CS Teaching Practices
+**Total Suggested Time:**
+
+This lesson highlights both CS teaching practices *and* student practices that support students in learning CS. Let's begin with first learning about CS teaching practices.
+
+The following Pedagogical Approaches to Curriculum values inform teaching CS practices that support learning CS in equitable and inclusive ways.
+
+## Role of the Teacher (Lead Learner)
+* The teacher will act as the lead learner, “I may not know the answer, but I know that together we can figure it out.”
+* Let the lesson activity expose the concept to students instead of lecturing or first offering an explanation.
+	* This can look like a teacher sharing they don't know everything about a CS concept during a lesson.
+
+
+## Discovery and Inquity
+* The curriculum is designed for students to explore concepts and build their own understanding through lesson activities.  
+* Students (and teachers) do not need prior experience to learn CS concepts and engage with the course content.
+	* This can look like a teacher engaging students with guiding questions during the warm up of the lesson instead of an  a direct explanation.
+    * This can also look like a teacher encouraging students to engage with the main activity of the lesson before asking questions about CS concepts.
+
+## The Classroom Community
+* Lessons allow for building a classroom community where students are almost always communicating, solving problems, and creating things as a classroom.
+* Building this type of learning community leads to active learning and an inclusive classroom culture with opportunities for all students to share and listen to ideas.
+	* This can look like a teacher providing all students with multiple opportunities to communicate their ideas throughout the lesson with other students.
+
+
+
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+
+    
+
+MARKDOWN

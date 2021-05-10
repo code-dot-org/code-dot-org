@@ -1,0 +1,7 @@
+{
+  "category": "Math",
+  "config": {
+    "docFunc": "codestudio_arithmeticOperator",
+    "func": "math_arithmetic"
+  }
+}

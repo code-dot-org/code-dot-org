@@ -983,6 +983,7 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+            '"speed"': швидкість
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} торкається {SPRITE2}"
         options:

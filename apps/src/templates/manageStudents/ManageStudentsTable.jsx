@@ -46,47 +46,6 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  headerName: {
-    width: '60%',
-    float: 'left',
-    marginRight: 5
-  },
-  headerIcon: {
-    width: '20%',
-    float: 'left'
-  },
-  button: {
-    float: 'left'
-  },
-  buttonWithMargin: {
-    marginRight: 5,
-    float: 'left'
-  },
-  verticalAlign: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  sectionCodeBox: {
-    float: 'right',
-    lineHeight: '30px'
-  },
-  sectionCode: {
-    marginLeft: 5,
-    color: color.teal,
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'copy'
-  },
-  noSectionCode: {
-    color: color.teal,
-    textDecoration: 'none',
-    cursor: 'pointer'
-  },
-  sectionCodeNotApplicable: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  }
-};
-
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
   SectionLoginType.picture,
@@ -824,6 +783,47 @@ class ManageStudentsTable extends Component {
     );
   }
 }
+
+const styles = {
+  headerName: {
+    width: '60%',
+    float: 'left',
+    marginRight: 5
+  },
+  headerIcon: {
+    width: '20%',
+    float: 'left'
+  },
+  button: {
+    float: 'left'
+  },
+  buttonWithMargin: {
+    marginRight: 5,
+    float: 'left'
+  },
+  verticalAlign: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  sectionCodeBox: {
+    float: 'right',
+    lineHeight: '30px'
+  },
+  sectionCode: {
+    marginLeft: 5,
+    color: color.teal,
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'copy'
+  },
+  noSectionCode: {
+    color: color.teal,
+    textDecoration: 'none',
+    cursor: 'pointer'
+  },
+  sectionCodeNotApplicable: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  }
+};
 
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
 

@@ -1,0 +1,23 @@
+---
+ka:
+  data:
+    variable_names:
+      actor: პერსონაჟი
+      counter: მრიცხველი
+      height: სიმაღლე
+      honey: თაფლი
+      left: მარცხნივ
+      length: სიგრძე
+      name: სახელი
+      nectar: ნექტარი
+      points: ქულები
+      random: შემთხვევითი
+      repeat: გაიმეორეთ
+      right: მარჯვნივ
+      score: ქულა
+      size: ზომა
+      speed: სიჩქარე
+      variable: ცვლადი
+      width: სიგრძე
+      wizard: ჯადოქარი
+      x: x

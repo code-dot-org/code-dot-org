@@ -187,6 +187,7 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
       gamelab_checkTouching:
         options:
           CONDITION:

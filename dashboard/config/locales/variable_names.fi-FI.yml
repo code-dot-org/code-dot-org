@@ -1,0 +1,29 @@
+---
+fi:
+  data:
+    variable_names:
+      Blue: Sininen
+      Green: Vihreä
+      Red: Punainen
+      actor: hahmo
+      cats: kaikki kissat
+      color: väri
+      counter: laskuri
+      dogs: kaikki koirat
+      height: korkeus
+      honey: hunaja
+      i: i
+      left: vasemmalle
+      length: pituus
+      name: nimi
+      nectar: mesi
+      points: pisteet
+      random: satunnainen
+      repeat: toista
+      right: oikealle
+      score: pisteet
+      size: koko
+      speed: nopeus
+      width: leveys
+      wizard: velho
+      x: x

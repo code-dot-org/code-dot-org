@@ -1,0 +1,6 @@
+name 'courseE_multi_dance_events_predict1_2021'
+question 'Look closely at the code below. What will happen after you click "Run"?'
+wrong 'Nothing will happen.', feedback: 'Incorrect. The alien will begin moving up and down on the screen.'
+wrong 'The alien will begin patrolling from right to left.', feedback: 'Incorrect. The alien will begin moving up and down on the screen.'
+right 'The alien will begin moving up and down on the screen.', feedback: 'Correct!'
+wrong 'The alien will disappear off the top of the screen.', feedback: 'Incorrect. The blue alien will begin moving up and down on the screen.'

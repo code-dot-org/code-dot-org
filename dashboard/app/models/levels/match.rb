@@ -76,4 +76,12 @@ class Match < DSLDefined
   def icon
     'fa fa-list-ul'
   end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        question: question
+      }
+    )
+  end
 end

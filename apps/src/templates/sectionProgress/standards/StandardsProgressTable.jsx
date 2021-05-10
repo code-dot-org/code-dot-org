@@ -16,24 +16,6 @@ export const COLUMNS = {
   LESSONS_COMPLETED: 3
 };
 
-const styles = {
-  mainColumnHeader: {
-    width: 80,
-    textAlign: 'center'
-  },
-  descriptionColumnHeader: {
-    textAlign: 'center'
-  },
-  mainColumnCell: {
-    width: 80,
-    textAlign: 'center'
-  },
-  descriptionCell: {
-    maxWidth: 470,
-    padding: '10px 10px 0px 10px'
-  }
-};
-
 class StandardsProgressTable extends Component {
   static propTypes = {
     style: PropTypes.object,
@@ -69,7 +51,7 @@ class StandardsProgressTable extends Component {
   getColumns = () => {
     let dataColumns = [
       {
-        property: 'concept',
+        property: 'category_description',
         header: {
           label: i18n.standardConcept(),
           props: {
@@ -90,7 +72,7 @@ class StandardsProgressTable extends Component {
         }
       },
       {
-        property: 'organization_id',
+        property: 'shortcode',
         header: {
           label: i18n.standardIdentifier(),
           props: {
@@ -205,6 +187,24 @@ class StandardsProgressTable extends Component {
     );
   }
 }
+
+const styles = {
+  mainColumnHeader: {
+    width: 80,
+    textAlign: 'center'
+  },
+  descriptionColumnHeader: {
+    textAlign: 'center'
+  },
+  mainColumnCell: {
+    width: 80,
+    textAlign: 'center'
+  },
+  descriptionCell: {
+    maxWidth: 470,
+    padding: '10px 10px 0px 10px'
+  }
+};
 
 export const UnconnectedStandardsProgressTable = StandardsProgressTable;
 

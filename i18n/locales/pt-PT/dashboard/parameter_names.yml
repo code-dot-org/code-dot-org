@@ -1,0 +1,15 @@
+pt:
+  data:
+    parameter_names:
+      actor: ator
+      color: cor
+      counter: contador
+      height: altura
+      honey: mel
+      left: para a esquerda
+      length: comprimento
+      min: mín
+      points: pontos
+      size: tamanho
+      speed: velocidade
+      width: largura

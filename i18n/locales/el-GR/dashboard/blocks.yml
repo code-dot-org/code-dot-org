@@ -970,6 +970,7 @@ el:
             '"x"': θέση x
             '"y"': θέση y
             '"direction"': κατεύθυνση κίνησης
+            '"speed"': ταχύτητα
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} Πινελιές {SPRITE2}"
         options:

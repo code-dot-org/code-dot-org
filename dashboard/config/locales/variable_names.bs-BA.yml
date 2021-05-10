@@ -1,0 +1,24 @@
+---
+bs:
+  data:
+    variable_names:
+      actor: lik
+      cats: sve mačke
+      counter: brojač
+      dogs: svi psi
+      height: visina
+      honey: med
+      i: i
+      left: lijevo
+      length: dužina
+      name: ime
+      nectar: nektar
+      random: slučajno odabran
+      repeat: ponovi
+      right: desno
+      score: bodovi
+      size: veličina
+      speed: brzina
+      width: širina
+      wizard: čarobnjak
+      x: x

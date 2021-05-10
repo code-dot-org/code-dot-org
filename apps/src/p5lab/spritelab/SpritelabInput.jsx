@@ -3,80 +3,10 @@ import {connect} from 'react-redux';
 import React from 'react';
 import memoize from 'memoize-one';
 import * as shapes from '../shapes';
+import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {PromptType, popPrompt} from './spritelabInputModule';
 import * as coreLibrary from './coreLibrary';
-
-const styles = {
-  container: {
-    background: 'rgba(34, 42, 51, 0.85)',
-    textAlign: 'center',
-    position: 'absolute',
-    bottom: 0,
-    width: '100%'
-  },
-  prompt: {
-    color: 'white',
-    fontSize: 15
-  },
-  promptText: {
-    lineHeight: '2em',
-    verticalAlign: 'middle',
-    display: 'inline-block',
-    maxWidth: 'calc(100% - 100px)',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap'
-  },
-  icon: {
-    color: 'white'
-  },
-  inputRow: {
-    padding: 0,
-    marginBottom: 2,
-    marginTop: 2
-  },
-  inputArea: {
-    width: 'calc(100% - 80px)',
-    margin: 0
-  },
-  submitButton: {
-    padding: 4,
-    margin: '2px 5px'
-  },
-  circle: {
-    position: 'absolute',
-    left: 10,
-    paddingRight: 8,
-    paddingTop: 6,
-    fontSize: 11
-  },
-  number: {
-    color: 'rgb(34, 42, 51)',
-    fontSize: 9
-  },
-  choiceButton: {
-    fontSize: 15,
-    padding: 5,
-    margin: '0px 8px',
-    maxWidth: 'calc(33% - 16px)',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap'
-  },
-  choiceSpriteContainer: {
-    padding: 0,
-    background: 'transparent',
-    border: '1px solid transparent'
-  },
-  choiceSpriteImage: {
-    margin: 0,
-    height: 32,
-    width: 32,
-    objectFit: 'contain',
-    opacity: 1
-  }
-};
 
 class SpritelabInput extends React.Component {
   static propTypes = {
@@ -108,6 +38,12 @@ class SpritelabInput extends React.Component {
     this.props.onPromptAnswer();
     coreLibrary.onPromptAnswer(variableName, value);
   }
+
+  onInputKeyDown = e => {
+    if (e.keyCode === KeyCodes.ENTER) {
+      this.onTextSubmit();
+    }
+  };
 
   onTextSubmit = () => {
     this.userInputSubmit(this.state.userInput);
@@ -152,6 +88,7 @@ class SpritelabInput extends React.Component {
             <input
               style={styles.inputArea}
               type="text"
+              onKeyDown={this.onInputKeyDown}
               onChange={event => this.setState({userInput: event.target.value})}
               value={this.state.userInput || ''}
               disabled={disabled}
@@ -230,6 +167,77 @@ class SpritelabInput extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    background: 'rgba(34, 42, 51, 0.85)',
+    textAlign: 'center',
+    position: 'absolute',
+    bottom: 0,
+    width: '100%'
+  },
+  prompt: {
+    color: 'white',
+    fontSize: 15
+  },
+  promptText: {
+    lineHeight: '2em',
+    verticalAlign: 'middle',
+    display: 'inline-block',
+    maxWidth: 'calc(100% - 100px)',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
+  },
+  icon: {
+    color: 'white'
+  },
+  inputRow: {
+    padding: 0,
+    marginBottom: 2,
+    marginTop: 2
+  },
+  inputArea: {
+    width: 'calc(100% - 80px)',
+    margin: 0
+  },
+  submitButton: {
+    padding: 4,
+    margin: '2px 5px'
+  },
+  circle: {
+    position: 'absolute',
+    left: 10,
+    paddingRight: 8,
+    paddingTop: 6,
+    fontSize: 11
+  },
+  number: {
+    color: 'rgb(34, 42, 51)',
+    fontSize: 9
+  },
+  choiceButton: {
+    fontSize: 15,
+    padding: 5,
+    margin: '0px 8px',
+    maxWidth: 'calc(33% - 16px)',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
+  },
+  choiceSpriteContainer: {
+    padding: 0,
+    background: 'transparent',
+    border: '1px solid transparent'
+  },
+  choiceSpriteImage: {
+    margin: 0,
+    height: 32,
+    width: 32,
+    objectFit: 'contain',
+    opacity: 1
+  }
+};
 
 export default connect(
   state => ({

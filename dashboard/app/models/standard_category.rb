@@ -17,4 +17,25 @@
 #  index_standard_categories_on_parent_category_id          (parent_category_id)
 #
 class StandardCategory < ApplicationRecord
+  include SerializedProperties
+
+  belongs_to :framework
+  belongs_to :parent_category, class_name: 'StandardCategory'
+
+  serialized_attrs %w(
+    description
+  )
+
+  def self.seed_all
+    Framework.all.each do |framework|
+      filename = "config/standards/#{framework.shortcode}_categories.csv"
+      CSV.foreach(filename, {headers: true}) do |row|
+        category = StandardCategory.find_or_initialize_by(framework: framework, shortcode: row['category'])
+        category.parent_category = StandardCategory.find_by!(shortcode: row['parent']) if row['parent']
+        category.category_type = row['type']
+        category.description = row['description']
+        category.save! if category.changed?
+      end
+    end
+  end
 end

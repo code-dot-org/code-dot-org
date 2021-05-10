@@ -993,6 +993,7 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
+            '"speed"': Geschwindigkeit
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} berührt {SPRITE2}"
         options:

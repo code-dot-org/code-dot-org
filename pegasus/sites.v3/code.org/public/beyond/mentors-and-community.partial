@@ -1,0 +1,218 @@
+---
+title: Mentorships and Community
+video_player: true
+theme: responsive
+social:
+  "og:title": "CS Journeys Resources: Mentorship and community"
+  "og:description": "Find support and guidance on your CS Journey"
+  "og:image": "/images/csjourneys/og-mentorships.jpg"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:title": "CS Journeys Resources: Mentorship and community"
+  "twitter:description": "Find support and guidance on your CS Journey"
+  "twitter:image": "/images/csjourneys/og-mentorships.jpg"
+---  
+<a id="top"></a>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Mentorships and Community</h1>
+<p>Mentors and communities can support you on your CS Journey in a number of ways — they can provide guidance and support, and connect you to opportunities and resources like networking events, internship and job opportunities, and professional development.</p>
+
+<ul>
+  <li><a href="#native-students">For Native American students</a></li>
+  <li><a href="#black-students">For Black students</a></li>
+  <li><a href="#hispanic-latino-students">For Hispanic / Latino/a/x students</a></li>
+  <li><a href="#youngwomen">For young women</a></li>
+  <li><a href="#allstudents">For all students</a></li>
+</ul>
+
+<br>
+
+
+<a id="native-students"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Native American students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="aises" href="http://www.aises.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/aises.png" alt="AISES logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="aises" href="http://www.aises.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>American Indian Science & Engineering Society</strong></h3></a>
+  <p>Membership includes networking and career development opportunities, events, internship and scholarship opportunities, exclusive job board access, and a national conference. Membership is free for pre-college and college students.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="natives-in-tech" href="https://nativesintech.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/natives-in-tech.png" alt="Natives in Tech logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="natives-in-tech" href="https://nativesintech.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Natives in Tech</strong></h3></a>
+  <p>Online community, yearly conference, and opportunities to collaborate on projects.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="black-students"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Black students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="nsbe" href="http://www.nsbe.org/home.aspx" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/nsbe.png" alt="NSBE logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="nsbe" href="http://www.nsbe.org/home.aspx" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>National Society of Black Engineers</strong></h3></a>
+  <p>Membership includes tutorial programs, group study sessions, high school/junior high outreach programs, technical seminars and workshops, a national communications network, banquets, an annual national convention, and more.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="blackgirlscode" href="https://www.blackgirlscode.com/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/black_girls_code.png" alt="Black Girls CODE logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="blackgirlscode" href="https://www.blackgirlscode.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Black Girls CODE</strong></h3></a>
+  <p>Workshops and after-school programs for young girls of color. Operates in select states.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="hispanic-latino-students"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For Hispanic / Latino/a/x students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="shpe" href="https://shpe.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/shpe.png" alt="SHPE logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="shpe" href="https://shpe.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Society of Hispanic Professionals</strong></h3></a>
+  <p>Membership includes events for students and professionals at all levels, access to cybersecurity courses and certifications, professional development webinars and courses, reading groups, and more.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="technolochicas" href="https://technolochicas.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/technolochicas.png" alt="TECHNOlochicas logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="technolochicas" href="https://technolochicas.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>TECHNOLOchicas</strong></h3></a>
+  <p>TECHNOLOchicas Ambassadors serve as role models in their communities to inspire the future generation of tech innovators.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="youngwomen"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For young women</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="builtbygirls" href="https://www.builtbygirls.com/about-wave" target="_blank">
+  <img style="width: 8%; float: left; margin-top: 1%; margin-right: 6%" src="/images/beyond/built-by-girls.png" alt="Built By Girls logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="builtbygirls" href="https://www.builtbygirls.com/about-wave" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Built By Girls WAVE</strong></h3></a>
+  <p>During this three-month mentorship, each Advisee receives personal support from a dedicated professional who will show you the career possibilities and help you develop the valuable skills needed to land your first job or internship.</p>
+  <p><i>Application period: Rolling</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="girlswhocode-loops" href="https://girlswhocode.com/programs/college-loops" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/girls_who_code.png" alt="Girls Who Code logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="girlswhocode-loops" href="https://girlswhocode.com/programs/college-loops" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Girls Who Code College Loops</strong></h3></a>
+  <p>College Loops are university-level networks for college-aged women interested in tech to support one another and help each other persist and succeed in the field. College Loops build belonging and community through weekly meetings during the school year. Find a College Loop near you by visiting <a href="https://girlswhocode/locations" target="_blank">girlswhocode.com/locations</a></p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="rewritingthecode" href="https://rewritingthecode.org/bridge-program/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/rtc.png" alt="Rewriting the Code logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="rewritingthecode" href="https://rewritingthecode.org/bridge-program/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Rewriting the Code</strong></h3></a>
+  <p>The High School Bridge program connects rising college freshmen with a community of peers. Also includes technical training, career pathway exploration, and mentorships.</p>
+  <p><i>Application period: April-May</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="swe" href="https://swe.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/swe.png" alt="SWE logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="swe" href="https://swe.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Society of Women Engineers</strong></h3></a>
+  <p>Membership includes training and development programs, networking opportunities, scholarships, and outreach and advocacy activities.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="systers" href="https://anitab.org/our-communities/systers/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/anitab.png" alt="AnitaB.org logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="systers" href="https://anitab.org/our-communities/systers/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Systers (AnitaB.org)</strong></h3></a>
+  <p>Email community of women in technical computing roles. Members gain support by networking, sharing advice and experiences, and collaborating on various projects.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="allstudents"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">For all students</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+
+<a class="linktag" id="acm" href="https://www.acm.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/association_for_computing_machinery.png" alt="ACM logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="acm" href="https://www.acm.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Association for Computing Machinery</strong></h3></a>
+  <p>ACM membership offers resources to help you shape the future – with lifelong learning programs, publications providing original research and practical content, special interest groups and local chapters to meet peers, delve deeper into technical areas, and leadership opportunities on stimulating projects.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="codepath" href="https://codepath.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/codepath.png" alt="CodePath logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="codepath" href="https://codepath.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>CodePath.org</strong></h3></a>
+  <p>CodePath transforms computer science education for women and underrepresented minorities across over 200 colleges and universities. By working closely with partners like Andreessen Horowitz, Cognizant, Facebook, Microsoft, and Walmart, we offer supplemental CS courses and career services to create successful pathways for students to enter and prosper in tech. To learn more, visit <a href="http://www.codepath.org/" target="_blank">www.codepath.org</a>.</p>
+  <p><i>Application period: Varies</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="ieee" href="https://www.ieee.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/ieee.png" alt="IEEE logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="ieee" href="https://www.ieee.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Institute of Electrical and Electronics Engineers</strong></h3></a>
+  <p>Membership includes networking opportunities, job and internship opportunities, local events, and a national conference.</p>
+  <p><i>Application period: Join anytime</i></p>
+</div>
+<div style="clear:both"></div>
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>

@@ -2615,6 +2615,8 @@ kk:
               display_name: Бинарлы
             csf_digcit:
               display_name: Сандық Азаматтық
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
         coursee-2021:
           lessons:
             Conditionals:
@@ -2623,7 +2625,7 @@ kk:
               name: Ән Жазу
           lesson_groups:
             ramp_up:
-              display_name: Ілмек
+              display_name: Кіріккен Циклдер
             csf_digcit:
               display_name: Сандық Азаматтық
             csf_nested_loops:
@@ -2645,9 +2647,15 @@ kk:
             csf_digcit:
               display_name: Сандық Азаматтық
             csf_variables:
-              display_name: Айнымалылар
+              display_name: For ілмектері
             csf_for_loops:
               display_name: For ілмектері
+            lessonGroup-8:
+              display_name: Айнымалылар
+            lessonGroup-9:
+              display_name: жою
+            lessonGroup-7:
+              display_name: Сандық Азаматтық
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2672,3 +2680,36 @@ kk:
               display_name: Кіріспе
             lessonGroup-3:
               display_name: Айнымалылар
+            variables:
+              display_name: Айнымалылар
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Кіріспе
+            Loops:
+              key: Ілмек
+              name: Ілмек
+            Events:
+              key: Шаралар
+              name: Шаралар
+            Conditionals:
+              key: Шарттар
+              name: Шарттар
+            Functions:
+              key: Функциялар
+              name: Функциялар
+            Variables:
+              key: Айнымалылар
+              name: Айнымалылар
+            For Loops:
+              key: For ілмектері
+              name: For ілмектері
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Кіріспе
+            Introduction:
+              display_name: Кіріспе

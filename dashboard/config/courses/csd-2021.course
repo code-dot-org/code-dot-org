@@ -11,6 +11,22 @@
   "properties": {
     "has_numbered_units": true,
     "version_year": "2021",
-    "family_name": "csd"
-  }
+    "family_name": "csd",
+    "has_verified_resources": true
+  },
+  "resources": [
+    {
+      "name": "Getting Started with CSD",
+      "url": "https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview",
+      "key": "getting_started_with_csd",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "getting_started_with_csd"
+      }
+    }
+  ],
+  "student_resources": [
+
+  ]
 }

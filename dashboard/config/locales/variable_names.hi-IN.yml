@@ -1,0 +1,30 @@
+---
+hi:
+  data:
+    variable_names:
+      Blue: नीला
+      Green: हरा
+      Red: लाल
+      actor: अभिनेता
+      cats: सभी बिल्लियां
+      color: रंग
+      counter: काउंटर
+      dogs: सभी कुत्ते
+      height: ऊंचाई
+      honey: शहद
+      i: i
+      left: बाएं
+      length: लंबाई
+      name: नाम
+      nectar: मधुरस
+      points: अंक
+      random: यादृच्छिक
+      repeat: दोहराएँ
+      right: सही
+      score: स्कोर
+      size: आकार
+      speed: गति
+      variable: चर / वेरीयबल
+      width: चौड़ाई
+      wizard: जादूगर
+      x: x

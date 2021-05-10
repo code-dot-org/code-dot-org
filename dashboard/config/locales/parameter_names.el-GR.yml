@@ -1,0 +1,18 @@
+---
+el:
+  data:
+    parameter_names:
+      actor: ηθοποιός
+      color: χρώμα
+      counter: μετρητής
+      height: ύψος
+      honey: μέλι
+      left: αριστερά
+      length: μήκος
+      min: ελάχιστο
+      points: πόντοι
+      radius: ακτίνα
+      sides: πλευρές
+      size: μέγεθος
+      speed: ταχύτητα
+      width: πλάτος

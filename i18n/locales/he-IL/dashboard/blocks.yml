@@ -973,6 +973,7 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+            '"speed"': מהירות
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} נוגע ב {SPRITE2}"
         options:

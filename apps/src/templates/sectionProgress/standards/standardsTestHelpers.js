@@ -86,27 +86,24 @@ const teacherSections = {
 export const standardsData = [
   {
     id: 16,
-    organization: 'CSTA',
-    organization_id: '1A-IC-17',
+    shortcode: '1A-IC-17',
     description: 'Work respectfully and responsibly with others online.',
-    concept: 'Impacts of Computing',
+    category_description: 'Impacts of Computing',
     lesson_ids: [662, 663]
   },
   {
     id: 17,
-    organization: 'CSTA',
-    organization_id: '1A-IC-18',
+    shortcode: '1A-IC-18',
     description: '"Keep login information private',
-    concept: 'Impacts of Computing',
+    category_description: 'Impacts of Computing',
     lesson_ids: [662, 663]
   },
   {
     id: 4,
-    organization: 'CSTA',
-    organization_id: '1A-AP-11',
+    shortcode: '1A-AP-11',
     description:
       'Decompose (break down) the steps needed to solve a problem into a precise sequence of instructions.',
-    concept: 'Algorithms & Programming',
+    category_description: 'Algorithms & Programming',
     lesson_ids: [663, 664, 665, 666, 667, 669, 670, 671, 672, 673]
   }
 ];

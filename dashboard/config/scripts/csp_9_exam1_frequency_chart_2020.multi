@@ -3,7 +3,7 @@ editor_experiment ''
 wrong 'Pens are a better writing tool than pencils'
 wrong 'More people use pens than pencils'
 wrong 'The number of pens sold has increased slowly over time'
-right 'At any point in time there are typically more people searching for the word \"pen\" than \"pencil\"'
+right 'At any point in time there are typically more people searching for the word "pen" than "pencil"'
 
 
 
@@ -11,4 +11,18 @@ markdown <<MARKDOWN
 ![](https://images.code.org/c7bdbc45a7642867eea1357de4826b6f-image-1583551097971.57.27 PM.png)
 
 The chart above shows the frequency of searches for the words "pencil" and "pen" over a 5 year period. Which of the following is the best interpretation of the chart above?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** The facts of the matter are related to searches. The other options are either opinions or would require more data than what is shown in the graph.
+
+Students practiced distinguishing between describing what the data shows and offering an informed opinion about why that might be the case in  [Lesson 1 - Learning From Data](https://curriculum.code.org/csp-20/unit9/1/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+* DAT-2.A: Describe what information can be extracted from data.
+:::
+
 MARKDOWN

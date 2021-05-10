@@ -1,0 +1,6 @@
+{
+  "func": "Math.random",
+  "category": "Math",
+  "type": "value",
+  "docFunc": "mathRandom"
+}

@@ -1,0 +1,31 @@
+ko:
+  data:
+    variable_names:
+      Blue: 파란색
+      Green: 녹색
+      Red: 빨간색
+      actor: 캐릭터
+      birds: 새들
+      cats: 모든 고양이
+      color: 색깔
+      counter: counter
+      dogs: 모든 개
+      height: '높이:'
+      honey: 꿀
+      i: i
+      left: 왼쪽으로
+      length: length
+      name: 맵 이름
+      nectar: 꽃꿀의 양
+      points: 점수
+      random: random(랜덤)
+      repeat: 반복
+      right: 오른쪽으로
+      score: 점수
+      shout: 소리지름
+      size: 크기
+      speed: 스피드
+      variable: 변수
+      width: 너비
+      wizard: 마법사
+      x: x

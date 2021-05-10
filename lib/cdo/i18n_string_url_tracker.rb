@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+require 'cdo/redis'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
@@ -67,7 +67,9 @@ class I18nStringUrlTracker
     url = normalize_url(url)
     return unless string_key && url && source
 
-    add_to_buffer(string_key, url, source)
+    # Reverse the URL encoding on special characters so the human readable characters are logged.
+    logged_url = CGI.unescape(url)
+    add_to_buffer(string_key, logged_url, source)
   end
 
   private
@@ -121,7 +123,7 @@ class I18nStringUrlTracker
       buffer[url].each_key do |string_key|
         buffer[url][string_key].each do |source|
           # record the string : url association.
-          FirehoseClient.instance.put_record(
+          RedisClient.instance.put_record(
             :i18n,
             {url: url, string_key: string_key, source: source}
           )
