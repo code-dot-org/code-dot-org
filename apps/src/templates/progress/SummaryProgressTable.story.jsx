@@ -111,8 +111,8 @@ export default storybook => {
                     id: '-1',
                     icon: 'fa-lock',
                     name: 'Reviews unavailable at this time',
-                    status: LevelStatus.locked,
-                    isLocked: false,
+                    status: LevelStatus.not_tried,
+                    isLocked: true,
                     url: '',
                     levelNumber: 3
                   }
@@ -215,7 +215,6 @@ export default storybook => {
                 fakeLevels(3),
                 fakeLevels(4).map(level => ({
                   ...level,
-                  status: LevelStatus.locked,
                   isLocked: true
                 })),
                 fakeLevels(2)

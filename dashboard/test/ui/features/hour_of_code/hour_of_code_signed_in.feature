@@ -15,6 +15,7 @@ Scenario:
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
   Then I navigate to the course page for "hourofcode"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress for stage 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/lessons/2/levels/2?noautoplay=true"
@@ -37,28 +38,35 @@ Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as att
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
   And I wait for the page to fully load
+  And I wait until jQuery Ajax requests are finished
   When element "#runButton" is visible
   Then I verify progress in the header of the current page is "attempted" for level 6
 
 Scenario: Async progress write followed by a stale read
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I wait for the page to fully load
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I reload the page
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I wait for 3 seconds
   And I navigate to the course page for "hourofcode"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress for stage 1 level 20 is "not_tried"
 
 Scenario: Progress on the server that is not on the client
   Given I am on "http://studio.code.org/hoc/20?noautoplay=true"
   And I wait for the page to fully load
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "not_tried" for level 20
   And I press "runButton"
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/20?noautoplay=true"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "attempted" for level 20
   And I navigate to the course page for "hourofcode"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress for stage 1 level 20 is "attempted"
 
 @no_mobile
