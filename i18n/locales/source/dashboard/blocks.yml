@@ -1800,6 +1800,30 @@ en:
         text: x coordinate of [SPRITE][0]
       Mikelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      Outbreak_beginCongregating:
+        text: monsters begin congregating
+      Outbreak_beginQuarantining:
+        text: monsters begin quarantining when sick
+      Outbreak_beginSocialDistancing:
+        text: monsters begin social distancing
+      Outbreak_beginWandering:
+        text: monsters begin wandering
+      Outbreak_beginWearingMasks:
+        text: monsters begin wearing masks
+      Outbreak_layoutSprites:
+        text: layout monsters as a [FORMAT][0]
+        options:
+          FORMAT:
+            '"grid"': grid
+            '"border"': border
+            '"row"': row
+            '"random"': random
+      Outbreak_setSpeed:
+        text: set monster speed to [VAL][0]
+      Outbreak_setupOutbreak:
+        text: setup Monster Town with[COUNT][0]monsters
+      Outbreak_stopMoving:
+        text: monsters stop moving
       RyanLab_moveForward:
         text: move forward
       RyanLab_readSound:

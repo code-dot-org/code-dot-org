@@ -50,7 +50,7 @@ export default class NpsSurveyBlock extends React.Component {
 
   componentDidMount() {
     $.ajax({
-      url: '/form/nps_survey/show',
+      url: '/form/nps_survey/configuration',
       type: 'get'
     }).done(result => {
       if (result) {
