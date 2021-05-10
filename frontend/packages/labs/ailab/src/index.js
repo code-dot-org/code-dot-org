@@ -8,7 +8,6 @@ import rootReducer, {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setSelectedTrainer,
   setInstructionsKeyCallback,
   setSaveStatus,
   setReserveLocation
@@ -70,11 +69,6 @@ const processMode = mode => {
         store.dispatch(setCurrentPanel("dataDisplayLabel"));
       }
       panelSet = true;
-    }
-
-    // Select a trainer immediately.
-    if (mode.hideSelectTrainer) {
-      store.dispatch(setSelectedTrainer(mode.hideSelectTrainer));
     }
 
     if (mode.randomizeTestData) {
