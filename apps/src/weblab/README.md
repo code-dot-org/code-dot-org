@@ -59,6 +59,6 @@ DCDO.set('disallowed_html_tags', ['div'])
 Usage rules for this flag:
 
 - Every value in the "disallowed_html_tags" array must be a string.
-- A tag is disallowed by its name. Examples: "div", "script", "span"
-- A single attribute is disallowed by "tag[attr]". Examples: "div[id]", "script[src]"
-- A single value of an attribute is disallowed by "tag[attr='value']". Examples: "div[id='do-not-use']", "script[src='/disallowed/path']"
+- A tag is disallowed by its name. Examples: `"div"`, `"script"`, `"span"`
+- A single attribute is disallowed by `"tag[attr]"`. Examples: `"div[id]"`, `"script[src]"`
+- A single value of an attribute is disallowed by `"tag[attr='value']"`. Examples: `"div[id='do-not-use']"`, `"script[src='/disallowed/path']"`
