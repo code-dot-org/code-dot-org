@@ -147,6 +147,10 @@ const prepareTrainingData = () => {
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "" && !isNaN(label));
+  /*
+  KNN uses the entire training dataset to build the model, thus we're setting
+  the training examples and labels prior to reserving test data.
+  */
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));
   /*
@@ -173,9 +177,7 @@ const prepareTrainingData = () => {
     while (numReserved < numToReserve) {
       let randomIndex = getRandomInt(trainingExamples.length - 1);
       accuracyCheckExamples.push(trainingExamples[randomIndex]);
-      trainingExamples.splice(randomIndex, 1);
       accuracyCheckLabels.push(trainingLabels[randomIndex]);
-      trainingLabels.splice(randomIndex, 1);
       numReserved++;
     }
   }

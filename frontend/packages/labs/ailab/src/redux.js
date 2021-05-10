@@ -21,7 +21,8 @@ import {
   ColumnTypes,
   MLTypes,
   TestDataLocations,
-  ResultsGrades
+  ResultsGrades,
+  REGRESSION_ERROR_TOLERANCE
 } from "./constants.js";
 
 // Action types
@@ -39,6 +40,7 @@ const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
 const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
+const SET_RESERVE_LOCATION = "SET_RESERVE_LOCATION";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
 const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
 const SET_ACCURACY_CHECK_PREDICTED_LABELS =
@@ -57,6 +59,8 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
+const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 const SET_K_VALUE = "SET_K_VALUE";
 const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
 const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
@@ -131,6 +135,10 @@ export function setPercentDataToReserve(percentDataToReserve) {
   return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
 }
 
+export function setReserveLocation(reserveLocation) {
+  return { type: SET_RESERVE_LOCATION, reserveLocation };
+}
+
 export function setAccuracyCheckExamples(accuracyCheckExamples) {
   return { type: SET_ACCURACY_CHECK_EXAMPLES, accuracyCheckExamples };
 }
@@ -203,6 +211,14 @@ export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
+export function setHistoricResult(label, features, accuracy) {
+  return { type: SET_HISTORIC_RESULT, label, features, accuracy };
+}
+
+export function setShowResultsDetails(show) {
+  return {type: SET_SHOW_RESULTS_DETAILS, show};
+}
+
 export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
 }
@@ -247,9 +263,9 @@ const initialState = {
   // Possible values for saveStatus: notStarted, started, success, and failure.
   saveStatus: "notStarted",
   columnRefs: {},
-  kValue: null,
   historicResults: [],
-  showResultsDetails: false
+  showResultsDetails: false,
+  kValue: null
 };
 
 // Reducer
@@ -365,6 +381,12 @@ export default function rootReducer(state = initialState, action) {
       percentDataToReserve: action.percentDataToReserve
     };
   }
+  if (action.type === SET_RESERVE_LOCATION) {
+   return {
+     ...state,
+     reserveLocation: action.reserveLocation
+   };
+ }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
     return {
       ...state,
@@ -540,12 +562,6 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
-  if (action.type === SET_K_VALUE) {
-    return {
-      ...state,
-      kValue: action.kValue
-    };
-  }
   if (action.type === SET_HISTORIC_RESULT) {
     return {
       ...state,
@@ -565,6 +581,13 @@ export default function rootReducer(state = initialState, action) {
       showResultsDetails: action.show
     };
   }
+  if (action.type === SET_K_VALUE) {
+    return {
+      ...state,
+      kValue: action.kValue
+    };
+  }
+
   return state;
 }
 
@@ -824,7 +847,7 @@ export function getAccuracyRegression(state) {
   let grades = [];
   const maxMin = getRange(state, state.labelColumn);
   const range = Math.abs(maxMin.max - maxMin.min);
-  const errorTolerance = range * 0.03;
+  const errorTolerance = range * REGRESSION_ERROR_TOLERANCE/100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     const diff = Math.abs(
@@ -1197,7 +1220,7 @@ export function getPanelButtons(state) {
       ? null
       : isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
-      : { panel: "continue", text: "Continue" };
+      : { panel: "continue", text: "Finish" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
     next = isPanelAvailable(state, "modelSummary")
