@@ -79,7 +79,7 @@ function saveTrainedModelStub(data, response) {
   response({ id: 303, status: "success" });
 }
 
-function setInstructionsKeyStub(instructionsKey) {
+function setInstructionsKeyStub(instructionsKey, options) {
   document.getElementById("instructions").innerText = instructionsKey;
 }
 
