@@ -175,7 +175,9 @@ class ProgressBubble extends React.Component {
               {level.letter && !smallBubble && (
                 <span id="test-bubble-letter"> {level.letter} </span>
               )}
-              {levelIcon === 'lock' && <FontAwesome icon="lock" />}
+              {levelIcon === 'lock' && !smallBubble && (
+                <FontAwesome icon="lock" />
+              )}
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />
               )}
