@@ -10,18 +10,23 @@ module Foorm
       form = Foorm::Form.all.detect {|f| f.key == params[:form_key]}
       return head :bad_request unless form
 
-      survey_data = parse_survey_data
+      unless valid_survey_data?(params)
+        return render status: :bad_request, json: {error: 'Must provide a name and value for any survey variables.'}
+      end
+      survey_data = parse_survey_data(params)
 
-      # Admin only page, so return any errors in plain text.
       begin
+        # Leaving optional "kind" blank in form stores a blank string without intervention.
+        # Store nil in that case.
         Foorm::SimpleSurveyForm.create!(
-          kind: params[:kind],
+          kind: params[:kind] == '' ? nil : params[:kind],
           path: params[:path],
           form_name: form.name,
           form_version: form.version,
           allow_multiple_submissions: params[:allow_multiple_submissions] == '1',
           survey_data: survey_data
         )
+      # Admin only page, so return any errors in plain text.
       rescue StandardError => e
         return render status: :bad_request, json: {error: e.message}
       end
@@ -120,20 +125,31 @@ module Foorm
       )
     end
 
-    def parse_survey_data
+    # Check that for any provided survey data,
+    # we have both a key and a value.
+    def valid_survey_data?(params)
+      (0..2).to_a.each do |id|
+        key = "survey_data_key_#{id}".to_sym
+        value = "survey_data_value_#{id}".to_sym
+
+        return false if params[key].blank? != params[value].blank?
+      end
+
+      true
+    end
+
+    # For any provided survey data, reshape into a single hash with the keys
+    # representing variable names and the values to be inserted into the survey.
+    # eg, if params: {survey_data_key_1: 'course', survey_data_value_1: 'CS Principles'}
+    # returns: {'course' => 'CS Principles'}
+    def parse_survey_data(params)
       survey_data = Hash.new
 
       (0..2).to_a.each do |id|
-        key = "survey_data_name_#{id}".to_sym
+        key = "survey_data_key_#{id}".to_sym
         value = "survey_data_value_#{id}".to_sym
 
-        unless params[key].empty?
-          if !params[value].empty?
-            survey_data[params[key]] = params[value]
-          else
-            raise 'grrr, no value for key'
-          end
-        end
+        survey_data[params[key]] = params[value] unless params[key].blank?
       end
 
       survey_data

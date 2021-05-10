@@ -10,6 +10,7 @@
   for the list of URLs currently in use.
 
 = form_with model: @foorm_simple_survey_form, url: foorm_simple_survey_forms_path do |f|
+  %h2 Survey Options
   .field
     = f.label :path, 'Path suffix where survey will appear (studio.code.org/form/your_path_here). Lower case letters, numbers, and underscores only.'
     = f.text_field :path
@@ -33,8 +34,8 @@
     leave these fields blank.
   .field
     - (0..2).to_a.each do |id|
-      = f.label "survey_data_name_#{id}", 'Name', style: 'display: inline'
-      = f.text_field "survey_data_name_#{id}"
+      = f.label "survey_data_key_#{id}", 'Name', style: 'display: inline'
+      = f.text_field "survey_data_key_#{id}", style: 'margin-right: 10px'
       = f.label "survey_data_value_#{id}", 'Value', style: 'display: inline'
       = f.text_field "survey_data_value_#{id}"
       %br
