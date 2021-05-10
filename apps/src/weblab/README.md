@@ -41,3 +41,24 @@ A Weblab project consists of 3 parts:
 Example: If my project contains an `index.html` file and a `style.css` file, then the `cdo-v3-files` S3 entry for my project would contain 3 files: `manifest.json` (with my project's metadata), `index.html` (with my HTML code), and `style.css` (with my CSS code). There would also be a corresponding record in the Pegasus `storage_apps` table.
 
 All of the pieces above use S3's versioning system, which allows us to use our version history feature to point to any version previously saved in S3.
+
+### Disallowing HTML Tags, Attributes, and/or Values
+
+We use a `DCDO` flag to disallow any HTML tag, attribute, and/or value in Weblab. This means we can update this flag on production and see the resulting change immediately without a code change or deploy. This also means that the list of disallowed HTML elements is environment-specific.
+
+The flag is named `disallowed_html_tags`. Example usage:
+
+```bash
+# View currently disallowed tags.
+DCDO.get('disallowed_html_tags', [])
+
+# Set currently disallowed tags to not allow the <div> tag.
+DCDO.set('disallowed_html_tags', ['div'])
+```
+
+Usage rules for this flag:
+
+- Every value in the "disallowed_html_tags" array must be a string.
+- A tag is disallowed by its name. Examples: "div", "script", "span"
+- A single attribute is disallowed by "tag[attr]". Examples: "div[id]", "script[src]"
+- A single value of an attribute is disallowed by "tag[attr='value']". Examples: "div[id='do-not-use']", "script[src='/disallowed/path']"
