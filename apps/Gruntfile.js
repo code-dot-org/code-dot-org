@@ -732,8 +732,8 @@ describe('entry tests', () => {
     'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
     'foorm/libraries/editor':
       './src/sites/studio/pages/foorm/libraries/editor.js',
-    'foorm/simple_survey/new':
-      './src/sites/studio/pages/foorm/simple_survey/new.js'
+    'foorm/simple_survey_forms/show':
+      './src/sites/studio/pages/foorm/simple_survey_forms/show.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included

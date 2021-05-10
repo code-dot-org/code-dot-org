@@ -141,11 +141,10 @@ class UserLevel < ApplicationRecord
     self.unlocked_at = is_locked ? nil : Time.now
   end
 
-  # this is the "locked" value we return to the client. if the lesson isn't
-  # lockable or we are an authorized teacher, we always return `false`.
+  # this is the "locked" value we return to the client.
+  # if the lesson isn't lockable, we always return `false`.
   def show_as_locked?(stage)
     return false unless stage.lockable?
-    return false if user.authorized_teacher?
     locked
   end
 
