@@ -9,57 +9,6 @@ import color from '../util/color';
 import {connect} from 'react-redux';
 import styleConstants from '@cdo/apps/styleConstants';
 
-const styles = {
-  headerBannerContainer: {
-    minHeight: 260,
-    maxWidth: styleConstants['content-width']
-  },
-  headerBannerContainerShort: {
-    minHeight: 140,
-    maxWidth: styleConstants['content-width']
-  },
-  bannerHeading: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
-  },
-  bannerHeadingShort: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    fontSize: 32,
-    lineHeight: '40px'
-  },
-  bannerSubHeading: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16
-  },
-  bannerSubHeadingResponsive: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16
-  },
-  bannerDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16
-  },
-  bannerDescriptionResponsive: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16
-  }
-};
-
 class HeaderBanner extends React.Component {
   static propTypes = {
     headingText: PropTypes.string,
@@ -152,6 +101,57 @@ class HeaderBanner extends React.Component {
     }
   }
 }
+
+const styles = {
+  headerBannerContainer: {
+    minHeight: 260,
+    maxWidth: styleConstants['content-width']
+  },
+  headerBannerContainerShort: {
+    minHeight: 140,
+    maxWidth: styleConstants['content-width']
+  },
+  bannerHeading: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white,
+    fontSize: 32,
+    lineHeight: '40px'
+  },
+  bannerHeadingShort: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white,
+    fontSize: 32,
+    lineHeight: '40px'
+  },
+  bannerSubHeading: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.white,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  },
+  bannerSubHeadingResponsive: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  },
+  bannerDescription: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.white,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  },
+  bannerDescriptionResponsive: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

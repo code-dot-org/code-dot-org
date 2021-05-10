@@ -14,11 +14,12 @@
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:54 UTC",
+    "serialized_at": "2021-05-10 17:32:24 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -569,19 +570,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d5f9994e-0aec-4d0f-a93a-adb8a3b91d33",
-        "lesson.key": "Exploring Web Pages",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "key": "64d14911-ea01-4c27-97e0-cb87aa740df8",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "64d14911-ea01-4c27-97e0-cb87aa740df8",
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021"
@@ -1600,7 +1588,8 @@
       "key": "aeb0ec32-aea0-4bfd-82de-d37b71b2075c",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.\n\nDirect students to the \"Sample Web Pages\" level on Code Studio.\n\n\n\n\n\n\n    \n\n#### Exploring Websites"
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.\n\nDirect students to the \"Sample Web Pages\" level on Code Studio.\n\n\n\n\n\n\n    \n\n",
+        "progression_name": "Sample Personal Web Pages"
       },
       "seeding_key": {
         "activity_section.key": "aeb0ec32-aea0-4bfd-82de-d37b71b2075c",
@@ -1608,21 +1597,11 @@
       }
     },
     {
-      "key": "1cb675d2-8d11-4d69-810f-9e6e89a69908",
+      "key": "1265c20c-95ab-4c34-b8fc-b3532b088415",
       "position": 3,
       "properties": {
-        "description": "#### Sample Websites"
-      },
-      "seeding_key": {
-        "activity_section.key": "1cb675d2-8d11-4d69-810f-9e6e89a69908",
-        "lesson_activity.key": "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3"
-      }
-    },
-    {
-      "key": "1265c20c-95ab-4c34-b8fc-b3532b088415",
-      "position": 4,
-      "properties": {
         "description": "This activity guide asks students to consider why people make personal web pages and what sorts of interests can be expressed on them.",
+        "name": "Exploring Websites",
         "tips": [
           {
             "type": "teachingTip",
@@ -1637,7 +1616,7 @@
     },
     {
       "key": "13a35f1c-deed-4a3d-9dd2-be2b7f6e5333",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "* What is this person sharing with the world?\r\n* Why is it important to them?\r\n\r\nEncourage students to be as detailed as possible when brainstorming the purposes of these sites."
       },
@@ -1648,7 +1627,7 @@
     },
     {
       "key": "5f55a18c-a9cc-4cbb-96ea-55eb630fdf3f",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "**Share:** Once everyone has had a chance to brainstorm about their sites, give students a chance to share out their thoughts."
       },
@@ -1659,7 +1638,7 @@
     },
     {
       "key": "c1050c6d-1379-4f81-ab69-6f00bbfb363a",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "**Discuss:** Give students an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.",
         "tips": [
@@ -1684,17 +1663,6 @@
       "seeding_key": {
         "activity_section.key": "d621ad85-b16c-458c-8473-abe27aef3168",
         "lesson_activity.key": "d5f9994e-0aec-4d0f-a93a-adb8a3b91d33"
-      }
-    },
-    {
-      "key": "0ca4137c-b4bf-45d3-af15-ff3800a98935",
-      "position": 1,
-      "properties": {
-        "progression_name": "Sample Personal Web Pages"
-      },
-      "seeding_key": {
-        "activity_section.key": "0ca4137c-b4bf-45d3-af15-ff3800a98935",
-        "lesson_activity.key": "64d14911-ea01-4c27-97e0-cb87aa740df8"
       }
     },
     {
@@ -1863,7 +1831,7 @@
       "key": "470c3268-f70d-43ac-831f-b37c3103531b",
       "position": 6,
       "properties": {
-        "description": "**Questions to consider with the video:\n- Why are HTML tags useful?\n- What does the paragraph tag do?",
+        "description": "**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?",
         "progression_name": "Video: Intro to Web Lab - Part 2",
         "tips": [
           {
@@ -1919,7 +1887,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Debugging:**\nAs students begin to debug, this is a great time to emphasize a positive culture around debugging. This is a central skill that students will develop throughout the course. Emphasize that debugging is a normal part of the programming process, and that all programmers, even experts get bugs. More information can be found in the \"Debugging Guide\" linked on the CS Discoveries curriculum page at https://curriculum.code.org/csd."
+            "markdown": "**Debugging:**\nAs students begin to debug, this is a great time to emphasize a positive culture around debugging. This is a central skill that students will develop throughout the course. Emphasize that debugging is a normal part of the programming process, and that all programmers, even experts get bugs. More information can be found in the \"Debugging Guide\" linked on the CS Discoveries curriculum page at https://studio.code.org/courses/csd."
           }
         ]
       },
@@ -2081,7 +2049,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Pair Programming:** Pair programming is practiced in education and in industry.  Students who pair program are more confident in their abilities and are more likely to continue to study computer science. This practice is most effective if it is introduced early and the rules for switching partners are enforced by the teacher.  You can read more about Pair Programming in the Curriculum Guide linked in the CS Discoveries curriculum page at [https://curriculum.code.org/csd](https://curriculum.code.org/csd).\r\n"
+            "markdown": "**Pair Programming:** Pair programming is practiced in education and in industry.  Students who pair program are more confident in their abilities and are more likely to continue to study computer science. This practice is most effective if it is introduced early and the rules for switching partners are enforced by the teacher.  You can read more about Pair Programming in the Curriculum Guide linked in the CS Discoveries curriculum page at https://studio.code.org/courses/csd.\n"
           }
         ]
       },
@@ -2196,7 +2164,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "[pull-right]\n\n![](https://images.code.org/b945453baae76206d68f443de4cc07bc-teacher panel.jpg)\n\n[/pull-right]\n\n**Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side. Students who have successfully answered the question will have a green bubble. Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.\n\n"
+            "markdown": "[pull-right]\n\n![](https://images.code.org/b945453baae76206d68f443de4cc07bc-teacher panel.jpg)\n\n[/pull-right]\n\n**Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side. Students who have successfully answered the question will have a green bubble. Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer. [Click Here to learn more about using the teacher panel with students.](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-)"
           }
         ]
       },
@@ -5719,7 +5687,7 @@
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "0ca4137c-b4bf-45d3-af15-ff3800a98935"
+        "activity_section.key": "aeb0ec32-aea0-4bfd-82de-d37b71b2075c"
       },
       "level_keys": [
         "CSD Web Sample Pages_2021"
@@ -8099,7 +8067,7 @@
         "lesson.key": "Exploring Web Pages",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "0ca4137c-b4bf-45d3-af15-ff3800a98935"
+        "activity_section.key": "aeb0ec32-aea0-4bfd-82de-d37b71b2075c"
       }
     },
     {

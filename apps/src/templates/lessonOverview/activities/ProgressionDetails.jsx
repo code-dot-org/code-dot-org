@@ -5,16 +5,6 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import LevelDetailsDialog from './LevelDetailsDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  progressionBox: {
-    margin: '10px, 0px',
-    padding: '0px 10px 10px 10px'
-  },
-  description: {
-    marginTop: 10
-  }
-};
-
 export default class ProgressionDetails extends Component {
   static propTypes = {
     section: PropTypes.object
@@ -90,3 +80,13 @@ export default class ProgressionDetails extends Component {
     );
   }
 }
+
+const styles = {
+  progressionBox: {
+    margin: '10px, 0px',
+    padding: '0px 10px 10px 10px'
+  },
+  description: {
+    marginTop: 10
+  }
+};

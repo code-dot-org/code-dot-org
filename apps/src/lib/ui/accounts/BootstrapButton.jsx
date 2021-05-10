@@ -8,12 +8,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const styles = {
-  button: {
-    margin: 0
-  }
-};
-
 const BUTTON_TYPE = {
   DANGER: 'danger',
   SUBMIT: 'submit'
@@ -69,3 +63,9 @@ export default class BootstrapButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    margin: 0
+  }
+};

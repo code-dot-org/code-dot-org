@@ -11,80 +11,6 @@ import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesE
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import _ from 'lodash';
 
-const styles = {
-  levelToken: {
-    fontSize: 13,
-    position: 'relative',
-    background: '#eee',
-    borderRadius: borderRadius,
-    margin: `${tokenMargin}px 0`
-  },
-  reorder: {
-    fontSize: 16,
-    display: 'table-cell',
-    background: '#ddd',
-    border: '1px solid #bbb',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
-    padding: '7px 15px',
-    borderTopLeftRadius: borderRadius,
-    borderBottomLeftRadius: borderRadius,
-    cursor: 'ns-resize'
-  },
-  levelTokenName: {
-    padding: 7,
-    display: 'table-cell',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    width: '100%',
-    borderTop: '1px solid #ddd',
-    borderBottom: '1px solid #ddd',
-    cursor: 'pointer'
-  },
-  tag: {
-    color: 'white',
-    background: color.purple,
-    padding: '3px 5px',
-    lineHeight: '12px',
-    borderRadius: 5,
-    marginLeft: 3
-  },
-  remove: {
-    fontSize: 14,
-    display: 'table-cell',
-    color: 'white',
-    background: '#c00',
-    border: '1px solid #a00',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
-    padding: '7px 13px',
-    borderTopRightRadius: borderRadius,
-    borderBottomRightRadius: borderRadius,
-    cursor: 'pointer'
-  },
-  edit: {
-    fontSize: 14,
-    display: 'table-cell',
-    color: 'white',
-    background: color.teal,
-    border: '1px solid #00adbc',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
-    padding: '7px 13px',
-    cursor: 'pointer'
-  },
-  levelArea: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  titleAndBubble: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  levelTitle: {
-    marginLeft: 5
-  }
-};
-
 /**
  * Component for editing puzzle dots with one or more level variants.
  */
@@ -223,6 +149,80 @@ class LevelToken extends Component {
     );
   }
 }
+
+const styles = {
+  levelToken: {
+    fontSize: 13,
+    position: 'relative',
+    background: '#eee',
+    borderRadius: borderRadius,
+    margin: `${tokenMargin}px 0`
+  },
+  reorder: {
+    fontSize: 16,
+    display: 'table-cell',
+    background: '#ddd',
+    border: '1px solid #bbb',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 15px',
+    borderTopLeftRadius: borderRadius,
+    borderBottomLeftRadius: borderRadius,
+    cursor: 'ns-resize'
+  },
+  levelTokenName: {
+    padding: 7,
+    display: 'table-cell',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    width: '100%',
+    borderTop: '1px solid #ddd',
+    borderBottom: '1px solid #ddd',
+    cursor: 'pointer'
+  },
+  tag: {
+    color: 'white',
+    background: color.purple,
+    padding: '3px 5px',
+    lineHeight: '12px',
+    borderRadius: 5,
+    marginLeft: 3
+  },
+  remove: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: 'white',
+    background: '#c00',
+    border: '1px solid #a00',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    borderTopRightRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
+    cursor: 'pointer'
+  },
+  edit: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: 'white',
+    background: color.teal,
+    border: '1px solid #00adbc',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    cursor: 'pointer'
+  },
+  levelArea: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  titleAndBubble: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  levelTitle: {
+    marginLeft: 5
+  }
+};
 
 export default connect(
   state => ({}),

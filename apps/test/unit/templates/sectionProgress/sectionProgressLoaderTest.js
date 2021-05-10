@@ -34,8 +34,9 @@ const serverProgressResponse = {
     100: {},
     101: {
       '2000': {
-        status: 'locked',
-        result: 1001,
+        locked: true,
+        status: 'not_tried',
+        result: -1,
         paired: false,
         time_spent: undefined,
         last_progress_at: 12345
@@ -74,8 +75,9 @@ const firstServerProgressResponse = {
     100: {},
     101: {
       '2000': {
-        status: 'locked',
-        result: 1001,
+        status: 'not_tried',
+        locked: true,
+        result: -1,
         paired: false,
         time_spent: undefined,
         last_progress_at: 12345
@@ -133,8 +135,9 @@ const fullExpectedResult = {
       101: {
         '2000': {
           pages: null,
-          status: 'locked',
-          result: 1001,
+          status: 'not_tried',
+          locked: true,
+          result: -1,
           paired: false,
           timeSpent: undefined,
           lastTimestamp: 12345
@@ -142,6 +145,7 @@ const fullExpectedResult = {
         '2001': {
           pages: null,
           status: 'perfect',
+          locked: false,
           result: 30,
           paired: true,
           timeSpent: 12345,
@@ -152,6 +156,7 @@ const fullExpectedResult = {
         '2000': {
           pages: null,
           status: 'perfect',
+          locked: false,
           result: 100,
           paired: false,
           timeSpent: 6789,

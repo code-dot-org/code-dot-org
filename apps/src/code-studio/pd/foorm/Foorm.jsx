@@ -4,12 +4,6 @@ import React from 'react';
 import {Button} from 'react-bootstrap';
 import Spinner from '../components/spinner';
 
-const styles = {
-  statusMessage: {
-    textAlign: 'center'
-  }
-};
-
 const SPINNER_WAIT_MS = 2000;
 
 export default class Foorm extends React.Component {
@@ -175,3 +169,9 @@ export default class Foorm extends React.Component {
     );
   }
 }
+
+const styles = {
+  statusMessage: {
+    textAlign: 'center'
+  }
+};

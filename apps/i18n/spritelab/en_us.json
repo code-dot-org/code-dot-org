@@ -84,9 +84,10 @@
   "noPropChangeKeyPressed": "You pressed a key but the sprite didn't change. Make sure the `change size` block is under the event block.",
   "didntPressKey": "Make sure to press an arrow key after pressing Run. You can click the orange buttons under the play area or press the keys on your keyboard.",
   "eventsOneChange": "Your sprite changed, but only once. Test your program by pressing the key a few times, and make sure to use the correct block. \n <xml><block type=\"gamelab_changePropBy\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_10_1\"</title></block></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>",
-  "behaviorsIncreased": "The number of behaviors for your sprite went up. To stop an old behavior, use this block. \n <xml><block type=\"gamelab_removeBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_18_1\"</title></block></value></block></xml>",
+  "behaviorsIncreased": "Your sprite didn't stop any behaviors. To stop an old behavior, use this block. \n <xml><block type=\"gamelab_removeBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"creature_18_1\"</title></block></value></block></xml>",
   "eventsWrongBehaviors": "Your sprite should have exactly 3 behaviors. Try moving the `stops everything` block to a different place in your code.",
   "spinBothWays": "Your sprite needs to spin both left and right, at different times.",
+  "moveBothWays": "Your sprite should move one way, and then the other.",
   "didntMoveUp": "Your sprite did not move up.",
   "didntMoveDown": "Your sprite did not move down.",
   "didntMoveLeft": "Your sprite did not move left.",
@@ -167,5 +168,9 @@
   "atLeastOneSpriteStillMoving": "At least one of your sprites was still moving. Make sure you have a `stops everything` block for each sprite.",
   "spritesNotTouch": "Make sure your sprites touch at some point.",
   "addWhenTouchesEvent": "You need to have a `when touches` block for any of your sprites that will touch. \n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"pink alien\"</title></block></value></block></xml>",
-  "changeSpriteBehaviorsWhenTouch": "A sprite needs to change behavior when two sprites touch."
+  "changeSpriteBehaviorsWhenTouch": "A sprite needs to change behavior when two sprites touch.",
+  "moveSpriteLocation": "Your sprites are in the same location. Move one of your sprites using the `location` block. <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">'{\"x\":200,\"y\":200}'</title></block></xml>",
+  "createDraggableSprite": "Your pet's food sprite needs to begin the `being draggable` behavior. <xml><block type=\"gamelab_addBehaviorSimple\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"face_carrot_1\"</title></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_draggable\"></block></value></block></xml>",
+  "createNotDraggableSPrite": "Only the food sprite should be draggable. Remove the behavior from your pet.",
+  "moveSpriteByDrag": "Your code looks great! To drag your sprite, click on it while the program runs."
 }
