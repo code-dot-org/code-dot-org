@@ -282,7 +282,7 @@ const getPagesProgress = serverProgress => {
       const pageProgress =
         (pageResult && levelProgressFromResult(pageResult)) ||
         levelProgressFromStatus(LevelStatus.not_tried);
-      pageProgress.locked = serverProgress.locked;
+      pageProgress.locked = serverProgress.locked || false;
       return pageProgress;
     });
   }
