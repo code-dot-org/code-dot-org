@@ -17,6 +17,8 @@ export default class SpriteUpload extends React.Component {
     spriteAvailability: '',
     category: '',
     currentCategories: [],
+    aliases: [],
+    metadata: '',
     uploadStatus: {
       success: null,
       message: ''
@@ -86,6 +88,25 @@ export default class SpriteUpload extends React.Component {
 
   handleAvailabilityChange = event => {
     this.setState({spriteAvailability: event.target.value, category: ''});
+  };
+
+  handleAliasChange = event => {
+    let aliases = event.target.value;
+    aliases = aliases.split(',');
+    let processedAliases = aliases.map(alias => alias.trim());
+    this.setState({aliases: processedAliases});
+  };
+
+  generateMetadata = () => {
+    let image = document.getElementById('sprite-image-preview');
+    let metadata = {};
+    metadata['name'] = this.state.filename;
+    metadata['aliases'] = this.state.aliases;
+    metadata['frameCount'] = 1;
+    metadata['frameSize'] = {x: image.width, y: image.height};
+    metadata['looping'] = true;
+    metadata['frameDelay'] = 2;
+    this.setState({metadata: JSON.stringify(metadata)});
   };
 
   render() {
@@ -161,9 +182,24 @@ export default class SpriteUpload extends React.Component {
           <br />
           <label>
             <h3>Image Preview:</h3>
-            <img src={filePreviewURL} />
+            <img id="sprite-image-preview" src={filePreviewURL} />
           </label>
           <br />
+          <label>
+            <h3>Enter the aliases for this sprite</h3>
+            <p>
+              Separate aliases by commas. Example: "peach, stonefruit,
+              delicious"
+            </p>
+            <input type="text" onChange={this.handleAliasChange} />
+          </label>
+          <button type="button" onClick={this.generateMetadata}>
+            Generate Sprite Metadata
+          </button>
+          <h3>Metadata JSON</h3>
+          <p>{this.state.metadata}</p>
+          <br />
+
           {!uploadButtonDisabled && (
             <button type="submit">Upload to Library</button>
           )}
