@@ -15,8 +15,12 @@ class PeerReviewsController < ApplicationController
   end
 
   def dashboard
-    plc_courses = Plc::Course.all.
-      select {|course| course.plc_course_units.map(&:script).any?(&:peer_reviews_to_complete?)}
+    plc_courses = Plc::Course.all.select do |course|
+      course.
+        plc_course_units.
+        map(&:script).
+        any?(&:peer_reviews_to_complete?)
+    end
 
     @course_list = plc_courses.map {|course| [course.name, course.id]}
 
