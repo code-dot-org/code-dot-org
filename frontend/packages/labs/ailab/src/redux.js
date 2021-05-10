@@ -456,7 +456,10 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_CURRENT_PANEL) {
     if (state.instructionsKeyCallback) {
       const options = {};
-      if (!state.viewedPanels.includes(action.currentPanel)) {
+      if (
+        !(state.mode && state.mode.hideInstructionsOverlay) &&
+        !state.viewedPanels.includes(action.currentPanel)
+      ) {
         options.showOverlay = true;
         state.viewedPanels.push(action.currentPanel);
       }

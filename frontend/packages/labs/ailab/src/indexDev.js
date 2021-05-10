@@ -17,7 +17,8 @@ const sampleModes = {
   "preload-metadata": {
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
-    hideChooseReserve: true
+    hideChooseReserve: true,
+    hideInstructionsOverlay: true
   },
 
   "intro-ai-tacos": {
@@ -80,7 +81,8 @@ function saveTrainedModelStub(data, response) {
 }
 
 function setInstructionsKeyStub(instructionsKey, options) {
-  document.getElementById("instructions").innerText = instructionsKey;
+  document.getElementById("instructions").innerText =
+    instructionsKey + (!options.showOverlay ? " (no overlay)" : "");
 }
 
 // Initialize the app.
