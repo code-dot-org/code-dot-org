@@ -83,6 +83,13 @@ class ManageStudentsActionsCell extends Component {
       });
   };
 
+  onSelectStudentForDelete = () => {
+    this.setState({multiDelete: true});
+    this.props.editStudent(this.props.id, {
+      delete: true
+    });
+  };
+
   onRequestDelete = () => {
     this.setState({deleting: true});
   };
@@ -133,6 +140,9 @@ class ManageStudentsActionsCell extends Component {
     const {id, sectionId} = this.props;
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.onAdd();
+    } else if (this.state.multiDelete) {
+      // row was selected for multi-delete but save is happening on individual row
+      this.setState({deleting: true});
     } else {
       this.props.saveStudent(id);
       firehoseClient.putRecord(
@@ -264,6 +274,16 @@ class ManageStudentsActionsCell extends Component {
               color={Button.ButtonColor.gray}
               text={i18n.cancel()}
             />
+            <div style={{display: 'flex'}}>
+              <input
+                type="checkbox"
+                disabled={this.props.disabled}
+                checked={this.state.multiDelete}
+                onChange={this.onSelectStudentForDelete}
+                style={{marginRight: '5px'}}
+              />
+              Remove
+            </div>
           </div>
         )}
         {rowType === RowType.ADD && (
@@ -322,6 +342,9 @@ export default connect(
     },
     setSection(section) {
       dispatch(setSection(section));
+    },
+    editStudent(id, studentInfo) {
+      dispatch(editStudent(id, studentInfo));
     }
   })
 )(ManageStudentsActionsCell);

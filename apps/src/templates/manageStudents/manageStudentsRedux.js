@@ -289,6 +289,7 @@ export const saveAllStudents = () => {
 
     // Currently, every update is an individual call to the server.
     const currentlyEditedData = Object.values(state.editingData);
+    console.log(currentlyEditedData);
     let studentsToSave = currentlyEditedData.filter(
       student => student.rowType === RowType.STUDENT
     );
