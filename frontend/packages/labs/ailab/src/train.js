@@ -148,7 +148,13 @@ const prepareTrainingData = () => {
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "" && !isNaN(label));
   /*
-  Select X% of examples and corresponding labels from the training set to reserve for a post-training accuracy calculation. The accuracy check examples and labels are excluded from the training set when the model is trained and saved to state separately to test the model's accuracy.
+  KNN uses the entire training dataset to build the model, thus we're setting
+  the training examples and labels prior to reserving test data.
+  */
+  store.dispatch(setTrainingExamples(trainingExamples));
+  store.dispatch(setTrainingLabels(trainingLabels));
+  /*
+  Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
   */
   const percent = updatedState.percentDataToReserve / 100;
   const numToReserve = parseInt(trainingExamples.length * percent);
@@ -171,14 +177,10 @@ const prepareTrainingData = () => {
     while (numReserved < numToReserve) {
       let randomIndex = getRandomInt(trainingExamples.length - 1);
       accuracyCheckExamples.push(trainingExamples[randomIndex]);
-      trainingExamples.splice(randomIndex, 1);
       accuracyCheckLabels.push(trainingLabels[randomIndex]);
-      trainingLabels.splice(randomIndex, 1);
       numReserved++;
     }
   }
-  store.dispatch(setTrainingExamples(trainingExamples));
-  store.dispatch(setTrainingLabels(trainingLabels));
   store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
   store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };
