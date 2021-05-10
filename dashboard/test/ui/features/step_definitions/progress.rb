@@ -28,6 +28,7 @@ def verify_progress(selector, test_result)
   end
   steps %{
     And I wait until element "#{selector}" is in the DOM
+    And I wait until jQuery Ajax requests are finished
     And element "#{selector}" has css property "background-color" equal to "#{background_color}"
     And element "#{selector}" has css property "border-top-color" equal to "#{border_color}"
   }
