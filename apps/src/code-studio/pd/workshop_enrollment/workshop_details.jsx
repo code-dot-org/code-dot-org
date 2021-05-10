@@ -50,9 +50,16 @@ export default class WorkshopDetails extends React.Component {
           <strong>Location:</strong>
         </div>
         <div className="span2">
-          {this.props.workshop.location_name}
-          <br />
-          {this.props.workshop.location_address}
+          {this.props.workshop.virtual
+            ? 'Virtual'
+            : this.props.workshop.location_name}
+          {!this.props.workshop.virtual &&
+            this.props.workshop.location_address && (
+              <>
+                <br />
+                {this.props.workshop.location_address}
+              </>
+            )}
         </div>
       </div>
     );
