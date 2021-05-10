@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-10 17:32:24 UTC",
+    "serialized_at": "2021-05-10 21:45:59 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -2528,16 +2528,60 @@
       "key": "71a885a3-e705-4367-8d43-5711b5af7e8f",
       "position": 2,
       "properties": {
-        "progression_name": "Social Sleuth",
+        "progression_name": "Social Sleuth"
+      },
+      "seeding_key": {
+        "activity_section.key": "71a885a3-e705-4367-8d43-5711b5af7e8f",
+        "lesson_activity.key": "03d57f25-1cca-49af-8487-43c3a7efceb8"
+      }
+    },
+    {
+      "key": "e9ffa025-70b3-4fdf-a55e-b9324e0470f2",
+      "position": 3,
+      "properties": {
+        "description": "[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Step 1:** Students look through all of the provided social media pages on Code Studio. The pages represent several unique individuals, each of whom has an account on three social media platforms. They are distributed as follows (do not share this with students):",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Social Sleuth:**\n\n**Step 1:** Students look through all of the provided social media pages on Code Studio. The pages represent several unique individuals, each of whom has an account on three social media platforms. They are distributed as follows (do not share this with students):\n\n**Tip:**\n\nStudents are asked to choose two users from the available profiles, but if you are short on time, you can ask students to complete just one of the footprints.\n\n**Step 2:** Once they've looked through the pages, students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another).\n\n**Share:** Have the class share the digital footprints that they developed through the activity.\n\n**Discuss:**\n\n- Which information was most difficult to find?\n- Which details were innocuous on their own, but revealed private information when combined with other details?\n- How does this make you think differently about what you choose to post online?"
+            "markdown": "Students are asked to choose two users from the available profiles, but if you are short on time, you can ask students to complete just one of the footprints."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "71a885a3-e705-4367-8d43-5711b5af7e8f",
+        "activity_section.key": "e9ffa025-70b3-4fdf-a55e-b9324e0470f2",
+        "lesson_activity.key": "03d57f25-1cca-49af-8487-43c3a7efceb8"
+      }
+    },
+    {
+      "key": "2487e526-f969-4440-bea4-f970fa05528d",
+      "position": 4,
+      "properties": {
+        "description": "**Step 2:** Once they've looked through the pages, students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another)."
+      },
+      "seeding_key": {
+        "activity_section.key": "2487e526-f969-4440-bea4-f970fa05528d",
+        "lesson_activity.key": "03d57f25-1cca-49af-8487-43c3a7efceb8"
+      }
+    },
+    {
+      "key": "f4eb6112-53c1-43fb-825c-8b064cb9af9f",
+      "position": 5,
+      "properties": {
+        "description": "**Share:** Have the class share the digital footprints that they developed through the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "f4eb6112-53c1-43fb-825c-8b064cb9af9f",
+        "lesson_activity.key": "03d57f25-1cca-49af-8487-43c3a7efceb8"
+      }
+    },
+    {
+      "key": "d8c2fd98-00cb-4da5-865a-517396312eec",
+      "position": 6,
+      "properties": {
+        "description": "**Discuss:**\n\n- Which information was most difficult to find?\n- Which details were innocuous on their own, but revealed private information when combined with other details?\n- How does this make you think differently about what you choose to post online?"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8c2fd98-00cb-4da5-865a-517396312eec",
         "lesson_activity.key": "03d57f25-1cca-49af-8487-43c3a7efceb8"
       }
     },

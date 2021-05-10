@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-06 20:12:16 UTC",
+    "serialized_at": "2021-05-10 20:49:35 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -4859,10 +4859,344 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "object",
+      "word": "Object",
+      "definition": "Created from a class; can know things and do things",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "key": "class",
+      "word": "Class",
+      "definition": "A user-defined blueprint from which objects are created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "key": "compile",
+      "word": "Compile",
+      "definition": "A program that translates human-readable source code into computer-executable machine code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "compile"
+      }
+    },
+    {
+      "key": "syntax",
+      "word": "Syntax",
+      "definition": "Rules for how code must be entered in order for our computer to understand",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "syntax"
+      }
+    },
+    {
+      "key": "syntax_error",
+      "word": "Syntax Error",
+      "definition": "Mistakes in the code, such as typos and misspelling, that do not follow the syntax rules of a given programming language",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "syntax_error"
+      }
+    },
+    {
+      "key": "command",
+      "word": "Command",
+      "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "command"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "boolean",
+      "word": "Boolean",
+      "definition": "A data type that can either be true or false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "key": "conditional_statement",
+      "word": "Conditional Statement",
+      "definition": "A statement that only runs under certain conditions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "key": "logic_error",
+      "word": "Logic Error",
+      "definition": "When code runs, but does not do what we expect it to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logic_error"
+      }
+    },
+    {
+      "key": "constructor",
+      "word": "Constructor",
+      "definition": "A block of code in the class that tells the computer how to create a new object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "key": "initialize",
+      "word": "Initialize",
+      "definition": "Create a new object with a specific name and set of starting characteristics",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "key": "constructor_signature",
+      "word": "Constructor Signature",
+      "definition": "The first line of the constructor which includes the constructor name and lists the object's characteristics that can be specified when it is initialized",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "key": "formal_parameter",
+      "word": "Formal Parameter",
+      "definition": "The name of the characteristics in the constructor signature",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "key": "actual_parameter",
+      "word": "Actual Parameter",
+      "definition": "The value given to a characteristic when initializing an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "Getting the best outcome with the least amount of waste",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "key": "code_review",
+      "word": "Code Review",
+      "definition": "A feedback cycle in which programmers help improve one another’s code by leaving questions and comments",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code_review"
+      }
+    },
+    {
+      "key": "inheritance",
+      "word": "Inheritance",
+      "definition": "Relationship between classes to share and reuse code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "key": "method",
+      "word": "Method",
+      "definition": "Has a name and organizes calls to other commands; another word for command",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "key": "edge_case",
+      "word": "Edge Case",
+      "definition": "Situations in a program that produce a different outcome and require special error handling",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "key": "pixel",
+      "word": "Pixel",
+      "definition": "The smallest unit of a digital image. Digital images are made up of a grid of pixels.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pixel"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "compile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "syntax"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "syntax_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "command"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "logic_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "code_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "pixel"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
