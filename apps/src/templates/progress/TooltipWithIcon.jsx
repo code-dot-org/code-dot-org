@@ -4,19 +4,6 @@ import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
 import {DOT_SIZE} from './progressStyles';
 
-const styles = {
-  tooltip: {
-    lineHeight: DOT_SIZE + 'px'
-  },
-  tooltipIcon: {
-    paddingRight: 5,
-    paddingLeft: 5
-  },
-  tooltipAssessmentIcon: {
-    paddingLeft: 5
-  }
-};
-
 /**
  * A simple tooltip that contains an icon and text. To use, you must still associate
  * the tooltip id with the element you want to get this tooltip, ie.
@@ -47,3 +34,16 @@ export default class TooltipWithIcon extends Component {
     );
   }
 }
+
+const styles = {
+  tooltip: {
+    lineHeight: DOT_SIZE + 'px'
+  },
+  tooltipIcon: {
+    paddingRight: 5,
+    paddingLeft: 5
+  },
+  tooltipAssessmentIcon: {
+    paddingLeft: 5
+  }
+};

@@ -14,21 +14,6 @@ import {
 } from '@cdo/apps/code-studio/stageLockRedux';
 import {lessonType} from './progressTypes';
 
-const styles = {
-  main: {
-    marginTop: 5
-  },
-  buttonContainer: {
-    marginLeft: 15,
-    marginRight: 15
-  },
-  button: {
-    paddingLeft: 0,
-    paddingRight: 0,
-    width: '100%'
-  }
-};
-
 class StageLock extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
@@ -70,6 +55,21 @@ class StageLock extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    marginTop: 5
+  },
+  buttonContainer: {
+    marginLeft: 15,
+    marginRight: 15
+  },
+  button: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    width: '100%'
+  }
+};
 
 export const UnconnectedStageLock = StageLock;
 export default connect(

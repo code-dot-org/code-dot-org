@@ -51,11 +51,8 @@ class Pd::Workshop < ApplicationRecord
   serialized_attrs [
     'fee',
 
-    # Indicates that this workshop will be conducted virtually, which has the
-    # following effects in our system:
-    #   - Ensures `suppress_email` is set (see below)
-    #     when it is left blank.
-    #   - Uses a different, virtual-specific post-workshop survey.
+    # Indicates that this workshop will be conducted virtually, which triggers
+    # a different, virtual-specific post-workshop survey.
     'virtual',
 
     # Allows a workshop to be associated with a third party
@@ -83,7 +80,6 @@ class Pd::Workshop < ApplicationRecord
   validate :subject_must_be_valid_for_course
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
-  validate :all_virtual_workshops_suppress_email
   validate :all_academic_year_workshops_suppress_email
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :friday_institute_workshops_must_be_virtual
@@ -114,12 +110,6 @@ class Pd::Workshop < ApplicationRecord
   def subject_must_be_valid_for_course
     unless (SUBJECTS[course] && SUBJECTS[course].include?(subject)) || (!SUBJECTS[course] && !subject)
       errors.add(:subject, 'must be a valid option for the course.')
-    end
-  end
-
-  def all_virtual_workshops_suppress_email
-    if virtual? && !suppress_email?
-      errors.add :properties, 'All virtual workshops must suppress email.'
     end
   end
 

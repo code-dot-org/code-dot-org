@@ -1113,9 +1113,9 @@ class Script < ApplicationRecord
   # 3. activity_section_position: position within the ActivitySection.
   # This method uses activity_section_position as the source of truth to set the
   # values of position and chapter on all script levels in the script.
-  def fix_script_level_positions(importing=false)
+  def fix_script_level_positions
     reload
-    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated || importing
+    raise 'cannot fix script level positions on non-migrated scripts' unless is_migrated
     prevent_legacy_script_levels_in_migrated_scripts
 
     chapter = 0
@@ -1263,12 +1263,14 @@ class Script < ApplicationRecord
     begin
       if Rails.application.config.levelbuilder_mode
         script = Script.find_by_name(script_name)
-        # Save in our custom Script DSL format. This is still what we're using currently to sync data
-        # across environments. The CPlat team is working on replacing it a new JSON-based approach.
+        # Save in our custom Script DSL format. This is how we currently sync
+        # data across environments for non-migrated scripts.
         script.write_script_dsl
 
-        # Also save in JSON format for "new seeding". This has not been launched yet for most scripts, but as part of
-        # pre-launch testing, we'll start generating these files in addition to the old .script files.
+        # Also save in JSON format for "new seeding". This is how we currently
+        # sync data across environments for migrated scripts. As part of
+        # pre-launch testing, we also generate these files for legacy scripts in
+        # addition to the old .script files.
         script.write_script_json
       end
       true

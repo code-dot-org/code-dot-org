@@ -24,38 +24,6 @@ import {
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 
-const styles = {
-  heading: {
-    marginBottom: 0
-  },
-  topRowContainer: {
-    display: 'flex',
-    alignItems: 'flex-end',
-    marginBottom: 10
-  },
-  chevronLink: {
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'flex-end'
-  },
-  icon: {
-    paddingRight: 5
-  },
-  toggle: {
-    margin: '0px 30px'
-  },
-  show: {
-    display: 'block'
-  },
-  hide: {
-    display: 'none'
-  },
-  studentTooltip: {
-    display: 'flex',
-    textAlign: 'center'
-  }
-};
-
 /**
  * Given a particular section, this component owns figuring out which script to
  * show progress for (selected via a dropdown), and querying the server for
@@ -208,6 +176,38 @@ class SectionProgress extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    marginBottom: 0
+  },
+  topRowContainer: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    marginBottom: 10
+  },
+  chevronLink: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'flex-end'
+  },
+  icon: {
+    paddingRight: 5
+  },
+  toggle: {
+    margin: '0px 30px'
+  },
+  show: {
+    display: 'block'
+  },
+  hide: {
+    display: 'none'
+  },
+  studentTooltip: {
+    display: 'flex',
+    textAlign: 'center'
+  }
+};
 
 export const UnconnectedSectionProgress = SectionProgress;
 

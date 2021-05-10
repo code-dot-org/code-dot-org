@@ -2,20 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-const styles = {
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4
-  },
-  checkbox: {
-    margin: '0 0 0 7px'
-  }
-};
-
 /**
  * Component which renders two input fields: a checkbox which controls whether the course/script
  * should be available in the dropdown on Teacher Dashboard, and a text field which controls whether
@@ -52,6 +38,20 @@ export default class VisibleAndPilotExperiment extends React.Component {
     );
   }
 }
+
+const styles = {
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4
+  },
+  checkbox: {
+    margin: '0 0 0 7px'
+  }
+};
 
 const VisibleInTeacherDashboard = props => (
   <label style={props.disabled ? {opacity: 0.5} : {}}>

@@ -20,7 +20,7 @@ Feature: Using the progress tab of the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I wait until element "#uitest-course-dropdown" contains text "All the Things! *"
+    And I wait until element "#uitest-course-dropdown" contains text "All the Things!"
 
     # Summary View
     And I wait until element ".uitest-summary-cell" is visible
