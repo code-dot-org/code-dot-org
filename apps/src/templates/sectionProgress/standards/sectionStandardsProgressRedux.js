@@ -36,19 +36,23 @@ const initialState = {
   studentLevelScoresByLesson: {}
 };
 
-function sortByOrganizationId(standardsByConcept) {
-  return _.orderBy(standardsByConcept, 'organization_id', 'asc');
+function sortByShortcode(standardsByCategory) {
+  return _.orderBy(standardsByCategory, 'shortcode', 'asc');
 }
 
 export default function sectionStandardsProgress(state = initialState, action) {
   if (action.type === SET_STANDARDS_DATA) {
-    const sortedByConcept = _.orderBy(action.standardsData, 'concept', 'asc');
-    const groupedStandards = _.orderBy(
-      _.groupBy(sortedByConcept, 'concept'),
-      'concept',
+    const sortedByCategory = _.orderBy(
+      action.standardsData,
+      'category_description',
       'asc'
     );
-    const sortedStandards = _.map(groupedStandards, sortByOrganizationId);
+    const groupedStandards = _.orderBy(
+      _.groupBy(sortedByCategory, 'category_description'),
+      'category_description',
+      'asc'
+    );
+    const sortedStandards = _.map(groupedStandards, sortByShortcode);
     return {
       ...state,
       standardsData: _.flatten(sortedStandards)

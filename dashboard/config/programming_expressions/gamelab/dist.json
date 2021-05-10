@@ -1,0 +1,17 @@
+{
+  "func": "dist",
+  "category": "Math",
+  "paletteParams": [
+    "x1",
+    "y1",
+    "x2",
+    "y2"
+  ],
+  "params": [
+    "0",
+    "0",
+    "100",
+    "100"
+  ],
+  "type": "value"
+}

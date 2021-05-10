@@ -79,7 +79,7 @@ ________________
 
 ## CS Discoveries and CS Principles Facilitator Support Documents
 
-- [6-12 Facilitator Handbook](https://docs.google.com/document/d/1DBP4mPMlW2b5dWjnkDZdGtX5hgLW3L1uREvi_JrNNoI/edit?usp=sharing) - Toolkit for CS Discoveries and CS Principles facilitators
+- [6-12 Facilitator Handbook](https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/preview) - Toolkit for CS Discoveries and CS Principles facilitators
 - [CS Discoveries Facilitator Landing Page](https://curriculum.code.org/plcsd/) - See full list of important resources and agendas for CS Discoveries Facilitators
 - [CS Principles Facilitator Landing Page](https://curriculum.code.org/plcsp/) - See full list of important resources and agendas for CS Principles Facilitators
 - <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit">6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated September 2019]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.

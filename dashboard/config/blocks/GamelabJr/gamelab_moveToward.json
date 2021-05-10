@@ -3,6 +3,7 @@
   "config": {
     "inline": false,
     "func": "moveToward",
+    "docFunc": "gamelab_moveToward",
     "blockText": "move {SPRITE} pixels {DISTANCE} toward {TARGET}",
     "args": [
       {

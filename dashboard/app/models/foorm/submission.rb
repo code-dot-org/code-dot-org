@@ -11,8 +11,10 @@
 #
 
 class Foorm::Submission < ApplicationRecord
+  include Pd::Foorm::Constants
+
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
-  has_one :misc_survey, foreign_key: :foorm_submission_id
+  has_one :simple_survey_submission, foreign_key: :foorm_submission_id
 
   belongs_to :form, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
 
@@ -20,7 +22,8 @@ class Foorm::Submission < ApplicationRecord
   #   - flattens matrix questions
   #   - returns readable answer, instead of a key representing a user's answer.
   def formatted_answers
-    question_answer_pairs = formatted_workshop_metadata
+    # First, grab associated PD-specific metadata for this submission (eg, workshop ID)
+    formatted_answers = formatted_workshop_metadata
 
     # Example of what parsed_answers looks like.
     # Note that matrix questions (eg, how_much_barrier_to_teaching_cs)
@@ -39,47 +42,49 @@ class Foorm::Submission < ApplicationRecord
     # }
     parsed_answers = JSON.parse(answers)
 
-    # Contains human readable questions, as well as answers
-    # (for non-free response questions).
-    # See FoormParser for the how this is structured.
-    general_parsed_questions = form.parsed_questions[:general][form.key]
-    facilitator_parsed_questions = form.parsed_questions[:facilitator] && form.parsed_questions[:facilitator][form.key]
-
-    parsed_questions = facilitator_parsed_questions ?
-                         general_parsed_questions.merge(facilitator_parsed_questions) :
-                         general_parsed_questions
-
-    parsed_answers.each do |question_id, answer|
-      if parsed_questions.keys.include?(question_id)
-
-        question_details = parsed_questions[question_id]
-
-        case question_details[:type]
-        when 'matrix'
-          choices = question_details[:columns]
-
-          answer.each do |matrix_question_id, matrix_question_answer|
-            key = Foorm::Form.get_matrix_question_id(question_id, matrix_question_id)
-            question_answer_pairs[key] = choices[matrix_question_answer]
-          end
-        when 'scale', 'text'
-          question_answer_pairs[question_id] = answer
-        when 'singleSelect'
-          choices = question_details[:choices]
-          question_answer_pairs[question_id] = choices[answer]
-        when 'multiSelect'
-          choices = question_details[:choices]
-          question_answer_pairs[question_id] = answer.map {|selected| choices[selected]}.compact.sort.join(', ')
-        end
-      else
-        # For any questions in the submission that aren't in the form,
-        # include them in the formatted submission with as-is.
-        # Main use cases are survey config variables (eg, workshop_course).
-        question_answer_pairs[question_id] = answer
-      end
+    # Then, merge in formatted versions of each answer in the submission.
+    parsed_answers.each do |question_name, answer|
+      formatted_answers.merge! get_formatted_answer(question_name, answer)
     end
 
-    question_answer_pairs
+    formatted_answers
+  end
+
+  # For a given question_name-answer key-value pair from a submission's answers,
+  # returns a hash with either a single key-value pair (for question types other than matrix) and a human readable response to a question,
+  # or a hash with multiple values (for matrix questions) with a human readable response to each sub-question.
+  # @param [String] question_name
+  # @param [String] answer the stored value representing a user's answer to a question (either a key that can be paired with a human readable answer, or the answer itself)
+  # @return [Hash] a human readable version of the answer(s) associated with a given question ID
+  def get_formatted_answer(question_name, answer)
+    question_details = form.get_question_details(question_name)
+
+    # If question isn't in the Form, return as-is.
+    # This is expected for metadata about the submission.
+    return {question_name => answer} if question_details.nil?
+
+    case question_details[:type]
+    when ANSWER_MATRIX
+      choices = question_details[:columns]
+
+      pairs = {}
+      answer.each do |matrix_question_id, matrix_question_answer|
+        key = Foorm::Form.get_matrix_question_id(question_name, matrix_question_id)
+        pairs[key] = choices[matrix_question_answer]
+      end
+      return pairs
+    when ANSWER_RATING, ANSWER_TEXT
+      return {question_name => answer}
+    when ANSWER_SINGLE_SELECT
+      choices = question_details[:choices]
+      return {question_name => choices[answer]}
+    when ANSWER_MULTI_SELECT
+      choices = question_details[:choices]
+      return {question_name => answer.map {|selected| choices[selected]}.compact.sort.join(', ')}
+    end
+
+    # Return blank hash if question_type not found
+    return {}
   end
 
   def formatted_workshop_metadata

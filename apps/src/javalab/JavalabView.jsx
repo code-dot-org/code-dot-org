@@ -2,34 +2,179 @@ import React from 'react';
 import JavalabConsole from './JavalabConsole';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
-import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {appendOutputLog} from './javalabRedux';
+import JavalabSettings from './JavalabSettings';
+import {appendOutputLog, setIsDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
-import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import TopInstructions from '@cdo/apps/templates/instructions/TopInstructions';
+import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
-const style = {
+class JavalabView extends React.Component {
+  static propTypes = {
+    handleVersionHistory: PropTypes.func.isRequired,
+    onMount: PropTypes.func.isRequired,
+    onRun: PropTypes.func.isRequired,
+    onContinue: PropTypes.func.isRequired,
+    onCommitCode: PropTypes.func.isRequired,
+    onInputMessage: PropTypes.func.isRequired,
+    suppliedFilesVersionId: PropTypes.string,
+    visualization: PropTypes.object.isRequired,
+
+    // populated by redux
+    isProjectLevel: PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    isDarkMode: PropTypes.bool.isRequired,
+    appendOutputLog: PropTypes.func,
+    setIsDarkMode: PropTypes.func,
+    channelId: PropTypes.string
+  };
+
+  componentDidMount() {
+    this.props.onMount();
+  }
+
+  compile = () => {
+    this.props.appendOutputLog('Compiling program...');
+    this.props.appendOutputLog('Compiled!');
+  };
+
+  // Sends redux call to update dark mode, which handles user preferences
+  renderSettings = () => {
+    const {isDarkMode} = this.props;
+    return [
+      <a
+        onClick={() => this.props.setIsDarkMode(!isDarkMode)}
+        key="theme-setting"
+      >
+        Switch to {isDarkMode ? 'light mode' : 'dark mode'}
+      </a>
+    ];
+  };
+
+  getButtonStyles = isSettingsButton => {
+    const {isDarkMode} = this.props;
+    if (isDarkMode) {
+      return styles.singleButton;
+    } else if (isSettingsButton) {
+      return {...styles.singleButton, backgroundColor: color.orange};
+    } else {
+      return {...styles.singleButton, backgroundColor: color.cyan};
+    }
+  };
+
+  render() {
+    const {
+      isDarkMode,
+      onCommitCode,
+      onContinue,
+      onRun,
+      onInputMessage,
+      handleVersionHistory,
+      visualization
+    } = this.props;
+    if (isDarkMode) {
+      document.body.style.backgroundColor = '#1b1c17';
+    } else {
+      document.body.style.backgroundColor = color.background_gray;
+    }
+    return (
+      <StudioAppWrapper>
+        <div style={styles.javalab}>
+          <div
+            id="visualizationColumn"
+            className="responsive"
+            style={styles.instructionsAndPreview}
+          >
+            <TopInstructions mainStyle={styles.instructions} standalone />
+            <div style={styles.preview}>{visualization}</div>
+          </div>
+          <VisualizationResizeBar />
+          <div
+            style={{
+              ...styles.editorAndConsole,
+              color: isDarkMode ? color.white : color.black
+            }}
+            className="editor-column"
+          >
+            <JavalabEditor
+              onCommitCode={onCommitCode}
+              handleVersionHistory={handleVersionHistory}
+            />
+            <div style={styles.consoleAndButtons}>
+              <div style={styles.buttons}>
+                <button
+                  type="button"
+                  style={this.getButtonStyles(false)}
+                  onClick={() => {}}
+                >
+                  <FontAwesome icon="stop" className="fa-2x" />
+                  <br />
+                  Stop
+                </button>
+                <button
+                  type="button"
+                  style={this.getButtonStyles(false)}
+                  onClick={onContinue}
+                >
+                  <FontAwesome icon="check" className="fa-2x" />
+                  <br />
+                  Continue
+                </button>
+              </div>
+              <div style={styles.buttons}>
+                <JavalabSettings
+                  style={this.getButtonStyles(true /* isSettingsButton */)}
+                >
+                  {this.renderSettings()}
+                </JavalabSettings>
+                <button
+                  type="button"
+                  style={this.getButtonStyles(false)}
+                  onClick={onRun}
+                >
+                  <FontAwesome icon="play" className="fa-2x" />
+                  <br />
+                  Run
+                </button>
+              </div>
+              <div style={styles.consoleStyle}>
+                <JavalabConsole onInputMessage={onInputMessage} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </StudioAppWrapper>
+    );
+  }
+}
+
+const styles = {
   instructionsAndPreview: {
-    width: '40%',
-    display: 'block'
-  },
-  editorAndConsole: {
-    width: '60%',
-    display: 'block'
+    width: '100%',
+    position: 'absolute',
+    marginRight: 15,
+    color: color.black,
+    right: '15px',
+    top: '15px'
   },
   instructions: {
-    height: '25%',
-    marginLeft: 15,
-    marginRight: 15,
-    backgroundColor: color.white,
-    color: color.black
+    width: '100%',
+    position: 'relative',
+    marginLeft: 0,
+    color: color.black,
+    left: 0
+  },
+  editorAndConsole: {
+    position: 'absolute',
+    right: '15px',
+    marginLeft: '15px'
   },
   preview: {
-    margin: 15,
     backgroundColor: color.light_gray,
-    height: '200px'
+    height: '200px',
+    marginTop: '13px'
   },
   javalab: {
     display: 'flex',
@@ -49,10 +194,10 @@ const style = {
     flexDirection: 'column'
   },
   singleButton: {
-    // this matches the current ace editor theme we are using
+    // this matches the current code mirror theme we are using
     // TODO: either add to color.scss or use a color from there depending
     // on final theme choice.
-    backgroundColor: '#272822',
+    backgroundColor: color.darkest_gray,
     color: color.white,
     width: 95,
     textAlign: 'center'
@@ -62,88 +207,19 @@ const style = {
   }
 };
 
-class JavalabView extends React.Component {
-  static propTypes = {
-    onMount: PropTypes.func.isRequired,
-
-    // populated by redux
-    isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    appendOutputLog: PropTypes.func
-  };
-
-  run = () => {
-    this.props.appendOutputLog('Running program...');
-    this.props.appendOutputLog('Hello world!');
-  };
-
-  compile = () => {
-    this.props.appendOutputLog('Compiling program...');
-    this.props.appendOutputLog('Compiled!');
-  };
-
-  render() {
-    return (
-      <StudioAppWrapper>
-        <InstructionsWithWorkspace>
-          <div style={style.javalab}>
-            <div style={style.instructionsAndPreview}>
-              <div style={style.instructions}>
-                <PaneHeader hasFocus={true}>
-                  <PaneSection>Instructions</PaneSection>
-                </PaneHeader>
-                <ul>
-                  <li>Instruction 1</li>
-                  <li>Another Instruction</li>
-                </ul>
-              </div>
-              <div style={style.preview}>
-                <PaneHeader hasFocus={true}>
-                  <PaneSection>Preview</PaneSection>
-                </PaneHeader>
-              </div>
-            </div>
-            <div style={style.editorAndConsole}>
-              <JavalabEditor />
-              <div style={style.consoleAndButtons}>
-                <div style={style.buttons}>
-                  <button
-                    type="button"
-                    style={style.singleButton}
-                    onClick={this.compile}
-                  >
-                    <FontAwesome icon="cubes" className="fa-2x" />
-                    <br />
-                    Compile
-                  </button>
-                  <button
-                    type="button"
-                    style={style.singleButton}
-                    onClick={this.run}
-                  >
-                    <FontAwesome icon="play" className="fa-2x" />
-                    <br />
-                    Run
-                  </button>
-                </div>
-                <div style={style.consoleStyle}>
-                  <JavalabConsole />
-                </div>
-              </div>
-            </div>
-          </div>
-        </InstructionsWithWorkspace>
-      </StudioAppWrapper>
-    );
-  }
-}
-
+// We use the UnconnectedJavalabView to make this component's methods testable.
+// This is a deprecated pattern but calling shallow().dive().instance() on the
+// connected JavalabView does not give us access to the methods owned by JavalabView.
+export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    channelId: state.pageConstants.channelId,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
-    appendOutputLog: log => dispatch(appendOutputLog(log))
+    appendOutputLog: log => dispatch(appendOutputLog(log)),
+    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
   })
-)(JavalabView);
+)(UnconnectedJavalabView);

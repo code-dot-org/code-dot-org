@@ -5,52 +5,13 @@ import {connect} from 'react-redux';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  levelType,
-  lessonType,
-  lessonGroupType
-} from '@cdo/apps/templates/progress/progressTypes';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-
-const styles = {
-  main: {
-    marginBottom: 20
-  },
-  header: {
-    padding: 20,
-    backgroundColor: color.purple,
-    fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: 'white',
-    borderTopLeftRadius: 4,
-    borderTopRightRadius: 4,
-    cursor: 'pointer'
-  },
-  headerBlue: {
-    backgroundColor: color.cyan
-  },
-  headingText: {
-    marginLeft: 10
-  },
-  contents: {
-    backgroundColor: color.lighter_purple,
-    padding: 20
-  },
-  contentsBlue: {
-    backgroundColor: color.lightest_cyan
-  },
-  bottom: {
-    borderBottomLeftRadius: 4,
-    borderBottomRightRadius: 4
-  },
-  lessonGroupInfo: {
-    padding: 10
-  }
-};
+import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 
 /**
  * A component that shows a group of lessons. That group has a name and is
@@ -58,16 +19,15 @@ const styles = {
  */
 class LessonGroup extends React.Component {
   static propTypes = {
-    lessonGroup: lessonGroupType,
-    lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
 
     // redux provided
     scriptId: PropTypes.number,
     lessonIsVisible: PropTypes.func.isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool
   };
 
   state = {
@@ -96,7 +56,7 @@ class LessonGroup extends React.Component {
         event: 'view_lesson_group_info',
         data_json: JSON.stringify({
           script_id: this.props.scriptId,
-          lesson_group_id: this.props.lessonGroup.id
+          lesson_group_id: this.props.groupedLesson.lessonGroup.id
         })
       },
       {includeUserId: true}
@@ -108,15 +68,11 @@ class LessonGroup extends React.Component {
   };
 
   render() {
-    const {
-      lessonGroup,
-      lessons,
-      levelsByLesson,
-      isSummaryView,
-      isPlc,
-      lessonIsVisible,
-      viewAs
-    } = this.props;
+    const {isSummaryView, isPlc, lessonIsVisible, viewAs, isRtl} = this.props;
+    const {lessonGroup, lessons} = this.props.groupedLesson;
+
+    // Adjust styles if locale is RTL
+    const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
 
     const TableType = isSummaryView
       ? SummaryProgressTable
@@ -129,7 +85,7 @@ class LessonGroup extends React.Component {
     }
 
     return (
-      <div style={styles.main}>
+      <div style={styles.main} className="lesson-group">
         <div
           style={[
             styles.header,
@@ -141,7 +97,7 @@ class LessonGroup extends React.Component {
           <FontAwesome
             icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
           />
-          <span style={styles.headingText}>{lessonGroup.displayName}</span>
+          <span style={headingTextStyle}>{lessonGroup.displayName}</span>
           {(lessonGroup.description || lessonGroup.bigQuestions) && (
             <FontAwesome
               icon="info-circle"
@@ -149,6 +105,12 @@ class LessonGroup extends React.Component {
               onClick={this.openLessonGroupInfoDialog}
             />
           )}
+          <div className="print-only">
+            <LessonGroupInfo
+              description={lessonGroup.description}
+              bigQuestions={lessonGroup.bigQuestions}
+            />
+          </div>
           <LessonGroupInfoDialog
             isOpen={this.state.lessonGroupInfoDialogOpen}
             displayName={lessonGroup.displayName}
@@ -165,7 +127,7 @@ class LessonGroup extends React.Component {
               styles.bottom
             ]}
           >
-            <TableType lessons={lessons} levelsByLesson={levelsByLesson} />
+            <TableType groupedLesson={this.props.groupedLesson} />
           </div>
         )}
       </div>
@@ -173,10 +135,50 @@ class LessonGroup extends React.Component {
   }
 }
 
+const styles = {
+  main: {
+    marginBottom: 20
+  },
+  header: {
+    padding: 20,
+    backgroundColor: color.purple,
+    fontSize: 18,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: 'white',
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
+    cursor: 'pointer'
+  },
+  headerBlue: {
+    backgroundColor: color.cyan
+  },
+  headingText: {
+    marginLeft: 10
+  },
+  headingTextRTL: {
+    marginRight: 10
+  },
+  contents: {
+    backgroundColor: color.lighter_purple,
+    padding: 20
+  },
+  contentsBlue: {
+    backgroundColor: color.lightest_cyan
+  },
+  bottom: {
+    borderBottomLeftRadius: 4,
+    borderBottomRightRadius: 4
+  },
+  lessonGroupInfo: {
+    padding: 10
+  }
+};
+
 export const UnconnectedLessonGroup = LessonGroup;
 
 export default connect(state => ({
   scriptId: state.progress.scriptId,
   lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs),
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  isRtl: state.isRtl
 }))(Radium(LessonGroup));

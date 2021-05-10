@@ -44,9 +44,17 @@ class Lesson < ApplicationRecord
   # join tables needed for seeding logic
   has_many :lessons_resources
   has_many :lessons_vocabularies
+  has_many :lessons_programming_expressions
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
+  has_many :lessons_standards, foreign_key: 'stage_id' # join table. we need this association for seeding logic
+
+  # the dependent: :destroy clause is needed to ensure that the associated join
+  # models are deleted when this lesson is deleted. in order for this to work,
+  # the join model must have an :id column.
+  has_many :lessons_opportunity_standards,  dependent: :destroy
+  has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
   self.table_name = 'stages'
 
@@ -219,14 +227,30 @@ class Lesson < ApplicationRecord
 
   def lesson_plan_pdf_url
     if script.is_migrated && has_lesson_plan
-      Services::LessonPlanPdfs.get_url(self)
+      Services::CurriculumPdfs.get_lesson_plan_url(self)
     else
       "#{lesson_plan_base_url}/Teacher.pdf"
     end
   end
 
+  def student_lesson_plan_pdf_url
+    if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan
+      Services::CurriculumPdfs.get_lesson_plan_url(self, true)
+    end
+  end
+
+  def script_resource_pdf_url
+    if script.is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(script)
+    end
+  end
+
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
+  end
+
+  def course_version_standards_url
+    script.get_course_version&.all_standards_url
   end
 
   def summarize(include_bonus_levels = false, for_edit: false)
@@ -259,7 +283,6 @@ class Lesson < ApplicationRecord
         unplugged: unplugged,
         lessonEditPath: edit_lesson_path(id: id)
       }
-
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
       last_script_level = script_levels.to_a.last
@@ -279,6 +302,9 @@ class Lesson < ApplicationRecord
       if has_lesson_plan
         lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+        if script.include_student_lesson_plans && script.is_migrated
+          lesson_data[:student_lesson_plan_html_url] = script_lesson_student_path(script, self)
+        end
       end
 
       if script.hoc?
@@ -286,7 +312,7 @@ class Lesson < ApplicationRecord
         lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
       end
 
-      lesson_data[:lesson_extras_level_url] = script_stage_extras_url(script.name, stage_position: relative_position) unless unplugged_lesson?
+      lesson_data[:lesson_extras_level_url] = script_lesson_extras_url(script.name, lesson_position: relative_position) unless unplugged_lesson?
 
       lesson_data
     end
@@ -327,6 +353,7 @@ class Lesson < ApplicationRecord
   # Key names are converted to camelCase here so they can easily be consumed by
   # the client.
   def summarize_for_lesson_edit
+    lesson_standards = standards.sort_by {|s| [s.framework.name, s.shortcode]}
     {
       id: id,
       name: name,
@@ -344,39 +371,87 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
+      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
+      standards: lesson_standards.map(&:summarize_for_lesson_edit),
+      frameworks: Framework.all.map(&:summarize_for_lesson_edit),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
-      lessonPath: script_lesson_path(script, self)
+      lessonPath: script_lesson_path(script, self),
+      lessonExtrasAvailableForScript: script.lesson_extras_available
     }
   end
 
-  def summarize_for_lesson_show(user)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     {
+      id: id,
       unit: script.summarize_for_lesson_show,
       position: relative_position,
       lockable: lockable,
       key: key,
       displayName: localized_name,
-      overview: overview || '',
+      overview: Services::MarkdownPreprocessor.process(overview || ''),
       announcements: announcements,
-      purpose: purpose || '',
-      preparation: preparation || '',
-      activities: lesson_activities.map(&:summarize_for_lesson_show),
+      purpose: Services::MarkdownPreprocessor.process(purpose || ''),
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
-      assessmentOpportunities: assessment_opportunities
+      assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
+      lessonPlanPdfUrl: lesson_plan_pdf_url,
+      courseVersionStandardsUrl: course_version_standards_url,
+      isVerifiedTeacher: user&.authorized_teacher?,
+      hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
+      scriptResourcesPdfUrl: script_resource_pdf_url
     }
   end
 
-  def summarize_for_lesson_dropdown
+  def summarize_for_rollup(user)
     {
       key: key,
+      position: relative_position,
       displayName: localized_name,
-      link: script_lesson_path(script, self),
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
+      link: script_lesson_path(script, self)
+    }
+  end
+
+  def summarize_for_student_lesson_plan
+    all_resources = resources_for_lesson_plan(false)
+    {
+      id: id,
+      unit: script.summarize_for_lesson_show(true),
+      position: relative_position,
+      key: key,
+      displayName: localized_name,
+      overview: student_overview || '',
+      announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
+      resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
+    }
+  end
+
+  def summarize_for_lesson_dropdown(is_student = false)
+    {
+      id: id,
+      key: key,
+      displayName: localized_name,
+      link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
       position: relative_position
     }
   end
@@ -441,8 +516,14 @@ class Lesson < ApplicationRecord
     end
     return students.map do |student|
       user_level = student.last_attempt_for_any script_level.levels, script_id: script.id
-      # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
-      # don't yet have a user_level, and need to provide enough data to create one
+      # user_level_data is provided so that we can get back to our user_level
+      # when updating. in some cases we don't yet have a user_level, and need
+      # to provide enough data to create one
+
+      # if we don't have a user level, consider ourselves locked
+      locked = user_level.nil? || user_level.show_as_locked?(self)
+      # if we don't have a user level, we can't be readonly
+      readonly = user_level.present? && user_level.show_as_readonly?(self)
       {
         user_level_data: {
           user_id: student.id,
@@ -450,9 +531,8 @@ class Lesson < ApplicationRecord
           script_id: script_level.script.id
         },
         name: student.name,
-        # if we don't have a user level, consider ourselves locked
-        locked: user_level ? user_level.locked?(self) : true,
-        readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
+        locked: locked,
+        readonly_answers: readonly
       }
     end
   end
@@ -637,6 +717,10 @@ class Lesson < ApplicationRecord
     end
     grouped_resources.delete('Verified Teacher')
     grouped_resources
+  end
+
+  def lesson_plan_has_verified_resources
+    resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
   private

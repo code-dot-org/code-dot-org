@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 require_relative 'only_one'
+
 abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../tools/hooks/hooks_utils.rb'
 
 # This syncs content changes from the shared dropbox folder to our github repo
 # on the staging machine. This is required for contents changes from dropbox to
@@ -11,6 +14,8 @@ SCRIPT_START = Time.now
 require_relative "../../deployment"
 require "cdo/slack"
 require "cdo/high_frequency_reporter"
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
 require "open3"
 
 FOLDERS = {
@@ -31,6 +36,8 @@ FOLDERS = {
   "hourofcode.com" => "sites.v3/hourofcode.com"
 }.freeze
 
+GIT_PULL_STARTED_PATH = deploy_dir('git-pull-started').freeze
+
 INTERVAL_SECONDS = 5
 TOTAL_SECONDS = 55 - INTERVAL_SECONDS
 
@@ -40,20 +47,29 @@ logger.load # load errors from most recent sync
 while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   attempt_start = Time.now
   logger.reset_new_events # reset new events such that they represent one run through all FOLDERS
-  FOLDERS.each do |key, value|
-    # 'unison' will sync the two folders. It will return true on success and false on failure.
-    # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
-    command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod -log -logfile /home/ubuntu/unison.log"
-    stdout, stderr, _ = Open3.capture3(command)
-    next if stdout == "" && stderr == ""
-    error_message = <<~ERROR_MSG
-                      <!here> Error syncing Dropbox and staging
-                      Dropbox directory: #{key}
-                      pegasus directory: #{value}
-                      stdout: #{stdout}
-                      stderr: #{stderr}
-                    ERROR_MSG
-    logger.record error_message
+  # To prevent any potential conflict between git-pull and unison on the staging
+  # environment, only run unison when git-pull is not running.
+  unless File.file?(GIT_PULL_STARTED_PATH)
+    FOLDERS.each do |key, value|
+      # 'unison' will sync the two folders. It will return true on success and false on failure.
+      # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
+      command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod -log -logfile /home/ubuntu/unison.log"
+      stdout, stderr, _ = Open3.capture3(command)
+      if stdout == "" && stderr == ""
+        HooksUtils.get_unstaged_files.each do |filename|
+          ChatClient.log("<@#{DevelopersTopic.dotd}> INVALID FILENAME: #{filename}", color: 'red') if HooksUtils.prohibited?(filename) && Time.now.sec % 59 == 0
+        end
+      else
+        error_message = <<~ERROR_MSG
+                          <!here> Error syncing Dropbox and staging
+                          Dropbox directory: #{key}
+                          pegasus directory: #{value}
+                          stdout: #{stdout}
+                          stderr: #{stderr}
+                        ERROR_MSG
+        logger.record error_message
+      end
+    end
   end
   current_time = Time.now
   logger.save

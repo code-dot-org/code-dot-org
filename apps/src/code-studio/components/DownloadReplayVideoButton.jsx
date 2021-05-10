@@ -35,20 +35,6 @@ function downloadRemoteUrl(url, downloadName) {
 const DOWNLOAD_NAME = 'dance_party.mp4';
 const MAX_ATTEMPTS = 30; // we want to fail after ~30 seconds, so 30 attempts at 1 attempt / second
 
-const styles = {
-  disabledLink: {
-    backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray,
-    boxShadow: 'none'
-  },
-  icon: {
-    fontSize: 17
-  },
-  span: {
-    paddingLeft: 10
-  }
-};
-
 /**
  * A button to download a video generated from a replay log. This component
  * will, if given the appropriate parameters, also take care of uploading the
@@ -224,6 +210,20 @@ class DownloadReplayVideoButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  disabledLink: {
+    backgroundColor: color.lighter_gray,
+    borderColor: color.lighter_gray,
+    boxShadow: 'none'
+  },
+  icon: {
+    fontSize: 17
+  },
+  span: {
+    paddingLeft: 10
+  }
+};
 
 export const UnconnectedDownloadReplayVideoButton = DownloadReplayVideoButton;
 

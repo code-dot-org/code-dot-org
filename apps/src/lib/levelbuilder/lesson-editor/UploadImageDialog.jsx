@@ -5,6 +5,7 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default class UploadImageDialog extends React.Component {
   static propTypes = {
@@ -15,12 +16,14 @@ export default class UploadImageDialog extends React.Component {
 
   state = {
     imgUrl: undefined,
+    expandable: false,
     error: undefined
   };
 
   resetState = () => {
     this.setState({
       imgUrl: undefined,
+      expandable: false,
       error: undefined
     });
   };
@@ -67,7 +70,7 @@ export default class UploadImageDialog extends React.Component {
 
   handleCloseAndSave = () => {
     if (this.state.imgUrl) {
-      this.props.uploadImage(this.state.imgUrl);
+      this.props.uploadImage(this.state.imgUrl, this.state.expandable);
     }
 
     this.handleClose();
@@ -90,6 +93,22 @@ export default class UploadImageDialog extends React.Component {
           </div>
         )}
 
+        <label style={styles.label}>
+          Expandable
+          <input
+            type="checkbox"
+            checked={this.state.expandable}
+            style={styles.checkbox}
+            onChange={e => this.setState({expandable: e.target.checked})}
+          />
+          <HelpTip>
+            <p>
+              Check if you want the image to be able to be enlarged in a dialog
+              over the page when clicked.
+            </p>
+          </HelpTip>
+        </label>
+
         <hr />
 
         <Button
@@ -102,3 +121,12 @@ export default class UploadImageDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  label: {
+    margin: '10px 0'
+  }
+};

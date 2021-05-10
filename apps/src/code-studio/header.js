@@ -12,8 +12,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-import {useDbProgress} from './progressRedux';
-import clientState from './clientState';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -77,11 +75,6 @@ header.build = function(
   scriptNameData,
   isLessonExtras
 ) {
-  const store = getStore();
-  if (progressData) {
-    store.dispatch(useDbProgress());
-    clientState.clearProgress();
-  }
   scriptData = scriptData || {};
   lessonGroupData = lessonGroupData || {};
   lessonData = lessonData || {};
@@ -90,7 +83,8 @@ header.build = function(
   const linesOfCodeText = progressData.linesOfCodeText;
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
-  // Set up the store immediately.
+  // Set up the store immediately. Note that some progress values are populated
+  // asynchronously.
   progress.generateStageProgress(
     scriptData,
     lessonGroupData,
@@ -107,6 +101,7 @@ header.build = function(
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
+  const store = getStore();
   $(document).ready(function() {
     ReactDOM.render(
       <Provider store={store}>
@@ -122,7 +117,7 @@ header.build = function(
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
-    if (scriptData.is_csf && !signedIn) {
+    if (scriptData.is_csf && signedIn === false) {
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')

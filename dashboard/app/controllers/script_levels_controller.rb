@@ -80,6 +80,9 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
+
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
@@ -162,8 +165,8 @@ class ScriptLevelsController < ApplicationController
   def self.get_script_level(script, params)
     if params[:chapter]
       script.get_script_level_by_chapter(params[:chapter])
-    elsif params[:stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:stage_position], params[:id], false)
+    elsif params[:lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lesson_position], params[:id], false)
     elsif params[:lockable_stage_position]
       script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
     else
@@ -228,7 +231,7 @@ class ScriptLevelsController < ApplicationController
     return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
 
     @script = Script.get_from_cache(params[:script_id])
-    @stage = @script.lesson_by_relative_position(params[:stage_position].to_i)
+    @stage = @script.lesson_by_relative_position(params[:lesson_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
@@ -244,15 +247,37 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    @stage = Script.get_from_cache(params[:script_id]).lesson_by_relative_position(params[:stage_position].to_i)
+    @stage = Script.get_from_cache(
+      params[:script_id]
+    ).lesson_by_relative_position(
+      params[:lesson_position].to_i
+      )
     @script = @stage.script
+    script_bonus_levels_by_stage = @script.get_bonus_script_levels(@stage)
+
+    user = @user || current_user
+    unless user.nil?
+      # bonus level summaries explicitly don't contain any user-specific data,
+      # so we need to merge in the user's progress.
+      script_bonus_levels_by_stage.each do |stage|
+        stage[:levels].each do |level_summary|
+          ul = UserLevel.find_by(
+            level_id: level_summary[:level_id], user_id: user.id, script: @script
+          )
+          level_summary[:perfect] = ul&.perfect?
+        end
+      end
+    end
+
     @stage_extras = {
-      next_stage_number: @stage.next_level_number_for_lesson_extras(current_user),
+      next_stage_number: @stage.next_level_number_for_lesson_extras(user),
       stage_number: @stage.relative_position,
-      next_level_path: @stage.next_level_path_for_lesson_extras(current_user),
-      bonus_levels: @script.get_bonus_script_levels(@stage, current_user),
+      next_level_path: @stage.next_level_path_for_lesson_extras(user),
+      bonus_levels: script_bonus_levels_by_stage,
     }.camelize_keys
-    @bonus_level_ids = @stage.script_levels.where(bonus: true).map(&:level_ids).flatten
+    @bonus_level_ids = @stage.script_levels.where(bonus: true).map(
+      &:level_ids
+    ).flatten
 
     render 'scripts/stage_extras'
   end
@@ -266,8 +291,8 @@ class ScriptLevelsController < ApplicationController
     script = Script.get_from_cache(params[:script_id])
 
     stage =
-      if params[:stage_position]
-        script.lesson_by_relative_position(params[:stage_position])
+      if params[:lesson_position]
+        script.lesson_by_relative_position(params[:lesson_position])
       else
         script.lesson_by_relative_position(params[:lockable_stage_position], true)
       end
@@ -485,7 +510,8 @@ class ScriptLevelsController < ApplicationController
       is_bonus_level: @script_level.bonus,
       useGoogleBlockly: params[:blocklyVersion] == "Google",
       azure_speech_service_voices: azure_speech_service_options[:voices],
-      authenticity_token: form_authenticity_token
+      authenticity_token: form_authenticity_token,
+      disallowed_html_tags: disallowed_html_tags
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 

@@ -13,6 +13,10 @@ export const commands = {
     }
   },
 
+  getEventLog() {
+    return coreLibrary.eventLog;
+  },
+
   getNumBehaviorsForAnimation(animation) {
     return coreLibrary.getNumBehaviorsForAnimation(animation);
   },
@@ -38,6 +42,9 @@ export const commands = {
   },
 
   getTitle() {
-    return {title: coreLibrary.title, subtitle: coreLibrary.subtitle};
+    return {
+      title: coreLibrary.screenText.title,
+      subtitle: coreLibrary.screenText.subtitle
+    };
   }
 };

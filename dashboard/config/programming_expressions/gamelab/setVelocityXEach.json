@@ -1,0 +1,11 @@
+{
+  "func": "setVelocityXEach",
+  "category": "Groups",
+  "paletteParams": [
+    "velocityX"
+  ],
+  "params": [
+    "3"
+  ],
+  "modeOptionName": "*.setVelocityXEach"
+}

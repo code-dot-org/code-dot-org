@@ -1,0 +1,13 @@
+{
+  "func": "pointTo",
+  "category": "Sprites",
+  "paletteParams": [
+    "x",
+    "y"
+  ],
+  "params": [
+    "200",
+    "200"
+  ],
+  "modeOptionName": "*.pointTo"
+}

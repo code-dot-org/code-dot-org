@@ -26,6 +26,7 @@ def sync_in
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
+  redact_script_and_course_content
   localize_markdown_content
   puts "Sync in completed successfully"
 rescue => e
@@ -51,6 +52,7 @@ def get_i18n_strings(level)
   elsif level.is_a?(Level)
     %w(
       display_name
+      bubble_choice_description
       short_instructions
       long_instructions
       failure_message_overrides
@@ -115,7 +117,9 @@ def get_i18n_strings(level)
       end
 
       ## Variable Names
-      variables = blocks.xpath("//block[@type=\"variables_get\"]")
+      variables_get = blocks.xpath("//block[@type=\"variables_get\"]")
+      variables_set = blocks.xpath("//block[@type=\"variables_set\"]")
+      variables = variables_get + variables_set
       i18n_strings['variable_names'] = Hash.new unless variables.empty?
       variables.each do |variable|
         name = variable.at_xpath('./title[@name="VAR"]')
@@ -430,6 +434,32 @@ def redact_block_content
   FileUtils.mkdir_p(File.dirname(backup))
   FileUtils.cp(source, backup)
   RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
+end
+
+def redact_script_and_course_content
+  plugins = %w(resourceLink vocabularyDefinition)
+  fields = %w(description student_description description_student description_teacher)
+
+  %w(script course).each do |type|
+    puts "Redacting #{type} content"
+    source = File.join(I18N_SOURCE_DIR, "dashboard/#{type}s.yml")
+
+    # Save the original data, for restoration
+    original = source.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(original))
+    FileUtils.cp(source, original)
+
+    # Redact the specific subset of fields within each script that we care about.
+    data = YAML.load_file(source)
+    data['en']['data'][type]['name'].values.each do |datum|
+      markdown_data = datum.slice(*fields)
+      redacted_data = RedactRestoreUtils.redact_data(markdown_data, plugins, 'md')
+      datum.merge!(redacted_data)
+    end
+
+    # Overwrite source file with redacted data
+    File.write(source, I18nScriptUtils.to_crowdin_yaml(data))
+  end
 end
 
 def localize_markdown_content

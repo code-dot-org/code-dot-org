@@ -1,0 +1,11 @@
+{
+  "func": "tan",
+  "category": "Math",
+  "paletteParams": [
+    "angle"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "value"
+}

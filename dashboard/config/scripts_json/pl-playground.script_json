@@ -1,0 +1,210 @@
+{
+  "script": {
+    "name": "pl-playground",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:56:13 UTC",
+    "seeding_key": {
+      "script.name": "pl-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "lesson group display name"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "new lesson",
+      "name": "lesson display name",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      }
+    },
+    {
+      "key": "Module 1",
+      "name": "Module 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 1",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro"
+        ],
+        "progression": "Module 1 Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro"
+        ],
+        "lesson.key": "Module 1",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      },
+      "level_keys": [
+        "OPL - CSD-PL AYWS1 Debugging Intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview"
+        ],
+        "progression": "Summer Workshop Review (~ 10 - 20 mins)"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview"
+        ],
+        "lesson.key": "Module 1",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 1 Summer Review Overview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro (Clone)"
+        ],
+        "progression": "Copy"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro (Clone)"
+        ],
+        "lesson.key": "Module 1",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      },
+      "level_keys": [
+        "OPL - CSD-PL AYWS1 Debugging Intro (Clone)"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "OPL - CSD-PL AYWS1 Debugging Intro",
+        "script_level.level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro"
+        ],
+        "lesson.key": "Module 1",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 1 Summer Review Overview",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview"
+        ],
+        "lesson.key": "Module 1",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPL - CSD-PL AYWS1 Debugging Intro (Clone)",
+        "script_level.level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro (Clone)"
+        ],
+        "lesson.key": "Module 1",
+        "lesson_group.key": "lesson group",
+        "script.name": "pl-playground"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

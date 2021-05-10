@@ -1,7 +1,7 @@
 import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
+import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
 
@@ -9,14 +9,16 @@ const unpluggedLevel = {
   id: '1',
   kind: LevelKind.unplugged,
   isUnplugged: true,
-  status: LevelStatus.perfect
+  status: LevelStatus.perfect,
+  isLocked: false
 };
 
 const assessmentLevel = {
   id: '2',
   kind: LevelKind.assessment,
   isUnplugged: false,
-  status: LevelStatus.perfect
+  status: LevelStatus.perfect,
+  isLocked: false
 };
 
 const levelWithUrl = {

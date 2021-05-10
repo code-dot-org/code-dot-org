@@ -87,7 +87,6 @@ lesson 'Project - App Presentation', display_name: 'Project - App Presentation',
 level 'CSD U4L16 autoSFLP_2020', named: true
 level 'csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019_2020', progression: 'Reflection', assessment: true
 
-lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
 lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD User Centered Design Post-Project Test_2020', assessment: true
 

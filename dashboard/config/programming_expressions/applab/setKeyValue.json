@@ -1,0 +1,18 @@
+{
+  "func": "setKeyValue",
+  "category": "Data",
+  "paletteParams": [
+    "key",
+    "value",
+    "callback"
+  ],
+  "params": [
+    "\"key\"",
+    "\"value\"",
+    "function () {\n  \n}"
+  ],
+  "allowFunctionDrop": {
+    "2": true,
+    "3": true
+  }
+}

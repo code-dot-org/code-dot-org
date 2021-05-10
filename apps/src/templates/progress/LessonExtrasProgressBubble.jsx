@@ -6,13 +6,6 @@ import TooltipWithIcon from './TooltipWithIcon';
 import {currentLocation} from '../../utils';
 import LessonExtrasFlagIcon from './LessonExtrasFlagIcon';
 
-const styles = {
-  main: {
-    width: 21,
-    height: 24
-  }
-};
-
 export default class LessonExtrasProgressBubble extends Component {
   static propTypes = {
     lessonExtrasUrl: PropTypes.string.isRequired,
@@ -44,3 +37,10 @@ export default class LessonExtrasProgressBubble extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    width: 21,
+    height: 24
+  }
+};

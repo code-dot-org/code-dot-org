@@ -1,0 +1,15 @@
+{
+  "func": "constrain",
+  "category": "Math",
+  "paletteParams": [
+    "num",
+    "low",
+    "high"
+  ],
+  "params": [
+    "1.1",
+    "0",
+    "1"
+  ],
+  "type": "value"
+}

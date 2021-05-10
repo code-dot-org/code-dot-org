@@ -1,0 +1,13 @@
+{
+  "func": "getProperty",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "property"
+  ],
+  "params": [
+    "\"id\"",
+    "\"width\""
+  ],
+  "type": "value"
+}

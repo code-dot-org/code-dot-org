@@ -1,0 +1,19 @@
+{
+  "func": "pinMode",
+  "category": "Maker",
+  "paletteParams": [
+    "pin",
+    "mode"
+  ],
+  "params": [
+    "13",
+    "\"output\""
+  ],
+  "dropdown": {
+    "1": [
+      "\"output\"",
+      "\"input\"",
+      "\"analog\""
+    ]
+  }
+}

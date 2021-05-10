@@ -1,0 +1,11 @@
+{
+  "func": "getXPosition",
+  "category": "UI controls",
+  "paletteParams": [
+    "id"
+  ],
+  "params": [
+    "\"id\""
+  ],
+  "type": "value"
+}

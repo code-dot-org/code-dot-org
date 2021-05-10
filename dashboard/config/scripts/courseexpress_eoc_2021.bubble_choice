@@ -3,7 +3,5 @@ display_name 'End of Course Project'
 description 'You have reached the last lesson of the Express Course! Choose a project to create.'
 
 sublevels
-level 'CourseD_EOC_dance_2021'
-level 'Course F: Artist Project_2021'
-level 'Course E: Frozen Project_2021'
 level 'CourseF_Project_SpriteLab_2021'
+level 'Course F: Artist Project_2021'

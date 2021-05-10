@@ -17,51 +17,7 @@ import {
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
-import TextareaWithImageUpload from '@cdo/apps/lib/levelbuilder/TextareaWithImageUpload';
-
-const styles = {
-  checkbox: {
-    margin: '0 0 0 7px'
-  },
-  lessonGroupCard: {
-    fontSize: 18,
-    background: 'white',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: '#ccc',
-    borderRadius: borderRadius,
-    padding: 20,
-    margin: 10
-  },
-  lessonGroupCardHeader: {
-    color: '#5b6770',
-    marginBottom: 15,
-    minHeight: 10
-  },
-  bottomControls: {
-    height: 30
-  },
-  addButton: {
-    fontSize: 14,
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
-  },
-  input: {
-    width: '100%'
-  },
-  title: {
-    marginRight: 5
-  }
-};
-
-styles.targetLessonGroupCard = {
-  ...styles.lessonGroupCard,
-  borderWidth: 5,
-  borderColor: color.cyan,
-  padding: 16
-};
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 class LessonGroupCard extends Component {
   static propTypes = {
@@ -292,7 +248,7 @@ class LessonGroupCard extends Component {
             <div>
               <label>
                 Description
-                <TextareaWithImageUpload
+                <MarkdownEnabledTextarea
                   markdown={this.props.lessonGroup.description}
                   name={'description'}
                   inputRows={Math.max(
@@ -301,11 +257,12 @@ class LessonGroupCard extends Component {
                     2
                   )}
                   handleMarkdownChange={this.handleChangeDescription}
+                  features={{imageUpload: true}}
                 />
               </label>
               <label>
                 Big Questions
-                <TextareaWithImageUpload
+                <MarkdownEnabledTextarea
                   markdown={this.props.lessonGroup.bigQuestions}
                   name={'big_questions'}
                   inputRows={Math.max(
@@ -314,6 +271,7 @@ class LessonGroupCard extends Component {
                     2
                   )}
                   handleMarkdownChange={this.handleChangeBigQuestions}
+                  features={{imageUpload: true}}
                 />
               </label>
             </div>
@@ -367,6 +325,50 @@ class LessonGroupCard extends Component {
     );
   }
 }
+
+const styles = {
+  checkbox: {
+    margin: '0 0 0 7px'
+  },
+  lessonGroupCard: {
+    fontSize: 18,
+    background: 'white',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: '#ccc',
+    borderRadius: borderRadius,
+    padding: 20,
+    margin: 10
+  },
+  lessonGroupCardHeader: {
+    color: '#5b6770',
+    marginBottom: 15,
+    minHeight: 10
+  },
+  bottomControls: {
+    height: 30
+  },
+  addButton: {
+    fontSize: 14,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    margin: '0 5px 0 0'
+  },
+  input: {
+    width: '100%'
+  },
+  title: {
+    marginRight: 5
+  }
+};
+
+styles.targetLessonGroupCard = {
+  ...styles.lessonGroupCard,
+  borderWidth: 5,
+  borderColor: color.cyan,
+  padding: 16
+};
 
 export const UnconnectedLessonGroupCard = LessonGroupCard;
 

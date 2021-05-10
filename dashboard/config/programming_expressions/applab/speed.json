@@ -1,0 +1,18 @@
+{
+  "func": "speed",
+  "category": "Turtle",
+  "paletteParams": [
+    "value"
+  ],
+  "params": [
+    "50"
+  ],
+  "dropdown": {
+    "0": [
+      "25",
+      "50",
+      "75",
+      "100"
+    ]
+  }
+}

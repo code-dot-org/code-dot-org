@@ -1,0 +1,5 @@
+{
+  "func": "greaterThanOrEqualOperator",
+  "block": "__ >= __",
+  "category": "Math"
+}

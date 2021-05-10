@@ -31,6 +31,22 @@ describe('Button', () => {
     assert.strictEqual(wrapper.props().target, '_blank');
   });
 
+  it('attempts to mitigate some of the inherent insecurity when setting target=_blank', () => {
+    const wrapper = shallow(
+      <Button
+        __useDeprecatedTag
+        href="/foo/bar"
+        text="Click me"
+        target="something other than _blank"
+      />
+    );
+
+    assert.isUndefined(wrapper.props().rel);
+
+    wrapper.setProps({target: '_blank'});
+    assert.strictEqual(wrapper.props().rel, 'noopener noreferrer');
+  });
+
   it('renders a div when button has an onClick', () => {
     const onClick = sinon.spy();
     const wrapper = shallow(

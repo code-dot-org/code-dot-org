@@ -221,12 +221,34 @@ DSL
     assert_nil sublevel_summary.last[:perfect]
   end
 
-  test 'best_result_sublevel_id returns sublevel with highest best_result for user' do
+  test 'summarize_sublevels does not leak progress between scripts' do
+    student = create :student
+    other_script_level = create :script_level, levels: [@bubble_choice]
+    create :user_level,
+      user: student,
+      level: @sublevel1,
+      script: @script_level.script,
+      best_result: ActivityConstants::BEST_PASS_RESULT
+    create :user_level,
+      user: student,
+      level: @sublevel2,
+      script: other_script_level.script,
+      best_result: ActivityConstants::BEST_PASS_RESULT
+    sublevel_summary = @bubble_choice.summarize_sublevels(
+      script_level: @script_level,
+      user_id: student.id
+    )
+    assert_equal 2, sublevel_summary.length
+    assert sublevel_summary.first[:perfect]
+    refute sublevel_summary.last[:perfect]
+  end
+
+  test 'best_result_sublevel returns sublevel with highest best_result for user' do
     student = create :student
     create :user_level, user: student, level: @sublevel2, best_result: 100
     create :user_level, user: student, level: @sublevel1, best_result: 20
 
-    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student)
+    assert_equal @sublevel2, @bubble_choice.best_result_sublevel(student, nil)
   end
 
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do

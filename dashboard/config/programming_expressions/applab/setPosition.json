@@ -1,0 +1,22 @@
+{
+  "func": "setPosition",
+  "category": "UI controls",
+  "paramButtons": {
+    "minArgs": 3,
+    "maxArgs": 5
+  },
+  "paletteParams": [
+    "id",
+    "x",
+    "y",
+    "width",
+    "height"
+  ],
+  "params": [
+    "\"id\"",
+    "0",
+    "0",
+    "100",
+    "100"
+  ]
+}

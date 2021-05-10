@@ -7,7 +7,10 @@
 
 import _ from 'lodash';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {levelProgressFromStatus} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  levelProgressFromServer,
+  lessonProgressForSection
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {createStore} from 'redux';
 import Immutable from 'immutable';
 
@@ -31,6 +34,7 @@ export const fakeLevel = (overrides = {}) => {
   return {
     id: id,
     status: LevelStatus.not_tried,
+    isLocked: false,
     levelNumber: levelNumber,
     bubbleText: levelNumber.toString(),
     url: `/level${levelNumber}`,
@@ -54,11 +58,15 @@ export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
 
 export const fakeProgressForLevels = (
   levels,
-  status = LevelStatus.not_tried
+  status = LevelStatus.not_tried,
+  serverProgressOverrides = {}
 ) => {
   const progress = {};
   levels.forEach(level => {
-    progress[level.id] = levelProgressFromStatus(status);
+    progress[level.id] = levelProgressFromServer({
+      status: status,
+      ...serverProgressOverrides
+    });
   });
   return progress;
 };
@@ -73,7 +81,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     stageLock: {
       stagesBySectionId: {
         '11': {}
-      }
+      },
+      lockableAuthorized: false
     },
     viewAs: viewAs,
     teacherSections: {
@@ -86,6 +95,43 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     }),
     progress: {
       showTeacherInfo: false
+    },
+    currentUser: {
+      userId: 1
+    }
+  });
+};
+
+/**
+ * Creates the shell of a redux store with the provided lessonId being hidden
+ * @param {ViewType} viewAs
+ * @param {number?} lessonId - Lesson to hide (or null if none)
+ */
+export const createStoreWithLockedLesson = (
+  viewAs,
+  lockableAuthorized = false
+) => {
+  return createStore(state => state, {
+    stageLock: {
+      stagesBySectionId: {
+        '11': {}
+      },
+      lockableAuthorized: lockableAuthorized
+    },
+    viewAs: viewAs,
+    teacherSections: {
+      selectedSectionId: '11'
+    },
+    hiddenStage: Immutable.fromJS({
+      stagesBySection: {
+        '11': {[lessonId]: true}
+      }
+    }),
+    progress: {
+      showTeacherInfo: false
+    },
+    currentUser: {
+      userId: 1
     }
   });
 };
@@ -135,8 +181,16 @@ export const fakeScriptData = (overrideFields = {}) => {
   };
 };
 
-export const fakeStudentLevelProgress = (levels, students) => {
-  const progressOnLessons = fakeProgressForLevels(levels);
+export const fakeStudentLevelProgress = (
+  levels,
+  students,
+  serverProgressOverrides = {}
+) => {
+  const progressOnLessons = fakeProgressForLevels(
+    levels,
+    serverProgressOverrides.status,
+    serverProgressOverrides
+  );
 
   const studentProgress = {};
   students.forEach(student => {
@@ -171,6 +225,10 @@ export const fakeProgressTableReduxInitialState = (
   if (!scriptData) {
     scriptData = fakeScriptData({stages});
   }
+  const levelProgressData = fakeStudentLevelProgress(
+    scriptData.stages[0].levels,
+    students
+  );
 
   return {
     progress: {
@@ -185,9 +243,12 @@ export const fakeProgressTableReduxInitialState = (
     sectionProgress: {
       scriptDataByScript: {[scriptData.id]: scriptData},
       studentLevelProgressByScript: {
-        [scriptData.id]: fakeStudentLevelProgress(
-          scriptData.stages[0].levels,
-          students
+        [scriptData.id]: levelProgressData
+      },
+      studentLessonProgressByScript: {
+        [scriptData.id]: lessonProgressForSection(
+          levelProgressData,
+          scriptData.stages
         )
       },
       studentLastUpdateByScript: fakeStudentLastUpdateByScript(

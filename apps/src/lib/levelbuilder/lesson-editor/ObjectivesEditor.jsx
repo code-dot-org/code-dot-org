@@ -2,20 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ObjectiveLine from './ObjectiveLine';
 
-const styles = {
-  addButton: {
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    borderRadius: 3,
-    fontSize: 14,
-    padding: 7,
-    textAlign: 'center',
-    marginTop: 10,
-    marginLeft: 0
-  }
-};
-
 export default class ObjectivesEditor extends Component {
   static propTypes = {
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -148,3 +134,17 @@ export default class ObjectivesEditor extends Component {
     );
   }
 }
+
+const styles = {
+  addButton: {
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    borderRadius: 3,
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
+  }
+};

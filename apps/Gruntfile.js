@@ -334,7 +334,10 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
-          ['build/package/css/lessons.css', 'style/lessons.scss'],
+          ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
+          ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
+          ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
+          ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
@@ -503,6 +506,10 @@ describe('entry tests', () => {
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
     'courses/show': './src/sites/studio/pages/courses/show.js',
+    'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
+    'courses/resources': './src/sites/studio/pages/courses/resources.js',
+    'courses/code': './src/sites/studio/pages/courses/code.js',
+    'courses/standards': './src/sites/studio/pages/courses/standards.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -558,6 +565,10 @@ describe('entry tests', () => {
     'report_abuse/report_abuse_form':
       './src/sites/studio/pages/report_abuse/report_abuse_form.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
+    'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
+    'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
+    'scripts/code': './src/sites/studio/pages/scripts/code.js',
+    'scripts/standards': './src/sites/studio/pages/scripts/standards.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
@@ -582,6 +593,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/datasets/edit_manifest.js',
     'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
+    'lessons/student_lesson_plan':
+      './src/sites/studio/pages/lessons/student_lesson_plan.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -617,7 +630,9 @@ describe('entry tests', () => {
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
     'shared_blockly_functions/edit':
-      './src/sites/studio/pages/shared_blockly_functions/edit.js'
+      './src/sites/studio/pages/shared_blockly_functions/edit.js',
+    'sprite_management/sprite_upload':
+      './src/sites/studio/pages/sprite_management/sprite_upload.js'
   };
 
   var pegasusEntries = {
@@ -715,7 +730,10 @@ describe('entry tests', () => {
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
     'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
     'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
-    'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
+    'foorm/libraries/editor':
+      './src/sites/studio/pages/foorm/libraries/editor.js',
+    'foorm/simple_survey_forms/show':
+      './src/sites/studio/pages/foorm/simple_survey_forms/show.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included

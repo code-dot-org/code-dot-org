@@ -1,0 +1,23 @@
+{
+  "func": "radioButton",
+  "category": "UI controls",
+  "paramButtons": {
+    "minArgs": 2,
+    "maxArgs": 3
+  },
+  "paletteParams": [
+    "id",
+    "checked"
+  ],
+  "params": [
+    "\"id\"",
+    "false",
+    "\"group\""
+  ],
+  "dropdown": {
+    "1": [
+      "true",
+      "false"
+    ]
+  }
+}

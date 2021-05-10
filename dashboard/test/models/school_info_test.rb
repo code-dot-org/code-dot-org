@@ -347,6 +347,18 @@ class SchoolInfoTest < ActiveSupport::TestCase
     assert_equal 'Zip Invalid zip code', school_info.errors.full_messages.first
   end
 
+  test 'US charter with over 5 digit zip code fails' do
+    school_info = build :school_info_us_charter, :with_district, school_other: true, zip: 136_177_321_812, school_name: "Another School"
+    refute school_info.valid?
+    assert_equal 'Zip Invalid zip code', school_info.errors.full_messages.first
+  end
+
+  test 'US charter with negative zip code fails' do
+    school_info = build :school_info_us_charter, :with_district, school_other: true, zip: -98144, school_name: "Another School"
+    refute school_info.valid?
+    assert_equal 'Zip Invalid zip code', school_info.errors.full_messages.first
+  end
+
   # deprecated data formats (without country). The absence of the country column is the marker that
   # the record does NOT conform to the newer data format. These older records may belong to a Pd::Enrollment,
   # in which case the school name should be stored in enrollment.school, NOT in enrollment.school_info.school_name.

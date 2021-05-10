@@ -7,6 +7,7 @@ export const testSection = {
   grade: '3',
   providerManaged: false,
   stageExtras: false,
+  ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 10,
   code: 'PMTKVH'
@@ -21,6 +22,7 @@ export const noStudentsSection = {
   grade: '3',
   providerManaged: false,
   stageExtras: false,
+  ttsAutoplayEnabled: false,
   pairingAllowed: true,
   studentCount: 0,
   code: 'PMTKVH'

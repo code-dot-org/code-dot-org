@@ -37,10 +37,6 @@ describe('activityCssClass', function() {
       'passed'
     );
     assert.strictEqual(activityCssClass(29), 'passed');
-    assert.strictEqual(
-      activityCssClass(TestResults.FREE_PLAY),
-      'free_play_complete'
-    );
     assert.strictEqual(activityCssClass(31), 'perfect');
     assert.strictEqual(
       activityCssClass(TestResults.CONTAINED_LEVEL_RESULT),

@@ -85,4 +85,11 @@ class CourseVersionTest < ActiveSupport::TestCase
     course_version.destroy_and_destroy_parent_if_empty
     assert_nil CourseVersion.find_by(course_offering: nil, key: course_version.key)
   end
+
+  test "enforces key format" do
+    course_version = build :course_version, key: 'invalid key'
+    refute course_version.valid?
+    course_version.key = '0123456789'
+    assert course_version.valid?
+  end
 end

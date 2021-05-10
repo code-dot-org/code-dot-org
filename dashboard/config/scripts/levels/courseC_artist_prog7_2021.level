@@ -1,9 +1,5 @@
 <Artist>
   <config><![CDATA[{
-  "game_id": 23,
-  "created_at": "2020-12-04T22:23:42.000Z",
-  "level_num": "custom",
-  "user_id": 6,
   "properties": {
     "skin": "artist",
     "x": "125",
@@ -43,15 +39,27 @@
     "parent_level_id": 21192,
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "short_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
-    "long_instructions": "**Challenge:** This tag is a special one!  \r\n\r\nCan you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
+    "short_instructions": "**Challenge:** This pet's name tag is a special shape!  This pet's name tag is a special shape!",
+    "long_instructions": "**Challenge:** This pet's name tag is a special shape!  \r\n\r\nCan you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
     "encrypted": "false",
     "mini_rubric": "false",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Pet Name Tag",
+    "hint_prompt_attempts_threshold": "1",
+    "bubble_choice_description": "This pet's name tag is a special shape!",
+    "thumbnail_url": "https://images.code.org/2ab617d96aae60ca7590cbadf14a39b2-image-1615564042745.png",
+    "validation_enabled": "false",
     "preload_asset_list": null
   },
+  "game_id": 23,
   "published": true,
+  "created_at": "2020-12-04T22:23:42.000Z",
+  "level_num": "custom",
+  "user_id": 6,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:53:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:53:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-11-19 17:54:40 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-25 16:58:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"free_play\",\"impressive\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-25 16:58:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"free_play\",\"impressive\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:53:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 15:53:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-11-19 17:54:40 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-25 16:58:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"free_play\",\"impressive\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2020-03-25 16:58:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"free_play\",\"impressive\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2021-03-12 15:47:53 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"short_instructions\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>

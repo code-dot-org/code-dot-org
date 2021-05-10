@@ -1,0 +1,12 @@
+{
+  "func": "digitalRead",
+  "category": "Maker",
+  "type": "value",
+  "nativeIsAsync": true,
+  "paletteParams": [
+    "pin"
+  ],
+  "params": [
+    "\"D4\""
+  ]
+}

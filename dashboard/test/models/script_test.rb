@@ -264,7 +264,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
-    create :maze, name: 'test_maze_level'
+    # use 'custom' level num to make level key match level name.
+    create :maze, name: 'test_maze_level', level_num: 'custom'
     script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
     Script.setup([script_file])
 
@@ -688,18 +689,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.can_view_version?(teacher)
   end
 
-  test 'visible scripts can not be marked at is_migrated' do
-    assert_raises ActiveRecord::RecordInvalid do
-      create :script, name: 'my-visible-script', hidden: false, properties: {is_migrated: true}
-    end
-  end
-
-  test 'hidden scripts can be marked at is_migrated' do
-    script = create :script, name: 'my-hidden-script', hidden: true,  properties: {is_migrated: true}
-
-    assert script.properties["is_migrated"]
-  end
-
   test 'can_view_version? is true if script is latest stable version in student locale or in English' do
     latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
     latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
@@ -865,9 +854,30 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:peerReviewsRequired]
   end
 
+  test 'does not include peer reviews in script that only requires instructor review' do
+    # Our script editing UI prevents creating a script with a number of peer reviews
+    # to complete that is not 0 when only instructor review is required.
+    # That said, this test confirms that we would not display a peer review lesson even if this
+    # did occur.
+    script = create(:script,
+      name: 'script-with-peer-review',
+      peer_reviews_to_complete: 1,
+      only_instructor_review_required: true
+    )
+    lesson_group = create(:lesson_group, key: 'key1', script: script)
+    lesson = create(:lesson, script: script, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson)
+
+    summary = script.summarize
+
+    assert_nil summary[:peerReviewLessonInfo]
+  end
+
   test 'can summarize script for lesson plan' do
     script = create :script, name: 'my-script'
-    lesson_group = create :lesson_group, script: script
+    lesson_group = create :lesson_group, key: 'lg-1', script: script
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
+    lesson_group3 = create :lesson_group, key: 'lg-3', script: script
     create(
       :lesson,
       lesson_group: lesson_group,
@@ -891,11 +901,101 @@ class ScriptTest < ActiveSupport::TestCase
       absolute_position: 2
     )
 
+    create(
+      :lesson,
+      lesson_group: lesson_group2,
+      script: script,
+      name: 'Lesson 3',
+      key: 'lesson-3',
+      has_lesson_plan: true,
+      lockable: false,
+      relative_position: 3,
+      absolute_position: 3
+    )
+
+    create(
+      :lesson,
+      lesson_group: lesson_group3,
+      script: script,
+      name: 'Lesson 4',
+      key: 'lesson-4',
+      has_lesson_plan: false,
+      lockable: false,
+      relative_position: 4,
+      absolute_position: 4
+    )
+
     summary = script.summarize_for_lesson_show
     assert_equal '/s/my-script', summary[:link]
+    # only includes lesson groups with lessons with lesson plans
+    assert_equal 2, summary[:lessonGroups].count
     # only includes lessons with lesson plans
-    assert_equal 1, summary[:lessons].count
-    assert_equal 'lesson-1', summary[:lessons][0][:key]
+    assert_equal 1, summary[:lessonGroups][0][:lessons].count
+    assert_equal 'lesson-1', summary[:lessonGroups][0][:lessons][0][:key]
+    assert_equal '/s/my-script/lessons/1', summary[:lessonGroups][0][:lessons][0][:link]
+  end
+
+  test 'can summarize script for student lesson plan' do
+    script = create :script, name: 'my-script'
+    lesson_group = create :lesson_group, script: script
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
+    lesson_group3 = create :lesson_group, key: 'lg-3', script: script
+    create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 1',
+      key: 'lesson-1',
+      has_lesson_plan: true,
+      lockable: false,
+      relative_position: 1,
+      absolute_position: 1
+    )
+    create(
+      :lesson,
+      lesson_group: lesson_group,
+      script: script,
+      name: 'Lesson 2',
+      key: 'lesson-2',
+      has_lesson_plan: false,
+      lockable: false,
+      relative_position: 2,
+      absolute_position: 2
+    )
+
+    create(
+      :lesson,
+      lesson_group: lesson_group2,
+      script: script,
+      name: 'Lesson 3',
+      key: 'lesson-3',
+      has_lesson_plan: true,
+      lockable: false,
+      relative_position: 3,
+      absolute_position: 3
+    )
+
+    create(
+      :lesson,
+      lesson_group: lesson_group3,
+      script: script,
+      name: 'Lesson 4',
+      key: 'lesson-4',
+      has_lesson_plan: false,
+      lockable: false,
+      relative_position: 4,
+      absolute_position: 4
+    )
+
+    summary = script.summarize_for_lesson_show(true)
+    assert_equal '/s/my-script', summary[:link]
+    # only includes lesson groups with lessons with lesson plans
+    assert_equal 2, summary[:lessonGroups].count
+    # only includes lessons with lesson plans
+    assert_equal 1, summary[:lessonGroups][0][:lessons].count
+    assert_equal 'lesson-1', summary[:lessonGroups][0][:lessons][0][:key]
+    # lesson links end with /student
+    assert_equal '/s/my-script/lessons/1/student', summary[:lessonGroups][0][:lessons][0][:link]
   end
 
   class SummarizeVisibleAfterScriptTests < ActiveSupport::TestCase
@@ -1472,7 +1572,6 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test "get_bonus_script_levels" do
-    student = create :student
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, lesson_group: lesson_group
@@ -1483,8 +1582,8 @@ class ScriptTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson3, bonus: true
     create :script_level, script: script, lesson: lesson3, bonus: true
 
-    bonus_levels1 = script.get_bonus_script_levels(lesson1, student)
-    bonus_levels3 = script.get_bonus_script_levels(lesson3, student)
+    bonus_levels1 = script.get_bonus_script_levels(lesson1)
+    bonus_levels3 = script.get_bonus_script_levels(lesson3)
 
     assert_equal 1, bonus_levels1.length
     assert_equal 1, bonus_levels1[0][:stageNumber]
@@ -2420,6 +2519,40 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal script.script_levels[0].activity_section_id, activity_section.id
   end
 
+  test 'can move last lesson group up' do
+    script = create :script, name: 'lesson-group-test-script'
+    lesson_group1 = create :lesson_group, key: 'lg-1', script: script
+    lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
+    lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
+    activity = create :lesson_activity, lesson: lesson2
+    activity_section = create :activity_section, lesson_activity: activity
+    level1 = create :level
+    script_level = create :script_level, script: script, lesson: lesson2, levels: [level1], activity_section: activity_section, activity_section_position: 1
+    lesson_group2 = create :lesson_group, key: 'lg-2', script: script
+    lesson3 = create :lesson, key: 'l-3', name: 'Lesson 3', lesson_group: lesson_group2
+
+    new_dsl = <<-SCRIPT
+      lesson_group '#{lesson_group2.key}', display_name: 'Lesson Group 2'
+      lesson '#{lesson3.key}', display_name: '#{lesson3.name}'
+
+      lesson_group '#{lesson_group1.key}', display_name: 'Lesson Group 1'
+      lesson '#{lesson1.key}', display_name: '#{lesson1.name}'
+
+      lesson '#{lesson2.key}', display_name: '#{lesson2.name}'
+      level '#{level1.name}'
+    SCRIPT
+
+    script = Script.add_script(
+      {name: 'lesson-group-test-script'},
+      ScriptDSL.parse(new_dsl, 'a filename')[0][:lesson_groups]
+    )
+
+    assert_equal script.lessons[2].lesson_group_id, lesson_group1.id
+    assert_equal script.lessons[2].id, lesson2.id
+    assert_equal script.script_levels[0].id, script_level.id
+    assert_equal script.script_levels[0].activity_section_id, activity_section.id
+  end
+
   test 'can add the lesson group for a lesson' do
     l = create :level
     old_dsl = <<-SCRIPT
@@ -2810,7 +2943,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'fix script level positions' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
 
     lesson_1 = create :lesson, script: script, lesson_group: lesson_group
@@ -2866,7 +2999,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cannot fix position of legacy script levels' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -2877,6 +3010,11 @@ class ScriptTest < ActiveSupport::TestCase
       script.fix_script_level_positions
     end
     assert_includes error.message, 'Legacy script levels are not allowed in migrated scripts.'
+  end
+
+  test 'localized_title defaults to name' do
+    script = create :script, name: "test-localized-title-default"
+    assert_equal "test-localized-title-default", script.localized_title
   end
 
   private

@@ -1,11 +1,11 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
+  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update]
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_script, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
@@ -109,7 +109,7 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
-      lessonLevelData: @script_file,
+      lessonLevelData: @script_dsl_text,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
@@ -138,15 +138,59 @@ class ScriptsController < ApplicationController
   def instructions
     require_levelbuilder_mode
 
-    script = Script.get_from_cache(params[:script_id])
+    script = Script.get_from_cache(params[:id])
 
     render 'levels/instructions', locals: {stages: script.lessons}
+  end
+
+  def vocab
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def resources
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def code
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def standards
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def get_rollup_resources
+    script = Script.get_from_cache(params[:id])
+    course_version = script.get_course_version
+    return render status: 400, json: {error: 'Script does not have course version'} unless course_version
+    rollup_pages = []
+    if script.lessons.any? {|l| !l.programming_expressions.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.resources.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.standards.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(script), course_version_id: course_version.id))
+    end
+    if script.lessons.any? {|l| !l.vocabularies.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(script), course_version_id: course_version.id))
+    end
+    rollup_pages.each do |r|
+      r.is_rollup = true
+      r.save! if r.changed?
+    end
+    render json: rollup_pages.map(&:summarize_for_lesson_edit).to_json
   end
 
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_lesson_groups(@script)
+    @script_dsl_text = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake
@@ -183,6 +227,7 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :visible_to_teachers,
+      :deprecated,
       :curriculum_umbrella,
       :family_name,
       :version_year,
@@ -191,6 +236,7 @@ class ScriptsController < ApplicationController
       :hideable_lessons,
       :curriculum_path,
       :professional_learning_course,
+      :only_instructor_review_required,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,
@@ -210,6 +256,8 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
+      resourceIds: [],
+      studentResourceIds: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h

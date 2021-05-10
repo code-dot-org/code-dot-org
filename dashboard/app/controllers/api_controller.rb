@@ -342,47 +342,6 @@ class ApiController < ApplicationController
     }
   end
 
-  # Get level progress for a set of users within this script.
-  # @param [Enumerable<User>] users
-  # @param [Script] script
-  # @return [Hash]
-  # Example return value (where 1 and 2 are userIds and 135 and 136 are levelIds):
-  #   {
-  #     "1": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     },
-  #     "2": {
-  #       "135": {"status": "perfect", "result": 100}
-  #       "136": {"status": "perfect", "result": 100}
-  #     }
-  #   }
-  private def script_progress_for_users(users, script)
-    user_levels = User.user_levels_by_user_by_level(users, script)
-    paired_user_levels_by_user = PairedUserLevel.pairs_by_user(users)
-    progress_by_user = users.inject({}) do |progress, user|
-      progress[user.id] = merge_user_progress_by_level(
-        script: script,
-        user: user,
-        user_levels_by_level: user_levels[user.id],
-        paired_user_levels: paired_user_levels_by_user[user.id],
-        include_timestamp: true
-      )
-      progress
-    end
-    timestamp_by_user = progress_by_user.transform_values do |user|
-      user.values.map {|level| level[:last_progress_at]}.compact.max
-    end
-    # Remove last_progress_at from the return value, to keep the data sent to
-    # the client to a minimum.
-    progress_by_user.values.each do |user|
-      user.values.each do |level|
-        level.delete(:last_progress_at)
-      end
-    end
-    [progress_by_user, timestamp_by_user]
-  end
-
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
@@ -405,9 +364,14 @@ class ApiController < ApplicationController
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
       teacher_viewing_student = current_user.students.include?(user)
-      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
+      render json: summarize_user_progress(script, user).merge(
+        {
+          signedIn: true,
+          teacherViewingStudent: teacher_viewing_student,
+        }
+      )
     else
-      render json: {}
+      render json: {signedIn: false}
     end
   end
 
@@ -420,9 +384,10 @@ class ApiController < ApplicationController
   # but not completed.)
   def user_progress_for_stage
     response = user_summary(current_user)
+    response[:signedIn] = !current_user.nil?
 
     script = Script.get_from_cache(params[:script])
-    stage = script.lessons[params[:stage_position].to_i - 1]
+    stage = script.lessons[params[:lesson_position].to_i - 1]
     script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 

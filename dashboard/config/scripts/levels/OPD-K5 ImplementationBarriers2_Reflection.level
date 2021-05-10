@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "tts_long_instructions_override": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "instructions_important": "false",
+    "short_instructions": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "# Implementation Barriers: Reflection\r\n\r\n**Prompt:**\r\n* What barriers do you have the power to influence? \r\n* What commitment are you ready to make in support of bringing CS Fundamentals to all of your students? \r\n\t* Be as specific as you can about your next steps:\r\n\t\t* Requesting tech support or additional devices\r\n\t\t* Changing classroom routines and procedures to make space for teaching CS Fundamentals\r\n\t\t\t* Setting aside time to teach CS Fundamentals on a weekly, monthly, or quarterly basis\r\n\t\t* Collaborating with teachers, administrators or support staff\r\n\t\t* Other considerations not already listed\r\n\r\n\r\n",
+    "parent_level_id": 27647,
+    "name_suffix": "_2021"
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-03-06T01:03:35.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-11-07 00:36:42 +0000\",\"changed\":[],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:37:20 +0000\",\"changed\":[\"name\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 00:39:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-08 17:52:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2021-03-05 19:35:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 22:37:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 22:53:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-05 23:21:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:14:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:15:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:18:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:45:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 00:59:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 01:02:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 01:03:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-03-06 01:10:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+}]]></config>
+</FreeResponse>

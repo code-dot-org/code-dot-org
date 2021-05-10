@@ -2,10 +2,46 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
+import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+
+// Dialog with information about a lesson group
+export default class LessonGroupInfoDialog extends Component {
+  static propTypes = {
+    isOpen: PropTypes.bool.isRequired,
+    displayName: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    closeDialog: PropTypes.func,
+    bigQuestions: PropTypes.string
+  };
+
+  render() {
+    return (
+      <BaseDialog
+        isOpen={this.props.isOpen}
+        handleClose={this.props.closeDialog}
+        useUpdatedStyles
+        style={styles.dialog}
+      >
+        <h2 style={styles.lessonGroupName}>{this.props.displayName}</h2>
+        <LessonGroupInfo
+          description={this.props.description}
+          bigQuestions={this.props.bigQuestions}
+        />
+        <DialogFooter rightAlign>
+          <Button
+            __useDeprecatedTag
+            text={i18n.closeDialog()}
+            onClick={this.props.closeDialog}
+            color={Button.ButtonColor.orange}
+          />
+        </DialogFooter>
+      </BaseDialog>
+    );
+  }
+}
 
 const styles = {
   description: {
@@ -28,57 +64,3 @@ const styles = {
     color: color.teal
   }
 };
-
-// Dialog with information about a lesson group
-export default class LessonGroupInfoDialog extends Component {
-  static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    displayName: PropTypes.string.isRequired,
-    description: PropTypes.string,
-    closeDialog: PropTypes.func,
-    bigQuestions: PropTypes.string
-  };
-
-  render() {
-    return (
-      <BaseDialog
-        isOpen={this.props.isOpen}
-        handleClose={this.props.closeDialog}
-        useUpdatedStyles
-        style={styles.dialog}
-      >
-        <h2 style={styles.lessonGroupName}>{this.props.displayName}</h2>
-        {this.props.description && (
-          <div>
-            <h4 style={styles.subTitle}>{i18n.description()}</h4>
-            <div style={styles.description}>
-              <SafeMarkdown
-                openExternalLinksInNewTab={true}
-                markdown={this.props.description}
-              />
-            </div>
-          </div>
-        )}
-        {this.props.bigQuestions && (
-          <div>
-            <h4 style={styles.subTitle}>{i18n.bigQuestions()}</h4>
-            <div style={styles.description}>
-              <SafeMarkdown
-                openExternalLinksInNewTab={true}
-                markdown={this.props.bigQuestions}
-              />
-            </div>
-          </div>
-        )}
-        <DialogFooter rightAlign>
-          <Button
-            __useDeprecatedTag
-            text={i18n.closeDialog()}
-            onClick={this.props.closeDialog}
-            color={Button.ButtonColor.orange}
-          />
-        </DialogFooter>
-      </BaseDialog>
-    );
-  }
-}

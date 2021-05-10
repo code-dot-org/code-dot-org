@@ -961,6 +961,8 @@ hu-HU:
   coursee-2018_gradelevel: 8-tól 12 éves korig
   coursed-2019_gradelevel: 8+ évfolyam
   coursee-2019_gradelevel: 8-tól 12 éves korig
+  coursed-2020_gradelevel: 8+ évfolyam
+  coursee-2020_gradelevel: 8-tól 12 éves korig
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -1723,3 +1725,9 @@ hu-HU:
   footer_powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
     Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
   codebytes_skinny_banner_english_only: Csak angol
+  footer_privacy_policy: Adatvédelmi Elvek
+  footer_about: Rólunk
+  footer_partners: Partnerek
+  footer_donate: Adományozz
+  footer_support: Segítség
+  footer_terms: Felhasználási feltételek

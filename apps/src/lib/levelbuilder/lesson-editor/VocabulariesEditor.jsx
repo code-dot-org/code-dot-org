@@ -14,45 +14,6 @@ import {
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
 
-const styles = {
-  search: {
-    paddingBottom: 10
-  },
-  actionsColumn: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'white'
-  },
-  edit: {
-    fontSize: 14,
-    color: 'white',
-    background: color.default_blue,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: '50%',
-    lineHeight: '30px'
-  },
-  remove: {
-    fontSize: 14,
-    color: 'white',
-    background: color.dark_red,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: '50%',
-    lineHeight: '30px'
-  },
-  addButton: {
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    fontSize: 14,
-    padding: 7,
-    textAlign: 'center',
-    marginTop: 10,
-    marginLeft: 0
-  }
-};
-
 class VocabulariesEditor extends Component {
   static propTypes = {
     courseVersionId: PropTypes.number,
@@ -236,7 +197,7 @@ class VocabulariesEditor extends Component {
             additionalQueryParams={{
               courseVersionId: this.props.courseVersionId
             }}
-            searchUrl={'vocabularysearch'}
+            searchUrl={'vocabularies/search'}
             constructOptions={this.constructSearchOptions}
           />
         </div>
@@ -256,6 +217,45 @@ class VocabulariesEditor extends Component {
     );
   }
 }
+
+const styles = {
+  search: {
+    paddingBottom: 10
+  },
+  actionsColumn: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
+  edit: {
+    fontSize: 14,
+    color: 'white',
+    background: color.default_blue,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
+  remove: {
+    fontSize: 14,
+    color: 'white',
+    background: color.dark_red,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '50%',
+    lineHeight: '30px'
+  },
+  addButton: {
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    fontSize: 14,
+    padding: 7,
+    textAlign: 'center',
+    marginTop: 10,
+    marginLeft: 0
+  }
+};
 
 export const UnconnectedVocabulariesEditor = VocabulariesEditor;
 

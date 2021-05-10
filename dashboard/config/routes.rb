@@ -221,8 +221,8 @@ Dashboard::Application.routes.draw do
 
   # quick links for cartoon network arabic
   get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
-  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/stage/1/puzzle/1'
-  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/stage/1/puzzle/1'
+  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/lessons/1/levels/1'
+  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/lessons/1/levels/1'
 
   # /lang/xx shortcut for all routes
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
@@ -271,16 +271,64 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get '/course/:course_name', to: redirect('/courses/%{course_name}')
+  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+
+  resources :courses, param: 'course_name' do
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+      get 'get_rollup_resources'
+    end
+  end
+
   # CSP 20-21 lockable lessons with lesson plan redirects
-  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/stage/14%{all}')
-  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/stage/9%{all}')
-  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/stage/11%{all}')
-  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/stage/15%{all}')
-  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/stage/18%{all}')
-  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/stage/6%{all}')
-  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/stage/11%{all}')
-  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/stage/9%{all}')
-  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/stage/14%{all}')
+  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
+  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lessons/9%{all}')
+  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/lessons/11%{all}')
+  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/lessons/15%{all}')
+  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/lessons/18%{all}')
+  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/lessons/6%{all}')
+  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
+  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
+  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
+
+  resources :lessons, only: [:edit, :update]
+
+  resources :resources, only: [:create, :update] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :vocabularies, only: [:create, :update] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :programming_expressions, only: [] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :standards, only: [] do
+    collection do
+      get :search
+    end
+  end
+
+  # Redirects from old /stage/x/extras url to new /lessons/x/extras url
+  get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%{script_name}/lessons/%{position}/extras')
+
+  # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
+  get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
+
+  # Redirects from old /lockable/x/puzzle url to new /lockable/x/levels url
+  get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
@@ -289,31 +337,38 @@ Dashboard::Application.routes.draw do
     get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
-    get 'instructions', to: 'scripts#instructions'
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+      get 'instructions'
+      get 'get_rollup_resources'
+    end
 
-    ## TODO: Once we move levels over to /lessons as well combine the routing rules
-    resources :lessons, only: [:show], param: 'position'
-
-    # /s/xxx/stage/yyy/puzzle/zzz
-    resources :stages, only: [], path: "/stage", param: 'position', format: false do
+    # /s/xxx/lessons/yyy
+    resources :lessons, only: [:show], param: 'position', format: false do
+      get 'student', to: 'lessons#student_lesson_plan'
       get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+
+      # /s/xxx/lessons/yyy/levels/zzz
+      resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
-          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lessons/yyy/levels/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-          # /s/xxx/stage/yyy/puzzle/zzz/sublevel/sss
+          # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
           get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
         end
       end
     end
 
-    # /s/xxx/lockable/yyy/puzzle/zzz
+    # /s/xxx/lockable/yyy/levels/zzz
     resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+      resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
-          # /s/xxx/stage/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lockable/yyy/levels/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
         end
       end
@@ -324,18 +379,6 @@ Dashboard::Application.routes.draw do
 
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
-
-  resources :courses, param: 'course_name'
-  get '/course/:course_name', to: redirect('/courses/%{course_name}')
-
-  resources :lessons, only: [:edit, :update]
-
-  resources :resources, only: [:create, :update]
-  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
-
-  resources :vocabularies, only: [:create, :update]
-  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
-  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -376,6 +419,8 @@ Dashboard::Application.routes.draw do
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
+  get '/admin/pilots/', to: 'admin_search#pilots', as: 'pilots'
+  post '/admin/pilots/', to: 'admin_search#create_pilot', as: 'create_pilot'
   get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
   post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
 
@@ -437,6 +482,12 @@ Dashboard::Application.routes.draw do
   namespace :plc do
     root to: 'plc#index'
     resources :user_course_enrollments
+    resources :course_units, only: [] do
+      collection do
+        get :launch
+        post :launch_plc_course
+      end
+    end
   end
 
   concern :api_v1_pd_routes do
@@ -528,6 +579,9 @@ Dashboard::Application.routes.draw do
           post :validate_form
           get ':id', action: :get_form_data
         end
+        namespace :library_questions do
+          post :validate_library_question
+        end
       end
     end
   end
@@ -537,7 +591,7 @@ Dashboard::Application.routes.draw do
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
-  post '/dashboardapi/v1/foorm/misc_survey_submission', action: :create, controller: 'api/v1/foorm_misc_survey_submissions'
+  post '/dashboardapi/v1/foorm/simple_survey_submission', action: :create, controller: 'api/v1/foorm_simple_survey_submissions'
 
   get 'my-professional-learning', to: 'pd/professional_learning_landing#index', as: 'professional_learning_landing'
 
@@ -653,8 +707,8 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
@@ -678,7 +732,9 @@ Dashboard::Application.routes.draw do
       concerns :api_v1_pd_routes
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
+      post 'users/:user_id/using_dark_mode', to: 'users#update_using_dark_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
+      get 'users/:user_id/using_dark_mode', to: 'users#get_using_dark_mode'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
@@ -715,10 +771,15 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      post 'ml_models/save', to: 'ml_models#save'
-      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
-      get 'ml_models/metadata/:model_id', to: 'ml_models#user_ml_model_metadata'
-      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
+      resources :ml_models, only: [:show, :destroy] do
+        collection do
+          get 'names'
+          post 'save'
+        end
+        member do
+          get 'metadata'
+        end
+      end
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
@@ -780,13 +841,20 @@ Dashboard::Application.routes.draw do
 
   get '/help', to: redirect("https://support.code.org")
 
-  get '/form/:misc_form_path', to: 'foorm/misc_survey#new'
-
-  get '/form/:misc_form_path/show', to: 'foorm/misc_survey#show'
-
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
+  get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
+
+  get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
+
+  # These really belong in the foorm namespace,
+  # but we leave them outside so that we can easily use the simple "/form" paths.
+  get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
+  get '/form/:path', to: 'foorm/simple_survey_forms#show'
+
   namespace :foorm do
+    resources :simple_survey_forms, only: [:index, :new, :create]
+
     resources :forms, only: [:create] do
       member do
         put :update_questions
@@ -802,6 +870,10 @@ Dashboard::Application.routes.draw do
       get :editor, on: :collection
     end
 
-    resources :library_questions, only: [:show, :update]
+    resources :library_questions, only: [:create, :show, :update] do
+      member do
+        get :published_forms_appeared_in
+      end
+    end
   end
 end

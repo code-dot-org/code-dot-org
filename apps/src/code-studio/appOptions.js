@@ -6,7 +6,7 @@
  * @typedef {Object} AppOptionsConfig
  * @property {boolean} embedded
  * @property {string} scriptName
- * @property {string} stagePosition
+ * @property {string} lessonPosition
  * @property {string} levelPosition
  * @property {AutoplayVideo} autoplayVideo
  * @property {SerializedAnimationList} initialAnimationList
@@ -37,7 +37,6 @@
  * @property {?} authoredHintsUsedIds
  * @property {number} serverLevelId
  * @property {number} serverProjectLevelId
- * @property {number} serverScriptLevelId
  * @property {string} gameDisplayName
  * @property {boolean} publicCaching
  * @property {?boolean} is13Plus - Will be true if the user is 13 or older,

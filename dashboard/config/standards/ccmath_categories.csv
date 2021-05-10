@@ -1,0 +1,35 @@
+framework,parent,category,type,description
+ccmath,,APR,Strand,Arithmetic With Polynomials And Rational Expressions
+ccmath,,BF,Strand,Building Functions
+ccmath,,C,Strand,Circles
+ccmath,,CC,Strand,Counting And Cardinality
+ccmath,,CED,Strand,Creating Equations
+ccmath,,CN,Strand,The Complex Number System
+ccmath,,CO,Strand,Congruence
+ccmath,,CP,Strand,Conditional Probability And The Rules Of Probability
+ccmath,,EE,Strand,Expressions And Equations
+ccmath,,F,Strand,Functions
+ccmath,,G,Strand,Geometry
+ccmath,,GMD,Strand,Geometric Measurement And Dimension
+ccmath,,GPE,Strand,Expressing Geometric Properties With Equations
+ccmath,,IC,Strand,Making Inferences And Justifying Conclusions
+ccmath,,ID,Strand,Interpreting Categorical And Quantitative Data
+ccmath,,IF,Strand,Interpreting Functions
+ccmath,,LE,Strand,"Linear, Quadratic, And Exponential Models★"
+ccmath,,MD,Strand,Measurement And Data
+ccmath,,MD,Strand,Using Probability To Make Decisions
+ccmath,,MG,Strand,Modeling With Geometry
+ccmath,,MP,Strand,Math Practices
+ccmath,,NBT,Strand,Number And Operations In Base Ten
+ccmath,,NF,Strand,Number And Operations – Fractions
+ccmath,,NS,Strand,The Number System
+ccmath,,OA,Strand,Operations And Algebraic Thinking
+ccmath,,Q,Strand,Quantities
+ccmath,,REI,Strand,Reasoning With Equations And Inequalities
+ccmath,,RN,Strand,The Real Number System
+ccmath,,RP,Strand,Ratios And Proportional Relationships
+ccmath,,SP,Strand,Statistics And Probability
+ccmath,,SRT,Strand,"Similarity, Right Triangles, And Trigonometry"
+ccmath,,SSE,Strand,Seeing Structure In Expressions
+ccmath,,TF,Strand,Trigonometric Functions
+ccmath,,VM,Strand,Vector And Matrix Quantities

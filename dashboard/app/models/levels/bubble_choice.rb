@@ -55,7 +55,7 @@ class BubbleChoice < DSLDefined
   end
 
   # Returns a sublevel's position in the parent level. Can be used for generating
-  # a sublevel URL (/s/:script_name/stage/:stage_pos/puzzle/:puzzle_pos/sublevel/:sublevel_pos).
+  # a sublevel URL (/s/:script_name/lessons/:stage_pos/levels/:puzzle_pos/sublevel/:sublevel_pos).
   # @param [Level] sublevel
   # @return [Integer] The sublevel's position (i.e., its index + 1) under the parent level.
   def sublevel_position(sublevel)
@@ -141,8 +141,16 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
-        level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
-        level_info[:status] = level_info[:perfect] ? SharedConstants::LEVEL_STATUS.perfect : SharedConstants::LEVEL_STATUS.not_tried
+        level_info[:perfect] = UserLevel.find_by(
+          level: level,
+          script: script_level.try(:script),
+          user_id: user_id
+          )&.perfect?
+        level_info[:status] = if level_info[:perfect]
+                                SharedConstants::LEVEL_STATUS.perfect
+                              else
+                                SharedConstants::LEVEL_STATUS.not_tried
+                              end
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.
@@ -162,11 +170,11 @@ class BubbleChoice < DSLDefined
     summary
   end
 
-  # Returns the sublevel id for a user that has the highest best_result.
+  # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
   # @return [Integer]
-  def best_result_sublevel(user)
-    ul = user.user_levels.where(level: sublevels).max_by(&:best_result)
+  def best_result_sublevel(user, script)
+    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
     ul&.level
   end
 

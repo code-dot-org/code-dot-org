@@ -1,0 +1,6 @@
+{
+  "func": "rotationSpeed",
+  "category": "Sprites",
+  "modeOptionName": "*.rotationSpeed",
+  "type": "property"
+}

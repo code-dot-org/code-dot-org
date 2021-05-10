@@ -23,19 +23,19 @@ module LevelsHelper
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
       if script_level.lesson.numbered_lesson?
-        puzzle_page_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+        puzzle_page_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       else
         puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
-      sublevel_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+      sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
     elsif !script_level.lesson.numbered_lesson?
       script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
-      script_stage_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
+      script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
-      script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
+      script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     end
   end
 
@@ -178,7 +178,7 @@ module LevelsHelper
     view_options(server_level_id: @level.id)
     if @script_level
       view_options(
-        stage_position: @script_level.lesson.absolute_position,
+        lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
         next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @stage)
       )
@@ -295,6 +295,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:usingDarkModePref] = !!current_user.using_dark_mode
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
@@ -474,6 +475,10 @@ module LevelsHelper
     {voices: AzureTextToSpeech.get_voices || {}}
   end
 
+  def disallowed_html_tags
+    DCDO.get('disallowed_html_tags', [])
+  end
+
   # Options hash for Blockly
   def blockly_options
     l = @level
@@ -516,9 +521,13 @@ module LevelsHelper
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
 
+    # Allow levelbuilders building AppLab widgets in start mode to access Applab as usual.
+    # Everywhere else, widgets should be treated as embedded levels.
+    treat_widget_as_embed = level_options['widgetMode'] && !@is_start_mode
+
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
-    level_options['embed'] = level_options['embed'] || level_options['widgetMode']
+    level_options['embed'] = level_options['embed'] || treat_widget_as_embed
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true

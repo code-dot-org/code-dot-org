@@ -1,0 +1,10 @@
+{
+  "func": "rect",
+  "category": "Canvas",
+  "paletteParams": [
+    "x",
+    "y",
+    "width",
+    "height"
+  ]
+}

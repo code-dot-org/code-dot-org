@@ -1,0 +1,7 @@
+{
+  "func": "mousePressed",
+  "block": "function mousePressed() {}",
+  "expansion": "function mousePressed() {\n  __;\n}",
+  "category": "World",
+  "noAutocomplete": true
+}

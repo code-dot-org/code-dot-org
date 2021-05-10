@@ -1,0 +1,186 @@
+---
+title: CS Journeys Resources - Online courses
+video_player: true
+theme: responsive
+social:
+  "og:title": "CS Journeys Resources: Online courses"
+  "og:description": "Extend your learning with online courses"
+  "og:image": "/images/csjourneys/og-courses.jpg"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:title": "CS Journeys Resources: Online courses"
+  "twitter:description": "Extend your learning with online courses"
+  "twitter:image": "/images/csjourneys/og-courses.jpg"
+---
+<a id="top"></a>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Online courses</h1>
+<p>Extend your learning with these online courses. Learn Python, JavaScript, and other programming languages. Learn about artificial intelligence (AI), robotics, and data science. The options below feature both beginner and advanced courses.</p>
+
+<ul>
+  <li><a href="#free">Free online courses</a></li>
+  <li><a href="#other">Other courses</a></li>
+</ul>
+
+<br>
+
+<a id="free"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Free online courses</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="stanfordonline" href="https://www.edx.org/course/computer-science-101" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/csjourneys/stanford-online.png" alt="StanfordOnline logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="stanfordonline" href="https://www.edx.org/course/computer-science-101" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Computer Science 101</strong></h3></a>
+  <p><strong>Stanford University (via edX) | For university students | For beginners</strong></p>
+  <p>CS101 is a self-paced course that teaches the essential ideas of Computer Science for a zero-prior-experience audience. In CS101, participants play and experiment with short bits of "computer code" to bring to life the power and limitations of computers. CS101 also provides a general background on computers today: what is a computer, what is hardware, what is software, what is the internet.</p>
+  <p><i>Registration period: Rolling</i></p>
+</div>
+<div style="clear: both"></div>
+<br>
+
+<a class="linktag" id="udacity" href="https://www.udacity.com/course/introduction-to-python--ud1110" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/csjourneys/udacity.png" alt="Udacity logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="udacity" href="https://www.udacity.com/course/introduction-to-python--ud1110" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Introduction to Python Programming</strong></h3></a>
+  <p><strong>Udacity | For university students | For beginners</strong></p>
+  <p>In this course, you'll learn the fundamentals of the Python programming language, along with programming best practices. You’ll learn to represent and store data using Python data types and variables, and use conditionals and loops to control the flow of your programs. You’ll harness the power of complex data structures like lists, sets, dictionaries, and tuples to store collections of related data. You’ll define and document your own custom functions, write scripts, and handle errors. Lastly, you’ll learn to find and use modules in the Python Standard Library and other third-party libraries.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="harvard-cs50" href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/csjourneys/harvard.png" alt="Harvard logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="harvard-cs50" href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Harvard CS50</strong></h3></a>
+  <p><strong>Harvard (via edX) | For university students | For beginners</strong></p>
+  <p>CS50 is Harvard University's introduction to the intellectual enterprises of computer science and the art of programming. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming.</p>
+  <p><i>Registration period: Rolling</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="khanacademy" href="https://www.khanacademy.org/computing/computer-programming" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/khan_academy.png" alt="Khan Academy logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="khanacademy" href="https://www.khanacademy.org/computing/computer-programming" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Khan Academy Computer Programming courses</strong></h3></a>
+  <p><strong>Khan Academy | For middle school and up | For beginners and advanced students</strong></p>
+  <p>Learn programming languages like HTML, JavaScript and SQL. Make drawings, animations and webpages, and learn how to query and manage data.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="odin-project" href="https://www.theodinproject.com/home" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/odin-project.png" alt="The Odin Project logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="odin-project" href="https://www.theodinproject.com/home" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>The Odin Project</strong></h3></a>
+  <p><strong>The Odin Project | For high school and up | For beginners</strong></p>
+  <p>The Odin Project provides a free open source coding curriculum that can be taken entirely online. Learn the foundations of web development, including HTML, CSS, JavaScript, and Ruby.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="w3schools" href="https://www.w3schools.com/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/csjourneys/w3.png" alt="W3 Schools logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="w3schools" href="https://www.w3schools.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>W3 Schools</strong></h3></a>
+  <p><strong>W3 Schools | For middle school and up | For beginners</strong></p>
+  <p>Learn almost any programming language with these free, easy tutorials.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>
+
+<a id="other"></a>
+<div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Other courses and online learning resources</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
+<a class="linktag" id="codecademy" href="https://www.codecademy.com/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/codeacademy.png" alt="Codecademy logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="codecademy" href="https://www.codecademy.com/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Codecademy</strong></h3></a>
+  <p><strong>Codecademy | For high school and up | For beginners</strong></p>
+  <p>Codecademy is an interactive learning platform used by tens of millions of students around the world. Our "Welcome to Codecademy" course is a great way to learn the basics of computer science using JavaScript. Sign up to create a free account and explore our many other free coding courses as well.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="create-learn" href="https://www.create-learn.us/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/create-learn.png" alt="Create & Learn logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="create-learn" href="https://www.create-learn.us/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Create & Learn</strong></h3></a>
+  <p><strong>Create & Learn | For Grades 2 through 12 | For beginners</strong></p>
+  <p>Live online computer science courses. Topics include coding, AI, data science, robotics, smart devices, coding for mobile, and digital design.</p>
+  <p><i>Registration period: Rolling</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="linkedin-learning" href="https://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD14814&bid=524&aid=CD14814&opt=" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/linkedin-learning.png" alt="LinkedIn Learning logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="linkedin-learning" href="https://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&utm_source=SSPRC&utm_content=524&utm_campaign=CD14814&bid=524&aid=CD14814&opt=" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Developer Training and Tutorials</strong></h3></a>
+  <p><strong>LinkedIn Learning | For high school and up | For beginners</strong></p>
+  <p>Learn how to code, create, and build web applications, from the foundations of object-oriented programming in C and C++, to how to write Java. Our developer tutorials can help you learn to develop and create mobile apps, work with PHP and MySQL databases, get started with the statistical processing language R, and much more.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="educative" href="https://www.educative.io/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/educative.png" alt="Educative logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="educative" href="https://www.educative.io/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Educative.io</strong></h3></a>
+  <p><strong>Educative.io | For high school and up | For beginners and advanced students</strong></p>
+  <p>Hands-on, text-based courses that help you expand your skills in half the time, without the hassle of setup or lengthy videos. Get ready for your career in tech by exploring hundreds of our courses on topics like Coding Interview Preparation, Web Development, and top modern technologies like Cloud Computing, Containerization, and Machine Learning. Get started for FREE with our "From Scratch" Programming Language courses.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="educode" href="https://educode.org/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/educode.png" alt="EduCode Academy logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="educode" href="https://educode.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>EduCode Academy</strong></h3></a>
+  <p><strong>EduCode Academy | For Grades 5-12 | For beginners and advanced students</strong></p>
+  <p>Coding courses for kids, featuring real code, animated video micro-lessons, and gamified, relatable, real-world projects. Four learning paths are available: JavaScript Programming, Game Development, Web Development, and Data Science.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+<a class="linktag" id="udemy" href="https://www.udemy.com/courses/development/programming-languages/" target="_blank">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/udemy.png" alt="Udemy logo">
+</a>
+<div style="width: 85%; float: left">
+  <a class="linktag" id="udemy" href="https://www.udemy.com/courses/development/programming-languages/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Udemy</strong></h3></a>
+  <p><strong>Udemy | For high school and up | For beginners</strong></p>
+  <p>Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors.</p>
+  <p><i>Registration period: Start anytime</i></p>
+</div>
+<div style="clear:both"></div>
+<br>
+
+</div>
+
+<div style="clear:both; margin-bottom:35px"></div>

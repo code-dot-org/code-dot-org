@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '../FontAwesome';
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {
   DOT_SIZE,
   DIAMOND_DOT_SIZE,
@@ -21,73 +21,9 @@ import TooltipWithIcon from './TooltipWithIcon';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
 import firehoseClient from '../../lib/util/firehose';
 
-/**
- * A ProgressBubble represents progress for a specific level. It can be a circle
- * or a diamond (or a pill in the case of unplugged levels), and it can be big
- * or small. The fill and outline change depending on the level status.
- */
-
-const styles = {
-  main: {
-    boxSizing: 'content-box',
-    fontFamily: '"Gotham 5r", sans-serif',
-    width: DOT_SIZE,
-    height: DOT_SIZE,
-    borderRadius: DOT_SIZE,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    fontSize: 16,
-    letterSpacing: -0.11,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition:
-      'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
-    marginTop: 3,
-    marginBottom: 3,
-    position: 'relative'
-  },
-  largeDiamond: {
-    width: DIAMOND_DOT_SIZE,
-    height: DIAMOND_DOT_SIZE,
-    borderRadius: 4,
-    transform: 'rotate(45deg)',
-    marginTop: 6,
-    marginBottom: 6
-  },
-  small: {
-    width: SMALL_DOT_SIZE,
-    height: SMALL_DOT_SIZE,
-    borderRadius: SMALL_DOT_SIZE,
-    fontSize: 0,
-    alignItems: 'none'
-  },
-  smallDiamond: {
-    width: SMALL_DIAMOND_SIZE,
-    height: SMALL_DIAMOND_SIZE,
-    borderRadius: 2,
-    fontSize: 0,
-    transform: 'rotate(45deg)',
-    marginLeft: 1,
-    marginRight: 1
-  },
-  contents: {
-    whiteSpace: 'nowrap',
-    lineHeight: '16px'
-  },
-  diamondContents: {
-    // undo the rotation from the parent
-    transform: 'rotate(-45deg)'
-  },
-  disabledStageExtras: {
-    backgroundColor: color.lighter_gray,
-    color: color.white
-  }
-};
-
 class ProgressBubble extends React.Component {
   static propTypes = {
-    level: levelType.isRequired,
+    level: levelWithProgressType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
     //TODO: (ErinB) probably change to use just number during post launch clean-up.
@@ -106,7 +42,8 @@ class ProgressBubble extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool
+    hideAssessmentIcon: PropTypes.bool,
+    onClick: PropTypes.func
   };
 
   static defaultProps = {
@@ -132,13 +69,15 @@ class ProgressBubble extends React.Component {
   render() {
     const {
       level,
+      disabled,
       smallBubble,
       selectedSectionId,
       selectedStudentId,
       currentLocation,
       lessonTrophyEnabled,
       pairingIconEnabled,
-      hideAssessmentIcon
+      hideAssessmentIcon,
+      onClick
     } = this.props;
 
     const levelIsAssessment = isLevelAssessment(level);
@@ -148,9 +87,8 @@ class ProgressBubble extends React.Component {
     const levelName = level.name || level.progressionDisplayName;
     const levelIcon = getIconForLevel(level);
 
-    const disabled = this.props.disabled || levelIcon === 'lock';
     const hideNumber =
-      level.letter || levelIcon === 'lock' || level.paired || level.bonus;
+      level.letter || level.isLocked || level.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -158,12 +96,12 @@ class ProgressBubble extends React.Component {
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level.status, level.kind, disabled),
-      ...(disabled && level.bonus && styles.disabledStageExtras)
+      ...levelProgressStyle(level.status, level.kind),
+      ...(level.highlighted && styles.highlighted)
     };
 
     let href = '';
-    if (!disabled && url) {
+    if (!disabled && url && !onClick) {
       const queryParams = queryString.parse(currentLocation.search);
 
       if (selectedSectionId) {
@@ -234,7 +172,7 @@ class ProgressBubble extends React.Component {
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
             >
-              {level.letter && (
+              {level.letter && !smallBubble && (
                 <span id="test-bubble-letter"> {level.letter} </span>
               )}
               {levelIcon === 'lock' && <FontAwesome icon="lock" />}
@@ -278,10 +216,89 @@ class ProgressBubble extends React.Component {
           {bubble}
         </a>
       );
+    } else if (onClick) {
+      bubble = (
+        <a
+          style={{textDecoration: 'none'}}
+          className="uitest-ProgressBubble"
+          onClick={() => onClick(level)}
+        >
+          {bubble}
+        </a>
+      );
     }
 
     return bubble;
   }
 }
+
+/**
+ * A ProgressBubble represents progress for a specific level. It can be a circle
+ * or a diamond (or a pill in the case of unplugged levels), and it can be big
+ * or small. The fill and outline change depending on the level status.
+ */
+
+const styles = {
+  main: {
+    boxSizing: 'content-box',
+    fontFamily: '"Gotham 5r", sans-serif',
+    width: DOT_SIZE,
+    height: DOT_SIZE,
+    borderRadius: DOT_SIZE,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    fontSize: 16,
+    letterSpacing: -0.11,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition:
+      'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+    marginTop: 3,
+    marginBottom: 3,
+    position: 'relative'
+  },
+  largeDiamond: {
+    width: DIAMOND_DOT_SIZE,
+    height: DIAMOND_DOT_SIZE,
+    borderRadius: 4,
+    transform: 'rotate(45deg)',
+    marginTop: 6,
+    marginBottom: 6
+  },
+  small: {
+    width: SMALL_DOT_SIZE,
+    height: SMALL_DOT_SIZE,
+    borderRadius: SMALL_DOT_SIZE,
+    fontSize: 0,
+    alignItems: 'none'
+  },
+  smallDiamond: {
+    width: SMALL_DIAMOND_SIZE,
+    height: SMALL_DIAMOND_SIZE,
+    borderRadius: 2,
+    fontSize: 0,
+    transform: 'rotate(45deg)',
+    marginLeft: 1,
+    marginRight: 1
+  },
+  contents: {
+    whiteSpace: 'nowrap',
+    lineHeight: '16px'
+  },
+  diamondContents: {
+    // undo the rotation from the parent
+    transform: 'rotate(-45deg)'
+  },
+  disabledStageExtras: {
+    backgroundColor: color.lighter_gray,
+    color: color.white
+  },
+  highlighted: {
+    color: color.white,
+    backgroundColor: color.orange,
+    borderColor: color.orange
+  }
+};
 
 export default Radium(ProgressBubble);

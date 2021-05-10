@@ -8,33 +8,34 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
+import {
+  BubbleSize,
+  BubbleShape
+} from '@cdo/apps/templates/progress/progressStyles';
 
 const TITLE = '1';
 
 const defaultProps = {
   levelStatus: LevelStatus.not_tried,
   levelKind: LevelKind.level,
-  disabled: false,
+  isDisabled: false,
   title: TITLE,
   url: '/foo/bar'
 };
 
 const borderColors = {
-  [LevelStatus.locked]: color.lighter_gray,
   [LevelStatus.not_tried]: color.lighter_gray,
   [LevelStatus.attempted]: color.level_perfect,
   [LevelStatus.passed]: color.level_perfect,
   [LevelStatus.perfect]: color.level_perfect
 };
 const backgroundColors = {
-  [LevelStatus.locked]: color.level_not_tried,
   [LevelStatus.not_tried]: color.level_not_tried,
   [LevelStatus.attempted]: color.level_not_tried,
   [LevelStatus.passed]: color.level_passed,
   [LevelStatus.perfect]: color.level_perfect
 };
 const assessmentBorders = {
-  [LevelStatus.locked]: color.lighter_gray,
   [LevelStatus.not_tried]: color.lighter_gray,
   [LevelStatus.attempted]: color.level_submitted,
   [LevelStatus.submitted]: color.level_submitted,
@@ -42,7 +43,6 @@ const assessmentBorders = {
   [LevelStatus.perfect]: color.level_submitted
 };
 const assessmentBackgrounds = {
-  [LevelStatus.locked]: color.level_not_tried,
   [LevelStatus.not_tried]: color.level_not_tried,
   [LevelStatus.attempted]: color.level_not_tried,
   [LevelStatus.submitted]: color.level_submitted,
@@ -62,67 +62,86 @@ function bubbleContainerStyleForStatus(status, propOverrides = {}) {
       levelStatus={status}
     />
   );
-  const bubbleType = propOverrides.concept
-    ? unitTestExports.LargeDiamond
-    : unitTestExports.LargeCircle;
+
   return wrapper
-    .find(bubbleType)
+    .find(unitTestExports.BasicBubble)
     .at(0)
     .childAt(0)
     .props().style;
 }
 
 describe('ProgressTableLevelBubble', () => {
-  it('renders a link when enabled', () => {
+  it('renders a link', () => {
     const wrapper = shallow(<ProgressTableLevelBubble {...defaultProps} />);
     expect(wrapper.find(unitTestExports.LinkWrapper)).to.have.lengthOf(1);
   });
 
-  it('does not render a link when disabled', () => {
-    const wrapper = shallow(
-      <ProgressTableLevelBubble {...defaultProps} disabled={true} />
+  it('renders default bubble with circle shape', () => {
+    const wrapper = mount(<ProgressTableLevelBubble {...defaultProps} />);
+    expect(wrapper.find(unitTestExports.BasicBubble).props().shape).to.equal(
+      BubbleShape.circle
     );
-    expect(wrapper.find(unitTestExports.LinkWrapper)).to.have.lengthOf(0);
+  });
+
+  it('renders concept bubble with diamond shape', () => {
+    const wrapper = mount(
+      <ProgressTableLevelBubble {...defaultProps} isConcept={true} />
+    );
+    expect(wrapper.find(unitTestExports.BasicBubble).props().shape).to.equal(
+      BubbleShape.diamond
+    );
+  });
+
+  it('renders unplugged bubble with pill shape', () => {
+    const wrapper = mount(
+      <ProgressTableLevelBubble {...defaultProps} isUnplugged={true} />
+    );
+    expect(wrapper.find(unitTestExports.BasicBubble).props().shape).to.equal(
+      BubbleShape.pill
+    );
   });
 
   it('shows correct text in unplugged bubble', () => {
     const wrapper = mount(
-      <ProgressTableLevelBubble {...defaultProps} unplugged={true} />
+      <ProgressTableLevelBubble {...defaultProps} isUnplugged={true} />
     );
-    expect(wrapper.find(unitTestExports.UnpluggedBubble)).to.have.lengthOf(1);
-    expect(wrapper.find(unitTestExports.Content).text()).to.equal(
+    expect(wrapper.find(unitTestExports.BasicBubble).text()).to.equal(
       i18n.unpluggedActivity()
     );
   });
 
   it('shows title in normal bubble', () => {
     const wrapper = mount(<ProgressTableLevelBubble {...defaultProps} />);
-    expect(wrapper.find(unitTestExports.LargeCircle)).to.have.lengthOf(1);
-    expect(wrapper.find(unitTestExports.Content).text()).to.equal(TITLE);
+    expect(wrapper.find(unitTestExports.BasicBubble).text()).to.equal(TITLE);
   });
 
   it('shows title in concept bubble', () => {
     const wrapper = mount(
       <ProgressTableLevelBubble {...defaultProps} concept={true} />
     );
-    expect(wrapper.find(unitTestExports.LargeDiamond)).to.have.lengthOf(1);
-    expect(wrapper.find(unitTestExports.Content).text()).to.equal(TITLE);
+    expect(wrapper.find(unitTestExports.BasicBubble).text()).to.equal(TITLE);
   });
 
-  it('shows title in small bubble', () => {
+  it('shows title in letter bubble', () => {
     const wrapper = mount(
-      <ProgressTableLevelBubble {...defaultProps} smallBubble={true} />
+      <ProgressTableLevelBubble
+        {...defaultProps}
+        bubbleSize={BubbleSize.letter}
+      />
     );
-    expect(wrapper.find(unitTestExports.SmallCircle)).to.have.lengthOf(1);
-    expect(wrapper.find(unitTestExports.Content).text()).to.equal(TITLE);
+    expect(wrapper.find(unitTestExports.BasicBubble).text()).to.equal(TITLE);
+  });
+
+  it('does not show title in dot bubble', () => {
+    const wrapper = mount(
+      <ProgressTableLevelBubble {...defaultProps} bubbleSize={BubbleSize.dot} />
+    );
+    expect(wrapper.find(unitTestExports.BasicBubble).text()).to.equal('');
   });
 
   it('shows correct icon when locked', () => {
     const wrapper = mount(
-      <ProgressTableLevelBubble
-        {...defaultProps}
-        levelStatus={LevelStatus.locked}
-      />
+      <ProgressTableLevelBubble {...defaultProps} isLocked={true} />
     );
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.lengthOf(1);
@@ -131,7 +150,7 @@ describe('ProgressTableLevelBubble', () => {
 
   it('shows correct icon for bonus', () => {
     const wrapper = mount(
-      <ProgressTableLevelBubble {...defaultProps} bonus={true} />
+      <ProgressTableLevelBubble {...defaultProps} isBonus={true} />
     );
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.lengthOf(1);
@@ -140,7 +159,7 @@ describe('ProgressTableLevelBubble', () => {
 
   it('shows correct icon for paired', () => {
     const wrapper = mount(
-      <ProgressTableLevelBubble {...defaultProps} paired={true} />
+      <ProgressTableLevelBubble {...defaultProps} isPaired={true} />
     );
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.lengthOf(1);
@@ -149,18 +168,15 @@ describe('ProgressTableLevelBubble', () => {
 
   it('only shows paired icon for bonus + paired', () => {
     const wrapper = mount(
-      <ProgressTableLevelBubble {...defaultProps} bonus={true} paired={true} />
+      <ProgressTableLevelBubble
+        {...defaultProps}
+        isBonus={true}
+        isPaired={true}
+      />
     );
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.lengthOf(1);
     expect(icon.at(0).props().icon).to.equal('users');
-  });
-
-  it('renders a diamond for concept levels', () => {
-    const style = bubbleContainerStyleForStatus(LevelStatus.not_tried, {
-      concept: true
-    });
-    expect(style.transform).to.equal('rotate(45deg)');
   });
 
   Object.keys(borderColors).forEach(status => {

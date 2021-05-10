@@ -1,0 +1,18 @@
+{
+  "func": "setSelectionRange",
+  "category": "Advanced",
+  "paletteParams": [
+    "id",
+    "start",
+    "end"
+  ],
+  "params": [
+    "\"id\"",
+    "0",
+    "0"
+  ],
+  "paramButtons": {
+    "minArgs": 3,
+    "maxArgs": 4
+  }
+}

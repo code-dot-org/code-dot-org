@@ -1,0 +1,14 @@
+{
+  "func": "getColumn",
+  "category": "Data",
+  "paletteParams": [
+    "table",
+    "column"
+  ],
+  "params": [
+    "\"mytable\"",
+    "\"mycolumn\""
+  ],
+  "nativeIsAsync": true,
+  "type": "value"
+}

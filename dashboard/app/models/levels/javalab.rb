@@ -30,7 +30,11 @@ class Javalab < Level
     hide_share_and_remix
     is_project_level
     submittable
+    encrypted_examples
+    csa_view_mode
   )
+
+  before_save :fix_examples
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -41,6 +45,12 @@ class Javalab < Level
         properties: {}
       )
     )
+  end
+
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
   end
 
   # Return an 'appOptions' hash derived from the level contents
@@ -61,6 +71,9 @@ class Javalab < Level
       # We don't want this to be cached (as we only want it to be seen by authorized teachers), so
       # set it to nil here and let other code put it in app_options
       level_prop['teacherMarkdown'] = nil
+
+      # Set the javabuilder url
+      level_prop['javabuilderUrl'] = CDO.javabuilder_url
 
       # Don't set nil values
       level_prop.reject! {|_, value| value.nil?}

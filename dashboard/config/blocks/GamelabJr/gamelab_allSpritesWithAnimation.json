@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "name": "allSpritesWithAnimation",
+    "docFunc": "gamelab_allSpritesWithAnimation",
     "expression": "{costume: VALUE}",
     "inline": false,
     "blockText": "{ANIMATION}",

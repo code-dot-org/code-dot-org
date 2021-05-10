@@ -1,0 +1,17 @@
+{
+  "func": "penWidth",
+  "category": "Turtle",
+  "paletteParams": [
+    "width"
+  ],
+  "params": [
+    "3"
+  ],
+  "dropdown": {
+    "0": [
+      "1",
+      "3",
+      "5"
+    ]
+  }
+}

@@ -1,9 +1,5 @@
 <Karel>
   <config><![CDATA[{
-  "game_id": 25,
-  "created_at": "2020-12-04T22:28:20.000Z",
-  "level_num": "custom",
-  "user_id": 6,
   "properties": {
     "skin": "bee",
     "short_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
@@ -42,11 +38,21 @@
     "shape_shift": "false",
     "name_suffix": "_2021",
     "parent_level_id": 21359,
+    "encrypted": "false",
+    "display_name": "Get Nectar and Make Honey",
+    "hint_prompt_attempts_threshold": "1",
+    "bubble_choice_description": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
+    "show_type_hints": "false",
+    "thumbnail_url": "https://images.code.org/bddc60892dd6cdb2de9638f4cca8cbf7-image-1615582133445.png",
     "preload_asset_list": null
   },
+  "game_id": 25,
   "published": true,
+  "created_at": "2020-12-04T22:28:20.000Z",
+  "level_num": "custom",
+  "user_id": 6,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-14 19:19:05 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-13 01:08:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-22 01:44:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-30 21:32:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-14 19:19:05 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:11:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-13 01:08:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-22 01:44:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-30 21:32:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-03-12 20:48:30 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 20:49:03 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <toolbox_blocks>

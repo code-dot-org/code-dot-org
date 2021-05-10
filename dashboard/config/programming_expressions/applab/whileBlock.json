@@ -1,0 +1,5 @@
+{
+  "func": "whileBlock",
+  "block": "while (__) {\n  __;\n}",
+  "category": "Control"
+}

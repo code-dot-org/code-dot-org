@@ -256,7 +256,7 @@ class ScriptLevel < ApplicationRecord
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
-      script_stage_extras_path(script.name, (extras_lesson || lesson).relative_position)
+      script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
@@ -311,7 +311,7 @@ class ScriptLevel < ApplicationRecord
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
-    user_level.nil? || user_level.locked?(lesson)
+    user_level.nil? || user_level.show_as_locked?(lesson)
   end
 
   def previous_level
@@ -451,17 +451,11 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown)
     summary = summarize
     summary[:id] = id.to_s
-    summary[:levels] = levels.map do |level|
-      {
-        name: level.name,
-        id: level.id.to_s,
-        icon: level.icon,
-        isConceptLevel: level.concept_level?
-      }
-    end
+    summary[:scriptId] = script_id
+    summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 
@@ -499,16 +493,17 @@ class ScriptLevel < ApplicationRecord
     extra_levels
   end
 
-  def summarize_as_bonus(user_id = nil)
-    perfect = user_id ? UserLevel.find_by(level: level, user_id: user_id)&.perfect? : false
+  def summarize_as_bonus
+    localized_level_description = I18n.t(level.name, scope: [:data, :bubble_choice_description], default: level.bubble_choice_description)
+    localized_level_display_name = I18n.t(level.name, scope: [:data, :display_name], default: level.display_name)
     {
       id: id.to_s,
+      level_id: level.id.to_s,
       type: level.type,
-      description: level.try(:bubble_choice_description),
-      display_name: level.display_name || I18n.t('lesson_extras.bonus_level'),
+      description: localized_level_description,
+      display_name: localized_level_display_name || I18n.t('lesson_extras.bonus_level'),
       thumbnail_url: level.try(:thumbnail_url) || level.try(:solution_image_url),
       url: build_script_level_url(self),
-      perfect: perfect,
       maze_summary: {
         map: JSON.parse(level.try(:maze) || '[]'),
         serialized_maze: level.try(:serialized_maze) && JSON.parse(level.try(:serialized_maze)),
@@ -533,7 +528,7 @@ class ScriptLevel < ApplicationRecord
       {
         # Some lessons have a lesson extras option without any bonus levels. In
         # these cases, they just display previous lesson challenges. These should
-        # be displayed as "perfect." Example level: /s/express-2020/stage/28/extras
+        # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
         id: '-1',
         bonus: true,
         user_id: student.id,
@@ -557,7 +552,7 @@ class ScriptLevel < ApplicationRecord
     contained = contained_levels.any?
 
     levels = if bubble_choice?
-               [level.best_result_sublevel(student) || level]
+               [level.best_result_sublevel(student, script) || level]
              elsif contained
                contained_levels
              else

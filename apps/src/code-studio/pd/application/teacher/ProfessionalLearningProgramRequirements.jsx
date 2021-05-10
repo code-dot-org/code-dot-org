@@ -17,16 +17,6 @@ import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-const styles = {
-  ...defaultStyles,
-  error: {
-    color: color.red
-  },
-  marginBottom: {
-    marginBottom: 30
-  }
-};
-
 export default class SummerWorkshop extends LabeledFormComponent {
   static labels = PageLabels.professionalLearningProgramRequirements;
 
@@ -343,3 +333,13 @@ export default class SummerWorkshop extends LabeledFormComponent {
     return changes;
   }
 }
+
+const styles = {
+  ...defaultStyles,
+  error: {
+    color: color.red
+  },
+  marginBottom: {
+    marginBottom: 30
+  }
+};

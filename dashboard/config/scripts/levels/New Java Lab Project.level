@@ -8,6 +8,7 @@
     "is_project_level": "true"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "long_instructions": "# Java Lab \r\n This is a new Java Lab project! Write some Java code!"
 }]]></config>
 </Javalab>

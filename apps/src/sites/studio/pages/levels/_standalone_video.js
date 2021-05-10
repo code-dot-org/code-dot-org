@@ -1,10 +1,6 @@
-/* globals appOptions */
 import $ from 'jquery';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {
-  postMilestoneForPageLoad,
-  onContinue
-} from '@cdo/apps/code-studio/levels/postOnLoad';
+import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import React from 'react';
@@ -12,49 +8,8 @@ import ReactDom from 'react-dom';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import _ from 'lodash';
 
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {
-  overwriteProgress,
-  useDbProgress
-} from '@cdo/apps/code-studio/progressRedux';
-var clientState = require('@cdo/apps/code-studio/clientState');
-import {TestResults} from '@cdo/apps/constants';
-
 $(document).ready(() => {
-  // Workaround to get the logged-in user's progress on this script
-  // when we loaded a standalone video on a cached script level.
-  // Logged out user progress will be in the session storage. Non-
-  // cached script progress will just be replaced with the same data.
-  $.ajax(
-    `/api/user_progress` +
-      `/${appOptions.scriptName}` +
-      `/${appOptions.stagePosition}` +
-      `/${appOptions.levelPosition}` +
-      `/${appOptions.serverLevelId}`
-  ).done(data => {
-    // Merge progress from server (loaded via AJAX)
-    if (data.progress) {
-      const store = getStore();
-
-      // The server returned progress. This is the source of truth.
-      store.dispatch(useDbProgress());
-      clientState.clearProgress();
-
-      // Clear any existing redux state.
-      store.dispatch(
-        overwriteProgress(
-          _.mapValues(data.progress, level =>
-            level.submitted ? TestResults.SUBMITTED_RESULT : level.result
-          )
-        )
-      );
-    }
-  });
-
   registerGetResult();
-
-  // make milestone post
-  postMilestoneForPageLoad();
 
   // handle click on continue (results in navigating to next puzzle)
   $('.submitButton').click(onContinue);

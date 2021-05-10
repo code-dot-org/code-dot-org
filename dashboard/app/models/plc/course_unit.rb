@@ -37,6 +37,10 @@ class Plc::CourseUnit < ApplicationRecord
     script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? {|level| level.class == EvaluationMulti}
   end
 
+  def deprecated?
+    !!script&.deprecated
+  end
+
   def determine_preferred_learning_modules(user)
     evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}
 

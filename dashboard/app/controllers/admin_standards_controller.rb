@@ -33,10 +33,11 @@ class AdminStandardsController < ApplicationController
       updated_standards = []
 
       lesson["standards"].each do |standard|
+        framework = Framework.find_by(shortcode: standard['framework'].downcase)
         code_studio_standard = Standard.find_by(
           {
-            organization: standard["framework"],
-            organization_id: standard["shortcode"]
+            framework: framework,
+            shortcode: standard["shortcode"]
           }
         )
 
