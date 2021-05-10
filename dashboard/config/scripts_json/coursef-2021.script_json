@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-06 18:01:19 UTC",
+    "serialized_at": "2021-05-07 22:56:16 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -3358,12 +3358,61 @@
       }
     },
     {
+      "key": "6a891356-b6da-4faa-bb30-f79f23f2bbcb",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.*",
+        "progression_name": "Learning from Simulations"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a891356-b6da-4faa-bb30-f79f23f2bbcb",
+        "lesson_activity.key": "d01a520e-a4bb-4422-80ae-fc1fe2157446"
+      }
+    },
+    {
+      "key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0",
+      "position": 8,
+      "properties": {
+        "description": "**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
+        "progression_name": "Mini-Project: Outbreak Simulator"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0",
+        "lesson_activity.key": "d01a520e-a4bb-4422-80ae-fc1fe2157446"
+      }
+    },
+    {
       "key": "2085bbfe-07e4-4eb4-9830-520e979a04c8",
       "position": 1,
       "properties": {
+        "description": "*Simulations are a great way to learn things that can be hard to observe in the real world. They help scientists solve problems, predict how to solve the problem, and test new ideas safely and efficiently. Your simulation is a way to show how a virus outbreak in Monster Town might look.*",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "2085bbfe-07e4-4eb4-9830-520e979a04c8",
+        "lesson_activity.key": "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b"
+      }
+    },
+    {
+      "key": "915a5565-ed7e-4c02-812a-fa59ae6e5f4b",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:**\n- How can simulations be helpful in the real world? \n- How can simulations help us understand the world around us? \n- How can simulations improve the way we test out ideas? \n\nThe goal of the discussion is for students to understand that simulations are a way to model complex systems in an interactive way. They should also see how simulations let people test out ideas quickly, cheaply and safely. "
+      },
+      "seeding_key": {
+        "activity_section.key": "915a5565-ed7e-4c02-812a-fa59ae6e5f4b",
+        "lesson_activity.key": "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b"
+      }
+    },
+    {
+      "key": "1669b35c-0860-4d88-afc0-acda928f054d",
+      "position": 3,
+      "properties": {
+        "description": "\n\n\n**Prompts:**\n- How is this simulation like the real world? How is it different?\n- What would you want to change/add to your simulation?\n",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "1669b35c-0860-4d88-afc0-acda928f054d",
         "lesson_activity.key": "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b"
       }
     },
@@ -4358,6 +4407,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_stops"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6383,6 +6435,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story"
+        ],
         "progression": "Welcome to Monster Town"
       },
       "named_level": false,
@@ -6406,6 +6461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak1"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6429,6 +6487,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak2"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6452,6 +6513,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak3"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6475,6 +6539,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak4"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6495,10 +6562,39 @@
     {
       "chapter": 100,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "progression": "Learning from Simulations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "6a891356-b6da-4faa-bb30-f79f23f2bbcb"
+      },
+      "level_keys": [
+        "CourseF_outbreak_story2"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak5"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
       },
       "named_level": false,
       "bonus": false,
@@ -6509,14 +6605,92 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "1b81351d-aade-4896-8957-e06fdd93edfa"
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
       },
       "level_keys": [
         "CourseF_outbreak5"
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
+      },
+      "level_keys": [
+        "CourseF_outbreak6"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
+      },
+      "level_keys": [
+        "CourseF_outbreak7"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
+      },
+      "level_keys": [
+        "CourseF_outbreak8"
+      ]
+    },
+    {
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6542,7 +6716,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6568,7 +6742,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6594,7 +6768,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6620,7 +6794,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6646,7 +6820,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6672,7 +6846,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 111,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6698,7 +6872,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 112,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6724,7 +6898,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6750,7 +6924,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6776,7 +6950,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 115,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7993,6 +8167,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CourseF_outbreak_story2",
+        "script_level.level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "6a891356-b6da-4faa-bb30-f79f23f2bbcb"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CourseF_outbreak5",
         "script_level.level_keys": [
           "CourseF_outbreak5"
@@ -8000,7 +8186,43 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "1b81351d-aade-4896-8957-e06fdd93edfa"
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak6",
+        "script_level.level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak7",
+        "script_level.level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak8",
+        "script_level.level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0"
       }
     },
     {
@@ -10474,6 +10696,13 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
       }
     },
     {

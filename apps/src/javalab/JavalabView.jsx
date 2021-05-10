@@ -13,6 +13,7 @@ import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
 class JavalabView extends React.Component {
   static propTypes = {
+    handleVersionHistory: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
@@ -70,6 +71,7 @@ class JavalabView extends React.Component {
       onContinue,
       onRun,
       onInputMessage,
+      handleVersionHistory,
       visualization
     } = this.props;
     if (isDarkMode) {
@@ -96,7 +98,10 @@ class JavalabView extends React.Component {
             }}
             className="editor-column"
           >
-            <JavalabEditor onCommitCode={onCommitCode} />
+            <JavalabEditor
+              onCommitCode={onCommitCode}
+              handleVersionHistory={handleVersionHistory}
+            />
             <div style={styles.consoleAndButtons}>
               <div style={styles.buttons}>
                 <button
@@ -144,23 +149,6 @@ class JavalabView extends React.Component {
     );
   }
 }
-
-// We use the UnconnectedJavalabView to make this component's methods testable.
-// This is a deprecated pattern but calling shallow().dive().instance() on the
-// connected JavalabView does not give us access to the methods owned by JavalabView.
-export const UnconnectedJavalabView = JavalabView;
-export default connect(
-  state => ({
-    isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    channelId: state.pageConstants.channelId,
-    isDarkMode: state.javalab.isDarkMode
-  }),
-  dispatch => ({
-    appendOutputLog: log => dispatch(appendOutputLog(log)),
-    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
-  })
-)(UnconnectedJavalabView);
 
 const styles = {
   instructionsAndPreview: {
@@ -218,3 +206,20 @@ const styles = {
     clear: 'both'
   }
 };
+
+// We use the UnconnectedJavalabView to make this component's methods testable.
+// This is a deprecated pattern but calling shallow().dive().instance() on the
+// connected JavalabView does not give us access to the methods owned by JavalabView.
+export const UnconnectedJavalabView = JavalabView;
+export default connect(
+  state => ({
+    isProjectLevel: state.pageConstants.isProjectLevel,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    channelId: state.pageConstants.channelId,
+    isDarkMode: state.javalab.isDarkMode
+  }),
+  dispatch => ({
+    appendOutputLog: log => dispatch(appendOutputLog(log)),
+    setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode))
+  })
+)(UnconnectedJavalabView);

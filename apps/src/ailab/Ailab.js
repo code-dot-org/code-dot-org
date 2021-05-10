@@ -32,7 +32,10 @@ function getInstructionsDefaults() {
     selectTrainer: 'Set up the training.',
     trainModel: 'Your model is being trained.',
     results: 'Review the results.',
-    saveModel: 'Save the trained model for use in App Lab.'
+    saveModel: 'Save the trained model for use in App Lab.',
+    modelSummary:
+      "You've successfully trained and saved your model. Review your model \
+      details and click Finish to use your trained model in App Lab."
   };
 
   return instructions;

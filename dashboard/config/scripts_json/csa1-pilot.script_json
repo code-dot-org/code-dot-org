@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-06 00:58:18 UTC",
+    "serialized_at": "2021-05-06 20:12:16 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -23,7 +23,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Content"
+        "display_name": "Content",
+        "description": "Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",

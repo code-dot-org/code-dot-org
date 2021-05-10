@@ -83,7 +83,7 @@ export default storybook => {
                 id: '-1',
                 icon: 'fa-lock',
                 name: 'Reviews unavailable at this time',
-                status: LevelStatus.locked,
+                status: LevelStatus.not_tried,
                 isLocked: true,
                 url: '',
                 levelNumber: 3
@@ -92,7 +92,7 @@ export default storybook => {
                 id: '-1',
                 icon: 'fa-lock',
                 name: 'Reviews unavailable at this time',
-                status: LevelStatus.locked,
+                status: LevelStatus.not_tried,
                 isLocked: true,
                 url: '',
                 levelNumber: 4
@@ -176,7 +176,6 @@ export default storybook => {
             lesson={fakeLesson('Asessment Number One', 1, true)}
             levels={fakeLevels(5, {named: false}).map(level => ({
               ...level,
-              status: LevelStatus.locked,
               isLocked: true
             }))}
             lessonIsLockedForUser={() => true}
