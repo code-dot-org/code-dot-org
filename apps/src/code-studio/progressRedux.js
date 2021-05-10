@@ -572,7 +572,8 @@ const peerReviewLevels = state =>
  */
 const levelWithProgress = (
   {levelResults, scriptProgress, levelPairing = {}, currentLevelId},
-  level
+  level,
+  isLockable
 ) => {
   const normalizedLevel = processedLevel(level);
   if (level.ids) {
@@ -582,7 +583,7 @@ const levelWithProgress = (
 
   // default values
   let status = LevelStatus.not_tried;
-  let locked = false;
+  let locked = isLockable;
 
   let levelProgress = scriptProgress[normalizedLevel.id];
   if (levelProgress?.pages) {
@@ -627,13 +628,15 @@ export const levelsByLesson = ({
     stage.levels.map(level => {
       let statusLevel = levelWithProgress(
         {levelResults, scriptProgress, levelPairing, currentLevelId},
-        level
+        level,
+        stage.lockable
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
           levelWithProgress(
             {levelResults, scriptProgress, levelPairing, currentLevelId},
-            sublevel
+            sublevel,
+            stage.lockable
           )
         );
       }
@@ -644,10 +647,12 @@ export const levelsByLesson = ({
 /**
  * Get data for a particular lesson/stage
  */
-export const levelsForLessonId = (state, lessonId) =>
-  state.stages
-    .find(stage => stage.id === lessonId)
-    .levels.map(level => levelWithProgress(state, level));
+export const levelsForLessonId = (state, lessonId) => {
+  const lesson = state.stages.find(stage => stage.id === lessonId);
+  return lesson.levels.map(level =>
+    levelWithProgress(state, level, lesson.lockable)
+  );
+};
 
 export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
