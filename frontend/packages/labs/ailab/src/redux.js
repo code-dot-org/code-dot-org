@@ -62,8 +62,6 @@ const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
 const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 const SET_K_VALUE = "SET_K_VALUE";
-const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
-const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 
 // Action creators
 export function setMode(mode) {
@@ -221,14 +219,6 @@ export function setShowResultsDetails(show) {
 
 export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
-}
-
-export function setHistoricResult(label, features, accuracy) {
-  return { type: SET_HISTORIC_RESULT, label, features, accuracy };
-}
-
-export function setShowResultsDetails(show) {
-  return {type: SET_SHOW_RESULTS_DETAILS, show};
 }
 
 const initialState = {
