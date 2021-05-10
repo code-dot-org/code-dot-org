@@ -30,6 +30,7 @@ class XhrProxyController < ApplicationController
     api.blizzard.com
     api.coinlayer.com
     api.datamuse.com
+    api.duckduckgo.com
     api.energidataservice.dk
     api.exchangeratesapi.io
     api.football-data.org
