@@ -125,7 +125,6 @@ const bubbleBorderRadii = {
   },
   [BubbleShape.diamond]: {
     [BubbleSize.dot]: 2,
-    [BubbleSize.letter]: 2,
     [BubbleSize.full]: 4
   },
   [BubbleShape.pill]: {}
