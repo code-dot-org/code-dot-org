@@ -31,8 +31,12 @@ function getInstructionsDefaults() {
       'Choose one or more columns as inputs to help make the prediction.',
     selectTrainer: 'Set up the training.',
     trainModel: 'Your model is being trained.',
+    modelTraining:
+      'Your model is undergoing training.  Notice how we do one row at a time!',
+    modelTraining2: 'You can press Continue any time you like to continue...',
     results: 'Review the results.',
-    saveModel: 'Save the trained model for use in App Lab.'
+    saveModel: 'Save the trained model for use in App Lab.',
+    trainingSettings: 'Adjust column types here if you want.'
   };
 
   return instructions;
@@ -146,8 +150,8 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
-Ailab.prototype.setInstructionsKey = function(instructionsKey) {
-  getStore().dispatch(setDynamicInstructionsKey(instructionsKey));
+Ailab.prototype.setInstructionsKey = function(instructionsKey, options) {
+  getStore().dispatch(setDynamicInstructionsKey(instructionsKey, options));
 };
 
 Ailab.prototype.initMLActivities = function() {

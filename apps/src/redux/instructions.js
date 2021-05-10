@@ -178,7 +178,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   if (action.type === SET_DYNAMIC_INSTRUCTIONS_KEY) {
     return Object.assign({}, state, {
       dynamicInstructionsKey: action.dynamicInstructionsKey,
-      overlayVisible: true
+      overlayVisible: action.options && action.options.showOverlay
     });
   }
 
@@ -267,9 +267,10 @@ export const setDynamicInstructionsDefaults = dynamicInstructionsDefaults => ({
   dynamicInstructionsDefaults: dynamicInstructionsDefaults
 });
 
-export const setDynamicInstructionsKey = dynamicInstructionsKey => ({
+export const setDynamicInstructionsKey = (dynamicInstructionsKey, options) => ({
   type: SET_DYNAMIC_INSTRUCTIONS_KEY,
-  dynamicInstructionsKey: dynamicInstructionsKey
+  dynamicInstructionsKey: dynamicInstructionsKey,
+  options: options
 });
 
 // HELPERS
