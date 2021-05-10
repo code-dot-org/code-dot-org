@@ -57,8 +57,9 @@ class ColumnInspector extends Component {
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
     hideSpecifyColumns: PropTypes.bool,
-    columnPositions: PropTypes.object,
-    currentPanel: PropTypes.string
+    currentPanel: PropTypes.string,
+    labelColumn: PropTypes.string,
+    selectedFeatures: PropTypes.array
   };
 
   handleChangeDataType = (event, feature) => {
@@ -66,12 +67,14 @@ class ColumnInspector extends Component {
     this.props.setColumnsByDataType(feature, event.target.value);
   };
 
-  setPredictColumn = () => {
+  setPredictColumn = e => {
     this.props.setLabelColumn(this.props.currentColumnData.id);
+    e.preventDefault();
   };
 
-  addFeature = () => {
+  addFeature = e => {
     this.props.addSelectedFeature(this.props.currentColumnData.id);
+    e.preventDefault();
   };
 
   removeLabel = () => {
@@ -87,7 +90,13 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const { currentColumnData, rangesByColumn, currentPanel } = this.props;
+    const {
+      currentColumnData,
+      rangesByColumn,
+      currentPanel,
+      labelColumn,
+      selectedFeatures
+    } = this.props;
 
     if (
       currentColumnData &&
@@ -102,115 +111,134 @@ class ColumnInspector extends Component {
 
     const maxLabelsInHistogram = 5;
 
-    let leftPosition = 0;
-
-    if (currentColumnData) {
-      if (this.props.columnPositions[currentColumnData.id]) {
-        leftPosition = this.props.columnPositions[currentColumnData.id];
-      }
-    }
-
     return (
       currentColumnData && (
         <div
           id="column-inspector"
           style={{
             ...styles.panel,
-            ...styles.popupPanel,
-            left: leftPosition
+            ...styles.rightPanel
           }}
         >
-          <div onClick={this.onClose} style={styles.popupClose}>
-            <FontAwesomeIcon icon={faTimes} />
-          </div>
-          <div style={styles.largeText}>Column Information</div>
-          <form>
-            <div>
-              <label>
-                <div>{currentColumnData.id}</div>
-                <div>Data Type:</div>
-                {this.props.hideSpecifyColumns && (
-                  <div> {currentColumnData.dataType} </div>
-                )}
-                {!this.props.hideSpecifyColumns && (
-                  <select
-                    onChange={event =>
-                      this.handleChangeDataType(event, currentColumnData.id)
-                    }
-                    value={currentColumnData.dataType}
-                  >
-                    {Object.values(ColumnTypes).map((option, index) => {
-                      return (
-                        <option key={index} value={option}>
-                          {option}
-                        </option>
-                      );
-                    })}
-                  </select>
-                )}
-                {currentColumnData.description && (
-                  <div>
-                    <br />
-                    <div>{currentColumnData.description}</div>
-                    <br />
-                  </div>
-                )}
-              </label>
-
-              {currentPanel === "dataDisplayLabel" &&
-                currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                  <div>
-                    {barData.labels.length <= maxLabelsInHistogram && (
-                      <Bar
-                        data={barData}
-                        width={100}
-                        height={150}
-                        options={chartOptions}
-                      />
+          <div style={styles.scrollableContents}>
+            <div style={styles.scrollingContents}>
+              <div onClick={this.onClose} style={styles.popupClose}>
+                <FontAwesomeIcon icon={faTimes} />
+              </div>
+              <div style={styles.largeText}>{currentColumnData.id}</div>
+              <form>
+                <div>
+                  <label>
+                    <div>Data Type:</div>
+                    {this.props.hideSpecifyColumns && (
+                      <div> {currentColumnData.dataType} </div>
                     )}
-                    {barData.labels.length > maxLabelsInHistogram && (
+                    {!this.props.hideSpecifyColumns && (
+                      <select
+                        onChange={event =>
+                          this.handleChangeDataType(event, currentColumnData.id)
+                        }
+                        value={currentColumnData.dataType}
+                      >
+                        {Object.values(ColumnTypes).map((option, index) => {
+                          return (
+                            <option key={index} value={option}>
+                              {option}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    )}
+                    {currentColumnData.description && (
                       <div>
-                        {barData.labels.length} values were found in this
-                        column. A graph is only shown when there are{" "}
-                        {maxLabelsInHistogram} or fewer.
+                        <br />
+                        <div>{currentColumnData.description}</div>
+                        <br />
                       </div>
                     )}
-                  </div>
-                )}
+                  </label>
 
-              {currentPanel === "dataDisplayFeatures" && (
-                <div>
-                  <ScatterPlot />
-                  <CrossTab />
-                </div>
-              )}
+                  {currentPanel === "dataDisplayLabel" &&
+                    currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                      <div>
+                        {barData.labels.length <= maxLabelsInHistogram && (
+                          <Bar
+                            data={barData}
+                            width={100}
+                            height={150}
+                            options={chartOptions}
+                          />
+                        )}
+                        {barData.labels.length > maxLabelsInHistogram && (
+                          <div>
+                            {barData.labels.length} values were found in this
+                            column. A graph is only shown when there are{" "}
+                            {maxLabelsInHistogram} or fewer.
+                          </div>
+                        )}
+                      </div>
+                    )}
 
-              {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
-                <div>
-                  {currentColumnData.range && (
+                  {currentPanel === "dataDisplayFeatures" && (
                     <div>
-                      {isNaN(rangesByColumn[currentColumnData.id].min) && (
-                        <p style={styles.error}>
-                          Numerical columns should contain only numbers.
-                        </p>
-                      )}
-                      {!isNaN(rangesByColumn[currentColumnData.id].min) && (
-                        <div style={styles.contents}>
-                          min: {rangesByColumn[currentColumnData.id].min}
-                          <br />
-                          max: {rangesByColumn[currentColumnData.id].max}
-                          <br />
-                          range: {rangesByColumn[currentColumnData.id].range}
+                      <ScatterPlot />
+                      <CrossTab />
+                    </div>
+                  )}
+
+                  {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
+                    <div>
+                      {currentColumnData.range && (
+                        <div>
+                          {isNaN(rangesByColumn[currentColumnData.id].min) && (
+                            <p style={styles.error}>
+                              Numerical columns should contain only numbers.
+                            </p>
+                          )}
+                          {!isNaN(rangesByColumn[currentColumnData.id].min) && (
+                            <div style={styles.contents}>
+                              min: {rangesByColumn[currentColumnData.id].min}
+                              <br />
+                              max: {rangesByColumn[currentColumnData.id].max}
+                              <br />
+                              range:{" "}
+                              {rangesByColumn[currentColumnData.id].range}
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>
                   )}
+                  <br />
+                  <br />
                 </div>
-              )}
-              <br />
-              <br />
+              </form>
+
+              {currentPanel === "dataDisplayLabel" &&
+                currentColumnData.id !== labelColumn && (
+                  <button
+                    type="button"
+                    onClick={e =>
+                      this.setPredictColumn(e, currentColumnData.id)
+                    }
+                    style={styles.selectLabelButton}
+                  >
+                    Select label
+                  </button>
+                )}
+
+              {currentPanel === "dataDisplayFeatures" &&
+                !selectedFeatures.includes(currentColumnData.id) && (
+                  <button
+                    type="button"
+                    onClick={e => this.addFeature(e, currentColumnData.id)}
+                    style={styles.selectFeaturesButton}
+                  >
+                    Add feature
+                  </button>
+                )}
             </div>
-          </form>
+          </div>
         </div>
       )
     );
@@ -222,7 +250,9 @@ export default connect(
     currentColumnData: getCurrentColumnData(state),
     rangesByColumn: getRangesByColumn(state),
     hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns,
-    currentPanel: state.currentPanel
+    currentPanel: state.currentPanel,
+    labelColumn: state.labelColumn,
+    selectedFeatures: state.selectedFeatures
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

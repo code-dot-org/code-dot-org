@@ -9,13 +9,14 @@ const sampleModes = {
     hideSpecifyColumns: true,
     hideChooseReserve: true,
     hideModelCard: true,
-    hideColumnClicking: true,
     hideSelectLabel: true
   },
 
   "preload-metadata": {
     hideSpecifyColumns: true,
-    hideChooseReserve: true
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true,
+    requireAccuracy: 50
   },
 
   "intro-ai-tacos": {

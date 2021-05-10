@@ -130,12 +130,26 @@ export const styles = {
     position: "relative"
   },
 
-  popupPanel: {
+  panelPopupContainer: {
     position: "absolute",
-    border: "1px solid",
-    top: 90,
-    height: "initial",
-    zIndex: 1
+    left: 20,
+    top: 20,
+    width: "calc(100% - 40px)",
+    height: "calc(100% - 40px)",
+    zIndex: 10
+  },
+
+  panelPopup: {
+    padding: 10,
+    backgroundColor: "white",
+    overflow: "hidden",
+    height: "100%",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    //opacity: 0.7,
+    border: "solid 1px black",
+    boxShadow: "-5px 5px 10px black"
   },
 
   scrollableContents: {
@@ -227,7 +241,7 @@ export const styles = {
     fontSize: 13.33,
     padding: "2px 6px",
     margin: 0,
-    border: "none",
+    border: "none"
   },
 
   specifyColumnsItem: {
@@ -300,11 +314,24 @@ export const styles = {
     borderColor: "#d6f2fa",
     cursor: "pointer"
   },
+  dataDisplayCellHighlightedLabel: {
+    backgroundColor: "#f1caca",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f1caca",
+    cursor: "pointer"
+  },
   dataDisplayCellSelected: {
     backgroundColor: "#94e3fa",
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "#94e3fa"
+  },
+  dataDisplayCellSelectedLabel: {
+    backgroundColor: "#f39f9f",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f39f9f"
   },
 
   tableCell: {
@@ -337,6 +364,38 @@ export const styles = {
   crossTabCell5: {
     backgroundColor: "rgba(255,100,100, 1)"
   },
+
+  resultsPanelContainer: {
+    width: "100%",
+    height: "100%",
+    position: "relative"
+  },
+
+  resultsStatement: {
+    float: "left",
+    width: "80%"
+  },
+
+  resultsAccuracy: { float: "left", fontSize: 18, width: "10%" },
+
+  resultsDetailsButtonContainer: {
+    float: "left",
+    textAlign: "center",
+    width: "10%"
+  },
+
+  resultsDetailsButton: {
+    fontSize: 14,
+    padding: "4px 12px",
+    margin: 0,
+    border: "none",
+    cursor: "pointer",
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white"
+  },
+
+  resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
 
   resultsTableFirstHeader: {
     top: 0,
@@ -381,19 +440,63 @@ export const styles = {
 
   statement: {
     fontSize: 32,
-    paddingBottom: 15
+    paddingBottom: 15,
+    lineHeight: '50px'
+  },
+
+  statementSmall: {
+    fontSize: 18,
+    paddingBottom: 6
   },
 
   statementLabel: {
-    color: labelColor,
+    backgroundColor: labelColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    lineHeight: 1.3
   },
 
   statementFeature: {
-    color: featureColor,
+    backgroundColor: featureColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    lineHeight: 1.3
+  },
+
+  statementDeleteIcon: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    transform: 'translateX(50%) translateY(-50%)',
+    color: "black",
+    cursor: "pointer"
+  },
+
+  statementDeleteCircle: {
+    backgroundColor: "white",
+    borderRadius: "50%",
+    height: 20,
+    width: 20,
+    top: 0,
+    left: 0
+  },
+
+  statementDeleteX: {
+    fontSize: 20,
+    position: "absolute",
+    top: 0,
+    right: 0,
+    lineHeight: "20px"
   },
 
   selectLabelText: {
@@ -402,6 +505,24 @@ export const styles = {
 
   selectFeaturesText: {
     color: featureColor
+  },
+
+  selectLabelButton: {
+    backgroundColor: labelColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 18
+  },
+
+  selectFeaturesButton: {
+    backgroundColor: featureColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 18
   },
 
   trainModelContainer: {
