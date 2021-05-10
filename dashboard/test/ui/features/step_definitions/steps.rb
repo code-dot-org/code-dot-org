@@ -1705,8 +1705,10 @@ end
 
 Then /^I scroll our lockable lesson into view$/ do
   # use visible pseudo selector as we also have lock icons in (hidden) summary view
-  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").length') > 0}
-  @browser.execute_script('$(".fa-lock:visible")[0].scrollIntoView(true)')
+  # and filter out lock icons in the header
+
+  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").not($(".full_progress_inner .fa-lock")).length') > 0}
+  @browser.execute_script('$(".fa-lock:visible").not($(".full_progress_inner .fa-lock"))[0].scrollIntoView(true)')
 end
 
 Then /^I open the lesson lock dialog$/ do
