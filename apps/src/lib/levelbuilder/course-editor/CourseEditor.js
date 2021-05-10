@@ -254,14 +254,14 @@ class CourseEditor extends Component {
           {this.props.migratedTeacherResources && (
             <input
               type="hidden"
-              name="resourceIds[]"
+              name="resourceIds"
               value={this.props.migratedTeacherResources.map(r => r.id)}
             />
           )}
           {this.props.studentResources && (
             <input
               type="hidden"
-              name="studentResourceIds[]"
+              name="studentResourceIds"
               value={this.props.studentResources.map(r => r.id)}
             />
           )}
