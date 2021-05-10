@@ -31,20 +31,8 @@ describe('ResourcesDropdown', () => {
             text={i18n.teacherResources()}
             color={Button.ButtonColor.blue}
           >
-            <a
-              href="https://example.com/a"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {i18n.curriculum()}
-            </a>
-            <a
-              href="https://example.com/b"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {i18n.vocabulary()}
-            </a>
+            <a href="https://example.com/a">{i18n.curriculum()}</a>
+            <a href="https://example.com/b">{i18n.vocabulary()}</a>
           </DropdownButton>
         </div>
       )
@@ -76,20 +64,8 @@ describe('ResourcesDropdown', () => {
             text={i18n.teacherResources()}
             color={Button.ButtonColor.blue}
           >
-            <a
-              href="https://example.com/a"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Curriculum
-            </a>
-            <a
-              href="https://example.com/b"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Vocabulary
-            </a>
+            <a href="https://example.com/a">Curriculum</a>
+            <a href="https://example.com/b">Vocabulary</a>
           </DropdownButton>
         </div>
       )
@@ -122,20 +98,8 @@ describe('ResourcesDropdown', () => {
             text={i18n.studentResources()}
             color={Button.ButtonColor.gray}
           >
-            <a
-              href="https://example.com/a"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Curriculum
-            </a>
-            <a
-              href="https://example.com/b"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Vocabulary
-            </a>
+            <a href="https://example.com/a">Curriculum</a>
+            <a href="https://example.com/b">Vocabulary</a>
           </DropdownButton>
         </div>
       )
