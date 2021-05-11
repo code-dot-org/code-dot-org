@@ -10,7 +10,7 @@ import {
 } from "../redux";
 import { styles } from "../constants";
 import Statement from "./Statement";
-import ResultsTable from "./ResultsTable";
+import ResultsToggle from "./ResultsToggle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -38,16 +38,7 @@ class ResultsDetails extends Component {
             <FontAwesomeIcon icon={faTimes} />
           </div>
 
-          <Statement />
-
-          {!isNaN(this.props.summaryStat.stat) && (
-            <div>
-              {this.props.percentDataToReserve}% of the training data was
-              reserved to test the accuracy of the newly trained model.
-            </div>
-          )}
-
-          {!isNaN(this.props.summaryStat.stat) && <ResultsTable />}
+          {!isNaN(this.props.summaryStat.stat) && <ResultsToggle />}
 
           {isNaN(this.props.summaryStat.stat) && (
             <p>
