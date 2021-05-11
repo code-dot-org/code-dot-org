@@ -663,12 +663,6 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
@@ -716,12 +710,6 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
@@ -731,12 +719,6 @@ el:
           description: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           description_short: 'Φάση 2 σε σύνδεση: Θερινή Μελέτη'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
@@ -1029,12 +1011,6 @@ el:
               name: 'Εκτός Σύνδεσης: Γράψιμο Τραγουδιών με Παραμέτρους'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Καλώς ήρθατε!
             Wrap-up:
@@ -2917,6 +2893,12 @@ el:
               name: Μάθημα A
             Course B:
               name: Μάθημα B
+            Course E:
+              name: Μάθημα E
+            Course F:
+              name: Μάθημα F
+            csf:
+              name: Βασικές αρχές της Επιστήμης των Υπολογιστών
         virustest:
           title: Εξομοιώνοντας μία Έξαρση
           description_short: Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να δημιουργήσετε
@@ -2948,7 +2930,9 @@ el:
             lessonGroup-3:
               display_name: Μεταβλητές
             outbreak:
-              display_name: Προσομοίωση Επιδημικής Έξαρσης
+              display_name: Προσομοιωτής Επιδημικής Έξαρσης
+            debugging:
+              display_name: Εντοπισμός σφαλμάτων
         csd1-2021:
           lesson_groups:
             cspSurvey:
@@ -3249,3 +3233,7 @@ el:
               display_name: Εισαγωγή
             Introduction:
               display_name: Εισαγωγή
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Έρευνα
