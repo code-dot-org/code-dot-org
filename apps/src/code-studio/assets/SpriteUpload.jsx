@@ -197,7 +197,9 @@ export default class SpriteUpload extends React.Component {
             Generate Sprite Metadata
           </button>
           <h3>Metadata JSON</h3>
-          <p>{this.state.metadata}</p>
+          <p>
+            <code>{this.state.metadata}</code>
+          </p>
           <br />
 
           {!uploadButtonDisabled && (
