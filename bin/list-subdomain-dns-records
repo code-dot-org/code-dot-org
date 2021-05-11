@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'aws-sdk-route53'
+require 'aws-sdk-ec2'
+require 'ipaddr'
+require 'csv'
+
+DNSRecord = Struct.new(
+  :name,
+  :type,
+  :ip_address,
+  :ip_address_in_use,
+  :alias_target
+)
+
+BASE_DOMAIN = "code.org".freeze
+
+route53_client = Aws::Route53::Client.new
+ec2_client = Aws::EC2::Client.new
+
+ip_address_list = ec2_client.describe_addresses.addresses.map(&:public_ip)
+puts ip_address_list
+
+dns_records = Array.new
+
+hosted_zoned_id = route53_client.list_hosted_zones_by_name(dns_name: BASE_DOMAIN, max_items: 1).hosted_zones[0].id
+puts hosted_zoned_id
+records_response = route53_client.list_resource_record_sets(
+  hosted_zone_id: hosted_zoned_id,
+  start_record_name: BASE_DOMAIN.split('.').reverse.join('.'), # Reverse "code.org" to "org.code".
+  start_record_type: "A",
+  max_items: 300 # Assume we don't have more than 300 A records for
+)
+puts records_response.resource_record_sets.count
+a_records = records_response.resource_record_sets.select {|record_set| record_set.type == "A"}
+a_records.each do |a_record|
+  record = DNSRecord.new
+  record.name = a_record.name
+  record.type = a_record.type
+  record.ip_address = a_record.resource_records[0]&.value # Assume only one record.
+  record.ip_address_in_use = ip_address_list.include?(a_record.resource_records[0]&.value)
+  record.alias_target = a_record&.alias_target&.dns_name
+  dns_records.push(record)
+end
+
+dns_records_csv = CSV.generate do |csv|
+  csv << DNSRecord.members # Add column headers.
+  dns_records.each {|record| csv << record}
+end
+
+puts dns_records_csv
