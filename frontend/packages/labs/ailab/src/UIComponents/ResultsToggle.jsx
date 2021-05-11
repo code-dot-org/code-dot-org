@@ -40,7 +40,7 @@ class ResultsToggle extends Component {
   getTogglePillStyle = key => {
     let style;
     if (key === this.state.tab) {
-      style = styles.selectedPill;
+      style = {...styles.pill, ...styles.selectedPill};
     } else {
       style = styles.pill;
     }

@@ -395,6 +395,7 @@ export const styles = {
   },
 
   resultsToggle: {
+    marginTop: 20,
     marginBottom: 20,
     backgroundColor: "#f2f2f2",
     borderRadius: 5,
@@ -405,9 +406,6 @@ export const styles = {
     height: 36
   },
   pill: {
-    ':hover': {
-      color: "#61d2eb"
-    },
     border: 'none',
     borderRadius: 50,
     fontFamily: '"Gotham 5r", sans-serif',
@@ -421,9 +419,6 @@ export const styles = {
     cursor: 'pointer'
   },
   selectedPill: {
-    ':hover': {
-      color: "white"
-    },
     backgroundColor: "#61d2eb",
     color: "white",
     border: 'none'
