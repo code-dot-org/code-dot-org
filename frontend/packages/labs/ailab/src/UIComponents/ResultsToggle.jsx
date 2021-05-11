@@ -5,17 +5,21 @@ import { connect } from "react-redux";
 import { getCorrectResults, getIncorrectResults } from "../redux";
 import ResultsTable from "./ResultsTable";
 import { ResultsGrades, styles } from "../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const resultsTabs = [
   {
     key: ResultsGrades.CORRECT,
     headerText: "Correct",
-    icon: ""
+    icon: faCheck,
+    iconStyle: styles.correct
   },
   {
     key: ResultsGrades.INCORRECT,
     headerText: "Incorrect",
-    icon: ""
+    icon: faTimes,
+    iconStyle: styles.error
   },
 ];
 
@@ -62,7 +66,8 @@ class ResultsToggle extends Component {
               style={this.getTogglePillStyle(tab.key)}
               onClick={() => this.toggleTo(tab.key)}
             >
-              {tab.headerText}
+              <FontAwesomeIcon icon={tab.icon} style={tab.iconStyle} />
+              {" "}{tab.headerText}
             </div>
           ))}
         </div>

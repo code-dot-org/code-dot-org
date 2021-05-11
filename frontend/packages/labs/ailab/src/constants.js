@@ -56,6 +56,9 @@ export const styles = {
     fontFamily: '"Gotham 4i", sans-serif'
   },
 
+  correct: {
+    color: "#73be73"
+  },
   error: {
     color: "#e51f68"
   },
