@@ -13,7 +13,11 @@ import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {sandboxDocumentBody} from '../util/testUtils';
+import {
+  sandboxDocumentBody,
+  replaceOnWindow,
+  restoreOnWindow
+} from '../util/testUtils';
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import * as utils from '@cdo/apps/utils';
@@ -28,6 +32,7 @@ describe('StudioApp', () => {
       stubStudioApp();
       stubRedux();
       registerReducers(commonReducers);
+      replaceOnWindow('setTimeout', () => {});
 
       codeWorkspaceDiv = document.createElement('div');
       codeWorkspaceDiv.id = 'codeWorkspace';
@@ -46,6 +51,7 @@ describe('StudioApp', () => {
     afterEach(() => {
       restoreStudioApp();
       restoreRedux();
+      restoreOnWindow('setTimeout');
 
       document.body.removeChild(codeWorkspaceDiv);
       document.body.removeChild(containerDiv);

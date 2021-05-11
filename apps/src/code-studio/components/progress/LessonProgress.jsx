@@ -3,11 +3,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../../util/color';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
-import LessonTrophyProgressBubble from '@cdo/apps/templates/progress/LessonTrophyProgressBubble';
 import {
   levelsForLessonId,
-  lessonExtrasUrl,
-  getPercentPerfect
+  lessonExtrasUrl
 } from '@cdo/apps/code-studio/progressRedux';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
@@ -22,7 +20,6 @@ class LessonProgress extends Component {
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     lessonExtrasUrl: PropTypes.string,
     isLessonExtras: PropTypes.bool,
-    lessonTrophyEnabled: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
     currentPageNumber: PropTypes.number
@@ -104,18 +101,8 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {
-      currentPageNumber,
-      lessonExtrasUrl,
-      isLessonExtras,
-      lessonTrophyEnabled
-    } = this.props;
+    const {currentPageNumber, lessonExtrasUrl, isLessonExtras} = this.props;
     let levels = this.props.levels;
-
-    // Only puzzle levels (non-concept levels) should count towards mastery.
-    if (lessonTrophyEnabled) {
-      levels = levels.filter(level => !level.isConceptLevel);
-    }
 
     // Bonus levels should not count towards mastery.
     levels = levels.filter(level => !level.bonus);
@@ -126,13 +113,7 @@ class LessonProgress extends Component {
     } = this.getFullProgressOffset();
 
     return (
-      <div
-        className="react_stage"
-        style={{
-          ...styles.container,
-          ...(lessonTrophyEnabled && styles.lessonTrophyContainer)
-        }}
-      >
+      <div className="react_stage" style={styles.container}>
         <div
           className="full_progress_outer"
           style={{...styles.outer, left: headerFullProgressOffset}}
@@ -142,7 +123,6 @@ class LessonProgress extends Component {
             ref="fullProgressInner"
             style={styles.inner}
           >
-            {lessonTrophyEnabled && <div style={styles.spacer} />}
             {levels.map((level, index) => {
               let isCurrent = level.isCurrentLevel;
               if (isCurrent && level.kind === LevelKind.assessment) {
@@ -160,23 +140,17 @@ class LessonProgress extends Component {
                     level={level}
                     disabled={false}
                     smallBubble={!isCurrent}
-                    lessonTrophyEnabled={lessonTrophyEnabled}
                   />
                 </div>
               );
             })}
-            {lessonExtrasUrl && !lessonTrophyEnabled && (
+            {lessonExtrasUrl && (
               <div ref={isLessonExtras ? 'currentLevel' : null}>
                 <LessonExtrasProgressBubble
                   lessonExtrasUrl={lessonExtrasUrl}
                   perfect={isLessonExtras}
                 />
               </div>
-            )}
-            {lessonTrophyEnabled && (
-              <LessonTrophyProgressBubble
-                percentPerfect={getPercentPerfect(levels)}
-              />
             )}
           </div>
         </div>

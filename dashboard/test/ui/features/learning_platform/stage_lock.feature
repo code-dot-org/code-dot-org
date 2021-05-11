@@ -46,6 +46,7 @@ Scenario: Lock settings for students
   When I sign in as "bobby"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   Then I verify progress for stage 31 level 1 is "not_tried"
   Then I verify progress for stage 31 level 2 is "not_tried"
@@ -64,6 +65,7 @@ Scenario: Lock settings for students
 
   When I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
   # teacher marks readonly
@@ -81,11 +83,12 @@ Scenario: Lock settings for students
   When I sign in as "bobby"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "perfect_assessment"
-  Then I verify progress for stage 31 level 2 is "perfect_assessment"
-  Then I verify progress for stage 31 level 3 is "perfect_assessment"
-  Then I verify progress for stage 31 level 4 is "perfect_assessment"
+  Then I verify progress for stage 31 level 1 is "not_tried"
+  Then I verify progress for stage 31 level 2 is "not_tried"
+  Then I verify progress for stage 31 level 3 is "not_tried"
+  Then I verify progress for stage 31 level 4 is "not_tried"
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   And I wait until element "h2:contains(Pre-survey)" is visible
@@ -99,6 +102,7 @@ Scenario: Lock settings for students who never submit
 
   When I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
@@ -120,6 +124,7 @@ Scenario: Lock settings for students who never submit
   When I sign in as "billy"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   Then I verify progress for stage 31 level 1 is "not_tried"
   Then I verify progress for stage 31 level 2 is "not_tried"
@@ -141,6 +146,7 @@ Scenario: Lock settings for students who never submit
   When I sign in as "billy"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   Then I verify progress for stage 31 level 1 is "not_tried"
   Then I verify progress for stage 31 level 2 is "not_tried"
@@ -152,6 +158,7 @@ Scenario: Lock settings for retake not submit scenario
 
   When I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
@@ -173,6 +180,7 @@ Scenario: Lock settings for retake not submit scenario
   When I sign in as "babby"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   Then I verify progress for stage 31 level 1 is "not_tried"
   Then I verify progress for stage 31 level 2 is "not_tried"
@@ -194,6 +202,7 @@ Scenario: Lock settings for retake not submit scenario
   When I sign in as "babby"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
   # now teacher allows for retake
@@ -211,6 +220,7 @@ Scenario: Lock settings for retake not submit scenario
   When I sign in as "babby"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   And I click selector ".submitButton" once I see it
@@ -222,6 +232,7 @@ Scenario: Lock settings for retake not submit scenario
 
   When I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
 Scenario: Lock settings for retake after submit scenario
@@ -229,6 +240,7 @@ Scenario: Lock settings for retake after submit scenario
 
   When I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
@@ -250,6 +262,7 @@ Scenario: Lock settings for retake after submit scenario
   When I sign in as "frank"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   Then I verify progress for stage 31 level 1 is "not_tried"
   Then I verify progress for stage 31 level 2 is "not_tried"
@@ -265,6 +278,7 @@ Scenario: Lock settings for retake after submit scenario
 
   When I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
   # now teacher allows for retake
@@ -282,6 +296,7 @@ Scenario: Lock settings for retake after submit scenario
   When I sign in as "frank"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   Then element ".unsubmitButton" is visible

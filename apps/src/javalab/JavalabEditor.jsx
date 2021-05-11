@@ -25,6 +25,7 @@ import JavalabEditorTabMenu from './JavalabEditorTabMenu';
 import JavalabFileExplorer from './JavalabFileExplorer';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
+import msg from '@cdo/locale';
 
 const style = {
   editor: {
@@ -68,7 +69,8 @@ class JavalabEditor extends React.Component {
     removeFile: PropTypes.func,
     sources: PropTypes.object,
     isDarkMode: PropTypes.bool,
-    isEditingStartSources: PropTypes.bool
+    isEditingStartSources: PropTypes.bool,
+    handleVersionHistory: PropTypes.func.isRequired
   };
 
   constructor(props) {
@@ -438,6 +440,14 @@ class JavalabEditor extends React.Component {
             headerHasFocus={true}
             isRtl={false}
             label="Commit Code"
+          />
+          <PaneButton
+            id="data-mode-versions-header"
+            iconClass="fa fa-clock-o"
+            label={msg.showVersionsHeader()}
+            headerHasFocus={true}
+            isRtl={false}
+            onClick={this.props.handleVersionHistory}
           />
           <PaneSection>Editor</PaneSection>
         </PaneHeader>

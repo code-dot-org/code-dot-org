@@ -30,7 +30,7 @@ class AilabView extends React.Component {
     return (
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
-          <CodeWorkspaceContainer topMargin={0}>
+          <CodeWorkspaceContainer>
             <div style={styles.container}>
               <div id="root" style={styles.containerReact} />
             </div>

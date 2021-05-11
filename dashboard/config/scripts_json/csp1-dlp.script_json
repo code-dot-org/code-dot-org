@@ -8,11 +8,12 @@
       "professional_learning_course": "CS Principles Facilitator in Training",
       "peer_reviews_to_complete": 6,
       "student_detail_progress_view": true,
-      "exclude_csf_column_in_legend": true
+      "exclude_csf_column_in_legend": true,
+      "deprecated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:03 UTC",
+    "serialized_at": "2021-05-10 15:35:28 UTC",
     "seeding_key": {
       "script.name": "csp1-dlp"
     }

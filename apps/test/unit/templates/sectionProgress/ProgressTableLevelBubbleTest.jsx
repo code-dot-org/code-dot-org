@@ -24,21 +24,18 @@ const defaultProps = {
 };
 
 const borderColors = {
-  [LevelStatus.locked]: color.lighter_gray,
   [LevelStatus.not_tried]: color.lighter_gray,
   [LevelStatus.attempted]: color.level_perfect,
   [LevelStatus.passed]: color.level_perfect,
   [LevelStatus.perfect]: color.level_perfect
 };
 const backgroundColors = {
-  [LevelStatus.locked]: color.level_not_tried,
   [LevelStatus.not_tried]: color.level_not_tried,
   [LevelStatus.attempted]: color.level_not_tried,
   [LevelStatus.passed]: color.level_passed,
   [LevelStatus.perfect]: color.level_perfect
 };
 const assessmentBorders = {
-  [LevelStatus.locked]: color.lighter_gray,
   [LevelStatus.not_tried]: color.lighter_gray,
   [LevelStatus.attempted]: color.level_submitted,
   [LevelStatus.submitted]: color.level_submitted,
@@ -46,7 +43,6 @@ const assessmentBorders = {
   [LevelStatus.perfect]: color.level_submitted
 };
 const assessmentBackgrounds = {
-  [LevelStatus.locked]: color.level_not_tried,
   [LevelStatus.not_tried]: color.level_not_tried,
   [LevelStatus.attempted]: color.level_not_tried,
   [LevelStatus.submitted]: color.level_submitted,
@@ -75,16 +71,9 @@ function bubbleContainerStyleForStatus(status, propOverrides = {}) {
 }
 
 describe('ProgressTableLevelBubble', () => {
-  it('renders a link when enabled', () => {
+  it('renders a link', () => {
     const wrapper = shallow(<ProgressTableLevelBubble {...defaultProps} />);
     expect(wrapper.find(unitTestExports.LinkWrapper)).to.have.lengthOf(1);
-  });
-
-  it('does not render a link when disabled', () => {
-    const wrapper = shallow(
-      <ProgressTableLevelBubble {...defaultProps} isDisabled={true} />
-    );
-    expect(wrapper.find(unitTestExports.LinkWrapper)).to.have.lengthOf(0);
   });
 
   it('renders default bubble with circle shape', () => {
@@ -152,10 +141,7 @@ describe('ProgressTableLevelBubble', () => {
 
   it('shows correct icon when locked', () => {
     const wrapper = mount(
-      <ProgressTableLevelBubble
-        {...defaultProps}
-        levelStatus={LevelStatus.locked}
-      />
+      <ProgressTableLevelBubble {...defaultProps} isLocked={true} />
     );
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.lengthOf(1);

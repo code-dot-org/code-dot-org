@@ -127,8 +127,8 @@ def main(options)
       lesson_group.update_from_curriculum_builder(cb_chapter) if options.models.include?('LessonGroup')
     end
 
-    script.fix_script_level_positions
     script.update!(show_calendar: !!cb_unit['show_calendar'], is_migrated: true)
+    script.fix_script_level_positions
     script.write_script_dsl
     script.write_script_json
 
