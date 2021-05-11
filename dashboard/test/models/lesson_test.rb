@@ -1001,6 +1001,36 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal [destination_vocab], copied_lesson.vocabularies
     end
 
+    test "can clone lesson another script in the same course version" do
+      unit_group = create :unit_group
+      course_version = create :course_version, content_root: unit_group
+
+      original_script = create :script, is_migrated: true
+      create :unit_group_unit, unit_group: unit_group, script: original_script, position: 1
+      original_script.expects(:write_script_json).never
+      original_lesson_group = create :lesson_group, script: original_script
+      original_lesson = create :lesson, lesson_group: original_lesson_group, script: original_script, has_lesson_plan: true
+      original_resource = create :resource, name: 'resource1', course_version: course_version, lessons: [original_lesson]
+      original_vocab = create :vocabulary, word: 'word one', course_version: course_version, lessons: [original_lesson]
+
+      destination_script = create :script, is_migrated: true
+      create :unit_group_unit, unit_group: unit_group, script: destination_script, position: 2
+      create :lesson_group, script: destination_script
+
+      destination_script.expects(:write_script_json).once
+      course_version_resource_count = course_version.resources.count
+      course_version_vocab_count = course_version.vocabularies.count
+      Script.expects(:merge_and_write_i18n).once
+      copied_lesson = Lesson.copy_to_script(original_lesson, destination_script)
+      course_version.reload
+
+      assert_equal destination_script, copied_lesson.script
+      assert_equal [original_resource], copied_lesson.resources
+      assert_equal [original_vocab], copied_lesson.vocabularies
+      assert_equal course_version.resources.count, course_version_resource_count
+      assert_equal course_version.vocabularies.count, course_version_vocab_count
+    end
+
     test "can clone lesson into another script with lessons" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
