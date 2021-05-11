@@ -1,0 +1,26 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "setupOutbreak",
+    "blockText": "outbreak setup\npopulation:{SPRITE2N}\n{TOGGLE}virus",
+    "eventBlock": true,
+    "inline": false,
+    "args": [
+      {
+        "name": "TOGGLE",
+        "type": "String",
+        "field": true
+      },
+      {
+        "name": "SPRITE2N",
+        "type": "Number",
+        "field": true
+      }
+    ],
+    "color": [
+      39,
+      1,
+      0.99
+    ]
+  }
+}

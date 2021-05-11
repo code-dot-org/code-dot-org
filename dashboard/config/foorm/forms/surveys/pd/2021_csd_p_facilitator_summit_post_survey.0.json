@@ -10,7 +10,7 @@
         },
         {
           "type": "radiogroup",
-          "name": "Course",
+          "name": "[Course]",
           "title": "For which course did you attend the Summit?",
           "isRequired": true,
           "choices": [
