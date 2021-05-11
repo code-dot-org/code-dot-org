@@ -6,19 +6,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {isIE11} from '@cdo/apps/util/browser-detector';
 import _ from 'lodash';
 
-// https://developers.google.com/classroom/brand
-const styles = {
-  label: {
-    paddingLeft: 16,
-    textAlign: 'left'
-  },
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'start'
-  }
-};
-
 // used to give each instance a unique id to use for callback names
 let componentCount = 0;
 
@@ -153,3 +140,16 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     );
   }
 }
+
+// https://developers.google.com/classroom/brand
+const styles = {
+  label: {
+    paddingLeft: 16,
+    textAlign: 'left'
+  },
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'start'
+  }
+};

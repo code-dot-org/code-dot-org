@@ -4,7 +4,7 @@ import ScriptSelector from './ScriptSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import LessonSelector from './LessonSelector';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -23,38 +23,6 @@ import {
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
-
-const styles = {
-  heading: {
-    marginBottom: 0
-  },
-  topRowContainer: {
-    display: 'flex',
-    alignItems: 'flex-end',
-    marginBottom: 10
-  },
-  chevronLink: {
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'flex-end'
-  },
-  icon: {
-    paddingRight: 5
-  },
-  toggle: {
-    margin: '0px 30px'
-  },
-  show: {
-    display: 'block'
-  },
-  hide: {
-    display: 'none'
-  },
-  studentTooltip: {
-    display: 'flex',
-    textAlign: 'center'
-  }
-};
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -194,7 +162,7 @@ class SectionProgress extends Component {
           {levelDataInitialized &&
             (currentView === ViewType.SUMMARY ||
               currentView === ViewType.DETAIL) && (
-              <ProgressTableContainer currentView={currentView} />
+              <ProgressTableView currentView={currentView} />
             )}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
@@ -208,6 +176,38 @@ class SectionProgress extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    marginBottom: 0
+  },
+  topRowContainer: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    marginBottom: 10
+  },
+  chevronLink: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'flex-end'
+  },
+  icon: {
+    paddingRight: 5
+  },
+  toggle: {
+    margin: '0px 30px'
+  },
+  show: {
+    display: 'block'
+  },
+  hide: {
+    display: 'none'
+  },
+  studentTooltip: {
+    display: 'flex',
+    textAlign: 'center'
+  }
+};
 
 export const UnconnectedSectionProgress = SectionProgress;
 

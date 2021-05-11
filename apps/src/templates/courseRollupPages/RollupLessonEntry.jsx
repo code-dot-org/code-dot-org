@@ -5,33 +5,6 @@ import i18n from '@cdo/locale';
 import RollupLessonEntrySection from './RollupLessonEntrySection';
 import {lessonShape} from './rollupShapes';
 
-const styles = {
-  main: {
-    width: '100%'
-  },
-  header: {
-    backgroundColor: color.purple,
-    color: color.white,
-    border: 'solid 1px' + color.charcoal,
-    padding: '0px 10px'
-  },
-  object: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
-    padding: '0px 10px'
-  },
-  entries: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'stretch',
-    alignContent: 'stretch'
-  },
-  link: {
-    color: color.white
-  }
-};
-
 export default class RollupLessonEntry extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
@@ -67,3 +40,30 @@ export default class RollupLessonEntry extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    width: '100%'
+  },
+  header: {
+    backgroundColor: color.purple,
+    color: color.white,
+    border: 'solid 1px' + color.charcoal,
+    padding: '0px 10px'
+  },
+  object: {
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    border: 'solid 1px' + color.charcoal,
+    padding: '0px 10px'
+  },
+  entries: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    alignContent: 'stretch'
+  },
+  link: {
+    color: color.white
+  }
+};

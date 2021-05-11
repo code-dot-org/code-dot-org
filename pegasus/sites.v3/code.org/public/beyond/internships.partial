@@ -3,18 +3,17 @@ title: Internships and apprenticeships
 video_player: true
 theme: responsive
 social:
-  "og:title": "CS Journeys: Internships and more"
+  "og:title": "CS Journeys Resources: Internships and more"
   "og:description": "Get real-world CS experience"
-  "og:image": ""
+  "twitter:title": "CS Journeys Resources: Internships and more"
+  "twitter:description": "Get real-world CS experience"
+  "twitter:image": "/images/csjourneys/og-internships.jpg"
+  "og:image": "/images/csjourneys/og-internships.jpg"
   "og:image:width": 1200
   "og:image:height": 630
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
 ---
 <a id="top"></a>
-<h1>Internships and apprenticeships</h1>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Internships and apprenticeships</h1>
 <p>Get real-world experience with these internship and apprenticeship opportunities.</p>
 
 <ul>
@@ -125,7 +124,7 @@ social:
 <div style="clear:both"></div>
 <br>
 
-<p>Many companies and organizations offer internships to university students. Once you have an idea of the field(s) that you’re interested in, you can use this checklist to find an internship in that field.</p>
+<p>Many companies and organizations offer internships to university students. Once you have an idea of the field(s) that you’re interested in, take a look at your college/university's career resources, or check out Handshake's <a href="https://joinhandshake.com/blog/students/" target="_blank">resources for students looking for jobs or internships</a>.</p>
 </div>
 
 <div style="clear:both; margin-bottom:35px"></div>

@@ -279,7 +279,7 @@ module Services
         updated_script_level = script.script_levels.first
         updated_script_level.update!(challenge: 'foo')
         updated_script_level.levels += [new_level]
-        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level]
+        create :script_level, lesson: script.lessons.last, script: script, levels: [new_level], assessment: false, bonus: false, named_level: false
       end
 
       ScriptSeed.seed_from_json(json)
@@ -776,6 +776,26 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed deletes all lesson programming expressions' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.lessons.each do |lesson|
+          lesson.programming_expressions = []
+          assert_equal 0, lesson.programming_expressions.count
+        end
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsProgrammingExpression'] = 0
+      assert_equal expected_counts, get_counts
+    end
+
     test 'seed can only find programming expression if programming environment matches' do
       script = create_script_tree(num_lessons_per_group: 1)
       json = ScriptSeed.serialize_seeding_json(script)
@@ -1089,7 +1109,9 @@ module Services
             (1..num_script_levels_per_section).each do |sl_pos|
               game = create :game, name: "#{name_prefix}_game#{sl_num}"
               level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "1_2_#{sl_num}", game: game
-              create :script_level, activity_section: section, activity_section_position: sl_pos, lesson: lesson, script: script, levels: [level], challenge: sl_num.even?
+              create :script_level, activity_section: section, activity_section_position: sl_pos,
+                     lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
+                     assessment: false, bonus: false, named_level: false
               sl_num += 1
             end
           end

@@ -10,15 +10,6 @@ import {
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 
-const styles = {
-  buttonMargin: {
-    marginLeft: 10
-  },
-  buttonMarginRTL: {
-    marginRight: 10
-  }
-};
-
 class AssignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
@@ -110,6 +101,15 @@ class AssignButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  buttonMargin: {
+    marginLeft: 10
+  },
+  buttonMarginRTL: {
+    marginRight: 10
+  }
+};
 
 export const UnconnectedAssignButton = AssignButton;
 

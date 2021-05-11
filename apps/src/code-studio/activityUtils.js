@@ -23,15 +23,6 @@ export const activityCssClass = result => {
   if (result === TestResults.SUBMITTED_RESULT) {
     return LevelStatus.submitted;
   }
-  if (result === TestResults.LOCKED_RESULT) {
-    return LevelStatus.locked;
-  }
-  if (result === TestResults.READONLY_SUBMISSION_RESULT) {
-    return LevelStatus.readonly;
-  }
-  if (result === TestResults.FREE_PLAY) {
-    return LevelStatus.free_play_complete;
-  }
   if (result >= TestResults.MINIMUM_OPTIMAL_RESULT) {
     return LevelStatus.perfect;
   }
@@ -56,12 +47,6 @@ export const resultFromStatus = status => {
   }
   if (status === LevelStatus.submitted) {
     return TestResults.SUBMITTED_RESULT;
-  }
-  if (status === LevelStatus.locked) {
-    return TestResults.LOCKED_RESULT;
-  }
-  if (status === LevelStatus.readonly) {
-    return TestResults.READONLY_SUBMISSION_RESULT;
   }
   if (status === LevelStatus.free_play_complete) {
     return TestResults.FREE_PLAY;

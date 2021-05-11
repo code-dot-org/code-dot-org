@@ -8,24 +8,6 @@ import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPl
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  dropdown: {
-    display: 'inline-block'
-  },
-  boldText: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  section: {
-    width: 300,
-    fontFamily: '"Gotham 4r", sans-serif',
-    backgroundColor: color.lightest_purple
-  },
-  lesson: {
-    width: 300,
-    fontFamily: '"Gotham 4r", sans-serif'
-  }
-};
-
 /*
  Component used to navigate between lesson plans. List
  is broken into sections based on Lesson Groups. Each section has its own item in the list.
@@ -154,3 +136,21 @@ export default class LessonNavigationDropdown extends Component {
     );
   }
 }
+
+const styles = {
+  dropdown: {
+    display: 'inline-block'
+  },
+  boldText: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  section: {
+    width: 300,
+    fontFamily: '"Gotham 4r", sans-serif',
+    backgroundColor: color.lightest_purple
+  },
+  lesson: {
+    width: 300,
+    fontFamily: '"Gotham 4r", sans-serif'
+  }
+};
