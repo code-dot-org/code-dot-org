@@ -1097,6 +1097,15 @@ mi:
             '"rotation"': hurihuri
             '"direction"': aronga nekehanga
             '"speed"': terenga
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': te rahi
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': wawaenga
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1299,24 +1308,38 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': tukutuku
+            '"border"': pae
+            '"row"': rārangi
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:
         text: huri whakatemauī
       RyanLab_turnRight:
         text: huri whakatematau
-      aalab_goToScene:
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
+          FORMAT:
+            '"grid"': tukutuku
+            '"border"': pae
+            '"row"': rārangi
+      aalab_someGraduallyStartIntervention:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
+          PORTION:
+            '1': katoa
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': katoa
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

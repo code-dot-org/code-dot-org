@@ -521,12 +521,6 @@ mi:
               name: Pūtaruna ā-Ipurangi
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         algebraPD2:
@@ -549,22 +543,10 @@ mi:
               name: Whakamutunga
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         asUnplugged:
@@ -763,12 +745,6 @@ mi:
               name: 'Momotu: Titowaiata me ngā Tawhā'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Tākaia
         grade3:
@@ -2420,6 +2396,10 @@ mi:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Ihirangi
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Ihirangi
         k5-onlinepd-2021:
           lessons:
