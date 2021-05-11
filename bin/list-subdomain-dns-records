@@ -24,14 +24,14 @@ puts ip_address_list
 dns_records = Array.new
 
 hosted_zoned_id = route53_client.list_hosted_zones_by_name(dns_name: BASE_DOMAIN, max_items: 1).hosted_zones[0].id
-puts hosted_zoned_id
+
 records_response = route53_client.list_resource_record_sets(
   hosted_zone_id: hosted_zoned_id,
   start_record_name: BASE_DOMAIN.split('.').reverse.join('.'), # Reverse "code.org" to "org.code".
   start_record_type: "A",
-  max_items: 300 # Assume we don't have more than 300 A records for
+  max_items: 300 # Assume we don't have more than 300 A records for the BASE_DOMAIN.
 )
-puts records_response.resource_record_sets.count
+
 a_records = records_response.resource_record_sets.select {|record_set| record_set.type == "A"}
 a_records.each do |a_record|
   record = DNSRecord.new
