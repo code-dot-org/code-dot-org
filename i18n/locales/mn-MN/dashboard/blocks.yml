@@ -1194,6 +1194,15 @@ mn:
             '"y"': у байрлал
             '"direction"': хөдөлгөөний чиглэл
             '"speed"': хурд
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': дундаж
+            '100': large
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}-г {N}% руу тохируулах"
         options:
@@ -1495,6 +1504,13 @@ mn:
             '"x"': х байрлал
             '"y"': у байрлал
             '"direction"': хөдөлгөөний чиглэл
+      Mikelab_setupSim:
+        text: |-
+          тохиргооны симуляци дараахтай хамт
+          {SPRITE1N}{SPRITE1COSTUME}хурд[SPRITE1SPEED]
+          {SPRITE2N}{SPRITE2COSTUME}хурд[SPRITE2SPEED]
+          цуглуулж буй
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1557,6 +1573,12 @@ mn:
         text: "{SPRITE}-н х тэнхлэг"
       Mikelab_yLocationOf:
         text: "{SPRITE}-н у тэнхлэг"
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': сүлжээ
+            '"border"': хил
+            '"row"': мөр
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:
@@ -1590,38 +1612,26 @@ mn:
         options:
           PROPERTY:
             "'shapeColor'": өнгө
-      aalab_addBehaviorForDuration:
-        text: aalab шидтэн {SPRITE} нь {BEHAVIOR}-р эхэлж {SECONDS} секунд үргэлжилнэ
-      aalab_addBehaviorUntilBoolean:
-        text: шидтэн {SPRITE} нь {BEHAVIOR}-р эхэлж {CONDITION} хүртэл үргэлжилнэ
-      aalab_createNewSpriteAnonReturn2:
-        text: шинэ шидтэн {SPRITE_NAME} нэртэй бөгөөд {LOCATION} байрлал дээр {ANIMATION_NAME} хувцастай байна
-      aalab_goToScene:
-        text: "{SCENE} үзэгдэл рүү очих"
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE}-г {DISTANCE} пикселээр {DIRECTION}-д хөдөлгөх"
+          FORMAT:
+            '"grid"': сүлжээ
+            '"border"': хил
+            '"row"': мөр
+      aalab_someGraduallyStartIntervention:
         options:
-          DIRECTION:
-            '"North"': Хойд
-            '"East"': Дорнод
-            '"South"': Өмнөд
-            '"West"': Өрнөд
-      aalab_prompt:
-        text: асуулт асуух {MESSAGE}
-      aalab_scene:
-        text: үзэгдэл {SCENE}
+          PORTION:
+            '1': бүгд
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: түүхийг тохируулах
+          PORTION:
+            '1': бүгд
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: хоёртыг зурах {BIN}
       binary_drawBinScreen:
