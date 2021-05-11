@@ -8,21 +8,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {connect} from 'react-redux';
 import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
-const styles = {
-  textArea: {
-    minHeight: 100,
-    width: '95%'
-  },
-  header: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  optionalText: {
-    paddingLeft: 10
-  }
-};
-
 class CreateStandardsReportStep2 extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
@@ -117,6 +102,21 @@ class CreateStandardsReportStep2 extends Component {
     );
   }
 }
+
+const styles = {
+  textArea: {
+    minHeight: 100,
+    width: '95%'
+  },
+  header: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  optionalText: {
+    paddingLeft: 10
+  }
+};
 
 export const UnconnectedCreateStandardsReportStep2 = CreateStandardsReportStep2;
 

@@ -45,7 +45,7 @@ module Services
 
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
-      resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq
+      resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
       lessons_resources = script.lessons.map(&:lessons_resources).flatten
       vocabularies = script.lessons.map(&:vocabularies).flatten
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
@@ -518,9 +518,8 @@ module Services
 
     def self.import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
       return [] unless seed_context.script.get_course_version
-      return [] if lessons_vocabularies_data.blank?
 
-      lessons_vocabularies_to_import = lessons_vocabularies_data.map do |lv_data|
+      lessons_vocabularies_to_import = (lessons_vocabularies_data || []).map do |lv_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
@@ -545,9 +544,7 @@ module Services
     end
 
     def self.import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
-      return [] if lessons_programming_expressions_data.blank?
-
-      lessons_programming_expressions_to_import = lessons_programming_expressions_data.map do |lpe_data|
+      lessons_programming_expressions_to_import = (lessons_programming_expressions_data || []).map do |lpe_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lpe_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
@@ -712,6 +709,11 @@ module Services
         :seeding_key
       )
 
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
@@ -725,6 +727,11 @@ module Services
         :seeding_key
       )
 
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
@@ -737,6 +744,11 @@ module Services
         :properties,
         :seeding_key
       )
+
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
@@ -755,6 +767,23 @@ module Services
         :seeding_key,
         :level_keys
       )
+
+      def assessment
+        !!object.assessment
+      end
+
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
+      def named_level
+        !!object.named_level
+      end
+
+      def bonus
+        !!object.bonus
+      end
 
       def seeding_key
         # Just in case the data stored in the level_keys property is out of sync somehow,

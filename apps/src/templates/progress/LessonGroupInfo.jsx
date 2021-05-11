@@ -4,20 +4,6 @@ import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const styles = {
-  description: {
-    color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r", sans-serif'
-  },
-  bigQuestion: {
-    fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  subTitle: {
-    color: color.teal
-  }
-};
-
 // Information about a lesson group
 export default class LessonGroupInfo extends Component {
   static propTypes = {
@@ -54,3 +40,17 @@ export default class LessonGroupInfo extends Component {
     );
   }
 }
+
+const styles = {
+  description: {
+    color: color.dark_charcoal,
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
+  bigQuestion: {
+    fontWeight: 'bolder',
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  subTitle: {
+    color: color.teal
+  }
+};

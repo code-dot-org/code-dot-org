@@ -12,12 +12,6 @@ import color from '@cdo/apps/util/color';
 const MIN_CSD_HOURS = 50;
 const MIN_CSP_HOURS = 100;
 
-const styles = {
-  error: {
-    color: color.red
-  }
-};
-
 export default class ChooseYourProgram extends LabeledFormComponent {
   static labels = PageLabels.chooseYourProgram;
 
@@ -265,3 +259,9 @@ export default class ChooseYourProgram extends LabeledFormComponent {
     return formatErrors;
   }
 }
+
+const styles = {
+  error: {
+    color: color.red
+  }
+};

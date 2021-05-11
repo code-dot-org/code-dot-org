@@ -5,7 +5,7 @@ import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/Se
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sinon from 'sinon';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
-import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -71,20 +71,20 @@ describe('SectionProgress', () => {
     expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
-  it('renders ProgressTableContainer for detail and summary view only', () => {
+  it('renders ProgressTableView for detail and summary view only', () => {
     let wrapper = setUp({currentView: ViewType.DETAIL});
-    expect(wrapper.find(ProgressTableContainer)).to.have.length(1);
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
 
     wrapper = setUp({currentView: ViewType.SUMMARY});
-    expect(wrapper.find(ProgressTableContainer)).to.have.length(1);
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
 
     wrapper = setUp({currentView: ViewType.STANDARDS});
-    expect(wrapper.find(ProgressTableContainer)).to.have.length(0);
+    expect(wrapper.find(ProgressTableView)).to.have.length(0);
   });
 
-  it('passes currentView to ProgressTableContainer', () => {
+  it('passes currentView to ProgressTableView', () => {
     const wrapper = setUp({currentView: ViewType.DETAIL});
-    expect(wrapper.find(ProgressTableContainer).props().currentView).to.equal(
+    expect(wrapper.find(ProgressTableView).props().currentView).to.equal(
       ViewType.DETAIL
     );
   });

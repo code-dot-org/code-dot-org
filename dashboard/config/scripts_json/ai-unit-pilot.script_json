@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-12 22:49:10 UTC",
+    "serialized_at": "2021-05-03 23:56:12 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -297,15 +297,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL01 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL01 autoSFLP_pilot-2021"
@@ -322,15 +322,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Recognizing Fish",
         "level_keys": [
           "Oceans_FishVTrash"
-        ]
+        ],
+        "progression": "Recognizing Fish"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Oceans_FishVTrash"
@@ -347,15 +347,15 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Recognizing Fish Features",
         "level_keys": [
           "Oceans_Short"
-        ]
+        ],
+        "progression": "Recognizing Fish Features"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Oceans_Short"
@@ -372,15 +372,15 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Recognizing Expressions",
         "level_keys": [
           "Oceans_Long"
-        ]
+        ],
+        "progression": "Recognizing Expressions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Oceans_Long"
@@ -397,15 +397,15 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL02 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL02 autoSFLP_pilot-2021"
@@ -422,15 +422,15 @@
       "chapter": 6,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Looking for Patterns",
         "level_keys": [
           "ml-L2 unsupervised - 1"
-        ]
+        ],
+        "progression": "Looking for Patterns"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-L2 unsupervised - 1"
@@ -447,15 +447,15 @@
       "chapter": 7,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Green Glass Door",
         "level_keys": [
           "ml-L2 supervised - green glass door"
-        ]
+        ],
+        "progression": "Green Glass Door"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-L2 supervised - green glass door"
@@ -472,15 +472,15 @@
       "chapter": 8,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL03 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL03 autoSFLP_pilot-2021"
@@ -497,15 +497,15 @@
       "chapter": 9,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Shoe Recommender",
         "level_keys": [
           "ml-models-shoes random"
-        ]
+        ],
+        "progression": "Shoe Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models-shoes random"
@@ -522,15 +522,15 @@
       "chapter": 10,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Improved Shoe Recommender",
         "level_keys": [
           "ml-models-shoes decision tree"
-        ]
+        ],
+        "progression": "Improved Shoe Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models-shoes decision tree"
@@ -547,15 +547,15 @@
       "chapter": 11,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Ultimate Shoe Recommender",
         "level_keys": [
           "ml-models-shoes data"
-        ]
+        ],
+        "progression": "Ultimate Shoe Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models-shoes data"
@@ -572,15 +572,15 @@
       "chapter": 12,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Ultimate Shoe Recommender",
         "level_keys": [
           "ml-models-shoes points"
-        ]
+        ],
+        "progression": "Ultimate Shoe Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models-shoes points"
@@ -597,15 +597,15 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL04 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL04 autoSFLP_pilot-2021"
@@ -622,15 +622,15 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL05 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL05 autoSFLP_pilot-2021"
@@ -647,15 +647,15 @@
       "chapter": 15,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Dataset #1: Tacos",
         "level_keys": [
           "ml-intro categorical-tacos"
-        ]
+        ],
+        "progression": "Dataset #1: Tacos"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-intro categorical-tacos"
@@ -672,15 +672,15 @@
       "chapter": 16,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Dataset #2: Ice Cream",
         "level_keys": [
           "ml-intro categorical-ice cream"
-        ]
+        ],
+        "progression": "Dataset #2: Ice Cream"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-intro categorical-ice cream"
@@ -697,15 +697,15 @@
       "chapter": 17,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Dataset #3: Pizza",
         "level_keys": [
           "ml-intro categorical-pizza"
-        ]
+        ],
+        "progression": "Dataset #3: Pizza"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-intro categorical-pizza"
@@ -722,15 +722,15 @@
       "chapter": 18,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "You Choose: Restaurant Recommendations",
         "level_keys": [
           "ml-intro categorical-food choices"
-        ]
+        ],
+        "progression": "You Choose: Restaurant Recommendations"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-intro categorical-food choices"
@@ -747,15 +747,15 @@
       "chapter": 19,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL06 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL06 autoSFLP_pilot-2021"
@@ -772,15 +772,15 @@
       "chapter": 20,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "(Enable AI Models)",
         "level_keys": [
           "Full Year Pilot Experiments Dashboard - AI Models"
-        ]
+        ],
+        "progression": "(Enable AI Models)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Full Year Pilot Experiments Dashboard - AI Models"
@@ -797,15 +797,15 @@
       "chapter": 21,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "What is your Ideal Vacation?",
         "level_keys": [
           "ml-models in applab-vacation example"
-        ]
+        ],
+        "progression": "What is your Ideal Vacation?"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models in applab-vacation example"
@@ -822,15 +822,15 @@
       "chapter": 22,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Import Your Model",
         "level_keys": [
           "ml-models in applab-import 1"
-        ]
+        ],
+        "progression": "Import Your Model"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models in applab-import 1"
@@ -847,15 +847,15 @@
       "chapter": 23,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Changing Screens",
         "level_keys": [
           "ml-models in applab-screens-2"
-        ]
+        ],
+        "progression": "Changing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models in applab-screens-2"
@@ -872,15 +872,15 @@
       "chapter": 24,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Changing Screens",
         "level_keys": [
           "ml-models in applab-screens-1"
-        ]
+        ],
+        "progression": "Changing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models in applab-screens-1"
@@ -897,15 +897,15 @@
       "chapter": 25,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Changing Screens",
         "level_keys": [
           "ml-models in applab-screens-3"
-        ]
+        ],
+        "progression": "Changing Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models in applab-screens-3"
@@ -922,15 +922,15 @@
       "chapter": 26,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "You Choose: Quiz Apps",
         "level_keys": [
           "ml-models in applab-practice choice"
-        ]
+        ],
+        "progression": "You Choose: Quiz Apps"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-models in applab-practice choice"
@@ -947,15 +947,15 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL07 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL07 autoSFLP_pilot-2021"
@@ -972,15 +972,15 @@
       "chapter": 28,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Medical Priority App",
         "level_keys": [
           "ml-model card-medical app v2"
-        ]
+        ],
+        "progression": "Medical Priority App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-model card-medical app v2"
@@ -997,15 +997,15 @@
       "chapter": 29,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Medical Dataset Model Cards",
         "level_keys": [
           "ml-model card-medical-1"
-        ]
+        ],
+        "progression": "Medical Dataset Model Cards"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-model card-medical-1"
@@ -1022,15 +1022,15 @@
       "chapter": 30,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Medical Dataset Model Cards",
         "level_keys": [
           "ml-model card-medical-2"
-        ]
+        ],
+        "progression": "Medical Dataset Model Cards"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-model card-medical-2"
@@ -1047,15 +1047,15 @@
       "chapter": 31,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Medical Dataset Model Cards",
         "level_keys": [
           "ml-model card-medical-3"
-        ]
+        ],
+        "progression": "Medical Dataset Model Cards"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-model card-medical-3"
@@ -1072,15 +1072,15 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL08 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL08 autoSFLP_pilot-2021"
@@ -1097,15 +1097,15 @@
       "chapter": 33,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Safari Planner",
         "level_keys": [
           "ml-numerical ai lab-safari 1"
-        ]
+        ],
+        "progression": "Safari Planner"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-numerical ai lab-safari 1"
@@ -1122,15 +1122,15 @@
       "chapter": 34,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL09 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL09 autoSFLP_pilot-2021"
@@ -1147,15 +1147,15 @@
       "chapter": 35,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL10 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL10 autoSFLP_pilot-2021"
@@ -1172,15 +1172,15 @@
       "chapter": 36,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pet Recommender",
         "level_keys": [
           "ml-use model card-example1A"
-        ]
+        ],
+        "progression": "Pet Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example1A"
@@ -1197,15 +1197,15 @@
       "chapter": 37,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pet Recommender",
         "level_keys": [
           "ml-use model card-pet model card"
-        ]
+        ],
+        "progression": "Pet Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-pet model card"
@@ -1222,15 +1222,15 @@
       "chapter": 38,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pet Recommender",
         "level_keys": [
           "ml-use model card-example1B"
-        ]
+        ],
+        "progression": "Pet Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example1B"
@@ -1247,15 +1247,15 @@
       "chapter": 39,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pet Recommender",
         "level_keys": [
           "ml-use model card-example1C"
-        ]
+        ],
+        "progression": "Pet Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example1C"
@@ -1272,15 +1272,15 @@
       "chapter": 40,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pet Recommender",
         "level_keys": [
           "ml-use model card-example1D"
-        ]
+        ],
+        "progression": "Pet Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example1D"
@@ -1297,15 +1297,15 @@
       "chapter": 41,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pet Recommender",
         "level_keys": [
           "ml-use model card-example1E"
-        ]
+        ],
+        "progression": "Pet Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example1E"
@@ -1322,15 +1322,15 @@
       "chapter": 42,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "You Choose: Improve Your App",
         "level_keys": [
           "ml-use models applab-practice choice"
-        ]
+        ],
+        "progression": "You Choose: Improve Your App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use models applab-practice choice"
@@ -1347,15 +1347,15 @@
       "chapter": 43,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL11 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL11 autoSFLP_pilot-2021"
@@ -1372,15 +1372,15 @@
       "chapter": 44,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Raspado Recommender",
         "level_keys": [
           "ml-customize-raspado"
-        ]
+        ],
+        "progression": "Raspado Recommender"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-customize-raspado"
@@ -1397,15 +1397,15 @@
       "chapter": 45,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Driver Alert System",
         "level_keys": [
           "ml-use model card-example3A"
-        ]
+        ],
+        "progression": "Driver Alert System"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example3A"
@@ -1422,15 +1422,15 @@
       "chapter": 46,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Driver Alert System",
         "level_keys": [
           "ml-use model card-example3_EditA"
-        ]
+        ],
+        "progression": "Driver Alert System"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example3_EditA"
@@ -1447,15 +1447,15 @@
       "chapter": 47,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Driver Alert System",
         "level_keys": [
           "ml-use model card-example3_EditB"
-        ]
+        ],
+        "progression": "Driver Alert System"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example3_EditB"
@@ -1472,15 +1472,15 @@
       "chapter": 48,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Driver Alert System",
         "level_keys": [
           "ml-use model card-example3_EditC"
-        ]
+        ],
+        "progression": "Driver Alert System"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example3_EditC"
@@ -1497,15 +1497,15 @@
       "chapter": 49,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Driver Alert System",
         "level_keys": [
           "ml-use model card-example3C"
-        ]
+        ],
+        "progression": "Driver Alert System"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example3C"
@@ -1522,15 +1522,15 @@
       "chapter": 50,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Driver Alert System",
         "level_keys": [
           "ml-use model card-example3D"
-        ]
+        ],
+        "progression": "Driver Alert System"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example3D"
@@ -1547,15 +1547,15 @@
       "chapter": 51,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Driver Alert System",
         "level_keys": [
           "ml-use model card-example3E"
-        ]
+        ],
+        "progression": "Driver Alert System"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-use model card-example3E"
@@ -1572,15 +1572,15 @@
       "chapter": 52,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "You Choose: Improve Your App",
         "level_keys": [
           "ml-customize apps-practice choice"
-        ]
+        ],
+        "progression": "You Choose: Improve Your App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-customize apps-practice choice"
@@ -1597,15 +1597,15 @@
       "chapter": 53,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL12 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL12 autoSFLP_pilot-2021"
@@ -1622,15 +1622,15 @@
       "chapter": 54,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Zoo Predictions",
         "level_keys": [
           "ml-data decisions-zoo1"
-        ]
+        ],
+        "progression": "Zoo Predictions"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-data decisions-zoo1"
@@ -1647,15 +1647,15 @@
       "chapter": 55,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Importing Your Model",
         "level_keys": [
           "ml-data decisions- import app"
-        ]
+        ],
+        "progression": "Importing Your Model"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-data decisions- import app"
@@ -1672,15 +1672,15 @@
       "chapter": 56,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Customizing Your App",
         "level_keys": [
           "ml-data decisions- customize app"
-        ]
+        ],
+        "progression": "Customizing Your App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-data decisions- customize app"
@@ -1697,15 +1697,15 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL13 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL13 autoSFLP_pilot-2021"
@@ -1722,15 +1722,15 @@
       "chapter": 58,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL14 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL14 autoSFLP_pilot-2021"
@@ -1747,15 +1747,15 @@
       "chapter": 59,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL15 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL15 autoSFLP_pilot-2021"
@@ -1772,15 +1772,15 @@
       "chapter": 60,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Planning Your App - AI Lab",
         "level_keys": [
           "ml-planning app-ai lab"
-        ]
+        ],
+        "progression": "Planning Your App - AI Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-planning app-ai lab"
@@ -1797,15 +1797,15 @@
       "chapter": 61,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lesson Overview",
         "level_keys": [
           "CSD AIL16 autoSFLP_pilot-2021"
-        ]
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSD AIL16 autoSFLP_pilot-2021"
@@ -1822,15 +1822,15 @@
       "chapter": 62,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App with Real-World Data - AI Lab",
         "level_keys": [
           "ml-final project-ai lab"
-        ]
+        ],
+        "progression": "App with Real-World Data - AI Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-final project-ai lab"
@@ -1847,15 +1847,15 @@
       "chapter": 63,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "App with Real-World Data - App Lab",
         "level_keys": [
           "ml-final project-app lab"
-        ]
+        ],
+        "progression": "App with Real-World Data - App Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ml-final project-app lab"

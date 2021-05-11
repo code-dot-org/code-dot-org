@@ -25,35 +25,6 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
-const styles = {
-  heading: {
-    width: '100%'
-  },
-  titleWrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end'
-  },
-  title: {
-    display: 'inline-block'
-  },
-  versionWrapper: {
-    display: 'flex',
-    alignItems: 'baseline'
-  },
-  versionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 15,
-    color: color.charcoal
-  },
-  versionDropdown: {
-    marginBottom: 13
-  },
-  description: {
-    width: 700
-  }
-};
-
 /**
  * This component takes some of the HAML generated content on the script overview
  * page, and moves it under our React root. This is done so that we can have React
@@ -256,6 +227,35 @@ class ScriptOverviewHeader extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    width: '100%'
+  },
+  titleWrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end'
+  },
+  title: {
+    display: 'inline-block'
+  },
+  versionWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  versionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    color: color.charcoal
+  },
+  versionDropdown: {
+    marginBottom: 13
+  },
+  description: {
+    width: 700
+  }
+};
 
 export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 

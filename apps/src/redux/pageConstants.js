@@ -55,6 +55,7 @@ var ALLOWED_KEYS = new Set([
   'nonResponsiveVisualizationColumnWidth',
   'is13Plus',
   'isSignedIn',
+  'isEditingStartSources',
   'userId',
   'verifiedTeacher',
   'isK1',

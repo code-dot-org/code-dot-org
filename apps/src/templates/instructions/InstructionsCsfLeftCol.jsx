@@ -13,13 +13,6 @@ import commonStyles from '../../commonStyles';
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
-const styles = {
-  // bubble has pointer cursor by default. override that if no hints
-  noAuthoredHints: {
-    cursor: 'default'
-  }
-};
-
 class InstructionsCsfLeftCol extends React.Component {
   static propTypes = {
     requestHint: PropTypes.func.isRequired,
@@ -117,6 +110,13 @@ class InstructionsCsfLeftCol extends React.Component {
     );
   }
 }
+
+const styles = {
+  // bubble has pointer cursor by default. override that if no hints
+  noAuthoredHints: {
+    cursor: 'default'
+  }
+};
 
 export const UnconnectedInstructionsCsfLeftCol = Radium(InstructionsCsfLeftCol);
 
