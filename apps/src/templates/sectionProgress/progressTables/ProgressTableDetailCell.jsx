@@ -102,6 +102,9 @@ export default class ProgressTableDetailCell extends React.Component {
   }
 
   render() {
+    if (!this.props.levels?.length) {
+      return null;
+    }
     return (
       <div
         style={{...styles.container, ...progressStyles.cellContent}}
