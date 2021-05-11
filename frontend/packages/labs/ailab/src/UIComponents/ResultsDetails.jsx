@@ -9,7 +9,6 @@ import {
   setShowResultsDetails
 } from "../redux";
 import { styles } from "../constants";
-import Statement from "./Statement";
 import ResultsToggle from "./ResultsToggle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
