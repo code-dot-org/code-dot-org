@@ -374,6 +374,7 @@
   "exactNumberOfBlocks": "فقط   {numBlocks, plural, one {1 block} other {# blocks}} استفاده شده!",
   "exampleErrorMessage": "تابع {functionName} یک یا بیشتر مثال دارد که نیاز به تنظیم دارد. مطمئن شوید که آن ها با تعریف شما همخوانی دارند و سوال را جواب می دهند.",
   "examplesFailedOnClose": "یک یا بیشتر از مثال های شما با تعریف شما همخوانی ندارند. مثال هایتان را قبل از بستن چک کنید",
+  "explainRestrictedSectionLearnMore": "بیشتر یاد بگیرید",
   "extraTopBlocks": "شما بلوک های جدا از هم داری.",
   "extraTopBlocksWhenRun": "بلوک های جدا از هم داری. آیا می خواهی که این ها را به بلوک \"when run\" وصل کنی؟",
   "fallbackVideoClosedCaptioningDialogClose": "ببند",
