@@ -59,6 +59,8 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
+const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 const SET_K_VALUE = "SET_K_VALUE";
 
 // Action creators
@@ -207,6 +209,14 @@ export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
 }
 
+export function setHistoricResult(label, features, accuracy) {
+  return { type: SET_HISTORIC_RESULT, label, features, accuracy };
+}
+
+export function setShowResultsDetails(show) {
+  return {type: SET_SHOW_RESULTS_DETAILS, show};
+}
+
 export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
 }
@@ -240,8 +250,11 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined,
+  // Possible values for saveStatus: notStarted, started, success, and failure.
+  saveStatus: "notStarted",
   columnRefs: {},
+  historicResults: [],
+  showResultsDetails: false,
   kValue: null
 };
 
@@ -314,8 +327,7 @@ export default function rootReducer(state = initialState, action) {
     if (!state.selectedFeatures.includes(action.selectedFeature)) {
       return {
         ...state,
-        selectedFeatures: [...state.selectedFeatures, action.selectedFeature],
-        currentColumn: undefined
+        selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
       };
     }
   }
@@ -332,8 +344,7 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
-      labelColumn: action.labelColumn,
-      currentColumn: undefined
+      labelColumn: action.labelColumn
     };
   }
   if (action.type === SET_FEATURE_NUMBER_KEY) {
@@ -541,12 +552,32 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
+  if (action.type === SET_HISTORIC_RESULT) {
+    return {
+      ...state,
+      historicResults: [
+        {
+          label: action.label,
+          features: action.features,
+          accuracy: action.accuracy
+        },
+        ...state.historicResults
+      ]
+    };
+  }
+  if (action.type === SET_SHOW_RESULTS_DETAILS) {
+    return {
+      ...state,
+      showResultsDetails: action.show
+    };
+  }
   if (action.type === SET_K_VALUE) {
     return {
       ...state,
       kValue: action.kValue
     };
   }
+
   return state;
 }
 
@@ -730,7 +761,7 @@ function isEmpty(object) {
 export function getConvertedValue(state, rawValue, column) {
   const convertedValue =
     getCategoricalColumns(state).includes(column) &&
-    !isEmpty(state.featureNumberKey)
+      !isEmpty(state.featureNumberKey)
       ? getKeyByValue(state.featureNumberKey[column], rawValue)
       : rawValue;
   return convertedValue;
@@ -921,13 +952,14 @@ export function getEmptyCellDetails(state) {
 export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
-    state.metadata
-    && state.metadata.card
-    && state.metadata.card.description
+    state.metadata &&
+    state.metadata.card &&
+    state.metadata.card.description
   ) {
     return state.metadata.card.description;
   } else if (
-    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+    state.trainedModelDetails &&
+    state.trainedModelDetails.datasetDescription
   ) {
     return state.trainedModelDetails.datasetDescription;
   } else {
@@ -935,19 +967,19 @@ export function getDataDescription(state) {
   }
 }
 
-function getDatasetDetails(state) {
-  const datasetDetails = {}
+export function getDatasetDetails(state) {
+  const datasetDetails = {};
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
   return datasetDetails;
 }
 
-function getColumnDataToSave(state, column) {
+export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
-    columnData.values = getUniqueOptions(state, column)
+    columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
     const maxMin = getRange(state, column, false);
     columnData.max = maxMin.max;
@@ -956,10 +988,10 @@ function getColumnDataToSave(state, column) {
   return columnData;
 }
 
-function getFeaturesToSave(state) {
+export function getFeaturesToSave(state) {
   const features = state.selectedFeatures.map(feature =>
     getColumnDataToSave(state, feature)
-  )
+  );
   return features;
 }
 
@@ -1013,7 +1045,8 @@ const panelList = [
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
-  { id: "saveModel", label: "Save" }
+  { id: "saveModel", label: "Save" },
+  { id: "modelSummary", label: "Finish" }
 ];
 */
 
@@ -1065,14 +1098,14 @@ function isPanelEnabled(state, panelId) {
   if (panelId === "results") {
     if (
       state.percentDataToReserve === 0 ||
-      state.accuracyCheckExamples.length === 0
-    ) {
+      state.accuracyCheckExamples.length === 0 ||
+      ["success", "started"].includes(state.saveStatus)) {
       return false;
     }
   }
 
-  if (panelId === "save") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+  if (panelId === "modelSummary") {
+    if (state.saveStatus === "started") {
       return false;
     }
   }
@@ -1104,9 +1137,29 @@ function isPanelAvailable(state, panelId) {
   }
 
   if (panelId === "saveModel") {
-    if (mode && mode.hideSave) {
+    if (mode && mode.hideSave || state.saveStatus === "success") {
       return false;
     }
+  }
+
+  if (panelId === "modelSummary") {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function isAccuracyAcceptable(state) {
+  const mode = state.mode;
+
+  if (
+    mode &&
+    mode.requireAccuracy &&
+    mode.requireAccuracy > state.historicResults[0].accuracy
+  ) {
+    return false;
   }
 
   return true;
@@ -1156,15 +1209,24 @@ export function getPanelButtons(state) {
     }
   } else if (state.currentPanel === "results") {
     prev = isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Back" }
+      ? { panel: "dataDisplayFeatures", text: "Try again" }
       : null;
-    next = isPanelAvailable(state, "saveModel")
+    next = !isAccuracyAcceptable(state)
+      ? null
+      : isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
       : { panel: "continue", text: "Finish" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = isPanelAvailable(state, "save")
-      ? { panel: "save", text: "Finish" }
+    next = isPanelAvailable(state, "modelSummary")
+      ? { panel: "modelSummary", text: "Save" }
+      : null;
+  } else if (state.currentPanel === "modelSummary") {
+    prev = isPanelAvailable(state, "saveModel")
+      ? { panel: "saveModel", text: "Back" }
+      : null;
+    next = isPanelAvailable(state, "finish")
+      ? { panel: "finish", text: "Finish" }
       : null;
   }
 
@@ -1328,4 +1390,12 @@ export function isUserUploadedDataset(state) {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
   return typeof state.csvfile === 'object' && state.csvfile !== null;
+}
+
+export function isSaveComplete(saveStatus) {
+  return ["success", "failure"].includes(saveStatus);
+}
+
+export function shouldDisplaySaveStatus(saveStatus) {
+  return ["success", "failure", "started"].includes(saveStatus);
 }

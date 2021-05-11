@@ -8,7 +8,7 @@ import {
   getDataDescription,
   isUserUploadedDataset
 } from "../redux";
-import { styles, saveMessages, ModelNameMaxLength } from "../constants";
+import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 
 class SaveModel extends Component {
@@ -43,8 +43,8 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
-      const columnType = columnDescription.id === this.props.labelColumn
-        ? "label" : "feature";
+      const columnType =
+        columnDescription.id === this.props.labelColumn ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -81,6 +81,7 @@ class SaveModel extends Component {
   };
 
   render() {
+
     const nameField = {
       id: "name",
       text: "What will you name the model? (required)"
@@ -94,7 +95,8 @@ class SaveModel extends Component {
     };
 
     const arrowIcon = this.state.showColumnDescriptions
-      ? 'fa fa-caret-up' : 'fa fa-caret-down';
+      ? "fa fa-caret-up"
+      : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
 
@@ -150,7 +152,11 @@ class SaveModel extends Component {
                             <textarea
                               rows="1"
                               onChange={event =>
-                                this.handleChange(event, field.id, field.isColumn)
+                                this.handleChange(
+                                  event,
+                                  field.id,
+                                  field.isColumn
+                                )
                               }
                               placeholder={field.placeholder}
                             />
@@ -197,13 +203,6 @@ class SaveModel extends Component {
               })}
             </div>
           </div>
-        </div>
-        <div>
-          {this.props.saveStatus && (
-            <div style={{ position: "absolute", bottom: 0 }}>
-              {saveMessages[this.props.saveStatus]}
-            </div>
-          )}
         </div>
       </div>
     );
