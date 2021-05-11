@@ -834,6 +834,29 @@ sk-SK:
           Aby si zistil/a, akú rolu majú informatika a programovanie v zábavnom priemysle, urob malý prieskum. Skús vyhľadať „Informatika a &#95;&#95;&#95;&#95;&#95;&#95;" v spojení s rôznymi druhmi zábavy ako je film, televízia, hudba, hry, animácie, móda a podobne.
 
 
+        teacher_markdown: "Tu je niekoľko stránok, ktoré študentom pomôžu začať. Tieto
+          stránky sú vo všeobecnosti vhodné pre školy, ale ich obsah sa často mení,
+          takže **vám veľmi odporúčame skontrolovať každú z nich kvôli nevhodnému
+          obsahu predtým, ako ju so študentmi budete zdieľať**. \n\n[key]\n\n## Vo
+          vnútri kúzla - [insidethemagic.net](http://www.insidethemagic.net)\n\n###
+          Prehľad\n\nTáto stránka je zameraná na novinky od Disney, ale môžete byť
+          prekvapení, akú veľkú úlohu tu zohráva IT pri rôznych formách zábavy. Pretože
+          toto nie je stránka zameraná na IT, pre nájdenie príslušných článkov budete
+          musieť použiť funkciu vyhľadávania.\n\n### Príslušné oblasti\n\n* Film/TV\n*
+          Animácie\n* Robotika/Mechanické bábky\n* Hry\n\n## Videá rozhodujúcej cesty
+          - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)\n\n###
+          Prehľad\n\nVideá predstavujúce celý rad ľudí pracujúcich v rôznych oblastiach
+          herného priemyslu a rozprávajúcich o tom, čo robia.\n\n### Príslušné oblasti\n\n*
+          Hry\n* Animácie\n* Umenie\n\n## Hudobný mysliaci tank - [musicthinktank.com](http://www.musicthinktank.com/)\n\n###
+          Prehľad\n\nHudobný mysliaci tank je blog zameraný na ľudí pracujúcich v
+          hudobnom priemysle. Nie je to špecificky IT stránka, ale pri vyhľadávaní
+          \"computer science\" alebo \"programming\" odhalíte nejaké zaujímavé články.\n\n###
+          Príslušné oblasti\n\n* Hudba\n\n## Kreatívny podcast zameraný na kódovanie
+          - [creativecodingpodcast.com](http://creativecodingpodcast.com/)\n\n###
+          Prehľad\n\nHoci tento podcast nie je robený v zmysle formálneho profesionálneho
+          programovania (že ľudia s tým živia), je to úžasný zdroj pohľadu na rôzne
+          spôsoby, ako amatéri vytvárajú zábavu pomocou kódovania.\n\n### Príslušné
+          oblasti\n\n* Všetky\n\n[/key]\n"
       CSD U3 Functions Prediction define first:
         answers:
         - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
@@ -4373,7 +4396,7 @@ sk-SK:
       csd-pre-survey-levelgroup_2019:
         title: Objavujeme Informatiku Študentský dotazník pred kurzom
       CSD Interactive Animations and Games Post-Project Test:
-        title: 'Interaktívne hry a animácie: Záverečný test'
+        title: 'Záverečný test: Interaktívne animácie a hry'
       csd-post-survey-2017-levelgroup:
         title: Objavujeme informatiku - Študentský dotazník na konci semestra
       csd-post-survey-2017-levelgroup_2018:
@@ -4871,3 +4894,5 @@ sk-SK:
         title: Počítače a riešenie problémov v postprojektovom testovaní
       CSD User Centered Design Post-Project Test:
         title: 'Dizajn zameraný na používateľa: Poprojektové testovanie'
+      CSD Physical Computing Post-Project Test:
+        title: 'Záverečný test: Fyzické výpočty'

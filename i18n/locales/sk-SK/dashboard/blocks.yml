@@ -968,7 +968,7 @@ sk:
       gamelab_beginCollectingData:
         text: pozbieraj {BREAK} hodnotu údajov {VALUE} so štítkom {LABEL}
       gamelab_bounceOff:
-        text: "{SPRITE} odrazí sa {TARGET}"
+        text: "{SPRITE} sa odrazí od {TARGET}"
       gamelab_changePropBy:
         text: zmeň {PROPERTY} {SPRITE} o {VAL}
         options:
@@ -1243,6 +1243,15 @@ sk:
             '"y"': pozícia y
             '"direction"': smeru pohybu
             '"speed"': rýchlosť
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': veľkosť
+          SIZE:
+            '25': veľmi malé
+            '50': Malé
+            '75': stredný
+            '100': Veľké
       gamelab_setSizes:
         text: nastav {SPRITE} {PROPERTY} na {N}%
         options:
@@ -1559,6 +1568,8 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+      Mikelab_setupSim:
+        text: "nastav simuláciu s \n{SPRITE1N}{SPRITE1COSTUME}rýchlosť{SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME}rýchlosť{SPRITE2SPEED}\nzbieranie\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1621,6 +1632,13 @@ sk:
         text: x súradnica {SPRITE}
       Mikelab_yLocationOf:
         text: y súradnica {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': mriežka
+            '"border"': okraj
+            '"row"': riadok
+            '"random"': náhodný
       RyanLab_moveForward:
         text: posuň sa dopredu
       RyanLab_turnLeft:
@@ -1654,49 +1672,27 @@ sk:
         options:
           PROPERTY:
             "'shapeColor'": farba
-      aalab_addBehaviorForDuration:
-        text: aalab postava {SPRITE} začne {BEHAVIOR} po dobu {SECONDS} sekúnd
-      aalab_addBehaviorUntilBoolean:
-        text: postava {SPRITE} začni {BEHAVIOR} až kým {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nova postava s menom{SPRITE_NAME} s kostýmom[ANIMATION_NAME] na mieste{LOCATION}
-      aalab_goToScene:
-        text: choď na miesto deja {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: pohni {SPRITE} o {DISTANCE} pixelov na {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Sever
-            '"East"': Východ
-            '"South"': Juh
-            '"West"': Západ
-      aalab_prompt:
-        text: položiť otázku {MESSAGE}
-      aalab_scene:
-        text: miesto deja {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: nastav príbeh
-      aalab_starwars_playSound:
-        text: prehraj zvuk {OPTION}
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': mriežka
+            '"border"': okraj
+            '"row"': riadok
             '"random"': náhodný
-            '"R2-D2 random"': R2-D2 náhodný
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': všetky
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': všetky
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:
