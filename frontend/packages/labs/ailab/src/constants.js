@@ -395,6 +395,41 @@ export const styles = {
     color: "white"
   },
 
+  resultsToggle: {
+    marginBottom: 20,
+    backgroundColor: "#f2f2f2",
+    borderRadius: 5,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: "white",
+    padding: 10,
+    height: 36
+  },
+  pill: {
+    ':hover': {
+      color: "#61d2eb"
+    },
+    border: 'none',
+    borderRadius: 50,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 20,
+    backgroundColor: "#f2f2f2",
+    margin: '0 0 0 20px',
+    boxShadow: 'none',
+    outline: 'none',
+    padding: '8px 18px',
+    float: 'left',
+    cursor: 'pointer'
+  },
+  selectedPill: {
+    ':hover': {
+      color: "white"
+    },
+    backgroundColor: "#61d2eb",
+    color: "white",
+    border: 'none'
+  },
+
   resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
 
   resultsTableFirstHeader: {

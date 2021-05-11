@@ -1340,3 +1340,29 @@ export function isUserUploadedDataset(state) {
   // users are objects. Use data type as a proxy to know which case we're in.
   return typeof state.csvfile === 'object' && state.csvfile !== null;
 }
+
+export function getCorrectResults(state) {
+  return getResultsByGrade(state, ResultsGrades.CORRECT);
+}
+
+export function getIncorrectResults(state) {
+  return getResultsByGrade(state, ResultsGrades.INCORRECT);
+}
+
+function getResultsByGrade(state, grade) {
+  const results = {};
+  const accuracyGrades = getAccuracyGrades(state);
+  const examples = getConvertedAccuracyCheckExamples(state).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  const labels = getConvertedLabels(state, state.accuracyCheckLabels).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  const predictedLabels = getConvertedLabels(state, state.accuracyCheckPredictedLabels).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  results.examples = examples;
+  results.labels = labels;
+  results.predictedLabels = predictedLabels;
+  return results;
+}
