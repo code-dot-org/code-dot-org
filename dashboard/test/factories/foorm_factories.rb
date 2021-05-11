@@ -1171,7 +1171,12 @@ FactoryGirl.define do
 
   factory :foorm_simple_survey_form, class: 'Foorm::SimpleSurveyForm' do
     sequence(:path) {|n| "test_path_#{n}"}
-    form_name 'A form that does not actually exist'
-    form_version 0
+    form factory: :foorm_form
+  end
+
+  factory :foorm_simple_survey_submission, class: 'Foorm::SimpleSurveySubmission' do
+    user factory: :teacher
+    foorm_submission factory: :basic_foorm_submission
+    simple_survey_form factory: :foorm_simple_survey_form
   end
 end

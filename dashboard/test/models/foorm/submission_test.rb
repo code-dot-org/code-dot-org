@@ -54,15 +54,23 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
     workshop_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low
     answers = workshop_form_submission_metadata.foorm_submission.formatted_answers
 
-    workshop_metadata_keys = ['user_id', 'pd_workshop_id', 'pd_session_id']
+    assert_equal [
+      workshop_form_submission_metadata.user.id,
+      workshop_form_submission_metadata.user.email,
+      workshop_form_submission_metadata.pd_workshop_id,
+      workshop_form_submission_metadata.pd_session_id
+    ],
+      answers.
+        slice('user_id', 'email', 'pd_workshop_id', 'pd_session_id').
+        values
+  end
 
-    assert (workshop_metadata_keys - answers.keys).empty?,
-      <<~MISSING_KEYS_MESSAGE
-        Expected formatted_answers keys to contain workshop metadata keys:
-          #{workshop_metadata_keys}
-        Found:
-          #{answers.keys}
-      MISSING_KEYS_MESSAGE
+  test 'formatted_answers formats submission with simple survey metadata as expected' do
+    simple_survey_submission = create :foorm_simple_survey_submission
+    answers = simple_survey_submission.foorm_submission.formatted_answers
+    user = simple_survey_submission.user
+
+    assert_equal [user.id, user.email], answers.slice('user_id', 'email').values
   end
 
   test 'associated_facilitator_submissions finds submissions when they exist' do

@@ -22,8 +22,8 @@ class Foorm::Submission < ApplicationRecord
   #   - flattens matrix questions
   #   - returns readable answer, instead of a key representing a user's answer.
   def formatted_answers
-    # First, grab associated PD-specific metadata for this submission (eg, workshop ID)
-    formatted_answers = formatted_workshop_metadata
+    # First, grab associated metadata for this submission (eg, workshop ID, user ID)
+    formatted_answers = formatted_metadata
 
     # Example of what parsed_answers looks like.
     # Note that matrix questions (eg, how_much_barrier_to_teaching_cs)
@@ -87,15 +87,30 @@ class Foorm::Submission < ApplicationRecord
     return {}
   end
 
-  def formatted_workshop_metadata
-    return {} if workshop_metadata.nil? || workshop_metadata.facilitator_specific?
+  def formatted_metadata
+    # If this submission has an associated simple survey, get user information.
+    if simple_survey_submission
+      return {
+        'user_id' => simple_survey_submission.user&.id,
+        'email' => simple_survey_submission.user&.email
+      }
+    end
 
-    {
-      'created_at' => created_at,
-      'user_id' => workshop_metadata.user&.id,
-      'pd_workshop_id' => workshop_metadata.pd_workshop&.id,
-      'pd_session_id' => workshop_metadata.pd_session&.id
-    }
+    # Otherwise, get workshop-specific metadata if it exists
+    # and this isn't a facilitator-specific submission,
+    # which can be thought of as "child" submissions of
+    # associated non-facilitator submissions.
+    if workshop_metadata.nil? || workshop_metadata.facilitator_specific?
+      return {}
+    else
+      return {
+        'user_id' => workshop_metadata.user&.id,
+        'email' => workshop_metadata.user&.email,
+        'created_at' => created_at,
+        'pd_workshop_id' => workshop_metadata.pd_workshop&.id,
+        'pd_session_id' => workshop_metadata.pd_session&.id
+      }
+    end
   end
 
   def associated_facilitator_submissions
