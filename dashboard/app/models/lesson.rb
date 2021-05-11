@@ -726,6 +726,7 @@ class Lesson < ApplicationRecord
   def self.copy_to_script(original_lesson, destination_script)
     return if original_lesson.script == destination_script
     raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script must be in a course version' if destination_script.get_course_version.nil?
 
     ActiveRecord::Base.transaction do
       copied_lesson = original_lesson.dup
@@ -776,29 +777,25 @@ class Lesson < ApplicationRecord
 
       # Copy objects that require course version, i.e. resources and vocab
       course_version = destination_script.get_course_version
-      if course_version
-        copied_lesson.resources = original_lesson.resources.map do |original_resource|
-          persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
-          if persisted_resource
-            persisted_resource
-          else
-            copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
-            copied_resource
-          end
-        end.uniq
+      copied_lesson.resources = original_lesson.resources.map do |original_resource|
+        persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
+        if persisted_resource
+          persisted_resource
+        else
+          copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
+          copied_resource
+        end
+      end.uniq
 
-        copied_lesson.vocabularies = original_lesson.vocabularies.map do |original_vocab|
-          persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
-          if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
-            persisted_vocab
-          else
-            copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
-            copied_vocab
-          end
-        end.uniq
-      elsif !original_lesson.resources.empty? || !original_lesson.vocabularies.empty?
-        puts 'Could not copy resources and vocabulary as destination script does not have a course version'
-      end
+      copied_lesson.vocabularies = original_lesson.vocabularies.map do |original_vocab|
+        persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
+        if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
+          persisted_vocab
+        else
+          copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
+          copied_vocab
+        end
+      end.uniq
 
       copied_lesson.save!
       Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
