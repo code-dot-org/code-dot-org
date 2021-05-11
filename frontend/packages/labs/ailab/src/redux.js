@@ -1,10 +1,4 @@
 import {
-  getMLType,
-  defaultRegressionTrainer,
-  defaultClassificationTrainer
-} from "./train.js";
-
-import {
   datasetUploaded,
   uniqueColumnNames,
   noEmptyCells,
@@ -20,6 +14,8 @@ import {
 import {
   ColumnTypes,
   MLTypes,
+  RegressionTrainer,
+  ClassificationTrainer,
   TestDataLocations,
   ResultsGrades,
   REGRESSION_ERROR_TOLERANCE
@@ -33,7 +29,6 @@ const SET_SELECTED_CSV = "SET_SELECTED_CSV";
 const SET_SELECTED_JSON = "SET_SELECTED_JSON";
 const SET_IMPORTED_DATA = "SET_IMPORTED_DATA";
 const SET_IMPORTED_METADATA = "SET_IMPORTED_METADATA";
-const SET_SELECTED_TRAINER = "SET_SELECTED_TRAINER";
 const SET_COLUMNS_BY_DATA_TYPE = "SET_COLUMNS_BY_DATA_TYPE";
 const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
@@ -86,10 +81,6 @@ export function setImportedData(data) {
 
 export function setImportedMetadata(metadata) {
   return { type: SET_IMPORTED_METADATA, metadata };
-}
-
-export function setSelectedTrainer(selectedTrainer) {
-  return { type: SET_SELECTED_TRAINER, selectedTrainer };
 }
 
 export const setColumnsByDataType = (column, dataType) => ({
@@ -227,7 +218,6 @@ const initialState = {
   jsonfile: undefined,
   data: [],
   metadata: undefined,
-  selectedTrainer: undefined,
   highlightDataset: undefined,
   highlightColumn: undefined,
   columnsByDataType: {},
@@ -307,12 +297,6 @@ export default function rootReducer(state = initialState, action) {
 
     return newState;
   }
-  if (action.type === SET_SELECTED_TRAINER) {
-    return {
-      ...state,
-      selectedTrainer: action.selectedTrainer
-    };
-  }
   if (action.type === SET_COLUMNS_BY_DATA_TYPE) {
     return {
       ...state,
@@ -322,7 +306,6 @@ export default function rootReducer(state = initialState, action) {
       }
     };
   }
-
   if (action.type === ADD_SELECTED_FEATURE) {
     if (!state.selectedFeatures.includes(action.selectedFeature)) {
       return {
@@ -331,7 +314,6 @@ export default function rootReducer(state = initialState, action) {
       };
     }
   }
-
   if (action.type === REMOVE_SELECTED_FEATURE) {
     return {
       ...state,
@@ -340,7 +322,6 @@ export default function rootReducer(state = initialState, action) {
       )
     };
   }
-
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
@@ -411,7 +392,6 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === RESET_STATE) {
     return {
       ...initialState,
-      selectedTrainer: state.mode && state.mode.hideSelectTrainer,
       instructionsKeyCallback: state.instructionsKeyCallback,
       mode: state.mode
     };
@@ -743,17 +723,6 @@ function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
 
-export function getSelectedTrainer(state) {
-  const trainerForLabel =
-    state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL
-      ? defaultRegressionTrainer
-      : defaultClassificationTrainer;
-  const trainer = state.selectedTrainer
-    ? state.selectedTrainer
-    : trainerForLabel;
-  return trainer;
-}
-
 function isEmpty(object) {
   return Object.keys(object).length === 0;
 }
@@ -797,8 +766,7 @@ export function getConvertedLabels(state, rawLabels = []) {
 }
 
 export function isRegression(state) {
-  const mlType = getMLType(getSelectedTrainer(state));
-  return mlType === MLTypes.REGRESSION;
+  return state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL;
 }
 
 export function getAccuracyGrades(state) {
@@ -859,12 +827,10 @@ export function getAccuracyRegression(state) {
 
 export function getSummaryStat(state) {
   let summaryStat = {};
-  const mlType = getMLType(getSelectedTrainer(state));
-  if (mlType === MLTypes.REGRESSION) {
+  if (isRegression(state)) {
     summaryStat.type = MLTypes.REGRESSION;
     summaryStat.stat = getAccuracyRegression(state).percentCorrect;
-  }
-  if (mlType === MLTypes.CLASSIFICATION) {
+  } else {
     summaryStat.type = MLTypes.CLASSIFICATION;
     summaryStat.stat = getAccuracyClassification(state).percentCorrect;
   }
@@ -1004,7 +970,10 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
-  dataToSave.selectedTrainer = getSelectedTrainer(state);
+  dataToSave.selectedTrainer =
+    isRegression(state)
+      ? RegressionTrainer
+      : ClassificationTrainer;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
