@@ -19,7 +19,7 @@ module Foorm
         # Leaving optional "kind" blank in form stores a blank string without intervention.
         # Store nil in that case.
         Foorm::SimpleSurveyForm.create!(
-          kind: params[:kind] == '' ? nil : params[:kind],
+          kind: params[:kind].presence,
           path: params[:path],
           form_name: form.name,
           form_version: form.version,
