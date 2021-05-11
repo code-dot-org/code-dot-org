@@ -128,48 +128,53 @@ export default class SpriteUpload extends React.Component {
       <div>
         <h1>Sprite Upload</h1>
         <form onSubmit={this.handleSubmit}>
-          <label>
-            <h3>Sprite Category:</h3>
-            <p>
-              Select whether the sprite should only be available in a specific
-              level or whether it should be available in the sprite library.
-            </p>
+          <h2 style={styles.spriteUploadStep}>
+            Step 1: Select where the sprite should be uploaded
+          </h2>
+          <h3>Sprite Category:</h3>
+          <p>
+            Select whether the sprite should only be available in a specific
+            level or whether it should be available in the sprite library.
+          </p>
+          <div>
+            <label>
+              Level-specific sprite:
+              <input
+                type="radio"
+                name="spriteAvailability"
+                style={styles.radioButton}
+                value={SpriteLocation.level}
+                onChange={this.handleAvailabilityChange}
+              />
+            </label>
+            <label>
+              Library sprite:
+              <input
+                type="radio"
+                name="spriteAvailability"
+                style={styles.radioButton}
+                value={SpriteLocation.library}
+                onChange={this.handleAvailabilityChange}
+              />
+            </label>
+          </div>
+          {spriteAvailability === SpriteLocation.library && (
             <div>
-              <label>
-                Level-specific sprite:
-                <input
-                  type="radio"
-                  name="spriteAvailability"
-                  style={styles.radioButton}
-                  value={SpriteLocation.level}
-                  onChange={this.handleAvailabilityChange}
-                />
-              </label>
-              <label>
-                Library sprite:
-                <input
-                  type="radio"
-                  name="spriteAvailability"
-                  style={styles.radioButton}
-                  value={SpriteLocation.library}
-                  onChange={this.handleAvailabilityChange}
-                />
-              </label>
+              <label>Category:</label>
+              <select onChange={this.handleCategoryChange}>
+                <option value="">Select an Option</option>
+                {(currentCategories || []).map(category => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
             </div>
-            {spriteAvailability === SpriteLocation.library && (
-              <div>
-                <label>Category:</label>
-                <select onChange={this.handleCategoryChange}>
-                  <option value="">Select an Option</option>
-                  {(currentCategories || []).map(category => (
-                    <option key={category} value={category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-          </label>
+          )}
+
+          <h2 style={styles.spriteUploadStep}>
+            Step 2: Select the sprite to upload
+          </h2>
           <label>
             <h3>Select Sprite to Add to Library:</h3>
             <input
@@ -185,6 +190,10 @@ export default class SpriteUpload extends React.Component {
             <img id="sprite-image-preview" src={filePreviewURL} />
           </label>
           <br />
+
+          <h2 style={styles.spriteUploadStep}>
+            Step 3: Generate metadata for the sprite
+          </h2>
           <label>
             <h3>Enter the aliases for this sprite</h3>
             <p>
@@ -197,13 +206,20 @@ export default class SpriteUpload extends React.Component {
             Generate Sprite Metadata
           </button>
           <h3>Metadata JSON</h3>
-          <p>
-            <code>{this.state.metadata}</code>
-          </p>
+          {!!this.state.metadata && (
+            <p>
+              <code>{this.state.metadata}</code>
+            </p>
+          )}
           <br />
 
           {!uploadButtonDisabled && (
-            <button type="submit">Upload to Library</button>
+            <div>
+              <h2 style={styles.spriteUploadStep}>
+                Step 4: Upload the sprite and metadata to sprite library
+              </h2>
+              <button type="submit">Upload to Library</button>
+            </div>
           )}
           <p
             style={{
@@ -228,5 +244,8 @@ const styles = {
   },
   radioButton: {
     margin: 10
+  },
+  spriteUploadStep: {
+    borderTop: '1px solid gray'
   }
 };
