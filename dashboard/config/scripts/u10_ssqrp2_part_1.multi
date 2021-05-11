@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 *The following passage will be used to answer questions #6 - #10*
 <br><br><br>
-*Snappy* is a crowdsourcing app designed with the purpose of making the world a happier place. The app collects photos users submit of "Happy Moments". Photos are tagged with the location where they were taken. Users have access to a map where they can zoom in to photos submitted at specific locations. A leaderboard displays the locations with the most "Happiness Moments" and the users who are the "snappiest" in each city due to the volume and rating of "Happiness Moments" they have submitted. Users can rate other "Hapiness Moments" using a limited set of emojis and can also leave comments which are moderated using machine learning in an effort to only allow positive comments, by checking each comment for common negative words learned through a training set. 
+*Snappy* is a crowdsourcing app designed with the purpose of making the world a happier place. The app collects photos users submit of "Happy Moments". Photos are tagged with the location where they were taken. Users have access to a map where they can zoom in to photos submitted at specific locations. A leaderboard displays the locations with the most "Happiness Moments" and the users who are the "snappiest" in each city due to the volume and rating of "Happiness Moments" they have submitted. Users can rate other "Happiness Moments" using a limited set of emojis and can also leave comments which are moderated using machine learning in an effort to only allow positive comments, by checking each comment for common negative words learned through a training set. 
 
 **Question:**
 
