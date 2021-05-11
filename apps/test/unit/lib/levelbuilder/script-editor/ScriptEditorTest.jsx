@@ -108,7 +108,11 @@ describe('ScriptEditor', () => {
     });
 
     it('uses new script editor for migrated script', () => {
-      const wrapper = createWrapper({initialHidden: false, isMigrated: true});
+      const wrapper = createWrapper({
+        initialHidden: false,
+        isMigrated: true,
+        initialCourseVersionId: 1
+      });
 
       expect(wrapper.find('input').length).to.equal(28);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
