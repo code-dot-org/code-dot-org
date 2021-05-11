@@ -30,8 +30,11 @@
   %p
     If your survey uses variables to fill placeholder text with a specified value (eg, a course name),
     include the name of the placeholder (eg, course) and the value
-    you want to appear in the survey (eg, CS Principles). Otherwise,
-    leave these fields blank.
+    you want to appear in the survey (eg, CS Principles).
+  %p
+    Please let an engineer know if your survey uses more than 3 variables.
+  %p
+    If your survey does not use variables, leave these fields blank.
   .field
     - (0..2).to_a.each do |id|
       = f.label "survey_data_key_#{id}", 'Name', style: 'display: inline'
