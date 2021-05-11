@@ -9,14 +9,19 @@ import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
-import { styles } from "./constants";
+import ModelCard from "./UIComponents/ModelCard";
+import { styles, saveMessages } from "./constants";
 import { connect } from "react-redux";
 import {
   getPanelButtons,
   setCurrentPanel,
   validationMessages,
-  getTrainedModelDataToSave
+  getTrainedModelDataToSave,
+  isSaveComplete,
+  shouldDisplaySaveStatus
 } from "./redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 class PanelButtons extends Component {
   static propTypes = {
@@ -25,7 +30,10 @@ class PanelButtons extends Component {
     setCurrentPanel: PropTypes.func,
     onContinue: PropTypes.func,
     startSaveTrainedModel: PropTypes.func,
-    dataToSave: PropTypes.object
+    dataToSave: PropTypes.object,
+    saveStatus: PropTypes.string,
+    isSaveComplete: PropTypes.func,
+    shouldDisplaySaveStatus: PropTypes.func
   };
 
   onClickPrev = () => {
@@ -33,17 +41,21 @@ class PanelButtons extends Component {
   };
 
   onClickNext = () => {
-    if (this.props.panelButtons.next.panel === "save") {
-      this.props.startSaveTrainedModel(this.props.dataToSave);
-    } else if (this.props.panelButtons.next.panel === "continue") {
+    if (["continue", "finish"].includes(this.props.panelButtons.next.panel)) {
       this.props.onContinue();
+    } else if (this.props.currentPanel === "saveModel") {
+      this.props.startSaveTrainedModel(this.props.dataToSave);
     } else {
       this.props.setCurrentPanel(this.props.panelButtons.next.panel);
     }
   };
 
   render() {
-    const { panelButtons } = this.props;
+    const { panelButtons, saveStatus } = this.props;
+
+    let loadSaveStatus= this.props.isSaveComplete(saveStatus)
+      ? (saveMessages[saveStatus])
+      : ( <FontAwesomeIcon icon={faSpinner} />);
 
     return (
       <div>
@@ -64,6 +76,11 @@ class PanelButtons extends Component {
             </button>
           </div>
         )}
+
+        {this.props.shouldDisplaySaveStatus(saveStatus) &&
+          this.props.currentPanel === "saveModel" && (
+            <span style={styles.modelSaveMessage}>{loadSaveStatus}</span>
+          )}
 
         {panelButtons.next && (
           <div style={styles.nextButton}>
@@ -132,7 +149,10 @@ class App extends Component {
     onContinue: PropTypes.func,
     resultsPhase: PropTypes.number,
     startSaveTrainedModel: PropTypes.func,
-    dataToSave: PropTypes.object
+    dataToSave: PropTypes.object,
+    saveStatus: PropTypes.string,
+    isSaveComplete: PropTypes.func,
+    shouldDisplaySaveStatus: PropTypes.func
   };
 
   render() {
@@ -143,7 +163,8 @@ class App extends Component {
       onContinue,
       resultsPhase,
       dataToSave,
-      startSaveTrainedModel
+      startSaveTrainedModel,
+      saveStatus
     } = this.props;
 
     return (
@@ -208,6 +229,14 @@ class App extends Component {
           </BodyContainer>
         )}
 
+        {currentPanel === "modelSummary" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <ModelCard />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
         <PanelButtons
           panelButtons={panelButtons}
           currentPanel={currentPanel}
@@ -215,6 +244,9 @@ class App extends Component {
           onContinue={onContinue}
           startSaveTrainedModel={startSaveTrainedModel}
           dataToSave={dataToSave}
+          saveStatus={saveStatus}
+          isSaveComplete={isSaveComplete}
+          shouldDisplaySaveStatus={shouldDisplaySaveStatus}
         />
       </div>
     );
@@ -227,11 +259,18 @@ export default connect(
     currentPanel: state.currentPanel,
     validationMessages: validationMessages(state),
     resultsPhase: state.resultsPhase,
-    dataToSave: getTrainedModelDataToSave(state)
+    dataToSave: getTrainedModelDataToSave(state),
+    saveStatus: state.saveStatus
   }),
   dispatch => ({
     setCurrentPanel(panel) {
       dispatch(setCurrentPanel(panel));
-    }
+    },
+    isSaveComplete(state) {
+      dispatch(isSaveComplete(state));
+    },
+    shouldDisplaySaveStatus(state) {
+      dispatch(shouldDisplaySaveStatus(state));
+    },
   })
 )(App);

@@ -240,7 +240,8 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined,
+  // Possible values for saveStatus: notStarted, started, success, and failure.
+  saveStatus: "notStarted",
   columnRefs: {},
   historicResults: [],
   showResultsDetails: false,
@@ -729,7 +730,7 @@ function isEmpty(object) {
 export function getConvertedValue(state, rawValue, column) {
   const convertedValue =
     getCategoricalColumns(state).includes(column) &&
-    !isEmpty(state.featureNumberKey)
+      !isEmpty(state.featureNumberKey)
       ? getKeyByValue(state.featureNumberKey[column], rawValue)
       : rawValue;
   return convertedValue;
@@ -932,14 +933,14 @@ export function getDataDescription(state) {
   }
 }
 
-function getDatasetDetails(state) {
+export function getDatasetDetails(state) {
   const datasetDetails = {};
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
   return datasetDetails;
 }
 
-function getColumnDataToSave(state, column) {
+export function getColumnDataToSave(state, column) {
   const columnData = {};
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
@@ -953,7 +954,7 @@ function getColumnDataToSave(state, column) {
   return columnData;
 }
 
-function getFeaturesToSave(state) {
+export function getFeaturesToSave(state) {
   const features = state.selectedFeatures.map(feature =>
     getColumnDataToSave(state, feature)
   );
@@ -1013,7 +1014,8 @@ const panelList = [
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
-  { id: "saveModel", label: "Save" }
+  { id: "saveModel", label: "Save" },
+  { id: "modelSummary", label: "Finish" }
 ];
 */
 
@@ -1065,14 +1067,14 @@ function isPanelEnabled(state, panelId) {
   if (panelId === "results") {
     if (
       state.percentDataToReserve === 0 ||
-      state.accuracyCheckExamples.length === 0
-    ) {
+      state.accuracyCheckExamples.length === 0 ||
+      ["success", "started"].includes(state.saveStatus)) {
       return false;
     }
   }
 
-  if (panelId === "save") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+  if (panelId === "modelSummary") {
+    if (state.saveStatus === "started") {
       return false;
     }
   }
@@ -1104,7 +1106,13 @@ function isPanelAvailable(state, panelId) {
   }
 
   if (panelId === "saveModel") {
-    if (mode && mode.hideSave) {
+    if (mode && mode.hideSave || state.saveStatus === "success") {
+      return false;
+    }
+  }
+
+  if (panelId === "modelSummary") {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
   }
@@ -1174,8 +1182,15 @@ export function getPanelButtons(state) {
       : { panel: "continue", text: "Finish" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = isPanelAvailable(state, "save")
-      ? { panel: "save", text: "Finish" }
+    next = isPanelAvailable(state, "modelSummary")
+      ? { panel: "modelSummary", text: "Save" }
+      : null;
+  } else if (state.currentPanel === "modelSummary") {
+    prev = isPanelAvailable(state, "saveModel")
+      ? { panel: "saveModel", text: "Back" }
+      : null;
+    next = isPanelAvailable(state, "finish")
+      ? { panel: "finish", text: "Finish" }
       : null;
   }
 
@@ -1365,4 +1380,12 @@ function getResultsByGrade(state, grade) {
   results.labels = labels;
   results.predictedLabels = predictedLabels;
   return results;
+}
+
+export function isSaveComplete(saveStatus) {
+  return ["success", "failure"].includes(saveStatus);
+}
+
+export function shouldDisplaySaveStatus(saveStatus) {
+  return ["success", "failure", "started"].includes(saveStatus);
 }

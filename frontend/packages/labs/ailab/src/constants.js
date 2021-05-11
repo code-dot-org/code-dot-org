@@ -30,8 +30,7 @@ export const ModelNameMaxLength = 150;
 
 export const saveMessages = {
   success: "Your model was saved!",
-  failure: "There was an error. Your model did not save.",
-  name: "Please name your model."
+  failure: "There was an error. Your model did not save. Please try again.",
 };
 
 const labelColor = "rgb(254, 96, 3)";
@@ -683,5 +682,67 @@ export const styles = {
 
   saveInputsWidth: {
     width: "95%"
+  },
+
+  modelCardContainer: {
+    backgroundColor: "rgb(198, 202, 205)",
+    borderRadius: 5,
+    padding: 20,
+    whiteSpace: "normal",
+    overflowY: "auto",
+    width: "30%",
+    margin: "0 auto"
+  },
+
+  modelCardHeader: {
+    marginBottom: 10,
+    marginTop: 0,
+    fontSize: 18,
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+
+  modelCardHeading: {
+    fontSize: 14,
+    marginTop: 0,
+    marginBottom: 5,
+    textAlign: "center",
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+
+  modelCardContent: {
+    fontSize: 13,
+    marginBottom: 0,
+    marginTop: 0
+  },
+
+  modelCardSubpanel: {
+    backgroundColor: "rgb(231, 232, 234)",
+    borderRadius: 5,
+    marginBottom: 10,
+    padding: 10
+  },
+
+  modelCardDetails: {
+    marginBottom: 0
+  },
+
+  summaryScreenBot: {
+    margin: 0,
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    left: "calc(35% - 185px)",
+    width: "150px"
+  },
+
+  modelSaveMessage: {
+    bottom: 40,
+    zIndex: 1001,
+    right: "calc(50% - 250px)",
+    textAlign: "center",
+    position: "fixed",
+    width: 500,
+    height: 30,
+    lineHeight: "20px"
   }
 };
