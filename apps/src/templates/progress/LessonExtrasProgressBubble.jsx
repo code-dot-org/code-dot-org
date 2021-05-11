@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import TooltipWithIcon from './TooltipWithIcon';
 import {currentLocation} from '../../utils';
@@ -24,10 +25,10 @@ export default class LessonExtrasProgressBubble extends Component {
    */
   getUrl() {
     let url = this.props.lessonExtrasUrl;
-    const query = new URLSearchParams(currentLocation().search);
-    query.delete('id');
-    if ([...query.keys()].length > 0) {
-      url = `${url}?${query}`;
+    const queryParams = queryString.parse(currentLocation().search);
+    delete queryParams.id;
+    if (Object.keys(queryParams).length > 0) {
+      url = `${url}?${queryString.stringify(queryParams)}`;
     }
     return url;
   }
