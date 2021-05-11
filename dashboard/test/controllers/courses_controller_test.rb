@@ -330,11 +330,12 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.update!(name: 'csp-2017')
     script = create :script, hidden: true, is_migrated: true
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
-    resource = create :resource, course_version: course_version
+    resource1 = create :resource, course_version: course_version
+    resource2 = create :resource, course_version: course_version
 
-    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource.id]}
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: "#{resource1.id},#{resource2.id}"}
     unit_group.reload
-    assert_equal 1, unit_group.resources.length
+    assert_equal 2, unit_group.resources.length
   end
 
   test "update: persists student resources for migrated unit groups" do
@@ -345,11 +346,12 @@ class CoursesControllerTest < ActionController::TestCase
     unit_group.update!(name: 'csp-2017')
     script = create :script, hidden: true, is_migrated: true
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
-    resource = create :resource, course_version: course_version
+    resource1 = create :resource, course_version: course_version
+    resource2 = create :resource, course_version: course_version
 
-    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource.id]}
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: "#{resource1.id},#{resource2.id}"}
     unit_group.reload
-    assert_equal 1, unit_group.student_resources.length
+    assert_equal 2, unit_group.student_resources.length
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
