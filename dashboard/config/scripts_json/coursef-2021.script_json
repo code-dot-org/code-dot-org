@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-11 16:54:02 UTC",
+    "serialized_at": "2021-05-11 22:04:27 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -8461,11 +8461,24 @@
       }
     },
     {
-      "name": "Blank Space Stories - Worksheet",
+      "name": "Blank Space Stories",
+      "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
+      "key": "blank_space_stories",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "blank_space_stories"
+      }
+    },
+    {
+      "name": "Blank Space Stories",
       "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
       "key": "blank_space_stories_-_worksheet",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "blank_space_stories_-_worksheet"
@@ -8633,6 +8646,18 @@
       }
     },
     {
+      "name": "Exploring Apps",
+      "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+      "key": "exploring_apps_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_apps_1"
+      }
+    },
+    {
       "name": "Final Project Design",
       "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/",
       "key": "final-project-design-worksheet",
@@ -8752,6 +8777,18 @@
       },
       "seeding_key": {
         "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "name": "Mini Project: User Input Programs",
+      "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
+      "key": "mini_project_user_input_programs_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_user_input_programs_1"
       }
     },
     {
@@ -8995,6 +9032,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "exploring_apps_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "making_sprites"
       }
@@ -9061,6 +9104,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "blank_space_stories"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "text_and_prompts"
       }
@@ -9087,6 +9136,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "teacher_sandbox_level"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs_1"
       }
     },
     {
