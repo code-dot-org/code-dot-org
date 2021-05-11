@@ -23,6 +23,8 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
     'allow_multiple_submissions'
   ]
 
+  validates :path, presence: true, format: {with: /\A[a-z0-9_]+\z/}
+
   def self.find_most_recent_form_for_path(path)
     where(path: path).last
   end

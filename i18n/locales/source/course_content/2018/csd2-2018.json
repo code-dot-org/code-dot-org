@@ -256,10 +256,10 @@
     }
   },
   "https://studio.code.org/s/csd2-2018/lessons/9/levels/6": {
-    "long_instructions": "# Create and Name Your New Page\n\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\n\n# Do This\n\n-   Create a new HTML page and rename it. (Look at <a href=\"../../../stage/6/puzzle/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\n-   Repeat this process for any other pages you want to add."
+    "long_instructions": "# Create and Name Your New Page\n\nBefore you start coding, you should make sure that you have all the pages that you need in your project.\n\n# Do This\n\n-   Create a new HTML page and rename it. (Look at <a href=\"../../../lessons/6/levels/8\" target=\"_new\">Lesson 6 Level 8</a> if you've forgotten how.)\n-   Repeat this process for any other pages you want to add."
   },
   "https://studio.code.org/s/csd2-2018/lessons/9/levels/7": {
-    "long_instructions": "# Upload Images\n\nNext, you'll need to upload all of your images into your project.\n\n# Do This\n\n-   Download all the images you want onto your computer. Visit <a href=\"../../../stage/7/puzzle/5\" target=\"_new\">Lesson 7 Level 5</a> for help if you need it.\n    -   Make sure you have the right to use these images.\n    -   Write down all of the attribution information that you need.\n    -   Upload all of the images into your project.  Visit <a href=\"../../../stage/7/puzzle/5\" target=\"_new\">Lesson 7 Level 5</a> if you've forgotten how."
+    "long_instructions": "# Upload Images\n\nNext, you'll need to upload all of your images into your project.\n\n# Do This\n\n-   Download all the images you want onto your computer. Visit <a href=\"../../../lessons/7/levels/5\" target=\"_new\">Lesson 7 Level 5</a> for help if you need it.\n    -   Make sure you have the right to use these images.\n    -   Write down all of the attribution information that you need.\n    -   Upload all of the images into your project.  Visit <a href=\"../../../lessons/7/levels/5\" target=\"_new\">Lesson 7 Level 5</a> if you've forgotten how."
   },
   "https://studio.code.org/s/csd2-2018/lessons/9/levels/8": {
     "long_instructions": "# Add HTML\n\nNext, you should add the HTML to your pages.\n\n# Do This\n\n-   For each of the new pages that you've created, add HTML to make the page you sketched in your project guide.\n-   You may also add more HTML to the pages you've already created."

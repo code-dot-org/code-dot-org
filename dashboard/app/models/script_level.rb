@@ -552,7 +552,7 @@ class ScriptLevel < ApplicationRecord
     contained = contained_levels.any?
 
     levels = if bubble_choice?
-               [level.best_result_sublevel(student) || level]
+               [level.best_result_sublevel(student, script) || level]
              elsif contained
                contained_levels
              else

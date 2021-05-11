@@ -46,7 +46,36 @@ module Services
           # Merge all gathered PDFs
           destination = File.join(directory, get_script_resources_pdf_pathname(script))
           FileUtils.mkdir_p(File.dirname(destination))
-          PDF.merge_local_pdfs(destination, *pdfs)
+          # We've been having an intermittent issue where this step will fail
+          # with a ghostscript error. The only way I've been able to reproduce
+          # this error locally is by deleting one of the PDFs out from under
+          # the generation process prior to the merge attempt, and I'm a bit
+          # skeptical that that explains what's going on in the actual staging
+          # environment.
+          #
+          # So, in an effort to better understand what's actually happening,
+          # I'm adding some explicit logging.
+          begin
+            PDF.merge_local_pdfs(destination, *pdfs)
+          rescue Exception => e
+            ChatClient.log(
+              "Error when trying to merge resource PDFs for #{script.name}: #{e}",
+              color: 'red'
+            )
+            ChatClient.log(
+              "destination: #{destination.inspect}",
+              color: 'red'
+            )
+            ChatClient.log(
+              "pdfs: #{pdfs.inspect}",
+              color: 'red'
+            )
+            ChatClient.log(
+              "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
+              color: 'red'
+            )
+            raise e
+          end
           FileUtils.remove_entry_secure(pdfs_dir)
 
           return destination

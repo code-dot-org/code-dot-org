@@ -3,14 +3,13 @@ import Radium from 'radium';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
   bubbleStyles,
   BubbleSize,
   BubbleShape,
   mainBubbleStyle,
   diamondContainerStyle,
-  getProgressStyle
+  levelProgressStyle
 } from '@cdo/apps/templates/progress/progressStyles';
 
 /**
@@ -21,7 +20,7 @@ class ProgressTableLevelBubble extends React.PureComponent {
   static propTypes = {
     levelStatus: PropTypes.string,
     levelKind: PropTypes.string,
-    isDisabled: PropTypes.bool,
+    isLocked: PropTypes.bool,
     isUnplugged: PropTypes.bool,
     isConcept: PropTypes.bool,
     isBonus: PropTypes.bool,
@@ -37,7 +36,7 @@ class ProgressTableLevelBubble extends React.PureComponent {
 
   renderContent() {
     const {
-      levelStatus,
+      isLocked,
       isUnplugged,
       isBonus,
       isPaired,
@@ -48,7 +47,6 @@ class ProgressTableLevelBubble extends React.PureComponent {
       // dot-sized bubbles are too small for content
       return null;
     }
-    const isLocked = levelStatus === LevelStatus.locked;
     return isUnplugged ? (
       <span>{i18n.unpluggedActivity()}</span>
     ) : isLocked ? (
@@ -63,7 +61,13 @@ class ProgressTableLevelBubble extends React.PureComponent {
   }
 
   render() {
-    const {isUnplugged, isConcept, isDisabled, bubbleSize} = this.props;
+    const {
+      isUnplugged,
+      isConcept,
+      bubbleSize,
+      levelStatus,
+      levelKind
+    } = this.props;
     const bubbleShape = isUnplugged
       ? BubbleShape.pill
       : isConcept
@@ -74,15 +78,12 @@ class ProgressTableLevelBubble extends React.PureComponent {
       <BasicBubble
         shape={bubbleShape}
         size={bubbleSize}
-        progressStyle={getProgressStyle(this.props)}
+        progressStyle={levelProgressStyle(levelStatus, levelKind)}
       >
         {this.renderContent()}
       </BasicBubble>
     );
 
-    if (isDisabled) {
-      return bubble;
-    }
     return <LinkWrapper {...this.props}>{bubble}</LinkWrapper>;
   }
 }

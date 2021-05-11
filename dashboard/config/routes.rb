@@ -841,17 +841,20 @@ Dashboard::Application.routes.draw do
 
   get '/help', to: redirect("https://support.code.org")
 
-  get '/form/:path', to: 'foorm/simple_survey#new'
-
-  get '/form/:path/show', to: 'foorm/simple_survey#show'
-
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
   get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
 
+  # These really belong in the foorm namespace,
+  # but we leave them outside so that we can easily use the simple "/form" paths.
+  get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
+  get '/form/:path', to: 'foorm/simple_survey_forms#show'
+
   namespace :foorm do
+    resources :simple_survey_forms, only: [:index, :new, :create]
+
     resources :forms, only: [:create] do
       member do
         put :update_questions
