@@ -56,7 +56,6 @@ class ColumnInspector extends Component {
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
-    hideSpecifyColumns: PropTypes.bool,
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array
@@ -130,25 +129,20 @@ class ColumnInspector extends Component {
                 <div>
                   <label>
                     <div>Data Type:</div>
-                    {this.props.hideSpecifyColumns && (
-                      <div> {currentColumnData.dataType} </div>
-                    )}
-                    {!this.props.hideSpecifyColumns && (
-                      <select
-                        onChange={event =>
-                          this.handleChangeDataType(event, currentColumnData.id)
-                        }
-                        value={currentColumnData.dataType}
-                      >
-                        {Object.values(ColumnTypes).map((option, index) => {
-                          return (
-                            <option key={index} value={option}>
-                              {option}
-                            </option>
-                          );
-                        })}
-                      </select>
-                    )}
+                    <select
+                      onChange={event =>
+                        this.handleChangeDataType(event, currentColumnData.id)
+                      }
+                      value={currentColumnData.dataType}
+                    >
+                      {Object.values(ColumnTypes).map((option, index) => {
+                        return (
+                          <option key={index} value={option}>
+                            {option}
+                          </option>
+                        );
+                      })}
+                    </select>
                     {currentColumnData.description && (
                       <div>
                         <br />
@@ -249,7 +243,6 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     rangesByColumn: getRangesByColumn(state),
-    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns,
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures
