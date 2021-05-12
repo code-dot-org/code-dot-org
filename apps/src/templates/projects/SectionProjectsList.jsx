@@ -4,18 +4,6 @@ import ProjectsList from './ProjectsList';
 import StudentFilterDropdown, {ALL_STUDENTS} from './StudentFilterDropdown';
 import _ from 'lodash';
 
-const styles = {
-  filterComponent: {
-    float: 'right'
-  },
-  filterRow: {
-    paddingBottom: 10
-  },
-  clearDiv: {
-    clear: 'both'
-  }
-};
-
 class SectionProjectsList extends Component {
   static propTypes = {
     projectsData: PropTypes.array.isRequired,
@@ -89,4 +77,16 @@ class SectionProjectsList extends Component {
     );
   }
 }
+
+const styles = {
+  filterComponent: {
+    float: 'right'
+  },
+  filterRow: {
+    paddingBottom: 10
+  },
+  clearDiv: {
+    clear: 'both'
+  }
+};
 export default SectionProjectsList;

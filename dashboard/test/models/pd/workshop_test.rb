@@ -447,6 +447,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_follow_up_after_days(30)
   end
 
+  # an issue with this test failing is fixed by prepending TZ=UTC to the test command
   test 'soft delete' do
     workshop = create :pd_workshop, num_sessions: 0
     session = create :pd_session, workshop: workshop
@@ -1395,7 +1396,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     refute potential_organizer_ids.include? program_manager.id
   end
 
-  test 'virtual workshops must suppress email' do
+  test 'virtual workshops don\'t automatically suppress email' do
     workshop = build :workshop
 
     # Non-virtual workshops may suppress email or not
@@ -1406,10 +1407,10 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.suppress_email = true
     assert workshop.valid?
 
-    # Virtual workshops must suppress email
+    # Virtual workshops may suppress email or not (change from previous behavior)
     workshop.virtual = true
     workshop.suppress_email = false
-    refute workshop.valid?
+    assert workshop.valid?
 
     workshop.suppress_email = true
     assert workshop.valid?

@@ -14,6 +14,10 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import Neighborhood from './Neighborhood';
+import MazeVisualization from '@cdo/apps/maze/Visualization';
+import DefaultVisualization from './DefaultVisualization';
+import {CsaViewMode} from './constants';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -72,10 +76,21 @@ Javalab.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
 
   config.getCode = this.getCode.bind(this);
+  config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
+  let visualization;
+  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
+    const miniApp = new Neighborhood();
+    config.afterInject = () =>
+      miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+    visualization = <MazeVisualization />;
+  } else {
+    visualization = <DefaultVisualization />;
+  }
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
@@ -91,6 +106,8 @@ Javalab.prototype.init = function(config) {
     bodyElement.style.overflow = 'hidden';
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
+    this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
@@ -100,13 +117,15 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+    config.afterInject?.();
   };
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
-    isEditingStartSources: !!config.level.editBlocks
+    isEditingStartSources: !!config.level.editBlocks,
+    isResponsive: true
   });
 
   registerReducers({javalab});
@@ -140,6 +159,8 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
+        handleVersionHistory={handleVersionHistory}
+        visualization={visualization}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -197,6 +218,11 @@ Javalab.prototype.onContinue = function() {
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
   return getSources(storeState);
+};
+
+Javalab.prototype.afterClearPuzzle = function() {
+  getStore().dispatch(setAllSources(this.level.startSources));
+  project.autosave();
 };
 
 Javalab.prototype.onCommitCode = function() {

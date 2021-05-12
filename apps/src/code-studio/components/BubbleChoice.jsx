@@ -8,26 +8,6 @@ import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 const MARGIN = 10;
 
-const styles = {
-  h2: {
-    color: color.charcoal,
-    padding: `${MARGIN}px 0`
-  },
-  btn: {
-    color: color.white,
-    backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray
-  },
-  btnOrange: {
-    backgroundColor: color.orange,
-    borderColor: color.orange
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  }
-};
-
 export default class BubbleChoice extends React.Component {
   // The bubble choice component doesn't need the status. It's
   // only rendering the sublevel cards.
@@ -89,3 +69,23 @@ export default class BubbleChoice extends React.Component {
     );
   }
 }
+
+const styles = {
+  h2: {
+    color: color.charcoal,
+    padding: `${MARGIN}px 0`
+  },
+  btn: {
+    color: color.white,
+    backgroundColor: color.lighter_gray,
+    borderColor: color.lighter_gray
+  },
+  btnOrange: {
+    backgroundColor: color.orange,
+    borderColor: color.orange
+  },
+  cards: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  }
+};

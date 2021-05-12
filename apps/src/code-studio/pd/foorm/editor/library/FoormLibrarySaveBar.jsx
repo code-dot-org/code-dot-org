@@ -25,43 +25,6 @@ import {
   setLastSavedQuestions
 } from '../foormEditorRedux';
 
-const styles = {
-  saveButtonBackground: {
-    margin: 0,
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    backgroundColor: color.lightest_gray,
-    borderColor: color.lightest_gray,
-    height: 50,
-    width: '100%',
-    zIndex: 900,
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  button: {
-    margin: '10px'
-  },
-  spinner: {
-    fontSize: 25,
-    padding: 10
-  },
-  lastSaved: {
-    fontSize: 14,
-    color: color.level_perfect,
-    padding: 15
-  },
-  error: {
-    fontSize: 14,
-    color: color.red,
-    padding: 15
-  },
-  warning: {
-    color: color.red,
-    fontWeight: 'bold'
-  }
-};
-
 const saveConfirmationDialogName = 'save';
 
 /*
@@ -457,6 +420,43 @@ class FoormLibrarySaveBar extends Component {
     );
   }
 }
+
+const styles = {
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.lightest_gray,
+    borderColor: color.lightest_gray,
+    height: 50,
+    width: '100%',
+    zIndex: 900,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  button: {
+    margin: '10px'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
+  },
+  lastSaved: {
+    fontSize: 14,
+    color: color.level_perfect,
+    padding: 15
+  },
+  error: {
+    fontSize: 14,
+    color: color.red,
+    padding: 15
+  },
+  warning: {
+    color: color.red,
+    fontWeight: 'bold'
+  }
+};
 
 export const UnconnectedFoormLibrarySaveBar = FoormLibrarySaveBar;
 

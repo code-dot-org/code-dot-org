@@ -4,6 +4,32 @@ import {connect} from 'react-redux';
 import FontAwesome from './FontAwesome';
 import color from '../util/color';
 
+class LargeChevronLink extends Component {
+  static propTypes = {
+    linkText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
+  };
+
+  render() {
+    const {link, linkText, isRtl} = this.props;
+    const localeStyle = isRtl ? styles.right : styles.left;
+    const icon = isRtl ? 'chevron-right' : 'chevron-left';
+
+    return (
+      <div style={{...styles.linkBox, ...localeStyle}}>
+        <a href={link} style={styles.link}>
+          {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+          <div style={styles.linkText}>{linkText}</div>
+        </a>
+        <a href={link} style={styles.link}>
+          {isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+        </a>
+      </div>
+    );
+  }
+}
+
 const styles = {
   link: {
     textDecoration: 'none'
@@ -37,32 +63,6 @@ const styles = {
     float: 'right'
   }
 };
-
-class LargeChevronLink extends Component {
-  static propTypes = {
-    linkText: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
-  };
-
-  render() {
-    const {link, linkText, isRtl} = this.props;
-    const localeStyle = isRtl ? styles.right : styles.left;
-    const icon = isRtl ? 'chevron-right' : 'chevron-left';
-
-    return (
-      <div style={{...styles.linkBox, ...localeStyle}}>
-        <a href={link} style={styles.link}>
-          {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
-          <div style={styles.linkText}>{linkText}</div>
-        </a>
-        <a href={link} style={styles.link}>
-          {isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
-        </a>
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   isRtl: state.isRtl

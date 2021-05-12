@@ -117,6 +117,7 @@ function randomProgress() {
     case 0:
       return {
         status: LevelStatus.perfect,
+        locked: false,
         result: TestResults.MINIMUM_OPTIMAL_RESULT,
         paired: paired,
         timeSpent: timeSpent,
@@ -125,6 +126,7 @@ function randomProgress() {
     case 1:
       return {
         status: LevelStatus.attempted,
+        locked: false,
         result: TestResults.LEVEL_STARTED,
         paired: paired,
         timeSpent: timeSpent,
@@ -133,6 +135,7 @@ function randomProgress() {
     case 2:
       return {
         status: LevelStatus.passed,
+        locked: false,
         result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
         timeSpent: undefined,
