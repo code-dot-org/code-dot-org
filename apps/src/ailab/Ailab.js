@@ -10,7 +10,8 @@ import $ from 'jquery';
 
 import {
   setDynamicInstructionsDefaults,
-  setDynamicInstructionsKey
+  setDynamicInstructionsKey,
+  setDynamicInstructionsOverlayDismissCallback
 } from '../redux/instructions';
 
 /**
@@ -180,7 +181,10 @@ Ailab.prototype.initMLActivities = function() {
 
   setAssetPath('/blockly/media/skins/ailab/');
 
-  const {initAll} = require('@code-dot-org/ml-playground');
+  const {
+    initAll,
+    instructionsDismissed
+  } = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
   initAll({
@@ -190,6 +194,12 @@ Ailab.prototype.initMLActivities = function() {
     i18n: ailabMsg,
     saveTrainedModel
   });
+
+  if (instructionsDismissed) {
+    getStore().dispatch(
+      setDynamicInstructionsOverlayDismissCallback(instructionsDismissed)
+    );
+  }
 };
 
 export default Ailab;
