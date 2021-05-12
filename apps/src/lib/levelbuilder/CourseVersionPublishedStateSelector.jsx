@@ -36,24 +36,22 @@ export default class CourseVersionPublishedStateSelector extends Component {
   }
 
   handlePublishedStateChange = event => {
-    switch (event.target.value) {
+    const newPublishedState = event.target.value;
+    switch (newPublishedState) {
       //case 'In Development':
       //break;
       case 'Pilot':
-        this.setState(
-          {publishedState: event.target.value, pilotExperiment: ''},
-          () => {
-            this.props.updatePilotExperiment(this.state.pilotExperiment);
-            this.props.updateVisible(false);
-            this.props.updateIsStable(false);
-          }
-        );
+        this.setState({publishedState: newPublishedState}, () => {
+          this.props.updatePilotExperiment(this.state.pilotExperiment);
+          this.props.updateVisible(false);
+          this.props.updateIsStable(false);
+        });
         break;
       case 'Assignable':
         this.setState(
-          {publishedState: event.target.value, pilotExperiment: null},
+          {publishedState: newPublishedState, pilotExperiment: null},
           () => {
-            this.props.updatePilotExperiment(null);
+            this.props.updatePilotExperiment('');
             this.props.updateVisible(true);
             this.props.updateIsStable(false);
           }
@@ -61,9 +59,9 @@ export default class CourseVersionPublishedStateSelector extends Component {
         break;
       case 'Recommended':
         this.setState(
-          {publishedState: event.target.value, pilotExperiment: null},
+          {publishedState: newPublishedState, pilotExperiment: null},
           () => {
-            this.props.updatePilotExperiment(null);
+            this.props.updatePilotExperiment('');
             this.props.updateVisible(true);
             this.props.updateIsStable(true);
           }
@@ -73,9 +71,9 @@ export default class CourseVersionPublishedStateSelector extends Component {
       case 'Preview':
       default:
         this.setState(
-          {publishedState: event.target.value, pilotExperiment: null},
+          {publishedState: newPublishedState, pilotExperiment: null},
           () => {
-            this.props.updatePilotExperiment(null);
+            this.props.updatePilotExperiment('');
             this.props.updateVisible(false);
             this.props.updateIsStable(false);
           }
@@ -85,8 +83,9 @@ export default class CourseVersionPublishedStateSelector extends Component {
   };
 
   updatePilotExperiment = event => {
-    this.setState({pilotExperiment: event.target.value}, () => {
-      this.props.updatePilotExperiment(event.target.value);
+    const newPilotExperiment = event.target.value;
+    this.setState({pilotExperiment: newPilotExperiment}, () => {
+      this.props.updatePilotExperiment(newPilotExperiment);
     });
   };
 
