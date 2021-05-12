@@ -8,29 +8,6 @@ import MarkdownEnabledTextarea, {
   markdownFeaturesShape
 } from './MarkdownEnabledTextarea';
 
-const styles = {
-  wrapper: {
-    marginTop: 10,
-    marginBottom: 10,
-    border: '1px solid ' + color.light_gray,
-    padding: 5,
-    display: 'flex',
-    alignItems: 'flex-start',
-    flexWrap: 'wrap'
-  },
-  container: {
-    flex: '1 1 500px',
-    maxWidth: 970,
-    margin: 5
-  },
-  preview: {
-    marginTop: 5,
-    marginBottom: 0,
-    border: '1px solid ' + color.lighter_gray,
-    padding: 10
-  }
-};
-
 /**
  * Component for previewing Markdown for a edit field
  */
@@ -80,3 +57,26 @@ export default class TextareaWithMarkdownPreview extends React.Component {
     );
   }
 }
+
+const styles = {
+  wrapper: {
+    marginTop: 10,
+    marginBottom: 10,
+    border: '1px solid ' + color.light_gray,
+    padding: 5,
+    display: 'flex',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap'
+  },
+  container: {
+    flex: '1 1 500px',
+    maxWidth: 970,
+    margin: 5
+  },
+  preview: {
+    marginTop: 5,
+    marginBottom: 0,
+    border: '1px solid ' + color.lighter_gray,
+    padding: 10
+  }
+};

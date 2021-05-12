@@ -7,26 +7,6 @@ import UploadImageDialog from './lesson-editor/UploadImageDialog';
 import FindResourceDialog from './lesson-editor/FindResourceDialog';
 import FindProgrammingExpressionDialog from './lesson-editor/FindProgrammingExpressionDialog';
 
-const styles = {
-  container: {
-    flex: '1 1 500px',
-    maxWidth: 970,
-    margin: 5
-  },
-  input: {
-    width: '100%',
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: '1px solid #ccc',
-    borderRadius: 4,
-    margin: 0
-  },
-  icon: {
-    marginRight: 7
-  }
-};
-
 export const markdownFeaturesShape = PropTypes.shape({
   imageUpload: PropTypes.bool,
   resourceLink: PropTypes.bool
@@ -169,3 +149,23 @@ export default class MarkdownEnabledTextarea extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    flex: '1 1 500px',
+    maxWidth: 970,
+    margin: 5
+  },
+  input: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: '1px solid #ccc',
+    borderRadius: 4,
+    margin: 0
+  },
+  icon: {
+    marginRight: 7
+  }
+};

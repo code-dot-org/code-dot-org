@@ -420,6 +420,7 @@ Dashboard::Application.routes.draw do
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
   get '/admin/pilots/', to: 'admin_search#pilots', as: 'pilots'
+  post '/admin/pilots/', to: 'admin_search#create_pilot', as: 'create_pilot'
   get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
   post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
 
@@ -840,17 +841,20 @@ Dashboard::Application.routes.draw do
 
   get '/help', to: redirect("https://support.code.org")
 
-  get '/form/:misc_form_path', to: 'foorm/simple_survey#new'
-
-  get '/form/:misc_form_path/show', to: 'foorm/simple_survey#show'
-
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
   get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
 
+  # These really belong in the foorm namespace,
+  # but we leave them outside so that we can easily use the simple "/form" paths.
+  get '/form/:path/configuration', to: 'foorm/simple_survey_forms#configuration'
+  get '/form/:path', to: 'foorm/simple_survey_forms#show'
+
   namespace :foorm do
+    resources :simple_survey_forms, only: [:index, :new, :create]
+
     resources :forms, only: [:create] do
       member do
         put :update_questions

@@ -6,52 +6,6 @@ import i18n from '@cdo/locale';
 import {TeacherPanelProgressBubble} from '@cdo/apps/code-studio/components/progress/TeacherPanelProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const styles = {
-  table: {
-    width: '90%',
-    margin: 'auto'
-  },
-  tr: {
-    height: 41,
-    color: color.cyan,
-    border: `1px solid ${color.lighter_cyan}`,
-    backgroundColor: color.lightest_gray,
-    ':hover': {
-      backgroundColor: color.lighter_cyan,
-      cursor: 'pointer'
-    }
-  },
-  td: {
-    padding: 1
-  },
-  selected: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    backgroundColor: color.light_cyan
-  },
-  studentTableRow: {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%'
-  },
-  meRow: {
-    padding: '1px 1px 1px 5px'
-  },
-  nameInScript: {
-    paddingLeft: 5,
-    margin: '1px 1px 1px 0',
-    flexGrow: 1
-  },
-  nameWithBubble: {
-    paddingLeft: 5,
-    margin: '1px 1px 1px 0',
-    flexGrow: 1
-  },
-  linkIcon: {
-    marginLeft: 10
-  }
-};
-
 export const studentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired
@@ -147,5 +101,51 @@ class StudentTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    width: '90%',
+    margin: 'auto'
+  },
+  tr: {
+    height: 41,
+    color: color.cyan,
+    border: `1px solid ${color.lighter_cyan}`,
+    backgroundColor: color.lightest_gray,
+    ':hover': {
+      backgroundColor: color.lighter_cyan,
+      cursor: 'pointer'
+    }
+  },
+  td: {
+    padding: 1
+  },
+  selected: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white,
+    backgroundColor: color.light_cyan
+  },
+  studentTableRow: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%'
+  },
+  meRow: {
+    padding: '1px 1px 1px 5px'
+  },
+  nameInScript: {
+    paddingLeft: 5,
+    margin: '1px 1px 1px 0',
+    flexGrow: 1
+  },
+  nameWithBubble: {
+    paddingLeft: 5,
+    margin: '1px 1px 1px 0',
+    flexGrow: 1
+  },
+  linkIcon: {
+    marginLeft: 10
+  }
+};
 
 export default Radium(StudentTable);

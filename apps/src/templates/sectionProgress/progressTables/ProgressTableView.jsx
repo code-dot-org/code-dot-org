@@ -37,20 +37,6 @@ const SUMMARY_VIEW_COLUMN_WIDTH = 40;
  */
 import progressTableStyles from './progressTableStyles.scss';
 
-const styles = {
-  container: {
-    width: styleConstants['content-width']
-  },
-  studentList: {
-    display: 'inline-block',
-    verticalAlign: 'top'
-  },
-  contentView: {
-    display: 'inline-block',
-    width: parseInt(progressTableStyles.CONTENT_VIEW_WIDTH)
-  }
-};
-
 function idForExpansionIndex(studentId, index) {
   return `${studentId}.${index}`;
 }
@@ -302,6 +288,7 @@ class ProgressTableView extends React.Component {
               studentTimestamps={this.props.studentTimestamps}
               localeCode={this.props.localeCode}
               onToggleRow={this.onToggleRow}
+              showSectionProgressDetails={this.props.showSectionProgressDetails}
             />
           </div>
           <div style={styles.contentView} className="content-view">
@@ -328,6 +315,20 @@ class ProgressTableView extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    width: styleConstants['content-width']
+  },
+  studentList: {
+    display: 'inline-block',
+    verticalAlign: 'top'
+  },
+  contentView: {
+    display: 'inline-block',
+    width: parseInt(progressTableStyles.CONTENT_VIEW_WIDTH)
+  }
+};
 
 export const UnconnectedProgressTableView = ProgressTableView;
 

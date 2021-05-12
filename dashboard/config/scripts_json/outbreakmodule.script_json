@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-23 02:55:59 UTC",
+    "serialized_at": "2021-05-03 23:56:13 UTC",
     "seeding_key": {
       "script.name": "outbreakmodule"
     }
@@ -115,15 +115,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Welcome to Monster Town",
         "level_keys": [
           "contagion_story"
-        ]
+        ],
+        "progression": "Welcome to Monster Town"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "contagion_story"
@@ -140,15 +140,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Setup",
         "level_keys": [
           "outbreak_rampup_sprites_make"
-        ]
+        ],
+        "progression": "Setup"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak_rampup_sprites_make"
@@ -165,15 +165,15 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Setup",
         "level_keys": [
           "outbreak_rampup_sprites_properties"
-        ]
+        ],
+        "progression": "Setup"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak_rampup_sprites_properties"
@@ -190,15 +190,15 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sometimes, but Not Always",
         "level_keys": [
           "contagion_lesson1_markdown"
-        ]
+        ],
+        "progression": "Sometimes, but Not Always"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "contagion_lesson1_markdown"
@@ -215,15 +215,15 @@
       "chapter": 5,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Telling a Data Story",
         "level_keys": [
           "contagion_lesson1_markdown"
-        ]
+        ],
+        "progression": "Telling a Data Story"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "contagion_lesson1_markdown"

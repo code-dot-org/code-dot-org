@@ -30,21 +30,6 @@ import _ from 'lodash';
 import queryString from 'query-string';
 import {StickyContainer} from 'react-sticky';
 
-const styles = {
-  bottomLinksContainer: {
-    padding: '10px 7px 40px 7px',
-    fontSize: 13,
-    lineHeight: '17px',
-    clear: 'both'
-  },
-  bottomLinksLink: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  bottomLinksLinkFirst: {
-    paddingBottom: 10
-  }
-};
-
 export default class TutorialExplorer extends React.Component {
   static propTypes = {
     tutorials: PropTypes.array.isRequired,
@@ -666,6 +651,21 @@ export default class TutorialExplorer extends React.Component {
     );
   }
 }
+
+const styles = {
+  bottomLinksContainer: {
+    padding: '10px 7px 40px 7px',
+    fontSize: 13,
+    lineHeight: '17px',
+    clear: 'both'
+  },
+  bottomLinksLink: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  bottomLinksLinkFirst: {
+    paddingBottom: 10
+  }
+};
 
 function getFilters({robotics, mobile}) {
   const filters = [
