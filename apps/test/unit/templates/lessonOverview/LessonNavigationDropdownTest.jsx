@@ -201,7 +201,7 @@ describe('LessonNavigationDropdown', () => {
         .at(1)
         .contains('1 - Lesson 1')
     ).to.be.true;
-    lesson1.simulate('click');
+    lesson1.simulate('click', {preventDefault: () => {}});
 
     expect(firehoseClient.putRecord).to.have.been.calledOnce;
     firehoseClient.putRecord.yieldTo('callback');

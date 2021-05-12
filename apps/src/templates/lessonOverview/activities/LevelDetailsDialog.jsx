@@ -196,9 +196,8 @@ class LevelDetailsDialog extends Component {
     }
   }
 
-  recordSeeFullLevelClick = (level, scriptLevel) => {
-    const baseUrl = level.url || scriptLevel.url;
-    const url = `${baseUrl}?no_redirect=1`;
+  recordSeeFullLevelClick = (e, url, scriptLevel) => {
+    e.preventDefault();
     firehoseClient.putRecord(
       {
         study: 'lesson-plan',
@@ -278,6 +277,8 @@ class LevelDetailsDialog extends Component {
     const levelSpecificStyling = hasVideo
       ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
       : {};
+    const baseUrl = level.url || scriptLevel.url;
+    const url = `${baseUrl}?no_redirect=1`;
     return (
       <BaseDialog
         isOpen={true}
@@ -296,11 +297,12 @@ class LevelDetailsDialog extends Component {
             style={{margin: 5}}
           />
           <Button
-            onClick={() => {
-              this.recordSeeFullLevelClick(level, scriptLevel);
+            onClick={e => {
+              this.recordSeeFullLevelClick(e, url, scriptLevel);
             }}
             text={i18n.seeFullLevel()}
             color={'orange'}
+            href={url}
             __useDeprecatedTag
             style={{margin: 5}}
           />

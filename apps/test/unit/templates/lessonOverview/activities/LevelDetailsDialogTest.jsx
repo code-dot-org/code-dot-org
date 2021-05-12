@@ -59,7 +59,7 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     const levelLink = wrapper.find('Button').at(1);
-    levelLink.simulate('click');
+    levelLink.simulate('click', {preventDefault: () => {}});
     expect(firehoseClient.putRecord).to.have.been.calledOnce;
     firehoseClient.putRecord.yieldTo('callback');
     expect(utils.windowOpen).to.have.been.calledWith('level.url?no_redirect=1');
