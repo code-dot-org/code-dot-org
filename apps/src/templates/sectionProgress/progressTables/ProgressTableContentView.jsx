@@ -8,7 +8,10 @@ import {
   studentTableRowType,
   scrollbarWidth
 } from '../sectionProgressConstants';
-import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  lessonIsAllAssessment,
+  lessonHasLevels
+} from '@cdo/apps/templates/progress/progressHelpers';
 import progressTableStyles from './progressTableStyles.scss';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 
@@ -68,7 +71,7 @@ export default class ProgressTableContentView extends React.Component {
     const lesson = this.props.scriptData.stages[columnIndex];
     const includeArrow =
       this.props.includeHeaderArrows &&
-      (!!lesson.levels?.length &&
+      (lessonHasLevels(lesson) &&
         (lesson.levels.length > 1 || lesson.levels[0].isUnplugged));
     return (
       <div
