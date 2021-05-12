@@ -821,14 +821,16 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
-    level1 = create :level
-    level2 = create :level
+    level1 = create :level, level_num: 'custom'
+    level2 = create :level, level_num: 'custom'
     script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
     assert_equal level1, script_level.oldest_active_level
     assert script_level.active?(level1)
 
     script_level.add_variant level2
     script_level.reload
+    assert_equal [level1, level2], script_level.levels
+    assert_equal [level1.key, level2.key], script_level.level_keys
     assert_equal level2, script_level.oldest_active_level
     assert script_level.active?(level2)
     refute script_level.active?(level1)
@@ -846,8 +848,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script = create :script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
-    level1 = create :level
-    level2 = create :level
+    level1 = create :level, level_num: 'custom'
+    level2 = create :level, level_num: 'custom'
     script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
     assert_equal level1, script_level.oldest_active_level
 
