@@ -56,7 +56,6 @@ class ColumnInspector extends Component {
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
-    hideSpecifyColumns: PropTypes.bool,
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array
@@ -130,10 +129,10 @@ class ColumnInspector extends Component {
                 <div>
                   <label>
                     <div>Data Type:</div>
-                    {this.props.hideSpecifyColumns && (
+                    {currentColumnData.readOnly && (
                       <div> {currentColumnData.dataType} </div>
                     )}
-                    {!this.props.hideSpecifyColumns && (
+                    {!currentColumnData.readOnly && (
                       <select
                         onChange={event =>
                           this.handleChangeDataType(event, currentColumnData.id)
@@ -249,7 +248,6 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     rangesByColumn: getRangesByColumn(state),
-    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns,
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures
