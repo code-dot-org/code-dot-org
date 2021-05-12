@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 >Now that you've spent an hour working on the practice PT, share your artifact, protocol, and any reflections you have on the project in the forum. 
 
-><h4><a href="http://forum.code.org/t/lesson-17-final-assessment/702" target="blank">Forum Thread for Lesson 16 <i class="fa fa-external-link-square" ></i></a>
+><h4><a href="http://forum.code.org/t/lesson-17-final-assessment/702" target="blank" rel="noopener noreferrer">Forum Thread for Lesson 16 <i class="fa fa-external-link-square" ></i></a>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 > An **event** is a line of code that tells your computer to "listen" for something to happen, then take an action. For example, on web pages, you often can display a drop down menu when you roll over the navigation bar with your mouse. The "mouse rollover" is an event that triggers an action.
 
 ***
-## **1. Review "<a href="https://curriculum.code.org/csf-19/coursec/14/" target="blank">The Big Event</a>" Lesson Plan from Course C.**
+## **1. Review "<a href="https://curriculum.code.org/csf-19/coursec/14/" target="blank" rel="noopener noreferrer">The Big Event</a>" Lesson Plan from Course C.**
 <br/>
 Course C is meant for students in Grade 2. Events come up in every CS Fundamentals Course, from A-F.
 <br/><br/>
@@ -15,5 +15,5 @@ Course C is meant for students in Grade 2. Events come up in every CS Fundamenta
 This is a video that you would show your students to help introduce the concept of events and kick off the unplugged lesson.
 
 ***
-<a href="https://curriculum.code.org/csf-19/coursec/14/" target="blank">![](https://images.code.org/37ab92bffc396c3b60f83123b44a0552-image-1573080011247.39.43 PM.png)</a>
+<a href="https://curriculum.code.org/csf-19/coursec/14/" target="blank" rel="noopener noreferrer">![](https://images.code.org/37ab92bffc396c3b60f83123b44a0552-image-1573080011247.39.43 PM.png)</a>
 MARKDOWN
