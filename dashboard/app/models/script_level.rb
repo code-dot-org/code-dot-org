@@ -710,6 +710,7 @@ class ScriptLevel < ApplicationRecord
     raise "can only be used on migrated scripts" unless script.is_migrated
     raise "expected 1 existing level but found: #{levels.map(&:key)}" unless levels.count == 1
     raise "expected empty variants property but found #{variants}" if variants
+    raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
     existing_level = levels.first
 
     levels << new_level
