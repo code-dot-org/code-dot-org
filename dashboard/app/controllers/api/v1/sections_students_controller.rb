@@ -51,6 +51,15 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
       return render json: {errors: 'Not a valid section type'}, status: :bad_request
     end
 
+    if @section.will_be_over_capacity?(params[:students].size)
+      render json: {
+        result: 'full',
+        sectionCapacity: @section.capacity,
+        numStudents: params[:students].size
+      }, status: :forbidden
+      return
+    end
+
     errors = []
     new_students = []
     ActiveRecord::Base.transaction do
