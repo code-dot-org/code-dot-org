@@ -14,6 +14,26 @@ let codeMirror;
 const nameKeyRegex = new RegExp(/"(?:name|value)"\:\s*"(.+)",?/gi);
 const nameKeyValidator = new RegExp(/^[a-z0-9_]+$/i);
 
+// performs additional key validation
+// (non-basic characters can get stripped when being transferred to the server)
+export const lintFoormKeys = (text, options, cm) => {
+  const annotations = [];
+  const nameEntries = Array.from(text.matchAll(nameKeyRegex));
+  nameEntries.forEach(match => {
+    const nameValue = match[1];
+    if (!nameKeyValidator.test(nameValue)) {
+      annotations.push({
+        message: 'Question keys should only contain letters and underscores.',
+        severity: 'error',
+        from: cm.posFromIndex(match.index),
+        to: cm.posFromIndex(match.index + match[0].length)
+      });
+    }
+  });
+
+  return annotations;
+};
+
 export function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
 
@@ -33,30 +53,17 @@ export function populateCodeMirror() {
     }
   }
 
-  function getAnnotations(text, options, cm) {
-    const annotations = cm.getHelper(CodeMirror.Pos(0, 0), 'lint')(text, {});
-
-    // additional key validation (non-basic characters can get stripped when being transferred to the server)
-    const nameEntries = Array.from(text.matchAll(nameKeyRegex));
-    nameEntries.forEach(match => {
-      const nameValue = match[1];
-      if (!nameKeyValidator.test(nameValue)) {
-        annotations.push({
-          message:
-            'Question keys should only contain lowercase letters and underscores.',
-          severity: 'error',
-          from: cm.posFromIndex(match.index),
-          to: cm.posFromIndex(match.index + match[0].length)
-        });
-      }
-    });
-
-    return annotations;
-  }
-
   codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: _.debounce(onCodeMirrorChange, 250),
-    getAnnotations
+    getAnnotations: (text, options, cm) => {
+      const cmValidation = cm.getHelper(CodeMirror.Pos(0, 0), 'lint')(
+        text,
+        {},
+        cm
+      );
+      const foormValidation = lintFoormKeys(text, options, cm);
+      return [...cmValidation, ...foormValidation];
+    }
   });
 }
 
