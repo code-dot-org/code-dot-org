@@ -4,88 +4,9 @@ import Radium from 'radium';
 import Button from '../Button';
 import color from '../../util/color';
 import {connect} from 'react-redux';
-
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
-
-const styles = {
-  card: {
-    height: 250,
-    width: 310,
-    background: color.teal
-  },
-  cardSmall: {
-    width: '100%'
-  },
-  cardAllowWrap: {
-    position: 'relative'
-  },
-  text: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    color: color.white
-  },
-  titleContainer: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'baseline',
-    padding: '20px 20px 15px 20px'
-  },
-  title: {
-    color: color.white,
-    fontFamily: '"Gotham 7r", sans-serif',
-    fontSize: 27,
-    lineHeight: '29px',
-    boxSizing: 'border-box'
-  },
-  titleSmall: {
-    boxSizing: 'border-box'
-  },
-  titleNoWrap: {
-    whiteSpace: 'nowrap',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden'
-  },
-  titleAllowWrap: {
-    lineHeight: '1.1'
-  },
-  callout: {
-    flex: 'none',
-    fontSize: 14,
-    margin: '0px 8px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.white
-  },
-  description: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 14,
-    lineHeight: '21px',
-    height: 140,
-    marginBottom: 5,
-    overflowY: 'auto'
-  },
-  descriptionSmall: {
-    width: '100%',
-    boxSizing: 'border-box'
-  },
-  button: {
-    marginLeft: 20,
-    marginRight: 20
-  },
-  buttonAllowWrap: {
-    position: 'absolute',
-    bottom: 20,
-    left: 0
-  },
-  ltr: {
-    float: 'left'
-  },
-  rtl: {
-    float: 'right'
-  }
-};
-
 class ResourceCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
@@ -166,6 +87,82 @@ class ResourceCard extends Component {
     );
   }
 }
+
+const styles = {
+  card: {
+    height: 250,
+    width: 310,
+    background: color.teal
+  },
+  cardSmall: {
+    width: '100%'
+  },
+  cardAllowWrap: {
+    position: 'relative'
+  },
+  text: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    color: color.white
+  },
+  titleContainer: {
+    display: 'flex',
+    alignItems: 'baseline',
+    padding: '14px 20px 10px 20px'
+  },
+  title: {
+    color: color.white,
+    fontFamily: '"Gotham 7r", sans-serif',
+    fontSize: 27,
+    lineHeight: '29px',
+    boxSizing: 'border-box'
+  },
+  titleSmall: {
+    boxSizing: 'border-box'
+  },
+  titleNoWrap: {
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
+  },
+  titleAllowWrap: {
+    lineHeight: '1.1'
+  },
+  callout: {
+    flex: 'none',
+    fontSize: 14,
+    margin: '0px 8px',
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.white
+  },
+  description: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    lineHeight: '21px',
+    height: 140,
+    marginBottom: 5,
+    overflowY: 'auto'
+  },
+  descriptionSmall: {
+    width: '100%',
+    boxSizing: 'border-box'
+  },
+  button: {
+    marginLeft: 20,
+    marginRight: 20
+  },
+  buttonAllowWrap: {
+    position: 'absolute',
+    bottom: 20,
+    left: 0
+  },
+  ltr: {
+    float: 'left'
+  },
+  rtl: {
+    float: 'right'
+  }
+};
 
 export default connect(state => ({
   isRtl: state.isRtl,

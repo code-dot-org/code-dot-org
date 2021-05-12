@@ -13,24 +13,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {InputGroup, FormGroup, FormControl} from 'react-bootstrap';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const styles = {
-  readOnlyInput: {
-    backgroundColor: 'inherit',
-    cursor: 'default',
-    border: 'none'
-  },
-  clearElement: {
-    color: '#999',
-    fontSize: '18px',
-    zIndex: 10,
-    cursor: 'pointer',
-    pointerEvents: 'all',
-    ':hover': {
-      color: '#D0021B'
-    }
-  }
-};
-
 class DateInputWithIconUnwrapped extends React.Component {
   static propTypes = {
     disabled: PropTypes.bool,
@@ -141,3 +123,21 @@ export default class DatePicker extends React.Component {
     );
   }
 }
+
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none'
+  },
+  clearElement: {
+    color: '#999',
+    fontSize: '18px',
+    zIndex: 10,
+    cursor: 'pointer',
+    pointerEvents: 'all',
+    ':hover': {
+      color: '#D0021B'
+    }
+  }
+};

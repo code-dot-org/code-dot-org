@@ -15,10 +15,11 @@ export default storybook => {
               id: '1',
               levelNumber: 3,
               status: status,
+              isLocked: false,
               url: '/foo/bar',
-              icon: status === LevelStatus.locked ? 'fa-lock' : 'fa-document'
+              icon: 'fa-document'
             }}
-            disabled={status === LevelStatus.locked}
+            disabled={false}
           />
         )
       }))
@@ -29,9 +30,9 @@ export default storybook => {
             <ProgressBubble
               level={{
                 id: '1',
-                levelNumber: 3,
+                levelNumber: 1,
                 status: LevelStatus.perfect,
-                url: '/foo/bar',
+                isLocked: false,
                 icon: 'fa-document'
               }}
               disabled={false}
@@ -47,6 +48,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document'
               }}
@@ -63,6 +65,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document'
               }}
@@ -80,6 +83,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.perfect,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document',
                 paired: true
@@ -99,6 +103,7 @@ export default storybook => {
                 id: '1',
                 levelNumber: 3,
                 status: LevelStatus.attempted,
+                isLocked: false,
                 url: '/foo/bar',
                 icon: 'fa-document',
                 paired: true

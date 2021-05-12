@@ -25,40 +25,6 @@ const craftStyles = {
   }
 };
 
-const styles = {
-  main: {
-    position: 'relative',
-    top: 0,
-    right: 0
-    // left handled by media queries for .editor-column
-  },
-  withOverlay: {
-    zIndex: OVERLAY_Z_INDEX + 1
-  },
-  noViz: {
-    left: 0,
-    right: 0,
-    marginRight: 0,
-    marginLeft: 0
-  },
-  body: {
-    backgroundColor: '#ddd',
-    width: '100%'
-  },
-  leftCol: {
-    position: 'absolute',
-    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
-    left: 0,
-    marginLeft: 0
-  },
-  leftColRtl: {
-    position: 'absolute',
-    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
-    right: 0,
-    marginRight: 0
-  }
-};
-
 /**
  * InstructionsCSF is made up of 3 ThreeColumns:
  * Left column: displays an avatar and a lightbulb (if hints are available) used for requesting hints
@@ -387,6 +353,40 @@ class InstructionsCSF extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    position: 'relative',
+    top: 0,
+    right: 0
+    // left handled by media queries for .editor-column
+  },
+  withOverlay: {
+    zIndex: OVERLAY_Z_INDEX + 1
+  },
+  noViz: {
+    left: 0,
+    right: 0,
+    marginRight: 0,
+    marginLeft: 0
+  },
+  body: {
+    backgroundColor: '#ddd',
+    width: '100%'
+  },
+  leftCol: {
+    position: 'absolute',
+    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
+    left: 0,
+    marginLeft: 0
+  },
+  leftColRtl: {
+    position: 'absolute',
+    bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
+    right: 0,
+    marginRight: 0
+  }
+};
 
 export default connect(
   function propsFromStore(state) {

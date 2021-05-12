@@ -18,9 +18,11 @@ describe('Java Lab View Test', () => {
       onContinue: () => {},
       onCommitCode: () => {},
       onInputMessage: () => {},
+      handleVersionHistory: () => {},
       isProjectLevel: false,
       isReadOnlyWorkspace: false,
-      isDarkMode: false
+      isDarkMode: false,
+      visualization: <div />
     };
   });
 

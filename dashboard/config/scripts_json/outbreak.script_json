@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-30 18:28:28 UTC",
+    "serialized_at": "2021-05-03 23:55:52 UTC",
     "seeding_key": {
       "script.name": "outbreak"
     }
@@ -55,15 +55,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Welcome to Monster Town",
         "level_keys": [
           "outbreak_story"
-        ]
+        ],
+        "progression": "Welcome to Monster Town"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak_story"
@@ -80,15 +80,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Creating a Simulation",
         "level_keys": [
           "outbreak1"
-        ]
+        ],
+        "progression": "Creating a Simulation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak1"
@@ -105,15 +105,15 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Programming with Events",
         "level_keys": [
           "outbreak2"
-        ]
+        ],
+        "progression": "Programming with Events"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak2"
@@ -130,15 +130,15 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Stopping the Outbreak with Masks",
         "level_keys": [
           "outbreak3"
-        ]
+        ],
+        "progression": "Stopping the Outbreak with Masks"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak3"
@@ -155,15 +155,15 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Learning from Simulations",
         "level_keys": [
           "outbreak_story2"
-        ]
+        ],
+        "progression": "Learning from Simulations"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak_story2"
@@ -180,15 +180,15 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "More Monsters",
         "level_keys": [
           "outbreak4"
-        ]
+        ],
+        "progression": "More Monsters"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak4"
@@ -205,15 +205,15 @@
       "chapter": 7,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Recovery",
         "level_keys": [
           "outbreak5"
-        ]
+        ],
+        "progression": "Recovery"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak5"
@@ -230,16 +230,16 @@
       "chapter": 8,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Chance",
         "challenge": true,
         "level_keys": [
           "outbreak6"
-        ]
+        ],
+        "progression": "Chance"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak6"
@@ -256,16 +256,16 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Vaccines",
         "challenge": true,
         "level_keys": [
           "outbreak7"
-        ]
+        ],
+        "progression": "Vaccines"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak7"
@@ -282,15 +282,15 @@
       "chapter": 10,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Share Your Message",
         "level_keys": [
           "outbreak8"
-        ]
+        ],
+        "progression": "Share Your Message"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak8"
@@ -307,15 +307,15 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "outbreak_freeplay_choice"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "outbreak_freeplay_choice"
@@ -461,6 +461,9 @@
   "scripts_resources": [
 
   ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
@@ -474,6 +477,9 @@
 
   ],
   "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

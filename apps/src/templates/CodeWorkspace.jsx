@@ -17,29 +17,6 @@ import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
 import {queryParams} from '../code-studio/utils';
 
-const styles = {
-  headerIcon: {
-    fontSize: 18
-  },
-  chevron: {
-    fontSize: 18,
-    ':hover': {
-      color: color.white
-    }
-  },
-  runningIcon: {
-    color: color.dark_charcoal
-  },
-  studentNotStartedWarning: {
-    zIndex: 99,
-    backgroundColor: color.lightest_red,
-    height: 20,
-    padding: 5,
-    opacity: 0.9,
-    position: 'relative'
-  }
-};
-
 class CodeWorkspace extends React.Component {
   static propTypes = {
     studentHasNotStartedLevel: PropTypes.bool,
@@ -54,7 +31,8 @@ class CodeWorkspace extends React.Component {
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
+    autogenerateML: PropTypes.func
   };
 
   shouldComponentUpdate(nextProps) {
@@ -108,7 +86,8 @@ class CodeWorkspace extends React.Component {
       runModeIndicators,
       readonlyWorkspace,
       withSettingsCog,
-      showMakerToggle
+      showMakerToggle,
+      autogenerateML
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
@@ -118,7 +97,9 @@ class CodeWorkspace extends React.Component {
     ];
 
     const settingsCog = showSettingsCog && (
-      <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}} />
+      <SettingsCog
+        {...{isRunning, runModeIndicators, showMakerToggle, autogenerateML}}
+      />
     );
 
     return [
@@ -245,6 +226,29 @@ class CodeWorkspace extends React.Component {
     );
   }
 }
+
+const styles = {
+  headerIcon: {
+    fontSize: 18
+  },
+  chevron: {
+    fontSize: 18,
+    ':hover': {
+      color: color.white
+    }
+  },
+  runningIcon: {
+    color: color.dark_charcoal
+  },
+  studentNotStartedWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative'
+  }
+};
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
 export default connect(state => ({

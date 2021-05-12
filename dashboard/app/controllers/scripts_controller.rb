@@ -109,7 +109,7 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
-      lessonLevelData: @script_file,
+      lessonLevelData: @script_dsl_text,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
@@ -190,7 +190,7 @@ class ScriptsController < ApplicationController
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_lesson_groups(@script)
+    @script_dsl_text = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake

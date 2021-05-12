@@ -901,13 +901,7 @@ level 'Level 3'
       }
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
-      hidden false
-      new_name 'new name'
-      family_name 'family name'
-      version_year '2001'
-      is_course true
       is_migrated true
-
     SCRIPT
     assert_equal expected, script_text
   end

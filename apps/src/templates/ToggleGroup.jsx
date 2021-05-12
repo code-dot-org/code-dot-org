@@ -5,13 +5,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ToggleButton from './ToggleButton';
 
-const styles = {
-  buttonReverse: {
-    display: 'flex',
-    flexDirection: 'row-reverse'
-  }
-};
-
 class ToggleGroup extends Component {
   static propTypes = {
     selected: PropTypes.string,
@@ -85,6 +78,13 @@ class ToggleGroup extends Component {
     });
   }
 }
+
+const styles = {
+  buttonReverse: {
+    display: 'flex',
+    flexDirection: 'row-reverse'
+  }
+};
 
 export const UnconnectedToggleGroup = ToggleGroup;
 
