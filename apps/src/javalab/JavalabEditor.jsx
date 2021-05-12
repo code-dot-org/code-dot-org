@@ -39,6 +39,8 @@ const style = {
   fileMenuToggleButton: {
     margin: '0, 0, 0, 4px',
     padding: 0,
+    height: 20,
+    width: 13,
     backgroundColor: 'transparent',
     border: 'none',
     ':hover': {

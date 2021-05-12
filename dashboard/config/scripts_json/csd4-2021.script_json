@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:56 UTC",
+    "serialized_at": "2021-05-12 18:59:34 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -54,21 +54,9 @@
       }
     },
     {
-      "key": "csd5_2",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Chapter 2: Solving Data Problems"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
       "key": "cspSurvey",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Survey"
       },
@@ -92,7 +80,7 @@
         "overview": "**Question of the Day:** How can we choose products based on the needs of a user?\n\nTo kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.",
         "preparation": "* Print a copy of the activity guide for each student (or prepare to distribute the document digitally).\r\n",
         "purpose": "Students will enter this unit with an understanding of the problem solving process from prior units.\n\nThe problem solving process used throughout CS Discoveries is:\n\n* Define\n* Prepare\n* Try\n* Reflect\n\nIn this lesson, students look at real-world objects to understand how the problem-solving process can be applied to help others. Starting with this lesson, we will be reframing this process to include a layer of empathy, encouraging students to consider how others will experience and use the things they create.\n\nWe are purposefully starting out by looking at non-technical objects to encourage students to think more broadly about what it means to consider the end-user of a product before honing in on how it specifically applies to software design",
-        "student_overview": "The class explores a variety of different teapot designs to consider design choices. Building on this, students explore the relationship between users, their needs, and the design of objects they use.\r\n"
+        "student_overview": "**Question of the Day: How can we choose products based on the needs of a user?**\n\nIn this lesson, you will explore the relationship between users, their needs, and the design of objects they use. "
       },
       "seeding_key": {
         "lesson.key": "Analysis of Design",
@@ -113,7 +101,7 @@
         "overview": "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\r\n\r\nDesigners need to understand their users' needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n",
         "preparation": "* Print out enough user profiles for all students, ensuring as much variety as possible\r\n* Print an activity guide for each user\r\n* Prepare prompt questions for warm up exercise\r\n* Label four corners of the room as A, B, C, and D\r\n* Arrange room in table groups of 4, and place a number on each table group (1, 2, 3,...)\r\n",
         "purpose": "This lesson builds on the previous by asking students to not only consider that there _is_ a user that products are designed for, but also empathize with those potential users. Throughout this unit, students will work to apply the problem solving process from Unit 1 to problems for other people. Empathy is a key element of this kind of user-centered design and a difficult skill for students at this age to master.\r\n",
-        "student_overview": "Using user profiles, students explore how different users might react to a variety of products. Role playing as a different person, each member of the class will get to experience designs through someone else's eyes.\r\n"
+        "student_overview": "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\n\nIn this lesson, you will explore how different users might react to a variety of products. "
       },
       "seeding_key": {
         "lesson.key": "Understanding Your User",
@@ -134,7 +122,7 @@
         "overview": "**Question of the Day: How can we design for people other than ourselves?**\r\n\r\nThis is the first part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. This lesson focuses on the Define and Prepare steps of the process. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. In the next lesson, students will complete the Try and Reflect steps of the design process.\r\n",
         "preparation": "* Ensure you have plenty of sticky notes, pens and large poster paper for students to work on\r\n* Set up groups with preferably 3 students each",
         "purpose": "This micro activity is the first of three design projects in this unit. It is a fast-paced introduction to the user-centered design process, intended to give students an experience with user-centered design that they can build on in later projects. In this lesson the primary goal is to establish that design decisions will be made with the user's needs in mind. The practice of categorizing lots of disparate ideas to help make decisions will also reappear later in the unit.\r\n\r\nThe activity in this lesson is an adaptation of the [Design Charrette from the University of Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach).",
-        "student_overview": "In small groups, students use the design process to come up with ideas for smart clothing. From brainstorming, to identifying users, to finally proposing a design, this activity serves as the first of several opportunities in this unit for students to practice designing a solution for the needs of others.\r\n"
+        "student_overview": "**Question of the Day: How can we design for people other than ourselves?**\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. "
       },
       "seeding_key": {
         "lesson.key": "User-Centered Design 1",
@@ -529,7 +517,7 @@
       },
       "seeding_key": {
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
     },
@@ -895,19 +883,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "0de0afb2-3b1f-420a-aaf6-557b0726539b",
-        "lesson.key": "Project - Paper Prototype",
-        "lesson_group.key": "csd4_1",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
-      "key": "0f848bfe-6e9f-410b-b58a-bb15397fab22",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0f848bfe-6e9f-410b-b58a-bb15397fab22",
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021"
@@ -1560,7 +1535,7 @@
       "seeding_key": {
         "lesson_activity.key": "d9ce0330-5c0e-41e2-837c-d4eba9da6310",
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021"
       }
     },
@@ -3337,22 +3312,12 @@
       "key": "3c6018f8-0048-4c97-9970-72884de4c736",
       "position": 3,
       "properties": {
-        "description": "**Survey:** Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "description": "**Survey:** Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736",
         "lesson_activity.key": "0de0afb2-3b1f-420a-aaf6-557b0726539b"
-      }
-    },
-    {
-      "key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
-      "position": 1,
-      "properties": {
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575",
-        "lesson_activity.key": "0f848bfe-6e9f-410b-b58a-bb15397fab22"
       }
     },
     {
@@ -5926,9 +5891,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
-        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -5940,7 +5902,7 @@
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021",
-        "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575"
+        "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
@@ -6638,7 +6600,7 @@
           "CSD User Centered Design Post-Project Test_2021"
         ],
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
         "activity_section.key": "417a52a3-713c-4f76-bb1f-b119d24d0293"
       },
@@ -6707,7 +6669,7 @@
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021",
-        "activity_section.key": "5edcc0f6-f4ad-42a5-86e4-d9015bcc8575"
+        "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736"
       }
     },
     {
@@ -7029,7 +6991,7 @@
           "CSD User Centered Design Post-Project Test_2021"
         ],
         "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd5_2",
+        "lesson_group.key": "csd4_2",
         "script.name": "csd4-2021",
         "activity_section.key": "417a52a3-713c-4f76-bb1f-b119d24d0293"
       }
@@ -7137,15 +7099,28 @@
       }
     },
     {
-      "name": "Determine the User",
-      "url": "https://docs.google.com/a/code.org/document/d/1kCvBqDl9XV5-RuW9zEOKDPTpULDFPyzvqVKfjcIow14/edit?usp=sharing",
-      "key": "determine-user-exemplar-2019",
+      "name": "Designing with Empathy",
+      "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
+      "key": "designing_with_empathy",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "designing_with_empathy"
+      }
+    },
+    {
+      "name": "Designing with Empathy",
+      "url": "https://docs.google.com/document/d/1iwf4Y8AYLQFAuHSq-k-FnASFI7Wt8w7skZKFclggBcA/view",
+      "key": "designing_with_empathy_1",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "determine-user-exemplar-2019"
+        "resource.key": "designing_with_empathy_1"
       }
     },
     {
@@ -7185,19 +7160,6 @@
       },
       "seeding_key": {
         "resource.key": "explore-ui-elements"
-      }
-    },
-    {
-      "name": "Determine the User",
-      "url": "https://docs.google.com/document/d/1X0qwGigSXa1hq6Q6dws3PxHryGhEyCgkaEHyJCMgvj4/edit",
-      "key": "exploring-design",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "exploring-design"
       }
     },
     {
@@ -7738,19 +7700,19 @@
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "resource.key": "determine-user-exemplar-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Analysis of Design",
-        "resource.key": "exploring-design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Analysis of Design",
         "resource.key": "pspe-image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "resource.key": "designing_with_empathy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "resource.key": "designing_with_empathy_1"
       }
     },
     {
