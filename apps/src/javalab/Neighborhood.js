@@ -37,6 +37,7 @@ export default class Neighborhood {
   }
 
   handleSignal(signal) {
+    // TODO: Map signals to neighborhood actions
     console.log('recieved signal: ' + signal);
   }
 }

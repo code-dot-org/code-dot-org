@@ -41,50 +41,55 @@ export default class JavabuilderConnection {
     } else {
       url += `?Authorization=${token}`;
     }
+
     this.socket = new WebSocket(url);
+    this.socket.onopen = this.onOpen.bind(this);
+    this.socket.onmessage = this.onMessage.bind(this);
+    this.socket.onclose = this.onClose.bind(this);
+    this.socket.onerror = this.onError.bind(this);
+  }
 
-    this.socket.onopen = () => {
-      this.onOutputMessage('Compiling...');
-    };
+  onOpen() {
+    this.onOutputMessage('Compiling...');
+  }
 
-    this.socket.onmessage = event => {
-      const data = JSON.parse(event.data);
-      switch (data.type) {
-        case WebSocketMessageType.SYSTEM_OUT:
-          this.onOutputMessage(data.value);
-          break;
-        case WebSocketMessageType.NEIGHBORHOOD:
-          Neighborhood.handleSignal(data);
-          break;
-        case WebSocketMessageType.EXCEPTION:
-          handleException(data, this.onOutputMessage);
-          break;
-        case WebSocketMessageType.DEBUBG:
-          this.onOutputMessage('--- Localhost debugging message ---');
-          this.onOutputMessage(data.value);
-          break;
-        default:
-          console.log(data);
-          break;
-      }
-    };
+  onMessage(event) {
+    const data = JSON.parse(event.data);
+    switch (data.type) {
+      case WebSocketMessageType.SYSTEM_OUT:
+        this.onOutputMessage(data.value);
+        break;
+      case WebSocketMessageType.NEIGHBORHOOD:
+        Neighborhood.handleSignal(data);
+        break;
+      case WebSocketMessageType.EXCEPTION:
+        handleException(data, this.onOutputMessage);
+        break;
+      case WebSocketMessageType.DEBUBG:
+        this.onOutputMessage('--- Localhost debugging message ---');
+        this.onOutputMessage(data.value);
+        break;
+      default:
+        console.log(data);
+        break;
+    }
+  }
 
-    this.socket.onclose = event => {
-      if (event.wasClean) {
-        console.log(`[close] code=${event.code} reason=${event.reason}`);
-      } else {
-        // e.g. server process ended or network down
-        // event.code is usually 1006 in this case
-        console.log(`[close] Connection died. code=${event.code}`);
-      }
-    };
+  onClose(event) {
+    if (event.wasClean) {
+      console.log(`[close] code=${event.code} reason=${event.reason}`);
+    } else {
+      // e.g. server process ended or network down
+      // event.code is usually 1006 in this case
+      console.log(`[close] Connection died. code=${event.code}`);
+    }
+  }
 
-    this.socket.onerror = error => {
-      this.onOutputMessage(
-        'We hit an error connecting to our server. Try again.'
-      );
-      console.error(`[error] ${error.message}`);
-    };
+  onError(error) {
+    this.onOutputMessage(
+      'We hit an error connecting to our server. Try again.'
+    );
+    console.error(`[error] ${error.message}`);
   }
 
   // Send a message across the websocket connection to Javabuilder
