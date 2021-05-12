@@ -4,6 +4,17 @@ class TransfersController < ApplicationController
 
   # POST /sections/transfers
   def create
+    new_section = Section.find_by_code(params[:new_section_code])
+
+    if new_section.will_be_over_capacity?(params[:student_ids].size)
+      render json: {
+        result: 'full',
+        verb: 'move',
+        sectionCapacity: new_section.capacity
+      }, status: :forbidden
+      return
+    end
+
     new_section_code = params[:new_section_code]
     current_section_code = params[:current_section_code]
     unless new_section_code && current_section_code

@@ -46,6 +46,10 @@ class Section < ApplicationRecord
     end
   end
 
+  # Sets a class variable for student limit.
+  # Is passed to React and HAML 'add_student' alerts.
+  @@section_capacity = 5
+
   include Rails.application.routes.url_helpers
   acts_as_paranoid
 
@@ -92,6 +96,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_FULL = 'full'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -163,6 +168,8 @@ class Section < ApplicationRecord
   #   already in the section or has now been added.
   def add_student(student)
     return ADD_STUDENT_FAILURE if user_id == student.id
+    # Return a full section error if the section is already at capacity.
+    return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
@@ -284,6 +291,14 @@ class Section < ApplicationRecord
 
   def provider_managed?
     false
+  end
+
+  def capacity
+    @@section_capacity
+  end
+
+  def will_be_over_capacity?(students_to_add)
+    students.distinct(&:id).size + students_to_add > @@section_capacity
   end
 
   # Hide or unhide a stage for this section
