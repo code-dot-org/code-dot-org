@@ -5,11 +5,12 @@ require 'aws-sdk-ec2'
 require 'ipaddr'
 require 'csv'
 
+# Simplified and flattened Route53 DNS record.
 DNSRecord = Struct.new(
   :name,
   :type,
   :ip_address,
-  :ip_address_in_use,
+  :in_use,
   :alias_target
 )
 
@@ -18,28 +19,68 @@ BASE_DOMAIN = "code.org".freeze
 route53_client = Aws::Route53::Client.new
 ec2_client = Aws::EC2::Client.new
 
+# Get list of Elastic IP addresses we have provisioned.
 ip_address_list = ec2_client.describe_addresses.addresses.map(&:public_ip)
-puts ip_address_list
 
 dns_records = Array.new
 
 hosted_zoned_id = route53_client.list_hosted_zones_by_name(dns_name: BASE_DOMAIN, max_items: 1).hosted_zones[0].id
 
-records_response = route53_client.list_resource_record_sets(
+a_records_response = route53_client.list_resource_record_sets(
   hosted_zone_id: hosted_zoned_id,
   start_record_name: BASE_DOMAIN.split('.').reverse.join('.'), # Reverse "code.org" to "org.code".
   start_record_type: "A",
   max_items: 300 # Assume we don't have more than 300 A records for the BASE_DOMAIN.
 )
 
-a_records = records_response.resource_record_sets.select {|record_set| record_set.type == "A"}
-a_records.each do |a_record|
+a_records = a_records_response.resource_record_sets.select {|record_set| record_set.type == "A"}
+
+cname_records_response = route53_client.list_resource_record_sets(
+  hosted_zone_id: hosted_zoned_id,
+  start_record_name: BASE_DOMAIN.split('.').reverse.join('.'), # Reverse "code.org" to "org.code".
+  start_record_type: "CNAME",
+  max_items: 300 # Assume we don't have more than 300 CNAME records for the BASE_DOMAIN.
+)
+
+cname_records = cname_records_response.resource_record_sets.select {|record_set| record_set.type == "CNAME"}
+
+(a_records + cname_records).each do |route53_record|
   record = DNSRecord.new
-  record.name = a_record.name
-  record.type = a_record.type
-  record.ip_address = a_record.resource_records[0]&.value # Assume only one record.
-  record.ip_address_in_use = ip_address_list.include?(a_record.resource_records[0]&.value)
-  record.alias_target = a_record&.alias_target&.dns_name
+  record.name = route53_record.name
+  record.type = route53_record.type
+  record.alias_target = route53_record&.alias_target&.dns_name
+  record.ip_address = route53_record&.resource_records&.first&.value # Assume only one record.
+
+  if route53_record.type == 'A'
+    record.in_use = ip_address_list.include?(route53_record&.resource_records&.first&.value)
+  end
+
+  if route53_record&.resource_records&.first&.value&.start_with?('ec2-') && route53_record.type == 'CNAME'
+    # Extract public IP address of an EC2 Instance from its Public IPv4 DNS.
+    # Example: 'ec2-1-2-3-4.compute-1.amazonaws.com' --> '1.2.3.4'
+    public_ip_address = route53_record.
+      resource_records.
+      first.
+      value.
+      delete_prefix('ec2-').
+      delete_suffix('.compute-1.amazonaws.com').
+      tr('-', '.')
+    # Lookup EC2 Instances in our account by IP Address to guess whether a DNS record that CNAMEs to an EC2 public
+    # IPv4 DNS name is being used by us.
+    record.in_use = !ec2_client.describe_instances(
+      {
+        filters: [
+          {
+            name: "ip-address",
+            values: [public_ip_address]
+          },
+        ],
+      }
+      ).
+      reservations.
+      empty?
+  end
+
   dns_records.push(record)
 end
 
