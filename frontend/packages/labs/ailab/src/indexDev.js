@@ -14,7 +14,6 @@ const sampleModes = {
 
   "preload-metadata": {
     hideSpecifyColumns: true,
-    hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
     requireAccuracy: 50
   },
