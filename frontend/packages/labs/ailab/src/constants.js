@@ -21,7 +21,6 @@ export const ResultsGrades = {
 export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
 
 export const TestDataLocations = {
-  BEGINNING: "beginning",
   END: "end",
   RANDOM: "random"
 };
