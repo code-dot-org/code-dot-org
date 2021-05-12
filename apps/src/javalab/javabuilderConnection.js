@@ -67,8 +67,6 @@ export default class JavabuilderConnection {
           console.log(data);
           break;
       }
-      // debugger;
-      // this.onOutputMessage(event.data);
     };
 
     this.socket.onclose = event => {
