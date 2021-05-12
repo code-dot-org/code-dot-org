@@ -10,6 +10,7 @@ require 'fileutils'
 require 'json'
 require 'digest/md5'
 
+require_relative 'curriculum_sync_utils'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
@@ -17,6 +18,7 @@ require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
   puts "Sync in starting"
+  CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
   localize_level_and_project_content
   localize_block_content
