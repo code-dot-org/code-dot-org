@@ -668,7 +668,6 @@ class ScriptEditor extends React.Component {
                   }
                 />
               )}
-              {/*Should just take on the level of the course. Need to work on this*/}
               {this.props.hasCourse && <UnitPublishedStateSelector />}
             </div>
           )}
