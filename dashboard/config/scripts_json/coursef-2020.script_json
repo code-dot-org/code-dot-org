@@ -53,7 +53,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-15 20:03:07 UTC",
+    "serialized_at": "2021-05-03 23:55:45 UTC",
     "seeding_key": {
       "script.name": "coursef-2020"
     }
@@ -446,15 +446,15 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_01_RETRY_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_01_RETRY_2020"
@@ -471,15 +471,15 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_02_Cole_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_02_Cole_2020"
@@ -496,15 +496,15 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_03_Cole_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_03_Cole_2020"
@@ -521,15 +521,15 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_04_Cole_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_04_Cole_2020"
@@ -546,15 +546,15 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2020"
@@ -571,15 +571,15 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_05_Cole_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_05_Cole_2020"
@@ -596,15 +596,15 @@
       "chapter": 7,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_06_Cole_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_06_Cole_2020"
@@ -621,15 +621,15 @@
       "chapter": 8,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "Function intro Ryan_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Function intro Ryan_2020"
@@ -646,15 +646,15 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_07_Cole_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_07_Cole_2020"
@@ -671,15 +671,15 @@
       "chapter": 10,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_10_RETRY_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_10_RETRY_2020"
@@ -696,15 +696,15 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "MC_HOC_2017_Ali_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_Ali_2020"
@@ -721,15 +721,15 @@
       "chapter": 12,
       "position": 12,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "MC_HOC_2017_FP20x20_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "MC_HOC_2017_FP20x20_2020"
@@ -746,15 +746,15 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Introducing Sprite Lab",
         "level_keys": [
           "CourseEF_video_IntroSpriteLab_2020"
-        ]
+        ],
+        "progression": "Introducing Sprite Lab"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_2020"
@@ -771,15 +771,15 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "Fish Tank 1-validated_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 1-validated_2020"
@@ -796,15 +796,15 @@
       "chapter": 15,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
           "Fish Tank 2-validated_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 2-validated_2020"
@@ -821,15 +821,15 @@
       "chapter": 16,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
           "Fish Tank 3-validated_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 3-validated_2020"
@@ -846,15 +846,15 @@
       "chapter": 17,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
           "Fish Tank 4-validated_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 4-validated_2020"
@@ -871,15 +871,15 @@
       "chapter": 18,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "How to Make a Sprite",
         "level_keys": [
           "CourseEF_video_MakeSprite_2020"
-        ]
+        ],
+        "progression": "How to Make a Sprite"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseEF_video_MakeSprite_2020"
@@ -896,15 +896,15 @@
       "chapter": 19,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
           "Fish Tank 5-validated_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish (continued)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 5-validated_2020"
@@ -921,15 +921,15 @@
       "chapter": 20,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
           "Fish Tank 6-validated_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Swimming Fish (continued)"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 6-validated_2020"
@@ -946,15 +946,15 @@
       "chapter": 21,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "Fish Tank 7-validated_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Fish Tank 7-validated_2020"
@@ -971,13 +971,13 @@
       "chapter": 22,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "spritelab_extras_repeat"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -995,15 +995,15 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "Dance Party 1-validated_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 1-validated_2020"
@@ -1020,15 +1020,15 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video",
         "level_keys": [
           "CDEF_video_SpritesInAction_2020"
-        ]
+        ],
+        "progression": "Video"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CDEF_video_SpritesInAction_2020"
@@ -1045,15 +1045,15 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 2_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 2_2020"
@@ -1070,15 +1070,15 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 3_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 3_2020"
@@ -1095,15 +1095,15 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 4_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 4_2020"
@@ -1120,15 +1120,15 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
           "Dance Party 5_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Moves"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 5_2020"
@@ -1145,15 +1145,15 @@
       "chapter": 29,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
           "Dance Party 6_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 6_2020"
@@ -1170,15 +1170,15 @@
       "chapter": 30,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
           "Dance Party 7_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party 7_2020"
@@ -1195,15 +1195,15 @@
       "chapter": 31,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
           "Dance Party Freeplay_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Alien Dance Party"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Dance Party Freeplay_2020"
@@ -1220,15 +1220,15 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Artist Intro with JR Hildebrande",
         "level_keys": [
           "courseC_video_artist_2020"
-        ]
+        ],
+        "progression": "Artist Intro with JR Hildebrande"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_artist_2020"
@@ -1245,15 +1245,15 @@
       "chapter": 33,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog1_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog1_2020"
@@ -1270,15 +1270,15 @@
       "chapter": 34,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog2_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog2_2020"
@@ -1295,15 +1295,15 @@
       "chapter": 35,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Loops with the Artist",
         "level_keys": [
           "ramp_video_loopsArtist_2020"
-        ]
+        ],
+        "progression": "Loops with the Artist"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_video_loopsArtist_2020"
@@ -1320,15 +1320,15 @@
       "chapter": 36,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog3_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog3_2020"
@@ -1345,15 +1345,15 @@
       "chapter": 37,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseC_artist_prog4_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog4_2020"
@@ -1370,16 +1370,16 @@
       "chapter": 38,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseC_artist_prog7_2020"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog7_2020"
@@ -1396,16 +1396,16 @@
       "chapter": 39,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "ramp_artist_loops4_2020"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops4_2020"
@@ -1422,15 +1422,15 @@
       "chapter": 40,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "ramp_artist_loops5_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops5_2020"
@@ -1447,15 +1447,15 @@
       "chapter": 41,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "ramp_artist_loops6_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops6_2020"
@@ -1472,16 +1472,16 @@
       "chapter": 42,
       "position": 11,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "ramp_artist_loops8_2020"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ramp_artist_loops8_2020"
@@ -1498,13 +1498,13 @@
       "chapter": 43,
       "position": 12,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge1_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1522,13 +1522,13 @@
       "chapter": 44,
       "position": 13,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseC_artist_prog_challenge2a_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1546,15 +1546,15 @@
       "chapter": 45,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops1a_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1a_2020"
@@ -1571,15 +1571,15 @@
       "chapter": 46,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops1_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops1_2020"
@@ -1596,15 +1596,15 @@
       "chapter": 47,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Nested Loops with the Bee",
         "level_keys": [
           "courseD_video_nestedLoops_2020"
-        ]
+        ],
+        "progression": "Nested Loops with the Bee"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_video_nestedLoops_2020"
@@ -1621,15 +1621,15 @@
       "chapter": 48,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseD_bee_nestedLoops2_predict1_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_predict1_2020"
@@ -1646,15 +1646,15 @@
       "chapter": 49,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops2_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops2_2020"
@@ -1671,15 +1671,15 @@
       "chapter": 50,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops3_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_nestedLoops3_2020"
@@ -1696,15 +1696,15 @@
       "chapter": 51,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops4_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_nestedLoops4_2020"
@@ -1721,15 +1721,15 @@
       "chapter": 52,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops5_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_nestedLoops5_2020"
@@ -1746,15 +1746,15 @@
       "chapter": 53,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_maze_nestedLoops6_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_nestedLoops6_2020"
@@ -1771,16 +1771,16 @@
       "chapter": 54,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseD_bee_nestedLoops7_2020"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops7_2020"
@@ -1797,15 +1797,15 @@
       "chapter": 55,
       "position": 11,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops8_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops8_2020"
@@ -1822,15 +1822,15 @@
       "chapter": 56,
       "position": 12,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseD_bee_nestedLoops9_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_2020"
@@ -1847,15 +1847,15 @@
       "chapter": 57,
       "position": 13,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseD_bee_nestedLoops9_predict2_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_bee_nestedLoops9_predict2_2020"
@@ -1872,14 +1872,14 @@
       "chapter": 58,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "PowerOfWords-Unplugged_2020"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PowerOfWords-Unplugged_2020"
@@ -1896,14 +1896,14 @@
       "chapter": 59,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "EnvelopeVariables-Unplugged_2020"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2020"
@@ -1920,15 +1920,15 @@
       "chapter": 60,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "grade5_artist_variables_triangles1_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade5_artist_variables_triangles1_2020"
@@ -1945,15 +1945,15 @@
       "chapter": 61,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables2_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables2_2020"
@@ -1970,15 +1970,15 @@
       "chapter": 62,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Artist: Variables",
         "level_keys": [
           "courseF_video_artistVariables_2020"
-        ]
+        ],
+        "progression": "Artist: Variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_video_artistVariables_2020"
@@ -1995,15 +1995,15 @@
       "chapter": 63,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseF_artist_variables3a_predict1_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables3a_predict1_2020"
@@ -2020,15 +2020,15 @@
       "chapter": 64,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables3_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables3_2020"
@@ -2045,15 +2045,15 @@
       "chapter": 65,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables4_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables4_2020"
@@ -2070,15 +2070,15 @@
       "chapter": 66,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables5_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables5_2020"
@@ -2095,15 +2095,15 @@
       "chapter": 67,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables6_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables6_2020"
@@ -2120,15 +2120,15 @@
       "chapter": 68,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables6a_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables6a_2020"
@@ -2145,15 +2145,15 @@
       "chapter": 69,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_variables_1_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_1_2020"
@@ -2170,15 +2170,15 @@
       "chapter": 70,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_variables_2_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_2_2020"
@@ -2195,15 +2195,15 @@
       "chapter": 71,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_variables_3_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_3_2020"
@@ -2220,15 +2220,15 @@
       "chapter": 72,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_variables_4_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_4_2020"
@@ -2245,15 +2245,15 @@
       "chapter": 73,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_variables_5_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_5_2020"
@@ -2270,16 +2270,16 @@
       "chapter": 74,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseF_bee_variables_6_2020"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_6_2020"
@@ -2296,15 +2296,15 @@
       "chapter": 75,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_variables_7_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_variables_7_2020"
@@ -2321,15 +2321,15 @@
       "chapter": 76,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables7_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables7_2020"
@@ -2346,15 +2346,15 @@
       "chapter": 77,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables8_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables8_2020"
@@ -2371,15 +2371,15 @@
       "chapter": 78,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables9_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables9_2020"
@@ -2396,15 +2396,15 @@
       "chapter": 79,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_variables10_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variables10_2020"
@@ -2421,15 +2421,15 @@
       "chapter": 80,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseF_artist_variablesFP_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_variablesFP_2020"
@@ -2446,13 +2446,13 @@
       "chapter": 81,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_artist_variables_challenge1_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2470,13 +2470,13 @@
       "chapter": 82,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_artist_variables_challenge2_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2494,15 +2494,15 @@
       "chapter": 83,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Run a simulation",
         "level_keys": [
           "simstarter_2020"
-        ]
+        ],
+        "progression": "Run a simulation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "simstarter_2020"
@@ -2519,15 +2519,15 @@
       "chapter": 84,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Modify simulation variables",
         "level_keys": [
           "simconfig_2020"
-        ]
+        ],
+        "progression": "Modify simulation variables"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "simconfig_2020"
@@ -2544,13 +2544,13 @@
       "chapter": 85,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_extras_sim"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -2568,14 +2568,14 @@
       "chapter": 86,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Machine_Learning"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Video_Machine_Learning"
@@ -2592,14 +2592,14 @@
       "chapter": 87,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_FishVTrash"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_FishVTrash"
@@ -2616,14 +2616,14 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrashDemo"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_CreaturesVTrashDemo"
@@ -2640,14 +2640,14 @@
       "chapter": 89,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrash"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_CreaturesVTrash"
@@ -2664,14 +2664,14 @@
       "chapter": 90,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Training_Data"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Video_Training_Data"
@@ -2688,14 +2688,14 @@
       "chapter": 91,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Short"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Short"
@@ -2712,14 +2712,14 @@
       "chapter": 92,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Societal_Implications"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Video_Societal_Implications"
@@ -2736,14 +2736,14 @@
       "chapter": 93,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Long"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseF_Oceans_Long"
@@ -2760,14 +2760,14 @@
       "chapter": 94,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "Internet-Unplugged_2020"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Internet-Unplugged_2020"
@@ -2784,14 +2784,14 @@
       "chapter": 95,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "ForLoopFun-Unplugged_2020"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "ForLoopFun-Unplugged_2020"
@@ -2808,15 +2808,15 @@
       "chapter": 96,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for1_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for1_2020"
@@ -2833,15 +2833,15 @@
       "chapter": 97,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for2_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for2_2020"
@@ -2858,15 +2858,15 @@
       "chapter": 98,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "For Loops and Repeat Blocks",
         "level_keys": [
           "courseF_video_forBee_2020"
-        ]
+        ],
+        "progression": "For Loops and Repeat Blocks"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_video_forBee_2020"
@@ -2883,15 +2883,15 @@
       "chapter": 99,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseF_bee_for3_predict1_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for3_predict1_2020"
@@ -2908,15 +2908,15 @@
       "chapter": 100,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for4_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for4_2020"
@@ -2933,15 +2933,15 @@
       "chapter": 101,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for6_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for6_2020"
@@ -2958,15 +2958,15 @@
       "chapter": 102,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for7_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for7_2020"
@@ -2983,15 +2983,15 @@
       "chapter": 103,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for8_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for8_2020"
@@ -3008,15 +3008,15 @@
       "chapter": 104,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for5_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for5_2020"
@@ -3033,15 +3033,15 @@
       "chapter": 105,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for9_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for9_2020"
@@ -3058,16 +3058,16 @@
       "chapter": 106,
       "position": 11,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
         "challenge": true,
         "level_keys": [
           "courseF_bee_for10_2020"
-        ]
+        ],
+        "progression": "Challenge"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for10_2020"
@@ -3084,15 +3084,15 @@
       "chapter": 107,
       "position": 12,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_bee_for11_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_bee_for11_2020"
@@ -3109,13 +3109,13 @@
       "chapter": 108,
       "position": 13,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_bee_for_challenge1_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3133,13 +3133,13 @@
       "chapter": 109,
       "position": 14,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_bee_for_challenge2_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3157,15 +3157,15 @@
       "chapter": 110,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Intro to For Loops",
         "level_keys": [
           "courseF_video_forArtist_2020"
-        ]
+        ],
+        "progression": "Intro to For Loops"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_video_forArtist_2020"
@@ -3182,15 +3182,15 @@
       "chapter": 111,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseF_artist_for1_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for1_2020"
@@ -3207,15 +3207,15 @@
       "chapter": 112,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_for2_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for2_2020"
@@ -3232,15 +3232,15 @@
       "chapter": 113,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_for3_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for3_2020"
@@ -3257,15 +3257,15 @@
       "chapter": 114,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_for4_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for4_2020"
@@ -3282,15 +3282,15 @@
       "chapter": 115,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_for5_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for5_2020"
@@ -3307,15 +3307,15 @@
       "chapter": 116,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_for6_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for6_2020"
@@ -3332,15 +3332,15 @@
       "chapter": 117,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_for7_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for7_2020"
@@ -3357,15 +3357,15 @@
       "chapter": 118,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseF_artist_for8_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for8_2020"
@@ -3382,15 +3382,15 @@
       "chapter": 119,
       "position": 10,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseF_artist_for9_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for9_2020"
@@ -3407,15 +3407,15 @@
       "chapter": 120,
       "position": 11,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "courseF_artist_for10_predict1_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for10_predict1_2020"
@@ -3432,15 +3432,15 @@
       "chapter": 121,
       "position": 12,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "courseF_artist_for10_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_artist_for10_2020"
@@ -3457,13 +3457,13 @@
       "chapter": 122,
       "position": 13,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_artist_for_challenge1_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3481,13 +3481,13 @@
       "chapter": 123,
       "position": 14,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_artist_for_challenge2_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3505,15 +3505,15 @@
       "chapter": 124,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Prediction",
         "level_keys": [
           "behaviors 1_2020"
-        ]
+        ],
+        "progression": "Prediction"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 1_2020"
@@ -3530,15 +3530,15 @@
       "chapter": 125,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "behaviors 2_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 2_2020"
@@ -3555,15 +3555,15 @@
       "chapter": 126,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "behaviors 3_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 3_2020"
@@ -3580,15 +3580,15 @@
       "chapter": 127,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "behaviors 3a_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 3a_2020"
@@ -3605,15 +3605,15 @@
       "chapter": 128,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "behaviors 4_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 4_2020"
@@ -3630,15 +3630,15 @@
       "chapter": 129,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "behaviors 5_2020"
-        ]
+        ],
+        "progression": "Practice"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 5_2020"
@@ -3655,15 +3655,15 @@
       "chapter": 130,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "behaviors free play_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors free play_2020"
@@ -3680,13 +3680,13 @@
       "chapter": 131,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "behaviors 6_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3704,13 +3704,13 @@
       "chapter": 132,
       "position": 9,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "behaviors 7_2020"
         ]
       },
-      "named_level": null,
+      "named_level": false,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -3728,15 +3728,15 @@
       "chapter": 133,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
         "level_keys": [
           "Virtual Pet 1_2020"
-        ]
+        ],
+        "progression": "Free Play"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 1_2020"
@@ -3753,15 +3753,15 @@
       "chapter": 134,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
           "Virtual Pet 2_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Virtual Pet"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 2_2020"
@@ -3778,15 +3778,15 @@
       "chapter": 135,
       "position": 3,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
           "Virtual Pet 3_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Virtual Pet"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 3_2020"
@@ -3803,15 +3803,15 @@
       "chapter": 136,
       "position": 4,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
           "Virtual Pet 4_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Virtual Pet"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 4_2020"
@@ -3828,15 +3828,15 @@
       "chapter": 137,
       "position": 5,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
           "Virtual Pet 5_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Virtual Pet"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 5_2020"
@@ -3853,15 +3853,15 @@
       "chapter": 138,
       "position": 6,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
           "Virtual Pet 6_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Virtual Pet"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 6_2020"
@@ -3878,15 +3878,15 @@
       "chapter": 139,
       "position": 7,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
           "Virtual Pet 7_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Virtual Pet"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 7_2020"
@@ -3903,15 +3903,15 @@
       "chapter": 140,
       "position": 8,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Mini-Project: Virtual Pet",
         "level_keys": [
           "Virtual Pet 8_2020"
-        ]
+        ],
+        "progression": "Mini-Project: Virtual Pet"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Virtual Pet 8_2020"
@@ -3928,15 +3928,15 @@
       "chapter": 141,
       "position": 1,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Example projects",
         "level_keys": [
           "courseF_project_exemplars_2019_2020"
-        ]
+        ],
+        "progression": "Example projects"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_project_exemplars_2019_2020"
@@ -3953,15 +3953,15 @@
       "chapter": 142,
       "position": 2,
       "activity_section_position": null,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Create your project",
         "level_keys": [
           "courseF_EOC_2020"
-        ]
+        ],
+        "progression": "Create your project"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_EOC_2020"
@@ -5545,6 +5545,12 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
@@ -5555,6 +5561,12 @@
 
   ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

@@ -280,6 +280,11 @@ class DeleteAccountsHelper
     end
   end
 
+  def purge_user_authentications(user)
+    # Delete most recently destroyed (soft-deleted) record first
+    user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -304,6 +309,13 @@ class DeleteAccountsHelper
     # emails stored in primary_contact_info, which will be destroyed.
     # If the user account was already soft-deleted, then fallback to the :email attribute.
     user_email = (user.email&.blank?) ? user.read_attribute(:email) : user.email
+
+    # There is a bug in our system that causes a user to have duplicate
+    # authentication options, one active and one soft-deleted.
+    # Purging that user will fail because of ActiveRecord::RecordNotUnique
+    # (Mysql2::Error: Duplicate entry) exception.
+    # To prevent that issue, hard-deleting authentication options first.
+    purge_user_authentications user
 
     user.destroy
 

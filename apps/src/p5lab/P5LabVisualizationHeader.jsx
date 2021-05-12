@@ -10,12 +10,6 @@ import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode} from './stateQueries';
 import * as utils from '../utils';
 
-const styles = {
-  main: {
-    height: styleConstants['workspace-headers-height']
-  }
-};
-
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */
@@ -70,6 +64,12 @@ class P5LabVisualizationHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    height: styleConstants['workspace-headers-height']
+  }
+};
 export default connect(
   state => ({
     interfaceMode: state.interfaceMode,

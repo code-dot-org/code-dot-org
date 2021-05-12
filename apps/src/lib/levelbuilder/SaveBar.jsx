@@ -3,40 +3,6 @@ import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const styles = {
-  saveButtonBackground: {
-    margin: 0,
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    backgroundColor: color.lightest_gray,
-    borderColor: color.lightest_gray,
-    height: 50,
-    width: '100%',
-    zIndex: 900,
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  saveButton: {
-    margin: '10px 50px 10px 20px'
-  },
-  spinner: {
-    fontSize: 25,
-    padding: 10
-  },
-  lastSaved: {
-    fontSize: 14,
-    color: color.level_perfect,
-    padding: 15
-  },
-  error: {
-    fontSize: 14,
-    color: color.red,
-    padding: 15,
-    maxWidth: 800
-  }
-};
-
 export default class SaveBar extends Component {
   static propTypes = {
     lastSaved: PropTypes.number,
@@ -85,3 +51,37 @@ export default class SaveBar extends Component {
     );
   }
 }
+
+const styles = {
+  saveButtonBackground: {
+    margin: 0,
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: color.lightest_gray,
+    borderColor: color.lightest_gray,
+    height: 50,
+    width: '100%',
+    zIndex: 900,
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  saveButton: {
+    margin: '10px 50px 10px 20px'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
+  },
+  lastSaved: {
+    fontSize: 14,
+    color: color.level_perfect,
+    padding: 15
+  },
+  error: {
+    fontSize: 14,
+    color: color.red,
+    padding: 15,
+    maxWidth: 800
+  }
+};

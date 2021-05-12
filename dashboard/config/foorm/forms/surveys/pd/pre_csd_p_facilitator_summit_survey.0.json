@@ -31,7 +31,7 @@
         },
         {
           "type": "matrix",
-          "name": "[programKnowledgeSkills]",
+          "name": "programKnowledgeSkills",
           "title": "Right now, I have the knowledge and skills to...",
           "columns": [
             {
@@ -88,7 +88,7 @@
         },
         {
           "type": "matrix",
-          "name": "[facilitatingDiscussions]",
+          "name": "facilitatingDiscussions",
           "title": "Right now, when facilitating discussions, I have the skills to...",
           "columns": [
             {
@@ -145,51 +145,51 @@
         },
         {
           "type": "rating",
-          "name": "[iFeelCSD]",
+          "name": "iFeelCSD",
           "visibleIf": "{Course} = 'item1'",
-          "title": "I Feel prepared to lead Code.org's CSD Course workshops in 2021-2022",
+          "title": "I feel prepared to lead Code.org's CSD Course workshops in 2021-2022.",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
         {
           "type": "rating",
-          "name": "[iFeelCSP]",
+          "name": "iFeelCSP",
           "visibleIf": "{Course} = 'item2'",
-          "title": "I Feel prepared to lead Code.org's CSP Course workshops in 2021-2022",
+          "title": "I feel prepared to lead Code.org's CSP Course workshops in 2021-2022.",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
         {
           "type": "rating",
-          "name": "[toWhat]",
+          "name": "toWhat",
           "title": "To what extent are the goals and objectives of the {course} summer workshop clear to you as a facilitator?",
-          "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
+          "description": "From 1 - Very Unclear to 7 - Very Clear",
           "rateMax": 7
         },
         {
           "type": "rating",
-          "name": "[Needed]",
+          "name": "Needed",
           "title": "To what extent do you feel confident in your ability to effectively explain the philosophy behind the curriculum to workshop participants?",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
         {
           "type": "rating",
-          "name": "[commitment]",
+          "name": "commitment",
           "title": "To what extent do you feel confident in your ability to support participants in building a commitment to creating equitable CS classrooms?",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
         {
           "type": "rating",
-          "name": "[building]",
+          "name": "building",
           "title": "To what extent do you feel confident in your ability to support participants in building equitable CS classrooms?",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
         {
           "type": "matrix",
-          "name": "[concerns]",
+          "name": "concerns",
           "title": "Right now, I am concerned about...",
           "columns": [
             {
@@ -251,11 +251,11 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<p><H2>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.” </h2><br>\n<b>1-2: Not true of me now</b> - need more development, not well prepared <br>\n<b>3-5: Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<b>6-7: Very true of me now</b>   - current strenghts, well prepared\n</p>"
+          "html": "<p><H3>For the following items, please assess your facilitation knowledge and skills along a scale from “Not true of me now” to “very true of me now.” </h3><br>\n<b>1-2: Not true of me now</b> - need more development, not well prepared <br>\n<b>3-5: Somewhat true of me now</b> - in process developing, somewhat prepared <br>\n<b>6-7: Very true of me now</b>   - current strenghts, well prepared\n</p>"
         },
         {
           "type": "matrix",
-          "name": "[facilitatorResponsibilitiesSkills]",
+          "name": "facilitatorResponsibilitiesSkills",
           "title": "As a facilitator, right now, I have the skills to...",
           "columns": [
             {
@@ -308,14 +308,14 @@
         },
         {
           "type": "rating",
-          "name": "[overallTo52]",
+          "name": "overallTo52",
           "title": "Overall, to what extent do you feel connected to the facilitator community?",
           "description": "From 1 - Strongly Disagree to 7 - Strongly Agree",
           "rateMax": 7
         },
         {
           "type": "matrix",
-          "name": "[connectedCommunity]",
+          "name": "connectedCommunity",
           "title": "When it comes to the community",
           "columns": [
             {
