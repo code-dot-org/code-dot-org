@@ -26,6 +26,8 @@ const SET_DYNAMIC_INSTRUCTIONS_DEFAULTS =
 const SET_DYNAMIC_INSTRUCTIONS_KEY =
   'instructions/SET_DYNAMIC_INSTRUCTIONS_KEY';
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
+const SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK =
+  'instructions/SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK';
 
 /**
  * Some scenarios:
@@ -164,6 +166,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   }
 
   if (action.type === HIDE_OVERLAY) {
+    if (state.dynamicInstructionsDismissCallback) {
+      state.dynamicInstructionsDismissCallback();
+    }
+
     return Object.assign({}, state, {
       overlayVisible: false
     });
@@ -179,6 +185,13 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     return Object.assign({}, state, {
       dynamicInstructionsKey: action.dynamicInstructionsKey,
       overlayVisible: action.options && action.options.showOverlay
+    });
+  }
+
+  if (action.type === SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK) {
+    return Object.assign({}, state, {
+      dynamicInstructionsDismissCallback:
+        action.dynamicInstructionsDismissCallback
     });
   }
 
@@ -264,13 +277,18 @@ export const hideOverlay = () => ({
 
 export const setDynamicInstructionsDefaults = dynamicInstructionsDefaults => ({
   type: SET_DYNAMIC_INSTRUCTIONS_DEFAULTS,
-  dynamicInstructionsDefaults: dynamicInstructionsDefaults
+  dynamicInstructionsDefaults
 });
 
 export const setDynamicInstructionsKey = (dynamicInstructionsKey, options) => ({
   type: SET_DYNAMIC_INSTRUCTIONS_KEY,
-  dynamicInstructionsKey: dynamicInstructionsKey,
-  options: options
+  dynamicInstructionsKey,
+  options
+});
+
+export const setDynamicInstructionsOverlayDismissCallback = dynamicInstructionsDismissCallback => ({
+  type: SET_DYNAMIC_INSTRUCTIONS_DISMISS_CALLBACK,
+  dynamicInstructionsDismissCallback
 });
 
 // HELPERS
