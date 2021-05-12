@@ -44,9 +44,9 @@ social:
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/csjourneys/udacity.png" alt="Udacity logo">
 </a>
 <div style="width: 85%; float: left">
-  <a class="linktag" id="udacity" href="https://www.udacity.com/course/introduction-to-python--ud1110" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>CS 101</strong></h3></a>
+  <a class="linktag" id="udacity" href="https://www.udacity.com/course/introduction-to-python--ud1110" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Introduction to Python Programming</strong></h3></a>
   <p><strong>Udacity | For university students | For beginners</strong></p>
-  <p>In this course you will learn key concepts in computer science and learn how to write your own computer programs in the context of building a web crawler. There is no prior programming knowledge needed for this course. At the end of this course, you will have learned key concepts in computer science and enough programming to be able to write Python programs to solve problems on your own.</p>
+  <p>In this course, you'll learn the fundamentals of the Python programming language, along with programming best practices. You’ll learn to represent and store data using Python data types and variables, and use conditionals and loops to control the flow of your programs. You’ll harness the power of complex data structures like lists, sets, dictionaries, and tuples to store collections of related data. You’ll define and document your own custom functions, write scripts, and handle errors. Lastly, you’ll learn to find and use modules in the Python Standard Library and other third-party libraries.</p>
   <p><i>Registration period: Start anytime</i></p>
 </div>
 <div style="clear:both"></div>
@@ -162,7 +162,7 @@ social:
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="educode" href="https://educode.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>EduCode Academy</strong></h3></a>
-  <p><strong>EduCode Academy | For Grades 5-12 | For beginners</strong></p>
+  <p><strong>EduCode Academy | For Grades 5-12 | For beginners and advanced students</strong></p>
   <p>Coding courses for kids, featuring real code, animated video micro-lessons, and gamified, relatable, real-world projects. Four learning paths are available: JavaScript Programming, Game Development, Web Development, and Data Science.</p>
   <p><i>Registration period: Start anytime</i></p>
 </div>

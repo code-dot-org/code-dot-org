@@ -6,50 +6,14 @@ import Button from '@cdo/apps/templates/Button';
 import ModelCard from './ModelCard';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import autogenerateML from '@cdo/apps/applab/ai';
 
 const DEFAULT_MARGIN = 7;
-
-const styles = {
-  dialog: {
-    padding: '0 15px',
-    cursor: 'default'
-  },
-  left: {
-    float: 'left',
-    width: '40%',
-    padding: 20,
-    boxSizing: 'border-box'
-  },
-  right: {
-    float: 'left',
-    width: '60%',
-    padding: 20,
-    boxSizing: 'border-box'
-  },
-  header: {
-    textAlign: 'center',
-    fontSize: 24,
-    marginTop: 20
-  },
-  message: {
-    color: color.dark_charcoal,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    overflow: 'hidden',
-    lineHeight: '15px',
-    whiteSpace: 'pre-wrap'
-  },
-  spinner: {
-    height: 'calc(80vh - 150px)',
-    color: color.dark_charcoal
-  }
-};
 
 export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
+    autogenerateML: PropTypes.func,
     // Levelbuilders can pre-populate App Lab levels with a pre-trained model.
     levelbuilderModel: PropTypes.object
   };
@@ -111,7 +75,7 @@ export default class ModelManagerDialog extends React.Component {
   importMLModel = async () => {
     this.setState({isImportPending: true});
     const modelId = this.root.value;
-    await autogenerateML(modelId);
+    await this.props.autogenerateML(modelId);
     this.setState({isImportPending: false});
     this.closeModelManager();
   };
@@ -254,3 +218,39 @@ export default class ModelManagerDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: '0 15px',
+    cursor: 'default'
+  },
+  left: {
+    float: 'left',
+    width: '40%',
+    padding: 20,
+    boxSizing: 'border-box'
+  },
+  right: {
+    float: 'left',
+    width: '60%',
+    padding: 20,
+    boxSizing: 'border-box'
+  },
+  header: {
+    textAlign: 'center',
+    fontSize: 24,
+    marginTop: 20
+  },
+  message: {
+    color: color.dark_charcoal,
+    textAlign: 'left',
+    margin: DEFAULT_MARGIN,
+    overflow: 'hidden',
+    lineHeight: '15px',
+    whiteSpace: 'pre-wrap'
+  },
+  spinner: {
+    height: 'calc(80vh - 140px)',
+    color: color.dark_charcoal
+  }
+};

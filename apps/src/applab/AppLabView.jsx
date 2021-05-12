@@ -20,6 +20,7 @@ import ExternalRedirectDialog from '@cdo/apps/applab/ExternalRedirectDialog';
 class AppLabView extends React.Component {
   static propTypes = {
     handleVersionHistory: PropTypes.func.isRequired,
+    autogenerateML: PropTypes.func.isRequired,
     isEditingProject: PropTypes.bool.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     onScreenCreate: PropTypes.func.isRequired,
@@ -49,6 +50,7 @@ class AppLabView extends React.Component {
       isEditingProject,
       screenIds,
       onScreenCreate,
+      autogenerateML,
       hasDesignMode,
       hasDataMode,
       handleVersionHistory
@@ -56,9 +58,9 @@ class AppLabView extends React.Component {
 
     const codeWorkspaceVisible = ApplabInterfaceMode.CODE === interfaceMode;
 
-    let instructionsStyle = {};
+    let instructionWorkspaceStyle = {};
     if (widgetMode) {
-      instructionsStyle = isRtl
+      instructionWorkspaceStyle = isRtl
         ? styles.widgetInstructionsRtl
         : styles.widgetInstructions;
     }
@@ -74,16 +76,17 @@ class AppLabView extends React.Component {
           onScreenCreate={onScreenCreate}
         />
         <VisualizationResizeBar />
-        {/* Applying instructionsStyle to both the container (using style) and instructions (using
-         * instructionsStyle) is necessary because the instructions element is absolutely positioned.
+        {/* Applying instructionWorkspaceStyle to both the instructions (using instructionsStyle) and the
+         *  workspace (using workspaceStyle) is necessary because both elements are absolutely positioned.
          */}
         <InstructionsWithWorkspace
-          style={instructionsStyle}
-          instructionsStyle={instructionsStyle}
+          workspaceStyle={instructionWorkspaceStyle}
+          instructionsStyle={instructionWorkspaceStyle}
         >
           <CodeWorkspace
             withSettingsCog
             style={{display: codeWorkspaceVisible ? 'block' : 'none'}}
+            autogenerateML={autogenerateML}
           />
           {hasDesignMode && <ProtectedDesignWorkspace />}
           {hasDataMode && (

@@ -8,12 +8,6 @@ import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import SaveImageButton from './SaveImageButton';
 import msg from '@cdo/locale';
 
-const styles = {
-  invisible: {
-    visibility: 'hidden'
-  }
-};
-
 export default class ArtistVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
@@ -80,3 +74,9 @@ export default class ArtistVisualizationColumn extends React.Component {
     );
   }
 }
+
+const styles = {
+  invisible: {
+    visibility: 'hidden'
+  }
+};

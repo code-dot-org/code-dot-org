@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+require 'cdo/redis'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
@@ -119,7 +119,7 @@ class I18nStringUrlTracker
       buffer[url].each_key do |string_key|
         buffer[url][string_key].each do |source|
           # record the string : url association.
-          FirehoseClient.instance.put_record(
+          RedisClient.instance.put_record(
             :i18n,
             {url: url, string_key: string_key, source: source}
           )

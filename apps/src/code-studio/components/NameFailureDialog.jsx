@@ -6,17 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 
-const styles = {
-  title: {
-    textAlign: 'left',
-    fontSize: '32px'
-  },
-  body: {
-    textAlign: 'left',
-    color: color.black
-  }
-};
-
 export default class NameFailureDialog extends React.Component {
   static propTypes = {
     flaggedText: PropTypes.string,
@@ -48,3 +37,14 @@ export default class NameFailureDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  title: {
+    textAlign: 'left',
+    fontSize: '32px'
+  },
+  body: {
+    textAlign: 'left',
+    color: color.black
+  }
+};

@@ -438,7 +438,7 @@ export class WorkshopForm extends React.Component {
                   <p>
                     <strong>
                       This functionality is disabled for all academic year
-                      workshops and virtual CSF workshops.
+                      workshops.
                     </strong>
                   </p>
                   <p>
@@ -453,7 +453,6 @@ export class WorkshopForm extends React.Component {
                 value={this.state.suppress_email || false}
                 readOnly={
                   this.props.readOnly ||
-                  this.state.virtual ||
                   MustSuppressEmailSubjects.includes(this.state.subject)
                 }
               />
@@ -579,7 +578,7 @@ export class WorkshopForm extends React.Component {
   }
 
   getInputStyle() {
-    return this.props.readOnly && styles.readOnlyInput;
+    return (this.props.readOnly && styles.readOnlyInput) || null;
   }
 
   handleErrorClick = i => {
@@ -689,16 +688,12 @@ export class WorkshopForm extends React.Component {
   };
 
   handleVirtualChange = event => {
-    // This field gets its own handler both so we can coerce its value to
-    // boolean, and so we can enforce some business logic that says:
-    // Virtual workshops ALWAYS suppress email.
+    // This field gets its own handler so we can coerce its value to boolean
     const value = event.target.value;
     const virtual = virtualWorkshopTypes.includes(value);
-    const suppress_email = virtual || this.state.suppress_email;
 
     this.setState({
       virtual,
-      suppress_email,
       third_party_provider: thirdPartyProviders.includes(value) ? value : null
     });
   };
@@ -750,8 +745,7 @@ export class WorkshopForm extends React.Component {
 
     if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
-        virtual: true,
-        suppress_email: true
+        virtual: true
       });
     }
 
