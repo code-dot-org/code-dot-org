@@ -582,7 +582,7 @@ function isColumnReadOnly(state, column) {
     state.metadata.fields.find(field => {
       return field.id === column;
     }).type;
-  return metadataColumnType;
+  return !!metadataColumnType;
 }
 
 export function getSelectedColumns(state) {

@@ -129,20 +129,25 @@ class ColumnInspector extends Component {
                 <div>
                   <label>
                     <div>Data Type:</div>
-                    <select
-                      onChange={event =>
-                        this.handleChangeDataType(event, currentColumnData.id)
-                      }
-                      value={currentColumnData.dataType}
-                    >
-                      {Object.values(ColumnTypes).map((option, index) => {
-                        return (
-                          <option key={index} value={option}>
-                            {option}
-                          </option>
-                        );
-                      })}
-                    </select>
+                    {currentColumnData.readOnly && (
+                      <div> {currentColumnData.dataType} </div>
+                    )}
+                    {!currentColumnData.readOnly && (
+                      <select
+                        onChange={event =>
+                          this.handleChangeDataType(event, currentColumnData.id)
+                        }
+                        value={currentColumnData.dataType}
+                      >
+                        {Object.values(ColumnTypes).map((option, index) => {
+                          return (
+                            <option key={index} value={option}>
+                              {option}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    )}
                     {currentColumnData.description && (
                       <div>
                         <br />
