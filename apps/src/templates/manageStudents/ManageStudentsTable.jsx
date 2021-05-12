@@ -45,6 +45,7 @@ import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import SafeMarkdown from '../SafeMarkdown';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -105,6 +106,30 @@ export const sortRows = (data, columnIndexList, orderList) => {
   newStudentRows = orderBy(newStudentRows, columnIndexList, orderList);
   studentRows = orderBy(studentRows, columnIndexList, orderList);
   return addRows.concat(newStudentRows).concat(studentRows);
+};
+
+// SafeMarkedown required to convert i18n string to clickable link
+const ManageStudentsNotificationFull = ({manageStatus}) => (
+  <Notification
+    type={NotificationType.failure}
+    notice={i18n.manageStudentsNotificationCannotVerb({
+      numStudents: manageStatus.numStudents,
+      verb: manageStatus.verb || 'add'
+    })}
+    details={
+      <SafeMarkdown
+        markdown={i18n.manageStudentsNotificationAtCapacity({
+          sectionCapacity: manageStatus.sectionCapacity,
+          supportLink: 'https://support.code.org/hc/en-us/requests/new'
+        })}
+      />
+    }
+    dismissible={false}
+  />
+);
+
+ManageStudentsNotificationFull.propTypes = {
+  manageStatus: PropTypes.object.isRequired
 };
 
 class ManageStudentsTable extends Component {
@@ -674,6 +699,12 @@ class ManageStudentsTable extends Component {
             })}
             dismissible={false}
           />
+        )}
+        {addStatus.status === AddStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={addStatus} />
+        )}
+        {transferStatus.status === TransferStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={transferStatus} />
         )}
         {addStatus.status === AddStatus.FAIL && (
           <Notification
