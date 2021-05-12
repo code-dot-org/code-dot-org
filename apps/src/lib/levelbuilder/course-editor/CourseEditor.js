@@ -61,6 +61,7 @@ class CourseEditor extends Component {
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
       visible: this.props.initialVisible,
+      isStable: this.props.isStable,
       pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: teacherResources
     };
