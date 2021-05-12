@@ -943,12 +943,12 @@ class LessonTest < ActiveSupport::TestCase
 
       @original_script = create :script, is_migrated: true
       @original_script.expects(:write_script_json).never
-      @original_course_version = create :course_version, content_root: @original_script
+      @original_course_version = create :course_version, content_root: @original_script, version_year: 2021
       @original_lesson_group = create :lesson_group, script: @original_script
       @original_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_script, has_lesson_plan: true
 
       @destination_script = create :script, is_migrated: true
-      @destination_course_version = create :course_version, content_root: @destination_script
+      @destination_course_version = create :course_version, content_root: @destination_script, version_year: 2021
       @destination_lesson_group = create :lesson_group, script: @destination_script
     end
 

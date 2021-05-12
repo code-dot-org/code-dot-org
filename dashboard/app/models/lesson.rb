@@ -723,10 +723,17 @@ class Lesson < ApplicationRecord
     resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
+  # Makes a copy of original_lesson and adds it to the end last lesson group
+  # in destination_script. It does not clone levels.
+  # Both destination_script and the script original_lesson in must:
+  # - be migrated
+  # - be in a course version
+  # - be in course versions from the same version year
   def self.copy_to_script(original_lesson, destination_script)
     return if original_lesson.script == destination_script
     raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
-    raise 'Destination script must be in a course version' if destination_script.get_course_version.nil?
+    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || original_lesson.script.get_course_version.nil?
+    raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == original_lesson.script.get_course_version.version_year
 
     ActiveRecord::Base.transaction do
       copied_lesson = original_lesson.dup
@@ -735,13 +742,8 @@ class Lesson < ApplicationRecord
       copied_lesson.lesson_group_id = destination_script.lesson_groups.last.id
 
       copied_lesson.absolute_position = destination_script.lessons.count + 1
-      numbered_lesson = copied_lesson.has_lesson_plan || !copied_lesson.lockable
       copied_lesson.relative_position =
-        if numbered_lesson
-          destination_script.lessons.select {|l| l.has_lesson_plan || !l.lockable}.length + 1
-        else
-          destination_script.lessons.select {|l| !l.has_lesson_plan && l.lockable}.length + 1
-        end
+        destination_script.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
 
       copied_lesson.save!
 
