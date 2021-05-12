@@ -40,7 +40,7 @@ const style = {
     margin: '0, 0, 0, 4px',
     padding: 0,
     height: 20,
-    width: 10,
+    width: 13,
     backgroundColor: 'transparent',
     border: 'none',
     ':hover': {
