@@ -34,10 +34,12 @@ function getInstructionsDefaults() {
     trainModel: 'Your model is being trained.',
     modelTraining:
       'Your model is undergoing training.  Notice how we do one row at a time!',
-    modelTraining2: 'You can press Continue any time you like to continue...',
     results: 'Review the results.',
     saveModel: 'Save the trained model for use in App Lab.',
-    trainingSettings: 'Adjust column types here if you want.'
+    trainingSettings: 'Adjust column types here if you want.',
+    modelSummary:
+      "You've successfully trained and saved your model. Review your model \
+      details and click Finish to use your trained model in App Lab."
   };
 
   return instructions;
