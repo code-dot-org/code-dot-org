@@ -1630,6 +1630,7 @@
   "sectionsNotificationFailure": "Couldn't join section",
   "sectionsNotificationJoinExists": "You have already joined section {sectionName}.",
   "sectionsNotificationJoinFail": "An error occurred attempting to join section {sectionId}.",
+  "sectionsNotificationJoinFull": "We couldn't add you to section {sectionId} because there are already {sectionCapacity} students in it. Please contact your teacher for help.",
   "sectionsNotificationJoinNotFound": "Section {sectionId} doesn't exist.",
   "sectionsNotificationJoinSuccess": "You joined section {sectionName}.",
   "sectionsNotificationJoinRestricted": "We couldn't add you to section {sectionId} because it is locked. Please contact your teacher for help.",
