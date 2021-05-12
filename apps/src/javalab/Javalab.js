@@ -11,7 +11,7 @@ import javalab, {
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import JavabuilderConnection from './javabuilderConnection';
+import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
