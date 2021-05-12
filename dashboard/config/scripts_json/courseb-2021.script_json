@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-05-05 18:19:54 UTC",
+    "serialized_at": "2021-05-11 20:00:59 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -6913,6 +6913,18 @@
       }
     },
     {
+      "name": "Play Lab Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
+      "key": "play_lab_project_planning_guide_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "play_lab_project_planning_guide_1"
+      }
+    },
+    {
       "name": "Stevie and the Big Project",
       "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
       "key": "stevie_and_the_big_project",
@@ -7317,6 +7329,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "play_lab_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "play_lab_project_planning_guide_1"
       }
     }
   ],
