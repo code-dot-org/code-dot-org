@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
@@ -14,6 +13,7 @@ import ResourceType, {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
+import CourseVersionPublishedStateSelector from '@cdo/apps/lib/levelbuilder/CourseVersionPublishedStateSelector';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -225,29 +225,17 @@ class CourseEditor extends Component {
               ))}
             </select>
           </label>
-          <VisibleAndPilotExperiment
+          {/*Since this is still saved the old way probably need a way to give that information*/}
+          <CourseVersionPublishedStateSelector
             visible={this.state.visible}
-            updateVisible={() => this.setState({visible: !this.state.visible})}
+            isStable={this.state.isStable}
             pilotExperiment={this.state.pilotExperiment}
+            updateVisible={visible => this.setState({visible})}
+            updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
-            paramName="visible"
           />
-          <label>
-            Can be recommended (aka stable)
-            <input
-              name="is_stable"
-              type="checkbox"
-              defaultChecked={this.props.isStable}
-              style={styles.checkbox}
-            />
-            <p>
-              If checked, this course will be eligible to be the recommended
-              version of the course. The most recent eligible version will be
-              the recommended version.
-            </p>
-          </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Resources Dropdowns">
