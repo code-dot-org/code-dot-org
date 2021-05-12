@@ -43,7 +43,8 @@ const ALREADY_OWNED = {
 const AT_CAPACITY = {
   action: 'join',
   result: 'section_full',
-  id: 'ABCDEF'
+  id: 'ABCDEF',
+  sectionCapacity: 500
 };
 
 describe('JoinSectionNotifications', () => {
@@ -81,6 +82,7 @@ describe('JoinSectionNotifications', () => {
 
   it('renders correct component when section is at capacity (already has 500 students)', () => {
     let wrapper = shallow(<JoinSectionNotifications {...AT_CAPACITY} />);
+    console.log(wrapper.debug());
     expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(1);
   });
 });
