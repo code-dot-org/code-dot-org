@@ -3,7 +3,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
-import {TestResults} from '@cdo/apps/constants';
 import {
   activityCssClass,
   resultFromStatus
@@ -108,6 +107,10 @@ export function getIconForLevel(level, inProgressView = false) {
     return 'scissors';
   }
 
+  if (level.isLocked) {
+    return 'lock';
+  }
+
   if (level.icon) {
     // Eventually I'd like to have dashboard return an icon type. For now, I'm just
     // going to treat the css class it sends as a type, and map it to an icon name.
@@ -162,8 +165,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     LevelStatus.perfect,
     LevelStatus.submitted,
     LevelStatus.free_play_complete,
-    LevelStatus.completed_assessment,
-    LevelStatus.readonly
+    LevelStatus.completed_assessment
   ];
 
   let attempted = 0;
@@ -263,17 +265,28 @@ export const processedLevel = level => {
 };
 
 export const getLevelResult = serverProgress => {
-  if (serverProgress.status === LevelStatus.locked) {
-    return TestResults.LOCKED_RESULT;
-  }
-  if (serverProgress.readonly_answers) {
-    return TestResults.READONLY_SUBMISSION_RESULT;
-  }
-  if (serverProgress.submitted) {
-    return TestResults.SUBMITTED_RESULT;
-  }
-
   return serverProgress.result || resultFromStatus(serverProgress.status);
+};
+
+/**
+ * `studentLevelProgressType.pages` is used by multi-page assessments,
+ * and its presence (or absence) is how we distinguish those from single-page
+ * assessments. `pages_completed` is an optional array of individual results
+ * for each page (or null). Since we only have the results for the pages, we
+ * need to create a `studentLevelProgressType` object from the results then
+ * set the `locked` value from the parent progress.
+ */
+const getPagesProgress = serverProgress => {
+  if (serverProgress.pages_completed?.length > 1) {
+    return serverProgress.pages_completed.map(pageResult => {
+      const pageProgress =
+        (pageResult && levelProgressFromResult(pageResult)) ||
+        levelProgressFromStatus(LevelStatus.not_tried);
+      pageProgress.locked = serverProgress.locked || false;
+      return pageProgress;
+    });
+  }
+  return null;
 };
 
 /**
@@ -287,20 +300,11 @@ export const levelProgressFromServer = serverProgress => {
   return {
     status: serverProgress.status || LevelStatus.not_tried,
     result: getLevelResult(serverProgress),
+    locked: serverProgress.locked || false,
     paired: serverProgress.paired || false,
     timeSpent: serverProgress.time_spent,
     lastTimestamp: serverProgress.last_progress_at,
-    // `pages` is used by multi-page assessments, and its presence
-    // (or absence) is how we distinguish those from single-page assessments
-    pages:
-      serverProgress.pages_completed &&
-      serverProgress.pages_completed.length > 1
-        ? serverProgress.pages_completed.map(
-            pageResult =>
-              (pageResult && levelProgressFromResult(pageResult)) ||
-              levelProgressFromStatus(LevelStatus.not_tried)
-          )
-        : null
+    pages: getPagesProgress(serverProgress)
   };
 };
 

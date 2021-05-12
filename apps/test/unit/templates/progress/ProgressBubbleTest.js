@@ -87,16 +87,6 @@ describe('ProgressBubble', () => {
     assert.equal(div.props().style.backgroundColor, color.level_submitted);
   });
 
-  it('has a white background when we are disabled', () => {
-    const wrapper = shallow(
-      <ProgressBubble {...defaultProps} disabled={true} />
-    );
-
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_not_tried);
-  });
-
   it('has green border and white background for in progress level', () => {
     const wrapper = shallow(
       <ProgressBubble

@@ -9,51 +9,6 @@ import {getResponsiveValue} from './responsive';
 import Image from './image';
 import LazyLoad from 'react-lazy-load';
 
-const styles = {
-  tutorialOuter: {
-    float: 'left',
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 7,
-    paddingRight: 7,
-    cursor: 'pointer'
-  },
-  tutorialImageContainer: {
-    position: 'relative',
-    width: '100%',
-    height: 0,
-    paddingTop: '75%'
-  },
-  tutorialImageBackground: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    backgroundColor: '#f1f1f1',
-    border: 'solid 1px #cecece'
-  },
-  tutorialImage: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%'
-  },
-  tutorialName: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 15,
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden'
-  },
-  tutorialSub: {
-    fontFamily: '"Gotham 3r", sans-serif',
-    fontSize: 12,
-    lineHeight: '16px',
-    height: 40
-  }
-};
-
 export default class Tutorial extends React.Component {
   static propTypes = {
     item: shapes.tutorial.isRequired,
@@ -99,3 +54,48 @@ export default class Tutorial extends React.Component {
     );
   }
 }
+
+const styles = {
+  tutorialOuter: {
+    float: 'left',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 7,
+    paddingRight: 7,
+    cursor: 'pointer'
+  },
+  tutorialImageContainer: {
+    position: 'relative',
+    width: '100%',
+    height: 0,
+    paddingTop: '75%'
+  },
+  tutorialImageBackground: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    backgroundColor: '#f1f1f1',
+    border: 'solid 1px #cecece'
+  },
+  tutorialImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%'
+  },
+  tutorialName: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
+  },
+  tutorialSub: {
+    fontFamily: '"Gotham 3r", sans-serif',
+    fontSize: 12,
+    lineHeight: '16px',
+    height: 40
+  }
+};

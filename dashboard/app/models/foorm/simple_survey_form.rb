@@ -22,4 +22,15 @@ class Foorm::SimpleSurveyForm < ApplicationRecord
     'survey_data',
     'allow_multiple_submissions'
   ]
+
+  validates :path, presence: true, format: {with: /\A[a-z0-9_]+\z/}
+
+  def self.find_most_recent_form_for_path(path)
+    where(path: path).last
+  end
+
+  def self.form_path_disabled?(path)
+    disabled_forms = DCDO.get('foorm_simple_survey_disabled', [])
+    disabled_forms && disabled_forms.include?(path)
+  end
 end

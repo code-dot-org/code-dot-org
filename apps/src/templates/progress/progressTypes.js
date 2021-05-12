@@ -80,6 +80,8 @@ export const levelWithProgressType = PropTypes.shape({
  * A numerical enum of the TestResult a student received for a level.
  * See src/constants.TestResult.
  * See src/code-studio/activityUtils.activityCssClass for a mapping to status.
+ * @property {bool} locked
+ * A boolean indicating if the level is locked for the student.
  * @property {bool} paired
  * A boolean indicating if a student was paired on a level.
  * @property {number} timeSpent
@@ -93,6 +95,7 @@ export const levelWithProgressType = PropTypes.shape({
 const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
+  locked: PropTypes.bool.isRequired,
   paired: PropTypes.bool.isRequired,
   timeSpent: PropTypes.number,
   lastTimestamp: PropTypes.number

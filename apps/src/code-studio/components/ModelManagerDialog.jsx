@@ -9,42 +9,6 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const DEFAULT_MARGIN = 7;
 
-const styles = {
-  dialog: {
-    padding: '0 15px',
-    cursor: 'default'
-  },
-  left: {
-    float: 'left',
-    width: '40%',
-    padding: 20,
-    boxSizing: 'border-box'
-  },
-  right: {
-    float: 'left',
-    width: '60%',
-    padding: 20,
-    boxSizing: 'border-box'
-  },
-  header: {
-    textAlign: 'center',
-    fontSize: 24,
-    marginTop: 20
-  },
-  message: {
-    color: color.dark_charcoal,
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    overflow: 'hidden',
-    lineHeight: '15px',
-    whiteSpace: 'pre-wrap'
-  },
-  spinner: {
-    height: 'calc(80vh - 140px)',
-    color: color.dark_charcoal
-  }
-};
-
 export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -155,7 +119,7 @@ export default class ModelManagerDialog extends React.Component {
       this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
     return (
-      <div>
+      <div className="ml-modal">
         <BaseDialog
           isOpen={isOpen}
           handleClose={this.closeModelManager}
@@ -254,3 +218,39 @@ export default class ModelManagerDialog extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: '0 15px',
+    cursor: 'default'
+  },
+  left: {
+    float: 'left',
+    width: '40%',
+    padding: 20,
+    boxSizing: 'border-box'
+  },
+  right: {
+    float: 'left',
+    width: '60%',
+    padding: 20,
+    boxSizing: 'border-box'
+  },
+  header: {
+    textAlign: 'center',
+    fontSize: 24,
+    marginTop: 20
+  },
+  message: {
+    color: color.dark_charcoal,
+    textAlign: 'left',
+    margin: DEFAULT_MARGIN,
+    overflow: 'hidden',
+    lineHeight: '15px',
+    whiteSpace: 'pre-wrap'
+  },
+  spinner: {
+    height: 'calc(80vh - 140px)',
+    color: color.dark_charcoal
+  }
+};
