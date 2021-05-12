@@ -62,7 +62,7 @@ class CourseEditor extends Component {
       announcements: this.props.initialAnnouncements,
       visible: this.props.initialVisible,
       isStable: this.props.isStable,
-      pilotExperiment: this.props.initialPilotExperiment,
+      pilotExperiment: this.props.initialPilotExperiment || '',
       teacherResources: teacherResources
     };
   }
@@ -85,6 +85,8 @@ class CourseEditor extends Component {
       versionYearOptions
     } = this.props;
     const {announcements, teacherResources} = this.state;
+
+    console.log(this.state.visible);
     return (
       <div>
         <h1>{name}</h1>
@@ -226,7 +228,6 @@ class CourseEditor extends Component {
               ))}
             </select>
           </label>
-          {/*Since this is still saved the old way probably need a way to give that information*/}
           <CourseVersionPublishedStateSelector
             visible={this.state.visible}
             isStable={this.state.isStable}
@@ -236,6 +237,13 @@ class CourseEditor extends Component {
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
+          />
+          <input name="visible" type="hidden" value={this.state.visible} />
+          <input name="is_stable" type="hidden" value={this.state.isStable} />
+          <input
+            name="pilot_experiment"
+            type="hidden"
+            value={this.state.pilotExperiment}
           />
         </CollapsibleEditorSection>
 

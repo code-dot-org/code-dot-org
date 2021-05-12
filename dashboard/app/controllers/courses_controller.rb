@@ -98,7 +98,8 @@ class CoursesController < ApplicationController
       unit_group.student_resources = params[:studentResourceIds].split(',').reject(&:empty?).map {|id| Resource.find(id.to_i)} if params.key?(:studentResourceIds)
     end
     # Convert checkbox values from a string ("on") to a boolean.
-    [:has_verified_resources, :has_numbered_units, :visible, :is_stable].each {|key| params[key] = !!params[key]}
+    [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
+    [:visible, :is_stable].each {|key| params[key] = params[key].to_bool}
     unit_group.update(course_params)
     redirect_to course_path(unit_group)
   end

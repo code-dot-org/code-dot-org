@@ -210,6 +210,7 @@ class UnitGroup < ApplicationRecord
         ugu.position = index + 1
       end
       unit_group_unit.update!(position: index + 1)
+      unit_group_unit.script.update!(hidden: !visible, is_stable: is_stable, pilot_experiment: pilot_experiment)
     end
 
     alternate_scripts.each do |hash|
