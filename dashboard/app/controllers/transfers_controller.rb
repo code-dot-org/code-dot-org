@@ -1,3 +1,5 @@
+require 'cdo/firehose'
+
 class TransfersController < ApplicationController
   before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
@@ -7,9 +9,25 @@ class TransfersController < ApplicationController
     new_section = Section.find_by_code(params[:new_section_code])
 
     if new_section.will_be_over_capacity?(params[:student_ids].size)
+
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'section capacity restriction',
+          event: "Section owner attempted to #{params[:stay_enrolled_in_current_section] ? 'copy' : 'move'} #{params[:student_ids].size > 1 ? 'multiple students' : 'a student'} to a full section",
+          data_json: {
+            section_id: new_section.id,
+            section_code: new_section.code,
+            date: "#{Time.now.month}/#{Time.now.day}/#{Time.now.year} at #{Time.now.hour}:#{Time.now.min}",
+            joiner_id: params[:student_ids],
+            section_teacher_id: new_section.user_id
+          }.to_json
+        }
+      )
+
       render json: {
         result: 'full',
-        verb: 'move',
+        verb: params[:stay_enrolled_in_current_section] ? 'copy' : 'move',
         sectionCapacity: new_section.capacity
       }, status: :forbidden
       return
