@@ -653,9 +653,9 @@ class ScriptEditor extends React.Component {
                 {this.state.familyName && !this.props.hasCourse && (
                   <HelpTip>
                     <p>
-                      (Still in development) If checked, indicates that this
-                      Unit represents a standalone course. Examples of such
-                      Units include CourseA-F, Express, and Pre-Express.
+                      If checked, indicates that this Unit represents a
+                      standalone course. Examples of such Units include
+                      CourseA-F, Express, and Pre-Express.
                     </p>
                   </HelpTip>
                 )}
