@@ -311,10 +311,6 @@ module ScriptConstants
     CSD5 = "csd5".freeze,
     CSD6 = "csd6".freeze,
 
-    # AIML
-    AIML = "aiml".freeze,
-
-    # Testing
     TEST = 'ui-test-versioned-script'.freeze
   ].freeze
 
