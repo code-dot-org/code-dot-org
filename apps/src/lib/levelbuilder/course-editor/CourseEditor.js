@@ -85,8 +85,6 @@ class CourseEditor extends Component {
       versionYearOptions
     } = this.props;
     const {announcements, teacherResources} = this.state;
-
-    console.log(this.state.visible);
     return (
       <div>
         <h1>{name}</h1>
