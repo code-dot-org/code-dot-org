@@ -714,6 +714,7 @@ class ScriptLevel < ApplicationRecord
 
     levels << new_level
     update!(
+      level_keys: levels.map(&:key),
       variants: {
         existing_level.name => {"active" => false}
       }
