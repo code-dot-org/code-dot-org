@@ -1,0 +1,8 @@
+- if @workshop.virtual?
+  %p
+    If you have any accessibility needs, please contact the workshop organizer to discuss appropriate accommodation plans and to answer any of your questions. You can reach them at
+    = mail_to(@workshop.organizer.email) + '.'
+- else
+  %p
+    If you have any accessibility needs or food allergies, please contact the workshop organizer to discuss appropriate accommodation plans and to answer any of your questions. You can reach them at
+    = mail_to(@workshop.organizer.email) + '.'

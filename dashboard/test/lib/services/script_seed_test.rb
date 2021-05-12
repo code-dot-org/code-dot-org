@@ -776,6 +776,26 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed deletes all lesson programming expressions' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.lessons.each do |lesson|
+          lesson.programming_expressions = []
+          assert_equal 0, lesson.programming_expressions.count
+        end
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsProgrammingExpression'] = 0
+      assert_equal expected_counts, get_counts
+    end
+
     test 'seed can only find programming expression if programming environment matches' do
       script = create_script_tree(num_lessons_per_group: 1)
       json = ScriptSeed.serialize_seeding_json(script)

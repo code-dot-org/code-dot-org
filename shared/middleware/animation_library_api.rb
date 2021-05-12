@@ -56,6 +56,22 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # POST /api/v1/animation-library/spritelab/<category>/<filename>
+  # Create Sprite in SpriteLab animations folder in the specified category
+  #
+  post %r{/api/v1/animation-library/spritelab/([^/]+)/(.+)} do |category, animation_name|
+    dont_cache
+    if request.content_type == 'image/png'
+      body = request.body
+      key = "spritelab/#{category}/#{animation_name}"
+
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+    else
+      bad_request
+    end
+  end
+
+  #
   # GET /api/v1/animation-library/(spritelab|gamelab)/<version-id>/<filename>
   #
   # Retrieve a file from the animation library for the given app type
