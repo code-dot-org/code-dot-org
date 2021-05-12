@@ -55,6 +55,7 @@ const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_K_VALUE = "SET_K_VALUE";
+const SET_INSTRUCTIONS_DISMISSED = "SET_INSTRUCTIONS_DISMISSED";
 
 // Action creators
 export function setMode(mode) {
@@ -202,6 +203,10 @@ export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
 }
 
+export function setInstructionsDismissed() {
+  return { type: SET_INSTRUCTIONS_DISMISSED };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -233,7 +238,8 @@ const initialState = {
   saveStatus: undefined,
   columnRefs: {},
   kValue: null,
-  viewedPanels: []
+  viewedPanels: [],
+  instructionsOverlayActive: false
 };
 
 // Reducer
@@ -434,6 +440,7 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
+    let showedOverlay = false;
     if (state.instructionsKeyCallback) {
       const options = {};
       if (
@@ -442,6 +449,7 @@ export default function rootReducer(state = initialState, action) {
       ) {
         options.showOverlay = true;
         state.viewedPanels.push(action.currentPanel);
+        showedOverlay = true;
       }
       state.instructionsKeyCallback(action.currentPanel, options);
     }
@@ -450,6 +458,7 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         currentColumn: undefined,
         selectedFeatures: []
       };
@@ -459,6 +468,7 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         testData: {},
         prediction: {}
       };
@@ -467,6 +477,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       currentPanel: action.currentPanel,
+      instructionsOverlayActive: showedOverlay,
       currentColumn: undefined
     };
   }
@@ -535,6 +546,12 @@ export default function rootReducer(state = initialState, action) {
       ...state,
       kValue: action.kValue
     };
+  }
+  if (action.type === SET_INSTRUCTIONS_DISMISSED) {
+    return {
+      ...state,
+      instructionsOverlayActive: false
+    }
   }
   return state;
 }

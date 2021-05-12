@@ -1,5 +1,5 @@
 import "./assetPath";
-import { initAll } from "./index";
+import { initAll, instructionsDismissed } from "./index";
 import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.
@@ -78,8 +78,11 @@ function saveTrainedModelStub(data, response) {
 }
 
 function setInstructionsKeyStub(instructionsKey, options) {
-  document.getElementById("instructions").innerText =
+  const element = document.getElementById("instructions");
+
+  element.innerText =
     instructionsKey + (!options.showOverlay ? " (no overlay)" : "");
+  element.onclick = instructionsDismissed;
 }
 
 // Initialize the app.
