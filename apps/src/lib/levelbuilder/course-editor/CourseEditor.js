@@ -20,10 +20,10 @@ class CourseEditor extends Component {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     versionTitle: PropTypes.string,
-    familyName: PropTypes.string,
-    versionYear: PropTypes.string,
+    initialFamilyName: PropTypes.string,
+    initialVersionYear: PropTypes.string,
     initialVisible: PropTypes.bool.isRequired,
-    isStable: PropTypes.bool.isRequired,
+    initialIsStable: PropTypes.bool.isRequired,
     initialPilotExperiment: PropTypes.string,
     descriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
@@ -61,11 +61,11 @@ class CourseEditor extends Component {
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
       visible: this.props.initialVisible,
-      isStable: this.props.isStable,
+      isStable: this.props.initialIsStable,
       pilotExperiment: this.props.initialPilotExperiment || '',
       teacherResources: teacherResources,
-      familyName: this.props.familyName,
-      versionYear: this.props.versionYear
+      familyName: this.props.initialFamilyName,
+      versionYear: this.props.initialVersionYear
     };
   }
 

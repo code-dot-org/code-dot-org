@@ -127,8 +127,8 @@ export default class CourseVersionPublishingEditor extends Component {
               <tr>
                 <td style={styles.tableBorder}>Pilot</td>
                 <td style={styles.tableBorder}>
-                  Pilot is where a limited set of teachers who are in a pilot
-                  experiment can see and assign the course.
+                  A limited set of teachers who are in a pilot experiment can
+                  see and assign the course.
                 </td>
               </tr>
               <tr>
@@ -148,8 +148,8 @@ export default class CourseVersionPublishingEditor extends Component {
               <tr>
                 <td style={styles.tableBorder}>Recommended</td>
                 <td style={styles.tableBorder}>
-                  The course is now the recommended course. It is assignable and
-                  we try to get teachers to use this course
+                  The course is the recommended course. It is assignable and we
+                  try to get teachers to use this course.
                 </td>
               </tr>
             </table>

@@ -16,10 +16,10 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 const defaultProps = {
   name: 'csp',
   title: 'Computer Science Principles 2017',
-  familyName: 'CSP',
-  versionYear: '2017',
+  initialFamilyName: 'CSP',
+  initialVersionYear: '2017',
   initialVisible: false,
-  isStable: false,
+  initialIsStable: false,
   descriptionShort: 'Desc here',
   initialDescriptionStudent:
     '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
