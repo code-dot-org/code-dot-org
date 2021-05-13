@@ -27,6 +27,7 @@ Scenario: New workshop: CSF intro
   # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
   # and cause the eyes check to fail.
   And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
+  And I focus selector "select#facilitator0"
 
   And I see no difference for "new workshop details: CSF"
 
@@ -65,6 +66,7 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
   # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
   # and cause the eyes check to fail.
   And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
+  And I focus selector "select#facilitator1"
 
   And I see no difference for "new workshop details: CSD"
 
@@ -99,6 +101,7 @@ Scenario: New workshop: CSP local summer with 1 facilitator
   # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
   # and cause the eyes check to fail.
   And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
+  And I focus selector "select#facilitator0"
 
   And I see no difference for "new workshop details: CSP"
 

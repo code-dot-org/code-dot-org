@@ -15,9 +15,10 @@
   },
   "game_id": 68,
   "published": true,
-  "created_at": "2021-03-16T23:33:13.000Z",
+  "created_at": "2021-03-04T21:05:57.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-05-05 00:41:48 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"}]"
 }]]></config>
 </Javalab>

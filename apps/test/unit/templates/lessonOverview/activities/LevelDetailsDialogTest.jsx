@@ -62,7 +62,7 @@ describe('LevelDetailsDialogTest', () => {
     levelLink.simulate('click');
     expect(firehoseClient.putRecord).to.have.been.calledOnce;
     firehoseClient.putRecord.yieldTo('callback');
-    expect(utils.windowOpen).to.have.been.calledWith('level.url');
+    expect(utils.windowOpen).to.have.been.calledWith('level.url?no_redirect=1');
 
     utils.windowOpen.restore();
     firehoseClient.putRecord.restore();

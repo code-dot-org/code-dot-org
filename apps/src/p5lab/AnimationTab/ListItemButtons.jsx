@@ -8,37 +8,6 @@ import SpeedSlider from '@cdo/apps/templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
 import DeleteAnimationDialog from './DeleteAnimationDialog';
 
-const styles = {
-  root: {
-    marginRight: 6,
-    marginLeft: 6,
-    marginTop: 6,
-    textAlign: 'center',
-    color: color.white,
-    fontSize: 24
-  },
-  icon: {
-    cursor: 'pointer',
-    float: 'left',
-    padding: 2,
-    borderWidth: 1,
-    borderRadius: 4,
-    borderStyle: 'solid',
-    borderColor: 'transparent'
-  },
-  trash: {
-    marginRight: 12
-  },
-  looping: {
-    marginRight: 10,
-    marginTop: 6
-  },
-  previewControls: {
-    height: 32,
-    display: 'inline-block'
-  }
-};
-
 const sliderStyle = {
   float: 'none',
   display: 'block'
@@ -129,5 +98,36 @@ class ListItemButtons extends React.Component {
     );
   }
 }
+
+const styles = {
+  root: {
+    marginRight: 6,
+    marginLeft: 6,
+    marginTop: 6,
+    textAlign: 'center',
+    color: color.white,
+    fontSize: 24
+  },
+  icon: {
+    cursor: 'pointer',
+    float: 'left',
+    padding: 2,
+    borderWidth: 1,
+    borderRadius: 4,
+    borderStyle: 'solid',
+    borderColor: 'transparent'
+  },
+  trash: {
+    marginRight: 12
+  },
+  looping: {
+    marginRight: 10,
+    marginTop: 6
+  },
+  previewControls: {
+    height: 32,
+    display: 'inline-block'
+  }
+};
 
 export default Radium(ListItemButtons);

@@ -6,12 +6,18 @@ import JavalabView from './JavalabView';
 import javalab, {
   getSources,
   setAllSources,
+  setIsDarkMode,
   appendOutputLog
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
+import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import Neighborhood from './Neighborhood';
+import MazeVisualization from '@cdo/apps/maze/Visualization';
+import DefaultVisualization from './DefaultVisualization';
+import {CsaViewMode} from './constants';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -50,6 +56,8 @@ Javalab.prototype.init = function(config) {
   this.skin = config.skin;
   this.level = config.level;
   this.channelId = config.channel;
+  // Pulls dark mode from user preferences
+  this.isDarkMode = !!config.usingDarkModePref;
 
   config.makeYourOwn = false;
   config.wireframeShare = true;
@@ -68,14 +76,28 @@ Javalab.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
 
   config.getCode = this.getCode.bind(this);
+  config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
+  let visualization;
+  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
+    const miniApp = new Neighborhood();
+    config.afterInject = () =>
+      miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+    visualization = <MazeVisualization />;
+  } else {
+    visualization = <DefaultVisualization />;
+  }
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
+    window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
+      this.studioApp_.resizeVisualization(e.detail);
+    });
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
@@ -84,6 +106,8 @@ Javalab.prototype.init = function(config) {
     bodyElement.style.overflow = 'hidden';
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
+    this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
@@ -93,14 +117,15 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+    config.afterInject?.();
   };
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
-    noVisualization: true,
-    visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
+    isEditingStartSources: !!config.level.editBlocks,
+    isResponsive: true
   });
 
   registerReducers({javalab});
@@ -123,6 +148,9 @@ Javalab.prototype.init = function(config) {
     getStore().dispatch(setAllSources(startSources));
   }
 
+  // Dispatches a redux update of isDarkMode
+  getStore().dispatch(setIsDarkMode(this.isDarkMode));
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <JavalabView
@@ -131,6 +159,8 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
+        handleVersionHistory={handleVersionHistory}
+        visualization={visualization}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -188,6 +218,11 @@ Javalab.prototype.onContinue = function() {
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
   return getSources(storeState);
+};
+
+Javalab.prototype.afterClearPuzzle = function() {
+  getStore().dispatch(setAllSources(this.level.startSources));
+  project.autosave();
 };
 
 Javalab.prototype.onCommitCode = function() {

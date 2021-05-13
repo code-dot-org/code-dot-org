@@ -102,6 +102,7 @@ class FollowersController < ApplicationController
     if @section&.restricted? && current_user && !Follower.find_by(section: @section, student_user: current_user)
       redirect_url = "#{root_url}join" # Keeps user on the join page.
       redirect_to redirect_url, inline_alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
+      return
     end
 
     # Redirect and provide an error for provider-managed sections.

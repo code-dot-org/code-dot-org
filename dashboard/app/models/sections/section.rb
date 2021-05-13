@@ -162,13 +162,21 @@ class Section < ApplicationRecord
   # @param student [User] The student to enroll in this section.
   # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
   #   already in the section or has now been added.
-  def add_student(student)
+  def add_student(student, added_by = nil)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
-    # Check for a restricted section that does not already have this follower enrolled (should exist and not be deleted)
-    return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
 
+    # If the section is restricted, return a restricted error unless a user is added by
+    # the teacher (Creating a Word or Picture login-based student) or is created via an
+    # OAUTH login section (Google Classroom / clever).
+    # added_by is passed only from the sections_students_controller, used by teachers to
+    # manager their rosters.
+    unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
+      return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+    end
+
+    follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
       if follower.deleted?
         follower.restore

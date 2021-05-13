@@ -15,30 +15,6 @@ import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
 import ProfessionalLearningApplyBanner from '../ProfessionalLearningApplyBanner';
 
-const styles = {
-  heading: {
-    marginTop: 20,
-    marginBottom: 0
-  },
-  description: {
-    marginTop: 10,
-    marginBottom: 20,
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    lineHeight: '1.5em'
-  },
-  mapFooter: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    fontSize: 20,
-    marginLeft: 25,
-    marginRight: 25
-  },
-
-  banner: {
-    marginBottom: 35
-  }
-};
-
 class YourSchool extends Component {
   static propTypes = {
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
@@ -177,6 +153,30 @@ class YourSchool extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    marginTop: 20,
+    marginBottom: 0
+  },
+  description: {
+    marginTop: 10,
+    marginBottom: 20,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    lineHeight: '1.5em'
+  },
+  mapFooter: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    fontSize: 20,
+    marginLeft: 25,
+    marginRight: 25
+  },
+
+  banner: {
+    marginBottom: 35
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

@@ -11,40 +11,6 @@ import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 import LessonEditorDialog from './LessonEditorDialog';
 
-const styles = {
-  dialog: {
-    width: 970,
-    marginLeft: -500
-  },
-  dialogContent: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  topArea: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 15
-  },
-  bottomArea: {
-    display: 'flex',
-    flexDirection: 'column',
-    margin: 15
-  },
-  textArea: {
-    width: '95%'
-  },
-  levelsBox: {
-    border: '1px solid black',
-    width: '95%',
-    height: '100%',
-    padding: 10
-  },
-  filtersAndLevels: {
-    display: 'flex',
-    flexDirection: 'column'
-  }
-};
-
 export default class AddLevelDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -112,3 +78,37 @@ export default class AddLevelDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    width: 970,
+    marginLeft: -500
+  },
+  dialogContent: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  topArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 15
+  },
+  bottomArea: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 15
+  },
+  textArea: {
+    width: '95%'
+  },
+  levelsBox: {
+    border: '1px solid black',
+    width: '95%',
+    height: '100%',
+    padding: 10
+  },
+  filtersAndLevels: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
+};

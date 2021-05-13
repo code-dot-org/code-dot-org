@@ -343,7 +343,9 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `{name: '${block.getTitleValue(arg.name)}'}`;
+      return `{name: '${Blockly.JavaScript.translateVarName(
+        block.getTitleValue(arg.name)
+      )}'}`;
     }
   },
   limitedColourPicker: {
