@@ -9,9 +9,15 @@ export default class CourseVersionPublishedStateSelector extends Component {
     visible: PropTypes.bool.isRequired,
     isStable: PropTypes.bool.isRequired,
     pilotExperiment: PropTypes.string,
+    versionYear: PropTypes.string,
+    familyName: PropTypes.string,
     updateVisible: PropTypes.func.isRequired,
     updateIsStable: PropTypes.func.isRequired,
-    updatePilotExperiment: PropTypes.func.isRequired
+    updatePilotExperiment: PropTypes.func.isRequired,
+    updateFamilyName: PropTypes.func.isRequired,
+    updateVersionYear: PropTypes.func.isRequired,
+    families: PropTypes.arrayOf(PropTypes.string).isRequired,
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   constructor(props) {
@@ -83,6 +89,44 @@ export default class CourseVersionPublishedStateSelector extends Component {
   render() {
     return (
       <div>
+        <label>
+          Family Name
+          <select
+            className="familyNameSelector"
+            value={this.props.familyName}
+            style={styles.dropdown}
+            onChange={this.props.updateFamilyName}
+          >
+            <option value="">(None)</option>
+            {this.props.families.map(familyOption => (
+              <option key={familyOption} value={familyOption}>
+                {familyOption}
+              </option>
+            ))}
+          </select>
+          <HelpTip>
+            <p>
+              The family name is used to group together courses that are
+              different version years of the same course so that users can be
+              redirected between different version years.
+            </p>
+          </HelpTip>
+        </label>
+        <label>
+          Version Year
+          <select
+            value={this.props.versionYear}
+            style={styles.dropdown}
+            onChange={this.props.updateVersionYear}
+          >
+            <option value="">(None)</option>
+            {this.props.versionYearOptions.map(year => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </label>
         <label>
           Published State
           <select
