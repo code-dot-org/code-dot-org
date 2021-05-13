@@ -705,4 +705,23 @@ class ScriptLevel < ApplicationRecord
     end
     self.levels = levels
   end
+
+  def add_variant(new_level)
+    raise "can only be used on migrated scripts" unless script.is_migrated
+    raise "expected 1 existing level but found: #{levels.map(&:key)}" unless levels.count == 1
+    raise "expected empty variants property but found #{variants}" if variants
+    raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
+    existing_level = levels.first
+
+    levels << new_level
+    update!(
+      level_keys: levels.map(&:key),
+      variants: {
+        existing_level.name => {"active" => false}
+      }
+    )
+    if Rails.application.config.levelbuilder_mode
+      script.write_script_json
+    end
+  end
 end
