@@ -148,18 +148,4 @@ describe('CourseEditor', () => {
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
-
-  describe('VisibleInTeacherDashboard', () => {
-    it('is unchecked when visible is false', () => {
-      const wrapper = createWrapper({});
-      const checkbox = wrapper.find('input[name="visible"]');
-      expect(checkbox.prop('checked')).to.be.false;
-    });
-
-    it('is checked when visible is true', () => {
-      const wrapper = createWrapper({initialVisible: true});
-      const checkbox = wrapper.find('input[name="visible"]');
-      expect(checkbox.prop('checked')).to.be.true;
-    });
-  });
 });
