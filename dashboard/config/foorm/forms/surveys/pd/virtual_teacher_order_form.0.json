@@ -43,16 +43,16 @@
         {
           "type": "checkbox",
           "name": "question5",
-          "title": "Course (select both if applicable)",
+          "title": "Course you're enrolled in for 2021-22 PD",
           "isRequired": true,
           "choices": [
             {
               "value": "item1",
-              "text": "CSD"
+              "text": "CS Discoveries"
             },
             {
               "value": "item2",
-              "text": "CSP"
+              "text": "CS Principles"
             }
           ]
         },
@@ -96,7 +96,7 @@
           "choices": [
             {
               "value": "item1",
-              "text": "yes"
+              "text": "Yes"
             }
           ]
         }
