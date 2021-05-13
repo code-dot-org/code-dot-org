@@ -80,6 +80,17 @@ export default class ResourcesEditor extends Component {
       ({type, link}) => link && type
     );
 
+    // If using migrated resources, we have to have a course version id
+    if (useMigratedResources && !this.props.courseVersionId) {
+      return (
+        <strong>
+          Cannot add resources to migrated script without course version. A
+          script must belong to a course or have 'Is a Standalone Course'
+          checked to have a course version.
+        </strong>
+      );
+    }
+
     // Resources contains maxResources entries. For the empty entries, we want to
     // show just one, so we slice to the lastNonEmpty +1 to get an empty entry
     // and +1 more because slice is exclusive.
