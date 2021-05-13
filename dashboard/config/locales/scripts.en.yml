@@ -19699,27 +19699,36 @@ en:
             Representation Matters:
               key: Representation Matters
               name: Representation Matters
-              description_student: "This first lesson provides an overview of what data is and how it is used to solve problems. Groups use a data set to make a series of meal recommendations for people with various criteria. Afterward, groups compare their responses and discuss how the different representations of the meal data affected how they were able to solve the different problems.\r\n"
-              description_teacher: "**Question of the Day: How does data affect decisions we make everyday?**\r\n\r\nIn the first lesson of the data unit, students get an overview of what data is and how it is used to solve problems. Students start off with a brief discussion to come to a common understanding of data. They then split into groups and use a data set to make a series of meal recommendations for people with various criteria. Each group has the choices of meal represented in a different way (pictures, recipes, menu, nutrition) that gives an advantage for one of the recommendations. Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.\r\n"
+              description_student: "**Question of the Day: How does data affect decisions we make every day?**\n\nIn this lesson, you will explore what data is and how it is used to solve problems. "
+              description_teacher: |
+                **Question of the Day: How does data affect decisions we make every day?**
+
+                In the first lesson of the data unit, students get an overview of what data is and how it is used to solve problems. Students start off with a brief discussion to come to a common understanding of data. They then split into groups and use a data set to make a series of meal recommendations for people with various criteria. Each group has the choices of meal represented in a different way (pictures, recipes, menu, nutrition) that gives an advantage for one of the recommendations. Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.
             Patterns and Representation:
               key: Patterns and Representation
               name: Patterns and Representation
-              description_student: "This lesson looks closer at what is needed to create a system of representation. Groups create systems that can represent any letter in the alphabet using only a single stack of cards. They then create messages with their systems and exchange with other groups to ensure the system worked as intended. Finally, the class discusses commonalities between working systems while recognizing that there are many possible working solutions.\r\n"
+              description_student: "**Question of the Day: How can we create a system for representing information?**\n\nIn this lesson, you will create a system to represent information by working with a group to create a system that can represent any letter in the alphabet using only a single stack of cards. "
               description_teacher: "**Question of the Day: How can we create a system for representing information?**\r\n\r\nIn this lesson students create their own system for representing information. They begin by brainstorming all the different systems they already use to represent yes-no responses. They then work in small groups to create a system that can represent any letter in the alphabet using only a single stack of cards. The cards used have one of 6 different possible drawings (6 animals, 6 colors, etc.) and so to represent the entire alphabet students will need to use patterns of multiple cards to represent each letter. Students create messages with their systems and exchange with other groups to ensure the system worked as intended. In the wrap-up discussion the class reviews any pros and cons of the different systems. They discuss commonalities between working systems and recognize that there are many possible solutions to this problem and what's important is that everyone uses the same arbitrary system to communicate.\r\n"
             ASCII and Binary Representation:
               key: ASCII and Binary Representation
               name: ASCII and Binary Representation
-              description_student: "This lesson introduces students to a formal binary system for encoding information: the ASCII system for representing letters and other characters. At the beginning of the lesson, the teacher introduces the fact that computers must represent information using either \"on\" or \"off.\" The class then learns about the ASCII system for representing text using binary symbols and practices using this system. Finally, they encode their own messages using ASCII.\r\n"
+              description_student: "**Question of the Day: What system do computers use to represent letters and words?**\n\nIn this lesson, you will be learning about binary and the ASCII system used for representing text. "
               description_teacher: "**Question of the Day: What system do computers use to represent letters and words?**\r\n \r\nIn this lesson students learn to use their first binary system for encoding information, the ASCII system for representing letters and other characters. At the beginning of the lesson the teacher introduces the fact that computers must represent information using either \"on\" or \"off\". Then students are introduced to the ASCII system for representing text using binary symbols. Students practice using this system before encoding their own message using ASCII. At the end of the lesson a debrief conversation helps synthesize the key learning objectives of the activity."
             Representing Images:
               key: Representing Images
               name: Representing Images
-              description_student: "This lesson continues the study of binary representation systems, this time with images. The class is introduced to the concept of splitting images into squares or \"pixels,\" which can then be turned on or off individually to make an entire image. After doing a short set of challenges using the Pixelation Widget, students make connections between the system for representing images and the ASCII system for representing text that they learned about in the previous lesson.\r\n"
+              description_student: |-
+                **Question of the Day: What system do computers use to represent images?**
+
+                In this lesson, you will continue exploring how you can create systems to represent information using binary, this time images!
               description_teacher: "**Question of the Day: What system do computers use to represent images?**\r\n\r\nIn this lesson students learn how computers represent images. To begin the lesson they consider the challenge of turning all the complexity of vision into a binary pattern. Through a series of images showing how this transformation is made students are introduced to the concept of splitting images into squares or \"pixels\" which can then be turned on or off individually to make the entire image. Students then do a short set of challenges using the Pixelation Widget in order to draw black and white images. Puzzles are designed to call out some of the challenges of representing images in this way. In the wrap up students make connections between the system for representing images and the system for representing text they learned in the previous lesson.\r\n"
             Representing Numbers:
               key: Representing Numbers
               name: Representing Numbers
-              description_student: This lesson introduces students to the binary number system. With a set of cards that represent the place values in a binary (base-2) number system, the class turns bits "on" or "off" by turning cards face up and face down, then observes the numbers that result from these different patterns. Eventually, the pattern is extended to a generic 4-bit system.
+              description_student: |-
+                **Question of the Day: What system do computers use to represent numbers?**
+
+                In this lesson, you will learn about the actual binary number system!
               description_teacher: "**Question of the Day: What system do computers use to represent numbers?**\r\n\r\nIn this lesson, students learn about the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system by a collection of dots, students turn bits \"on\" or \"off\" by turning cards face up and face down, then observe the numbers that result from these different patterns.  Eventually, students extend the pattern to a generic 4-bit system."
             Keeping Data Secret:
               key: Keeping Data Secret
@@ -19732,7 +19741,7 @@ en:
             Combining Representations:
               key: Combining Representations
               name: Combining Representations
-              description_student: "This lesson combines all three types of binary representation systems (ASCII characters, binary numbers, and images) to explore ways to encode more complex types of information in a record. After seeing a series of bits and being asked to decode them, students are introduced to the idea that understanding binary information requires an understanding of both the system that is being used, and the meaning of the information encoded.\r\n"
+              description_student: "**Question of the Day: How do computers tell the difference between binary codes for letters, numbers, or images?**\n\nIn this lesson, you'll combine ASCII, binary, and images to explore ways to encode more complex types of information. "
               description_teacher: "**Question of the Day: How do computers tell the difference between binary codes for letters, numbers, or images?**\r\n \r\nIn this lesson, students use all three types of binary representation systems (ASCII characters, binary number, and images) to decode information in a record. After seeing a series of bits and being asked to decode them, students are introduced to the idea that in order to understand binary information, they must understand both the system that is being used and the meaning of the information encoded. They then decode a record representing a pet based on a given structure.\r\n"
             Project - Create a Representation:
               key: Project - Create a Representation
@@ -22320,12 +22329,16 @@ en:
               name: Assessment Day
               description_student: You have completed your first unit, congratulations! Today you will take a multiple-choice assessment to evaluate your learning.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            lesson-21:
+              name: 'Test Lesson #1'
           lesson_groups:
             lessonGroup-2:
               display_name: Content
               description: Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Test
           name: csa1-pilot
           title: Object Oriented Programming
           description_audience: ''
