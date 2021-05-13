@@ -2,7 +2,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import CourseVersionPublishedStateSelector from '../../../../src/lib/levelbuilder/CourseVersionPublishedStateSelector';
+import CourseVersionPublishingEditor from '../../../../src/lib/levelbuilder/CourseVersionPublishingEditor';
 
 describe('CourseVersionPublishedStateSelector', () => {
   let defaultProps, updateVisible, updatePilotExperiment;
@@ -20,7 +20,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
   it('test', () => {
     const wrapper = shallow(
-      <CourseVersionPublishedStateSelector {...defaultProps} />
+      <CourseVersionPublishingEditor {...defaultProps} />
     );
     expect(wrapper.find('select').length).to.equal(1);
   });

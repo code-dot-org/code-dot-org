@@ -13,7 +13,7 @@ import ResourceType, {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
-import CourseVersionPublishedStateSelector from '@cdo/apps/lib/levelbuilder/CourseVersionPublishedStateSelector';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -194,7 +194,7 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
-          <CourseVersionPublishedStateSelector
+          <CourseVersionPublishingEditor
             visible={this.state.visible}
             isStable={this.state.isStable}
             pilotExperiment={this.state.pilotExperiment}
