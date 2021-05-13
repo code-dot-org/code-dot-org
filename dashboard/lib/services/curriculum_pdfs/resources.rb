@@ -34,7 +34,7 @@ module Services
           script.lessons.each do |lesson|
             ChatClient.log("Gathering resources for #{lesson.key.inspect}") if DEBUG
             lesson_pdfs = lesson.resources.map do |resource|
-              fetch_resource_pdf(resource, pdfs_dir) if resource.include_in_pdf
+              fetch_resource_pdf(resource, pdfs_dir) if resource.should_include_in_pdf?
             end.compact
 
             next if lesson_pdfs.empty?
