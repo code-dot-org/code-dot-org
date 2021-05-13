@@ -95,6 +95,16 @@ describe('ScriptEditor', () => {
   };
 
   describe('Script Editor', () => {
+    it('does not show publishing editor if hasCourse is true', () => {
+      const wrapper = createWrapper({initialHidden: false, hasCourse: true});
+      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 0);
+    });
+
+    it('shows publishing editor if hasCourse is false', () => {
+      const wrapper = createWrapper({initialHidden: false, hasCourse: false});
+      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+    });
+
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
