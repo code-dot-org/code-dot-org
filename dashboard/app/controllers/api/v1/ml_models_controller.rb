@@ -10,8 +10,11 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
     model_id = generate_id
+
+    return head :bad_request if params["ml_model"].nil? || params["ml_model"] == ""
+
     metadata = params["ml_model"].except(:trainedModel, :featureNumberKey)
-    @user_ml_model = UserMlModel.create!(
+    @user_ml_model = UserMlModel.create(
       user_id: current_user&.id,
       model_id: model_id,
       name: params["ml_model"]["name"],
