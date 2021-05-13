@@ -40,7 +40,10 @@ module.exports = {
       customValidator: function() {
         // Make sure pegman made it to the end, rather than ending as soon as
         // he tried to leave the path
-        return Maze.controller.pegmanX === 3 && Maze.controller.pegmanY === 1;
+        return (
+          Maze.controller.getPegmanX() === 3 &&
+          Maze.controller.getPegmanY() === 1
+        );
       },
       xml:
         '<xml>' +
