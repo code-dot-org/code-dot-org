@@ -288,6 +288,23 @@ module Services
       assert_equal 'foo', script.script_levels.first.challenge
     end
 
+    test 'seed updates levels_script_levels' do
+      script = create_script_tree
+      new_level = create :level
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        updated_script_level = script.script_levels.first
+        updated_script_level.add_variant(new_level)
+        assert_equal 2, script.script_levels.first.levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      assert_equal 2, script.script_levels.first.levels.count
+    end
+
     test 'seed updates lesson resources' do
       script = create_script_tree
       CourseOffering.add_course_offering(script)
@@ -615,6 +632,33 @@ module Services
       # Deleting the ScriptLevel should also delete its LevelsScriptLevel.
       expected_counts = original_counts.clone
       expected_counts['ScriptLevel'] -= 1
+      expected_counts['LevelsScriptLevel'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed deletes levels_script_levels' do
+      script = create_script_tree
+      old_level = script.script_levels.first.levels.first
+      new_level = create :level, level_num: 'custom'
+      script.script_levels.first.add_variant(new_level)
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script_level = script.script_levels.first
+        script_level.update!(
+          levels: [old_level],
+          level_keys: [old_level.key],
+          variants: nil
+        )
+        assert_equal 1, script_level.levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      assert_equal 1, script.script_levels.first.levels.count
+      expected_counts = original_counts.clone
       expected_counts['LevelsScriptLevel'] -= 1
       assert_equal expected_counts, get_counts
     end
@@ -960,9 +1004,9 @@ module Services
     def assert_script_levels_equal(script_levels1, script_levels2)
       script_levels1.zip(script_levels2).each do |sl1, sl2|
         assert_attributes_equal(sl1, sl2, ['script_id', 'stage_id', 'activity_section_id', 'properties'])
-        # level_names is generated during seeding
+        # level_keys is generated during seeding
         # TODO: should we use a callback or validation to verify that level_keys is always populated correctly?
-        assert_equal sl1.properties, sl2.properties.except('level_keys')
+        assert_equal sl1.properties.except('level_keys'), sl2.properties.except('level_keys')
         assert_equal sl1.levels, sl2.levels
       end
     end
