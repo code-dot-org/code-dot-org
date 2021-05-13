@@ -99,7 +99,7 @@ class CoursesController < ApplicationController
     end
     # Convert checkbox values from a string ("on") to a boolean.
     [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
-    [:visible, :is_stable].each {|key| params[key] = params[key].to_bool}
+    [:visible, :is_stable].each {|key| params[key] = params[key]&.to_bool}
     unit_group.update(course_params)
     unit_group.default_scripts.each do |script|
       script.update!(hidden: !course_params[:visible], is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment])
