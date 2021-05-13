@@ -28,17 +28,12 @@ export const styles = {
 
 export const ExpandMode = {
   NONE: 'none',
-  FIRST: 'first',
   ALL: 'all'
 };
 
 const expandModeShape = PropTypes.oneOf([
   // The component should not be expanded.
   ExpandMode.NONE,
-
-  // The component should be expanded. Its first child and the first child of
-  // each of its descendants should also be expanded.
-  ExpandMode.FIRST,
 
   // This component and all its descendants should be expanded.
   ExpandMode.ALL
@@ -55,8 +50,6 @@ function getChildExpandMode(parentExpandMode, index) {
   switch (parentExpandMode) {
     case ExpandMode.ALL:
       return ExpandMode.ALL;
-    case ExpandMode.FIRST:
-      return index === 0 ? ExpandMode.FIRST : ExpandMode.NONE;
     case ExpandMode.NONE:
       return ExpandMode.NONE;
   }
@@ -67,7 +60,7 @@ function getChildExpandMode(parentExpandMode, index) {
  * @returns {boolean} Whether the component's details element should be expanded
  */
 function getDetailsOpen(expandMode) {
-  return expandMode === ExpandMode.ALL || expandMode === ExpandMode.FIRST;
+  return expandMode === ExpandMode.ALL;
 }
 
 export default class LessonStandards extends PureComponent {
