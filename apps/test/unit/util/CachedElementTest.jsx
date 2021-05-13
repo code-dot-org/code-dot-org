@@ -38,12 +38,12 @@ const spy = sinon.spy(createDiv);
 describe('CachedElement', () => {
   beforeEach(() => {
     spy.resetHistory();
-    unitTestExports.clearElementsCache();
+    unitTestExports.clearElementsCache(defaultType);
   });
 
   after(() => {
     spy.resetHistory();
-    unitTestExports.clearElementsCache();
+    unitTestExports.clearElementsCache(defaultType);
   });
 
   it('caches and renders raw HTML', () => {
@@ -60,7 +60,12 @@ describe('CachedElement', () => {
 
     // verify that the nested `CachedElement` isn't in the tree
     expect(wrapper.find(CachedElement)).to.have.lengthOf(1);
-    expect(wrapper.find(CachedElement).find(CachedElement)).to.be.empty;
+    expect(
+      wrapper
+        .find(CachedElement)
+        .childAt(0)
+        .find(CachedElement)
+    ).to.be.empty;
 
     expect(getCachedElement()).to.equal(defaultHtml);
     expect(getCachedElement('CachedElement')).to.equal(nestedHtml);
