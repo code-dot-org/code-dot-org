@@ -9,14 +9,16 @@ const unpluggedLevel = {
   id: '1',
   kind: LevelKind.unplugged,
   isUnplugged: true,
-  status: LevelStatus.perfect
+  status: LevelStatus.perfect,
+  isLocked: false
 };
 
 const assessmentLevel = {
   id: '2',
   kind: LevelKind.assessment,
   isUnplugged: false,
-  status: LevelStatus.perfect
+  status: LevelStatus.perfect,
+  isLocked: false
 };
 
 const levelWithUrl = {

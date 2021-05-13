@@ -12,26 +12,6 @@ import {
 import {standardShape, frameworkShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
-const styles = {
-  actionsColumn: {
-    display: 'flex',
-    justifyContent: 'space-evenly',
-    backgroundColor: 'white'
-  },
-  remove: {
-    fontSize: 14,
-    color: 'white',
-    background: color.dark_red,
-    cursor: 'pointer',
-    textAlign: 'center',
-    width: 50,
-    lineHeight: '30px'
-  },
-  select: {
-    width: 400
-  }
-};
-
 class StandardsEditor extends Component {
   static propTypes = {
     standardType: PropTypes.string.isRequired,
@@ -237,6 +217,26 @@ class StandardsEditor extends Component {
     );
   }
 }
+
+const styles = {
+  actionsColumn: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'white'
+  },
+  remove: {
+    fontSize: 14,
+    color: 'white',
+    background: color.dark_red,
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: 50,
+    lineHeight: '30px'
+  },
+  select: {
+    width: 400
+  }
+};
 
 export const UnconnectedStandardsEditor = StandardsEditor;
 

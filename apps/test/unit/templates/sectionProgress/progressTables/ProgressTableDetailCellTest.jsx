@@ -24,8 +24,7 @@ const DEFAULT_PROPS = {
   studentId: 1,
   sectionId: 123,
   levels: levels,
-  studentProgress: fakeProgressForLevels(levels),
-  stageExtrasEnabled: false
+  studentProgress: fakeProgressForLevels(levels)
 };
 
 const setUp = (overrideProps = {}) => {
@@ -42,6 +41,11 @@ describe('ProgressTableDetailCell', () => {
     firehoseClient.putRecord.restore();
   });
 
+  it('renders nothing if levels array is empty', () => {
+    const wrapper = setUp({levels: []});
+    expect(wrapper).to.be.empty;
+  });
+
   it('displays a progress table level bubble for each level and sublevel', () => {
     const wrapper = setUp();
     const levelBubble1 = wrapper.findWhere(node => node.key() === '123_1');
@@ -50,20 +54,6 @@ describe('ProgressTableDetailCell', () => {
     expect(levelBubble1.find(ProgressTableLevelBubble)).to.have.length(1);
     expect(levelBubble2.find(ProgressTableLevelBubble)).to.have.length(2); // 1 for level, 1 for sublevel
     expect(levelBubble3.find(ProgressTableLevelBubble)).to.have.length(1);
-  });
-
-  it('disables progress bubble if there is a bonus and stageExtrasEnabled is false', () => {
-    const wrapper = setUp();
-    const levelBubble3 = wrapper.findWhere(node => node.key() === '999_3');
-    const progressBubble = levelBubble3.find(ProgressTableLevelBubble);
-    expect(progressBubble.props().isDisabled).to.be.true;
-  });
-
-  it('disable is false for progress bubble if there is a bonus and stageExtrasEnabled is true', () => {
-    const wrapper = setUp({stageExtrasEnabled: true});
-    const levelBubble3 = wrapper.findWhere(node => node.key() === '999_3');
-    const progressBubble = levelBubble3.find(ProgressTableLevelBubble);
-    expect(progressBubble.props().isDisabled).to.be.false;
   });
 
   it('generates the right url for level bubble', () => {

@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+require 'cdo/redis'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
@@ -76,18 +76,14 @@ class I18nStringUrlTracker
 
   # Records the log data to a buffer which will eventually be flushed
   def add_to_buffer(string_key, url, source)
-    data = {url => {string_key => Set[source]}}
     # make sure this is the only thread modifying @buffer
     @buffer.synchronize do
       # update the buffer size if we are adding any new data to it
       # duplicate data will not increase the buffer size
-      size = 0
-      size += url.bytesize unless @buffer.dig(url)
-      size += string_key.bytesize unless @buffer.dig(url, string_key)
-      size += source.bytesize unless @buffer.dig(url, string_key)&.include?(source)
-      @buffer_size += size
+      buffer_url = @buffer[url] ||= {}.tap {@buffer_size += url.bytesize}
+      buffer_string_key = buffer_url[string_key] ||= Set.new.tap {@buffer_size += string_key.bytesize}
       # add the new data to the buffer
-      @buffer.deep_merge!(data)
+      @buffer_size += source.bytesize if buffer_string_key.add?(source)
     end
 
     # if the buffer is too large, trigger an early flush
@@ -123,7 +119,7 @@ class I18nStringUrlTracker
       buffer[url].each_key do |string_key|
         buffer[url][string_key].each do |source|
           # record the string : url association.
-          FirehoseClient.instance.put_record(
+          RedisClient.instance.put_record(
             :i18n,
             {url: url, string_key: string_key, source: source}
           )

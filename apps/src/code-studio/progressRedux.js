@@ -9,6 +9,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
 import {
   processedLevel,
+  processServerStudentProgress,
   getLevelResult
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
@@ -114,7 +115,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_SCRIPT_PROGRESS) {
     return {
       ...state,
-      scriptProgress: action.scriptProgress
+      scriptProgress: processServerStudentProgress(action.scriptProgress)
     };
   }
 
@@ -556,11 +557,10 @@ const peerReviewLevels = state =>
   state.peerReviewLessonInfo.levels.map((level, index) => ({
     // These aren't true levels (i.e. we won't have an entry in levelResults),
     // so always use a specific id that won't collide with real levels
-    id: PEER_REVIEW_ID,
-    status: level.locked ? LevelStatus.locked : level.status,
-    url: level.url,
-    name: level.name,
-    icon: level.locked ? level.icon : undefined,
+    ...level,
+    id: PEER_REVIEW_ID.toString(),
+    isLocked: level.locked,
+    status: level.status || LevelStatus.not_tried,
     levelNumber: index + 1
   }));
 
@@ -570,33 +570,47 @@ const peerReviewLevels = state =>
  * about and (b) determines current status based on the current state of
  * state.levelResults
  */
-const levelWithStatus = (
-  {
-    levelResults,
-    scriptProgress,
-    levelPairing = {},
-    currentLevelId,
-    isSublevel = false
-  },
-  level
+const levelWithProgress = (
+  {levelResults, scriptProgress, levelPairing = {}, currentLevelId},
+  level,
+  isLockable
 ) => {
-  if (level.kind !== LevelKind.unplugged && !isSublevel) {
-    if (!level.title || typeof level.title !== 'number') {
-      throw new Error(
-        'Expect all non-unplugged, non-bubble choice sublevel, levels to have a numerical title'
-      );
-    }
+  const normalizedLevel = processedLevel(level);
+  if (level.ids) {
+    // make sure we're using the id with best progress
+    normalizedLevel.id = bestResultLevelId(level.ids, levelResults);
   }
 
-  const normalizedLevel = processedLevel(level);
-  const levelProgress = scriptProgress[normalizedLevel.id];
+  // default values
+  let status = LevelStatus.not_tried;
+  let locked = isLockable;
+
+  let levelProgress = scriptProgress[normalizedLevel.id];
+  if (levelProgress?.pages) {
+    levelProgress = levelProgress.pages[normalizedLevel.pageNumber - 1];
+  }
+  if (levelProgress) {
+    // if we have levelProgress, overwrite default values
+    status = levelProgress.status;
+    locked = levelProgress.locked;
+  } else if (level.kind !== LevelKind.assessment) {
+    // if we don't have levelProgress, get the status from `levelResults`.
+    // however, `levelResults` doesn't track per-page results for multi-page
+    // assessments, so for assessments we leave default values.
+    //
+    // note: if we're not using levelProgress, `isLocked` will always be false.
+    status = activityCssClass(levelResults[normalizedLevel.id]);
+  }
+  const isCurrent =
+    normalizedLevel.id === currentLevelId ||
+    !!level.ids?.includes[currentLevelId];
+
   return {
     ...normalizedLevel,
-    status: statusForLevel(level, levelResults),
-    isCurrentLevel: currentLevelId === normalizedLevel.id,
+    status: status,
+    isCurrentLevel: isCurrent,
     paired: levelPairing[level.activeId],
-    locked: levelProgress?.locked,
-    readonlyAnswers: level.readonly_answers
+    isLocked: locked
   };
 };
 
@@ -612,21 +626,17 @@ export const levelsByLesson = ({
 }) =>
   stages.map(stage =>
     stage.levels.map(level => {
-      let statusLevel = levelWithStatus(
+      let statusLevel = levelWithProgress(
         {levelResults, scriptProgress, levelPairing, currentLevelId},
-        level
+        level,
+        stage.lockable
       );
       if (statusLevel.sublevels) {
         statusLevel.sublevels = level.sublevels.map(sublevel =>
-          levelWithStatus(
-            {
-              levelResults,
-              scriptProgress,
-              levelPairing,
-              currentLevelId,
-              isSublevel: true
-            },
-            sublevel
+          levelWithProgress(
+            {levelResults, scriptProgress, levelPairing, currentLevelId},
+            sublevel,
+            stage.lockable
           )
         );
       }
@@ -637,10 +647,12 @@ export const levelsByLesson = ({
 /**
  * Get data for a particular lesson/stage
  */
-export const levelsForLessonId = (state, lessonId) =>
-  state.stages
-    .find(stage => stage.id === lessonId)
-    .levels.map(level => levelWithStatus(state, level));
+export const levelsForLessonId = (state, lessonId) => {
+  const lesson = state.stages.find(stage => stage.id === lessonId);
+  return lesson.levels.map(level =>
+    levelWithProgress(state, level, lesson.lockable)
+  );
+};
 
 export const lessonExtrasUrl = (state, stageId) =>
   state.stageExtrasEnabled
@@ -650,71 +662,6 @@ export const lessonExtrasUrl = (state, stageId) =>
 export const isPerfect = (state, levelId) =>
   !!state.levelResults &&
   state.levelResults[levelId] >= TestResults.MINIMUM_OPTIMAL_RESULT;
-
-export const getPercentPerfect = levels => {
-  const puzzleLevels = levels.filter(level => !level.isConceptLevel);
-  if (puzzleLevels.length === 0) {
-    return 0;
-  }
-
-  const perfected = puzzleLevels.reduce(
-    (accumulator, level) =>
-      accumulator + (level.status === LevelStatus.perfect),
-    0
-  );
-  return perfected / puzzleLevels.length;
-};
-
-/**
- * Given a level and levelResults (both from our redux store state), determine
- * the status for that level.
- * @param {object} level - Level object from state.stages.levels
- * @param {object<number, TestResult>} levelResults - Mapping from levelId to
- *   TestResult
- */
-export function statusForLevel(level, levelResults) {
-  // Peer Reviews use a level object to track their state, but have some subtle
-  // differences from regular levels (such as a separate id namespace). Unlike
-  // levels, Peer Reviews store status on the level object (for the time being)
-  if (level.kind === LevelKind.peer_review) {
-    if (level.locked) {
-      return LevelStatus.locked;
-    }
-    return level.status;
-  }
-
-  // LevelGroup assessments (multi-page assessments)
-  // will have a uid for each page (and a test-result
-  // for each uid). When locked, they will end up not having a per-uid
-  // test result, but will have a LOCKED_RESULT for the LevelGroup (which
-  // is tracked by ids)
-  // BubbleChoice sublevels will have a level_id
-  // Worth noting that in the majority of cases, ids will be a single
-  // id here
-  const id =
-    level.uid || level.level_id || bestResultLevelId(level.ids, levelResults);
-  let status = activityCssClass(levelResults[id]);
-  if (
-    level.uid &&
-    level.ids.every(id => levelResults[id] === TestResults.LOCKED_RESULT)
-  ) {
-    status = LevelStatus.locked;
-  }
-
-  // If complete a level that is marked as assessment
-  // then mark as completed assessment
-  if (
-    level.kind === LevelKind.assessment &&
-    [
-      LevelStatus.free_play_complete,
-      LevelStatus.perfect,
-      LevelStatus.passed
-    ].includes(status)
-  ) {
-    return LevelStatus.completed_assessment;
-  }
-  return status;
-}
 
 /**
  * Groups lessons according to LessonGroup.
@@ -738,7 +685,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
         bigQuestions: lessonGroup.big_questions
       },
       lessons: [],
-      levels: []
+      levelsByLesson: []
     };
   });
 
@@ -752,7 +699,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
 
     if (byGroup[group]) {
       byGroup[group].lessons.push(lessonAtIndex);
-      byGroup[group].levels.push(lessonLevels);
+      byGroup[group].levelsByLesson.push(lessonLevels);
     }
   });
 
@@ -769,7 +716,7 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
         bigQuestions: null
       },
       lessons: [peerReviewLesson(state)],
-      levels: [peerReviewLevels(state)]
+      levelsByLesson: [peerReviewLevels(state)]
     };
   }
 

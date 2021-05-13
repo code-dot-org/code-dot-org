@@ -5,7 +5,6 @@ import color from '@cdo/apps/util/color';
 import {BubbleSize} from '@cdo/apps/templates/progress/progressStyles';
 
 const statuses = [
-  LevelStatus.locked,
   LevelStatus.not_tried,
   LevelStatus.attempted,
   LevelStatus.passed,
@@ -46,13 +45,13 @@ export default storybook => {
     .addStoryTable(
       [
         {
-          name: `disabled bubble`,
+          name: `locked bubble`,
           story: () =>
             wrapped(
               <ProgressTableLevelBubble
                 levelStatus={LevelStatus.not_tried}
                 levelKind={LevelKind.level}
-                isDisabled={true}
+                isLocked={true}
                 title={'3'}
                 url={'/foo/bar'}
               />
@@ -81,7 +80,6 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
                   isConcept={true}
@@ -97,7 +95,6 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.assessment}
-                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
                 />
@@ -112,7 +109,6 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
                   isPaired={true}
@@ -128,7 +124,6 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
                   isBonus={true}
@@ -144,7 +139,6 @@ export default storybook => {
                 <ProgressTableLevelBubble
                   levelStatus={status}
                   levelKind={LevelKind.level}
-                  isDisabled={status === LevelStatus.locked}
                   title={'3'}
                   url={'/foo/bar'}
                   isUnplugged={true}
@@ -159,7 +153,6 @@ export default storybook => {
               wrapMultiple([
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.perfect}
-                  isDisabled={false}
                   bubbleSize={BubbleSize.letter}
                   title={'a'}
                   url={'/foo/bar'}
@@ -167,7 +160,6 @@ export default storybook => {
                 />,
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.attempted}
-                  isDisabled={false}
                   bubbleSize={BubbleSize.letter}
                   title={'b'}
                   url={'/foo/bar'}
@@ -175,7 +167,6 @@ export default storybook => {
                 />,
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.not_tried}
-                  isDisabled={false}
                   bubbleSize={BubbleSize.letter}
                   title={'c'}
                   url={'/foo/bar'}
@@ -191,7 +182,6 @@ export default storybook => {
               wrapMultiple([
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.perfect}
-                  isDisabled={false}
                   isConcept={true}
                   bubbleSize={BubbleSize.dot}
                   title={'a'}
@@ -200,7 +190,6 @@ export default storybook => {
                 />,
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.attempted}
-                  isDisabled={false}
                   bubbleSize={BubbleSize.dot}
                   title={'b'}
                   url={'/foo/bar'}
@@ -208,7 +197,6 @@ export default storybook => {
                 />,
                 <ProgressTableLevelBubble
                   levelStatus={LevelStatus.not_tried}
-                  isDisabled={false}
                   bubbleSize={BubbleSize.dot}
                   title={'c'}
                   url={'/foo/bar'}

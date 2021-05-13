@@ -9,13 +9,6 @@ import _ from 'lodash';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  tip: {
-    maxWidth: 400,
-    color: color.default_text
-  }
-};
-
 export default class LessonTipIconWithTooltip extends Component {
   static propTypes = {
     tip: tipShape.isRequired,
@@ -53,3 +46,10 @@ export default class LessonTipIconWithTooltip extends Component {
     );
   }
 }
+
+const styles = {
+  tip: {
+    maxWidth: 400,
+    color: color.default_text
+  }
+};

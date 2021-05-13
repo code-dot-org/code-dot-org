@@ -367,7 +367,7 @@ const latestInstaller = _.memoize(latestYamlUrl => {
     .then(response => response.text())
     .then(text => yaml.safeLoad(text))
     .then(datum => ({
-      filename: datum.url,
+      filename: datum.path,
       version: datum.version
     }));
 });

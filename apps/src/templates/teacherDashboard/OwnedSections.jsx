@@ -23,27 +23,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
-const styles = {
-  button: {
-    marginBottom: 20,
-    float: 'right'
-  },
-  buttonContainer: {
-    width: styleConstants['content-width'],
-    textAlign: 'right',
-    paddingTop: 10,
-    paddingBottom: 10
-  },
-  hiddenSectionLabel: {
-    fontSize: 14,
-    paddingBottom: 5,
-    color: color.charcoal
-  },
-  spinner: {
-    marginTop: '10px'
-  }
-};
-
 class OwnedSections extends React.Component {
   static propTypes = {
     // redux provided
@@ -150,6 +129,27 @@ class OwnedSections extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    marginBottom: 20,
+    float: 'right'
+  },
+  buttonContainer: {
+    width: styleConstants['content-width'],
+    textAlign: 'right',
+    paddingTop: 10,
+    paddingBottom: 10
+  },
+  hiddenSectionLabel: {
+    fontSize: 14,
+    paddingBottom: 5,
+    color: color.charcoal
+  },
+  spinner: {
+    marginTop: '10px'
+  }
+};
 export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(

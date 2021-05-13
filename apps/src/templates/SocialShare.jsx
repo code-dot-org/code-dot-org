@@ -7,13 +7,6 @@ import i18n from '@cdo/locale';
 import color from '../util/color';
 import testImageAccess from '../code-studio/url_test';
 
-const styles = {
-  shareButton: {
-    color: color.white,
-    minWidth: 40
-  }
-};
-
 export default class SocialShare extends Component {
   static propTypes = {
     facebook: PropTypes.string.isRequired,
@@ -90,3 +83,10 @@ export default class SocialShare extends Component {
     );
   }
 }
+
+const styles = {
+  shareButton: {
+    color: color.white,
+    minWidth: 40
+  }
+};

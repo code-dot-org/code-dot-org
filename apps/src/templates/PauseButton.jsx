@@ -5,34 +5,6 @@ import color from '@cdo/apps/util/color';
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 
-const styles = {
-  icon: {
-    lineHeight: 'inherit',
-    color: color.white
-  },
-  container: {
-    width: 40,
-    height: 40,
-    lineHeight: '40px',
-    textAlign: 'center',
-    verticalAlign: 'middle',
-    display: 'inline-block'
-  },
-  button: {
-    minWidth: 0,
-    padding: 0,
-    borderRadius: '100%'
-  },
-  runningColor: {
-    backgroundColor: color.cyan,
-    borderColor: color.cyan
-  },
-  pausedColor: {
-    backgroundColor: color.orange,
-    borderColor: color.orange
-  }
-};
-
 class PauseButton extends React.Component {
   static propTypes = {
     pauseHandler: PropTypes.func.isRequired,
@@ -83,6 +55,34 @@ class PauseButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  icon: {
+    lineHeight: 'inherit',
+    color: color.white
+  },
+  container: {
+    width: 40,
+    height: 40,
+    lineHeight: '40px',
+    textAlign: 'center',
+    verticalAlign: 'middle',
+    display: 'inline-block'
+  },
+  button: {
+    minWidth: 0,
+    padding: 0,
+    borderRadius: '100%'
+  },
+  runningColor: {
+    backgroundColor: color.cyan,
+    borderColor: color.cyan
+  },
+  pausedColor: {
+    backgroundColor: color.orange,
+    borderColor: color.orange
+  }
+};
 
 export default connect(
   state => ({

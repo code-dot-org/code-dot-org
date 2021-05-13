@@ -337,6 +337,7 @@ describe('entry tests', () => {
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
+          ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
             'build/package/css/levelbuilder.css',
@@ -732,7 +733,8 @@ describe('entry tests', () => {
     'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
     'foorm/libraries/editor':
       './src/sites/studio/pages/foorm/libraries/editor.js',
-    'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
+    'foorm/simple_survey_forms/show':
+      './src/sites/studio/pages/foorm/simple_survey_forms/show.js'
   };
 
   // Entries which are shared between dashboard and pegasus, which are included

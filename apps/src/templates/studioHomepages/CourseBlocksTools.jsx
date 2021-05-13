@@ -25,23 +25,25 @@ class CourseBlocksTools extends Component {
     },
     {
       heading: i18n.courseBlocksToolsWebLab(),
+      callout: `(${i18n.beta()})`,
       description: i18n.courseBlocksToolsWebLabDescription(),
       path: 'weblab'
     },
     {
-      heading: i18n.courseBlocksToolsWidgets(),
-      description: i18n.courseBlocksToolsWidgetsDescription(),
-      path: 'widgets'
-    },
-    {
-      heading: i18n.courseBlocksToolsInspire(),
-      description: i18n.courseBlocksToolsInspireDescription(),
-      path: 'inspire'
+      heading: i18n.csJourneys(),
+      callout: i18n.newExclame(),
+      description: i18n.csJourneysDescription(),
+      path: 'csjourneys'
     },
     {
       heading: i18n.courseBlocksToolsVideo(),
       description: i18n.courseBlocksToolsVideoDescription(),
       path: 'videos'
+    },
+    {
+      heading: i18n.courseBlocksToolsWidgets(),
+      description: i18n.courseBlocksToolsWidgetsDescription(),
+      path: 'widgets'
     }
   ];
 
@@ -63,6 +65,7 @@ class CourseBlocksTools extends Component {
               <ResourceCard
                 key={cardIndex}
                 title={card.heading}
+                callout={card.callout}
                 description={card.description}
                 buttonText={i18n.learnMore()}
                 link={pegasus(`/${card.path}`)}
