@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Project Level\r\n\r\nUse this level to import your project and build your app! You will work in this screen for several days as you complete your project!\r\n\r\n- *Note: If \"Manage AI Models\" doesn't appear, [click here to reload the page](https://studio.code.org/s/ai-unit-pilot/lessons/16/levels/3?enableExperiments=applab-ml) and the link should appear!*\r\n",
+    "long_instructions": "# Project Level\r\n\r\nUse this level to import your project and build your app! You will work in this screen for several days as you complete your project!\r\n\r\n- *Note: If \"Manage AI Models\" doesn't appear, [click here to reload the page](https://studio.code.org/s/aiml-2021/lessons/16/levels/3?enableExperiments=applab-ml) and the link should appear!*\r\n",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",
