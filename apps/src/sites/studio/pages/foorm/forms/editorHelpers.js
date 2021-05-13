@@ -20,8 +20,9 @@ const nameKeyValidator = new RegExp(/^[a-z0-9_]+$/i);
 // (non-basic characters can get stripped when being transferred to the server)
 export const lintFoormKeys = (text, options, cm) => {
   const annotations = [];
-  const nameEntries = Array.from(text.matchAll(nameKeyRegex));
-  nameEntries.forEach(match => {
+
+  let match;
+  while ((match = nameKeyRegex.exec(text)) !== null) {
     const nameValue = match[1];
     if (!nameKeyValidator.test(nameValue)) {
       annotations.push({
@@ -31,7 +32,7 @@ export const lintFoormKeys = (text, options, cm) => {
         to: cm.posFromIndex(match.index + match[0].length)
       });
     }
-  });
+  }
 
   return annotations;
 };
