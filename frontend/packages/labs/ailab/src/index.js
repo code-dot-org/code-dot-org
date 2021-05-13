@@ -10,7 +10,8 @@ import rootReducer, {
   setSelectedJSON,
   setInstructionsKeyCallback,
   setSaveStatus,
-  setReserveLocation
+  setReserveLocation,
+  setInstructionsDismissed
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
@@ -44,6 +45,10 @@ export const initAll = function(options) {
     document.getElementById("root")
   );
 };
+
+export const instructionsDismissed = function() {
+  store.dispatch(setInstructionsDismissed());
+}
 
 // Process an optional mode.
 const processMode = mode => {

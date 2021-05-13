@@ -1,5 +1,5 @@
 import "./assetPath";
-import { initAll } from "./index";
+import { initAll, instructionsDismissed } from "./index";
 import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.
@@ -15,7 +15,8 @@ const sampleModes = {
 
   "preload-metadata": {
     hideSpecifyColumns: true,
-    hideChooseReserve: true
+    hideChooseReserve: true,
+    hideInstructionsOverlay: true
   },
 
   "intro-ai-tacos": {
@@ -76,8 +77,12 @@ function saveTrainedModelStub(data, response) {
   response({ id: 303, status: "success" });
 }
 
-function setInstructionsKeyStub(instructionsKey) {
-  document.getElementById("instructions").innerText = instructionsKey;
+function setInstructionsKeyStub(instructionsKey, options) {
+  const element = document.getElementById("instructions");
+
+  element.innerText =
+    instructionsKey + (!options.showOverlay ? " (no overlay)" : "");
+  element.onclick = instructionsDismissed;
 }
 
 // Initialize the app.

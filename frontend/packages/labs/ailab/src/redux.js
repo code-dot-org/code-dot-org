@@ -55,6 +55,7 @@ const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_K_VALUE = "SET_K_VALUE";
+const SET_INSTRUCTIONS_DISMISSED = "SET_INSTRUCTIONS_DISMISSED";
 
 // Action creators
 export function setMode(mode) {
@@ -202,6 +203,10 @@ export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
 }
 
+export function setInstructionsDismissed() {
+  return { type: SET_INSTRUCTIONS_DISMISSED };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -232,7 +237,9 @@ const initialState = {
   resultsPhase: undefined,
   saveStatus: undefined,
   columnRefs: {},
-  kValue: null
+  kValue: null,
+  viewedPanels: [],
+  instructionsOverlayActive: false
 };
 
 // Reducer
@@ -342,11 +349,11 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_RESERVE_LOCATION) {
-   return {
-     ...state,
-     reserveLocation: action.reserveLocation
-   };
- }
+    return {
+      ...state,
+      reserveLocation: action.reserveLocation
+    };
+  }
   if (action.type === SET_ACCURACY_CHECK_EXAMPLES) {
     return {
       ...state,
@@ -433,14 +440,25 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
+    let showedOverlay = false;
     if (state.instructionsKeyCallback) {
-      state.instructionsKeyCallback(action.currentPanel);
+      const options = {};
+      if (
+        !(state.mode && state.mode.hideInstructionsOverlay) &&
+        !state.viewedPanels.includes(action.currentPanel)
+      ) {
+        options.showOverlay = true;
+        state.viewedPanels.push(action.currentPanel);
+        showedOverlay = true;
+      }
+      state.instructionsKeyCallback(action.currentPanel, options);
     }
 
     if (action.currentPanel === "dataDisplayLabel") {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         currentColumn: undefined,
         selectedFeatures: []
       };
@@ -450,6 +468,7 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         testData: {},
         prediction: {}
       };
@@ -458,6 +477,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       currentPanel: action.currentPanel,
+      instructionsOverlayActive: showedOverlay,
       currentColumn: undefined
     };
   }
@@ -526,6 +546,12 @@ export default function rootReducer(state = initialState, action) {
       ...state,
       kValue: action.kValue
     };
+  }
+  if (action.type === SET_INSTRUCTIONS_DISMISSED) {
+    return {
+      ...state,
+      instructionsOverlayActive: false
+    }
   }
   return state;
 }
@@ -749,7 +775,9 @@ export function getAccuracyClassification(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const numPredictedLabels = state.accuracyCheckPredictedLabels ?  state.accuracyCheckPredictedLabels.length : 0;
+  const numPredictedLabels = state.accuracyCheckPredictedLabels
+    ? state.accuracyCheckPredictedLabels.length
+    : 0;
   for (let i = 0; i < numPredictedLabels; i++) {
     if (
       state.accuracyCheckLabels[i].toString() ===
@@ -774,7 +802,7 @@ export function getAccuracyRegression(state) {
   let grades = [];
   const maxMin = getRange(state, state.labelColumn);
   const range = Math.abs(maxMin.max - maxMin.min);
-  const errorTolerance = range * REGRESSION_ERROR_TOLERANCE/100;
+  const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
     const diff = Math.abs(
@@ -887,13 +915,14 @@ export function getEmptyCellDetails(state) {
 export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
-    state.metadata
-    && state.metadata.card
-    && state.metadata.card.description
+    state.metadata &&
+    state.metadata.card &&
+    state.metadata.card.description
   ) {
     return state.metadata.card.description;
   } else if (
-    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+    state.trainedModelDetails &&
+    state.trainedModelDetails.datasetDescription
   ) {
     return state.trainedModelDetails.datasetDescription;
   } else {
@@ -902,7 +931,7 @@ export function getDataDescription(state) {
 }
 
 function getDatasetDetails(state) {
-  const datasetDetails = {}
+  const datasetDetails = {};
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
   return datasetDetails;
@@ -913,7 +942,7 @@ function getColumnDataToSave(state, column) {
   columnData.id = column;
   columnData.description = getColumnDescription(state, column);
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
-    columnData.values = getUniqueOptions(state, column)
+    columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
     const maxMin = getRange(state, column, false);
     columnData.max = maxMin.max;
@@ -925,7 +954,7 @@ function getColumnDataToSave(state, column) {
 function getFeaturesToSave(state) {
   const features = state.selectedFeatures.map(feature =>
     getColumnDataToSave(state, feature)
-  )
+  );
   return features;
 }
 
@@ -1291,5 +1320,5 @@ function areArraysEqual(array1, array2) {
 export function isUserUploadedDataset(state) {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
-  return typeof state.csvfile === 'object' && state.csvfile !== null;
+  return typeof state.csvfile === "object" && state.csvfile !== null;
 }
