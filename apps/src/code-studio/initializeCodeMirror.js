@@ -49,7 +49,7 @@ function initializeCodeMirror(target, mode, options = {}) {
     callback,
     attachments,
     onUpdateLinting,
-    getAnnotations,
+    additionalAnnotations,
     preview
   } = options;
   let updatePreview;
@@ -92,6 +92,18 @@ function initializeCodeMirror(target, mode, options = {}) {
       };
     }
   }
+
+  const getAnnotations = (text, options, cm) => {
+    const cmValidation = cm.getHelper(CodeMirror.Pos(0, 0), 'lint')(
+      text,
+      {},
+      cm
+    );
+    const additionalValidation = additionalAnnotations
+      ? additionalAnnotations(text, options, cm)
+      : [];
+    return [...cmValidation, ...additionalValidation];
+  };
 
   var editor = CodeMirror.fromTextArea(node, {
     mode: mode,

@@ -1,7 +1,4 @@
 import {getStore} from '@cdo/apps/redux';
-import CodeMirror from 'codemirror';
-import 'codemirror/addon/lint/lint';
-import 'codemirror/addon/lint/javascript-lint';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {
   setQuestions,
@@ -11,7 +8,12 @@ import _ from 'lodash';
 
 let codeMirror;
 
+// this regex is designed to match strings like '"name": "some_question_name"'
+// we want to match keys named "name" and "value" because "value" keys are used for matrix questions
+// we capture the value associated with the matched key to validate it with the next regex
 const nameKeyRegex = new RegExp(/"(?:name|value)"\:\s*"(.+)",?/gi);
+
+// this regex is used to ensure the strings contain only alphanumeric (case insensitive) and underscore characters
 const nameKeyValidator = new RegExp(/^[a-z0-9_]+$/i);
 
 // performs additional key validation
@@ -23,7 +25,7 @@ export const lintFoormKeys = (text, options, cm) => {
     const nameValue = match[1];
     if (!nameKeyValidator.test(nameValue)) {
       annotations.push({
-        message: 'Question keys should only contain letters and underscores.',
+        message: 'Question names should only contain letters and underscores.',
         severity: 'error',
         from: cm.posFromIndex(match.index),
         to: cm.posFromIndex(match.index + match[0].length)
@@ -55,15 +57,7 @@ export function populateCodeMirror() {
 
   codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: _.debounce(onCodeMirrorChange, 250),
-    getAnnotations: (text, options, cm) => {
-      const cmValidation = cm.getHelper(CodeMirror.Pos(0, 0), 'lint')(
-        text,
-        {},
-        cm
-      );
-      const foormValidation = lintFoormKeys(text, options, cm);
-      return [...cmValidation, ...foormValidation];
-    }
+    additionalAnnotations: lintFoormKeys
   });
 }
 
