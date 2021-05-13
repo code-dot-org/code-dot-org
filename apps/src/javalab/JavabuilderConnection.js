@@ -66,8 +66,10 @@ export default class JavabuilderConnection {
         handleException(data, this.onOutputMessage);
         break;
       case WebSocketMessageType.DEBUBG:
-        this.onOutputMessage('--- Localhost debugging message ---');
-        this.onOutputMessage(data.value);
+        if (window.location.hostname.includes('localhost')) {
+          this.onOutputMessage('--- Localhost debugging message ---');
+          this.onOutputMessage(data.value);
+        }
         break;
       default:
         console.log(data);
