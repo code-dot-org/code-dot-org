@@ -4,7 +4,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 const publishedStates = ['Pilot', 'Preview', 'Assignable', 'Recommended'];
 
-export default class CourseVersionPublishedStateSelector extends Component {
+export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
     visible: PropTypes.bool.isRequired,
     isStable: PropTypes.bool.isRequired,

@@ -26,7 +26,7 @@ import {
   resourceShape as migratedResourceShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import CourseVersionPublishedStateSelector from '@cdo/apps/lib/levelbuilder/CourseVersionPublishedStateSelector';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -605,7 +605,7 @@ class ScriptEditor extends React.Component {
                       </HelpTip>
                     )}
                   </label>
-                  <CourseVersionPublishedStateSelector
+                  <CourseVersionPublishingEditor
                     visible={!this.state.hidden}
                     isStable={this.state.isStable}
                     pilotExperiment={this.state.pilotExperiment}
