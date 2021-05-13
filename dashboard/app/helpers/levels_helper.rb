@@ -107,6 +107,16 @@ module LevelsHelper
     channel_token&.channel
   end
 
+  # If given a level and a user, returns whether any work has been done
+  # on the level
+  def level_started?(level, user)
+    if level.channel_backed? # maureen make sure user is present or this will fail
+      return get_channel_for(level, user).present?
+    else
+      user.last_attempt(level).present?
+    end
+  end
+
   def select_and_track_autoplay_video
     return if @level.try(:autoplay_blocked_by_level?)
 
@@ -278,6 +288,10 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+
+      if @user || current_user
+        @app_options[:level][:isStarted] = level_started?(@level, @user || current_user)
+      end
     end
 
     if current_user

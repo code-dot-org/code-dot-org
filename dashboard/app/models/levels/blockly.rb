@@ -376,7 +376,6 @@ class Blockly < Level
       end
 
       level_prop['levelId'] = level_num
-      level_prop['isChannelBacked'] = channel_backed?
       level_prop['images'] = JSON.parse(level_prop['images']) if level_prop['images'].present?
 
       # Blockly requires startDirection as an integer not a string
