@@ -27,7 +27,6 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishedStateSelector from '@cdo/apps/lib/levelbuilder/CourseVersionPublishedStateSelector';
-import UnitPublishedStateSelector from '@cdo/apps/lib/levelbuilder/UnitPublishedStateSelector';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -668,7 +667,6 @@ class ScriptEditor extends React.Component {
                   }
                 />
               )}
-              {this.props.hasCourse && <UnitPublishedStateSelector />}
             </div>
           )}
         </CollapsibleEditorSection>
