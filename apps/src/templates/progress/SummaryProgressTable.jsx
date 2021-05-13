@@ -2,30 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import {levelType, lessonType} from './progressTypes';
+import {groupedLessonsType} from './progressTypes';
 import SummaryProgressRow, {styles as rowStyles} from './SummaryProgressRow';
 import {connect} from 'react-redux';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-const styles = {
-  table: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderLeftColor: color.border_gray,
-    borderTopColor: color.border_gray,
-    borderBottomColor: color.border_light_gray,
-    borderRightColor: color.border_light_gray
-  },
-  headerRow: {
-    backgroundColor: color.table_header
-  }
-};
-
 class SummaryProgressTable extends React.Component {
   static propTypes = {
-    lessons: PropTypes.arrayOf(lessonType).isRequired,
-    levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelType)).isRequired,
+    groupedLesson: groupedLessonsType.isRequired,
     minimal: PropTypes.bool,
 
     // redux provided
@@ -34,7 +19,8 @@ class SummaryProgressTable extends React.Component {
   };
 
   render() {
-    const {lessons, levelsByLesson, viewAs, minimal} = this.props;
+    const {viewAs, minimal} = this.props;
+    const {lessons, levelsByLesson} = this.props.groupedLesson;
 
     if (lessons.length !== levelsByLesson.length) {
       throw new Error('Inconsistent number of lessons');
@@ -73,6 +59,20 @@ class SummaryProgressTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderLeftColor: color.border_gray,
+    borderTopColor: color.border_gray,
+    borderBottomColor: color.border_light_gray,
+    borderRightColor: color.border_light_gray
+  },
+  headerRow: {
+    backgroundColor: color.table_header
+  }
+};
 
 export const UnconnectedSummaryProgressTable = SummaryProgressTable;
 export default connect(state => ({

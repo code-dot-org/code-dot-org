@@ -47,38 +47,6 @@ const SOUND_CATEGORIES = {
   all: 'All'
 };
 
-const styles = {
-  button: {
-    float: 'right',
-    margin: '20px 0px'
-  },
-  categoryArea: {
-    float: 'left',
-    marginBottom: 20,
-    overflowY: 'scroll',
-    height: 320
-  },
-  allCategoriesText: {
-    fontSize: 16,
-    color: color.purple,
-    font: 'Gotham 5r',
-    paddingRight: 5,
-    cursor: 'pointer'
-  },
-  breadcrumbs: {
-    float: 'left',
-    marginTop: 16
-  },
-  categoryText: {
-    fontSize: 14
-  },
-  searchBarContainer: {
-    width: '300px',
-    float: 'right',
-    marginBottom: 10
-  }
-};
-
 /**
  * A component for managing sounds, searching sounds, and categories of sounds.
  */
@@ -194,3 +162,35 @@ export default class SoundLibrary extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    float: 'right',
+    margin: '20px 0px'
+  },
+  categoryArea: {
+    float: 'left',
+    marginBottom: 20,
+    overflowY: 'scroll',
+    height: 320
+  },
+  allCategoriesText: {
+    fontSize: 16,
+    color: color.purple,
+    font: 'Gotham 5r',
+    paddingRight: 5,
+    cursor: 'pointer'
+  },
+  breadcrumbs: {
+    float: 'left',
+    marginTop: 16
+  },
+  categoryText: {
+    fontSize: 14
+  },
+  searchBarContainer: {
+    width: '300px',
+    float: 'right',
+    marginBottom: 10
+  }
+};

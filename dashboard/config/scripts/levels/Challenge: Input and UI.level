@@ -206,7 +206,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "long_instructions": "# Stop\r\n\r\nYou have reached the end of the lesson. Check in with your teacher to see if you should work on the challenge level before you start. This is an extra challenge to practice your skills if you have time. If you don't have time for it no big deal!\r\n\r\n# Challenge\r\n\r\nGo to <a href=\"https://studio.code.org/p/applab\" target=\"_blank\">Full App Lab</a> and try to make your own profile creator like the example program on this level.",
+    "long_instructions": "# Stop\r\n\r\nYou have reached the end of the lesson. Check in with your teacher to see if you should work on the challenge level before you start. This is an extra challenge to practice your skills if you have time. If you don't have time for it no big deal!\r\n\r\n# Challenge\r\n\r\nGo to <a href=\"https://studio.code.org/p/applab\" target=\"_blank\" rel=\"noopener noreferrer\">Full App Lab</a> and try to make your own profile creator like the example program on this level.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

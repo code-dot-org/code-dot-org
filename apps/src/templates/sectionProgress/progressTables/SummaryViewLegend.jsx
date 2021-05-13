@@ -4,34 +4,6 @@ import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-const styles = {
-  header: {
-    fontWeight: 'bold',
-    color: color.charcoal,
-    textAlign: 'center'
-  },
-  th: {
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
-    border: `1px solid ${color.lightest_gray}`,
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 14,
-    textAlign: 'center',
-    padding: 15
-  },
-  td: {
-    border: `1px solid ${color.lightest_gray}`,
-    padding: 15
-  },
-  boxStyle: {
-    margin: '0 auto'
-  },
-  completedBoxes: {
-    display: 'flex',
-    flexDirection: 'row'
-  }
-};
-
 export default class SummaryViewLegend extends Component {
   static propTypes = {
     showCSFProgressBox: PropTypes.bool
@@ -137,3 +109,31 @@ export default class SummaryViewLegend extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    fontWeight: 'bold',
+    color: color.charcoal,
+    textAlign: 'center'
+  },
+  th: {
+    backgroundColor: color.lightest_gray,
+    color: color.charcoal,
+    border: `1px solid ${color.lightest_gray}`,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    textAlign: 'center',
+    padding: 15
+  },
+  td: {
+    border: `1px solid ${color.lightest_gray}`,
+    padding: 15
+  },
+  boxStyle: {
+    margin: '0 auto'
+  },
+  completedBoxes: {
+    display: 'flex',
+    flexDirection: 'row'
+  }
+};

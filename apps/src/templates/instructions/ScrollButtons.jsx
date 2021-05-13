@@ -28,34 +28,6 @@ const DIRECTIONS = {
   DOWN: 1
 };
 
-const styles = {
-  all: {
-    position: 'absolute',
-    transition: 'opacity 200ms',
-    margin: 0
-  },
-  arrow: {
-    width: 0,
-    height: 0,
-    cursor: 'pointer',
-    borderStyle: 'solid',
-    borderColor: 'transparent',
-    borderRightWidth: WIDTH,
-    borderLeftWidth: WIDTH,
-    ':hover': {
-      filter: 'drop-shadow(2px 2px 5px rgba(0,0,0,0.3))'
-    }
-  },
-  arrowUp: {
-    borderBottomWidth: HEIGHT,
-    borderBottomColor: color.purple
-  },
-  arrowDown: {
-    borderTopWidth: HEIGHT,
-    borderTopColor: color.purple
-  }
-};
-
 const MARGIN = 5;
 const CRAFT_MARGIN = 0;
 
@@ -202,5 +174,33 @@ class ScrollButtons extends React.Component {
     );
   }
 }
+
+const styles = {
+  all: {
+    position: 'absolute',
+    transition: 'opacity 200ms',
+    margin: 0
+  },
+  arrow: {
+    width: 0,
+    height: 0,
+    cursor: 'pointer',
+    borderStyle: 'solid',
+    borderColor: 'transparent',
+    borderRightWidth: WIDTH,
+    borderLeftWidth: WIDTH,
+    ':hover': {
+      filter: 'drop-shadow(2px 2px 5px rgba(0,0,0,0.3))'
+    }
+  },
+  arrowUp: {
+    borderBottomWidth: HEIGHT,
+    borderBottomColor: color.purple
+  },
+  arrowDown: {
+    borderTopWidth: HEIGHT,
+    borderTopColor: color.purple
+  }
+};
 
 export default Radium(ScrollButtons);

@@ -3,57 +3,12 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import {levelType} from './progressTypes';
+import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
 import {connect} from 'react-redux';
-
-const styles = {
-  levelPill: {
-    textAlign: 'center',
-    justifyContent: 'center',
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
-    color: color.charcoal,
-    display: 'flex',
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
-    borderRadius: 20,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 6,
-    paddingBottom: 6,
-    minWidth: 70,
-    lineHeight: '18px',
-    marginTop: 3,
-    marginBottom: 3,
-    position: 'relative'
-  },
-  text: {
-    display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
-    letterSpacing: -0.12
-  },
-  textProgressStyle: {
-    display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 12,
-    letterSpacing: -0.12,
-    width: 120,
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
-  },
-  iconMargin: {
-    marginLeft: 10
-  },
-  iconMarginRTL: {
-    marginRight: 10
-  }
-};
 
 /**
  * This component is similar to our ProgressBubble, except that instead of being
@@ -62,7 +17,7 @@ const styles = {
  */
 class ProgressPill extends React.Component {
   static propTypes = {
-    levels: PropTypes.arrayOf(levelType),
+    levels: PropTypes.arrayOf(levelWithProgressType),
     icon: PropTypes.string,
     text: PropTypes.string,
     tooltip: PropTypes.element,
@@ -151,6 +106,51 @@ class ProgressPill extends React.Component {
     );
   }
 }
+
+const styles = {
+  levelPill: {
+    textAlign: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    color: color.charcoal,
+    display: 'flex',
+    fontSize: 16,
+    fontFamily: '"Gotham 5r", sans-serif',
+    borderRadius: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 6,
+    paddingBottom: 6,
+    minWidth: 70,
+    lineHeight: '18px',
+    marginTop: 3,
+    marginBottom: 3,
+    position: 'relative'
+  },
+  text: {
+    display: 'inline-block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    letterSpacing: -0.12
+  },
+  textProgressStyle: {
+    display: 'inline-block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 12,
+    letterSpacing: -0.12,
+    width: 120,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  iconMargin: {
+    marginLeft: 10
+  },
+  iconMarginRTL: {
+    marginRight: 10
+  }
+};
 
 export const UnconnectedProgressPill = ProgressPill;
 

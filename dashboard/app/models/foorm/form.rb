@@ -22,6 +22,7 @@ class Foorm::Form < ApplicationRecord
   class InvalidFoormConfigurationError < StandardError; end
 
   has_many :submissions, foreign_key: [:form_name, :form_version], primary_key: [:name, :version]
+
   validate :validate_questions, :validate_published
 
   after_commit :write_form_to_file

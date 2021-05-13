@@ -14,19 +14,6 @@ const projectProp = PropTypes.shape({
   updatedAt: PropTypes.date
 });
 
-const styles = {
-  card: {
-    display: 'inline-block',
-    paddingTop: 10,
-    paddingBottom: 20
-  },
-  row: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
-};
-
 export default class ProjectCardRow extends React.Component {
   static propTypes = {
     projects: PropTypes.arrayOf(projectProp).isRequired,
@@ -52,3 +39,16 @@ export default class ProjectCardRow extends React.Component {
     );
   }
 }
+
+const styles = {
+  card: {
+    display: 'inline-block',
+    paddingTop: 10,
+    paddingBottom: 20
+  },
+  row: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  }
+};

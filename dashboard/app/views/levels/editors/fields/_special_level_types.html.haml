@@ -21,7 +21,10 @@
   - if @level.is_a?(Applab)
     .field
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode"}
-      %p Creates an embeded level with a double-width app screen that auto-runs on page load. The coding workspace, design mode, data mode, the reset button, and sharing are all disabled in widget mode.
+      %p Creates an embeded level with a double-width app screen that auto-runs on page load.
+      %ul
+        %li For users: The coding workspace, design mode, data mode, the reset button, and sharing are all disabled.
+        %li For levelbuilders: The coding workspace and design mode are available in start mode.
 
   - if (@level.is_a?(Blockly) || @level.is_a?(Weblab))
     .field
