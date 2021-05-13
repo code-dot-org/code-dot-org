@@ -30,12 +30,12 @@ describe('foorm linting', () => {
     assert(annotations.length === 2);
     assert(
       annotations[1].message ===
-        'Question keys should only contain letters and underscores.'
+        'Question names should only contain letters and underscores.'
     );
     assert(annotations[0].severity === 'error');
     assert(
       annotations[1].message ===
-        'Question keys should only contain letters and underscores.'
+        'Question names should only contain letters and underscores.'
     );
     assert(annotations[1].severity === 'error');
   });
