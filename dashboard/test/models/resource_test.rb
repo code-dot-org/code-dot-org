@@ -102,6 +102,13 @@ class ResourceTest < ActiveSupport::TestCase
     end
   end
 
+  test 'should_include_in_pdf' do
+    assert create(:resource, include_in_pdf: true, audience: 'Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: false, audience: 'Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: true, audience: 'Verified Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: false, audience: 'Verified Teacher').should_include_in_pdf?
+  end
+
   test 'serialize scripts that resource is in' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
