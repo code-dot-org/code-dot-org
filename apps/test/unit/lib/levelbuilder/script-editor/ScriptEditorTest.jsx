@@ -73,6 +73,8 @@ describe('ScriptEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
+      initialIsStable: false,
+      initialHidden: false,
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };
@@ -96,10 +98,10 @@ describe('ScriptEditor', () => {
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      expect(wrapper.find('input').length).to.equal(24);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('input').length).to.equal(21);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
       expect(wrapper.find('textarea').length).to.equal(3);
-      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -114,10 +116,10 @@ describe('ScriptEditor', () => {
         initialCourseVersionId: 1
       });
 
-      expect(wrapper.find('input').length).to.equal(28);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
+      expect(wrapper.find('input').length).to.equal(25);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(4);
+      expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -207,21 +209,11 @@ describe('ScriptEditor', () => {
 
     it('must set family name in order to check standalone course', () => {
       const wrapper = createWrapper({
-        initialHidden: false
+        initialHidden: false,
+        initialFamilyName: 'family1'
       });
       let courseCheckbox = wrapper.find('.isCourseCheckbox');
-      let familyNameSelect = wrapper.find('.familyNameSelector');
 
-      expect(courseCheckbox.props().disabled).to.be.true;
-      expect(familyNameSelect.props().value).to.equal('');
-
-      familyNameSelect.simulate('change', {target: {value: 'Family'}});
-
-      // have to re-find the items inorder to see updates
-      courseCheckbox = wrapper.find('.isCourseCheckbox');
-      familyNameSelect = wrapper.find('.familyNameSelector');
-
-      expect(familyNameSelect.props().value).to.equal('Family');
       expect(courseCheckbox.props().disabled).to.be.false;
     });
   });
@@ -476,24 +468,6 @@ describe('ScriptEditor', () => {
       ).to.be.true;
 
       server.restore();
-    });
-  });
-
-  describe('VisibleInTeacherDashboard', () => {
-    it('is checked when hidden is false', () => {
-      const wrapper = createWrapper({
-        initialHidden: false
-      });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
-      expect(checkbox.prop('checked')).to.be.true;
-    });
-
-    it('is unchecked when hidden is true', () => {
-      const wrapper = createWrapper({
-        initialHidden: true
-      });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
-      expect(checkbox.prop('checked')).to.be.false;
     });
   });
 });

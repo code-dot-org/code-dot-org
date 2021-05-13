@@ -68,7 +68,6 @@ export default class CourseVersionPublishingEditor extends Component {
         <label>
           Family Name
           <select
-            className="familyNameSelector"
             value={this.props.familyName}
             style={styles.dropdown}
             onChange={this.props.updateFamilyName}
@@ -106,6 +105,7 @@ export default class CourseVersionPublishingEditor extends Component {
         <label>
           Published State
           <select
+            className="publishedStateSelector"
             value={this.state.publishedState}
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
