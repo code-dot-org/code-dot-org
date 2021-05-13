@@ -331,6 +331,12 @@ class LessonGroupCard extends Component {
                   .id
               : null
           }
+          lessonName={
+            this.state.lessonPosToClone
+              ? this.props.lessonGroup.lessons[this.state.lessonPosToClone - 1]
+                  .name
+              : null
+          }
           handleClose={() => this.setState({lessonPosToClone: null})}
         />
       </div>

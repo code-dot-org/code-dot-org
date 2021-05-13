@@ -7,6 +7,7 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 export default class CloneLessonDialog extends Component {
   static propTypes = {
     lessonId: PropTypes.number,
+    lessonName: PropTypes.string,
     handleClose: PropTypes.func.isRequired
   };
 
@@ -14,8 +15,8 @@ export default class CloneLessonDialog extends Component {
     super(props);
     this.state = {
       destinationScript: '',
-      error: '',
       saving: false,
+      cloneFailed: false,
       cloneSucceeded: false
     };
   }
@@ -24,6 +25,7 @@ export default class CloneLessonDialog extends Component {
     e.preventDefault();
     this.setState({saving: true});
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
+    let success = false;
     fetch(`/lessons/${this.props.lessonId}/clone`, {
       method: 'POST',
       body: JSON.stringify({
@@ -33,17 +35,20 @@ export default class CloneLessonDialog extends Component {
         'Content-Type': 'application/json',
         'X-CSRF-Token': csrfContainer && csrfContainer.content
       }
-    }).then(data => {
-      if (data.ok) {
-        this.setState({saving: false, error: '', cloneSucceeded: true});
-      } else {
+    })
+      .then(response => {
+        success = response.ok;
+        return response;
+      })
+      .then(response => response.json())
+      .then(json => {
         this.setState({
-          error: 'Clone failed',
-          saving: false,
-          cloneSucceeded: false
+          responseData: json,
+          cloneSucceeded: success,
+          cloneFailed: !success,
+          saving: false
         });
-      }
-    });
+      });
   };
 
   handleClose = () => {
@@ -60,15 +65,35 @@ export default class CloneLessonDialog extends Component {
         handleClose={this.handleClose}
         isOpen={!!this.props.lessonId}
       >
-        {this.state.error && (
-          <span style={{color: 'red'}}>{this.state.error}</span>
+        {this.state.cloneFailed && (
+          <span style={{color: 'red'}}>{this.state.responseData.error}</span>
         )}
         {this.state.cloneSucceeded ? (
-          <span>Clone succeeded!</span>
+          <span>
+            Clone succeeded! Visit{' '}
+            <a
+              href={this.state.responseData.editScriptUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              the script edit page
+            </a>{' '}
+            to move the cloned lesson or{' '}
+            <a
+              href={this.state.responseData.editLessonUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              the lesson edit page
+            </a>{' '}
+            to edit it.
+          </span>
         ) : (
           <div>
             <label>
-              Which script do you want to clone this lesson to?
+              Cloning will add lesson <strong>{this.props.lessonName}</strong>{' '}
+              to the end of the last lesson group in the script. Which script do
+              you want to clone this lesson to?
               <input
                 type="text"
                 value={this.state.destinationScript}
@@ -77,18 +102,19 @@ export default class CloneLessonDialog extends Component {
                 }
               />
             </label>
-            Cloning will add this lesson to the end of the last lesson group in
-            the script.
+            {this.state.saving && <i className="fa fa-spinner fa-spin" />}
           </div>
         )}
         <DialogFooter>
           <Button onClick={this.handleClose} text={'Close'} color={'gray'} />
-          <Button
-            onClick={this.onCloneClick}
-            text={'Clone'}
-            color={'orange'}
-            disabled={this.state.saving}
-          />
+          {!this.state.cloneSucceeded && (
+            <Button
+              onClick={this.onCloneClick}
+              text={'Clone'}
+              color={'orange'}
+              disabled={this.state.saving}
+            />
+          )}
         </DialogFooter>
       </BaseDialog>
     );
