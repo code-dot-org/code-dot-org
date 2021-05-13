@@ -120,38 +120,42 @@ export default class CourseVersionPublishingEditor extends Component {
           </select>
           <HelpTip>
             <table>
-              <tr>
-                <th>Publish State</th>
-                <th>Overview</th>
-              </tr>
-              <tr>
-                <td style={styles.tableBorder}>Pilot</td>
-                <td style={styles.tableBorder}>
-                  A limited set of teachers who are in a pilot experiment can
-                  see and assign the course.
-                </td>
-              </tr>
-              <tr>
-                <td style={styles.tableBorder}>Preview</td>
-                <td style={styles.tableBorder}>
-                  Anyone who has the link can view the course and make progress
-                  on it. It is not assignable by teachers yet.
-                </td>
-              </tr>
-              <tr>
-                <td style={styles.tableBorder}>Assignable</td>
-                <td style={styles.tableBorder}>
-                  The course is now a choice in the dropdown that is assignable
-                  but is not the recommended course.
-                </td>
-              </tr>
-              <tr>
-                <td style={styles.tableBorder}>Recommended</td>
-                <td style={styles.tableBorder}>
-                  The course is the recommended course. It is assignable and we
-                  try to get teachers to use this course.
-                </td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Publish State</th>
+                  <th>Overview</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={styles.tableBorder}>Pilot</td>
+                  <td style={styles.tableBorder}>
+                    A limited set of teachers who are in a pilot experiment can
+                    see and assign the course.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Preview</td>
+                  <td style={styles.tableBorder}>
+                    Anyone who has the link can view the course and make
+                    progress on it. It is not assignable by teachers yet.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Assignable</td>
+                  <td style={styles.tableBorder}>
+                    The course is now a choice in the dropdown that is
+                    assignable but is not the recommended course.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Recommended</td>
+                  <td style={styles.tableBorder}>
+                    The course is the recommended course. It is assignable and
+                    we try to get teachers to use this course.
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </HelpTip>
         </label>
