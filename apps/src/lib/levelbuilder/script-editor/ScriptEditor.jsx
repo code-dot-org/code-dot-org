@@ -622,6 +622,7 @@ class ScriptEditor extends React.Component {
                     }
                     families={this.props.scriptFamilies}
                     versionYearOptions={this.props.versionYearOptions}
+                    isCourse={this.state.isCourse}
                   />
                 </div>
               )}

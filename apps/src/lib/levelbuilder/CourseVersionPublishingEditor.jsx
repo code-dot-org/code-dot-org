@@ -18,7 +18,8 @@ export default class CourseVersionPublishingEditor extends Component {
     updateFamilyName: PropTypes.func.isRequired,
     updateVersionYear: PropTypes.func.isRequired,
     families: PropTypes.arrayOf(PropTypes.string).isRequired,
-    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
+    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isCourse: PropTypes.bool
   };
 
   constructor(props) {
@@ -73,7 +74,7 @@ export default class CourseVersionPublishingEditor extends Component {
             style={styles.dropdown}
             onChange={this.props.updateFamilyName}
           >
-            <option value="">(None)</option>
+            {!this.props.isCourse && <option value="">(None)</option>}
             {this.props.families.map(familyOption => (
               <option key={familyOption} value={familyOption}>
                 {familyOption}
