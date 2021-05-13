@@ -2,13 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-const publishedStates = [
-  //'In Development',
-  'Pilot',
-  'Preview',
-  'Assignable',
-  'Recommended'
-];
+const publishedStates = ['Pilot', 'Preview', 'Assignable', 'Recommended'];
 
 export default class CourseVersionPublishedStateSelector extends Component {
   static propTypes = {
@@ -38,8 +32,6 @@ export default class CourseVersionPublishedStateSelector extends Component {
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
     switch (newPublishedState) {
-      //case 'In Development':
-      //break;
       case 'Pilot':
         this.setState({publishedState: newPublishedState}, () => {
           this.props.updatePilotExperiment(this.state.pilotExperiment);
@@ -66,7 +58,6 @@ export default class CourseVersionPublishedStateSelector extends Component {
             this.props.updateIsStable(true);
           }
         );
-
         break;
       case 'Preview':
       default:
