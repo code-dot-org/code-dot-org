@@ -35,8 +35,8 @@ export default class LessonNavigationDropdown extends Component {
   }
 
   handleDropdownClick = (e, listItem) => {
+    e.preventDefault();
     if (listItem.link) {
-      e.preventDefault();
       firehoseClient.putRecord(
         {
           study: 'lesson-plan',
