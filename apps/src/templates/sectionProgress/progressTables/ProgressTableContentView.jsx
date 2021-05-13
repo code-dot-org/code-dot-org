@@ -118,7 +118,7 @@ export default class ProgressTableContentView extends React.Component {
     let width = null;
     if (columnWidths) {
       width = columnWidths[index];
-    } else if (!scriptData.stages[index].levels?.length) {
+    } else if (!lessonHasLevels(scriptData.stages[index])) {
       width = parseInt(progressTableStyles.MIN_COLUMN_WIDTH);
     }
     return width ? {style: {minWidth: width, maxWidth: width}} : {};
