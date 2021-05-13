@@ -6,18 +6,6 @@ import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const styles = {
-  heading: {
-    color: color.purple
-  },
-  listAlign: {
-    marginLeft: 10
-  },
-  sublistAlign: {
-    marginLeft: 20
-  }
-};
-
 export default class SignInInstructions extends React.Component {
   static propTypes = {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
@@ -103,3 +91,15 @@ export default class SignInInstructions extends React.Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    color: color.purple
+  },
+  listAlign: {
+    marginLeft: 10
+  },
+  sublistAlign: {
+    marginLeft: 20
+  }
+};

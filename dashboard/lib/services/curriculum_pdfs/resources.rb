@@ -34,7 +34,7 @@ module Services
           script.lessons.each do |lesson|
             ChatClient.log("Gathering resources for #{lesson.key.inspect}") if DEBUG
             lesson_pdfs = lesson.resources.map do |resource|
-              fetch_resource_pdf(resource, pdfs_dir)
+              fetch_resource_pdf(resource, pdfs_dir) if resource.should_include_in_pdf?
             end.compact
 
             next if lesson_pdfs.empty?
@@ -46,7 +46,36 @@ module Services
           # Merge all gathered PDFs
           destination = File.join(directory, get_script_resources_pdf_pathname(script))
           FileUtils.mkdir_p(File.dirname(destination))
-          PDF.merge_local_pdfs(destination, *pdfs)
+          # We've been having an intermittent issue where this step will fail
+          # with a ghostscript error. The only way I've been able to reproduce
+          # this error locally is by deleting one of the PDFs out from under
+          # the generation process prior to the merge attempt, and I'm a bit
+          # skeptical that that explains what's going on in the actual staging
+          # environment.
+          #
+          # So, in an effort to better understand what's actually happening,
+          # I'm adding some explicit logging.
+          begin
+            PDF.merge_local_pdfs(destination, *pdfs)
+          rescue Exception => e
+            ChatClient.log(
+              "Error when trying to merge resource PDFs for #{script.name}: #{e}",
+              color: 'red'
+            )
+            ChatClient.log(
+              "destination: #{destination.inspect}",
+              color: 'red'
+            )
+            ChatClient.log(
+              "pdfs: #{pdfs.inspect}",
+              color: 'red'
+            )
+            ChatClient.log(
+              "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
+              color: 'red'
+            )
+            raise e
+          end
           FileUtils.remove_entry_secure(pdfs_dir)
 
           return destination
@@ -83,55 +112,46 @@ module Services
           return path
         end
 
-        def export_from_google(url, path)
+        def google_drive_file_by_url(url)
           @google_drive_session ||= GoogleDrive::Session.from_service_account_key(
             StringIO.new(CDO.gdrive_export_secret&.to_json || "")
           )
-          file = @google_drive_session.file_by_url(url)
+          return @google_drive_session.file_by_url(url)
+        end
 
-          # If file is already a PDF, we can just download it; otherwise, we
-          # need to export to convert it.
-          if file.available_content_types.include? "application/pdf"
+        def fetch_url_to_path(url, path)
+          if url.start_with?("https://docs.google.com/document/d/")
+            file = google_drive_file_by_url(url)
+            file.export_as_file(path, "application/pdf")
+            return path
+          elsif url.start_with?("https://drive.google.com/")
+            file = google_drive_file_by_url(url)
+            return nil unless file.available_content_types.include? "application/pdf"
             file.download_to_file(path)
-          else
-            # The intuitive option here would be to use
-            # file.export_as_file(path, "application/pdf"); unfortunately, that
-            # method applies some restrictive file size limits that for
-            # whatever reason hitting the URI directly does not.
-            IO.copy_stream(URI.open("https://docs.google.com/document/d/#{file.id}/export?format=pdf"), path)
+            return path
+          elsif url.end_with?(".pdf")
+            IO.copy_stream(URI.open(url), path)
+            return path
           end
+        rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
+          ChatClient.log(
+            "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+            color: 'yellow'
+          )
+          return nil
+        rescue URI::InvalidURIError, OpenURI::HTTPError => e
+          ChatClient.log(
+            "URI error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+            color: 'yellow'
+          )
+          return nil
         end
 
         def fetch_resource_pdf(resource, directory="/tmp/")
           filename = ActiveStorage::Filename.new("resource.#{resource.key}.pdf").sanitized
           path = File.join(directory, filename)
           return path if File.exist?(path)
-
-          begin
-            if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
-              # We don't want to export forms
-              return nil if resource.url.start_with?("https://docs.google.com/forms")
-              begin
-                export_from_google(resource.url, path)
-                return path
-              rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
-                ChatClient.log(
-                  "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
-                  color: 'yellow'
-                )
-                return nil
-              end
-            elsif resource.url.end_with?(".pdf")
-              IO.copy_stream(URI.open(resource.url), path)
-              return path
-            end
-          rescue URI::InvalidURIError, OpenURI::HTTPError => e
-            ChatClient.log(
-              "URI error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
-              color: 'yellow'
-            )
-            return nil
-          end
+          return fetch_url_to_path(resource.url, path)
         end
       end
     end

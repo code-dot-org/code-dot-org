@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-05-03 23:56:07 UTC",
+    "serialized_at": "2021-05-13 18:43:12 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -1787,6 +1787,7 @@
       "key": "4a6ce720-3271-41a8-8f69-23473046c28a",
       "position": 9,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {

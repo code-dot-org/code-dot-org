@@ -7,61 +7,6 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 
-const styles = {
-  rubricLevelHeaders: {
-    width: '100%'
-  },
-  detailsArea: {
-    width: '100%',
-    paddingTop: 2
-  },
-  rubricHeader: {
-    fontSize: 12,
-    marginLeft: 10,
-    color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif',
-    // Don't show default summary tag outline and background on hover or focus
-    outline: 'none',
-    background: 'none'
-  },
-  performanceLevelHeader: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    margin: '0px 8px',
-    padding: 4,
-    borderRadius: 4,
-    border: `solid 1px ${color.white}`,
-    ':hover': {
-      border: `solid 1px ${color.light_cyan}`
-    }
-  },
-  performanceLevelHeaderSelected: {
-    display: 'flex',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    margin: '0px 8px',
-    padding: 4,
-    backgroundColor: color.lightest_cyan,
-    borderRadius: 4,
-    border: `solid 1px ${color.white}`,
-    ':hover': {
-      border: `solid 1px ${color.light_cyan}`
-    }
-  },
-  tooltip: {
-    maxWidth: 200,
-    lineHeight: '20px',
-    whiteSpace: 'normal'
-  },
-  rubricDetails: {
-    paddingLeft: 23,
-    paddingTop: 5,
-    fontSize: 12,
-    margin: 0
-  }
-};
-
 const rubricPerformanceHeaders = {
   performanceLevel1: i18n.rubricLevelOneHeader(),
   performanceLevel2: i18n.rubricLevelTwoHeader(),
@@ -142,5 +87,60 @@ class RubricField extends Component {
     );
   }
 }
+
+const styles = {
+  rubricLevelHeaders: {
+    width: '100%'
+  },
+  detailsArea: {
+    width: '100%',
+    paddingTop: 2
+  },
+  rubricHeader: {
+    fontSize: 12,
+    marginLeft: 10,
+    color: color.black,
+    fontFamily: '"Gotham 5r", sans-serif',
+    // Don't show default summary tag outline and background on hover or focus
+    outline: 'none',
+    background: 'none'
+  },
+  performanceLevelHeader: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    margin: '0px 8px',
+    padding: 4,
+    borderRadius: 4,
+    border: `solid 1px ${color.white}`,
+    ':hover': {
+      border: `solid 1px ${color.light_cyan}`
+    }
+  },
+  performanceLevelHeaderSelected: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    margin: '0px 8px',
+    padding: 4,
+    backgroundColor: color.lightest_cyan,
+    borderRadius: 4,
+    border: `solid 1px ${color.white}`,
+    ':hover': {
+      border: `solid 1px ${color.light_cyan}`
+    }
+  },
+  tooltip: {
+    maxWidth: 200,
+    lineHeight: '20px',
+    whiteSpace: 'normal'
+  },
+  rubricDetails: {
+    paddingLeft: 23,
+    paddingTop: 5,
+    fontSize: 12,
+    margin: 0
+  }
+};
 export const UnwrappedRubricField = RubricField;
 export default Radium(RubricField);

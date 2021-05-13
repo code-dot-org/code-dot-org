@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_040241) do
+ActiveRecord::Schema.define(version: 2021_05_11_160631) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -490,7 +490,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.string "path", null: false
     t.string "kind"
     t.string "form_name", null: false
-    t.integer "form_version"
+    t.integer "form_version", null: false
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

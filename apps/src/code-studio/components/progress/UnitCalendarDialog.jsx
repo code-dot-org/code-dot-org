@@ -9,32 +9,6 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [45, 90, 135, 180, 225];
 export const WEEK_WIDTH = 585;
 
-const styles = {
-  dialog: {
-    textAlign: 'left',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  button: {
-    float: 'right',
-    marginTop: 30
-  },
-  dropdown: {
-    width: 'fit-content',
-    marginBottom: 0
-  },
-  minutesPerWeekWrapper: {
-    display: 'flex',
-    marginBottom: 10,
-    alignItems: 'center'
-  },
-  minutesPerWeekDescription: {
-    fontWeight: 'bold',
-    marginRight: 10
-  }
-};
-
 export default class UnitCalendarDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -103,3 +77,29 @@ export default class UnitCalendarDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    textAlign: 'left',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  button: {
+    float: 'right',
+    marginTop: 30
+  },
+  dropdown: {
+    width: 'fit-content',
+    marginBottom: 0
+  },
+  minutesPerWeekWrapper: {
+    display: 'flex',
+    marginBottom: 10,
+    alignItems: 'center'
+  },
+  minutesPerWeekDescription: {
+    fontWeight: 'bold',
+    marginRight: 10
+  }
+};

@@ -64,7 +64,6 @@ export function getDetailCellFormatters(levelProgressByStudent, section) {
     <ProgressTableDetailCell
       studentId={student.id}
       sectionId={section.id}
-      stageExtrasEnabled={section.stageExtras}
       levels={lesson.levels}
       studentProgress={levelProgressByStudent[student.id]}
     />

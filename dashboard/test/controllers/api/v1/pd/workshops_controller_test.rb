@@ -490,11 +490,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert response_workshop.virtual?
   end
 
-  test 'cannot create a virtual workshop without suppressed email' do
+  # this is a change from previous behavior that enforced virtual workshops suppressing emails
+  test 'can create a virtual workshop without suppressed email' do
     sign_in @organizer
-    refute_creates(Pd::Workshop) do
+    assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
-      assert_response :bad_request
+      assert_response :success
+      assert response_workshop.virtual?
+      refute response_workshop.suppress_email?
     end
   end
 
@@ -677,15 +680,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert workshop.virtual?
   end
 
-  test 'cannot update a workshop to be virtual without suppressed email' do
+  # this is a change from previous behavior that enforced virtual workshops suppressing emails
+  test 'can update a workshop to be virtual without suppressed email' do
     sign_in @organizer
     workshop = create :workshop, organizer: @organizer
     refute workshop.virtual?
 
     put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
-    assert_response :bad_request
+    assert_response :success
     workshop.reload
-    refute workshop.virtual?
+    assert workshop.virtual?
+    refute workshop.suppress_email?
   end
 
   test 'can update a workshop to have suppressed email' do

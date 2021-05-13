@@ -13,12 +13,6 @@ import AgeDialog, {signedOutOver13} from '../templates/AgeDialog';
 const GAME_WIDTH = gameLabConstants.GAME_WIDTH;
 const GAME_HEIGHT = gameLabConstants.GAME_HEIGHT;
 
-const styles = {
-  selectStyle: {
-    width: '100%'
-  }
-};
-
 const SongSelector = Radium(
   class extends React.Component {
     static propTypes = {
@@ -166,6 +160,12 @@ class DanceVisualizationColumn extends React.Component {
     );
   }
 }
+
+const styles = {
+  selectStyle: {
+    width: '100%'
+  }
+};
 
 export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
