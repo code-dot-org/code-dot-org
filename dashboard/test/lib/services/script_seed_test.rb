@@ -82,14 +82,13 @@ module Services
       #   2 queries, one to remove LessonsOpportunityStandards from each Lesson.
       #   1 query to get all the programming environments
       #   1 query to get all the standards frameworks
-      #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
       # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(102) do
+      assert_queries(85) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -1085,7 +1084,7 @@ module Services
             )
             (1..num_script_levels_per_section).each do |sl_pos|
               game = create :game, name: "#{name_prefix}_game#{sl_num}"
-              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "1_2_#{sl_num}", game: game
+              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game
               create :script_level, activity_section: section, activity_section_position: sl_pos,
                      lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
                      assessment: false, bonus: false, named_level: false
