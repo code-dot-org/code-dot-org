@@ -600,7 +600,6 @@ module Services
     test 'seed deletes script_levels' do
       script = create_script_tree
       original_counts = get_counts
-      original_script_level_ids = script.script_levels.map(&:id)
 
       script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         script.script_levels.first.destroy!
@@ -619,8 +618,6 @@ module Services
       expected_counts['ScriptLevel'] -= 1
       expected_counts['LevelsScriptLevel'] -= 1
       assert_equal expected_counts, get_counts
-      # We need to preserve the script level ids of the remaining script levels, since teacher feedbacks reference them.
-      assert_equal original_script_level_ids.slice(1, original_script_level_ids.length), script.script_levels.map(&:id)
     end
 
     # Resources are owned by the course version. We need to make sure all the
