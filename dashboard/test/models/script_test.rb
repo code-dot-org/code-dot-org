@@ -1237,6 +1237,23 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal [level.id.to_s], response[:lessons].first[:levels].first[:ids]
   end
 
+  test 'summarize preprocesses markdown' do
+    course_offering = create :course_offering, key: 'offering'
+    course_version = create :course_version, course_offering: course_offering
+    resource = create :resource, key: 'resource', course_version: course_version
+    vocab = create :vocabulary, key: 'vocab', course_version: course_version
+
+    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
+    expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
+    script = create :script
+    script.stubs(:localized_description).returns(source)
+    script.stubs(:localized_student_description).returns(source)
+    summary = script.summarize
+
+    assert_equal(expected, summary[:description])
+    assert_equal(expected, summary[:studentDescription])
+  end
+
   test 'should generate PLC objects' do
     script_file = File.join(self.class.fixture_path, 'test-plc.script')
     script_names, custom_i18n = Script.setup([script_file])
