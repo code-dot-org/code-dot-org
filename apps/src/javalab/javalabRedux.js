@@ -4,13 +4,14 @@ const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const RENAME_FILE = 'javalab/RENAME_FILE';
 const SET_SOURCE = 'javalab/SET_SOURCE';
 const SOURCE_VISIBILITY_UPDATED = 'javalab/SOURCE_VISIBILITY_UPDATED';
+const SOURCE_VALIDATION_UPDATED = 'javalab/SOURCE_VALIDATION_UPDATED';
 const SET_ALL_SOURCES = 'javalab/SET_ALL_SOURCES';
 const COLOR_PREFERENCE_UPDATED = 'javalab/COLOR_PREFERENCE_UPDATED';
 const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', visible: true}},
+  sources: {'MyClass.java': {text: '', visible: true, isValidationFile: false}},
   isDarkMode: false
 };
 
@@ -36,17 +37,31 @@ export const renameFile = (oldFilename, newFilename) => ({
   newFilename
 });
 
-export const setSource = (filename, source, isVisible = true) => ({
+export const setSource = (
+  filename,
+  source,
+  isVisible = true,
+  isValidation = false
+) => ({
   type: SET_SOURCE,
   filename,
   source,
-  isVisible
+  isVisible,
+  isValidation
 });
 
-export const sourceVisibilityUpdated = (filename, isVisible) => ({
+export const sourceVisibilityUpdated = (filename, isVisible, isValidation) => ({
   type: SOURCE_VISIBILITY_UPDATED,
   filename,
-  isVisible
+  isVisible,
+  isValidation
+});
+
+export const sourceValidationUpdated = (filename, isVisible, isValidation) => ({
+  type: SOURCE_VALIDATION_UPDATED,
+  filename,
+  isVisible,
+  isValidation
 });
 
 // Updates the user preferences to reflect change
@@ -90,6 +105,16 @@ export default function reducer(state = initialState, action) {
   if (action.type === SOURCE_VISIBILITY_UPDATED) {
     let newSources = {...state.sources};
     newSources[action.filename].visible = action.isVisible;
+    newSources[action.filename].isValidationFile = action.isValidation;
+    return {
+      ...state,
+      sources: newSources
+    };
+  }
+  if (action.type === SOURCE_VALIDATION_UPDATED) {
+    let newSources = {...state.sources};
+    newSources[action.filename].visible = action.isVisible;
+    newSources[action.filename].isValidationFile = action.isValidation;
     return {
       ...state,
       sources: newSources
