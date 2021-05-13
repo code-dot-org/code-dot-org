@@ -1561,9 +1561,12 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit(include_lessons=true)
-    data = %w(title description student_description description_short description_audience).map do |key|
+    data = %w(title description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
+
+    data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
+    data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
       data[:stageDescriptions] = lessons.map do |lesson|
@@ -1757,11 +1760,11 @@ class Script < ApplicationRecord
       info[:version_title] = version_year
     end
     if localized_description
-      info[:description] = localized_description
+      info[:description] = Services::MarkdownPreprocessor.process(localized_description)
     end
 
     if localized_student_description
-      info[:student_description] = localized_student_description
+      info[:student_description] = Services::MarkdownPreprocessor.process(localized_student_description)
     end
 
     info[:is_stable] = true if is_stable
