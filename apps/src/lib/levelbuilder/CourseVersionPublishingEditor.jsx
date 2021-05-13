@@ -30,59 +30,35 @@ export default class CourseVersionPublishingEditor extends Component {
           : 'Assignable'
         : this.props.pilotExperiment
         ? 'Pilot'
-        : 'Preview',
-      pilotExperiment: this.props.pilotExperiment
+        : 'Preview'
     };
   }
 
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
-    switch (newPublishedState) {
-      case 'Pilot':
-        this.setState({publishedState: newPublishedState}, () => {
-          this.props.updatePilotExperiment(this.state.pilotExperiment);
+    this.setState({publishedState: newPublishedState}, () => {
+      switch (newPublishedState) {
+        case 'Pilot':
           this.props.updateVisible(false);
           this.props.updateIsStable(false);
-        });
-        break;
-      case 'Assignable':
-        this.setState(
-          {publishedState: newPublishedState, pilotExperiment: null},
-          () => {
-            this.props.updatePilotExperiment('');
-            this.props.updateVisible(true);
-            this.props.updateIsStable(false);
-          }
-        );
-        break;
-      case 'Recommended':
-        this.setState(
-          {publishedState: newPublishedState, pilotExperiment: null},
-          () => {
-            this.props.updatePilotExperiment('');
-            this.props.updateVisible(true);
-            this.props.updateIsStable(true);
-          }
-        );
-        break;
-      case 'Preview':
-      default:
-        this.setState(
-          {publishedState: newPublishedState, pilotExperiment: null},
-          () => {
-            this.props.updatePilotExperiment('');
-            this.props.updateVisible(false);
-            this.props.updateIsStable(false);
-          }
-        );
-        break;
-    }
-  };
-
-  updatePilotExperiment = event => {
-    const newPilotExperiment = event.target.value;
-    this.setState({pilotExperiment: newPilotExperiment}, () => {
-      this.props.updatePilotExperiment(newPilotExperiment);
+          break;
+        case 'Assignable':
+          this.props.updatePilotExperiment('');
+          this.props.updateVisible(true);
+          this.props.updateIsStable(false);
+          break;
+        case 'Recommended':
+          this.props.updatePilotExperiment('');
+          this.props.updateVisible(true);
+          this.props.updateIsStable(true);
+          break;
+        case 'Preview':
+        default:
+          this.props.updatePilotExperiment('');
+          this.props.updateVisible(false);
+          this.props.updateIsStable(false);
+          break;
+      }
     });
   };
 
@@ -152,9 +128,9 @@ export default class CourseVersionPublishingEditor extends Component {
               </p>
             </HelpTip>
             <input
-              value={this.state.pilotExperiment}
+              value={this.props.pilotExperiment}
               style={styles.input}
-              onChange={this.updatePilotExperiment}
+              onChange={this.props.updatePilotExperiment}
             />
           </label>
         )}
