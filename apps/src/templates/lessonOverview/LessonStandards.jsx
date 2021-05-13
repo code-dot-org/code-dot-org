@@ -23,6 +23,12 @@ export const styles = {
     fontFamily: "'Gotham 5r', sans-serif",
     fontWeight: 'bold',
     color: color.dark_charcoal
+  },
+  summary: {
+    padding: 3
+  },
+  standard: {
+    padding: 3
   }
 };
 
@@ -145,7 +151,7 @@ class UnconnectedParentCategory extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary>
+          <summary style={styles.summary}>
             <span style={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
@@ -189,7 +195,7 @@ class UnconnectedCategory extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary>
+          <summary style={styles.summary}>
             <span style={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
@@ -215,12 +221,10 @@ class Standard extends PureComponent {
   render() {
     const {standard} = this.props;
     return (
-      <li key={standard.shortcode}>
-        <summary>
-          <span style={styles.standardShortcode}>{standard.shortcode}</span>
-          {' - '}
-          {standard.description}
-        </summary>
+      <li key={standard.shortcode} style={styles.standard}>
+        <span style={styles.standardShortcode}>{standard.shortcode}</span>
+        {' - '}
+        {standard.description}
       </li>
     );
   }
