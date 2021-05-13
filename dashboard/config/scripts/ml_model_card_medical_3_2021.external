@@ -1,0 +1,17 @@
+name 'ml-model card-medical-3-2021'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Medical Priority Model Card #3
+
+<a href="https://images.code.org/18750f42cc67d7757e4b890363d24242-image-1615862917104.png" target="_blank">
+<img src="https://images.code.org/18750f42cc67d7757e4b890363d24242-image-1615862917104.png" width="45%" style="float:left; margin: 2px;"></a>
+
+<a href="https://images.code.org/b651a09a294df811dbd1282c0ac43481-image-1615862941447.png" target="_blank">
+<img src="https://images.code.org/b651a09a294df811dbd1282c0ac43481-image-1615862941447.png" width="45%" style="float:right; margin: 2px"></a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

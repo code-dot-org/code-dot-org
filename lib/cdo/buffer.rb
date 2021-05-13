@@ -141,8 +141,8 @@ module Cdo
 
       # Flush now if the batch is full or when force flushing.
       wait = 0.0 if force ||
-        size(@buffer.map(&:object)) >= @batch_size ||
-        @buffer.length >= @batch_count
+        @buffer.length >= @batch_count ||
+        size(@buffer.map(&:object)) >= @batch_size
 
       # Wait until min_interval has passed since the last flush.
       min_delay = @min_interval - (now - @last_flush.to_f)

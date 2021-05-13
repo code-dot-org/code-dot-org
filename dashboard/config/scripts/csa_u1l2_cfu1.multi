@@ -1,0 +1,15 @@
+name 'CSA U1L2 CFU1'
+editor_experiment ''
+
+
+wrong 'class'
+right 'object'
+
+
+markdown <<MARKDOWN
+Look at the underlined code snippet below. Which of the following correctly identifies the code?
+
+```
+Painter art = new Painter();
+```
+MARKDOWN

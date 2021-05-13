@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-05-11 21:40:20 UTC",
+    "serialized_at": "2021-05-12 19:36:21 UTC",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -5173,7 +5173,6 @@
         "description": "**Step 2 - Prepare Your Training Data:** Give students time to look through the available datasets in AI Lab to find one that resonates with their AI for Social Good topic of interest. Once they have done this, have them complete the table and answer the question that follows.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Using Relevant Datasets:** Student choice and creativity is important for this project, but you may find that the datasets we have available are not an exact match to the issues that students have chosen. There are a few options available for students who encounter this:\n\n- If a dataset is _close_ to a student’s initial idea, encourage them to adjust their app idea to match the data available. This happens frequently when developing machine learning apps as well since the apps can only work with the data that is available\n- If students find a dataset that looks interesting but is unrelated to their topic, encourage them to adjust their app idea to use the new dataset. They will need to re-complete Part 1 of the Project Guide, but the rest of the activity can continue as normal using the new dataset\n- If students have picked a highly relevant topic but there aren’t any supporting datasets, students have the following options:\n\t- You can help students use a program like Google Forms to collect their own data to create a Machine Learning model. [Click Here](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) to make a copy of a form that students can use as a template. Once students have collected enough data, they can export their data as a .csv file and upload it to AI Lab. [Click Here](https://www.loom.com/share/243208cbfb1e427c81fc7d2bac43f1e9) for a video showing how you and students can use this form with AI Lab\n\t- You can help students search for new datasets using a Machine Learning dataset website like [Kaggle.com](https://www.kaggle.com/). This site can be overwhelming and not all of the datasets will work with AI Lab, so students will need guidance on how to find appropriate datasets\n"
           }
@@ -5366,7 +5365,6 @@
       "key": "005dc3d1-eaf6-4ab8-999a-4ca4bfa37617",
       "position": 2,
       "properties": {
-        "name": "App with Real-World Data - App Lab",
         "progression_name": "App with Real-World Data - App Lab"
       },
       "seeding_key": {
@@ -5460,16 +5458,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-L2 unsupervised - 1"
-        ],
         "progression": "Looking for Patterns"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-L2 unsupervised - 1"
+          "ml-L2 unsupervised - 1-2021"
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
@@ -5477,7 +5472,7 @@
         "activity_section.key": "8c0df74a-8255-43b8-9469-4bf985619e0d"
       },
       "level_keys": [
-        "ml-L2 unsupervised - 1"
+        "ml-L2 unsupervised - 1-2021"
       ]
     },
     {
@@ -5486,16 +5481,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-L2 supervised - green glass door"
-        ],
         "progression": "Green Glass Door"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-L2 supervised - green glass door"
+          "ml-L2 supervised - green glass door-2021"
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
@@ -5503,7 +5495,7 @@
         "activity_section.key": "85b150ba-3103-4062-bf3c-f2d366749f17"
       },
       "level_keys": [
-        "ml-L2 supervised - green glass door"
+        "ml-L2 supervised - green glass door-2021"
       ]
     },
     {
@@ -5512,16 +5504,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models-shoes random"
-        ],
         "progression": "Shoe Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models-shoes random"
+          "ml-models-shoes random-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -5529,7 +5518,7 @@
         "activity_section.key": "f553a16f-2fc2-49b6-a55a-70fd46a1b3b4"
       },
       "level_keys": [
-        "ml-models-shoes random"
+        "ml-models-shoes random-2021"
       ]
     },
     {
@@ -5538,16 +5527,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models-shoes decision tree"
-        ],
         "progression": "Improved Shoe Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models-shoes decision tree"
+          "ml-models-shoes decision tree-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -5555,7 +5541,7 @@
         "activity_section.key": "00ced768-6406-47aa-815d-9d3a89cc6fd6"
       },
       "level_keys": [
-        "ml-models-shoes decision tree"
+        "ml-models-shoes decision tree-2021"
       ]
     },
     {
@@ -5564,16 +5550,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models-shoes data"
-        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models-shoes data"
+          "ml-models-shoes data-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -5581,7 +5564,7 @@
         "activity_section.key": "76fb0647-ea59-4d24-a7f1-a000316a3e33"
       },
       "level_keys": [
-        "ml-models-shoes data"
+        "ml-models-shoes data-2021"
       ]
     },
     {
@@ -5590,16 +5573,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models-shoes points"
-        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models-shoes points"
+          "ml-models-shoes points-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -5607,7 +5587,7 @@
         "activity_section.key": "280ddf58-b0ce-4ca6-ad91-b55243b6b638"
       },
       "level_keys": [
-        "ml-models-shoes points"
+        "ml-models-shoes points-2021"
       ]
     },
     {
@@ -5616,16 +5596,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-intro categorical-tacos"
-        ],
         "progression": "Dataset #1: Tacos"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-intro categorical-tacos"
+          "ml-intro categorical-tacos-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -5633,7 +5610,7 @@
         "activity_section.key": "dfe4bee2-8fb7-40e3-8608-dd4bdf887b74"
       },
       "level_keys": [
-        "ml-intro categorical-tacos"
+        "ml-intro categorical-tacos-2021"
       ]
     },
     {
@@ -5642,16 +5619,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-intro categorical-ice cream"
-        ],
         "progression": "Dataset #2: Ice Cream"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-intro categorical-ice cream"
+          "ml-intro categorical-ice cream-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -5659,7 +5633,7 @@
         "activity_section.key": "1c4017dc-ecea-46b8-8e2b-7a8ae1b54934"
       },
       "level_keys": [
-        "ml-intro categorical-ice cream"
+        "ml-intro categorical-ice cream-2021"
       ]
     },
     {
@@ -5668,16 +5642,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-intro categorical-pizza"
-        ],
         "progression": "Dataset #3: Pizza"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-intro categorical-pizza"
+          "ml-intro categorical-pizza-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -5685,7 +5656,7 @@
         "activity_section.key": "1a926676-97b4-4a29-bc21-c005ebae26a0"
       },
       "level_keys": [
-        "ml-intro categorical-pizza"
+        "ml-intro categorical-pizza-2021"
       ]
     },
     {
@@ -5694,16 +5665,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-intro categorical-food choices"
-        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-intro categorical-food choices"
+          "ml-intro categorical-food choices-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -5711,7 +5679,7 @@
         "activity_section.key": "b1b025ba-1107-456f-9b31-c9cd6a6c6388"
       },
       "level_keys": [
-        "ml-intro categorical-food choices"
+        "ml-intro categorical-food choices-2021"
       ]
     },
     {
@@ -5720,16 +5688,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Full Year Pilot Experiments Dashboard - AI Models"
-        ],
         "progression": "(Enable AI Models)"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Full Year Pilot Experiments Dashboard - AI Models"
+          "Course Experiments Dashboard - AI Models-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -5737,7 +5702,7 @@
         "activity_section.key": "8e4ae398-9b7f-4b57-8d97-39773df3efec"
       },
       "level_keys": [
-        "Full Year Pilot Experiments Dashboard - AI Models"
+        "Course Experiments Dashboard - AI Models-2021"
       ]
     },
     {
@@ -5746,16 +5711,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-vacation example"
-        ],
         "progression": "What is your Ideal Vacation?"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-vacation example"
+          "ml-models in applab-vacation example-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -5763,7 +5725,7 @@
         "activity_section.key": "652fe87c-8a35-45bc-a770-741ecb0a626c"
       },
       "level_keys": [
-        "ml-models in applab-vacation example"
+        "ml-models in applab-vacation example-2021"
       ]
     },
     {
@@ -5772,16 +5734,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-import 1"
-        ],
         "progression": "Import Your Model"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-import 1"
+          "ml-models in applab-import 1-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -5789,7 +5748,7 @@
         "activity_section.key": "17ada59a-9b77-4062-99d7-b38fe5e5b0f8"
       },
       "level_keys": [
-        "ml-models in applab-import 1"
+        "ml-models in applab-import 1-2021"
       ]
     },
     {
@@ -5798,16 +5757,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-screens-2"
-        ],
         "progression": "Changing Screens"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-screens-2"
+          "ml-models in applab-screens-2-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -5815,7 +5771,7 @@
         "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
       },
       "level_keys": [
-        "ml-models in applab-screens-2"
+        "ml-models in applab-screens-2-2021"
       ]
     },
     {
@@ -5824,16 +5780,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-screens-1"
-        ],
         "progression": "Changing Screens"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-screens-1"
+          "ml-models in applab-screens-1-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -5841,7 +5794,7 @@
         "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
       },
       "level_keys": [
-        "ml-models in applab-screens-1"
+        "ml-models in applab-screens-1-2021"
       ]
     },
     {
@@ -5850,16 +5803,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-screens-3"
-        ],
         "progression": "Changing Screens"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-screens-3"
+          "ml-models in applab-screens-3-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -5867,7 +5817,7 @@
         "activity_section.key": "ba1e3fee-4fb9-49b1-853b-52ee120ddf3d"
       },
       "level_keys": [
-        "ml-models in applab-screens-3"
+        "ml-models in applab-screens-3-2021"
       ]
     },
     {
@@ -5876,16 +5826,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-models in applab-practice choice"
-        ],
         "progression": "You Choose: Quiz Apps"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-models in applab-practice choice"
+          "ml-models in applab-practice choice-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -5893,7 +5840,7 @@
         "activity_section.key": "edaf13e1-c93d-4c3b-a58f-60a2e635abcf"
       },
       "level_keys": [
-        "ml-models in applab-practice choice"
+        "ml-models in applab-practice choice-2021"
       ]
     },
     {
@@ -5902,16 +5849,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-model card-medical app v2"
-        ],
         "progression": "Medical Priority App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-model card-medical app v2"
+          "ml-model card-medical app v2 2021-2"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -5919,7 +5863,7 @@
         "activity_section.key": "8b22ccf6-2ced-49a2-9c6a-056923a215e2"
       },
       "level_keys": [
-        "ml-model card-medical app v2"
+        "ml-model card-medical app v2 2021-2"
       ]
     },
     {
@@ -5928,16 +5872,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-model card-medical-1"
-        ],
         "progression": "Medical Dataset Model Cards"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-model card-medical-1"
+          "ml-model card-medical-1-2021"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -5945,7 +5886,7 @@
         "activity_section.key": "4e17e42c-6609-469f-955c-e753795346f5"
       },
       "level_keys": [
-        "ml-model card-medical-1"
+        "ml-model card-medical-1-2021"
       ]
     },
     {
@@ -5954,16 +5895,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-model card-medical-2"
-        ],
         "progression": "Medical Dataset Model Cards"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-model card-medical-2"
+          "ml-model card-medical-2-2021"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -5971,7 +5909,7 @@
         "activity_section.key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f"
       },
       "level_keys": [
-        "ml-model card-medical-2"
+        "ml-model card-medical-2-2021"
       ]
     },
     {
@@ -5980,16 +5918,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-model card-medical-3"
-        ],
         "progression": "Medical Dataset Model Cards"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-model card-medical-3"
+          "ml-model card-medical-3-2021"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -5997,7 +5932,7 @@
         "activity_section.key": "0b6e4e8e-2d74-40f5-8c49-37b0450bf64f"
       },
       "level_keys": [
-        "ml-model card-medical-3"
+        "ml-model card-medical-3-2021"
       ]
     },
     {
@@ -6006,16 +5941,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-numerical ai lab-safari 1"
-        ],
         "progression": "Safari Planner"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-numerical ai lab-safari 1"
+          "ml-numerical ai lab-safari 1-2021"
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
@@ -6023,7 +5955,7 @@
         "activity_section.key": "81d7419f-f4d1-496d-96de-dd9c1ded659a"
       },
       "level_keys": [
-        "ml-numerical ai lab-safari 1"
+        "ml-numerical ai lab-safari 1-2021"
       ]
     },
     {
@@ -6032,16 +5964,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1A"
-        ],
         "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1A"
+          "ml-use model card-example1A-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6049,7 +5978,7 @@
         "activity_section.key": "283059e1-d586-43f4-a40d-3209eb08ee0a"
       },
       "level_keys": [
-        "ml-use model card-example1A"
+        "ml-use model card-example1A-2021"
       ]
     },
     {
@@ -6058,16 +5987,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-pet model card"
-        ],
         "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-pet model card"
+          "ml-use model card-pet model card-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6075,7 +6001,7 @@
         "activity_section.key": "1eea6334-2050-4da1-b4d3-299c156619f8"
       },
       "level_keys": [
-        "ml-use model card-pet model card"
+        "ml-use model card-pet model card-2021"
       ]
     },
     {
@@ -6084,16 +6010,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1B"
-        ],
         "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1B"
+          "ml-use model card-example1B-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6101,7 +6024,7 @@
         "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
       },
       "level_keys": [
-        "ml-use model card-example1B"
+        "ml-use model card-example1B-2021"
       ]
     },
     {
@@ -6110,16 +6033,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1C"
-        ],
         "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1C"
+          "ml-use model card-example1C-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6127,7 +6047,7 @@
         "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
       },
       "level_keys": [
-        "ml-use model card-example1C"
+        "ml-use model card-example1C-2021"
       ]
     },
     {
@@ -6136,16 +6056,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1D"
-        ],
         "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1D"
+          "ml-use model card-example1D-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6153,7 +6070,7 @@
         "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
       },
       "level_keys": [
-        "ml-use model card-example1D"
+        "ml-use model card-example1D-2021"
       ]
     },
     {
@@ -6162,16 +6079,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example1E"
-        ],
         "progression": "Pet Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example1E"
+          "ml-use model card-example1E-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6179,7 +6093,7 @@
         "activity_section.key": "29ef48d3-a56d-46f3-9a72-e9e12aec4a32"
       },
       "level_keys": [
-        "ml-use model card-example1E"
+        "ml-use model card-example1E-2021"
       ]
     },
     {
@@ -6188,16 +6102,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use models applab-practice choice"
-        ],
         "progression": "You Choose: Improve Your App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use models applab-practice choice"
+          "ml-use models applab-practice choice-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6205,7 +6116,7 @@
         "activity_section.key": "7d14c666-aa61-41e8-8ac3-97e4bc9a6ce2"
       },
       "level_keys": [
-        "ml-use models applab-practice choice"
+        "ml-use models applab-practice choice-2021"
       ]
     },
     {
@@ -6214,16 +6125,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-customize-raspado"
-        ],
         "progression": "Raspado Recommender"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-customize-raspado"
+          "ml-customize-raspado-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6231,7 +6139,7 @@
         "activity_section.key": "153128c6-6d02-4bbf-ac13-74cc48a73c01"
       },
       "level_keys": [
-        "ml-customize-raspado"
+        "ml-customize-raspado-2021"
       ]
     },
     {
@@ -6240,16 +6148,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example3A"
-        ],
         "progression": "Driver Alert System"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example3A"
+          "ml-use model card-example3A-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6257,7 +6162,7 @@
         "activity_section.key": "e1393dbd-1484-4bc1-94ed-3c7c3b3889f2"
       },
       "level_keys": [
-        "ml-use model card-example3A"
+        "ml-use model card-example3A-2021"
       ]
     },
     {
@@ -6266,16 +6171,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example3_EditA"
-        ],
         "progression": "Driver Alert System"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example3_EditA"
+          "ml-use model card-example3_EditA-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6283,7 +6185,7 @@
         "activity_section.key": "59d6e324-5cfd-48d7-96a3-323576a7e0b6"
       },
       "level_keys": [
-        "ml-use model card-example3_EditA"
+        "ml-use model card-example3_EditA-2021"
       ]
     },
     {
@@ -6292,16 +6194,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example3_EditB"
-        ],
         "progression": "Driver Alert System"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example3_EditB"
+          "ml-use model card-example3_EditB-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6309,7 +6208,7 @@
         "activity_section.key": "59d6e324-5cfd-48d7-96a3-323576a7e0b6"
       },
       "level_keys": [
-        "ml-use model card-example3_EditB"
+        "ml-use model card-example3_EditB-2021"
       ]
     },
     {
@@ -6318,16 +6217,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example3_EditC"
-        ],
         "progression": "Driver Alert System"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example3_EditC"
+          "ml-use model card-example3_EditC-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6335,7 +6231,7 @@
         "activity_section.key": "59d6e324-5cfd-48d7-96a3-323576a7e0b6"
       },
       "level_keys": [
-        "ml-use model card-example3_EditC"
+        "ml-use model card-example3_EditC-2021"
       ]
     },
     {
@@ -6344,16 +6240,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example3C"
-        ],
         "progression": "Driver Alert System"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example3C"
+          "ml-use model card-example3C-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6361,7 +6254,7 @@
         "activity_section.key": "59d6e324-5cfd-48d7-96a3-323576a7e0b6"
       },
       "level_keys": [
-        "ml-use model card-example3C"
+        "ml-use model card-example3C-2021"
       ]
     },
     {
@@ -6370,16 +6263,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example3D"
-        ],
         "progression": "Driver Alert System"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example3D"
+          "ml-use model card-example3D-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6387,7 +6277,7 @@
         "activity_section.key": "59d6e324-5cfd-48d7-96a3-323576a7e0b6"
       },
       "level_keys": [
-        "ml-use model card-example3D"
+        "ml-use model card-example3D-2021"
       ]
     },
     {
@@ -6396,16 +6286,13 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-use model card-example3E"
-        ],
         "progression": "Driver Alert System"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-use model card-example3E"
+          "ml-use model card-example3E-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6413,7 +6300,7 @@
         "activity_section.key": "59d6e324-5cfd-48d7-96a3-323576a7e0b6"
       },
       "level_keys": [
-        "ml-use model card-example3E"
+        "ml-use model card-example3E-2021"
       ]
     },
     {
@@ -6422,16 +6309,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-customize apps-practice choice"
-        ],
         "progression": "You Choose: Improve Your App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-customize apps-practice choice"
+          "ml-customize apps-practice choice-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6439,7 +6323,7 @@
         "activity_section.key": "94321cfd-ee71-4ed8-a02a-4e12891a3206"
       },
       "level_keys": [
-        "ml-customize apps-practice choice"
+        "ml-customize apps-practice choice-2021"
       ]
     },
     {
@@ -6448,16 +6332,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-data decisions-zoo1"
-        ],
         "progression": "Zoo Predictions"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-data decisions-zoo1"
+          "ml-data decisions-zoo1-2021"
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
@@ -6465,7 +6346,7 @@
         "activity_section.key": "ca3604c5-332f-476a-a4ab-77f202a16d9b"
       },
       "level_keys": [
-        "ml-data decisions-zoo1"
+        "ml-data decisions-zoo1-2021"
       ]
     },
     {
@@ -6474,16 +6355,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-data decisions- import app"
-        ],
         "progression": "Importing Your Model"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-data decisions- import app"
+          "ml-data decisions- import app-2021"
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
@@ -6491,7 +6369,7 @@
         "activity_section.key": "ce60ba1b-6123-487c-a277-2ffa024d3581"
       },
       "level_keys": [
-        "ml-data decisions- import app"
+        "ml-data decisions- import app-2021"
       ]
     },
     {
@@ -6500,16 +6378,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-data decisions- customize app"
-        ],
         "progression": "Customizing Your App"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-data decisions- customize app"
+          "ml-data decisions- customize app-2021"
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
@@ -6517,7 +6392,7 @@
         "activity_section.key": "31f96b84-479f-4201-a049-ab140b03cfd7"
       },
       "level_keys": [
-        "ml-data decisions- customize app"
+        "ml-data decisions- customize app-2021"
       ]
     },
     {
@@ -6526,16 +6401,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-planning app-ai lab"
-        ],
         "progression": "Planning Your App - AI Lab"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-planning app-ai lab"
+          "ml-planning app-ai lab-2021"
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
@@ -6543,7 +6415,7 @@
         "activity_section.key": "e632fcec-fec2-4a6c-a9bd-7471c08ca509"
       },
       "level_keys": [
-        "ml-planning app-ai lab"
+        "ml-planning app-ai lab-2021"
       ]
     },
     {
@@ -6552,16 +6424,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-final project-ai lab"
-        ],
         "progression": "App with Real-World Data - AI Lab"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-final project-ai lab"
+          "ml-final project-ai lab-2021"
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
@@ -6569,7 +6438,7 @@
         "activity_section.key": "73111770-0977-426b-a5bb-9015022a4d8e"
       },
       "level_keys": [
-        "ml-final project-ai lab"
+        "ml-final project-ai lab-2021"
       ]
     },
     {
@@ -6578,16 +6447,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-final project-app lab"
-        ],
         "progression": "App with Real-World Data - App Lab"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-final project-app lab"
+          "ml-final project-app lab-2021"
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
@@ -6595,7 +6461,7 @@
         "activity_section.key": "005dc3d1-eaf6-4ab8-999a-4ca4bfa37617"
       },
       "level_keys": [
-        "ml-final project-app lab"
+        "ml-final project-app lab-2021"
       ]
     }
   ],
@@ -6638,9 +6504,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-L2 unsupervised - 1",
+        "level.key": "ml-L2 unsupervised - 1-2021",
         "script_level.level_keys": [
-          "ml-L2 unsupervised - 1"
+          "ml-L2 unsupervised - 1-2021"
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
@@ -6650,9 +6516,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-L2 supervised - green glass door",
+        "level.key": "ml-L2 supervised - green glass door-2021",
         "script_level.level_keys": [
-          "ml-L2 supervised - green glass door"
+          "ml-L2 supervised - green glass door-2021"
         ],
         "lesson.key": "lesson2",
         "lesson_group.key": "",
@@ -6662,9 +6528,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models-shoes random",
+        "level.key": "ml-models-shoes random-2021",
         "script_level.level_keys": [
-          "ml-models-shoes random"
+          "ml-models-shoes random-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -6674,9 +6540,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models-shoes decision tree",
+        "level.key": "ml-models-shoes decision tree-2021",
         "script_level.level_keys": [
-          "ml-models-shoes decision tree"
+          "ml-models-shoes decision tree-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -6686,9 +6552,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models-shoes data",
+        "level.key": "ml-models-shoes data-2021",
         "script_level.level_keys": [
-          "ml-models-shoes data"
+          "ml-models-shoes data-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -6698,9 +6564,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models-shoes points",
+        "level.key": "ml-models-shoes points-2021",
         "script_level.level_keys": [
-          "ml-models-shoes points"
+          "ml-models-shoes points-2021"
         ],
         "lesson.key": "lesson3",
         "lesson_group.key": "",
@@ -6710,9 +6576,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-tacos",
+        "level.key": "ml-intro categorical-tacos-2021",
         "script_level.level_keys": [
-          "ml-intro categorical-tacos"
+          "ml-intro categorical-tacos-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -6722,9 +6588,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-ice cream",
+        "level.key": "ml-intro categorical-ice cream-2021",
         "script_level.level_keys": [
-          "ml-intro categorical-ice cream"
+          "ml-intro categorical-ice cream-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -6734,9 +6600,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-pizza",
+        "level.key": "ml-intro categorical-pizza-2021",
         "script_level.level_keys": [
-          "ml-intro categorical-pizza"
+          "ml-intro categorical-pizza-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -6746,9 +6612,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-food choices",
+        "level.key": "ml-intro categorical-food choices-2021",
         "script_level.level_keys": [
-          "ml-intro categorical-food choices"
+          "ml-intro categorical-food choices-2021"
         ],
         "lesson.key": "lesson5",
         "lesson_group.key": "",
@@ -6758,9 +6624,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Full Year Pilot Experiments Dashboard - AI Models",
+        "level.key": "Course Experiments Dashboard - AI Models-2021",
         "script_level.level_keys": [
-          "Full Year Pilot Experiments Dashboard - AI Models"
+          "Course Experiments Dashboard - AI Models-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -6770,9 +6636,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-vacation example",
+        "level.key": "ml-models in applab-vacation example-2021",
         "script_level.level_keys": [
-          "ml-models in applab-vacation example"
+          "ml-models in applab-vacation example-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -6782,9 +6648,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-import 1",
+        "level.key": "ml-models in applab-import 1-2021",
         "script_level.level_keys": [
-          "ml-models in applab-import 1"
+          "ml-models in applab-import 1-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -6794,9 +6660,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-screens-2",
+        "level.key": "ml-models in applab-screens-2-2021",
         "script_level.level_keys": [
-          "ml-models in applab-screens-2"
+          "ml-models in applab-screens-2-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -6806,9 +6672,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-screens-1",
+        "level.key": "ml-models in applab-screens-1-2021",
         "script_level.level_keys": [
-          "ml-models in applab-screens-1"
+          "ml-models in applab-screens-1-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -6818,9 +6684,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-screens-3",
+        "level.key": "ml-models in applab-screens-3-2021",
         "script_level.level_keys": [
-          "ml-models in applab-screens-3"
+          "ml-models in applab-screens-3-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -6830,9 +6696,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-models in applab-practice choice",
+        "level.key": "ml-models in applab-practice choice-2021",
         "script_level.level_keys": [
-          "ml-models in applab-practice choice"
+          "ml-models in applab-practice choice-2021"
         ],
         "lesson.key": "lesson6",
         "lesson_group.key": "",
@@ -6842,9 +6708,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-model card-medical app v2",
+        "level.key": "ml-model card-medical app v2 2021-2",
         "script_level.level_keys": [
-          "ml-model card-medical app v2"
+          "ml-model card-medical app v2 2021-2"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -6854,9 +6720,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-model card-medical-1",
+        "level.key": "ml-model card-medical-1-2021",
         "script_level.level_keys": [
-          "ml-model card-medical-1"
+          "ml-model card-medical-1-2021"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -6866,9 +6732,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-model card-medical-2",
+        "level.key": "ml-model card-medical-2-2021",
         "script_level.level_keys": [
-          "ml-model card-medical-2"
+          "ml-model card-medical-2-2021"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -6878,9 +6744,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-model card-medical-3",
+        "level.key": "ml-model card-medical-3-2021",
         "script_level.level_keys": [
-          "ml-model card-medical-3"
+          "ml-model card-medical-3-2021"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
@@ -6890,9 +6756,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-numerical ai lab-safari 1",
+        "level.key": "ml-numerical ai lab-safari 1-2021",
         "script_level.level_keys": [
-          "ml-numerical ai lab-safari 1"
+          "ml-numerical ai lab-safari 1-2021"
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
@@ -6902,9 +6768,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example1A",
+        "level.key": "ml-use model card-example1A-2021",
         "script_level.level_keys": [
-          "ml-use model card-example1A"
+          "ml-use model card-example1A-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6914,9 +6780,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-pet model card",
+        "level.key": "ml-use model card-pet model card-2021",
         "script_level.level_keys": [
-          "ml-use model card-pet model card"
+          "ml-use model card-pet model card-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6926,9 +6792,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example1B",
+        "level.key": "ml-use model card-example1B-2021",
         "script_level.level_keys": [
-          "ml-use model card-example1B"
+          "ml-use model card-example1B-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6938,9 +6804,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example1C",
+        "level.key": "ml-use model card-example1C-2021",
         "script_level.level_keys": [
-          "ml-use model card-example1C"
+          "ml-use model card-example1C-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6950,9 +6816,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example1D",
+        "level.key": "ml-use model card-example1D-2021",
         "script_level.level_keys": [
-          "ml-use model card-example1D"
+          "ml-use model card-example1D-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6962,9 +6828,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example1E",
+        "level.key": "ml-use model card-example1E-2021",
         "script_level.level_keys": [
-          "ml-use model card-example1E"
+          "ml-use model card-example1E-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6974,9 +6840,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use models applab-practice choice",
+        "level.key": "ml-use models applab-practice choice-2021",
         "script_level.level_keys": [
-          "ml-use models applab-practice choice"
+          "ml-use models applab-practice choice-2021"
         ],
         "lesson.key": "lesson10",
         "lesson_group.key": "",
@@ -6986,9 +6852,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-customize-raspado",
+        "level.key": "ml-customize-raspado-2021",
         "script_level.level_keys": [
-          "ml-customize-raspado"
+          "ml-customize-raspado-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -6998,9 +6864,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example3A",
+        "level.key": "ml-use model card-example3A-2021",
         "script_level.level_keys": [
-          "ml-use model card-example3A"
+          "ml-use model card-example3A-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7010,9 +6876,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example3_EditA",
+        "level.key": "ml-use model card-example3_EditA-2021",
         "script_level.level_keys": [
-          "ml-use model card-example3_EditA"
+          "ml-use model card-example3_EditA-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7022,9 +6888,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example3_EditB",
+        "level.key": "ml-use model card-example3_EditB-2021",
         "script_level.level_keys": [
-          "ml-use model card-example3_EditB"
+          "ml-use model card-example3_EditB-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7034,9 +6900,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example3_EditC",
+        "level.key": "ml-use model card-example3_EditC-2021",
         "script_level.level_keys": [
-          "ml-use model card-example3_EditC"
+          "ml-use model card-example3_EditC-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7046,9 +6912,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example3C",
+        "level.key": "ml-use model card-example3C-2021",
         "script_level.level_keys": [
-          "ml-use model card-example3C"
+          "ml-use model card-example3C-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7058,9 +6924,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example3D",
+        "level.key": "ml-use model card-example3D-2021",
         "script_level.level_keys": [
-          "ml-use model card-example3D"
+          "ml-use model card-example3D-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7070,9 +6936,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-use model card-example3E",
+        "level.key": "ml-use model card-example3E-2021",
         "script_level.level_keys": [
-          "ml-use model card-example3E"
+          "ml-use model card-example3E-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7082,9 +6948,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-customize apps-practice choice",
+        "level.key": "ml-customize apps-practice choice-2021",
         "script_level.level_keys": [
-          "ml-customize apps-practice choice"
+          "ml-customize apps-practice choice-2021"
         ],
         "lesson.key": "lesson11",
         "lesson_group.key": "",
@@ -7094,9 +6960,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-data decisions-zoo1",
+        "level.key": "ml-data decisions-zoo1-2021",
         "script_level.level_keys": [
-          "ml-data decisions-zoo1"
+          "ml-data decisions-zoo1-2021"
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
@@ -7106,9 +6972,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-data decisions- import app",
+        "level.key": "ml-data decisions- import app-2021",
         "script_level.level_keys": [
-          "ml-data decisions- import app"
+          "ml-data decisions- import app-2021"
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
@@ -7118,9 +6984,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-data decisions- customize app",
+        "level.key": "ml-data decisions- customize app-2021",
         "script_level.level_keys": [
-          "ml-data decisions- customize app"
+          "ml-data decisions- customize app-2021"
         ],
         "lesson.key": "lesson12",
         "lesson_group.key": "",
@@ -7130,9 +6996,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-planning app-ai lab",
+        "level.key": "ml-planning app-ai lab-2021",
         "script_level.level_keys": [
-          "ml-planning app-ai lab"
+          "ml-planning app-ai lab-2021"
         ],
         "lesson.key": "lesson15",
         "lesson_group.key": "",
@@ -7142,9 +7008,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-final project-ai lab",
+        "level.key": "ml-final project-ai lab-2021",
         "script_level.level_keys": [
-          "ml-final project-ai lab"
+          "ml-final project-ai lab-2021"
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
@@ -7154,9 +7020,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-final project-app lab",
+        "level.key": "ml-final project-app lab-2021",
         "script_level.level_keys": [
-          "ml-final project-app lab"
+          "ml-final project-app lab-2021"
         ],
         "lesson.key": "lesson16",
         "lesson_group.key": "",
