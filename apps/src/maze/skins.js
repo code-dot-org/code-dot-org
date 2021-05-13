@@ -9,6 +9,7 @@
 
 var skinsBase = require('../skins');
 var randomValue = require('../utils').randomValue;
+import {neighborhoodSprites, sheetRows} from './neighborhoodSprites';
 
 var CONFIGS = {
   letters: {
@@ -185,7 +186,10 @@ var CONFIGS = {
     turnAfterVictory: true
   },
 
-  neighborhood: {}
+  neighborhood: {
+    spriteMap: neighborhoodSprites,
+    sheetRows: sheetRows
+  }
 };
 
 // night skins are effectively the same, but will have some different assets
