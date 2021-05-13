@@ -31,9 +31,11 @@ class Javalab < Level
     is_project_level
     submittable
     encrypted_examples
+    csa_view_mode
+    serialized_maze
   )
 
-  before_save :fix_examples
+  before_save :fix_examples, :parse_maze
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -44,6 +46,22 @@ class Javalab < Level
         properties: {}
       )
     )
+  end
+
+  def parse_maze
+    return if serialized_maze.nil?
+    maze_json = serialized_maze.is_a?(Array) ? serialized_maze.to_json : serialized_maze
+    maze = JSON.parse(maze_json)
+    maze.each_with_index do |row, x|
+      row.each_with_index do |cell, y|
+        next unless cell.is_a?(Hash)
+        unless cell.key?('tileType')
+          raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
+        end
+      end
+    end
+
+    self.serialized_maze = maze
   end
 
   def fix_examples
