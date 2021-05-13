@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
-#include Rails.application.routes.url_helpers
-#include LevelsHelper
 require_relative '../../dashboard/config/environment'
-require_relative '../../dashboard/app/helpers/levels_helper'
 
 def main
   current_year = '2021'
@@ -18,7 +15,6 @@ def main
 
   scripts = standalone_scripts + course_scripts
 
-  #paths = []
   search_str = '/s/'
   search_str2 = '/levels/'
 
@@ -28,8 +24,6 @@ def main
       sl.levels.each do |level|
         puts level.name
       end
-      #paths << build_script_level_path(sl)
-      #puts build_script_level_path(sl)
     end
   end
 end
