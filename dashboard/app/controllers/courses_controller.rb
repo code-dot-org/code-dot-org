@@ -102,7 +102,8 @@ class CoursesController < ApplicationController
     [:visible, :is_stable].each {|key| params[key] = params[key]&.to_bool}
     unit_group.update(course_params)
     unit_group.default_scripts.each do |script|
-      script.update!(hidden: !course_params[:visible], is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment])
+      script.assign_attributes(hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
+      script.save! if script.changed?
       script.write_script_dsl
       script.write_script_json
     end
