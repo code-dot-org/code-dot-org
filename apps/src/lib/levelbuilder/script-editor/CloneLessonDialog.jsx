@@ -15,7 +15,8 @@ export default class CloneLessonDialog extends Component {
     this.state = {
       destinationScript: '',
       error: '',
-      saving: false
+      saving: false,
+      cloneSucceeded: false
     };
   }
 
@@ -34,16 +35,19 @@ export default class CloneLessonDialog extends Component {
       }
     }).then(data => {
       if (data.ok) {
-        this.setState({saving: false});
-        this.handleClose();
+        this.setState({saving: false, error: '', cloneSucceeded: true});
       } else {
-        this.setState({error: 'Clone failed', saving: false});
+        this.setState({
+          error: 'Clone failed',
+          saving: false,
+          cloneSucceeded: false
+        });
       }
     });
   };
 
   handleClose = () => {
-    this.setState({destinationScript: ''});
+    this.setState({destinationScript: '', cloneSucceeded: false});
     this.props.handleClose();
   };
 
@@ -59,16 +63,24 @@ export default class CloneLessonDialog extends Component {
         {this.state.error && (
           <span style={{color: 'red'}}>{this.state.error}</span>
         )}
-        <label>
-          Which script do you want to clone this lesson to?
-          <input
-            type="text"
-            value={this.state.destinationScript}
-            onChange={e => this.setState({destinationScript: e.target.value})}
-          />
-        </label>
-        Cloning will add this lesson to the end of the last lesson group in the
-        script.
+        {this.state.cloneSucceeded ? (
+          <span>Clone succeeded!</span>
+        ) : (
+          <div>
+            <label>
+              Which script do you want to clone this lesson to?
+              <input
+                type="text"
+                value={this.state.destinationScript}
+                onChange={e =>
+                  this.setState({destinationScript: e.target.value})
+                }
+              />
+            </label>
+            Cloning will add this lesson to the end of the last lesson group in
+            the script.
+          </div>
+        )}
         <DialogFooter>
           <Button onClick={this.handleClose} text={'Close'} color={'gray'} />
           <Button
