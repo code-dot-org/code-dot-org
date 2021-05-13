@@ -43,10 +43,10 @@ function showCourseEditor() {
         name={courseEditorData.course_summary.name}
         title={courseEditorData.course_summary.title}
         versionTitle={courseEditorData.course_summary.version_title}
-        familyName={courseEditorData.course_summary.family_name}
-        versionYear={courseEditorData.course_summary.version_year}
+        initialFamilyName={courseEditorData.course_summary.family_name}
+        initialVersionYear={courseEditorData.course_summary.version_year}
         initialVisible={courseEditorData.course_summary.visible}
-        isStable={courseEditorData.course_summary.is_stable}
+        initialIsStable={courseEditorData.course_summary.is_stable}
         initialPilotExperiment={
           courseEditorData.course_summary.pilot_experiment
         }
