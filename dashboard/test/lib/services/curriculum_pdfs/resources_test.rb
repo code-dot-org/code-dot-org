@@ -46,13 +46,15 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     end
   end
 
-  test 'script resources PDF skips resources where include_in_pdf is falsy' do
+  test 'script resources PDF skips resources where should_include_in_pdf is falsy' do
     script = create(:script, seeded_from: Time.now)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script)
     resource = create(:resource, url: "test.pdf", include_in_pdf: false)
+    verified_teacher_resource = create(:resource, url: "verified-teacher-test.pdf", include_in_pdf: true, audience: 'Verified Teacher')
 
     lesson.resources << resource
+    lesson.resources << verified_teacher_resource
     lesson_group.lessons << lesson
     script.reload
 
