@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-12 19:42:29 UTC",
+    "serialized_at": "2021-05-13 18:39:44 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -2052,7 +2052,7 @@
       "key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "65c4bba2-442b-4e0d-9264-aa5cb72e80e7",
@@ -2107,6 +2107,7 @@
       "key": "19367182-a8f0-442e-9a7d-e7852546f961",
       "position": 7,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2220,7 +2221,7 @@
       "key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94",
@@ -2228,8 +2229,19 @@
       }
     },
     {
-      "key": "73d03eeb-a7b1-4ee8-ad5b-85638d568511",
+      "key": "f6ef0cac-d698-4ba1-9e6d-d6c00538c584",
       "position": 4,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6ef0cac-d698-4ba1-9e6d-d6c00538c584",
+        "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a"
+      }
+    },
+    {
+      "key": "73d03eeb-a7b1-4ee8-ad5b-85638d568511",
+      "position": 5,
       "properties": {
         "progression_name": "Prediction"
       },
@@ -2240,7 +2252,7 @@
     },
     {
       "key": "142926ac-9a7f-484f-975c-c0eceba04aa9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2251,8 +2263,9 @@
     },
     {
       "key": "509f1df0-4e9b-454e-ae25-a6380f29ab57",
-      "position": 6,
+      "position": 7,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2334,7 +2347,7 @@
       "key": "0474e6b4-d8ed-450d-a6ac-49d35b6d8872",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "0474e6b4-d8ed-450d-a6ac-49d35b6d8872",
@@ -2389,6 +2402,7 @@
       "key": "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948",
       "position": 8,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2447,7 +2461,7 @@
       "key": "d9b1cf39-8041-44b2-a8f8-a2e396647ab2",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "d9b1cf39-8041-44b2-a8f8-a2e396647ab2",
@@ -2497,6 +2511,7 @@
       "key": "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89",
       "position": 7,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2611,7 +2626,7 @@
       "key": "90de173c-642d-4906-a7fe-c3d9ad3123ec",
       "position": 5,
       "properties": {
-        "progression_name": "Mini-Project: Swimming Fish"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec",
@@ -2633,7 +2648,7 @@
       "key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95",
       "position": 7,
       "properties": {
-        "progression_name": "Mini-Project: Swimming Fish (continued)"
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95",
@@ -2655,6 +2670,7 @@
       "key": "ed3b436a-cfda-46c3-92b6-b17937d7d58b",
       "position": 9,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3055,7 +3071,7 @@
       "key": "f62e3109-74fd-45b6-b335-059ef71dc3c3",
       "position": 5,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "f62e3109-74fd-45b6-b335-059ef71dc3c3",
@@ -3110,6 +3126,7 @@
       "key": "be8322ab-77e7-4f99-ad08-40a19edc5c00",
       "position": 10,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -4804,7 +4821,7 @@
         "level_keys": [
           "courseC_maze_programming1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -4830,7 +4847,7 @@
         "level_keys": [
           "courseC_maze_programming2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -4856,7 +4873,7 @@
         "level_keys": [
           "courseC_maze_programming3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -4882,7 +4899,7 @@
         "level_keys": [
           "courseC_maze_programming4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -4908,7 +4925,7 @@
         "level_keys": [
           "courseC_maze_programming5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -4934,7 +4951,7 @@
         "level_keys": [
           "courseC_maze_programming6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5142,7 +5159,7 @@
         "level_keys": [
           "courseC_maze_debugging1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5168,7 +5185,7 @@
         "level_keys": [
           "courseC_maze_debugging2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5194,7 +5211,7 @@
         "level_keys": [
           "courseC_maze_debugging3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5220,7 +5237,7 @@
         "level_keys": [
           "courseC_maze_debugging4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5246,7 +5263,7 @@
         "level_keys": [
           "courseC_maze_debugging5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5272,7 +5289,7 @@
         "level_keys": [
           "courseC_maze_debugging6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5292,14 +5309,11 @@
     {
       "chapter": 21,
       "position": 8,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseC_maze_debugging7_2021"
-        ],
-        "progression": "Practice"
+        "progression": "Challenge"
       },
       "named_level": false,
       "bonus": false,
@@ -5310,7 +5324,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
+        "activity_section.key": "f6ef0cac-d698-4ba1-9e6d-d6c00538c584"
       },
       "level_keys": [
         "courseC_maze_debugging7_2021"
@@ -5455,7 +5469,7 @@
         "level_keys": [
           "courseC_collector_prog1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5481,7 +5495,7 @@
         "level_keys": [
           "courseC_collector_prog2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5507,7 +5521,7 @@
         "level_keys": [
           "courseC_collector_prog3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5533,7 +5547,7 @@
         "level_keys": [
           "courseC_collector_prog4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5559,7 +5573,7 @@
         "level_keys": [
           "courseC_collector_prog5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5585,7 +5599,7 @@
         "level_keys": [
           "courseC_collector_prog6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5846,7 +5860,7 @@
         "level_keys": [
           "courseC_artist_prog1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5872,7 +5886,7 @@
         "level_keys": [
           "courseC_artist_prog2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5898,7 +5912,7 @@
         "level_keys": [
           "courseC_artist_prog3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5924,7 +5938,7 @@
         "level_keys": [
           "courseC_artist_prog4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5950,7 +5964,7 @@
         "level_keys": [
           "courseC_artist_prog5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5976,7 +5990,7 @@
         "level_keys": [
           "courseC_artist_prog6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6185,7 +6199,7 @@
         "level_keys": [
           "Fish Tank 2-validated_2021"
         ],
-        "progression": "Mini-Project: Swimming Fish"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6211,7 +6225,7 @@
         "level_keys": [
           "Fish Tank 3-validated_2021"
         ],
-        "progression": "Mini-Project: Swimming Fish"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6237,7 +6251,7 @@
         "level_keys": [
           "Fish Tank 4-validated_2021"
         ],
-        "progression": "Mini-Project: Swimming Fish"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6289,7 +6303,7 @@
         "level_keys": [
           "Fish Tank 5-validated_2021"
         ],
-        "progression": "Mini-Project: Swimming Fish (continued)"
+        "progression": "Practice"
       },
       "named_level": false,
       "bonus": false,
@@ -6315,7 +6329,7 @@
         "level_keys": [
           "Fish Tank 6-validated_2021"
         ],
-        "progression": "Mini-Project: Swimming Fish (continued)"
+        "progression": "Practice"
       },
       "named_level": false,
       "bonus": false,
@@ -7121,7 +7135,7 @@
         "level_keys": [
           "courseC_starWars_loops2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -7147,7 +7161,7 @@
         "level_keys": [
           "courseC_starWars_loops4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -7173,7 +7187,7 @@
         "level_keys": [
           "courseC_starWars_loops5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -7199,7 +7213,7 @@
         "level_keys": [
           "courseC_starWars_loops6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -7225,7 +7239,7 @@
         "level_keys": [
           "courseC_starWars_loops7_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -12782,7 +12796,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
+        "activity_section.key": "f6ef0cac-d698-4ba1-9e6d-d6c00538c584"
       }
     },
     {
@@ -16238,7 +16252,7 @@
       "key": "sprite_lab_documentation",
       "properties": {
         "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
