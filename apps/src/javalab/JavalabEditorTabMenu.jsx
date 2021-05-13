@@ -13,8 +13,10 @@ class JavalabTabMenuComponent extends Component {
     renameFromTabMenu: PropTypes.func.isRequired,
     deleteFromTabMenu: PropTypes.func.isRequired,
     changeVisibilityFromTabMenu: PropTypes.func.isRequired,
+    changeValidationFromTabMenu: PropTypes.func.isRequired,
     showVisibilityOption: PropTypes.bool.isRequired,
-    fileIsVisible: PropTypes.bool
+    fileIsVisible: PropTypes.bool,
+    fileIsValidation: PropTypes.bool
   };
 
   state = {
@@ -28,7 +30,9 @@ class JavalabTabMenuComponent extends Component {
       cancelTabMenu,
       showVisibilityOption,
       changeVisibilityFromTabMenu,
-      fileIsVisible
+      changeValidationFromTabMenu,
+      fileIsVisible,
+      fileIsValidation
     } = this.props;
     return (
       <div>
@@ -48,14 +52,34 @@ class JavalabTabMenuComponent extends Component {
         >
           Delete
         </button>
-        {showVisibilityOption && (
+        {showVisibilityOption && !fileIsVisible && (
           <button
             type="button"
             key="visibility"
             onClick={changeVisibilityFromTabMenu}
             style={styles.anchor}
           >
-            {fileIsVisible ? 'Make support file' : 'Make starter file'}
+            Make starter file
+          </button>
+        )}
+        {showVisibilityOption && (fileIsVisible || fileIsValidation) && (
+          <button
+            type="button"
+            key="support"
+            onClick={changeVisibilityFromTabMenu}
+            style={styles.anchor}
+          >
+            Make support file
+          </button>
+        )}
+        {showVisibilityOption && !fileIsValidation && (
+          <button
+            type="button"
+            key="validation"
+            onClick={changeValidationFromTabMenu}
+            style={styles.anchor}
+          >
+            Make validation file
           </button>
         )}
         <button

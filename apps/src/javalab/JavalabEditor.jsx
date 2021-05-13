@@ -4,6 +4,7 @@ import Radium from 'radium';
 import {
   setSource,
   sourceVisibilityUpdated,
+  sourceValidationUpdated,
   renameFile,
   removeFile
 } from './javalabRedux';
@@ -65,6 +66,7 @@ class JavalabEditor extends React.Component {
     // populated by redux
     setSource: PropTypes.func,
     sourceVisibilityUpdated: PropTypes.func,
+    sourceValidationUpdated: PropTypes.func,
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
@@ -87,6 +89,7 @@ class JavalabEditor extends React.Component {
     this.onDeleteFile = this.onDeleteFile.bind(this);
     this.onOpenFile = this.onOpenFile.bind(this);
     this.toggleFileVisibility = this.toggleFileVisibility.bind(this);
+    this.makeeValidationFile = this.makeValidationFile.bind(this);
     this._codeMirrors = {};
 
     // fileMetadata is a dictionary of file key -> filename.
@@ -193,7 +196,21 @@ class JavalabEditor extends React.Component {
   toggleFileVisibility(key) {
     this.props.sourceVisibilityUpdated(
       this.state.fileMetadata[key],
-      !this.props.sources[this.state.fileMetadata[key]].visible
+      !this.props.sources[this.state.fileMetadata[key]].visible,
+      false
+    );
+    this.setState({
+      showMenu: false,
+      contextTarget: null
+    });
+  }
+
+  // This will only ever be called when making a file a validation file
+  makeValidationFile(key) {
+    this.props.sourceValidationUpdated(
+      this.state.fileMetadata[key],
+      false,
+      true
     );
     this.setState({
       showMenu: false,
@@ -474,6 +491,8 @@ class JavalabEditor extends React.Component {
                         icon={
                           sources[fileMetadata[tabKey]].visible
                             ? 'eye'
+                            : sources[fileMetadata[tabKey]].isValidationFile
+                            ? 'flask'
                             : 'eye-slash'
                         }
                       />
@@ -531,6 +550,13 @@ class JavalabEditor extends React.Component {
               sources[fileMetadata[activeTabKey]] &&
               sources[fileMetadata[activeTabKey]].visible
             }
+            fileIsValidation={
+              sources[fileMetadata[activeTabKey]] &&
+              sources[fileMetadata[activeTabKey]].isValidationFile
+            }
+            changeValidationFromTabMenu={() =>
+              this.makeValidationFile(activeTabKey)
+            }
           />
         </div>
         <DeleteConfirmationDialog
@@ -576,8 +602,10 @@ export default connect(
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
-    sourceVisibilityUpdated: (filename, isVisible) =>
-      dispatch(sourceVisibilityUpdated(filename, isVisible)),
+    sourceVisibilityUpdated: (filename, isVisible, isValidationFile) =>
+      dispatch(sourceVisibilityUpdated(filename, isVisible, isValidationFile)),
+    sourceValidationUpdated: (filename, isVisible, isValidationFile) =>
+      dispatch(sourceValidationUpdated(filename, isVisible, isValidationFile)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename))
