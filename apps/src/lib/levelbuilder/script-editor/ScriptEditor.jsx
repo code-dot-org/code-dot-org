@@ -538,7 +538,6 @@ class ScriptEditor extends React.Component {
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
             <div>
-              {/*Can we move core course to the course page if a script is in a course?*/}
               <label>
                 Core Course
                 <select
@@ -570,61 +569,14 @@ class ScriptEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
+              {this.props.hasCourse && (
+                <p>
+                  This unit is part of a course. Go to the course edit page to
+                  publish the course and its units.
+                </p>
+              )}
               {!this.props.hasCourse && (
                 <div>
-                  <label>
-                    Family Name
-                    <select
-                      className="familyNameSelector"
-                      value={this.state.familyName}
-                      style={styles.dropdown}
-                      disabled={this.props.hasCourse}
-                      onChange={this.handleFamilyNameChange}
-                    >
-                      {!this.state.isCourse && <option value="">(None)</option>}
-                      {this.props.scriptFamilies.map(familyOption => (
-                        <option key={familyOption} value={familyOption}>
-                          {familyOption}
-                        </option>
-                      ))}
-                    </select>
-                    {!this.props.hasCourse && (
-                      <HelpTip>
-                        <p>
-                          The family name is used to group together scripts that
-                          are different version years of the same standalone
-                          course so that users can be redirected between
-                          different version years.
-                        </p>
-                      </HelpTip>
-                    )}
-                    {this.state.isCourse && (
-                      <HelpTip>
-                        <p>
-                          If you want to clear the family name you need to
-                          uncheck standalone course.
-                        </p>
-                      </HelpTip>
-                    )}
-                  </label>
-                  <label>
-                    Version Year
-                    <select
-                      value={this.state.versionYear}
-                      style={styles.dropdown}
-                      disabled={this.props.hasCourse}
-                      onChange={e =>
-                        this.setState({versionYear: e.target.value})
-                      }
-                    >
-                      <option value="">(None)</option>
-                      {this.props.versionYearOptions.map(year => (
-                        <option key={year} value={year}>
-                          {year}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
                   <label>
                     Is a Standalone Course
                     <input
@@ -653,19 +605,25 @@ class ScriptEditor extends React.Component {
                       </HelpTip>
                     )}
                   </label>
+                  <CourseVersionPublishedStateSelector
+                    visible={!this.state.hidden}
+                    isStable={this.state.isStable}
+                    pilotExperiment={this.state.pilotExperiment}
+                    versionYear={this.state.versionYear}
+                    familyName={this.state.familyName}
+                    updateVisible={visible => this.setState({hidden: !visible})}
+                    updateIsStable={isStable => this.setState({isStable})}
+                    updatePilotExperiment={pilotExperiment =>
+                      this.setState({pilotExperiment})
+                    }
+                    updateFamilyName={familyName => this.setState({familyName})}
+                    updateVersionYear={versionYear =>
+                      this.setState({versionYear})
+                    }
+                    families={this.props.scriptFamilies}
+                    versionYearOptions={this.props.versionYearOptions}
+                  />
                 </div>
-              )}
-              {this.state.isCourse && (
-                <CourseVersionPublishedStateSelector
-                  visible={!this.state.hidden}
-                  isStable={this.state.isStable}
-                  pilotExperiment={this.state.pilotExperiment}
-                  updateVisible={visible => this.setState({hidden: !visible})}
-                  updateIsStable={isStable => this.setState({isStable})}
-                  updatePilotExperiment={pilotExperiment =>
-                    this.setState({pilotExperiment})
-                  }
-                />
               )}
             </div>
           )}

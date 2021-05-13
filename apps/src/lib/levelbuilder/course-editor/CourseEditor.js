@@ -63,7 +63,9 @@ class CourseEditor extends Component {
       visible: this.props.initialVisible,
       isStable: this.props.isStable,
       pilotExperiment: this.props.initialPilotExperiment || '',
-      teacherResources: teacherResources
+      teacherResources: teacherResources,
+      familyName: this.props.familyName,
+      versionYear: this.props.versionYear
     };
   }
 
@@ -76,13 +78,9 @@ class CourseEditor extends Component {
       name,
       title,
       versionTitle,
-      familyName,
-      versionYear,
       descriptionShort,
       scriptsInCourse,
-      scriptNames,
-      courseFamilies,
-      versionYearOptions
+      scriptNames
     } = this.props;
     const {announcements, teacherResources} = this.state;
     return (
@@ -196,45 +194,31 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
-          <label>
-            Family Name
-            <select
-              name="family_name"
-              defaultValue={familyName}
-              style={styles.dropdown}
-            >
-              <option value="">(None)</option>
-              {courseFamilies.map(familyOption => (
-                <option key={familyOption} value={familyOption}>
-                  {familyOption}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Version Year
-            <select
-              name="version_year"
-              defaultValue={versionYear}
-              style={styles.dropdown}
-            >
-              <option value="">(None)</option>
-              {versionYearOptions.map(year => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </label>
           <CourseVersionPublishedStateSelector
             visible={this.state.visible}
             isStable={this.state.isStable}
             pilotExperiment={this.state.pilotExperiment}
+            versionYear={this.state.versionYear}
+            familyName={this.state.familyName}
             updateVisible={visible => this.setState({visible})}
             updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
+            updateFamilyName={familyName => this.setState({familyName})}
+            updateVersionYear={versionYear => this.setState({versionYear})}
+            families={this.props.courseFamilies}
+            versionYearOptions={this.props.versionYearOptions}
+          />
+          <input
+            name="family_name"
+            type="hidden"
+            value={this.state.familyName}
+          />
+          <input
+            name="version_year"
+            type="hidden"
+            value={this.state.versionYear}
           />
           <input name="visible" type="hidden" value={this.state.visible} />
           <input name="is_stable" type="hidden" value={this.state.isStable} />
