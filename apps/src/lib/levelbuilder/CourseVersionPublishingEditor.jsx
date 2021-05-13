@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
 
 const publishedStates = ['Pilot', 'Preview', 'Assignable', 'Recommended'];
 
@@ -116,6 +117,42 @@ export default class CourseVersionPublishingEditor extends Component {
               </option>
             ))}
           </select>
+          <HelpTip>
+            <table>
+              <tr>
+                <th>Publish State</th>
+                <th>Overview</th>
+              </tr>
+              <tr>
+                <td style={styles.tableBorder}>Pilot</td>
+                <td style={styles.tableBorder}>
+                  Pilot is where a limited set of teachers who are in a pilot
+                  experiment can see and assign the course.
+                </td>
+              </tr>
+              <tr>
+                <td style={styles.tableBorder}>Preview</td>
+                <td style={styles.tableBorder}>
+                  Anyone who has the link can view the course and make progress
+                  on it. It is not assignable by teachers yet.
+                </td>
+              </tr>
+              <tr>
+                <td style={styles.tableBorder}>Assignable</td>
+                <td style={styles.tableBorder}>
+                  The course is now a choice in the dropdown that is assignable
+                  but is not the recommended course.
+                </td>
+              </tr>
+              <tr>
+                <td style={styles.tableBorder}>Recommended</td>
+                <td style={styles.tableBorder}>
+                  The course is now the recommended course. It is assignable and
+                  we try to get teachers to use this course
+                </td>
+              </tr>
+            </table>
+          </HelpTip>
         </label>
         {this.state.publishedState === 'Pilot' && (
           <label>
@@ -151,5 +188,9 @@ const styles = {
   },
   dropdown: {
     margin: '0 6px'
+  },
+  tableBorder: {
+    border: '1px solid ' + color.white,
+    padding: 5
   }
 };
