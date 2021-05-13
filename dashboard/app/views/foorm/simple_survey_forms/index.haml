@@ -12,6 +12,6 @@
   Note that some surveys are disabled after they've been used (disabling currently only accessible to engineers),
   so you may see a message saying the survey has closed on some of these pages.
 
-- Foorm::SimpleSurveyForm.all.pluck(:path).sort.uniq do |path|
+- Foorm::SimpleSurveyForm.all.pluck(:path).sort.uniq.each do |path|
   %p
     = link_to path, CDO.studio_url("form/#{path}", CDO.default_scheme)
