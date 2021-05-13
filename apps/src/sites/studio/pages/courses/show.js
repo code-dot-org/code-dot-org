@@ -24,6 +24,8 @@ import announcementReducer, {
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {registerReducers} from '@cdo/apps/redux';
 
+import {tooltipifyVocabulary} from '../utils';
+
 $(document).ready(showCourseOverview);
 
 function showCourseOverview() {
@@ -117,4 +119,5 @@ function showCourseOverview() {
     </Provider>,
     document.getElementById('course_overview')
   );
+  tooltipifyVocabulary();
 }
