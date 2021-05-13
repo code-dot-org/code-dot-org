@@ -21677,8 +21677,12 @@ en:
               description_teacher: 'In this **skill-building** lesson, students will program an interactive dance party. '
             lesson-2:
               name: Making Sprites
+              description_student: In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
             lesson-3:
               name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
             lesson-4:
               name: Text and Prompts
           lesson_groups:
