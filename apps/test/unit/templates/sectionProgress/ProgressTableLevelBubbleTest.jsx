@@ -61,10 +61,9 @@ const assessmentBackgrounds = {
  * of the BasicBubble, we use a spy to intercept the props used to render the
  * BasicBubble so we can render it here for easier verification.
  */
-const renderPropsSpy = sinon.spy(
-  ProgressTableLevelBubble.prototype,
-  'renderBasicBubble'
-);
+const renderPropsSpy = sinon
+  .createSandbox()
+  .spy(ProgressTableLevelBubble.prototype, 'renderBasicBubble');
 
 /**
  * The spy's history is reset before each test so this will give us the first
@@ -110,12 +109,12 @@ function getCacheSize() {
 describe('ProgressTableLevelBubble', () => {
   beforeEach(() => {
     renderPropsSpy.resetHistory();
-    cacheExports.clearElementsCache();
+    cacheExports.clearElementsCache('BasicBubble');
   });
 
   after(() => {
     renderPropsSpy.resetHistory();
-    cacheExports.clearElementsCache();
+    cacheExports.clearElementsCache('BasicBubble');
   });
 
   it('renders a link', () => {
