@@ -131,7 +131,11 @@ describe('ProgressTableContentView', () => {
   it('uses a fixed column width for empty lessons', () => {
     const wrapper = setUp({columnWidths: null});
     const headers = wrapper.find('th');
+    expect(headers.at(0).props().style?.minWidth).to.be.undefined;
     expect(headers.at(0).props().style?.maxWidth).to.be.undefined;
+    expect(headers.at(3).props().style.minWidth).to.equal(
+      parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
+    );
     expect(headers.at(3).props().style.maxWidth).to.equal(
       parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
     );
