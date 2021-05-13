@@ -19,9 +19,12 @@ import {
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
+import {tooltipifyVocabulary} from '../utils';
+
 $(document).ready(function() {
   displayLessonOverview();
   prepareExpandableImageDialog();
+  tooltipifyVocabulary();
 });
 
 /**

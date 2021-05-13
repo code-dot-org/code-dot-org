@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import {renderCourseProgress} from '@cdo/apps/code-studio/progress';
 import {
   setVerified,
@@ -13,7 +14,9 @@ import plcHeaderReducer, {
 import announcementsReducer, {
   addAnnouncement
 } from '@cdo/apps/code-studio/announcementsRedux';
+
 import locales, {setLocaleEnglishName} from '../../../../redux/localesRedux';
+import {tooltipifyVocabulary} from '../utils';
 
 $(document).ready(initPage);
 
@@ -63,4 +66,5 @@ function initPage() {
   }
 
   renderCourseProgress(scriptData);
+  tooltipifyVocabulary();
 }
