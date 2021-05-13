@@ -196,7 +196,6 @@ module.exports = class Maze {
       )
     });
 
-    // This is where we need to add the slider
     var iconPath = '/blockly/media/turtle/icons.png';
     var visualizationColumn = (
       <MazeVisualizationColumn
