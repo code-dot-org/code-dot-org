@@ -16,14 +16,11 @@ def main
   scripts = standalone_scripts + course_scripts
 
   search_str = '/s/'
-  search_str2 = '/levels/'
 
   scripts.each do |script|
     script.script_levels.each do |sl|
-      next if !sl.level.long_instructions&.include?(search_str) || !sl.level.long_instructions&.include?(search_str2)
-      sl.levels.each do |level|
-        puts level.name
-      end
+      next unless sl.level.long_instructions&.include?(search_str)
+      puts sl.level.name
     end
   end
 end
