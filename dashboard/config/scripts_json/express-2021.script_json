@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-13 18:39:44 UTC",
+    "serialized_at": "2021-05-13 20:31:10 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -244,6 +244,10 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. ",
+        "preparation": "Play through the levels and review the ***lesson slides**.",
+        "purpose": "This lesson is designed to introduce students to programming in Sprite Lab. Students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
+        "student_overview": "In this lesson you will write programs and learn about sprites and behaviors."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -259,6 +263,10 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. ",
+        "preparation": "Play through the levels and review the lesson slides.",
+        "purpose": "This lesson is designed to reinforce skills from the previous lesson and introduce students to programming with events. Throughout this course, events will be the primary way students change how their programs run over time or in response to the user.",
+        "student_overview": "You will work through programming levels and finish with an open-ended \"free play\" task where you can build whatever you like."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -1000,6 +1008,90 @@
         "lesson_activity.key": "3ba524d7-98f9-4c54-a616-1ffb77d3f190",
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "82634dba-ecce-4213-9e2b-4435bf9c1b5d",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82634dba-ecce-4213-9e2b-4435bf9c1b5d",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "9e0e1792-f9b4-4a5b-a282-e297ccf9d497",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9e0e1792-f9b4-4a5b-a282-e297ccf9d497",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "6c03cbfc-a38d-4aba-9cab-7e7520800342",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c03cbfc-a38d-4aba-9cab-7e7520800342",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "46e18a1e-d87a-4452-aa83-d5f742e61da6",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46e18a1e-d87a-4452-aa83-d5f742e61da6",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "184d2f0c-1709-4440-95bc-9030c4ff73ed",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "184d2f0c-1709-4440-95bc-9030c4ff73ed",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "70774562-2a5b-4a27-80d4-d731fc280abf",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70774562-2a5b-4a27-80d4-d731fc280abf",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021"
       }
     },
@@ -2691,6 +2783,255 @@
       }
     },
     {
+      "key": "9b131ffd-535f-4044-b7f7-d8aa2ba715ae",
+      "position": 1,
+      "properties": {
+        "description": "####Instructions for a Scene",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b131ffd-535f-4044-b7f7-d8aa2ba715ae",
+        "lesson_activity.key": "82634dba-ecce-4213-9e2b-4435bf9c1b5d"
+      }
+    },
+    {
+      "key": "5a8f455d-1681-4101-b70c-73117d7172a4",
+      "position": 2,
+      "properties": {
+        "description": "Last time, we explored apps and games created with Sprite Lab. Today we are going to begin writing our own code to create simple sprite animations.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5a8f455d-1681-4101-b70c-73117d7172a4",
+        "lesson_activity.key": "82634dba-ecce-4213-9e2b-4435bf9c1b5d"
+      }
+    },
+    {
+      "key": "d3c5cb2c-aa26-41cb-9e54-dd8e8ae43402",
+      "position": 3,
+      "properties": {
+        "description": "**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this sprite scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3c5cb2c-aa26-41cb-9e54-dd8e8ae43402",
+        "lesson_activity.key": "82634dba-ecce-4213-9e2b-4435bf9c1b5d"
+      }
+    },
+    {
+      "key": "ff19466f-a215-4f8f-b83a-4a289e985f0f",
+      "position": 1,
+      "properties": {
+        "description": "####Prediction (3 mins)\n\n**Do This:**  Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "name": "Making Sprites",
+        "progression_name": "Prediction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " In prediction puzzles students are asked to read a provided program and answer a question about it. The question must be answered before the student may press the “Run” button. While it is possible to use these questions as a form of assessment, keep in mind that they are often placed at the start of a lesson as a way to get students questioning things before they are even formally shown how something new works. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ff19466f-a215-4f8f-b83a-4a289e985f0f",
+        "lesson_activity.key": "9e0e1792-f9b4-4a5b-a282-e297ccf9d497"
+      }
+    },
+    {
+      "key": "60d05bd8-d452-4ff7-8d42-afc78df62133",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:**  Play the video, “How to Make a Sprite”",
+        "progression_name": "Video: How to Make a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "60d05bd8-d452-4ff7-8d42-afc78df62133",
+        "lesson_activity.key": "9e0e1792-f9b4-4a5b-a282-e297ccf9d497"
+      }
+    },
+    {
+      "key": "924d0fc2-b5b6-4176-b3fd-391937e4d187",
+      "position": 3,
+      "properties": {
+        "description": "####Skill Building and Practice (20 mins)\n\n**Transition:** Have students move to their computer and sign in. \n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187",
+        "lesson_activity.key": "9e0e1792-f9b4-4a5b-a282-e297ccf9d497"
+      }
+    },
+    {
+      "key": "8fd35c57-6015-4e9b-97cd-a8ade679fe05",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "8fd35c57-6015-4e9b-97cd-a8ade679fe05",
+        "lesson_activity.key": "9e0e1792-f9b4-4a5b-a282-e297ccf9d497"
+      }
+    },
+    {
+      "key": "676dfae2-cb99-4395-a262-f61ed61a3d28",
+      "position": 5,
+      "properties": {
+        "description": "####Free Play (10 mins)\n\n**Transition:** Students should now skip to the final level in the lesson where they will be able to make their own project.",
+        "progression_name": "Free Play: Make a Scene"
+      },
+      "seeding_key": {
+        "activity_section.key": "676dfae2-cb99-4395-a262-f61ed61a3d28",
+        "lesson_activity.key": "9e0e1792-f9b4-4a5b-a282-e297ccf9d497"
+      }
+    },
+    {
+      "key": "a35138b5-f6fc-4fac-9a73-991bed07f6d1",
+      "position": 1,
+      "properties": {
+        "description": "Today you learned how to write code to create programs in Sprite Lab. \n\n**Program** - An algorithm that has been coded into something that can be run by a machine.\n\n**Algorithm** - A list of steps to complete a task.",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "a35138b5-f6fc-4fac-9a73-991bed07f6d1",
+        "lesson_activity.key": "6c03cbfc-a38d-4aba-9cab-7e7520800342"
+      }
+    },
+    {
+      "key": "e80dde92-1c60-43ad-86ab-8688fbc0b52b",
+      "position": 2,
+      "properties": {
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\nWhat advice would you have for a friend who is interested in creating their own programs in Sprite Lab?\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e80dde92-1c60-43ad-86ab-8688fbc0b52b",
+        "lesson_activity.key": "6c03cbfc-a38d-4aba-9cab-7e7520800342"
+      }
+    },
+    {
+      "key": "88fed7fa-5670-4ce5-af7e-e4ece0814bdc",
+      "position": 1,
+      "properties": {
+        "description": "**Do this:** Review or introduce the word **algorithm**: *a list of steps to complete a task.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "88fed7fa-5670-4ce5-af7e-e4ece0814bdc",
+        "lesson_activity.key": "46e18a1e-d87a-4452-aa83-d5f742e61da6"
+      }
+    },
+    {
+      "key": "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f",
+      "position": 2,
+      "properties": {
+        "description": "Today we’re going to start with a quick game. In this game, I will be giving you all commands to follow and your job is to follow the algorithm. The commands will always start with “begin” or “stop”. If I tell you to begin doing something, you need to start that behavior and keep it going until I tell you to stop. I might also tell you to “stop everything” which means you can end all of the behaviors I’ve given you so far. We’ll play 3 rounds and after each round I’ll ask you all a couple questions.\n",
+        "name": "Follow the Algorithm",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Be sure to give a little space between commands. For each of these sections, consider running through the entire sequence without any discussion and later repeating it again after everyone has had a chance to debrief and process any confusion."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f",
+        "lesson_activity.key": "46e18a1e-d87a-4452-aa83-d5f742e61da6"
+      }
+    },
+    {
+      "key": "5c75924f-ef1f-4b61-9850-820fb68c0972",
+      "position": 3,
+      "properties": {
+        "description": "#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n**Discussion:** _What happened when you were told to clap but you were already marching in place? What happens if you are told to begin two different behaviors at once?_\n\nStudents should understand that multiple behaviors can happen simultaneously.\n\n####Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n**Discussion:**\n\n_What kinds of instructions caused people to make mistakes?\nWhat strategies do you think are helpful for making sure you follow instructions correctly?\nWhy is it important to keep track of each behavior separately?_\n\nStudents should understand that each behavior needs to be stopped individually. They need to keep track of each one separately.\n\n####Challenging\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n**Discussion:** _What happens if two behaviors seem to conflict with each other?_\n\n_What should you do when told to clap your hands and flap your arms at the same time?_\n\n_How can you jump up and down while crouching?_\n\n_What happens if you need to tap your knees and your head at the same time?_\n\n_When you were told to spin in two opposite directions what did you see people do?_ \n\n_What would happen if you were told to spin left and right at the exact same time?_\n\nStudents should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out."
+      },
+      "seeding_key": {
+        "activity_section.key": "5c75924f-ef1f-4b61-9850-820fb68c0972",
+        "lesson_activity.key": "46e18a1e-d87a-4452-aa83-d5f742e61da6"
+      }
+    },
+    {
+      "key": "bc9a48f5-47d1-4044-89fc-a38283b796e2",
+      "position": 1,
+      "properties": {
+        "description": "####Prediction (2 mins)\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "name": "Sprites in Action",
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc9a48f5-47d1-4044-89fc-a38283b796e2",
+        "lesson_activity.key": "184d2f0c-1709-4440-95bc-9030c4ff73ed"
+      }
+    },
+    {
+      "key": "456f3d6e-f3ff-4217-9ff9-891d66f8f18f",
+      "position": 2,
+      "properties": {
+        "description": "####Video: Sprites in Action (3 mins)\n\n**Do This:** Play the video, “Sprites in Action”",
+        "progression_name": "Video: Sprites in Action"
+      },
+      "seeding_key": {
+        "activity_section.key": "456f3d6e-f3ff-4217-9ff9-891d66f8f18f",
+        "lesson_activity.key": "184d2f0c-1709-4440-95bc-9030c4ff73ed"
+      }
+    },
+    {
+      "key": "00b7c8be-fa03-430e-9c7c-18c4890ac747",
+      "position": 3,
+      "properties": {
+        "description": "####Skill Building and Practice (20 mins)\n\n**Transition:** Have students move to their computer and sign in. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747",
+        "lesson_activity.key": "184d2f0c-1709-4440-95bc-9030c4ff73ed"
+      }
+    },
+    {
+      "key": "25d274b2-36a3-49fc-8646-93275a5162a0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "25d274b2-36a3-49fc-8646-93275a5162a0",
+        "lesson_activity.key": "184d2f0c-1709-4440-95bc-9030c4ff73ed"
+      }
+    },
+    {
+      "key": "482633ae-1c8c-4ca2-b44b-ba150352c610",
+      "position": 5,
+      "properties": {
+        "description": "####Free Play (10 mins)\n\n**Transition:** Students should now skip to the final level in the lesson where they will see the same free play choices as the previous lessons. Encourage students to add events to their projects from last time, or begin a new project.\n\n",
+        "progression_name": "Free Play: Make an Interactive Scene"
+      },
+      "seeding_key": {
+        "activity_section.key": "482633ae-1c8c-4ca2-b44b-ba150352c610",
+        "lesson_activity.key": "184d2f0c-1709-4440-95bc-9030c4ff73ed"
+      }
+    },
+    {
+      "key": "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b",
+      "position": 1,
+      "properties": {
+        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - *An action that causes something to happen.*",
+        "name": "Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b",
+        "lesson_activity.key": "70774562-2a5b-4a27-80d4-d731fc280abf"
+      }
+    },
+    {
+      "key": "c2c39f4c-ffb6-483d-931a-222e52751d81",
+      "position": 2,
+      "properties": {
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:** \nArrow keys are one way to make a program more interactive. What other ways could we give a user control over what happens in an app or game?\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2c39f4c-ffb6-483d-931a-222e52751d81",
+        "lesson_activity.key": "70774562-2a5b-4a27-80d4-d731fc280abf"
+      }
+    },
+    {
       "key": "c536d74f-f3af-41d7-b4e4-475b9a3f45c8",
       "position": 1,
       "properties": {
@@ -2746,7 +3087,7 @@
       "key": "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85",
       "position": 4,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Exploration"
       },
       "seeding_key": {
         "activity_section.key": "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85",
@@ -2757,10 +3098,21 @@
       "key": "bee07420-6a4f-4f4f-9058-c651486b7b38",
       "position": 5,
       "properties": {
-        "progression_name": "Create a Virtual Pet"
+        "progression_name": "Mini-Project: Create a Virtual Pet"
       },
       "seeding_key": {
         "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38",
+        "lesson_activity.key": "30742072-e383-4bf2-b103-2d9c6209706c"
+      }
+    },
+    {
+      "key": "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4",
+      "position": 6,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4",
         "lesson_activity.key": "30742072-e383-4bf2-b103-2d9c6209706c"
       }
     },
@@ -2927,7 +3279,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is not checked for correctness in order to encourage experimentation instead of solving a specific task."
+            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task."
           }
         ]
       },
@@ -3445,7 +3797,7 @@
       "properties": {
         "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming.",
         "name": "Looking Ahead with Minecraft",
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "db402396-6473-4942-a3b9-e3833beb0cd8",
@@ -3547,7 +3899,7 @@
       "key": "2c223051-9787-4ae5-afb2-c999300ee231",
       "position": 4,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "2c223051-9787-4ae5-afb2-c999300ee231",
@@ -3569,7 +3921,7 @@
       "key": "431e814c-2fdb-4385-ac49-7a3ad70c8411",
       "position": 6,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "431e814c-2fdb-4385-ac49-7a3ad70c8411",
@@ -3613,6 +3965,7 @@
       "key": "fe26d5c2-ccdc-48cc-9678-793d2e491bf5",
       "position": 10,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3844,7 +4197,7 @@
       "properties": {
         "description": "Bringing together concepts is not easy, but this set of levels is meant to help students see the endless possibilities of coding when using conditions. If students struggle at all with understanding the similarities or differences between `while` loops and `until` loops, have them try to think of how they would use similar statements in their real lives.",
         "name": "Until Loops in Maze",
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "3fabd283-0831-412f-8a9f-76e9bf96206f",
@@ -3877,7 +4230,7 @@
       "key": "308b7268-008e-40c7-9ab3-6977bfd38927",
       "position": 4,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "308b7268-008e-40c7-9ab3-6977bfd38927",
@@ -3914,17 +4267,6 @@
       },
       "seeding_key": {
         "activity_section.key": "573b69bd-e7dc-41e2-930f-1368a20d3e15",
-        "lesson_activity.key": "c2bcd776-9900-4043-99e5-939545175088"
-      }
-    },
-    {
-      "key": "f0be69e9-8f90-4e71-8392-0908d7e60d1d",
-      "position": 8,
-      "properties": {
-        "description": "\n####Online Puzzles\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0be69e9-8f90-4e71-8392-0908d7e60d1d",
         "lesson_activity.key": "c2bcd776-9900-4043-99e5-939545175088"
       }
     },
@@ -6404,10 +6746,424 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "ff19466f-a215-4f8f-b83a-4a289e985f0f"
+      },
+      "level_keys": [
+        "courseF_sprites_predict"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: How to Make a Sprite"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "60d05bd8-d452-4ff7-8d42-afc78df62133"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_2021-2"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      },
+      "level_keys": [
+        "courseF_sprites_make"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      },
+      "level_keys": [
+        "courseF_sprites_positioning"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      },
+      "level_keys": [
+        "courseF_sprites_moreSprites"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      },
+      "level_keys": [
+        "courseF_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      },
+      "level_keys": [
+        "courseF_sprites_behaviors"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "8fd35c57-6015-4e9b-97cd-a8ade679fe05"
+      },
+      "level_keys": [
+        "courseF_sprites_practice"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play: Make a Scene"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "676dfae2-cb99-4395-a262-f61ed61a3d28"
+      },
+      "level_keys": [
+        "courseF_sprites_freeplay"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_predict"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "bc9a48f5-47d1-4044-89fc-a38283b796e2"
+      },
+      "level_keys": [
+        "courseF_events_predict"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Sprites in Action"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "456f3d6e-f3ff-4217-9ff9-891d66f8f18f"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_events"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_review"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      },
+      "level_keys": [
+        "courseF_events_review"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_time"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      },
+      "level_keys": [
+        "courseF_events_time"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_key"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      },
+      "level_keys": [
+        "courseF_events_key"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_stops"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      },
+      "level_keys": [
+        "courseF_events_stops"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_conflict"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      },
+      "level_keys": [
+        "courseF_events_conflict"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_practice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "25d274b2-36a3-49fc-8646-93275a5162a0"
+      },
+      "level_keys": [
+        "courseF_events_practice"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play: Make an Interactive Scene"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_freeplay"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "482633ae-1c8c-4ca2-b44b-ba150352c610"
+      },
+      "level_keys": [
+        "courseF_events_freeplay"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "Virtual Pet 1_2021"
         ],
-        "progression": "Skill Building"
+        "progression": "Exploration"
       },
       "named_level": false,
       "bonus": false,
@@ -6425,7 +7181,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6433,7 +7189,7 @@
         "level_keys": [
           "Virtual Pet 2_2021"
         ],
-        "progression": "Create a Virtual Pet"
+        "progression": "Mini-Project: Create a Virtual Pet"
       },
       "named_level": false,
       "bonus": false,
@@ -6451,7 +7207,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6459,7 +7215,7 @@
         "level_keys": [
           "Virtual Pet 3_2021"
         ],
-        "progression": "Create a Virtual Pet"
+        "progression": "Mini-Project: Create a Virtual Pet"
       },
       "named_level": false,
       "bonus": false,
@@ -6477,7 +7233,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6485,7 +7241,7 @@
         "level_keys": [
           "Virtual Pet 5_2021"
         ],
-        "progression": "Create a Virtual Pet"
+        "progression": "Mini-Project: Create a Virtual Pet"
       },
       "named_level": false,
       "bonus": false,
@@ -6503,7 +7259,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6511,7 +7267,7 @@
         "level_keys": [
           "Virtual Pet 6_2021"
         ],
-        "progression": "Create a Virtual Pet"
+        "progression": "Mini-Project: Create a Virtual Pet"
       },
       "named_level": false,
       "bonus": false,
@@ -6529,7 +7285,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6537,7 +7293,7 @@
         "level_keys": [
           "Virtual Pet 7_2021"
         ],
-        "progression": "Create a Virtual Pet"
+        "progression": "Mini-Project: Create a Virtual Pet"
       },
       "named_level": false,
       "bonus": false,
@@ -6555,15 +7311,12 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 87,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Virtual Pet 8_2021"
-        ],
-        "progression": "Create a Virtual Pet"
+        "progression": "Free Play"
       },
       "named_level": false,
       "bonus": false,
@@ -6574,14 +7327,14 @@
         "lesson.key": "Virtual Pet with Sprite Lab",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
+        "activity_section.key": "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4"
       },
       "level_keys": [
         "Virtual Pet 8_2021"
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6607,7 +7360,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6633,7 +7386,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6659,7 +7412,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6685,7 +7438,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6711,7 +7464,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6737,7 +7490,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6763,7 +7516,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6789,7 +7542,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 96,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6815,7 +7568,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 97,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6841,7 +7594,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 98,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6867,7 +7620,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 99,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6893,7 +7646,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 100,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -6919,7 +7672,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 101,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6945,7 +7698,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 102,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6971,7 +7724,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 103,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -6997,7 +7750,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 104,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -7023,7 +7776,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7049,7 +7802,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 106,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7075,7 +7828,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 107,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7101,7 +7854,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 108,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7127,7 +7880,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 109,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7153,7 +7906,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 110,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7179,7 +7932,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 111,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7205,7 +7958,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 112,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -7231,7 +7984,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 113,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -7257,7 +8010,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 114,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7284,7 +8037,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 115,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7310,7 +8063,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 116,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -7336,7 +8089,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 117,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7362,7 +8115,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 118,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7388,7 +8141,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 119,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -7414,7 +8167,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 120,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -7440,7 +8193,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7466,7 +8219,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7492,7 +8245,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7518,7 +8271,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7544,7 +8297,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7570,7 +8323,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7596,7 +8349,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7622,7 +8375,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7648,7 +8401,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7674,7 +8427,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 130,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7700,7 +8453,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 131,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7726,7 +8479,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 132,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7752,7 +8505,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 133,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7778,7 +8531,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 134,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7804,7 +8557,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 135,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7830,7 +8583,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 136,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7856,7 +8609,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 137,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -7882,7 +8635,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 138,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -7908,7 +8661,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 139,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7935,7 +8688,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 140,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7961,7 +8714,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 141,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -7987,7 +8740,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 142,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -8013,7 +8766,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 143,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -8039,7 +8792,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 144,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -8065,7 +8818,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 145,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8091,7 +8844,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 146,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8117,7 +8870,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 147,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8143,7 +8896,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 148,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8169,7 +8922,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 149,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8195,7 +8948,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 150,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8221,7 +8974,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8229,7 +8982,7 @@
         "level_keys": [
           "Overworld Move to Sheep_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8247,7 +9000,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 152,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8255,7 +9008,7 @@
         "level_keys": [
           "Overworld Chop Tree_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8273,7 +9026,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 153,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8281,7 +9034,7 @@
         "level_keys": [
           "Overworld Shear Sheep_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8299,7 +9052,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 154,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8307,7 +9060,7 @@
         "level_keys": [
           "Overworld Chop Trees_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8325,7 +9078,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 155,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8333,7 +9086,7 @@
         "level_keys": [
           "Overworld Place Wall_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8351,7 +9104,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 156,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8359,7 +9112,7 @@
         "level_keys": [
           "Overworld House Frame Chosen_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8377,7 +9130,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 157,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -8385,7 +9138,7 @@
         "level_keys": [
           "Overworld Plant Crops_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8403,7 +9156,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 158,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -8411,7 +9164,7 @@
         "level_keys": [
           "Overworld Avoid Monsters_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8429,7 +9182,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 159,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -8437,7 +9190,7 @@
         "level_keys": [
           "Overworld Powered Minecart_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8455,7 +9208,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 160,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -8463,7 +9216,7 @@
         "level_keys": [
           "Underground Mining Coal_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8481,34 +9234,8 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 161,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Underground Iron_2021"
-        ],
-        "progression": "Practice"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Underground Iron_2021"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft ",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "express-2021",
-        "activity_section.key": "db402396-6473-4942-a3b9-e3833beb0cd8"
-      },
-      "level_keys": [
-        "Underground Iron_2021"
-      ]
-    },
-    {
-      "chapter": 144,
-      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -8534,8 +9261,8 @@
       ]
     },
     {
-      "chapter": 145,
-      "position": 13,
+      "chapter": 162,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -8561,7 +9288,30 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 163,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Underground Iron_2021"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft ",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf"
+      },
+      "level_keys": [
+        "Underground Iron_2021"
+      ]
+    },
+    {
+      "chapter": 164,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -8587,7 +9337,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 165,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8613,7 +9363,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 166,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8639,7 +9389,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 167,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8647,7 +9397,7 @@
         "level_keys": [
           "courseD_bee_conditionals2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8665,7 +9415,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 168,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8673,7 +9423,7 @@
         "level_keys": [
           "courseD_bee_conditionals3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8691,7 +9441,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 169,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8699,7 +9449,7 @@
         "level_keys": [
           "courseD_bee_conditionals4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8717,7 +9467,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 170,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -8725,7 +9475,7 @@
         "level_keys": [
           "courseD_bee_conditionals5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8743,7 +9493,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 171,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -8751,7 +9501,7 @@
         "level_keys": [
           "courseD_bee_conditionals6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8769,7 +9519,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 172,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8795,7 +9545,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 173,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8803,7 +9553,7 @@
         "level_keys": [
           "courseD_bee_conditionals7_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -8821,7 +9571,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 174,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -8847,7 +9597,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 175,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8874,7 +9624,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 176,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -8900,7 +9650,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 177,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -8926,7 +9676,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 178,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -8952,7 +9702,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 179,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -8978,7 +9728,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 180,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9004,7 +9754,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 181,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9030,7 +9780,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 182,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9056,7 +9806,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 183,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9082,7 +9832,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 184,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -9108,7 +9858,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 185,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -9134,7 +9884,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 186,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -9160,7 +9910,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 187,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -9186,7 +9936,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 188,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -9212,7 +9962,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 189,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9239,7 +9989,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 190,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -9265,7 +10015,7 @@
       ]
     },
     {
-      "chapter": 173,
+      "chapter": 191,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -9291,7 +10041,7 @@
       ]
     },
     {
-      "chapter": 174,
+      "chapter": 192,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -9317,7 +10067,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 193,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -9343,7 +10093,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 194,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9369,7 +10119,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 195,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -9395,7 +10145,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 196,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -9421,7 +10171,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 197,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -9447,7 +10197,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 198,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -9473,7 +10223,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 199,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -9499,7 +10249,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 200,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -9525,7 +10275,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 201,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -9551,7 +10301,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 202,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -9577,7 +10327,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 203,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -9603,7 +10353,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 204,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -9629,7 +10379,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 205,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9637,7 +10387,7 @@
         "level_keys": [
           "courseD_maze_until1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9655,7 +10405,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 206,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9681,7 +10431,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 207,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -9707,7 +10457,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 208,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -9715,7 +10465,7 @@
         "level_keys": [
           "courseD_maze_until3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9733,7 +10483,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 209,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -9741,7 +10491,7 @@
         "level_keys": [
           "courseD_maze_until4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9759,7 +10509,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 210,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -9767,7 +10517,7 @@
         "level_keys": [
           "courseD_maze_until5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9785,7 +10535,7 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 211,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -9793,7 +10543,7 @@
         "level_keys": [
           "courseD_maze_until6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9811,7 +10561,7 @@
       ]
     },
     {
-      "chapter": 194,
+      "chapter": 212,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -9819,7 +10569,7 @@
         "level_keys": [
           "courseD_maze_until7_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9837,7 +10587,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 213,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -9864,7 +10614,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 214,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -9890,7 +10640,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 215,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -9916,7 +10666,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 216,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -9942,7 +10692,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 217,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9968,7 +10718,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 218,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -9994,7 +10744,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 219,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10020,7 +10770,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 220,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10046,7 +10796,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 221,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10072,7 +10822,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 222,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -10098,7 +10848,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 223,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10125,7 +10875,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 224,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -10151,7 +10901,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 225,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -10177,7 +10927,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 226,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -10203,7 +10953,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 227,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -10229,7 +10979,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 228,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -10255,7 +11005,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 229,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10281,7 +11031,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 230,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -10307,7 +11057,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 231,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -10333,7 +11083,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 232,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -10359,7 +11109,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 233,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -10385,7 +11135,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 234,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -10411,7 +11161,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 235,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -10437,7 +11187,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 236,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -10463,7 +11213,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 237,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -10489,7 +11239,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 238,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -10515,7 +11265,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 239,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -10541,7 +11291,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 240,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -10567,7 +11317,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 241,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10593,7 +11343,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 242,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -10619,7 +11369,7 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 243,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -10645,7 +11395,7 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 244,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -10671,7 +11421,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 245,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -10697,7 +11447,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 246,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -10723,7 +11473,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 247,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -10749,7 +11499,7 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 248,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10775,7 +11525,7 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 249,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -10801,7 +11551,7 @@
       ]
     },
     {
-      "chapter": 232,
+      "chapter": 250,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -10827,7 +11577,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 251,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -10854,7 +11604,7 @@
       ]
     },
     {
-      "chapter": 234,
+      "chapter": 252,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -10880,7 +11630,7 @@
       ]
     },
     {
-      "chapter": 235,
+      "chapter": 253,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -10906,7 +11656,7 @@
       ]
     },
     {
-      "chapter": 236,
+      "chapter": 254,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10932,7 +11682,7 @@
       ]
     },
     {
-      "chapter": 237,
+      "chapter": 255,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10958,7 +11708,7 @@
       ]
     },
     {
-      "chapter": 238,
+      "chapter": 256,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10984,7 +11734,7 @@
       ]
     },
     {
-      "chapter": 239,
+      "chapter": 257,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11010,7 +11760,7 @@
       ]
     },
     {
-      "chapter": 240,
+      "chapter": 258,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11036,7 +11786,7 @@
       ]
     },
     {
-      "chapter": 241,
+      "chapter": 259,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -11062,7 +11812,7 @@
       ]
     },
     {
-      "chapter": 242,
+      "chapter": 260,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -11088,7 +11838,7 @@
       ]
     },
     {
-      "chapter": 243,
+      "chapter": 261,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -11114,7 +11864,7 @@
       ]
     },
     {
-      "chapter": 244,
+      "chapter": 262,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -11140,7 +11890,7 @@
       ]
     },
     {
-      "chapter": 245,
+      "chapter": 263,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11167,7 +11917,7 @@
       ]
     },
     {
-      "chapter": 246,
+      "chapter": 264,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11193,7 +11943,7 @@
       ]
     },
     {
-      "chapter": 247,
+      "chapter": 265,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -11219,7 +11969,7 @@
       ]
     },
     {
-      "chapter": 248,
+      "chapter": 266,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11245,7 +11995,7 @@
       ]
     },
     {
-      "chapter": 249,
+      "chapter": 267,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -11271,7 +12021,7 @@
       ]
     },
     {
-      "chapter": 250,
+      "chapter": 268,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -11297,7 +12047,7 @@
       ]
     },
     {
-      "chapter": 251,
+      "chapter": 269,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11323,7 +12073,7 @@
       ]
     },
     {
-      "chapter": 252,
+      "chapter": 270,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11349,7 +12099,7 @@
       ]
     },
     {
-      "chapter": 253,
+      "chapter": 271,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11375,7 +12125,7 @@
       ]
     },
     {
-      "chapter": 254,
+      "chapter": 272,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -11401,7 +12151,7 @@
       ]
     },
     {
-      "chapter": 255,
+      "chapter": 273,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -11427,7 +12177,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 274,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -11453,7 +12203,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 275,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -11479,7 +12229,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 276,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11505,7 +12255,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 277,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11531,7 +12281,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 278,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11557,7 +12307,7 @@
       ]
     },
     {
-      "chapter": 261,
+      "chapter": 279,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11583,7 +12333,7 @@
       ]
     },
     {
-      "chapter": 262,
+      "chapter": 280,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -11609,7 +12359,7 @@
       ]
     },
     {
-      "chapter": 263,
+      "chapter": 281,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11636,7 +12386,7 @@
       ]
     },
     {
-      "chapter": 264,
+      "chapter": 282,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11662,7 +12412,7 @@
       ]
     },
     {
-      "chapter": 265,
+      "chapter": 283,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11688,7 +12438,7 @@
       ]
     },
     {
-      "chapter": 266,
+      "chapter": 284,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11714,7 +12464,7 @@
       ]
     },
     {
-      "chapter": 267,
+      "chapter": 285,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11740,7 +12490,7 @@
       ]
     },
     {
-      "chapter": 268,
+      "chapter": 286,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11766,7 +12516,7 @@
       ]
     },
     {
-      "chapter": 269,
+      "chapter": 287,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11792,7 +12542,7 @@
       ]
     },
     {
-      "chapter": 270,
+      "chapter": 288,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11818,7 +12568,7 @@
       ]
     },
     {
-      "chapter": 271,
+      "chapter": 289,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -11844,7 +12594,7 @@
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 290,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11870,7 +12620,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 291,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11896,7 +12646,7 @@
       ]
     },
     {
-      "chapter": 274,
+      "chapter": 292,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -11922,7 +12672,7 @@
       ]
     },
     {
-      "chapter": 275,
+      "chapter": 293,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -11948,7 +12698,7 @@
       ]
     },
     {
-      "chapter": 276,
+      "chapter": 294,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -11974,7 +12724,7 @@
       ]
     },
     {
-      "chapter": 277,
+      "chapter": 295,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12000,7 +12750,7 @@
       ]
     },
     {
-      "chapter": 278,
+      "chapter": 296,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12026,7 +12776,7 @@
       ]
     },
     {
-      "chapter": 279,
+      "chapter": 297,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12052,7 +12802,7 @@
       ]
     },
     {
-      "chapter": 280,
+      "chapter": 298,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -12078,7 +12828,7 @@
       ]
     },
     {
-      "chapter": 281,
+      "chapter": 299,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12104,7 +12854,7 @@
       ]
     },
     {
-      "chapter": 282,
+      "chapter": 300,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12130,7 +12880,7 @@
       ]
     },
     {
-      "chapter": 283,
+      "chapter": 301,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12156,7 +12906,7 @@
       ]
     },
     {
-      "chapter": 284,
+      "chapter": 302,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12182,7 +12932,7 @@
       ]
     },
     {
-      "chapter": 285,
+      "chapter": 303,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12208,7 +12958,7 @@
       ]
     },
     {
-      "chapter": 286,
+      "chapter": 304,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12234,7 +12984,7 @@
       ]
     },
     {
-      "chapter": 287,
+      "chapter": 305,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12260,7 +13010,7 @@
       ]
     },
     {
-      "chapter": 288,
+      "chapter": 306,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -12286,7 +13036,7 @@
       ]
     },
     {
-      "chapter": 289,
+      "chapter": 307,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -12312,7 +13062,7 @@
       ]
     },
     {
-      "chapter": 290,
+      "chapter": 308,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -12338,7 +13088,7 @@
       ]
     },
     {
-      "chapter": 291,
+      "chapter": 309,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -12364,7 +13114,7 @@
       ]
     },
     {
-      "chapter": 292,
+      "chapter": 310,
       "position": 10,
       "activity_section_position": 9,
       "assessment": false,
@@ -12390,7 +13140,7 @@
       ]
     },
     {
-      "chapter": 293,
+      "chapter": 311,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12416,7 +13166,7 @@
       ]
     },
     {
-      "chapter": 294,
+      "chapter": 312,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -12442,7 +13192,7 @@
       ]
     },
     {
-      "chapter": 295,
+      "chapter": 313,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12468,7 +13218,7 @@
       ]
     },
     {
-      "chapter": 296,
+      "chapter": 314,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -12494,7 +13244,7 @@
       ]
     },
     {
-      "chapter": 297,
+      "chapter": 315,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12520,7 +13270,7 @@
       ]
     },
     {
-      "chapter": 298,
+      "chapter": 316,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -13293,6 +14043,222 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseF_sprites_predict",
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "ff19466f-a215-4f8f-b83a-4a289e985f0f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_2021-2",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2021-2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "60d05bd8-d452-4ff7-8d42-afc78df62133"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_make",
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_positioning",
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_moreSprites",
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_properties",
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_behaviors",
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "924d0fc2-b5b6-4176-b3fd-391937e4d187"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_practice",
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "8fd35c57-6015-4e9b-97cd-a8ade679fe05"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_freeplay",
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "express-2021",
+        "activity_section.key": "676dfae2-cb99-4395-a262-f61ed61a3d28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_predict",
+        "script_level.level_keys": [
+          "courseF_events_predict"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "bc9a48f5-47d1-4044-89fc-a38283b796e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_pilotVideo_events",
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "456f3d6e-f3ff-4217-9ff9-891d66f8f18f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_review",
+        "script_level.level_keys": [
+          "courseF_events_review"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_time",
+        "script_level.level_keys": [
+          "courseF_events_time"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_key",
+        "script_level.level_keys": [
+          "courseF_events_key"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_stops",
+        "script_level.level_keys": [
+          "courseF_events_stops"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_conflict",
+        "script_level.level_keys": [
+          "courseF_events_conflict"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "00b7c8be-fa03-430e-9c7c-18c4890ac747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_practice",
+        "script_level.level_keys": [
+          "courseF_events_practice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "25d274b2-36a3-49fc-8646-93275a5162a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_freeplay",
+        "script_level.level_keys": [
+          "courseF_events_freeplay"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "express-2021",
+        "activity_section.key": "482633ae-1c8c-4ca2-b44b-ba150352c610"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Virtual Pet 1_2021",
         "script_level.level_keys": [
           "Virtual Pet 1_2021"
@@ -13372,7 +14338,7 @@
         "lesson.key": "Virtual Pet with Sprite Lab",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
+        "activity_section.key": "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4"
       }
     },
     {
@@ -14253,18 +15219,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Underground Iron_2021",
-        "script_level.level_keys": [
-          "Underground Iron_2021"
-        ],
-        "lesson.key": "Looking Ahead with Minecraft ",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "express-2021",
-        "activity_section.key": "db402396-6473-4942-a3b9-e3833beb0cd8"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Underground Avoiding Lava_2021",
         "script_level.level_keys": [
           "Underground Avoiding Lava_2021"
@@ -14280,6 +15234,18 @@
         "level.key": "Underground If Statements_2021",
         "script_level.level_keys": [
           "Underground If Statements_2021"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft ",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "3ab2228f-c257-4ffd-bcc0-1e5b29118ccf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Underground Iron_2021",
+        "script_level.level_keys": [
+          "Underground Iron_2021"
         ],
         "lesson.key": "Looking Ahead with Minecraft ",
         "lesson_group.key": "csf_conditionals",
@@ -16199,6 +17165,18 @@
       }
     },
     {
+      "name": "Making Sprites",
+      "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview\t",
+      "key": "making_sprites",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "making_sprites"
+      }
+    },
+    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair_programming",
@@ -16256,6 +17234,30 @@
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation_1"
+      }
+    },
+    {
+      "name": "Sprites in Action",
+      "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview\t",
+      "key": "sprites_in_action",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprites_in_action"
       }
     },
     {
@@ -16457,6 +17459,24 @@
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "sprite_lab_documentation_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "making_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "sprites_in_action"
       }
     },
     {
@@ -16694,6 +17714,66 @@
       },
       "seeding_key": {
         "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
       }
     },
     {
@@ -17226,6 +18306,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Virtual Pet with Sprite Lab",
         "vocabulary.key": "event"
       }
@@ -17623,6 +18739,54 @@
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
         "objective.key": "09281dd0-4b33-4537-9543-a2377bc2f923"
+      }
+    },
+    {
+      "key": "30a80046-d715-46b1-8b89-65c410d04690",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and behaviors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "30a80046-d715-46b1-8b89-65c410d04690"
+      }
+    },
+    {
+      "key": "e0d4a883-51dc-4647-8c9f-59652f699aec",
+      "properties": {
+        "description": "Create an animation using sprites, and behaviors."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "e0d4a883-51dc-4647-8c9f-59652f699aec"
+      }
+    },
+    {
+      "key": "3f6c865d-fafb-4084-8a8f-4c518dcd479b",
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "3f6c865d-fafb-4084-8a8f-4c518dcd479b"
+      }
+    },
+    {
+      "key": "4e8dca52-438e-46fd-b9bd-0bb1486ee05d",
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "4e8dca52-438e-46fd-b9bd-0bb1486ee05d"
+      }
+    },
+    {
+      "key": "6ba64af5-a4d3-4473-b004-166dfdc6bd71",
+      "properties": {
+        "description": "Create an interactive animation using events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "6ba64af5-a4d3-4473-b004-166dfdc6bd71"
       }
     },
     {
@@ -18153,6 +19317,41 @@
     {
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
       }
