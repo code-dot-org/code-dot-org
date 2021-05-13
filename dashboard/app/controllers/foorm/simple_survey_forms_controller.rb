@@ -46,7 +46,7 @@ module Foorm
 
       form_questions = ::Foorm::Form.get_questions_for_name_and_version(
         form_data[:form_name],
-        form_data[:form_version] || 0
+        form_data[:form_version]
       )
 
       return render_404 unless form_questions
@@ -86,7 +86,7 @@ module Foorm
 
       form_questions = ::Foorm::Form.get_questions_for_name_and_version(
         form_data[:form_name],
-        form_data[:form_version] || 0
+        form_data[:form_version]
       )
 
       key_params = {
