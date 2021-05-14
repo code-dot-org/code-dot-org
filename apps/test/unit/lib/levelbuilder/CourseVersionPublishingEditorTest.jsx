@@ -130,7 +130,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'Preview'}});
+      .simulate('change', {target: {value: 'Assignable'}});
 
     expect(updateVisible).to.have.been.calledWith(true);
     expect(updateIsStable).to.have.been.calledWith(false);
@@ -144,7 +144,7 @@ describe('CourseVersionPublishedStateSelector', () => {
 
     wrapper
       .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'Preview'}});
+      .simulate('change', {target: {value: 'Recommended'}});
 
     expect(updateVisible).to.have.been.calledWith(true);
     expect(updateIsStable).to.have.been.calledWith(true);
