@@ -120,8 +120,8 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # If the stage is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that stage
+    # If the lesson is not released yet (visible_after is in the future) then don't
+    # let a user go to the script_level page in that lesson
     return head(:forbidden) unless @script_level.lesson.published?(current_user)
 
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
@@ -259,8 +259,8 @@ class ScriptLevelsController < ApplicationController
     unless user.nil?
       # bonus level summaries explicitly don't contain any user-specific data,
       # so we need to merge in the user's progress.
-      script_bonus_levels_by_stage.each do |stage|
-        stage[:levels].each do |level_summary|
+      script_bonus_levels_by_stage.each do |lesson|
+        lesson[:levels].each do |level_summary|
           ul = UserLevel.find_by(
             level_id: level_summary[:level_id], user_id: user.id, script: @script
           )
