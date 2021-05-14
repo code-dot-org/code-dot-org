@@ -198,6 +198,8 @@ class ScriptEditor extends React.Component {
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
+    let shouldSave = true;
+
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     const videoKeysBefore = (
@@ -231,6 +233,7 @@ class ScriptEditor extends React.Component {
     }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
+      shouldSave = false;
       this.setState({
         isSaving: false,
         error:
@@ -242,6 +245,7 @@ class ScriptEditor extends React.Component {
       (parseInt(this.state.weeklyInstructionalMinutes) <= 0 ||
         isNaN(parseInt(this.state.weeklyInstructionalMinutes)))
     ) {
+      shouldSave = false;
       this.setState({
         isSaving: false,
         error:
@@ -252,6 +256,7 @@ class ScriptEditor extends React.Component {
       this.state.publishedState === 'Pilot' &&
       this.state.pilotExperiment === ''
     ) {
+      shouldSave = false;
       this.setState({
         isSaving: false,
         error:
@@ -320,7 +325,7 @@ class ScriptEditor extends React.Component {
       dataToSave.stage_descriptions = this.state.lessonDescriptions;
     }
 
-    if (this.state.isSaving) {
+    if (shouldSave) {
       $.ajax({
         url: `/s/${this.props.id}`,
         method: 'PUT',
