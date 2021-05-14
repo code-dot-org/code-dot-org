@@ -25,17 +25,17 @@ describe('VisibleAndPilotExperiment', () => {
         pilotExperiment="test-pilot"
       />
     );
-    const checkbox = wrapper.find('input[name="hidden"]');
+    const checkbox = wrapper.find('input[type="checkbox"]');
     expect(checkbox.prop('disabled')).to.be.true;
     expect(checkbox.prop('checked')).to.be.false;
   });
 
   it('visible updates state as pilotExperiment changes', () => {
-    const wrapper = mount(<VisibleAndPilotExperiment {...defaultProps} />);
     const visibleInTeacherDashboard = () =>
-      wrapper.find('input[name="hidden"]');
-    const pilotExperiment = () =>
-      wrapper.find('input[name="pilot_experiment"]');
+      wrapper.find('input[type="checkbox"]');
+    const wrapper = mount(<VisibleAndPilotExperiment {...defaultProps} />);
+    const pilotExperimentComponent = wrapper.find('PilotExperiment');
+    const pilotExperiment = () => pilotExperimentComponent.find('input');
 
     expect(pilotExperiment().prop('value')).to.equal('');
     expect(visibleInTeacherDashboard().prop('checked')).to.be.true;
