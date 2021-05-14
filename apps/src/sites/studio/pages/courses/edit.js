@@ -40,6 +40,7 @@ function showCourseEditor() {
   ReactDOM.render(
     <Provider store={store}>
       <CourseEditor
+        id={courseEditorData.course_summary.id}
         name={courseEditorData.course_summary.name}
         title={courseEditorData.course_summary.title}
         versionTitle={courseEditorData.course_summary.version_title}
@@ -71,6 +72,7 @@ function showCourseEditor() {
         initialAnnouncements={announcements}
         useMigratedResources={courseEditorData.course_summary.is_migrated}
         courseVersionId={courseEditorData.course_summary.course_version_id}
+        coursePath={courseEditorData.course_summary.course_path}
       />
     </Provider>,
     document.getElementById('course_editor')
