@@ -50,13 +50,13 @@ export default class ProgressBubble extends React.Component {
   };
 
   /**
-   * onClick takes priority over url, so if we have onClick, return undefined
+   * onClick takes priority over url, so if we have onClick, return null
    */
   getUrl() {
     const {onClick, level, selectedSectionId, selectedStudentId} = this.props;
-    return (
-      !onClick && getBubbleUrl(level.url, selectedStudentId, selectedSectionId)
-    );
+    return onClick
+      ? null
+      : getBubbleUrl(level.url, selectedStudentId, selectedSectionId, true);
   }
 
   createBubbleElement() {
@@ -68,13 +68,18 @@ export default class ProgressBubble extends React.Component {
       level.isUnplugged,
       level.bonus,
       false,
-      level.bubbleText,
+      level.bubbleText || level.letter || level.levelNumber,
       bubbleSize
+    );
+    const shape = getBubbleShape(
+      // override pill shape for small bubbles
+      level.isUnplugged && !smallBubble,
+      level.isConceptLevel
     );
 
     const bubble = (
       <BasicBubble
-        shape={getBubbleShape(level.isUnplugged, level.isConceptLevel)}
+        shape={shape}
         size={bubbleSize}
         progressStyle={levelProgressStyle(level.status, level.kind)}
         classNames={getBubbleClassNames(this.isEnabled())}

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import _ from 'lodash';
+import queryString from 'query-string';
 import i18n from '@cdo/locale';
+import {currentLocation} from '@cdo/apps/utils';
 import TooltipWithIcon from './TooltipWithIcon';
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {
@@ -11,8 +13,7 @@ import {
   BubbleSize,
   BubbleShape,
   mainBubbleStyle,
-  diamondContainerStyle,
-  inlineBlock
+  diamondContainerStyle
 } from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 
@@ -111,12 +112,7 @@ export function BubbleTooltip({level, children}) {
   }
   const tooltipId = _.uniqueId();
   return (
-    <div
-      data-tip
-      data-for={tooltipId}
-      aria-describedby={tooltipId}
-      style={inlineBlock}
-    >
+    <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
       {children}
       <TooltipWithIcon
         tooltipId={tooltipId}
@@ -175,20 +171,28 @@ export function getBubbleClassNames(isEnabled) {
   return classNames('progress-bubble', {enabled: isEnabled});
 }
 
-export function getBubbleUrl(levelUrl, studentId, sectionId) {
+export function getBubbleUrl(
+  levelUrl,
+  studentId,
+  sectionId,
+  preserveQueryParams = false
+) {
   if (!levelUrl) {
     return null;
-  } else if (!studentId && !sectionId) {
-    return levelUrl;
   }
-  const params = [];
+  const params = preserveQueryParams
+    ? queryString.parse(currentLocation().search)
+    : {};
   if (sectionId) {
-    params.push(`section_id=${sectionId}`);
+    params.section_id = sectionId;
   }
   if (studentId) {
-    params.push(`user_id=${studentId}`);
+    params.user_id = studentId;
   }
-  return `${levelUrl}?${params.join('&')}`;
+  if (Object.keys(params).length) {
+    return `${levelUrl}?${queryString.stringify(params)}`;
+  }
+  return levelUrl;
 }
 
 export const unitTestExports = {

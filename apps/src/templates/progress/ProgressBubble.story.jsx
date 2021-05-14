@@ -1,6 +1,6 @@
 import React from 'react';
 import ProgressBubble from './ProgressBubble';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const statuses = Object.values(LevelStatus);
 
@@ -15,6 +15,12 @@ export default storybook => {
               id: '1',
               levelNumber: 3,
               bubbleText: '3',
+              kind: [
+                LevelStatus.completed_assessment,
+                LevelStatus.submitted
+              ].includes(status)
+                ? LevelKind.assessment
+                : LevelKind.puzzle,
               status: status,
               isLocked: false,
               url: '/foo/bar',
@@ -25,6 +31,46 @@ export default storybook => {
         )
       }))
       .concat([
+        {
+          name: 'concept assessment - not_tried',
+          description: 'Should show diamond with checkmark',
+          story: () => (
+            <ProgressBubble
+              level={{
+                id: '1',
+                levelNumber: 3,
+                bubbleText: '1',
+                status: LevelStatus.not_tried,
+                kind: LevelKind.assessment,
+                isConceptLevel: true,
+                isLocked: false,
+                url: '/foo/bar',
+                icon: 'fa-document'
+              }}
+              disabled={false}
+            />
+          )
+        },
+        {
+          name: 'concept assessment - submitted',
+          description: 'Should show diamond with checkmark',
+          story: () => (
+            <ProgressBubble
+              level={{
+                id: '1',
+                levelNumber: 3,
+                bubbleText: '1',
+                status: LevelStatus.submitted,
+                kind: LevelKind.assessment,
+                isConceptLevel: true,
+                isLocked: false,
+                url: '/foo/bar',
+                icon: 'fa-document'
+              }}
+              disabled={false}
+            />
+          )
+        },
         {
           name: 'bubble with no url',
           story: () => (
