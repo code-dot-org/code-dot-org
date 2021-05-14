@@ -86,7 +86,7 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
         }
       end
     else
-      # Otherwise, status is determined by the completion of stages
+      # Otherwise, status is determined by the completion of lessons
       plc_course_unit.script.lesson_groups.each do |lesson_group|
         summary << {
           category: lesson_group.localized_display_name,
