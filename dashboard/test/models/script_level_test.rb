@@ -475,12 +475,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'end of stage' do
     script = Script.find_by_name('course1')
 
-    assert script.lessons[0].script_levels.last.end_of_stage?
-    assert script.lessons[1].script_levels.last.end_of_stage?
-    assert script.lessons[2].script_levels.last.end_of_stage?
-    assert script.lessons[3].script_levels.last.end_of_stage?
-    refute script.lessons[3].script_levels.first.end_of_stage?
-    refute script.lessons[3].script_levels[1].end_of_stage?
+    assert script.lessons[0].script_levels.last.end_of_lesson?
+    assert script.lessons[1].script_levels.last.end_of_lesson?
+    assert script.lessons[2].script_levels.last.end_of_lesson?
+    assert script.lessons[3].script_levels.last.end_of_lesson?
+    refute script.lessons[3].script_levels.first.end_of_lesson?
+    refute script.lessons[3].script_levels[1].end_of_lesson?
   end
 
   test 'cached_find' do

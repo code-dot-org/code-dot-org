@@ -1419,7 +1419,7 @@ class Script < ApplicationRecord
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
-      is_stable: is_stable,
+      is_stable: !!is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1561,9 +1561,12 @@ class Script < ApplicationRecord
   end
 
   def summarize_i18n_for_edit(include_lessons=true)
-    data = %w(title description student_description description_short description_audience).map do |key|
+    data = %w(title description_short description_audience).map do |key|
       [key.camelize(:lower).to_sym, I18n.t("data.script.name.#{name}.#{key}", default: '')]
     end.to_h
+
+    data[:description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.description", default: ''))
+    data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
       data[:stageDescriptions] = lessons.map do |lesson|
@@ -1600,7 +1603,7 @@ class Script < ApplicationRecord
           version_year: s.version_year,
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
-          is_stable: s.is_stable,
+          is_stable: !!s.is_stable,
           locales: s.supported_locale_names
         }
       end
@@ -1757,11 +1760,11 @@ class Script < ApplicationRecord
       info[:version_title] = version_year
     end
     if localized_description
-      info[:description] = localized_description
+      info[:description] = Services::MarkdownPreprocessor.process(localized_description)
     end
 
     if localized_student_description
-      info[:student_description] = localized_student_description
+      info[:student_description] = Services::MarkdownPreprocessor.process(localized_student_description)
     end
 
     info[:is_stable] = true if is_stable

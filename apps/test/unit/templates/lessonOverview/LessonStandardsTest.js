@@ -55,24 +55,6 @@ describe('LessonStandards', () => {
     });
   });
 
-  it('renders many standards with first standard expanded', () => {
-    const standards = cspStandards.concat(cstaStandards);
-    const wrapper = mount(
-      <LessonStandards standards={standards} expandMode={ExpandMode.FIRST} />
-    );
-    const frameworks = wrapper.find('Framework');
-    expect(frameworks.length).to.equal(2);
-
-    const parentCategories = frameworks.at(0).find('UnconnectedParentCategory');
-    expect(parentCategories.length).to.equal(1);
-    expect(isOpen(parentCategories.at(0))).to.be.true;
-
-    const categories = parentCategories.at(0).find('UnconnectedCategory');
-    expect(categories.length).to.equal(2);
-    expect(isOpen(categories.at(0))).to.be.true;
-    expect(isOpen(categories.at(1))).to.be.false;
-  });
-
   it('renders many standards with all standards expanded', () => {
     const standards = cspStandards.concat(cstaStandards);
     const wrapper = mount(
