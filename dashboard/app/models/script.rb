@@ -1419,7 +1419,7 @@ class Script < ApplicationRecord
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       hidden: hidden,
-      is_stable: is_stable,
+      is_stable: !!is_stable,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1603,7 +1603,7 @@ class Script < ApplicationRecord
           version_year: s.version_year,
           version_title: s.version_year,
           can_view_version: s.can_view_version?(user),
-          is_stable: s.is_stable,
+          is_stable: !!s.is_stable,
           locales: s.supported_locale_names
         }
       end
