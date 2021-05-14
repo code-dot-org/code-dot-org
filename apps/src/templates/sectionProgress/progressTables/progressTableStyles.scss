@@ -92,6 +92,19 @@ $content-view-width: $content-width - $student-list-width;
   }
 }
 
+.progress-bubble {
+  &.enabled {
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
+      color 0.2s ease-out;
+    &:hover {
+      text-decoration: none;
+      color: $white !important;
+      border-color: $level_current !important;
+      background-color: $level_current !important;
+    }
+  }
+}
+
 :export {
   MAX_BODY_HEIGHT: $max-height / 1px;
   STUDENT_LIST_WIDTH: $student-list-width / 1px;
