@@ -208,7 +208,7 @@ module.exports = class Maze {
         showStepButton={
           !!(this.controller.level.step && !this.controller.level.edit_blocks)
         }
-        showSpeedSlider={skin.adjustableSpeed}
+        showSpeedSlider={!!skin.adjustableSpeed}
         iconPath={iconPath}
       />
     );
