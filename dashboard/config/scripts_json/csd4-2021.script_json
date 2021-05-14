@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-13 16:29:00 UTC",
+    "serialized_at": "2021-05-14 16:47:44 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -5844,6 +5844,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -5867,6 +5870,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-1"
+        ],
         "progression": "Sample Apps for Good"
       },
       "named_level": false,
@@ -5890,6 +5896,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-2"
+        ],
         "progression": "Sample Apps for Good"
       },
       "named_level": false,
@@ -5913,6 +5922,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-3"
+        ],
         "progression": "Sample Apps for Good"
       },
       "named_level": false,
@@ -5936,6 +5948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-1"
+        ],
         "progression": "Example Apps"
       },
       "named_level": false,
@@ -5959,6 +5974,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-2"
+        ],
         "progression": "Example Apps"
       },
       "named_level": false,
@@ -5982,6 +6000,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-3"
+        ],
         "progression": "Example Apps"
       },
       "named_level": false,
@@ -6005,6 +6026,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-4"
+        ],
         "progression": "Example Apps"
       },
       "named_level": false,
@@ -6028,6 +6052,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-5"
+        ],
         "progression": "Example Apps"
       },
       "named_level": false,
@@ -6051,6 +6078,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-6"
+        ],
         "progression": "Example Apps"
       },
       "named_level": false,
@@ -6074,6 +6104,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Design Mode Video_2021"
+        ],
         "progression": "Video: Intro to Design Mode"
       },
       "named_level": false,
@@ -6097,6 +6130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2021"
+        ],
         "progression": "Build a Screen"
       },
       "named_level": false,
@@ -6120,6 +6156,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2021"
+        ],
         "progression": "Build a Screen"
       },
       "named_level": false,
@@ -6143,6 +6182,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2021"
+        ],
         "progression": "Build a Screen"
       },
       "named_level": false,
@@ -6166,6 +6208,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2021"
+        ],
         "progression": "Build a Screen"
       },
       "named_level": false,
@@ -6189,6 +6234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2021"
+        ],
         "progression": "Finish a Screen"
       },
       "named_level": false,
@@ -6212,6 +6260,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2021"
+        ],
         "progression": "Finish a Screen"
       },
       "named_level": false,
@@ -6235,6 +6286,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2021"
+        ],
         "progression": "Finish a Screen"
       },
       "named_level": false,
@@ -6258,6 +6312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2021"
+        ],
         "progression": "Design a Screen for your App"
       },
       "named_level": false,
@@ -6281,6 +6338,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2021"
+        ],
         "progression": "App Project: Screen Design"
       },
       "named_level": false,
@@ -6304,6 +6364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2021"
+        ],
         "progression": "Adding Screens"
       },
       "named_level": false,
@@ -6327,6 +6390,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2021"
+        ],
         "progression": "Adding Screens"
       },
       "named_level": false,
@@ -6350,6 +6416,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2021"
+        ],
         "progression": "Adding Screens"
       },
       "named_level": false,
@@ -6373,6 +6442,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2021"
+        ],
         "progression": "Adding Screens"
       },
       "named_level": false,
@@ -6396,6 +6468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2021"
+        ],
         "progression": "Events and Linking Screens"
       },
       "named_level": false,
@@ -6419,6 +6494,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2021"
+        ],
         "progression": "Events and Linking Screens"
       },
       "named_level": false,
@@ -6442,6 +6520,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2021"
+        ],
         "progression": "Events and Linking Screens"
       },
       "named_level": false,
@@ -6465,6 +6546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2021"
+        ],
         "progression": "Combining Projects"
       },
       "named_level": false,
@@ -6488,6 +6572,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2021"
+        ],
         "progression": "Combining Projects"
       },
       "named_level": false,
@@ -6511,6 +6598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_preview-2021"
+        ],
         "progression": "Updating Your Prototype"
       },
       "named_level": false,
@@ -6534,6 +6624,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -7039,6 +7132,50 @@
   ],
   "resources": [
     {
+      "name": "All Code",
+      "url": "/s/csd4-2021/code",
+      "key": "all_code_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_3"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd4-2021/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd4-2021/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd4-2021/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "App Design Kickoff",
       "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
       "key": "app-design-kickoff-2019",
@@ -7089,6 +7226,18 @@
       }
     },
     {
+      "name": "Bug Report",
+      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
+      "key": "bug_report",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "bug_report"
+      }
+    },
+    {
       "name": "Bugs and Features",
       "url": "https://docs.google.com/document/d/1TGQ7XrKwn9fPRG0Mx73KJa8aGns6mZf49Q9FaNd-s4Y/view",
       "key": "bugs-and-features-planning",
@@ -7112,6 +7261,40 @@
       },
       "seeding_key": {
         "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
       }
     },
     {
@@ -7176,6 +7359,31 @@
       },
       "seeding_key": {
         "resource.key": "explore-ui-elements"
+      }
+    },
+    {
+      "name": "Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
+      "key": "guide_to_using_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_using_resources"
+      }
+    },
+    {
+      "name": "How To Debug",
+      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
+      "key": "how_to_debug",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_debug"
       }
     },
     {
@@ -8176,10 +8384,69 @@
         "resource.key": "teacher_forum",
         "script.name": "csd4-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code_3",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csd4-2021"
+      }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "bug_report",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_using_resources",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "how_to_debug",
+        "script.name": "csd4-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
