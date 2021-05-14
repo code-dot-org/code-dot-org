@@ -174,7 +174,7 @@ class ScriptLevelsController < ApplicationController
     end
   end
 
-  # Get a list of hidden stages for the current users section
+  # Get a list of hidden lessons for the current users section
   def hidden_stage_ids
     authorize! :read, ScriptLevel
 
