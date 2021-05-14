@@ -14,7 +14,8 @@ import Statement from "./Statement";
 import DataTable from "./DataTable";
 import ResultsTable from "./ResultsTable";
 
-const framesPerCycle = 40;
+const framesPerCycle = 80;
+const numItems = 6;
 
 class GenerateResults extends Component {
   static propTypes = {
@@ -56,6 +57,10 @@ class GenerateResults extends Component {
       this.setState({ headOpen: true });
     }
 
+    if (this.getAnimationStep() >= numItems) {
+      this.setState({ headOpen: false });
+    }
+
     this.setState({ frame: this.state.frame + 1 });
   };
 
@@ -75,10 +80,14 @@ class GenerateResults extends Component {
   };
 
   render() {
-    const translateX = 30 + this.getAnimationProgess() * 55;
+    const translateX = 30 + this.getAnimationProgess() * 40;
     const translateY = 15;
-    const rotateZ = 20 + this.getAnimationProgess() * -40;
+    const rotateZ = 20 + this.getAnimationProgess() * -20;
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
+
+    const hideLabel = this.getAnimationSubstep() < framesPerCycle / 2;
+
+    const showAnimation = this.getAnimationStep() < numItems;
 
     return (
       <div
@@ -113,23 +122,27 @@ class GenerateResults extends Component {
             <DataTable
               reducedColumns={true}
               startingRow={this.getAnimationStep()}
+              noLabel={true}
             />
           </div>
 
-          <div
-            style={{
-              position: "absolute",
-              transformOrigin: "center center",
-              bottom: translateY + "%",
-              left: translateX + "%",
-              transform: transform,
-            }}
-          >
-            <DataTable
-              reducedColumns={true}
-              singleRow={this.getAnimationStep()}
-            />
-          </div>
+          {showAnimation && (
+            <div
+              style={{
+                position: "absolute",
+                transformOrigin: "center center",
+                bottom: translateY + "%",
+                left: translateX + "%",
+                transform: transform,
+              }}
+            >
+              <DataTable
+                reducedColumns={true}
+                singleRow={this.getAnimationStep()}
+                hideLabel={hideLabel}
+              />
+            </div>
+          )}
         </div>
 
         {this.props.readyToTrain && (

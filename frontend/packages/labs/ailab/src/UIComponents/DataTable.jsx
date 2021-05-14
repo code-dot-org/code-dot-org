@@ -17,14 +17,20 @@ class DataTable extends Component {
     highlightColumn: PropTypes.string,
     reducedColumns: PropTypes.bool,
     singleRow: PropTypes.number,
-    startingRow: PropTypes.number
+    startingRow: PropTypes.number,
+    noLabel: PropTypes.bool,
+    hideLabel: PropTypes.bool
   };
 
   getColumnHeaderStyle = key => {
     let style;
 
     if (key === this.props.labelColumn) {
-      style = styles.dataDisplayHeaderLabel;
+      if (this.props.hideLabel) {
+        style = styles.dataDisplayHeaderLabelHidden;
+      } else {
+        style = styles.dataDisplayHeaderLabel;
+      }
     } else if (this.props.selectedFeatures.includes(key)) {
       style = styles.dataDisplayHeaderFeature;
     }
@@ -35,7 +41,9 @@ class DataTable extends Component {
   getColumnCellStyle = key => {
     let style;
 
-    if (key === this.props.currentColumn) {
+    if (this.props.hideLabel && this.props.labelColumn === key) {
+      style = styles.dataDisplayCellHidden;
+    } else if (key === this.props.currentColumn) {
       if (this.props.currentPanel === "dataDisplayLabel") {
         style = styles.dataDisplayCellSelectedLabel;
       } else {
@@ -56,9 +64,11 @@ class DataTable extends Component {
     if (this.props.reducedColumns) {
       return Object.keys(this.props.data[0]).filter(key => {
         return (
-          this.props.labelColumn === key ||
+          (!this.props.noLabel && this.props.labelColumn === key) ||
           this.props.selectedFeatures.includes(key)
         );
+      }).sort((key1, key2) => {
+        return this.props.labelColumn === key1 ? 1 : -1
       });
     }
 

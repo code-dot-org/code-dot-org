@@ -286,6 +286,10 @@ export const styles = {
     fontSize: 14
   },
 
+  dataDisplayHeaderLabelHidden: {
+    opacity: 0
+  },
+
   dataDisplayHeaderLabel: {
     backgroundColor: labelColor,
     color: "white"
@@ -293,6 +297,10 @@ export const styles = {
   dataDisplayHeaderFeature: {
     backgroundColor: featureColor,
     color: "white"
+  },
+
+  dataDisplayCellHidden: {
+    opacity: 0
   },
 
   dataDisplayCell: {

@@ -41,7 +41,7 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
-        <div style={styles.largeText}>Try the model!</div>
+        <div style={styles.largeText}>Try it out!</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
             <form>

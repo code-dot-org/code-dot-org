@@ -11,7 +11,8 @@ import labBackground from "@public/images/lab-background-light.png";
 import Statement from "./Statement";
 import DataTable from "./DataTable";
 
-const framesPerCycle = 40;
+const framesPerCycle = 60;
+const numItems = 12;
 
 class TrainModel extends Component {
   static propTypes = {
@@ -49,6 +50,10 @@ class TrainModel extends Component {
       this.setState({ headOpen: true });
     }
 
+    if (this.getAnimationStep() >= numItems) {
+      this.setState({ headOpen: false });
+    }
+
     this.setState({ frame: this.state.frame + 1 });
   };
 
@@ -73,6 +78,8 @@ class TrainModel extends Component {
     const rotateZ = this.getAnimationProgess() * 60;
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
 
+    const showAnimation = this.getAnimationStep() < numItems;
+
     return (
       <div
         id="train-model"
@@ -93,21 +100,22 @@ class TrainModel extends Component {
         </div>
 
         <div style={styles.trainModelContainer}>
-
-          <div
-            style={{
-              position: "absolute",
-              transformOrigin: "center center",
-              top: translateY + "%",
-              left: translateX + "%",
-              transform: transform
-            }}
-          >
-            <DataTable
-              reducedColumns={true}
-              singleRow={this.getAnimationStep()}
-            />
-          </div>
+          {showAnimation && (
+            <div
+              style={{
+                position: "absolute",
+                transformOrigin: "center center",
+                top: translateY + "%",
+                left: translateX + "%",
+                transform: transform
+              }}
+            >
+              <DataTable
+                reducedColumns={true}
+                singleRow={this.getAnimationStep()}
+              />
+            </div>
+          )}
         </div>
 
         {this.props.readyToTrain && (
