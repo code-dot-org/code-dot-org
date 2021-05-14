@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-05-03 23:56:05 UTC",
+    "serialized_at": "2021-05-13 18:31:26 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -1961,6 +1961,7 @@
       "key": "12488a0c-dc91-4ea4-bdc7-28e27145f721",
       "position": 7,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2108,6 +2109,7 @@
       "key": "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1",
       "position": 8,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2216,6 +2218,7 @@
       "key": "8d556f84-689c-4046-bd40-a955e56ef116",
       "position": 7,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2494,6 +2497,7 @@
       "key": "5bf6ad3e-3f64-4131-9604-04de80516931",
       "position": 9,
       "properties": {
+        "name": "Lesson Extras",
         "progression_name": "Practice"
       },
       "seeding_key": {

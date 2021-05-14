@@ -723,6 +723,90 @@ class Lesson < ApplicationRecord
     resources.any? {|r| r.audience == 'Verified Teacher'}
   end
 
+  # Makes a copy of original_lesson and adds it to the end last lesson group
+  # in destination_script. It does not clone levels.
+  # Both destination_script and the script original_lesson in must:
+  # - be migrated
+  # - be in a course version
+  # - be in course versions from the same version year
+  def self.copy_to_script(original_lesson, destination_script)
+    return if original_lesson.script == destination_script
+    raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
+    raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || original_lesson.script.get_course_version.nil?
+    raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == original_lesson.script.get_course_version.version_year
+
+    ActiveRecord::Base.transaction do
+      copied_lesson = original_lesson.dup
+      copied_lesson.key = copied_lesson.name
+      copied_lesson.script_id = destination_script.id
+      copied_lesson.lesson_group_id = destination_script.lesson_groups.last.id
+
+      copied_lesson.absolute_position = destination_script.lessons.count + 1
+      copied_lesson.relative_position =
+        destination_script.lessons.select {|l| copied_lesson.numbered_lesson? == l.numbered_lesson?}.length + 1
+
+      copied_lesson.save!
+
+      # Copy lesson activities, activity sections, and script levels
+      copied_lesson.lesson_activities = original_lesson.lesson_activities.map do |original_lesson_activity|
+        copied_lesson_activity = original_lesson_activity.dup
+        copied_lesson_activity.key = SecureRandom.uuid
+        copied_lesson_activity.lesson_id = copied_lesson.id
+        copied_lesson_activity.save!
+        copied_lesson_activity.activity_sections = original_lesson_activity.activity_sections.map do |original_activity_section|
+          copied_activity_section = original_activity_section.dup
+          copied_activity_section.key = SecureRandom.uuid
+          copied_activity_section.lesson_activity_id = copied_lesson_activity.id
+          copied_activity_section.save!
+          sl_data = original_activity_section.script_levels.map.with_index(1) {|l, pos| JSON.parse({assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: pos}.to_json)}
+          copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
+          copied_activity_section
+        end
+        copied_lesson_activity
+      end
+
+      # Copy objectives
+      copied_lesson.objectives = original_lesson.objectives.map do |original_objective|
+        copied_objective = original_objective.dup
+        copied_objective.key = SecureRandom.uuid
+        copied_objective
+      end
+
+      # Copy programming expressions and standards associations
+      copied_lesson.programming_expressions = original_lesson.programming_expressions
+      copied_lesson.standards = original_lesson.standards
+      copied_lesson.opportunity_standards = original_lesson.opportunity_standards
+
+      # Copy objects that require course version, i.e. resources and vocab
+      course_version = destination_script.get_course_version
+      copied_lesson.resources = original_lesson.resources.map do |original_resource|
+        persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
+        if persisted_resource
+          persisted_resource
+        else
+          copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
+          copied_resource
+        end
+      end.uniq
+
+      copied_lesson.vocabularies = original_lesson.vocabularies.map do |original_vocab|
+        persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
+        if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
+          persisted_vocab
+        else
+          copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
+          copied_vocab
+        end
+      end.uniq
+
+      copied_lesson.save!
+      Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_script.name)
+      destination_script.fix_script_level_positions
+      destination_script.write_script_json
+      copied_lesson
+    end
+  end
+
   private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
