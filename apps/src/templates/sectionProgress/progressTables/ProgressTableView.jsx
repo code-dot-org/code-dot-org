@@ -253,7 +253,7 @@ class ProgressTableView extends React.Component {
   summaryContentViewProps() {
     return {
       columnWidths: new Array(this.props.scriptData.stages.length).fill(
-        parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
+        parseInt(progressStyles.MIN_COLUMN_WIDTH)
       ),
       lessonCellFormatters: this.summaryCellFormatters,
       includeHeaderArrows: false

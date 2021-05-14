@@ -1,9 +1,19 @@
 import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
+import sinon from 'sinon';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {
+  BasicBubble,
+  BubbleLink
+} from '@cdo/apps/templates/progress/BubbleFactory';
+import {
+  BubbleSize,
+  BubbleShape
+} from '@cdo/apps/templates/progress/progressStyles';
+import * as utils from '@cdo/apps/utils';
 
 const defaultProps = {
   level: {
@@ -19,14 +29,41 @@ const defaultProps = {
   disabled: false
 };
 
-describe('ProgressBubble', () => {
-  it('renders an anchor tag when we have a url', () => {
-    const wrapper = shallow(<ProgressBubble {...defaultProps} />);
+/**
+ * Helper function to retrieve the underlying `BasicBubble` of a rendered
+ * bubble with the provided status and props.
+ */
+function getBasicBubble(
+  status = LevelStatus.not_tried,
+  propOverrides = {},
+  levelOverrides = {}
+) {
+  const props = {
+    ...defaultProps,
+    ...propOverrides,
+    level: {...defaultProps.level, ...levelOverrides, status: status}
+  };
+  const wrapper = mount(<ProgressBubble {...props} />);
+  return wrapper.find(BasicBubble);
+}
 
-    assert(wrapper.is('a'));
+/**
+ * Helper function to retrieve the style object of a rendered bubble with the
+ * provided status and props.
+ */
+function styleForStatus(status, propOverrides = {}, levelOverrides = {}) {
+  return getBasicBubble(status, propOverrides, levelOverrides)
+    .childAt(0)
+    .props().style;
+}
+
+describe('ProgressBubble', () => {
+  it('renders a link when we have a url', () => {
+    const wrapper = shallow(<ProgressBubble {...defaultProps} />);
+    expect(wrapper.find(BubbleLink)).to.have.lengthOf(1);
   });
 
-  it('does not render an anchor tag when we have no url', () => {
+  it('does not render a link when we have no url', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
@@ -36,20 +73,18 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-
-    assert(wrapper.is('div'));
+    expect(wrapper.find(BubbleLink)).to.be.empty;
   });
 
-  it('does not render an anchor tag if we are disabled', () => {
+  it('does not render a link if we are disabled', () => {
     const wrapper = shallow(
       <ProgressBubble {...defaultProps} disabled={true} />
     );
-
-    assert(wrapper.is('div'));
+    expect(wrapper.find(BubbleLink)).to.be.empty;
   });
 
   it('shows letter in bubble when level has a letter', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <ProgressBubble
         {...defaultProps}
         level={{
@@ -59,162 +94,94 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find('#test-bubble-letter')).to.have.lengthOf(1);
+    expect(wrapper.find(BasicBubble).text()).to.equal('a');
   });
 
   it('has a green background when we have perfect status and not assessment', () => {
-    const wrapper = shallow(<ProgressBubble {...defaultProps} />);
-
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_perfect);
+    const style = styleForStatus(LevelStatus.perfect);
+    expect(style.backgroundColor).to.equal(color.level_perfect);
   });
 
   it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          kind: LevelKind.assessment,
-          status: LevelStatus.completed_assessment
-        }}
-      />
+    const style = styleForStatus(
+      LevelStatus.completed_assessment,
+      {},
+      {kind: LevelKind.assessment}
     );
-
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_submitted);
+    expect(style.backgroundColor).to.equal(color.level_submitted);
   });
 
   it('has green border and white background for in progress level', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          status: LevelStatus.attempted
-        }}
-      />
-    );
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_not_tried);
-    assert.equal(div.props().style.borderColor, color.level_perfect);
+    const style = styleForStatus(LevelStatus.attempted);
+    expect(style.backgroundColor).to.equal(color.level_not_tried);
+    expect(style.borderColor).to.equal(color.level_perfect);
   });
 
   it('has a green border and light green background for too many blocks level', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          status: LevelStatus.passed
-        }}
-      />
-    );
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_passed);
-    assert.equal(div.props().style.borderColor, color.level_perfect);
+    const style = styleForStatus(LevelStatus.passed);
+    expect(style.backgroundColor).to.equal(color.level_passed);
+    expect(style.borderColor).to.equal(color.level_perfect);
   });
 
   it('has a purple background for submitted level', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          kind: LevelKind.assessment,
-          status: LevelStatus.submitted
-        }}
-      />
+    const style = styleForStatus(
+      LevelStatus.submitted,
+      {},
+      {kind: LevelKind.assessment}
     );
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_submitted);
-    assert.equal(div.props().style.borderColor, color.level_submitted);
-    assert.equal(div.props().style.color, color.white);
+    expect(style.backgroundColor).to.equal(color.level_submitted);
+    expect(style.borderColor).to.equal(color.level_submitted);
+    expect(style.color).to.equal(color.white);
   });
 
   it('has a red background for review_rejected', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          kind: LevelKind.peer_review,
-          status: LevelStatus.review_rejected
-        }}
-      />
+    const style = styleForStatus(
+      LevelStatus.review_rejected,
+      {},
+      {kind: LevelKind.peer_review}
     );
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(
-      div.props().style.backgroundColor,
-      color.level_review_rejected
-    );
-    assert.equal(div.props().style.borderColor, color.level_review_rejected);
-    assert.equal(div.props().style.color, color.white);
+    expect(style.backgroundColor).to.equal(color.level_review_rejected);
+    expect(style.borderColor).to.equal(color.level_review_rejected);
+    expect(style.color).to.equal(color.white);
   });
 
   it('has a green background for review_accepted', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          kind: LevelKind.peer_review,
-          status: LevelStatus.review_accepted
-        }}
-      />
+    const style = styleForStatus(
+      LevelStatus.review_accepted,
+      {},
+      {kind: LevelKind.peer_review}
     );
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_perfect);
-    assert.equal(div.props().style.borderColor, color.level_perfect);
-    assert.equal(div.props().style.color, color.white);
+    expect(style.backgroundColor).to.equal(color.level_perfect);
+    expect(style.borderColor).to.equal(color.level_perfect);
+    expect(style.color).to.equal(color.white);
   });
 
   it('renders a diamond for concept levels', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={{
-          ...defaultProps.level,
-          isConceptLevel: true
-        }}
-      />
+    const wrapper = getBasicBubble(
+      LevelStatus.not_tried,
+      {},
+      {isConceptLevel: true}
     );
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.transform, 'rotate(45deg)');
+    expect(wrapper.props().shape).to.equal(BubbleShape.diamond);
   });
 
   it('renders a small diamond for concept levels when smallBubble is true ', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        smallBubble={true}
-        level={{
-          ...defaultProps.level,
-          isConceptLevel: true
-        }}
-      />
+    const wrapper = getBasicBubble(
+      LevelStatus.not_tried,
+      {smallBubble: true},
+      {isConceptLevel: true}
     );
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.transform, 'rotate(45deg)');
-    assert.equal(div.props().style.borderRadius, 2);
+    expect(wrapper.props().shape).to.equal(BubbleShape.diamond);
+    expect(wrapper.props().size).to.equal(BubbleSize.dot);
   });
 
   it('uses name when specified', () => {
-    const wrapper = shallow(<ProgressBubble {...defaultProps} />);
+    const wrapper = mount(<ProgressBubble {...defaultProps} />);
     assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. level_name');
   });
 
   it('uses progression display name when no name is specified', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <ProgressBubble
         {...defaultProps}
         level={{
@@ -248,17 +215,8 @@ describe('ProgressBubble', () => {
   });
 
   it('renders a small bubble if smallBubble is true', () => {
-    const wrapper = shallow(
-      <ProgressBubble {...defaultProps} smallBubble={true} />
-    );
-    const tooltipDiv = wrapper.find('div').at(1);
-    assert.equal(
-      tooltipDiv
-        .find('div')
-        .at(1)
-        .props().style.width,
-      9
-    );
+    const wrapper = getBasicBubble(LevelStatus.not_tried, {smallBubble: true});
+    expect(wrapper.props().size).to.equal(BubbleSize.dot);
   });
 
   it('shows assessment icon on assessment level', () => {
@@ -290,73 +248,30 @@ describe('ProgressBubble', () => {
     expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
   });
 
-  it('does not show assessment icon on bubble on assessment level if hideAssessmentIcon is true', () => {
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        hideAssessmentIcon={true}
-        level={{
-          ...defaultProps.level,
-          kind: LevelKind.assessment
-        }}
-      />
+  it('renders a pill shape for unplugged lessons', () => {
+    const wrapper = getBasicBubble(
+      LevelStatus.perfect,
+      {},
+      {isUnplugged: true}
     );
-
-    expect(wrapper.find('SmallAssessmentIcon')).to.have.lengthOf(0);
+    expect(wrapper.props().shape).to.equal(BubbleShape.pill);
   });
 
-  it('renders a progress pill for unplugged lessons', () => {
-    const unpluggedLevel = {
-      id: '1',
-      status: LevelStatus.perfect,
-      isLocked: false,
-      kind: LevelKind.unplugged,
-      url: '/foo/bar',
-      isUnplugged: true
-    };
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={unpluggedLevel}
-        smallBubble={false}
-      />
+  it('renders a circle shape for unplugged when small', () => {
+    const wrapper = getBasicBubble(
+      LevelStatus.perfect,
+      {smallBubble: true},
+      {isUnplugged: true}
     );
-    assert.equal(wrapper.find('Connect(ProgressPill)').length, 1);
-    assert(!!wrapper.find('Connect(ProgressPill)').props().tooltip);
-  });
-
-  it('does not render a progress pill for unplugged when small', () => {
-    const unpluggedLevel = {
-      id: '1',
-      status: LevelStatus.perfect,
-      isLocked: false,
-      kind: LevelKind.unplugged,
-      url: '/foo/bar',
-      isUnplugged: true
-    };
-    const wrapper = shallow(
-      <ProgressBubble
-        {...defaultProps}
-        level={unpluggedLevel}
-        smallBubble={true}
-      />
-    );
-    assert.equal(wrapper.find('ProgressPill').length, 0);
+    expect(wrapper.props().shape).to.equal(BubbleShape.circle);
+    expect(wrapper.props().size).to.equal(BubbleSize.dot);
   });
 
   describe('href', () => {
-    let fakeLocation;
-
-    beforeEach(() => {
-      fakeLocation = document.createElement('a');
-    });
-
     it('links to the level url', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
-      const wrapper = shallow(
+      const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
-          currentLocation={fakeLocation}
           level={{
             ...defaultProps.level,
             url: '/my/test/url'
@@ -367,81 +282,47 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
-      const wrapper = shallow(
-        <ProgressBubble
-          {...defaultProps}
-          currentLocation={fakeLocation}
-          selectedSectionId="12345"
-        />
+      const wrapper = mount(
+        <ProgressBubble {...defaultProps} selectedSectionId="12345" />
       );
       assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
     });
 
     it('includes the user_id in the queryparams if selectedStudentId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
-      const wrapper = shallow(
+      const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
-          currentLocation={fakeLocation}
           selectedSectionId="12345"
           selectedStudentId="207"
         />
       );
+      assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
       assert.include(wrapper.find('a').prop('href'), 'user_id=207');
     });
 
     it('preserves the queryparams of the current location', () => {
-      fakeLocation.href =
-        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
-      const wrapper = shallow(
-        <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
-      );
+      sinon
+        .stub(utils, 'currentLocation')
+        .returns({search: 'section_id=212&user_id=559'});
+      const wrapper = mount(<ProgressBubble {...defaultProps} />);
       const href = wrapper.find('a').prop('href');
       assert.include(href, 'section_id=212');
       assert.include(href, 'user_id=559');
+      utils.currentLocation.restore();
     });
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
-      fakeLocation.href =
-        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
-      const wrapper = shallow(
-        <ProgressBubble
-          {...defaultProps}
-          currentLocation={fakeLocation}
-          selectedSectionId="12345"
-        />
+      sinon
+        .stub(utils, 'currentLocation')
+        .returns({search: 'section_id=212&user_id=559'});
+      const wrapper = mount(
+        <ProgressBubble {...defaultProps} selectedSectionId="12345" />
       );
       const href = wrapper.find('a').prop('href');
       assert.notInclude(href, 'section_id=212');
       assert.include(href, 'section_id=12345');
       assert.include(href, 'user_id=559');
-    });
-  });
-
-  describe('currentLocation', () => {
-    // The currentLocation prop exists to provide a testing hook for functionality
-    // that depends on the window.location global.
-    it('defaults to window.location if not provided', () => {
-      assert.notProperty(defaultProps, 'currentLocation');
-      const wrapper = shallow(<ProgressBubble {...defaultProps} />);
-      assert.strictEqual(
-        wrapper.instance().props.currentLocation,
-        window.location
-      );
-    });
-
-    it('can be explicitly set to an anchor object', () => {
-      const fakeLocation = document.createElement('a');
-      fakeLocation.href =
-        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
-      const wrapper = shallow(
-        <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
-      );
-      assert.strictEqual(
-        wrapper.instance().props.currentLocation,
-        fakeLocation
-      );
+      utils.currentLocation.restore();
     });
   });
 });
