@@ -26,6 +26,12 @@ class DataDisplay extends Component {
         </div>
         <div style={styles.footerText}>
           There are {this.props.data.length} rows of data.
+          {this.props.data.length > 100 &&
+            <span>
+              &nbsp;
+              (Showing first 100 rows.)
+            </span>
+          }
         </div>
       </div>
     );

@@ -70,18 +70,6 @@ class DataCard extends Component {
                       </div>
                     </div>
                   )}
-
-                  <div style={styles.bold}>Columns:</div>
-                  <div style={styles.contents}>
-                    {metadata.fields.map(field => {
-                      return (
-                        <div key={field.id} style={styles.cardRow}>
-                          <div style={styles.bold}>{field.id}:</div>
-                          {field.description}
-                        </div>
-                      );
-                    })}
-                  </div>
                 </div>
               )}
               {!card && dataLength > 0 && (

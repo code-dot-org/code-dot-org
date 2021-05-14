@@ -36,6 +36,7 @@ class Results extends Component {
         <div id="results" style={styles.panel}>
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>
+              <div style={styles.largeText}>Results</div>
               {historicResults.map((historicResult, index) => {
                 return (
                   <div key={index}>

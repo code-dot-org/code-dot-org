@@ -12,6 +12,7 @@ import blueScanner from "@public/images/ai-bot/blue-scanner.png";
 import resultsBackground from "@public/images/results-background-light.png";
 import Statement from "./Statement";
 import DataTable from "./DataTable";
+import ResultsTable from "./ResultsTable";
 
 const framesPerCycle = 40;
 
@@ -44,6 +45,10 @@ class GenerateResults extends Component {
     );
 
     this.setState({ animationTimer });
+  };
+
+  getAnimationSubstep = () => {
+    return this.state.frame % framesPerCycle;
   };
 
   updateAnimation = () => {
@@ -82,13 +87,29 @@ class GenerateResults extends Component {
           ...styles.panel,
           justifyContent: "center",
           backgroundSize: "cover",
-          backgroundImage: "url(" + resultsBackground + ")"
+          //backgroundImage: "url(" + resultsBackground + ")"
         }}
       >
-        <Statement/>
+        <div style={styles.statement}>Testing accuracy</div>
 
         <div style={styles.generateResultsContainer}>
           <div style={styles.generateResultsDataTable}>
+
+            <svg
+              preserveAspectRatio="none"
+              style={{
+                position: "absolute",
+                width: "30%",
+                height: 40,
+                paddingTop: 32,
+                zIndex: 1
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="1 0 6 1"
+            >
+              <path d="M 8 0 L 7 1 L 6 0 L 5 1 L 4 0 L 3 1 L 2 0 L 1 1 L 0 0 L 8 0" fill="#fff"/>
+            </svg>
+
             <DataTable
               reducedColumns={true}
               startingRow={this.getAnimationStep()}

@@ -80,10 +80,10 @@ class TrainModel extends Component {
           ...styles.panel,
           justifyContent: "center",
           backgroundSize: "cover",
-          backgroundImage: "url(" + labBackground + ")"
+          //backgroundImage: "url(" + labBackground + ")"
         }}
       >
-        <Statement/>
+        <div style={styles.statement}>Training</div>
 
         <div style={styles.trainModelDataTable}>
           <DataTable
