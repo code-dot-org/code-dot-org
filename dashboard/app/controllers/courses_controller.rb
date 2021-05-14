@@ -101,9 +101,12 @@ class CoursesController < ApplicationController
     [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
     [:visible, :is_stable].each {|key| params[key] = params[key]&.to_bool}
     unit_group.update(course_params)
+
+    # Update the published state of all the units in the course to be same as the course
     unit_group.default_scripts.each do |script|
       script.assign_attributes(hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
-      script.save! if script.changed?
+      next unless script.changed?
+      script.save!
       script.write_script_dsl
       script.write_script_json
     end

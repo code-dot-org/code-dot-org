@@ -34,7 +34,7 @@ module Services
           script.lessons.each do |lesson|
             ChatClient.log("Gathering resources for #{lesson.key.inspect}") if DEBUG
             lesson_pdfs = lesson.resources.map do |resource|
-              fetch_resource_pdf(resource, pdfs_dir) if resource.include_in_pdf
+              fetch_resource_pdf(resource, pdfs_dir) if resource.should_include_in_pdf?
             end.compact
 
             next if lesson_pdfs.empty?
@@ -135,13 +135,13 @@ module Services
           end
         rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
           ChatClient.log(
-            "Google error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+            "Google error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{e}",
             color: 'yellow'
           )
           return nil
         rescue URI::InvalidURIError, OpenURI::HTTPError => e
           ChatClient.log(
-            "URI error when trying to fetch PDF for resource #{resource.key.inspect} (#{resource.url}): #{e}",
+            "URI error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{e}",
             color: 'yellow'
           )
           return nil

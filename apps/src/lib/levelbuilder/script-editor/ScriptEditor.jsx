@@ -384,7 +384,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({description: e.target.value})
             }
-            features={{imageUpload: true}}
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
           <TextareaWithMarkdownPreview
             markdown={this.state.studentDescription}
@@ -394,7 +397,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({studentDescription: e.target.value})
             }
-            features={{imageUpload: true}}
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
         </CollapsibleEditorSection>
 

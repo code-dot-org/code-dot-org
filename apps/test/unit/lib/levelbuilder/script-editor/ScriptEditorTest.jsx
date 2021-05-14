@@ -75,6 +75,7 @@ describe('ScriptEditor', () => {
       isMigrated: false,
       initialIsStable: false,
       initialHidden: false,
+      hasCourse: false,
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };

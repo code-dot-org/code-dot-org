@@ -72,6 +72,14 @@ class Resource < ApplicationRecord
     {'resource.key': key}.stringify_keys
   end
 
+  def should_include_in_pdf?
+    # Resources should be excluded from PDF rollups if they are either not
+    # explicitly flagged with the `include_in_pdf` property OR if they are
+    # intended to only be shown to verified teachers.
+    return false if audience == 'Verified Teacher'
+    return !!include_in_pdf
+  end
+
   def summarize_for_lesson_plan
     {
       id: id,
@@ -104,6 +112,7 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
+      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
       name: name,
       url: url
     }
