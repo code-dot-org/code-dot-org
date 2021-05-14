@@ -7,4 +7,3 @@
   %script{ src: webpack_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
 = form_for(unit_group, {url: course_path(unit_group)}) do |f|
   #course_editor
-  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes

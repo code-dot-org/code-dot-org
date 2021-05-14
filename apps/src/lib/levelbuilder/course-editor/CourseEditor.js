@@ -14,9 +14,13 @@ import ResourceType, {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
+import $ from 'jquery';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 class CourseEditor extends Component {
   static propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     versionTitle: PropTypes.string,
@@ -57,6 +61,9 @@ class CourseEditor extends Component {
     }
 
     this.state = {
+      isSaving: false,
+      error: null,
+      lastSaved: null,
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
@@ -68,6 +75,35 @@ class CourseEditor extends Component {
 
   handleUpdateAnnouncements = newAnnouncements => {
     this.setState({announcements: newAnnouncements});
+  };
+
+  handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
+
+    this.setState({isSaving: true, lastSaved: null, error: null});
+
+    let dataToSave = {};
+
+    $.ajax({
+      url: `/courses/${this.props.id}`, // add id?
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    })
+      .done(data => {
+        if (shouldCloseAfterSave) {
+          navigateToHref(linkWithQueryParams(data.coursePath)); //add coursePath
+        } else {
+          this.setState({
+            lastSaved: Date.now(),
+            isSaving: false
+          });
+        }
+      })
+      .fail(error => {
+        this.setState({isSaving: false, error: error.responseText});
+      });
   };
 
   render() {
@@ -309,6 +345,12 @@ class CourseEditor extends Component {
             />
           </label>
         </CollapsibleEditorSection>
+        <SaveBar
+          handleSave={this.handleSave}
+          error={this.state.error}
+          isSaving={this.state.isSaving}
+          lastSaved={this.state.lastSaved}
+        />
       </div>
     );
   }
