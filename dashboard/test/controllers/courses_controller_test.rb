@@ -295,8 +295,8 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {
       course_name: 'course',
       scripts: ['unit1', 'unit2'],
-      visible: 'on',
-      is_stable: 'on'
+      visible: 'true',
+      is_stable: 'true'
     }
     course.reload
     unit1.reload
