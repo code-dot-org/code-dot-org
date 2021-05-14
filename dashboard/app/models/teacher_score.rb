@@ -62,10 +62,10 @@ class TeacherScore < ApplicationRecord
     stages = Script.find(script_id).lessons.select(&:unplugged)
     student_ids = Section.find(section_id).students.page(page).per(50).pluck(:id)
     stage_student_level_scores = {}
-    stages.each do |stage|
-      level_scores = get_level_scores_for_stage_for_students(stage, student_ids)
+    stages.each do |lesson|
+      level_scores = get_level_scores_for_stage_for_students(lesson, student_ids)
       unless level_scores.empty?
-        stage_student_level_scores[stage.id] = level_scores
+        stage_student_level_scores[lesson.id] = level_scores
       end
     end
     level_scores_by_student_by_stage_by_script[script_id] = stage_student_level_scores

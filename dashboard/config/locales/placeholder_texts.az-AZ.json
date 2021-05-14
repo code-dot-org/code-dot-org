@@ -34,10 +34,106 @@
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Qazandın!",
-          "498cd895eb5a102c5aeb977e2b928dee": "Sağ olun!"
+          "498cd895eb5a102c5aeb977e2b928dee": "Sağ olun!",
+          "6b90c9823ff75e6a78aa63b392e7315a": "Xal: "
         },
         "Find the Wizard": {
           "0b895ef4c917e50663bc2a7327cbee3d": "Sən məni tapdın!"
+        },
+        "Choose Your Own Adventure": {
+          "5282c58be05cdecc1308241480b66276": "Oyun Bitdi",
+          "710ba29e2eed73bc74a520631d0ab520": "Oyun Bitdi!"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "c469f9393f38213de6fcffa9fe48008d": " -xal- "
+        },
+        "Course 4 Play Lab Vars 2": {
+          "c469f9393f38213de6fcffa9fe48008d": " -xal- "
+        },
+        "Course 4 Play Lab Vars 6": {
+          "38ef4db866aae5cb50ce847a505b95d1": "Yemək Savaşı!"
+        },
+        "Course 4 Play Lab Vars 7": {
+          "38ef4db866aae5cb50ce847a505b95d1": "Yemək Savaşı!"
+        },
+        "Course 4 Playlab For Loops 6b": {
+          "710ba29e2eed73bc74a520631d0ab520": "Oyun Bitdi!"
+        },
+        "FoodFight": {
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Xal ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "Səviyyə "
+        },
+        "OPD-K5-projects-6": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "OPD-K5-projects-7": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "course3_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "course4_playlab_variables_challenge1": {
+          "8292c7cbebf598e875ccd0c008958922": " kim?",
+          "40f4f24106dde9234f43bf30465647e0": "Tuk tuk.",
+          "3986de660e6560710c546cb2f22c12f3": "Kim var burda?",
+          "812febf38bfe564d348136e1b9e71bcd": "Meqabaytlar!"
+        },
+        "courseC19_playLab_EOC5": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "courseC19_playLab_EOC6": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "courseC_data wizard": {
+          "5b402e6ea05e847a076e03ad74420c45": " quşlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Bütün heyvanları sayın!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Ev eeyvanlarını sayın"
+        },
+        "courseC_data wizard_2020": {
+          "5b402e6ea05e847a076e03ad74420c45": " quşlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Bütün heyvanları sayın!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Ev eeyvanlarını sayın"
+        },
+        "courseE_playLab_challenge1": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "courseE_playLab_scaffold5": {
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": "fillər toplandı "
+        },
+        "courseF_playlab_variables7c": {
+          "c216de13cd615c884ff2cc5894324e17": "Bir rəng seçin."
+        },
+        "courseF_playlab_variables8c": {
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Təbriklər, ",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "Bağışlayın, ",
+          "c216de13cd615c884ff2cc5894324e17": "Bir rəng seçin."
+        },
+        "courseF_playlab_variables_challenge1": {
+          "8292c7cbebf598e875ccd0c008958922": " kim?",
+          "40f4f24106dde9234f43bf30465647e0": "Tuk tuk.",
+          "3986de660e6560710c546cb2f22c12f3": "Kim var burda?",
+          "812febf38bfe564d348136e1b9e71bcd": "Meqabaytlar!"
+        },
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": "Xal: "
         }
       }
     }

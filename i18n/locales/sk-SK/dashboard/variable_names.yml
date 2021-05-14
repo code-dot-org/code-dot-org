@@ -14,10 +14,12 @@ sk:
       animal2score: zviera2body
       animal2speed: zviera2rýchlosť
       answer: odpoveď
+      armlength: dĺžkaruky
       binary: binárny
       bit: bit
       blue1: modrá1
       blue2: modrá2
+      bodylength: dĺžkatela
       buttonHeight: výškaTlačidla
       buttonMargin: okrajTlačidla
       buttonWidth: šírkaTlačidla
@@ -34,6 +36,7 @@ sk:
       counter: počítadlo
       counter2: počítadlo2
       currentActor: súčasnýHerec
+      direction: smer
       dog_score: pes_body
       dog_speed: pes_rýchlosť
       dogs: psov
@@ -59,6 +62,7 @@ sk:
       myName: mojeMeno
       name: meno
       nectar: nektár
+      nectars: nektár
       padYOffset: vnútornýPosunY
       player_score: body_hráča
       points: body

@@ -900,12 +900,6 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -957,12 +951,6 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -972,12 +960,6 @@ nl:
           description: 'Fase 2 Online: Gemengde zomer studie'
           description_short: 'Fase 2 Online: Gemengde zomer studie'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -1451,12 +1433,6 @@ nl:
               name: 'Unplugged: Liedjes schrijven met Parameters'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Welkom!
             Wrap-up:
@@ -5065,6 +5041,9 @@ nl:
             Module 8:
               name: Module 8
         curriculum-sandbox-levels:
+          lessons:
+            csf:
+              name: Basis
           lesson_groups:
             lesson group:
               display_name: weergavenaam
@@ -5073,6 +5052,12 @@ nl:
           title: Een uitbraak simuleren
           description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
             te simuleren.
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Les 14
+            lesson15:
+              name: Les 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -5098,7 +5083,9 @@ nl:
             lessonGroup-3:
               display_name: Variabelen
             outbreak:
-              display_name: Uitbraaksimulatie
+              display_name: Uitbraaksimulator
+            debugging:
+              display_name: Foutopsporing
           description_audience: Intern
           description_short: Intern
         csd1-2021:
@@ -5648,6 +5635,10 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Content
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -5682,3 +5673,11 @@ nl:
               display_name: Volgende stappen
             Introduction:
               display_name: Introductie
+        pl-playground:
+          lessons:
+            Module 1:
+              name: Module 1
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Vragenlijst

@@ -274,6 +274,7 @@
   "exampleErrorMessage": "A función {functionName} ten un ou máis exemplos que necesitan algún axuste. Asegúrate de que encaixan coa definición e resposta á pregunta.",
   "examplesFailedOnClose": "Un ou máis dos teus exemplos non encaixan coa túa definición. Comproba os teus exemplos antes de pechar",
   "explainLessonExtrasLearnMore": "Aprende máis sobre as leccións extra.",
+  "explainRestrictedSectionLearnMore": "Aprende máis",
   "extrasStageNumberCompleted": "Completaches a lección {number}!",
   "extrasNextLesson": "Continúa na lección {number}",
   "extrasNoBonusLevels": "Non hai niveis extra para esta lección.",

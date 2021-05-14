@@ -30,7 +30,7 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import UnitCalendar from './UnitCalendar';
 
 /**
- * Stage progress component used in level header and script overview.
+ * Lesson progress component used in level header and script overview.
  */
 class ScriptOverview extends React.Component {
   static propTypes = {
