@@ -7,7 +7,6 @@ const sampleModes = {
   minimal: {
     datasets: ["tacos_toy"],
     hideSpecifyColumns: true,
-    hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
     hideModelCard: true,
     hideSelectLabel: true
@@ -15,7 +14,6 @@ const sampleModes = {
 
   "preload-metadata": {
     hideSpecifyColumns: true,
-    hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
     requireAccuracy: 50
   },
@@ -53,8 +51,7 @@ const sampleModes = {
     hideSpecifyColumns: true,
     hideChooseReserve: true,
     hideModelCard: true,
-    hideSave: true,
-    hideSelectTrainer: "knnRegress"
+    hideSave: true
   },
 
   zoo: {
