@@ -15,7 +15,7 @@ import JavabuilderConnection from './javabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
-import MazeVisualization from '@cdo/apps/maze/Visualization';
+import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import DefaultVisualization from './DefaultVisualization';
 import {CsaViewMode} from './constants';
 
@@ -87,7 +87,10 @@ Javalab.prototype.init = function(config) {
     const miniApp = new Neighborhood();
     config.afterInject = () =>
       miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
-    visualization = <MazeVisualization />;
+    const iconPath = '/blockly/media/turtle/';
+    visualization = (
+      <NeighborhoodVisualizationColumn iconPath={iconPath} showSpeedSlider />
+    );
   } else {
     visualization = <DefaultVisualization />;
   }
