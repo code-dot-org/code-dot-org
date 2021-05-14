@@ -384,7 +384,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({description: e.target.value})
             }
-            features={{imageUpload: true}}
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
           <TextareaWithMarkdownPreview
             markdown={this.state.studentDescription}
@@ -394,7 +397,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({studentDescription: e.target.value})
             }
-            features={{imageUpload: true}}
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
         </CollapsibleEditorSection>
 
@@ -653,9 +659,9 @@ class ScriptEditor extends React.Component {
                 {this.state.familyName && !this.props.hasCourse && (
                   <HelpTip>
                     <p>
-                      (Still in development) If checked, indicates that this
-                      Unit represents a standalone course. Examples of such
-                      Units include CourseA-F, Express, and Pre-Express.
+                      If checked, indicates that this Unit represents a
+                      standalone course. Examples of such Units include
+                      CourseA-F, Express, and Pre-Express.
                     </p>
                   </HelpTip>
                 )}

@@ -815,6 +815,69 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 'Validation failed: Script level activity_section.lesson does not match lesson', error.message
   end
 
+  test 'adds variant to custom level in migrated script' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    script = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    level1 = create :level, level_num: 'custom'
+    level2 = create :level, level_num: 'custom'
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
+    assert_equal level1, script_level.oldest_active_level
+    assert script_level.active?(level1)
+
+    script_level.add_variant level2
+    script_level.reload
+    assert_equal [level1, level2], script_level.levels
+    assert_equal [level1.key, level2.key], script_level.level_keys
+    assert_equal level2, script_level.oldest_active_level
+    assert script_level.active?(level2)
+    refute script_level.active?(level1)
+
+    level3 = create :level
+    e = assert_raises do
+      script_level.add_variant level3
+    end
+    assert_includes e.message, "expected 1 existing level"
+  end
+
+  # variants do not appear to work for non-custom levels
+  test 'cannot add variant to non custom level' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    script = create :script, is_migrated: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    level1 = create :level
+    level2 = create :level
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
+    assert_equal level1, script_level.oldest_active_level
+    assert script_level.active?(level1)
+
+    e = assert_raises do
+      script_level.add_variant level2
+    end
+    assert_equal "cannot add variant to non-custom level", e.message
+  end
+
+  test 'cannot add variant to legacy script' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    level1 = create :level, level_num: 'custom'
+    level2 = create :level, level_num: 'custom'
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
+    assert_equal level1, script_level.oldest_active_level
+
+    e = assert_raises do
+      script_level.add_variant level2
+    end
+    assert_equal "can only be used on migrated scripts", e.message
+  end
+
   private
 
   def create_fake_plc_data

@@ -223,7 +223,10 @@ function beginQuarantining() {
 }
 
 function beginSocialDistancing() {
-  addMonsterBehavior(socialDistancingBehavior);
+  //addMonsterBehavior(socialDistancingBehavior);
+  addTarget({costume: "all"}, "all", "avoid");
+  addBehaviorSimple({costume: "all"}, avoidingTargets());
+  //addMonsterBehavior(avoidingTargets());
 }
 
 function beginWandering() {
