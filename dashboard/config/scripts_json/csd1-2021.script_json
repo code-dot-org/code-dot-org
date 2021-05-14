@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-14 16:22:55 UTC",
+    "serialized_at": "2021-05-14 19:54:08 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -5643,18 +5643,6 @@
       }
     },
     {
-      "name": "Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
-      "key": "guide_to_using_resources",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources"
-      }
-    },
-    {
       "name": "Code.org How-to Video Playlist",
       "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
       "key": "how-to-videos",
@@ -6466,12 +6454,6 @@
     {
       "seeding_key": {
         "resource.key": "bug_report",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources",
         "script.name": "csd1-2021"
       }
     },
