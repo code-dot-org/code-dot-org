@@ -60,9 +60,9 @@ class CourseEditor extends Component {
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
-      visible: this.props.initialVisible || false,
-      isStable: this.props.initialIsStable || false,
-      pilotExperiment: this.props.initialPilotExperiment || '',
+      visible: this.props.initialVisible,
+      isStable: this.props.initialIsStable,
+      pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: teacherResources,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear
