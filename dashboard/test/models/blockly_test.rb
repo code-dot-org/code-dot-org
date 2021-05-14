@@ -646,10 +646,4 @@ XML
     assert_equal 'translated long instructions', summary[:longInstructions]
     assert_equal 'translated short instructions', summary[:shortInstructions]
   end
-
-  test 'blockly_level_options returns expected options' do
-    level = create(:level, :blockly, level_num: 'level1')
-    expected_level_options = {"sharedBlocks" => [], "levelId" => "level1", "isChannelBacked" => false, "editCode" => false}
-    assert_equal level.blockly_level_options, expected_level_options
-  end
 end
