@@ -107,13 +107,13 @@ module LevelsHelper
     channel_token&.channel
   end
 
-  # If given a level and a user, returns whether any work has been done
-  # on the level
-  def level_started?(level, user)
+  # If given a level and a user and optional script, returns whether the level
+  # has been started by the user
+  def level_started?(level, user, script = nil)
     if level.channel_backed? # maureen make sure user is present or this will fail
       return get_channel_for(level, user).present?
     else
-      user.last_attempt(level).present?
+      user.last_attempt(level, script).present?
     end
   end
 
@@ -290,7 +290,7 @@ module LevelsHelper
       @app_options[:level][:referenceLinks] = @level.reference_links
 
       if @user || current_user
-        @app_options[:level][:isStarted] = level_started?(@level, @user || current_user)
+        @app_options[:level][:isStarted] = level_started?(@level, @user || current_user, @script)
       end
     end
 
