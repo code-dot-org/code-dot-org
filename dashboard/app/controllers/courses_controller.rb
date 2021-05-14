@@ -109,7 +109,8 @@ class CoursesController < ApplicationController
       script.write_script_dsl
       script.write_script_json
     end
-    redirect_to course_path(unit_group)
+    unit_group.reload
+    render json: unit_group.summarize
   end
 
   def edit

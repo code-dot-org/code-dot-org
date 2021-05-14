@@ -244,7 +244,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 2, default_unit_group_units.length
     assert_equal ['script1', 'script2'], default_unit_group_units.map(&:script).map(&:name)
 
-    assert_redirected_to '/courses/csp'
+    assert_response :success
   end
 
   test "update: persists changes to alternate_unit_group_units" do
@@ -282,7 +282,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal expected_position, alternate_unit_group_unit.position,
       'an alternate script must have the same position as the default script it replaces'
 
-    assert_redirected_to '/courses/csp'
+    assert_response :success
   end
 
   test "update: sets visible and is_stable on units in unit group" do
