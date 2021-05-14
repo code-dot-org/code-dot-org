@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-12 00:00:01 UTC",
+    "serialized_at": "2021-05-14 16:22:55 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -5521,6 +5521,18 @@
       }
     },
     {
+      "name": "Bug Report",
+      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
+      "key": "bug_report",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "bug_report"
+      }
+    },
+    {
       "name": "Build a Newspaper Table",
       "url": "https://docs.google.com/document/d/1dBzGa8_2iObdnxfSkBtgdYoQXRaM3bIB1eYiDnfAo7k/",
       "key": "build-a-newspaper-table",
@@ -5544,6 +5556,30 @@
       },
       "seeding_key": {
         "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
       }
     },
     {
@@ -5607,6 +5643,18 @@
       }
     },
     {
+      "name": "Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
+      "key": "guide_to_using_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_using_resources"
+      }
+    },
+    {
       "name": "Code.org How-to Video Playlist",
       "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
       "key": "how-to-videos",
@@ -5615,6 +5663,19 @@
       },
       "seeding_key": {
         "resource.key": "how-to-videos"
+      }
+    },
+    {
+      "name": "How To Debug",
+      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
+      "key": "how_to_debug",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_debug"
       }
     },
     {
@@ -6387,10 +6448,39 @@
         "resource.key": "all_vocabulary",
         "script.name": "csd1-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd1-2021"
+      }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "bug_report",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_using_resources",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "how_to_debug",
+        "script.name": "csd1-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
