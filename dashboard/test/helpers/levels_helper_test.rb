@@ -251,6 +251,50 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal true, view_options[:readonly_workspace]
   end
 
+  test 'level_started? should return true if a channel exists for a channel backed level' do
+    user = create :user
+    applab_level = create :applab # is channel backed
+    create :channel_token, level: applab_level, storage_id: storage_id_for_user_id(user.id)
+
+    assert_equal true, level_started?(applab_level, user)
+  end
+
+  test 'level_started? should return false if a channel does not exist for a channel backed level' do
+    user = create :user
+    applab_level = create :applab # is channel backed
+
+    assert_equal false, level_started?(applab_level, user)
+  end
+
+  test 'level_started? should return true if progress exists for a level that is not channel backed' do
+    user = create :user
+    maze_level = create :maze
+    script = create(:script)
+    create(:script_level, levels: [maze_level], script: script)
+    create :user_level, level: maze_level, user: user, script: script
+
+    assert_equal true, level_started?(maze_level, user)
+  end
+
+  test 'level_started? should return false if progress does not exist for a level that is not channel backed' do
+    user = create :user
+    maze_level = create :maze
+
+    assert_equal false, level_started?(maze_level, user)
+  end
+
+  test 'a teacher viewing student work should see isStarted value for student' do
+    create :user
+    applab_level = create :applab
+
+    teacher = create :teacher
+    sign_in teacher
+    # create progress on level for teacher to ensure we get back student isStarted value
+    create :channel_token, level: applab_level, storage_id: storage_id_for_user_id(teacher.id)
+
+    assert_equal false, app_options[:level][:isStarted]
+  end
+
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
     @driver = create :student
