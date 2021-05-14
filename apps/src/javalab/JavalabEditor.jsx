@@ -90,6 +90,7 @@ class JavalabEditor extends React.Component {
     this.onOpenFile = this.onOpenFile.bind(this);
     this.updateVisibility = this.updateVisibility.bind(this);
     this.updateValidation = this.updateValidation.bind(this);
+    this.updateFileType = this.updateFileType.bind(this);
     this._codeMirrors = {};
 
     // fileMetadata is a dictionary of file key -> filename.
@@ -210,6 +211,11 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null
     });
+  }
+
+  updateFileType(key, isVisible, isValidation) {
+    this.updateVisibility(key, isVisible);
+    this.updateValidation(key, isValidation);
   }
 
   getTabKey(index) {
@@ -536,8 +542,8 @@ class JavalabEditor extends React.Component {
             cancelTabMenu={this.cancelTabMenu}
             renameFromTabMenu={this.renameFromTabMenu}
             deleteFromTabMenu={this.deleteFromTabMenu}
-            changeVisibilityFromTabMenu={isVisible =>
-              this.updateVisibility(activeTabKey, isVisible)
+            changeFileTypeFromTabMenu={(isVisible, isValidation) =>
+              this.updateFileType(activeTabKey, isVisible, isValidation)
             }
             showVisibilityOption={isEditingStartSources}
             fileIsVisible={
@@ -547,9 +553,6 @@ class JavalabEditor extends React.Component {
             fileIsValidation={
               sources[fileMetadata[activeTabKey]] &&
               sources[fileMetadata[activeTabKey]].isValidation
-            }
-            changeValidationFromTabMenu={isValidation =>
-              this.updateValidation(activeTabKey, isValidation)
             }
           />
         </div>
