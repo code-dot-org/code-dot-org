@@ -160,8 +160,8 @@ describe('Java Lab Editor Test', () => {
       const javalabEditor = editor.find('JavalabEditor').instance();
       store.dispatch(
         setAllSources({
-          'Class1.java': {text: '', visible: true},
-          'Class2.java': {text: '', visible: true}
+          'Class1.java': {text: '', isVisible: true, isValidation: false},
+          'Class2.java': {text: '', isVisible: true, isValidation: false}
         })
       );
 
@@ -275,8 +275,8 @@ describe('Java Lab Editor Test', () => {
       const javalabEditor = editor.find('JavalabEditor').instance();
       store.dispatch(
         setAllSources({
-          'Class1.java': {text: '', visible: true},
-          'Class2.java': {text: '', visible: true}
+          'Class1.java': {text: '', isVisible: true, isValidation: false},
+          'Class2.java': {text: '', isVisible: true, isValidation: false}
         })
       );
 
