@@ -254,7 +254,7 @@ class ScriptEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      visible_to_teachers: !this.state.hidden,
+      hidden: this.state.hidden,
       is_stable: this.state.isStable,
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,

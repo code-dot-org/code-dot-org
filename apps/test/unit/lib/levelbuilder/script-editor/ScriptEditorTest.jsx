@@ -484,7 +484,7 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: false
       });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
+      const checkbox = wrapper.find('input[name="hidden"]');
       expect(checkbox.prop('checked')).to.be.true;
     });
 
@@ -492,7 +492,7 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: true
       });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
+      const checkbox = wrapper.find('input[name="hidden"]');
       expect(checkbox.prop('checked')).to.be.false;
     });
   });
