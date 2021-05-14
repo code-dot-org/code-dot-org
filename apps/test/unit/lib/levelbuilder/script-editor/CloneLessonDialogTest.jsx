@@ -67,15 +67,13 @@ describe('CloneLessonDialog', () => {
     };
     fetchSpy
       .withArgs('/lessons/1/clone')
-      .returns(
-        Promise.resolve({ok: false, json: () => JSON.stringify(returnData)})
-      );
+      .returns(Promise.resolve({ok: false, json: () => returnData}));
     return wrapper
       .instance()
       .onCloneClick()
       .then(() => {
         const errorMessage = wrapper.find('span');
-        expect(errorMessage.text().contains('Error message.')).to.be.true;
+        expect(errorMessage.text().includes('Error message.')).to.be.true;
       });
   });
 });

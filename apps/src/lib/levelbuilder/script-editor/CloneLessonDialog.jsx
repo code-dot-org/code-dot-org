@@ -11,23 +11,23 @@ export default class CloneLessonDialog extends Component {
     handleClose: PropTypes.func.isRequired
   };
 
+  defaultState = {
+    destinationScript: '',
+    saving: false,
+    cloneFailed: false,
+    cloneSucceeded: false,
+    responseData: null
+  };
+
   constructor(props) {
     super(props);
-    this.state = {
-      destinationScript: '',
-      saving: false,
-      cloneFailed: false,
-      cloneSucceeded: false
-    };
+    this.state = {...this.defaultState};
   }
 
   onCloneClick = () => {
     this.setState({saving: true});
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     let success = false;
-    console.log({
-      'Content-Type': 'application/json'
-    });
 
     return fetch(`/lessons/${this.props.lessonId}/clone`, {
       method: 'POST',
@@ -55,7 +55,7 @@ export default class CloneLessonDialog extends Component {
   };
 
   handleClose = () => {
-    this.setState({destinationScript: '', cloneSucceeded: false});
+    this.setState({...this.defaultState});
     this.props.handleClose();
   };
 
