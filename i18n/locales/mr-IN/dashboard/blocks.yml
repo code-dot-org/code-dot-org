@@ -944,6 +944,10 @@ mr:
             '"scale"': आकार
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': आकार
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1063,18 +1067,18 @@ mr:
             "{x: 300, y: 200}": उजवा
       Mikelab_whenKeyPressed:
         text: जेव्हा {KEY} दाबली जाते
-      aalab_goToScene:
+      Outbreak_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
+          FORMAT:
+            '"grid"': ग्रिड
+            '"border"': सीमारेषा
+            '"row"': ओळ
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
+          FORMAT:
+            '"grid"': ग्रिड
+            '"border"': सीमारेषा
+            '"row"': ओळ
       binary_move:
         options:
           DIR:

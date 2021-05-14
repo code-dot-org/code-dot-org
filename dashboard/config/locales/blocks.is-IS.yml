@@ -1229,6 +1229,15 @@ is:
             '"y"': y staða
             '"direction"': stefna hreyfingar
             '"speed"': hraða
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': stærð
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': miðlungs
+            '100': large
       gamelab_setSizes:
         text: stilla {SPRITE} {PROPERTY} á {N}%
         options:
@@ -1544,6 +1553,13 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
+      Mikelab_setupSim:
+        text: |-
+          stilla upp hermi þar sem
+          {SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}
+          eru að safna
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1609,6 +1625,13 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': fylking
+            '"border"': rammi
+            '"row"': hlið við hlið
+            '"random"': eitthvað
       RyanLab_moveForward:
         text: færa áfram
       RyanLab_turnLeft:
@@ -1642,49 +1665,27 @@ is:
         options:
           PROPERTY:
             "'shapeColor'": litur
-      aalab_addBehaviorForDuration:
-        text: aalab vera {SPRITE} gerir {BEHAVIOR} í {SECONDS} sekúndur
-      aalab_addBehaviorUntilBoolean:
-        text: aalab vera {SPRITE} gerir {BEHAVIOR} þar til {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nýr kviki með nafn{SPRITE_NAME} í búningi{ANIMATION_NAME} á stað{LOCATION}
-      aalab_goToScene:
-        text: fara til senu {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: færa {SPRITE} {DISTANCE} díla í {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': norður
-            '"East"': austur
-            '"South"': suður
-            '"West"': vestur
-      aalab_prompt:
-        text: spyrja spurningar {MESSAGE}
-      aalab_scene:
-        text: sena {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: stilla upp sögu
-      aalab_starwars_playSound:
-        text: spila{OPTION}hljóð
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': fylking
+            '"border"': rammi
+            '"row"': hlið við hlið
             '"random"': eitthvað
-            '"R2-D2 random"': R2-D2 ?
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': allt
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': allt
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: teikna tvíund {BIN}
       binary_drawBinScreen:

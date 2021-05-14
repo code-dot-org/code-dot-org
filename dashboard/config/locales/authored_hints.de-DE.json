@@ -184,7 +184,7 @@
           "2-3_Maze_16_b": "Um viele Bausteine innerhalb einer Schleife zu platzieren, ziehe einfach eine Schleife in den Arbeitsbereich und ziehe dann alle Bausteine aus dem Startprogramm hinein.  \n\nVerbinde alles wieder mit dem `Wenn Ausführen` Baustein und schon kann es losgehen!"
         },
         "2-3 Maze 6": {
-          "2-3_Maze_6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!"
+          "2-3_Maze_6_a": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!"
         },
         "2-3 Maze Loops 17": {
           "2-3_Maze_Loops_17_a": "Wenn das Muster schwer zu erkennen ist, dann versuche zuerst alles zu programmieren und schaue, was sich immer wieder wiederholt, bevor du die Schleifen einsetzt.",
@@ -1193,7 +1193,7 @@
           "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "course2_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die `wenn bei Blume` Bausteine, wird der Code innerhalb eines `solange Nektar > 0` nur ausgeführt, wenn sich die Biene an einer Blume befindet. Der Hauptunterschied besteht darin, dass der Code im Inneren wiederholt ausgeführt wird, bis kein Nektar mehr vorhanden ist.  Versuche dieses Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "course2_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_a": "Der Originalcode würde gut funktionieren - wenn es nur einen Schatz in jedem Stapel gäbe!",
@@ -1252,8 +1252,8 @@
           "courseF_bee_functions_challenge2_b": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur ZWEI Edelsteine von jedem der ersten zwei Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -3798,28 +3798,28 @@
         },
         "courseC_artist_prog4": {
           "courseC_artist_prog4_a": "Um die Rakete fertigzustellen, zeichne einfach ein Dreieck oben drauf!",
-          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!",
           "courseC_artist_prog4_c": "Ein Dreieck zeichnest du so:\n\n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen"
         },
         "courseC_artist_prog4_2018": {
           "courseC_artist_prog4_a": "Um die Rakete fertigzustellen, zeichne einfach ein Dreieck oben drauf!",
-          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!",
           "courseC_artist_prog4_c": "Ein Dreieck zeichnest du so:\n\n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen"
         },
         "courseC_artist_prog4_2019": {
           "courseC_artist_prog4_a": "Um die Rakete fertigzustellen, zeichne einfach ein Dreieck oben drauf!",
-          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!",
           "courseC_artist_prog4_c": "Ein Dreieck zeichnest du so:\n\n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen"
         },
         "courseC_artist_prog4_2020": {
           "courseC_artist_prog4_a": "Um die Rakete fertigzustellen, zeichne einfach ein Dreieck oben drauf!",
-          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseC_artist_prog4_b": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!",
           "courseC_artist_prog4_c": "Ein Dreieck zeichnest du so:\n\n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen \n-   um 120 Grad nach links drehen \n-   vorwärts bewegen"
         },
         "courseC_artist_prog5": {
           "courseC_artist_prog5_a": "Verlangsame den Schieberegler ganz herunter, bis du deinen Code Zeile für Zeile ausführen kannst, um zu sehen, was nicht funktioniert hat.",
           "courseC_artist_prog5_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist.",
-          "courseC_artist_prog5_c": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseC_artist_prog5_c": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!",
           "courseC_artist_prog5_d": "Jede Drehung sollte um 90 Grad nach rechts erfolgen."
         },
         "courseC_artist_prog5_2018": {
@@ -4237,17 +4237,17 @@
           "courseC_harvester_loops2_c": "Eine Schleife wiederholt den Befehl `vorwärts bewegen` und die andere wiederholt den Befehl `Kürbis pflücken`."
         },
         "courseC_harvester_loops3": {
-          "courseC_harvester_loops3_a": "Habe keine Angst, einen Fehler zu machen! Versuche weitere Bausteine hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
+          "courseC_harvester_loops3_a": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseC_harvester_loops3_b": "Für die ersten Kürbisse kannst du Code verwenden, der dem des letzten Rätsels sehr ähnlich ist. In welche Richtung musst du dich danach drehen?",
           "courseC_harvester_loops3_c": "Wenn du deinen Code vereinfachen möchtest, kannst du tatsächlich eine Schleife in eine andere einfügen! Dies wird eine **geschachtelte Schleife** genannt."
         },
         "courseC_harvester_loops3_2018": {
-          "courseC_harvester_loops3_a": "Habe keine Angst, einen Fehler zu machen! Versuche weitere Bausteine hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
+          "courseC_harvester_loops3_a": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseC_harvester_loops3_b": "Für die ersten Kürbisse kannst du Code verwenden, der dem des letzten Rätsels sehr ähnlich ist. In welche Richtung musst du dich danach drehen?",
           "courseC_harvester_loops3_c": "Wenn du deinen Code vereinfachen möchtest, kannst du tatsächlich eine Schleife in eine andere einfügen! Dies wird eine **geschachtelte Schleife** genannt."
         },
         "courseC_harvester_loops3_2019": {
-          "courseC_harvester_loops3_a": "Habe keine Angst, einen Fehler zu machen! Versuche weitere Bausteine hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
+          "courseC_harvester_loops3_a": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen, auch wenn du der Meinung bist, dass du das Rätsel noch nicht gelöst hast.",
           "courseC_harvester_loops3_b": "Für die ersten Kürbisse kannst du Code verwenden, der dem des letzten Rätsels sehr ähnlich ist. In welche Richtung musst du dich danach drehen?",
           "courseC_harvester_loops3_c": "Wenn du deinen Code vereinfachen möchtest, kannst du tatsächlich eine Schleife in eine andere einfügen! Dies wird eine **geschachtelte Schleife** genannt."
         },
@@ -4620,7 +4620,7 @@
           "courseC_maze_programming4_b": "Um dem Weg zu folgen:\n\n-   vorwärts bewegen\n-   in eine Richtung drehen\n-   vorwärts bewegen\n-   in die andere Richtung drehen\n-   vorwärts bewegen"
         },
         "courseC_maze_programming5": {
-          "courseC_maze_programming5_a": "Versuche, die \"Schritt\" Schaltfläche zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
+          "courseC_maze_programming5_a": "Versuche, die Schaltfläche \"Step\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
           "courseC_maze_programming5_b": "Der Vogel muss sich einmal drehen, um die Aufgabe zu lösen. Findest du heraus in welche Richtung?",
           "courseC_maze_programming5_c": "In der Lösung werden zwei 'vorwärts bewegen' Blöcke, eine Drehung und zwei weitere 'vorwärts bewegen' Blöcke sein."
         },
@@ -4646,19 +4646,19 @@
           "courseC_maze_programming6_d": "Steckst du fest? Schau dir diesen Weg an!"
         },
         "courseC_maze_programming6_2018": {
-          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!",
           "courseC_maze_programming6_b": "Verfolge mit dem Finger den Weg vom Vogel zum Schwein. Welche Schritte hast du gemacht?",
           "courseC_maze_programming6_c": "Denk daran, den Vogel zuerst zu drehen, da er vor einer Wand steht!",
           "courseC_maze_programming6_d": "Steckst du fest? Schau dir diesen Weg an!"
         },
         "courseC_maze_programming6_2019": {
-          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!",
           "courseC_maze_programming6_b": "Verfolge mit dem Finger den Weg vom Vogel zum Schwein. Welche Schritte hast du gemacht?",
           "courseC_maze_programming6_c": "Denk daran, den Vogel zuerst zu drehen, da er vor einer Wand steht!",
           "courseC_maze_programming6_d": "Steckst du fest? Schau dir diesen Weg an!"
         },
         "courseC_maze_programming6_2020": {
-          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!",
           "courseC_maze_programming6_b": "Verfolge mit dem Finger den Weg vom Vogel zum Schwein. Welche Schritte hast du gemacht?",
           "courseC_maze_programming6_c": "Denk daran, den Vogel zuerst zu drehen, da er vor einer Wand steht!",
           "courseC_maze_programming6_d": "Steckst du fest? Schau dir diesen Weg an!"
@@ -4681,7 +4681,7 @@
         },
         "courseC_maze_programming8": {
           "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile prüfen!",
-          "courseC_maze_programming8_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen! Dann siehst du, was passiert, auch wenn die Aufgabe noch nicht vollständig gelöst ist. "
+          "courseC_maze_programming8_b": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseC_maze_programming8_2018": {
           "courseC_maze_programming8_a": "Denk daran, die \"Schritt\" Taste zu benutzen, falls du stecken bleibst! So kannst du deinen Code Zeile für Zeile prüfen!",
@@ -5500,7 +5500,7 @@
         },
         "courseD_bee_conditionals2": {
           "courseD_bee_conditionals2_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine `wenn`-Anweisung.wenn",
+          "courseD_bee_conditionals2_a": "Manchmal ist eine Blüte da, manchmal nicht. Wenn du willst, dass dein Code in beiden Fällen läuft, verwende auf jeden Fall eine \\`if‘-Anweisung.",
           "courseD_bee_conditionals2_b": "Du kannst eine `wiederhole`-Schleife`oder eine`solange ein Weg vor dir liegt\\` verwenden, um dich durch dieses Labyrinth zu bewegen.",
           "courseD_bee_conditionals2_c": "Du brauchst nicht nach Honigwaben suchen. Unter den Wolken befinden sich nur Blüten oder leere Felder.",
           "courseD_bee_conditionals2_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
@@ -5558,8 +5558,8 @@
         },
         "courseD_bee_conditionals4": {
           "courseD_bee_conditionals4_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
-          "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg sehen kannst.",
-          "courseD_bee_conditionals4_b": "Verwende eine `wenn`-Anweisung innerhalb deiner Schleife, um jedes Feld auf Nektar zu überprüfen.",
+          "courseD_bee_conditionals4_a": "Du kannst jeden Platz immer noch so behandeln, als ob eine Wolke über ihm liegt, obwohl du den ganzen Weg übersehen kannst.",
+          "courseD_bee_conditionals4_b": "Verwende eine `if`-Anweisung innerhalb deiner Schleife, um jedes Platz auf Nektar zu überprüfen.",
           "courseD_bee_conditionals4_c": "Mit dem <xml><block type=\"maze_untilBlocked\"/></xml> Baustein solltest du dich vorwärts bewegen und nach einer Blüte suchen. Wenn dort eine Blüte ist - was soll die Biene tun?",
           "courseD_bee_conditionals4_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
         },
@@ -5673,7 +5673,7 @@
         "courseD_bee_conditionals8": {
           "courseD_bee_conditionals8_hintVid1": "Brauchst du Hilfe? Sieh dir das Video an!",
           "courseD_bee_conditionals8_a": "**Denke daran:** Dieses Rätsel ändert sich jedes Mal, wenn es gelaufen ist.\nDu brauchst einen bedingten Block (`if` oder `if/else`), um die Aufgabe zu lösen.",
-          "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche nur am Ende deines Weges nach Nektar und Honig.",
+          "courseD_bee_conditionals8_b": "Dieses Rätsel ist knifflig, weil man leere Felder, Nektar, _und_ Honig nicht mit nur einer einzigen Bedingung prüfen kann.\n\nSuche Nektar und Honig nur am Ende deines Weges.",
           "courseD_bee_conditionals8_c": "Wie kannst du sicherstellen, dass du jeden Weg bis zum Ende gehst, egal wie lang er ist?",
           "courseD_bee_conditionals8_d": "Auch wenn du eine Wolke direkt vor dir hast, musst du sie nicht als erstes besuchen. Versuche, mit der Wolke unten rechts im Feld zu beginnen. \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)",
           "courseD_bee_conditionals8_hintVid2": "In diesem Video findest du Hilfe zur Lösung dieser Aufgabe."
@@ -5711,16 +5711,16 @@
           "courseD_bee_conditionals_challenge1_b": "In dieser Aufgabe könnte jedes Feld eine Blüte, eine Honigwabe oder nichts enthalten. Das bedeutet, dass du deine `wenn/ansonsten`-Bedingung in jedem Feld wiederholen kannst."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Genau wie die Bausteine `wenn an der Blume` läuft der Code in einem `solange Nektar > 0 ist` nur dann, wenn sich die Biene an einer Blüte befindet. Der Unterschied besteht darin, dass der eingefügte Code immer wieder läuft, bis kein Nektar mehr vorhanden ist. Probiere es mit diesem Muster:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "Warum funktioniert die erste Hälfte dieses Programms? Denk darüber nach, warum die Biene sich rückwärts bewegen muss. Wie viel Nektar sammelt die Biene jedes Mal, wenn sie sich über eine Blüte bewegt?",
@@ -6001,8 +6001,8 @@
           "courseD_collector_debugging9_b": "Überlege, wie du die Aufgabe lösen würdest, und versuche dann schrittweise, den Code an das, was du dir vorstellst, anzupassen."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_a": "Beginne damit, nur **zwei** Edelsteine von jedem der ersten **zwei** Stapel zu holen.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\nVerwende diese Blöcke.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "Als nächstes sammele die restlichen Edelsteine in dieser Reihe ein. \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nFüge diese Blöcke zu deinem Programm hinzu.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml>",
           "courseD_collector_debugging_challenge2_c": "Sammele schließlich den verbleibenden Schatz ein. Füge diese Blöcke zu deinem Programm hinzu.\n\n[blockly block][1]",
           "courseD_collector_debugging_challenge2_d": "Hier ist die vollständige Lösung für dieses Rätsel.\n\n[blockly block][1]"
         },
@@ -6031,7 +6031,7 @@
           "courseD_bee_nested_loops_challenge2_d": "**Lösung:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_collector_nested_loops_challenge2a": {
-          "courseD_collector_nested_loops_challenge2a_a": "Vergiss nicht, dass du einen einzelnen Befehl oder ein längeres Muster `wiederholen` kannst. Du kannst sogar einen Block `wiederholen`!",
+          "courseD_collector_nested_loops_challenge2a_a": "Vergiss nicht, dass du einen einzelnen Befehl oder ein längeres Muster `wiederholen` kannst. Du kannst sogar einen Block \"wiederholen\"!",
           "courseD_collector_nested_loops_challenge2a_b": "Kannst Du herausfinden,  wie du alle vier Edelsteine kriegst, ohne mehr Blöcke zu verwenden als für zwei Edelsteine?"
         },
         "courseD_collector_ramp10": {
@@ -6625,7 +6625,7 @@
         },
         "courseD_maze_ramp2_2018": {
           "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",
-          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind. Klicke dann erneut auf \"\"Ausführen\"\"."
+          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind und am `wenn ausgeführt`-Block hängen."
         },
         "courseD_maze_ramp2_2019": {
           "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",
@@ -6633,7 +6633,7 @@
         },
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_a": "Um einen `Vorwärts´-Block zu verwenden, ziehe ihn aus der Werkzeugkiste in den Arbeitsbereich und verbinde ihn mit dem`wenn ausgeführt\\`-Block.",
-          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind. Klicke dann erneut auf \"\"Ausführen\"\"."
+          "courseC_maze_programming2_b": "Überprüfe, ob alle drei Blöcke vollständig zusammengeklickt sind und am `wenn ausgeführt`-Block hängen."
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nUm einen Block aus deinem Code zu löschen, ziehe alle Blöcke, die darunter sind, nach rechts weg und lasse sie für einen Moment im Arbeitsbereich.\n\nKlicke auf den Block, den du löschen möchtest, und ziehe ihn zurück in die Werkzeugkiste. \n\nBringe schließlich deine anderen Blöcke dahin zurück, wo sie hingehören."
@@ -6664,7 +6664,7 @@
           "courseC_maze_programming4_b": "Um dem Weg zu folgen, bewege Dich vorwärts und drehe dich in eine Richtung. Gehe anschließend weiter und drehen dich dann in die andere Richtung. Zuletzt bewege dich noch ein weiteres Mal vorwärts, um die Eichel zu erreichen."
         },
         "courseD_maze_ramp5": {
-          "courseC_maze_programming5_a": "Versuche, die \"Schritt\" Schaltfläche zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
+          "courseC_maze_programming5_a": "Versuche, die Schaltfläche \"Step\" zu verwenden, um deinen Code Zeile für Zeile auszuführen. Weißt du, was du als nächstes tun musst?",
           "courseC_maze_programming5_b": "Denke daran, dass Drehungen aus der Sicht des Vogels erfolgen.",
           "courseC_maze_programming5_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
@@ -6724,7 +6724,7 @@
           "courseC_maze_programming5_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
         "courseD_maze_ramp6": {
-          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseC_maze_programming6_a": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!",
           "courseC_maze_programming6_b": "Zu Beginn schaut der Vogel auf eine Wand, also denke daran, ihn zu drehen, bevor er sich bewegt!",
           "courseC_maze_programming6_c": "Denke daran, du kannst jeweils einen Teil des Codes schreiben und ihn dann laufen lassen! So kannst du herausfinden, wie du von dort weitermachen musst. "
         },
@@ -6943,7 +6943,7 @@
           "courseC_maze_programming6a_a": "Verwende eine \"Wiederholen“-Schleife\", um Scrat in Bewegung zu bringen!"
         },
         "courseD_scrat_ramp7": {
-          "courseD_scrat_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseD_scrat_programming6_a": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!",
           "courseD_scrat_programming6_b": "Denke daran, dich zuerst zu drehen, bevor du dich bewegst, da Scrat in die falsche Richtung zeigt.",
           "courseD_scrat_programming6_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
@@ -7239,7 +7239,7 @@
         },
         "courseE_artist_ramp9": {
           "courseD_artist_ramp12_a": "Auf welche Weise ähnelt das Dreieck einem Quadrat? Was ist hier anders?",
-          "courseD_artist_ramp12_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseD_artist_ramp12_b": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!",
           "courseD_artist_ramp12_c": "Um alle Seiten zu zeichnen, brauchst du eine Vorwärtsbewegung um 100 Pixel und dann eine 120 Grad Drehung nach rechts. Wie viele Seiten musst du zeichnen?"
         },
         "courseE_artist_ramp9_2": {
@@ -7392,7 +7392,7 @@
         },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_a": "Die Werkzeugkiste ist diesmal ein wenig anders organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche Bausteine dir zur Verfügung stehen.",
-          "courseE_farmer_functions1_b": "Du brauchst nur einen Kürbis zu pflücken, aber könntest du eine Schleife benutzen, um an ihn heranzukommen?"
+          "courseE_farmer_functions1_b": "Du brauchst nur einen Kürbis einzusammeln, aber könntest du eine Schleife verwenden, um zum Kürbis zu gelangen?"
         },
         "courseE_farmer_functions1_2019": {
           "courseE_farmer_functions1_a": "Die Werkzeugkiste ist diesmal ein wenig anders organisiert! Klicke auf die verschiedenen Kategorien, um zu sehen, welche Bausteine dir zur Verfügung stehen.",
@@ -8644,7 +8644,7 @@
           "iceage_warn_ice_age_b": "Füge die beiden neuen Bausteine unter dem Ereignis `wenn ausgeführt wird` hinzu, damit sie unmittelbar nach dem Programmstart ausgeführt werden."
         },
         "courseC_video_angles": {
-          "courseD_scrat_programming6_a": "Es gibt zwei Möglichkeiten, dieses Rätsel zu lösen!",
+          "courseD_scrat_programming6_a": "Es gibt zwei Möglichkeiten, diese Aufgabe zu lösen!",
           "courseD_scrat_programming6_b": "Denke daran, dich zuerst zu drehen, bevor du dich bewegst, da Scrat in die falsche Richtung zeigt.",
           "courseD_scrat_programming6_c": "Hab keine Angst, einen Fehler zu machen! Versuche weitere Blöcke hinzuzufügen und den Code auszuführen. Manchmal hilft es zu sehen was passiert, auch wenn du der Meinung bist, dass das Rätsel noch nicht gelöst ist."
         },
@@ -8653,7 +8653,7 @@
           "courseE_artist_ramp8_b": "Um 4 Seiten zu zeichnen, füge einen `um 100 Pixel vorwärts bewegen`-Baustein in eine Wiederholen-Schleife ein und achte darauf, dass die Schleife so eingestellt ist, dass 4 Mal gezeichnet wird. \n\nVergiss das anschließende Drehen nicht!",
           "courseE_artist_ramp8_c": "Deine Schleife sollte zwei Bausteine enthalten: `vorwärts bewegen` und `um 90 Grad nach rechts drehen`.",
           "courseD_artist_ramp12_a": "Auf welche Weise ähnelt das Dreieck einem Quadrat? Was ist hier anders?",
-          "courseD_artist_ramp12_b": "Du kannst das Dropdown-Menü auf den `Drehblöcken` benutzen, um zu sehen, welchen Winkel du brauchst!",
+          "courseD_artist_ramp12_b": "Du kannst das Dropdown-Menü auf den `Drehen`-Blöcken benutzen, um zu sehen, welchen Winkel du brauchst!",
           "courseD_artist_ramp12_c": "Um alle Seiten zu zeichnen, brauchst du eine Vorwärtsbewegung um 100 Pixel und dann eine 120 Grad Drehung nach rechts. Wie viele Seiten musst du zeichnen?"
         },
         "courseE_bee_ramp14": {
@@ -8674,8 +8674,8 @@
           "hint1": "Klicke auf die Schaltfläche `+` auf dem Ereignis-Block. Schiebe den Block `Subjekt`, den du innen gefunden hast, in den Block `Kostüm ändern`.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "Um den Monstern eine Maske zu geben, verwendest du den Block `Kostüm ändern` mit einem Ereignis `wenn berührt`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nZiehe auch den kleinen Block `geklickt` hinein!",
-          "hint2": "Das ist der neue Code dieses Levels:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Um den Monstern eine Maske zu geben, verwendest du den Block `Kostüm ändern` mit einem Ereignis `wenn berührt`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nZiehe auch den kleinen Block `geklickt` hinein!",
+          "hint2": "Das ist der neue Code dieses Levels:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
           "challenge": "## Eine zusätzliche Herausforderung?\n\nDu kannst einstellen, dass sich deine Monster schneller oder langsamer bewegen.\n\n1.  Klicke auf `Bearbeiten` in diesem Block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Erhöhe oder verringer die Anzahl in diesem Block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nWähle eine Dezimalzahl wie `0.5` or `0.25`, wenn sich die Monster langsamer bewegen sollen. Wähle eine beliebige Zahl größer 1, damit sie sich schneller bewegen."
@@ -8685,10 +8685,10 @@
         },
         "outbreak6": {
           "hint2": "Verschiebe den anderen Block \"Aktion\" in den Block `wenn Chance`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Du musst 3 weitere Ereignisse `wenn berührt` hinzufügen, um alle möglichen Kombinationen von `Berührungen` zwischen gesunden und infizierten Sprites zu erfassen.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hint1": "Du musst 3 weitere Ereignisse `wenn berührt` hinzufügen, um alle möglichen Kombinationen von `Berührungen` zwischen gesunden und infizierten Sprites zu erfassen.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block>\\<block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "outbreak7": {
-          "whenclicked": "## Impfungen\n\nDu kannst simulieren, dass die Monster eine Impfung erhalten, wenn du sie anklickst. Verwende dazu den Block `Kostüm ändern` mit diesem Ereignis:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Impfungen\n\nDu kannst simulieren, dass die Monster eine Impfung erhalten, wenn du sie anklickst. Verwende dazu den Block `Kostüm ändern` mit diesem Ereignis:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Wenn du nicht weiterkommst, kannst du deinen Code immer zurücksetzen. Klicke unten auf `Versionsverlauf` und wähle dann \"Neu beginnen\"."
         }
       }

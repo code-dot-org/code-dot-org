@@ -264,7 +264,7 @@ zh-TW:
   follower:
     invite_sent: 已發送邀請
     added_teacher: "%{name} 已成為你的老師"
-    registered: 你已經註冊了 %{section_name}。
+    registered: 你已經用 %{section_name}註冊。
     captcha_required: 請填寫驗證碼來加入本學習小組。
     error:
       signed_in: 操作前請先登出
