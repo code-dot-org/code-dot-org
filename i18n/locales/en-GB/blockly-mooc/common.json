@@ -208,6 +208,7 @@
   "errorUnusedParam": "You added a parameter block, but didn't use it in the definition. Make sure to use your parameter by clicking \"edit\" and placing the parameter block inside the green block.",
   "exampleErrorMessage": "The function {functionName} has one or more examples that need adjusting. Make sure they match your definition and answer the question.",
   "examplesFailedOnClose": "One or more of your examples do not match your definition. Check your examples before closing",
+  "explainRestrictedSectionLearnMore": "Learn More",
   "extraTopBlocks": "You have unattached blocks.",
   "extraTopBlocksWhenRun": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "finalStage": "Congratulations! You have completed the final puzzle.",

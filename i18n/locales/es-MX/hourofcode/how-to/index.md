@@ -4,7 +4,7 @@ title: Guía práctica de la Hora del Código
 
 {{ signup_button }}
 
-# Cómo planificar tu Hora del Código
+# Cómo planificar tu Hora de Código
 
 ### Únete al movimiento e introduce a tus estudiantes en las ciencias de la computación con estos pasos.
 
@@ -47,7 +47,7 @@ Explora las actividades y decide con anticipación si deseas elegir un solo tuto
 
 ## 3. Crea tu plan para el día
 
-### Considera tus necesidades tecnológicas. ¡Las computadoras son opcionales!
+### Piensa en tus necesidades tecnológicas. ¡Las computadoras son opcionales!
 
 - Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero no necesitas una computadora para cada niño; incluso, puedes llevar adelante la Hora del Código sin computadoras. Para las [actividades sin conexión](/learn), solo tienes que filtrar la sección Tecnología en el aula para mostrar las opciones para “Sin computadoras o dispositivos”.
 - Asegúrate de probar los tutoriales en las computadoras o los dispositivos de los estudiantes para garantizar que el sonido y el video funcionen bien en los navegadores. ¿Tienes ancho de banda limitado? Muestra los videos a toda la clase para que los estudiantes no tengan que descargarlos. También puedes probar los tutoriales sin conexión.

@@ -1235,6 +1235,15 @@ hu:
             '"y"': y-pozíció
             '"direction"': mozgás iránya
             '"speed"': sebesség
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': méret
+          SIZE:
+            '25': nagyon kicsi
+            '50': kicsi
+            '75': közepes
+            '100': nagy
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} beállítása erre: {N}%"
         options:
@@ -1558,6 +1567,13 @@ hu:
             '"x"': x pozíció
             '"y"': y-pozíció
             '"direction"': mozgás iránya
+      Mikelab_setupSim:
+        text: |-
+          telepítő-szimuláció
+          {SPRITE1N}{SPRITE1COSTUME}Sebesség{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Sebesség{SPRITE2SPEED}
+          Gyűjtése
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1620,6 +1636,13 @@ hu:
         text: "{SPRITE} x koordinátája"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': rács
+            '"border"': határ
+            '"row"': sor
+            '"random"': véletlen
       RyanLab_moveForward:
         text: előrelépni
       RyanLab_turnLeft:
@@ -1653,49 +1676,27 @@ hu:
         options:
           PROPERTY:
             "'shapeColor'": szín
-      aalab_addBehaviorForDuration:
-        text: a sprite {SPRITE} Kezdődik {BEHAVIOR} a {SECONDS} Másodperc
-      aalab_addBehaviorUntilBoolean:
-        text: szereplő {SPRITE} elkezd {BEHAVIOR} amíg {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: új kobold nevű{SPRITE_NAME} jelmezes{ANIMATION_NAME} a helynél{LOCATION}
-      aalab_goToScene:
-        text: menjen a {SCENE} jelenethez
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE} lépj {DISTANCE} képpontot {DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Észak
-            '"East"': Kelet
-            '"South"': Dél
-            '"West"': Nyugat
-      aalab_prompt:
-        text: kérdezd {MESSAGE}
-      aalab_scene:
-        text: "[SCENE]jelenet[0]"
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: beállítási történet
-      aalab_starwars_playSound:
-        text: "{OPTION} hang lejátszása"
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': rács
+            '"border"': határ
+            '"row"': sor
             '"random"': véletlen
-            '"R2-D2 random"': véletlen R2-D2
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': összes
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': összes
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: bináris {BIN} rajzolása
       binary_drawBinScreen:

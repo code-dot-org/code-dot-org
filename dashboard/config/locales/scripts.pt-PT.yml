@@ -717,12 +717,6 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -774,12 +768,6 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -789,12 +777,6 @@ pt:
           description: 'Fase 2 Online: combinado de estudos de verão'
           description_short: 'Fase 2 Online: combinado de estudos de verão'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -1119,12 +1101,6 @@ pt:
               name: 'Offline: escrever músicas com parâmetros'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Olá!
             Wrap-up:
@@ -3114,6 +3090,8 @@ pt:
               display_name: Funções
             csp_project:
               display_name: Projecto
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -3122,10 +3100,14 @@ pt:
               display_name: Ciclos
             csp_project:
               display_name: Projecto
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
         csp7-2020:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotecas
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
         csp9-pilot:
           lessons:
             new stage:
@@ -3336,6 +3318,8 @@ pt:
               display_name: 'Unidade 1: Informação Digital'
             cspSurvey:
               display_name: Inquérito
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -3345,14 +3329,22 @@ pt:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A Internet'
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
           lessons:
             new stage:
               name: nova fase
         csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
           lessons:
             new stage:
               name: nova fase
         csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -3361,6 +3353,9 @@ pt:
             new stage:
               name: nova fase
         csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -3368,6 +3363,8 @@ pt:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidade 10: Ciber Segurança e Impactos Globais'
+            cspSurvey2020:
+              display_name: Inquérito Pós-Curso
           lessons:
             new stage:
               name: nova fase
@@ -3500,6 +3497,18 @@ pt:
               name: Curso A
             Course B:
               name: Curso B
+            Course E:
+              name: Curso E
+            Course F:
+              name: Curso F
+            csf:
+              name: Fundamentos
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Lição 14
+            lesson15:
+              name: Lição 15
         2021drafting:
           lesson_groups:
             introduction:
@@ -3798,6 +3807,10 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -3830,3 +3843,7 @@ pt:
               display_name: Próximos Passos
             Introduction:
               display_name: Introdução
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Inquérito

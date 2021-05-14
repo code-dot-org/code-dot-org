@@ -669,12 +669,6 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -722,12 +716,6 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -737,12 +725,6 @@ fi:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -1018,12 +1000,6 @@ fi:
               name: 'Tietokoneeton tekeminen: parametroitu sävellys'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Tervetuloa!
             Wrap-up:
@@ -3184,3 +3160,7 @@ fi:
               display_name: Johdanto
             Introduction:
               display_name: Johdanto
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Kysely

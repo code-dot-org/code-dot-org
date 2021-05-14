@@ -336,7 +336,7 @@ fr:
   follower:
     invite_sent: Invitation envoyée
     added_teacher: "%{name} ajouté en tant que ton enseignant"
-    registered: Tu t’es inscrit à %{section_name}.
+    registered: Vous vous êtes inscrit à %{section_name}.
     captcha_required: Veuillez remplir le CAPTCHA pour rejoindre cette section.
     error:
       signed_in: Merci de te déconnecter avant de continuer
