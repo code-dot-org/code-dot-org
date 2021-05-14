@@ -12,8 +12,7 @@ class JavalabTabMenuComponent extends Component {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired,
     deleteFromTabMenu: PropTypes.func.isRequired,
-    changeVisibilityFromTabMenu: PropTypes.func.isRequired,
-    changeValidationFromTabMenu: PropTypes.func.isRequired,
+    changeFileTypeFromTabMenu: PropTypes.func.isRequired,
     showVisibilityOption: PropTypes.bool.isRequired,
     fileIsVisible: PropTypes.bool,
     fileIsValidation: PropTypes.bool
@@ -29,8 +28,7 @@ class JavalabTabMenuComponent extends Component {
       deleteFromTabMenu,
       cancelTabMenu,
       showVisibilityOption,
-      changeVisibilityFromTabMenu,
-      changeValidationFromTabMenu,
+      changeFileTypeFromTabMenu,
       fileIsVisible,
       fileIsValidation
     } = this.props;
@@ -57,8 +55,10 @@ class JavalabTabMenuComponent extends Component {
             type="button"
             key="visibility"
             onClick={() => {
-              changeVisibilityFromTabMenu(true);
-              changeValidationFromTabMenu(false);
+              changeFileTypeFromTabMenu(
+                true /*isVisible*/,
+                false /*isValidation*/
+              );
             }}
             style={styles.anchor}
           >
@@ -70,8 +70,10 @@ class JavalabTabMenuComponent extends Component {
             type="button"
             key="support"
             onClick={() => {
-              changeVisibilityFromTabMenu(false);
-              changeValidationFromTabMenu(false);
+              changeFileTypeFromTabMenu(
+                false /*isVisible*/,
+                false /*isValidation*/
+              );
             }}
             style={styles.anchor}
           >
@@ -83,8 +85,10 @@ class JavalabTabMenuComponent extends Component {
             type="button"
             key="validation"
             onClick={() => {
-              changeVisibilityFromTabMenu(false);
-              changeValidationFromTabMenu(true);
+              changeFileTypeFromTabMenu(
+                false /*isVisible*/,
+                true /*isValidation*/
+              );
             }}
             style={styles.anchor}
           >
