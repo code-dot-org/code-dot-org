@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-12 18:51:39 UTC",
+    "serialized_at": "2021-05-14 16:33:18 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -6919,6 +6919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 4_2021"
+        ],
         "progression": "Sample Programs"
       },
       "named_level": false,
@@ -6942,6 +6945,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 3_2021"
+        ],
         "progression": "Sample Programs"
       },
       "named_level": false,
@@ -6965,6 +6971,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 1_2021"
+        ],
         "progression": "Sample Programs"
       },
       "named_level": false,
@@ -6988,6 +6997,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 2_2021"
+        ],
         "progression": "Sample Programs"
       },
       "named_level": false,
@@ -9949,6 +9961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Exemplar_2021"
+        ],
         "progression": "Demo App: Interactive Card"
       },
       "named_level": false,
@@ -9972,6 +9987,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Card Examples_2018_2019_pilot_2021"
+        ],
         "progression": "Make an Interactive Card"
       },
       "named_level": false,
@@ -9995,6 +10013,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Background_2021"
+        ],
         "progression": "Project Work"
       },
       "named_level": false,
@@ -10018,6 +10039,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Sprites_2021"
+        ],
         "progression": "Project Work"
       },
       "named_level": false,
@@ -10041,6 +10065,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card User Input_2021"
+        ],
         "progression": "Project Work"
       },
       "named_level": false,
@@ -10064,6 +10091,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Other Conditionals_2021"
+        ],
         "progression": "Project Work"
       },
       "named_level": false,
@@ -10087,6 +10117,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Final_2021"
+        ],
         "progression": "Project Work"
       },
       "named_level": false,
@@ -10110,6 +10143,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -10393,6 +10429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro_2021"
+        ],
         "progression": "Sample Game"
       },
       "named_level": false,
@@ -10988,6 +11027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions predict set velocity code_2021"
+        ],
         "progression": "Code Prediction"
       },
       "named_level": false,
@@ -12519,6 +12561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game intro_2018_2019_pilot_2021"
+        ],
         "progression": "Sample Games"
       },
       "named_level": false,
@@ -12542,6 +12587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables_2021"
+        ],
         "progression": "Project - Background and Variables"
       },
       "named_level": false,
@@ -12565,6 +12613,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds_2021"
+        ],
         "progression": "Project - Background and Variables"
       },
       "named_level": false,
@@ -12588,6 +12639,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards_2021"
+        ],
         "progression": "Project - Background and Variables"
       },
       "named_level": false,
@@ -12611,6 +12665,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background_2021"
+        ],
         "progression": "Project - Background and Variables"
       },
       "named_level": false,
@@ -12634,6 +12691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations_2021"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "named_level": false,
@@ -12657,6 +12717,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites_2021"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "named_level": false,
@@ -12680,6 +12743,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement_2021"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "named_level": false,
@@ -12703,6 +12769,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls_2021"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "named_level": false,
@@ -12726,6 +12795,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions_2021"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "named_level": false,
@@ -12749,6 +12821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project review_2021"
+        ],
         "progression": "Review Your Game"
       },
       "named_level": false,
@@ -12772,6 +12847,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -15653,6 +15731,50 @@
   ],
   "resources": [
     {
+      "name": "All Code",
+      "url": "/s/csd3-2021/code",
+      "key": "all_code_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_1"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd3-2021/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd3-2021/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd3-2021/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    },
+    {
       "name": "Animated Scene",
       "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
       "key": "animated-scene",
@@ -15701,6 +15823,18 @@
       },
       "seeding_key": {
         "resource.key": "animating-sprites"
+      }
+    },
+    {
+      "name": "Bug Report",
+      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
+      "key": "bug_report",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "bug_report"
       }
     },
     {
@@ -15853,6 +15987,50 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
       "name": "CSD Unit 3 - Interactive Animations and Games",
       "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
       "key": "csd_unit_3_-_interactive_animations_and_games",
@@ -15962,6 +16140,31 @@
       },
       "seeding_key": {
         "resource.key": "functions"
+      }
+    },
+    {
+      "name": "Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
+      "key": "guide_to_using_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_using_resources"
+      }
+    },
+    {
+      "name": "How To Debug",
+      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
+      "key": "how_to_debug",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_debug"
       }
     },
     {
@@ -16963,10 +17166,75 @@
         "resource.key": "teacher_forum_1",
         "script.name": "csd3-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "csd3-2021"
+      }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "bug_report",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_using_resources",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "how_to_debug",
+        "script.name": "csd3-2021"
+      }
+    }
   ],
   "vocabularies": [
     {

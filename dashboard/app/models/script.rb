@@ -1321,9 +1321,9 @@ class Script < ApplicationRecord
 
   # This method updates scripts.en.yml with i18n data from the scripts.
   # There are three types of i18n data
-  # 1. Stage names, which we get from the script DSL, and is passed in as lessons_i18n here
+  # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
-  # 3. Stage descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
+  # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, script_name = '', metadata_i18n = {})
     scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
@@ -1334,14 +1334,14 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      stage_descriptions = metadata_i18n.delete(:stage_descriptions)
+      lesson_descriptions = metadata_i18n.delete(:stage_descriptions)
       metadata_i18n['lessons'] = {}
-      unless stage_descriptions.nil?
-        JSON.parse(stage_descriptions).each do |stage|
-          stage_name = stage['name']
+      unless lesson_descriptions.nil?
+        JSON.parse(lesson_descriptions).each do |lesson|
+          stage_name = lesson['name']
           stage_data = {
-            'description_student' => stage['descriptionStudent'],
-            'description_teacher' => stage['descriptionTeacher']
+            'description_student' => lesson['descriptionStudent'],
+            'description_teacher' => lesson['descriptionTeacher']
           }
           metadata_i18n['lessons'][stage_name] = stage_data
         end
@@ -1471,7 +1471,7 @@ class Script < ApplicationRecord
     #TODO: lessons should be summarized through lesson groups in the future
     summary[:lessonGroups] = lesson_groups.map(&:summarize)
 
-    # Filter out stages that have a visible_after date in the future
+    # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
@@ -1488,7 +1488,7 @@ class Script < ApplicationRecord
       link: script_path(self)
     }
 
-    # Filter out stages that have a visible_after date in the future
+    # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     # Only get lessons with lesson plans
     filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
