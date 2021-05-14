@@ -68,7 +68,7 @@ class Plc::EnrollmentUnitAssignment < ApplicationRecord
     end
   end
 
-  def focus_area_stage_ids
+  def focus_area_lesson_ids
     plc_module_assignments.map {|a| a.plc_learning_module.lesson.id unless a.plc_learning_module.required?}.compact
   end
 
