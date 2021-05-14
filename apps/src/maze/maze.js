@@ -179,7 +179,7 @@ module.exports = class Maze {
       }
 
       if (this.controller.skin.adjustableSpeed) {
-        var slider = document.getElementById('slider');
+        const slider = document.getElementById('slider');
         this.speedSlider = new Slider(10, 35, 130, slider);
       }
 
