@@ -5,6 +5,7 @@ import requests
 import os, math, time
 
 spritedata = {}
+# These are the different sheets that will be generated (buildings.png, vehicles.png, etc.)
 sheetdata = {'buildings': [], 'vehicles': [], 'wall': [], 'other': [], 'sidewalk': []}
 
     # Open a csv reader for the csv sprites.csv
