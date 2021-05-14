@@ -2,7 +2,7 @@
 title: Udhëzues për prindërit
 ---
 
-# How to do an Hour of Code with your child
+# Si të përfundoni një orë kodimi me fëmijën tuaj
 Mencuba Hour of Code ialah cara mudah dan menyeronokkan bagi memperkenalkan anak anda kepada sains komputer, mungkin buat pertama kalinya.     Bukan sahaja sains komputer menjadi asas untuk semua bidang pengajian, tetapi <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">kajian terkini menunjukkan</a>: kanak-kanak yang belajar sains komputer mempunyai prestasi lebih baik dalam mata pelajaran lain, cemerlang dalam menyelesaikan masalah dan <font color="00adbc"><b>17% lebih berkemungkinan mendaftar untuk memasuki kolej</b></font>.
 
 Anda boleh menyertai puluhan juta pelajar dari seluruh dunia dalam acara global ini.     Bersama, kita boleh memberikan inspirasi kepada kanak-kanak untuk belajar, memecahkan stereotaip dan membantu kanak-kanak menemui minat baharu.     Terbaik daripada semua ini, anda telah mempunyai semua yang anda perlukan untuk membawa Hour of Code (Sejam Mengekod) pulang ke rumah anda!
