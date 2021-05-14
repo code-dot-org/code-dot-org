@@ -659,7 +659,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: 'pilot-experiment',
-      hidden: false,
+      hidden: false
     }
 
     assert_response :success
@@ -681,7 +681,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: '',
-      hidden: false,
+      hidden: false
     }
 
     assert_response :success
