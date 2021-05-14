@@ -53,7 +53,7 @@ class JavalabTabMenuComponent extends Component {
         {showVisibilityOption && !fileIsVisible && (
           <button
             type="button"
-            key="visibility"
+            key="starter"
             onClick={() => {
               changeFileTypeFromTabMenu(
                 true /*isVisible*/,
