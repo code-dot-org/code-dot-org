@@ -259,8 +259,8 @@ class ScriptLevelsController < ApplicationController
     unless user.nil?
       # bonus level summaries explicitly don't contain any user-specific data,
       # so we need to merge in the user's progress.
-      script_bonus_levels_by_stage.each do |stage|
-        stage[:levels].each do |level_summary|
+      script_bonus_levels_by_stage.each do |lesson|
+        lesson[:levels].each do |level_summary|
           ul = UserLevel.find_by(
             level_id: level_summary[:level_id], user_id: user.id, script: @script
           )
