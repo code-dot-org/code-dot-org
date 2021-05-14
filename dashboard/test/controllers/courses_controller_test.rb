@@ -379,7 +379,7 @@ class CoursesControllerTest < ActionController::TestCase
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
 
-    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: "#{resource1.id},#{resource2.id}"}
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.resources.length
   end
@@ -395,7 +395,7 @@ class CoursesControllerTest < ActionController::TestCase
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
 
-    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: "#{resource1.id},#{resource2.id}"}
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.student_resources.length
   end
