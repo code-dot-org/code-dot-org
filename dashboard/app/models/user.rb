@@ -1248,11 +1248,11 @@ class User < ApplicationRecord
     script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
 
     if !script_sections.empty?
-      # if we have one or more sections matching this script id, we consider a stage hidden if all of those sections
-      # hides the stage
+      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
+      # hides the lesson
       script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
     else
-      # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
+      # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
     end
@@ -1279,8 +1279,8 @@ class User < ApplicationRecord
 
   # @return {Hash<string,number[]>|number[]}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
-  #   stage ids for that section.
-  #   For students this will just be a list of stage ids that are hidden for them.
+  #   lesson ids for that section.
+  #   For students this will just be a list of lesson ids that are hidden for them.
   def get_hidden_lesson_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
