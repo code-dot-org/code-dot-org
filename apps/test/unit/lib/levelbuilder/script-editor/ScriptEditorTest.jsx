@@ -19,6 +19,7 @@ import createResourcesReducer, {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import $ from 'jquery';
 
 describe('ScriptEditor', () => {
   let defaultProps, store;
@@ -339,16 +340,9 @@ describe('ScriptEditor', () => {
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialShowCalendar: true});
       const scriptEditor = wrapper.find('ScriptEditor');
-
-      let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/s/1`, [
-        404,
-        {'Content-Type': 'application/json'},
-        returnData
-      ]);
 
       const saveBar = wrapper.find('SaveBar');
 
@@ -356,6 +350,8 @@ describe('ScriptEditor', () => {
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
 
       expect(scriptEditor.state().isSaving).to.equal(false);
       expect(scriptEditor.state().error).to.equal(
@@ -369,24 +365,16 @@ describe('ScriptEditor', () => {
             'Error Saving: Please provide instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
-
-      server.restore();
+      $.ajax.restore();
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes is invalid', () => {
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({
         initialShowCalendar: true,
         initialWeeklyInstructionalMinutes: -100
       });
       const scriptEditor = wrapper.find('ScriptEditor');
-
-      let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/s/1`, [
-        404,
-        {'Content-Type': 'application/json'},
-        returnData
-      ]);
 
       const saveBar = wrapper.find('SaveBar');
 
@@ -394,6 +382,8 @@ describe('ScriptEditor', () => {
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
 
       expect(scriptEditor.state().isSaving).to.equal(false);
       expect(scriptEditor.state().error).to.equal(
@@ -407,8 +397,39 @@ describe('ScriptEditor', () => {
             'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
+      $.ajax.restore();
+    });
 
-      server.restore();
+    it('shows error when published state is pilot but no pilot experiment given', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({});
+
+      const scriptEditor = wrapper.find('ScriptEditor');
+      scriptEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal(
+        'Please provide a pilot experiment in order to save with published state as pilot.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
     });
 
     it('can save and close', () => {

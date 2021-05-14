@@ -14,6 +14,7 @@ import {Provider} from 'react-redux';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import $ from 'jquery';
 
 const defaultProps = {
   name: 'test-course',
@@ -307,6 +308,38 @@ describe('CourseEditor', () => {
       ).to.be.true;
 
       server.restore();
+    });
+
+    it('shows error when published state is pilot but no pilot experiment given', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({});
+
+      const courseEditor = wrapper.find('CourseEditor');
+      courseEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(courseEditor.state().isSaving).to.equal(false);
+      expect(courseEditor.state().error).to.equal(
+        'Please provide a pilot experiment in order to save with published state as pilot.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
     });
   });
 });

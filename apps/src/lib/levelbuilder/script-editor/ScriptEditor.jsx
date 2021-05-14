@@ -198,8 +198,6 @@ class ScriptEditor extends React.Component {
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
-    let shouldSave = true;
-
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     const videoKeysBefore = (
@@ -233,7 +231,6 @@ class ScriptEditor extends React.Component {
     }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
-      shouldSave = false;
       this.setState({
         isSaving: false,
         error:
@@ -245,7 +242,6 @@ class ScriptEditor extends React.Component {
       (parseInt(this.state.weeklyInstructionalMinutes) <= 0 ||
         isNaN(parseInt(this.state.weeklyInstructionalMinutes)))
     ) {
-      shouldSave = false;
       this.setState({
         isSaving: false,
         error:
@@ -256,7 +252,6 @@ class ScriptEditor extends React.Component {
       this.state.publishedState === 'Pilot' &&
       this.state.pilotExperiment === ''
     ) {
-      shouldSave = false;
       this.setState({
         isSaving: false,
         error:
@@ -325,34 +320,30 @@ class ScriptEditor extends React.Component {
       dataToSave.stage_descriptions = this.state.lessonDescriptions;
     }
 
-    if (shouldSave) {
-      $.ajax({
-        url: `/s/${this.props.id}`,
-        method: 'PUT',
-        dataType: 'json',
-        contentType: 'application/json;charset=UTF-8',
-        data: JSON.stringify(dataToSave)
-      })
-        .done(data => {
-          if (shouldCloseAfterSave) {
-            navigateToHref(linkWithQueryParams(data.scriptPath));
-          } else {
-            const lessonGroups = mapLessonGroupDataForEditor(
-              data.lesson_groups
-            );
+    $.ajax({
+      url: `/s/${this.props.id}`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    })
+      .done(data => {
+        if (shouldCloseAfterSave) {
+          navigateToHref(linkWithQueryParams(data.scriptPath));
+        } else {
+          const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
-            this.props.init(lessonGroups, this.props.levelKeyList);
-            this.setState({
-              lastSaved: Date.now(),
-              isSaving: false,
-              oldScriptText: data.lessonLevelData
-            });
-          }
-        })
-        .fail(error => {
-          this.setState({isSaving: false, error: error.responseText});
-        });
-    }
+          this.props.init(lessonGroups, this.props.levelKeyList);
+          this.setState({
+            lastSaved: Date.now(),
+            isSaving: false,
+            oldScriptText: data.lessonLevelData
+          });
+        }
+      })
+      .fail(error => {
+        this.setState({isSaving: false, error: error.responseText});
+      });
   };
 
   render() {
