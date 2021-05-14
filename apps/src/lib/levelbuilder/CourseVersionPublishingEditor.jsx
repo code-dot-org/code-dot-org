@@ -19,49 +19,36 @@ export default class CourseVersionPublishingEditor extends Component {
     updateVersionYear: PropTypes.func.isRequired,
     families: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    isCourse: PropTypes.bool
+    isCourse: PropTypes.bool,
+    publishedState: PropTypes.string.isRequired,
+    updatePublishedState: PropTypes.func.isRequired
   };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      publishedState: this.props.visible
-        ? this.props.isStable
-          ? 'Recommended'
-          : 'Assignable'
-        : this.props.pilotExperiment
-        ? 'Pilot'
-        : 'Preview'
-    };
-  }
 
   handlePublishedStateChange = event => {
     const newPublishedState = event.target.value;
-    this.setState({publishedState: newPublishedState}, () => {
-      switch (newPublishedState) {
-        case 'Pilot':
-          this.props.updateVisible(false);
-          this.props.updateIsStable(false);
-          break;
-        case 'Assignable':
-          this.props.updatePilotExperiment('');
-          this.props.updateVisible(true);
-          this.props.updateIsStable(false);
-          break;
-        case 'Recommended':
-          this.props.updatePilotExperiment('');
-          this.props.updateVisible(true);
-          this.props.updateIsStable(true);
-          break;
-        case 'Preview':
-        default:
-          this.props.updatePilotExperiment('');
-          this.props.updateVisible(false);
-          this.props.updateIsStable(false);
-          break;
-      }
-    });
+    this.props.updatePublishedState(newPublishedState);
+    switch (newPublishedState) {
+      case 'Pilot':
+        this.props.updateVisible(false);
+        this.props.updateIsStable(false);
+        break;
+      case 'Assignable':
+        this.props.updatePilotExperiment('');
+        this.props.updateVisible(true);
+        this.props.updateIsStable(false);
+        break;
+      case 'Recommended':
+        this.props.updatePilotExperiment('');
+        this.props.updateVisible(true);
+        this.props.updateIsStable(true);
+        break;
+      case 'Preview':
+      default:
+        this.props.updatePilotExperiment('');
+        this.props.updateVisible(false);
+        this.props.updateIsStable(false);
+        break;
+    }
   };
 
   render() {
@@ -108,7 +95,7 @@ export default class CourseVersionPublishingEditor extends Component {
           Published State
           <select
             className="publishedStateSelector"
-            value={this.state.publishedState}
+            value={this.props.publishedState}
             style={styles.dropdown}
             onChange={this.handlePublishedStateChange}
           >
@@ -159,7 +146,7 @@ export default class CourseVersionPublishingEditor extends Component {
             </table>
           </HelpTip>
         </label>
-        {this.state.publishedState === 'Pilot' && (
+        {this.props.publishedState === 'Pilot' && (
           <label>
             Pilot Experiment
             <HelpTip>

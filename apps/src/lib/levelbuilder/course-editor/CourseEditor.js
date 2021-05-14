@@ -65,7 +65,14 @@ class CourseEditor extends Component {
       pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: teacherResources,
       familyName: this.props.initialFamilyName,
-      versionYear: this.props.initialVersionYear
+      versionYear: this.props.initialVersionYear,
+      publishedState: this.props.initialVisible
+        ? this.props.initialIsStable
+          ? 'Recommended'
+          : 'Assignable'
+        : this.props.initialPilotExperiment
+        ? 'Pilot'
+        : 'Preview'
     };
   }
 
@@ -209,6 +216,10 @@ class CourseEditor extends Component {
             updateVersionYear={versionYear => this.setState({versionYear})}
             families={this.props.courseFamilies}
             versionYearOptions={this.props.versionYearOptions}
+            publishedState={this.state.publishedState}
+            updatePublishedState={publishedState =>
+              this.setState({publishedState})
+            }
           />
           <input
             name="family_name"

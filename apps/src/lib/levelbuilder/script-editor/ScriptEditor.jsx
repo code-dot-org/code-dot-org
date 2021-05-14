@@ -146,7 +146,14 @@ class ScriptEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
-      deprecated: this.props.initialDeprecated
+      deprecated: this.props.initialDeprecated,
+      publishedState: !this.props.initialHidden
+        ? this.props.initialIsStable
+          ? 'Recommended'
+          : 'Assignable'
+        : this.props.initialPilotExperiment
+        ? 'Pilot'
+        : 'Preview'
     };
   }
 
@@ -241,6 +248,16 @@ class ScriptEditor extends React.Component {
           'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
       });
       return;
+    } else if (
+      this.state.publishedState === 'Pilot' &&
+      this.state.pilotExperiment === ''
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a pilot experiment in order to save with published state as pilot.'
+      });
+      return;
     }
 
     let dataToSave = {
@@ -303,30 +320,34 @@ class ScriptEditor extends React.Component {
       dataToSave.stage_descriptions = this.state.lessonDescriptions;
     }
 
-    $.ajax({
-      url: `/s/${this.props.id}`,
-      method: 'PUT',
-      dataType: 'json',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToSave)
-    })
-      .done(data => {
-        if (shouldCloseAfterSave) {
-          navigateToHref(linkWithQueryParams(data.scriptPath));
-        } else {
-          const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
-
-          this.props.init(lessonGroups, this.props.levelKeyList);
-          this.setState({
-            lastSaved: Date.now(),
-            isSaving: false,
-            oldScriptText: data.lessonLevelData
-          });
-        }
+    if (this.state.isSaving) {
+      $.ajax({
+        url: `/s/${this.props.id}`,
+        method: 'PUT',
+        dataType: 'json',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify(dataToSave)
       })
-      .fail(error => {
-        this.setState({isSaving: false, error: error.responseText});
-      });
+        .done(data => {
+          if (shouldCloseAfterSave) {
+            navigateToHref(linkWithQueryParams(data.scriptPath));
+          } else {
+            const lessonGroups = mapLessonGroupDataForEditor(
+              data.lesson_groups
+            );
+
+            this.props.init(lessonGroups, this.props.levelKeyList);
+            this.setState({
+              lastSaved: Date.now(),
+              isSaving: false,
+              oldScriptText: data.lessonLevelData
+            });
+          }
+        })
+        .fail(error => {
+          this.setState({isSaving: false, error: error.responseText});
+        });
+    }
   };
 
   render() {
@@ -629,6 +650,10 @@ class ScriptEditor extends React.Component {
                     families={this.props.scriptFamilies}
                     versionYearOptions={this.props.versionYearOptions}
                     isCourse={this.state.isCourse}
+                    publishedState={this.state.publishedState}
+                    updatePublishedState={publishedState =>
+                      this.setState({publishedState})
+                    }
                   />
                 </div>
               )}
