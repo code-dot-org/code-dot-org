@@ -40,7 +40,6 @@ function showCourseEditor() {
   ReactDOM.render(
     <Provider store={store}>
       <CourseEditor
-        id={courseEditorData.course_summary.id}
         name={courseEditorData.course_summary.name}
         initialTitle={courseEditorData.course_summary.title}
         initialVersionTitle={courseEditorData.course_summary.version_title}
