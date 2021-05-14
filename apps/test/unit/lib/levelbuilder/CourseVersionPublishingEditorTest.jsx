@@ -95,4 +95,59 @@ describe('CourseVersionPublishedStateSelector', () => {
       'Recommended'
     );
   });
+
+  it('updates visible, isStable, and pilotExperiment when publish state changed to pilot', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} />
+    );
+
+    wrapper
+      .find('.publishedStateSelector')
+      .simulate('change', {target: {value: 'Pilot'}});
+
+    expect(updateVisible).to.have.been.calledWith(false);
+    expect(updateIsStable).to.have.been.calledWith(false);
+  });
+
+  it('updates visible, isStable, and pilotExperiment when publish state changed to preview', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} />
+    );
+
+    wrapper
+      .find('.publishedStateSelector')
+      .simulate('change', {target: {value: 'Preview'}});
+
+    expect(updateVisible).to.have.been.calledWith(false);
+    expect(updateIsStable).to.have.been.calledWith(false);
+    expect(updatePilotExperiment).to.have.been.calledWith('');
+  });
+
+  it('updates visible, isStable, and pilotExperiment when publish state changed to assignable', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} />
+    );
+
+    wrapper
+      .find('.publishedStateSelector')
+      .simulate('change', {target: {value: 'Preview'}});
+
+    expect(updateVisible).to.have.been.calledWith(true);
+    expect(updateIsStable).to.have.been.calledWith(false);
+    expect(updatePilotExperiment).to.have.been.calledWith('');
+  });
+
+  it('updates visible, isStable, and pilotExperiment when publish state changed to recommended', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} />
+    );
+
+    wrapper
+      .find('.publishedStateSelector')
+      .simulate('change', {target: {value: 'Preview'}});
+
+    expect(updateVisible).to.have.been.calledWith(true);
+    expect(updateIsStable).to.have.been.calledWith(true);
+    expect(updatePilotExperiment).to.have.been.calledWith('');
+  });
 });
