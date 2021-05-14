@@ -107,3 +107,7 @@ WorkspaceSvg.prototype.blockSpaceEditor = {
   },
   svgResize: () => {} // TODO
 };
+
+WorkspaceSvg.prototype.events = {
+  dispatchEvent: () => {} // TODO
+};
