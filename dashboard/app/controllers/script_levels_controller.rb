@@ -178,29 +178,29 @@ class ScriptLevelsController < ApplicationController
   def hidden_lesson_ids
     authorize! :read, ScriptLevel
 
-    stage_ids = current_user ? current_user.get_hidden_lesson_ids(params[:script_id]) : []
+    lesson_ids = current_user ? current_user.get_hidden_lesson_ids(params[:script_id]) : []
 
-    render json: stage_ids
+    render json: lesson_ids
   end
 
-  # toggles whether or not a stage is hidden for a section
+  # toggles whether or not a lesson is hidden for a section
   def toggle_hidden
     script_id = params.require(:script_id)
     section_id = params.require(:section_id).to_i
-    stage_id = params[:stage_id]
+    lesson_id = params[:stage_id]
     # this is "true" in tests but true in non-test requests
     should_hide = params.require(:hidden) == "true" || params.require(:hidden) == true
 
     section = Section.find(section_id)
     authorize! :read, section
 
-    if stage_id
+    if lesson_id
       # TODO(asher): change this to use a cache
-      stage = Lesson.find(stage_id)
-      return head :forbidden unless stage.try(:script).try(:hideable_lessons)
-      section.toggle_hidden_stage(stage, should_hide)
+      lesson = Lesson.find(lesson_id)
+      return head :forbidden unless lesson.try(:script).try(:hideable_lessons)
+      section.toggle_hidden_stage(lesson, should_hide)
     else
-      # We don't have a stage id, implying we instead want to toggle the hidden state of this script
+      # We don't have a lesson id, implying we instead want to toggle the hidden state of this script
       script = Script.get_from_cache(script_id)
       return head :bad_request if script.nil?
       section.toggle_hidden_script(script, should_hide)
