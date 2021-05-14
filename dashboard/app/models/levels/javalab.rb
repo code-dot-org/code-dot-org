@@ -49,13 +49,16 @@ class Javalab < Level
   end
 
   def parse_maze
+    if serialized_maze.nil? && csa_view_mode == 'neighborhood'
+      raise ArgumentError.new('neighborhood must have a serialized_maze')
+    end
     return if serialized_maze.nil?
+    # convert maze into json object and validate each cell has a tileType
     maze_json = serialized_maze.is_a?(Array) ? serialized_maze.to_json : serialized_maze
     maze = JSON.parse(maze_json)
     maze.each_with_index do |row, x|
       row.each_with_index do |cell, y|
-        next unless cell.is_a?(Hash)
-        unless cell.key?('tileType')
+        unless cell.is_a?(Hash) && cell.key?('tileType')
           raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
         end
       end
