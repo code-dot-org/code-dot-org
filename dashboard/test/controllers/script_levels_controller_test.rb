@@ -1585,30 +1585,30 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     experiment.destroy
   end
 
-  test "hidden_stage_ids for user not signed in" do
-    response = get :hidden_stage_ids, params: {script_id: @script.name}
+  test "hidden_lesson_ids for user not signed in" do
+    response = get :hidden_lesson_ids, params: {script_id: @script.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)
     assert_equal [], hidden
   end
 
-  test "hidden_stage_ids for student signed in" do
+  test "hidden_lesson_ids for student signed in" do
     SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
 
     sign_in @student
-    response = get :hidden_stage_ids, params: {script_id: @script.name}
+    response = get :hidden_lesson_ids, params: {script_id: @script.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)
     assert_equal [@custom_lesson_1.id], hidden
   end
 
-  test "hidden_stage_ids for teacher signed in" do
+  test "hidden_lesson_ids for teacher signed in" do
     SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
 
     sign_in @teacher
-    response = get :hidden_stage_ids, params: {script_id: @script.name}
+    response = get :hidden_lesson_ids, params: {script_id: @script.name}
     assert_response :success
 
     hidden = JSON.parse(response.body)
