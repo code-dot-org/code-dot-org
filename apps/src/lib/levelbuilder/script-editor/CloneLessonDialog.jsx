@@ -21,12 +21,15 @@ export default class CloneLessonDialog extends Component {
     };
   }
 
-  onCloneClick = e => {
-    e.preventDefault();
+  onCloneClick = () => {
     this.setState({saving: true});
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     let success = false;
-    fetch(`/lessons/${this.props.lessonId}/clone`, {
+    console.log({
+      'Content-Type': 'application/json'
+    });
+
+    return fetch(`/lessons/${this.props.lessonId}/clone`, {
       method: 'POST',
       body: JSON.stringify({
         destinationScriptName: this.state.destinationScript

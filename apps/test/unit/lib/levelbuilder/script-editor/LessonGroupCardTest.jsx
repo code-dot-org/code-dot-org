@@ -146,4 +146,10 @@ describe('LessonGroupCard', () => {
     expect(addLesson).to.have.been.calledOnce;
     window.prompt.restore();
   });
+
+  it('displays clone lesson dialog when cloning a lesson', () => {
+    const wrapper = shallow(<LessonGroupCard {...defaultProps} />);
+    wrapper.instance().handleCloneLesson(0);
+    expect(wrapper.find('CloneLessonDialog')).to.have.lengthOf(1);
+  });
 });
