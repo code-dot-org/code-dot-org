@@ -522,7 +522,7 @@ module.exports = class Maze {
     if (this.controller.skin.adjustableSpeed) {
       // The slider's value is between 1 and 0 with 1 being slowest for some reason.
       // We make it between -1 and 1 with -1 being slowest by multiplying
-      // by 2, subtracting 1, then multiplying by -1.
+      // by -2 and adding 1.
       this.stepSpeedMultiplier = Math.pow(
         2,
         -2 * this.speedSlider.getValue() + 1
