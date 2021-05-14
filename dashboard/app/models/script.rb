@@ -1337,11 +1337,11 @@ class Script < ApplicationRecord
       stage_descriptions = metadata_i18n.delete(:stage_descriptions)
       metadata_i18n['lessons'] = {}
       unless stage_descriptions.nil?
-        JSON.parse(stage_descriptions).each do |stage|
-          stage_name = stage['name']
+        JSON.parse(stage_descriptions).each do |lesson|
+          stage_name = lesson['name']
           stage_data = {
-            'description_student' => stage['descriptionStudent'],
-            'description_teacher' => stage['descriptionTeacher']
+            'description_student' => lesson['descriptionStudent'],
+            'description_teacher' => lesson['descriptionTeacher']
           }
           metadata_i18n['lessons'][stage_name] = stage_data
         end
@@ -1471,7 +1471,7 @@ class Script < ApplicationRecord
     #TODO: lessons should be summarized through lesson groups in the future
     summary[:lessonGroups] = lesson_groups.map(&:summarize)
 
-    # Filter out stages that have a visible_after date in the future
+    # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
@@ -1488,7 +1488,7 @@ class Script < ApplicationRecord
       link: script_path(self)
     }
 
-    # Filter out stages that have a visible_after date in the future
+    # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     # Only get lessons with lesson plans
     filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
