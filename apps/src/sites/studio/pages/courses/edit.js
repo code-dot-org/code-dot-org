@@ -45,10 +45,10 @@ function showCourseEditor() {
         versionTitle={courseEditorData.course_summary.version_title}
         initialFamilyName={courseEditorData.course_summary.family_name}
         initialVersionYear={courseEditorData.course_summary.version_year}
-        initialVisible={courseEditorData.course_summary.visible}
-        initialIsStable={courseEditorData.course_summary.is_stable}
+        initialVisible={courseEditorData.course_summary.visible || false}
+        initialIsStable={courseEditorData.course_summary.is_stable || false}
         initialPilotExperiment={
-          courseEditorData.course_summary.pilot_experiment
+          courseEditorData.course_summary.pilot_experiment || ''
         }
         descriptionShort={courseEditorData.course_summary.description_short}
         initialDescriptionStudent={

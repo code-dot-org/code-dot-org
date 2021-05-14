@@ -52,7 +52,7 @@
     "validation_enabled": "true",
     "ai_enabled": "true",
     "project_template_level_name": "ml-data decisions-app template",
-    "long_instructions": "# Importing Your App\r\n\r\nLet’s import the model we just created in AI Lab!\r\n\r\n# Do This:\r\n- Click the gear icon and select “Manage AI Models”\r\n\t- *Note: If \"Manage AI Models\" doesn't appear, [click here to reload the page](https://studio.code.org/s/ai-unit-pilot/lessons/12/levels/3?enableExperiments=applab-ml) and the link should appear!*\r\n- Select the model you just saved in AI Lab\r\n- Run your code and verify that it works\r\n\r\nOnce you’ve verified that your code works, continue to the next step\r\n",
+    "long_instructions": "# Importing Your App\r\n\r\nLet’s import the model we just created in AI Lab!\r\n\r\n# Do This:\r\n- Click the gear icon and select “Manage AI Models”\r\n\t- *Note: If \"Manage AI Models\" doesn't appear, [click here to reload the page](https://studio.code.org/s/aiml-2021/lessons/12/levels/3?enableExperiments=applab-ml) and the link should appear!*\r\n- Select the model you just saved in AI Lab\r\n- Run your code and verify that it works\r\n\r\nOnce you’ve verified that your code works, continue to the next step\r\n",
     "preload_asset_list": null
   },
   "published": true,

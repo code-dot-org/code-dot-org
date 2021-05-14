@@ -255,6 +255,15 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"speed"': shpejtësia
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mesatar
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -371,15 +380,19 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': zakonshëm
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:
         text: kthehu majtas
       RyanLab_turnRight:
         text: kthehu djathtas
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': zakonshëm
       binary_move:
         options:

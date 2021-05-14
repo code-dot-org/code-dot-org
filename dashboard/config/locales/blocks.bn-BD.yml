@@ -194,6 +194,10 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"speed"': গতি
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': আকার
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -302,15 +306,19 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': এলোমেলো
       RyanLab_moveForward:
         text: সামনে এগিয়ে যান
       RyanLab_turnLeft:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': এলোমেলো
       binary_move:
         options:

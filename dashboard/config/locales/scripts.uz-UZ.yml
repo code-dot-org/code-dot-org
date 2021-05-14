@@ -211,15 +211,11 @@ uz:
         hourofcode:
           title: Klassik labirint
           description: '"Angry Birds", "Plants vs Zombies" va "Ice Age" o‘yinidagi
-            Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!
-
-'
+            Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
           description_short: Ko‘plab ajoyib personajlar bilan kompyuter savodxonligi
             asoslarini sinab ko‘ring!
           student_description: '"Angry Birds", "Plants vs Zombies" va "Ice Age" o‘yinidagi
-            Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!
-
-'
+            Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
         frozen:
           title: Anna va Elza bilan kod yozing
           description: Anna va Elza muzning sehrlari va go‘zalligini o‘rganayotganda
@@ -563,18 +559,14 @@ uz:
         Hour of Code:
           title: Dasturlash soati - 2013
           description: '"Angry Birds" va "Plants vs Zombies" personajlari bilan kompyuter
-            savodxonligi asoslarini sinab ko‘ring!
-
-'
+            savodxonligi asoslarini sinab ko‘ring!'
           description_short: Ko‘plab ajoyib personajlar bilan kompyuter savodxonligi
             asoslarini sinab ko‘ring!
           lessons:
             Hour of Code 2013:
               name: Dasturlash soati - 2013
           student_description: '"Angry Birds" va "Plants vs Zombies" personajlari
-            bilan kompyuter savodxonligi asoslarini sinab ko‘ring!
-
-'
+            bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -1148,12 +1140,6 @@ uz:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Day 17-19 What Is Intelligence?
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1256,12 +1242,6 @@ uz:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Day 17-19 What Is Intelligence?
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1284,12 +1264,6 @@ uz:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Day 17-19 What Is Intelligence?
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2057,7 +2031,7 @@ uz:
             chiqaradi. Ushbu bo‘limning maqsadi dunyodagi ma'lumotlar, shu jumladan,
             ularning ijobiy va salbiy ta'sirlari to‘g‘risida har tomonlama va adolatli
             qarashlarni rivojlantirish hamda axborotlarni zamonaviy shifrlash qanday
-            va nima uchun ishlash asoslarini tushunishdir.\r\n\r\nBu bo‘lim oxirgi
+            va nima uchun ishlash asoslarini tushunishdir.\\\r\n\\\r\nBu bo‘lim oxirgi
             marta 2017-yil noyabrda yangilangan. Dastur yangilanishlari haqida ushbu
             sahifada ko‘proq ma'lumot olishingiz mumkin forum.code.org/c/csp/updates."
           description_short: Explore the data-rich world we live, and how data impacts
@@ -2113,7 +2087,7 @@ uz:
             keltirib chiqaradi. Ushbu bo‘limning maqsadi dunyodagi ma'lumotlar, shu
             jumladan, ularning ijobiy va salbiy ta'sirlari to‘g‘risida har tomonlama
             va adolatli qarashlarni rivojlantirish hamda axborotlarni zamonaviy shifrlash
-            qanday va nima uchun ishlash asoslarini tushunishdir.\r\n\r\nBu bo‘lim
+            qanday va nima uchun ishlash asoslarini tushunishdir.\\\r\n\\\r\nBu bo‘lim
             oxirgi marta 2017-yil noyabrda yangilangan. Dastur yangilanishlari haqida
             ushbu sahifada ko‘proq ma'lumot olishingiz mumkin forum.code.org/c/csp/updates."
         csp5-2017:
@@ -2808,12 +2782,6 @@ uz:
               name: Unit 1, Day 15-16 Computer Programs and Following Directions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Unit 1, Day 17-19 What Is Intelligence?
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Days 3-4 Buying a Computer
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3046,17 +3014,15 @@ uz:
                 o‘rganadilar. Oxirgi darajalarda sinf bu harakatlarni bitta spraytni
                 jonlantirish va boshqarish uchun birlashtiradi va oddiy o‘yinni quradi,
                 unda belgi uchib yurib, tangalarni yig‘adi.
-              description_teacher: 'O‘quvchilar spraytlarning tezlik xususiyatlarini
+              description_teacher: O‘quvchilar spraytlarning tezlik xususiyatlarini
                 hisoblagich naqsh bilan birlashtirib, murakkabroq sprayt harakatini
-                yaratishni o‘rganadilar. Ba''zi o‘quvchilar gravitatsiya kuchini simulyatsiya
+                yaratishni o‘rganadilar. Ba'zi o‘quvchilar gravitatsiya kuchini simulyatsiya
                 qilishni, spraytni sakrata olish va sprayt chapga yoki o‘ngga burilishga
                 ruxsat berishni o‘rganadilar. Code Studio progressining so‘nggi bosqichlarida
                 o‘quvchilar ushbu harakatlarni bitta spraytni jonlantirish va boshqarish
                 uchun birlashtiradilar hamda oddiygina o‘yin yaratadilar, o‘yinda
                 belgi uchib yurib, tanga to‘playdi. O‘quvchilar so‘nggi bosqichda
                 o‘yinga o‘zlarining qo‘shimchalarini kiritishlari tavsiya etiladi.
-
-'
             Collisions:
               name: Collisions
               description_student: The class programs their sprites to interact in
@@ -3235,7 +3201,7 @@ uz:
                 loop with random numbers to manipulate some simple animations with
                 dots and then with sprites. Afterwards, everyone uses what they learned
                 to update the sprite scene from the previous lesson.
-              description_teacher: 'Ushbu darsda o‘quvchilar Game Labda dasturlashning
+              description_teacher: Ushbu darsda o‘quvchilar Game Labda dasturlashning
                 asosiy paradigmalaridan biri bo‘lgan chizish sikli bilan tanishadilar.
                 Darsni boshlash uchun o‘quvchilar bir nechta haqiqiy flipbukni (harakatlanuvchi
                 rasmlar ketma-ketligi kitobchasini) ko‘rib chiqishadi, chunki turli
@@ -3243,12 +3209,10 @@ uz:
                 yaratadi. So‘ngra o‘quvchilar videoni tomosha qilishadi, qanday qilib
                 Game Labdagi chizish sikli o‘z dasturlarida xuddi shunday taassurotni
                 yaratishga yordam berishini ko‘rib chiqishadi. O‘quvchilar chizilgan
-                siklni tasodifiy sonlar bilan birlashtirib, ba''zi oddiy animatsiyalarni
+                siklni tasodifiy sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni
                 nuqta bilan, so‘ngra spraytlar bilan boshqaradilar. Dars oxirida o‘quvchilar
                 o‘tgan darsdan o‘zlarining sprayt sahnalarini yangilash uchun o‘rganganlaridan
                 foydalanadilar.
-
-'
             The Counter Pattern Unplugged:
               name: The Counter Pattern Unplugged
               description_student: Ushbu oflayn dars o‘zgaruvchilarning asosiy mohiyatini
@@ -3348,7 +3312,7 @@ uz:
                 yoki birgalikda ishlash orqali o‘quvchilar ishlarni rejalashtiradi,
                 rivojlantiradi va o‘yinlar haqida fikr bildiradi. O‘zaro fikr-mulohazalarni
                 kiritgandan so‘ng, sinf yakunlagan o‘yinlarni baham ko‘radi.
-              description_teacher: 'O‘quvchilar o‘zlarining loyihalarini boshqarish
+              description_teacher: O‘quvchilar o‘zlarining loyihalarini boshqarish
                 uchun avvalgi ikki darsdagi loyiha qo‘llanmasidan foydalanib o‘z o‘yinlarini
                 rejalashtirishadi va qurishadi. Yakka tartibda yoki birgalikda ishlaganda
                 o‘quvchilar avval namunaviy o‘yinlar to‘plamidan ilhomlanib, qurmoqchi
@@ -3363,8 +3327,6 @@ uz:
                 Dars oxirida o‘quvchilar tugatilgan o‘yinlarini sinfdoshlari bilan
                 bo‘lishadilar. Ushbu loyiha bir nechta mashg‘ulotlarni o‘z ichiga
                 oladi va 3-5 ta darslar oralig‘ida bemalol o‘tilishi mumkin.
-
-'
             Parameters and Randomization:
               name: Parameters and Randomization
             Shapes and Randomization:
@@ -3482,16 +3444,14 @@ uz:
         csd1-2017:
           title: CSD Unit 1 - Problem Solving ('17-'18)
           description_short: "  Learn how humans work with computers to solve problems."
-          description: 'Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
+          description: Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
             kompyuter savodxonligi sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi
             hisoblanadi. Bir qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni
             yechish uchun siz muammolarni yechish jarayonidan foydalanishni mashq
             qilasiz. Keyinchalik, odamlarga muammolarni yechishda yordam beradigan
-            kompyuterlarning qanday ma''lumotlarni kiritish, chiqarish, saqlash va
+            kompyuterlarning qanday ma'lumotlarni kiritish, chiqarish, saqlash va
             qayta ishlashini o‘rganasiz. Unit siz tanlagan muammoni yechishga yordam
             beradigan dasturni ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
           lesson_groups:
             cspSurvey:
               display_name: Survey
@@ -3507,18 +3467,16 @@ uz:
                 the lesson groups reflect on their experiences with the activity and
                 make connections to the types of problem solving they will be doing
                 for the rest of the course. '
-              description_teacher: 'Ushbu darsda o‘quvchilar guruhlarga bo‘linib,
-                iloji boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy
-                zarqog‘oz qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash
-                uchun ikki roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani
-                ushlab turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
+              description_teacher: Ushbu darsda o‘quvchilar guruhlarga bo‘linib, iloji
+                boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy zarqog‘oz
+                qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash uchun ikki
+                roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani ushlab
+                turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
                 keyingi darslarda batafsilroq tanishtiradigan muammolarni yechish
                 jarayonining turli bosqichlarini oldindan belgilab beradi. Dars oxirida
                 o‘quvchilar o‘zlarining faoliyati bilan bog‘liq tajribalarini aks
                 ettiradilar va darsning qolgan qismida bajaradigan muammolarni hal
                 qilish turlari bilan bog‘lanishadi.
-
-'
             The Problem Solving Process:
               name: Muammoni yechish jarayoni
               description_student: Ushbu darsda o‘quvchilar yil davomida foydalanadigan,
@@ -3596,21 +3554,19 @@ uz:
                 yakunlash uchun sinf kompyuterda amalga oshiriladigan umumiy faoliyatni
                 tekshiradi va jadvalda ushbu faoliyat uchun ishlatiladigan kirish
                 va chiqishlarni tanlaydi.
-              description_teacher: 'Bunda sinf o‘quvchilari kirish va chiqishning
-                qaysi turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
+              description_teacher: Bunda sinf o‘quvchilari kirish va chiqishning qaysi
+                turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
                 ko‘rib chiqadilar. Guruhlar hisoblash moslamasiga biriktirilgan va
-                o‘qituvchi tomonidan kiritilgan va chiqadigan ta''rifi asosida ularning
+                o‘qituvchi tomonidan kiritilgan va chiqadigan ta'rifi asosida ularning
                 qurilmasining kirish va chiqishlarini ro‘yxatlashga asoslangan. Ilgari
                 mashg‘ulotlarda o‘quvchilar ko‘proq aniq jismoniy kirish va natijalarga
-                e''tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
+                e'tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
                 yoki chiqish sifatida ekran), ammo keyinchalik munozaralar o‘quvchilarni
                 unchalik aniq bo‘lmagan misollarni ko‘rib chiqishga undaydi (masalan,
                 sensorli ekran ham kirish va chiqish, yoki Internet ham kirish, ham
                 chiqish sifatida xizmat qilishi mumkin). Dars davomida o‘qituvchi
                 xonaning old qismidagi jadvalda aniqlangan kirish va chiqishlarni
                 qayd etadi.
-
-'
             Processing:
               name: Processing
               description_student: Ushbu dars kompyuter ta'rifi doirasida aytib o‘tilgan
@@ -3637,19 +3593,17 @@ uz:
                 ishlab chiqish va almashish bilan o‘tkazadi, bunda har qanday algoritm
                 uchun qanchalik saqlash kerakligi ta'kidlanadi. Dars ma'lumotni qayta
                 ishlash paytida saqlashning muhimligini muhokama qilish bilan yakunlanadi.
-              description_teacher: 'O‘quvchilar kompyuterning Input-Storage-Processing-Output
+              description_teacher: O‘quvchilar kompyuterning Input-Storage-Processing-Output
                 modeli asosida saqlash muhimligini o‘rganadilar. Isitish jarayoni
                 o‘quvchilarni ilgari kompyuterlar saqlagan hujjatlar, fotosuratlar
-                yoki videofilmlar kabi ko‘rgan ma''lumotlarini aks ettirishni so‘raydi.
-                Oflayn asosiy mashg‘ulot o‘quvchilarga pastki qismdagi ma''lum kartalarni
+                yoki videofilmlar kabi ko‘rgan ma'lumotlarini aks ettirishni so‘raydi.
+                Oflayn asosiy mashg‘ulot o‘quvchilarga pastki qismdagi ma'lum kartalarni
                 qidirishda kichik ildiz kartalarini qayta ishlash algoritmini ishlab
                 chiqishga majbur qiladi. O‘quvchilarning kartalarni qanday ko‘chirishi
                 mumkinligi to‘g‘risidagi cheklovlar, ular kemani qayta ishlash paytida
                 ham saqlashning muhimligini hisobga olishga majbur qiladi. Dars o‘quvchilar
-                ushbu darsda ko‘rgan saqlashning ikki turi va ma''lumotni qayta ishlash
+                ushbu darsda ko‘rgan saqlashning ikki turi va ma'lumotni qayta ishlash
                 paytida saqlashning ahamiyatini muhokama qilish bilan yakunlanadi.
-
-'
             Apps and Problem Solving:
               name: Apps and Problem Solving
               description_student: 'Ushbu dars o‘quvchilarga mos va tanish bo‘lgan
@@ -3689,16 +3643,14 @@ uz:
               name: CS Discoveries Pre-survey
             CS Discoveries Rapid Survey:
               name: CS Discoveries Rapid Survey
-          student_description: 'Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
+          student_description: Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
             kompyuter savodxonligi sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi
             hisoblanadi. Bir qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni
             yechish uchun siz muammolarni yechish jarayonidan foydalanishni mashq
             qilasiz. Keyinchalik, odamlarga muammolarni yechishda yordam beradigan
-            kompyuterlarning qanday ma''lumotlarni kiritish, chiqarish, saqlash va
+            kompyuterlarning qanday ma'lumotlarni kiritish, chiqarish, saqlash va
             qayta ishlashini o‘rganasiz. Unit siz tanlagan muammoni yechishga yordam
             beradigan dasturni ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
         csp-online-test:
           lesson_groups:
             required:
@@ -3863,13 +3815,11 @@ uz:
               name: Images on the Web
             Clean Code and Debugging:
               name: Clean Code and Debugging
-              description_student: 'Ushbu darsda HTMLda veb-sahifalarni loyihalashda
+              description_student: Ushbu darsda HTMLda veb-sahifalarni loyihalashda
                 yuzaga keladigan keng tarqalgan masalalar yoritilgan. Sinf Code Studioda
                 topilgan tobora murakkablashib borayotgan veb-sahifalar ketma-ketligidagi
                 xatolarni to‘g‘rilaydi va sharhlar, bo‘sh joy va matn oralig‘i veb-sahifalarni
                 o‘qishni osonlashtiruvchi vosita sifatida ahamiyatini o‘rganadi.
-
-'
               description_teacher: Students deal with common issues that arise when
                 designing web pages in HTML. Students will correct errors in a sequence
                 of increasingly complex web pages. In the process they will learn
@@ -3891,17 +3841,15 @@ uz:
               name: Box Model and Page Layout
             Digital Footprint:
               name: Digital Footprint
-              description_student: 'Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
+              description_student: Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
                 orqaga surilib, odamlar raqamli ravishda almashishni tanlagan shaxsiy
-                ma''lumotlar haqida gaplashadi. Sinf qaysi turdagi ma''lumotlarni
-                boshqa odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama
-                qilish bilan boshlanadi, so‘ngra shaxsiy ma''lumotlarning qanday turlari
-                atayin yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun
-                bir nechta namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va
-                nihoyat, sinf ma''lumotni Internetga qo‘yishda rioya qilish uchun
-                bir qator ko‘rsatmalarni ishlab chiqadi.
-
-'
+                ma'lumotlar haqida gaplashadi. Sinf qaysi turdagi ma'lumotlarni boshqa
+                odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama qilish
+                bilan boshlanadi, so‘ngra shaxsiy ma'lumotlarning qanday turlari atayin
+                yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun bir nechta
+                namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va nihoyat,
+                sinf ma'lumotni Internetga qo‘yishda rioya qilish uchun bir qator
+                ko‘rsatmalarni ishlab chiqadi.
               description_teacher: "Yaqinda o‘quvchilar o‘zlarining shaxsiy veb-saytlariga
                 kiradigan haqiqiy tarkib haqida bir oz vaqt sarflaganliklari sababli,
                 ushbu dars o‘quvchilarga qanday shaxsiy ma'lumotlarni raqamli va kim
@@ -3919,7 +3867,7 @@ uz:
                 \r \n\r \nUshbu darsning asosiy maqsadi o‘quvchilarni qo‘rqitish emas,
                 balki tajriba asosida o‘quvchilarni internetga ma'lumot chiqarishda
                 o‘zlarining nazorat darajalari yo‘qligini aniq anglashlariga olib
-                kelishdir.\n"
+                kelishdir."
             Publishing a Website:
               name: Publishing a Website
             Sources and Search Engines:
@@ -3961,14 +3909,12 @@ uz:
                 o‘rgangan narsalarini shaxsiy veb-sahifalarida qo‘llaydilar. \r \r"
             Styling Elements with CSS:
               name: Styling Elements with CSS
-              description_student: 'Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
-                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e''tibor
+              description_student: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
+                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini o‘rganishadi
                 va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar. So‘ng
                 o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish uchun
                 CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.
-
-'
               description_teacher: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
                 davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu darsni "Dunyo shirinliklari" haqidagi
@@ -3979,14 +3925,12 @@ uz:
                 xususiyatlari haqidagi bilimlarini qo‘llaydilar.
             Exploring Websites:
               name: Exploring Websites
-              description_student: 'Ushbu dars veb-sayt foydalanuvchilar uchun ham,
+              description_student: Ushbu dars veb-sayt foydalanuvchilar uchun ham,
                 sayt yaratuvchilar uchun ham xizmat qilishi mumkin bo‘lgan maqsadlarni
                 o‘z ichiga oladi. O‘quvchilar Qo‘shma Shtatlardagi eng ko‘p ishlatiladigan
                 veb-saytlarning bir nechtasini o‘rganadi va ushbu saytlarning har
                 biri foydalanuvchilar uchun qanday foydali ekanligini va uning sayt
                 yaratuvchilariga qanday xizmat qilishi mumkinligini muhokama qiladi.
-
-'
               description_teacher: Har qanday veb-saytning maqsadi, kimdir uni yaratganligi
                 va boshqalarning undan foydalanishining sababi bor. Ushbu darsda o‘quvchilar
                 veb-sayt foydalanuvchilar uchun ham, yaratuvchilar uchun ham xizmat
@@ -4051,16 +3995,16 @@ uz:
             Lists:
               name: Ro‘yxatlar
               description_student: This lesson introduces ordered and unordered lists
-                and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
-                class practices using the tags, then goes back to the personal web
-                page project to add a new HTML page that includes the new tags.
+                and the associated  <ul>, <ol>, and <li> HTML tags.  The class practices
+                using the tags, then goes back to the personal web page project to
+                add a new HTML page that includes the new tags.
               description_teacher: O‘quvchilar HTML da tartiblangan va tartibsiz ro‘yxatlar
-                bilan tanishadilar va &lt;ul&gt;, &lt;ol&gt; va &lt;li&gt; teglardan
-                foydalanadigan bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining
-                loyihalariga qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi
-                sahifaning ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari
-                o‘rgangan yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish
-                uchun HTML teglarini yozadilar.
+                bilan tanishadilar va <ul>, <ol> va <li> teglardan foydalanadigan
+                bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining loyihalariga
+                qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi sahifaning
+                ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari o‘rgangan
+                yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish uchun HTML
+                teglarini yozadilar.
             Intellectual Property and Images:
               name: Intellectual Property and Images
               description_student: Ushbu dars rasmlar, videolar yoki boshqalar tomonidan
@@ -4077,7 +4021,7 @@ uz:
                 Commons litsenziyalarini o‘rganadigan faoliyatga o‘tadilar. \r \n\r
                 \nVa nihoyat, har xil Creative Commons litsenziyalari cheklovlari
                 haqida umumiy tushuncha bilan o‘quvchilar veb-sahifalariga rasmlarni
-                &lt;img&gt; tegi yordamida joylashni o‘rganadilar.\n"
+                <img> tegi yordamida joylashni o‘rganadilar."
             Project - Multi-Page Websites:
               name: Project - Multi-Page Websites
               description_student: Ushbu dars veb-dasturchilarga sahifalarni bir veb-saytga
@@ -4089,7 +4033,7 @@ uz:
                 chiqqandan so‘ng, o‘quvchilar o‘zlari ishlagan veb-saytni nashr etishlari
                 mumkin. Ushbu darsda ular o‘zlari yaratgan avvalgi barcha sahifalarni
                 bitta loyihaga bog‘laydilar, yangi sahifa yaratadilar va butun saytni
-                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r\n"
+                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r"
             RGB Colors and Classes:
               name: RGB Colors and Classes
               description_student: Ushbu dars klasslar va maxsus ranglarni o‘z ichiga
@@ -4302,13 +4246,11 @@ uz:
                 barcha ilovalar uchun havolalar ro‘yxatini saqlab qoladi.
             Paper Prototypes:
               name: Paper Prototypes
-              description_student: 'Qog‘oz prototiplari yozib olish dasturchilarga
+              description_student: Qog‘oz prototiplari yozib olish dasturchilarga
                 kod yozish uchun ko‘p vaqt sarflashdan oldin g‘oyalarni tezda sinab
                 ko‘rishlariga imkon beradi. Ushbu darsda jamoalar o‘zlarining dastlabki
                 qog‘oz prototiplarini ko‘rsatish uchun ushbu ilovalar yordamida App
-                Lab da yaratilgan ba''zi bir dasturlarni o‘rganadilar.
-
-'
+                Lab da yaratilgan ba'zi bir dasturlarni o‘rganadilar.
               description_teacher: "Ilovalarni loyihalashtirishni boshlashdan oldin,
                 biz o‘quvchilarning umidlarini kuchaytirishga yordam berishimiz kerak.
                 O‘quvchilar bo‘lim oxirida App Labda ushbu dasturlarning prototipini
@@ -4321,7 +4263,7 @@ uz:
                 tanlashlari mumkin. U yerdan jamoalar qog‘oz prototiplarini ishlab
                 chiqish uchun 3x5 indeksli kartalarni ishlatishdan oldin o‘zlarining
                 dasturlarining asosiy funksiyalarini muhokama qilish uchun biroz vaqt
-                ajratadilar.\n\r\n"
+                ajratadilar.\n\r"
             Prototype Testing:
               name: Prototype Testing
               description_student: Ushbu darsda jamoalar o‘zlarining qog‘oz prototiplarini
@@ -4343,15 +4285,13 @@ uz:
                 berish uchun ba'zi savollar tayyorlangandan keyin test yakunlandi.
             Digital Design:
               name: Digital Design
-              description_student: 'Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
+              description_student: Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
                 o‘tgan va fikr-mulohazalarni to‘plagan jamoalar endi o‘zlarining dasturlarining
                 navbatdagi takrorlanishini yaratish uchun App Labga o‘tadilar. Drag-and-drop
                 (sichqoncha yordamida surib siljitib-joylash) dizayn rejimidan foydalangan
-                holda, har bir jamoa a''zosi o‘zlarining dasturlarining kamida bitta
+                holda, har bir jamoa a'zosi o‘zlarining dasturlarining kamida bitta
                 sahifasini yaratadilar va testlarning oldingi bosqichida olingan fikr-mulohazalarga
                 javob berishadi.
-
-'
               description_teacher: Having collaboratively developed a paper prototype
                 for their apps, groups now divide and conquer to begin work on an
                 interactive digital version based on the paper prototype. Using the
@@ -5243,12 +5183,10 @@ uz:
         applab-1hour:
           title: App Lab 1 Hour Workshop
           description_audience: Middle and High School Students
-          description: 'Ushbu seminar o‘quvchilarga 1 soat ichida amaliy laboratoriya
-            haqida asosiy ma''lumot berish uchun mo‘ljallangan. O‘quvchilar kompyuter
-            fanlari bo‘yicha turli xil ma''lumotlarga ega bo‘lishlari va biror narsa
+          description: Ushbu seminar o‘quvchilarga 1 soat ichida amaliy laboratoriya
+            haqida asosiy ma'lumot berish uchun mo‘ljallangan. O‘quvchilar kompyuter
+            fanlari bo‘yicha turli xil ma'lumotlarga ega bo‘lishlari va biror narsa
             yaratishda zavqlanishlari kerak.
-
-'
           lessons:
             App Lab Workshop:
               name: App Lab Workshop
@@ -5264,12 +5202,10 @@ uz:
               name: Room Escape
             Extra:
               name: Extra
-          student_description: 'Ushbu seminar o‘quvchilarga 1 soat ichida amaliy laboratoriya
-            haqida asosiy ma''lumot berish uchun mo‘ljallangan. O‘quvchilar kompyuter
-            fanlari bo‘yicha turli xil ma''lumotlarga ega bo‘lishlari va biror narsa
+          student_description: Ushbu seminar o‘quvchilarga 1 soat ichida amaliy laboratoriya
+            haqida asosiy ma'lumot berish uchun mo‘ljallangan. O‘quvchilar kompyuter
+            fanlari bo‘yicha turli xil ma'lumotlarga ega bo‘lishlari va biror narsa
             yaratishda zavqlanishlari kerak.
-
-'
         applab-2hour:
           title: App Lab 2 Hour Workshop
           description_audience: Middle and High School Students
@@ -5446,13 +5382,11 @@ uz:
                 yozadilar.*
             Lists and For Loops:
               name: Lists and For Loops
-              description_student: '_lists_  (ro‘yxat) va _for loop_ (for sikl) larni
-                birlashtirish, qancha vaqt bo‘lishidan qat''i nazar, ro‘yxatning har
-                bir elementiga ta''sir qiladigan kod yozishga imkon beradi. Sinf ushbu
+              description_student: _lists_  (ro‘yxat) va _for loop_ (for sikl) larni
+                birlashtirish, qancha vaqt bo‘lishidan qat'i nazar, ro‘yxatning har
+                bir elementiga ta'sir qiladigan kod yozishga imkon beradi. Sinf ushbu
                 tuzilmani ro‘yxatdagi barcha elementlarni qayta ishlaydigan, rangli
                 LEDlar ro‘yxatini o‘z ichiga olgan dasturlarni yozishda foydalanadi.
-
-'
               description_teacher: Massivdagi barcha elementlarni takrorlash uchun
                 _for loop_ dan foydalanish ko'pgina dasturlash tillarida haqiqatan
                 ham foydali tuzilma hisoblanadi. Ushbu darsda talabalar ushbu namunani
@@ -5650,13 +5584,11 @@ uz:
                 turish va ijro etish uchun massivlardan foydalanadilar.
             Arrays and For Loops:
               name: Arrays and For Loops
-              description_student: '_lists_  (ro‘yxat) va _for loop_ (for sikl) larni
-                birlashtirish, qancha vaqt bo‘lishidan qat''i nazar, ro‘yxatning har
-                bir elementiga ta''sir qiladigan kod yozishga imkon beradi. Sinf ushbu
+              description_student: _lists_  (ro‘yxat) va _for loop_ (for sikl) larni
+                birlashtirish, qancha vaqt bo‘lishidan qat'i nazar, ro‘yxatning har
+                bir elementiga ta'sir qiladigan kod yozishga imkon beradi. Sinf ushbu
                 tuzilmani ro‘yxatdagi barcha elementlarni qayta ishlaydigan, rangli
                 LEDlar ro‘yxatini o‘z ichiga olgan dasturlarni yozishda foydalanadi.
-
-'
               description_teacher: Massivdagi barcha elementlarni takrorlash uchun
                 _for loop_ dan foydalanish ko'pgina dasturlash tillarida haqiqatan
                 ham foydali tuzilma hisoblanadi. Ushbu darsda talabalar kodni takrorlash
@@ -5874,13 +5806,11 @@ uz:
                 turish va ijro etish uchun massivlardan foydalanadilar.
             Arrays and For Loops_:
               name: Arrays and For Loops
-              description_student: '_lists_  (ro‘yxat) va _for loop_ (for sikl) larni
-                birlashtirish, qancha vaqt bo‘lishidan qat''i nazar, ro‘yxatning har
-                bir elementiga ta''sir qiladigan kod yozishga imkon beradi. Sinf ushbu
+              description_student: _lists_  (ro‘yxat) va _for loop_ (for sikl) larni
+                birlashtirish, qancha vaqt bo‘lishidan qat'i nazar, ro‘yxatning har
+                bir elementiga ta'sir qiladigan kod yozishga imkon beradi. Sinf ushbu
                 tuzilmani ro‘yxatdagi barcha elementlarni qayta ishlaydigan, rangli
                 LEDlar ro‘yxatini o‘z ichiga olgan dasturlarni yozishda foydalanadi.
-
-'
               description_teacher: Massivdagi barcha elementlarni takrorlash uchun
                 _for loop_ dan foydalanish ko'pgina dasturlash tillarida haqiqatan
                 ham foydali tuzilma hisoblanadi. Ushbu darsda talabalar kodni takrorlash
@@ -6936,12 +6866,10 @@ uz:
           description_short: C kursidan tushunchalarni tezkor o‘rganib oling, so‘ngra
             algoritmlar, ichma-ich sikllar, shartli bayonotlar va boshqalar bilan
             o‘rganishni davom eting.
-          description: 'Algoritmlarni, jamlangan sikllarni, while siklini, shart operatorlari
+          description: Algoritmlarni, jamlangan sikllarni, while siklini, shart operatorlari
             va hodisalarni o‘z ichiga olgan yangi kodlash tushunchalarini o‘rganing.
             Taqdim qilishingiz mumkin bo‘lgan o‘zingizning o‘yiningiz yoki hikoyangizni
-            yaratishdan oldin raqamli fuqarolik haqida ma''lumot oling.
-
-'
+            yaratishdan oldin raqamli fuqarolik haqida ma'lumot oling.
           lessons:
             Introduction:
               name: Onlayn boshqotirmalar bilan tanishish.
@@ -7029,15 +6957,15 @@ uz:
               name: 'If/Else: Kartalar bilan shartli bayonotlar'
               description_student: Ma’lum bir shartlar bajarilgandagina bal yig‘ishingiz
                 mumkin bo‘lgan o‘yin o‘ynashning vaqti!
-              description_teacher: "Bu dars biron maxsus ma’lumotga dastur tuzish
-                uchun shartli bayonotlardan qanday foydalanishni namoyish qiladi.
-                Biz biron dastur yozayotganimizda har doim ham bizda kerakli barcha
-                ma’lomotlar bo‘lavermaydi. Ba’zida siz biron holatda hattoki siz kodingiz
-                ishlaganda qaysi holat to‘g‘ri bo‘lishini bilmasangiz ham boshqa biriga
-                qaraganda boshqacharoq nimadir qilishni xohlaysiz. Mana shu joyda
-                shartli bayonotlar ishlatiladi. Shartli bayonotlar komputerga kodingiz
-                ishlatilganda doimo to‘g‘ri bo‘ladigan ma’lumotga asoslanib, qaror
-                qabul qilish imkonini beradi.\n\n"
+              description_teacher: Bu dars biron maxsus ma’lumotga dastur tuzish uchun
+                shartli bayonotlardan qanday foydalanishni namoyish qiladi. Biz biron
+                dastur yozayotganimizda har doim ham bizda kerakli barcha ma’lomotlar
+                bo‘lavermaydi. Ba’zida siz biron holatda hattoki siz kodingiz ishlaganda
+                qaysi holat to‘g‘ri bo‘lishini bilmasangiz ham boshqa biriga qaraganda
+                boshqacharoq nimadir qilishni xohlaysiz. Mana shu joyda shartli bayonotlar
+                ishlatiladi. Shartli bayonotlar komputerga kodingiz ishlatilganda
+                doimo to‘g‘ri bo‘ladigan ma’lumotga asoslanib, qaror qabul qilish
+                imkonini beradi.
             Conditionals in Bee:
               name: Conditionals in Bee
               description_student: 'Siz hozir shartli boyonotlarni tushunib oldingiz,
@@ -7127,12 +7055,10 @@ uz:
                 debug qilishni mashq qilishadi. Talabalar boshqotirmalarni oddiy algoritmlar,
                 sikllar va ichma-ich sikllar bilan to‘g‘rilash uchun kodni o‘qish
                 va o‘zgartirishni mashq qilib ko‘rishadi.
-          student_description: 'Algoritmlarni, jamlangan sikllarni, while siklini,
+          student_description: Algoritmlarni, jamlangan sikllarni, while siklini,
             shart operatorlari va hodisalarni o‘z ichiga olgan yangi kodlash tushunchalarini
             o‘rganing. Taqdim qilishingiz mumkin bo‘lgan o‘zingizning o‘yiningiz yoki
-            hikoyangizni yaratishdan oldin raqamli fuqarolik haqida ma''lumot oling.
-
-'
+            hikoyangizni yaratishdan oldin raqamli fuqarolik haqida ma'lumot oling.
           name: coursed-2017
         coursee-2017:
           title: Kurs E
@@ -8871,7 +8797,7 @@ uz:
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_short: Temporary staging ground for Oct. changes to csp3
           description: "This is a replica of live levels in /s/csp3-2017 with new
-            and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
+            and modified stages added.  DO NOT EDIT LIVE LEVELS.\\\r"
           lesson_groups:
             cspAssessment:
               display_name: Chapter Assessment
@@ -8899,7 +8825,7 @@ uz:
             Unit 3 Chapter 1 Assessment:
               name: Unit 3 Chapter 1 Assessment
           student_description: "This is a replica of live levels in /s/csp3-2017 with
-            new and modified stages added.  DO NOT EDIT LIVE LEVELS.\r\n"
+            new and modified stages added.  DO NOT EDIT LIVE LEVELS.\\\r"
         pwc:
           title: PwC's Access Your Potential curriculum
           description: PwC da biz barcha o‘quvchilar ertangi kunning yetakchilari
@@ -9531,7 +9457,7 @@ uz:
                 loop with random numbers to manipulate some simple animations with
                 dots and then with sprites. Afterwards, everyone uses what they learned
                 to update the sprite scene from the previous lesson.
-              description_teacher: 'Ushbu darsda o‘quvchilar Game Labda dasturlashning
+              description_teacher: Ushbu darsda o‘quvchilar Game Labda dasturlashning
                 asosiy paradigmalaridan biri bo‘lgan chizish sikli bilan tanishadilar.
                 Darsni boshlash uchun o‘quvchilar bir nechta haqiqiy flipbukni (harakatlanuvchi
                 rasmlar ketma-ketligi kitobchasini) ko‘rib chiqishadi, chunki turli
@@ -9539,12 +9465,10 @@ uz:
                 yaratadi. So‘ngra o‘quvchilar videoni tomosha qilishadi, qanday qilib
                 Game Labdagi chizish sikli o‘z dasturlarida xuddi shunday taassurotni
                 yaratishga yordam berishini ko‘rib chiqishadi. O‘quvchilar chizilgan
-                siklni tasodifiy sonlar bilan birlashtirib, ba''zi oddiy animatsiyalarni
+                siklni tasodifiy sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni
                 nuqta bilan, so‘ngra spraytlar bilan boshqaradilar. Dars oxirida o‘quvchilar
                 o‘tgan darsdan o‘zlarining sprayt sahnalarini yangilash uchun o‘rganganlaridan
                 foydalanadilar.
-
-'
             The Counter Pattern Unplugged:
               name: The Counter Pattern Unplugged
               description_student: Ushbu oflayn dars o‘zgaruvchilarning asosiy mohiyatini
@@ -9675,17 +9599,15 @@ uz:
                 o‘rganadilar. Oxirgi darajalarda sinf bu harakatlarni bitta spraytni
                 jonlantirish va boshqarish uchun birlashtiradi va oddiy o‘yinni quradi,
                 unda belgi uchib yurib, tangalarni yig‘adi.
-              description_teacher: 'O‘quvchilar spraytlarning tezlik xususiyatlarini
+              description_teacher: O‘quvchilar spraytlarning tezlik xususiyatlarini
                 hisoblagich naqsh bilan birlashtirib, murakkabroq sprayt harakatini
-                yaratishni o‘rganadilar. Ba''zi o‘quvchilar gravitatsiya kuchini simulyatsiya
+                yaratishni o‘rganadilar. Ba'zi o‘quvchilar gravitatsiya kuchini simulyatsiya
                 qilishni, spraytni sakrata olish va sprayt chapga yoki o‘ngga burilishga
                 ruxsat berishni o‘rganadilar. Code Studio progressining so‘nggi bosqichlarida
                 o‘quvchilar ushbu harakatlarni bitta spraytni jonlantirish va boshqarish
                 uchun birlashtiradilar hamda oddiygina o‘yin yaratadilar, o‘yinda
                 belgi uchib yurib, tanga to‘playdi. O‘quvchilar so‘nggi bosqichda
                 o‘yinga o‘zlarining qo‘shimchalarini kiritishlari tavsiya etiladi.
-
-'
             Collisions:
               name: Collisions
               description_student: The class programs their sprites to interact in
@@ -9769,7 +9691,7 @@ uz:
                 yoki birgalikda ishlash orqali o‘quvchilar ishlarni rejalashtiradi,
                 rivojlantiradi va o‘yinlar haqida fikr bildiradi. O‘zaro fikr-mulohazalarni
                 kiritgandan so‘ng, sinf yakunlagan o‘yinlarni baham ko‘radi.
-              description_teacher: 'O‘quvchilar o‘zlarining loyihalarini boshqarish
+              description_teacher: O‘quvchilar o‘zlarining loyihalarini boshqarish
                 uchun avvalgi ikki darsdagi loyiha qo‘llanmasidan foydalanib o‘z o‘yinlarini
                 rejalashtirishadi va qurishadi. Yakka tartibda yoki birgalikda ishlaganda
                 o‘quvchilar avval namunaviy o‘yinlar to‘plamidan ilhomlanib, qurmoqchi
@@ -9784,8 +9706,6 @@ uz:
                 Dars oxirida o‘quvchilar tugatilgan o‘yinlarini sinfdoshlari bilan
                 bo‘lishadilar. Ushbu loyiha bir nechta mashg‘ulotlarni o‘z ichiga
                 oladi va 3-5 ta darslar oralig‘ida bemalol o‘tilishi mumkin.
-
-'
             CS Discoveries End of Semester Survey:
               name: CS Discoveries End of Semester Survey
             CS Discoveries Post-Course Survey:
@@ -9816,14 +9736,12 @@ uz:
           lessons:
             Exploring Websites:
               name: Exploring Websites
-              description_student: 'Ushbu dars veb-sayt foydalanuvchilar uchun ham,
+              description_student: Ushbu dars veb-sayt foydalanuvchilar uchun ham,
                 sayt yaratuvchilar uchun ham xizmat qilishi mumkin bo‘lgan maqsadlarni
                 o‘z ichiga oladi. O‘quvchilar Qo‘shma Shtatlardagi eng ko‘p ishlatiladigan
                 veb-saytlarning bir nechtasini o‘rganadi va ushbu saytlarning har
                 biri foydalanuvchilar uchun qanday foydali ekanligini va uning sayt
                 yaratuvchilariga qanday xizmat qilishi mumkinligini muhokama qiladi.
-
-'
               description_teacher: Har qanday veb-saytning maqsadi, kimdir uni yaratganligi
                 va boshqalarning undan foydalanishining sababi bor. Ushbu darsda o‘quvchilar
                 veb-sayt foydalanuvchilar uchun ham, yaratuvchilar uchun ham xizmat
@@ -9887,17 +9805,15 @@ uz:
                 o‘quvchilar butun bo‘lim davomida ishlaydigan loyihani boshlaydilar.
             Digital Footprint:
               name: Digital Footprint
-              description_student: 'Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
+              description_student: Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
                 orqaga surilib, odamlar raqamli ravishda almashishni tanlagan shaxsiy
-                ma''lumotlar haqida gaplashadi. Sinf qaysi turdagi ma''lumotlarni
-                boshqa odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama
-                qilish bilan boshlanadi, so‘ngra shaxsiy ma''lumotlarning qanday turlari
-                atayin yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun
-                bir nechta namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va
-                nihoyat, sinf ma''lumotni Internetga qo‘yishda rioya qilish uchun
-                bir qator ko‘rsatmalarni ishlab chiqadi.
-
-'
+                ma'lumotlar haqida gaplashadi. Sinf qaysi turdagi ma'lumotlarni boshqa
+                odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama qilish
+                bilan boshlanadi, so‘ngra shaxsiy ma'lumotlarning qanday turlari atayin
+                yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun bir nechta
+                namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va nihoyat,
+                sinf ma'lumotni Internetga qo‘yishda rioya qilish uchun bir qator
+                ko‘rsatmalarni ishlab chiqadi.
               description_teacher: "Yaqinda o‘quvchilar o‘zlarining shaxsiy veb-saytlariga
                 kiradigan haqiqiy tarkib haqida bir oz vaqt sarflaganliklari sababli,
                 ushbu dars o‘quvchilarga qanday shaxsiy ma'lumotlarni raqamli va kim
@@ -9915,20 +9831,20 @@ uz:
                 \r \n\r \nUshbu darsning asosiy maqsadi o‘quvchilarni qo‘rqitish emas,
                 balki tajriba asosida o‘quvchilarni internetga ma'lumot chiqarishda
                 o‘zlarining nazorat darajalari yo‘qligini aniq anglashlariga olib
-                kelishdir.\n"
+                kelishdir."
             Lists:
               name: Ro‘yxatlar
               description_student: This lesson introduces ordered and unordered lists
-                and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
-                class practices using the tags, then goes back to the personal web
-                page project to add a new HTML page that includes the new tags.
+                and the associated  <ul>, <ol>, and <li> HTML tags.  The class practices
+                using the tags, then goes back to the personal web page project to
+                add a new HTML page that includes the new tags.
               description_teacher: O‘quvchilar HTML da tartiblangan va tartibsiz ro‘yxatlar
-                bilan tanishadilar va &lt;ul&gt;, &lt;ol&gt; va &lt;li&gt; teglardan
-                foydalanadigan bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining
-                loyihalariga qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi
-                sahifaning ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari
-                o‘rgangan yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish
-                uchun HTML teglarini yozadilar.
+                bilan tanishadilar va <ul>, <ol> va <li> teglardan foydalanadigan
+                bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining loyihalariga
+                qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi sahifaning
+                ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari o‘rgangan
+                yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish uchun HTML
+                teglarini yozadilar.
             Intellectual Property and Images:
               name: Intellectual Property and Images
               description_student: Ushbu dars rasmlar, videolar yoki boshqalar tomonidan
@@ -9945,16 +9861,14 @@ uz:
                 Commons litsenziyalarini o‘rganadigan faoliyatga o‘tadilar. \r \n\r
                 \nVa nihoyat, har xil Creative Commons litsenziyalari cheklovlari
                 haqida umumiy tushuncha bilan o‘quvchilar veb-sahifalariga rasmlarni
-                &lt;img&gt; tegi yordamida joylashni o‘rganadilar.\n"
+                <img> tegi yordamida joylashni o‘rganadilar."
             Clean Code and Debugging:
               name: Clean Code and Debugging
-              description_student: 'Ushbu darsda HTMLda veb-sahifalarni loyihalashda
+              description_student: Ushbu darsda HTMLda veb-sahifalarni loyihalashda
                 yuzaga keladigan keng tarqalgan masalalar yoritilgan. Sinf Code Studioda
                 topilgan tobora murakkablashib borayotgan veb-sahifalar ketma-ketligidagi
                 xatolarni to‘g‘rilaydi va sharhlar, bo‘sh joy va matn oralig‘i veb-sahifalarni
                 o‘qishni osonlashtiruvchi vosita sifatida ahamiyatini o‘rganadi.
-
-'
               description_teacher: Students deal with common issues that arise when
                 designing web pages in HTML. Students will correct errors in a sequence
                 of increasingly complex web pages. In the process they will learn
@@ -9973,7 +9887,7 @@ uz:
                 chiqqandan so‘ng, o‘quvchilar o‘zlari ishlagan veb-saytni nashr etishlari
                 mumkin. Ushbu darsda ular o‘zlari yaratgan avvalgi barcha sahifalarni
                 bitta loyihaga bog‘laydilar, yangi sahifa yaratadilar va butun saytni
-                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r\n"
+                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r"
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: Ushbu dars CSS ni sahifadagi elementlarni uslublash
@@ -9991,14 +9905,12 @@ uz:
                 o‘rgangan narsalarini shaxsiy veb-sahifalarida qo‘llaydilar. \r \r"
             Styling Elements with CSS:
               name: Styling Elements with CSS
-              description_student: 'Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
-                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e''tibor
+              description_student: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
+                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini o‘rganishadi
                 va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar. So‘ng
                 o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish uchun
                 CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.
-
-'
               description_teacher: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
                 davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu darsni "Dunyo shirinliklari" haqidagi
@@ -11238,16 +11150,14 @@ uz:
             natijalarini o‘rganadi.
         csd1-2018:
           title: CSD Unit 1 - Problem Solving ('18-'19)
-          description: 'Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
+          description: Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
             kompyuter savodxonligi sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi
             hisoblanadi. Bir qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni
             yechish uchun siz muammolarni yechish jarayonidan foydalanishni mashq
             qilasiz. Keyinchalik, odamlarga muammolarni yechishda yordam beradigan
-            kompyuterlarning qanday ma''lumotlarni kiritish, chiqarish, saqlash va
+            kompyuterlarning qanday ma'lumotlarni kiritish, chiqarish, saqlash va
             qayta ishlashini o‘rganasiz. Unit siz tanlagan muammoni yechishga yordam
             beradigan dasturni ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
           description_short: "  Learn how humans work with computers to solve problems."
           lesson_groups:
             cspSurvey:
@@ -11266,18 +11176,16 @@ uz:
                 the lesson groups reflect on their experiences with the activity and
                 make connections to the types of problem solving they will be doing
                 for the rest of the course. '
-              description_teacher: 'Ushbu darsda o‘quvchilar guruhlarga bo‘linib,
-                iloji boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy
-                zarqog‘oz qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash
-                uchun ikki roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani
-                ushlab turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
+              description_teacher: Ushbu darsda o‘quvchilar guruhlarga bo‘linib, iloji
+                boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy zarqog‘oz
+                qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash uchun ikki
+                roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani ushlab
+                turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
                 keyingi darslarda batafsilroq tanishtiradigan muammolarni yechish
                 jarayonining turli bosqichlarini oldindan belgilab beradi. Dars oxirida
                 o‘quvchilar o‘zlarining faoliyati bilan bog‘liq tajribalarini aks
                 ettiradilar va darsning qolgan qismida bajaradigan muammolarni hal
                 qilish turlari bilan bog‘lanishadi.
-
-'
             The Problem Solving Process:
               name: Muammoni yechish jarayoni
               description_student: Ushbu darsda o‘quvchilar yil davomida foydalanadigan,
@@ -11322,7 +11230,7 @@ uz:
                 yaxshiroq aniqlashda yordam bering, chunki bu ko‘pincha eng muhim
                 qadamdir.\r\n\r\nUshbu dars, ehtimol, 2 dars soati yoki undan ko‘proq
                 vaqtni oladi. Birinchi ikkita muammo bitta dars soatiga to‘g‘ri kelishi
-                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi.\n"
+                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi."
             What is a Computer?:
               name: Kompyuter nima?
               description_student: Ushbu darsda o‘quvchilar kompyuterning oldindan
@@ -11353,21 +11261,19 @@ uz:
                 yakunlash uchun sinf kompyuterda amalga oshiriladigan umumiy faoliyatni
                 tekshiradi va jadvalda ushbu faoliyat uchun ishlatiladigan kirish
                 va chiqishlarni tanlaydi.
-              description_teacher: 'Bunda sinf o‘quvchilari kirish va chiqishning
-                qaysi turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
+              description_teacher: Bunda sinf o‘quvchilari kirish va chiqishning qaysi
+                turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
                 ko‘rib chiqadilar. Guruhlar hisoblash moslamasiga biriktirilgan va
-                o‘qituvchi tomonidan kiritilgan va chiqadigan ta''rifi asosida ularning
+                o‘qituvchi tomonidan kiritilgan va chiqadigan ta'rifi asosida ularning
                 qurilmasining kirish va chiqishlarini ro‘yxatlashga asoslangan. Ilgari
                 mashg‘ulotlarda o‘quvchilar ko‘proq aniq jismoniy kirish va natijalarga
-                e''tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
+                e'tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
                 yoki chiqish sifatida ekran), ammo keyinchalik munozaralar o‘quvchilarni
                 unchalik aniq bo‘lmagan misollarni ko‘rib chiqishga undaydi (masalan,
                 sensorli ekran ham kirish va chiqish, yoki Internet ham kirish, ham
                 chiqish sifatida xizmat qilishi mumkin). Dars davomida o‘qituvchi
                 xonaning old qismidagi jadvalda aniqlangan kirish va chiqishlarni
                 qayd etadi.
-
-'
             Processing:
               name: Processing
               description_student: Ushbu dars kompyuter ta'rifi doirasida aytib o‘tilgan
@@ -11394,19 +11300,17 @@ uz:
                 ishlab chiqish va almashish bilan o‘tkazadi, bunda har qanday algoritm
                 uchun qanchalik saqlash kerakligi ta'kidlanadi. Dars ma'lumotni qayta
                 ishlash paytida saqlashning muhimligini muhokama qilish bilan yakunlanadi.
-              description_teacher: 'O‘quvchilar kompyuterning Input-Storage-Processing-Output
+              description_teacher: O‘quvchilar kompyuterning Input-Storage-Processing-Output
                 modeli asosida saqlash muhimligini o‘rganadilar. Isitish jarayoni
                 o‘quvchilarni ilgari kompyuterlar saqlagan hujjatlar, fotosuratlar
-                yoki videofilmlar kabi ko‘rgan ma''lumotlarini aks ettirishni so‘raydi.
-                Oflayn asosiy mashg‘ulot o‘quvchilarga pastki qismdagi ma''lum kartalarni
+                yoki videofilmlar kabi ko‘rgan ma'lumotlarini aks ettirishni so‘raydi.
+                Oflayn asosiy mashg‘ulot o‘quvchilarga pastki qismdagi ma'lum kartalarni
                 qidirishda kichik ildiz kartalarini qayta ishlash algoritmini ishlab
                 chiqishga majbur qiladi. O‘quvchilarning kartalarni qanday ko‘chirishi
                 mumkinligi to‘g‘risidagi cheklovlar, ular kemani qayta ishlash paytida
                 ham saqlashning muhimligini hisobga olishga majbur qiladi. Dars o‘quvchilar
-                ushbu darsda ko‘rgan saqlashning ikki turi va ma''lumotni qayta ishlash
+                ushbu darsda ko‘rgan saqlashning ikki turi va ma'lumotni qayta ishlash
                 paytida saqlashning ahamiyatini muhokama qilish bilan yakunlanadi.
-
-'
             Apps and Problem Solving:
               name: Apps and Problem Solving
               description_student: 'Ushbu dars o‘quvchilarga mos va tanish bo‘lgan
@@ -11460,16 +11364,14 @@ uz:
                 turns those inputs into the desired output, and what information they
                 would want to store for later. The class concludes with a discussion
                 that connects the lesson to apps students are more familiar with. '
-          student_description: 'Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
+          student_description: Unit 1 bu muammolarni yechishning keng doirasida yaratilgan,
             kompyuter savodxonligi sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi
             hisoblanadi. Bir qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni
             yechish uchun siz muammolarni yechish jarayonidan foydalanishni mashq
             qilasiz. Keyinchalik, odamlarga muammolarni yechishda yordam beradigan
-            kompyuterlarning qanday ma''lumotlarni kiritish, chiqarish, saqlash va
+            kompyuterlarning qanday ma'lumotlarni kiritish, chiqarish, saqlash va
             qayta ishlashini o‘rganasiz. Unit siz tanlagan muammoni yechishga yordam
             beradigan dasturni ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
         csd4-2018:
           title: CSD Unit 4 - The Design Process ('18-'19)
           description: Unit 4 introduces the broader social impacts of computing.
@@ -11646,13 +11548,11 @@ uz:
                 barcha ilovalar uchun havolalar ro‘yxatini saqlab qoladi.
             Paper Prototypes:
               name: Paper Prototypes
-              description_student: 'Qog‘oz prototiplari yozib olish dasturchilarga
+              description_student: Qog‘oz prototiplari yozib olish dasturchilarga
                 kod yozish uchun ko‘p vaqt sarflashdan oldin g‘oyalarni tezda sinab
                 ko‘rishlariga imkon beradi. Ushbu darsda jamoalar o‘zlarining dastlabki
                 qog‘oz prototiplarini ko‘rsatish uchun ushbu ilovalar yordamida App
-                Lab da yaratilgan ba''zi bir dasturlarni o‘rganadilar.
-
-'
+                Lab da yaratilgan ba'zi bir dasturlarni o‘rganadilar.
               description_teacher: "Ilovalarni loyihalashtirishni boshlashdan oldin,
                 biz o‘quvchilarning umidlarini kuchaytirishga yordam berishimiz kerak.
                 O‘quvchilar bo‘lim oxirida App Labda ushbu dasturlarning prototipini
@@ -11665,7 +11565,7 @@ uz:
                 tanlashlari mumkin. U yerdan jamoalar qog‘oz prototiplarini ishlab
                 chiqish uchun 3x5 indeksli kartalarni ishlatishdan oldin o‘zlarining
                 dasturlarining asosiy funksiyalarini muhokama qilish uchun biroz vaqt
-                ajratadilar.\n\r\n"
+                ajratadilar.\n\r"
             Prototype Testing:
               name: Prototype Testing
               description_student: Ushbu darsda jamoalar o‘zlarining qog‘oz prototiplarini
@@ -11687,15 +11587,13 @@ uz:
                 berish uchun ba'zi savollar tayyorlangandan keyin test yakunlandi.
             Digital Design:
               name: Digital Design
-              description_student: 'Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
+              description_student: Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
                 o‘tgan va fikr-mulohazalarni to‘plagan jamoalar endi o‘zlarining dasturlarining
                 navbatdagi takrorlanishini yaratish uchun App Labga o‘tadilar. Drag-and-drop
                 (sichqoncha yordamida surib siljitib-joylash) dizayn rejimidan foydalangan
-                holda, har bir jamoa a''zosi o‘zlarining dasturlarining kamida bitta
+                holda, har bir jamoa a'zosi o‘zlarining dasturlarining kamida bitta
                 sahifasini yaratadilar va testlarning oldingi bosqichida olingan fikr-mulohazalarga
                 javob berishadi.
-
-'
               description_teacher: Having collaboratively developed a paper prototype
                 for their apps, groups now divide and conquer to begin work on an
                 interactive digital version based on the paper prototype. Using the
@@ -12436,7 +12334,7 @@ uz:
             ma'lumotlarni to‘plash va ulardan foydalanishga imkon beradigan bir qator
             vositalar mavjud. Ikkinchi bobda ushbu vositalar qanday ishlashi haqida
             umumiy ma'lumot, ushbu vositalar yordamida qurilishi mumkin bo‘lgan loyihalar
-            namunalari va yakuniy loyihani qurish va taqdim etish uchun joy ajratilgan.\n"
+            namunalari va yakuniy loyihani qurish va taqdim etish uchun joy ajratilgan."
           description_short: Learn to collect and use data in App Lab apps.
           lesson_groups:
             csp_postap_1:
@@ -12500,7 +12398,7 @@ uz:
             imkon beradigan bir qator vositalar mavjud. Ikkinchi bobda ushbu vositalar
             qanday ishlashi haqida umumiy ma'lumot, ushbu vositalar yordamida qurilishi
             mumkin bo‘lgan loyihalar namunalari va yakuniy loyihani qurish va taqdim
-            etish uchun joy ajratilgan.\n"
+            etish uchun joy ajratilgan."
         spritelab:
           title: Introduction to Sprite Lab (PILOT)
           description_audience: Course E/F Students
@@ -13037,10 +12935,8 @@ uz:
         csp-apprentice-18:
           title: CS Principles Apprentice Reflections 2018-2019
           description_audience: CS Principles Facilitators in Training 2018-2019
-          description_short: 'Malaka oshiruvchi o‘qituvchilar uchun CS Tamoyillari
+          description_short: Malaka oshiruvchi o‘qituvchilar uchun CS Tamoyillari
             kursi uchun o‘quvchilarni aks ettiruvchi materiallar
-
-'
           description: This is the set of apprentice reflections for Code.org CS Principles
             facilitators in training during their 5-day summer workshop. Here you
             will find reflection prompts for each day of your in-person 5-day summer
@@ -14199,8 +14095,8 @@ uz:
               name: Raqamli Ulashish
             Simon Says:
               name: Simon so'zlaydi
-              description_student: "O‘ynang va natijaga erishish uchun qanday buyruqlar
-                kerakligini o‘ylab ko‘ring.\n\n"
+              description_student: O‘ynang va natijaga erishish uchun qanday buyruqlar
+                kerakligini o‘ylab ko‘ring.
               description_teacher: Ushbu darsda o‘quvchilar to‘g‘ri natija berish
                 uchun qanday buyruqlar berish kerakligi haqida fikr yuritishga mo‘ljallangan
                 o‘yin o‘ynaydilar. Bu ularga kelgusi darslarda Sprite Labga osonroq
@@ -14356,17 +14252,15 @@ uz:
             ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
         csd1-2019:
           title: CSD Unit 1 - Problem Solving and Computing ('19-'20)
-          description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
           description_short: "  Learn how humans work with computers to solve problems."
           lesson_groups:
             cspSurvey:
@@ -14385,18 +14279,16 @@ uz:
                 the lesson groups reflect on their experiences with the activity and
                 make connections to the types of problem solving they will be doing
                 for the rest of the course. '
-              description_teacher: 'Ushbu darsda o‘quvchilar guruhlarga bo‘linib,
-                iloji boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy
-                zarqog‘oz qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash
-                uchun ikki roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani
-                ushlab turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
+              description_teacher: Ushbu darsda o‘quvchilar guruhlarga bo‘linib, iloji
+                boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy zarqog‘oz
+                qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash uchun ikki
+                roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani ushlab
+                turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
                 keyingi darslarda batafsilroq tanishtiradigan muammolarni yechish
                 jarayonining turli bosqichlarini oldindan belgilab beradi. Dars oxirida
                 o‘quvchilar o‘zlarining faoliyati bilan bog‘liq tajribalarini aks
                 ettiradilar va darsning qolgan qismida bajaradigan muammolarni hal
                 qilish turlari bilan bog‘lanishadi.
-
-'
             The Problem Solving Process:
               name: Muammoni yechish jarayoni
               description_student: Ushbu darsda o‘quvchilar yil davomida foydalanadigan,
@@ -14441,7 +14333,7 @@ uz:
                 yaxshiroq aniqlashda yordam bering, chunki bu ko‘pincha eng muhim
                 qadamdir.\r\n\r\nUshbu dars, ehtimol, 2 dars soati yoki undan ko‘proq
                 vaqtni oladi. Birinchi ikkita muammo bitta dars soatiga to‘g‘ri kelishi
-                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi.\n"
+                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi."
             What is a Computer?:
               name: Kompyuter nima?
               description_student: Ushbu darsda o‘quvchilar kompyuterning oldindan
@@ -14472,21 +14364,19 @@ uz:
                 yakunlash uchun sinf kompyuterda amalga oshiriladigan umumiy faoliyatni
                 tekshiradi va jadvalda ushbu faoliyat uchun ishlatiladigan kirish
                 va chiqishlarni tanlaydi.
-              description_teacher: 'Bunda sinf o‘quvchilari kirish va chiqishning
-                qaysi turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
+              description_teacher: Bunda sinf o‘quvchilari kirish va chiqishning qaysi
+                turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
                 ko‘rib chiqadilar. Guruhlar hisoblash moslamasiga biriktirilgan va
-                o‘qituvchi tomonidan kiritilgan va chiqadigan ta''rifi asosida ularning
+                o‘qituvchi tomonidan kiritilgan va chiqadigan ta'rifi asosida ularning
                 qurilmasining kirish va chiqishlarini ro‘yxatlashga asoslangan. Ilgari
                 mashg‘ulotlarda o‘quvchilar ko‘proq aniq jismoniy kirish va natijalarga
-                e''tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
+                e'tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
                 yoki chiqish sifatida ekran), ammo keyinchalik munozaralar o‘quvchilarni
                 unchalik aniq bo‘lmagan misollarni ko‘rib chiqishga undaydi (masalan,
                 sensorli ekran ham kirish va chiqish, yoki Internet ham kirish, ham
                 chiqish sifatida xizmat qilishi mumkin). Dars davomida o‘qituvchi
                 xonaning old qismidagi jadvalda aniqlangan kirish va chiqishlarni
                 qayd etadi.
-
-'
             Processing:
               name: Processing
               description_student: Ushbu dars kompyuter ta'rifi doirasida aytib o‘tilgan
@@ -14542,17 +14432,15 @@ uz:
                 completed individually.
             Post-Project Test:
               name: Loyiha yakuniy testi
-          student_description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          student_description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
         andrea-test:
           title: andrea-test
           description_audience: 6-12 Facilitators-in-Training
@@ -14790,7 +14678,7 @@ uz:
                 va xavfsiz parollarni yaratish va saqlash strategiyasini topish mavjud.\r\n\r\nO‘quvchilar
                 parol turlarini o‘rganadilar, o‘zlarining mavjud parollarini interaktiv
                 o‘yin yordamida sinab ko‘rishadi va kuchli parollar yaratish qo‘llanmasidan
-                foydalangan holda yangi parollar yaratadilar.\n"
+                foydalangan holda yangi parollar yaratadilar."
             Sticker Art with Loops:
               name: Sticker Art with Loops
               description_student: In this lesson, loops make it easy to make even
@@ -15216,14 +15104,12 @@ uz:
           lessons:
             Exploring Websites:
               name: Exploring Websites
-              description_student: 'Ushbu dars veb-sayt foydalanuvchilar uchun ham,
+              description_student: Ushbu dars veb-sayt foydalanuvchilar uchun ham,
                 sayt yaratuvchilar uchun ham xizmat qilishi mumkin bo‘lgan maqsadlarni
                 o‘z ichiga oladi. O‘quvchilar Qo‘shma Shtatlardagi eng ko‘p ishlatiladigan
                 veb-saytlarning bir nechtasini o‘rganadi va ushbu saytlarning har
                 biri foydalanuvchilar uchun qanday foydali ekanligini va uning sayt
                 yaratuvchilariga qanday xizmat qilishi mumkinligini muhokama qiladi.
-
-'
               description_teacher: Har qanday veb-saytning maqsadi, kimdir uni yaratganligi
                 va boshqalarning undan foydalanishining sababi bor. Ushbu darsda o‘quvchilar
                 veb-sayt foydalanuvchilar uchun ham, yaratuvchilar uchun ham xizmat
@@ -15287,17 +15173,15 @@ uz:
                 o‘quvchilar butun bo‘lim davomida ishlaydigan loyihani boshlaydilar.
             Digital Footprint:
               name: Digital Footprint
-              description_student: 'Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
+              description_student: Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
                 orqaga surilib, odamlar raqamli ravishda almashishni tanlagan shaxsiy
-                ma''lumotlar haqida gaplashadi. Sinf qaysi turdagi ma''lumotlarni
-                boshqa odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama
-                qilish bilan boshlanadi, so‘ngra shaxsiy ma''lumotlarning qanday turlari
-                atayin yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun
-                bir nechta namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va
-                nihoyat, sinf ma''lumotni Internetga qo‘yishda rioya qilish uchun
-                bir qator ko‘rsatmalarni ishlab chiqadi.
-
-'
+                ma'lumotlar haqida gaplashadi. Sinf qaysi turdagi ma'lumotlarni boshqa
+                odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama qilish
+                bilan boshlanadi, so‘ngra shaxsiy ma'lumotlarning qanday turlari atayin
+                yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun bir nechta
+                namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va nihoyat,
+                sinf ma'lumotni Internetga qo‘yishda rioya qilish uchun bir qator
+                ko‘rsatmalarni ishlab chiqadi.
               description_teacher: "Yaqinda o‘quvchilar o‘zlarining shaxsiy veb-saytlariga
                 kiradigan haqiqiy tarkib haqida bir oz vaqt sarflaganliklari sababli,
                 ushbu dars o‘quvchilarga qanday shaxsiy ma'lumotlarni raqamli va kim
@@ -15315,20 +15199,20 @@ uz:
                 \r \n\r \nUshbu darsning asosiy maqsadi o‘quvchilarni qo‘rqitish emas,
                 balki tajriba asosida o‘quvchilarni internetga ma'lumot chiqarishda
                 o‘zlarining nazorat darajalari yo‘qligini aniq anglashlariga olib
-                kelishdir.\n"
+                kelishdir."
             Lists:
               name: Ro‘yxatlar
               description_student: This lesson introduces ordered and unordered lists
-                and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
-                class practices using the tags, then goes back to the personal web
-                page project to add a new HTML page that includes the new tags.
+                and the associated  <ul>, <ol>, and <li> HTML tags.  The class practices
+                using the tags, then goes back to the personal web page project to
+                add a new HTML page that includes the new tags.
               description_teacher: O‘quvchilar HTML da tartiblangan va tartibsiz ro‘yxatlar
-                bilan tanishadilar va &lt;ul&gt;, &lt;ol&gt; va &lt;li&gt; teglardan
-                foydalanadigan bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining
-                loyihalariga qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi
-                sahifaning ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari
-                o‘rgangan yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish
-                uchun HTML teglarini yozadilar.
+                bilan tanishadilar va <ul>, <ol> va <li> teglardan foydalanadigan
+                bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining loyihalariga
+                qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi sahifaning
+                ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari o‘rgangan
+                yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish uchun HTML
+                teglarini yozadilar.
             Intellectual Property and Images:
               name: Intellectual Property and Images
               description_student: Ushbu dars rasmlar, videolar yoki boshqalar tomonidan
@@ -15345,16 +15229,14 @@ uz:
                 Commons litsenziyalarini o‘rganadigan faoliyatga o‘tadilar. \r \n\r
                 \nVa nihoyat, har xil Creative Commons litsenziyalari cheklovlari
                 haqida umumiy tushuncha bilan o‘quvchilar veb-sahifalariga rasmlarni
-                &lt;img&gt; tegi yordamida joylashni o‘rganadilar.\n"
+                <img> tegi yordamida joylashni o‘rganadilar."
             Clean Code and Debugging:
               name: Clean Code and Debugging
-              description_student: 'Ushbu darsda HTMLda veb-sahifalarni loyihalashda
+              description_student: Ushbu darsda HTMLda veb-sahifalarni loyihalashda
                 yuzaga keladigan keng tarqalgan masalalar yoritilgan. Sinf Code Studioda
                 topilgan tobora murakkablashib borayotgan veb-sahifalar ketma-ketligidagi
                 xatolarni to‘g‘rilaydi va sharhlar, bo‘sh joy va matn oralig‘i veb-sahifalarni
                 o‘qishni osonlashtiruvchi vosita sifatida ahamiyatini o‘rganadi.
-
-'
               description_teacher: Students deal with common issues that arise when
                 designing web pages in HTML. Students will correct errors in a sequence
                 of increasingly complex web pages. In the process they will learn
@@ -15373,7 +15255,7 @@ uz:
                 chiqqandan so‘ng, o‘quvchilar o‘zlari ishlagan veb-saytni nashr etishlari
                 mumkin. Ushbu darsda ular o‘zlari yaratgan avvalgi barcha sahifalarni
                 bitta loyihaga bog‘laydilar, yangi sahifa yaratadilar va butun saytni
-                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r\n"
+                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r"
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: Ushbu dars CSS ni sahifadagi elementlarni uslublash
@@ -15391,14 +15273,12 @@ uz:
                 o‘rgangan narsalarini shaxsiy veb-sahifalarida qo‘llaydilar. \r \r"
             Styling Elements with CSS:
               name: Styling Elements with CSS
-              description_student: 'Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
-                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e''tibor
+              description_student: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
+                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini o‘rganishadi
                 va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar. So‘ng
                 o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish uchun
                 CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.
-
-'
               description_teacher: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
                 davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu darsni "Dunyo shirinliklari" haqidagi
@@ -15576,7 +15456,7 @@ uz:
                 loop with random numbers to manipulate some simple animations with
                 dots and then with sprites. Afterwards, everyone uses what they learned
                 to update the sprite scene from the previous lesson.
-              description_teacher: 'Ushbu darsda o‘quvchilar Game Labda dasturlashning
+              description_teacher: Ushbu darsda o‘quvchilar Game Labda dasturlashning
                 asosiy paradigmalaridan biri bo‘lgan chizish sikli bilan tanishadilar.
                 Darsni boshlash uchun o‘quvchilar bir nechta haqiqiy flipbukni (harakatlanuvchi
                 rasmlar ketma-ketligi kitobchasini) ko‘rib chiqishadi, chunki turli
@@ -15584,12 +15464,10 @@ uz:
                 yaratadi. So‘ngra o‘quvchilar videoni tomosha qilishadi, qanday qilib
                 Game Labdagi chizish sikli o‘z dasturlarida xuddi shunday taassurotni
                 yaratishga yordam berishini ko‘rib chiqishadi. O‘quvchilar chizilgan
-                siklni tasodifiy sonlar bilan birlashtirib, ba''zi oddiy animatsiyalarni
+                siklni tasodifiy sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni
                 nuqta bilan, so‘ngra spraytlar bilan boshqaradilar. Dars oxirida o‘quvchilar
                 o‘tgan darsdan o‘zlarining sprayt sahnalarini yangilash uchun o‘rganganlaridan
                 foydalanadilar.
-
-'
             The Counter Pattern Unplugged:
               name: The Counter Pattern Unplugged
               description_student: Ushbu oflayn dars o‘zgaruvchilarning asosiy mohiyatini
@@ -15720,17 +15598,15 @@ uz:
                 o‘rganadilar. Oxirgi darajalarda sinf bu harakatlarni bitta spraytni
                 jonlantirish va boshqarish uchun birlashtiradi va oddiy o‘yinni quradi,
                 unda belgi uchib yurib, tangalarni yig‘adi.
-              description_teacher: 'O‘quvchilar spraytlarning tezlik xususiyatlarini
+              description_teacher: O‘quvchilar spraytlarning tezlik xususiyatlarini
                 hisoblagich naqsh bilan birlashtirib, murakkabroq sprayt harakatini
-                yaratishni o‘rganadilar. Ba''zi o‘quvchilar gravitatsiya kuchini simulyatsiya
+                yaratishni o‘rganadilar. Ba'zi o‘quvchilar gravitatsiya kuchini simulyatsiya
                 qilishni, spraytni sakrata olish va sprayt chapga yoki o‘ngga burilishga
                 ruxsat berishni o‘rganadilar. Code Studio progressining so‘nggi bosqichlarida
                 o‘quvchilar ushbu harakatlarni bitta spraytni jonlantirish va boshqarish
                 uchun birlashtiradilar hamda oddiygina o‘yin yaratadilar, o‘yinda
                 belgi uchib yurib, tanga to‘playdi. O‘quvchilar so‘nggi bosqichda
                 o‘yinga o‘zlarining qo‘shimchalarini kiritishlari tavsiya etiladi.
-
-'
             Collisions:
               name: Collisions
               description_student: The class programs their sprites to interact in
@@ -15814,7 +15690,7 @@ uz:
                 yoki birgalikda ishlash orqali o‘quvchilar ishlarni rejalashtiradi,
                 rivojlantiradi va o‘yinlar haqida fikr bildiradi. O‘zaro fikr-mulohazalarni
                 kiritgandan so‘ng, sinf yakunlagan o‘yinlarni baham ko‘radi.
-              description_teacher: 'O‘quvchilar o‘zlarining loyihalarini boshqarish
+              description_teacher: O‘quvchilar o‘zlarining loyihalarini boshqarish
                 uchun avvalgi ikki darsdagi loyiha qo‘llanmasidan foydalanib o‘z o‘yinlarini
                 rejalashtirishadi va qurishadi. Yakka tartibda yoki birgalikda ishlaganda
                 o‘quvchilar avval namunaviy o‘yinlar to‘plamidan ilhomlanib, qurmoqchi
@@ -15829,8 +15705,6 @@ uz:
                 Dars oxirida o‘quvchilar tugatilgan o‘yinlarini sinfdoshlari bilan
                 bo‘lishadilar. Ushbu loyiha bir nechta mashg‘ulotlarni o‘z ichiga
                 oladi va 3-5 ta darslar oralig‘ida bemalol o‘tilishi mumkin.
-
-'
             CS Discoveries End of Semester Survey:
               name: CS Discoveries End of Semester Survey
             Post-Project Test:
@@ -16021,13 +15895,11 @@ uz:
                 barcha ilovalar uchun havolalar ro‘yxatini saqlab qoladi.
             Paper Prototypes:
               name: Paper Prototypes
-              description_student: 'Qog‘oz prototiplari yozib olish dasturchilarga
+              description_student: Qog‘oz prototiplari yozib olish dasturchilarga
                 kod yozish uchun ko‘p vaqt sarflashdan oldin g‘oyalarni tezda sinab
                 ko‘rishlariga imkon beradi. Ushbu darsda jamoalar o‘zlarining dastlabki
                 qog‘oz prototiplarini ko‘rsatish uchun ushbu ilovalar yordamida App
-                Lab da yaratilgan ba''zi bir dasturlarni o‘rganadilar.
-
-'
+                Lab da yaratilgan ba'zi bir dasturlarni o‘rganadilar.
               description_teacher: "Ilovalarni loyihalashtirishni boshlashdan oldin,
                 biz o‘quvchilarning umidlarini kuchaytirishga yordam berishimiz kerak.
                 O‘quvchilar bo‘lim oxirida App Labda ushbu dasturlarning prototipini
@@ -16040,7 +15912,7 @@ uz:
                 tanlashlari mumkin. U yerdan jamoalar qog‘oz prototiplarini ishlab
                 chiqish uchun 3x5 indeksli kartalarni ishlatishdan oldin o‘zlarining
                 dasturlarining asosiy funksiyalarini muhokama qilish uchun biroz vaqt
-                ajratadilar.\n\r\n"
+                ajratadilar.\n\r"
             Prototype Testing:
               name: Prototype Testing
               description_student: Ushbu darsda jamoalar o‘zlarining qog‘oz prototiplarini
@@ -16062,15 +15934,13 @@ uz:
                 berish uchun ba'zi savollar tayyorlangandan keyin test yakunlandi.
             Digital Design:
               name: Digital Design
-              description_student: 'Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
+              description_student: Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
                 o‘tgan va fikr-mulohazalarni to‘plagan jamoalar endi o‘zlarining dasturlarining
                 navbatdagi takrorlanishini yaratish uchun App Labga o‘tadilar. Drag-and-drop
                 (sichqoncha yordamida surib siljitib-joylash) dizayn rejimidan foydalangan
-                holda, har bir jamoa a''zosi o‘zlarining dasturlarining kamida bitta
+                holda, har bir jamoa a'zosi o‘zlarining dasturlarining kamida bitta
                 sahifasini yaratadilar va testlarning oldingi bosqichida olingan fikr-mulohazalarga
                 javob berishadi.
-
-'
               description_teacher: Having collaboratively developed a paper prototype
                 for their apps, groups now divide and conquer to begin work on an
                 interactive digital version based on the paper prototype. Using the
@@ -16967,7 +16837,7 @@ uz:
             ma'lumotlarni to‘plash va ulardan foydalanishga imkon beradigan bir qator
             vositalar mavjud. Ikkinchi bobda ushbu vositalar qanday ishlashi haqida
             umumiy ma'lumot, ushbu vositalar yordamida qurilishi mumkin bo‘lgan loyihalar
-            namunalari va yakuniy loyihani qurish va taqdim etish uchun joy ajratilgan.\n"
+            namunalari va yakuniy loyihani qurish va taqdim etish uchun joy ajratilgan."
           description_short: Learn to collect and use data in App Lab apps.
           lesson_groups:
             csp_postap_1:
@@ -17025,7 +16895,7 @@ uz:
             imkon beradigan bir qator vositalar mavjud. Ikkinchi bobda ushbu vositalar
             qanday ishlashi haqida umumiy ma'lumot, ushbu vositalar yordamida qurilishi
             mumkin bo‘lgan loyihalar namunalari va yakuniy loyihani qurish va taqdim
-            etish uchun joy ajratilgan.\n"
+            etish uchun joy ajratilgan."
         csp1-pilot:
           lesson_groups:
             cspSurvey:
@@ -17878,10 +17748,8 @@ uz:
             Problem Solving Process:
               name: Muammoni yechish jarayoni
         fit2019-apprentice:
-          description_short: 'Malaka oshiruvchi o‘qituvchilar uchun 2019-yil uchun
+          description_short: Malaka oshiruvchi o‘qituvchilar uchun 2019-yil uchun
             o‘quvchilarni aks ettiruvchi materiallar
-
-'
           description: Bu Code.org o‘qituvchilari uchun 5 kunlik yozgi seminar davomida
             mashg‘ulotlarda shogirdlarning fikrlari to‘plami. Bu yerda siz o‘zingizning
             shaxsiy 5 kunlik yozgi seminaringizning har bir kunini aks ettirish ko‘rsatmalarini
@@ -17911,17 +17779,15 @@ uz:
             ettirish ko‘rsatmalarini topasiz. Ushbu savollar biz shogirdlarni tayyorlash
             bo‘yicha seminarda olib boradigan ishimizning asosi bo‘ladi.
         csd1-pilot:
-          description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
           description_short: "  Learn how humans work with computers to solve problems."
           lesson_groups:
             cspSurvey:
@@ -17940,18 +17806,16 @@ uz:
                 the lesson groups reflect on their experiences with the activity and
                 make connections to the types of problem solving they will be doing
                 for the rest of the course. '
-              description_teacher: 'Ushbu darsda o‘quvchilar guruhlarga bo‘linib,
-                iloji boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy
-                zarqog‘oz qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash
-                uchun ikki roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani
-                ushlab turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
+              description_teacher: Ushbu darsda o‘quvchilar guruhlarga bo‘linib, iloji
+                boricha ko‘proq tangalarni qo‘llab-quvvatlaydigan alyuminiy zarqog‘oz
+                qayiqlarini ishlab chiqadilar. Guruhlar qayiqda ishlash uchun ikki
+                roundga ega, shu maqsadda 1-rounddan ko‘ra ko‘proq tangani ushlab
+                turishga harakat qilish kerak. Bunda faoliyat strukturasi o‘quvchilarni
                 keyingi darslarda batafsilroq tanishtiradigan muammolarni yechish
                 jarayonining turli bosqichlarini oldindan belgilab beradi. Dars oxirida
                 o‘quvchilar o‘zlarining faoliyati bilan bog‘liq tajribalarini aks
                 ettiradilar va darsning qolgan qismida bajaradigan muammolarni hal
                 qilish turlari bilan bog‘lanishadi.
-
-'
             The Problem Solving Process:
               name: Muammoni yechish jarayoni
               description_student: Ushbu darsda o‘quvchilar yil davomida foydalanadigan,
@@ -17996,7 +17860,7 @@ uz:
                 yaxshiroq aniqlashda yordam bering, chunki bu ko‘pincha eng muhim
                 qadamdir.\r\n\r\nUshbu dars, ehtimol, 2 dars soati yoki undan ko‘proq
                 vaqtni oladi. Birinchi ikkita muammo bitta dars soatiga to‘g‘ri kelishi
-                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi.\n"
+                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi."
             What is a Computer?:
               name: Kompyuter nima?
               description_student: Ushbu darsda o‘quvchilar kompyuterning oldindan
@@ -18027,21 +17891,19 @@ uz:
                 yakunlash uchun sinf kompyuterda amalga oshiriladigan umumiy faoliyatni
                 tekshiradi va jadvalda ushbu faoliyat uchun ishlatiladigan kirish
                 va chiqishlarni tanlaydi.
-              description_teacher: 'Bunda sinf o‘quvchilari kirish va chiqishning
-                qaysi turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
+              description_teacher: Bunda sinf o‘quvchilari kirish va chiqishning qaysi
+                turlarini ishlatishini aniqlash uchun bir qator hisoblash moslamalarini
                 ko‘rib chiqadilar. Guruhlar hisoblash moslamasiga biriktirilgan va
-                o‘qituvchi tomonidan kiritilgan va chiqadigan ta''rifi asosida ularning
+                o‘qituvchi tomonidan kiritilgan va chiqadigan ta'rifi asosida ularning
                 qurilmasining kirish va chiqishlarini ro‘yxatlashga asoslangan. Ilgari
                 mashg‘ulotlarda o‘quvchilar ko‘proq aniq jismoniy kirish va natijalarga
-                e''tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
+                e'tibor berishlari kerak edi (masalan, kirish sifatida klaviatura
                 yoki chiqish sifatida ekran), ammo keyinchalik munozaralar o‘quvchilarni
                 unchalik aniq bo‘lmagan misollarni ko‘rib chiqishga undaydi (masalan,
                 sensorli ekran ham kirish va chiqish, yoki Internet ham kirish, ham
                 chiqish sifatida xizmat qilishi mumkin). Dars davomida o‘qituvchi
                 xonaning old qismidagi jadvalda aniqlangan kirish va chiqishlarni
                 qayd etadi.
-
-'
             Processing:
               name: Processing
               description_student: Ushbu dars kompyuter ta'rifi doirasida aytib o‘tilgan
@@ -18097,17 +17959,15 @@ uz:
                 completed individually.
             Post-Project Test:
               name: Loyiha yakuniy testi
-          student_description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          student_description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
         csd2-pilot:
           description: Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni
             yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham
@@ -18127,14 +17987,12 @@ uz:
           lessons:
             Exploring Websites:
               name: Exploring Websites
-              description_student: 'Ushbu dars veb-sayt foydalanuvchilar uchun ham,
+              description_student: Ushbu dars veb-sayt foydalanuvchilar uchun ham,
                 sayt yaratuvchilar uchun ham xizmat qilishi mumkin bo‘lgan maqsadlarni
                 o‘z ichiga oladi. O‘quvchilar Qo‘shma Shtatlardagi eng ko‘p ishlatiladigan
                 veb-saytlarning bir nechtasini o‘rganadi va ushbu saytlarning har
                 biri foydalanuvchilar uchun qanday foydali ekanligini va uning sayt
                 yaratuvchilariga qanday xizmat qilishi mumkinligini muhokama qiladi.
-
-'
               description_teacher: Har qanday veb-saytning maqsadi, kimdir uni yaratganligi
                 va boshqalarning undan foydalanishining sababi bor. Ushbu darsda o‘quvchilar
                 veb-sayt foydalanuvchilar uchun ham, yaratuvchilar uchun ham xizmat
@@ -18198,17 +18056,15 @@ uz:
                 o‘quvchilar butun bo‘lim davomida ishlaydigan loyihani boshlaydilar.
             Digital Footprint:
               name: Digital Footprint
-              description_student: 'Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
+              description_student: Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
                 orqaga surilib, odamlar raqamli ravishda almashishni tanlagan shaxsiy
-                ma''lumotlar haqida gaplashadi. Sinf qaysi turdagi ma''lumotlarni
-                boshqa odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama
-                qilish bilan boshlanadi, so‘ngra shaxsiy ma''lumotlarning qanday turlari
-                atayin yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun
-                bir nechta namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va
-                nihoyat, sinf ma''lumotni Internetga qo‘yishda rioya qilish uchun
-                bir qator ko‘rsatmalarni ishlab chiqadi.
-
-'
+                ma'lumotlar haqida gaplashadi. Sinf qaysi turdagi ma'lumotlarni boshqa
+                odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama qilish
+                bilan boshlanadi, so‘ngra shaxsiy ma'lumotlarning qanday turlari atayin
+                yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun bir nechta
+                namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va nihoyat,
+                sinf ma'lumotni Internetga qo‘yishda rioya qilish uchun bir qator
+                ko‘rsatmalarni ishlab chiqadi.
               description_teacher: "Yaqinda o‘quvchilar o‘zlarining shaxsiy veb-saytlariga
                 kiradigan haqiqiy tarkib haqida bir oz vaqt sarflaganliklari sababli,
                 ushbu dars o‘quvchilarga qanday shaxsiy ma'lumotlarni raqamli va kim
@@ -18226,20 +18082,20 @@ uz:
                 \r \n\r \nUshbu darsning asosiy maqsadi o‘quvchilarni qo‘rqitish emas,
                 balki tajriba asosida o‘quvchilarni internetga ma'lumot chiqarishda
                 o‘zlarining nazorat darajalari yo‘qligini aniq anglashlariga olib
-                kelishdir.\n"
+                kelishdir."
             Lists:
               name: Ro‘yxatlar
               description_student: This lesson introduces ordered and unordered lists
-                and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The
-                class practices using the tags, then goes back to the personal web
-                page project to add a new HTML page that includes the new tags.
+                and the associated  <ul>, <ol>, and <li> HTML tags.  The class practices
+                using the tags, then goes back to the personal web page project to
+                add a new HTML page that includes the new tags.
               description_teacher: O‘quvchilar HTML da tartiblangan va tartibsiz ro‘yxatlar
-                bilan tanishadilar va &lt;ul&gt;, &lt;ol&gt; va &lt;li&gt; teglardan
-                foydalanadigan bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining
-                loyihalariga qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi
-                sahifaning ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari
-                o‘rgangan yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish
-                uchun HTML teglarini yozadilar.
+                bilan tanishadilar va <ul>, <ol> va <li> teglardan foydalanadigan
+                bir necha bosqichlarda ishlashadi. Keyin ular o‘zlarining loyihalariga
+                qaytib, u yerda yangi HTML sahifasini yaratadilar. Yangi sahifaning
+                ichida ular retsept, yuqori 10 talik ro‘yxat yoki o‘zlari o‘rgangan
+                yangi teglardan foydalanadigan boshqa kontentni ko‘rsatish uchun HTML
+                teglarini yozadilar.
             Intellectual Property and Images:
               name: Intellectual Property and Images
               description_student: Ushbu dars rasmlar, videolar yoki boshqalar tomonidan
@@ -18256,16 +18112,14 @@ uz:
                 Commons litsenziyalarini o‘rganadigan faoliyatga o‘tadilar. \r \n\r
                 \nVa nihoyat, har xil Creative Commons litsenziyalari cheklovlari
                 haqida umumiy tushuncha bilan o‘quvchilar veb-sahifalariga rasmlarni
-                &lt;img&gt; tegi yordamida joylashni o‘rganadilar.\n"
+                <img> tegi yordamida joylashni o‘rganadilar."
             Clean Code and Debugging:
               name: Clean Code and Debugging
-              description_student: 'Ushbu darsda HTMLda veb-sahifalarni loyihalashda
+              description_student: Ushbu darsda HTMLda veb-sahifalarni loyihalashda
                 yuzaga keladigan keng tarqalgan masalalar yoritilgan. Sinf Code Studioda
                 topilgan tobora murakkablashib borayotgan veb-sahifalar ketma-ketligidagi
                 xatolarni to‘g‘rilaydi va sharhlar, bo‘sh joy va matn oralig‘i veb-sahifalarni
                 o‘qishni osonlashtiruvchi vosita sifatida ahamiyatini o‘rganadi.
-
-'
               description_teacher: Students deal with common issues that arise when
                 designing web pages in HTML. Students will correct errors in a sequence
                 of increasingly complex web pages. In the process they will learn
@@ -18284,7 +18138,7 @@ uz:
                 chiqqandan so‘ng, o‘quvchilar o‘zlari ishlagan veb-saytni nashr etishlari
                 mumkin. Ushbu darsda ular o‘zlari yaratgan avvalgi barcha sahifalarni
                 bitta loyihaga bog‘laydilar, yangi sahifa yaratadilar va butun saytni
-                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r\n"
+                Internetga chiqarishdan oldin sahifalar orasida navigatsiya qo‘shadilar.\r\n\r"
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: Ushbu dars CSS ni sahifadagi elementlarni uslublash
@@ -18302,14 +18156,12 @@ uz:
                 o‘rgangan narsalarini shaxsiy veb-sahifalarida qo‘llaydilar. \r \r"
             Styling Elements with CSS:
               name: Styling Elements with CSS
-              description_student: 'Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
-                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e''tibor
+              description_student: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
+                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini o‘rganishadi
                 va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar. So‘ng
                 o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish uchun
                 CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.
-
-'
               description_teacher: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
                 davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu darsni "Dunyo shirinliklari" haqidagi
@@ -18493,7 +18345,7 @@ uz:
                 loop with random numbers to manipulate some simple animations with
                 dots and then with sprites. Afterwards, everyone uses what they learned
                 to update the sprite scene from the previous lesson.
-              description_teacher: 'Ushbu darsda o‘quvchilar Game Labda dasturlashning
+              description_teacher: Ushbu darsda o‘quvchilar Game Labda dasturlashning
                 asosiy paradigmalaridan biri bo‘lgan chizish sikli bilan tanishadilar.
                 Darsni boshlash uchun o‘quvchilar bir nechta haqiqiy flipbukni (harakatlanuvchi
                 rasmlar ketma-ketligi kitobchasini) ko‘rib chiqishadi, chunki turli
@@ -18501,12 +18353,10 @@ uz:
                 yaratadi. So‘ngra o‘quvchilar videoni tomosha qilishadi, qanday qilib
                 Game Labdagi chizish sikli o‘z dasturlarida xuddi shunday taassurotni
                 yaratishga yordam berishini ko‘rib chiqishadi. O‘quvchilar chizilgan
-                siklni tasodifiy sonlar bilan birlashtirib, ba''zi oddiy animatsiyalarni
+                siklni tasodifiy sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni
                 nuqta bilan, so‘ngra spraytlar bilan boshqaradilar. Dars oxirida o‘quvchilar
                 o‘tgan darsdan o‘zlarining sprayt sahnalarini yangilash uchun o‘rganganlaridan
                 foydalanadilar.
-
-'
             The Counter Pattern Unplugged:
               name: The Counter Pattern Unplugged
               description_student: Ushbu oflayn dars o‘zgaruvchilarning asosiy mohiyatini
@@ -18637,17 +18487,15 @@ uz:
                 o‘rganadilar. Oxirgi darajalarda sinf bu harakatlarni bitta spraytni
                 jonlantirish va boshqarish uchun birlashtiradi va oddiy o‘yinni quradi,
                 unda belgi uchib yurib, tangalarni yig‘adi.
-              description_teacher: 'O‘quvchilar spraytlarning tezlik xususiyatlarini
+              description_teacher: O‘quvchilar spraytlarning tezlik xususiyatlarini
                 hisoblagich naqsh bilan birlashtirib, murakkabroq sprayt harakatini
-                yaratishni o‘rganadilar. Ba''zi o‘quvchilar gravitatsiya kuchini simulyatsiya
+                yaratishni o‘rganadilar. Ba'zi o‘quvchilar gravitatsiya kuchini simulyatsiya
                 qilishni, spraytni sakrata olish va sprayt chapga yoki o‘ngga burilishga
                 ruxsat berishni o‘rganadilar. Code Studio progressining so‘nggi bosqichlarida
                 o‘quvchilar ushbu harakatlarni bitta spraytni jonlantirish va boshqarish
                 uchun birlashtiradilar hamda oddiygina o‘yin yaratadilar, o‘yinda
                 belgi uchib yurib, tanga to‘playdi. O‘quvchilar so‘nggi bosqichda
                 o‘yinga o‘zlarining qo‘shimchalarini kiritishlari tavsiya etiladi.
-
-'
             Collisions:
               name: Collisions
               description_student: The class programs their sprites to interact in
@@ -18731,7 +18579,7 @@ uz:
                 yoki birgalikda ishlash orqali o‘quvchilar ishlarni rejalashtiradi,
                 rivojlantiradi va o‘yinlar haqida fikr bildiradi. O‘zaro fikr-mulohazalarni
                 kiritgandan so‘ng, sinf yakunlagan o‘yinlarni baham ko‘radi.
-              description_teacher: 'O‘quvchilar o‘zlarining loyihalarini boshqarish
+              description_teacher: O‘quvchilar o‘zlarining loyihalarini boshqarish
                 uchun avvalgi ikki darsdagi loyiha qo‘llanmasidan foydalanib o‘z o‘yinlarini
                 rejalashtirishadi va qurishadi. Yakka tartibda yoki birgalikda ishlaganda
                 o‘quvchilar avval namunaviy o‘yinlar to‘plamidan ilhomlanib, qurmoqchi
@@ -18746,8 +18594,6 @@ uz:
                 Dars oxirida o‘quvchilar tugatilgan o‘yinlarini sinfdoshlari bilan
                 bo‘lishadilar. Ushbu loyiha bir nechta mashg‘ulotlarni o‘z ichiga
                 oladi va 3-5 ta darslar oralig‘ida bemalol o‘tilishi mumkin.
-
-'
             Post-Project Test:
               name: Loyiha yakuniy testi
             CS Discoveries Post Course survey:
@@ -19382,6 +19228,8 @@ uz:
               display_name: Funksiyalar
             csp_project:
               display_name: Loyiha
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Variables Explore:
               name: Variables Explore
@@ -19413,6 +19261,8 @@ uz:
               name: Loyiha - Qaror qilish ilovasi. 3-qism
             'Lesson 15: Assessment Day':
               name: '15-dars: Baholash kuni'
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp4-2020
         csp5-2020:
           lesson_groups:
@@ -19422,6 +19272,8 @@ uz:
               display_name: Sikllar
             csp_project:
               display_name: Loyiha
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Lists Explore:
               name: Lists Explore
@@ -19441,8 +19293,13 @@ uz:
               name: Unit 5. TALABA uchun so‘rovnoma
             Unit 5 TEACHER Survey:
               name: Unit 5. O‘qituvchi uchun so‘rovnoma
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp5-2020
         csp7-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             Project - Make a Library Part 1:
               name: Loyiha - Kutubxona yarating, 1-qism
@@ -19458,6 +19315,8 @@ uz:
               name: Unit 7. O‘qituvchi uchun so‘rovnoma
             'Lesson 11: Assessment Day':
               name: '15-dars: Baholash kuni'
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp7-2020
         csp9-pilot:
           lessons:
@@ -19489,7 +19348,7 @@ uz:
                 o‘z ichiga oladi. O‘quvchilar Qo‘shma Shtatlardagi eng ko‘p ishlatiladigan
                 veb-saytlarning bir nechtasini o‘rganadi va ushbu saytlarning har
                 biri foydalanuvchilar uchun qanday foydali ekanligini va uning sayt
-                yaratuvchilariga qanday xizmat qilishi mumkinligini muhokama qiladi.\n"
+                yaratuvchilariga qanday xizmat qilishi mumkinligini muhokama qiladi."
               description_teacher: "**Kun savoli:  Nima uchun odamlar veb-sahifalar
                 yaratadilar??**\r\n\r\n\r\nHar qanday veb-saytning maqsadi, kimdir
                 uni yaratganligi va boshqalarning undan foydalanishining sababi bor.
@@ -19498,7 +19357,7 @@ uz:
                 boshlaydilar. O‘quvchilar ba'zi bir namunali veb-saytlarni o‘rganadilar
                 va uning yaratuvchisi uchun nima maqsadda saytni shunday tuzganligini
                 muhokama qiladilar, so‘ngra ulardan kimdir veb-saytlar yaratishining
-                mumkin bo‘lgan sabablari haqida mulohaza yuritadilar.\n"
+                mumkin bo‘lgan sabablari haqida mulohaza yuritadilar."
             Intro to HTML:
               name: Intro to HTML
               description_student: "**Kun savoli: Qanday qilib veb-sahifaga *nima*
@@ -19548,7 +19407,7 @@ uz:
                 qanday turlari atayin yoki bilmagan holda tarqatilishi mumkinligini
                 ko‘rish uchun bir nechta namunali ijtimoiy tarmoq sahifalarini ko‘rib
                 chiqadi. Va nihoyat, sinf ma'lumotni Internetga qo‘yishda rioya qilish
-                uchun bir qator ko‘rsatmalarni ishlab chiqadi.\n"
+                uchun bir qator ko‘rsatmalarni ishlab chiqadi."
               description_teacher: "**Kun savoli: Shaxsiy ma'lumotlaringiz shaxsiyligacha
                 qolishiga qanday ishonch hosil qilish mumkin?**\r\n\r\n\nYaqinda o‘quvchilar
                 o‘zlarining shaxsiy veb-saytlariga kiradigan haqiqiy tarkib haqida
@@ -19567,7 +19426,7 @@ uz:
                 ekanligi haqida mulohaza yuritadilar. \r \n\r \nUshbu darsning asosiy
                 maqsadi o‘quvchilarni qo‘rqitish emas, balki tajriba asosida o‘quvchilarni
                 internetga ma'lumot chiqarishda o‘zlarining nazorat darajalari yo‘qligini
-                aniq anglashlariga olib kelishdir.\n"
+                aniq anglashlariga olib kelishdir."
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: "**Kun savoli: Veb-sahifadagi matn stilini qanday
@@ -19593,7 +19452,7 @@ uz:
                 ijodiy tarkib foydalanuvchilari uchun mualliflik huquqining maqsadi
                 va rolini o‘rganadi. Keyin ular mualliflik huquqi bilan bog‘liq muammolarni
                 hal qilish uchun turli xil Creative Commons litsenziyalarini o‘rganadigan
-                faoliyatga o‘tadilar. \n"
+                faoliyatga o‘tadilar. "
               description_teacher: "**Kun savoli: Odamlar bir-birining kontentidan
                 foydalanganda qanday qoidalar ularning huquqlarini himoya qiladi?**\r\n\r\nBoshqalarga
                 o‘z ishlaridan qanday foydalanishga ruxsat berish kerakligi to‘g‘risida
@@ -19601,21 +19460,21 @@ uz:
                 ijodiy tarkib foydalanuvchilari uchun mualliflik huquqining maqsadi
                 va rolini o‘rganadi. Keyin ular mualliflik huquqi bilan bog‘liq muammolarni
                 hal qilish uchun turli xil Creative Commons litsenziyalarini o‘rganadigan
-                faoliyatga o‘tadilar. \n"
+                faoliyatga o‘tadilar. "
             Images:
               name: Rasmlar
               description_student: "Qanday qilib biz o‘z veb-saytimizga hammaning
                 huquqlarini hurmat qilgan tarzda rasmlarni qo‘shishimiz mumkin?**\r
                 \n\r \nO‘quvchilar veb-saytlarda rasmlardan foydalanishning axloqiy
                 oqibatlarini, xususan intellektual mulk nuqtai nazaridan tushunishni
-                boshlashadi. Keyin ular veb-sahifalariga &lt;img&gt; teg va rasm manbalarini
-                qanday qilib mos keltirish kerakligini o‘rganishadi.\n"
+                boshlashadi. Keyin ular veb-sahifalariga <img> teg va rasm manbalarini
+                qanday qilib mos keltirish kerakligini o‘rganishadi."
               description_teacher: "Qanday qilib biz o‘z veb-saytimizga hammaning
                 huquqlarini hurmat qilgan tarzda rasmlarni qo‘shishimiz mumkin?**\r
                 \n\r \nO‘quvchilar darsni veb-saytlaridagi rasmlardan foydalanishning
                 axloqiy oqibatlarini, xususan intellektual mulk nuqtai nazaridan tushunish
-                bilan boshlashadi. Keyin ular veb-sahifalariga &lt;img&gt; teg va
-                rasm manbalarini qanday qilib mos keltirish kerakligini o‘rganadilar."
+                bilan boshlashadi. Keyin ular veb-sahifalariga <img> teg va rasm manbalarini
+                qanday qilib mos keltirish kerakligini o‘rganadilar."
             'Websites for Expression ':
               name: 'Websites for Expression '
               description_student: "**Kun savoli: O'zimizni ko'rsatish uchun veb-saytlardan
@@ -19644,14 +19503,14 @@ uz:
                 e'tibor qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini
                 o‘rganishadi va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar.
                 So‘ng o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish
-                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.\n"
+                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar."
               description_teacher: "**Kun savoli: Sahifa rasm va qatlamlariga stil
                 qanday beriladi?**\r\n\r\nUshbu dars CSS uslubi xususiyatlari bilan
                 tanishishni davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga
                 e'tibor qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini
                 o‘rganishadi va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar.
                 So‘ng o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish
-                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.\n"
+                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar."
             Project - Building a Webpage:
               description_student: "**Kun savoli: Veb-sahifalarni yaratishda qanday
                 ko‘nikma va amaliyotlar yordam beradi?**\r\n\r\nXatoliklarni tuzatish
@@ -19670,7 +19529,7 @@ uz:
                 Keyin ular sahifalarni yakuniy tahrir qilishdan oldin o‘zaro tuzilgan
                 fikr-mulohazalar jarayonida qatnashadilar. Keyinchalik, ular muvaffaqiyatli
                 bo‘lishlariga yordam bergan ko‘nikmalar va amaliyotlar haqida fikr
-                yuritishadi.\n"
+                yuritishadi."
             Purpose of a  Websites:
               description_student: "**Kun savoli: Odamlar veb-sayt yaratishining sabablari
                 nimada?**\r\n\r\nUshbu darsda o‘quvchilar odamlarning veb-saytlarini
@@ -19902,17 +19761,15 @@ uz:
             holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek,
             siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         csd1-2020:
-          description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
           description_short: "  Learn how humans work with computers to solve problems."
           lesson_groups:
             cspSurvey:
@@ -19943,8 +19800,8 @@ uz:
                 beradi. Dars oxirida o‘quvchilar o‘zlarining faoliyati bilan bog‘liq
                 tajribalarini aks ettiradilar va darsning qolgan qismida bajaradigan
                 muammolarni hal qilish turlari bilan bog‘lanishadi.\n\n**Darsning
-                alternativ versiyalari ham bor.** \r\n\r\n* [Newspaper Table](../4/)\r\n*
-                [Spaghetti Bridge](../5/)\r\n* [Paper Tower](../6/)\n\n"
+                alternativ versiyalari ham bor.** \r\n\r\n\n* [Newspaper Table](../4/)\r\n\n*
+                [Spaghetti Bridge](../5/)\r\n\n* [Paper Tower](../6/)"
             The Problem Solving Process:
               name: Muammoni yechish jarayoni
               description_student: "**Kun savoli: Turli xil muammolarni hal qilishda
@@ -19996,7 +19853,7 @@ uz:
                 yaxshiroq aniqlashda yordam bering, chunki bu ko‘pincha eng muhim
                 qadamdir.\r\n\r\nUshbu dars, ehtimol, 2 dars soati yoki undan ko‘proq
                 vaqtni oladi. Birinchi ikkita muammo bitta dars soatiga to‘g‘ri kelishi
-                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi.\n"
+                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi."
             What is a Computer?:
               name: Kompyuter nima?
               description_student: "**Kun savoli: Kompyuter nima?**\r\n\r\nIn this
@@ -20089,7 +19946,7 @@ uz:
                 haqidagi qarorlarini qabul qilishdan oldin bobni boshidan boshlab
                 qayta ko‘rib chiqish uchun so‘nggi imkoniyatga ega bo‘ladirlar. Dars
                 o‘quvchilar o‘zlarining ilova g‘oyalari va qanday qilib xotiradan
-                foydalanish mumkinligini aks ettirish bilan yakunlanadi.\n"
+                foydalanish mumkinligini aks ettirish bilan yakunlanadi."
             Project - Propose an App:
               name: Project - Propose an App
               description_student: "**Kun savoli: IOSP modeli qanday qilib muammoni
@@ -20133,7 +19990,7 @@ uz:
                 tajribalarini aks ettiradilar va darsning qolgan qismida bajaradigan
                 muammolarni hal qilish turlari bilan bog‘lanishadi.\n\n**Darsning
                 alternativ versiyasi ham bor - [Intro to Problem Solving - Aluminum
-                Boats](../1/)**\n"
+                Boats](../1/)**"
             Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
               description_student: "**Question of the Day: What can help us to work
                 together and solve problems as a team?**\r\n\r\nSinf imkon qadar ko‘proq
@@ -20153,7 +20010,7 @@ uz:
                 tajribalarini aks ettiradilar va darsning qolgan qismida bajaradigan
                 muammolarni hal qilish turlari bilan bog‘lanishadi.\n\n**Darsning
                 alternativ versiyasi ham bor - [Intro to Problem Solving - Aluminum
-                Boats](../1/)**\n\n"
+                Boats](../1/)**"
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               description_student: "**Question of the Day: How can we apply the problem
                 solving process to many different kinds of problems?**\r\n\r\nUshbu
@@ -20164,17 +20021,15 @@ uz:
                 yechish jarayoni qanday foydali bo‘lishini tushunish mumkin. "
             Storage:
               name: Storage
-          student_description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          student_description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
         csd4-2020:
           description: Unit 4 introduces the broader social impacts of computing.
             Through a series of design challenges, you will learn how to better understand
@@ -20352,13 +20207,11 @@ uz:
                 barcha ilovalar uchun havolalar ro‘yxatini saqlab qoladi.
             Paper Prototypes:
               name: Paper Prototypes
-              description_student: 'Qog‘oz prototiplari yozib olish dasturchilarga
+              description_student: Qog‘oz prototiplari yozib olish dasturchilarga
                 kod yozish uchun ko‘p vaqt sarflashdan oldin g‘oyalarni tezda sinab
                 ko‘rishlariga imkon beradi. Ushbu darsda jamoalar o‘zlarining dastlabki
                 qog‘oz prototiplarini ko‘rsatish uchun ushbu ilovalar yordamida App
-                Lab da yaratilgan ba''zi bir dasturlarni o‘rganadilar.
-
-'
+                Lab da yaratilgan ba'zi bir dasturlarni o‘rganadilar.
               description_teacher: "Ilovalarni loyihalashtirishni boshlashdan oldin,
                 biz o‘quvchilarning umidlarini kuchaytirishga yordam berishimiz kerak.
                 O‘quvchilar bo‘lim oxirida App Labda ushbu dasturlarning prototipini
@@ -20371,7 +20224,7 @@ uz:
                 tanlashlari mumkin. U yerdan jamoalar qog‘oz prototiplarini ishlab
                 chiqish uchun 3x5 indeksli kartalarni ishlatishdan oldin o‘zlarining
                 dasturlarining asosiy funksiyalarini muhokama qilish uchun biroz vaqt
-                ajratadilar.\n\r\n"
+                ajratadilar.\n\r"
             Prototype Testing:
               name: Prototype Testing
               description_student: Ushbu darsda jamoalar o‘zlarining qog‘oz prototiplarini
@@ -20393,15 +20246,13 @@ uz:
                 berish uchun ba'zi savollar tayyorlangandan keyin test yakunlandi.
             Digital Design:
               name: Digital Design
-              description_student: 'Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
+              description_student: Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
                 o‘tgan va fikr-mulohazalarni to‘plagan jamoalar endi o‘zlarining dasturlarining
                 navbatdagi takrorlanishini yaratish uchun App Labga o‘tadilar. Drag-and-drop
                 (sichqoncha yordamida surib siljitib-joylash) dizayn rejimidan foydalangan
-                holda, har bir jamoa a''zosi o‘zlarining dasturlarining kamida bitta
+                holda, har bir jamoa a'zosi o‘zlarining dasturlarining kamida bitta
                 sahifasini yaratadilar va testlarning oldingi bosqichida olingan fikr-mulohazalarga
                 javob berishadi.
-
-'
               description_teacher: Having collaboratively developed a paper prototype
                 for their apps, groups now divide and conquer to begin work on an
                 interactive digital version based on the paper prototype. Using the
@@ -21058,7 +20909,7 @@ uz:
                 sikli o‘z dasturlarida xuddi shunday taassurotni yaratishga yordam
                 berishini ko‘rib chiqishadi. O‘quvchilar chizilgan siklni tasodifiy
                 sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni nuqta bilan,
-                so‘ngra spraytlar bilan boshqaradilar. \n"
+                so‘ngra spraytlar bilan boshqaradilar. "
             The Counter Pattern Unplugged:
               name: The Counter Pattern Unplugged
               description_student: Ushbu oflayn dars o‘zgaruvchilarning asosiy mohiyatini
@@ -21338,7 +21189,7 @@ uz:
                 so‘ng, o‘zaro fikr-mulohazalarni bildiradilar. Dars oxirida o‘quvchilar
                 tugatilgan o‘yinlarini sinfdoshlari bilan bo‘lishadilar. Ushbu loyiha
                 bir nechta mashg‘ulotlarni o‘z ichiga oladi va 3-5 ta darslar oralig‘ida
-                bemalol o‘tilishi mumkin.\n"
+                bemalol o‘tilishi mumkin."
             Post-Project Test:
               name: Loyiha yakuniy testi
             CS Discoveries Post Course survey:
@@ -21761,7 +21612,7 @@ uz:
                 va xavfsiz parollarni yaratish va saqlash strategiyasini topish mavjud.\r\n\r\nO‘quvchilar
                 parol turlarini o‘rganadilar, o‘zlarining mavjud parollarini interaktiv
                 o‘yin yordamida sinab ko‘rishadi va kuchli parollar yaratish qo‘llanmasidan
-                foydalangan holda yangi parollar yaratadilar.\n"
+                foydalangan holda yangi parollar yaratadilar."
             'Programming: My Robotic Friends':
               name: Mening robot do‘stlarim Jr.
               description_student: In this lesson, you'll pretend your classmates
@@ -22233,8 +22084,8 @@ uz:
                 ishlatish orqali dasturlashda qulayliklar taklif qiladi.
             Simon Says:
               name: Simon so'zlaydi
-              description_student: "O‘ynang va natijaga erishish uchun qanday buyruqlar
-                kerakligini o‘ylab ko‘ring.\n\n"
+              description_student: O‘ynang va natijaga erishish uchun qanday buyruqlar
+                kerakligini o‘ylab ko‘ring.
               description_teacher: Ushbu darsda o‘quvchilar to‘g‘ri natija berish
                 uchun qanday buyruqlar berish kerakligi haqida fikr yuritishga mo‘ljallangan
                 o‘yin o‘ynaydilar. Bu ularga kelgusi darslarda Sprite Labga osonroq
@@ -22635,7 +22486,7 @@ uz:
                 rasmlarni tomosha qilishga undaydi. Videolar, ko'rsatmalarni o'qing
                 va yo'lda turli xil narsalarni sinab ko'ring. Istalgan vaqtda ular
                 siz yoki sinfdoshingiz bilan o'zlarining topilmalari haqida bo'lishishlari
-                mumkin. \r\n"
+                mumkin. \r"
           student_description: Learn to use different kinds of loops, events, functions,
             and conditionals. Investigate different problem-solving techniques and
             discuss societal impacts of computing and the internet. In the second
@@ -22873,6 +22724,8 @@ uz:
           lesson_groups:
             cspSurvey:
               display_name: Survey
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -22894,12 +22747,16 @@ uz:
               name: '15-dars: Baholash kuni'
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp1-2020
         csp2-2020:
           title: CSP Unit 2 - Internet ('20-'21)
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: Internet'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -22907,8 +22764,13 @@ uz:
               name: Routers and Redundancy
             'Lesson 9: Assessment Day':
               name: '15-dars: Baholash kuni'
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp2-2020
         csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -22930,17 +22792,23 @@ uz:
               name: Loyiha - Ilova dizayni. 5-qism
             'Lesson 11: Assessment Day':
               name: '15-dars: Baholash kuni'
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csd3-2020
         csp6-2020:
           title: CSP Unit 6 - Algoritmlar ('20-'21)
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algoritmlar'
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
             'Lesson 6: Assessment Day':
               name: '15-dars: Baholash kuni'
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp6-2020
         csp8-2020:
           lessons:
@@ -22950,13 +22818,21 @@ uz:
               name: Create PT - Complete the Task
           name: csp8-2020
         csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
             'Lesson 9: Assessment Day':
               name: '15-dars: Baholash kuni'
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp9-2020
         csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Post-Course Survey
           lessons:
             new stage:
               name: new stage
@@ -22982,6 +22858,8 @@ uz:
               name: 'Loyiha: Innovatsiya simulatsiyasi. 7-qism'
             'Lesson 14: Unit Assessment Day':
               name: '14-dars: Baholash kuni'
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
           name: csp10-2020
         csp-march-virtual:
           lessons:
@@ -23106,17 +22984,15 @@ uz:
                 o‘quvchilar butun bo‘lim davomida ishlaydigan loyihani boshlaydilar.
             Digital Footprint:
               name: Digital Footprint
-              description_student: 'Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
+              description_student: Ushbu dars shaxsiy veb-saytni yaratishda bir qadam
                 orqaga surilib, odamlar raqamli ravishda almashishni tanlagan shaxsiy
-                ma''lumotlar haqida gaplashadi. Sinf qaysi turdagi ma''lumotlarni
-                boshqa odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama
-                qilish bilan boshlanadi, so‘ngra shaxsiy ma''lumotlarning qanday turlari
-                atayin yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun
-                bir nechta namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va
-                nihoyat, sinf ma''lumotni Internetga qo‘yishda rioya qilish uchun
-                bir qator ko‘rsatmalarni ishlab chiqadi.
-
-'
+                ma'lumotlar haqida gaplashadi. Sinf qaysi turdagi ma'lumotlarni boshqa
+                odamlar bilan baham ko‘rish uchun yaxshi bo‘lishini muhokama qilish
+                bilan boshlanadi, so‘ngra shaxsiy ma'lumotlarning qanday turlari atayin
+                yoki bilmagan holda tarqatilishi mumkinligini ko‘rish uchun bir nechta
+                namunali ijtimoiy tarmoq sahifalarini ko‘rib chiqadi. Va nihoyat,
+                sinf ma'lumotni Internetga qo‘yishda rioya qilish uchun bir qator
+                ko‘rsatmalarni ishlab chiqadi.
               description_teacher: "Yaqinda o‘quvchilar o‘zlarining shaxsiy veb-saytlariga
                 kiradigan haqiqiy tarkib haqida bir oz vaqt sarflaganliklari sababli,
                 ushbu dars o‘quvchilarga qanday shaxsiy ma'lumotlarni raqamli va kim
@@ -23134,7 +23010,7 @@ uz:
                 \r \n\r \nUshbu darsning asosiy maqsadi o‘quvchilarni qo‘rqitish emas,
                 balki tajriba asosida o‘quvchilarni internetga ma'lumot chiqarishda
                 o‘zlarining nazorat darajalari yo‘qligini aniq anglashlariga olib
-                kelishdir.\n"
+                kelishdir."
             Styling Text with CSS:
               name: Styling Text with CSS
               description_student: Ushbu dars CSS ni sahifadagi elementlarni uslublash
@@ -23172,14 +23048,12 @@ uz:
                 usullarni o‘ylab topadilar.
             Styling Elements with CSS:
               name: Styling Elements with CSS
-              description_student: 'Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
-                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e''tibor
+              description_student: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
+                davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini o‘rganishadi
                 va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar. So‘ng
                 o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish uchun
                 CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.
-
-'
               description_teacher: Ushbu dars CSS uslubi xususiyatlari bilan tanishishni
                 davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga e'tibor
                 qaratadi. O‘quvchilar ushbu darsni "Dunyo shirinliklari" haqidagi
@@ -23752,7 +23626,7 @@ uz:
                 sikli o‘z dasturlarida xuddi shunday taassurotni yaratishga yordam
                 berishini ko‘rib chiqishadi. O‘quvchilar chizilgan siklni tasodifiy
                 sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni nuqta bilan,
-                so‘ngra spraytlar bilan boshqaradilar. \n"
+                so‘ngra spraytlar bilan boshqaradilar. "
             Sprite Movement:
               name: Sprite Movement
               description_student: "**Question of the Day: How can we control sprite
@@ -24065,7 +23939,7 @@ uz:
                 so‘ng, o‘zaro fikr-mulohazalarni bildiradilar. Dars oxirida o‘quvchilar
                 tugatilgan o‘yinlarini sinfdoshlari bilan bo‘lishadilar. Ushbu loyiha
                 bir nechta mashg‘ulotlarni o‘z ichiga oladi va 3-5 ta darslar oralig‘ida
-                bemalol o‘tilishi mumkin.\n"
+                bemalol o‘tilishi mumkin."
             Post-Project Test:
               name: Loyiha yakuniy testi
             CS Discoveries Post Course survey:
@@ -24164,6 +24038,12 @@ uz:
               name: Kurs E/F
             CS Discoveries:
               name: Kompyuter fanlari kashfiyotlari
+            Course E:
+              name: Kurs E
+            Course F:
+              name: Kurs F
+            csf:
+              name: CS asoslari
           lesson_groups:
             lesson group:
               display_name: ko‘rsatiladigan ism
@@ -24181,6 +24061,36 @@ uz:
               name: 6-dars
             temp:
               name: 20-dars
+            lesson2:
+              name: 2-dars
+            lesson3:
+              name: 3-dars
+            lesson4:
+              name: 4-dars
+            lesson5:
+              name: Model va ma'lumotlar
+            lesson6:
+              name: 6-dars
+            lesson7:
+              name: 7-dars
+            lesson8:
+              name: 8-dars
+            lesson9:
+              name: 9-dars
+            lesson10:
+              name: 10-dars
+            lesson11:
+              name: 11-dars
+            lesson12:
+              name: 12-dars
+            lesson13:
+              name: 13-dars
+            lesson14:
+              name: 14-Dars
+            lesson15:
+              name: 15-Dars
+            lesson16:
+              name: 16-dars
           description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin
             maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
           student_description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy
@@ -24223,18 +24133,18 @@ uz:
                 o‘zgartiring, qiziqarli interaktiv loyihalarni yarating!
             contagion:
               display_name: Kasallik yuqishi
+            debugging:
+              display_name: Nosozliklarni bartaraf etish (Debugging)
         csd1-2021:
-          description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
           description_short: "  Learn how humans work with computers to solve problems."
           lessons:
             CS Discoveries Pre-survey:
@@ -24260,8 +24170,8 @@ uz:
                 beradi. Dars oxirida o‘quvchilar o‘zlarining faoliyati bilan bog‘liq
                 tajribalarini aks ettiradilar va darsning qolgan qismida bajaradigan
                 muammolarni hal qilish turlari bilan bog‘lanishadi.\n\n**Darsning
-                alternativ versiyalari ham bor.** \r\n\r\n* [Newspaper Table](../4/)\r\n*
-                [Spaghetti Bridge](../5/)\r\n* [Paper Tower](../6/)\n\n"
+                alternativ versiyalari ham bor.** \r\n\r\n\n* [Newspaper Table](../4/)\r\n\n*
+                [Spaghetti Bridge](../5/)\r\n\n* [Paper Tower](../6/)"
             The Problem Solving Process:
               key: Muammoni yechish jarayoni
               name: Muammoni yechish jarayoni
@@ -24315,7 +24225,7 @@ uz:
                 yaxshiroq aniqlashda yordam bering, chunki bu ko‘pincha eng muhim
                 qadamdir.\r\n\r\nUshbu dars, ehtimol, 2 dars soati yoki undan ko‘proq
                 vaqtni oladi. Birinchi ikkita muammo bitta dars soatiga to‘g‘ri kelishi
-                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi.\n"
+                mumkin, ammo uchinchisini ikkinchi kunga o‘tkazish kerak bo‘ladi."
             What is a Computer?:
               key: Kompyuter nima?
               name: Kompyuter nima?
@@ -24458,7 +24368,7 @@ uz:
                 tajribalarini aks ettiradilar va darsning qolgan qismida bajaradigan
                 muammolarni hal qilish turlari bilan bog‘lanishadi.\n\n**Darsning
                 alternativ versiyasi ham bor - [Intro to Problem Solving - Aluminum
-                Boats](../1/)**\n"
+                Boats](../1/)**"
             Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
               description_student: "**Question of the Day: What can help us to work
                 together and solve problems as a team?**\r\n\r\nSinf imkon qadar ko‘proq
@@ -24478,7 +24388,7 @@ uz:
                 tajribalarini aks ettiradilar va darsning qolgan qismida bajaradigan
                 muammolarni hal qilish turlari bilan bog‘lanishadi.\n\n**Darsning
                 alternativ versiyasi ham bor - [Intro to Problem Solving - Aluminum
-                Boats](../1/)**\n\n"
+                Boats](../1/)**"
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               description_student: "**Question of the Day: How can we apply the problem
                 solving process to many different kinds of problems?**\r\n\r\nUshbu
@@ -24504,8 +24414,8 @@ uz:
             csd1_2:
               display_name: 'Chapter 2: Computers and Problem Solving'
               big_questions: "* Kompyuterlar odamlarga muammolarni hal qilishda qanday
-                yordam beradi? \n* Qanday qilib odamlar va kompyuterlar muammolarga
-                boshqacha munosabatda bo‘lishadi? \n* Muammolarni samarali hal qilish
+                yordam beradi? \n\n* Qanday qilib odamlar va kompyuterlar muammolarga
+                boshqacha munosabatda bo‘lishadi? \n\n* Muammolarni samarali hal qilish
                 uchun kompyuter odamlardan nimalarni so‘raydi?"
               description: Ushbu bob kompyuterlarni axborot muammolarini hal qiladigan
                 mashinalar sifatida taqdim etadi. O‘quvchilar ma'lum bir qo‘shimcha
@@ -24515,17 +24425,15 @@ uz:
                 uchun o‘quvchilar o‘zlari tanlagan muammoni hal qilish uchun ishlatilishi
                 mumkin bo‘lgan dasturni taklif qilishadi.
           name: csd1-2021
-          student_description: 'Muammolarni yechish va hisoblash asoslari - bu muammolarni
+          student_description: Muammolarni yechish va hisoblash asoslari - bu muammolarni
             yechishning keng doirasi doirasida yaratilgan, kompyuter savodxonligi
             sohasidagi juda interaktiv va hamkorlikdagi bog‘lovchi hisoblanadi. Bir
             qator jumboqlarni, muammolarni va haqiqiy dunyodan misollarni yechish
             uchun siz muammolarni yechish jarayonidan foydalanishni mashq qilasiz.
             Keyinchalik, odamlarga muammolarni yechishda yordam beradigan kompyuterlarning
-            qanday ma''lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
+            qanday ma'lumotlarni kiritish, chiqarish, saqlash va qayta ishlashini
             o‘rganasiz. Qurilma siz tanlagan muammoni yechishga yordam beradigan dasturni
             ishlab chiqadigan loyiha bilan yakunlanadi.
-
-'
         csd2-2021:
           description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni
             yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham
@@ -24578,7 +24486,7 @@ uz:
                 ijodiy tarkib foydalanuvchilari uchun mualliflik huquqining maqsadi
                 va rolini o‘rganadi. Keyin ular mualliflik huquqi bilan bog‘liq muammolarni
                 hal qilish uchun turli xil Creative Commons litsenziyalarini o‘rganadigan
-                faoliyatga o‘tadilar. \n"
+                faoliyatga o‘tadilar. "
               description_teacher: "**Kun savoli: Odamlar bir-birining kontentidan
                 foydalanganda qanday qoidalar ularning huquqlarini himoya qiladi?**\r\n\r\nBoshqalarga
                 o‘z ishlaridan qanday foydalanishga ruxsat berish kerakligi to‘g‘risida
@@ -24586,20 +24494,20 @@ uz:
                 ijodiy tarkib foydalanuvchilari uchun mualliflik huquqining maqsadi
                 va rolini o‘rganadi. Keyin ular mualliflik huquqi bilan bog‘liq muammolarni
                 hal qilish uchun turli xil Creative Commons litsenziyalarini o‘rganadigan
-                faoliyatga o‘tadilar. \n"
+                faoliyatga o‘tadilar. "
             Using Images:
               description_student: "Qanday qilib biz o‘z veb-saytimizga hammaning
                 huquqlarini hurmat qilgan tarzda rasmlarni qo‘shishimiz mumkin?**\r
                 \n\r \nO‘quvchilar veb-saytlarda rasmlardan foydalanishning axloqiy
                 oqibatlarini, xususan intellektual mulk nuqtai nazaridan tushunishni
                 boshlashadi. Keyin ular veb-sahifalariga <img> teg va rasm manbalarini
-                qanday qilib mos keltirish kerakligini o‘rganishadi.\n"
+                qanday qilib mos keltirish kerakligini o‘rganishadi."
               description_teacher: "Qanday qilib biz o‘z veb-saytimizga hammaning
                 huquqlarini hurmat qilgan tarzda rasmlarni qo‘shishimiz mumkin?**\r
                 \n\r \nO‘quvchilar darsni veb-saytlaridagi rasmlardan foydalanishning
                 axloqiy oqibatlarini, xususan intellektual mulk nuqtai nazaridan tushunish
-                bilan boshlashadi. Keyin ular veb-sahifalariga &lt;img&gt; teg va
-                rasm manbalarini qanday qilib mos keltirish kerakligini o‘rganadilar."
+                bilan boshlashadi. Keyin ular veb-sahifalariga <img> teg va rasm manbalarini
+                qanday qilib mos keltirish kerakligini o‘rganadilar."
             'Websites for Expression ':
               key: 'Websites for Expression '
               name: Websites for Expression
@@ -24630,14 +24538,14 @@ uz:
                 e'tibor qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini
                 o‘rganishadi va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar.
                 So‘ng o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish
-                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.\n"
+                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar."
               description_teacher: "**Kun savoli: Sahifa rasm va qatlamlariga stil
                 qanday beriladi?**\r\n\r\nUshbu dars CSS uslubi xususiyatlari bilan
                 tanishishni davom ettiradi, bu safar ko‘proq matnli bo‘lmagan elementlarga
                 e'tibor qaratadi. O‘quvchilar ushbu veb-saytdagi yangi CSS uslublarini
                 o‘rganishadi va o‘zgartiradilar va sahifaga o‘z uslublarini qo‘shadilar.
                 So‘ng o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish
-                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar.\n"
+                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar."
             Your Web Page - Prepare:
               key: Veb-sahifangiz - Tayyorlanish
               name: Veb-sahifangiz - Tayyorlanish
@@ -24684,7 +24592,7 @@ uz:
                 Keyin ular sahifalarni yakuniy tahrir qilishdan oldin o‘zaro tuzilgan
                 fikr-mulohazalar jarayonida qatnashadilar. Keyinchalik, ular muvaffaqiyatli
                 bo‘lishlariga yordam bergan ko‘nikmalar va amaliyotlar haqida fikr
-                yuritishadi.\n"
+                yuritishadi."
             Websites for a Purpose:
               description_student: "**Kun savoli: Odamlar veb-sayt yaratishining sabablari
                 nimada?**\r\n\r\nUshbu darsda o‘quvchilar odamlarning veb-saytlarini
@@ -24755,11 +24663,11 @@ uz:
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
           lesson_groups:
             csd2_1v2:
-              big_questions: "* Nima uchun odamlar veb-saytlarni yaratadilar? \n*
+              big_questions: "* Nima uchun odamlar veb-saytlarni yaratadilar? \n\n*
                 Matn qanday qilib veb-sahifadagi kontentini, tuzilishini va uslubini
-                yetkazishi mumkin? \n* Internetda nashr etilgan kontentdan qanday
-                qilib xavfsiz va keraklicha foydalanishim lozim? \n* Muammolarni topish
-                va tuzatish uchun kodlashda qanday strategiyalardan foydalanishim
+                yetkazishi mumkin? \n\n* Internetda nashr etilgan kontentdan qanday
+                qilib xavfsiz va keraklicha foydalanishim lozim? \n\n* Muammolarni
+                topish va tuzatish uchun kodlashda qanday strategiyalardan foydalanishim
                 mumkin?"
               description: O‘quvchilar asosiy veb-sahifalarni ishlab chiqish va rivojlantirishda
                 kompyuterni o‘zini namoyon qilish shakli sifatida ishlatishadi. O‘quvchilar
@@ -24769,9 +24677,9 @@ uz:
                 nashr etishning maxfiyligi va intellektual mulk ta'sirini o‘rganadilar.
             csd2_2v2:
               big_questions: "* Dunyo muammolarini hal qilish uchun veb-saytlardan
-                qanday foydalanish mumkin? \n* Jamoalar yaxshiroq ishlash uchun qanday
-                strategiyalardan foydalanishlari mumkin? \n* Internetda qanday ma'lumotlarga
-                ishonish mumkinligini qanday bilsam bo‘ladi?"
+                qanday foydalanish mumkin? \n\n* Jamoalar yaxshiroq ishlash uchun
+                qanday strategiyalardan foydalanishlari mumkin? \n\n* Internetda qanday
+                ma'lumotlarga ishonish mumkinligini qanday bilsam bo‘ladi?"
               description: O‘quvchilar veb-saytlar haqidagi g‘oyalarini shaxsiy qarashidan
                 kelib chiqib kengaytiradilar va ularni muammolarni hal qilishning
                 bir usuli deb bilishni boshlaydilar. O‘quvchilar o‘zaro hamkorlik
@@ -24851,7 +24759,7 @@ uz:
                 sikli o‘z dasturlarida xuddi shunday taassurotni yaratishga yordam
                 berishini ko‘rib chiqishadi. O‘quvchilar chizilgan siklni tasodifiy
                 sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni nuqta bilan,
-                so‘ngra spraytlar bilan boshqaradilar. \n"
+                so‘ngra spraytlar bilan boshqaradilar. "
             Sprite Movement:
               key: Sprite Movement
               name: Sprite Movement
@@ -24920,10 +24828,10 @@ uz:
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
-              big_questions: "* Kompyuter dasturi nima? \n* Ko‘pgina dasturlash tillarining
-                asosiy xususiyatlari qanday? \n* Dasturlash qanday qilib kreativlik
-                va individual yondashuvni ta'minlaydi? \n* Dasturlarni yozishda menga
-                qanday amaliyot va strategiyalar yordam beradi?\n"
+              big_questions: "* Kompyuter dasturi nima? \n\n* Ko‘pgina dasturlash
+                tillarining asosiy xususiyatlari qanday? \n\n* Dasturlash qanday qilib
+                kreativlik va individual yondashuvni ta'minlaydi? \n\n* Dasturlarni
+                yozishda menga qanday amaliyot va strategiyalar yordam beradi?"
               description: O‘quvchilar Game Lab muhitida interaktiv animatsiyalarni
                 dasturlash bilan shug‘ullanadilar. Ular oddiy shakllar va spraytlardan
                 boshlanadi, so‘ngra sikl yordamida flipbook uslubidagi animatsiyalarni
@@ -24934,10 +24842,10 @@ uz:
             csd3_2:
               display_name: 'Chapter 2: Building Games'
               big_questions: "* Dastur ishlab chiqaruvchilari murakkablik va o‘lchovni
-                qanday boshqaradilar? \n* Umumiy muammolarni faqat bir marta hal qilish
-                uchun dasturlarni qanday tashkil qilish mumkin? \n* Qanday qilib yanada
-                murakkab amallarni bajarish uchun avvalgi yechimlardan foydalanishim
-                mumkin?"
+                qanday boshqaradilar? \n\n* Umumiy muammolarni faqat bir marta hal
+                qilish uchun dasturlarni qanday tashkil qilish mumkin? \n\n* Qanday
+                qilib yanada murakkab amallarni bajarish uchun avvalgi yechimlardan
+                foydalanishim mumkin?"
               description: Ushbu bobda o‘quvchilar birinchi bobda o‘rgangan konstruksiyalarni
                 o‘zlarining spraytlarida yanada murakkab harakat va to‘qnashuvlarni
                 dasturlash uchun birlashtiradilar. Keyinchalik murakkab dasturlarni
@@ -25101,8 +25009,8 @@ uz:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
               big_questions: "* Dizaynerlar o‘z foydalanuvchilari ehtiyojlarini qanday
-                aniqlaydilar? \n* Qanday qilib biz dizaynimiz orqali foydalanuvchi
-                ehtiyojlarini qondirishimiz mumkin? \n* Qaysi jarayonlar o‘z dizaynlarimizni
+                aniqlaydilar? \n\n* Qanday qilib biz dizaynimiz orqali foydalanuvchi
+                ehtiyojlarini qondirishimiz mumkin? \n\n* Qaysi jarayonlar o‘z dizaynlarimizni
                 samarali yaratish, sinash va takrorlashimizga imkon beradi?"
               description: Ushbu bob loyihalash jarayonini foydalanuvchi ehtiyojlariga
                 nisbatan doimiy ravishda birlashtirilgan muammolarni hal qilish jarayonining
@@ -25116,9 +25024,9 @@ uz:
             csd4_2:
               display_name: 'Chapter 2: App Prototyping'
               big_questions: "* Dasturlarni ishlab chiqishda jamoalar qanday samarali
-                tarzda hamkorlik qilishadi? \n* Dasturiy ta'minotni ishlab chiqish
+                tarzda hamkorlik qilishadi? \n\n* Dasturiy ta'minotni ishlab chiqish
                 va ishlab chiqish uchun dasturlashdan tashqari qanday ishlarni bajarish
-                rollari zarur? \n* Qanday qilib dizaynerlar fikr-mulohazalarni mahsulotning
+                rollari zarur? \n\n* Qanday qilib dizaynerlar fikr-mulohazalarni mahsulotning
                 ko‘p takrorlanishiga qo‘llaydilar?"
               description: Ushbu bo‘lim o‘quvchilarga ilova prototipini ishlab chiqishda
                 foydalanuvchiga asoslangan dizayn haqida o‘rgangan barcha narsalarini
@@ -25226,10 +25134,10 @@ uz:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
               big_questions: "* Nima uchun taqdim qilish jarayoni muammolarni hal
-                qilishda muhim ahamiyatga ega? \n* Taqdim etish tizimi qanday xususiyatlarga
-                ega bo‘lishi kerak? \n* Foydalaniladigan ikkilik taqdim etish tizimlarini
-                yaratish uchun nima zarur? \n* Qanday qilib biz murakkabroq ma'lumotlarni
-                olish uchun tizimlarni birlashtira olamiz?\n"
+                qilishda muhim ahamiyatga ega? \n\n* Taqdim etish tizimi qanday xususiyatlarga
+                ega bo‘lishi kerak? \n\n* Foydalaniladigan ikkilik taqdim etish tizimlarini
+                yaratish uchun nima zarur? \n\n* Qanday qilib biz murakkabroq ma'lumotlarni
+                olish uchun tizimlarni birlashtira olamiz?"
               description: Ushbu bob ma'lumotlarning namoyishi va uning axborot muammolarini
                 hal qilishdagi roliga qaratilgan. O‘quvchilar taqdim qilish tizimi
                 nimaga foydali bo‘lishi kerakligini va qanday qilib kompyuterlar ikkilik
@@ -25240,9 +25148,9 @@ uz:
             csd5_2:
               display_name: 'Chapter 2: Solving Data Problems'
               big_questions: "* Ma'lumotlar bizga muammolarni hal qilishda qanday
-                yordam beradi? \n* Qanday qilib kompyuterlar va odamlar ma'lumotlardan
-                har xil tarzda foydalanadilar? \n* Ma'lumotlar muammosini hal qilish
-                jarayonining qaysi qismlarini avtomatlashtirish mumkin? \n* Haqiqiy
+                yordam beradi? \n\n* Qanday qilib kompyuterlar va odamlar ma'lumotlardan
+                har xil tarzda foydalanadilar? \n\n* Ma'lumotlar muammosini hal qilish
+                jarayonining qaysi qismlarini avtomatlashtirish mumkin? \n\n* Haqiqiy
                 dunyoda kompyuterlar qanday muammolarni hal qilish uchun ma'lumotlardan
                 foydalanadilar?"
               description: O‘quvchilar ma'lumotlardan qanday qilib qiziqarli savollarga
@@ -25460,9 +25368,9 @@ uz:
             csd6_1:
               display_name: 'Chapter 1: Programming with Hardware'
               big_questions: "* Dasturiy ta'minot qurilma bilan qanday o‘zaro aloqa
-                qiladi? \n* Qanday qilib kompyuterlar o‘zlarining qurilmalarini sezishi
-                va javob berishi mumkin? \n* Oddiy qurilmaning chiqish joyi orqali
-                qanday ma'lumotni yetkazish mumkin?"
+                qiladi? \n\n* Qanday qilib kompyuterlar o‘zlarining qurilmalarini
+                sezishi va javob berishi mumkin? \n\n* Oddiy qurilmaning chiqish joyi
+                orqali qanday ma'lumotni yetkazish mumkin?"
               description: Ushbu bo‘lim App Labda dasturlashni qayta ko‘rib chiqishni
                 boshlashdan oldin o‘quvchilarni turli xil noan'anaviy hisoblash platformalarini
                 o‘rganishga undaydigan mashg‘ulotlardan boshlanadi va dastlab, 4-bo‘limda
@@ -25477,8 +25385,8 @@ uz:
             csd6_2:
               display_name: 'Chapter 2: Building Physical Prototypes'
               big_questions: "* Qanday qilib ko‘proq miqdordagi o‘xshash qiymatlar
-                bilan dasturchilar ishlaydi? \n* Haqiqiy dunyodagi murakkab ma'lumotlarni
-                qanday qilib kodda aks ettirish mumkin? \n* Innovatsion yangi mahsulotlarni
+                bilan dasturchilar ishlaydi? \n\n* Haqiqiy dunyodagi murakkab ma'lumotlarni
+                qanday qilib kodda aks ettirish mumkin? \n\n* Innovatsion yangi mahsulotlarni
                 yaratish uchun oddiy qurilmadan qanday foydalanish mumkin?"
               description: Ma'lumotlarni qabul qilish va ishlab chiqarish uchun texnik
                 vositalardan qanday foydalanishni tushungan holda, o‘quvchilar qurilma
@@ -26148,13 +26056,13 @@ uz:
               name: End of Course Project
               description_student: Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang!
                 Loyihangizni yaratishni boshlashning vaqti keldi.
-              description_teacher: 'Ushbu yakunlovchi dars o‘quvchilarni o‘z Play
-                Lab loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish
-                jarayonidan o‘tadi! Ushbu jarayon muammosiz o‘tishini ta''minlash
-                uchun biz o‘quvchilarga qog‘ozda rejalashtirishdan boshlab veb-saytimizdagi
-                kodlashgacha bosqichma-bosqich o‘tish tuzilmasini ta''minladik. Bundan
-                tashqari, biz o''qituvchilarga taqdimotli finalni engillashtirishda
-                yordam beradigan g''oyalarni taklif etamiz! '
+              description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘z Play Lab
+                loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan
+                o‘tadi! Ushbu jarayon muammosiz o‘tishini ta'minlash uchun biz o‘quvchilarga
+                qog‘ozda rejalashtirishdan boshlab veb-saytimizdagi kodlashgacha bosqichma-bosqich
+                o‘tish tuzilmasini ta'minladik. Bundan tashqari, biz o'qituvchilarga
+                taqdimotli finalni engillashtirishda yordam beradigan g'oyalarni taklif
+                etamiz!
           lesson_groups:
             csf_digcit:
               display_name: Raqamli Fuqarolik
@@ -26462,8 +26370,8 @@ uz:
                 ishlatish orqali dasturlashda qulayliklar taklif qiladi.
             Simon Says:
               key: Simon so'zlaydi
-              description_student: "O‘ynang va natijaga erishish uchun qanday buyruqlar
-                kerakligini o‘ylab ko‘ring.\n\n"
+              description_student: O‘ynang va natijaga erishish uchun qanday buyruqlar
+                kerakligini o‘ylab ko‘ring.
               description_teacher: Ushbu darsda o‘quvchilar to‘g‘ri natija berish
                 uchun qanday buyruqlar berish kerakligi haqida fikr yuritishga mo‘ljallangan
                 o‘yin o‘ynaydilar. Bu ularga kelgusi darslarda Sprite Labga osonroq
@@ -26601,6 +26509,10 @@ uz:
             lesson-4:
               description_student: Kiberhujumni ko‘rganingizda qanday qilib undan
                 himoyada bo‘lishingizni bilib oling.
+            lesson-1:
+              description_teacher: 'Miya hujumi (brainstorm) va faraziy ilovalar uchun
+                qulay yechimlarni loyihalashtirish orqali kirish imkoniyati va empatiya
+                qiymati haqida bilib oling. '
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
@@ -26616,6 +26528,8 @@ uz:
               display_name: Kompyuterlar ta'siri
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-7:
+              display_name: Kompyuterlar ta'siri
           name: coursee-2021
           student_description: Start coding with algorithms, loops, conditionals,
             and events and then you’ll move on functions. In the second part of this
@@ -26711,9 +26625,9 @@ uz:
             Variables that Change in Bee:
               name: Changing Variables with Bee
               description_student: This bee loves variables!
-              description_teacher: 'This lesson will help illustrate how variables
+              description_teacher: This lesson will help illustrate how variables
                 can make programs more powerful by allowing values to change while
-                the code is running. '
+                the code is running.
             Variables that Change in Artist:
               name: Changing Variables with Artist
               description_student: In this lesson, you'll make drawings using variables
@@ -26762,7 +26676,7 @@ uz:
                 rasmlarni tomosha qilishga undaydi. Videolar, ko'rsatmalarni o'qing
                 va yo'lda turli xil narsalarni sinab ko'ring. Istalgan vaqtda ular
                 siz yoki sinfdoshingiz bilan o'zlarining topilmalari haqida bo'lishishlari
-                mumkin. \r\n"
+                mumkin. \r"
             Internet:
               key: Internet
               name: Internet
@@ -26778,11 +26692,11 @@ uz:
               name: Zavqli For sikli
               description_student: Siz for sikllari haqida juda ko‘p qiziqarli ma’lumotlarga
                 ega bo‘lasiz!
-              description_teacher: 'Biz bilamizki, ilmoqlar bizga narsalarni qayta-qayta
-                bajarishga imkon beradi, ammo endi biz qo''shimcha tuzilmalarga ega
-                bo''lgan sikllardan qanday foydalanishni o''rganamiz. Ushbu yangi
-                tuzilmalar talabalarga kodni yanada kuchli va dinamik yaratishga imkon
-                beradi. . '
+              description_teacher: Biz bilamizki, ilmoqlar bizga narsalarni qayta-qayta
+                bajarishga imkon beradi, ammo endi biz qo'shimcha tuzilmalarga ega
+                bo'lgan sikllardan qanday foydalanishni o'rganamiz. Ushbu yangi tuzilmalar
+                talabalarga kodni yanada kuchli va dinamik yaratishga imkon beradi.
+                .
             For Loops in Bee:
               key: For Loops in Bee
               name: Asalari bilan for sikllari
@@ -26816,11 +26730,12 @@ uz:
                 Sprite Lab's "Costumes" tool to customize their pet's appearance.
                 They will then use events, behaviors, and other concepts they have
                 learned to give their pet a life of its own!
-              description_teacher: In this lesson, students will create an interactive
-                Virtual Pet that looks and behaves how they wish. Students will use
-                Sprite Lab's "Costumes" tool to customize their pet's appearance.
-                They will then use events, behaviors, and other concepts they have
-                learned to give their pet a life of its own!
+              description_teacher: Bu darsda talabalar ular xohlagandek ko‘rinadigan
+                va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar
+                uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning
+                "Costumes" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish
+                uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan
+                foydalanishadi!
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
@@ -26858,6 +26773,8 @@ uz:
               description_student: Bezorilik hech qachon yaxshi bo’lmaydi. Ushbu dars
                 sizga onlaynda nima deyish va nima deyish mumkinligi to’g’risida ma’lumot
                 beradi.
+            lesson-11:
+              name: Chat-Bot yaratish
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
@@ -26915,7 +26832,7 @@ uz:
                 qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.
             Debugging with Scrat:
               key: Skrat bilan debug qilish
-              name: Skrat bilan debug qilish
+              name: Debugging in Maze
               description_student: Boshqotirmalardagi muammolarni toping va debug
                 qilish mahoratingizni amalda sinab ko‘ring.
               description_teacher: Debug qilish dasturlashni o‘rganishning muhim elementidir.
@@ -27069,17 +26986,20 @@ uz:
               name: Variables with Artist
               description_student: Sinfga ijodkorlikni jalb qilishni unutmang! Ushbu
                 jumboqlarda siz o'zgaruvchilardan foydalanib hayoliy rasmlar chizasiz.
-              description_teacher: In this lesson, students will explore the creation
-                of repetitive designs using variables in the Artist environment. Students
-                will learn how variables can be used to make code easier to write
-                and easier to read, even when the values don't change at runtime.
+              description_teacher: Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar
+                yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar
+                o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish
+                uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan
+                jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining
+                o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni
+                o’rganadilar
             Changing Variables with Bee:
               key: Changing Variables with Bee
               name: Changing Variables with Bee
               description_student: This bee loves variables!
-              description_teacher: 'This lesson will help illustrate how variables
+              description_teacher: This lesson will help illustrate how variables
                 can make programs more powerful by allowing values to change while
-                the code is running. '
+                the code is running.
             Changing Variables with Artist:
               key: Changing Variables with Artist
               name: Changing Variables with Artist
@@ -27143,11 +27063,12 @@ uz:
                 Sprite Lab's "Costumes" tool to customize their pet's appearance.
                 They will then use events, behaviors, and other concepts they have
                 learned to give their pet a life of its own!
-              description_teacher: In this lesson, students will create an interactive
-                Virtual Pet that looks and behaves how they wish. Students will use
-                Sprite Lab's "Costumes" tool to customize their pet's appearance.
-                They will then use events, behaviors, and other concepts they have
-                learned to give their pet a life of its own!
+              description_teacher: Bu darsda talabalar ular xohlagandek ko‘rinadigan
+                va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar
+                uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning
+                "Costumes" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish
+                uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan
+                foydalanishadi!
             End of Course Project:
               key: End of Course Project
               name: End of Course Project
@@ -27203,6 +27124,7 @@ uz:
             Learn to Drag and Drop:
               key: Drag&Drop - Olib ko‘chirishni o‘rganish
               name: Drag&Drop - Olib ko‘chirishni o‘rganish
+              description_student: Click and drag to finish the puzzles.
               description_teacher: Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga
                 kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya
                 qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi,
@@ -27211,6 +27133,7 @@ uz:
             Sequencing with Scrat:
               key: Sequencing with Scrat
               name: Sequencing with Scrat
+              description_student: Program Scrat to reach the acorn.
               description_teacher: Using Scrat from the Ice Age franchise, students
                 will develop sequential algorithms to move a squirrel character from
                 one side of a maze to the acorn at the other side. To do this they
@@ -27218,11 +27141,11 @@ uz:
             Programming in with Angry Birds:
               key: Jahldor qushlar bilan dasturlash
               name: Jahldor qushlar bilan dasturlash
-              description_teacher: Jahldor qushlar o‘yinidagi obrazlardan foydalanib,
-                talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga
-                qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar.
-                Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan
-                qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.
+              description_teacher: Using characters from the Ice Age, students will
+                develop sequential algorithms to move Scrat from one side of a maze
+                to the acorn at the other side. To do this they will stack code blocks
+                together in a linear sequence, making them move straight, turn left,
+                or turn right.
             Programming with Rey and BB-8:
               key: Rey va BB-8 bilan dasturlash
               name: Rey va BB-8 bilan dasturlash
@@ -27231,6 +27154,8 @@ uz:
                 o'tish uchun foydalanadilar.
             Programming in Harvester:
               name: Terimchi bilan dasturlash
+              description_student: Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga
+                yordam bering.
               description_teacher: Talabalar Terimchi (Harvester) muhitida o‘rgangan
                 dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni
                 maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib
@@ -27240,6 +27165,7 @@ uz:
             Loops with Scrat:
               key: Loops with Scrat
               name: Loops with Scrat
+              description_student: Help Scrat cover more ground using loops.
             Loops with Laurel:
               key: Laurel bilan sikllar
               name: Laurel bilan sikllar
@@ -27250,6 +27176,7 @@ uz:
             Ocean Scene with Loops:
               key: Sikllar bilan okean manzarasi
               name: Sikllar bilan okean manzarasi
+              description_student: Use loops and patterns to finish the images.
               description_teacher: Sikllar mavzusiga qaytgan holda, talabalar ko‘rsatmalarning
                 oddiy ketma-ketligini takrorlash orqali rasmlar chizishni o‘rganishadi.
                 Kompyuter bilan o‘tilgan oldingi darsda, sikllar labirintdan o‘tish
@@ -27259,6 +27186,7 @@ uz:
             Drawing Gardens with Loops:
               key: Drawing Gardens with Loops
               name: Drawing Gardens with Loops
+              description_student: Use patterns and loops to finish the images.
               description_teacher: Sikllarga qaytadigan bo‘lsak, talabalar ko‘rsatmalarning
                 oddiy ketma-ketligini takrorlash orqali rasm chizishni o‘rganishadi.
                 Oldingi onlayn darsda, sikllar labirintni kesib o‘tish va xazina to‘plash
@@ -27268,6 +27196,7 @@ uz:
             On the Move with Events:
               key: Hodisalar bilan harakatda
               name: Hodisalar bilan harakatda
+              description_student: O'z o'yiningiz yoki hikoyangizni yarating!
               description_teacher: Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi
                 hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan
                 o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish
@@ -27276,6 +27205,8 @@ uz:
             A Royal Battle with Events:
               key: A Royal Battle with Events
               name: A Royal Battle with Events
+              description_student: Use events to create a story or make an interactive
+                game.
               description_teacher: Bu onlayn mashg‘ulotda, talabalarda Play Labda
                 hodisalardan qanday foydalanishni o‘rganish va animatsiyalashtirilgan
                 o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga
@@ -27523,13 +27454,11 @@ uz:
             Paper Prototypes:
               key: Paper Prototypes
               name: Paper Prototypes
-              description_student: 'Qog‘oz prototiplari yozib olish dasturchilarga
+              description_student: Qog‘oz prototiplari yozib olish dasturchilarga
                 kod yozish uchun ko‘p vaqt sarflashdan oldin g‘oyalarni tezda sinab
                 ko‘rishlariga imkon beradi. Ushbu darsda jamoalar o‘zlarining dastlabki
                 qog‘oz prototiplarini ko‘rsatish uchun ushbu ilovalar yordamida App
-                Lab da yaratilgan ba''zi bir dasturlarni o‘rganadilar.
-
-'
+                Lab da yaratilgan ba'zi bir dasturlarni o‘rganadilar.
               description_teacher: "Ilovalarni loyihalashtirishni boshlashdan oldin,
                 biz o‘quvchilarning umidlarini kuchaytirishga yordam berishimiz kerak.
                 O‘quvchilar bo‘lim oxirida App Labda ushbu dasturlarning prototipini
@@ -27542,7 +27471,7 @@ uz:
                 tanlashlari mumkin. U yerdan jamoalar qog‘oz prototiplarini ishlab
                 chiqish uchun 3x5 indeksli kartalarni ishlatishdan oldin o‘zlarining
                 dasturlarining asosiy funksiyalarini muhokama qilish uchun biroz vaqt
-                ajratadilar.\n\r\n"
+                ajratadilar.\n\r"
             Prototype Testing:
               key: Prototype Testing
               name: Prototype Testing
@@ -27566,15 +27495,13 @@ uz:
             Digital Design:
               key: Digital Design
               name: Digital Design
-              description_student: 'Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
+              description_student: Qog‘oz prototipi bo‘yicha ishlab chiqilgan, sinovdan
                 o‘tgan va fikr-mulohazalarni to‘plagan jamoalar endi o‘zlarining dasturlarining
                 navbatdagi takrorlanishini yaratish uchun App Labga o‘tadilar. Drag-and-drop
                 (sichqoncha yordamida surib siljitib-joylash) dizayn rejimidan foydalangan
-                holda, har bir jamoa a''zosi o‘zlarining dasturlarining kamida bitta
+                holda, har bir jamoa a'zosi o‘zlarining dasturlarining kamida bitta
                 sahifasini yaratadilar va testlarning oldingi bosqichida olingan fikr-mulohazalarga
                 javob berishadi.
-
-'
               description_teacher: Having collaboratively developed a paper prototype
                 for their apps, groups now divide and conquer to begin work on an
                 interactive digital version based on the paper prototype. Using the
@@ -28089,6 +28016,13 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa2-pilot:
+          lessons:
+            lesson-15:
+              name: '15-dars: Baholash kuni'
+          lesson_groups:
+            lesson group:
+              display_name: Kontent
         k5-onlinepd-2021:
           description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org
             ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter
@@ -28142,3 +28076,26 @@ uz:
           lesson_groups:
             Lesson 1:
               display_name: 1-dars
+        pl-playground:
+          lessons:
+            Module 1:
+              name: Modul 1
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: CSP Post-Course Survey
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Survey
+          description_audience: CSP Students
+          description_short: CSP Student Post Course Survey
+          description: Welcome to the Code.org CS Principles Post-Course Survey.  This
+            survey takes about 15 minutes to complete.  Your responses are private
+            and anonymous -- your teacher can see anonymous aggregate results for
+            the whole class.  The results are vital for your teacher and for Code.org
+            to sustain and improve the course.  Thanks for your time and consideration.
+          student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This
+            survey takes about 15 minutes to complete.  Your responses are private
+            and anonymous -- your teacher can see anonymous aggregate results for
+            the whole class.  The results are vital for your teacher and for Code.org
+            to sustain and improve the course.  Thanks for your time and consideration.

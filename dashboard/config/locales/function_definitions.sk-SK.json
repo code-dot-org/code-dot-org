@@ -70,7 +70,11 @@
             "name": "nakresli pravú nohu"
           },
           "draw body and arms": {
-            "name": "nakresli telo a ruky"
+            "name": "nakresli telo a ruky",
+            "parameters": {
+              "armlength": "dĺžkaruky",
+              "bodylength": "dĺžkatela"
+            }
           },
           "draw a head": {
             "name": "nakresli hlavu"
@@ -432,34 +436,53 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "získať 3 nektáre"
+            "name": "získať 3 nektáre",
+            "parameters": {
+              "direction": "smer"
+            }
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "získať 3 nektáre"
+            "name": "získať 3 nektáre",
+            "parameters": {
+              "direction": "smer"
+            }
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "získaj 5 nektárov"
+            "name": "získaj 5 nektárov",
+            "parameters": {
+              "direction": "smer"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "získaj 5 nektárov"
+            "name": "získaj 5 nektárov",
+            "parameters": {
+              "direction": "smer",
+              "nectar units": "jednotky nektáru"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "získať veľa nektáru"
+            "name": "získať veľa nektáru",
+            "parameters": {
+              "direction": "smer",
+              "nectars": "nektár"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "získaj nektár a vyrob med",
             "parameters": {
-              "honey": "med"
+              "honey": "med",
+              "direction": "smer",
+              "nectars": "nektár"
             }
           }
         },
@@ -574,7 +597,8 @@
           "get nectar": {
             "name": "získaj nektár",
             "parameters": {
-              "counter": "počítadlo"
+              "counter": "počítadlo",
+              "dir": "adr"
             }
           }
         },
@@ -588,7 +612,10 @@
             "name": "nakresli štvorec 20"
           },
           "draw octagons": {
-            "name": "nakresli osemuholníky"
+            "name": "nakresli osemuholníky",
+            "parameters": {
+              "numOctagons": "početOsemuholníkov"
+            }
           },
           "draw an octagon": {
             "name": "nakresli osemuholník"
@@ -720,7 +747,10 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "skontroluj odhad"
+            "name": "skontroluj odhad",
+            "parameters": {
+              "theGuess": "Tip"
+            }
           }
         },
         "InspirationalArtwork": {

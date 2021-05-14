@@ -3,21 +3,21 @@
     "data": {
       "behavior_names": {
         "CourseE_Project_SpriteLab": {
-          "wandering": "wandering",
+          "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
           "spinning right": "rechtsdrehend",
-          "shrinking": "shrinking",
+          "shrinking": "schrumpfend",
           "growing": "wachsend",
           "moving south": "nach Süden gehend",
           "swimming left and right": "links und rechts schwimmend",
           "moving north": "nach Norden gehend",
-          "jittering": "jittering",
+          "jittering": "zitternd",
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
         },
         "CourseE_Project_SpriteLab_2019": {
-          "wandering": "wandering",
+          "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
           "spinning right": "rechtsdrehend",
@@ -31,16 +31,16 @@
           "patrolling": "patrouillierend"
         },
         "CourseE_hoops": {
-          "wandering": "wandering",
+          "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
           "spinning right": "rechtsdrehend",
-          "shrinking": "shrinking",
+          "shrinking": "schrumpfend",
           "growing": "wachsend",
           "moving south": "nach Süden gehend",
           "being hungry": "hungrig sein",
           "moving north": "nach Norden gehend",
-          "jittering": "jittering",
+          "jittering": "zitternd",
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "swimming left and right": "links und rechts schwimmend"
@@ -665,7 +665,7 @@
           "patrolling": "patrouillierend",
           "wandering": "wandernd",
           "growing": "wachsend",
-          "jittering": "jittering",
+          "jittering": "zitternd",
           "moving east": "nach Osten gehend",
           "moving north": "nach Norden gehend",
           "moving south": "nach Süden gehend",
@@ -905,16 +905,16 @@
         "courseE_Dogger_2": {
           "drive left": "fahre nach links",
           "drive right": "fahre nach rechts",
-          "wandering": "wandering",
+          "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
           "spinning right": "rechtsdrehend",
-          "shrinking": "shrinking",
+          "shrinking": "schrumpfend",
           "growing": "wachsend",
           "moving south": "nach Süden gehend",
           "swimming left and right": "links und rechts schwimmend",
           "moving north": "nach Norden gehend",
-          "jittering": "jittering",
+          "jittering": "zitternd",
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
         },
@@ -975,7 +975,7 @@
           "patrolling": "patrouillierend"
         },
         "courseE_aboutme_3": {
-          "wandering": "wandering",
+          "wandering": "wandernd",
           "moving east": "nach Osten gehend",
           "spinning left": "linksdrehend",
           "spinning right": "rechtsdrehend",
@@ -984,7 +984,7 @@
           "moving south": "nach Süden gehend",
           "swimming left and right": "links und rechts schwimmend",
           "moving north": "nach Norden gehend",
-          "jittering": "jittering",
+          "jittering": "zitternd",
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
         },
@@ -1012,7 +1012,7 @@
           "moving south": "nach Süden gehend",
           "swimming left and right": "links und rechts schwimmend",
           "moving north": "nach Norden gehend",
-          "jittering": "jittering",
+          "jittering": "zitternd",
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
         },
@@ -1040,7 +1040,7 @@
           "moving south": "nach Süden gehend",
           "swimming left and right": "links und rechts schwimmend",
           "moving north": "nach Norden gehend",
-          "jittering": "jittering",
+          "jittering": "zitternd",
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
         },

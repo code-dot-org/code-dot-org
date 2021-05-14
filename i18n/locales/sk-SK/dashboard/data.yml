@@ -508,7 +508,7 @@ sk:
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
         csd_applab_designmode: 'Objavujeme informatiku : App Lab - dizajnový mód'
         csd_pair_programming: Programovanie v páre
-        csd_gamelab_functions: Názvy a definície funkcií
+        csd_gamelab_functions: Volanie a definovanie funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
         csd_problem_solving_process: Proces riešenia problémov

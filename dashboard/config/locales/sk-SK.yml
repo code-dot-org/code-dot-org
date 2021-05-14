@@ -321,6 +321,7 @@ sk:
     added_teacher: "%{name} pridaný ako váš učiteľ"
     registered: Zaregistrovali ste sa na %{section_name}.
     captcha_required: Pre pripojenie k triede, vyplň prosím CAPTCHA.
+    already_exists: V sekcii %{section_name} ťa už evidujeme.
     error:
       signed_in: Pred pokračovaním sa prosím odhláste
       username_not_found: Užívateľské meno %{username} nebolo nájdené
@@ -334,6 +335,8 @@ sk:
       provider_managed_section: Túto triedu spravuje iný poskytovateľ a nie je možné
         sa k nej pripojiť. Požiadajte prosím vášho školiteľa o pridanie pomocou %{provider}
         a opätovné synchronizovanie ich triedy.
+      restricted_section: Do sekcie %{section_code} ťa nevieme pridať, pretože je
+        uzamknutá. Kontaktuj prosím svojho učiteľa pre pomoc.
     mail:
       student_disassociated:
         subject: 'Code.org upozornenie: %{student_name} už nie je Vaším študentom.'
@@ -923,9 +926,7 @@ sk:
     correct_title: Správne
     correct_body: To je správna odpoveď.
   lesson_extras:
-    bonus_level: |-
-      Tekvica označuje miesto, kde by si mal :otočiť sa vpravo". V opačnom prípade pokračuj ďalej, ale nezabudni pozbierať všetok šalát alebo kukuricu.
-      *Každá skrytá plodina má iba jednu kukuricu alebo šalát.*
+    bonus_level: Bonusová úroveň
   dialog:
     ok: ok
     startover_title: Naozaj chceš začať odznova?
@@ -1254,6 +1255,7 @@ sk:
         malaysia: Malajzia
         mexico: Mexiko
         thailand: Thajsko
+        uzbekistan: Uzbekistan
       ages:
         ages_under_6: "< 6 rokov"
         ages_7_8: 7-8 rokov

@@ -34,7 +34,11 @@ mt:
         text: kulur bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
-      aalab_starwars_playSound:
+      Outbreak_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
+            '"random"': bl-addoċċ
+      aalab_layoutSprites:
+        options:
+          FORMAT:
             '"random"': bl-addoċċ

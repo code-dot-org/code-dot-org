@@ -8,11 +8,13 @@
       "is_migrated": true,
       "curriculum_umbrella": "CSA",
       "weekly_instructional_minutes": 225,
-      "show_calendar": true
+      "show_calendar": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-11 21:16:37 UTC",
+    "serialized_at": "2021-05-13 14:46:33 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -23,8 +25,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Content",
-        "description": "Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity."
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -40,6 +41,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Test"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -406,6 +419,21 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Test Lesson #1",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -1818,7 +1846,8 @@
       "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n",
-        "name": "Assessment: Check For Understanding"
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8",
@@ -1972,8 +2001,9 @@
       "key": "aed67282-2415-4401-9c3e-c62c39d534b1",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The `Painter` started with five units of paint on their paint tray. How many units of paint will the `Painter` have left on their paint tray after painting a straight line that connects the origin, (0, 0) to (3, 3)?\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1",
@@ -2233,8 +2263,9 @@
       "key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Look at the code snippet below. Would the code inside the `if`-statement run? Why or why not?\n\n```\n    Painter jes = new Painter();\n    if(canMove()){\n        jes.Move();\n    }\n```\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
@@ -4850,8 +4881,12 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2 CFU1"
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": false,
       "bonus": false,
@@ -4867,6 +4902,58 @@
       "level_keys": [
         "CSA U1L2 CFU1"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3 CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3 CFU1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1"
+      },
+      "level_keys": [
+        "CSA U1L3 CFU1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7"
+      },
+      "level_keys": [
+        "CSA U1L4 CFU1"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4880,6 +4967,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot",
         "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3 CFU1",
+        "script_level.level_keys": [
+          "CSA U1L3 CFU1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4 CFU1",
+        "script_level.level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7"
       }
     }
   ],

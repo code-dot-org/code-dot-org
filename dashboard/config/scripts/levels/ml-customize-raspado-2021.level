@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Raspado Recommender\r\n\r\nUpdate the data variables to use the new design elements on the second screen.\r\n\r\n# Do This\r\n\r\n- Drag out a `getText()` block to each blank to the right of a variable\r\n- Use the drop-down menu to select the appropriate dropdown\r\n- Run the app and verify that it works\r\n\t- _If you get any errors about the `getPrediction()` block, [click here to reload the page](https://studio.code.org/s/ai-unit-pilot/lessons/11/levels/2?enableExperiments=applab-ml) and enable AI on this app_",
+    "long_instructions": "# Raspado Recommender\r\n\r\nUpdate the data variables to use the new design elements on the second screen.\r\n\r\n# Do This\r\n\r\n- Drag out a `getText()` block to each blank to the right of a variable\r\n- Use the drop-down menu to select the appropriate dropdown\r\n- Run the app and verify that it works\r\n\t- _If you get any errors about the `getPrediction()` block, [click here to reload the page](https://studio.code.org/s/aiml-2021/lessons/11/levels/2?enableExperiments=applab-ml) and enable AI on this app_",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

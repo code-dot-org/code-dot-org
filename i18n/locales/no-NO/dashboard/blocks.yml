@@ -1032,6 +1032,15 @@
             '"y"': y-posisjon
             '"direction"': bevegelsesretning
             '"speed"': fart
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': størrelse
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': middels
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1265,6 +1274,13 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': rutenett
+            '"border"': kantlinje
+            '"row"': rad
+            '"random"': tilfeldig
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:
@@ -1279,18 +1295,27 @@
         text: tilfeldig sted
       Vector_vectorNorth:
         text: nord
-      aalab_moveInDirection:
-        text: gå {SPRITE} {DISTANCE} piksler {DIRECTION}
+      aalab_layoutSprites:
         options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Øst
-            '"South"': Sør
-            '"West"': Vest
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': rutenett
+            '"border"': kantlinje
+            '"row"': rad
             '"random"': tilfeldig
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': alle
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_goToHome:
         text: hopp til øverst til venstre
       binary_move:

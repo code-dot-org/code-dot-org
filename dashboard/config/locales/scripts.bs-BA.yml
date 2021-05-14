@@ -769,12 +769,6 @@ bs:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
@@ -820,12 +814,6 @@ bs:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
@@ -835,12 +823,6 @@ bs:
           description: Predaji Funkcionalno Programiranje kroz Algebru
           description_short: Predaji Funkcionalno Programiranje kroz Algebru
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
@@ -1242,12 +1224,6 @@ bs:
               name: 'Izvanmrežno: Pisanje pjesama s parametrima'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobrodošli!
             Wrap-up:
@@ -3118,6 +3094,12 @@ bs:
               name: Kurs A
             Course B:
               name: Kurs B
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Lekcija 14
+            lesson15:
+              name: Lekcija 15
         2021drafting:
           lesson_groups:
             introduction:
