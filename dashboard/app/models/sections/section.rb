@@ -304,7 +304,7 @@ class Section < ApplicationRecord
   end
 
   # Hide or unhide a stage for this section
-  def toggle_hidden_stage(stage, should_hide)
+  def toggle_hidden_lesson(stage, should_hide)
     hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
     if hidden_stage && !should_hide
       hidden_stage.delete

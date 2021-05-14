@@ -198,7 +198,7 @@ class ScriptLevelsController < ApplicationController
       # TODO(asher): change this to use a cache
       lesson = Lesson.find(lesson_id)
       return head :forbidden unless lesson.try(:script).try(:hideable_lessons)
-      section.toggle_hidden_stage(lesson, should_hide)
+      section.toggle_hidden_lesson(lesson, should_hide)
     else
       # We don't have a lesson id, implying we instead want to toggle the hidden state of this script
       script = Script.get_from_cache(script_id)
@@ -253,13 +253,13 @@ class ScriptLevelsController < ApplicationController
       params[:lesson_position].to_i
       )
     @script = @stage.script
-    script_bonus_levels_by_stage = @script.get_bonus_script_levels(@stage)
+    script_bonus_levels_by_lesson = @script.get_bonus_script_levels(@stage)
 
     user = @user || current_user
     unless user.nil?
       # bonus level summaries explicitly don't contain any user-specific data,
       # so we need to merge in the user's progress.
-      script_bonus_levels_by_stage.each do |lesson|
+      script_bonus_levels_by_lesson.each do |lesson|
         lesson[:levels].each do |level_summary|
           ul = UserLevel.find_by(
             level_id: level_summary[:level_id], user_id: user.id, script: @script
@@ -273,7 +273,7 @@ class ScriptLevelsController < ApplicationController
       next_stage_number: @stage.next_level_number_for_lesson_extras(user),
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_lesson_extras(user),
-      bonus_levels: script_bonus_levels_by_stage,
+      bonus_levels: script_bonus_levels_by_lesson,
     }.camelize_keys
     @bonus_level_ids = @stage.script_levels.where(bonus: true).map(
       &:level_ids
@@ -282,7 +282,7 @@ class ScriptLevelsController < ApplicationController
     render 'scripts/stage_extras'
   end
 
-  # Provides a JSON summary of a particular stage, that is consumed by tools used to
+  # Provides a JSON summary of a particular lesson, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans
     require_levelbuilder_mode
@@ -290,14 +290,14 @@ class ScriptLevelsController < ApplicationController
 
     script = Script.get_from_cache(params[:script_id])
 
-    stage =
+    lesson =
       if params[:lesson_position]
         script.lesson_by_relative_position(params[:lesson_position])
       else
         script.lesson_by_relative_position(params[:lockable_stage_position], true)
       end
 
-    render json: stage.summary_for_lesson_plans
+    render json: lesson.summary_for_lesson_plans
   end
 
   def self.get_script(request)
