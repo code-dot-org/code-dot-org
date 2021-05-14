@@ -19875,27 +19875,31 @@ en:
             Innovations in Computing:
               key: Innovations in Computing
               name: Innovations in Computing
-              description_student: "In this lesson, students explore a wide variety of new and innovative computing platforms while expanding their understanding of what a computer can be.\r\n"
+              description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+
+'
               description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Designing Screens with Code:
               key: Designing Screens with Code
               name: Designing Screens with Code
-              description_student: "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n"
+              description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality ... even though they are just one screen!
               description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).
             The Circuit Playground:
               key: The Circuit Playground
               name: The Circuit Playground
-              description_student: In this lesson, students get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, they develop programs that use the Circuit Playground for output.
+              description_student: 'In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. '
               description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Input Unplugged:
               key: Input Unplugged
               name: Input Unplugged
-              description_student: "Students experience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\r\n"
+              description_student: 'In this lesson, you will eperience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.
+
+'
               description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Board Events:
               key: Board Events
               name: Board Events
-              description_student: "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n"
+              description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
               description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
             Getting Properties:
               key: Getting Properties
