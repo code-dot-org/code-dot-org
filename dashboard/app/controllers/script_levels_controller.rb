@@ -175,10 +175,10 @@ class ScriptLevelsController < ApplicationController
   end
 
   # Get a list of hidden lessons for the current users section
-  def hidden_stage_ids
+  def hidden_lesson_ids
     authorize! :read, ScriptLevel
 
-    stage_ids = current_user ? current_user.get_hidden_stage_ids(params[:script_id]) : []
+    stage_ids = current_user ? current_user.get_hidden_lesson_ids(params[:script_id]) : []
 
     render json: stage_ids
   end
