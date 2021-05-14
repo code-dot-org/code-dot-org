@@ -20,7 +20,6 @@ import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 class CourseEditor extends Component {
   static propTypes = {
-    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     initialTitle: PropTypes.string.isRequired,
     initialVersionTitle: PropTypes.string,
@@ -120,7 +119,7 @@ class CourseEditor extends Component {
     }
 
     $.ajax({
-      url: `/courses/${this.props.id}`,
+      url: `/courses/${this.props.name}`,
       method: 'PUT',
       dataType: 'json',
       contentType: 'application/json;charset=UTF-8',
