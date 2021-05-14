@@ -5,16 +5,18 @@ import sinon from 'sinon';
 import LessonToken from '@cdo/apps/lib/levelbuilder/script-editor/LessonToken';
 
 describe('LessonToken', () => {
-  let handleDragStart, removeLesson, defaultProps;
+  let handleDragStart, cloneLesson, removeLesson, defaultProps;
 
   beforeEach(() => {
     handleDragStart = sinon.spy();
+    cloneLesson = sinon.spy();
     removeLesson = sinon.spy();
     defaultProps = {
       dragging: false,
       draggedLessonPos: false,
       delta: 0,
       handleDragStart,
+      cloneLesson,
       removeLesson,
       lesson: {
         id: 10,
@@ -36,7 +38,7 @@ describe('LessonToken', () => {
     let wrapper = mount(<LessonToken {...defaultProps} />);
     expect(wrapper.find('Motion').length).to.equal(1);
     expect(wrapper.contains('Lesson 1')).to.be.true;
-    expect(wrapper.find('i').length).to.equal(3);
+    expect(wrapper.find('i').length).to.equal(4);
     expect(wrapper.find('.fa-pencil').length).to.equal(1);
     expect(wrapper.contains('assessment')).to.be.true;
   });
@@ -55,7 +57,7 @@ describe('LessonToken', () => {
     );
     expect(wrapper.find('Motion').length).to.equal(1);
     expect(wrapper.contains('New Lesson')).to.be.true;
-    expect(wrapper.find('i').length).to.equal(2);
+    expect(wrapper.find('i').length).to.equal(3);
     expect(wrapper.find('.fa-pencil').length).to.equal(0);
   });
 });

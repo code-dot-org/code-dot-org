@@ -171,6 +171,10 @@ class LessonGroupCard extends Component {
     this.setState({lessonPosToRemove: lessonPosition});
   };
 
+  handleCloneLesson = lessonPosition => {
+    this.setState({lessonPosToClone: lessonPosition});
+  };
+
   handleCloseRemoveLesson = () => {
     this.setState({lessonPosToRemove: null});
   };
@@ -296,7 +300,7 @@ class LessonGroupCard extends Component {
             delta={this.state.currentPositions[lesson.position - 1] || 0}
             handleDragStart={this.handleDragStart}
             removeLesson={this.handleRemoveLesson}
-            cloneLesson={pos => this.setState({lessonPosToClone: pos})}
+            cloneLesson={this.handleCloneLesson}
           />
         ))}
         <div style={styles.bottomControls}>
@@ -323,7 +327,6 @@ class LessonGroupCard extends Component {
           lessonPosToRemove={this.state.lessonPosToRemove}
           handleClose={this.handleCloseRemoveLesson}
         />
-
         <CloneLessonDialog
           lessonId={
             this.state.lessonPosToClone
