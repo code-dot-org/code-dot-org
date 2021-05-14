@@ -92,7 +92,7 @@ class ActivitiesController < ApplicationController
       # For lockable stages, the last script_level (which will be a LevelGroup) is the only one where
       # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
       # so having no user_level is equivalent to bein glocked
-      nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
+      nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
       if nonsubmitted_lockable || user_level.try(:show_as_locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
         return head 403
