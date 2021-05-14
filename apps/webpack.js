@@ -68,6 +68,12 @@ var baseConfig = {
         'gamelab',
         'locale-do-not-import.js'
       ),
+      '@cdo/javalab/locale': path.resolve(
+        __dirname,
+        'src',
+        'javalab',
+        'locale-do-not-import.js'
+      ),
       '@cdo/spritelab/locale': path.resolve(
         __dirname,
         'src',
@@ -246,6 +252,13 @@ var karmaConfig = _.extend({}, baseConfig, {
         'test',
         'util',
         'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/javalab/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'javalab',
         'locale-do-not-import.js'
       ),
       '@cdo/weblab/locale': path.resolve(

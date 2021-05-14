@@ -14,25 +14,28 @@ import ResourceType, {
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import $ from 'jquery';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    versionTitle: PropTypes.string,
+    initialTitle: PropTypes.string.isRequired,
+    initialVersionTitle: PropTypes.string,
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialVisible: PropTypes.bool.isRequired,
     initialIsStable: PropTypes.bool.isRequired,
     initialPilotExperiment: PropTypes.string,
-    descriptionShort: PropTypes.string,
+    initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
-    scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    initialScriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
-    hasVerifiedResources: PropTypes.bool.isRequired,
-    hasNumberedUnits: PropTypes.bool.isRequired,
+    initialHasVerifiedResources: PropTypes.bool.isRequired,
+    initialHasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -57,15 +60,24 @@ class CourseEditor extends Component {
     }
 
     this.state = {
+      isSaving: false,
+      error: null,
+      lastSaved: null,
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
       visible: this.props.initialVisible,
-      isStable: this.props.initialIsStable,
       pilotExperiment: this.props.initialPilotExperiment,
       teacherResources: teacherResources,
+      title: this.props.initialTitle,
+      versionTitle: this.props.initialVersionTitle,
+      descriptionShort: this.props.initialDescriptionShort,
+      hasVerifiedResources: this.props.initialHasVerifiedResources,
+      hasNumberedUnits: this.props.initialHasNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
+      isStable: this.props.initialIsStable,
+      scriptsInCourse: this.props.initialScriptsInCourse,
       publishedState: this.props.initialVisible
         ? this.props.initialIsStable
           ? 'Recommended'
@@ -80,27 +92,87 @@ class CourseEditor extends Component {
     this.setState({announcements: newAnnouncements});
   };
 
+  handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
+
+    this.setState({isSaving: true, lastSaved: null, error: null});
+
+    let dataToSave = {
+      title: this.state.title,
+      version_title: this.state.versionTitle,
+      description_short: this.state.descriptionShort,
+      description_student: this.state.descriptionStudent,
+      description_teacher: this.state.descriptionTeacher,
+      has_verified_resources: this.state.hasVerifiedResources,
+      has_numbered_units: this.state.hasNumberedUnits,
+      family_name: this.state.familyName,
+      version_year: this.state.versionYear,
+      is_stable: this.state.isStable,
+      visible: this.state.visible,
+      pilot_experiment: this.state.pilotExperiment,
+      scripts: this.state.scriptsInCourse
+    };
+
+    if (this.props.migratedTeacherResources) {
+      dataToSave.resourceIds = this.props.migratedTeacherResources.map(
+        r => r.id
+      );
+    }
+
+    if (this.props.studentResources) {
+      dataToSave.studentResourceIds = this.props.studentResources.map(
+        r => r.id
+      );
+    }
+
+    $.ajax({
+      url: `/courses/${this.props.name}`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    })
+      .done(data => {
+        if (shouldCloseAfterSave) {
+          navigateToHref(linkWithQueryParams(data.coursePath));
+        } else {
+          this.setState({
+            lastSaved: Date.now(),
+            isSaving: false
+          });
+        }
+      })
+      .fail(error => {
+        this.setState({isSaving: false, error: error.responseText});
+      });
+  };
+
   render() {
+    const {name, scriptNames, courseFamilies, versionYearOptions} = this.props;
     const {
-      name,
+      announcements,
+      teacherResources,
       title,
       versionTitle,
       descriptionShort,
+      descriptionStudent,
+      descriptionTeacher,
+      hasVerifiedResources,
+      hasNumberedUnits,
+      familyName,
+      versionYear,
+      pilotExperiment,
+      isStable,
+      visible,
       scriptsInCourse,
-      scriptNames
-    } = this.props;
-    const {announcements, teacherResources} = this.state;
+      publishedState
+    } = this.state;
     return (
       <div>
         <h1>{name}</h1>
         <label>
           Display Name
-          <input
-            type="text"
-            name="title"
-            defaultValue={title}
-            style={styles.input}
-          />
+          <input type="text" defaultValue={title} style={styles.input} />
         </label>
         <label>
           URL slug
@@ -124,7 +196,6 @@ class CourseEditor extends Component {
             type="text"
             defaultValue={versionTitle}
             placeholder="e.g. '19-'20"
-            name="version_title"
             style={styles.input}
           />
         </label>
@@ -134,31 +205,28 @@ class CourseEditor extends Component {
             <p>used in course cards on homepage</p>
           </HelpTip>
           <textarea
-            name="description_short"
             defaultValue={descriptionShort}
             rows={5}
             style={styles.input}
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionStudent}
+          markdown={descriptionStudent}
           label={'Student Description'}
-          name={'description_student'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({descriptionStudent: e.target.value})
           }
-          features={{imageUpload: true}}
+          features={{imageUpload: true, resourceLink: true}}
         />
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionTeacher}
+          markdown={descriptionTeacher}
           label={'Teacher Description'}
-          name={'description_teacher'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({descriptionTeacher: e.target.value})
           }
-          features={{imageUpload: true}}
+          features={{imageUpload: true, resourceLink: true}}
         />
 
         <CollapsibleEditorSection title="Basic Settings">
@@ -172,9 +240,8 @@ class CourseEditor extends Component {
               </p>
             </HelpTip>
             <input
-              name="has_verified_resources"
               type="checkbox"
-              defaultChecked={this.props.hasVerifiedResources}
+              defaultChecked={hasVerifiedResources}
               style={styles.checkbox}
             />
           </label>
@@ -187,9 +254,8 @@ class CourseEditor extends Component {
               </p>
             </HelpTip>
             <input
-              name="has_numbered_units"
               type="checkbox"
-              defaultChecked={this.props.hasNumberedUnits}
+              defaultChecked={hasNumberedUnits}
               style={styles.checkbox}
             />
           </label>
@@ -202,11 +268,11 @@ class CourseEditor extends Component {
 
         <CollapsibleEditorSection title="Publishing Settings">
           <CourseVersionPublishingEditor
-            visible={this.state.visible}
-            isStable={this.state.isStable}
-            pilotExperiment={this.state.pilotExperiment}
-            versionYear={this.state.versionYear}
-            familyName={this.state.familyName}
+            visible={visible}
+            isStable={isStable}
+            pilotExperiment={pilotExperiment}
+            versionYear={versionYear}
+            familyName={familyName}
             updateVisible={visible => this.setState({visible})}
             updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
@@ -214,47 +280,16 @@ class CourseEditor extends Component {
             }
             updateFamilyName={familyName => this.setState({familyName})}
             updateVersionYear={versionYear => this.setState({versionYear})}
-            families={this.props.courseFamilies}
-            versionYearOptions={this.props.versionYearOptions}
-            publishedState={this.state.publishedState}
+            families={courseFamilies}
+            versionYearOptions={versionYearOptions}
+            publishedState={publishedState}
             updatePublishedState={publishedState =>
               this.setState({publishedState})
             }
           />
-          <input
-            name="family_name"
-            type="hidden"
-            value={this.state.familyName}
-          />
-          <input
-            name="version_year"
-            type="hidden"
-            value={this.state.versionYear}
-          />
-          <input name="visible" type="hidden" value={this.state.visible} />
-          <input name="is_stable" type="hidden" value={this.state.isStable} />
-          <input
-            name="pilot_experiment"
-            type="hidden"
-            value={this.state.pilotExperiment}
-          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Resources Dropdowns">
-          {this.props.migratedTeacherResources && (
-            <input
-              type="hidden"
-              name="resourceIds"
-              value={this.props.migratedTeacherResources.map(r => r.id)}
-            />
-          )}
-          {this.props.studentResources && (
-            <input
-              type="hidden"
-              name="studentResourceIds"
-              value={this.props.studentResources.map(r => r.id)}
-            />
-          )}
           Select the resources you'd like to have show up in the dropdown at the
           top of the course overview page:
           <div>
@@ -295,10 +330,19 @@ class CourseEditor extends Component {
             <CourseScriptsEditor
               inputStyle={styles.input}
               scriptsInCourse={scriptsInCourse}
+              updateScriptsInCourse={scriptsInCourse =>
+                this.setState({scriptsInCourse})
+              }
               scriptNames={scriptNames}
             />
           </label>
         </CollapsibleEditorSection>
+        <SaveBar
+          handleSave={this.handleSave}
+          error={this.state.error}
+          isSaving={this.state.isSaving}
+          lastSaved={this.state.lastSaved}
+        />
       </div>
     );
   }
