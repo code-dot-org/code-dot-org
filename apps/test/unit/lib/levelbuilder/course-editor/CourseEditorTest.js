@@ -12,9 +12,12 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
+import sinon from 'sinon';
+import * as utils from '@cdo/apps/utils';
 
 const defaultProps = {
-  name: 'csp',
+  id: 1,
+  name: 'test-course',
   title: 'Computer Science Principles 2017',
   familyName: 'CSP',
   versionYear: '2017',
@@ -147,6 +150,153 @@ describe('CourseEditor', () => {
     ).to.equal(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
+  });
+
+  describe('Saving Course Editor', () => {
+    it('can save and keep editing', () => {
+      const wrapper = createWrapper({});
+      const courseEditor = wrapper.find('CourseEditor');
+
+      let returnData = {
+        updatedAt: '2020-11-06T21:33:32.000Z',
+        scriptPath: '/courses/test-course'
+      };
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/courses/1`, [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(returnData)
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(courseEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      courseEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(courseEditor.state().isSaving).to.equal(false);
+      expect(courseEditor.state().lastSaved).to.equal(
+        '2020-11-06T21:33:32.000Z'
+      );
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      //check that last saved message is showing
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+    });
+
+    it('shows error when save and keep editing has error saving', () => {
+      const wrapper = createWrapper({});
+      const courseEditor = wrapper.find('CourseEditor');
+
+      let returnData = 'There was an error';
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/courses/1`, [
+        404,
+        {'Content-Type': 'application/json'},
+        returnData
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(courseEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      courseEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(courseEditor.state().isSaving).to.equal(false);
+      expect(courseEditor.state().error).to.equal('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(
+        wrapper.find('.saveBar').contains('Error Saving: There was an error')
+      ).to.be.true;
+
+      server.restore();
+    });
+
+    it('can save and close', () => {
+      const wrapper = createWrapper({});
+      const courseEditor = wrapper.find('CourseEditor');
+
+      let returnData = {
+        updatedAt: '2020-11-06T21:33:32.000Z',
+        scriptPath: '/courses/test-course'
+      };
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/courses/1`, [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(returnData)
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndCloseButton = saveBar.find('button').at(1);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+      saveAndCloseButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(courseEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      courseEditor.update();
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        `/courses/test-course${window.location.search}`
+      );
+
+      server.restore();
+    });
+
+    it('shows error when save and keep editing has error saving', () => {
+      const wrapper = createWrapper({});
+      const courseEditor = wrapper.find('CourseEditor');
+
+      let returnData = 'There was an error';
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/courses/1`, [
+        404,
+        {'Content-Type': 'application/json'},
+        returnData
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndCloseButton = saveBar.find('button').at(1);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+      saveAndCloseButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(courseEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+
+      courseEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+
+      expect(courseEditor.state().isSaving).to.equal(false);
+      expect(courseEditor.state().error).to.equal('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(
+        wrapper.find('.saveBar').contains('Error Saving: There was an error')
+      ).to.be.true;
+
+      server.restore();
+    });
   });
 
   describe('VisibleInTeacherDashboard', () => {
