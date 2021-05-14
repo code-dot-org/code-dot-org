@@ -1,6 +1,19 @@
 require 'test_helper'
 
 class Foorm::FormTest < ActiveSupport::TestCase
+  CSV_GENERAL_HEADERS = {
+    'created_at' => 'created_at',
+    'user_id' => 'user_id',
+    'email' => 'email',
+    'pd_workshop_id' => 'pd_workshop_id',
+    'pd_session_id' => 'pd_session_id'
+  }
+
+  CSV_FACILITATOR_HEADERS = {
+    'facilitatorId_1' => 'facilitatorId_1',
+    'facilitatorName_1' => 'facilitatorName_1'
+  }
+
   test 'get latest form and version gets correct form' do
     form1 = create :foorm_form
     form2 = create :foorm_form, name: form1.name, version: form1.version + 1
@@ -55,14 +68,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     submission_workshop_metadata = create :csf_intro_post_workshop_submission, :answers_low
     submission = submission_workshop_metadata.foorm_submission
 
-    other_headers = {
-      'created_at' => 'created_at',
-      'user_id' => 'user_id',
-      'pd_workshop_id' => 'pd_workshop_id',
-      'pd_session_id' => 'pd_session_id'
-    }
-    expected_headers = other_headers.merge form.readable_questions[:general]
-
+    expected_headers = CSV_GENERAL_HEADERS.merge form.readable_questions[:general]
     expected_response = submission.formatted_answers
 
     assert_equal get_csv_string([expected_headers.values, expected_response.values]), form.submissions_to_csv
@@ -91,17 +97,9 @@ class Foorm::FormTest < ActiveSupport::TestCase
 
     general_submission = general_submission_workshop_metadata.foorm_submission
 
-    other_general_headers = {
-      'created_at' => 'created_at',
-      'user_id' => 'user_id',
-      'pd_workshop_id' => 'pd_workshop_id',
-      'pd_session_id' => 'pd_session_id'
-    }
-
-    expected_headers = other_general_headers.
+    expected_headers = CSV_GENERAL_HEADERS.
       merge(form.readable_questions[:general]).
       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
-
     expected_response = general_submission.formatted_answers
 
     assert_equal get_csv_string([expected_headers.values, expected_response.values_at(*expected_headers.keys)]),
@@ -118,23 +116,10 @@ class Foorm::FormTest < ActiveSupport::TestCase
     general_submission = general_submission_workshop_metadata.foorm_submission
     facilitator_submission = facilitator_submission_workshop_metadata.foorm_submission
 
-    other_general_headers = {
-      'created_at' => 'created_at',
-      'user_id' => 'user_id',
-      'pd_workshop_id' => 'pd_workshop_id',
-      'pd_session_id' => 'pd_session_id'
-    }
-
-    other_facilitator_headers = {
-      'facilitatorId_1' => 'facilitatorId_1',
-      'facilitatorName_1' => 'facilitatorName_1'
-    }
-
-    expected_headers = other_general_headers.
+    expected_headers = CSV_GENERAL_HEADERS.
       merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
+      merge(CSV_FACILITATOR_HEADERS).
       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
-
     expected_response = general_submission.formatted_answers.
       merge(facilitator_submission.formatted_answers_with_facilitator_number(1))
 
@@ -154,21 +139,9 @@ class Foorm::FormTest < ActiveSupport::TestCase
     facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
     general_submission_2 = general_submission_workshop_metadata_2.foorm_submission
 
-    other_general_headers = {
-      'created_at' => 'created_at',
-      'user_id' => 'user_id',
-      'pd_workshop_id' => 'pd_workshop_id',
-      'pd_session_id' => 'pd_session_id'
-    }
-
-    other_facilitator_headers = {
-      'facilitatorId_1' => 'facilitatorId_1',
-      'facilitatorName_1' => 'facilitatorName_1'
-    }
-
-    expected_headers = other_general_headers.
+    expected_headers = CSV_GENERAL_HEADERS.
       merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
+      merge(CSV_FACILITATOR_HEADERS).
       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
@@ -198,21 +171,9 @@ class Foorm::FormTest < ActiveSupport::TestCase
     general_submission_1 = general_submission_workshop_metadata_1.foorm_submission
     facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
 
-    other_general_headers = {
-      'created_at' => 'created_at',
-      'user_id' => 'user_id',
-      'pd_workshop_id' => 'pd_workshop_id',
-      'pd_session_id' => 'pd_session_id'
-    }
-
-    other_facilitator_headers = {
-      'facilitatorId_1' => 'facilitatorId_1',
-      'facilitatorName_1' => 'facilitatorName_1'
-    }
-
-    expected_headers = other_general_headers.
+    expected_headers = CSV_GENERAL_HEADERS.
       merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
+      merge(CSV_FACILITATOR_HEADERS).
       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
@@ -241,21 +202,9 @@ class Foorm::FormTest < ActiveSupport::TestCase
     facilitator_submission_1 = facilitator_submission_workshop_metadata_1.foorm_submission
     other_submission = other_form_workshop_metadata.foorm_submission
 
-    other_general_headers = {
-      'created_at' => 'created_at',
-      'user_id' => 'user_id',
-      'pd_workshop_id' => 'pd_workshop_id',
-      'pd_session_id' => 'pd_session_id'
-    }
-
-    other_facilitator_headers = {
-      'facilitatorId_1' => 'facilitatorId_1',
-      'facilitatorName_1' => 'facilitatorName_1'
-    }
-
-    expected_headers = other_general_headers.
+    expected_headers = CSV_GENERAL_HEADERS.
       merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
+      merge(CSV_FACILITATOR_HEADERS).
       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
