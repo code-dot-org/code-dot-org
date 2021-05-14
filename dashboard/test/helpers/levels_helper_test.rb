@@ -254,16 +254,20 @@ class LevelsHelperTest < ActionView::TestCase
   test 'level_started? should return true if a channel exists for a channel backed level' do
     user = create :user
     applab_level = create :applab # is channel backed
+    script = create(:script)
+    create(:script_level, levels: [applab_level], script: script)
     create :channel_token, level: applab_level, storage_id: storage_id_for_user_id(user.id)
 
-    assert_equal true, level_started?(applab_level, user)
+    assert_equal true, level_started?(applab_level, user, script)
   end
 
   test 'level_started? should return false if a channel does not exist for a channel backed level' do
     user = create :user
     applab_level = create :applab # is channel backed
+    script = create(:script)
+    create(:script_level, levels: [applab_level], script: script)
 
-    assert_equal false, level_started?(applab_level, user)
+    assert_equal false, level_started?(applab_level, user, script)
   end
 
   test 'level_started? should return true if progress exists for a level that is not channel backed' do
@@ -273,14 +277,16 @@ class LevelsHelperTest < ActionView::TestCase
     create(:script_level, levels: [maze_level], script: script)
     create :user_level, level: maze_level, user: user, script: script
 
-    assert_equal true, level_started?(maze_level, user)
+    assert_equal true, level_started?(maze_level, user, script)
   end
 
   test 'level_started? should return false if progress does not exist for a level that is not channel backed' do
     user = create :user
     maze_level = create :maze
+    script = create(:script)
+    create(:script_level, levels: [maze_level], script: script)
 
-    assert_equal false, level_started?(maze_level, user)
+    assert_equal false, level_started?(maze_level, user, script)
   end
 
   test 'a teacher viewing student work should see isStarted value for student' do
