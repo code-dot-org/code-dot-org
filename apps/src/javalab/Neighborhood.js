@@ -1,4 +1,5 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
+const Slider = require('@cdo/apps/slider');
 const Direction = tiles.Direction;
 
 export default class Neighborhood {
@@ -34,5 +35,8 @@ export default class Neighborhood {
     controller.subtype.createDrawer(svg);
     controller.subtype.initWallMap();
     controller.initWithSvg(svg);
+
+    const slider = document.getElementById('slider');
+    this.speedSlider = new Slider(10, 35, 130, slider);
   }
 }
