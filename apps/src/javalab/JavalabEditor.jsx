@@ -88,8 +88,8 @@ class JavalabEditor extends React.Component {
     this.onCreateFile = this.onCreateFile.bind(this);
     this.onDeleteFile = this.onDeleteFile.bind(this);
     this.onOpenFile = this.onOpenFile.bind(this);
-    this.toggleFileVisibility = this.toggleFileVisibility.bind(this);
-    this.makeeValidationFile = this.makeValidationFile.bind(this);
+    this.updateVisibility = this.updateVisibility.bind(this);
+    this.updateValidation = this.updateValidation.bind(this);
     this._codeMirrors = {};
 
     // fileMetadata is a dictionary of file key -> filename.
@@ -97,7 +97,7 @@ class JavalabEditor extends React.Component {
     // tab order is an ordered list of file keys.
     let orderedTabKeys = [];
     Object.keys(props.sources).forEach((file, index) => {
-      if (props.sources[file].visible || props.isEditingStartSources) {
+      if (props.sources[file].isVisible || props.isEditingStartSources) {
         let tabKey = this.getTabKey(index);
         fileMetadata[tabKey] = file;
         orderedTabKeys.push(tabKey);
@@ -193,24 +193,18 @@ class JavalabEditor extends React.Component {
     };
   };
 
-  toggleFileVisibility(key) {
-    this.props.sourceVisibilityUpdated(
-      this.state.fileMetadata[key],
-      !this.props.sources[this.state.fileMetadata[key]].visible,
-      false
-    );
+  updateVisibility(key, isVisible) {
+    this.props.sourceVisibilityUpdated(this.state.fileMetadata[key], isVisible);
     this.setState({
       showMenu: false,
       contextTarget: null
     });
   }
 
-  // This will only ever be called when making a file a validation file
-  makeValidationFile(key) {
+  updateValidation(key, isValidation) {
     this.props.sourceValidationUpdated(
       this.state.fileMetadata[key],
-      false,
-      true
+      isValidation
     );
     this.setState({
       showMenu: false,
@@ -489,9 +483,9 @@ class JavalabEditor extends React.Component {
                       <FontAwesome
                         style={style.fileTypeIcon}
                         icon={
-                          sources[fileMetadata[tabKey]].visible
+                          sources[fileMetadata[tabKey]].isVisible
                             ? 'eye'
-                            : sources[fileMetadata[tabKey]].isValidationFile
+                            : sources[fileMetadata[tabKey]].isValidation
                             ? 'flask'
                             : 'eye-slash'
                         }
@@ -542,20 +536,20 @@ class JavalabEditor extends React.Component {
             cancelTabMenu={this.cancelTabMenu}
             renameFromTabMenu={this.renameFromTabMenu}
             deleteFromTabMenu={this.deleteFromTabMenu}
-            changeVisibilityFromTabMenu={() =>
-              this.toggleFileVisibility(activeTabKey)
+            changeVisibilityFromTabMenu={isVisible =>
+              this.updateVisibility(activeTabKey, isVisible)
             }
             showVisibilityOption={isEditingStartSources}
             fileIsVisible={
               sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].visible
+              sources[fileMetadata[activeTabKey]].isVisible
             }
             fileIsValidation={
               sources[fileMetadata[activeTabKey]] &&
-              sources[fileMetadata[activeTabKey]].isValidationFile
+              sources[fileMetadata[activeTabKey]].isValidation
             }
-            changeValidationFromTabMenu={() =>
-              this.makeValidationFile(activeTabKey)
+            changeValidationFromTabMenu={isValidation =>
+              this.updateValidation(activeTabKey, isValidation)
             }
           />
         </div>
@@ -602,10 +596,10 @@ export default connect(
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),
-    sourceVisibilityUpdated: (filename, isVisible, isValidationFile) =>
-      dispatch(sourceVisibilityUpdated(filename, isVisible, isValidationFile)),
-    sourceValidationUpdated: (filename, isVisible, isValidationFile) =>
-      dispatch(sourceValidationUpdated(filename, isVisible, isValidationFile)),
+    sourceVisibilityUpdated: (filename, isVisible) =>
+      dispatch(sourceVisibilityUpdated(filename, isVisible)),
+    sourceValidationUpdated: (filename, isValidation) =>
+      dispatch(sourceValidationUpdated(filename, isValidation)),
     renameFile: (oldFilename, newFilename) =>
       dispatch(renameFile(oldFilename, newFilename)),
     removeFile: filename => dispatch(removeFile(filename))
