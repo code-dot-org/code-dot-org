@@ -2,14 +2,17 @@ import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import CdoBlockDragger from '@cdo/apps/blocklyAddons/cdoBlockDragger';
 import CdoBlockSvg from '@cdo/apps/blocklyAddons/cdoBlockSvg';
+import initializeCdoConstants from '@cdo/apps/blocklyAddons/cdoConstants';
 import CdoFieldDropdown from '@cdo/apps/blocklyAddons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from '@cdo/apps/blocklyAddons/cdoFieldImageDropdown';
+import FunctionEditor from '@cdo/apps/blocklyAddons/functionEditor';
 import CdoInput from '@cdo/apps/blocklyAddons/cdoInput';
 import CdoMetricsManager from '@cdo/apps/blocklyAddons/cdoMetricsManager';
 import CdoPathObject from '@cdo/apps/blocklyAddons/cdoPathObject';
 import CdoTheme from '@cdo/apps/blocklyAddons/cdoTheme';
 import initializeTouch from '@cdo/apps/blocklyAddons/cdoTouch';
 import CdoTrashcan from '@cdo/apps/blocklyAddons/cdoTrashcan';
+import initializeVariables from '@cdo/apps/blocklyAddons/cdoVariables';
 import CdoWorkspaceSvg from '@cdo/apps/blocklyAddons/cdoWorkspaceSvg';
 import initializeBlocklyXml from '@cdo/apps/blocklyAddons/cdoXml';
 
@@ -65,7 +68,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('BlockFieldHelper');
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
-  blocklyWrapper.wrapReadOnlyProperty('BlockValueType');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
@@ -135,6 +137,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.blockly_.MetricsManager = CdoMetricsManager;
   blocklyWrapper.geras.PathObject = CdoPathObject;
@@ -188,9 +191,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
       this.blockly_.CONNECTING_SNAP_RADIUS = snapRadius;
     }
   });
-  // Google Blockly defaults to 28, but Cdo Blockly defaults to 15. Some labs set the snap radius
-  // by multiplying a scale factor, so it's important that the default value matches what it was on our fork
-  blocklyWrapper.SNAP_RADIUS = 15;
+
+  // TODO
+  blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
+
+  // TODO
+  blocklyWrapper.Flyout.configure = function(type, config) {};
 
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
@@ -258,6 +264,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return code.join('\n');
   };
 
+  blocklyWrapper.Generator.prefixLines = blocklyWrapper.JavaScript.prefixLines;
+
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {
       ...opt_options,
@@ -289,6 +297,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   initializeBlocklyXml(blocklyWrapper);
   initializeTouch(blocklyWrapper);
+  initializeVariables(blocklyWrapper);
+  initializeCdoConstants(blocklyWrapper);
 
   return blocklyWrapper;
 }
