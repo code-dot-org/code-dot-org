@@ -38,7 +38,7 @@ class ProgressBubbleSet extends React.Component {
 
   bubbleDisabled = level => {
     const {disabled, stageExtrasEnabled} = this.props;
-    // Bonus level (aka stage extras) bubble is disabled if stage extras are disabled
+    // Bonus level (aka lesson extras) bubble is disabled if lesson extras are disabled
     // for the current section.
     const disableBubble = disabled || (!stageExtrasEnabled && level.bonus);
     if (disableBubble) {

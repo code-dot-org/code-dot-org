@@ -1,5 +1,5 @@
 /**
- * @overview React for the End-of-Stage Experience
+ * @overview React for the End-of-Lesson Experience
  */
 import PropTypes from 'prop-types';
 import React from 'react';
