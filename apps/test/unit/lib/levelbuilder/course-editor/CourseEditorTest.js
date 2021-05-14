@@ -16,31 +16,32 @@ import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
 const defaultProps = {
-  id: 1,
   name: 'test-course',
-  title: 'Computer Science Principles 2017',
-  familyName: 'CSP',
-  versionYear: '2017',
+  initialTitle: 'Computer Science Principles 2017',
+  initialFamilyName: 'CSP',
+  initialVersionYear: '2017',
   initialVisible: false,
-  isStable: false,
-  descriptionShort: 'Desc here',
+  initialIsStable: false,
+  initialDescriptionShort: 'Desc here',
   initialDescriptionStudent:
     '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   initialDescriptionTeacher:
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
-  scriptsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
+  initialScriptsInCourse: ['CSP Unit 1', 'CSP Unit 2'],
   scriptNames: ['CSP Unit 1', 'CSP Unit 2'],
   initialTeacherResources: [],
-  hasVerifiedResources: false,
-  hasNumberedUnits: false,
+  initialHasVerifiedResources: false,
+  initialHasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019'],
   initialAnnouncements: [],
-  useMigratedResources: false
+  useMigratedResources: false,
+  coursePath: '/courses/test-course'
 };
 
 describe('CourseEditor', () => {
   beforeEach(() => {
+    sinon.stub(utils, 'navigateToHref');
     stubRedux();
     registerReducers({
       teacherSections,
@@ -51,6 +52,7 @@ describe('CourseEditor', () => {
 
   afterEach(() => {
     restoreRedux();
+    utils.navigateToHref.restore();
   });
 
   const createWrapper = overrideProps => {
@@ -153,16 +155,24 @@ describe('CourseEditor', () => {
   });
 
   describe('Saving Course Editor', () => {
+    let clock;
+
+    afterEach(() => {
+      if (clock) {
+        clock.restore();
+        clock = undefined;
+      }
+    });
+
     it('can save and keep editing', () => {
       const wrapper = createWrapper({});
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
-        scriptPath: '/courses/test-course'
+        coursePath: '/courses/test-course'
       };
       let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/courses/1`, [
+      server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
         JSON.stringify(returnData)
@@ -179,13 +189,15 @@ describe('CourseEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(courseEditor.state().isSaving).to.equal(true);
 
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      const expectedLastSaved = Date.now();
       server.respond();
+      clock.tick(50);
+
       courseEditor.update();
       expect(utils.navigateToHref).to.not.have.been.called;
       expect(courseEditor.state().isSaving).to.equal(false);
-      expect(courseEditor.state().lastSaved).to.equal(
-        '2020-11-06T21:33:32.000Z'
-      );
+      expect(courseEditor.state().lastSaved).to.equal(expectedLastSaved);
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
@@ -197,7 +209,7 @@ describe('CourseEditor', () => {
 
       let returnData = 'There was an error';
       let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/courses/1`, [
+      server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},
         returnData
@@ -232,11 +244,10 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = {
-        updatedAt: '2020-11-06T21:33:32.000Z',
-        scriptPath: '/courses/test-course'
+        coursePath: '/courses/test-course'
       };
       let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/courses/1`, [
+      server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
         JSON.stringify(returnData)
@@ -267,7 +278,7 @@ describe('CourseEditor', () => {
 
       let returnData = 'There was an error';
       let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/courses/1`, [
+      server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},
         returnData
@@ -302,13 +313,19 @@ describe('CourseEditor', () => {
   describe('VisibleInTeacherDashboard', () => {
     it('is unchecked when visible is false', () => {
       const wrapper = createWrapper({});
-      const checkbox = wrapper.find('input[name="visible"]');
+      const visibleAndPilotExperiment = wrapper.find(
+        'VisibleAndPilotExperiment'
+      );
+      const checkbox = visibleAndPilotExperiment.find('input[type="checkbox"]');
       expect(checkbox.prop('checked')).to.be.false;
     });
 
     it('is checked when visible is true', () => {
       const wrapper = createWrapper({initialVisible: true});
-      const checkbox = wrapper.find('input[name="visible"]');
+      const visibleAndPilotExperiment = wrapper.find(
+        'VisibleAndPilotExperiment'
+      );
+      const checkbox = visibleAndPilotExperiment.find('input[type="checkbox"]');
       expect(checkbox.prop('checked')).to.be.true;
     });
   });
