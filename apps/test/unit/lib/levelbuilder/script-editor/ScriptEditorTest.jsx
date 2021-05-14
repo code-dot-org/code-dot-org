@@ -73,6 +73,7 @@ describe('ScriptEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
+      hasCourse: false,
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };
@@ -123,6 +124,19 @@ describe('ScriptEditor', () => {
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
       expect(wrapper.find('#script_text').length).to.equal(0);
+    });
+
+    it('hides publishing setting if hasCourse', () => {
+      const wrapper = createWrapper({
+        initialHidden: false,
+        isMigrated: true,
+        initialCourseVersionId: 1,
+        hasCourse: true
+      });
+
+      expect(wrapper.find('VisibleAndPilotExperiment').length).to.equal(0);
+      expect(wrapper.find('.isCourseCheckbox').length).to.equal(0);
+      expect(wrapper.find('.familyNameSelector').length).to.equal(0);
     });
 
     describe('Teacher Resources', () => {
@@ -484,7 +498,7 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: false
       });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
+      const checkbox = wrapper.find('input[name="hidden"]');
       expect(checkbox.prop('checked')).to.be.true;
     });
 
@@ -492,7 +506,7 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: true
       });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
+      const checkbox = wrapper.find('input[name="hidden"]');
       expect(checkbox.prop('checked')).to.be.false;
     });
   });
