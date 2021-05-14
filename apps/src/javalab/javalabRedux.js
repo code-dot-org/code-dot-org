@@ -11,7 +11,7 @@ const REMOVE_FILE = 'javalab/REMOVE_FILE';
 
 const initialState = {
   consoleLogs: [],
-  sources: {'MyClass.java': {text: '', visible: true, isValidationFile: false}},
+  sources: {'MyClass.java': {text: '', isVisible: true, isValidation: false}},
   isDarkMode: false
 };
 
@@ -50,17 +50,15 @@ export const setSource = (
   isValidation
 });
 
-export const sourceVisibilityUpdated = (filename, isVisible, isValidation) => ({
+export const sourceVisibilityUpdated = (filename, isVisible) => ({
   type: SOURCE_VISIBILITY_UPDATED,
   filename,
-  isVisible,
-  isValidation
+  isVisible
 });
 
-export const sourceValidationUpdated = (filename, isVisible, isValidation) => ({
+export const sourceValidationUpdated = (filename, isValidation) => ({
   type: SOURCE_VALIDATION_UPDATED,
   filename,
-  isVisible,
   isValidation
 });
 
@@ -95,7 +93,8 @@ export default function reducer(state = initialState, action) {
     let newSources = {...state.sources};
     newSources[action.filename] = {
       text: action.source,
-      visible: action.isVisible
+      isVisible: action.isVisible,
+      isValidation: action.isValidation
     };
     return {
       ...state,
@@ -104,8 +103,7 @@ export default function reducer(state = initialState, action) {
   }
   if (action.type === SOURCE_VISIBILITY_UPDATED) {
     let newSources = {...state.sources};
-    newSources[action.filename].visible = action.isVisible;
-    newSources[action.filename].isValidationFile = action.isValidation;
+    newSources[action.filename].isVisible = action.isVisible;
     return {
       ...state,
       sources: newSources
@@ -113,8 +111,7 @@ export default function reducer(state = initialState, action) {
   }
   if (action.type === SOURCE_VALIDATION_UPDATED) {
     let newSources = {...state.sources};
-    newSources[action.filename].visible = action.isVisible;
-    newSources[action.filename].isValidationFile = action.isValidation;
+    newSources[action.filename].isValidation = action.isValidation;
     return {
       ...state,
       sources: newSources

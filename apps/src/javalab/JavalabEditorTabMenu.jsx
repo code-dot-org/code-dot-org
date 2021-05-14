@@ -56,7 +56,10 @@ class JavalabTabMenuComponent extends Component {
           <button
             type="button"
             key="visibility"
-            onClick={changeVisibilityFromTabMenu}
+            onClick={() => {
+              changeVisibilityFromTabMenu(true);
+              changeValidationFromTabMenu(false);
+            }}
             style={styles.anchor}
           >
             Make starter file
@@ -66,7 +69,10 @@ class JavalabTabMenuComponent extends Component {
           <button
             type="button"
             key="support"
-            onClick={changeVisibilityFromTabMenu}
+            onClick={() => {
+              changeVisibilityFromTabMenu(false);
+              changeValidationFromTabMenu(false);
+            }}
             style={styles.anchor}
           >
             Make support file
@@ -76,7 +82,10 @@ class JavalabTabMenuComponent extends Component {
           <button
             type="button"
             key="validation"
-            onClick={changeValidationFromTabMenu}
+            onClick={() => {
+              changeVisibilityFromTabMenu(false);
+              changeValidationFromTabMenu(true);
+            }}
             style={styles.anchor}
           >
             Make validation file
