@@ -95,6 +95,8 @@ class CourseEditor extends Component {
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
+    let shouldSave = true;
+
     this.setState({isSaving: true, lastSaved: null, error: null});
 
     let dataToSave = {
@@ -125,26 +127,41 @@ class CourseEditor extends Component {
       );
     }
 
-    $.ajax({
-      url: `/courses/${this.props.name}`,
-      method: 'PUT',
-      dataType: 'json',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToSave)
-    })
-      .done(data => {
-        if (shouldCloseAfterSave) {
-          navigateToHref(linkWithQueryParams(data.coursePath));
-        } else {
-          this.setState({
-            lastSaved: Date.now(),
-            isSaving: false
-          });
-        }
-      })
-      .fail(error => {
-        this.setState({isSaving: false, error: error.responseText});
+    if (
+      this.state.publishedState === 'Pilot' &&
+      this.state.pilotExperiment === ''
+    ) {
+      shouldSave = false;
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a pilot experiment in order to save with published state as pilot.'
       });
+      return;
+    }
+
+    if (shouldSave) {
+      $.ajax({
+        url: `/courses/${this.props.name}`,
+        method: 'PUT',
+        dataType: 'json',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify(dataToSave)
+      })
+        .done(data => {
+          if (shouldCloseAfterSave) {
+            navigateToHref(linkWithQueryParams(data.coursePath));
+          } else {
+            this.setState({
+              lastSaved: Date.now(),
+              isSaving: false
+            });
+          }
+        })
+        .fail(error => {
+          this.setState({isSaving: false, error: error.responseText});
+        });
+    }
   };
 
   render() {
