@@ -8,7 +8,7 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
     if section.user_id == current_user.id
       TeacherScore.transaction do
         params[:stage_scores].each do |stage_score|
-          TeacherScore.score_stage_for_section(
+          TeacherScore.score_lesson_for_section(
             params[:section_id],
             stage_score[:stage_id],
             stage_score[:score]

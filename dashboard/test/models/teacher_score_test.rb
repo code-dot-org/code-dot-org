@@ -83,7 +83,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     user_level_count_before = UserLevel.all.count
     student_count = @section.students.count
 
-    TeacherScore.score_stage_for_section(
+    TeacherScore.score_lesson_for_section(
       @section.id, @lesson.id, @score
     )
 
@@ -108,16 +108,16 @@ class TeacherScoreTest < ActiveSupport::TestCase
       )
     end
 
-    assert_equal(TeacherScore.get_level_scores_for_stage_for_students(@lesson, @section.students.pluck(:id)), {@student_1.id => {@level_1.id => @score_2}})
+    assert_equal(TeacherScore.get_level_scores_for_lesson_for_students(@lesson, @section.students.pluck(:id)), {@student_1.id => {@level_1.id => @score_2}})
   end
 
   test 'get scores for stage for students' do
-    TeacherScore.score_stage_for_section(
+    TeacherScore.score_lesson_for_section(
       @section.id, @lesson.id, @score
     )
 
     assert_equal(
-      TeacherScore.get_level_scores_for_stage_for_students(
+      TeacherScore.get_level_scores_for_lesson_for_students(
         @lesson,
         @section.students.pluck(:id)
       ),
@@ -130,7 +130,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
   end
 
   test 'get scores for script for section' do
-    TeacherScore.score_stage_for_section(
+    TeacherScore.score_lesson_for_section(
       @section.id, @lesson.id, @score
     )
     page = 1

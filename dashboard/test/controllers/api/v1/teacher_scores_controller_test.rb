@@ -11,14 +11,14 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     @script = create :script
   end
 
-  test 'score_stage_for_section is forbidden if signed out' do
+  test 'score_lesson_for_section is forbidden if signed out' do
     post '/dashboardapi/v1/teacher_scores', params: {
       section_id: @section.id, stage_scores: [{stage_id: @lesson.id, score: 100}]
     }
     assert_response 302
   end
 
-  test 'score_stage_for_section is forbidden if student' do
+  test 'score_lesson_for_section is forbidden if student' do
     sign_in @student
     post '/dashboardapi/v1/teacher_scores', params: {
       section_id: @section.id, stage_scores: [{stage_id: @lesson.id, score: 100}]
@@ -26,7 +26,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     assert_response :forbidden
   end
 
-  test 'score_stage_for_section is forbidden for teacher who does not own section' do
+  test 'score_lesson_for_section is forbidden for teacher who does not own section' do
     sign_in @teacher
     section_2 = create :section
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section_2.id, stage_scores: [{stage_id: @lesson.id, score: 100}]}
