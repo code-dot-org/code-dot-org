@@ -2931,6 +2931,13 @@ $modal-no-icon-gap: 22px;
   }
 }
 
+.dynamic-instructions-markdown {
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 html[dir="rtl"] .instructions-markdown {
   .instructor-image {
     float: right;

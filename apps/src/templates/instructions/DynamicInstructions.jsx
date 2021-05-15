@@ -85,9 +85,7 @@ class DynamicInstructions extends React.Component {
 
         <div
           style={{
-            marginTop: 10,
-            marginRight: 50,
-            position: 'relative',
+            ...styles.container,
             height: this.state.dynamicInstructionsHeight
           }}
         >
@@ -95,19 +93,19 @@ class DynamicInstructions extends React.Component {
             return (
               <div
                 style={{
-                  position: 'absolute',
-                  top: 0,
+                  ...styles.instruction,
                   opacity: key === this.props.dynamicInstructionsKey ? 1 : 0
                 }}
                 key={key}
               >
-                <div style={{fontSize: 16}}>
-                  <div ref={ref => (this.dynamicInstructionsRefs[key] = ref)}>
-                    <SafeMarkdown
-                      markdown={this.props.dynamicInstructions[key]}
-                      openExternalLinksInNewTab={true}
-                    />
-                  </div>
+                <div
+                  className="dynamic-instructions-markdown"
+                  ref={ref => (this.dynamicInstructionsRefs[key] = ref)}
+                >
+                  <SafeMarkdown
+                    markdown={this.props.dynamicInstructions[key]}
+                    openExternalLinksInNewTab={true}
+                  />
                 </div>
               </div>
             );
@@ -117,5 +115,17 @@ class DynamicInstructions extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    position: 'relative',
+    marginTop: 10,
+    marginRight: 50
+  },
+  instruction: {
+    position: 'absolute',
+    top: 0
+  }
+};
 
 module.exports = DynamicInstructions;

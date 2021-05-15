@@ -30,13 +30,9 @@ function getInstructionsDefaults() {
     dataDisplayLabel: 'Choose one column to predict.',
     dataDisplayFeatures:
       'Choose one or more columns as inputs to help make the prediction.',
-    selectTrainer: 'Set up the training.',
     trainModel: 'Your model is being trained.',
-    modelTraining:
-      'Your model is undergoing training.  Notice how we do one row at a time!',
     results: 'Review the results.',
     saveModel: 'Save the trained model for use in App Lab.',
-    trainingSettings: 'Adjust column types here if you want.',
     modelSummary:
       "You've successfully trained and saved your model. Review your model \
       details and click Finish to use your trained model in App Lab."
