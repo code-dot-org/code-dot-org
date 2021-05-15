@@ -493,7 +493,6 @@ class TopInstructions extends Component {
             dynamicInstructionsKey={dynamicInstructionsKey}
             setInstructionsRenderedHeight={height => {
               this.props.setInstructionsRenderedHeight(height);
-              this.props.setAllowInstructionsResize(false);
             }}
           />
         );
