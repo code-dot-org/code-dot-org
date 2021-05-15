@@ -155,6 +155,36 @@ describe('CourseEditor', () => {
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
+
+  describe('Publish State', () => {
+    it('published state is preview when visible and isStable are false and there is no pilot experiment', () => {
+      const wrapper = createWrapper({});
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Preview');
+    });
+
+    it('published state is pilot if there is a pilot experiment', () => {
+      const wrapper = createWrapper({initialPilotExperiment: 'my-pilot'});
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Pilot');
+    });
+
+    it('published state is assignable if visible is true but isStable is false', () => {
+      const wrapper = createWrapper({initialVisible: true});
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Assignable');
+    });
+
+    it('published state is recommended if visible and isStable are true', () => {
+      const wrapper = createWrapper({
+        initialVisible: true,
+        initialIsStable: true
+      });
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Recommended');
+    });
+  });
+
   describe('Saving Course Editor', () => {
     let clock;
 

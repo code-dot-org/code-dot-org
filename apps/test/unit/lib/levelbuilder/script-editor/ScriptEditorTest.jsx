@@ -75,7 +75,7 @@ describe('ScriptEditor', () => {
       initialLocales: [],
       isMigrated: false,
       initialIsStable: false,
-      initialHidden: false,
+      initialHidden: true,
       hasCourse: false,
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
@@ -252,6 +252,35 @@ describe('ScriptEditor', () => {
 
     expect(peerReviewCountInput.props().disabled).to.be.true;
     expect(peerReviewCountInput.props().value).to.equal(0);
+  });
+
+  describe('Publish State', () => {
+    it('published state is preview when visible and isStable are false and there is no pilot experiment', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Preview');
+    });
+
+    it('published state is pilot if there is a pilot experiment', () => {
+      const wrapper = createWrapper({initialPilotExperiment: 'my-pilot'});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Pilot');
+    });
+
+    it('published state is assignable if visible is true but isStable is false', () => {
+      const wrapper = createWrapper({initialHidden: false});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Assignable');
+    });
+
+    it('published state is recommended if visible and isStable are true', () => {
+      const wrapper = createWrapper({
+        initialHidden: false,
+        initialIsStable: true
+      });
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Recommended');
+    });
   });
 
   describe('Saving Script Editor', () => {
