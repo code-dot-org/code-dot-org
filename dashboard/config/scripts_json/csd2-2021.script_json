@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-12 03:43:52 UTC",
+    "serialized_at": "2021-05-14 17:59:02 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -7333,6 +7333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd web teamwork video_2021"
+        ],
         "progression": "Video: Teamwork"
       },
       "named_level": false,
@@ -7356,6 +7359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd web disagreement video_2021"
+        ],
         "progression": "Video: Managing Disagreement"
       },
       "named_level": false,
@@ -7379,6 +7385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd web search video_2021"
+        ],
         "progression": "Video: How Search Works"
       },
       "named_level": false,
@@ -7558,6 +7567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web upload images multi_2021"
+        ],
         "progression": "Upload Your Images"
       },
       "named_level": false,
@@ -7919,6 +7931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web incorporate feedback_2021"
+        ],
         "progression": "Incorporate Feedback"
       },
       "named_level": false,
@@ -7942,6 +7957,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -9155,6 +9173,50 @@
   ],
   "resources": [
     {
+      "name": "All Code",
+      "url": "/s/csd2-2021/code",
+      "key": "all_code_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_2"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd2-2021/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd2-2021/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd2-2021/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
+      }
+    },
+    {
       "name": "Body Styling",
       "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
       "key": "body-styling",
@@ -9189,6 +9251,50 @@
       },
       "seeding_key": {
         "resource.key": "creative-commons-video"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
       }
     },
     {
@@ -9401,6 +9507,19 @@
       },
       "seeding_key": {
         "resource.key": "internet-scavenger-hunt"
+      }
+    },
+    {
+      "name": "Intro to Web Lab Part 2",
+      "url": "https://youtu.be/Hjl6gbg9kmk",
+      "key": "intro_to_web_lab_part_2",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/weblab_introtohtml-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_web_lab_part_2"
       }
     },
     {
@@ -9832,6 +9951,19 @@
       }
     },
     {
+      "name": "Video: Intro to Web Lab Part 1",
+      "url": "https://www.youtube.com/watch?v=itx0RYOnoBs",
+      "key": "video_intro_to_web_lab_part_1",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/weblab_introtoweblab-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "video_intro_to_web_lab_part_1"
+      }
+    },
+    {
       "name": "Website for a Purpose",
       "url": "https://docs.google.com/document/d/1zcF1XGxdvmysJhYpv3f9mBljI2gbAN_4U0ctM3Ero5g/edit",
       "key": "website-for-a-purpose",
@@ -10055,6 +10187,18 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "resource.key": "html_tags"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "resource.key": "video_intro_to_web_lab_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "resource.key": "intro_to_web_lab_part_2"
       }
     },
     {
@@ -10470,6 +10614,54 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code_2",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
         "script.name": "csd2-2021"
       }
     }
