@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-12 16:57:32 UTC",
+    "serialized_at": "2021-05-13 19:29:48 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -1998,7 +1998,7 @@
       "key": "47bca048-39fb-4014-a480-e21d163469db",
       "position": 1,
       "properties": {
-        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - An action that causes something to happen.",
+        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - *An action that causes something to happen.*",
         "name": "Reflection",
         "remarks": true
       },
@@ -6486,6 +6486,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_lotsofsprites_video"
+        ],
         "progression": "Video: Lots of Sprites"
       },
       "named_level": false,

@@ -1,9 +1,5 @@
 <StandaloneVideo>
   <config><![CDATA[{
-  "game_id": 54,
-  "created_at": "2021-03-11T21:55:07.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "video_key": "CSF_Spritelab_MakeSprite_v2",
     "instructions_important": "false",
@@ -14,8 +10,12 @@
     "name_suffix": "_2021",
     "encrypted": "false"
   },
+  "game_id": 54,
   "published": true,
+  "created_at": "2021-03-11T21:55:07.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-03 22:54:26 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 22:55:11 +0000\",\"changed\":[\"video_key\",\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-29 17:26:15 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2018-07-03 22:54:26 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-03 22:55:11 +0000\",\"changed\":[\"video_key\",\"display_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-29 17:26:15 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2021-05-13 19:05:06 +0000\",\"changed\":[],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
 }]]></config>
 </StandaloneVideo>
