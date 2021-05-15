@@ -10,6 +10,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     updatePilotExperiment,
     updateIsStable,
     updateFamilyName,
+    updatePublishedState,
     updateVersionYear;
 
   beforeEach(() => {
@@ -18,6 +19,7 @@ describe('CourseVersionPublishedStateSelector', () => {
     updateIsStable = sinon.spy();
     updateFamilyName = sinon.spy();
     updateVersionYear = sinon.spy();
+    updatePublishedState = sinon.spy();
     defaultProps = {
       visible: false,
       isStable: false,
@@ -29,36 +31,18 @@ describe('CourseVersionPublishedStateSelector', () => {
       updateIsStable,
       updateFamilyName,
       updateVersionYear,
+      updatePublishedState,
       families: ['family1', 'family2', 'family3'],
-      versionYearOptions: ['1990', '1991', '1992']
+      versionYearOptions: ['1990', '1991', '1992'],
+      publishedState: 'Preview'
     };
-  });
-
-  it('published state is preview when visible and isStable are false and there is no pilot experiment', () => {
-    const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} />
-    );
-    expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'Preview'
-    );
-  });
-
-  it('published state is pilot if there is a pilot experiment', () => {
-    const wrapper = shallow(
-      <CourseVersionPublishingEditor
-        {...defaultProps}
-        pilotExperiment={'my-pilot'}
-      />
-    );
-    expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'Pilot'
-    );
   });
 
   it('pilot input field shows if published state is pilot', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor
         {...defaultProps}
+        publishedState={'Pilot'}
         pilotExperiment={'my-pilot'}
       />
     );
@@ -76,24 +60,6 @@ describe('CourseVersionPublishedStateSelector', () => {
       'Preview'
     );
     expect(wrapper.find('input').length).to.equal(0);
-  });
-
-  it('published state is assignable if visible is true but isStable is false', () => {
-    const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} visible />
-    );
-    expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'Assignable'
-    );
-  });
-
-  it('published state is recommended if visible and isStable are true', () => {
-    const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} visible isStable />
-    );
-    expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'Recommended'
-    );
   });
 
   it('updates visible, isStable, and pilotExperiment when publish state changed to pilot', () => {
