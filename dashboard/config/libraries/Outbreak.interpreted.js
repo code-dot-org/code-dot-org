@@ -29,6 +29,9 @@ function quarantiningBehavior(spriteIdArg) {
   if (isSick) {
     removeBehaviorSimple(spriteIdArg, new Behavior(congregatingBehavior, []));
     removeBehaviorSimple(spriteIdArg, new Behavior(wanderingBehavior, []));
+    //added this 
+    addTarget({costume: "all"}, "all", "avoid");
+  	addBehaviorSimple({costume: "sick"}, avoidingTargets());
   }
 }
 
