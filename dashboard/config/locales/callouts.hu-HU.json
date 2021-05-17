@@ -15,7 +15,7 @@
           "4_5_Bee_Conditionals_2_1": "Emlékezz, ellenőrizni kell hogy van-e virág minden felhőben. A lépeket nem kell ellenőrizned."
         },
         "Course 4 Artist 4": {
-          "repeat_full_circle": "Hányszor kell lépnie a zombinak, hogy egy teljes kört megtegyen? Írd be ezt a számot!"
+          "repeat_full_circle": "Írd be a számát, hogy hányszor kell a zombinak mozognia, hogy egy teljes kört leírjon"
         },
         "Course 4 Artist 7": {
           "repeat_blocks": "Használd az \"Ismételd\" blokkot, és kerítsd körbe vele a munkaterületen lévő blokkokat"
@@ -60,7 +60,7 @@
           "Course_4_Play_Lab_Vars_9_1": "Minden blokkodat kategóriák szerint rendeztünk el. Kattints a címükre, hogy kiderüljön, mi is van bennük."
         },
         "CourseD_Dance_2020_01": {
-          "dance_callout_01": "Add hozzá ezt a blokkot a programodhoz!"
+          "dance_callout_01": "Válaszd ki innen a táncos típusát!"
         },
         "CourseD_Dance_2020_02": {
           "dance_callout_11_a": "Add hozzá ezt a blokkot a programodhoz.",
@@ -500,16 +500,20 @@
           "courseC_maze_programming2_1": "Ez itt a toolbox, de hívhatnánk szerszámosládának is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat."
         },
         "courseC_maze_programming3": {
-          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat.",
+          "courseC_maze_programming3_3": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
         },
         "courseC_maze_programming3_2018": {
-          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat.",
+          "courseC_maze_programming3_3": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
         },
         "courseC_maze_programming3_2019": {
-          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat.",
+          "courseC_maze_programming3_3": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
         },
         "courseC_maze_programming3_2020": {
-          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat."
+          "courseC_maze_programming3_2": "További blokkoktól is megszabadulhatsz, ha a toolboxba húzod azokat.",
+          "courseC_maze_programming3_3": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
         },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "Ez a felhasználható blokkok maximális száma. Azt mutatja meg, hogy mennyi blokkot használhatsz még fel."
@@ -760,6 +764,25 @@
         },
         "Course 4 Artist Vars 8": {
           "Course_4_Artist_Vars_8_a": "Több helyre van szükséged? Húzd el ezt a csúszkát, és a kódolási területed szélesebbé válik."
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Ez a feladat az első kihívás! Ezek a feladatok nehezebbek, és nem biztos, hogy elsőre meg tudod oldani őket.",
+          "courseC_maze_programming7_2": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "Ez a feladat az első kihívás! Ezek a feladatok nehezebbek, és nem biztos, hogy elsőre meg tudod oldani őket.",
+          "courseC_maze_programming7_2": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "Ez a feladat az első kihívás! Ezek a feladatok nehezebbek, és nem biztos, hogy elsőre meg tudod oldani őket.",
+          "courseC_maze_programming7_2": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "Ez a feladat az első kihívás! Ezek a feladatok nehezebbek, és nem biztos, hogy elsőre meg tudod oldani őket.",
+          "courseC_maze_programming7_2": "Ezek a blokkok kőből vannak, és nem lehet őket kidobni."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "Ez a feladat az első kihívás! Ezek a feladatok nehezebbek, és nem biztos, hogy elsőre meg tudod oldani őket."
         }
       }
     }

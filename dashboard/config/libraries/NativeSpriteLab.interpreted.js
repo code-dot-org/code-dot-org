@@ -202,3 +202,22 @@ function xLocationOf(spriteId) {
 function yLocationOf(spriteId) {
   return getProp(spriteId, 'y');
 }
+
+//Mike's follow/avoid behavior blocks
+function startFollowing(sprites,targets){
+  addTarget(sprites, targets, "follow");
+  addBehaviorSimple(sprites, followingTargets());
+}
+
+function stopFollowing(sprites){
+  removeBehaviorSimple(sprites, followingTargets());
+}
+
+function startAvoiding(sprites,targets){
+  addTarget(sprites, targets, "avoid");
+  addBehaviorSimple(sprites, avoidingTargets());
+}
+
+function stopFollowing(sprites){
+  removeBehaviorSimple(sprites, avoidingTargets());
+}

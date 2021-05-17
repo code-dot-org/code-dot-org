@@ -466,6 +466,7 @@
   "exactNumberOfBlocks": "Kun {numBlocks, plural, one {1 blok} other {# blokke}} brugt!",
   "exampleErrorMessage": "Funktion {functionName} har en eller flere eksempler, der har brug for en justering. Kontroller om de passer til din definition og besvare spørgsmålet.",
   "examplesFailedOnClose": "En eller flere af dine forslag passer ikke til din definition. Kontroller dine forslag før du lukker",
+  "explainRestrictedSectionLearnMore": "Lær mere",
   "extrasNoBonusLevels": "There are no bonus levels for this stage.",
   "extraTopBlocks": "Du har separate blokke.",
   "extraTopBlocksWhenRun": "Du har separate blokke. Var det din mening at hæfte disse til \"ved kørsel\"-blokken?",

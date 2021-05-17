@@ -19010,7 +19010,7 @@ en:
           student_description: ''
         csd1-2021:
           title: Problem Solving and Computing ('21-'22)
-          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n"
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n**Implementation Guidance for Unit 1**\n- Unit 1 Chapter 1 should be completed before any other unit in CS Discoveries\n- Alternate lessons are provided for some lessons in Unit 1, depending on your classroom context\n- You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below\n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
           lessons:
@@ -19153,8 +19153,8 @@ en:
           name: csd1-2021
           student_description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
         csd2-2021:
-          title: CSD Unit 2 - Web Development ('21-'22)
-          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   "
+          title: Web Development ('21-'22)
+          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   \n\n**Implementation Guidance for Unit 2**\n- Complete Unit 1 Chapter 1 before starting this unit\n- Guidance for how to differentiate tasks is available in the *Differentiation Guide* in the Teacher Resources menu below\n- You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below"
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
           lessons:
@@ -19314,8 +19314,15 @@ en:
           name: csd2-2021
           student_description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
         csd3-2021:
-          title: CSD Unit 3 - Interactive Animations and Games ('21-'22)
-          description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          title: Interactive Animations and Games ('21-'22)
+          description: |2-
+             In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
+
+            **Implementation Guidance for Unit 3**
+            - Complete Unit 1 Chapter 1 before starting this unit
+            - Chapter 1 of this unit is a pre-requisite for Unit 6
+            - Guidance for how to differentiate tasks is available in the *Differentiation Guide* in the Teacher Resources menu below
+            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
           lessons:
@@ -19519,8 +19526,14 @@ en:
           name: csd3-2021
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
         csd4-2021:
-          title: CSD Unit 4 - The Design Process ('21-'22)
-          description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+          title: The Design Process ('21-'22)
+          description: |-
+            Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+
+            **Implementation Guidance for Unit 4**
+            - Complete Unit 1 Chapter 1 before starting this unit
+            - This unit is a pre-requisite for Unit 6 and Unit 7
+            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
           lessons:
@@ -19691,8 +19704,14 @@ en:
           name: csd4-2021
           student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
         csd5-2021:
-          title: CSD Unit 5 - Data and Society ('21-'22)
-          description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+          title: Data and Society ('21-'22)
+          description: |-
+            Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+
+            **Implementation Guidance for Unit 5**
+            - Complete Unit 1 Chapter 1 before starting this unit
+            - This unit could be swapped out with Unit 7 - see the *Implementation Guide* for more information on this option
+            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
           lessons:
@@ -19733,7 +19752,10 @@ en:
             Keeping Data Secret:
               key: Keeping Data Secret
               name: Keeping Data Secret
-              description_student: "Students have a discussion on the different levels of security they would like for personal data. Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note. The class concludes with a discussion about the importance of both physical and digital security.\r\n"
+              description_student: |
+                **Question of the Day: How can we keep data secret and protect it from misuse?**
+
+                In this lesson, you will explore different levels of security, look at the importance of privacy, and learn how to encrypt information!
               description_teacher: |-
                 **Question of the Day: How can we keep data secret and protect it from misuse?**
 
@@ -19746,7 +19768,10 @@ en:
             Project - Create a Representation:
               key: Project - Create a Representation
               name: Create a Representation
-              description_student: "The class designs structures to represent their perfect day using the binary representation systems they've learned in this chapter. After deciding which pieces of information the record should capture, students decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Afterwards, they use the ASCII, binary number, and image formats they have learned to represent their perfect days and try to decipher what a partner's perfect day is like.\r\n"
+              description_student: |-
+                **Question of the Day: How can I represent complex information using binary systems?**
+
+                In this lesson, you will explore how to use ASCII, binary, and image formats to represent your perfect day!
               description_teacher: |-
                 **Question of the Day: How can I represent complex information using binary systems?**
 
@@ -19754,37 +19779,46 @@ en:
             Problem Solving and Data:
               key: Problem Solving and Data
               name: Problem Solving and Data
-              description_student: "This lesson covers how the problem solving process can be tailored to deal with data problems. The class is tasked with deciding what a city most needs to spend resources on. They must find and use data from the internet to support their decision.\r\n"
+              description_student: |-
+                **Question of the Day: How can we use data to solve problems in our community?**
+
+                In this lesson, you will decide what a city most needs to spend resources on as a way to see how to use data to solve problems.
               description_teacher: "**Question of the Day: How can we use data to solve problems in our community?**\r\n\r\nIn this lesson, students use the problem solving process from earlier in the course to solve a data problem. After reviewing the process, the class is presented with a decision: whether a city should build a library, pet shelter, or fire department. Students work in teams to collect information on the Internet to help them decide what should be built, then use this information to build an argument that will convince the city council of their choice. They then map what they have done to the problem solving process that they have been using throughout the course, comparing the general problem solving process to its specific application to data problems."
             Problem Solving with Big Data:
               key: Problem Solving with Big Data
               name: Problem Solving with Big Data
-              description_student: This lesson covers how data is collected and used by organizations to solve problems in the real world. Students look at three scenarios that could be solved using data and brainstorm the types of data they would want to use to solve each problem, as well as strategies they could use to collect the data. Each scenario also includes a video about a real-world service that has solved a similar problem with data.
+              description_student: "**Question of the Day: How is our data collected and why is it useful?**\n\nIn this lesson, you will get a look at how data is collected and used by organizations to solve real problems in the real world. \n"
               description_teacher: "**Question of the Day: How is our data collected and why is it useful?**\r\n\r\nIn this lesson, students look at how data is collected and used by organizations to solve problems in the real world. Students are presented with three scenarios that could be solved using data and brainstorm the types of data they would need and how they could collect the data. Each problem is designed to reflect a real-world service that exists. After brainstorming, students watch a video about a real-world service and record notes about what data is collected by the real-world service and how it is used. At the end of the lesson, students record whether data was provided actively by a user, was recorded passively, or is collected by sensors.\r\n"
             Structuring Data:
               key: Structuring Data
               name: Structuring Data
-              description_student: "This lesson goes further into the interpretation of data, including how to clean and visualize raw data sets. The class first looks at how presenting data in different ways can help people to understand it better. After seeing how cleaning and visualization can help people make better decisions, students look at which parts of this process can be automated, and which parts need a human.\r\n"
+              description_student: "**Question of the Day: how can we make it easier for computers to process data?**\n\nIn this lesson, you will learn how to present data in different ways that can help people understand the data better as well as which parts of the process can be done by a computer and which parts need a human. "
               description_teacher: "**Question of the Day: how can we make it easier for computers to process data?**\r\n\r\nIn this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing data. Students first look at how presenting data in different ways can help people to understand it better, and they then create visualizations of their own data. Using the results of a preferred pizza topping survey, students must decide what to do with data that does not easily fit into the visualization scheme that they have chosen. Finally, students discuss which parts of this process can be automated by a computer and which need a human to make decisions."
             Making Decisions with Data:
               key: Making Decisions with Data
               name: Making Decisions with Data
-              description_student: "This lesson gives students a chance to practice the data problem solving process introduced in the last lesson. Not all questions have right answers, and in some cases the class can and should decide that they need to collect more data. The lesson concludes with a discussion about how different people could draw different conclusions from the same data, and how collecting different data might have affected the decisions they made.\r\n"
+              description_student: "**Question of the Day - how can patterns in data help make a decision?**\n\nIn this lesson, you will get a chance to practice the data problem-solving process you learned about in the previous lesson. "
               description_teacher: "**Question of the Day - how can patterns in data help make a decision?**\r\n\r\nIn this lesson students get practice making decisions with data based on problems designed to be familiar to middle school students. Students work in groups discussing how they would use the data presented to make a decision before the class discusses their final choices. Not all questions have right answers and in some cases students can and should decide that they should collect more data. The lesson concludes with a discussion of how different people could draw different conclusions from the same data, or how collecting different data might have affected the decisions they made.\r\n"
             Interpreting Data:
               key: Interpreting Data
               name: Interpreting Data
-              description_student: "Students begin the lesson by looking at a cake preference survey where respondents specified both a cake and an icing flavor. They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend. Students are then introduced to cross tabulation, which allows them to graph relationships to different preferences. They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.\r\n"
-              description_teacher: "**Question of the Day**: How can patterns in data help us make decisions?\r\n\r\nStudents begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor. They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend. They are then introduced to cross tabulation, which allows them to graph relationships to different preferences. They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.\r\n"
+              description_student: "**Question of the Day: How can patterns in data help us make decisions?**\n\nIn this lesson, you will learn about cross tabulation which will allow you to graph relationships between various pieces of data. "
+              description_teacher: |
+                **Question of the Day: How can patterns in data help us make decisions?**
+
+                Students begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor. They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend. They are then introduced to cross tabulation, which allows them to graph relationships to different preferences. They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.
             Automating Data Decisions:
               key: Automating Data Decisions
               name: Automating Data Decisions
-              description_student: "In this lesson, the class looks at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that suggests a vacation spot. They then create rules, or an algorithm, that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. Next, they use data from their classmates to test whether their rules would make the same decision that a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.\r\n"
+              description_student: |-
+                **Question of the Day: How can computers help us make decisions about data?**
+
+                In this lesson, you will examine how a computer could be used to complete the decision-making step of the data problem-solving process.
               description_teacher: "**Question of the Day: How can computers help us make decisions about data?**\r\n\r\nIn this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot. Students then create rules that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.\r\n"
             Project - Make a Recommendation:
               key: Project - Make a Recommendation
               name: Project - Make a Recommendation
-              description_student: 
+              description_student: "**Question of the Day: How can I use data to make my own recommendations?**\n\nIn this lesson, you will design a recommendation engine based on data that you collect and analyze from your classmates. "
               description_teacher: |-
                 **Question of the Day: How can I use data to make my own recommendations?**
 
@@ -19801,7 +19835,7 @@ en:
               description_teacher: 
             Data and Machine Learning:
               name: Data and Machine Learning
-              description_student: 'Question of the Day: How can machines "learn"?'
+              description_student: "**Question of the Day: How can machines \"learn\"?**\n\nIn this lesson, you get to work with Artificial Intelligence and learn about Machine Learning. "
               description_teacher: "**Question of the Day: How can machines \"learn\"?**\r\n\r\nIn this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
           lesson_groups:
             csd5_1:
@@ -19825,90 +19859,111 @@ en:
           name: csd5-2021
           student_description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
         csd6-2021:
-          title: CSD Unit 6 - Physical Computing ('21-'22)
-          description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          title: Physical Computing ('21-'22)
+          description: |-
+            Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+
+            **Implementation Guidance for Unit 6**
+            - Complete Unit 1 Chapter 1 before starting this unit
+            - This unit assumes students have completed Unit 3 Chapter 1 and Unit 4. Students without this background may struggle in this unit.
+            - This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom
+            - This unit could be swapped out with Unit 7 - see the *Implementation Guide* for more information on this option
+            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
           description_short: Learn to program with physical devices.
           description_audience: ''
           lessons:
             Innovations in Computing:
               key: Innovations in Computing
               name: Innovations in Computing
-              description_student: "In this lesson, students explore a wide variety of new and innovative computing platforms while expanding their understanding of what a computer can be.\r\n"
+              description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+
+'
               description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Designing Screens with Code:
               key: Designing Screens with Code
               name: Designing Screens with Code
-              description_student: "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n"
+              description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality ... even though they are just one screen!
               description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).
             The Circuit Playground:
               key: The Circuit Playground
               name: The Circuit Playground
-              description_student: In this lesson, students get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, they develop programs that use the Circuit Playground for output.
+              description_student: 'In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. '
               description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.
             Input Unplugged:
               key: Input Unplugged
               name: Input Unplugged
-              description_student: "Students experience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\r\n"
+              description_student: 'In this lesson, you will eperience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.
+
+'
               description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Board Events:
               key: Board Events
               name: Board Events
-              description_student: "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n"
+              description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
               description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
             Getting Properties:
               key: Getting Properties
               name: Getting Properties
-              description_student: This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code. They first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new screen element, the slider, and a new event trigger, onChange, are also introduced.
-              description_teacher: This lesson introduces students to the `getProperty` block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use `getProperty` and `setProperty` together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
+              description_student: 'In this lesson, you will learn how to access the properties of different elements with code. '
+              description_teacher: This lesson introduces students to the [`getProperty`(#fff176)](/docs/applab/getProperty/) block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use [`getProperty`(#fff176)](/docs/applab/getProperty/) and [`setProperty`(#fff176)](/docs/applab/setProperty/) together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
             Analog Input:
               key: Analog Input
               name: Analog Input
-              description_student: "Students get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\r\n"
+              description_student: 'In this lesson, you will get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
+
+'
               description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
             The Program Design Process:
               key: The Program Design Process
               name: The Program Design Process
-              description_student: "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide that asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming (a process very similar to the Game Design Process that students used in Unit 3). Students begin by playing a tug o' war style game where the code is hidden. They  discuss what they think the board components, events, and variables would need to be to make the program. Then, they are then given a completed project guide that shows one way to implement the project, and are walked through this process in a series of levels. At the end of the lesson, students have an opportunity to make improvements to the program to make it their own.\r\n"
+              description_student: 'In this lesson, you will learn about the process you will use to design programs of your own throughout this unit. '
               description_teacher: This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.
             'Project: Make a Game':
               key: 'Project: Make a Game'
               name: Project - Make a Game
-              description_student: "For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.\r\n"
-              description_teacher: Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.
+              description_student: In this lesson, you will take what you have learned through chapter one, and develop an app of your own design that uses the board to output information.
+              description_teacher: |+
+                For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.
+
+
             Arrays and Color LEDs:
               key: Arrays and Color LEDs
               name: Arrays and Color LEDs
-              description_student: "In this lesson, students are introduced to the ring of color LEDs, which are exposed as an array called colorLeds. Students learn how to access and control each LED in an array individually, preparing them to access multiple LEDs through iteration later in the chapter. \r\n"
+              description_student: 'In this lesson, you will learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground. '
               description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
             Making Music:
               key: Making Music
               name: Making Music
-              description_student: "In this lesson, students will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of musical notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, and compose simple songs.\r\n"
+              description_student: 'In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. '
               description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
             Arrays and For Loops:
               key: Arrays and For Loops
               name: Arrays and For Loops
-              description_student: "Students learn to combine lists and for-loops in this lesson, which allows them to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, including the list of color LEDs.\r\n"
+              description_student: 'In this lesson, you will learn to combine lists and for-loops in order to write code that impacts every element of a list, regardless of how long it is. '
               description_teacher: Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.
             Accelerometer:
               key: Accelerometer
               name: Accelerometer
-              description_student: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_student: 'In this lesson, you will explore the accelerometer and its capabilities. '
               description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
             Functions with Parameters:
               key: Functions with Parameters
               name: Functions with Parameters
-              description_student: "This lesson starts with a quick review of parameters in the context of the App Lab blocks that students have seen recently. Students then look at examples of parameters within user-created functions in App Lab, and create and call functions with parameters to control multiple elements on a screen. Afterward, they use for loops to iterate over an array, passing each element into a function. Last, students use what they have learned to create a star catching game.\r\n"
+              description_student: 'In this lesson, you will create and call functions with parameters, use for loops to iterate over an array, and finally use what you have learned to create a star catching game.
+
+'
               description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
             Circuits and Physical Prototypes:
               key: Circuits and Physical Prototypes
               name: Circuits and Physical Prototypes
-              description_student: "In this lesson, students wire simple circuits to create a physical prototype using low-cost and easily-found materials.\r\n"
+              description_student: 'In this lesson, you will wire simple circuits to create a physical prototype using low-cost and easily-found materials.
+
+'
               description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
             'Project: Prototype an Innovation':
               key: 'Project: Prototype an Innovation'
               name: Project - Prototype an Innovation
-              description_student: "This final project challenges students to develop and test a prototype for an innovative computing device that interacts with the physical world through various types of input and output, whichallow for interesting and unique user interactions. This project is an opportunity for students to showcase their technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.\r\n"
+              description_student: 'In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. '
               description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
             Post-Project Test:
               key: Post-Project Test
@@ -21677,8 +21732,12 @@ en:
               description_teacher: 'In this **skill-building** lesson, students will program an interactive dance party. '
             lesson-2:
               name: Making Sprites
+              description_student: In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
             lesson-3:
               name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
             lesson-4:
               name: Text and Prompts
           lesson_groups:

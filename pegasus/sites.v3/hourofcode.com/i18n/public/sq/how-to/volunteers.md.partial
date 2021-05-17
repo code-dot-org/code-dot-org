@@ -8,11 +8,11 @@ nav: how_to_nav
 
 ### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Regjistrohuni për të dalë vullnetar</button>]({{ urls/volunteer }})
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+Të menduarit llogaritës ndihmon në rritjen e aftësive për zgjidhjen e problemeve, logjikës dhe krijimtarisë Teknologjia po transformon çdo industri në planet. Studentët sot duhet të mësojnë se si të krijojnë teknologji, jo vetëm ta përdorin atë.
 
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
@@ -23,7 +23,7 @@ The Hour of Code is a one-hour introduction to computer science designed to demy
 - [How to prepare](#how-to-prepare)
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Më shumë mënyra për të mbështetur Orën e Kodit](#support-hour-of-code)
 - [Volunteer FAQ](#faq)
 
 Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
@@ -54,7 +54,7 @@ Check out some testimonials from past volunteers:
 - “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.” 
 - "Kënaqesha kur shikoja sa të emocionuar ishin fëmijët. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Regjistrohuni për të dalë vullnetar</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -120,17 +120,17 @@ If you’re considering hosting the Hour of Code at home or in the community, we
 
 ### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Përcaktoni një datë, format dhe vendndodhje për ngjarjen tuaj
 
-Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Work with the school or teacher to discuss what makes the most sense. Ne kemi parë ngjarje që janë [ virtuale ](https://hourofcode.com/us/how-to/virtual) ose personalisht, në zyrën e kompanisë ose të mbajtura në komunitet dhe për studentë të të gjitha moshave! Ju gjithashtu mund të hidhni një vështrim në atë që <a href = "https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code -të-studentëve-në të gjithë botën-4641325542cf "> partnerë të korporatave </a> dhe [ donatorët ](https://medium.com/@codeorg/how-code-orgs-corporate-spporters-helped-spread-the-love -për-2019-s-orë-të-kodit-73a3c088f10f) kanë bërë në të kaluarën për disa ide frymëzuese.
 
 <br />
 
-#### Sample Agenda:
+#### Shembulli i rendit të ditës:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+Koha | Artikulli i Agjendës | | \---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | | 1-5 minuta | Shfaq një [ video frymëzuese ](https://hourofcode.com/us/promote/resources#videos) |   
+| 5-10 minuta | Prezantohuni dhe mësoni më shumë rreth studentëve: Ku punoni, çfarë bëni dhe çfarë doni më shumë për punën tuaj? Çfarë apo kush ju frymëzoi? Si u interesuat për shkencat kompjuterike? A keni pasur një mentor? Bëni studentëve pyetje dhe lini kohë për P & amp; A. |  
+|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | | 1-3 minuta | Faleminderit të gjithëve dhe ndajnë fjalët frymëzuese të ndarjes. Shpërndani çdo swag të kompanisë suaj (ngjitëset [ ](#celebrate) janë të mrekullueshme)! | | <br />
 
 #### Other ideas to add to your event
 
@@ -223,7 +223,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Më shumë mënyra për të mbështetur Orën e Kodit
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
@@ -265,4 +265,4 @@ Teachers will be searching for volunteers on our [volunteer map](https://code.or
 When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Regjistrohuni për të dalë vullnetar</button>]({{ urls/volunteer }})

@@ -209,7 +209,7 @@ class ScriptLevel < ApplicationRecord
 
   def has_another_level_to_go_to?
     if script.professional_learning_course?
-      !end_of_stage?
+      !end_of_lesson?
     else
       next_progression_level
     end
@@ -320,7 +320,7 @@ class ScriptLevel < ApplicationRecord
     script.script_levels[i - 1]
   end
 
-  def end_of_stage?
+  def end_of_lesson?
     lesson.script_levels.to_a.last == self
   end
 
@@ -435,7 +435,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       # Add a next pointer if it's not the obvious (level+1)
-      if end_of_stage?
+      if end_of_lesson?
         if next_level
           summary[:next] = [next_level.lesson.absolute_position, next_level.position]
         else
@@ -704,5 +704,24 @@ class ScriptLevel < ApplicationRecord
       save! if changed?
     end
     self.levels = levels
+  end
+
+  def add_variant(new_level)
+    raise "can only be used on migrated scripts" unless script.is_migrated
+    raise "expected 1 existing level but found: #{levels.map(&:key)}" unless levels.count == 1
+    raise "expected empty variants property but found #{variants}" if variants
+    raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
+    existing_level = levels.first
+
+    levels << new_level
+    update!(
+      level_keys: levels.map(&:key),
+      variants: {
+        existing_level.name => {"active" => false}
+      }
+    )
+    if Rails.application.config.levelbuilder_mode
+      script.write_script_json
+    end
   end
 end
