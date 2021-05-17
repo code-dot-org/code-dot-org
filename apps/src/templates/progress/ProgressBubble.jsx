@@ -41,7 +41,6 @@ class ProgressBubble extends React.Component {
     lessonTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
-    stageExtrasEnabled: PropTypes.bool,
     hideAssessmentIcon: PropTypes.bool,
     onClick: PropTypes.func
   };
