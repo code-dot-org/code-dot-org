@@ -27,7 +27,6 @@ const mazeReducer = require('./redux');
 const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
-const Slider = require('../slider');
 
 const createResultsHandlerForSubtype = require('./results/utils')
   .createResultsHandlerForSubtype;
@@ -48,8 +47,6 @@ module.exports = class Maze {
     this.result = undefined;
     this.testResults = undefined;
     this.waitingForReport = undefined;
-    this.stepSpeedMultiplier = 1;
-    this.speedSlider = null;
 
     //TODO: Make configurable.
     studioApp().setCheckForEmptyBlocks(true);
@@ -178,11 +175,6 @@ module.exports = class Maze {
         dom.addClickTouchEvent(finishButton, this.finishButtonClick_);
       }
 
-      if (this.controller.skin.adjustableSpeed) {
-        const slider = document.getElementById('slider');
-        this.speedSlider = new Slider(10, 35, 130, slider);
-      }
-
       // Listen for hint events that draw a path in the game.
       window.addEventListener('displayHintPath', e => {
         this.controller.drawHintPath(svg, e.detail);
@@ -196,7 +188,6 @@ module.exports = class Maze {
       )
     });
 
-    var iconPath = '/blockly/media/turtle/icons.png';
     var visualizationColumn = (
       <MazeVisualizationColumn
         searchWord={this.controller.level.searchWord}
@@ -208,8 +199,6 @@ module.exports = class Maze {
         showStepButton={
           !!(this.controller.level.step && !this.controller.level.edit_blocks)
         }
-        showSpeedSlider={!!skin.adjustableSpeed}
-        iconPath={iconPath}
       />
     );
 
@@ -519,22 +508,11 @@ module.exports = class Maze {
 
     this.controller.animationsController.stopIdling();
 
-    if (this.controller.skin.adjustableSpeed) {
-      // The slider's value is between 1 and 0 with 1 being slowest for some reason.
-      // We make it between -1 and 1 with -1 being slowest by multiplying
-      // by -2 and adding 1.
-      this.stepSpeedMultiplier = Math.pow(
-        2,
-        -2 * this.speedSlider.getValue() + 1
-      );
-    }
-
     // Speeding up specific levels
     var scaledStepSpeed =
       this.stepSpeed *
       this.scale.stepSpeed *
-      this.controller.skin.movePegmanAnimationSpeedScale *
-      this.stepSpeedMultiplier;
+      this.controller.skin.movePegmanAnimationSpeedScale;
     timeoutList.setTimeout(() => {
       this.scheduleAnimations_(stepMode);
     }, scaledStepSpeed);
@@ -546,8 +524,7 @@ module.exports = class Maze {
     var timePerAction =
       this.stepSpeed *
       this.scale.stepSpeed *
-      this.controller.skin.movePegmanAnimationSpeedScale *
-      this.stepSpeedMultiplier;
+      this.controller.skin.movePegmanAnimationSpeedScale;
     // get a flat list of actions we want to schedule
     var actions = this.executionInfo.getActions(singleStep);
 
