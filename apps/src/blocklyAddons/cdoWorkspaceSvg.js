@@ -71,9 +71,9 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   }
 
   isReadOnly() {
-    return false; // TODO
+    return false; // TODO - used for feedback
   }
-  setEnableToolbox() {} // TODO
+  setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   showTrashcan() {
     /**
      * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.

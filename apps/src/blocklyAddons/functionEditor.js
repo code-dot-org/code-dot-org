@@ -1,3 +1,5 @@
+// This class is not yet implemented. It is used for the modal function editor,
+// which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   // TODO
   constructor(
