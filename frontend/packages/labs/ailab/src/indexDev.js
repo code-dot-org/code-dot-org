@@ -6,14 +6,12 @@ import queryString from "query-string";
 const sampleModes = {
   minimal: {
     datasets: ["tacos_toy"],
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
-    hideColumnClicking: true,
     hideSelectLabel: true
   },
 
   "preload-metadata": {
+    requireAccuracy: 50,
     hideSpecifyColumns: true,
     hideChooseReserve: true,
     hideInstructionsOverlay: true
@@ -22,8 +20,6 @@ const sampleModes = {
   "intro-ai-tacos": {
     datasets: ["tacos_toy"],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
@@ -40,8 +36,6 @@ const sampleModes = {
       "salsa_toy"
     ],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
@@ -49,16 +43,12 @@ const sampleModes = {
   safari: {
     datasets: ["safari_toy"],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
 
   zoo: {
-    datasets: ["zoo"],
-    hideSpecifyColumns: true,
-    hideChooseReserve: true
+    datasets: ["zoo"]
   },
 
   "final-project": {}
@@ -74,7 +64,10 @@ function onContinueStub() {
 
 function saveTrainedModelStub(data, response) {
   console.log("This would save a trained model.", data);
-  response({ id: 303, status: "success" });
+  setTimeout(
+    () => response({ id: 303, status: "success" }),
+    2000
+  );
 }
 
 function setInstructionsKeyStub(instructionsKey, options) {
