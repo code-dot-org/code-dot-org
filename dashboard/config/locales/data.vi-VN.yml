@@ -416,22 +416,44 @@ vi:
         studio_playlab_10: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
           thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
           của họ.
-        studio_iceage_hello1: Sid muốn tập hợp tất cả mọi người một chuyến phiêu lưu
-          mới. Bạn có thể giúp cậu ấy nói "Xin chào" bằng cách kéo các khối "nói"
-          vào khu vực làm việc và gõ từ "xin chào" bên trong?
+        studio_iceage_hello1: Sid muốn tập hợp tất cả mọi người trong một chuyến phiêu
+          lưu mới. Bạn có thể giúp cậu ấy nói “Xin chào” bằng cách kéo các khối “nói”
+          vào không gian làm việc và gõ từ “xin chào” bên trong không?
         studio_iceage_hello2: Manny (nhân vật 1) tìm thấy Sid (nhân vật 2) và muốn
-          mời anh ta vào cuộc phiêu lưu. Giúp họ chào nhau bằng cách sử dụng khối
-          "nhân vật nói" hai lần.
-        studio_iceage_move_to_flag: Scrat đang tìm kiếm acorn của mình!  Giúp cậu
-          ấy đi tới cuối 200 pixels bằng cách sử dụng  khối "di chuyển".
+          mời anh ta tham gia cuộc phiêu lưu. Hãy giúp họ chào nhau bằng cách sử dụng
+          khối “nhân vật nói” hai lần.
+        studio_iceage_move_to_flag: Scrat đang tìm kiếm hạt sồi của mình! Hãy giúp
+          cậu ấy đi tới 200 pixel cuối bằng cách sử dụng khối “di chuyển”.
         studio_iceage_move_to_actor: Diego (nhân vật 1) đang tìm kiếm Manny (nhân
-          vật 2). Giúp Diego di chuyển 200 điểm ảnh xuống để Manny sử dụng khối "di
-          chuyển nhân vật". Tiếp theo, kết nối một khối với sự kiện "khi nhân vật
-          chạm" để phát âm thanh khi họ tìm thấy nhau.
+          vật 2). Hãy giúp Diego di chuyển xuống 200 pixel tới chỗ Manny bằng khối
+          “di chuyển nhân vật”. Tiếp theo, hãy nối một khối với sự kiện “khi nhân
+          vật chạm” để phát âm thanh khi họ tìm thấy nhau.
         studio_iceage_repeat: Khối lệnh "lặp lại mãi mãi" cho phép bạn có
           thể chạy đoạn mã liên tục. Bạn có thể gắn khối lệnh để giúp
           Granny tập thể dục bằng cách di chuyển qua trái và qua phải lặp
           lại không?
+        studio_iceage_click_hello: Bạn có thể giúp Sid thử gọi bạn bè lần cuối khi
+          nhấp chuột không? Đừng quên nhấp chuột vào cậu ta sau khi nhấn Chạy.
+        studio_iceage_move_events: Scrat vẫn đang tìm hạt sồi! Hãy giúp cậu ấy lùng
+          sục xung quanh bằng cách gắn khối “di chuyển” vào mỗi sự kiện và thay đổi
+          hướng hoạt động cho mỗi phím mũi tên. Khi bạn hoàn tất, hãy nhấp chuột vào
+          Chạy và cố gắng thu thập tất cả các hạt sồi nhé.
+        studio_iceage_sound_and_points: Chúng tôi đã cung cấp hầu hết các mã lệnh
+          giúp Granny di chuyển sang trái và phải cũng như mã lệnh để di chuyển Sid
+          quanh màn hình. Bạn có thể hoàn thành mã lệnh và thêm các khối vào sự kiện
+          “khi diễn viên chạm vào” để tạo ra sự kiện đó và cả hai cùng phát ra âm
+          thanh cũng như ghi điểm khi Sid và Granny va chạm không? Nhấn Chạy để chơi
+          trò chơi.
+        studio_iceage_warn_ice_age: Mọi người cần phải di chuyển nhanh hơn vì kỷ băng
+          hà đang đến gần! Hãy đổi cảnh nền thành băng giá và đặt tốc độ của Sid thành
+          nhanh, sau đó nhấn Chạy và di chuyển cậu ta đến chỗ Diego để cảnh báo.
+        studio_iceage_throw_hearts: Sid muốn cho bà của mình, Granny, biết rằng anh
+          yêu bà. Hãy sử dụng lệnh “diễn viên ném” để Sid (diễn viên 1) ném trái tim
+          vào Granny (diễn viên 2)! Đặt tâm trạng của Granny thành hạnh phúc khi bà
+          nhận được trái tim.
+        studio_iceage_free_play: Đã đến lúc làm game hoặc câu chuyện của riêng bạn
+          rồi! Khi bạn hoàn tất, hãy nhấp chuột vào Hoàn tất để cho bạn bè của mình
+          chơi thử game của bạn trên điện thoại, máy tính bảng hoặc máy tính của họ!
         studio_full_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
           thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
           của họ.

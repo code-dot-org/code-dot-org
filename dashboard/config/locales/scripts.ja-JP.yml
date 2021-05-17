@@ -1110,8 +1110,6 @@ ja:
               name: ユニット1、15～16日目 コンピューター プログラムと指示の順守
             Unit 1, Day 17-19 What Is Intelligence?:
               name: ユニット1、17～19日目 インテリジェンスとは？
-            0: ユニット1、1～2日コンピューターとは？
-            1: ユニット1、1～2日コンピューターとは？
             Unit 1, Days 3-4 Buying a Computer:
               name: ユニット1、3～4日目 コンピューターの購入
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1218,8 +1216,6 @@ ja:
               name: ユニット1、15～16日目 コンピューター プログラムと指示の順守
             Unit 1, Day 17-19 What Is Intelligence?:
               name: ユニット1、17～19日目 インテリジェンスとは？
-            0: ユニット1、1～2日コンピューターとは？
-            1: ユニット1、1～2日コンピューターとは？
             Unit 1, Days 3-4 Buying a Computer:
               name: ユニット1、3～4日目 コンピューターの購入
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1242,8 +1238,6 @@ ja:
               name: ユニット1、15～16日目 コンピューター プログラムと指示の順守
             Unit 1, Day 17-19 What Is Intelligence?:
               name: ユニット1、17～19日目 インテリジェンスとは？
-            0: ユニット1、1～2日コンピューターとは？
-            1: ユニット1、1～2日コンピューターとは？
             Unit 1, Days 3-4 Buying a Computer:
               name: ユニット1、3～4日目 コンピューターの購入
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2755,8 +2749,6 @@ ja:
               name: ユニット1、15～16日目 コンピューター プログラムと指示の順守
             Unit 1, Day 17-19 What Is Intelligence?:
               name: ユニット1、17～19日目 インテリジェンスとは？
-            0: ユニット1、1～2日コンピューターとは？
-            1: ユニット1、1～2日コンピューターとは？
             Unit 1, Days 3-4 Buying a Computer:
               name: ユニット1、3～4日目 コンピューターの購入
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3752,9 +3744,7 @@ ja:
             Debugging in Maze:
               name: 迷路で学ぶデバッグ
             Loops in Harvester:
-              name: 'Loops in Harvester
-
-'
+              name: Loops in Harvester
         coursed-draft:
           description_short: コンピューター サイエンスの基礎を学び、独自のアート、ストーリー、ゲームを作成しましょう。
           lessons:
@@ -5125,9 +5115,7 @@ ja:
             Loops in Maze:
               name: 迷路で学ぶループ
             Loops in Harvester:
-              name: 'Loops in Harvester
-
-'
+              name: Loops in Harvester
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
             Build a Flappy Game:
@@ -13388,6 +13376,8 @@ ja:
               display_name: 関数(かんすう)
             csp_project:
               display_name: プロジェクト
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             Variables Explore:
               name: 変数 探索
@@ -13419,6 +13409,8 @@ ja:
               name: プロジェクト - 意思決定アプリ パート3
             'Lesson 15: Assessment Day':
               name: 'レッスン15: 評価日'
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp5-2020:
           title: CSPユニット5 - リスト、ループ、トラバーサル ('20 - '21)
           lesson_groups:
@@ -13430,6 +13422,8 @@ ja:
               display_name: トラバーサル
             csp_project:
               display_name: プロジェクト
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             Lists Explore:
               name: リスト 探索
@@ -13471,12 +13465,16 @@ ja:
               name: ユニット5 生徒向けアンケート
             Unit 5 TEACHER Survey:
               name: ユニット5 先生向けアンケート
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: パラメータと戻り値
             csp_libraries:
               display_name: ライブラリ
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             Parameters and Return Explore:
               name: パラメータと戻り値 探索
@@ -13508,6 +13506,8 @@ ja:
               name: 変数作成デモ
             'Lesson 11: Assessment Day':
               name: 'レッスン15: 評価日'
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csd2-projects-temp:
           title: CSD ウェブプロジェクト - 一時
           description: CSD ウェブ開発のための新しいミニプロジェクトを開催する一時的な場所
@@ -13730,8 +13730,6 @@ ja:
               name: 'レッスン3: 問題解決の探索 - ゲームのテーマ'
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 'レッスン3: 問題解決の探索 - 動物のテーマ'
-            0:
-              name: "\\「代替レッスン1:\\」問題解決入門 - 新聞の表"
             'Alt Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
               name: '代替レッスン1: 問題解決入門 - スパゲッティ ブリッジ'
             '"Alt Lesson 1:" Intro to Problem Solving - Newspaper Table':
@@ -14947,6 +14945,8 @@ ja:
               display_name: 'ユニット1: デジタル情報'
             cspSurvey:
               display_name: アンケート
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             new stage:
               name: 新しいステージ
@@ -14980,11 +14980,15 @@ ja:
               name: 'レッスン15: 評価日'
             CS Principles Pre-survey:
               name: CS原則の事前アンケート
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp2-2020:
           title: CSPユニット2 - インターネット ('20～'21)
           lesson_groups:
             csp_unit2_2020:
               display_name: 'ユニット2: インターネット'
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             new stage:
               name: 新しいステージ
@@ -15006,11 +15010,15 @@ ja:
               name: プロジェクト - インターネットのジレンマ パート2
             'Lesson 9: Assessment Day':
               name: 'レッスン15: 評価日'
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp3-2020:
           title: CSPユニット3 - アプリ設計入門 ('20 - '21)
           lesson_groups:
             csp_unit3_2020:
               display_name: 'ユニット3: アプリ設計入門'
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             new stage:
               name: 新しいステージ
@@ -15034,11 +15042,15 @@ ja:
               name: プロジェクト - アプリの設計 パート5
             'Lesson 11: Assessment Day':
               name: 'レッスン15: 評価日'
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp6-2020:
           title: CSPユニット6 - アルゴリズム ('20～21)
           lesson_groups:
             csp_unit6_2020:
               display_name: 'ユニット6: アルゴリズム'
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             new stage:
               name: 新しいステージ
@@ -15054,6 +15066,8 @@ ja:
               name: 並列分散アルゴリズム
             'Lesson 6: Assessment Day':
               name: 'レッスン15: 評価日'
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp8-2020:
           title: CSPユニット8 - PT準備の作成 ('20～'21)
           lessons:
@@ -15070,6 +15084,8 @@ ja:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'ユニット9: データ'
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             new stage:
               name: 新しいステージ
@@ -15091,11 +15107,15 @@ ja:
               name: プロジェクト - データストーリーを伝える - パート2
             'Lesson 9: Assessment Day':
               name: 'レッスン15: 評価日'
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp10-2020:
           title: CSPユニット10 - サイバーセキュリティとグローバルインパクト ('20～'21)
           lesson_groups:
             csp_unit10_2020:
               display_name: 'ユニット10: サイバーセキュリティとグローバルインパクト'
+            cspSurvey2020:
+              display_name: コース終了後アンケート
           lessons:
             new stage:
               name: 新しいステージ
@@ -15133,6 +15153,8 @@ ja:
               name: 'プロジェクト: イノベーションシミュレーションパート7'
             'Lesson 14: Unit Assessment Day':
               name: 'レッスン14: ユニット評価日'
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
         csp-march-virtual:
           title: CS原則 20～21 ファシリテーター向けカリキュラムトレーニング
           lessons:
@@ -15209,9 +15231,7 @@ ja:
             Introduction to CSD:
               name: CSD入門
             Tools:
-              name: 'Tools
-
-'
+              name: Tools
             Curriculum Components:
               name: カリキュラムのコンポーネント
             Course Resources:
@@ -15896,6 +15916,12 @@ ja:
               name: コースE/F
             CS Discoveries:
               name: コンピューターサイエンス 発展
+            Course E:
+              name: コース E
+            Course F:
+              name: コース F
+            csf:
+              name: コンピューター・サイエンスの基礎
         ml-playground:
           lessons:
             AI for Oceans:
@@ -15906,6 +15932,10 @@ ja:
               name: 最終プロジェクト
             Project:
               name: 最終プロジェクト
+            lesson14:
+              name: レッスン14
+            lesson15:
+              name: レッスン15
         2021drafting:
           lessons:
             Course F Introduction:
@@ -15919,6 +15949,8 @@ ja:
               display_name: はじめに
             lessonGroup-3:
               display_name: 変数（へんすう）
+            debugging:
+              display_name: Debugging
         csd1-2021:
           title: CSDユニット1 - 問題の解決とコンピューティング ('21～'22)
           description: "問題解決とコンピューティングは、コンピューター サイエンスの世界を高度にインタラクティブで協調的な形で紹介し、問題解決のより広い枠組みを見ていきます。問題解決プロセスを使って練習し、一連のパズル、課題、および実際のシナリオをこなしていきます。次に、コンピューターがどのように情報を入力、出力、保存、処理して、人が問題を解決するのを助けているかを学びます。このユニットの終わりに、選択した問題の解決に役立つアプリケーションを設計します。\r"
@@ -16918,9 +16950,7 @@ ja:
               description_student: このレッスンでは、繰り返しループを使用してダンスパーティーを行います。
               description_teacher: 長くて面白いプログラムを書き始めると、プログラムには多くの繰り返しが含まれることがよくあります。このレッスンでは、ループを使って、ダンスで繰り返される動きのパターンを見つけることで、繰り返しの多い指示をより簡単に伝達する方法について学習します。
             Loops in Harvester:
-              key: 'Loops in Harvester
-
-'
+              key: Loops in Harvester
               name: 農夫と学ぶループ
               description_student: ループを使って、農夫の収穫を手伝ってあげましょう！
               description_teacher: "「ルーピーをゲット」で学んだ繰り返しの指示のコンセプトに基づいて、このステージではループを使って、Code.orgでより効率的にトウモロコシを収穫してもらいます。"
@@ -17017,9 +17047,7 @@ ja:
               description_student: ループを使ってBB-8が迷路を通り抜けるのを助けてあげましょう！
               description_teacher: "「ルーピーをゲット」の指示をここでも繰り返すというコンセプトに基づいて、このステージではループを使って、BB-8が以前よりも効率的に迷路を通過できるようにします。"
             Loops in Harvester:
-              key: 'Loops in Harvester
-
-'
+              key: Loops in Harvester
               name: ループで作物を収穫する
               description_student: ループを使って農夫が野菜を収穫するのを助けてあげましょう！
             Looking Ahead:
@@ -17302,6 +17330,9 @@ ja:
                 (これはおそらくプロジェクトで最長のステージです)。最後に、生徒は完成した作品を仲間に発表することができます。
             lesson-4:
               name: スーパーデジタルシティズンになる
+            lesson-1:
+              name: アクセシビリティのための設計
+              description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
           lesson_groups:
             ramp_up:
               display_name: ランプアップ
@@ -17315,6 +17346,8 @@ ja:
               display_name: コンピューティングの影響
             end_of_course_project:
               display_name: コース最後のプロジェクト
+            lessonGroup-7:
+              display_name: コンピューティングの影響
           name: コースe -2021
           student_description: アルゴリズム、ループ、条件文、イベントを使ってプログラミングから始めて、関数に移ります。このコースの後半では、友だちや家族と共有できるキャップストーンプロジェクトを設計して作成します。
         coursef-2021:
@@ -17465,7 +17498,7 @@ ja:
               description_teacher: アングリーバードゲームのキャラクターを使って、生徒はトリを迷路の片側から反対側のブタに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、トリをまっすぐ移動、左折、または右折させます。
             Debugging with Scrat:
               key: スクラットと学ぶデバッグ
-              name: スクラットと学ぶデバッグ
+              name: 迷路で学ぶデバッグ
               description_student: パズルで問題を見つけ、デバッグスキルを練習しましょう。
               description_teacher: デバッグはプログラミングの学習に不可欠な要素です。このレッスンでは、誤って解かれたパズルに取り組みます。ループが不正確だったり、ブロックが欠落していたり、ブロックが余分だったり、ブロックが機能しないなどのエラーを特定するには、既存のプログラムを順に検証する必要があります。
             Collecting Treasure with Laurel:
@@ -17548,7 +17581,7 @@ ja:
               key: アーティストと学ぶ変数
               name: アーティストと学ぶ変数
               description_student: クラスに創造性の風を吹き込むことを忘れないでください！ここで取り組むパズルでは、変数を使って素晴らしい絵を作成します。
-              description_teacher: このレッスンでは、アーティスト環境の変数を使って、反復的なデザインの作成について学びます。実行時に値が変化しない場合でも、変数を使ってプログラムを簡単に記述し、読みやすくする方法を学習します。
+              description_teacher: このレッスンでは、アーティスト環境の変数を使って、反復的なデザインを行う方法ついて学びます。生徒は、変数をどう使うと、プログラムをど簡単に記述し、読みやすくできるかを学びます。ガイド付きパズルを行った後、生徒はフリープレイレベルで終了します。そこで学んだことを示し、独自のデザインを作成します。
             Changing Variables with Bee:
               key: みつばちと学ぶ変数の変更
               name: みつばちと学ぶ変数の変更
@@ -17623,12 +17656,15 @@ ja:
             Learn to Drag and Drop:
               key: ドラッグ＆ドロップ
               name: ドラッグ＆ドロップ
+              description_student: クリックしてドラッグし、パズルを完成させましょう。
               description_teacher: このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。
             Sequencing with Scrat:
               key: スクラッチと学ぶシーケンス
               name: スクラッチと学ぶシーケンス
+              description_student: どんぐりにたどり着けるようにスクラッチをプログラムします。
             Programming in with Angry Birds:
               name: めいろ のプログラミング
+              description_teacher: アイスエイジのキャラクターを使って、生徒はスクラットを迷路の片側から反対側のどんぐりに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、スクラットをまっすぐ移動、左折、または右折させます。
             Programming with Rey and BB-8:
               key: レイとBB-8と学ぶプログラミング
               name: レイとBB-8と学ぶプログラミング
@@ -17636,10 +17672,12 @@ ja:
             Programming in Harvester:
               key: 農夫と学ぶプログラミング
               name: 農夫と学ぶプログラミング
+              description_student: 農夫が道に沿って野菜を収穫するのを手伝ってあげましょう。
               description_teacher: 生徒は、学習したプログラミングの概念を農夫の収穫に適用します。ここでは、キャラクターをゴールに到達させるだけでなく、新しいブロックを使ってトウモロコシを収穫する必要があります。生徒は引き続き順序アルゴリズムスキルを開発し、デバッグプロセスを使い始めます。
             Loops with Scrat:
               key: スクラッチと学ぶループ
               name: スクラッチと学ぶループ
+              description_student: ループを使ってスクラッチがより多くの地面をカバーできるようにします。
             Loops with Laurel:
               key: くりかえし あつめる
               name: くりかえし あつめる
@@ -17648,18 +17686,22 @@ ja:
             Ocean Scene with Loops:
               key: アーティストくりかえし
               name: アーティストくりかえし
+              description_student: ループとパターンを使って画像を完成させましょう。
               description_teacher: ループに戻って、生徒は一連の簡単な指示をループすることで画像を描く方法を学びます。前のオンラインレッスンでは、ループを使って迷路を進み、宝物を収集しました。ここでは、ループでパターンを作成します。この段階の最後に、生徒はループを使って自分の画像を作成する機会があります。
             Drawing Gardens with Loops:
               key: アーティストくりかえし
               name: アーティストくりかえし
+              description_student: パターンとループを使って画像を完成させましょう。
               description_teacher: ループに戻って、生徒は一連の簡単な指示をループすることで画像を描く方法を学びます。前のオンラインレッスンでは、ループを使って迷路を進み、宝物を収集しました。ここでは、生徒はループを使ってパターンを作成します。この段階の最後に、生徒はループを使って自分の画像を作成する機会があります。
             On the Move with Events:
               key: プレイ ラボのイベント
               name: プレイ ラボのイベント
+              description_student: 独自のゲームやストーリーを作成しましょう。
               description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってストーリーを作りましょう！
             A Royal Battle with Events:
               key: プレイ ラボのイベント
               name: プレイ ラボのイベント
+              description_student: イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。
               description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってゲームを作りましょう！
           lesson_groups:
             csf_sequencing:
@@ -17917,6 +17959,13 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csa2-pilot:
+          lessons:
+            lesson-15:
+              name: 'レッスン15: 評価日'
+          lesson_groups:
+            lesson group:
+              display_name: 内容
         k5-onlinepd-2021:
           description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター サイエンスを教える方法を学びましょう！
           student_description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター
@@ -17981,3 +18030,20 @@ ja:
               display_name: 次の手順
             Introduction:
               display_name: はじめに
+        pl-playground:
+          lessons:
+            Module 1:
+              name: モジュール1
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: CSPコース後アンケート
+          lesson_groups:
+            cspSurvey2020:
+              display_name: アンケート
+          description_audience: CSP生徒
+          description_short: CSP生徒向けコース後の調査
+          description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません
+            - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
+          student_description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません
+            - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。

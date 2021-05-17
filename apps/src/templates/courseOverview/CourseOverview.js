@@ -199,6 +199,7 @@ class CourseOverview extends Component {
             }}
           />
         )}
+        {showNotification && <VerifiedResourcesNotification />}
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {filteredVersions.length > 1 && (
@@ -218,7 +219,6 @@ class CourseOverview extends Component {
               : descriptionTeacher
           }
         />
-        {showNotification && <VerifiedResourcesNotification />}
         <div>
           <CourseOverviewTopRow
             sectionsInfo={sectionsInfo}

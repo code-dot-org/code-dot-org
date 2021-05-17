@@ -1226,6 +1226,15 @@ cs:
             '"y"': souřadnice Y
             '"direction"': směr pohybu
             '"speed"': rychlost
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+          SIZE:
+            '25': velmi malý
+            '50': malý
+            '75': středně
+            '100': velký
       gamelab_setSizes:
         text: nastavit {SPRITE} {PROPERTY} na {N}%
         options:
@@ -1533,6 +1542,13 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
+      Mikelab_setupSim:
+        text: |-
+          simulace nastavení
+          {SPRITE1N}{SPRITE1COSTUME}Rychlost{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Rychlost{SPRITE2SPEED}
+          Shromažďování
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1595,6 +1611,13 @@ cs:
         text: x souřadnice {SPRITE}
       Mikelab_yLocationOf:
         text: y souřadnice {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': mřížka
+            '"border"': hranice
+            '"row"': řádek
+            '"random"': náhodně
       RyanLab_moveForward:
         text: posuň se vpřed
       RyanLab_turnLeft:
@@ -1628,49 +1651,27 @@ cs:
         options:
           PROPERTY:
             "'shapeColor'": barva
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} začni {BEHAVIOR} na {SECONDS} sekundy
-      aalab_addBehaviorUntilBoolean:
-        text: postava {SPRITE} začni {BEHAVIOR} až do momentu {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nová postava s názvem {SPRITE_NAME} s kostýmem {ANIMATION_NAME} na místě{LOCATION}
-      aalab_goToScene:
-        text: jít na scénu {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: pohni {SPRITE} o {DISTANCE} pixelů na {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': sever
-            '"East"': východ
-            '"South"': jih
-            '"West"': západ
-      aalab_prompt:
-        text: ptát {MESSAGE}
-      aalab_scene:
-        text: scéna {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: příběh o nastavení
-      aalab_starwars_playSound:
-        text: přehraj zvuk {OPTION}
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': mřížka
+            '"border"': hranice
+            '"row"': řádek
             '"random"': náhodně
-            '"R2-D2 random"': R2-D2 náhodný
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': vše
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': vše
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: nakreslit binární {BIN}
       binary_drawBinScreen:

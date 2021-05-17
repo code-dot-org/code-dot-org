@@ -1199,6 +1199,15 @@ th:
             '"y"': อยู่ที่แกน Y
             '"direction"': ทิศทางการเคลื่อนไหว
             '"speed"': ความเร็ว
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': ปานกลาง
+            '100': large
       gamelab_setSizes:
         text: ตั้งค่า {SPRITE} {PROPERTY} เป็น {N}%
         options:
@@ -1500,6 +1509,13 @@ th:
             '"x"': ตามแนวแกนนอน
             '"y"': ตามแนวแกนตั้ง
             '"direction"': ทิศทางการเคลื่อนไหว
+      Mikelab_setupSim:
+        text: |-
+          การจำลองการตั้งค่าที่มี
+          {SPRITE1N}{SPRITE1COSTUME}ความเร็ว{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}ความเร็ว{SPRITE2SPEED}
+          รวบ รวม
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1562,6 +1578,13 @@ th:
         text: x พิกัดของ {SPRITE}
       Mikelab_yLocationOf:
         text: พิกัด y ของ {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ตาข่าย
+            '"border"': เส้นขอบ
+            '"row"': แถว
+            '"random"': สุ่ม
       RyanLab_moveForward:
         text: ไปข้างหน้า
       RyanLab_turnLeft:
@@ -1595,42 +1618,27 @@ th:
         options:
           PROPERTY:
             "'shapeColor'": สี
-      aalab_addBehaviorForDuration:
-        text: ทั้งนี้ {SPRITE} เริ่ม ต้น {BEHAVIOR} สำหรับ {SECONDS} วินาที
-      aalab_addBehaviorUntilBoolean:
-        text: "[SPRITE]สไปรท์[0] เริ่มต้น {BEHAVIOR} จนกระทั่ง {CONDITION}"
-      aalab_createNewSpriteAnonReturn2:
-        text: ผีสางใหม่ชื่อ{SPRITE_NAME} แต่งชุด{ANIMATION_NAME} [1] สถานที่{LOCATION}
-      aalab_goToScene:
-        text: ไปที่ฉาก {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: ย้าย {SPRITE} {DISTANCE} พิก เซล {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': ทิศเหนือ
-            '"East"': ตะวันออก
-            '"South"': ทางใต้
-            '"West"': เวสต์
-      aalab_prompt:
-        text: ถามคำถาม {MESSAGE}
-      aalab_scene:
-        text: "[SCENE]ฉาก[0]"
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: เรื่องราวการติดตั้ง
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': ตาข่าย
+            '"border"': เส้นขอบ
+            '"row"': แถว
             '"random"': สุ่ม
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': ทั้งหมด
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': ทั้งหมด
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: วาดเลขฐานสอง {BIN}
       binary_drawBinScreen:
