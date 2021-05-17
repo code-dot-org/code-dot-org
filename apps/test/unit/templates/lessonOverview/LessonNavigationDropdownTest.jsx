@@ -172,7 +172,7 @@ describe('LessonNavigationDropdown', () => {
 
     let section2 = wrapper.find('a').at(10);
     expect(section2.contains('Lesson Group 2')).to.be.true;
-    section2.simulate('click');
+    section2.simulate('click', {preventDefault: () => {}});
 
     expect(wrapper.find('a').length).to.equal(9);
 
