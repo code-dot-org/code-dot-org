@@ -701,10 +701,10 @@ module LevelsHelper
         else
           data_t_suffix 'script.name', @script_level.script.name, 'title'
         end
-      stage = @script_level.name
+      lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{stage} ##{position}"
+        "#{script}: #{lesson} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else

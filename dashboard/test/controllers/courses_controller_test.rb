@@ -285,6 +285,52 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp'
   end
 
+  test "update: sets visible and is_stable on units in unit group" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course = create :unit_group, name: 'course'
+    unit1 = create :script, name: 'unit1'
+    unit2 = create :script, name: 'unit2'
+
+    post :update, params: {
+      course_name: 'course',
+      scripts: ['unit1', 'unit2'],
+      visible: 'on',
+      is_stable: 'on'
+    }
+    course.reload
+    unit1.reload
+    unit2.reload
+
+    assert course.visible?
+    assert course.is_stable?
+    refute unit1.hidden?
+    assert unit1.is_stable?
+    refute unit2.hidden?
+    assert unit2.is_stable?
+  end
+
+  test "update: sets pilot_experiment on units in unit group" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course = create :unit_group, name: 'course'
+    unit1 = create :script, name: 'unit1'
+    unit2 = create :script, name: 'unit2'
+
+    post :update, params: {
+      course_name: 'course',
+      scripts: ['unit1', 'unit2'],
+      pilot_experiment: 'my-pilot'
+    }
+    course.reload
+    unit1.reload
+    unit2.reload
+
+    assert_equal course.pilot_experiment, 'my-pilot'
+    assert_equal unit1.pilot_experiment, 'my-pilot'
+    assert_equal unit2.pilot_experiment, 'my-pilot'
+  end
+
   test "update: persists changes localizeable strings" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true

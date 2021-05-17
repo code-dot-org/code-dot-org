@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-12 00:00:01 UTC",
+    "serialized_at": "2021-05-16 00:05:36 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -5446,18 +5446,6 @@
       }
     },
     {
-      "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "apps-and-problem-solving-1-2",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "apps-and-problem-solving-1-2"
-      }
-    },
-    {
       "name": "Sample Marked Rubrics",
       "url": "https://docs.google.com/document/d/1oZ67Hh9ITbADuabNgrEqE249KBOnp8uGsSaMLWr7c-I/edit",
       "key": "apps-and-problem-solving-marked-rubrics",
@@ -5509,15 +5497,15 @@
       }
     },
     {
-      "name": "Apps with Processing",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "apps-with-processing-1",
+      "name": "Bug Report",
+      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
+      "key": "bug_report",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "type": "Resource",
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "apps-with-processing-1"
+        "resource.key": "bug_report"
       }
     },
     {
@@ -5547,6 +5535,30 @@
       }
     },
     {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
       "name": "CSD Unit 1 - Problem Solving and Computing",
       "url": "https://docs.google.com/presentation/d/1shN8hHC5rgEgb09IU_2eYoU1cDBEee924-E7q6RDUcc/copy",
       "key": "csd_unit_1_-_problem_solving_and_computing",
@@ -5568,30 +5580,6 @@
       },
       "seeding_key": {
         "resource.key": "exploring-problem-solving-animal-theme-2020"
-      }
-    },
-    {
-      "name": "Exploring Problem Solving - Animals Theme",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "exploring-problem-solving-animals-theme",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "exploring-problem-solving-animals-theme"
-      }
-    },
-    {
-      "name": "Exploring Problem Solving - Games Theme",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "exploring-problem-solving-games-theme",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "exploring-problem-solving-games-theme"
       }
     },
     {
@@ -5618,6 +5606,19 @@
       }
     },
     {
+      "name": "How To Debug",
+      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
+      "key": "how_to_debug",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_debug"
+      }
+    },
+    {
       "name": "Input and Output",
       "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
       "key": "input-and-output-1",
@@ -5628,18 +5629,6 @@
       },
       "seeding_key": {
         "resource.key": "input-and-output-1"
-      }
-    },
-    {
-      "name": "Input and Output",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "input-and-output-1-2",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "input-and-output-1-2"
       }
     },
     {
@@ -5667,18 +5656,6 @@
       }
     },
     {
-      "name": "Intro to Problem Solving - Newspaper Tables",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "intro-to-problem-solving-newspaper-tables",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "intro-to-problem-solving-newspaper-tables"
-      }
-    },
-    {
       "name": "Intro to Problem Solving - Paper Tower",
       "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
       "key": "intro-to-problem-solving-paper-tower-2020",
@@ -5691,18 +5668,6 @@
       }
     },
     {
-      "name": "Intro to Problem Solving - Paper Towers",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "intro-to-problem-solving-paper-towers",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "intro-to-problem-solving-paper-towers"
-      }
-    },
-    {
       "name": "Intro to Problem Solving - Spaghetti Bridge",
       "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
       "key": "intro-to-problem-solving-spaghetti-bridge-2020",
@@ -5712,18 +5677,6 @@
       },
       "seeding_key": {
         "resource.key": "intro-to-problem-solving-spaghetti-bridge-2020"
-      }
-    },
-    {
-      "name": "Intro to Problem Solving - Spaghetti Bridges",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "intro-to-problem-solving-spaghetti-bridges",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "intro-to-problem-solving-spaghetti-bridges"
       }
     },
     {
@@ -5949,18 +5902,6 @@
       }
     },
     {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "the-problem-solving-process-1-2",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-problem-solving-process-1-2"
-      }
-    },
-    {
       "name": "What Do Computers Do",
       "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
       "key": "what-do-computers-do",
@@ -5984,18 +5925,6 @@
       },
       "seeding_key": {
         "resource.key": "what-is-a-computer-1-2-3"
-      }
-    },
-    {
-      "name": "What is a Computer",
-      "url": "https://docs.google.com/presentation/d/1ctMTD-E5lQJZGjWdckx2wiZvLnaenxp38uyENuVf_AE/copy",
-      "key": "what-is-a-computer-1-2-3-4",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "what-is-a-computer-1-2-3-4"
       }
     },
     {
@@ -6071,12 +6000,6 @@
     {
       "seeding_key": {
         "lesson.key": "The Problem Solving Process",
-        "resource.key": "the-problem-solving-process-1-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
         "resource.key": "problem-solving-process-1"
       }
     },
@@ -6090,6 +6013,12 @@
       "seeding_key": {
         "lesson.key": "The Problem Solving Process",
         "resource.key": "problem-solving-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6119,12 +6048,6 @@
     {
       "seeding_key": {
         "lesson.key": "What is a Computer?",
-        "resource.key": "what-is-a-computer-1-2-3-4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
         "resource.key": "what-is-a-computer-1-2-3"
       }
     },
@@ -6142,6 +6065,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Input and Output",
         "resource.key": "input-and-output-2020"
       }
@@ -6149,13 +6078,13 @@
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "resource.key": "input-and-output-1-2"
+        "resource.key": "input-and-output-1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "resource.key": "input-and-output-1"
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6167,13 +6096,13 @@
     {
       "seeding_key": {
         "lesson.key": "Processing",
-        "resource.key": "apps-with-processing-1"
+        "resource.key": "apps-with-processing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Processing",
-        "resource.key": "apps-with-processing"
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6198,12 +6127,6 @@
       "seeding_key": {
         "lesson.key": "Storage",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps-and-problem-solving-1-2"
       }
     },
     {
@@ -6250,6 +6173,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
         "resource.key": "how-to-videos"
       }
@@ -6263,13 +6192,13 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "intro-to-problem-solving-newspaper-tables"
+        "resource.key": "build-a-newspaper-table"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "build-a-newspaper-table"
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
@@ -6287,25 +6216,19 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "intro-to-problem-solving-spaghetti-bridges"
+        "resource.key": "spaghetti-bridge-activity-guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "spaghetti-bridge-activity-guide"
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
         "resource.key": "intro-to-problem-solving-paper-tower-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-        "resource.key": "intro-to-problem-solving-paper-towers"
       }
     },
     {
@@ -6322,14 +6245,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "exploring-problem-solving-animal-theme-2020"
+        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "exploring-problem-solving-animals-theme"
+        "resource.key": "exploring-problem-solving-animal-theme-2020"
       }
     },
     {
@@ -6346,6 +6269,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
         "resource.key": "exploring-problem-solving-games-theme-2020"
       }
@@ -6353,13 +6282,13 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-        "resource.key": "exploring-problem-solving-games-theme"
+        "resource.key": "solving-problems-activity-guide-game-2020"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-        "resource.key": "solving-problems-activity-guide-game-2020"
+        "resource.key": "csd_unit_1_-_problem_solving_and_computing"
       }
     }
   ],
@@ -6387,10 +6316,33 @@
         "resource.key": "all_vocabulary",
         "script.name": "csd1-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd1-2021"
+      }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "bug_report",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "how_to_debug",
+        "script.name": "csd1-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
