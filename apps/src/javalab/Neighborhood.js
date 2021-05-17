@@ -35,4 +35,9 @@ export default class Neighborhood {
     controller.subtype.initWallMap();
     controller.initWithSvg(svg);
   }
+
+  handleSignal(signal) {
+    // TODO: Map signals to neighborhood actions
+    console.log('recieved signal: ' + signal);
+  }
 }

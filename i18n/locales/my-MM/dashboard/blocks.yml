@@ -152,6 +152,13 @@ my:
             '50': small
             '75': အလယ်အလတ်
             '100': large
+      gamelab_setProp_dropdown:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': အလယ်အလတ်
+            '100': large
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -205,6 +212,20 @@ my:
           KEY:
             '"a"': က
             '"d"': ဃ
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': အားလုံး
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': အားလုံး
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       craft_ifPath:
         options:
           DIR:

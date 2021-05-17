@@ -1201,6 +1201,15 @@ vi:
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
             '"speed"': tốc độ
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': kích cỡ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': trung bình
+            '100': large
       gamelab_setSizes:
         text: thiết lập {PROPERTY} {SPRITE} thành {N}%
         options:
@@ -1504,6 +1513,13 @@ vi:
             '"x"': hoành độ
             '"y"': tung độ
             '"direction"': phương hướng chuyển động
+      Mikelab_setupSim:
+        text: |-
+          thiết lập mô phỏng với
+          {SPRITE1N}{SPRITE1COSTUME}Tốc độ{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Tốc độ{SPRITE2SPEED}
+          Thu thập
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1566,6 +1582,13 @@ vi:
         text: x tọa độ {SPRITE}
       Mikelab_yLocationOf:
         text: tọa độ y của {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': lưới
+            '"border"': đường biên
+            '"row"': hàng
+            '"random"': ngẫu nhiên
       RyanLab_moveForward:
         text: đi thẳng
       RyanLab_turnLeft:
@@ -1599,42 +1622,27 @@ vi:
         options:
           PROPERTY:
             "'shapeColor'": màu sắc
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} bắt đầu {BEHAVIOR} cho {SECONDS} giây
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} bắt đầu {BEHAVIOR} cho đến khi {CONDITION} 123_321
-      aalab_createNewSpriteAnonReturn2:
-        text: sprite mới tên{SPRITE_NAME} với trang phục{ANIMATION_NAME} tại vị trí{LOCATION}
-      aalab_goToScene:
-        text: đi đến cảnh {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: Di chuyển {SPRITE} {DISTANCE} Pixel {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Phía Bắc
-            '"East"': Phía Đông
-            '"South"': Phía Nam
-            '"West"': Phía Tây
-      aalab_prompt:
-        text: đặt câu hỏi {MESSAGE}
-      aalab_scene:
-        text: cảnh {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: câu chuyện thiết lập
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': lưới
+            '"border"': đường biên
+            '"row"': hàng
             '"random"': ngẫu nhiên
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': tất cả
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': tất cả
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: vẽ nhị phân {BIN}
       binary_drawBinScreen:

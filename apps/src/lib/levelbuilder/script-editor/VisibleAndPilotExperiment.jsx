@@ -18,7 +18,7 @@ export default class VisibleAndPilotExperiment extends React.Component {
   };
 
   static defaultProps = {
-    paramName: 'visible_to_teachers'
+    paramName: 'hidden'
   };
 
   render() {
