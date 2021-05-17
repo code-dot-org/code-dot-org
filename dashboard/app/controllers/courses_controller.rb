@@ -99,7 +99,7 @@ class CoursesController < ApplicationController
     end
     # Convert checkbox values from a string ("on") to a boolean.
     [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
-    [:visible, :is_stable].each {|key| params[key] = params[key]&.to_bool}
+    [:visible, :is_stable].each {|key| params[key] = params[key]}
     unit_group.update(course_params)
 
     # Update the published state of all the units in the course to be same as the course
