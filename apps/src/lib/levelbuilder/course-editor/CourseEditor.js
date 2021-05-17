@@ -160,7 +160,12 @@ class CourseEditor extends Component {
         <h1>{name}</h1>
         <label>
           Display Name
-          <input type="text" defaultValue={title} style={styles.input} />
+          <input
+            type="text"
+            defaultValue={title}
+            style={styles.input}
+            onChange={e => this.setState({title: e.target.value})}
+          />
         </label>
         <label>
           URL slug
@@ -185,6 +190,7 @@ class CourseEditor extends Component {
             defaultValue={versionTitle}
             placeholder="e.g. '19-'20"
             style={styles.input}
+            onChange={e => this.setState({versionTitle: e.target.value})}
           />
         </label>
         <label>
@@ -196,6 +202,7 @@ class CourseEditor extends Component {
             defaultValue={descriptionShort}
             rows={5}
             style={styles.input}
+            onChange={e => this.setState({descriptionShort: e.target.value})}
           />
         </label>
         <TextareaWithMarkdownPreview
@@ -231,6 +238,9 @@ class CourseEditor extends Component {
               type="checkbox"
               defaultChecked={hasVerifiedResources}
               style={styles.checkbox}
+              onChange={e =>
+                this.setState({hasVerifiedResources: e.target.value})
+              }
             />
           </label>
           <label>
@@ -245,6 +255,7 @@ class CourseEditor extends Component {
               type="checkbox"
               defaultChecked={hasNumberedUnits}
               style={styles.checkbox}
+              onChange={e => this.setState({hasNumberedUnits: e.target.value})}
             />
           </label>
           <AnnouncementsEditor
