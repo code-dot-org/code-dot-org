@@ -168,8 +168,12 @@ class Section < ApplicationRecord
   #   already in the section or has now been added.
   def add_student(student)
     return ADD_STUDENT_FAILURE if user_id == student.id
-    # Return a full section error if the section is already at capacity.
-    return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
+
+    # Unless the sections login type is Google or Clever
+    unless externally_rostered?
+      # Return a full section error if the section is already at capacity.
+      return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
+    end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower

@@ -237,10 +237,15 @@ export const transferStudentsFailure = error => ({
 export const transferStudentsPending = () => ({
   type: TRANSFER_STUDENTS_PENDING
 });
-export const transferStudentsFull = ({sectionCapacity, numStudents}, copy) => ({
+export const transferStudentsFull = (
+  {sectionCapacity, numStudents, sectionCode, sectionStudentCount},
+  copy
+) => ({
   type: TRANSFER_STUDENTS_FULL,
   sectionCapacity,
   numStudents,
+  sectionStudentCount,
+  sectionCode,
   verb: copy ? 'copy' : 'move'
 });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => ({
@@ -256,12 +261,14 @@ export const addStudentsFailure = (numStudents, error, studentIds) => ({
   studentIds
 });
 export const addStudentsFull = (
-  {sectionCapacity, numStudents},
+  {sectionCapacity, numStudents, sectionCode, sectionStudentCount},
   studentIds
 ) => ({
   type: ADD_STUDENT_FULL,
   sectionCapacity,
   numStudents,
+  sectionStudentCount,
+  sectionCode,
   studentIds
 });
 export const addMultipleRows = studentData => ({
@@ -593,9 +600,12 @@ export default function manageStudents(state = initialState, action) {
     let newState = {
       ...state,
       addStatus: {
+        ...state.addStatus,
         status: AddStatus.FULL,
         numStudents: action.numStudents,
-        sectionCapacity: action.sectionCapacity
+        sectionCapacity: action.sectionCapacity,
+        sectionCode: action.sectionCode,
+        sectionStudentCount: action.sectionStudentCount
       }
     };
     for (let i = 0; i < action.studentIds.length; i++) {
@@ -782,6 +792,8 @@ export default function manageStudents(state = initialState, action) {
         status: TransferStatus.FULL,
         sectionCapacity: action.sectionCapacity,
         numStudents: action.numStudents,
+        sectionCode: action.sectionCode,
+        sectionStudentCount: action.sectionStudentCount,
         verb: action.verb
       }
     };

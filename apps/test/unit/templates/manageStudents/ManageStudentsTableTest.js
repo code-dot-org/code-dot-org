@@ -20,7 +20,9 @@ import manageStudents, {
   RowType,
   setLoginType,
   setStudents,
-  startEditingStudent
+  startEditingStudent,
+  addStudentsFull,
+  transferStudentsFull
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections
@@ -29,6 +31,7 @@ import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
+import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
 
 describe('ManageStudentsTable', () => {
   it('sortRows orders table in the following order: add, newStudent, student', () => {
@@ -353,6 +356,173 @@ describe('ManageStudentsTable', () => {
       const mainTable = wrapper.find('ManageStudentsTable');
       mainTable.setState({showSectionCodeDialog: true});
       expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.equal(true);
+    });
+
+    describe('renders the correct full section alert if a student is added to an already full section', () => {
+      const wordSection = {...fakeSection, loginType: SectionLoginType.word};
+      const wordStudent = {...fakeStudent, loginType: SectionLoginType.word};
+      const wordStudents = {
+        [wordStudent.id]: wordStudent
+      };
+      getStore().dispatch(setLoginType(SectionLoginType.word));
+      getStore().dispatch(setSections([wordSection]));
+      getStore().dispatch(setSection(wordSection));
+      getStore().dispatch(setStudents(wordStudents));
+
+      describe('Single students', () => {
+        const defaultAddTransferStatus = {
+          sectionCapacity: 500,
+          numStudents: 1
+        };
+
+        it('added', () => {
+          getStore().dispatch(addStudentsFull(defaultAddTransferStatus, [0]));
+
+          const wrapper = mount(
+            <Provider store={getStore()}>
+              <ManageStudentsTable section={wordSection} />
+            </Provider>
+          );
+
+          expect(
+            wrapper.contains(
+              <ManageStudentsNotificationFull
+                manageStatus={{...defaultAddTransferStatus, status: 'full'}}
+              />
+            )
+          ).to.be.true;
+        });
+        it('moved', () => {
+          getStore().dispatch(
+            transferStudentsFull(defaultAddTransferStatus, false)
+          );
+
+          const wrapper = mount(
+            <Provider store={getStore()}>
+              <ManageStudentsTable section={wordSection} />
+            </Provider>
+          );
+
+          expect(
+            wrapper.containsMatchingElement(
+              <ManageStudentsNotificationFull
+                manageStatus={{
+                  ...defaultAddTransferStatus,
+                  status: 'full',
+                  type: null,
+                  error: null,
+                  sectionDisplay: '',
+                  verb: 'move'
+                }}
+              />
+            )
+          ).to.be.true;
+        });
+        it('copied', () => {
+          getStore().dispatch(
+            transferStudentsFull(defaultAddTransferStatus, true)
+          );
+
+          const wrapper = mount(
+            <Provider store={getStore()}>
+              <ManageStudentsTable section={wordSection} />
+            </Provider>
+          );
+
+          expect(
+            wrapper.containsMatchingElement(
+              <ManageStudentsNotificationFull
+                manageStatus={{
+                  ...defaultAddTransferStatus,
+                  status: 'full',
+                  type: null,
+                  error: null,
+                  sectionDisplay: '',
+                  verb: 'copy'
+                }}
+              />
+            )
+          ).to.be.true;
+        });
+      });
+      describe('Multiple students', () => {
+        const defaultAddTransferStatus = {
+          sectionCapacity: 500,
+          numStudents: 2
+        };
+
+        it('added', () => {
+          getStore().dispatch(
+            addStudentsFull(defaultAddTransferStatus, [0, 1])
+          );
+
+          const wrapper = mount(
+            <Provider store={getStore()}>
+              <ManageStudentsTable section={wordSection} />
+            </Provider>
+          );
+
+          expect(
+            wrapper.containsMatchingElement(
+              <ManageStudentsNotificationFull
+                manageStatus={{...defaultAddTransferStatus, status: 'full'}}
+              />
+            )
+          ).to.be.true;
+        });
+        it('moved', () => {
+          getStore().dispatch(
+            transferStudentsFull(defaultAddTransferStatus, false)
+          );
+
+          const wrapper = mount(
+            <Provider store={getStore()}>
+              <ManageStudentsTable section={wordSection} />
+            </Provider>
+          );
+
+          expect(
+            wrapper.containsMatchingElement(
+              <ManageStudentsNotificationFull
+                manageStatus={{
+                  ...defaultAddTransferStatus,
+                  status: 'full',
+                  type: null,
+                  error: null,
+                  sectionDisplay: '',
+                  verb: 'move'
+                }}
+              />
+            )
+          ).to.be.true;
+        });
+        it('copied', () => {
+          getStore().dispatch(
+            transferStudentsFull(defaultAddTransferStatus, true)
+          );
+
+          const wrapper = mount(
+            <Provider store={getStore()}>
+              <ManageStudentsTable section={wordSection} />
+            </Provider>
+          );
+
+          expect(
+            wrapper.containsMatchingElement(
+              <ManageStudentsNotificationFull
+                manageStatus={{
+                  ...defaultAddTransferStatus,
+                  status: 'full',
+                  type: null,
+                  error: null,
+                  sectionDisplay: '',
+                  verb: 'copy'
+                }}
+              />
+            )
+          ).to.be.true;
+        });
+      });
     });
   });
 });

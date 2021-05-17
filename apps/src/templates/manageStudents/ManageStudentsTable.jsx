@@ -109,24 +109,36 @@ export const sortRows = (data, columnIndexList, orderList) => {
 };
 
 // SafeMarkedown required to convert i18n string to clickable link
-const ManageStudentsNotificationFull = ({manageStatus}) => (
-  <Notification
-    type={NotificationType.failure}
-    notice={i18n.manageStudentsNotificationCannotVerb({
-      numStudents: manageStatus.numStudents,
-      verb: manageStatus.verb || 'add'
-    })}
-    details={
-      <SafeMarkdown
-        markdown={i18n.manageStudentsNotificationAtCapacity({
-          sectionCapacity: manageStatus.sectionCapacity,
-          supportLink: 'https://support.code.org/hc/en-us/requests/new'
-        })}
-      />
-    }
-    dismissible={false}
-  />
-);
+export const ManageStudentsNotificationFull = ({manageStatus}) => {
+  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
+
+  const sectionSpotsRemaining =
+    sectionCapacity - sectionStudentCount > 0
+      ? sectionCapacity - sectionStudentCount
+      : 0;
+
+  return (
+    <Notification
+      type={NotificationType.failure}
+      notice={i18n.manageStudentsNotificationCannotVerb({
+        numStudents: manageStatus.numStudents,
+        verb: manageStatus.verb || 'add'
+      })}
+      details={
+        <SafeMarkdown
+          markdown={i18n.manageStudentsNotificationAtCapacity({
+            sectionCapacity,
+            sectionCode,
+            sectionStudentCount,
+            sectionSpotsRemaining,
+            supportLink: 'https://support.code.org/hc/en-us/requests/new'
+          })}
+        />
+      }
+      dismissible={false}
+    />
+  );
+};
 
 ManageStudentsNotificationFull.propTypes = {
   manageStatus: PropTypes.object.isRequired
