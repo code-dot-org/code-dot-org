@@ -6,9 +6,9 @@ import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import msg from '@cdo/locale';
 
 const TEST_PUZZLE_NUMBER = 2;
-const TEST_STAGE_TOTAL = 5;
+const TEST_LESSON_TOTAL = 5;
 const EXPECTED_PUZZLE_TITLE = msg.puzzleTitle({
-  stage_total: TEST_STAGE_TOTAL,
+  stage_total: TEST_LESSON_TOTAL,
   puzzle_number: TEST_PUZZLE_NUMBER
 });
 const TEST_INSTRUCTIONS_1 = 'First line of short instructions';
@@ -22,7 +22,7 @@ const SAMPLE_IMAGE_URL = 'example.gif';
 
 const DEFAULT_PROPS = {
   puzzleNumber: TEST_PUZZLE_NUMBER,
-  stageTotal: TEST_STAGE_TOTAL,
+  stageTotal: TEST_LESSON_TOTAL,
   shortInstructions: TEST_INSTRUCTIONS_1,
   shortInstructions2: TEST_INSTRUCTIONS_2,
   imgURL: SAMPLE_IMAGE_URL
