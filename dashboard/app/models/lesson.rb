@@ -322,6 +322,7 @@ class Lesson < ApplicationRecord
   def summarize_for_calendar
     {
       id: id,
+      lessonNumber: relative_position,
       title: localized_title,
       duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
       assessment: !!assessment,
