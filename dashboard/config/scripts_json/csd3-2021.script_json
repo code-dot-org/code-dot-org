@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-14 16:33:18 UTC",
+    "serialized_at": "2021-05-16 16:02:19 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -15852,18 +15852,6 @@
     },
     {
       "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "collision-detection-1",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "collision-detection-1"
-      }
-    },
-    {
-      "name": "Collision Detection",
       "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
       "key": "collision-detection-exemplar-2020",
       "properties": {
@@ -15901,18 +15889,6 @@
       }
     },
     {
-      "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "collisions",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "collisions"
-      }
-    },
-    {
       "name": "Sample Shape Drawing",
       "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
       "key": "colored-shape-drawing",
@@ -15922,18 +15898,6 @@
       },
       "seeding_key": {
         "resource.key": "colored-shape-drawing"
-      }
-    },
-    {
-      "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "complex-sprite-movement",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "complex-sprite-movement"
       }
     },
     {
@@ -15947,18 +15911,6 @@
       },
       "seeding_key": {
         "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "conditionals",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "conditionals"
       }
     },
     {
@@ -16043,18 +15995,6 @@
       }
     },
     {
-      "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "drawing-in-game-lab",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "drawing-in-game-lab"
-      }
-    },
-    {
       "name": "Drawing Shapes",
       "url": "https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing",
       "key": "drawing-shapes-exemplar-2020",
@@ -16131,18 +16071,6 @@
       }
     },
     {
-      "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "functions",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "functions"
-      }
-    },
-    {
       "name": "Guide to Using Resources",
       "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
       "key": "guide_to_using_resources",
@@ -16190,18 +16118,6 @@
       },
       "seeding_key": {
         "resource.key": "interactive-card-1-2-3-4"
-      }
-    },
-    {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "interactive-card-1-2-3-4-5",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "interactive-card-1-2-3-4-5"
       }
     },
     {
@@ -16268,18 +16184,6 @@
       }
     },
     {
-      "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "keyboard-input",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "keyboard-input"
-      }
-    },
-    {
       "name": "Make Your Own Game",
       "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
       "key": "make-your-own-game",
@@ -16343,18 +16247,6 @@
       }
     },
     {
-      "name": "Mini-Project: Animation",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-animated-scenes",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-animated-scenes"
-      }
-    },
-    {
       "name": "Mini Project - Captioned Scenes",
       "url": "https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit",
       "key": "mini-project-captioned-scenes-2020",
@@ -16367,18 +16259,6 @@
       }
     },
     {
-      "name": "Mini-Project: Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-flyer-game",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-flyer-game"
-      }
-    },
-    {
       "name": "Mini-Project Guide - Side Scroller",
       "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
       "key": "mini-project-guide-side-scroller-exemplar-2020",
@@ -16388,42 +16268,6 @@
       },
       "seeding_key": {
         "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
-      }
-    },
-    {
-      "name": "Mini-Project: Side Scroller",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-side-scroller",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-side-scroller"
-      }
-    },
-    {
-      "name": "Mini-Project: Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mini-project-sprite-scene",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-sprite-scene"
-      }
-    },
-    {
-      "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "mouse-input",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mouse-input"
       }
     },
     {
@@ -16452,30 +16296,6 @@
       }
     },
     {
-      "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "plotting-shapes",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "plotting-shapes"
-      }
-    },
-    {
-      "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "project-design-a-game",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "project-design-a-game"
-      }
-    },
-    {
       "name": "Defender Game",
       "url": "https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/edit?usp=sharing",
       "key": "project-guide-defender-game",
@@ -16501,18 +16321,6 @@
       }
     },
     {
-      "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "random-numbers",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random-numbers"
-      }
-    },
-    {
       "name": "Random Sprite Flipbook",
       "url": "https://docs.google.com/drawings/d/1mVt8SE1N5KYy2TfOlqtvkL_2MmYk6wFpiouMZ-P-kQY/edit?usp=sharing",
       "key": "random-sprite-flipbook",
@@ -16522,18 +16330,6 @@
       },
       "seeding_key": {
         "resource.key": "random-sprite-flipbook"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "shapes-and-parameters",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "shapes-and-parameters"
       }
     },
     {
@@ -16576,30 +16372,6 @@
       }
     },
     {
-      "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "sprite-movement",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sprite-movement"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "sprite-properties",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sprite-properties"
-      }
-    },
-    {
       "name": "Sprite Scene Planning",
       "url": "https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/edit",
       "key": "sprite-scene-planning",
@@ -16613,18 +16385,6 @@
       }
     },
     {
-      "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "sprites",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sprites"
-      }
-    },
-    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csd3",
       "key": "teacher_forum_1",
@@ -16633,78 +16393,6 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
-      }
-    },
-    {
-      "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "text",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "text"
-      }
-    },
-    {
-      "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "the-draw-loop",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-draw-loop"
-      }
-    },
-    {
-      "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "the-game-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the-game-design-process"
-      }
-    },
-    {
-      "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "using-the-game-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "using-the-game-design-process"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "variables",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "variables"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/1vGPLsDh6Mcm2xmwBoq8YIAq05iy2pQq6JstSh7yaDyo/copy",
-      "key": "velocity",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "velocity"
       }
     },
     {
@@ -16760,12 +16448,6 @@
     {
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
-        "resource.key": "plotting-shapes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
         "resource.key": "colored-shape-drawing"
       }
     },
@@ -16783,14 +16465,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing-in-game-lab"
+        "lesson.key": "Plotting Shapes",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes-and-parameters"
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16801,8 +16483,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables"
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16813,26 +16495,32 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Random Numbers",
-        "resource.key": "random-numbers"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites",
-        "resource.key": "sprites"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprite Properties",
-        "resource.key": "sprite-properties"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text",
-        "resource.key": "text"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16850,19 +16538,13 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Captioned Scenes",
-        "resource.key": "mini-project-sprite-scene"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
         "resource.key": "sprite-scene-planning"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the-draw-loop"
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16885,14 +16567,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "sprite-movement"
+        "lesson.key": "The Draw Loop",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "animating-sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16910,37 +16598,37 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Animation",
-        "resource.key": "mini-project-animated-scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
         "resource.key": "animated-scene"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Animation",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Conditionals",
-        "resource.key": "conditionals"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keyboard Input",
-        "resource.key": "keyboard-input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "mouse-input"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mouse Input",
         "resource.key": "if-else_statements_-_map_level_pdf_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16964,12 +16652,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-1-2-3-4-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
         "resource.key": "interactive-card-project-guide-2019"
       }
     },
@@ -16987,20 +16669,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Velocity",
-        "resource.key": "velocity"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collision Detection",
         "resource.key": "collision-detection-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision-detection-1"
       }
     },
     {
@@ -17013,6 +16695,12 @@
       "seeding_key": {
         "lesson.key": "Collision Detection",
         "resource.key": "collision_detection_version_a_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17030,19 +16718,13 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "mini-project-side-scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
         "resource.key": "side-scroller"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "complex-sprite-movement"
+        "lesson.key": "Mini-Project: Side Scroller",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17053,8 +16735,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Collisions",
-        "resource.key": "collisions"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17072,31 +16760,31 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "mini-project-flyer-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
         "resource.key": "flyer-game"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions"
+        "lesson.key": "Mini-Project: Flyer Game",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "the-game-design-process"
+        "lesson.key": "Functions",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Game Design Process",
         "resource.key": "project-guide-defender-game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17108,13 +16796,13 @@
     {
       "seeding_key": {
         "lesson.key": "Using the Game Design Process",
-        "resource.key": "using-the-game-design-process"
+        "resource.key": "platform-game-project-guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Using the Game Design Process",
-        "resource.key": "platform-game-project-guide"
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -17138,12 +16826,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
-        "resource.key": "project-design-a-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
         "resource.key": "make-your-own-game"
       }
     },
@@ -17157,6 +16839,12 @@
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
         "resource.key": "make-your-own-game-1-2-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     }
   ],
