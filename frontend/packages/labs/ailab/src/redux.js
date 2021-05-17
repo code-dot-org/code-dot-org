@@ -582,7 +582,7 @@ function isColumnReadOnly(state, column) {
     state.metadata.fields.find(field => {
       return field.id === column;
     }).type;
-  return metadataColumnType && state.mode && state.mode.hideSpecifyColumns;
+  return !!metadataColumnType;
 }
 
 export function getSelectedColumns(state) {
@@ -993,10 +993,6 @@ export function getShowColumnClicking(state) {
   return !(state.mode && state.mode.hideColumnClicking);
 }
 
-export function getShowChooseReserve(state) {
-  return !(state.mode && state.mode.hideChooseReserve);
-}
-
 export function getPredictAvailable(state) {
   return (
     Object.keys(state.testData).filter(
@@ -1011,7 +1007,6 @@ const panelList = [
   { id: "specifyColumns", label: "Columns" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
-  { id: "trainingSettings", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
@@ -1049,12 +1044,6 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "selectFeatures") {
     if (!isDataUploaded(state)) {
-      return false;
-    }
-  }
-
-  if (panelId === "trainingSettings") {
-    if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
   }
@@ -1097,12 +1086,6 @@ function isPanelAvailable(state, panelId) {
 
   if (panelId === "dataDisplayLabel") {
     if (mode && mode.hideSelectLabel) {
-      return false;
-    }
-  }
-
-  if (panelId === "trainingSettings") {
-    if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
       return false;
     }
   }
@@ -1158,13 +1141,6 @@ export function getPanelButtons(state) {
     prev = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Back" }
       : null;
-    next = isPanelAvailable(state, "trainingSettings")
-      ? { panel: "trainingSettings", text: "Continue" }
-      : isPanelAvailable(state, "trainModel")
-      ? { panel: "trainModel", text: "Train" }
-      : null;
-  } else if (state.currentPanel === "trainingSettings") {
-    prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;

@@ -134,13 +134,6 @@ const prepareTrainingData = () => {
   const numToReserve = parseInt(trainingExamples.length * percent);
   let accuracyCheckExamples = [];
   let accuracyCheckLabels = [];
-  if (
-    updatedState.reserveLocation === TestDataLocations.BEGINNING &&
-    percent !== 0
-  ) {
-    accuracyCheckExamples = trainingExamples.slice(numToReserve);
-    accuracyCheckLabels = trainingLabels.slice(numToReserve);
-  }
   if (updatedState.reserveLocation === TestDataLocations.END) {
     const index = -1 * numToReserve;
     accuracyCheckExamples = trainingExamples.slice(index);

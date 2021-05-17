@@ -6,23 +6,17 @@ import queryString from "query-string";
 const sampleModes = {
   minimal: {
     datasets: ["tacos_toy"],
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSelectLabel: true
   },
 
   "preload-metadata": {
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     requireAccuracy: 50
   },
 
   "intro-ai-tacos": {
     datasets: ["tacos_toy"],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
@@ -39,8 +33,6 @@ const sampleModes = {
       "salsa_toy"
     ],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
@@ -48,16 +40,12 @@ const sampleModes = {
   safari: {
     datasets: ["safari_toy"],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
 
   zoo: {
-    datasets: ["zoo"],
-    hideSpecifyColumns: true,
-    hideChooseReserve: true
+    datasets: ["zoo"]
   },
 
   "final-project": {}
