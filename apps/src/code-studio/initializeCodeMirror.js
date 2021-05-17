@@ -116,7 +116,7 @@ function initializeCodeMirror(target, mode, options = {}) {
     lineWrapping: true,
     gutters: ['CodeMirror-lint-markers'],
     lint: {
-      getAnnotations,
+      getAnnotations: additionalAnnotations ? getAnnotations : undefined,
       onUpdateLinting
     }
   });
