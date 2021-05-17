@@ -28,8 +28,8 @@ class ProgressLessonTeacherInfo extends React.Component {
 
     // redux provided
     section: sectionShape,
-    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
-    hiddenStageState: PropTypes.object.isRequired,
+    scriptAllowsHiddenLessons: PropTypes.bool.isRequired,
+    hiddenLessonState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenStage: PropTypes.func.isRequired,
@@ -70,8 +70,8 @@ class ProgressLessonTeacherInfo extends React.Component {
   render() {
     const {
       section,
-      scriptAllowsHiddenStages,
-      hiddenStageState,
+      scriptAllowsHiddenLessons,
+      hiddenLessonState,
       hasNoSections,
       lockableAuthorized,
       lesson,
@@ -80,10 +80,10 @@ class ProgressLessonTeacherInfo extends React.Component {
 
     const sectionId = (section && section.id.toString()) || '';
     const showHiddenForSectionToggle =
-      section && scriptAllowsHiddenStages && !hasNoSections;
+      section && scriptAllowsHiddenLessons && !hasNoSections;
     const isHidden =
-      scriptAllowsHiddenStages &&
-      isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
+      scriptAllowsHiddenLessons &&
+      isStageHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
     const loginRequiredLessonUrl = lessonUrl + '?login_required=true';
@@ -169,8 +169,8 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
-    hiddenStageState: state.hiddenStage,
+    scriptAllowsHiddenLessons: state.hiddenStage.hideableStagesAllowed,
+    hiddenLessonState: state.hiddenStage,
     scriptName: state.progress.scriptName,
     lockableAuthorized: state.stageLock.lockableAuthorized,
     hasNoSections:
