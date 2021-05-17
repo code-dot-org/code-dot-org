@@ -38,10 +38,12 @@ export default class Neighborhood {
 
     const slider = document.getElementById('slider');
     this.speedSlider = new Slider(10, 35, 130, slider);
-    // TODO: use the speed slider to adjust the pegman speed
-    // This will involve reading the slider value at execution time which is between 1 and 0
-    // with 1 being slowest for some reason.
-    // We make it between -1 and 1 with -1 being slowest by multiplying by -2 and adding 1.
-    // We then use that adjusted value as a step speed multiplier, ranging from 0.5 to 2.
+  }
+
+  // TODO: use this as a multiplier on the time per action or step at execution time.
+  getPegmanSpeedMultiplier() {
+    // The slider goes from 0 to 1. We scale the speed slider value to be between -1 and 1 and
+    // return 2 to the power of that scaled value to get a multiplier between 0.5 and 2.
+    return Math.pow(2, -2 * this.speedSlider.getValue() + 1);
   }
 }
