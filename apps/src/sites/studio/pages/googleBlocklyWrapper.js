@@ -192,16 +192,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }
   });
 
-  // TODO
+  // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
-  // TODO
+  // TODO - used to add "create a behavior" button to the toolbox
   blocklyWrapper.Flyout.configure = function(type, config) {};
 
   blocklyWrapper.getGenerator = function() {
     return this.JavaScript;
   };
-  blocklyWrapper.findEmptyContainerBlock = function() {}; // TODO
+
+  // TODO - used for validation in CS in Algebra.
+  blocklyWrapper.findEmptyContainerBlock = function() {};
   blocklyWrapper.BlockSpace = {
     EVENTS: {
       MAIN_BLOCK_SPACE_CREATED: 'mainBlockSpaceCreated',
@@ -264,7 +266,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return code.join('\n');
   };
 
-  blocklyWrapper.Generator.prefixLines = blocklyWrapper.JavaScript.prefixLines;
+  blocklyWrapper.Generator.prefixLines = function(text, prefix) {
+    return blocklyWrapper.JavaScript.prefixLines(text, prefix);
+  };
 
   blocklyWrapper.inject = function(container, opt_options, opt_audioPlayer) {
     const options = {

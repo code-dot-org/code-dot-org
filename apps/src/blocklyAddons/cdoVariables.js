@@ -1,8 +1,8 @@
 export default function initializeVariables(blocklyWrapper) {
-  // TODO
+  // TODO - required for sprite variable blocks
   blocklyWrapper.Variables.registerGetter = function(category, blockName) {};
 
-  // TODO
+  // TODO - required for all variable blocks
   blocklyWrapper.Variables.getVars = function(opt_category) {
     return {};
   };
