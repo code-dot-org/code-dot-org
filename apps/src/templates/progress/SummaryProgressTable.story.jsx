@@ -125,7 +125,7 @@ export default storybook => {
       )
     },
     {
-      name: 'second lesson is a hidden stage, viewing as teacher',
+      name: 'second lesson is a hidden lesson, viewing as teacher',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
           <SummaryProgressTable
@@ -139,7 +139,7 @@ export default storybook => {
       )
     },
     {
-      name: 'third lesson is a hidden stage, viewing as teacher',
+      name: 'third lesson is a hidden lesson, viewing as teacher',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '3')}>
           <SummaryProgressTable
@@ -153,7 +153,7 @@ export default storybook => {
       )
     },
     {
-      name: 'second lesson is a hidden stage, viewing as student',
+      name: 'second lesson is a hidden lesson, viewing as student',
       description: 'Row 2 should not be visible',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
@@ -167,7 +167,7 @@ export default storybook => {
       )
     },
     {
-      name: 'third row is a hidden stage, viewing as student',
+      name: 'third row is a hidden lesson, viewing as student',
       description: 'Row 3 should not be visible, gray still every other row',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Student, '3')}>
@@ -273,7 +273,7 @@ export default storybook => {
           <SummaryProgressTable
             {...defaultProps}
             groupedLesson={{
-              lessons: [fakeLesson('Stage with Unplugged', 1, false, 1)],
+              lessons: [fakeLesson('Lesson with Unplugged', 1, false, 1)],
               levelsByLesson: [
                 [fakeLevel({isUnplugged: true}), ...fakeLevels(3)]
               ]
