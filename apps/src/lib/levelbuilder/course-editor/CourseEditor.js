@@ -268,7 +268,11 @@ class CourseEditor extends Component {
         <CollapsibleEditorSection title="Publishing Settings">
           <label>
             Family Name
-            <select defaultValue={familyName} style={styles.dropdown}>
+            <select
+              defaultValue={familyName}
+              style={styles.dropdown}
+              onChange={e => this.setState({familyName: e.target.value})}
+            >
               <option value="">(None)</option>
               {courseFamilies.map(familyOption => (
                 <option key={familyOption} value={familyOption}>
@@ -279,7 +283,11 @@ class CourseEditor extends Component {
           </label>
           <label>
             Version Year
-            <select defaultValue={versionYear} style={styles.dropdown}>
+            <select
+              defaultValue={versionYear}
+              style={styles.dropdown}
+              onChange={e => this.setState({versionYear: e.target.value})}
+            >
               <option value="">(None)</option>
               {versionYearOptions.map(year => (
                 <option key={year} value={year}>
