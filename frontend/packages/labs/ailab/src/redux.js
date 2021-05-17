@@ -18,7 +18,8 @@ import {
   ClassificationTrainer,
   TestDataLocations,
   ResultsGrades,
-  REGRESSION_ERROR_TOLERANCE
+  REGRESSION_ERROR_TOLERANCE,
+  UNIQUE_OPTIONS_MAX
 } from "./constants.js";
 
 // Action types
@@ -606,7 +607,8 @@ export function getCurrentColumnData(state) {
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
     range: getRange(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
-    description: getColumnDescription(state, state.currentColumn)
+    description: getColumnDescription(state, state.currentColumn),
+    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn)
   };
 }
 
@@ -640,6 +642,20 @@ export function getSelectedNumericalFeatures(state) {
 
 export function getNumericalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.NUMERICAL);
+}
+
+/*
+  Categorical columns with too many unique values are unlikley to make
+  accurate models, and we don't want to overflow the metadata column for saved
+  models.
+*/
+function hasTooManyUniqueOptions(state, column) {
+  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+    const uniqueOptionsCount =
+      getUniqueOptions(state, state.currentColumn).length;
+    return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
+  }
+  return false;
 }
 
 export function getSelectableFeatures(state) {
