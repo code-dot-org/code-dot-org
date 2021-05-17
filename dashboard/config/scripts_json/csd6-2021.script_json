@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-14 17:08:09 UTC",
+    "serialized_at": "2021-05-15 01:03:54 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -86,7 +86,7 @@
         "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.",
         "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
         "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
-        "student_overview": "In this lesson, students explore a wide variety of new and innovative computing platforms while expanding their understanding of what a computer can be.\r\n"
+        "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
       },
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -106,7 +106,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).",
         "purpose": "This lesson allows students some time to get back into programming with App Lab before introducing the Circuit Playground, but also introduces the useful concept of a _setter_. In Unit 4, students primarily used [`setScreen()`(#fff176)](/docs/applab/setScreen/) to make their apps respond to user interaction. While this is a simple and useful technique, it can lead to a lot of duplication of content across multiple screens. By using _setters_, and later _getters_, students can write apps that actually change the content on a single screen, by showing and hiding or changing the content or look of various elements.\r\n\r\nOnce students have learned about using getters and setters with UI elements, encourage them to think critically about when to use a separate screen in the design phase of an app. If screens are more alike than different, it might be more effective to just change the elements on screen in reaction to input instead of duplicating content across multiple screens. While students are only introduced to [`setProperty()`(#fff176)](/docs/applab/setProperty/) right now, they will later learn the partner command [`getProperty()`(#fff176)](/docs/applab/getProperty/).",
-        "student_overview": "By reading and changing the content on the screen of an app, the class starts to build apps that only need a single screen. Even with just one screen, students can begin to see that these techniques allow for lots of user interaction and functionality.\r\n"
+        "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality ... even though they are just one screen!"
       },
       "seeding_key": {
         "lesson.key": "Designing Screens with Code",
@@ -127,7 +127,7 @@
         "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possibly functionalities, students move online where they will learn to write applications that control an LED. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an ouput device while relying on App Lab for user input.",
         "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\r\n* Prepare a board and USB cable for each pair of students",
         "purpose": "As the first introduction to using the Circuit Playground, this lesson leaves time for students to get comfortable with getting the hardware plugged in. By leveraging students' existing knowledge of event handling in App Lab, we can quickly get an app up and running that shows the potential of physical computing with little more than a single red LED.",
-        "student_overview": "In this lesson, students get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. Using App Lab, they develop programs that use the Circuit Playground for output."
+        "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
       },
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
@@ -148,7 +148,7 @@
         "overview": "In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.",
         "preparation": "* Prepare to display example programs for the whole class.\r\n* A half deck of cards for each group of three students or [deck-of-cards.js.org](https://deck-of-cards.js.org).\r\n* Print one copy of the activity guide for each group of four students.",
         "purpose": "This lesson is intended to help students transition from the _draw loop_ and conditional model of input used in Game Lab to the event-driven model used in App Lab. While students have experienced and learned a bit about event-driven programming in Unit 4, a deeper understanding of how the events work will help when it comes to responding to events on the Circuit Playground later in this unit.",
-        "student_overview": "Students experience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\r\n"
+        "student_overview": "In this lesson, you will eperience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.\n"
       },
       "seeding_key": {
         "lesson.key": "Input Unplugged",
@@ -168,7 +168,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
         "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
-        "student_overview": "Using the hardware buttons and switch, students develop programs that use the Circuit Playground as an input.\r\n"
+        "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
       "seeding_key": {
         "lesson.key": "Board Events",
@@ -188,7 +188,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to the [`getProperty`(#fff176)](/docs/applab/getProperty/) block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use [`getProperty`(#fff176)](/docs/applab/getProperty/) and [`setProperty`(#fff176)](/docs/applab/setProperty/) together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.",
         "purpose": "So far, students have only used the button press event to gather information from the App Lab screen.  Using [`getProperty`(#fff176)](/docs/applab/getProperty/) opens the students to gathering a wide range of information from the user.  Getting properties also allows students to create programs that don't rely on knowing an element's properties when the code is written, so their programs can be more dynamic and interactive.  These features will be important as students move toward making an interactive game in the next few lessons. ",
-        "student_overview": "This lesson introduces students to the getProperty block, which allows them to access the properties of different elements with code. They first practice using the block to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new screen element, the slider, and a new event trigger, onChange, are also introduced."
+        "student_overview": "In this lesson, you will learn how to access the properties of different elements with code. "
       },
       "seeding_key": {
         "lesson.key": "Getting Properties",
@@ -209,7 +209,7 @@
         "overview": "In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.",
         "preparation": "* Cue up the [r analog-digital-video/csd/2021]\r\n* If your room isn't very bright, it's useful to have some flashlights or other light sources on hand for testing the light sensor",
         "purpose": "This lesson builds on the previous by introducing analog sensors as a new form of input. These sensors all perform analog-to-digital conversion, allowing programs to sense things as represented by a 10 bit number (0-1023).",
-        "student_overview": "Students get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\r\n"
+        "student_overview": "In this lesson, you will get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.\n"
       },
       "seeding_key": {
         "lesson.key": "Analog Input",
@@ -230,7 +230,7 @@
         "overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide which asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming. This process is similar to the Game Design Process that we used in Unit 3. In this lesson students begin by playing a tug o' war style game where the code is hidden. They discuss what they think the board components, events, and variables would need to be to make the program. They are then given a completed project guide which shows one way to implement the project. Students are then walked through this process through a series of levels. At the end of the lesson students have an opportunity to make improvements to the program to make it their own.",
         "preparation": "* Provide students with copies of the project guide",
         "purpose": "This lesson gives students to practice developing a larger scale program in order to prepare them to do so independently. While previous lessons have focused on building skills around using specific elements of the Circuit Playground and related programming concepts, this lesson focuses on combining everything learned so far into a more complex program. The lesson heavily scaffolds the software development process by providing students a completed project guide, providing starter code, and walking students through its implementation. In the subsequent lessons students will need to complete a greater portion of this guide independently, and for the final project they will follow this process largely independently.",
-        "student_overview": "This lesson introduces students to the process they will use to design programs of their own throughout this unit. This process is centered around a project guide that asks students to sketch out their screens, identify elements of the Circuit Playground to be used, define variables, and describe events before they begin programming (a process very similar to the Game Design Process that students used in Unit 3). Students begin by playing a tug o' war style game where the code is hidden. They  discuss what they think the board components, events, and variables would need to be to make the program. Then, they are then given a completed project guide that shows one way to implement the project, and are walked through this process in a series of levels. At the end of the lesson, students have an opportunity to make improvements to the program to make it their own.\r\n"
+        "student_overview": "In this lesson, you will learn about the process you will use to design programs of your own throughout this unit. "
       },
       "seeding_key": {
         "lesson.key": "The Program Design Process",
@@ -248,10 +248,10 @@
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students take what they've learned through chapter one, and develop an app of their own design that uses the board to output information.",
+        "overview": "For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.\n\n\n",
         "preparation": "* Print a copy of the project guide for each group of students\r\n* Print a copy of the rubric for each student",
         "purpose": "This end of chapter assessment is a good place for students to bring together all the pieces they have learned (event handlers, using the board as output, etc.) in one place. This project is purposefully left very open to allow students to think broadly about how physical output might be useful in an app - this is a great opportunity to encourage students to revisit programs they've written earlier in this unit or in Unit 4 that would benefit from using the board to output information.",
-        "student_overview": "For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.\r\n"
+        "student_overview": "In this lesson, you will take what you have learned through chapter one, and develop an app of your own design that uses the board to output information."
       },
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
@@ -271,7 +271,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.",
         "purpose": "Arrays are a common data structure in computer science, used to make storing and accessing information easier. The lesson prepares students to access items within an array, but doesn't yet cover creating and modifying arrays, which will be addressed in the following lesson. Students are also introduced to the ring of color LEDs, which are exposed as an array called [`colorLeds`(#f78183)](/docs/applab/colorLeds/). Students learn how to access and control each LED in the array individually, preparing them to access multiple LEDs though iteration later in the chapter.",
-        "student_overview": "In this lesson, students are introduced to the ring of color LEDs, which are exposed as an array called colorLeds. Students learn how to access and control each LED in an array individually, preparing them to access multiple LEDs through iteration later in the chapter. \r\n"
+        "student_overview": "In this lesson, you will learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground. "
       },
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
@@ -291,7 +291,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.",
         "purpose": "This lesson allows students to get more creative with the buzzer by introducing the concept of a \"note\" and by using arrays to hold sequential collections of notes.  Using notes rather than frequencies provides a layer of abstraction that makes it easier for students to identify sounds that can be used to make music.  Arrays provide a way to group together sounds in sequence, so that they can be played as music.  Using the `playNotes` block to iterate over an array of notes provides a conceptual foundation for working with `for` loops in the next lesson.",
-        "student_overview": "In this lesson, students will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of musical notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, and compose simple songs.\r\n"
+        "student_overview": "In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. "
       },
       "seeding_key": {
         "lesson.key": "Making Music",
@@ -311,7 +311,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Using a _for loop_ to iterate over all of the elements in an array is a really useful construct in most programming languages. In this lesson, students learn the basics of how a _for loop_ can be used to repeat code, and then combine it with what they've already learned about arrays to write programs that process all elements in an array. Students use for loops to go through each element in a list one at a time without having to write code for each element. Towards the end of the lesson students will apply this with the `colorLed` list on the board to create an app that changes all of the LEDs each time a button is clicked.",
         "purpose": "As students start using arrays more frequently, a common pattern emerges wherein you want to run some code on each element of an array. While _for loops_ are a generally useful structure for repeating code, they are a particularly useful for iterating over an array. In this lesson we build on the understanding of arrays that students have developed in the last two lessons by introducing the _for loop_, which combines a variable, the counter pattern, and a conditional all in a single construct.",
-        "student_overview": "Students learn to combine lists and for-loops in this lesson, which allows them to write code that impacts every element of a list, regardless of how long it is. The class uses this structure to write programs that process all of the elements in lists, including the list of color LEDs.\r\n"
+        "student_overview": "In this lesson, you will learn to combine lists and for-loops in order to write code that impacts every element of a list, regardless of how long it is. "
       },
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
@@ -331,7 +331,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.",
         "purpose": "This lesson gives students an opportunity to work with the accelerometer sensor and explore its orientation properties and accelerometer-specific board events. Students will see the purpose and uses of an accelerometer in real world devices and programs and create their own versions of some of these applications. To do this, students will need to refer back to their past knowledge of the counter pattern to create functional accelerometer-based apps. ",
-        "student_overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications."
+        "student_overview": "In this lesson, you will explore the accelerometer and its capabilities. "
       },
       "seeding_key": {
         "lesson.key": "Accelerometer",
@@ -351,7 +351,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.",
         "purpose": "In previous lessons, students have used functions to define blocks of code that can be used in multiple places in a program.  In this lesson, students learn how to use parameters to generalize the purpose of a function.  Parameters allow a program to specify the details of how a function works when it is called, rather than when the program is defined.  Although students have seen functions with parameters earlier in the unit, this is the first time that they are expected to define and call their own.  Students also learn how to use a for loop to iteratively pass in the elements of an array as parameters to a function, allowing them to use the same function on multiple elements on the screen.",
-        "student_overview": "This lesson starts with a quick review of parameters in the context of the App Lab blocks that students have seen recently. Students then look at examples of parameters within user-created functions in App Lab, and create and call functions with parameters to control multiple elements on a screen. Afterward, they use for loops to iterate over an array, passing each element into a function. Last, students use what they have learned to create a star catching game.\r\n"
+        "student_overview": "In this lesson, you will create and call functions with parameters, use for loops to iterate over an array, and finally use what you have learned to create a star catching game.\n"
       },
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
@@ -372,7 +372,7 @@
         "overview": "In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.",
         "preparation": "* Gather prototyping materials, such as:\r\n\t* Structural material (cardboard, construction paper, etc)\r\n\t* Connective material (tape, glue, hot glue, etc)\r\n\t* Construction tools (scissors, staplers, etc)\r\n\t* Other materials (cups, binder clips, paper plates, etc)\r\n* Prepare circuit wiring materials, such as:\r\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\r\n\t* LEDs (included in Circuit Playground classroom kit)\r\n\t* Other conductive material (wire, paper clips, foil, etc)\r\n\t* (optional) Buttons or switches\r\n* Print a copy of the project guide for each group of 2-3 students\r\n* Prepare a model button to show the class",
         "purpose": "The goal of this lesson is both to model for students how thinking about the physical design of a product impacts the prototyping process, and to introduce a handful of practical skills that will make creating their final projects easier.",
-        "student_overview": "In this lesson, students wire simple circuits to create a physical prototype using low-cost and easily-found materials.\r\n"
+        "student_overview": "In this lesson, you will wire simple circuits to create a physical prototype using low-cost and easily-found materials.\n"
       },
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
@@ -393,7 +393,7 @@
         "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
         "preparation": "* Collect materials for physical prototyping, eg.\r\n\t* Cardboard\r\n\t* Scissors\r\n\t* Tape\r\n\t* Glue\r\n\t* Foil\r\n* Print a copy of the project guide for each pair of students\r\n* Print a copy of the peer review sheet for each student\r\n* Print a copy of the rubric for each student",
         "purpose": "This lesson is the culmination of Unit 6 and provides students an opportunity to build a Maker Toolkit project of their own from the ground up. This project is an opportunity to showcase technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.",
-        "student_overview": "This final project challenges students to develop and test a prototype for an innovative computing device that interacts with the physical world through various types of input and output, whichallow for interesting and unique user interactions. This project is an opportunity for students to showcase their technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.\r\n"
+        "student_overview": "In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. "
       },
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",

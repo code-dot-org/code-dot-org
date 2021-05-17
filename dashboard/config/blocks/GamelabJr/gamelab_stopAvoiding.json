@@ -6,8 +6,8 @@
       1,
       0.74
     ],
-    "func": "stopFollowing",
-    "blockText": "{SPRITE} stops following other sprites",
+    "func": "stopAvoiding",
+    "blockText": "{SPRITE} stops avoiding other sprites",
     "args": [
       {
         "name": "SPRITE",
