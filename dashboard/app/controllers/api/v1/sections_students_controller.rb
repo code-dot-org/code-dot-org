@@ -73,7 +73,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
       render json: {
         result: 'full',
         sectionCapacity: @section.capacity,
-        numStudents: params[:students].size
+        numStudents: params[:students].size,
+        sectionCode: @section.code,
+        sectionStudentCount: @section.summarize[:numberOfStudents]
       }, status: :forbidden
       return
     end

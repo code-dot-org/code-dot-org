@@ -223,4 +223,17 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :forbidden
   end
+
+  test "returns an error when the new_section will be over it's section capacity" do
+    500.times do
+      create(:follower, section: @picture_section)
+    end
+
+    post :create, params: @params
+    assert_response :forbidden
+    assert_equal(
+      "full",
+      json_response["result"]
+    )
+  end
 end
