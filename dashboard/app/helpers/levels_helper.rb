@@ -108,9 +108,14 @@ module LevelsHelper
   end
 
   # If given a level and a user and optional script, returns whether the level
-  # has been started by the user
+  # has been started by the user. A channel-backed level is considered started when a
+  # channel is created for the level, which happens when the user first visits the level page.
+  # Other levels are considered started when progress has been saved for the level (for example
+  # clicking the run button saves progress).
   def level_started?(level, user, script = nil)
-    if level.channel_backed? # maureen make sure user is present or this will fail
+    return false unless user.present?
+
+    if level.channel_backed?
       return get_channel_for(level, user).present?
     else
       user.last_attempt(level, script).present?
