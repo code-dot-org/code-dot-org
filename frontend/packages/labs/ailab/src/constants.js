@@ -29,8 +29,16 @@ export const ModelNameMaxLength = 150;
 
 export const saveMessages = {
   success: "Your model was saved!",
-  failure: "There was an error. Your model did not save. Please try again.",
+  failure: "There was an error. Your model did not save. Please try again."
 };
+
+export function getFadeOpacity(animationProgress) {
+  return animationProgress > 0.95
+    ? 1 - (animationProgress - 0.95) / 0.05
+    : animationProgress < 0.05
+    ? animationProgress / 0.05
+    : 1;
+}
 
 const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
@@ -447,7 +455,7 @@ export const styles = {
   statement: {
     fontSize: 32,
     paddingBottom: 15,
-    lineHeight: '50px'
+    lineHeight: "50px"
   },
 
   statementSmall: {
@@ -483,7 +491,7 @@ export const styles = {
     position: "absolute",
     top: 0,
     right: 0,
-    transform: 'translateX(50%) translateY(-50%)',
+    transform: "translateX(50%) translateY(-50%)",
     color: "black",
     cursor: "pointer"
   },

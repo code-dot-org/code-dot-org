@@ -4,14 +4,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import train from "../train";
 import { readyToTrain } from "../redux";
-import { styles } from "../constants";
+import { styles, getFadeOpacity } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import labBackground from "@public/images/lab-background-light.png";
-import Statement from "./Statement";
 import DataTable from "./DataTable";
 
-const framesPerCycle = 60;
+const framesPerCycle = 80;
 const numItems = 12;
 
 class TrainModel extends Component {
@@ -65,7 +64,9 @@ class TrainModel extends Component {
   };
 
   getAnimationProgess = () => {
-    return (this.state.frame % framesPerCycle) / framesPerCycle;
+    let amount = (this.state.frame % framesPerCycle) / framesPerCycle;
+    amount -= Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
+    return amount;
   };
 
   getAnimationStep = () => {
@@ -73,11 +74,12 @@ class TrainModel extends Component {
   };
 
   render() {
-    const translateX = 15 + this.getAnimationProgess() * (100 - 15);
-    const translateY = 80 - Math.sin(this.getAnimationProgess() * Math.PI) * 30;
-    const rotateZ = this.getAnimationProgess() * 60;
+    const animationProgress = this.getAnimationProgess();
+    const translateX = 15 + animationProgress * (100 - 15);
+    const translateY = 80 - Math.sin(animationProgress * Math.PI) * 30;
+    const rotateZ = animationProgress * 60;
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
-
+    const opacity = getFadeOpacity(animationProgress);
     const showAnimation = this.getAnimationStep() < numItems;
 
     return (
@@ -87,7 +89,7 @@ class TrainModel extends Component {
           ...styles.panel,
           justifyContent: "center",
           backgroundSize: "cover",
-          //backgroundImage: "url(" + labBackground + ")"
+          backgroundImage: "url(" + labBackground + ")"
         }}
       >
         <div style={styles.statement}>Training</div>
@@ -107,7 +109,8 @@ class TrainModel extends Component {
                 transformOrigin: "center center",
                 top: translateY + "%",
                 left: translateX + "%",
-                transform: transform
+                transform: transform,
+                opacity: opacity
               }}
             >
               <DataTable
