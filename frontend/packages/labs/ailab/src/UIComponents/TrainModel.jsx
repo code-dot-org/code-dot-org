@@ -19,7 +19,8 @@ class TrainModel extends Component {
     readyToTrain: PropTypes.bool,
     modelSize: PropTypes.number,
     labelColumn: PropTypes.string,
-    selectedFeatures: PropTypes.array
+    selectedFeatures: PropTypes.array,
+    instructionsOverlayActive: PropTypes.bool
   };
 
   state = {
@@ -49,7 +50,9 @@ class TrainModel extends Component {
       this.setState({ headOpen: true });
     }
 
-    this.setState({ frame: this.state.frame + 1 });
+    if (!this.props.instructionsOverlayActive) {
+      this.setState({ frame: this.state.frame + 1 });
+    }
   };
 
   componentWillUnmount = () => {
@@ -133,5 +136,6 @@ export default connect(state => ({
   readyToTrain: readyToTrain(state),
   modelSize: state.modelSize,
   labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures
+  selectedFeatures: state.selectedFeatures,
+  instructionsOverlayActive: state.instructionsOverlayActive
 }))(TrainModel);
