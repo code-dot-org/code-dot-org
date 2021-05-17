@@ -142,7 +142,7 @@ class CourseEditor extends Component {
           handleMarkdownChange={e =>
             this.setState({descriptionStudent: e.target.value})
           }
-          features={{imageUpload: true}}
+          features={{imageUpload: true, resourceLink: true}}
         />
         <TextareaWithMarkdownPreview
           markdown={this.state.descriptionTeacher}
@@ -152,7 +152,7 @@ class CourseEditor extends Component {
           handleMarkdownChange={e =>
             this.setState({descriptionTeacher: e.target.value})
           }
-          features={{imageUpload: true}}
+          features={{imageUpload: true, resourceLink: true}}
         />
 
         <CollapsibleEditorSection title="Basic Settings">

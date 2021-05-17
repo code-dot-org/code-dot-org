@@ -66,7 +66,7 @@ class TextResponses extends Component {
   renderFilterByStageDropdown = () => {
     const stages = this.getStages();
 
-    // only render filter dropdown if there are 2+ stages
+    // only render filter dropdown if there are 2+ lessons
     if (stages.length <= 1) {
       return null;
     }

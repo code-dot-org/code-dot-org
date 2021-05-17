@@ -20,12 +20,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-06 16:58:50 UTC",
+    "serialized_at": "2021-05-14 17:08:09 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -1091,21 +1091,8 @@
       }
     },
     {
-      "key": "b8a3b11c-3a97-4267-86ac-052acfb36531",
-      "position": 5,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531",
-        "lesson.key": "Circuits and Physical Prototypes",
-        "lesson_group.key": "csd6_2",
-        "script.name": "csd6-2021"
-      }
-    },
-    {
       "key": "b3d78956-5557-4142-bd84-3741cc92fb87",
-      "position": 6,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -2332,17 +2319,6 @@
       }
     },
     {
-      "key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51",
-      "position": 11,
-      "properties": {
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51",
-        "lesson_activity.key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c"
-      }
-    },
-    {
       "key": "5efa89cb-f262-4f85-afb8-752e1495d920",
       "position": 1,
       "properties": {
@@ -2363,6 +2339,17 @@
       },
       "seeding_key": {
         "activity_section.key": "e478ff63-84b6-4de8-b5c3-83e86860f443",
+        "lesson_activity.key": "594d3531-8212-4241-979a-17ae94cb6d89"
+      }
+    },
+    {
+      "key": "187cdb02-266e-41c6-a35e-8d31c07cfdff",
+      "position": 3,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "187cdb02-266e-41c6-a35e-8d31c07cfdff",
         "lesson_activity.key": "594d3531-8212-4241-979a-17ae94cb6d89"
       }
     },
@@ -3030,7 +3017,8 @@
       "key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82",
       "position": 4,
       "properties": {
-        "description": "**Display:** Watch the [How Computers Work: Circuits & Logic - Video](https://www.youtube.com/watch?v=ZoqMiFKspAA&feature=youtu.be) (level two in the progression) as a class."
+        "description": "**Display:** Watch [r circuits-logic-video/csd/2021].",
+        "progression_name": "Video: Circuits and Logic"
       },
       "seeding_key": {
         "activity_section.key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82",
@@ -3053,10 +3041,38 @@
       "key": "7daa06e9-87f0-4e03-b2fe-afbf6ae551e9",
       "position": 6,
       "properties": {
-        "description": "**Distribute:** Wires, LEDs, and any other hardware you want available for this portion. Let the class know that before digging too far into building our prototypes, we'll need to learn how to add additional hardware to the board.\r\n\r\n**Transition:** Head to Code Studio to work on the Simple Circuits section."
+        "description": "**Distribute:** Wires, LEDs, and any other hardware you want available for this portion. Let the class know that before digging too far into building our prototypes, we'll need to learn how to add additional hardware to the board.\n\n**Transition:** Head to Code Studio to work on the Simple Circuits and Blinkers sections."
       },
       "seeding_key": {
         "activity_section.key": "7daa06e9-87f0-4e03-b2fe-afbf6ae551e9",
+        "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2"
+      }
+    },
+    {
+      "key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16",
+      "position": 7,
+      "properties": {
+        "progression_name": "Simple Circuits"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16",
+        "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2"
+      }
+    },
+    {
+      "key": "c814528c-f376-440e-849f-19d8790e7d92",
+      "position": 8,
+      "properties": {
+        "progression_name": "Smart Bike - Blinkers",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Level 7:**\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92",
         "lesson_activity.key": "d5a88b8b-de36-473b-8206-46ac7d2801c2"
       }
     },
@@ -3130,58 +3146,19 @@
       }
     },
     {
-      "key": "7e02ad52-172a-48e2-a123-4afb134873f2",
-      "position": 1,
-      "properties": {
-        "progression_name": "Circuits and Logic"
-      },
-      "seeding_key": {
-        "activity_section.key": "7e02ad52-172a-48e2-a123-4afb134873f2",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
-      }
-    },
-    {
-      "key": "a7a4d26a-c501-413b-9461-80af372036c7",
+      "key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d",
       "position": 2,
-      "properties": {
-        "progression_name": "Simple Circuits"
-      },
-      "seeding_key": {
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
-      }
-    },
-    {
-      "key": "f93d6752-3b69-4f35-a977-147f8678eafd",
-      "position": 3,
-      "properties": {
-        "progression_name": "Smart Bike - Blinkers",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Level 7:**\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
-      }
-    },
-    {
-      "key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd",
-      "position": 4,
       "properties": {
         "progression_name": "Button Circuits"
       },
       "seeding_key": {
-        "activity_section.key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
+        "activity_section.key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d",
+        "lesson_activity.key": "09284bd4-8906-4775-8b69-db734dde7324"
       }
     },
     {
-      "key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997",
-      "position": 5,
+      "key": "672d26f8-cbd5-46ea-8482-d84b0be3e335",
+      "position": 3,
       "properties": {
         "progression_name": "Finish the Prototype",
         "tips": [
@@ -3192,8 +3169,8 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997",
-        "lesson_activity.key": "b8a3b11c-3a97-4267-86ac-052acfb36531"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335",
+        "lesson_activity.key": "09284bd4-8906-4775-8b69-db734dde7324"
       }
     },
     {
@@ -5660,7 +5637,7 @@
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2021",
-        "activity_section.key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51"
+        "activity_section.key": "187cdb02-266e-41c6-a35e-8d31c07cfdff"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U6Ch1_2021"
@@ -7365,7 +7342,7 @@
         "level_keys": [
           "CSD U6 circuit logic video_2021"
         ],
-        "progression": "Circuits and Logic"
+        "progression": "Video: Circuits and Logic"
       },
       "named_level": false,
       "bonus": false,
@@ -7376,7 +7353,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "7e02ad52-172a-48e2-a123-4afb134873f2"
+        "activity_section.key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82"
       },
       "level_keys": [
         "CSD U6 circuit logic video_2021"
@@ -7402,7 +7379,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit predict_2021"
@@ -7428,7 +7405,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit pinMode_2021"
@@ -7454,7 +7431,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit createLed_2021"
@@ -7480,7 +7457,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       },
       "level_keys": [
         "CSD U6 circuit multi led_2021"
@@ -7506,7 +7483,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       },
       "level_keys": [
         "CSD U6 circuit smart bike blinkers_2021"
@@ -7532,7 +7509,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       },
       "level_keys": [
         "CSD U6 circuit smart bike blinker buttons_2021"
@@ -7558,7 +7535,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       },
       "level_keys": [
         "CSD U6 circuit smart bike blinker build_2021"
@@ -7584,7 +7561,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd"
+        "activity_section.key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d"
       },
       "level_keys": [
         "CSD U6 circuit createButton_2021"
@@ -7610,7 +7587,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       },
       "level_keys": [
         "CSD U6 circuit smart bike buzzer_2021"
@@ -7636,7 +7613,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       },
       "level_keys": [
         "CSD U6 circuit smart bike light_2021"
@@ -7662,7 +7639,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       },
       "level_keys": [
         "CSD U6 circuit smart bike final_2021"
@@ -8970,7 +8947,7 @@
         "lesson.key": "Project: Make a Game",
         "lesson_group.key": "csd6_1",
         "script.name": "csd6-2021",
-        "activity_section.key": "a9ac787b-cff6-4a4a-a739-889b8a7fba51"
+        "activity_section.key": "187cdb02-266e-41c6-a35e-8d31c07cfdff"
       }
     },
     {
@@ -9762,7 +9739,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "7e02ad52-172a-48e2-a123-4afb134873f2"
+        "activity_section.key": "57a93004-eeaa-48a5-b81b-6f9b05aedf82"
       }
     },
     {
@@ -9774,7 +9751,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9786,7 +9763,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9798,7 +9775,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9810,7 +9787,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "a7a4d26a-c501-413b-9461-80af372036c7"
+        "activity_section.key": "4d9d84e9-900f-4816-81fd-b70a1ca43b16"
       }
     },
     {
@@ -9822,7 +9799,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       }
     },
     {
@@ -9834,7 +9811,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       }
     },
     {
@@ -9846,7 +9823,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "f93d6752-3b69-4f35-a977-147f8678eafd"
+        "activity_section.key": "c814528c-f376-440e-849f-19d8790e7d92"
       }
     },
     {
@@ -9858,7 +9835,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "9161ca79-dace-4d06-b1fe-a9a4d9ad1bfd"
+        "activity_section.key": "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d"
       }
     },
     {
@@ -9870,7 +9847,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       }
     },
     {
@@ -9882,7 +9859,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       }
     },
     {
@@ -9894,7 +9871,7 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "lesson_group.key": "csd6_2",
         "script.name": "csd6-2021",
-        "activity_section.key": "ddab7436-e5b1-4a8c-ba17-0edc90bb8997"
+        "activity_section.key": "672d26f8-cbd5-46ea-8482-d84b0be3e335"
       }
     },
     {
@@ -10032,6 +10009,50 @@
   ],
   "resources": [
     {
+      "name": "All Code",
+      "url": "/s/csd6-2021/code",
+      "key": "all_code_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_4"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csd6-2021/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd6-2021/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd6-2021/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
+    {
       "name": "Difference between Analog and Digital Signals",
       "url": "https://www.youtube.com/watch?v=RQc_frX50BA",
       "key": "analog-digital-video",
@@ -10080,6 +10101,50 @@
       },
       "seeding_key": {
         "resource.key": "computing-innovations"
+      }
+    },
+    {
+      "name": "CSD Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "key": "csd_curriculum_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
       }
     },
     {
@@ -10388,6 +10453,54 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_curriculum_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code_4",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "csd6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
         "script.name": "csd6-2021"
       }
     }
