@@ -498,7 +498,10 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: false
       });
-      const checkbox = wrapper.find('input[name="hidden"]');
+      const visibleAndPilotExperiment = wrapper.find(
+        'VisibleAndPilotExperiment'
+      );
+      const checkbox = visibleAndPilotExperiment.find('input[type="checkbox"]');
       expect(checkbox.prop('checked')).to.be.true;
     });
 
@@ -506,7 +509,10 @@ describe('ScriptEditor', () => {
       const wrapper = createWrapper({
         initialHidden: true
       });
-      const checkbox = wrapper.find('input[name="hidden"]');
+      const visibleAndPilotExperiment = wrapper.find(
+        'VisibleAndPilotExperiment'
+      );
+      const checkbox = visibleAndPilotExperiment.find('input[type="checkbox"]');
       expect(checkbox.prop('checked')).to.be.false;
     });
   });

@@ -13,12 +13,7 @@ export default class VisibleAndPilotExperiment extends React.Component {
     visible: PropTypes.bool.isRequired,
     updateVisible: PropTypes.func.isRequired,
     pilotExperiment: PropTypes.string,
-    updatePilotExperiment: PropTypes.func.isRequired,
-    paramName: PropTypes.string
-  };
-
-  static defaultProps = {
-    paramName: 'hidden'
+    updatePilotExperiment: PropTypes.func.isRequired
   };
 
   render() {
@@ -28,7 +23,6 @@ export default class VisibleAndPilotExperiment extends React.Component {
           checked={this.props.visible}
           disabled={!!this.props.pilotExperiment}
           onChange={this.props.updateVisible}
-          paramName={this.props.paramName}
         />
         <PilotExperiment
           value={this.props.pilotExperiment}
@@ -57,7 +51,6 @@ const VisibleInTeacherDashboard = props => (
   <label style={props.disabled ? {opacity: 0.5} : {}}>
     Visible in Teacher Dashboard
     <input
-      name={props.paramName}
       type="checkbox"
       disabled={props.disabled}
       checked={props.checked && !props.disabled}
@@ -76,7 +69,6 @@ const VisibleInTeacherDashboard = props => (
   </label>
 );
 VisibleInTeacherDashboard.propTypes = {
-  paramName: PropTypes.string.isRequired,
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   onChange: PropTypes.func.isRequired
@@ -92,7 +84,6 @@ const PilotExperiment = props => (
       </p>
     </HelpTip>
     <input
-      name="pilot_experiment"
       value={props.value || ''}
       style={styles.input}
       onChange={props.onChange}
