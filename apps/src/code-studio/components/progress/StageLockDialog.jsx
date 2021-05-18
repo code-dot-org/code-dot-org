@@ -329,7 +329,7 @@ export const UnconnectedStageLockDialog = Radium(StageLockDialog);
 export default connect(
   state => ({
     initialLockStatus: state.lessonLock.lockStatus,
-    isOpen: !!state.lessonLock.lockDialogStageId,
+    isOpen: !!state.lessonLock.lockDialogLessonId,
     saving: state.lessonLock.saving,
     selectedSectionId: state.teacherSections.selectedSectionId.toString()
   }),
