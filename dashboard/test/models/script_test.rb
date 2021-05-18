@@ -172,8 +172,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should remove empty lessons, reordering lessons' do
-    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-stages.script")
-    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-stages.script")
+    script_file_3_lessons = File.join(self.class.fixture_path, "test-fixture-3-lessons.script")
+    script_file_middle_missing_reversed = File.join(self.class.fixture_path, "duplicate_scripts", "test-fixture-3-lessons.script")
     script_names, _ = Script.setup([script_file_3_lessons])
     script = Script.find_by!(name: script_names.first)
     assert_equal 3, script.lessons.count
