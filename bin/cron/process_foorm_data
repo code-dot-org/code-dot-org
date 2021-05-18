@@ -26,13 +26,13 @@ FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
 def main
   redshift_client = RedshiftClient.instance
 
-  # Processes and uploads Foorm submissions to Redshift for analytics use via S3.
+  # Processes and uploads Foorm Submissions to Redshift for analytics use via S3.
   AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME)
   reshaped_submissions = Pd::Foorm::SubmissionAnalyticsParser.reshape_all_submissions_into_csv
   AWS::S3.upload_to_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME, reshaped_submissions, no_random: true)
   write_submissions_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
 
-  # Processes and uploads Foorm forms to Redshift for analytics use via S3.
+  # Processes and uploads Foorm Forms to Redshift for analytics use via S3.
   AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME)
   reshaped_forms = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
   AWS::S3.upload_to_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME, reshaped_forms, no_random: true)

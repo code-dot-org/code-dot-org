@@ -190,9 +190,9 @@ class FoormFormEditorManager extends React.Component {
   render() {
     return (
       <div>
-        <h1>Foorm Editor</h1>
+        <h1>Foorm Form Editor</h1>
         <p>
-          Interface for creating and making updates to Foorm forms. Check out
+          Interface for creating and making updates to Foorm Forms. Check out
           our{' '}
           <a
             href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"

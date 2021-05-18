@@ -1,4 +1,4 @@
-// Pop-up modal for downloading all Foorm submissions for a single form as a csv.
+// Pop-up modal for downloading all Foorm Submissions for a single Form as a csv.
 import React from 'react';
 import PropTypes from 'prop-types';
 import {

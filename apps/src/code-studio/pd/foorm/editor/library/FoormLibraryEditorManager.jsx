@@ -226,7 +226,7 @@ class FoormLibraryEditorManager extends React.Component {
       <div>
         <h1>Foorm Library Editor</h1>
         <p>
-          Interface for creating and making updates to Foorm libraries. Check
+          Interface for creating and making updates to Foorm Libraries. Check
           out our{' '}
           <a
             href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-The-Foorm-Editor"

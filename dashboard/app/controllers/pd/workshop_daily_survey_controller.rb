@@ -20,7 +20,7 @@ module Pd
       end
     end
 
-    # General workshop daily survey using foorm system.
+    # General workshop daily survey using Foorm system.
     # GET '/pd/workshop_daily_survey/day/:day?enrollmentCode=code'
     # Enrollment code is an optional parameter, otherwise will show most recent workshop.
     # Accepts any day greater than 0 and less than or equal to the number of sessions in the workshop
@@ -54,7 +54,7 @@ module Pd
       render_survey_foorm(survey_name: survey_name, workshop: workshop, session: session, day: day)
     end
 
-    # General pre-workshop survey using foorm system.
+    # General pre-workshop survey using Foorm system.
     # GET '/pd/workshop_pre_survey?enrollmentCode=code'
     # Enrollment code is an optional parameter, otherwise will show most recent workshop.
     #
@@ -63,7 +63,7 @@ module Pd
       new_general_foorm(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
-    # General post-workshop survey using foorm system.
+    # General post-workshop survey using Foorm system.
     # GET '/pd/workshop_post_survey?enrollmentCode=code'
     # Enrollment code is an optional parameter, otherwise will show most recent workshop.
     #
