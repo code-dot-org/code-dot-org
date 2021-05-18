@@ -329,8 +329,9 @@ es:
   follower:
     invite_sent: Invitación enviada
     added_teacher: "%{name} añadido como tu profesor"
-    registered: Se/te ha/has inscrito en % {section_name}.
+    registered: Se/te ha/has inscrito para % {section_name}.
     captcha_required: Por favor, rellene el CAPTCHA para entrar en esta sección.
+    already_exists: Ya te has unido a la sección %{section_name}.
     error:
       signed_in: Cierra la sesión antes de continuar
       username_not_found: Usuario %{username} no encontrado
@@ -343,6 +344,9 @@ es:
       provider_managed_section: No puedes unirte a esta sección, porque está a cargo
         de otro proveedor. Consulta con tu docente para que te agregue a través de
         %{provider} y vuelve a sincronizar la sección.
+      restricted_section: No hemos podido añadirte a la sección %{section_code} porque
+        está bloqueada. Por favor, póngase en contacto con su profesor para obtener
+        ayuda.
     mail:
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como
@@ -1300,6 +1304,7 @@ es:
         malaysia: Malasia
         mexico: México
         thailand: Tailandia
+        uzbekistan: Uzbekistán
       ages:
         ages_under_6: Hasta 6 años
         ages_7_8: 7-8 años

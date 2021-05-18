@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:59 UTC",
+    "serialized_at": "2021-05-18 02:54:31 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -139,7 +139,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2021/stage/4/puzzle/1)",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "unplugged": true
@@ -202,7 +202,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
+        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2021/stage/7/puzzle/1)",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
         "student_overview": "Learn how computers represent black and white images using bits."
       },
@@ -2667,7 +2667,8 @@
       "key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n",
+        "progression_name": "How Computers Work: Binary and Data"
       },
       "seeding_key": {
         "activity_section.key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e",
@@ -2675,8 +2676,19 @@
       }
     },
     {
-      "key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
+      "key": "5074ae18-1a20-46a1-bde3-433baa9dea03",
       "position": 6,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "5074ae18-1a20-46a1-bde3-433baa9dea03",
+        "lesson_activity.key": "544f13a4-73fc-40e4-a1b2-410ca0568674"
+      }
+    },
+    {
+      "key": "97e8fc39-2d8c-4d72-ac62-435dbb38c653",
+      "position": 7,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Which statement about analog and digital images is true?\r\n\r\n**Question:** Describe how the process of sampling, RGB pixels, and binary sequences work together to display a digital color image.",
         "name": "Assessment: Check For Understanding\r",
@@ -4552,6 +4564,32 @@
       "chapter": 29,
       "position": 8,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1 L8 Video: Binary and Data"
+        ],
+        "progression": "How Computers Work: Binary and Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 L8 Video: Binary and Data"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2021",
+        "activity_section.key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e"
+      },
+      "level_keys": [
+        "U1 L8 Video: Binary and Data"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4575,8 +4613,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 31,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4601,7 +4639,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4627,7 +4665,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4653,7 +4691,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4679,7 +4717,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -4705,7 +4743,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4731,7 +4769,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4757,7 +4795,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4783,7 +4821,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4808,7 +4846,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4833,7 +4871,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4859,7 +4897,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4885,7 +4923,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5246,6 +5284,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
         "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 L8 Video: Binary and Data",
+        "script_level.level_keys": [
+          "U1 L8 Video: Binary and Data"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2021",
+        "activity_section.key": "beb390b2-6cd4-4db3-8ce9-c9b18e3ce55e"
       }
     },
     {
@@ -5750,6 +5800,18 @@
       "seeding_key": {
         "resource.key": "u1l7_black_and_white_images"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -5992,6 +6054,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp1-2021"
       }
     }

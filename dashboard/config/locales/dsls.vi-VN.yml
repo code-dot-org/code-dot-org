@@ -1470,7 +1470,6 @@ vi-VN:
       courseD_EOC_2020:
         description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
           muốn nhé.
-        display_name: Dự án cuối khóa học
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2276,3 +2275,21 @@ vi-VN:
         description: Bạn đã hoàn thành phần hướng dẫn! Hãy tiếp tục thay đổi hoặc
           cải thiện dự án của mình. Bạn có thể chọn tiếp tục làm việc với các khối
           giống như vậy hoặc thử hộp công cụ mở rộng.
+      courseD_project_exemplars_2020_2021:
+        markdown: |+
+          # Ví dụ về Dự án
+
+          Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu, hãy dành thời gian xem các dự án mẫu nhé.
+
+
+          | Tốc độ ngẫu nhiên khi nảy (Bóng rổ) | Nhân bản Stormtrooper (Chiến tranh giữa các vì sao) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | Quả bóng thay đổi tốc độ khi nảy lên! | Hãy tránh stormtrooper nếu không chúng sẽ nhân bản đấy! |
+
+
+          | Panic! at the Disco (Bữa tiệc khiêu vũ) | Cảnh biển (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Các vũ công phụ họa của bạn liên tục thay đổi điệu nhảy! | Hãy thử thêm nhiều màu sắc và phông nền cho cảnh này nhé! |
+

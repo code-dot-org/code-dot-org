@@ -14,8 +14,8 @@ class AdminStandardsController < ApplicationController
     script = Script.find_by_name(params["unit_name"])
 
     code_studio_stages = {}
-    script&.lessons&.each do |stage|
-      code_studio_stages[stage.localized_name] = stage
+    script&.lessons&.each do |lesson|
+      code_studio_stages[lesson.localized_name] = lesson
     end
 
     missing_standards = []

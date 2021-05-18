@@ -1,12 +1,12 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Ora e kodit si udhëzues për ngjarjet virtuale
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Këshilla për një ngjarje virtuale të Orës së Kodit
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Ju nuk duhet të jeni personalisht për të drejtuar një Orë Kodimi të suksesshëm!
 
 ***
 

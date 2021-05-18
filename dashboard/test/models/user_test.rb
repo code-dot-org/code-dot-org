@@ -3758,7 +3758,7 @@ class UserTest < ActiveSupport::TestCase
       hide_lessons_in_sections(section1, section2)
 
       # when attached to script, we should hide only if hidden in every section
-      assert_equal [@lesson1.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id], student.get_hidden_lesson_ids(@script.name)
 
       # validate script_level_hidden? gives same result
       assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
@@ -3820,7 +3820,7 @@ class UserTest < ActiveSupport::TestCase
       hide_lessons_in_sections(section1, section2)
 
       # when not attached to script, we should hide when hidden in any section
-      assert_equal [@lesson1.id, @lesson2.id, @lesson3.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id, @lesson2.id, @lesson3.id], student.get_hidden_lesson_ids(@script.name)
 
       # validate script_level_hidden? gives same result
       assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
@@ -3850,7 +3850,7 @@ class UserTest < ActiveSupport::TestCase
       hide_lessons_in_sections(attached_section, unattached_section)
 
       # only the lessons hidden in the attached section are considered hidden
-      assert_equal [@lesson1.id, @lesson2.id], student.get_hidden_stage_ids(@script.name)
+      assert_equal [@lesson1.id, @lesson2.id], student.get_hidden_lesson_ids(@script.name)
 
       # validate script_level_hidden? gives same result
       assert_equal true, student.script_level_hidden?(@lesson1.script_levels.first)
@@ -3873,7 +3873,7 @@ class UserTest < ActiveSupport::TestCase
     test "user in no sections" do
       student = create :student
 
-      assert_equal [], student.get_hidden_stage_ids(@script.name)
+      assert_equal [], student.get_hidden_lesson_ids(@script.name)
     end
 
     test "teacher gets hidden lessons for sections they own" do
@@ -3900,7 +3900,7 @@ class UserTest < ActiveSupport::TestCase
         teacher_owner_section.id => [@lesson1.id],
         teacher_owner_section2.id => [@lesson1.id, @lesson2.id]
       }
-      assert_equal expected, teacher.get_hidden_stage_ids(@script.id)
+      assert_equal expected, teacher.get_hidden_lesson_ids(@script.id)
     end
 
     test "teacher gets hidden scripts for sections they own" do

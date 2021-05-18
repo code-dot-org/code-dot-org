@@ -39,7 +39,7 @@ module Services
           url = student_facing ? Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson) : Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
           pathname = get_lesson_plan_pathname(lesson, student_facing)
 
-          ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}"
+          ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}" if DEBUG
 
           FileUtils.mkdir_p(File.join(directory, pathname.dirname))
           PDF.generate_from_url(url, File.join(directory, pathname))

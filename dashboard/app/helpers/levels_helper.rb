@@ -107,6 +107,21 @@ module LevelsHelper
     channel_token&.channel
   end
 
+  # If given a level, script and a user, returns whether the level
+  # has been started by the user. A channel-backed level is considered started when a
+  # channel is created for the level, which happens when the user first visits the level page.
+  # Other levels are considered started when progress has been saved for the level (for example
+  # clicking the run button saves progress).
+  def level_started?(level, script, user)
+    return false unless user.present?
+
+    if level.channel_backed?
+      return get_channel_for(level, user).present?
+    else
+      user.last_attempt(level, script).present?
+    end
+  end
+
   def select_and_track_autoplay_video
     return if @level.try(:autoplay_blocked_by_level?)
 
@@ -278,6 +293,10 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+
+      if (@user || current_user) && @script
+        @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+      end
     end
 
     if current_user
@@ -701,10 +720,10 @@ module LevelsHelper
         else
           data_t_suffix 'script.name', @script_level.script.name, 'title'
         end
-      stage = @script_level.name
+      lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{stage} ##{position}"
+        "#{script}: #{lesson} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else

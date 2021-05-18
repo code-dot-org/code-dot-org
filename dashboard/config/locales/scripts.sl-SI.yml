@@ -416,12 +416,6 @@ sl:
               name: Osnove Računalništva
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Povzetek
         sciencePD2b:
@@ -438,22 +432,10 @@ sl:
               name: Zaključek
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Povzetek
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Povzetek
         asUnplugged:
@@ -589,12 +571,6 @@ sl:
               name: 'Brez prijave: Pisanje pesmi s parametri'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Povzetek
         grade3:
@@ -2231,6 +2207,10 @@ sl:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Vsebina
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Vsebina
         k5-onlinepd-2021:
           lessons:

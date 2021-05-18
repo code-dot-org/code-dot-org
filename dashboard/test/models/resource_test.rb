@@ -76,6 +76,19 @@ class ResourceTest < ActiveSupport::TestCase
     )
   end
 
+  test "'resources dropdown' summary method includes markdown key" do
+    # This is necessary for the "add markdown syntax" levelbuilder interface to work
+    course_offering = create :course_offering
+    course_version = create(:course_version, course_offering: course_offering)
+    resource = create(:resource, course_version: course_version)
+    summary = resource.summarize_for_resources_dropdown
+    assert summary.key?(:markdownKey)
+    assert_equal(
+      Services::MarkdownPreprocessor.build_resource_key(resource),
+      summary[:markdownKey]
+    )
+  end
+
   test 'seeding_key' do
     resource = create :resource
     seed_context = {}
@@ -87,6 +100,13 @@ class ResourceTest < ActiveSupport::TestCase
       }
       assert_equal expected, resource.seeding_key(seed_context)
     end
+  end
+
+  test 'should_include_in_pdf' do
+    assert create(:resource, include_in_pdf: true, audience: 'Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: false, audience: 'Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: true, audience: 'Verified Teacher').should_include_in_pdf?
+    refute create(:resource, include_in_pdf: false, audience: 'Verified Teacher').should_include_in_pdf?
   end
 
   test 'serialize scripts that resource is in' do

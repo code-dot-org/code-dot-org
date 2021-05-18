@@ -3,16 +3,12 @@
 
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
-import {getLocation} from './locationPickerModule';
+import {getLocation} from '../redux/locationPicker';
 import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {animationSourceUrl} from '../animationListModule';
+import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {
-  Goal,
-  show,
-  showBackground
-} from '../AnimationPicker/animationPickerModule';
+import {Goal, show, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 function animations(areBackgrounds) {
@@ -343,7 +339,9 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `{name: '${block.getTitleValue(arg.name)}'}`;
+      return `{name: '${Blockly.JavaScript.translateVarName(
+        block.getTitleValue(arg.name)
+      )}'}`;
     }
   },
   limitedColourPicker: {

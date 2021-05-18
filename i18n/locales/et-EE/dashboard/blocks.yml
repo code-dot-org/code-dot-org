@@ -888,6 +888,15 @@ et:
             '"y"': y asukoht
             '"direction"': liikumise suund
             '"speed"': kiirus
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': suurus
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': keskmine
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1101,6 +1110,13 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ruudustikus
+            '"border"': piir
+            '"row"': rida
+            '"random"': juhuslik
       RyanLab_moveForward:
         text: liigu edasi
       RyanLab_turnLeft:
@@ -1109,10 +1125,27 @@ et:
         text: pööra paremale
       Vector_positionCenter:
         text: keskel
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
+            '"grid"': ruudustikus
+            '"border"': piir
+            '"row"': rida
             '"random"': juhuslik
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': kõik
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': kõik
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:
