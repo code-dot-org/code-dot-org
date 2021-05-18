@@ -165,7 +165,7 @@ describe('progressHelpers', () => {
         selectedSectionId: sectionId
       },
       lessonLock: {
-        stagesBySectionId: {
+        lessonsBySectionId: {
           11: {
             [lockedStageId]: [
               {

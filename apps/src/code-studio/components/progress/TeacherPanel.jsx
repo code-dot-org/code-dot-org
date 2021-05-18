@@ -245,16 +245,16 @@ const styles = {
 
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(state => {
-  const {stagesBySectionId, lockableAuthorized} = state.lessonLock;
+  const {lessonsBySectionId, lockableAuthorized} = state.lessonLock;
   const {
     selectedSectionId,
     sectionsAreLoaded,
     sectionIds
   } = state.teacherSections;
-  const currentSection = stagesBySectionId[selectedSectionId];
+  const currentSection = lessonsBySectionId[selectedSectionId];
 
   const fullyLocked = fullyLockedStageMapping(
-    state.lessonLock.stagesBySectionId[selectedSectionId]
+    state.lessonLock.lessonsBySectionId[selectedSectionId]
   );
   const unlockedStageIds = Object.keys(currentSection || {}).filter(
     stageId => !fullyLocked[stageId]
