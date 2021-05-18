@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-16 00:05:36 UTC",
+    "serialized_at": "2021-05-18 20:28:55 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -2103,7 +2103,7 @@
       "key": "397250f1-0ead-4ee1-b22f-bc7c0036a794",
       "position": 9,
       "properties": {
-        "description": "**Display:** Show [r what-is-a-computer-1-2-3/csd/2021]. This video is also available to students on the Code.org website, including an alternative link for schools where YouTube is blocked. The video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n\n**Key Vocabulary:**\n\n- **computer:** a machine that works with information\n\nAllow students to revise their posters using the definition they have just learned.  They can use the following questions to guide them.\n\n* What types of problems is this device used to solve?\n* Does the device use information to solve problems?\n* Where does it get the information?\n* How does it use the information to solve problems?"
+        "description": "**Display:** Show [r what-is-a-computer-1-2-3/csd/2021]. This video is also available to students on the Code.org website, including an alternative link for schools where YouTube is blocked. The video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n"
       },
       "seeding_key": {
         "activity_section.key": "397250f1-0ead-4ee1-b22f-bc7c0036a794",
@@ -2111,10 +2111,28 @@
       }
     },
     {
-      "key": "900764b3-0256-4cc9-b88f-1b8c4992e653",
+      "key": "5733d57d-7dc2-45ba-885b-e223a44ad2af",
       "position": 10,
       "properties": {
-        "description": "**Discuss:**  Did any groups change their minds about whether something was a computer?  What about the definition convinced you?",
+        "description": "**Questions to think about with the video**:\n- What made computers different from machines that came before them?",
+        "progression_name": "Video: What Makes a Computer, a Computer?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "After watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work. Within a problem solving context, computers are designed to solve information problems. Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots). It's okay if students do not come to a particular conclusion about every device they can think of."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5733d57d-7dc2-45ba-885b-e223a44ad2af",
+        "lesson_activity.key": "9612f586-66a9-4418-8a79-40080b796a76"
+      }
+    },
+    {
+      "key": "900764b3-0256-4cc9-b88f-1b8c4992e653",
+      "position": 11,
+      "properties": {
+        "description": "**Key Vocabulary:**\n\n- **computer:** a machine that works with information\n\nAllow students to revise their posters using the definition they have just learned.  They can use the following questions to guide them.\n\n* What types of problems is this device used to solve?\n* Does the device use information to solve problems?\n* Where does it get the information?\n* How does it use the information to solve problems?\n\n**Discuss:**  Did any groups change their minds about whether something was a computer?  What about the definition convinced you?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2158,24 +2176,6 @@
       "seeding_key": {
         "activity_section.key": "e623c176-d684-43c0-ad4b-9f33a3acc00f",
         "lesson_activity.key": "23c77bb1-85ea-4391-a235-0161f782c996"
-      }
-    },
-    {
-      "key": "8fbba712-4509-4539-89c3-ac8a69f99409",
-      "position": 1,
-      "properties": {
-        "description": "**Questions to think about with the video**:\n- What made computers different from machines that came before them?",
-        "progression_name": "Video: What Makes a Computer, a Computer?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "After watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work. Within a problem solving context, computers are designed to solve information problems. Subtleties may come up in the discussion around computers that have output mechanisms that allow them to do physical work (e.g. robots). It's okay if students do not come to a particular conclusion about every device they can think of."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8fbba712-4509-4539-89c3-ac8a69f99409",
-        "lesson_activity.key": "5e39abe9-8fa9-47ce-bef4-267b81499baf"
       }
     },
     {
@@ -4669,9 +4669,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD What Makes a Computer a Computer Video_2021"
-        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "named_level": false,
@@ -4683,7 +4680,7 @@
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-2021",
-        "activity_section.key": "8fbba712-4509-4539-89c3-ac8a69f99409"
+        "activity_section.key": "5733d57d-7dc2-45ba-885b-e223a44ad2af"
       },
       "level_keys": [
         "CSD What Makes a Computer a Computer Video_2021"
@@ -5165,7 +5162,7 @@
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-2021",
-        "activity_section.key": "8fbba712-4509-4539-89c3-ac8a69f99409"
+        "activity_section.key": "5733d57d-7dc2-45ba-885b-e223a44ad2af"
       }
     },
     {

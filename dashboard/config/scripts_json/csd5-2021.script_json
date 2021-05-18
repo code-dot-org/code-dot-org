@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-14 18:50:07 UTC",
+    "serialized_at": "2021-05-18 19:53:13 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -5951,7 +5951,7 @@
       "key": "how-big-data-is-used-in-amazon-recommendation-systems",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/amazon_data.mp4"
       },
       "seeding_key": {
@@ -5959,7 +5959,7 @@
       }
     },
     {
-      "name": "How Computers Work - Data and Binary",
+      "name": "Binary and Data",
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "how-computers-work-data-and-binary",
       "properties": {
@@ -6116,7 +6116,7 @@
       "key": "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/netflix_data.mp4"
       },
       "seeding_key": {
@@ -6486,7 +6486,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_impact_on_society"
@@ -6499,7 +6499,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_machine_learning"
@@ -6512,7 +6512,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_training_data_and_bias"
@@ -6524,7 +6524,7 @@
       "key": "why-are-so-many-drivers-obsessed-with-waze",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/waze_data.mp4"
       },
       "seeding_key": {

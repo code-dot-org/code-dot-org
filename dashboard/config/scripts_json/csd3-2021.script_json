@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 15:00:19 UTC",
+    "serialized_at": "2021-05-18 20:51:41 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -15813,16 +15813,28 @@
       }
     },
     {
-      "name": "Animating Sprites",
+      "name": "Sprite Movement",
       "url": "https://youtu.be/G666sFzAg5g",
       "key": "animating-sprites",
       "properties": {
         "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/cs-discoveries/gamelab/gamelab_animating_sprites.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4"
       },
       "seeding_key": {
         "resource.key": "animating-sprites"
+      }
+    },
+    {
+      "name": "Animation Tab",
+      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+      "key": "animation_tab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "animation_tab"
       }
     },
     {
@@ -15839,6 +15851,18 @@
       }
     },
     {
+      "name": "Booleans and Comparison Operators",
+      "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
+      "key": "booleans_and_comparison_operators",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
       "name": "Bug Report",
       "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
       "key": "bug_report",
@@ -15851,7 +15875,7 @@
       }
     },
     {
-      "name": "Calling and Defining Functions",
+      "name": "Functions",
       "url": "https://youtu.be/3ZfqwCuDZaQ",
       "key": "calling_and_defining_functions",
       "properties": {
@@ -15886,6 +15910,18 @@
       },
       "seeding_key": {
         "resource.key": "collision-detection-exemplar-2020"
+      }
+    },
+    {
+      "name": "Collision Detection",
+      "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
+      "key": "collision_detection",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection"
       }
     },
     {
@@ -16072,6 +16108,18 @@
       }
     },
     {
+      "name": "Drawing Shapes",
+      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
+      "key": "drawing_shapes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
       "name": "Drawing Shapes (Version A)",
       "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
       "key": "drawing_shapes_version_a_",
@@ -16136,6 +16184,18 @@
       }
     },
     {
+      "name": "Functions",
+      "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
+      "key": "functions_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "functions_1"
+      }
+    },
+    {
       "name": "Guide to Using Resources",
       "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
       "key": "guide_to_using_resources",
@@ -16161,8 +16221,8 @@
       }
     },
     {
-      "name": "If-Else Statements - Map Level (PDF)",
-      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view",
+      "name": "If-Else Statements",
+      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
       "key": "if-else_statements_-_map_level_pdf_",
       "properties": {
         "type": "Resource",
@@ -16183,6 +16243,18 @@
       },
       "seeding_key": {
         "resource.key": "if_else_statements"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
+      "key": "if_statements",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements"
       }
     },
     {
@@ -16375,6 +16447,18 @@
       }
     },
     {
+      "name": "Naming Variables",
+      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
+      "key": "naming_variables",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "naming_variables"
+      }
+    },
+    {
       "name": "Planning Your Platform Game",
       "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
       "key": "planning-your-platform-game-exemplar-2020",
@@ -16437,6 +16521,30 @@
       }
     },
     {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
+      "key": "random_numbers",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Shapes and Parameters",
+      "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
+      "key": "shapes_and_parameters",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "shapes_and_parameters"
+      }
+    },
+    {
       "name": "Shapes and Parameters - (Map Level)",
       "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
       "key": "shapes_and_parameters_-_map_level",
@@ -16489,6 +16597,30 @@
       }
     },
     {
+      "name": "Sprite Properties",
+      "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
+      "key": "sprite_properties",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_properties"
+      }
+    },
+    {
+      "name": "Sprites",
+      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+      "key": "sprites_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprites_1"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csd3",
       "key": "teacher_forum_1",
@@ -16513,6 +16645,42 @@
       }
     },
     {
+      "name": "The Counter Pattern",
+      "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
+      "key": "the_counter_pattern",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_counter_pattern"
+      }
+    },
+    {
+      "name": "The Draw Loop",
+      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+      "key": "the_draw_loop",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
+      "key": "variables_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "variables_1"
+      }
+    },
+    {
       "name": "Velocity",
       "url": "https://youtu.be/zcP94yMYqrI",
       "key": "velocity_1",
@@ -16526,8 +16694,20 @@
       }
     },
     {
-      "name": "Velocity and the Counter Pattern - Map Level (PDF)",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view",
+      "name": "Velocity",
+      "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
+      "key": "velocity_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_2"
+      }
+    },
+    {
+      "name": "Velocity and the Counter Pattern",
+      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
       "key": "velocity_and_the_counter_pattern_-_map_level_pdf_",
       "properties": {
         "type": "Resource",
@@ -16619,6 +16799,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "resource.key": "shapes_and_parameters_-_map_level"
       }
@@ -16627,6 +16813,12 @@
       "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "shapes_and_parameters"
       }
     },
     {
@@ -16643,8 +16835,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "variables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Random Numbers",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "resource.key": "random_numbers"
       }
     },
     {
@@ -16667,8 +16877,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprite Properties",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties"
       }
     },
     {
@@ -16733,6 +16961,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "animating-sprites"
       }
@@ -16741,6 +16975,12 @@
       "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "the_counter_pattern"
       }
     },
     {
@@ -16783,6 +17023,18 @@
       "seeding_key": {
         "lesson.key": "Conditionals",
         "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "if_statements"
       }
     },
     {
@@ -16865,6 +17117,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Velocity",
+        "resource.key": "velocity_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Collision Detection",
         "resource.key": "collision-detection-exemplar-2020"
       }
@@ -16885,6 +17143,12 @@
       "seeding_key": {
         "lesson.key": "Collision Detection",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection"
       }
     },
     {
@@ -16963,6 +17227,12 @@
       "seeding_key": {
         "lesson.key": "Functions",
         "resource.key": "calling_and_defining_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "resource.key": "functions_1"
       }
     },
     {
