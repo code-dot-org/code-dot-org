@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
+import Overlay from '../templates/Overlay';
 
 /**
  * Top-level React wrapper for Ailab
@@ -29,6 +30,7 @@ class AilabView extends React.Component {
   render() {
     return (
       <StudioAppWrapper>
+        <Overlay />
         <InstructionsWithWorkspace>
           <CodeWorkspaceContainer>
             <div style={styles.container}>
