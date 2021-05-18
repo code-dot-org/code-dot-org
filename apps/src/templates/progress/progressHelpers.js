@@ -73,7 +73,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
  */
 export function lessonIsLockedForAllStudents(lessonId, state) {
   const currentSectionId = state.teacherSections.selectedSectionId;
-  const currentSection = state.lessonLock.stagesBySectionId[currentSectionId];
+  const currentSection = state.lessonLock.lessonsBySectionId[currentSectionId];
   const fullyLockedStages = fullyLockedStageMapping(currentSection);
   return !!fullyLockedStages[lessonId];
 }
