@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 14:15:50 UTC",
+    "serialized_at": "2021-05-18 20:20:25 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -9229,6 +9229,30 @@
       }
     },
     {
+      "name": "Body Styling",
+      "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
+      "key": "body_styling",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "body_styling"
+      }
+    },
+    {
+      "name": "Classes",
+      "url": "https://drive.google.com/file/d/14bipDHAQUc7Ni6jjx9_rooNVg-QmextP/view",
+      "key": "classes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "classes"
+      }
+    },
+    {
       "name": "Computer Science Practices",
       "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
       "key": "computer-science-practices",
@@ -9251,6 +9275,18 @@
       },
       "seeding_key": {
         "resource.key": "creative-commons-video"
+      }
+    },
+    {
+      "name": "Creative Commons Search",
+      "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing",
+      "key": "creative_commons_search",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "creative_commons_search"
       }
     },
     {
@@ -9384,7 +9420,31 @@
       }
     },
     {
-      "name": "How Search Works",
+      "name": "Formatting HTML",
+      "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
+      "key": "formatting_html",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "formatting_html"
+      }
+    },
+    {
+      "name": "Headings and Paragraphs",
+      "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view",
+      "key": "headings_and_paragraphs",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "headings_and_paragraphs"
+      }
+    },
+    {
+      "name": "Video: How Search Works",
       "url": "https://youtu.be/LVV_93mBfSU",
       "key": "how-search-works-video",
       "properties": {
@@ -9397,12 +9457,12 @@
       }
     },
     {
-      "name": "How Teamwork Works",
+      "name": "Video: Teamwork",
       "url": "https://youtu.be/qkw4pDV5Lec",
       "key": "how-teamwork-works",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/teamwork_sm-mp4.mp4"
       },
       "seeding_key": {
@@ -9458,6 +9518,30 @@
       },
       "seeding_key": {
         "resource.key": "html_tags"
+      }
+    },
+    {
+      "name": "Hyperlinks",
+      "url": "https://drive.google.com/file/d/1x8rGBJ8EDZ07TasatQlu5wRM8Z7-M5e8/view",
+      "key": "hyperlinks",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "hyperlinks"
+      }
+    },
+    {
+      "name": "Images in HTML",
+      "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view",
+      "key": "images_in_html",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "images_in_html"
       }
     },
     {
@@ -9525,6 +9609,18 @@
       }
     },
     {
+      "name": "Layout Properties",
+      "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view",
+      "key": "layout_properties",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "layout_properties"
+      }
+    },
+    {
       "name": "Licensing Your Work",
       "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
       "key": "licensing-your-work-2020",
@@ -9572,6 +9668,18 @@
       },
       "seeding_key": {
         "resource.key": "links-and-research-1"
+      }
+    },
+    {
+      "name": "Lists",
+      "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view",
+      "key": "lists",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lists"
       }
     },
     {
@@ -9834,6 +9942,18 @@
       }
     },
     {
+      "name": "Style Sheets",
+      "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view",
+      "key": "style_sheets",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "style_sheets"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csd",
       "key": "teacher_forum",
@@ -9845,16 +9965,41 @@
       }
     },
     {
-      "name": "Teamwork - Dealing with Disagreement",
+      "name": "Video: Managing Disagreement",
       "url": "https://youtu.be/6GgrUeVT-xs",
       "key": "teamwork-dealing-with-disagreement",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/disagreements_sm-mp4.mp4"
       },
       "seeding_key": {
         "resource.key": "teamwork-dealing-with-disagreement"
+      }
+    },
+    {
+      "name": "Text Properties",
+      "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing",
+      "key": "text_properties",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "text_properties"
+      }
+    },
+    {
+      "name": "Video: Debugging",
+      "url": "https://youtu.be/auv10y-dN4s",
+      "key": "video_debugging",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "video_debugging"
       }
     },
     {
@@ -10075,6 +10220,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "video_debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "headings_and_paragraphs"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "project-guide-html-project-2020"
       }
@@ -10111,6 +10268,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "formatting_html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "lists"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Digital Footprint",
         "resource.key": "digital-footprint"
       }
@@ -10143,6 +10312,18 @@
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
         "resource.key": "intro_to_css_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "style_sheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "text_properties"
       }
     },
     {
@@ -10213,6 +10394,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "images_in_html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "creative_commons_search"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Websites for Expression ",
         "resource.key": "define-your-webpage-2020"
       }
@@ -10245,6 +10438,18 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "layout_properties"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "body_styling"
       }
     },
     {
@@ -10405,6 +10610,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "resource.key": "classes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Planning a Multi-page Website",
         "resource.key": "project-guide-website-for-a-purpose-prepare-exemplar-2020"
       }
@@ -10431,6 +10642,12 @@
       "seeding_key": {
         "lesson.key": "Linking Pages",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "resource.key": "hyperlinks"
       }
     },
     {

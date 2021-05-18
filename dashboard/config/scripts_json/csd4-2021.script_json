@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 15:04:22 UTC",
+    "serialized_at": "2021-05-18 20:57:31 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -7298,6 +7298,30 @@
       }
     },
     {
+      "name": "Design Mode",
+      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
+      "key": "design_mode",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "name": "Design Mode Elements",
+      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
+      "key": "design_mode_elements",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_elements"
+      }
+    },
+    {
       "name": "Designing with Empathy",
       "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
       "key": "designing_with_empathy",
@@ -8220,6 +8244,18 @@
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
         "resource.key": "phone-paper-prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode_elements"
       }
     },
     {

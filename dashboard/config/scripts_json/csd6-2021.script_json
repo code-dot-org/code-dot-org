@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-18 15:36:02 UTC",
+    "serialized_at": "2021-05-18 19:55:05 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -10225,7 +10225,7 @@
       }
     },
     {
-      "name": "Loops in App Lab",
+      "name": "For Loops",
       "url": "https://youtu.be/WqmyVZnMWHY",
       "key": "loops_in_app_lab",
       "properties": {
