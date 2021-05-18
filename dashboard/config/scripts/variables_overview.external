@@ -12,10 +12,10 @@ Variable re-assignment typically means to change the value of a variable based o
 
 The following links provide additional links and information about variables.  Many of these links are also found in the curriculum, but are consolidated here for convenience.
 
-- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/3” target=_blank> Video: Variables Part 1 <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/17” target=_blank> Video: Variables Part 2 <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/9” target=_blank> Controlling Memory: Other ways to store values <i class="fa fa-external-link-square"></i></a>
-- <a href = “https://studio.code.org/s/csp5-2019/stage/4/puzzle/14” target=_blank>Variables - The Mental Model <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/4/levels/3” target=_blank> Video: Variables Part 1 <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/4/levels/17” target=_blank> Video: Variables Part 2 <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/4/levels/9” target=_blank> Controlling Memory: Other ways to store values <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://studio.code.org/s/csp5-2019/lessons/4/levels/14” target=_blank>Variables - The Mental Model <i class="fa fa-external-link-square"></i></a>
 - <a href = “http://www.w3schools.com/js/js_variables.asp” target=_blank> JavaScript Variables - w3schools <i class="fa fa-external-link-square"></i></a>
 - <a href = “http://www.cs.utah.edu/~germain/PPS/Topics/variables.html” target=_blank> Variables: University of Utah <i class="fa fa-external-link-square"></i></a>  **Note** that this resource is not a JavaScript-specific resource, so the syntax shown in the examples is not exactly what students will do in this course.
 

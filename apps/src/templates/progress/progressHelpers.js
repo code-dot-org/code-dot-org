@@ -146,6 +146,15 @@ export function lessonIsAllAssessment(levels) {
 }
 
 /**
+ * Checks if there are any levels in a lesson.
+ * @param {object} lesson the lesson to check
+ * @returns {bool} If the lesson has any levels
+ */
+export function lessonHasLevels(lesson) {
+  return !!lesson.levels?.length;
+}
+
+/**
  * Computes summary of a student's progress in a lesson's levels.
  * @param {{id: studentLevelProgressType}} studentLevelProgress
  * An object keyed by level id containing objects representing the student's

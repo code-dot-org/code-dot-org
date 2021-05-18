@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_040241) do
+ActiveRecord::Schema.define(version: 2021_05_14_195057) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -490,7 +490,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.string "path", null: false
     t.string "kind"
     t.string "form_name", null: false
-    t.integer "form_version"
+    t.integer "form_version", null: false
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -1717,6 +1717,7 @@ ActiveRecord::Schema.define(version: 2021_05_01_040241) do
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
     t.integer "analytics_section_id"
+    t.string "review_state"
     t.index ["student_id", "level_id", "teacher_id"], name: "index_feedback_on_student_and_level_and_teacher_id"
     t.index ["teacher_id"], name: "index_teacher_feedbacks_on_teacher_id"
   end
