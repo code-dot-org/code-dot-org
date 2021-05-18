@@ -41,6 +41,13 @@ export function uploadSpriteToAnimationLibrary(
     });
 }
 
+/* Uploads the given JSON of sprite metadata to the animation library at the specified path. On success
+  and error calls the associated function
+ * @param destination {String} path to metadata location in the animation-library folder
+ * @param JSONData {String} JSON object of metadata to upload
+ * @param onSuccess {function} callback function for success upload
+ * @param onError {function} callback function for upload error
+ */
 export function uploadMetadataToAnimationLibrary(
   destination,
   JSONData,
