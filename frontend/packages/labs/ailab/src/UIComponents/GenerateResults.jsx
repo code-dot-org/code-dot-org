@@ -6,10 +6,7 @@ import train from "../train";
 import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
 import aiBotClosed from "@public/images/ai-bot/ai-bot-closed.png";
-import aiBotYes from "@public/images/ai-bot/ai-bot-yes.png";
-//import aiBotNo from "@public/images/ai-bot/ai-bot-no.png";
 import blueScanner from "@public/images/ai-bot/blue-scanner.png";
-import redScanner from "@public/images/ai-bot/red-scanner.png";
 import resultsBackground from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
@@ -89,8 +86,8 @@ class GenerateResults extends Component {
     const opacity = getFadeOpacity(animationProgress);
     const hideLabel = this.getAnimationSubstep() < framesPerCycle / 2;
     const showAnimation = this.getAnimationStep() < numItems;
-    const botImage = animationProgress >= 0.8 ? aiBotYes : aiBotClosed;
-    const scannerImage = animationProgress >= 0.4 ? redScanner : blueScanner;
+    const botImage = aiBotClosed;
+    const scannerImage = blueScanner;
 
     return (
       <div

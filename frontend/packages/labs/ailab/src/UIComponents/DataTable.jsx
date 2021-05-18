@@ -26,11 +26,7 @@ class DataTable extends Component {
     let style;
 
     if (key === this.props.labelColumn) {
-      if (this.props.hideLabel) {
-        style = styles.dataDisplayHeaderLabelHidden;
-      } else {
-        style = styles.dataDisplayHeaderLabel;
-      }
+      style = styles.dataDisplayHeaderLabel;
     } else if (this.props.selectedFeatures.includes(key)) {
       style = styles.dataDisplayHeaderFeature;
     }
