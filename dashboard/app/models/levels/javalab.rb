@@ -27,6 +27,7 @@ class Javalab < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
+    validation
     hide_share_and_remix
     is_project_level
     submittable
