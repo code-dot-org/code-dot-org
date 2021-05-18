@@ -11,12 +11,15 @@ import {CommentArea} from './CommentArea';
 import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
 import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
 import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
+import experiments from '@cdo/apps/util/experiments';
 
 const ErrorType = {
   NoError: 'NoError',
   Load: 'Load',
   Save: 'Save'
 };
+
+const keepWorkingExperiment = 'teacher-feedback-review-state';
 
 export class TeacherFeedback extends Component {
   static propTypes = {
@@ -159,6 +162,16 @@ export class TeacherFeedback extends Component {
 
     const feedbackUnchanged = this.feedbackIsUnchanged();
 
+    const {submitting, errorState, comment, performance} = this.state;
+    const {
+      verifiedTeacher,
+      viewAs,
+      displayKeyConcept,
+      visible,
+      rubric,
+      disabledMode
+    } = this.props;
+
     const buttonDisabled =
       feedbackUnchanged ||
       submitting ||
@@ -177,6 +190,10 @@ export class TeacherFeedback extends Component {
 
     const displayComment =
       !displayReadonlyRubric && (!!comment || viewAs === ViewType.Teacher);
+
+    const keepWorkingExperiementEnabled = experiments.isEnabled(
+      keepWorkingExperiment
+    );
 
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
@@ -198,6 +215,21 @@ export class TeacherFeedback extends Component {
         )}
         {displayComment && (
           <div style={styles.commentAndFooter}>
+            <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+            {keepWorkingExperiementEnabled && (
+              <div style={styles.keepWorking}>
+                <input
+                  id="keep-working"
+                  type="checkbox"
+                  checked={false}
+                  onChange={() => {}}
+                />
+                {/* maureen add to internationalization and check rtl*/}
+                <label htmlFor="keep-working" style={styles.keepWorkingText}>
+                  Keep Working
+                </label>
+              </div>
+            )}
             <CommentArea
               disabledMode={disabledMode}
               comment={comment}
@@ -268,6 +300,7 @@ const styles = {
 };
 
 export const UnconnectedTeacherFeedback = TeacherFeedback;
+
 export default connect(state => ({
   viewAs: state.viewAs,
   verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
