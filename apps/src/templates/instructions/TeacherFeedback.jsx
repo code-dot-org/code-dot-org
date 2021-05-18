@@ -12,6 +12,7 @@ import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedb
 import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
 import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
 import experiments from '@cdo/apps/util/experiments';
+import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -53,6 +54,7 @@ export class TeacherFeedback extends Component {
       performance: latestFeedback?.performance,
       studentId: studentId,
       latestFeedback: latestFeedback,
+      newReviewState: null,
       submitting: false,
       errorState: ErrorType.NoError
     };
@@ -67,7 +69,7 @@ export class TeacherFeedback extends Component {
   }
 
   onUnload = event => {
-    if (!this.feedbackIsUnchanged()) {
+    if (this.feedbackChanged()) {
       event.preventDefault();
       event.returnValue = i18n.feedbackNotSavedWarning();
     }
@@ -90,6 +92,8 @@ export class TeacherFeedback extends Component {
     this.setState({submitting: true});
     const payload = {
       comment: this.state.comment,
+      review_state:
+        this.state.newReviewState || this.latestFeedback().review_state,
       student_id: this.state.studentId,
       script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
@@ -160,20 +164,8 @@ export class TeacherFeedback extends Component {
       errorState
     } = this.state;
 
-    const feedbackUnchanged = this.feedbackIsUnchanged();
-
-    const {submitting, errorState, comment, performance} = this.state;
-    const {
-      verifiedTeacher,
-      viewAs,
-      displayKeyConcept,
-      visible,
-      rubric,
-      disabledMode
-    } = this.props;
-
     const buttonDisabled =
-      feedbackUnchanged ||
+      !this.feedbackChanged() ||
       submitting ||
       errorState === ErrorType.Load ||
       !verifiedTeacher;
@@ -197,10 +189,14 @@ export class TeacherFeedback extends Component {
 
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
-    const tabVisible = visible ? styles.tabAreaVisible : styles.tabAreaHidden;
+    const tabDisplayStyle = visible
+      ? styles.tabAreaVisible
+      : styles.tabAreaHidden;
+
+    const keepWorkingEnabled = experiments.isEnabled(keepWorkingExperiment);
 
     return (
-      <div style={tabVisible}>
+      <div style={tabDisplayStyle}>
         {errorState === ErrorType.Load &&
           this.renderError(i18n.feedbackLoadError())}
         {rubric && (
@@ -216,19 +212,12 @@ export class TeacherFeedback extends Component {
         {displayComment && (
           <div style={styles.commentAndFooter}>
             <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-            {keepWorkingExperiementEnabled && (
-              <div style={styles.keepWorking}>
-                <input
-                  id="keep-working"
-                  type="checkbox"
-                  checked={false}
-                  onChange={() => {}}
-                />
-                {/* maureen add to internationalization and check rtl*/}
-                <label htmlFor="keep-working" style={styles.keepWorkingText}>
-                  Keep Working
-                </label>
-              </div>
+            {keepWorkingEnabled && (
+              <TeacherFeedbackKeepWorking
+                latestFeedback={latestFeedback}
+                newReviewState={this.state.newReviewState}
+                setReviewState={state => this.setState({newReviewState: state})}
+              />
             )}
             <CommentArea
               disabledMode={disabledMode}
