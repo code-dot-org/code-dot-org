@@ -1269,7 +1269,7 @@ class LessonsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     lesson = create :lesson
-    put :clone, params: {id: lesson.id, 'destinationScriptName': 'fake-script'}
+    put :clone, params: {id: lesson.id, 'destinationUnitName': 'fake-script'}
     assert_response :not_acceptable
     assert @response.body.include?('error')
   end
@@ -1282,7 +1282,7 @@ class LessonsControllerTest < ActionController::TestCase
     lesson = create :lesson
     cloned_lesson = create :lesson, script: script
     Lesson.stubs(:copy_to_script).returns(cloned_lesson)
-    put :clone, params: {id: lesson.id, 'destinationScriptName': script.name}
+    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
 
     assert_response 200
     assert @response.body.include?('editLessonUrl')

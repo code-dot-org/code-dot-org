@@ -12,7 +12,7 @@ export default class CloneLessonDialog extends Component {
   };
 
   defaultState = {
-    destinationScript: '',
+    destinationUnit: '',
     saving: false,
     cloneFailed: false,
     cloneSucceeded: false,
@@ -32,7 +32,7 @@ export default class CloneLessonDialog extends Component {
     return fetch(`/lessons/${this.props.lessonId}/clone`, {
       method: 'POST',
       body: JSON.stringify({
-        destinationScriptName: this.state.destinationScript
+        destinationUnitName: this.state.destinationUnit
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -99,10 +99,8 @@ export default class CloneLessonDialog extends Component {
               you want to clone this lesson to?
               <input
                 type="text"
-                value={this.state.destinationScript}
-                onChange={e =>
-                  this.setState({destinationScript: e.target.value})
-                }
+                value={this.state.destinationUnit}
+                onChange={e => this.setState({destinationUnit: e.target.value})}
               />
             </label>
             {this.state.saving && <i className="fa fa-spinner fa-spin" />}
