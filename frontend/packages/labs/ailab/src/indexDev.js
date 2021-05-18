@@ -1,28 +1,25 @@
 import "./assetPath";
-import { initAll } from "./index";
+import { initAll, instructionsDismissed } from "./index";
 import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes = {
   minimal: {
     datasets: ["tacos_toy"],
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSelectLabel: true
   },
 
   "preload-metadata": {
+    requireAccuracy: 50,
     hideSpecifyColumns: true,
     hideChooseReserve: true,
-    requireAccuracy: 50
+    hideInstructionsOverlay: true
   },
 
   "intro-ai-tacos": {
     datasets: ["tacos_toy"],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
@@ -39,8 +36,6 @@ const sampleModes = {
       "salsa_toy"
     ],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
@@ -48,16 +43,12 @@ const sampleModes = {
   safari: {
     datasets: ["safari_toy"],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
     hideModelCard: true,
     hideSave: true
   },
 
   zoo: {
-    datasets: ["zoo"],
-    hideSpecifyColumns: true,
-    hideChooseReserve: true
+    datasets: ["zoo"]
   },
 
   "final-project": {}
@@ -79,8 +70,12 @@ function saveTrainedModelStub(data, response) {
   );
 }
 
-function setInstructionsKeyStub(instructionsKey) {
-  document.getElementById("instructions").innerText = instructionsKey;
+function setInstructionsKeyStub(instructionsKey, options) {
+  const element = document.getElementById("instructions");
+
+  element.innerText =
+    instructionsKey + (!options.showOverlay ? " (no overlay)" : "");
+  element.onclick = instructionsDismissed;
 }
 
 // Initialize the app.

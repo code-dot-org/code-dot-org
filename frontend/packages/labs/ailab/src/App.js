@@ -4,7 +4,6 @@ import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import DataCard from "./UIComponents/DataCard";
-import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
@@ -189,14 +188,6 @@ class App extends Component {
             <ContainerRight>
               <ColumnInspector />
             </ContainerRight>
-          </BodyContainer>
-        )}
-
-        {currentPanel === "trainingSettings" && (
-          <BodyContainer>
-            <ContainerFullWidth>
-              <TrainingSettings />
-            </ContainerFullWidth>
           </BodyContainer>
         )}
 

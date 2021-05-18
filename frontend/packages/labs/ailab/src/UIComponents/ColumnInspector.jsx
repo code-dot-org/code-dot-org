@@ -11,7 +11,7 @@ import {
   getRangesByColumn,
   setCurrentColumn
 } from "../redux";
-import { ColumnTypes, styles } from "../constants.js";
+import { ColumnTypes, styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
 import { Bar } from "react-chartjs-2";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
@@ -56,7 +56,6 @@ class ColumnInspector extends Component {
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
-    hideSpecifyColumns: PropTypes.bool,
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array
@@ -130,10 +129,10 @@ class ColumnInspector extends Component {
                 <div>
                   <label>
                     <div>Data Type:</div>
-                    {this.props.hideSpecifyColumns && (
+                    {currentColumnData.readOnly && (
                       <div> {currentColumnData.dataType} </div>
                     )}
-                    {!this.props.hideSpecifyColumns && (
+                    {!currentColumnData.readOnly && (
                       <select
                         onChange={event =>
                           this.handleChangeDataType(event, currentColumnData.id)
@@ -215,7 +214,8 @@ class ColumnInspector extends Component {
               </form>
 
               {currentPanel === "dataDisplayLabel" &&
-                currentColumnData.id !== labelColumn && (
+                currentColumnData.id !== labelColumn &&
+                !currentColumnData.hasTooManyUniqueOptions && (
                   <button
                     type="button"
                     onClick={e =>
@@ -228,7 +228,8 @@ class ColumnInspector extends Component {
                 )}
 
               {currentPanel === "dataDisplayFeatures" &&
-                !selectedFeatures.includes(currentColumnData.id) && (
+                !selectedFeatures.includes(currentColumnData.id) &&
+                !currentColumnData.hasTooManyUniqueOptions && (
                   <button
                     type="button"
                     onClick={e => this.addFeature(e, currentColumnData.id)}
@@ -236,6 +237,14 @@ class ColumnInspector extends Component {
                   >
                     Add feature
                   </button>
+                )}
+
+                {currentColumnData.hasTooManyUniqueOptions && (
+                  <span>
+                    Categorical columns with more than {UNIQUE_OPTIONS_MAX}
+                    {" "} unique values can not be selected as the label or a
+                    {" "} feature.
+                  </span>
                 )}
             </div>
           </div>
@@ -249,7 +258,6 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     rangesByColumn: getRangesByColumn(state),
-    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns,
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures
