@@ -157,10 +157,10 @@ describe('CourseEditor', () => {
   });
 
   describe('Publish State', () => {
-    it('published state is preview when visible and isStable are false and there is no pilot experiment', () => {
+    it('published state is beta when visible and isStable are false and there is no pilot experiment', () => {
       const wrapper = createWrapper({});
       const courseEditor = wrapper.find('CourseEditor');
-      expect(courseEditor.state().publishedState).to.equal('Preview');
+      expect(courseEditor.state().publishedState).to.equal('Beta');
     });
 
     it('published state is pilot if there is a pilot experiment', () => {
@@ -169,10 +169,10 @@ describe('CourseEditor', () => {
       expect(courseEditor.state().publishedState).to.equal('Pilot');
     });
 
-    it('published state is assignable if visible is true but isStable is false', () => {
+    it('published state is preview if visible is true but isStable is false', () => {
       const wrapper = createWrapper({initialVisible: true});
       const courseEditor = wrapper.find('CourseEditor');
-      expect(courseEditor.state().publishedState).to.equal('Assignable');
+      expect(courseEditor.state().publishedState).to.equal('Preview');
     });
 
     it('published state is recommended if visible and isStable are true', () => {
