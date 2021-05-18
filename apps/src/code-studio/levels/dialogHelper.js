@@ -158,7 +158,7 @@ export function processResults(onComplete, beforeHook) {
           }`;
           ReactDOM.render(
             <PlayZone
-              stageName={stageName}
+              lessonName={stageName}
               onContinue={() => {
                 dialog.hide();
               }}
