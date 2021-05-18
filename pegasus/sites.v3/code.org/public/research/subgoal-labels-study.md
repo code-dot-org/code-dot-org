@@ -29,7 +29,7 @@ What's a subgoal label? [(see below)](#whatssubgoal)
 * Please consider participating in the research study by clicking the orange button below (it goes to a consent form)
 * This is an exciting opportunity to help you, your students, and computer science education research 
 
-[<button>Excited? Click here to sign up for the Subgoal Labels Study</button>](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)
+[<button>Excited? Click here to sign up for the Subgoal Labels Study</button>](https://studio.code.org/s/subgoal-labels-opt-in/lessons/1/levels/1?viewAs=Student)
 
 Got questions? [email: research@code.org](mailto:research@code.org)
 
@@ -56,7 +56,7 @@ The example on the right shows subgoal labels applied to a small piece of code (
 
 <div style="clear: both;"></div>
 
-[Sounds great! Sign me up for the Subgoal Labels study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)
+[Sounds great! Sign me up for the Subgoal Labels study](https://studio.code.org/s/subgoal-labels-opt-in/lessons/1/levels/1?viewAs=Student)
 
 
 ## Benefits for your students:
@@ -72,7 +72,7 @@ Prior research across a variety of disciplines such as statistics, algebra and c
 
 By participating you can help to verify these initial results with a wide range of students.
 
-[Sign me up! I want to participate in the Subgoal Labels study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)
+[Sign me up! I want to participate in the Subgoal Labels study](https://studio.code.org/s/subgoal-labels-opt-in/lessons/1/levels/1?viewAs=Student)
 
 
 ## What will you have to do to participate?
@@ -85,7 +85,7 @@ Very little!
 
 You may be asked to provide feedback on how you perceive your students are doing with unit 3, and we may ask you additional demographic data about your class.
 
-You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/stage/1/puzzle/1?viewAs=Student)
+You also must [click here to opt-in to participate in the Subgoal Labels Study](https://studio.code.org/s/subgoal-labels-opt-in/lessons/1/levels/1?viewAs=Student)
 
 ## How does the study work?
 

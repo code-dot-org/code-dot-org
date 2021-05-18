@@ -52,7 +52,7 @@ Once the students correctly implement [on-screen?](../docs/worksheets/onscreen.p
 ## Activity: The Big Game - Booleans
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Return to your Big Game to use Booleans to keep your player character on screen. Head to [CS in Algebra stage 16](http://studio.code.org/s/algebra/stage/16/puzzle/1) in Code Studio to get started programming.
+Return to your Big Game to use Booleans to keep your player character on screen. Head to [CS in Algebra stage 16](http://studio.code.org/s/algebra/lessons/16/levels/1) in Code Studio to get started programming.
 
 [/together]
 

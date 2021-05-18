@@ -70,7 +70,7 @@ Be sure to check students’ Contracts and Examples during this exercise, especi
 ## Activity: Conditionals
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Head to [CS in Algebra stage 18](http://studio.code.org/s/algebra/stage/18/puzzle/1) in Code Studio to get started programming.
+Head to [CS in Algebra stage 18](http://studio.code.org/s/algebra/lessons/18/levels/1) in Code Studio to get started programming.
 
 [/together]
 

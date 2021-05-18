@@ -54,7 +54,7 @@ and so on...
 ## Activity: Composite Functions
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-In this stage you'll define simple functions. Head to [CS in Algebra stage 8](http://studio.code.org/s/algebra/stage/8/puzzle/1) in Code Studio to get started programming.
+In this stage you'll define simple functions. Head to [CS in Algebra stage 8](http://studio.code.org/s/algebra/lessons/8/levels/1) in Code Studio to get started programming.
 
 [/together]
 

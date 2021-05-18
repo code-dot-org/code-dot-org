@@ -33,7 +33,7 @@ The second chapter of Unit 2 of the CS Principles curriculum incorporates data t
 			<td>
 				Lesson 7 - Introduction to Data<br>
 				<a href="hhttps://curriculum.code.org/csp/unit2/7" target="_blank">Lesson Plan</a> | 
-				<a href="https://studio.code.org/s/csp2-2019/stage/7/puzzle/1" target="_blank">Code Studio</a>
+				<a href="https://studio.code.org/s/csp2-2019/lessons/7/levels/1" target="_blank">Code Studio</a>
 			</td>
 			<td>
 				<ul>
@@ -65,7 +65,7 @@ The second chapter of Unit 2 of the CS Principles curriculum incorporates data t
 			<td>
 				Lesson 11 - Making Data Visualization<br>
 				<a href="https://curriculum.code.org/csp/unit2/11/" target="_blank">Lesson Plan</a> | 
-				<a href="https://studio.code.org/s/csp2-2019/stage/11/puzzle/1" target="_blank">Code Studio</a>
+				<a href="https://studio.code.org/s/csp2-2019/lessons/11/levels/1" target="_blank">Code Studio</a>
 			</td>
 			<td>
 				<ul>
@@ -97,7 +97,7 @@ The second chapter of Unit 2 of the CS Principles curriculum incorporates data t
 			<td>
 				Lesson 13 - Cleaning Data<br>
 				<a href="https://curriculum.code.org/csp/unit2/13" target="_blank">Lesson Plan</a> | 
-				<a href="https://studio.code.org/s/csp2-2019/stage/13/puzzle/1" target="_blank">Code Studio</a>
+				<a href="https://studio.code.org/s/csp2-2019/lessons/13/levels/1" target="_blank">Code Studio</a>
 			</td>
 			<td>
 				<ul>
@@ -134,7 +134,7 @@ The second chapter of Unit 2 of the CS Principles curriculum incorporates data t
 			<td>
 				Lesson 14 - Creating Summary Tables<br>
 				<a href="https://curriculum.code.org/csp/unit2/14" target="_blank">Lesson Plan</a> | 
-				<a href="https://studio.code.org/s/csp2-2019/stage/14/puzzle/1" target="_blank">Code Studio</a>
+				<a href="https://studio.code.org/s/csp2-2019/lessons/14/levels/1" target="_blank">Code Studio</a>
 			</td>
 			<td>
 				<ul>

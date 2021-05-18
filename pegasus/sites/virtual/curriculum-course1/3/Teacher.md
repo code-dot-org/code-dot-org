@@ -58,7 +58,7 @@ Ask students if they have ever used a computer mouse before (or trackpad, touchs
 [together]
 
 ## Activity
-### <a name="Activity"></a>[Jigsaw: Learn to drag and drop](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="Activity"></a>[Jigsaw: Learn to drag and drop](http://learn.code.org/s/course1/lessons/3/levels/1)
 
 Pair programming works best with two students to a computer and clear expectations of who is the driver and who is the navigator. You may want to create a visual reminder, like hats or sashes, to identify the driver and the navigator.
 

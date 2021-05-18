@@ -60,7 +60,7 @@ We can store that red triangle Evaluation Block in a Variable, let's call it "re
 ## Activity: Defining Variables and Substitution
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-In this stage you'll use variables to reference a variety of values and expressions. Head to [CS in Algebra stage 6](http://studio.code.org/s/algebra/stage/6/puzzle/1) in Code Studio to get started programming.
+In this stage you'll use variables to reference a variety of values and expressions. Head to [CS in Algebra stage 6](http://studio.code.org/s/algebra/lessons/6/levels/1) in Code Studio to get started programming.
 
 [/together]
 

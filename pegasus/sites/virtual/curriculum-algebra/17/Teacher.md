@@ -193,7 +193,7 @@ This could be graphed with the following piecewise function y = { 3: x<2, [[x]]+
 ## Assessment 
 ### <a name="Assessment"></a>4) Conditionals Assessment
 
-Visit [CS in Algebra Stage 17](http://studio.code.org/s/algebra/stage/17/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 17](http://studio.code.org/s/algebra/lessons/17/levels/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

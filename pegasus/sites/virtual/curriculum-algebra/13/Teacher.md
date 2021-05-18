@@ -140,7 +140,7 @@ How does this activity connect with our game? In our game, we may need to determ
 ## Assessment 
 ### <a name="Assessment"></a>4) Booleans Assessment
 
-Visit [CS in Algebra Stage 13](http://studio.code.org/s/algebra/stage/13/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 13](http://studio.code.org/s/algebra/lessons/13/levels/1) in Code Studio to complete the assessments.
 -->
 
 [/together]
