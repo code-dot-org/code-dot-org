@@ -3422,7 +3422,7 @@ es-MX:
           _en cualquier orden_. Salta para ver cómo se hizo algo en un nivel anterior
           o combina conceptos entre los proyectos. Pruébalos todos, elige tu favorito
           y trabaja en la personalización de ese proyecto.\n\n<a class=\"btn btn-large
-          btn-primary next-stage submitButton pull-right\">Continuar</a>\n\n<div class=\"clearfix\"></div>\n\n<div
+          btn-primary next-lesson submitButton pull-right\">Continuar</a>\n\n<div class=\"clearfix\"></div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nPoner en formación\n</h2>\n\n<img
           src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n¿A dónde fueron?\n</h2>\n\n<img
@@ -3443,7 +3443,7 @@ es-MX:
 
           Puedes hacer estos niveles en cualquier orden. Salta para ver cómo se hizo algo en un nivel anterior, o combina conceptos entre los proyectos. Pruébalos todos, elige tu favorito y pasa tu tiempo trabajando en sumar cosas a ese proyecto para hacerlo tuyo.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuar</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Continuar</a>
 
           <div class="clearfix"></div>
 
@@ -3657,7 +3657,7 @@ es-MX:
           para satisfacer tus necesidades.\n\n <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
           width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n  \n\n_Siguiente:
           Instrucciones de configuración_\n\n<a class=\"btn btn-large btn-primary
-          next-stage submitButton\">Continuar</a>\n"
+          next-lesson submitButton\">Continuar</a>\n"
       Internet Simulator Setup 2:
         content1: descripción aquí
         markdown: |+
@@ -3677,7 +3677,7 @@ es-MX:
 
           _Siguiente: Preguntas frecuentes_
 
-          <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton">Continue</a>
 
       Internet Simulator Setup 3:
         content1: descripción aquí
@@ -3694,7 +3694,7 @@ es-MX:
           Para que los estudiantes se vean en el lobby del Simulador de Internet, deberán estar en la misma sección. Verifica que hayas completado las instrucciones de configuración de la sección de la página anterior y que los estudiantes en cuestión se hayan unido a ese código de sección específico. Además, algunos estudiantes pueden estar en varias secciones si ya han realizado cursos con Code.org, así que asegúrate de saber el nombre de tu sección y de haberlo escogido en el menú desplegable antes de ingresar al lobby.
 
 
-          <a class="btn btn-large btn-primary next-stage submitButton">Continuar</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton">Continuar</a>
       Internet-Unplugged:
         markdown: |
           # El Internet
@@ -9346,7 +9346,7 @@ es-MX:
         markdown: "# El comportamiento en el Laboratorio informático\n  \n<br/><br/>
           \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nIr al plan de la lección\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Continuar</a>\n"
       csf_digital_trails:
         markdown: |-
           # Sigue el Rastro Digital

@@ -1290,7 +1290,7 @@ pl-PL:
 
           Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz koncepcje między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego twój własny.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Kontynuuj</a>
 
           <div class="clearfix"></div>
 
@@ -1361,7 +1361,7 @@ pl-PL:
 
           Możesz przechodzić te poziomy _w dowolnej kolejności_. Przejdź, aby zobaczyć, jak coś zostało zrobione na poprzednim poziomie, lub połącz pomysły między projektami. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć swój czas na powiększenie go, utworzyć swój własny.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Kontynuuj</a>
 
           <div class="clearfix"></div>
 
@@ -4152,7 +4152,7 @@ pl-PL:
         markdown: "# Zachowanie w laboratorium komputerowym\n\n<br/><br/>    \n    \n<a
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\n\nPrzejdź do planu lekcji\n\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Continue</a>\n"
       courseD_EOC_2020:
         display_name: Koniec projektu kursu
         description: Dotarłeś do ostatniej lekcji Kursu D! Wybierz projekt do utworzenia.

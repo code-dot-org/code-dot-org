@@ -1189,7 +1189,7 @@ fr-FR:
 
           Tu peux faire ces niveaux dans _n'importe quel ordre_. Navigue un peu partout pour comprendre comment les choses sont effectuées dans un niveau précédent, ou combine les concepts entre les projets. Essaie les tous, choisis ton favori, et passe du temps pour ajouter à ce projet tes idées pour qu'il devienne le tien
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuer</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Continuer</a>
 
           <div class="clearfix"></div>
 
@@ -1261,7 +1261,7 @@ fr-FR:
 
           Tu peux faire ces niveaux _dans n'importe quel ordre_. Va voir ce qui a été fait dans un niveau précédent, ou combine des concepts entre les projets. Essaie-les tous, choisis ton préféré et passe ton temps à l'ajouter à ce projet pour le personnaliser.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuer</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Continuer</a>
 
           <div class="clearfix"></div>
 
@@ -4410,7 +4410,7 @@ fr-FR:
         markdown: "# Se comporter dans le Labo Informatique \n \n<br/> <br/>  \n  \n<a
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target= \"_new\">\n <button>\nAller au plan de la leçon\n</button> \n</a>\n\n<br/>
-          <br/>\n<a class = \"btn btn-large btn-primary next-stage submitButton\">Continue</a>"
+          <br/>\n<a class = \"btn btn-large btn-primary next-lesson submitButton\">Continue</a>"
       outbreak_story:
         content1: description ici
         markdown: "# Épidémie : Codez votre propre simulation\n\n## Bienvenue à Monster

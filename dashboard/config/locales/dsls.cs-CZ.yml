@@ -859,7 +859,7 @@ cs-CZ:
           procházet _v libovolném pořadí_. Přejdi do jiné a podívej se, jak se něco
           dělalo v předchozí úrovni, nebo kombinuj koncepty z různých projektů. Vyzkoušej
           je všechny, vyber si své oblíbené a věnuj čas jejich přidání do svého vlastního
-          projektu. \n\n<a class=\"btn btn-large btn-primary next-stage submitButton
+          projektu. \n\n<a class=\"btn btn-large btn-primary next-lesson submitButton
           pull-right\">Pokračovat</a> \n\n<div class=\"clearfix\"></div> \n\n<div
           style=\"float: left; margin: 10px\"> \n<a href=\"2\">\n <h2> \nSem a tam
           \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
@@ -886,7 +886,7 @@ cs-CZ:
 
           Tyto úrovně můžeš procházet _v libovolném pořadí_. Přejdi do jiné a podívej se, jak se něco dělalo v předchozí úrovni, nebo kombinuj koncepty z různých projektů. Vyzkoušej je všechny, vyber si své oblíbené, věnuj čas rozvíjení projektu a přizpůsob si ho podle sebe.
 
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right“>Pokračovat</a>
+          <a class=""btn btn-large btn-primary next-lesson submitButton pull-right“>Pokračovat</a>
 
           <div class=""clearfix""></div>
 

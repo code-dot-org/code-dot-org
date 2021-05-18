@@ -853,7 +853,7 @@ sv-SE:
           ordning_. Hoppa runt och kolla på hur något gjordes på en tidigare nivå,
           eller kombinera koncept projekten emellan. Prova allt, välj en favorit,
           och lägg tiden på att lägga till saker till projektet så att det blir ditt
-          eget. \n\n<a class=\"\"btn btn-large btn-primary next-stage submitButton
+          eget. \n\n<a class=\"\"btn btn-large btn-primary next-lesson submitButton
           pull-right\"\">Continue</a> \n\n<div class=\"\"clearfix\"\"></div>\n\n <div
           style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"2\"\">\n <h2>\nBack
           and Forth\n</h2> \n\n<img src=\"\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"\"></a>\n\n
@@ -880,7 +880,7 @@ sv-SE:
 
           Du kan göra de här nivåerna _i vilken ordning du vill_. Titta runt för att se hur något har gjorts på en tidigare nivå eller kombinera koncept från olika projekt. Prova dem alla, välj dina favoriter och använd din tid till att utveckla det projektet så att det blir ditt eget.
 
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Fortsätt</a>
+          <a class=""btn btn-large btn-primary next-lesson submitButton pull-right"">Fortsätt</a>
 
           <div class=""clearfix""></div>
 

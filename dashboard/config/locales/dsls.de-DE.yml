@@ -2098,7 +2098,7 @@ de-DE:
 
           Du kannst die Level _in egal welcher Reihenfolge_ machen. Schau dir an wie etwas im vorigen Level gemacht wurde, oder vermische Konzepte der einzelnen Projekte. Probiere alle aus, wähle dein Lieblingsprojekt, und erweitere dieses mit deinen Ideen.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Weiter</a>
 
           <div class="clearfix"></div>
 
@@ -2169,7 +2169,7 @@ de-DE:
 
           Du kannst diese Stufen in beliebiger Reihenfolge durchführen. Springe herum, um zu sehen, wie etwas in einem früheren Level gemacht wurde, oder kombiniere Konzepte aus verschiedenen Projekten. Probiere alle aus, wähle Deine Favoriten und verbringe Deine Zeit damit, dieses Projekt zu erweitern, um es zu Deinem eigenen zu machen.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Weiter</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Weiter</a>
 
           <div class="clearfix"></div>
 
@@ -2453,7 +2453,7 @@ de-DE:
           #### Meine Schüler können sich nicht sehen, wenn sie auf die URL gehen, die ich ihnen für den Internetsimulator gebe. Was soll ich tun?
           Damit sich die Schüler in der Lobby des Internetsimulators sehen können, müssen sie sich im selben Abschnitt befinden. Vergewissern Sie sich noch einmal, dass Sie die Anweisungen zur Einrichtung des Abschnitts von der vorherigen Seite vollständig ausgefüllt haben und dass die betreffenden Schüler diesem spezifischen Abschnittscode beigetreten sind. Außerdem können einige Schüler in mehreren Abschnitten sein, wenn sie bereits mit Code.org gearbeitet haben, also stellen Sie sicher, dass sie den Namen Ihres Abschnitts kennen und ihn in der Dropdown-Liste ausgewählt haben, bevor sie die Lobby betreten.
 
-          <a class="btn btn-large btn-primary next-stage submitButton">Fortsetzen</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton">Fortsetzen</a>
       Internet-Unplugged:
         markdown: |
           # Das Internet
@@ -6462,7 +6462,7 @@ de-DE:
       gradek1_activity_beNice:
         markdown: "# Verhalten im Computerlabor\n \n<br/><br/>  \n  \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nZum Unterrichtsplan\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Weiter</a>"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Weiter</a>"
       csd-post-survey-intro-2019:
         markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
       Unit 1 Lesson 1 Overview:

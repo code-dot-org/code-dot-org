@@ -851,7 +851,7 @@ no-NO:
 
           Du kan gjennomføre leksjonene i hvilken som helst rekkefølge. Flytt deg mellom leksjonene for å se hvordan noe ble gjort i en tidligere leksjon, eller for å kombinere ideer mellom de ulike prosjektene. Prøv ut alle prosjektene, finn dine favoritter og bruk tiden din på legge dem til for å skape ditt eget prosjekt.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Fortsett</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Fortsett</a>
 
           <div class="clearfix"></div>
 
@@ -921,7 +921,7 @@ no-NO:
           som helst rekkefølge. Hopp rundt for å se hvordan noe er løst i en tidligere
           oppgave, eller kombiner konsepter mellom prosjektene. Test alle sammen,
           velg en favoritt og bruk tid for å benytte den på din måte i prosjektet.\n\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">Fortsett</a>\n\n<div
+          class=\"btn btn-large btn-primary next-lesson submitButton pull-right\">Fortsett</a>\n\n<div
           class=\"clearfix\"></div>\n\n\n<div style=\"float: left; margin: 10px\">\n<a
           href=\"2\">\n<h2>\nFrem og Tilbake\n</h2>\n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nFlere Knapper\n</h2>\n\n<img

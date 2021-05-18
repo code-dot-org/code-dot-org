@@ -744,7 +744,7 @@ th-TH:
           _ในลำดับใดก็ได้_ข้ามไปดูสิว่า เราจะทำกิจกรรมต่างๆ ได้อย่างไรในเลเวลก่อนหน้านี้
           หรือรวมแนวคิดของโปรเจ็กต์ต่างๆ เข้าด้วยกันได้อย่างไรลองทำทั้งหมดดู ก่อนเลือกอันที่คุณชอบมากที่สุด
           แล้วใช้เวลาเพื่อเพิ่มเติมรายละเอียดลงในโปรเจ็กต์นั้นเพื่อสะท้อนความเป็นตัวตนของคุณ\n\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">ทำต่อ</a>
+          class=\"btn btn-large btn-primary next-lesson submitButton pull-right\">ทำต่อ</a>
           \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:10px\">\n
           <a href=\"2\"> \n<h2>\n เดินหน้าถอยหลัง \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
           </div> \n\n<div style=\"float: left; margin:10px\"> \n<a href=\"3\"> \n<h2>
@@ -770,7 +770,7 @@ th-TH:
 
           คุณทำงานในเลเวลเหล่านี้ได้ _ในลำดับใดก็ได้_ ข้ามไปดูสิว่า เราจะทำกิจกรรมต่างๆ ได้อย่างไรในเลเวลก่อนหน้านี้ หรือรวมแนวคิดของโปรเจ็กต์ต่างๆ เข้าด้วยกันได้อย่างไร ลองทำทั้งหมดดู ก่อนเลือกอันที่คุณชอบมากที่สุด แล้วใช้เวลาเพื่อเพิ่มเติมรายละเอียดลงในโปรเจ็กต์นั้นเพื่อสะท้อนความเป็นตัวตนของคุณ
 
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">ทำต่อ</a>
+          <a class=""btn btn-large btn-primary next-lesson submitButton pull-right"">ทำต่อ</a>
 
           <div class=""clearfix""></div>
 

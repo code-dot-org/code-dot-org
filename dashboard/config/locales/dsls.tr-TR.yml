@@ -1190,7 +1190,7 @@ tr-TR:
           yapabilirsiniz.Önceki seviyede bir şeyin nasıl yapıldığına bakmak için etrafa
           bakın veya projeler arasında kavramları birleştirin.Hepsini deneyin, favorilerinizi
           seçin ve zamanınızı kendiniz harcamak için o projeye eklemeye çalışarak
-          geçirin.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton
+          geçirin.\n\n<a class=\"btn btn-large btn-primary next-lesson submitButton
           pull-right\">Devam</a> \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float:
           left; margin:10px\">\n <a href=\"2\"> \n<h2>\n Geri ve İleri \n</h2> \n\n<img
           src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
@@ -1217,7 +1217,7 @@ tr-TR:
 
           Herhangi bir sırada bu seviyeleri yapabilirsiniz. Önceki seviyede bir şeyin nasıl yapıldığına bakmak için etrafa atlayın veya projeler arasında kavramları birleştirin. Hepsini deneyin, favorilerinizi seçin ve zamanınızı kendiniz yapmak için o projeye eklemeye çalışarak geçirin.
 
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Devam Et</a>
+          <a class=""btn btn-large btn-primary next-lesson submitButton pull-right"">Devam Et</a>
 
           <div class=""clearfix""></div>
 
@@ -4113,7 +4113,7 @@ tr-TR:
         markdown: "# Bilgisayar Laboratuvarındaki Davranışlar\n  \n<br/><br/>    \n
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nDers planına git\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Devam Et</a>\n"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Devam Et</a>\n"
       courseD_EOC_2020:
         display_name: Ders Projesinin Sonu
       courseE_EOC_2020:

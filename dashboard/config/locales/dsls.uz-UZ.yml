@@ -2984,7 +2984,7 @@ uz-UZ:
         markdown: "# Kompyuter laboratoriyasida xulq-atvor\n  \n<br/><br/>    \n    \n<a
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nDars rejasiga o'tish\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Davom etish</a>\n"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Davom etish</a>\n"
       ConditionalsWithCards-Unplugged:
         markdown: |-
           # Kartalar bilan shartli bayonotlar
@@ -4981,7 +4981,7 @@ uz-UZ:
 
           Siz ushbu bosqichlarni _ istalgan tartibda_ bajarishingiz mumkin. Biror narsaning avvalgi bosqichda bajarilganligini ko'rish uchun sakrab o'ting yoki loyihalar orasidagi tushunchalarni birlashtiring. Barchasini sinab ko'ring, sevimlisini tanlang va ushbu loyihaga qo'shilish uchun xohlagancha vaqt sarflang.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Davom etish</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Davom etish</a>
 
           <div class="clearfix"></div>
 
@@ -5052,7 +5052,7 @@ uz-UZ:
 
           Siz ushbu bosqichlarni _ istalgan tartibda_ bajarishingiz mumkin. Biror narsaning avvalgi bosqichda bajarilganligini ko'rish uchun sakrab o'ting yoki loyihalar orasidagi tushunchalarni birlashtiring. Barchasini sinab ko'ring, sevimlisini tanlang va ushbu loyihaga qo'shilish uchun xohlagancha vaqt sarflang.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Davom etish</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Davom etish</a>
 
           <div class="clearfix"></div>
 

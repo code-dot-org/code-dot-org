@@ -3882,7 +3882,7 @@ pt-BR:
 
           Você pode percorrer estes níveis _em qualquer ordem_. Revire tudo à volta para ver como alguma coisa foi feita em um nível anterior, ou combine conceitos entre os projetos. Experimente todos eles, escolha seu favorito, e gaste seu tempo incrementando o projeto para torná-lo seu.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Prosseguir</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Prosseguir</a>
 
           <div class="clearfix"></div>
 
@@ -4252,7 +4252,7 @@ pt-BR:
           Simulador para satisfazer suas necessidades.\n\n\n<br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
           width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n \n\n_Próximo
           tópico: Instruções de configuração_\n\n<a class=\"btn btn-large btn-primary
-          next-stage submitButton\">Prosseguir</a>\n"
+          next-lesson submitButton\">Prosseguir</a>\n"
       Internet Simulator Setup 2:
         content1: descrição aqui
         markdown: "# Simulador de Internet: Instruções de Configuração\n\n1. **Crie
@@ -4275,7 +4275,7 @@ pt-BR:
           compartihe a URL com os alunos. Se eles estiverem todos na mesma seção,
           então eles automaticamente estarão aptos a se conectarem entre si quando
           estiverem navegando na mesma URL. \n\n_Próximo tópico: Perguntas Mais Frequentes_\n\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Prosseguir</a>\n\n"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Prosseguir</a>\n\n"
       Internet Simulator Setup 3:
         content1: descrição aqui
         markdown: |
@@ -9026,7 +9026,7 @@ pt-BR:
         markdown: "# Se comportando no laboratório de computação\n  \n<br/><br/>    \n
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nIr para o plano de aulas\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Continuar</a>\n"
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # O Poder das Palavras

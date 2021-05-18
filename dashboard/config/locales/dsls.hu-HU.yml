@@ -914,7 +914,7 @@ hu-HU:
           és figyeld meg, hogyan lehetett elérni valamit az előző szinten, vagy kombináld
           össze az elképzeléseket a projektek között.Próbáld ki mindet, válaszd ki
           a kedvencedet, és folyamatosan bővítsd a projektedet, hogy igazán a magadénak
-          érezd.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton pull-right\">Folytatás</a>
+          érezd.\n\n<a class=\"btn btn-large btn-primary next-lesson submitButton pull-right\">Folytatás</a>
           \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:10px\">\n
           <a href=\"2\"> \n<h2>\n Előre és hátra \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
           </div> \n\n<div style=\"float: left; margin:10px\">\n <a href=\"3\">\n <h2>
@@ -940,7 +940,7 @@ hu-HU:
 
           Ezeket a szinteket _bármilyen sorrendben_ teljesítheted. Ugrálj a szintek között, és figyeld meg, hogyan lehetett elérni valamit az előző szinten, vagy kombinálj össze különböző elképzeléseket a projektek között. Próbáld ki mindet, válaszd ki a kedvencedet, és folyamatosan bővítsd a projektedet, hogy igazán a magadénak érezd.
 
-          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Folytatás</a>
+          <a class=""btn btn-large btn-primary next-lesson submitButton pull-right"">Folytatás</a>
 
           <div class=""clearfix""></div>
 

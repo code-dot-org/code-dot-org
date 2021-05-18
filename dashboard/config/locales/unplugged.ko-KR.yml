@@ -467,7 +467,7 @@ ko:
           과정에 등록하도록 설득하는데 효과적이라고 생각하는 명언이 나오면 우측으로 스와이핑하고 그렇지 않다고 생각하는 명언은 좌측으로 스와이핑합니다.
           이 세션 동안, 그룹으로 나눠 각자가 생각하는 학생을 CS에 등록시키는데 가장 효과적인 문장은 어떤 유형인지 토론하고 워크숍 내
           다른 이들이 각 논쟁에서 어떻게 스와이핑하는지 볼 기회를 갖게 될 것입니다. \r\n<br><br><br><br>\r\n\r\n<span
-          style=\"display:none\">submitButton next-stage</span>\r\n\r\n<a class=\"btn
+          style=\"display:none\">submitButton next-lesson</span>\r\n\r\n<a class=\"btn
           btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
           CS를 위한 우측으로 스와이핑을 플레이 하려면 여기를 클릭하세요!</a>\r\n\r"
       PlantASeed_2019:

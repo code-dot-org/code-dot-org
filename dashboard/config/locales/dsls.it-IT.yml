@@ -1319,7 +1319,7 @@ it-IT:
 
           Puoi provare questi progetti _in qualsiasi ordine_. Dai un'occhiata per scoprire com'è stato realizzato qualche effetto che hai intravisto in un esercizio precedente o combina dei meccanismi visti in diversi esercizi. Provali tutti, scegli il tuo preferito e divertiti a personalizzarlo per renderlo tuo.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Continue</a>
 
           <div class="clearfix"></div>
 
@@ -1390,7 +1390,7 @@ it-IT:
 
           Puoi provare questi progetti _in qualsiasi ordine_. Dai un'occhiata per scoprire com'è stato realizzato qualche effetto che hai intravisto in un esercizio precedente o combina dei meccanismi visti in diversi esercizi. Provali tutti, scegli il tuo preferito e divertiti a personalizzarlo per renderlo tuo.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Continue</a>
 
           <div class="clearfix"></div>
 
@@ -7239,7 +7239,7 @@ it-IT:
         markdown: "# Comportamento corretto bene in aula computer\n  \n<br/><br/>
           \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nVai al piano di lavoro della lezione\n</button>\n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Continua</a>"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Continua</a>"
       CSD U5 test:
         title: Test Post-Progetto sui Dati e la Società
       outbreak_freeplay_choice:

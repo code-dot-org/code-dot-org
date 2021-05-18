@@ -17,7 +17,7 @@
   %p= try_t("data.unplugged.#{unplugged}.desc")
 
   .video-section
-    %a.btn.btn-primary.next-stage
+    %a.btn.btn-primary.next-lesson
       = t('next_stage')
 
     - if video && video.download
@@ -51,7 +51,7 @@
           = t('pdf_download')
 
 :javascript
-  $('a.next-stage').click(function() {
+  $('a.next-lesson').click(function() {
     var finishedButton = $(this);
 
     if (finishedButton.hasClass("disabled")) {

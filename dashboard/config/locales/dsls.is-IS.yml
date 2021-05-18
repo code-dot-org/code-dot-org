@@ -1199,7 +1199,7 @@ is-IS:
 
           Þú getur gert þessa áfanga _í hvaða röð sem er_. Hoppaðu á milli til að sjá hvernig eitthvað var gert í fyrri áfanga eða sameinaðu hugmyndir úr verkefnum. Prófaðu þá alla, veldu þann sem þér finnst bestur og notaðu tímann til að bæta við það verkefni til að gera það að þínu.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Áfram</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Áfram</a>
 
           <div class="clearfix"></div>
 
@@ -1270,7 +1270,7 @@ is-IS:
 
           Þú getur klárað þessi borð _í hvaða röð sem er_. Farðu á milli til að skoða hvernig eitthvað var gert í fyrra borði eða sameinaðu hugmyndir úr verkefnunum. Prófaðu þau öll og veldu svo það þér fannst skemmtilegast og notaðu svo tímann til að bæta við það verkefni til að gera það að þínu.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Áfram</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Áfram</a>
 
           <div class="clearfix"></div>
 
@@ -4458,7 +4458,7 @@ is-IS:
       gradek1_activity_beNice:
         markdown: "# Hegðun í tölvuveri\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nOpna kennsluáætlun\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-stage submitButton\">Halda áfram</a>\n"
+          class=\"btn btn-large btn-primary next-lesson submitButton\">Halda áfram</a>\n"
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # Afl orðanna

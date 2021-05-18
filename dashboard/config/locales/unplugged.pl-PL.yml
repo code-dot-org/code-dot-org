@@ -652,7 +652,7 @@ pl:
           swoje przemyślenia dotyczące rodzajów stwierdzeń, które najbardziej skutecznie
           przekonują ucznia do zapisania się na informatykę i będziesz mieć okazję
           zobaczyć, jak inne osoby z Twojej grupy przeciągnęli poszczególne argumenty.
-          \r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">submitButton next-stage</span>\r\n\r\n<a
+          \r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">submitButton next-lesson</span>\r\n\r\n<a
           class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
           Kliknij tutaj, aby zagrać w Przeciągnij w prawo w kierunku informatyki!</a>\r\n\r"
       PlantASeed_2019:

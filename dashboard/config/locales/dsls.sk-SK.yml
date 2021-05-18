@@ -1383,7 +1383,7 @@ sk-SK:
 
           Tieto úrovne môžete vykonávať _v akomkoľvek poradí_. Pohľadaj naokolo, ako si niečo vyriešil/a v predchádzajúcich úlohách, alebo skombinuj koncepty medzi projektmi. Vyskúšaj ich všetky, vyber si svoj obľúbený a pracuj na pridávaní do tohto projektu, aby si si ho vytvoril/a sám/a.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Pokračovať</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Pokračovať</a>
 
           <div class="clearfix"></div>
 
@@ -1452,7 +1452,7 @@ sk-SK:
 
           Tieto levely môžeš spraviť v _hocijakom poradí_. Poobezerať sa aj ako bolo niečo spravené v predchádzajúcich leveloch, alebo skombinovať koncepty medzi projektami. Vyskúšaj to všetko a vyber si čo sa ti najviac páči, potom stráv čas na budovaní projektu, aby si si ho spravil/a po svojom.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Pokračovať</a>
+          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Pokračovať</a>
 
           <div class="clearfix"></div>
 
