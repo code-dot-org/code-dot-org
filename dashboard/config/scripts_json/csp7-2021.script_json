@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:02 UTC",
+    "serialized_at": "2021-05-18 03:04:21 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -3497,6 +3497,18 @@
       "seeding_key": {
         "resource.key": "teacher_forum"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -3613,6 +3625,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp7-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp7-2021"
       }
     }
