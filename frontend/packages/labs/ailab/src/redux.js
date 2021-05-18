@@ -18,7 +18,8 @@ import {
   ClassificationTrainer,
   TestDataLocations,
   ResultsGrades,
-  REGRESSION_ERROR_TOLERANCE
+  REGRESSION_ERROR_TOLERANCE,
+  UNIQUE_OPTIONS_MAX
 } from "./constants.js";
 
 // Action types
@@ -57,6 +58,7 @@ const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
 const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 const SET_K_VALUE = "SET_K_VALUE";
+const SET_INSTRUCTIONS_DISMISSED = "SET_INSTRUCTIONS_DISMISSED";
 
 // Action creators
 export function setMode(mode) {
@@ -212,6 +214,10 @@ export function setKValue(kValue) {
   return { type: SET_K_VALUE, kValue };
 }
 
+export function setInstructionsDismissed() {
+  return { type: SET_INSTRUCTIONS_DISMISSED };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -245,7 +251,9 @@ const initialState = {
   columnRefs: {},
   historicResults: [],
   showResultsDetails: false,
-  kValue: null
+  kValue: null,
+  viewedPanels: [],
+  instructionsOverlayActive: false
 };
 
 // Reducer
@@ -444,14 +452,25 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
+    let showedOverlay = false;
     if (state.instructionsKeyCallback) {
-      state.instructionsKeyCallback(action.currentPanel);
+      const options = {};
+      if (
+        !(state.mode && state.mode.hideInstructionsOverlay) &&
+        !state.viewedPanels.includes(action.currentPanel)
+      ) {
+        options.showOverlay = true;
+        state.viewedPanels.push(action.currentPanel);
+        showedOverlay = true;
+      }
+      state.instructionsKeyCallback(action.currentPanel, options);
     }
 
     if (action.currentPanel === "dataDisplayLabel") {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         currentColumn: undefined,
         selectedFeatures: []
       };
@@ -461,6 +480,7 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         currentPanel: action.currentPanel,
+        instructionsOverlayActive: showedOverlay,
         testData: {},
         prediction: {}
       };
@@ -469,6 +489,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       currentPanel: action.currentPanel,
+      instructionsOverlayActive: showedOverlay,
       currentColumn: undefined
     };
   }
@@ -557,6 +578,12 @@ export default function rootReducer(state = initialState, action) {
       kValue: action.kValue
     };
   }
+  if (action.type === SET_INSTRUCTIONS_DISMISSED) {
+    return {
+      ...state,
+      instructionsOverlayActive: false
+    }
+  }
 
   return state;
 }
@@ -606,7 +633,8 @@ export function getCurrentColumnData(state) {
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
     range: getRange(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
-    description: getColumnDescription(state, state.currentColumn)
+    description: getColumnDescription(state, state.currentColumn),
+    hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn)
   };
 }
 
@@ -640,6 +668,20 @@ export function getSelectedNumericalFeatures(state) {
 
 export function getNumericalColumns(state) {
   return filterColumnsByType(state, ColumnTypes.NUMERICAL);
+}
+
+/*
+  Categorical columns with too many unique values are unlikley to make
+  accurate models, and we don't want to overflow the metadata column for saved
+  models.
+*/
+function hasTooManyUniqueOptions(state, column) {
+  if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
+    const uniqueOptionsCount =
+      getUniqueOptions(state, state.currentColumn).length;
+    return uniqueOptionsCount > UNIQUE_OPTIONS_MAX;
+  }
+  return false;
 }
 
 export function getSelectableFeatures(state) {
