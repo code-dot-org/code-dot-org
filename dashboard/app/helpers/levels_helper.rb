@@ -107,12 +107,12 @@ module LevelsHelper
     channel_token&.channel
   end
 
-  # If given a level and a user and optional script, returns whether the level
+  # If given a level, script and a user, returns whether the level
   # has been started by the user. A channel-backed level is considered started when a
   # channel is created for the level, which happens when the user first visits the level page.
   # Other levels are considered started when progress has been saved for the level (for example
   # clicking the run button saves progress).
-  def level_started?(level, user, script = nil)
+  def level_started?(level, script, user)
     return false unless user.present?
 
     if level.channel_backed?
@@ -294,8 +294,8 @@ module LevelsHelper
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
 
-      if @user || current_user
-        @app_options[:level][:isStarted] = level_started?(@level, @user || current_user, @script)
+      if (@user || current_user) && @script
+        @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
       end
     end
 
