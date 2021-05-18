@@ -2,14 +2,14 @@
 // We get this from our call to /api/lock_status
 const section1Id = 42;
 const section2Id = 43;
-const stage1Id = 12;
+const lesson1Id = 12;
 
 const fakeSectionData = {
   [section1Id]: {
     section_id: section1Id,
     section_name: 'My Section',
     stages: {
-      [stage1Id]: [
+      [lesson1Id]: [
         // locked
         {
           locked: true,
@@ -50,7 +50,7 @@ const fakeSectionData = {
     section_id: section2Id,
     section_name: 'My Other Section',
     stages: {
-      [stage1Id]: [
+      [lesson1Id]: [
         {
           locked: true,
           name: 'student4',
