@@ -1,3 +1,8 @@
+export const UploadType = {
+  SPRITE: 'Sprite',
+  JSON: 'JSON'
+};
+
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
  * @param appType {String} "gamelab" or "spritelab"
  * @param locale {String} language locale, defaults to 'en_us'
@@ -29,9 +34,30 @@ export function uploadSpriteToAnimationLibrary(
     body: imageData
   })
     .then(response => {
-      onSuccess(response);
+      onSuccess(UploadType.SPRITE, response);
     })
     .catch(err => {
-      onError(err);
+      onError(UploadType.SPRITE, err);
+    });
+}
+
+export function uploadJSONtoAnimationLibrary(
+  destination,
+  JSONData,
+  onSuccess,
+  onError
+) {
+  return fetch(`/api/v1/animation-library` + destination, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSONData
+  })
+    .then(response => {
+      onSuccess(UploadType.JSON, response);
+    })
+    .catch(err => {
+      onError(UploadType.JSON, err);
     });
 }

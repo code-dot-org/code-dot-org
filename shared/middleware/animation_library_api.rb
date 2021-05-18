@@ -45,7 +45,7 @@ class AnimationLibraryApi < Sinatra::Base
   #
   post %r{/api/v1/animation-library/level_animations/(.+)} do |animation_name|
     dont_cache
-    if request.content_type == 'image/png'
+    if request.content_type == 'image/png' || request.content_type == 'application/json'
       body = request.body
       key = "level_animations/#{animation_name}"
 
@@ -61,7 +61,7 @@ class AnimationLibraryApi < Sinatra::Base
   #
   post %r{/api/v1/animation-library/spritelab/([^/]+)/(.+)} do |category, animation_name|
     dont_cache
-    if request.content_type == 'image/png'
+    if request.content_type == 'image/png' || request.content_type == 'application/json'
       body = request.body
       key = "spritelab/#{category}/#{animation_name}"
 
