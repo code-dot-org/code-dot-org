@@ -136,6 +136,7 @@ module ScriptConstants
       CSD4_2021_NAME = 'csd4-2021'.freeze,
       CSD5_2021_NAME = 'csd5-2021'.freeze,
       CSD6_2021_NAME = 'csd6-2021'.freeze,
+      CSD7_2021_NAME = 'csd7-2021'.freeze,
     ],
     csd_2020: [
       CSD1_2020_NAME = 'csd1-2020'.freeze,
