@@ -3,7 +3,9 @@ import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 import {
   getManifest,
-  uploadSpriteToAnimationLibrary
+  uploadSpriteToAnimationLibrary,
+  uploadJSONtoAnimationLibrary,
+  UploadType
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const SpriteLocation = makeEnum('library', 'level');
@@ -19,7 +21,11 @@ export default class SpriteUpload extends React.Component {
     currentCategories: [],
     aliases: [],
     metadata: '',
-    uploadStatus: {
+    imageUploadStatus: {
+      success: null,
+      message: ''
+    },
+    metadataUploadStatus: {
       success: null,
       message: ''
     }
@@ -33,7 +39,13 @@ export default class SpriteUpload extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const {spriteAvailability, fileData, category, filename} = this.state;
+    const {
+      spriteAvailability,
+      fileData,
+      category,
+      filename,
+      metadata
+    } = this.state;
 
     let destination = null;
 
@@ -46,27 +58,52 @@ export default class SpriteUpload extends React.Component {
         break;
     }
 
+    let JSONDestination = destination.replace('.png', '.json');
+
     return uploadSpriteToAnimationLibrary(
       destination,
       fileData,
       this.onSuccess,
       this.onError
+    ).then(() =>
+      uploadJSONtoAnimationLibrary(
+        JSONDestination,
+        metadata,
+        this.onSuccess,
+        this.onError
+      )
     );
   };
 
-  onSuccess = response => {
+  // 'uploadType' indicates whether the response comes from uploading the 'Image' file or the 'Metadata' file
+  onSuccess = (uploadType, response) => {
     let responseMessage = response.ok
-      ? 'Image Successfully Uploaded'
-      : `Error(${response.status}: ${response.statusText})`;
-    this.setState({
-      uploadStatus: {success: response.ok, message: responseMessage}
-    });
+      ? `${uploadType} Successfully Uploaded`
+      : `${uploadType} Upload Error(${response.status}: ${
+          response.statusText
+        })`;
+    if (uploadType === UploadType.SPRITE) {
+      this.setState({
+        imageUploadStatus: {success: response.ok, message: responseMessage}
+      });
+    } else if (uploadType === UploadType.JSON) {
+      this.setState({
+        metadataUploadStatus: {success: response.ok, message: responseMessage}
+      });
+    }
   };
 
-  onError = error => {
-    this.setState({
-      uploadStatus: {success: false, message: error.toString()}
-    });
+  // 'uploadType' indicates whether the response comes from uploading the 'Image' file or the 'Metadata' file
+  onError = (uploadType, error) => {
+    if (uploadType === UploadType.SPRITE) {
+      this.setState({
+        imageUploadStatus: {success: false, message: error.toString()}
+      });
+    } else if (uploadType === UploadType.JSON) {
+      this.setState({
+        metadataUploadStatus: {success: false, message: error.toString()}
+      });
+    }
     console.error(error);
   };
 
@@ -98,10 +135,11 @@ export default class SpriteUpload extends React.Component {
   };
 
   generateMetadata = () => {
+    const {filename, aliases} = this.state;
     let image = document.getElementById('sprite-image-preview');
     let metadata = {};
-    metadata['name'] = this.state.filename;
-    metadata['aliases'] = this.state.aliases;
+    metadata['name'] = filename;
+    metadata['aliases'] = aliases;
     metadata['frameCount'] = 1;
     metadata['frameSize'] = {x: image.width, y: image.height};
     metadata['looping'] = true;
@@ -111,7 +149,8 @@ export default class SpriteUpload extends React.Component {
 
   render() {
     const {
-      uploadStatus,
+      imageUploadStatus,
+      metadataUploadStatus,
       filePreviewURL,
       currentCategories,
       spriteAvailability,
@@ -224,10 +263,18 @@ export default class SpriteUpload extends React.Component {
           <p
             style={{
               ...styles.uploadStatusMessage,
-              ...(!uploadStatus.success && styles.uploadFailure)
+              ...(!imageUploadStatus.success && styles.uploadFailure)
             }}
           >
-            {uploadStatus.message}
+            {imageUploadStatus.message}
+          </p>
+          <p
+            style={{
+              ...styles.uploadStatusMessage,
+              ...(!metadataUploadStatus.success && styles.uploadFailure)
+            }}
+          >
+            {metadataUploadStatus.message}
           </p>
         </form>
       </div>
