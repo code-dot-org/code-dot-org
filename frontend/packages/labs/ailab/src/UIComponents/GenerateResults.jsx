@@ -11,7 +11,7 @@ import resultsBackground from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
-const numItems = 12;
+const numItems = 7;
 
 class GenerateResults extends Component {
   static propTypes = {
@@ -19,7 +19,8 @@ class GenerateResults extends Component {
     readyToTrain: PropTypes.bool,
     modelSize: PropTypes.number,
     labelColumn: PropTypes.string,
-    selectedFeatures: PropTypes.array
+    selectedFeatures: PropTypes.array,
+    instructionsOverlayActive: PropTypes.bool
   };
 
   state = {
@@ -27,6 +28,16 @@ class GenerateResults extends Component {
     animationTimer: undefined,
     headOpen: false
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      frame: 0,
+      animationTimer: undefined,
+      finished: false
+    };
+  }
 
   componentDidMount() {
     this.onClickTrainModel();
@@ -49,15 +60,13 @@ class GenerateResults extends Component {
   };
 
   updateAnimation = () => {
-    if (this.state.frame === 15) {
-      this.setState({ headOpen: true });
-    }
-
     if (this.getAnimationStep() >= numItems) {
-      this.setState({ headOpen: false });
+      this.setState({ finished: true });
     }
 
-    this.setState({ frame: this.state.frame + 1 });
+    if (!this.props.instructionsOverlayActive) {
+      this.setState({ frame: this.state.frame + 1 });
+    }
   };
 
   componentWillUnmount = () => {
@@ -87,7 +96,21 @@ class GenerateResults extends Component {
     const hideLabel = this.getAnimationSubstep() < framesPerCycle / 2;
     const showAnimation = this.getAnimationStep() < numItems;
     const botImage = aiBotClosed;
-    const scannerImage = blueScanner;
+    const maxFrames = framesPerCycle * (numItems - 1.5);
+    const tableOpacity =
+      this.state.frame < framesPerCycle
+        ? this.state.frame / framesPerCycle
+        : this.state.frame >= maxFrames &&
+          this.state.frame < maxFrames + framesPerCycle
+        ? 1 - (this.state.frame - maxFrames) / framesPerCycle
+        : this.state.frame >= maxFrames + framesPerCycle
+        ? 0
+        : 1;
+
+    // Let's still show the starting row on our very first frame, because we might
+    // be paused waiting fo the overlay to be dismissed.
+    const startingRow =
+      this.state.frame === 0 ? undefined : this.getAnimationStep();
 
     return (
       <div
@@ -102,33 +125,15 @@ class GenerateResults extends Component {
         <div style={styles.statement}>Testing accuracy</div>
 
         <div style={styles.generateResultsContainer}>
-          <div style={styles.generateResultsDataTable}>
-            {/*
-            <svg
-              preserveAspectRatio="none"
-              style={{
-                position: "absolute",
-                width: "30%",
-                //height: 40,
-                paddingTop: 32,
-                zIndex: 1
-              }}
-              xmlns="http://www.w3.org/2000/svg"
-              _viewBox="1 0 6 1"
-
-            >
-              <defs>
-                <pattern id="tear" width="0.1" height="1" patternContentUnits="objectBoundingBox" viewBox="0 1 2 3">
-                  <path d="M 2 0 L 1 1 L 0 0" fill="white"/>
-                </pattern>
-              </defs>
-              <rect fill="url(#tear)" width="100%" height="100"/>
-            </svg>
-            */}
-
+          <div
+            style={{
+              ...styles.generateResultsDataTable,
+              opacity: tableOpacity
+            }}
+          >
             <DataTable
               reducedColumns={true}
-              startingRow={this.getAnimationStep()}
+              startingRow={startingRow}
               noLabel={true}
             />
           </div>
@@ -141,7 +146,7 @@ class GenerateResults extends Component {
                 bottom: translateY + "%",
                 left: translateX + "%",
                 transform: transform,
-                opacity: opacity,
+                opacity: opacity * tableOpacity,
                 zIndex: 1
               }}
             >
@@ -161,7 +166,10 @@ class GenerateResults extends Component {
                 <img src={botImage} style={styles.trainBotBody} />
               </div>
               <div style={{ width: 150 }}>
-                <img src={scannerImage} style={{ width: "100%" }} />
+                <img
+                  src={blueScanner}
+                  style={{ width: "100%", opacity: tableOpacity }}
+                />
               </div>
             </div>
           </div>
@@ -175,5 +183,6 @@ export default connect(state => ({
   readyToTrain: readyToTrain(state),
   modelSize: state.modelSize,
   labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures
+  selectedFeatures: state.selectedFeatures,
+  instructionsOverlayActive: state.instructionsOverlayActive
 }))(GenerateResults);

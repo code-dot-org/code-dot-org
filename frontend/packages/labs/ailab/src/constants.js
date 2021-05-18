@@ -570,11 +570,11 @@ export const styles = {
     width: "43%",
     top: "0%",
     position: "absolute",
-    direction: "ltr"
+    direction: "ltr",
+    transformOrigin: "bottom right",
   },
   trainBotOpen: {
     transform: "rotate(90deg)",
-    transformOrigin: "bottom right",
     direction: "ltr"
   },
   trainBotBody: {

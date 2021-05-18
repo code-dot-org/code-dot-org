@@ -7,11 +7,11 @@ import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
-import labBackground from "@public/images/lab-background-light.png";
+import labBackground from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
-const numItems = 12;
+const numItems = 7;
 
 class TrainModel extends Component {
   static propTypes = {
@@ -23,11 +23,16 @@ class TrainModel extends Component {
     instructionsOverlayActive: PropTypes.bool
   };
 
-  state = {
-    frame: 0,
-    animationTimer: undefined,
-    headOpen: false
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      frame: 0,
+      animationtimer: undefined,
+      headOpen: false,
+      finished: false
+    };
+  }
 
   componentDidMount() {
     this.onClickTrainModel();
@@ -51,7 +56,7 @@ class TrainModel extends Component {
     }
 
     if (this.getAnimationStep() >= numItems) {
-      this.setState({ headOpen: false });
+      this.setState({ headOpen: false, finished: true });
     }
 
     if (!this.props.instructionsOverlayActive) {
@@ -85,6 +90,22 @@ class TrainModel extends Component {
     const opacity = getFadeOpacity(animationProgress);
     const showAnimation = this.getAnimationStep() < numItems;
 
+    const maxFrames = framesPerCycle * (numItems - 1.5);
+    const tableOpacity =
+      this.state.frame < framesPerCycle
+        ? this.state.frame / framesPerCycle
+        : this.state.frame >= maxFrames &&
+          this.state.frame < maxFrames + framesPerCycle
+        ? 1 - (this.state.frame - maxFrames) / framesPerCycle
+        : this.state.frame >= maxFrames + framesPerCycle
+        ? 0
+        : 1;
+
+    // Let's still show the starting row on our very first frame, because we might
+    // be paused waiting fo the overlay to be dismissed.
+    const startingRow =
+      this.state.frame === 0 ? undefined : this.getAnimationStep();
+
     return (
       <div
         id="train-model"
@@ -97,11 +118,14 @@ class TrainModel extends Component {
       >
         <div style={styles.statement}>Training</div>
 
-        <div style={styles.trainModelDataTable}>
-          <DataTable
-            reducedColumns={true}
-            startingRow={this.getAnimationStep()}
-          />
+        <div
+          style={{
+            ...styles.trainModelDataTable,
+            //opacity: this.state.finished ? 0 : 1
+            opacity: tableOpacity
+          }}
+        >
+          <DataTable reducedColumns={true} startingRow={startingRow} />
         </div>
 
         <div style={styles.trainModelContainer}>
@@ -113,7 +137,7 @@ class TrainModel extends Component {
                 top: translateY + "%",
                 left: translateX + "%",
                 transform: transform,
-                opacity: opacity
+                opacity: opacity * tableOpacity
               }}
             >
               <DataTable
