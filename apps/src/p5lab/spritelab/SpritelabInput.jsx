@@ -94,6 +94,7 @@ class SpritelabInput extends React.Component {
               disabled={disabled}
             />
             <button
+              id="spritelabSubmitPrompt"
               style={styles.submitButton}
               type="button"
               onClick={this.onTextSubmit}
