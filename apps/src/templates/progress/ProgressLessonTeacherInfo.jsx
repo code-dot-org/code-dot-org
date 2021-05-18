@@ -32,7 +32,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     hiddenLessonState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenStage: PropTypes.func.isRequired,
+    toggleHiddenLesson: PropTypes.func.isRequired,
     lockableAuthorized: PropTypes.bool.isRequired
   };
 
@@ -43,9 +43,9 @@ class ProgressLessonTeacherInfo extends React.Component {
   }
 
   onClickHiddenToggle(value) {
-    const {scriptName, section, lesson, toggleHiddenStage} = this.props;
+    const {scriptName, section, lesson, toggleHiddenLesson} = this.props;
     const sectionId = (section && section.id.toString()) || '';
-    toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
+    toggleHiddenLesson(scriptName, sectionId, lesson.id, value === 'hidden');
     firehoseClient.putRecord(
       {
         study: 'hidden-lessons',
@@ -177,5 +177,9 @@ export default connect(
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0
   }),
-  {toggleHiddenStage}
+  dispatch => ({
+    toggleHiddenLesson(scriptName, sectionId, lessonId, hidden) {
+      dispatch(toggleHiddenStage(scriptName, sectionId, lessonId, hidden));
+    }
+  })
 )(ProgressLessonTeacherInfo);
