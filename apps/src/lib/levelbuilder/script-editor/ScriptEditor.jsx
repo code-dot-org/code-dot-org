@@ -150,10 +150,10 @@ class ScriptEditor extends React.Component {
       publishedState: !this.props.initialHidden
         ? this.props.initialIsStable
           ? 'Recommended'
-          : 'Assignable'
+          : 'Preview'
         : this.props.initialPilotExperiment
         ? 'Pilot'
-        : 'Preview'
+        : 'Beta'
     };
   }
 
