@@ -865,7 +865,7 @@ el-GR:
           τις έννοιες μεταξύ των έργων. Δοκιμάστε τα όλα, επιλέξτε το αγαπημένο σας,
           και αφιερώστε το χρόνο σας δουλεύοντας για να προσθέσετε κάτι σε αυτό το
           έργο για να το κάνετε δικό σας. \n\n<a class=\"btn btn-large btn-primary
-          next-lesson submitButton pull-right\">Συνέχεια</a> \n\n<div class=\"clearfix\"></div>
+          next-stage submitButton pull-right\">Συνέχεια</a> \n\n<div class=\"clearfix\"></div>
           \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"2\">\n <h2> \nΜπρος-Πίσω\n</h2>
           \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
           \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"3\">
@@ -891,7 +891,7 @@ el-GR:
 
           Μπορείτε να κάνετε αυτά τα επίπεδα _με οποιαδήποτε σειρά_. Περιηγηθείτε για να δείτε πώς έγινε κάτι σε προηγούμενο επίπεδο, ή για να συνδυάσετε τις έννοιες μεταξύ των έργων. Δοκιμάστε τα όλα, επιλέξτε το αγαπημένο σας, και αφιερώστε το χρόνο σας δουλεύοντας για να προσθέσετε κάτι σε αυτό το έργο για να το κάνετε δικό σας.
 
-          <a class=""btn btn-large btn-primary next-lesson submitButton pull-right"">Συνέχεια</a>
+          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Συνέχεια</a>
 
           <div class=""clearfix""></div>
 

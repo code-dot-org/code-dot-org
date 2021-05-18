@@ -1557,7 +1557,7 @@ zh-TW:
       Dance_Party_extras_intro:
         markdown: "# 繼續跳舞!\n\n第 2 部分裡，你可以創作自己的專案。這裡沒有要解決的關卡，只有一堆利用不同方式做出的五花八門的舞蹈派對專案。
           \n\n你可以_隨意選擇_要從哪一關開始，看看之前完成的關卡，或是把這些專案中的概念合而為一。盡情嘗試，隨你開心，打造一個屬於你自己的舞蹈派對。\n\n<a
-          class=\"btn btn-large btn-primary next-lesson submitButton pull-right\">繼續</a>\n\n<div
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">繼續</a>\n\n<div
           class=\"clearfix\"></div>\n\n<div style=\"float: left; margin: 10px\">\n<a
           href=\"2\">\n<h2>\n加入隊形\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n他們去哪啦？\n</h2>\n\n<img
@@ -1573,7 +1573,7 @@ zh-TW:
       Dance_Party_extras_intro_2019:
         markdown: "# 繼續跳舞!\n\n第 2 部分裡，你可以創作自己的專案。這裡沒有要解決的關卡，只有一堆利用不同方式做出的五花八門的舞蹈派對專案。
           \n\n你可以_隨意選擇_要從哪一關開始，看看之前完成的關卡，或是把這些專案中的概念合而為一。盡情嘗試，隨你開心，打造一個屬於你自己的舞蹈派對。\n\n<a
-          class=\"btn btn-large btn-primary next-lesson submitButton pull-right\">繼續</a>\n\n<div
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">繼續</a>\n\n<div
           class=\"clearfix\"></div>\n\n\n<div style=\"float: left; margin: 10px\">\n<a
           href=\"2\">\n<h2>\n前前後後\n</h2>\n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n更多按鈕\n</h2>\n\n<img
@@ -4359,7 +4359,7 @@ zh-TW:
       gradek1_activity_beNice:
         markdown: "#計算機實驗室行為\n\n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>轉至教學計劃</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
-          btn-large btn-primary next-lesson submitButton\">繼續</a>"
+          btn-large btn-primary next-stage submitButton\">繼續</a>"
       Building a UI with Design Mode:
         markdown: |-
           ＃ 歡迎使用App Lab設計模式

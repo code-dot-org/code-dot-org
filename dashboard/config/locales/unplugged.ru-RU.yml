@@ -612,7 +612,7 @@ ru:
           занятия мы обсудим всей группой ваше мнение о самых убедительных доводах,
           а у вас будет возможность увидеть, как другие участники вашего семинара
           оценили каждый из аргументов. \r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">submitButton
-          next-lesson</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
+          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
           href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
           Нажми здесь, чтобы сыграть в \"Смахните вправо для записи на КН\"!</a>\r\n\r\n"
       PlantASeed_2019:

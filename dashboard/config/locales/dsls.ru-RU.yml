@@ -1153,7 +1153,7 @@ ru-RU:
 
           Вы можете проходить эти уровни в любом порядке. Вернитесь назад, чтобы посмотреть, как что-то было сделано на предыдущем уровне, или объединить концепции между проектами. Попробуйте их все, выберите свой любимый и потратьте свое время на добавление к этому проекту, чтобы сделать его своим собственным.
 
-          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Continue</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
 
           <div class="clearfix"></div>
 
@@ -1225,7 +1225,7 @@ ru-RU:
           Вы можете проходить эти уровни в любом порядке. Вернитесь назад, чтобы посмотреть, как что-то было сделано на предыдущем уровне, или объединить концепции между проектами. Попробуйте их все, выберите свой любимый и потратьте свое время на добавление к этому проекту, чтобы сделать его своим собственным.
 
 
-          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Continue</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continue</a>
 
           <div class="clearfix"></div>
 
@@ -5318,7 +5318,7 @@ ru-RU:
         markdown: "# Правила поведения в компьютерной лаборатории  \n  \n<br/><br/>
           \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nGo to lesson plan\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-lesson submitButton\">Continue</a>\n"
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continue</a>\n"
       BigEvent-Unplugged:
         markdown: |
           # Большое событие

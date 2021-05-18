@@ -600,7 +600,7 @@ sk:
           programovacích prístupov, ktoré sú podľa vás najefektívnejšie na pritiahnutie
           študenta ku kurzu a budete mať možnosť vidieť ako ostatní vo vašej skupine
           vyberali v jednotlivých debatách.\r\n<br><br><br><br>\r\n\r<span style=\"display:none\">submitButton
-          next-lesson</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
+          next-stage</span>\r\n\r\n<a class=\"btn btn-large btn-primary submitButton\"
           href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/><a
           class=\"btn btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>
           kliknúť sem pre spustenie Potiahni vpravo pre CS!</a>\r\n\r\n"

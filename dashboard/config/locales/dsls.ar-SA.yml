@@ -1027,7 +1027,7 @@ ar-SA:
           _في أي ترتيب_. خذ جولة لإلقاء نظرة على طريقة إتمام شيء ما في المستوي السابق،
           أو قم بتجميع الأفكار العامة ما بين المشروعات. جربها جميعاً، قم بانتقاء المفضلة،
           واستغرق الوقت للعمل على إضافة هذا المشروع إلى مساحة عملك. \n\n<a class=\"btn
-          btn-large btn-primary next-lesson submitButton pull-right\">مواصله</a>\n\n<div
+          btn-large btn-primary next-stage submitButton pull-right\">مواصله</a>\n\n<div
           class=\"clearfix\"></div>\n\n<div style=\"float: left; margin: 10px\">\n<a
           href=\"2\">\n<h2>\nالحصول علي التشكيل\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nأين ذهبوا ؟\n</h2>\n\n<img
@@ -1048,7 +1048,7 @@ ar-SA:
 
           يمكنك القيام بهذه المستويات _ في أي أمر_. اقفز في المكان لتعرف كيف تم القيام بشيء ما في المستوى السابق ، أو ادمج المفاهيم بين المشاريع. جرّبهم جميعًا ، واختر ما تفضله ، وقضي وقتك في العمل على الإضافة إلى هذا المشروع لجعله بنفسك.
 
-          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">مواصلة</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">مواصلة</a>
 
           <div class="clearfix"></div>
 
@@ -3976,7 +3976,7 @@ ar-SA:
 
           <a href="https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing" target="_new"><button>
           انتقل إلى خطة الدراسة
-          </button> </a><br/><br/><a class="btn btn-large btn-primary next-lesson submitButton">Continue</a>
+          </button> </a><br/><br/><a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
       csf_digital_trails:
         markdown: |-
           # اتبع الأثر الرقمي

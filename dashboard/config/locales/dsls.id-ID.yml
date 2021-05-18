@@ -999,7 +999,7 @@ id-ID:
 
           Anda bisa melakukan level ini-dalam urutan apapun_melompat untuk melihat bagaimana sesuatu sudah dikerjakan dalam tingkat selanjutnya atau kombinasi konsep diantara proyek. Cobalah semua,ambil yang anda suka dan habiskan waktu anda untuk bekerja untuk menambahkan pada proyek agar menjadi milik anda sendiri.
 
-          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">lanjutkan</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">lanjutkan</a>
 
           <div class="clearfix"></div>
 
@@ -1074,7 +1074,7 @@ id-ID:
 
           Anda dapat melakukan level ini dalam urutan apa pun. Langsung berkeliling untuk melihat bagaimana sesuatu dilakukan di tingkat sebelumnya, atau menggabungkan konsep antara proyek. Cobalah semuanya, pilih favorit Anda, dan habiskan waktu Anda bekerja untuk menambah proyek itu untuk menjadikannya milik Anda.
 
-          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">Lanjutkan</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Lanjutkan</a>
 
           <div class="clearfix"></div>
 
@@ -4053,7 +4053,7 @@ id-ID:
       gradek1_activity_beNice:
         markdown: "# Berperilaku di Lab Komputer\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nBuka rencana pelajaran\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-lesson submitButton\">Lanjutkan</a>\n"
+          class=\"btn btn-large btn-primary next-stage submitButton\">Lanjutkan</a>\n"
       outbreak_story:
         content1: deskripsi di sini
         markdown: "# Wabah: Buat Kode Simulasi Anda Sendiri\n\n## Selamat Datang Monster

@@ -2264,7 +2264,7 @@ km-KH:
         markdown: "\n# អាកប្បកិរិយាក្នុងបន្ទប់​កុំព្យូទ័រ\n  \n<br/><br/>    \n    \n<a
           href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nចូលទៅផែនការមេរៀន\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-lesson submitButton\">បន្ត</a>"
+          class=\"btn btn-large btn-primary next-stage submitButton\">បន្ត</a>"
       courseF_external_variableConstant:
         markdown: |-
           <h2>ច្រេីនទៀតលេីអថេរ</h2>
@@ -2612,7 +2612,7 @@ km-KH:
           សម្រាប់ផ្នែកទី២នេះអ្នកនឹងត្រូវបង្កើតគម្រោងការសម្ដែងមួយដោយខ្លូនឯង។ នៅទីនេះគ្មានចំណោទបញ្ហាអោយអ្នកដោះស្រាយទេ តែគឺមានវគ្គមួយកំភ្លុះសម្រាប់បង្រៀនអ្នកពីក្បាច់ផ្សេងៗដើម្បីបង្កើតការសម្ដែងដែលមានភាពកាន់តែស្មុគស្មាញជាញមុនទៅទៀត។
 
           វគ្គទាំងនេះ _មិនតម្រូវអោយអ្នករៀនតាមលំដាប់នោះទេ_។ អ្នកអាចផ្លោះពីមួយវគ្គទៅមួយវគ្គទៀតដើម្បីមើលរបៀបប្រើក្បាច់ណាមួយឡើងវិញ ឬក៏អាចយកផ្នែកផ្សេងៗនៃវគ្គផ្សេងគ្នាមកផ្គុំចូលគ្នាក៏បាន។ សាកល្បងអោយបានគ្រប់វគ្គទៅ ហើយរើសយកផ្នែកដែលអ្នកពេញចិត្តមកដាក់ចូលក្នុងគម្រោងការសម្ដែងរបស់អ្នកដើម្បីបង្ហាញចំណូលចិត្តផ្ទាល់ខ្លួនរបស់អ្នក។
-          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">បន្ទាប់</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">បន្ទាប់</a>
 
           <div class="clearfix"></div>
 
@@ -2770,7 +2770,7 @@ km-KH:
 
           អ្នកអាចចូលមើលវគ្គទាំងនេះ _តាមលំដាប់ណាក៏បានដែរ_. ផ្លោះពីវគ្គមួយទៅវគ្គមួយទៀតដើម្បីមើលរបៀបធ្វើអ្វីមួយនៅវគ្គមុន ឬក៏បូកបញ្ចូលគំនិតរវាងវគ្គនាៗក៏បាន។ សាកអោយបានគ្រប់វគ្គ ហើយរើសយកតែកន្លែងដែលខ្លួនពេញចិត្តមកកែច្នៃបន្ថែមដើម្បីបង្ហាញពីចំណូលចិត្តផ្ទាល់ខ្លួន។
 
-          <a class="btn btn-large btn-primary next-lesson submitButton pull-right">បន្ទាប់</a>
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">បន្ទាប់</a>
 
           <div class="clearfix"></div>
 

@@ -393,7 +393,7 @@ zh-TW:
           CS）的工具，這款工具由麻省理工大學的合作夥伴製作。在「向右掃，學電腦」中，你會閱讀一些學生檔案，並思考一些特定的句子，是否可用於說服他/她登記你的電腦科學原理課程。\r\r##
           使用方法\r玩「向右掃，學電腦」遊戲時，你會看見一系列的引述句子，並可能會用來對每位學生說出來。若你認為引述句子可有效說服特定學生報名參加課程，就把句子向右側輕掃；若你認為句子效用不大，則向左側輕掃。在工作階段中，我們會以小組形式討論你的想法，瞭解你認為哪類句子最有效讓學生報名參加
           CS 課程，而你也有機會看看工作坊裡的其他人對每個引述句子的選擇。\r<br><br><br><br>\r\r<span style=\"display:none\">submitButton
-          next-lesson</span>\r\r<a class=\"btn btn-large btn-primary submitButton\"
+          next-stage</span>\r\r<a class=\"btn btn-large btn-primary submitButton\"
           href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">點擊這裡，開始「向右掃，學電腦」遊戲！</a>\r\r"
       PlantASeed_2019:
         title: 生活中的演算法 - 植物種植

@@ -942,7 +942,7 @@ ja-JP:
           助け合うこと とは、コンピュータ サイエンスの世界で 問題を解決しようとするとき、あなたが一人でがんばるよりも、クラスのみんなで協力したほうが、はやく解決できる ということを 意味します。
       Dance_Party_extras_intro:
         markdown: "＃ダンスを継続する！\n\nパート2では、独自のプロジェクトを創作します。ここにはパズルはありません-代わりに、より複雑なダンスパーティーを創作するさまざまな方法を示す多くのプロジェクトがあります。\n\nこれらのレベルは_あらゆる順序で_実行できます。前のレベルでどのように行われたかを確認したり、プロジェクト間でコンセプトを組み合わせたりしてください。それらをすべて試して、お気に入りを選んで、そのプロジェクトに自分のプロジェクトを追加する作業を行ってください。
-          \n\n<a class=\"btn btn-large btn-primary next-lesson submitButton pull-right\">継続する</a>
+          \n\n<a class=\"btn btn-large btn-primary next-stage submitButton pull-right\">継続する</a>
           <div class=\"clearfix\">\n\n</div> \n\n<div style=\"float: left; margin:
           10px\"> \n<a href=\"2\"> \n<h2>\nバック&フォース（行ったり来たり）\n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
           </div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"3\"> \n<h2>\n
@@ -962,7 +962,7 @@ ja-JP:
           \n\n</div>\n"
       Dance_Party_extras_intro_2019:
         markdown: "\"＃踊りつづけて！\n\nパート2では、独自のプロジェクトを作成します。ここにはパズルはありません。代わりに、より複雑なダンスパーティーを作成するさまざまな方法を示す多数のプロジェクトがあります。\n\nレベルは_任意の順序で_実行できます。前のレベルで何かがどう行われたかを確認したり、プロジェクト間でコンセプトを組み合わせたりしてください。それらをすべて試して、お気に入りを選んで、時間を使ってそのプロジェクトに追加して、自分のものを作成してください。\n\n<html>
-          <a class=\"\"btn btn-large btn-primary next-lesson submitButton pull-right\"\">続行</a>
+          <a class=\"\"btn btn-large btn-primary next-stage submitButton pull-right\"\">続行</a>
           \n\n<div class=\"\"clearfix\"\"></div>\n\n<div style=\"\"float: left; margin:
           10px\"\">\n<a href=\"\"2\"\">\n<h2>\n行ったり来たり\n</h2>\n\n<img src=\"\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"\"></a>\n\n</div>\n\n<div
           style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"3\"\">\n<h2>\nその他のボタン\n</h2>\n\n<img
@@ -3517,7 +3517,7 @@ ja-JP:
       gradek1_activity_beNice:
         markdown: "# Behaving in the Computer Lab\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nレッスンプランへ行く\n</button> \n</a>\n\n<br/><br/>\n<a
-          class=\"btn btn-large btn-primary next-lesson submitButton\">続行</a>"
+          class=\"btn btn-large btn-primary next-stage submitButton\">続行</a>"
       outbreak_story:
         content1: 説明
       outbreak_story2:
