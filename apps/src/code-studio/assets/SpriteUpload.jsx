@@ -75,7 +75,7 @@ export default class SpriteUpload extends React.Component {
     );
   };
 
-  // 'uploadType' indicates whether the response comes from uploading the 'Image' file or the 'Metadata' file
+  // 'uploadType' indicates whether the response comes from uploading the sprite file or the metadata file
   onSuccess = (uploadType, response) => {
     let responseMessage = response.ok
       ? `${uploadType} Successfully Uploaded`
@@ -93,7 +93,7 @@ export default class SpriteUpload extends React.Component {
     }
   };
 
-  // 'uploadType' indicates whether the response comes from uploading the 'Image' file or the 'Metadata' file
+  // 'uploadType' indicates whether the response comes from uploading the sprite file or the metadata file
   onError = (uploadType, error) => {
     if (uploadType === UploadType.SPRITE) {
       this.setState({
