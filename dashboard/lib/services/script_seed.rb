@@ -518,9 +518,8 @@ module Services
 
     def self.import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
       return [] unless seed_context.script.get_course_version
-      return [] if lessons_vocabularies_data.blank?
 
-      lessons_vocabularies_to_import = lessons_vocabularies_data.map do |lv_data|
+      lessons_vocabularies_to_import = (lessons_vocabularies_data || []).map do |lv_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
@@ -545,9 +544,7 @@ module Services
     end
 
     def self.import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
-      return [] if lessons_programming_expressions_data.blank?
-
-      lessons_programming_expressions_to_import = lessons_programming_expressions_data.map do |lpe_data|
+      lessons_programming_expressions_to_import = (lessons_programming_expressions_data || []).map do |lpe_data|
         lesson_id = seed_context.lessons.select {|l| l.key == lpe_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 

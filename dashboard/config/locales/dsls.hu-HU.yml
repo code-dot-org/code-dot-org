@@ -503,7 +503,7 @@ hu-HU:
         markdown: |
           # A nagy esemény
 
-          A számítástechnikában az események a akciók, amit a számítógép kijelez. Ebben a leckében a gép másképp reagál, attól függően, hogy melyik gombot nyomod meg.
+          A számítástechnikában az események olyan akciók, amiket a számítógép kijelez. Ebben a leckében a gép mindenre másképp reagál, attól függően, hogy melyik gombot nyomod meg.
       BigEvent-Unplugged_2020:
         markdown: |
           # A nagy esemény
@@ -1524,44 +1524,60 @@ hu-HU:
             gond a kóddal?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - {}
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: A madár eljut a malacig.
           correct: true
           feedback: Helyes!
-        - {}
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
         questions:
-        - {}
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - {}
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: A madár eljut a malacig.
           correct: true
           feedback: Helyes!
-        - {}
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
         questions:
-        - {}
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - {}
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: A madár eljut a malacig.
           correct: true
           feedback: Helyes!
-        - {}
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
         questions:
-        - {}
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - {}
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: A madár eljut a malacig.
           correct: true
           feedback: Helyes!
-        - {}
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
         - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
         questions:
-        - {}
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 nem fog megmozdulni.
@@ -2501,7 +2517,8 @@ hu-HU:
           feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
             és ez hibát okoz.
         questions:
-        - {}
+        - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
+            a programot?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
@@ -2518,7 +2535,8 @@ hu-HU:
           feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
             és ez hibát okoz.
         questions:
-        - {}
+        - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
+            a programot?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
@@ -2535,14 +2553,13 @@ hu-HU:
           feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
             és ez hibát okoz.
         questions:
-        - {}
+        - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
+            a programot?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           # Az Online Szomszédságom
 
           ## Hogyan juss el biztonságosan valahová online?
-      CSD U1 Test:
-        title: Számítógépek és problémamegoldás projektzáró teszt
       outbreak_story:
         content1: a leírás itt található
       outbreak_story2:

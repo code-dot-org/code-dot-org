@@ -155,6 +155,7 @@
   "errorUnusedParam": "Anda telah menambah sebuah blok parameter, tetapi tidak menggunakannya di dalam definisi. Pastikan anda menggunakan parameter tersebut dengan mengklik \"sunting\" dan meletakkannya di dalam blok hijau.",
   "exampleErrorMessage": "Fungsi {functionName} mempunyai satu atau lebih contoh yang perlu penyesuaian. Pastikan kesemuanya sepadan dengan definisi anda dan jawab soalan.",
   "examplesFailedOnClose": "Satu atau lebih daripada contoh-contoh anda tidak sepadan dengan definisinya. Semak contoh-contoh anda sebelum menutupnya",
+  "explainRestrictedSectionLearnMore": "Ketahui lebih lanjut",
   "extraTopBlocks": "Anda mempunyai blok-blok yang tidak dicantumkan.",
   "extraTopBlocksWhenRun": "Anda mempunyai blok-blok yang tidak dicantumkan. Adakah anda bermaksud untuk mencantumkannya kepada blok \"apabila berjalan\"?",
   "finalStage": "Tahniah! Anda telah melengkapkan peringkat akhir.",

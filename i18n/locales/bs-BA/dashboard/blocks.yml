@@ -939,6 +939,10 @@ bs:
             '"rotation"': rotacija
             '"direction"': smijer kretanja
             '"speed"': brzina
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': veličina
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1108,6 +1112,13 @@ bs:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': mreža
+            '"border"': ivica
+            '"row"': red
+            '"random"': slučajno odabran
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
@@ -1116,9 +1127,12 @@ bs:
         text: okreni desno
       Vector_positionCenter:
         text: centralna
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
+            '"grid"': mreža
+            '"border"': ivica
+            '"row"': red
             '"random"': slučajno odabran
       binary_move:
         options:

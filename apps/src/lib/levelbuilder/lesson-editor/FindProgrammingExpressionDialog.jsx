@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import queryString from 'query-string';
 
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
@@ -167,7 +168,7 @@ export class FindProgrammingExpressionDialog extends Component {
       params.programmingEnvironmentName = this.state.filteredProgrammingEnvironment;
     }
 
-    fetch('/programming_expressions/search?' + new URLSearchParams(params))
+    fetch('/programming_expressions/search?' + queryString.stringify(params))
       .then(response => response.json())
       .then(data => {
         this.setState({

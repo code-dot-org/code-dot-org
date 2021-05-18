@@ -1007,7 +1007,7 @@
           "grade2_CaringForNewPet_0_1": "Wenn du alle Blöcke verbunden hast, drücke auf \"Ausführen\", um dein Programm zu starten."
         },
         "courseC_maze_programming2": {
-          "courseC_maze_programming2_1": "Das ist die Werkzeugkiste. Hier findest du zusätzliche Blöcke, mit denen du deine Aufgaben lösen kannst."
+          "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
         },
         "courseC_maze_programming2_2018": {
           "courseC_maze_programming2_1": "Das ist der Werkzeugkasten. Hier findest du zusätzliche Blöcke, mit denen du deine Rätsel lösen kannst."
@@ -1035,7 +1035,7 @@
           "courseC_maze_programming3_3": "Diese Blöcke sind aus Stein und können nicht weggeworfen werden."
         },
         "courseC_maze_programming4": {
-          "courseC_maze_programming4_1": "Dies ist deine maximale Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
+          "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
         },
         "courseC_maze_programming4_2018": {
           "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
@@ -1047,7 +1047,7 @@
           "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
         },
         "courseC_maze_programming5": {
-          "": "Auf diesen Blöcken sind keine Zahlen. Du kannst so viele verwenden, wie du willst!"
+          "": "Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du willst!"
         },
         "courseC_maze_programming5_2018": {
           "": "Diese Blöcke haben keine Nummern. Du kannst so viele verwenden, wie du willst!"
@@ -1205,7 +1205,7 @@
           "stone_block_2": "Graue Bausteine können nicht entfernt werden."
         },
         "courseD_maze_ramp4": {
-          "courseC_maze_programming4_1": "Dies ist deine maximale Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
+          "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
         },
         "courseD_maze_ramp4_2018": {
           "courseC_maze_programming4_1": "Dies ist deine maximal Anzahl an Blöcken. Die Zahl sagt dir, wie viele dieser Blöcke du noch verwenden kannst."
@@ -1345,7 +1345,7 @@
           "courseE_artist_functions_challenge2_callout2": "Wenn dir dieses Design nicht gefällt, ändere es so, wie es dir gefällt."
         },
         "courseE_artist_ramp8": {
-          "courseE_artist_ramp8_1": "Du kannst diese Zahl ändern",
+          "courseE_artist_ramp8_1": "Du kannst diese Zahl ändern.",
           "courseE_artist_ramp8_2": "Klicke hier, um die Anzahl der Wiederholungen deines Codes einzugeben."
         },
         "courseE_artist_ramp8_2": {
@@ -1614,7 +1614,7 @@
           "courseD_maze_ramp6_1": "Egal, welchen Code du hier eingibst, er wird so oft wiederholt, wie du es vorschreibst, und führt dann das verbleibende Programm aus."
         },
         "courseD_video_nestedLoopsArtist": {
-          "courseE_artist_ramp8_1": "Du kannst diese Zahl ändern",
+          "courseE_artist_ramp8_1": "Du kannst diese Zahl ändern.",
           "courseE_artist_ramp8_2": "Klicke hier, um die Anzahl der Wiederholungen deines Codes einzugeben."
         },
         "outbreak2": {

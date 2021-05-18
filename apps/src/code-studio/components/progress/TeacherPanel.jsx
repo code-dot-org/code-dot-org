@@ -265,7 +265,7 @@ export default connect(state => {
     stageNames[stage.id] = stage.name;
   });
 
-  // Pretend we don't have lockable stages if we're not authorized to see them
+  // Pretend we don't have lockable lessons if we're not authorized to see them
   const scriptHasLockableStages =
     lockableAuthorized && hasLockableStages(state.progress);
 

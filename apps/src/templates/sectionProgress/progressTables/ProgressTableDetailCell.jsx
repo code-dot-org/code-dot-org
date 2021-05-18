@@ -5,6 +5,7 @@ import {
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
+import {lessonHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -102,6 +103,9 @@ export default class ProgressTableDetailCell extends React.Component {
   }
 
   render() {
+    if (!lessonHasLevels({levels: this.props.levels})) {
+      return null;
+    }
     return (
       <div
         style={{...styles.container, ...progressStyles.cellContent}}
