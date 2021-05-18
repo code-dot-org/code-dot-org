@@ -21,7 +21,7 @@ export default storybook => {
         const store = createStore();
         return (
           <Provider store={store}>
-            <SendLesson lessonUrl="https://studio.code.org/s/coursee-2020/stage/2/puzzle/1?login_required=true" />
+            <SendLesson lessonUrl="https://studio.code.org/s/coursee-2020/lessons/2/levels/1?login_required=true" />
           </Provider>
         );
       }
@@ -33,7 +33,7 @@ export default storybook => {
         return (
           <Provider store={store}>
             <SendLesson
-              lessonUrl="https://studio.code.org/s/coursee-2020/stage/2/puzzle/1?login_required=true"
+              lessonUrl="https://studio.code.org/s/coursee-2020/lessons/2/levels/1?login_required=true"
               lessonTitle="Sequencing in the Maze"
               courseid={12345}
               analyticsData='{\"script_name\":\"coursee-2020\",\"section_id\":7,\"lesson_id\":1050,\"lesson_name\":\"Sequencing in the Maze\"}'
