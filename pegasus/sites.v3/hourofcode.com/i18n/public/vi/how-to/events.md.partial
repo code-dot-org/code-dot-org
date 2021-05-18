@@ -6,62 +6,62 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Cách tổ chức sự kiện hoặc hội thảo Giờ lập trình
 
-### Get your entire school or community involved in an Hour of Code!
+### Thu hút toàn bộ trường học hoặc cộng đồng của bạn tham gia Giờ lập trình!
 
 * * *
 
 ## 1. Chuẩn bị cho sự kiện
 
-- Xác định địa điểm, ngày và giờ tổ chức.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Xác định địa điểm, ngày và giờ.
+- Gửi [thư](https://hourofcode.com/promote/resources#sample-emails) cho thị trưởng, đại biểu Quốc hội, thống đốc tại nơi bạn sống và mời họ phát biểu. Xem [bộ công cụ hướng dẫn]({{ localized_files/elected_official }}) của chúng tôi khi tiếp đón một vị quan chức được bầu cử tham gia Giờ lập trình để biết thêm thông tin.
+- Mời cơ quan truyền thông/báo chí như tức là đài truyền hình, tòa soạn báo, blogger giáo dục/công nghệ tại địa phương. Xem [bộ tài liệu truyền thông]({{ promote/press_kit_url }}) của chúng tôi để được trợ giúp.
 
-## 2. Trong suốt sự kiện
+## 2. Trong sự kiện của bạn
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Bắt đầu sự kiện của bạn bằng một trong những [video truyền cảm hứng]({{ promote/videos }}) của chúng tôi.
+- Giới thiệu tổng quan về tầm quan trọng của khoa học máy tính, sử dụng các [số liệu thống kê và biểu đồ hình ảnh]({{ promote/stats_url }}) sau.   
       
     
 - **Các ý tưởng sự kiện khác**: 
-    - Mời một nhà lãnh đạo ngành công nghiệp địa phương để thảo luận về công việc của mình liên quan đến khoa học máy tính.
-    - Mời một chính trị gia địa phương đến và để cho học sinh dạy ông/bà ấy biết cách lập trình.
-    - Mời một nhóm học sinh làm mẫu thử một hoạt động mà không cần máy vi tính.
-    - Cho một nhóm học sinh dạy cách lập trình cho ngài Hiệu trưởng hoặc một nhóm giáo viên.
-    - Nếu trường của bạn đã dạy về khoa học máy tính rồi, hãy để các học sinh giới thiệu các dự án mẫu.
+    - Mời một nhà lãnh đạo ngành tại địa phương thảo luận về công việc của họ liên quan đến khoa học máy tính.
+    - Mời một chính trị gia địa phương và để học sinh hướng dẫn người đó cách viết mã lệnh.
+    - Yêu cầu một nhóm học sinh trình diễn hoạt động không sử dụng thiết bị điện tử.
+    - Yêu cầu một nhóm học sinh hướng dẫn hiệu trưởng hoặc một nhóm giáo viên cách viết mã lệnh.
+    - Nếu trường học của bạn đã dạy môn khoa học máy tính, hãy yêu cầu học sinh làm các dự án demo.
 
-## 3. Chia sẻ về sự kiện đã diễn ra như thế nào
+## 3. Chia sẻ diễn biến sự kiện
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Tổ chức một Đêm Lập trình của Gia Đình với Giờ Lập trình và mời phụ huynh tham gia
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Chia sẻ hình ảnh về sự kiện của bạn trên Facebook và Twitter và sử dụng hashtag **#GiờLậpTrình**.
 
 * * *
 
-## Example plan for a school assembly or event
+## Tổ chức Đêm lập trình gia đình (Family Code Night) cùng Giờ lập trình và mời cha mẹ tham gia
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Cân nhắc tổ chức một sự kiện buổi tối cho học sinh K-5 và mời phụ huynh tham gia cùng các em trong một giờ học môn khoa học máy tính. Đây là một cách tuyệt vời để thu hút cộng đồng lớn hơn và khuyến khích sự ủng hộ của phụ huynh đối với môn khoa học máy tính tại trường của bạn. Các đối tác của chúng tôi tại Family Code Night đã tạo ra một bộ sự kiện hoàn chỉnh kèm theo danh sách kiểm tra kế hoạch, kịch bản cho người thuyết trình, email mời tham dự, áp phích, powerpoint, v.v. để tổ chức sự kiện của riêng bạn. [Nhấp chuột vào đây để tải xuống Bộ công cụ sự kiện](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## Kế hoạch mẫu cho một buổi họp mặt hoặc sự kiện ở trường
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**Sự kiện:** Lễ khai mạc Tuần lễ Giáo dục Khoa học Máy tính toàn trường
 
-## Chạy Chương trình
+**Ngày:** {{ campaign_date/start_short }} (bắt đầu Tuần lễ Giáo dục Khoa học Máy tính)
 
-| Thời gian   | Hoạt động                                                                                                                                                            |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                   |
-| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                |
-| 10:17-10:30 | Khách mời đặc biệt nói về lý lịch/công việc của họ và làm thế nào mà khoa học công nghệ và máy vi tính đóng một vai trò quan trọng trong cuộc sống hàng ngày của họ. |
-| 10:30-10:40 | Học sinh làm một bản giới thiệu về Giờ Lập trình cho trường học. Khuấy động không khí: để học sinh dạy cho hiệu trưởng, chính trị gia hoặc các học sinh khác!        |
-| 10:40-11:00 | Sinh viên làm ví dụ một hoạt động không cần máy vi tính và giới thiệu cách mà khoa học máy vi tính có thể được giảng dạy mà không sử dụng máy tính.                  |
-| 11:00-11:05 | Giáo viên, người đã giúp đỡ tổ chức sự kiện toàn trường đưa ra bài phát biểu bế mạc.                                                                                 |
+**Thời gian:** Trong ngày đi học. Ưu tiên sự kiện vào giữa giờ buổi sáng. Khoảng 1 giờ.
+
+**Địa điểm:** Hội trường (Ví dụ: nhà hát, phòng thể chất, căn tin)
+
+## Kịch bản chương trình
+
+| Thời gian          | Hoạt động                                                                                                                                                  |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 – 10:05 sáng | Mở màn bằng một trong các [video truyền cảm hứng]({{ promote/videos }}) của chúng tôi.                                                                     |
+| 10:05 – 10:15 sáng | Hiệu trưởng giới thiệu tổng quan về tầm quan trọng của khoa học máy tính. Sử dụng các [số liệu thống kê và biểu đồ hình ảnh]({{ promote/stats_url }}) sau. |
+| 10:15 – 10:30 sáng | Khách mời đặc biệt nói về xuất thân của mình và cách công nghệ cũng như khoa học máy tính đóng vai trò quan trọng trong cuộc sống hàng ngày của người đó.  |
+| 10:30 – 10:40 sáng | Học sinh thực hiện bản demo Giờ lập trình cho trường. Điều thú vị: hãy yêu cầu các em hướng dẫn hiệu trưởng, chính trị gia hoặc các học sinh khác!         |
+| 10:40 – 11:00 sáng | Học sinh trình diễn một hoạt động không sử dụng thiết bị điện tử và cách giảng dạy môn khoa học máy tính mà không cần sử dụng máy tính.                    |
+| 11:00 – 11:05 sáng | Giáo viên đã giúp tổ chức sự kiện toàn trường phát biểu bế mạc.                                                                                            |
 
 {{ signup_button }}

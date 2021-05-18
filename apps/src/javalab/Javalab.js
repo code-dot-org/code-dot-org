@@ -11,7 +11,7 @@ import javalab, {
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import JavabuilderConnection from './javabuilderConnection';
+import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
@@ -36,6 +36,7 @@ const Javalab = function() {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
+  this.miniApp = null;
 };
 
 /**
@@ -84,9 +85,9 @@ Javalab.prototype.init = function(config) {
   const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
   let visualization;
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    const miniApp = new Neighborhood();
+    this.miniApp = new Neighborhood();
     config.afterInject = () =>
-      miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+      this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
     const iconPath = '/blockly/media/turtle/';
     visualization = (
       <NeighborhoodVisualizationColumn iconPath={iconPath} showSpeedSlider />
@@ -187,10 +188,12 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  this.miniApp.reset();
   this.javabuilderConnection = new JavabuilderConnection(
     this.channelId,
     this.level.javabuilderUrl,
-    message => getStore().dispatch(appendOutputLog(message))
+    message => getStore().dispatch(appendOutputLog(message)),
+    this.miniApp
   );
   this.javabuilderConnection.connectJavabuilder();
 };

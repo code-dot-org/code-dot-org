@@ -334,8 +334,8 @@ class UnitGroup < ApplicationRecord
       is_stable: is_stable?,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
-      description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
+      description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
+      description_teacher: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_teacher", default: '')),
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       scripts: scripts_for_user(user).map do |script|
         include_lessons = false
@@ -350,7 +350,8 @@ class UnitGroup < ApplicationRecord
       versions: summarize_versions(user),
       show_assign_button: assignable?(user),
       announcements: announcements,
-      course_version_id: course_version&.id
+      course_version_id: course_version&.id,
+      course_path: link
     }
   end
 

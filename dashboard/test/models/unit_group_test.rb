@@ -367,7 +367,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
-                  :announcements, :course_version_id], summary.keys
+                  :announcements, :course_version_id, :course_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -438,6 +438,23 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert_equal 'Unit 2 - script2-title', unit_group.summarize[:scripts].last[:title]
     assert_equal 'Unit 2 - script2-title', script2.summarize[:title]
+  end
+
+  test 'summarize preprocesses markdown' do
+    course_offering = create :course_offering
+    course_version = create :course_version, course_offering: course_offering
+    resource = create :resource, course_version: course_version
+    vocab = create :vocabulary, course_version: course_version
+
+    source = "We support [r #{Services::MarkdownPreprocessor.build_resource_key(resource)}] resource links and [v #{Services::MarkdownPreprocessor.build_vocab_key(vocab)}] vocabulary definitions"
+    I18n.stubs(:t).returns(source)
+
+    expected = "We support [fake name](fake.url) resource links and <span class=\"vocab\" title=\"definition\">word</span> vocabulary definitions"
+    unit_group = create :unit_group
+    summary = unit_group.summarize
+
+    assert_equal(expected, summary[:description_student])
+    assert_equal(expected, summary[:description_teacher])
   end
 
   test 'summarize_version' do
