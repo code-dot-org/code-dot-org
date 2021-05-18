@@ -31,6 +31,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {hasInstructions} from './utils';
 import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
+import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -66,6 +67,7 @@ class TopInstructions extends Component {
     longInstructions: PropTypes.string,
     dynamicInstructions: PropTypes.object,
     dynamicInstructionsKey: PropTypes.string,
+    overlayVisible: PropTypes.bool,
     ttsLongInstructionsUrl: PropTypes.string,
     isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
@@ -491,7 +493,6 @@ class TopInstructions extends Component {
             dynamicInstructionsKey={dynamicInstructionsKey}
             setInstructionsRenderedHeight={height => {
               this.props.setInstructionsRenderedHeight(height);
-              this.props.setAllowInstructionsResize(false);
             }}
           />
         );
@@ -517,6 +518,7 @@ class TopInstructions extends Component {
       longInstructions,
       dynamicInstructions,
       dynamicInstructionsKey,
+      overlayVisible,
       hasContainedLevels,
       noInstructionsWhenCollapsed,
       noVisualization,
@@ -559,7 +561,10 @@ class TopInstructions extends Component {
         height: height - RESIZER_HEIGHT
       },
       noVisualization && styles.noViz,
-      isEmbedView && styles.embedView
+      isEmbedView && styles.embedView,
+      dynamicInstructions &&
+        overlayVisible &&
+        styles.dynamicInstructionsWithOverlay
     ];
 
     const instructionsContainerStyle = [
@@ -759,6 +764,9 @@ const styles = {
     textAlign: 'center',
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
+  },
+  dynamicInstructionsWithOverlay: {
+    zIndex: OVERLAY_Z_INDEX + 1
   }
 };
 // Note: ususally the unconnected component is only used for tests, in this case it is used
@@ -795,7 +803,8 @@ export default connect(
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
     dynamicInstructions: getDynamicInstructions(state.instructions),
-    dynamicInstructionsKey: state.instructions.dynamicInstructionsKey
+    dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
+    overlayVisible: state.instructions.overlayVisible
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
