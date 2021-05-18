@@ -1,6 +1,6 @@
 export const UploadType = {
   SPRITE: 'Sprite',
-  JSON: 'JSON'
+  METADATA: 'Metadata'
 };
 
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
@@ -41,7 +41,7 @@ export function uploadSpriteToAnimationLibrary(
     });
 }
 
-export function uploadJSONtoAnimationLibrary(
+export function uploadMetadataToAnimationLibrary(
   destination,
   JSONData,
   onSuccess,
@@ -55,9 +55,9 @@ export function uploadJSONtoAnimationLibrary(
     body: JSONData
   })
     .then(response => {
-      onSuccess(UploadType.JSON, response);
+      onSuccess(UploadType.METADATA, response);
     })
     .catch(err => {
-      onError(UploadType.JSON, err);
+      onError(UploadType.METADATA, err);
     });
 }

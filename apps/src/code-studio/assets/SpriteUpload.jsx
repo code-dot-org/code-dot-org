@@ -4,7 +4,7 @@ import {makeEnum} from '@cdo/apps/utils';
 import {
   getManifest,
   uploadSpriteToAnimationLibrary,
-  uploadJSONtoAnimationLibrary,
+  uploadMetadataToAnimationLibrary,
   UploadType
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
@@ -66,7 +66,7 @@ export default class SpriteUpload extends React.Component {
       this.onSuccess,
       this.onError
     ).then(() =>
-      uploadJSONtoAnimationLibrary(
+      uploadMetadataToAnimationLibrary(
         JSONDestination,
         metadata,
         this.onSuccess,
@@ -86,7 +86,7 @@ export default class SpriteUpload extends React.Component {
       this.setState({
         imageUploadStatus: {success: response.ok, message: responseMessage}
       });
-    } else if (uploadType === UploadType.JSON) {
+    } else if (uploadType === UploadType.METADATA) {
       this.setState({
         metadataUploadStatus: {success: response.ok, message: responseMessage}
       });
@@ -99,7 +99,7 @@ export default class SpriteUpload extends React.Component {
       this.setState({
         imageUploadStatus: {success: false, message: error.toString()}
       });
-    } else if (uploadType === UploadType.JSON) {
+    } else if (uploadType === UploadType.METADATA) {
       this.setState({
         metadataUploadStatus: {success: false, message: error.toString()}
       });
