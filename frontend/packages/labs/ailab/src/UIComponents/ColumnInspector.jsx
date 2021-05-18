@@ -8,7 +8,7 @@ import {
   getCurrentColumnData,
   addSelectedFeature,
   removeSelectedFeature,
-  getRangesByColumn,
+  getExtremumsByColumn,
   setCurrentColumn
 } from "../redux";
 import { ColumnTypes, styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
@@ -54,7 +54,7 @@ class ColumnInspector extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
-    rangesByColumn: PropTypes.object,
+    extremumsByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
     currentPanel: PropTypes.string,
     labelColumn: PropTypes.string,
@@ -91,7 +91,7 @@ class ColumnInspector extends Component {
   render() {
     const {
       currentColumnData,
-      rangesByColumn,
+      extremumsByColumn,
       currentPanel,
       labelColumn,
       selectedFeatures
@@ -189,19 +189,19 @@ class ColumnInspector extends Component {
                     <div>
                       {currentColumnData.range && (
                         <div>
-                          {isNaN(rangesByColumn[currentColumnData.id].min) && (
+                          {isNaN(extremumsByColumn[currentColumnData.id].min) && (
                             <p style={styles.error}>
                               Numerical columns should contain only numbers.
                             </p>
                           )}
-                          {!isNaN(rangesByColumn[currentColumnData.id].min) && (
+                          {!isNaN(extremumsByColumn[currentColumnData.id].min) && (
                             <div style={styles.contents}>
-                              min: {rangesByColumn[currentColumnData.id].min}
+                              min: {extremumsByColumn[currentColumnData.id].min}
                               <br />
-                              max: {rangesByColumn[currentColumnData.id].max}
+                              max: {extremumsByColumn[currentColumnData.id].max}
                               <br />
                               range:{" "}
-                              {rangesByColumn[currentColumnData.id].range}
+                              {extremumsByColumn[currentColumnData.id].range}
                             </div>
                           )}
                         </div>
@@ -257,7 +257,7 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    rangesByColumn: getRangesByColumn(state),
+    extremumsByColumn: getExtremumsByColumn(state),
     currentPanel: state.currentPanel,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures
