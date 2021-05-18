@@ -23,7 +23,6 @@ class Predict extends Component {
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    confidence: PropTypes.number,
     getPredictAvailable: PropTypes.bool,
     rangesByColumn: PropTypes.object
   };
@@ -115,9 +114,6 @@ class Predict extends Component {
             <div>A.I. predicts:</div>
             <div style={styles.contents}>
               {this.props.labelColumn}: {this.props.predictedLabel}
-              {this.props.confidence && (
-                <p>Confidence: {this.props.confidence}</p>
-              )}
             </div>
           </div>
         )}
@@ -130,7 +126,6 @@ export default connect(
   state => ({
     testData: state.testData,
     predictedLabel: getConvertedPredictedLabel(state),
-    confidence: state.prediction.confidence,
     labelColumn: state.labelColumn,
     selectedNumericalFeatures: getSelectedNumericalFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
