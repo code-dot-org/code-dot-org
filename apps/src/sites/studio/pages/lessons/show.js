@@ -10,18 +10,20 @@ import announcementsReducer, {
 } from '@cdo/apps/code-studio/announcementsRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   setVerified,
   setVerifiedResources
 } from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 $(document).ready(function() {
   displayLessonOverview();
   prepareExpandableImageDialog();
+  tooltipifyVocabulary();
 });
 
 /**
