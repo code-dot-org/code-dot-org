@@ -1,6 +1,6 @@
 {
   "card": {
-    "description": "A survey from FiveThrityEight, asking people around the country what foods they have for Thanksgiving dinner.",
+    "description": "A survey from FiveThrityEight, asking people across the United States what foods they have for Thanksgiving dinner.",
     "source": "FiveThirtyEight (https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015) ",
     "lastUpdated": "2015",
     "context": {
