@@ -59,7 +59,7 @@ export default class CourseVersionPublishingEditor extends Component {
           <select
             value={this.props.familyName}
             style={styles.dropdown}
-            onChange={this.props.updateFamilyName}
+            onChange={event => this.props.updateFamilyName(event.target.value)}
           >
             {!this.props.isCourse && <option value="">(None)</option>}
             {this.props.families.map(familyOption => (
@@ -81,7 +81,7 @@ export default class CourseVersionPublishingEditor extends Component {
           <select
             value={this.props.versionYear}
             style={styles.dropdown}
-            onChange={this.props.updateVersionYear}
+            onChange={event => this.props.updateVersionYear(event.target.value)}
           >
             <option value="">(None)</option>
             {this.props.versionYearOptions.map(year => (
@@ -159,7 +159,9 @@ export default class CourseVersionPublishingEditor extends Component {
             <input
               value={this.props.pilotExperiment}
               style={styles.input}
-              onChange={this.props.updatePilotExperiment}
+              onChange={event =>
+                this.props.updatePilotExperiment(event.target.value)
+              }
             />
           </label>
         )}
