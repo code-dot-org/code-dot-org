@@ -1,14 +1,14 @@
 /* globals dashboard */
 import {WebSocketMessageType} from './constants';
-import Neighborhood from './Neighborhood';
 import {handleException} from './javabuilderExceptionHandler';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(channelId, javabuilderUrl, onMessage) {
+  constructor(channelId, javabuilderUrl, onMessage, miniApp) {
     this.channelId = channelId;
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
+    this.miniApp = miniApp;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -60,7 +60,7 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
-        Neighborhood.handleSignal(data);
+        this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
         handleException(data, this.onOutputMessage);
