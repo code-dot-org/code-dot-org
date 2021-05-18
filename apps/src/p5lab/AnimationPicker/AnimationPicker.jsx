@@ -12,7 +12,7 @@ import {
   beginUpload,
   handleUploadComplete,
   handleUploadError
-} from './animationPickerModule';
+} from '../redux/animationPicker';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 
