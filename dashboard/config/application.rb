@@ -135,12 +135,21 @@ module Dashboard
     # Support including code from directories outside of the normal Rails directory
     # structure. Specifically, include a couple of directories for misc library code, as
     # well as some subdirectories of the models dir that we use for organization.
+    #
+    # Do not re-enable dependency autoloading, it is not thread-safe and triggers errors on heavily-loaded servers.
+    # Instead, ensure all paths are `eager_load_paths` instead of `autoload_paths` so they can be eager-loaded.
+    # @see https://github.com/rails/rails/issues/13142
+    # @see https://github.com/rails/rails/issues/33209
+    # @see http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
+    # @see https://guides.rubyonrails.org/autoloading_and_reloading_constants_classic_mode.html#autoload-paths-and-eager-load-paths
+    #
+    # config.enable_dependency_loading = true
 
-    config.autoload_paths << Rails.root.join('lib')
-    config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
-    config.autoload_paths << Rails.root.join('app', 'models', 'levels')
-    config.autoload_paths << Rails.root.join('app', 'models', 'sections')
-    config.autoload_paths << Rails.root.join('../lib/cdo/shared_constants')
+    config.eager_load_paths << Rails.root.join('lib')
+    config.eager_load_paths << Rails.root.join('app', 'models', 'experiments')
+    config.eager_load_paths << Rails.root.join('app', 'models', 'levels')
+    config.eager_load_paths << Rails.root.join('app', 'models', 'sections')
+    config.eager_load_paths << Rails.root.join('../lib/cdo/shared_constants')
 
     # Make sure to explicitly cast all autoload paths to strings; the gem we use to
     # annotate model files with schema descriptions doesn't know how to deal with
@@ -149,7 +158,7 @@ module Dashboard
     # We have a PR opened with a fix at https://github.com/ctran/annotate_models/pull/848;
     # once a version of the gem is released which includes that change, we can get rid of
     # this line.
-    config.autoload_paths.map!(&:to_s)
+    config.eager_load_paths.map!(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
@@ -164,10 +173,6 @@ module Dashboard
 
     # turn off ActionMailer logging to avoid logging email addresses
     ActionMailer::Base.logger = nil
-
-    # Make sure dependency auto loading is enabled across all environments.
-    # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
-    config.enable_dependency_loading = true
 
     if CDO.newrelic_logging
       require 'newrelic_rpm'
