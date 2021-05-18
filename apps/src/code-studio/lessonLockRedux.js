@@ -24,7 +24,7 @@ const SET_SECTION_LOCK_STATUS = 'lessonLock/SET_SECTION_LOCK_STATUS';
 
 const initialState = {
   lessonsBySectionId: {},
-  lockDialogStageId: null,
+  lockDialogLessonId: null,
   // The locking info for the currently selected section/lesson
   lockStatus: [],
   saving: false,
@@ -72,13 +72,13 @@ export default function reducer(state = initialState, action) {
     }
     // If we have a lockStatus (i.e. from an open dialog) we need to update
     // it with the new section
-    const {lockDialogStageId} = state;
-    if (lockDialogStageId) {
+    const {lockDialogLessonId} = state;
+    if (lockDialogLessonId) {
       return {
         ...state,
         lockStatus: lockStatusForStage(
           state.lessonsBySectionId[sectionId],
-          lockDialogStageId
+          lockDialogLessonId
         )
       };
     }
@@ -87,7 +87,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === OPEN_LOCK_DIALOG) {
     const {sectionId, stageId} = action;
     return Object.assign({}, state, {
-      lockDialogStageId: stageId,
+      lockDialogLessonId: stageId,
       lockStatus: lockStatusForStage(
         state.lessonsBySectionId[sectionId],
         stageId
@@ -97,7 +97,7 @@ export default function reducer(state = initialState, action) {
 
   if (action.type === CLOSE_LOCK_DIALOG) {
     return Object.assign({}, state, {
-      lockDialogStageId: null,
+      lockDialogLessonId: null,
       lockStatus: initialState.lockStatus
     });
   }
@@ -203,7 +203,7 @@ const performSave = (sectionId, stageId, newLockStatus, onComplete) => {
 
 export const saveLockDialog = (sectionId, newLockStatus) => {
   return (dispatch, getState) => {
-    const stageId = getState().lessonLock.lockDialogStageId;
+    const stageId = getState().lessonLock.lockDialogLessonId;
     dispatch(
       performSave(sectionId, stageId, newLockStatus, () => {
         dispatch(closeLockDialog());

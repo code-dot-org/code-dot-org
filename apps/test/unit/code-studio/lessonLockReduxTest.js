@@ -91,14 +91,14 @@ describe('lessonLockRedux reducer tests', () => {
   });
 
   describe('openLockDialog', () => {
-    it('updates lock status and lockDialogStageId', () => {
+    it('updates lock status and lockDialogLessonId', () => {
       const state = reducer(undefined, setSectionLockStatus(fakeSectionData));
       assert.deepEqual(state.lockStatus, []);
-      assert.equal(state.lockDialogStageId, null);
+      assert.equal(state.lockDialogLessonId, null);
 
       const action = openLockDialog(section1Id, stage1Id);
       const nextState = reducer(state, action);
-      assert.equal(nextState.lockDialogStageId, stage1Id);
+      assert.equal(nextState.lockDialogLessonId, stage1Id);
 
       const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
       const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
@@ -125,14 +125,14 @@ describe('lessonLockRedux reducer tests', () => {
   });
 
   describe('closeLockDialog', () => {
-    it('resets saving/lockStatus/lockDialogStageId', () => {
+    it('resets saving/lockStatus/lockDialogLessonId', () => {
       let state = reducer({}, setSectionLockStatus(fakeSectionData));
       state = reducer(state, openLockDialog(section1Id, stage1Id));
       state = reducer(state, beginSave());
 
       const action = closeLockDialog();
       const nextState = reducer(state, action);
-      assert.equal(nextState.lockDialogStageId, null);
+      assert.equal(nextState.lockDialogLessonId, null);
       assert.deepEqual(nextState.lockStatus, []);
     });
   });
