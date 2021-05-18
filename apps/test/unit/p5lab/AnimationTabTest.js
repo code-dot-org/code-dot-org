@@ -1,9 +1,9 @@
-var animationTabModule = require('@cdo/apps/p5lab/AnimationTab/animationTabModule');
+var animationTab = require('@cdo/apps/p5lab/redux/animationTab');
 import {expect} from '../../util/deprecatedChai';
 
 describe('AnimationTab', function() {
   describe('reducer', function() {
-    var reducer = animationTabModule.default;
+    var reducer = animationTab.default;
     var initialState = {
       columnSizes: [150, undefined],
       selectedAnimation: ''
@@ -19,7 +19,7 @@ describe('AnimationTab', function() {
     });
 
     describe('action: selectAnimation', function() {
-      var selectAnimation = animationTabModule.selectAnimation;
+      var selectAnimation = animationTab.selectAnimation;
 
       it('changes selected animation in state', function() {
         var newState = reducer(initialState, selectAnimation('animationKey'));
