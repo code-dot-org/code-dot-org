@@ -17,7 +17,7 @@ describe('the level builder page init script', () => {
         is_migrated: false
       },
       i18n: {
-        stageDescriptions: [],
+        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:

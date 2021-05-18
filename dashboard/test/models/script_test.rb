@@ -1434,7 +1434,7 @@ class ScriptTest < ActiveSupport::TestCase
     metadata = {
       'title' => 'Report Script Name',
       'description' => 'This is what Report Script is all about',
-      stage_descriptions: [{
+      lesson_descriptions: [{
         'name' => 'Report Stage 1',
         'descriptionStudent' => 'lesson 1 is pretty neat',
         'descriptionTeacher' => 'This is what you should know as a teacher'

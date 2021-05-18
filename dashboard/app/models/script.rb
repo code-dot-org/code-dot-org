@@ -1323,7 +1323,7 @@ class Script < ApplicationRecord
   # There are three types of i18n data
   # 1. Lesson names, which we get from the script DSL, and is passed in as lessons_i18n here
   # 2. Script Metadata (title, descs, etc.) which is in metadata_i18n
-  # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
+  # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:lesson_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, script_name = '', metadata_i18n = {})
     scripts_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     i18n = File.exist?(scripts_yml) ? YAML.load_file(scripts_yml) : {}
@@ -1334,7 +1334,7 @@ class Script < ApplicationRecord
 
   def self.update_i18n(existing_i18n, lessons_i18n, script_name = '', metadata_i18n = {})
     if metadata_i18n != {}
-      lesson_descriptions = metadata_i18n.delete(:stage_descriptions)
+      lesson_descriptions = metadata_i18n.delete(:lesson_descriptions)
       metadata_i18n['lessons'] = {}
       unless lesson_descriptions.nil?
         JSON.parse(lesson_descriptions).each do |lesson|
@@ -1569,7 +1569,7 @@ class Script < ApplicationRecord
     data[:student_description] = Services::MarkdownPreprocessor.process(I18n.t("data.script.name.#{name}.student_description", default: ''))
 
     if include_lessons
-      data[:stageDescriptions] = lessons.map do |lesson|
+      data[:lessonDescriptions] = lessons.map do |lesson|
         {
           key: lesson.key,
           name: lesson.name,

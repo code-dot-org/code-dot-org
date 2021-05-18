@@ -57,7 +57,7 @@ describe('ScriptEditor', () => {
       initialAnnouncements: [],
       curriculumUmbrella: 'CSF',
       i18nData: {
-        stageDescriptions: [],
+        lessonDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
         studentDescription:
