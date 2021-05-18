@@ -1,4 +1,4 @@
-import {fullyLockedStageMapping} from '@cdo/apps/code-studio/lessonLockRedux';
+import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
@@ -74,7 +74,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
 export function lessonIsLockedForAllStudents(lessonId, state) {
   const currentSectionId = state.teacherSections.selectedSectionId;
   const currentSection = state.lessonLock.lessonsBySectionId[currentSectionId];
-  const fullyLockedStages = fullyLockedStageMapping(currentSection);
+  const fullyLockedStages = fullyLockedLessonMapping(currentSection);
   return !!fullyLockedStages[lessonId];
 }
 

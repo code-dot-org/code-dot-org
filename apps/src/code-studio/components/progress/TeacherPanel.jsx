@@ -5,7 +5,7 @@ import TeacherPanelContainer from '../TeacherPanelContainer';
 import SectionSelector from './SectionSelector';
 import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {fullyLockedStageMapping} from '../../lessonLockRedux';
+import {fullyLockedLessonMapping} from '../../lessonLockRedux';
 import {ViewType} from '../../viewAsRedux';
 import {hasLockableStages} from '../../progressRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -253,7 +253,7 @@ export default connect(state => {
   } = state.teacherSections;
   const currentSection = lessonsBySectionId[selectedSectionId];
 
-  const fullyLocked = fullyLockedStageMapping(
+  const fullyLocked = fullyLockedLessonMapping(
     state.lessonLock.lessonsBySectionId[selectedSectionId]
   );
   const unlockedStageIds = Object.keys(currentSection || {}).filter(
