@@ -101,7 +101,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, unplugged: true
     script_level = create(
-      :sclessonlevel,
+      :script_level,
       script: script,
       lesson: lesson,
       levels: [
