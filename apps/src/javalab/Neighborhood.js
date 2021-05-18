@@ -43,12 +43,13 @@ export default class Neighborhood {
     const type = signal.value;
     switch (type) {
       case NeighborhoodSignalType.MOVE: {
-        // TODO: Add client-side support for accessing painters by ID
-        const {direction /*, id*/} = signal.detail;
-        this.controller.animatedMove(
-          Direction[direction.toUpperCase()],
-          1000 /*, id*/
-        );
+        const {direction, id} = signal.detail;
+        this.controller.animatedMove(Direction[direction.toUpperCase()], id);
+        break;
+      }
+      case NeighborhoodSignalType.INITIALIZE: {
+        const {direction, x, y, id} = signal.detail;
+        this.controller.addPegman(id, x, y, direction);
         break;
       }
       default:
@@ -58,6 +59,6 @@ export default class Neighborhood {
   }
 
   reset() {
-    this.controller.reset();
+    //this.controller.reset();
   }
 }
