@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
@@ -14,25 +13,29 @@ import ResourceType, {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import $ from 'jquery';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    versionTitle: PropTypes.string,
-    familyName: PropTypes.string,
-    versionYear: PropTypes.string,
+    initialTitle: PropTypes.string.isRequired,
+    initialVersionTitle: PropTypes.string,
+    initialFamilyName: PropTypes.string,
+    initialVersionYear: PropTypes.string,
     initialVisible: PropTypes.bool.isRequired,
-    isStable: PropTypes.bool.isRequired,
+    initialIsStable: PropTypes.bool.isRequired,
     initialPilotExperiment: PropTypes.string,
-    descriptionShort: PropTypes.string,
+    initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
-    scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    initialScriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
-    hasVerifiedResources: PropTypes.bool.isRequired,
-    hasNumberedUnits: PropTypes.bool.isRequired,
+    initialHasVerifiedResources: PropTypes.bool.isRequired,
+    initialHasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -57,12 +60,31 @@ class CourseEditor extends Component {
     }
 
     this.state = {
+      isSaving: false,
+      error: null,
+      lastSaved: null,
       descriptionStudent: this.props.initialDescriptionStudent,
       descriptionTeacher: this.props.initialDescriptionTeacher,
       announcements: this.props.initialAnnouncements,
       visible: this.props.initialVisible,
       pilotExperiment: this.props.initialPilotExperiment,
-      teacherResources: teacherResources
+      teacherResources: teacherResources,
+      title: this.props.initialTitle,
+      versionTitle: this.props.initialVersionTitle,
+      descriptionShort: this.props.initialDescriptionShort,
+      hasVerifiedResources: this.props.initialHasVerifiedResources,
+      hasNumberedUnits: this.props.initialHasNumberedUnits,
+      familyName: this.props.initialFamilyName,
+      versionYear: this.props.initialVersionYear,
+      isStable: this.props.initialIsStable,
+      scriptsInCourse: this.props.initialScriptsInCourse,
+      publishedState: this.props.initialVisible
+        ? this.props.initialIsStable
+          ? 'Recommended'
+          : 'Preview'
+        : this.props.initialPilotExperiment
+        ? 'Pilot'
+        : 'Beta'
     };
   }
 
@@ -70,20 +92,93 @@ class CourseEditor extends Component {
     this.setState({announcements: newAnnouncements});
   };
 
+  handleSave = (event, shouldCloseAfterSave) => {
+    event.preventDefault();
+
+    this.setState({isSaving: true, lastSaved: null, error: null});
+
+    let dataToSave = {
+      title: this.state.title,
+      version_title: this.state.versionTitle,
+      description_short: this.state.descriptionShort,
+      description_student: this.state.descriptionStudent,
+      description_teacher: this.state.descriptionTeacher,
+      has_verified_resources: this.state.hasVerifiedResources,
+      has_numbered_units: this.state.hasNumberedUnits,
+      family_name: this.state.familyName,
+      version_year: this.state.versionYear,
+      is_stable: this.state.isStable,
+      visible: this.state.visible,
+      pilot_experiment: this.state.pilotExperiment,
+      scripts: this.state.scriptsInCourse
+    };
+
+    if (this.props.migratedTeacherResources) {
+      dataToSave.resourceIds = this.props.migratedTeacherResources.map(
+        r => r.id
+      );
+    }
+
+    if (this.props.studentResources) {
+      dataToSave.studentResourceIds = this.props.studentResources.map(
+        r => r.id
+      );
+    }
+
+    if (
+      this.state.publishedState === 'Pilot' &&
+      this.state.pilotExperiment === ''
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a pilot experiment in order to save with published state as pilot.'
+      });
+      return;
+    }
+
+    $.ajax({
+      url: `/courses/${this.props.name}`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(dataToSave)
+    })
+      .done(data => {
+        if (shouldCloseAfterSave) {
+          navigateToHref(linkWithQueryParams(data.coursePath));
+        } else {
+          this.setState({
+            lastSaved: Date.now(),
+            isSaving: false
+          });
+        }
+      })
+      .fail(error => {
+        this.setState({isSaving: false, error: error.responseText});
+      });
+  };
+
   render() {
+    const {name, scriptNames, courseFamilies, versionYearOptions} = this.props;
     const {
-      name,
+      announcements,
+      teacherResources,
       title,
       versionTitle,
+      descriptionShort,
+      descriptionStudent,
+      descriptionTeacher,
+      hasVerifiedResources,
+      hasNumberedUnits,
       familyName,
       versionYear,
-      descriptionShort,
+      pilotExperiment,
+      isStable,
+      visible,
       scriptsInCourse,
-      scriptNames,
-      courseFamilies,
-      versionYearOptions
-    } = this.props;
-    const {announcements, teacherResources} = this.state;
+      publishedState
+    } = this.state;
     return (
       <div>
         <h1>{name}</h1>
@@ -91,9 +186,9 @@ class CourseEditor extends Component {
           Display Name
           <input
             type="text"
-            name="title"
             defaultValue={title}
             style={styles.input}
+            onChange={e => this.setState({title: e.target.value})}
           />
         </label>
         <label>
@@ -118,8 +213,8 @@ class CourseEditor extends Component {
             type="text"
             defaultValue={versionTitle}
             placeholder="e.g. '19-'20"
-            name="version_title"
             style={styles.input}
+            onChange={e => this.setState({versionTitle: e.target.value})}
           />
         </label>
         <label>
@@ -128,31 +223,29 @@ class CourseEditor extends Component {
             <p>used in course cards on homepage</p>
           </HelpTip>
           <textarea
-            name="description_short"
             defaultValue={descriptionShort}
             rows={5}
             style={styles.input}
+            onChange={e => this.setState({descriptionShort: e.target.value})}
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionStudent}
+          markdown={descriptionStudent}
           label={'Student Description'}
-          name={'description_student'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({descriptionStudent: e.target.value})
           }
-          features={{imageUpload: true}}
+          features={{imageUpload: true, resourceLink: true}}
         />
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionTeacher}
+          markdown={descriptionTeacher}
           label={'Teacher Description'}
-          name={'description_teacher'}
           inputRows={5}
           handleMarkdownChange={e =>
             this.setState({descriptionTeacher: e.target.value})
           }
-          features={{imageUpload: true}}
+          features={{imageUpload: true, resourceLink: true}}
         />
 
         <CollapsibleEditorSection title="Basic Settings">
@@ -166,10 +259,12 @@ class CourseEditor extends Component {
               </p>
             </HelpTip>
             <input
-              name="has_verified_resources"
               type="checkbox"
-              defaultChecked={this.props.hasVerifiedResources}
+              defaultChecked={hasVerifiedResources}
               style={styles.checkbox}
+              onChange={e =>
+                this.setState({hasVerifiedResources: e.target.value})
+              }
             />
           </label>
           <label>
@@ -181,10 +276,10 @@ class CourseEditor extends Component {
               </p>
             </HelpTip>
             <input
-              name="has_numbered_units"
               type="checkbox"
-              defaultChecked={this.props.hasNumberedUnits}
+              defaultChecked={hasNumberedUnits}
               style={styles.checkbox}
+              onChange={e => this.setState({hasNumberedUnits: e.target.value})}
             />
           </label>
           <AnnouncementsEditor
@@ -195,76 +290,29 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
-          <label>
-            Family Name
-            <select
-              name="family_name"
-              defaultValue={familyName}
-              style={styles.dropdown}
-            >
-              <option value="">(None)</option>
-              {courseFamilies.map(familyOption => (
-                <option key={familyOption} value={familyOption}>
-                  {familyOption}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Version Year
-            <select
-              name="version_year"
-              defaultValue={versionYear}
-              style={styles.dropdown}
-            >
-              <option value="">(None)</option>
-              {versionYearOptions.map(year => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </label>
-          <VisibleAndPilotExperiment
-            visible={this.state.visible}
-            updateVisible={() => this.setState({visible: !this.state.visible})}
-            pilotExperiment={this.state.pilotExperiment}
+          <CourseVersionPublishingEditor
+            visible={visible}
+            isStable={isStable}
+            pilotExperiment={pilotExperiment}
+            versionYear={versionYear}
+            familyName={familyName}
+            updateVisible={visible => this.setState({visible})}
+            updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
-            paramName="visible"
+            updateFamilyName={familyName => this.setState({familyName})}
+            updateVersionYear={versionYear => this.setState({versionYear})}
+            families={courseFamilies}
+            versionYearOptions={versionYearOptions}
+            publishedState={publishedState}
+            updatePublishedState={publishedState =>
+              this.setState({publishedState})
+            }
           />
-          <label>
-            Can be recommended (aka stable)
-            <input
-              name="is_stable"
-              type="checkbox"
-              defaultChecked={this.props.isStable}
-              style={styles.checkbox}
-            />
-            <p>
-              If checked, this course will be eligible to be the recommended
-              version of the course. The most recent eligible version will be
-              the recommended version.
-            </p>
-          </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Resources Dropdowns">
-          {this.props.migratedTeacherResources && (
-            <input
-              type="hidden"
-              name="resourceIds"
-              value={this.props.migratedTeacherResources.map(r => r.id)}
-            />
-          )}
-          {this.props.studentResources && (
-            <input
-              type="hidden"
-              name="studentResourceIds"
-              value={this.props.studentResources.map(r => r.id)}
-            />
-          )}
           Select the resources you'd like to have show up in the dropdown at the
           top of the course overview page:
           <div>
@@ -305,10 +353,19 @@ class CourseEditor extends Component {
             <CourseScriptsEditor
               inputStyle={styles.input}
               scriptsInCourse={scriptsInCourse}
+              updateScriptsInCourse={scriptsInCourse =>
+                this.setState({scriptsInCourse})
+              }
               scriptNames={scriptNames}
             />
           </label>
         </CollapsibleEditorSection>
+        <SaveBar
+          handleSave={this.handleSave}
+          error={this.state.error}
+          isSaving={this.state.isSaving}
+          lastSaved={this.state.lastSaved}
+        />
       </div>
     );
   }

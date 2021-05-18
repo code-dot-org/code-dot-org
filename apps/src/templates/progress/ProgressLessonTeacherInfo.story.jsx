@@ -130,7 +130,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -165,7 +165,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[0]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -200,7 +200,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -217,7 +217,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[2]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -252,7 +252,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[1]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
@@ -288,7 +288,7 @@ export default storybook => {
               <div style={style}>
                 <ProgressLessonTeacherInfo
                   lesson={lessons(state.progress)[3]}
-                  lessonUrl="https://studio.code.org/s/csd3-2020/stage/5/puzzle/1?login_required=true"
+                  lessonUrl="https://studio.code.org/s/csd3-2020/lessons/5/levels/1?login_required=true"
                 />
               </div>
             </Provider>
