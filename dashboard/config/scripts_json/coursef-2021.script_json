@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-13 19:29:48 UTC",
+    "serialized_at": "2021-05-18 13:52:14 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -2518,7 +2518,7 @@
       "position": 2,
       "properties": {
         "description": "###Mini-Project (20 mins)\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.",
-        "progression_name": "Application - Create Your Project",
+        "progression_name": "Mini-Project: User Input Programs",
         "tips": [
           {
             "type": "teachingTip",
@@ -5085,7 +5085,7 @@
         "level_keys": [
           "courseF_variables_projects"
         ],
-        "progression": "Application - Create Your Project"
+        "progression": "Mini-Project: User Input Programs"
       },
       "named_level": false,
       "bonus": false,
