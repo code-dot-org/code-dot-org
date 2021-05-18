@@ -22888,3 +22888,12 @@ en:
           description: ''
           student_description: ''
           lesson_groups: {}
+        csd7-2021:
+          lessons: {}
+          lesson_groups: {}
+          name: csd7-2021
+          title: AI and Machine Learning
+          description_audience: ''
+          description_short: ''
+          description: Coming soon!
+          student_description: Coming soon!

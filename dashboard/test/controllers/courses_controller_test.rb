@@ -244,7 +244,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 2, default_unit_group_units.length
     assert_equal ['script1', 'script2'], default_unit_group_units.map(&:script).map(&:name)
 
-    assert_redirected_to '/courses/csp'
+    assert_response :success
   end
 
   test "update: persists changes to alternate_unit_group_units" do
@@ -282,7 +282,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal expected_position, alternate_unit_group_unit.position,
       'an alternate script must have the same position as the default script it replaces'
 
-    assert_redirected_to '/courses/csp'
+    assert_response :success
   end
 
   test "update: sets visible and is_stable on units in unit group" do
@@ -295,8 +295,8 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {
       course_name: 'course',
       scripts: ['unit1', 'unit2'],
-      visible: 'on',
-      is_stable: 'on'
+      visible: true,
+      is_stable: true
     }
     course.reload
     unit1.reload
@@ -356,8 +356,8 @@ class CoursesControllerTest < ActionController::TestCase
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: 'on',
-      visible: 'on',
-      is_stable: 'on'
+      visible: true,
+      is_stable: true
     }
     unit_group.reload
 
@@ -379,7 +379,7 @@ class CoursesControllerTest < ActionController::TestCase
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
 
-    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: "#{resource1.id},#{resource2.id}"}
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.resources.length
   end
@@ -395,7 +395,7 @@ class CoursesControllerTest < ActionController::TestCase
     resource1 = create :resource, course_version: course_version
     resource2 = create :resource, course_version: course_version
 
-    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: "#{resource1.id},#{resource2.id}"}
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource1.id, resource2.id]}
     unit_group.reload
     assert_equal 2, unit_group.student_resources.length
   end
