@@ -242,8 +242,8 @@ class ColumnInspector extends Component {
                 {currentColumnData.hasTooManyUniqueOptions && (
                   <span>
                     Categorical columns with more than {UNIQUE_OPTIONS_MAX}
-                    {" "} unique values can not be selected as the label or
-                    {" "} features.
+                    {" "} unique values can not be selected as the label or a
+                    {" "} feature.
                   </span>
                 )}
             </div>
