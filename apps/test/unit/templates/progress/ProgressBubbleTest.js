@@ -229,6 +229,24 @@ describe('ProgressBubble', () => {
     );
   });
 
+  it('uses display name when isSublevel is true', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          display_name: 'Display Name',
+          name: 'display_name',
+          isSublevel: true
+        }}
+      />
+    );
+    assert.equal(
+      wrapper.find('TooltipWithIcon').props().text,
+      '1. Display Name'
+    );
+  });
+
   it('renders a small bubble if smallBubble is true', () => {
     const wrapper = shallow(
       <ProgressBubble {...defaultProps} smallBubble={true} />
