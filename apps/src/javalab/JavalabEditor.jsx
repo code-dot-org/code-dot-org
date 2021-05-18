@@ -72,6 +72,7 @@ class JavalabEditor extends React.Component {
     renameFile: PropTypes.func,
     removeFile: PropTypes.func,
     sources: PropTypes.object,
+    validation: PropTypes.object,
     isDarkMode: PropTypes.bool,
     isEditingStartSources: PropTypes.bool,
     handleVersionHistory: PropTypes.func.isRequired
@@ -298,6 +299,11 @@ class JavalabEditor extends React.Component {
         renameFileError: this.duplicateFileError(newFilename)
       });
       return;
+    } else if (Object.keys(this.props.validation).includes(newFilename)) {
+      this.setState({
+        renameFileError: this.duplicateValidationFileError(newFilename)
+      });
+      return;
     }
 
     // update file metadata with new filename
@@ -397,6 +403,10 @@ class JavalabEditor extends React.Component {
 
   duplicateFileError(filename) {
     return `Filename ${filename} is already in use in this project. Please choose a different name`;
+  }
+
+  duplicateValidationFileError(filename) {
+    return `Filename ${filename} is already in use in this level's support code. Please choose a different name`;
   }
 
   // This is called from the file explorer when we want to jump to a file
@@ -596,6 +606,7 @@ class JavalabEditor extends React.Component {
 export default connect(
   state => ({
     sources: state.javalab.sources,
+    validation: state.javalab.validation,
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources
   }),
