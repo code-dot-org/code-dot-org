@@ -6,7 +6,8 @@
     "csd3-2021",
     "csd4-2021",
     "csd5-2021",
-    "csd6-2021"
+    "csd6-2021",
+    "csd7-2021"
   ],
   "properties": {
     "has_numbered_units": true,
@@ -94,6 +95,16 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview",
+      "key": "csd_guide_to_assessment",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
       "name": "CSD Guide to Differentiation",
       "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
       "key": "csd_guide_to_differentiation",
@@ -122,32 +133,9 @@
       "seeding_key": {
         "resource.key": "csd_guide_to_debugging"
       }
-    },
-    {
-      "name": "CSD Guide to Assessment",
-      "url": "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview",
-      "key": "csd_guide_to_assessment",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment"
-      }
     }
   ],
   "student_resources": [
-    {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
-      }
-    },
     {
       "name": "Bug Report",
       "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
@@ -170,6 +158,19 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_using_resources"
+      }
+    },
+    {
+      "name": "How To Debug",
+      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
+      "key": "how_to_debug",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_debug"
       }
     }
   ]
