@@ -338,7 +338,7 @@ Dashboard::Application.routes.draw do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
     get 'next', to: 'script_levels#next'
-    get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
+    get 'hidden_stages', to: 'script_levels#hidden_lesson_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
     member do
@@ -819,7 +819,7 @@ Dashboard::Application.routes.draw do
   post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
 
   # Routes used by teacher scores
-  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_stages_for_section'
+  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
   get '/dashboardapi/v1/teacher_scores/:section_id/:script_id', to: 'api/v1/teacher_scores#get_teacher_scores_for_script', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify

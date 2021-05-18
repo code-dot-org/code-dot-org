@@ -794,6 +794,9 @@ de:
     reminder_desc: 'Wir haben unsere <a href="%{tos_url}" target="_blank">Allgemeinen Geschäftsbedingungen</a> und <a href="%{privacy_url}" target="_blank">Datenschutzerklärung</a> aktualisiert. Bitte lesen Sie diese sorgfältig durch, bevor Sie sie akzeptieren. Beachten Sie bitte, dass unsere Werkzeuge zum Lehren von JavaScript möglicherweise nicht für Ihre Studenten zur Verfügung stehen, bevor Sie die aktualisierten Bedingungen nicht explizit akzeptieren.'
     reminder_desc_markdown: Wir haben unsere [Allgemeinen Geschäftsbedingungen](%{tos_url}) und [Datenschutzerklärung](%{privacy_url}) aktualisiert. Bitte lesen Sie diese sorgfältig durch, bevor Sie sie akzeptieren. Beachten Sie bitte, dass unsere Werkzeuge zum Lehren von JavaScript möglicherweise nicht für Ihre Studenten zur Verfügung stehen, bevor Sie die aktualisierten Bedingungen nicht explizit akzeptieren.
     review_terms: "Aktualisierte Bedingungen ansehen"
+  donor_interstitial:
+    local_supporters: "Lokale Unterstützer"
+    global_supporters: "Globale Unterstützer"
   school_info_interstitial:
     title: "Wir wollen jedem Schüler die Informatik näher bringen - helfen Sie uns, unsere Fortschritte zu verfolgen!"
     message: "Bitte geben Sie unten Ihre Schuldaten ein."
@@ -990,10 +993,12 @@ de:
       school_country:
         canada: 'Kanada'
         chile: 'Chile'
+        colombia: 'Kolumbien'
         israel: 'Israel'
         malaysia: 'Malaysien'
         mexico: 'Mexiko'
         thailand: 'Thailand'
+        uzbekistan: 'Usbekistan'
       ages:
         ages_under_6: '< 6 Jahre alt'
         ages_7_8: '7-8 Jahre alt'
@@ -1038,6 +1043,7 @@ de:
         csf_express: 'CS Grundlagen (Pre-Express oder Express)'
         csd: 'CS Entdeckungen'
         csp: 'Informatik Grundprinzipien'
+        not_applicable: "Nicht anwendbar"
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nein'
@@ -1046,6 +1052,7 @@ de:
       intro: "Vielen Dank, dass Sie sich die Zeit nehmen, sich über den Lehrplan von Code.org zu informieren. Unsere Mission, allen Kindern in allen Schulen der Welt Möglichkeiten zum Informatikunterricht zu bieten, wäre ohne Sie nicht möglich gewesen."
       instructions: "Bitte füllen Sie das untenstehende Formular aus, um anzugeben, dass Sie 1) an einem Schulungsworkshop teilgenommen haben, der von einem der internationalen Partner von Code.org durchgeführt wird, und 2) Sie zustimmen, Ihre Informationen an unseren internationalen Partner in Ihrem Land weiterzugeben, damit dieser Ihre Laufbahn als Informatiklehrer unterstützen kann."
       thanks_markdown: "Danke, dass Sie sich angemeldet haben! Wir freuen uns darauf, Sie beim Kennenlernen des Lehrplans und der Tools von Code.org zu unterstützen. Bitte teilen Sie uns Ihre Fragen und Anregungen mit, indem Sie uns unter[support@code.org](%{support_email_url}) eine Email schreiben oder im [Lehrerforum](%{teacher_forum_url}) posten!"
+      facilitator_not_applicable: "Nicht anwendbar"
     logged_out:
       heading: 'Vielen Dank für Ihr Interesse am Professional Learning Program!'
       body: 'Um zu beginnen, müssen Sie zuerst in Ihr Code.org-Konto eingeloggt sein. Wenn Sie weitere Informationen über das Programm wünschen, bevor Sie Ihre Anwendung starten, lesen Sie bitte die <a href="%{url}">Übersicht über das Professional Learning Programm</a>.'
@@ -1076,4 +1083,4 @@ de:
   parent_email_banner:
     text: "**Sind Sie ein Elternteil oder ein(e) Erziehungsberechtigte(r)?* Verlinken Sie Ihre E-Mail-Adresse mit diesem Konto, um über die Fortschritte und Projekte Ihres Kindes auf dem Laufenden zu bleiben!"
     link_your_email: "E-Mail-Adresse Verlinken"
-    not_now: "Nicht jetzt\n"
+    not_now: "Nicht jetzt"

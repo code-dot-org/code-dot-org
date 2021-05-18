@@ -1,13 +1,24 @@
 hr:
   data:
     parameter_names:
+      "???": "???"
       actor: lik
+      color: boja
       counter: brojač
+      dir: smjer
+      direction: smjer
       height: visina
       honey: med
       left: lijevo
       length: duljina
       min: min
+      nectar units: jedinice nektara
+      nectars: nektari
+      numOctagons: brojOktagona
       points: bodovi
+      radius: radijus
+      sides: strane
       size: veličina
       speed: brzina
+      theGuess: Pogađanje
+      width: širina

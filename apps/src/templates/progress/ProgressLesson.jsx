@@ -41,7 +41,7 @@ class ProgressLesson extends React.Component {
     super(props);
     this.state = {
       // We want teachers to start with everything uncollapsed. For students we
-      // collapse everything except current stage
+      // collapse everything except current lesson
       collapsed:
         props.viewAs !== ViewType.Teacher &&
         props.currentStageId !== props.lesson.id
@@ -96,7 +96,7 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
-    // Is this a hidden stage that we still render because we're a teacher
+    // Is this a hidden lesson that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);

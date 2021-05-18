@@ -7,6 +7,7 @@ zh-CN:
       Green: 绿色
       Red: 红色
       actor: 角色
+      age: 年龄
       armlength: 臂长
       binary: 二进制
       birds: 鸟
@@ -26,6 +27,8 @@ zh-CN:
       nectars: 花蜜
       points: 分数
       random: 随机
+      red1: 红色1
+      red2: 红色2
       repeat: 重复
       right: 向右
       score: 得分

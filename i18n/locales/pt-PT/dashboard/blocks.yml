@@ -1201,6 +1201,15 @@ pt:
             '"y"': posição y
             '"direction"': direção do movimento
             '"speed"': velocidade
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': tamanho
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': intermédio
+            '100': large
       gamelab_setSizes:
         text: Definir {SPRITE} {PROPERTY} Para {N}%
         options:
@@ -1504,6 +1513,13 @@ pt:
             '"x"': posição x
             '"y"': posição y
             '"direction"': direção do movimento
+      Mikelab_setupSim:
+        text: |-
+          simulação de configuração com
+          {SPRITE1N}{SPRITE1COSTUME}Velocidade{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Velocidade{SPRITE2SPEED}
+          Coleta
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1566,6 +1582,13 @@ pt:
         text: x coordenada de {SPRITE}
       Mikelab_yLocationOf:
         text: y coordenada de {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': grade
+            '"border"': fronteira
+            '"row"': aula
+            '"random"': aleatório
       RyanLab_moveForward:
         text: segue em frente
       RyanLab_turnLeft:
@@ -1599,42 +1622,27 @@ pt:
         options:
           PROPERTY:
             "'shapeColor'": cor
-      aalab_addBehaviorForDuration:
-        text: aalab sprite aalab sprite {SPRITE} Começa {BEHAVIOR} Para {SECONDS} Segundos
-      aalab_addBehaviorUntilBoolean:
-        text: Sprite {SPRITE} Começa {BEHAVIOR} Até {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: novo sprite chamado{SPRITE_NAME} com traje{ANIMATION_NAME} no local{LOCATION}
-      aalab_goToScene:
-        text: ir à cena {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: Mover {SPRITE} {DISTANCE} Pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Norte
-            '"East"': Leste
-            '"South"': Sul
-            '"West"': Ocidente
-      aalab_prompt:
-        text: fazer a pergunta {MESSAGE}
-      aalab_scene:
-        text: cena {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: história de configuração
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grade
+            '"border"': fronteira
+            '"row"': aula
             '"random"': aleatório
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': tudo
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': tudo
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: desenhar binário {BIN}
       binary_drawBinScreen:

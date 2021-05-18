@@ -122,32 +122,14 @@ ku:
               name: هاوشێوەسازی ئینتەرنێت
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         asUnplugged:
@@ -178,12 +160,6 @@ ku:
               name: گرێکان
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: پوختەی بابەت
         grade3:

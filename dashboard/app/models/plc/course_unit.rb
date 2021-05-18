@@ -58,8 +58,8 @@ class Plc::CourseUnit < ApplicationRecord
 
       next if selected_answer['stage'].nil?
 
-      stage = Lesson.find_by(name: selected_answer['stage'], script: script)
-      learning_module = stage.try(:plc_learning_module)
+      lesson = Lesson.find_by(name: selected_answer['stage'], script: script)
+      learning_module = lesson.try(:plc_learning_module)
 
       next if learning_module.nil?
 

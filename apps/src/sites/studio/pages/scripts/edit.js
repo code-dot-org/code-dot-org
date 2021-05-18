@@ -54,7 +54,7 @@ export default function initPage(scriptEditorData) {
         name={scriptEditorData.script.name}
         i18nData={scriptEditorData.i18n}
         initialHidden={valueOr(scriptData.hidden, true)}
-        initialIsStable={scriptData.is_stable}
+        initialIsStable={scriptData.is_stable || false}
         initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
@@ -76,7 +76,7 @@ export default function initPage(scriptEditorData) {
         initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialCurriculumPath={scriptData.curriculum_path || ''}
-        initialPilotExperiment={scriptData.pilot_experiment}
+        initialPilotExperiment={scriptData.pilot_experiment || ''}
         initialEditorExperiment={scriptData.editor_experiment || ''}
         initialAnnouncements={announcements}
         initialSupportedLocales={scriptData.supported_locales || []}
