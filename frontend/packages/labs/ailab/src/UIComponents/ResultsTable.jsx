@@ -3,17 +3,13 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { isRegression } from "../redux";
-import {
-  styles,
-  colors,
-  REGRESSION_ERROR_TOLERANCE
-} from "../constants";
+import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
 
 class ResultsTable extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    results: PropTypes.array,
+    results: PropTypes.object,
     isRegression: PropTypes.bool
   };
 
@@ -33,9 +29,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>
-                    Features
-                  </span>
+                  <span style={styles.largeText}>Features</span>
                 </th>
                 <th
                   style={{

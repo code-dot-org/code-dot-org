@@ -31,7 +31,7 @@ export const UNIQUE_OPTIONS_MAX = 50;
 
 export const saveMessages = {
   success: "Your model was saved!",
-  failure: "There was an error. Your model did not save. Please try again.",
+  failure: "There was an error. Your model did not save. Please try again."
 };
 
 const labelColor = "rgb(254, 96, 3)";
@@ -403,29 +403,29 @@ export const styles = {
     marginBottom: 20,
     backgroundColor: "#f2f2f2",
     borderRadius: 5,
-    borderStyle: 'solid',
+    borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white",
     padding: 10,
     height: 36
   },
   pill: {
-    border: 'none',
+    border: "none",
     borderRadius: 50,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 20,
     backgroundColor: "#f2f2f2",
-    margin: '0 0 0 20px',
-    boxShadow: 'none',
-    outline: 'none',
-    padding: '8px 18px',
-    float: 'left',
-    cursor: 'pointer'
+    margin: "0 0 0 20px",
+    boxShadow: "none",
+    outline: "none",
+    padding: "8px 18px",
+    float: "left",
+    cursor: "pointer"
   },
   selectedPill: {
     backgroundColor: "#61d2eb",
     color: "white",
-    border: 'none'
+    border: "none"
   },
 
   resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
@@ -474,7 +474,7 @@ export const styles = {
   statement: {
     fontSize: 32,
     paddingBottom: 15,
-    lineHeight: '50px'
+    lineHeight: "50px"
   },
 
   statementSmall: {
@@ -510,7 +510,7 @@ export const styles = {
     position: "absolute",
     top: 0,
     right: 0,
-    transform: 'translateX(50%) translateY(-50%)',
+    transform: "translateX(50%) translateY(-50%)",
     color: "black",
     cursor: "pointer"
   },

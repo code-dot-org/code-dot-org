@@ -2,8 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getCorrectResults, getIncorrectResults } from "../redux";
-import ResultsTable from "./ResultsTable";
+import { setResultsTab } from "../redux";
 import { ResultsGrades, styles } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -20,31 +19,19 @@ const resultsTabs = [
     headerText: "Incorrect",
     icon: faTimes,
     iconStyle: styles.error
-  },
+  }
 ];
 
 class ResultsToggle extends Component {
   static propTypes = {
-    correctResults: PropTypes.array,
-    incorrectResults: PropTypes.array
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      tab: ResultsGrades.CORRECT
-    };
-  }
-
-  toggleTo = tab => {
-    this.setState({tab: tab})
+    resultsTab: PropTypes.string,
+    setResultsTab: PropTypes.func
   };
 
   getTogglePillStyle = key => {
     let style;
-    if (key === this.state.tab) {
-      style = {...styles.pill, ...styles.selectedPill};
+    if (key === this.props.resultsTab) {
+      style = { ...styles.pill, ...styles.selectedPill };
     } else {
       style = styles.pill;
     }
@@ -52,11 +39,6 @@ class ResultsToggle extends Component {
   };
 
   render() {
-    const results =
-      this.state.tab === ResultsGrades.CORRECT
-        ? this.props.correctResults
-        : this.props.incorrectResults;
-
     return (
       <div>
         <div style={styles.resultsToggle}>
@@ -64,21 +46,25 @@ class ResultsToggle extends Component {
             <div
               key={tab.key}
               style={this.getTogglePillStyle(tab.key)}
-              onClick={() => this.toggleTo(tab.key)}
+              onClick={() => this.props.setResultsTab(tab.key)}
             >
-              <FontAwesomeIcon icon={tab.icon} style={tab.iconStyle} />
-              {" "}{tab.headerText}
+              <FontAwesomeIcon icon={tab.icon} style={tab.iconStyle} />{" "}
+              {tab.headerText}
             </div>
           ))}
         </div>
-        <ResultsTable results={results} />
       </div>
-
     );
   }
 }
 
-export default connect(state => ({
-  correctResults: getCorrectResults(state),
-  incorrectResults: getIncorrectResults(state)
-}))(ResultsToggle);
+export default connect(
+  state => ({
+    resultsTab: state.resultsTab
+  }),
+  dispatch => ({
+    setResultsTab(key) {
+      dispatch(setResultsTab(key));
+    }
+  })
+)(ResultsToggle);
