@@ -90,6 +90,10 @@ class TeacherFeedback < ApplicationRecord
     find_by(id: maximum(:id))
   end
 
+  def student_last_updated # maureen what about channel backed levels?
+    student.last_attempt(level, script).updated_at
+  end
+
   # Increments student_visit_count and related metrics timestamps for a TeacherFeedback.
   def increment_visit_count
     now = DateTime.now
