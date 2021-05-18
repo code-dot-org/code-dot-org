@@ -52,7 +52,7 @@ This lesson gets complicated rather quickly.  If your students had an easy time 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Functions with Parameters](http://learn.code.org/s/course4/stage/16/puzzle/1)
+### <a name="Activity"></a> [Bee: Functions with Parameters](http://learn.code.org/s/course4/lessons/16/levels/1)
 
 [/together]
 

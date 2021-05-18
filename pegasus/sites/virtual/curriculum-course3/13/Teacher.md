@@ -46,7 +46,7 @@ Students use the Bee environment to write programs using nested loops.
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Nested Loops](http://learn.code.org/s/course3/stage/13/puzzle/1)
+### <a name="Activity"></a> [Bee: Nested Loops](http://learn.code.org/s/course3/lessons/13/levels/1)
 
 [/together]
 

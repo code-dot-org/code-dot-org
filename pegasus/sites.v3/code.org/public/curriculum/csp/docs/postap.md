@@ -32,7 +32,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 1 - Creating JavaScript Objects<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/1/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/1/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         In this stage, students learn about <strong>JavaScript objects</strong>, which are collections of related properties with assigned values. Students learn the <strong>dot notation</strong> used to access and manipulate individual object properties. Finally, students begin developing a <strong>Contacts App</strong>, which will be built upon in the next several stages.
@@ -46,7 +46,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 2 - Permanent Data Storage<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/2/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/2/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         In this stage, students are introduced to the idea of “<strong>remote databases</strong>,” which allow apps to store data even after the app is restarted. Students are introduced to the <code>createRecord</code> command, which allows them to add rows to tables in a database. They are also introduced to the App Lab <strong>Data Viewer</strong>, which allows them to view and manually manipulate the data stored in the database. Students build on the <strong>Contacts App</strong> by using <code>createRecord</code> to store newly created contacts in the database.<br><br>
@@ -69,7 +69,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 3 - Reading Records<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/3/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/3/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         In this stage, students learn how to use <code>readRecords</code> to load information stored in the database back into an app. Students are introduced to <strong>callback functions</strong> and the idea of <strong>asynchronous commands</strong>. Students build on the <strong>Contacts App</strong> by using <code>readRecords</code> to load the contacts from the database into the app when it first runs. Students are also introduced to the idea of <strong>local</strong> versus <strong>remote</strong> data storage.<br><br>
@@ -87,7 +87,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 4 - Deleting Records<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/4/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/4/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         In this stage, students learn how to use <code>deleteRecord</code> to remove rows from the database. Students build on the <strong>Contacts App</strong> by creating a “Delete” button and then using <code>deleteRecord</code> to remove the current contact from the database.<br><br>
@@ -105,7 +105,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 5 - Updating Records<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/5/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/5/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         In this stage, students learn how to use <code>updateRecord</code> to edit rows in the database. Students finish building on the <strong>Contacts App</strong> by creating an “Edit” button and using <code>updateRecord</code> to save a user’s changes to a contact to the database.<br><br>
@@ -123,7 +123,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 6 - Importing and Exporting Data<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/6/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/6/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>       
         In this stage, students learn how to “<strong>Remix</strong>” projects and that an app’s data does not transfer when it is remixed. Students learn how to use the <strong>import</strong> and <strong>export</strong> tools in the Data Viewer to transfer data between apps.
@@ -134,7 +134,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 7 - Visualizing Data<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/7/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/7/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         In this stage, students learn how to use <code>drawChartFromRecords</code> to create visualizations from within their apps, using the information stored in the database. Students use pre-populated databases to create a <strong>scatter chart</strong>, create a <strong>line chart</strong>, and <strong>customize a chart’s appearance</strong>.<br><br>
@@ -152,7 +152,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 8 - Sample Apps<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/8/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/8/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         Students don’t learn any new concepts in this stage. This stage is composed of a series of sample apps, which demonstrate ways in which the Data Tools may be used in projects. Students are meant to look through these projects to gain inspiration and ideas for their own final projects.<br><br>
@@ -170,7 +170,7 @@ For more information about how to teach this material, please refer to this <a h
     <tr>
       <td>
         Stage 9 - Final Project<br><br>
-        <a href="https://studio.code.org/s/cspunit6/stage/9/puzzle/1" target="_blank">Code Studio</a>
+        <a href="https://studio.code.org/s/cspunit6/lessons/9/levels/1" target="_blank">Code Studio</a>
       </td>
       <td>
         This stage contains a single level, in which students can build their final projects. Alternatively, if students want to remix a previous project and make alterations and improvements, they can submit the "Share" link for their final project by pasting the link into a comment in this level.

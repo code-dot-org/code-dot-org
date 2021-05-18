@@ -85,7 +85,7 @@ Before students get started on the computers, you can have them work through the
 ## Activity: Evaluation Blocks
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-The programming language you are going to learn uses Evaluation Blocks to visually represent mathematical functions. Each block of code is either a Function, or a Value - head to [CS in Algebra Stage 2](http://studio.code.org/s/algebra/stage/2/puzzle/1) in Code Studio to get started programming.
+The programming language you are going to learn uses Evaluation Blocks to visually represent mathematical functions. Each block of code is either a Function, or a Value - head to [CS in Algebra Stage 2](http://studio.code.org/s/algebra/lessons/2/levels/1) in Code Studio to get started programming.
 
 [/together]
 
