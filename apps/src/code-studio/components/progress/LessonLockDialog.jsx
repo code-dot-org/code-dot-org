@@ -10,7 +10,7 @@ import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
-class StageLockDialog extends React.Component {
+class LessonLockDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
@@ -325,7 +325,7 @@ const styles = {
   }
 };
 
-export const UnconnectedStageLockDialog = Radium(StageLockDialog);
+export const UnconnectedLessonLockDialog = Radium(LessonLockDialog);
 export default connect(
   state => ({
     initialLockStatus: state.stageLock.lockStatus,
@@ -338,4 +338,4 @@ export default connect(
       dispatch(saveLockDialog(sectionId, lockStatus));
     }
   })
-)(UnconnectedStageLockDialog);
+)(UnconnectedLessonLockDialog);

@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {lessonType} from './progressTypes';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
-import StageLock from './StageLock';
+import LessonLock from './LessonLock';
 import {
   toggleHiddenStage,
   isStageHiddenForSection
@@ -126,7 +126,7 @@ class ProgressLessonTeacherInfo extends React.Component {
           </div>
         )}
         {lesson.lockable && lockableAuthorized && !hasNoSections && (
-          <StageLock lesson={lesson} />
+          <LessonLock lesson={lesson} />
         )}
         {lessonUrl && !(lesson.lockable && !lockableAuthorized) && (
           <div style={styles.buttonContainer}>
