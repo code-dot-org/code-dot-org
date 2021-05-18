@@ -48,13 +48,16 @@ export class TeacherFeedback extends Component {
     this.onRubricChange = this.onRubricChange.bind(this);
 
     const {latestFeedback} = this.props;
-
     this.state = {
       comment: latestFeedback?.comment || '',
       performance: latestFeedback?.performance,
       studentId: studentId,
       latestFeedback: latestFeedback,
-      newReviewState: null,
+      reviewState:
+        latestFeedback && latestFeedback.review_state
+          ? latestFeedback.review_state
+          : null,
+      reviewStateUpdated: false,
       submitting: false,
       errorState: ErrorType.NoError
     };
@@ -92,8 +95,7 @@ export class TeacherFeedback extends Component {
     this.setState({submitting: true});
     const payload = {
       comment: this.state.comment,
-      review_state:
-        this.state.newReviewState || this.latestFeedback().review_state,
+      review_state: this.state.reviewState,
       student_id: this.state.studentId,
       script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
@@ -125,16 +127,28 @@ export class TeacherFeedback extends Component {
       });
   };
 
-  feedbackIsUnchanged = () => {
-    const {latestFeedback} = this.state;
-    const feedbackUnchanged =
-      (latestFeedback &&
-        (this.state.comment === latestFeedback.comment &&
-          this.state.performance === latestFeedback.performance)) ||
-      (!latestFeedback &&
-        (this.state.comment.length === 0 && !this.state.performance));
+  feedbackChanged = () => {
+    const latestFeedback = this.state.latestFeedback;
 
-    return feedbackUnchanged;
+    if (latestFeedback) {
+      const commentChanged = this.state.comment !== latestFeedback.comment;
+      const performanceChanged =
+        this.state.performance !== latestFeedback.performance;
+
+      // Review state changes are tracked differently than comment or performance
+      // because the teacher could repeatedly leave feedback for the student to
+      // keep working, which would have the same review_state value, but should be treated
+      // as independent feedbacks.
+      const reviewStateChange = this.state.reviewStateUpdated;
+
+      return commentChanged || performanceChanged || reviewStateChange;
+    } else {
+      return (
+        !!this.state.comment.length ||
+        !!this.state.performance ||
+        this.state.reviewStateUpdated
+      );
+    }
   };
 
   renderError(errorText) {
@@ -215,8 +229,13 @@ export class TeacherFeedback extends Component {
             {keepWorkingEnabled && (
               <TeacherFeedbackKeepWorking
                 latestFeedback={latestFeedback}
-                newReviewState={this.state.newReviewState}
-                setReviewState={state => this.setState({newReviewState: state})}
+                reviewState={this.state.reviewState}
+                setReviewState={reviewState =>
+                  this.setState({
+                    reviewState: reviewState,
+                    reviewStateUpdated: true
+                  })
+                }
               />
             )}
             <CommentArea
