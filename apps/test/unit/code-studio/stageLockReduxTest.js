@@ -25,14 +25,14 @@ import reducer, {
   CLOSE_LOCK_DIALOG,
   fullyLockedStageMapping,
   setSectionLockStatus
-} from '@cdo/apps/code-studio/stageLockRedux';
+} from '@cdo/apps/code-studio/lessonLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
 // We get this from our call to /api/lock_status
 const [section1Id, section2Id] = Object.keys(fakeSectionData);
 const stage1Id = Object.keys(fakeSectionData[section1Id].stages)[0];
 
-describe('stageLockRedux reducer tests', () => {
+describe('lessonLockRedux reducer tests', () => {
   describe('setSectionLockStatus', () => {
     it('sets section data we receive from the server', () => {
       const action = setSectionLockStatus(fakeSectionData);
@@ -210,7 +210,7 @@ describe('saveLockDialog', () => {
     };
     reducerSpy = sinon.spy(reducer);
     stubRedux();
-    registerReducers({stageLock: reducerSpy});
+    registerReducers({lessonLock: reducerSpy});
     store = getStore();
   });
 
@@ -224,7 +224,7 @@ describe('saveLockDialog', () => {
     store.dispatch(setSectionLockStatus(fakeSectionData));
     store.dispatch(openLockDialog(section1Id, stage1Id));
 
-    let newLockStatus = _.cloneDeep(store.getState().stageLock.lockStatus);
+    let newLockStatus = _.cloneDeep(store.getState().lessonLock.lockStatus);
     // swap students two and three in terms of lock status
     newLockStatus[1].lockStatus = LockStatus.ReadonlyAnswers;
     newLockStatus[2].lockStatus = LockStatus.Editable;

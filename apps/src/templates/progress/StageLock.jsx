@@ -11,7 +11,7 @@ import StageLockDialog from '@cdo/apps/code-studio/components/progress/StageLock
 import {
   openLockDialog,
   closeLockDialog
-} from '@cdo/apps/code-studio/stageLockRedux';
+} from '@cdo/apps/code-studio/lessonLockRedux';
 import {lessonType} from './progressTypes';
 
 class StageLock extends React.Component {
@@ -76,7 +76,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId.toString(),
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    saving: state.stageLock.saving
+    saving: state.lessonLock.saving
   }),
   {openLockDialog, closeLockDialog}
 )(StageLock);

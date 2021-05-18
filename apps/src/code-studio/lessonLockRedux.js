@@ -1,6 +1,6 @@
 /**
- * Reducer and actions for stage lock info. This includes the teacher panel on
- * the course overview page, and the stage locking dialog.
+ * Reducer and actions for lesson lock info. This includes the teacher panel on
+ * the course overview page, and the lesson locking dialog.
  */
 
 import $ from 'jquery';
@@ -15,12 +15,12 @@ import {
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
 // Action types
-const OPEN_LOCK_DIALOG = 'stageLock/OPEN_LOCK_DIALOG';
-export const CLOSE_LOCK_DIALOG = 'stageLock/CLOSE_LOCK_DIALOG';
-export const BEGIN_SAVE = 'stageLock/BEGIN_SAVE';
-export const FINISH_SAVE = 'stageLock/FINISH_SAVE';
-const AUTHORIZE_LOCKABLE = 'stageLock/AUTHORIZE_LOCKABLE';
-const SET_SECTION_LOCK_STATUS = 'stageLock/SET_SECTION_LOCK_STATUS';
+const OPEN_LOCK_DIALOG = 'lessonLock/OPEN_LOCK_DIALOG';
+export const CLOSE_LOCK_DIALOG = 'lessonLock/CLOSE_LOCK_DIALOG';
+export const BEGIN_SAVE = 'lessonLock/BEGIN_SAVE';
+export const FINISH_SAVE = 'lessonLock/FINISH_SAVE';
+const AUTHORIZE_LOCKABLE = 'lessonLock/AUTHORIZE_LOCKABLE';
+const SET_SECTION_LOCK_STATUS = 'lessonLock/SET_SECTION_LOCK_STATUS';
 
 const initialState = {
   stagesBySectionId: {},
@@ -161,7 +161,7 @@ export const finishSave = (sectionId, stageId, newLockStatus) => ({
  */
 const performSave = (sectionId, stageId, newLockStatus, onComplete) => {
   return (dispatch, getState) => {
-    const oldLockStatus = getState().stageLock.lockStatus;
+    const oldLockStatus = getState().lessonLock.lockStatus;
 
     const saveData = newLockStatus
       .filter((item, index) => {
@@ -200,7 +200,7 @@ const performSave = (sectionId, stageId, newLockStatus, onComplete) => {
 
 export const saveLockDialog = (sectionId, newLockStatus) => {
   return (dispatch, getState) => {
-    const stageId = getState().stageLock.lockDialogStageId;
+    const stageId = getState().lessonLock.lockDialogStageId;
     dispatch(
       performSave(sectionId, stageId, newLockStatus, () => {
         dispatch(closeLockDialog());
@@ -212,7 +212,7 @@ export const saveLockDialog = (sectionId, newLockStatus) => {
 export const lockStage = (sectionId, stageId) => {
   return (dispatch, getState) => {
     const state = getState();
-    const section = state.stageLock.stagesBySectionId[sectionId];
+    const section = state.lessonLock.stagesBySectionId[sectionId];
     const oldLockStatus = lockStatusForStage(section, stageId);
     const newLockStatus = oldLockStatus.map(student => ({
       ...student,
