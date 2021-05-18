@@ -11,7 +11,7 @@ import {
   getRangesByColumn,
   setCurrentColumn
 } from "../redux";
-import { ColumnTypes, styles } from "../constants.js";
+import { ColumnTypes, styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
 import { Bar } from "react-chartjs-2";
 import ScatterPlot from "./ScatterPlot";
 import CrossTab from "./CrossTab";
@@ -214,7 +214,8 @@ class ColumnInspector extends Component {
               </form>
 
               {currentPanel === "dataDisplayLabel" &&
-                currentColumnData.id !== labelColumn && (
+                currentColumnData.id !== labelColumn &&
+                !currentColumnData.hasTooManyUniqueOptions && (
                   <button
                     type="button"
                     onClick={e =>
@@ -227,7 +228,8 @@ class ColumnInspector extends Component {
                 )}
 
               {currentPanel === "dataDisplayFeatures" &&
-                !selectedFeatures.includes(currentColumnData.id) && (
+                !selectedFeatures.includes(currentColumnData.id) &&
+                !currentColumnData.hasTooManyUniqueOptions && (
                   <button
                     type="button"
                     onClick={e => this.addFeature(e, currentColumnData.id)}
@@ -235,6 +237,14 @@ class ColumnInspector extends Component {
                   >
                     Add feature
                   </button>
+                )}
+
+                {currentColumnData.hasTooManyUniqueOptions && (
+                  <span>
+                    Categorical columns with more than {UNIQUE_OPTIONS_MAX}
+                    {" "} unique values can not be selected as the label or a
+                    {" "} feature.
+                  </span>
                 )}
             </div>
           </div>

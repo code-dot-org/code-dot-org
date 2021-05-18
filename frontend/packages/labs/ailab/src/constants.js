@@ -27,6 +27,8 @@ export const TestDataLocations = {
 
 export const ModelNameMaxLength = 150;
 
+export const UNIQUE_OPTIONS_MAX = 50;
+
 export const saveMessages = {
   success: "Your model was saved!",
   failure: "There was an error. Your model did not save. Please try again.",
