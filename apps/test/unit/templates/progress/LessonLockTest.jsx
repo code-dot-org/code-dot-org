@@ -2,8 +2,8 @@ import React from 'react';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {UnconnectedStageLock as StageLock} from '@cdo/apps/templates/progress/StageLock';
-import StageLockDialog from '@cdo/apps/code-studio/components/progress/StageLockDialog';
+import {UnconnectedLessonLock as LessonLock} from '@cdo/apps/templates/progress/LessonLock';
+import LessonLockDialog from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
@@ -23,15 +23,15 @@ const DEFAULT_PROPS = {
   closeLockDialog: () => {}
 };
 
-describe('StageLock', () => {
+describe('LessonLock', () => {
   it('renders a loading message before sections are loaded', () => {
-    const wrapper = shallow(<StageLock {...DEFAULT_PROPS} />);
+    const wrapper = shallow(<LessonLock {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(<div>{i18n.loading()}</div>);
   });
 
   it('renders a button and dialog after sections are loaded', () => {
     const wrapper = shallow(
-      <StageLock {...DEFAULT_PROPS} sectionsAreLoaded={true} />
+      <LessonLock {...DEFAULT_PROPS} sectionsAreLoaded={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -43,14 +43,14 @@ describe('StageLock', () => {
             icon="lock"
           />
         </div>
-        <StageLockDialog />
+        <LessonLockDialog />
       </div>
     );
   });
 
   it('changes button text while saving', () => {
     const wrapper = shallow(
-      <StageLock {...DEFAULT_PROPS} sectionsAreLoaded={true} saving={true} />
+      <LessonLock {...DEFAULT_PROPS} sectionsAreLoaded={true} saving={true} />
     );
     expect(wrapper).to.containMatchingElement(
       <Button __useDeprecatedTag text={i18n.saving()} icon="lock" />
@@ -61,7 +61,7 @@ describe('StageLock', () => {
     const openSpy = sinon.spy();
     const closeSpy = sinon.spy();
     const wrapper = shallow(
-      <StageLock
+      <LessonLock
         {...DEFAULT_PROPS}
         sectionsAreLoaded={true}
         openLockDialog={openSpy}
@@ -71,7 +71,7 @@ describe('StageLock', () => {
 
     // Close callback gets passed through to the dialog unchanged.
     expect(wrapper).to.containMatchingElement(
-      <StageLockDialog handleClose={closeSpy} />
+      <LessonLockDialog handleClose={closeSpy} />
     );
 
     // Open callback gets called when button is clicked.

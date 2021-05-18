@@ -87,7 +87,7 @@ describe('ProgressLessonTeacherInfo', () => {
     );
   });
 
-  it('renders our StageLock button when lesson is lockable and teacher is lockable authorized', () => {
+  it('renders our LessonLock button when lesson is lockable and teacher is lockable authorized', () => {
     const lockableLesson = fakeLesson('Maze', 1, true);
     const unlockableLesson = fakeLesson('Maze', 1, false);
 
@@ -112,11 +112,11 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('Connect(StageLock)').length, 1);
-    assert.equal(wrapperUnlockable.find('Connect(StageLock)').length, 0);
+    assert.equal(wrapperLockable.find('Connect(LessonLock)').length, 1);
+    assert.equal(wrapperUnlockable.find('Connect(LessonLock)').length, 0);
   });
 
-  it('does not render StageLock button when lesson is lockable and teacher is not lockable authorized', () => {
+  it('does not render LessonLock button when lesson is lockable and teacher is not lockable authorized', () => {
     const lockableLesson = fakeLesson('Maze', 1, true);
     const unlockableLesson = fakeLesson('Maze', 1, false);
 
@@ -141,11 +141,11 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('Connect(StageLock)').length, 0);
-    assert.equal(wrapperUnlockable.find('Connect(StageLock)').length, 0);
+    assert.equal(wrapperLockable.find('Connect(LessonLock)').length, 0);
+    assert.equal(wrapperUnlockable.find('Connect(LessonLock)').length, 0);
   });
 
-  it('does not render our StageLock button when we have no sections', () => {
+  it('does not render our LessonLock button when we have no sections', () => {
     const lockableLesson = fakeLesson('Maze', 1, true);
 
     const wrapper = shallow(
@@ -164,7 +164,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('Connect(StageLock)').length, 0);
+    assert.equal(wrapper.find('Connect(LessonLock)').length, 0);
   });
 
   it('renders SendLessonDialog when there is a lessonUrl', () => {
