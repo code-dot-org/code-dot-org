@@ -171,4 +171,4 @@
   </div>
 </div>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+<a class="btn btn-large btn-primary next-lesson submitButton">Continue</a>
