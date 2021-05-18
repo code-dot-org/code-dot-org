@@ -372,6 +372,8 @@ describe('ManageStudentsTable', () => {
       describe('Single students', () => {
         const defaultAddTransferStatus = {
           sectionCapacity: 500,
+          sectionCode: 'ABCDEF',
+          sectionStudentCount: 500,
           numStudents: 1
         };
 
@@ -448,6 +450,8 @@ describe('ManageStudentsTable', () => {
       describe('Multiple students', () => {
         const defaultAddTransferStatus = {
           sectionCapacity: 500,
+          sectionCode: 'ABCDEF',
+          sectionStudentCount: 499,
           numStudents: 2
         };
 
