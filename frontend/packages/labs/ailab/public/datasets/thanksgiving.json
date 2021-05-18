@@ -1,0 +1,205 @@
+{
+  "card": {
+    "description": "A survey from FiveThrityEight, asking people around the country what foods they have for Thanksgiving dinner.",
+    "source": "FiveThirtyEight (https://github.com/fivethirtyeight/data/tree/master/thanksgiving-2015) ",
+    "lastUpdated": "2015",
+    "context": {
+      "createdBy": "FiveThirtyEight",
+      "potentialUses": "Predict whether someone will have a specific food for Thanksgiving, based on the region of the country they are from.",
+      "potentialMisuses": "Trying to guess what region someone is from, just based on the foods they eat on Thanksgiving."
+    }
+  },
+  "defaultLabelColumn": "Vegetable Salad?",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Main dish",
+      "description": "The main dish served at the meal. Most likely turkey."
+    },
+    {
+      "type": "categorical",
+      "id": "Main dish cooking method",
+      "description": "How the main dish was cooked, e.g. baked, roasted, fried."
+    },
+    {
+      "type": "categorical",
+      "id": "Stuffing base",
+      "description": "If stuffing was served, what its major ingredient was, or none if no stuffing was served."
+    },
+    {
+      "type": "categorical",
+      "id": "Craberry sauce",
+      "description": "The kind of cranberry sauce served."
+    },
+    {
+      "type": "categorical",
+      "id": "Gravy?",
+      "description": "Whether or not gravy was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Brussel sprouts?",
+      "description": "Whether or not brussel sprouts were served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Carrots?",
+      "description": "Whether or not carrots were served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Cauliflower?",
+      "description": "Whether or not cauliflower was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Corn?",
+      "description": "Whether or not corn was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Cornbread?",
+      "description": "Whether or not cornbread was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Fruit salad?",
+      "description": "Whether or not fruit salad was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Green beans/green bean casserole?",
+      "description": "Whether or not a dish with green beans was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Mac and cheese?",
+      "description": "Whether or not mac and cheese was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Mashed potatoes?",
+      "description": "Whether or not mashed potatoes were served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Rolls/biscuits?",
+      "description": "Whether or not rolls or biscuits were served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Squash?",
+      "description": "Whether or not squash was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Vegetable salad?",
+      "description": "Whether or not vegetable salad was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Yams/sweet potato casserole?",
+      "description": "Whether or not yam casserole or sweet potato casserole was served with the meal."
+    },
+    {
+      "type": "categorical",
+      "id": "Apple pie?",
+      "description": "Whether or not apple pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Buttermilk pie?",
+      "description": "Whether or not buttermilk pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Cherry pie?",
+      "description": "Whether or not cherry pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Chocolate pie?",
+      "description": "Whether or not chocolate pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Coconut cream pie?",
+      "description": "Whether or not coconut cream pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Key lime pie?",
+      "description": "Whether or not key lime pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Peach pie?",
+      "description": "Whether or not peach pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Pecan pie?",
+      "description": "Whether or not pecan pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Pumpkin pie?",
+      "description": "Whether or not pumpkin pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Sweet potato pie?",
+      "description": "Whether or not sweet potato pie was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Apple cobbler?",
+      "description": "Whether or not apple cobbler was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Blondies?",
+      "description": "Whether or not blondies were served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Brownies?",
+      "description": "Whether or not brownies were served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Carrot cake?",
+      "description": "Whether or not carrot cake was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Cheese cake?",
+      "description": "Whether or not cheese cake was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Cookies?",
+      "description": "Whether or not cookies were served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Fudge?",
+      "description": "Whether or not fudge was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Ice cream?",
+      "description": "Whether or not ice cream was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "Peach cobbler?",
+      "description": "Whether or not peach cobbler was served as a dessert."
+    },
+    {
+      "type": "categorical",
+      "id": "US region",
+      "description": "The part of the country the participant was from."
+    }
+  ]
+}

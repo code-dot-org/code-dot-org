@@ -59,7 +59,7 @@
       {
         "type": "numerical",
         "id": "Min width of back pocket",
-        "description": "The width of the front pocket from its most narrowest part."
+        "description": "The width of the front pocket from its narrowest part."
       },
       {
         "type": "numerical",
@@ -69,7 +69,7 @@
       {
         "type": "numerical",
         "id": "Min height of back pocket",
-        "description": "The height of the front pocket from its most shallow part."
+        "description": "The height of the front pocket from its shallowest part."
       }
     ]
   }
