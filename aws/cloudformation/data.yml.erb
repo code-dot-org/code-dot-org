@@ -60,6 +60,9 @@ Resources:
       MasterUsername: {Ref: RedshiftUsername}
       MasterUserPassword: {Ref: RedshiftPassword}
       NodeType: dc1.large
+      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
+      # to start at least 1 hour before the export begins (it typically takes 15 minutes).
+      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
   TableauSync:
