@@ -10,7 +10,8 @@ import $ from 'jquery';
 
 import {
   setDynamicInstructionsDefaults,
-  setDynamicInstructionsKey
+  setDynamicInstructionsKey,
+  setDynamicInstructionsOverlayDismissCallback
 } from '../redux/instructions';
 
 /**
@@ -29,7 +30,6 @@ function getInstructionsDefaults() {
     dataDisplayLabel: 'Choose one column to predict.',
     dataDisplayFeatures:
       'Choose one or more columns as inputs to help make the prediction.',
-    selectTrainer: 'Set up the training.',
     trainModel: 'Your model is being trained.',
     results: 'Review the results.',
     saveModel: 'Save the trained model for use in App Lab.',
@@ -149,8 +149,8 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
-Ailab.prototype.setInstructionsKey = function(instructionsKey) {
-  getStore().dispatch(setDynamicInstructionsKey(instructionsKey));
+Ailab.prototype.setInstructionsKey = function(instructionsKey, options) {
+  getStore().dispatch(setDynamicInstructionsKey(instructionsKey, options));
 };
 
 Ailab.prototype.initMLActivities = function() {
@@ -179,7 +179,10 @@ Ailab.prototype.initMLActivities = function() {
 
   setAssetPath('/blockly/media/skins/ailab/');
 
-  const {initAll} = require('@code-dot-org/ml-playground');
+  const {
+    initAll,
+    instructionsDismissed
+  } = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
   initAll({
@@ -189,6 +192,12 @@ Ailab.prototype.initMLActivities = function() {
     i18n: ailabMsg,
     saveTrainedModel
   });
+
+  if (instructionsDismissed) {
+    getStore().dispatch(
+      setDynamicInstructionsOverlayDismissCallback(instructionsDismissed)
+    );
+  }
 };
 
 export default Ailab;
