@@ -312,7 +312,9 @@ describe('manageStudentsRedux', () => {
         ...blankStudentTransferStatus,
         status: TransferStatus.FULL,
         sectionCapacity: 500,
-        numStudents: 500
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500,
+        numStudents: 1
       };
       const action = transferStudentsFull(
         {...transferStatus, type: TransferType.MOVE_STUDENTS},
@@ -329,7 +331,9 @@ describe('manageStudentsRedux', () => {
         ...blankStudentTransferStatus,
         status: TransferStatus.FULL,
         sectionCapacity: 500,
-        numStudents: 500
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500,
+        numStudents: 1
       };
       const action = transferStudentsFull(transferStatus, true);
       const nextState = manageStudents(initialState, action);
@@ -343,7 +347,9 @@ describe('manageStudentsRedux', () => {
         ...blankStudentTransferStatus,
         status: TransferStatus.FULL,
         sectionCapacity: 500,
-        numStudents: 500
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500,
+        numStudents: 1
       };
       const action = transferStudentsFull(transferStatus, false);
       const nextState = manageStudents(initialState, action);
@@ -942,7 +948,12 @@ describe('manageStudentsRedux', () => {
 
       // Add student to full section
       const addStudentFullAction = addStudentsFull(
-        {sectionCapacity: 500, numStudents: 1},
+        {
+          sectionCapacity: 500,
+          numStudents: 1,
+          sectionCode: 'ABCEDF',
+          sectionStudentCount: 500
+        },
         [0]
       );
       const addedStudentState = manageStudents(
@@ -961,7 +972,9 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.FULL,
         numStudents: 1,
-        sectionCapacity: 500
+        sectionCapacity: 500,
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500
       });
     });
 
@@ -997,7 +1010,12 @@ describe('manageStudentsRedux', () => {
 
       // Add students to a full section
       const addStudentsFullAction = addStudentsFull(
-        {sectionCapacity: 500, numStudents: 2},
+        {
+          sectionCapacity: 500,
+          numStudents: 2,
+          sectionCode: 'ABCEDF',
+          sectionStudentCount: 500
+        },
         [1, 2]
       );
       const addedStudentState = manageStudents(
@@ -1024,7 +1042,9 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.FULL,
         numStudents: 2,
-        sectionCapacity: 500
+        sectionCapacity: 500,
+        sectionCode: 'ABCEDF',
+        sectionStudentCount: 500
       });
     });
   });
