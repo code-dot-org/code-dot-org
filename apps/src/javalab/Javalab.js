@@ -185,7 +185,7 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
-  this.miniApp.reset();
+  this.miniApp?.reset?.();
   this.javabuilderConnection = new JavabuilderConnection(
     this.channelId,
     this.level.javabuilderUrl,
