@@ -2,27 +2,14 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {
-  getConvertedAccuracyCheckExamples,
-  getConvertedLabels,
-  getAccuracyGrades,
-  isRegression
-} from "../redux";
-import {
-  styles,
-  colors,
-  ResultsGrades,
-  REGRESSION_ERROR_TOLERANCE
-} from "../constants";
+import { isRegression } from "../redux";
+import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
 
 class ResultsTable extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    accuracyCheckExamples: PropTypes.array,
-    accuracyCheckLabels: PropTypes.array,
-    accuracyCheckPredictedLabels: PropTypes.array,
-    accuracyGrades: PropTypes.array,
+    results: PropTypes.object,
     isRegression: PropTypes.bool
   };
 
@@ -42,9 +29,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>
-                    Features
-                  </span>
+                  <span style={styles.largeText}>Features</span>
                 </th>
                 <th
                   style={{
@@ -119,7 +104,7 @@ class ResultsTable extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.props.accuracyCheckExamples.map((examples, index) => {
+              {this.props.results.examples.map((examples, index) => {
                 return (
                   <tr key={index}>
                     {examples.map((example, i) => {
@@ -130,23 +115,11 @@ class ResultsTable extends Component {
                       );
                     })}
                     <td style={styles.tableCell}>
-                      {this.props.accuracyCheckLabels[index]}
+                      {this.props.results.labels[index]}
                     </td>
                     <td style={styles.tableCell}>
-                      {this.props.accuracyCheckPredictedLabels[index]}
+                      {this.props.results.predictedLabels[index]}
                     </td>
-                    {this.props.accuracyGrades[index] ===
-                      ResultsGrades.CORRECT && (
-                      <td style={{ ...styles.ready, ...styles.tableCell }}>
-                        &#x2713;
-                      </td>
-                    )}
-                    {this.props.accuracyGrades[index] ===
-                      ResultsGrades.INCORRECT && (
-                      <td style={{ ...styles.error, ...styles.tableCell }}>
-                        &#10006;
-                      </td>
-                    )}
                   </tr>
                 );
               })}
@@ -161,12 +134,5 @@ class ResultsTable extends Component {
 export default connect(state => ({
   selectedFeatures: state.selectedFeatures,
   labelColumn: state.labelColumn,
-  accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
-  accuracyCheckLabels: getConvertedLabels(state, state.accuracyCheckLabels),
-  accuracyCheckPredictedLabels: getConvertedLabels(
-    state,
-    state.accuracyCheckPredictedLabels
-  ),
-  accuracyGrades: getAccuracyGrades(state),
   isRegression: isRegression(state)
 }))(ResultsTable);
