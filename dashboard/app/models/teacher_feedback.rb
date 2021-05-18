@@ -35,8 +35,8 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :teacher, class_name: 'User'
 
   REVIEW_STATES = [
-    "KeepWorking",
-    "Completed"
+    "keepWorking",
+    "completed"
   ]
 
   validates_inclusion_of :review_state, in: REVIEW_STATES, allow_nil: true
