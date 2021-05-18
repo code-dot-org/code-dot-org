@@ -58,14 +58,16 @@ class DataTable extends Component {
 
   getColumns = () => {
     if (this.props.reducedColumns) {
-      return Object.keys(this.props.data[0]).filter(key => {
-        return (
-          (!this.props.noLabel && this.props.labelColumn === key) ||
-          this.props.selectedFeatures.includes(key)
-        );
-      }).sort((key1, key2) => {
-        return this.props.labelColumn === key1 ? 1 : -1
-      });
+      return Object.keys(this.props.data[0])
+        .filter(key => {
+          return (
+            (!this.props.noLabel && this.props.labelColumn === key) ||
+            this.props.selectedFeatures.includes(key)
+          );
+        })
+        .sort((key1, key2) => {
+          return this.props.labelColumn === key1 ? 1 : -1;
+        });
     }
 
     return Object.keys(this.props.data[0]);
@@ -79,12 +81,17 @@ class DataTable extends Component {
         ]
       ];
     } else {
-      return this.props.data.slice(0,100);
+      return this.props.data.slice(0, 100);
     }
   };
 
   render() {
-    const { data, setCurrentColumn, setHighlightColumn, startingRow } = this.props;
+    const {
+      data,
+      setCurrentColumn,
+      setHighlightColumn,
+      startingRow
+    } = this.props;
 
     if (data.length === 0) {
       return null;
@@ -122,10 +129,11 @@ class DataTable extends Component {
                       onMouseEnter={() => setHighlightColumn(key)}
                       onMouseLeave={() => setHighlightColumn(undefined)}
                     >
-                      {startingRow !== undefined &&
-                      index <= startingRow
-                        ? <span>&nbsp;</span>
-                        : row[key]}
+                      {startingRow !== undefined && index <= startingRow ? (
+                        <span>&nbsp;</span>
+                      ) : (
+                        row[key]
+                      )}
                     </td>
                   );
                 })}
