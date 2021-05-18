@@ -34,7 +34,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       updatePublishedState,
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
-      publishedState: 'Preview'
+      publishedState: 'Beta'
     };
   });
 
@@ -57,7 +57,7 @@ describe('CourseVersionPublishedStateSelector', () => {
       <CourseVersionPublishingEditor {...defaultProps} />
     );
     expect(wrapper.find('.publishedStateSelector').props().value).to.equal(
-      'Preview'
+      'Beta'
     );
     expect(wrapper.find('input').length).to.equal(0);
   });
@@ -75,6 +75,20 @@ describe('CourseVersionPublishedStateSelector', () => {
     expect(updateIsStable).to.have.been.calledWith(false);
   });
 
+  it('updates visible, isStable, and pilotExperiment when publish state changed to beta', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor {...defaultProps} />
+    );
+
+    wrapper
+      .find('.publishedStateSelector')
+      .simulate('change', {target: {value: 'Beta'}});
+
+    expect(updateVisible).to.have.been.calledWith(false);
+    expect(updateIsStable).to.have.been.calledWith(false);
+    expect(updatePilotExperiment).to.have.been.calledWith('');
+  });
+
   it('updates visible, isStable, and pilotExperiment when publish state changed to preview', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />
@@ -83,20 +97,6 @@ describe('CourseVersionPublishedStateSelector', () => {
     wrapper
       .find('.publishedStateSelector')
       .simulate('change', {target: {value: 'Preview'}});
-
-    expect(updateVisible).to.have.been.calledWith(false);
-    expect(updateIsStable).to.have.been.calledWith(false);
-    expect(updatePilotExperiment).to.have.been.calledWith('');
-  });
-
-  it('updates visible, isStable, and pilotExperiment when publish state changed to assignable', () => {
-    const wrapper = shallow(
-      <CourseVersionPublishingEditor {...defaultProps} />
-    );
-
-    wrapper
-      .find('.publishedStateSelector')
-      .simulate('change', {target: {value: 'Assignable'}});
 
     expect(updateVisible).to.have.been.calledWith(true);
     expect(updateIsStable).to.have.been.calledWith(false);
