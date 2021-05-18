@@ -1,10 +1,10 @@
 module CurriculumSyncUtils
   class CrowdinCollectionSerializer < ActiveModel::Serializer::CollectionSerializer
-    # TODO: finish comment
-    # Default CollectionSerializer behavior is to return an array of hashes,
-    # where each hash is a single result. We would instead like to return a
-    # hash.
+    # @override
     def serializable_hash(adapter_options, options, adapter_instance)
+      # Default CollectionSerializer behavior is to return an array of hashes,
+      # where each hash is a single result. We would instead like to return a
+      # single hash, keyed by `crowdin_key`
       return super.reduce({}) do |results, result|
         raise KeyEror.new("Serializer must define :crowdin_key for curriculum content I18N serialization; got #{result.keys.inspect}") unless result.key?(:crowdin_key)
         crowdin_key = result.delete(:crowdin_key)
@@ -18,19 +18,19 @@ module CurriculumSyncUtils
     config.collection_serializer = CrowdinCollectionSerializer
     config.adapter = :json
 
+    # @override
     def serializable_hash(adapter_options = nil, options = {}, adapter_instance = self.class.serialization_adapter_instance)
+      # include nested relationships of an arbitrary depth, rather than the
+      # default of only a single level of nesting.
       options[:include_directive] ||= JSONAPI::IncludeDirective.new('**', allow_wildcard: true)
-      super.compact
+      # compact the result, excluding not only nil values but also empty ones
+      super.reject {|_, v| v.blank?}
     end
 
     attribute :crowdin_key
     def crowdin_key
       object.try(:key) || object.id
     end
-  end
-
-  class LessonGroupI18nSerializer < I18nSerializer
-    attribute :display_name
   end
 
   class ActivitySectionI18nSerializer < I18nSerializer
@@ -64,8 +64,11 @@ module CurriculumSyncUtils
   end
 
   class LessonI18nSerializer < I18nSerializer
+    # Note that we don't include "name" here, because that's already
+    # handled by existing logic. We could in the future consider moving
+    # that (and possibly script stuff, too) out of whereever it exists
+    # and into this logic.
     attributes(
-      :name,
       :overview,
       :preparation,
       :purpose,
@@ -83,7 +86,6 @@ module CurriculumSyncUtils
   end
 
   class ScriptI18nSerializer < I18nSerializer
-    has_many :lesson_groups, serializer: CurriculumSyncUtils::LessonGroupI18nSerializer
     has_many :lessons, serializer: CurriculumSyncUtils::LessonI18nSerializer
     has_many :resources, serializer: CurriculumSyncUtils::ResourceI18nSerializer
     has_many :student_resources, serializer: CurriculumSyncUtils::ResourceI18nSerializer
