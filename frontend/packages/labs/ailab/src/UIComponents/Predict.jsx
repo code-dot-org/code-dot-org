@@ -5,10 +5,12 @@ import { connect } from "react-redux";
 import train from "../train";
 import {
   setTestData,
-  getSelectedContinuousFeatures,
+  getSelectedNumericalFeatures,
   getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn,
-  getConvertedPredictedLabel
+  getConvertedPredictedLabel,
+  getPredictAvailable,
+  getRangesByColumn
 } from "../redux";
 import { styles } from "../constants";
 
@@ -16,12 +18,14 @@ class Predict extends Component {
   static propTypes = {
     labelColumn: PropTypes.string,
     selectedCategoricalFeatures: PropTypes.array,
-    selectedContinuousFeatures: PropTypes.array,
+    selectedNumericalFeatures: PropTypes.array,
     uniqueOptionsByColumn: PropTypes.object,
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    confidence: PropTypes.number
+    confidence: PropTypes.number,
+    getPredictAvailable: PropTypes.bool,
+    rangesByColumn: PropTypes.object
   };
 
   handleChange = (event, feature) => {
@@ -36,67 +40,87 @@ class Predict extends Component {
 
   render() {
     return (
-      <div id="predict">
-        <div style={styles.panel}>
-          <div style={styles.largeText}>Test the Model</div>
-          <form>
-            {this.props.selectedContinuousFeatures.map((feature, index) => {
-              return (
-                <div key={index}>
-                  <label>
-                    {feature}:
-                    <input
-                      type="text"
-                      onChange={event => this.handleChange(event, feature)}
-                    />
-                  </label>
-                </div>
-              );
-            })}
-          </form>
-          <br />
-          <form>
-            {this.props.selectedCategoricalFeatures.map((feature, index) => {
-              return (
-                <span key={index}>
-                  <label>
-                    {feature}:
-                    <select
-                      onChange={event => this.handleChange(event, feature)}
-                    >
-                      <option>{""}</option>
-                      {this.props.uniqueOptionsByColumn[feature]
-                        .sort()
-                        .map((option, index) => {
-                          return (
-                            <option key={index} value={option}>
-                              {option}
-                            </option>
-                          );
-                        })}
-                    </select>
-                  </label>
-                </span>
-              );
-            })}
-          </form>
-          <br />
-          <button type="button" onClick={this.onClickPredict}>
-            Predict!
-          </button>
-          <p />
-          {this.props.predictedLabel && (
-            <div>
-              <div> The Machine Learning model predicts... </div>
-              <div style={styles.subPanel}>
-                {this.props.labelColumn}: {this.props.predictedLabel}
-                {this.props.confidence && (
-                  <p>Confidence: {this.props.confidence}</p>
-                )}
-              </div>
-            </div>
-          )}
+      <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
+        <div style={styles.largeText}>Test The Model</div>
+        <div style={styles.scrollableContents}>
+          <div style={styles.scrollingContents}>
+            <form>
+              {this.props.selectedNumericalFeatures.map((feature, index) => {
+                let min = this.props.rangesByColumn[feature].min.toFixed(2);
+                let max = this.props.rangesByColumn[feature].max.toFixed(2);
+
+                return (
+                  <div style={styles.cardRow} key={index}>
+                    <label>
+                      {feature} {`(min: ${+min}, max: ${+max})`}
+                      : &nbsp;
+                      <input
+                        type="number"
+                        onChange={event => this.handleChange(event, feature)}
+                        value={this.props.testData[feature]}
+                      />
+                    </label>
+
+                  </div>
+                );
+              })}
+            </form>
+            <br />
+            <form>
+              {this.props.selectedCategoricalFeatures.map((feature, index) => {
+                return (
+                  <div style={styles.cardRow} key={index}>
+                    <label>
+                      {feature}: &nbsp;
+                      <select
+                        onChange={event => this.handleChange(event, feature)}
+                        value={this.props.testData[feature]}
+                      >
+                        <option>{""}</option>
+                        {this.props.uniqueOptionsByColumn[feature]
+                          .sort()
+                          .map((option, index) => {
+                            return (
+                              <option key={index} value={option}>
+                                {option}
+                              </option>
+                            );
+                          })}
+                      </select>
+                    </label>
+                  </div>
+                );
+              })}
+            </form>
+          </div>
         </div>
+        <br />
+        <div>
+          <button
+            type="button"
+            style={
+              !this.props.getPredictAvailable
+                ? styles.disabledButton
+                : undefined
+            }
+            onClick={this.onClickPredict}
+            disabled={!this.props.getPredictAvailable}
+          >
+            Predict
+          </button>
+        </div>
+        {this.props.predictedLabel && (
+          <div>
+            <p />
+            <div>A.I. predicts:</div>
+            <div style={styles.contents}>
+              {this.props.labelColumn}: {this.props.predictedLabel}
+              {this.props.confidence && (
+                <p>Confidence: {this.props.confidence}</p>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -108,9 +132,11 @@ export default connect(
     predictedLabel: getConvertedPredictedLabel(state),
     confidence: state.prediction.confidence,
     labelColumn: state.labelColumn,
-    selectedContinuousFeatures: getSelectedContinuousFeatures(state),
+    selectedNumericalFeatures: getSelectedNumericalFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
-    uniqueOptionsByColumn: getUniqueOptionsByColumn(state)
+    uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
+    getPredictAvailable: getPredictAvailable(state),
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setTestData(testData) {

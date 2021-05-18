@@ -1,0 +1,65 @@
+{
+  "card": {
+    "description": "Survey of customers in a poke shop on whether or not they like certain poke combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Help make recommendations for what kind of poke a new customer should buy",
+      "potentialMisuses": "Anything other than recommendations"
+    }
+  },
+  "defaultLabelColumn": "preference",
+  "fields": [
+    {
+      "id": "avocado",
+      "type": "categorical",
+      "description": "Does the poke have avocado mixed in?"
+    },
+    {
+      "id": "onion",
+      "type": "categorical",
+      "description": "Does the poke have onion mixed in?"
+    },
+    {
+      "id": "masago",
+      "type": "categorical",
+      "description": "Does the poke have masago mixed in?"
+    },
+    {
+      "id": "wasabi",
+      "type": "categorical",
+      "description": "Does the poke have wasabi mixed in?"
+    },
+    {
+      "id": "ginger",
+      "type": "categorical",
+      "description": "Does the poke have ginger mixed in?"
+    },
+    {
+      "id": "seaweed",
+      "type": "categorical",
+      "description": "Does the poke have seaweed mixed in?"
+    },
+    {
+      "id": "furikake",
+      "type": "categorical",
+      "description": "Does the poke have furikake mixed in?"
+    },
+    {
+      "id": "surimi",
+      "type": "categorical",
+      "description": "Does the poke have surimi mixed in?"
+    },
+    {
+      "id": "chili",
+      "type": "categorical",
+      "description": "Does the poke have chili mixed in?"
+    },
+    {
+      "id": "preference",
+      "type": "categorical",
+      "description": "Do you like or dislike the poke?"
+    }
+  ]
+}

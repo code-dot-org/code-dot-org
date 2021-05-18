@@ -1,62 +1,87 @@
-import { initAll } from "./index";
 import "./assetPath";
+import { initAll, instructionsDismissed } from "./index";
 import queryString from "query-string";
 
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes = {
-  load_foods: { datasets: ["foods"] },
+  minimal: {
+    datasets: ["tacos_toy"],
+    hideModelCard: true,
+    hideSelectLabel: true
+  },
 
-  level_3_1: {
-    datasets: ["candy", "titanic", "foods"],
-    hideSelectLabel: true,
+  "preload-metadata": {
+    requireAccuracy: 50,
     hideSpecifyColumns: true,
     hideChooseReserve: true,
+    hideInstructionsOverlay: true
+  },
+
+  "intro-ai-tacos": {
+    datasets: ["tacos_toy"],
+    hideSelectLabel: true,
     hideModelCard: true,
     hideSave: true
   },
 
-  level_3_3: {
-    datasets: ["candy", "titanic", "foods"],
+  "intro-ai-foods": {
+    datasets: [
+      "boba_toy",
+      "cookies_toy",
+      "naan_toy",
+      "poke_toy",
+      "poutine_toy",
+      "raspado_toy",
+      "salad_toy",
+      "salsa_toy"
+    ],
     hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
-    hideModelCard: true
+    hideModelCard: true,
+    hideSave: true
   },
 
-  level_4_1: {
-    datasets: ["candy"],
-    hideChooseReserve: true,
-    hideModelCard: true
+  safari: {
+    datasets: ["safari_toy"],
+    hideSelectLabel: true,
+    hideModelCard: true,
+    hideSave: true
   },
 
-  level_4_3: {
-    datasets: ["candy", "titanic", "foods"],
-    hideChooseReserve: true,
-    hideModelCard: true
+  zoo: {
+    datasets: ["zoo"]
   },
 
-  level_5_3: {
-    datasets: ["candy", "titanic", "foods"]
-  },
-
-  level_7_6: {},
-
-  minimal: {
-    datasets: ["candy"],
-    hideSpecifyColumns: true,
-    hideSelectTrainer: "knnClassify",
-    hideChooseReserve: true,
-    hideModelCard: true
-  }
+  "final-project": {}
 };
 
 // Look for a ?mode= parameter on the URL
 let parameters = queryString.parse(location.search);
 const mode = parameters["mode"] ? sampleModes[parameters["mode"]] : null;
 
-function saveTrainedModelStub(data) {
+function onContinueStub() {
+  console.log("This would continue to the next level.");
+}
+
+function saveTrainedModelStub(data, response) {
   console.log("This would save a trained model.", data);
+  setTimeout(
+    () => response({ id: 303, status: "success" }),
+    2000
+  );
+}
+
+function setInstructionsKeyStub(instructionsKey, options) {
+  const element = document.getElementById("instructions");
+
+  element.innerText =
+    instructionsKey + (!options.showOverlay ? " (no overlay)" : "");
+  element.onclick = instructionsDismissed;
 }
 
 // Initialize the app.
-initAll({ mode: mode, saveTrainedModel: saveTrainedModelStub });
+initAll({
+  mode: mode,
+  onContinue: onContinueStub,
+  saveTrainedModel: saveTrainedModelStub,
+  setInstructionsKey: setInstructionsKeyStub
+});

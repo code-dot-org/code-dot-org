@@ -1,6 +1,5 @@
 /* Generic machine learning handlers that route to the selected trainer. */
 
-import SVMTrainer from "./trainers/SVMTrainer";
 import KNNTrainer from "./trainers/KNNTrainer";
 
 import { store } from "./index.js";
@@ -14,62 +13,7 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels
 } from "./redux";
-import { ColumnTypes, MLTypes } from "./constants.js";
-
-export const availableTrainers = {
-  binarySvm: {
-    name: "Binary SVM",
-    description:
-      "Uses the Support Vector Machine algorithm to classify an example as one of two options.",
-    mlType: MLTypes.CLASSIFICATION,
-    binary: true,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
-    labelType: ColumnTypes.CATEGORICAL
-  },
-  knnClassify: {
-    name: "KNN Classifier",
-    description:
-      "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.",
-    mlType: MLTypes.CLASSIFICATION,
-    binary: false,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
-    labelType: ColumnTypes.CATEGORICAL
-  },
-  knnRegress: {
-    name: "KNN Regression",
-    description:
-      "Uses the K-Nearest Neighbor algorithm to predict a floating point label.",
-    mlType: MLTypes.REGRESSION,
-    binary: false,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
-    labelType: ColumnTypes.CONTINUOUS
-  }
-};
-
-const filterTrainersByType = type => {
-  let trainersOfType = {};
-  const trainerKeys = Object.keys(availableTrainers).filter(
-    trainerKey => availableTrainers[trainerKey].mlType === type
-  );
-  trainerKeys.forEach(
-    trainerKey => (trainersOfType[trainerKey] = availableTrainers[trainerKey])
-  );
-  return trainersOfType;
-};
-
-export const getClassificationTrainers = () => {
-  return filterTrainersByType(MLTypes.CLASSIFICATION);
-};
-
-export const getRegressionTrainers = () => {
-  return filterTrainersByType(MLTypes.REGRESSION);
-};
-
-export const getMLType = trainerName => {
-  if (availableTrainers[trainerName]) {
-    return availableTrainers[trainerName].mlType;
-  }
-};
+import { TestDataLocations } from "./constants.js";
 
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.
@@ -109,9 +53,7 @@ const buildOptionNumberKey = (state, feature) => {
 
 const buildOptionNumberKeysByFeature = state => {
   let optionsMappedToNumbersByFeature = {};
-  const categoricalColumnsToConvert = getSelectedCategoricalColumns(
-    state
-  ).concat(state.labelColumn);
+  const categoricalColumnsToConvert = getSelectedCategoricalColumns(state);
   categoricalColumnsToConvert.forEach(
     feature =>
       (optionsMappedToNumbersByFeature[feature] = buildOptionNumberKey(
@@ -125,7 +67,7 @@ const buildOptionNumberKeysByFeature = state => {
 /* For feature columns that store categorical data, looks up the value
   associated with a row's specific option for a given feature; otherwise
   returns the option converted to an integer for feature columns that store
-  continuous data.
+  numerical data.
   @param {object} row, entry from the dataset
   {
     labelColumn: option,
@@ -179,24 +121,33 @@ const prepareTrainingData = () => {
   const trainingLabels = updatedState.data
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "" && !isNaN(label));
-  // Randomly select 10% of examples and corresponding labels from the training // set to reserve for a post-training accuracy calculation. The accuracy check
-  // examples and labels are excluded from the training set when the model is
-  // trained and saved to state separately to test the model's accuracy.
-  const accuracyCheckExamples = [];
-  const accuracyCheckLabels = [];
-  const percent = updatedState.percentDataToReserve / 100;
-  const numToReserve = parseInt(trainingExamples.length * percent);
-  let numReserved = 0;
-  while (numReserved < numToReserve) {
-    let randomIndex = getRandomInt(trainingExamples.length - 1);
-    accuracyCheckExamples.push(trainingExamples[randomIndex]);
-    trainingExamples.splice(randomIndex, 1);
-    accuracyCheckLabels.push(trainingLabels[randomIndex]);
-    trainingLabels.splice(randomIndex, 1);
-    numReserved++;
-  }
+  /*
+  KNN uses the entire training dataset to build the model, thus we're setting
+  the training examples and labels prior to reserving test data.
+  */
   store.dispatch(setTrainingExamples(trainingExamples));
   store.dispatch(setTrainingLabels(trainingLabels));
+  /*
+  Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
+  */
+  const percent = updatedState.percentDataToReserve / 100;
+  const numToReserve = parseInt(trainingExamples.length * percent);
+  let accuracyCheckExamples = [];
+  let accuracyCheckLabels = [];
+  if (updatedState.reserveLocation === TestDataLocations.END) {
+    const index = -1 * numToReserve;
+    accuracyCheckExamples = trainingExamples.slice(index);
+    accuracyCheckLabels = trainingLabels.slice(index);
+  }
+  if (updatedState.reserveLocation === TestDataLocations.RANDOM) {
+    let numReserved = 0;
+    while (numReserved < numToReserve) {
+      let randomIndex = getRandomInt(trainingExamples.length - 1);
+      accuracyCheckExamples.push(trainingExamples[randomIndex]);
+      accuracyCheckLabels.push(trainingLabels[randomIndex]);
+      numReserved++;
+    }
+  }
   store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
   store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };
@@ -213,19 +164,7 @@ const prepareTestData = () => {
 let trainingState = {};
 const init = () => {
   const state = store.getState();
-  let trainer;
-  switch (state.selectedTrainer) {
-    case "binarySvm":
-      trainer = new SVMTrainer();
-      break;
-    case "knnClassify":
-      trainer = new KNNTrainer();
-      break;
-    case "knnRegress":
-      trainer = new KNNTrainer();
-      break;
-  }
-  trainingState.trainer = trainer;
+  trainingState.trainer =  new KNNTrainer();
   buildOptionNumberKeysByFeature(state);
   prepareTrainingData();
 };

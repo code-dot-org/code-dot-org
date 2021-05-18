@@ -2,205 +2,30 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getEmptyCellDetails, setCurrentColumn } from "../redux";
+import Statement from "./Statement";
+import DataTable from "./DataTable";
 import { styles } from "../constants";
-import SelectFeatures from "./SelectFeatures";
 
 class DataDisplay extends Component {
   static propTypes = {
-    data: PropTypes.array,
-    labelColumn: PropTypes.string,
-    selectedFeatures: PropTypes.array,
-    emptyCellDetails: PropTypes.array,
-    setCurrentColumn: PropTypes.func,
-    currentColumn: PropTypes.string
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showRawData: true,
-      showEmptyCellDetails: false,
-      showSelectFeatures: null
-    };
-  }
-
-  toggleRawData = () => {
-    this.setState({
-      showRawData: !this.state.showRawData
-    });
-  };
-
-  toggleEmptyCellDetails = () => {
-    this.setState({
-      showEmptyCellDetails: !this.state.showEmptyCellDetails
-    });
-  };
-
-  getColumnHeaderStyle = key => {
-    let style;
-
-    if (key === this.props.currentColumn) {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayHeaderLabelSelected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayHeaderFeatureSelected;
-      } else {
-        style = styles.dataDisplayHeaderSelected;
-      }
-    } else {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayHeaderLabelUnselected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayHeaderFeatureUnselected;
-      } else {
-        style = styles.dataDisplayHeaderUnselected;
-      }
-    }
-
-    return {...style, ...styles.dataDisplayHeader};
-  };
-
-  getColumnCellStyle = key => {
-    let style;
-
-    if (key === this.props.currentColumn) {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayCellLabelSelected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayCellFeatureSelected;
-      } else {
-        style = styles.dataDisplayCellSelected;
-      }
-    } else {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayCellLabelUnselected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayCellFeatureUnselected;
-      } else {
-        style = styles.dataDisplayCellUnselected;
-      }
-    }
-
-    return {...style, ...styles.dataDisplayCell};
-  };
-
-  showSelectFeatures = mode => {
-    this.setState({ showSelectFeatures: mode });
-  };
-
-  onSelectFeaturesClose = () => {
-    this.setState({ showSelectFeatures: null });
+    data: PropTypes.array
   };
 
   render() {
-    const { data, setCurrentColumn } = this.props;
+    const { data } = this.props;
+
+    if (data.length === 0) {
+      return null;
+    }
 
     return (
-      <div id="data-display">
-        {this.state.showSelectFeatures && (
-          <SelectFeatures
-            mode={this.state.showSelectFeatures}
-            onClose={this.onSelectFeaturesClose}
-          />
-        )}
-
-        <div style={styles.statement}>
-          Predict{" "}
-          <span
-            style={styles.statementLabel}
-            onClick={() => this.showSelectFeatures("label")}
-          >
-            {this.props.labelColumn || "..."}
-          </span>{" "}
-          based on{" "}
-          <span
-            style={styles.statementFeature}
-            onClick={() => this.showSelectFeatures("features")}
-          >
-            {this.props.selectedFeatures.length > 0
-              ? this.props.selectedFeatures.join(", ")
-              : ".."}
-          </span>
-          {"."}
+      <div id="data-display" style={styles.panel}>
+        <Statement />
+        <div style={styles.tableParent}>
+          <DataTable />
         </div>
-        <br />
-        <div style={styles.panel}>
-          <div style={styles.largeText}>Imported Data</div>
-          {this.state.showRawData && (
-            <div>
-              <div style={styles.finePrint}>
-                <table style={styles.dataDisplayTable}>
-                  <thead>
-                    <tr>
-                      {data.length > 0 &&
-                        Object.keys(data[0]).map(key => {
-                          return (
-                            <th
-                              key={key}
-                              style={this.getColumnHeaderStyle(key)}
-                              onClick={() => setCurrentColumn(key)}
-                            >
-                              {key}
-                            </th>
-                          );
-                        })}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.length > 0 &&
-                      data.map((row, index) => {
-                        return (
-                          <tr key={index}>
-                            {data.length > 0 &&
-                              Object.keys(row).map(key => {
-                                return (
-                                  <td
-                                    key={key}
-                                    style={this.getColumnCellStyle(key)}
-                                    onClick={() => setCurrentColumn(key)}
-                                  >
-                                    {row[key]}
-                                  </td>
-                                );
-                              })}
-                          </tr>
-                        );
-                      })}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-          {!this.state.showRawData && (
-            <button type="button" onClick={this.toggleRawData}>
-              show data
-            </button>
-          )}
-          <div style={styles.mediumText}>
-            There are {this.props.data.length} rows of data.
-          </div>
-
-          <div style={styles.mediumText}>
-            There are {this.props.emptyCellDetails.length} empty cells.
-          </div>
-          {this.state.showEmptyCellDetails && (
-            <div>
-              <button type="button" onClick={this.toggleEmptyCellDetails}>
-                hide empty cell details
-              </button>
-              {this.props.emptyCellDetails.map((cellDetails, i) => {
-                return <p key={i}>{cellDetails}</p>;
-              })}
-            </div>
-          )}
-          {!this.state.showEmptyCellDetails &&
-            this.props.emptyCellDetails.length > 0 && (
-              <button type="button" onClick={this.toggleEmptyCellDetails}>
-                show empty cell details
-              </button>
-            )}
+        <div style={styles.footerText}>
+          There are {this.props.data.length} rows of data.
         </div>
       </div>
     );
@@ -209,15 +34,6 @@ class DataDisplay extends Component {
 
 export default connect(
   state => ({
-    data: state.data,
-    labelColumn: state.labelColumn,
-    selectedFeatures: state.selectedFeatures,
-    emptyCellDetails: getEmptyCellDetails(state),
-    currentColumn: state.currentColumn
-  }),
-  dispatch => ({
-    setCurrentColumn(column) {
-      dispatch(setCurrentColumn(column));
-    }
+    data: state.data
   })
 )(DataDisplay);

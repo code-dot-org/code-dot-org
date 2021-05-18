@@ -1,0 +1,51 @@
+{
+  "card": {
+    "description": "A small dataset of different car statistics, originally from 1983, used to predict their MPG (miles per gallon). This dataset is unlikely to get great accuracy scores on a KNN regression, but it could make a useful model nonetheless: how can you take a general pattern in the model and use that to determine which features contribute to higher miles per gallon? How might you change the dataset to get a more accurate model - for example, changing MPG from a numerical column to a categorical one with intervals of 5 MPG?",
+    "source": "UCI (http://archive.ics.uci.edu/ml/datasets/Auto+MPG)",
+    "lastUpdated": "1983",
+    "context": {
+      "createdBy": "Carnegie Mellon's StatLib",
+      "potentialUses": "Determine a car's MPG based on various features like weight and horsepower.",
+      "potentialMisuses": "Since it's 30 years old, it may not reflect advancements in technology - don't buy your car based on this!"
+    }
+  },
+  "defaultLabelColumn": "weight",
+  "fields": [
+    {
+      "type": "numerical",
+      "id": "mpg",
+      "description": "Miles per gallon."
+    },
+    {
+      "type": "numerical",
+      "id": "cylinders",
+      "description": "The number of cylinders in the engine."
+    },
+    {
+      "type": "numerical",
+      "id": "displacement",
+      "description": "A measure of cylinder volume."
+    },
+    {
+      "type": "numerical",
+      "id": "horsepower",
+      "description": "The power of the car."
+    },
+    {
+      "type": "numerical",
+      "id": "weight",
+      "description": "The car's weight in pounds."
+    },
+    { "type": "numerical", "id": "acceleration", "description": "" },
+    {
+      "type": "categorical",
+      "id": "model year",
+      "description": "The year the car was released."
+    },
+    {
+      "type": "categorical",
+      "id": "car name",
+      "description": "The name of the car: all unique values"
+    }
+  ]
+}

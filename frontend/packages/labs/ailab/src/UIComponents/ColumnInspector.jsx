@@ -8,12 +8,44 @@ import {
   getCurrentColumnData,
   addSelectedFeature,
   removeSelectedFeature,
-  getCurrentColumnIsSelectedFeature,
-  getCurrentColumnIsSelectedLabel,
-  getRangesByColumn
+  getRangesByColumn,
+  setCurrentColumn
 } from "../redux";
-import { ColumnTypes, styles } from "../constants.js";
-import Histogram from "react-chart-histogram";
+import { ColumnTypes, styles, UNIQUE_OPTIONS_MAX } from "../constants.js";
+import { Bar } from "react-chartjs-2";
+import ScatterPlot from "./ScatterPlot";
+import CrossTab from "./CrossTab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
+const barData = {
+  labels: [],
+  datasets: [
+    {
+      label: "",
+      backgroundColor: "rgba(255,99,132,0.2)",
+      borderColor: "rgba(255,99,132,1)",
+      borderWidth: 1,
+      hoverBackgroundColor: "rgba(255,99,132,0.4)",
+      hoverBorderColor: "rgba(255,99,132,1)",
+      data: []
+    }
+  ]
+};
+
+const chartOptions = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true
+        }
+      }
+    ]
+  },
+  legend: { display: false },
+  maintainAspectRatio: false
+};
 
 class ColumnInspector extends Component {
   static propTypes = {
@@ -22,9 +54,11 @@ class ColumnInspector extends Component {
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
-    currentColumnIsSelectedFeature: PropTypes.bool,
-    currentColumnIsSelectedLabel: PropTypes.bool,
-    rangesByColumn: PropTypes.object
+    rangesByColumn: PropTypes.object,
+    setCurrentColumn: PropTypes.func,
+    currentPanel: PropTypes.string,
+    labelColumn: PropTypes.string,
+    selectedFeatures: PropTypes.array
   };
 
   handleChangeDataType = (event, feature) => {
@@ -32,82 +66,73 @@ class ColumnInspector extends Component {
     this.props.setColumnsByDataType(feature, event.target.value);
   };
 
-  setPredictColumn = () => {
+  setPredictColumn = e => {
     this.props.setLabelColumn(this.props.currentColumnData.id);
+    e.preventDefault();
   };
 
-  addFeature = () => {
+  addFeature = e => {
     this.props.addSelectedFeature(this.props.currentColumnData.id);
+    e.preventDefault();
   };
 
   removeLabel = () => {
     this.props.setLabelColumn(null);
-  }
+  };
+
   removeFeature = () => {
     this.props.removeSelectedFeature(this.props.currentColumnData.id);
+  };
+
+  onClose = () => {
+    this.props.setCurrentColumn(undefined);
   };
 
   render() {
     const {
       currentColumnData,
-      currentColumnIsSelectedFeature,
-      currentColumnIsSelectedLabel,
-      rangesByColumn
+      rangesByColumn,
+      currentPanel,
+      labelColumn,
+      selectedFeatures
     } = this.props;
 
-    let labels, data, options;
     if (
       currentColumnData &&
       currentColumnData.dataType === ColumnTypes.CATEGORICAL
     ) {
-      labels = Object.values(currentColumnData.uniqueOptions);
-      data = labels.map(option => {
+      barData.labels = Object.values(currentColumnData.uniqueOptions);
+      barData.datasets[0].data = barData.labels.map(option => {
         return currentColumnData.frequencies[option];
       });
-      options = { fillColor: "#000", strokeColor: "#000" };
+      barData.datasets[0].label = currentColumnData.id;
     }
 
+    const maxLabelsInHistogram = 5;
+
     return (
-      <div id="column-inspector">
-        {currentColumnData && (
-          <div style={styles.validationMessagesLight}>
-
-            {currentColumnData.dataType === ColumnTypes.OTHER && (
-              <div>
-                <div style={styles.mediumText}>
-                  Describe the data in each of your selected columns
-                </div>
-                <div style={styles.smallText}>
-                  Categorical columns contain a fixed number of possible values that
-                  indicate a group. For example, the column "Size" might contain
-                  categorical data such as "small", "medium" and "large".{" "}
-                </div>
-                <div style={styles.smallText}>
-                  Continuous columns contain a range of possible numerical values
-                  that could fall anywhere on a continuum. For example, the column
-                  "Height in inches" might contain continuous data such as "12",
-                  "11.25" and "9.07".{" "}
-                </div>
-                <div style={styles.smallText}>
-                  If the column contains anything other than categorical or
-                  continuous data, it's not going to work for training this type of
-                  machine learning model.
-                </div>
+      currentColumnData && (
+        <div
+          id="column-inspector"
+          style={{
+            ...styles.panel,
+            ...styles.rightPanel
+          }}
+        >
+          <div style={styles.scrollableContents}>
+            <div style={styles.scrollingContents}>
+              <div onClick={this.onClose} style={styles.popupClose}>
+                <FontAwesomeIcon icon={faTimes} />
               </div>
-            )}
-
-            <form>
-              <div>
-                <label>
-                  {currentColumnData.readOnly && (
-                    <div>
-                      {currentColumnData.id}: {currentColumnData.dataType}
-                    </div>
-                  )}
-
-                  {!currentColumnData.readOnly && (
-                    <div>
-                      {currentColumnData.id}: &nbsp;
+              <div style={styles.largeText}>{currentColumnData.id}</div>
+              <form>
+                <div>
+                  <label>
+                    <div>Data Type:</div>
+                    {currentColumnData.readOnly && (
+                      <div> {currentColumnData.dataType} </div>
+                    )}
+                    {!currentColumnData.readOnly && (
                       <select
                         onChange={event =>
                           this.handleChangeDataType(event, currentColumnData.id)
@@ -122,127 +147,109 @@ class ColumnInspector extends Component {
                           );
                         })}
                       </select>
-                    </div>
-                  )}
-                </label>
-
-                {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                  <div>
-                    <br />
-                    <Histogram
-                      xLabels={labels}
-                      yValues={data}
-                      width="300"
-                      height="150"
-                      options={options}
-                    />
-                  </div>
-                )}
-
-                {/*currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                  <div>
-                    <p>
-                      {Object.keys(currentColumnData.uniqueOptions).length}{" "}
-                      unique values for {currentColumnData.id}:{" "}
-                    </p>
-                    <div style={styles.subPanel}>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Option</th>
-                            <th>Frequency</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {Object.keys(currentColumnData.uniqueOptions)
-                            .sort()
-                            .map((option, index) => {
-                              return (
-                                <tr key={index}>
-                                  <td>{option}</td>
-                                  <td>
-                                    {currentColumnData.frequencies[option]}
-                                  </td>
-                                </tr>
-                              );
-                            })}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                )*/}
-                {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
-                  <div>
-                    {currentColumnData.range && (
+                    )}
+                    {currentColumnData.description && (
                       <div>
-                        {isNaN(rangesByColumn[currentColumnData.id].min) && (
-                          <p style={styles.error}>
-                            Continuous columns should contain only numbers.
-                          </p>
+                        <br />
+                        <div>{currentColumnData.description}</div>
+                        <br />
+                      </div>
+                    )}
+                  </label>
+
+                  {currentPanel === "dataDisplayLabel" &&
+                    currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                      <div>
+                        {barData.labels.length <= maxLabelsInHistogram && (
+                          <Bar
+                            data={barData}
+                            width={100}
+                            height={150}
+                            options={chartOptions}
+                          />
                         )}
-                        {!isNaN(rangesByColumn[currentColumnData.id].min) && (
-                          <div style={styles.subPanel}>
-                            min: {rangesByColumn[currentColumnData.id].min}
-                            <br />
-                            max: {rangesByColumn[currentColumnData.id].max}
+                        {barData.labels.length > maxLabelsInHistogram && (
+                          <div>
+                            {barData.labels.length} values were found in this
+                            column. A graph is only shown when there are{" "}
+                            {maxLabelsInHistogram} or fewer.
                           </div>
                         )}
                       </div>
                     )}
-                  </div>
-                )}
-                <br />
-                <br />
-              </div>
-            </form>
 
-            {currentColumnData.dataType !== ColumnTypes.OTHER && (
-              <div>
-                {!currentColumnIsSelectedLabel && !currentColumnIsSelectedFeature && (
-                  <div>
-                    <button
-                      type="button"
-                      onClick={this.setPredictColumn}
-                      style={styles.predictButton}
-                    >
-                      Predict this column
-                    </button>
-                    <br />
-                    <button
-                      type="button"
-                      onClick={this.addFeature}
-                      style={styles.predictBasedButton}
-                    >
-                      Predict based on this column
-                    </button>
-                    <br />
-                  </div>
-                )}
+                  {currentPanel === "dataDisplayFeatures" && (
+                    <div>
+                      <ScatterPlot />
+                      <CrossTab />
+                    </div>
+                  )}
 
-                {currentColumnIsSelectedLabel && (
+                  {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
+                    <div>
+                      {currentColumnData.range && (
+                        <div>
+                          {isNaN(rangesByColumn[currentColumnData.id].min) && (
+                            <p style={styles.error}>
+                              Numerical columns should contain only numbers.
+                            </p>
+                          )}
+                          {!isNaN(rangesByColumn[currentColumnData.id].min) && (
+                            <div style={styles.contents}>
+                              min: {rangesByColumn[currentColumnData.id].min}
+                              <br />
+                              max: {rangesByColumn[currentColumnData.id].max}
+                              <br />
+                              range:{" "}
+                              {rangesByColumn[currentColumnData.id].range}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  <br />
+                  <br />
+                </div>
+              </form>
+
+              {currentPanel === "dataDisplayLabel" &&
+                currentColumnData.id !== labelColumn &&
+                !currentColumnData.hasTooManyUniqueOptions && (
                   <button
                     type="button"
-                    onClick={this.removeLabel}
-                    style={styles.dontPredictButton}
+                    onClick={e =>
+                      this.setPredictColumn(e, currentColumnData.id)
+                    }
+                    style={styles.selectLabelButton}
                   >
-                    Don't predict this column
+                    Select label
                   </button>
                 )}
 
-                {currentColumnIsSelectedFeature && (
+              {currentPanel === "dataDisplayFeatures" &&
+                !selectedFeatures.includes(currentColumnData.id) &&
+                !currentColumnData.hasTooManyUniqueOptions && (
                   <button
                     type="button"
-                    onClick={this.removeFeature}
-                    style={styles.dontPredictBasedButton}
+                    onClick={e => this.addFeature(e, currentColumnData.id)}
+                    style={styles.selectFeaturesButton}
                   >
-                    Don't predict based on this column
+                    Add feature
                   </button>
                 )}
-              </div>
-            )}
+
+                {currentColumnData.hasTooManyUniqueOptions && (
+                  <span>
+                    Categorical columns with more than {UNIQUE_OPTIONS_MAX}
+                    {" "} unique values can not be selected as the label or a
+                    {" "} feature.
+                  </span>
+                )}
+            </div>
           </div>
-        )}
-      </div>
+        </div>
+      )
     );
   }
 }
@@ -250,9 +257,10 @@ class ColumnInspector extends Component {
 export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
-    currentColumnIsSelectedFeature: getCurrentColumnIsSelectedFeature(state),
-    currentColumnIsSelectedLabel: getCurrentColumnIsSelectedLabel(state),
-    rangesByColumn: getRangesByColumn(state)
+    rangesByColumn: getRangesByColumn(state),
+    currentPanel: state.currentPanel,
+    labelColumn: state.labelColumn,
+    selectedFeatures: state.selectedFeatures
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
@@ -266,6 +274,9 @@ export default connect(
     },
     removeSelectedFeature(labelColumn) {
       dispatch(removeSelectedFeature(labelColumn));
+    },
+    setCurrentColumn(column) {
+      dispatch(setCurrentColumn(column));
     }
   })
 )(ColumnInspector);

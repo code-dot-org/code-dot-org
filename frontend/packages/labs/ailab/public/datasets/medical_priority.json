@@ -1,0 +1,55 @@
+{
+  "card": {
+    "description": "Data collected by a hospital on all patients who entered an emergency room over the course of one month",
+    "source": "Code.org Generated Dataset",
+    "lastUpdated": "2020",
+    "context": {
+      "createdBy": "Code.org",
+      "potentialUses": "Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.",
+      "potentialMisuses": "This model shouldn't be used in a way that could reduce the care for people entering an emergency room."
+    }
+  },
+  "defaultLabelColumn": "decision",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "age",
+      "description": "Age ranges of the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "gender",
+      "description": "Gender of the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "race",
+      "description": "Racial information about the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "bleeding",
+      "description": "Whether or not the patient was bleeding"
+    },
+    {
+      "type": "categorical",
+      "id": "shortness_of_breath",
+      "description": "Whether or not the patient had shortness of breath"
+    },
+    {
+      "type": "categorical",
+      "id": "weight",
+      "description": "Weight ranges for the patient"
+    },
+    {
+      "type": "categorical",
+      "id": "area_of_pain",
+      "description": "Where the pain was located"
+    },
+    {
+      "type": "categorical",
+      "id": "decision",
+      "description": "How quickly the patient received treatment"
+    }
+  ]
+}

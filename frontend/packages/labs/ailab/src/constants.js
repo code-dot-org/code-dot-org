@@ -1,7 +1,6 @@
 export const ColumnTypes = {
   CATEGORICAL: "categorical",
-  CONTINUOUS: "continuous",
-  OTHER: "other"
+  NUMERICAL: "numerical"
 };
 
 export const MLTypes = {
@@ -9,11 +8,53 @@ export const MLTypes = {
   REGRESSION: "regression"
 };
 
-export const TRAINING_DATA_PERCENTS = [0, 5, 10, 15, 20];
+export const RegressionTrainer = "knnRegress";
+export const ClassificationTrainer = "knnClassify";
+
+export const REGRESSION_ERROR_TOLERANCE = 5;
+
+export const ResultsGrades = {
+  CORRECT: "correct",
+  INCORRECT: "incorrect"
+};
+
+export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
+
+export const TestDataLocations = {
+  END: "end",
+  RANDOM: "random"
+};
+
+export const ModelNameMaxLength = 150;
+
+export const UNIQUE_OPTIONS_MAX = 50;
+
+export const saveMessages = {
+  success: "Your model was saved!",
+  failure: "There was an error. Your model did not save. Please try again.",
+};
+
+const labelColor = "rgb(254, 96, 3)";
+const featureColor = "rgb(75, 155, 213)";
+
+export const colors = {
+  feature: featureColor,
+  label: labelColor
+};
 
 export const styles = {
   app: {
-    userSelect: "none"
+    userSelect: "none",
+    height: "100%",
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
+
+  bold: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+
+  italic: {
+    fontFamily: '"Gotham 4i", sans-serif'
   },
 
   error: {
@@ -25,14 +66,33 @@ export const styles = {
   },
 
   panelContainer: {
-    fontFamily: '"Gotham 4r", sans-serif',
     position: "relative",
     float: "left",
+    width: "70%",
+    height: "100%"
+  },
+
+  panelContainerLeft: {
     width: "70%"
   },
 
+  panelContainerRight: {
+    marginLeft: 10,
+    width: "calc(30% - 10px)"
+  },
+
+  panelContainerFullWidth: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    position: "relative",
+    float: "left",
+    width: "100%",
+    height: "100%"
+  },
+
   bodyContainer: {
-    marginTop: 20
+    height: "100%",
+    boxSizing: "border-box",
+    paddingBottom: 50
   },
 
   largeText: {
@@ -41,7 +101,7 @@ export const styles = {
   },
 
   mediumText: {
-    fontSize: 18,
+    fontSize: 13,
     marginBottom: 8
   },
 
@@ -50,26 +110,74 @@ export const styles = {
     marginBottom: 8
   },
 
+  smallTextNoMargin: {
+    fontSize: 12
+  },
+
+  footerText: {
+    fontSize: 13,
+    marginTop: 12
+  },
+
   panel: {
-    padding: 20,
-    backgroundColor: "rgb(230,230,230)",
-    borderRadius: 5,
-    xwidth: "calc(70% - 100px)",
+    padding: 10,
+    backgroundColor: "white",
+    overflow: "hidden",
+    height: "100%",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    position: "relative"
+  },
+
+  panelPopupContainer: {
+    position: "absolute",
+    left: 20,
+    top: 20,
+    width: "calc(100% - 40px)",
+    height: "calc(100% - 40px)",
+    zIndex: 10
+  },
+
+  panelPopup: {
+    padding: 10,
+    backgroundColor: "white",
+    overflow: "hidden",
+    height: "100%",
+    boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column",
+    //opacity: 0.7,
     border: "solid 1px black",
+    boxShadow: "-5px 5px 10px black"
+  },
+
+  scrollableContents: {
     overflow: "hidden"
+  },
+
+  scrollableContentsTinted: {
+    overflow: "hidden",
+    borderRadius: 0,
+    backgroundColor: "rgb(206, 206, 206)",
+    padding: 10
+  },
+
+  scrollingContents: {
+    overflow: "auto",
+    height: "100%",
+    boxSizing: "border-box"
+  },
+
+  contents: {
+    borderRadius: 0,
+    backgroundColor: "rgb(206, 206, 206)",
+    padding: 15
   },
 
   panelContentLeft: {
     float: "left",
     width: "80%"
-  },
-
-  subPanel: {
-    padding: 15,
-    backgroundColor: "rgb(180,180,180)",
-    borderRadius: 5,
-    marginTop: 20,
-    border: "solid 1px white"
   },
 
   validationMessages: {
@@ -86,136 +194,242 @@ export const styles = {
     float: "left",
     marginLeft: 10,
     width: "calc(30% - 20px)",
-    padding: 10,
-    backgroundColor: "rgb(230,230,230)",
-    border: "solid 1px black",
+    padding: 20,
+    backgroundColor: "white",
     borderRadius: 5,
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
     boxSizing: "border-box",
-    overflow: "scroll",
-    marginTop: 59
+    overflow: "auto",
+    marginTop: 59,
+    position: "relative"
   },
 
-  dataDisplayTable: {
+  rightPanel: {
+    fontSize: 13
+  },
+
+  selectDatasetItem: {
+    width: "30%",
+    padding: 20,
+    float: "left",
+    boxSizing: "border-box",
+    border: "solid 4px rgba(0,0,0,0)",
+    borderRadius: 0,
+    height: 220,
+    cursor: "pointer"
+  },
+
+  selectDatasetItemHighlighted: {
+    backgroundColor: "#d6f2fa"
+  },
+
+  selectDatasetItemSelected: {
+    backgroundColor: "#94e3fa"
+  },
+
+  selectDatasetImage: {
+    width: "100%"
+  },
+
+  selectDatasetText: {
+    fontSize: 14,
+    marginTop: 10
+  },
+
+  uploadButton: {
+    fontSize: 13.33,
+    padding: "2px 6px",
+    margin: 0,
+    border: "none"
+  },
+
+  specifyColumnsItem: {
+    display: "inline-block",
+    width: "20%"
+  },
+
+  displayTable: {
     whiteSpace: "nowrap",
-    borderSpacing: 0
+    borderSpacing: 0,
+    width: "100%",
+    borderCollapse: "collapse"
   },
 
-  finePrint: {
-    maxHeight: 300,
-    overflow: "scroll",
+  tableParent: {
+    overflowY: "auto",
     overflowWrap: "break-word",
     fontSize: 10,
-    padding: 10,
     boxSizing: "border-box",
     borderRadius: 5,
-    backgroundColor: "rgb(180,180,180)",
-    border: "solid 1px white"
+    backgroundColor: "white"
+  },
+
+  tableHeader: {
+    paddingLeft: 20,
+    textAlign: "right",
+    position: "sticky",
+    top: 0,
+    fontSize: 12
   },
 
   dataDisplayHeader: {
     paddingLeft: 20,
-    textAlign: "right"
+    textAlign: "right",
+    position: "sticky",
+    top: 0,
+    backgroundColor: "white",
+    color: "#4d575f",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "white",
+    padding: 7,
+    fontSize: 14
   },
-  dataDisplayHeaderLabelSelected: {
-    backgroundColor: "rgba(186, 168, 70)",
-    color: "yellow",
-  },
-  dataDisplayHeaderFeatureSelected: {
-    backgroundColor: "rgb(70, 186, 168)",
-    color: "yellow",
-  },
-  dataDisplayHeaderSelected: {
-    color: "yellow",
-    backgroundColor: "black"
-  },
-  dataDisplayHeaderLabelUnselected: {
-    backgroundColor: "rgba(186, 168, 70)",
+
+  dataDisplayHeaderLabel: {
+    backgroundColor: labelColor,
     color: "white"
   },
-  dataDisplayHeaderFeatureUnselected: {
-    backgroundColor: "rgb(70, 186, 168)",
-    color: "white"
-  },
-  dataDisplayHeaderUnselected: {
-    backgroundColor: "black",
+  dataDisplayHeaderFeature: {
+    backgroundColor: featureColor,
     color: "white"
   },
 
   dataDisplayCell: {
+    padding: 3,
     paddingLeft: 20,
-    textAlign: "right"
+    textAlign: "right",
+    fontSize: 12,
+    color: "#4d575f",
+    backgroundColor: "#f2f2f2",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "white"
   },
-  dataDisplayCellLabelSelected: {
-    backgroundColor: "rgba(186, 168, 70, 0.4)",
-    color: "yellow",
+  dataDisplayCellHighlighted: {
+    backgroundColor: "#d6f2fa",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#d6f2fa",
+    cursor: "pointer"
   },
-  dataDisplayCellFeatureSelected: {
-    backgroundColor: "rgb(70, 186, 168)",
-    color: "yellow",
+  dataDisplayCellHighlightedLabel: {
+    backgroundColor: "#f1caca",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f1caca",
+    cursor: "pointer"
   },
   dataDisplayCellSelected: {
-    color: "yellow",
-    backgroundColor: "grey"
+    backgroundColor: "#94e3fa",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#94e3fa"
   },
-  dataDisplayCellLabelUnselected: {
-    backgroundColor: "rgba(186, 168, 70, 0.4)",
-  },
-  dataDisplayCellFeatureUnselected: {
-    backgroundColor: "rgb(70, 186, 168)",
-  },
-  dataDisplayCellUnselected: {
-  },
-
-  tabContainer: {
-    overflow: "hidden",
-    marginTop: 10
+  dataDisplayCellSelectedLabel: {
+    backgroundColor: "#f39f9f",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "#f39f9f"
   },
 
-  tab: {
+  tableCell: {
+    paddingLeft: 20,
+    textAlign: "right",
+    fontSize: 12
+  },
+  dataDisplayCellLabelSelected: {},
+  dataDisplayCellFeatureSelected: {},
+
+  dataDisplayCellLabelUnselected: {},
+  dataDisplayCellFeatureUnselected: {},
+  dataDisplayCellUnselected: {},
+
+  crossTabCell0: {
+    backgroundColor: "rgba(255,100,100, 0)"
+  },
+  crossTabCell1: {
+    backgroundColor: "rgba(255,100,100, 0.2)"
+  },
+  crossTabCell2: {
+    backgroundColor: "rgba(255,100,100, 0.4)"
+  },
+  crossTabCell3: {
+    backgroundColor: "rgba(255,100,100, 0.6)"
+  },
+  crossTabCell4: {
+    backgroundColor: "rgba(255,100,100, 0.8)"
+  },
+  crossTabCell5: {
+    backgroundColor: "rgba(255,100,100, 1)"
+  },
+
+  resultsPanelContainer: {
+    width: "100%",
+    height: "100%",
+    position: "relative"
+  },
+
+  resultsStatement: {
     float: "left",
-    backgroundColor: "rgba(0,0,0,0.8)",
-    color: "white",
-    padding: "5px 30px 5px 30px",
-    marginRight: 1,
-    marginBottom: 2,
+    width: "80%"
+  },
+
+  resultsAccuracy: { float: "left", fontSize: 18, width: "10%" },
+
+  resultsDetailsButtonContainer: {
+    float: "left",
+    textAlign: "center",
+    width: "10%"
+  },
+
+  resultsDetailsButton: {
+    fontSize: 14,
+    padding: "4px 12px",
+    margin: 0,
+    border: "none",
     cursor: "pointer",
-    border: "solid 5px white",
-    borderRadius: 3,
-    fontFamily: '"Gotham 4r", sans-serif'
+    borderRadius: 5,
+    backgroundColor: "#61d2eb",
+    color: "white"
   },
 
-  currentTab: {
-    border: "solid 5px #7ad9f7",
-    borderRadius: 3
+  resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
+
+  resultsTableFirstHeader: {
+    top: 0,
+    backgroundColor: "white",
+    color: "rgb(30, 30, 30)",
+    verticalAlign: "top",
+    height: 45
   },
 
-  disabledTab: {
-    backgroundColor: "rgb(160,160,160)",
-    color: "rgb(230,230,230)",
-    pointerEvents: "none",
-    cursor: "initial"
+  resultsTableSecondHeader: {
+    top: "47px",
+    color: "white"
   },
 
   previousButton: {
     position: "fixed",
     left: 20,
-    bottom: 20,
+    bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
+    zIndex: 1001
   },
 
   nextButton: {
     position: "fixed",
     right: 20,
-    bottom: 20,
+    bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
+    zIndex: 1001
   },
 
   navButton: {
-    backgroundColor: "black",
+    backgroundColor: "rgb(254, 190, 64)",
     color: "white",
     borderRadius: 5,
     fontSize: 24,
@@ -224,58 +438,277 @@ export const styles = {
     cursor: "pointer"
   },
 
-  predictButton: {
-    backgroundColor: "rgb(186, 168, 70)"
-  },
-  predictBasedButton: {
-    backgroundColor: "rgb(70, 186, 168)"
-  },
-  dontPredictButton: {
-    backgroundColor: "rgb(186, 168, 70)"
-  },
-  dontPredictBasedButton: {
-    backgroundColor: "rgb(70, 186, 168)"
+  statement: {
+    fontSize: 32,
+    paddingBottom: 15,
+    lineHeight: '50px'
   },
 
-  statement: {
-    fontSize: 36
+  statementSmall: {
+    fontSize: 18,
+    paddingBottom: 6
   },
 
   statementLabel: {
-    color: "rgb(186, 168, 70)",
-    border: "dotted 1px grey",
+    backgroundColor: labelColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    lineHeight: 1.3
   },
 
   statementFeature: {
-    color: "rgb(70, 186, 168)",
-    border: "dotted 1px grey",
+    backgroundColor: featureColor,
+    color: "white",
     paddingLeft: 4,
-    paddingRight: 4
+    paddingRight: 4,
+    paddingTop: 1,
+    paddingBottom: 1,
+    display: "inline-block",
+    position: "relative",
+    lineHeight: 1.3
   },
 
-  selectLabelPopup: {
+  statementDeleteIcon: {
     position: "absolute",
-    marginLeft: 160
+    top: 0,
+    right: 0,
+    transform: 'translateX(50%) translateY(-50%)',
+    color: "black",
+    cursor: "pointer"
   },
 
-  selectFeaturesPopup: {
-    position: "absolute",
-    marginLeft: 440
+  statementDeleteCircle: {
+    backgroundColor: "white",
+    borderRadius: "50%",
+    height: 20,
+    width: 20,
+    top: 0,
+    left: 0
   },
 
-  selectFeaturesPopupClose: {
+  statementDeleteX: {
+    fontSize: 20,
     position: "absolute",
-    right: 20
+    top: 0,
+    right: 0,
+    lineHeight: "20px"
   },
 
   selectLabelText: {
-    color: "rgb(186, 168, 70)"
+    color: labelColor
   },
 
   selectFeaturesText: {
-    color: "rgb(70, 186, 168)"
-  }
+    color: featureColor
+  },
 
+  selectLabelButton: {
+    backgroundColor: labelColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 18
+  },
+
+  selectFeaturesButton: {
+    backgroundColor: featureColor,
+    color: "white",
+    padding: 10,
+    cursor: "pointer",
+    border: "none",
+    fontSize: 18
+  },
+
+  trainModelContainer: {
+    position: "absolute",
+    overflow: "hidden",
+    paddingTop: 20,
+    width: "calc(50% + 52px)",
+    height: "calc(50% + 66px)",
+    top: 0
+  },
+  trainModelDataTable: {
+    width: "30%",
+    overflow: "hidden",
+    opacity: 0.3,
+    paddingTop: 20
+  },
+  trainModelBotContainer: {
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-25%)"
+  },
+
+  trainBot: {
+    position: "relative",
+    width: 300
+  },
+  trainBotHead: {
+    transition: "transform 500ms",
+    left: "3%",
+    width: "43%",
+    top: "0%",
+    position: "absolute",
+    direction: "ltr"
+  },
+  trainBotOpen: {
+    transform: "rotate(90deg)",
+    transformOrigin: "bottom right",
+    direction: "ltr"
+  },
+  trainBotBody: {
+    width: "49%",
+    marginTop: "30%",
+    direction: "ltr"
+  },
+
+  cardRow: {
+    marginTop: 11,
+    marginBottom: 11
+  },
+
+  disabledButton: {
+    opacity: 0.5
+  },
+
+  floatLeft: {
+    float: "left",
+    margin: 20
+  },
+
+  phraseBuilder: {
+    fontSize: 16
+  },
+
+  phraseBuilderHeader: {
+    backgroundColor: "grey",
+    color: "white",
+    padding: 15
+  },
+
+  phraseBuilderHeaderSecond: {
+    backgroundColor: "grey",
+    color: "white",
+    padding: 15,
+    marginTop: 30
+  },
+
+  popupClose: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    cursor: "pointer"
+  },
+
+  phraseBuilderFeatureRemove: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    cursor: "pointer",
+    fontSize: 12
+  },
+
+  phraseBuilderSelect: {
+    fontSize: 16,
+    marginTop: 10,
+    padding: 6,
+    cursor: "pointer",
+    height: 43,
+    width: "100%"
+  },
+
+  phraseBuilderLabel: {
+    fontSize: 16,
+    marginTop: 10,
+    paddingTop: 13,
+    paddingLeft: 13,
+    height: 43,
+    backgroundColor: labelColor,
+    color: "white",
+    boxSizing: "border-box"
+  },
+
+  phraseBuilderFeature: {
+    fontSize: 16,
+    marginTop: 10,
+    paddingTop: 13,
+    paddingLeft: 13,
+    height: 43,
+    backgroundColor: featureColor,
+    color: "white",
+    boxSizing: "border-box",
+    position: "relative"
+  },
+
+  saveInputsWidth: {
+    width: "95%"
+  },
+
+  modelCardContainer: {
+    backgroundColor: "rgb(198, 202, 205)",
+    borderRadius: 5,
+    padding: 20,
+    whiteSpace: "normal",
+    overflowY: "auto",
+    width: "30%",
+    margin: "0 auto"
+  },
+
+  modelCardHeader: {
+    marginBottom: 10,
+    marginTop: 0,
+    fontSize: 18,
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+
+  modelCardHeading: {
+    fontSize: 14,
+    marginTop: 0,
+    marginBottom: 5,
+    textAlign: "center",
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+
+  modelCardContent: {
+    fontSize: 13,
+    marginBottom: 0,
+    marginTop: 0
+  },
+
+  modelCardSubpanel: {
+    backgroundColor: "rgb(231, 232, 234)",
+    borderRadius: 5,
+    marginBottom: 10,
+    padding: 10
+  },
+
+  modelCardDetails: {
+    marginBottom: 0
+  },
+
+  summaryScreenBot: {
+    margin: 0,
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    left: "calc(35% - 185px)",
+    width: "150px"
+  },
+
+  modelSaveMessage: {
+    bottom: 40,
+    zIndex: 1001,
+    right: "calc(50% - 250px)",
+    textAlign: "center",
+    position: "fixed",
+    width: 500,
+    height: 30,
+    lineHeight: "20px"
+  }
 };

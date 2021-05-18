@@ -8,32 +8,52 @@ import rootReducer, {
   setCurrentPanel,
   setSelectedCSV,
   setSelectedJSON,
-  setSelectedTrainer
+  setInstructionsKeyCallback,
+  setSaveStatus,
+  setReserveLocation,
+  setInstructionsDismissed
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
 import { parseCSV } from "./csvReaderWrapper";
 import { parseJSON } from "./jsonReaderWrapper";
+import { TestDataLocations } from "./constants";
 
 export const store = createStore(rootReducer);
 
-export const initAll = function(options) {
+let saveTrainedModel = null;
+let onContinue = null;
+
+export const initAll = function (options) {
   // Handle an optional mode.
   const mode = options && options.mode;
-  const saveTrainedModel = options && options.saveTrainedModel;
+  onContinue = options && options.onContinue;
+  saveTrainedModel = options && options.saveTrainedModel;
+  store.dispatch(
+    setInstructionsKeyCallback(options && options.setInstructionsKey)
+  );
   store.dispatch(setMode(mode));
   processMode(mode);
 
   ReactDOM.render(
     <Provider store={store}>
-      <App mode={mode} saveTrainedModel={saveTrainedModel} />
+      <App
+        mode={mode}
+        onContinue={onContinue}
+        startSaveTrainedModel={startSaveTrainedModel}
+      />
     </Provider>,
     document.getElementById("root")
   );
 };
 
+export const instructionsDismissed = function() {
+  store.dispatch(setInstructionsDismissed());
+}
+
 // Process an optional mode.
 const processMode = mode => {
   const assetPath = global.__ml_playground_asset_public_path__;
+  let panelSet = false;
 
   if (mode) {
     // Load a single dataset immediately.
@@ -48,14 +68,33 @@ const processMode = mode => {
       // Also retrieve model metadata and set column data types.
       parseJSON(assetPath + item.metadataPath);
 
-      store.dispatch(setCurrentPanel("dataDisplay"));
+      if (mode.hideSelectLabel) {
+        store.dispatch(setCurrentPanel("dataDisplayFeatures"));
+      } else {
+        store.dispatch(setCurrentPanel("dataDisplayLabel"));
+      }
+      panelSet = true;
     }
 
-    // Select a trainer immediately.
-    if (mode.hideSelectTrainer) {
-      store.dispatch(setSelectedTrainer(mode.hideSelectTrainer));
+    if (mode.randomizeTestData) {
+      store.dispatch(setReserveLocation(TestDataLocations.RANDOM))
     }
-  } else {
+  }
+
+  if (!panelSet) {
     store.dispatch(setCurrentPanel("selectDataset"));
   }
+};
+
+// Do the asynchronous save of a model.
+const startSaveTrainedModel = dataToSave => {
+  store.dispatch(setSaveStatus("started"));
+  saveTrainedModel(dataToSave, response => {
+    store.dispatch(setSaveStatus(response.status));
+    if (response.status === "success") {
+      store.dispatch(setCurrentPanel("modelSummary"));
+    } else {
+      store.dispatch(setCurrentPanel("saveModel"));
+    }
+  });
 };
