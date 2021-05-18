@@ -19,11 +19,11 @@ import reducer, {
   openLockDialog,
   closeLockDialog,
   saveLockDialog,
-  lockStage,
+  lockLesson,
   BEGIN_SAVE,
   FINISH_SAVE,
   CLOSE_LOCK_DIALOG,
-  fullyLockedStageMapping,
+  fullyLockedLessonMapping,
   setSectionLockStatus
 } from '@cdo/apps/code-studio/lessonLockRedux';
 
@@ -273,12 +273,12 @@ describe('saveLockDialog', () => {
     assert.equal(thirdAction.type, CLOSE_LOCK_DIALOG);
   });
 
-  it('successfully lockStage without dialog', () => {
+  it('successfully lockLesson without dialog', () => {
     store.dispatch(setSectionLockStatus(fakeSectionData));
 
     reducerSpy.resetHistory();
 
-    store.dispatch(lockStage(section1Id, stage1Id));
+    store.dispatch(lockLesson(section1Id, stage1Id));
 
     const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
     const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
@@ -320,7 +320,7 @@ describe('saveLockDialog', () => {
   });
 });
 
-describe('fullyLockedStageMapping', () => {
+describe('fullyLockedLessonMapping', () => {
   const sections = {
     // all stages fully locked
     '11': {
@@ -399,27 +399,27 @@ describe('fullyLockedStageMapping', () => {
   };
 
   it('maps to true for fully locked stages', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['11']), {
+    assert.deepEqual(fullyLockedLessonMapping(sections['11']), {
       '1360': true,
       '1361': true
     });
   });
 
   it('maps to false for non-fully locked stages', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['12']), {
+    assert.deepEqual(fullyLockedLessonMapping(sections['12']), {
       '1360': false,
       '1361': false
     });
   });
 
   it('works when some of our stages are locked and others arent', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['13']), {
+    assert.deepEqual(fullyLockedLessonMapping(sections['13']), {
       '1360': true,
       '1361': false
     });
   });
 
   it('returns an empty object if no selectedSection', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['9999']), {});
+    assert.deepEqual(fullyLockedLessonMapping(sections['9999']), {});
   });
 });
