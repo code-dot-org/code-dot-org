@@ -1709,6 +1709,30 @@
         "row": 1,
         "column": 1
     },
+    "287": {
+        "name": "E-Painter",
+        "sheet": "idle_avatar.png",
+        "row": 0,
+        "column": 1
+    },
+    "288": {
+        "name": "N-Painter",
+        "sheet": "idle_avatar.png",
+        "row": 0,
+        "column": 0
+    },
+    "289": {
+        "name": "W-Painter",
+        "sheet": "idle_avatar.png",
+        "row": 0,
+        "column": 3
+    },
+    "290": {
+        "name": "S-Painter",
+        "sheet": "idle_avatar.png",
+        "row": 0,
+        "column": 2
+    },
     "291": {
         "name": "W-taxi-2",
         "sheet": "vehicles.png",

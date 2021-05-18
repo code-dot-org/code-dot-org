@@ -26,7 +26,6 @@ describe('Google Blockly Wrapper', () => {
       'BlockFieldHelper',
       'Blocks',
       'BlockSvg',
-      'BlockValueType',
       'common_locale',
       'Connection',
       'ContextMenu',
