@@ -320,10 +320,6 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': кездейсоқ
       RyanLab_moveForward:
         text: алдыға қозғалу
       RyanLab_turnLeft:

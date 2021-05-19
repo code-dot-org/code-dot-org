@@ -2644,6 +2644,8 @@ kk:
               display_name: Айнымалылар
             csf_for_loops:
               display_name: For ілмектері
+            lessonGroup-9:
+              display_name: Шаралар
         pre-express-2021:
           lesson_groups:
             csf_loops:

@@ -204,6 +204,15 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"speed"': жылдамдық
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': шама
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орта
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -318,9 +327,9 @@ kk:
         text: солға бұрылу
       RyanLab_turnRight:
         text: оңға бұрылу
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': кездейсоқ
       binary_move:
         options:
