@@ -711,6 +711,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            lessonGroup-9:
+              display_name: நிகழ்வுகள்
         pre-express-2021:
           lesson_groups:
             csf_loops:
