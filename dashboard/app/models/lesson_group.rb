@@ -211,4 +211,20 @@ class LessonGroup < ApplicationRecord
     save! if changed?
     changed
   end
+
+  def i18n_hash
+    if display_name
+      {
+        script.name => {
+          'lesson_groups' => {
+            key => {
+              'display_name' => display_name
+            }
+          }
+        }
+      }
+    else
+      {}
+    end
+  end
 end
