@@ -1593,13 +1593,6 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': רשת
-            '"border"': גבול
-            '"row"': שורה
-            '"random"': אקראי
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:

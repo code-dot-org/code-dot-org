@@ -1026,18 +1026,6 @@
         "courseA_harvester_seq5_2020": {
           "courseA_harvester_seq5_b": "אתם צריכים למחוק בלוק אחד."
         },
-        "courseA_maze_ramp3b_2018": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseA_maze_ramp3b_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseA_maze_ramp5a_2018": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseA_maze_ramp5a_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "אם אתם מתקשים לגרום לציפור לזוז, תבדקו שוב שהבלוקים מחוברים כמו שצריך תחת הבלוק <xml>\n  <block type=\"when_run\"/>\n</xml>",
           "courseA_maze_seq1_b": "הציפור צריכה לזוז בכיוון מערב 3 פעמים כדי להגיע אל החזיר. השתמשו בבלוק הזה:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
@@ -1083,12 +1071,6 @@
         },
         "courseB_Scrat_ramp1_2020": {
           "2": "אל תפחד לטעות! נסה משהו, ואם זה לא מצליח, נסה משהו אחר!"
-        },
-        "courseB_Scrat_ramp3b_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
-        },
-        "courseB_Scrat_ramp5a_2019": {
-          "1": "הקוד שלך צריך להיראות כך:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge2a": {
           "courseB_collector_loops_challenge2a_a": "אם משהו משתבש, נסה לפתור אותו. אל תוותר!",
@@ -1896,7 +1878,7 @@
         },
         "courseD_iceage_loops1_2019": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",
-          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveForward\"/></xml>"
+          "courseD_iceage_loops1_b": "יהיה עליך להשתמש בבלוק הזה:\n<xml><block type=\"maze_moveEast\"/></xml>"
         },
         "courseD_iceage_loops1_2020": {
           "courseD_iceage_loops1_a": "היזהרו מהקרח השבור! סקראט ייפול ישר לתוכו!",

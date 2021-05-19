@@ -3715,6 +3715,8 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
         pre-express-2021:
           lessons:
             Programming in with Angry Birds:
