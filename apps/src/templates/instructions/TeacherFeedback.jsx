@@ -232,9 +232,11 @@ export class TeacherFeedback extends Component {
                 reviewState={this.state.reviewState}
                 setReviewState={reviewState =>
                   this.setState({
-                    reviewState: reviewState,
-                    reviewStateUpdated: true
+                    reviewState: reviewState
                   })
+                }
+                setReviewStateChanged={isChanged =>
+                  this.setState({reviewStateUpdated: isChanged})
                 }
               />
             )}

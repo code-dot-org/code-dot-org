@@ -2,24 +2,22 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 const reviewStates = {
-  completed: 'Completed',
-  keepWorking: 'KeepWorking'
+  completed: 'completed',
+  keepWorking: 'keepWorking'
 };
 
 class TeacherFeedbackKeepWorking extends Component {
   static propTypes = {
     latestFeedback: PropTypes.object,
     reviewState: PropTypes.string,
-    setReviewState: PropTypes.func
+    setReviewState: PropTypes.func,
+    setReviewStateChanged: PropTypes.func
   };
 
   constructor(props) {
     super(props);
 
     this.checkbox = null;
-    this.state = {
-      isChecked: props.reviewState === reviewStates.keepWorking
-    };
   }
 
   componentDidMount() {
@@ -45,15 +43,17 @@ class TeacherFeedbackKeepWorking extends Component {
   }
 
   handleCheckboxChange = () => {
-    const isChecked = !this.state.isChecked;
-    this.setState({isChecked});
-    this.updateReviewState(isChecked);
+    const newReviewState = this.getNewReviewState();
+    this.props.setReviewState(newReviewState);
+
+    const isDifferentFromInitial = this.isDifferentFromInitial(newReviewState);
+    this.props.setReviewStateChanged(isDifferentFromInitial);
   };
 
-  updateReviewState(isChecked) {
+  getNewReviewState() {
     let newReviewState;
 
-    if (isChecked) {
+    if (this.checkbox.checked) {
       newReviewState = reviewStates.keepWorking;
     } else if (this.awaitingTeacherReview()) {
       newReviewState = reviewStates.completed;
@@ -61,7 +61,16 @@ class TeacherFeedbackKeepWorking extends Component {
       newReviewState = null;
     }
 
-    this.props.setReviewState(newReviewState);
+    return newReviewState;
+  }
+
+  isDifferentFromInitial(newReviewState) {
+    const removedIndeterminateState =
+      this.awaitingTeacherReview() && !this.checkbox.indeterminate;
+    const reviewStateChanged =
+      newReviewState !== this.props.latestFeedback.review_state;
+
+    return removedIndeterminateState || reviewStateChanged;
   }
 
   render() {
@@ -71,7 +80,7 @@ class TeacherFeedbackKeepWorking extends Component {
           id="keep-working"
           ref={ref => (this.checkbox = ref)}
           type="checkbox"
-          checked={this.state.isChecked}
+          checked={this.props.reviewState === reviewStates.keepWorking}
           onChange={this.handleCheckboxChange}
         />
         {/* maureen add to internationalization and check rtl*/}
