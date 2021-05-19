@@ -1594,13 +1594,6 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': شبكة
-            '"border"': الحدود
-            '"row"': صف
-            '"random"': عشوائي
       RyanLab_moveForward:
         text: تحريك إلى الأمام
       RyanLab_turnLeft:
