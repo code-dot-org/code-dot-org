@@ -306,7 +306,7 @@ pt:
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como teu professor"
-    registered: Registaste-te para %{section_name}.
+    registered: Registou-se para %{section_name}.
     error:
       signed_in: Antes de prosseguires, termina sessão
       username_not_found: Nome de utilizador %{username} não encontrado
