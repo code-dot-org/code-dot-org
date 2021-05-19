@@ -1625,13 +1625,6 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': fylking
-            '"border"': rammi
-            '"row"': hlið við hlið
-            '"random"': eitthvað
       RyanLab_moveForward:
         text: færa áfram
       RyanLab_turnLeft:

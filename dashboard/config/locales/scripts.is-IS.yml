@@ -8243,6 +8243,8 @@ is:
                 að blása lífi í gæludýrið!
             lesson-1:
               name: Danspartý
+            lesson-3:
+              name: Kvikar í verki
           lesson_groups:
             csf_sequencing:
               display_name: Skipanaröð
@@ -8258,6 +8260,8 @@ is:
               display_name: Frá lykkjur
             csf_sprites:
               display_name: Kvikar
+            lessonGroup-9:
+              display_name: Atvik
           student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
             Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         pre-express-2021:
@@ -8437,6 +8441,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+            lessonGroup-4:
+              display_name: Próf
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -8488,3 +8494,7 @@ is:
           lesson_groups:
             cspSurvey2020:
               display_name: Könnun
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Kennslustund 15
