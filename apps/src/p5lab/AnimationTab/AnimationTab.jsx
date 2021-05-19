@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import AnimationPicker from '../AnimationPicker/AnimationPicker';
 import P5LabVisualizationHeader from '../P5LabVisualizationHeader';
-import {setColumnSizes} from './animationTabModule';
+import {setColumnSizes} from '../redux/animationTab';
 import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
