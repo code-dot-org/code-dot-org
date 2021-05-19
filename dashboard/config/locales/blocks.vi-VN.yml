@@ -1582,13 +1582,6 @@ vi:
         text: x tọa độ {SPRITE}
       Mikelab_yLocationOf:
         text: tọa độ y của {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': lưới
-            '"border"': đường biên
-            '"row"': hàng
-            '"random"': ngẫu nhiên
       RyanLab_moveForward:
         text: đi thẳng
       RyanLab_turnLeft:

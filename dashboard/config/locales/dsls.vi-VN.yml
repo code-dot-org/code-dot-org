@@ -1470,6 +1470,7 @@ vi-VN:
       courseD_EOC_2020:
         description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
           muốn nhé.
+        display_name: Dự án tổng kết khóa học
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -2293,3 +2294,133 @@ vi-VN:
           | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
           | Các vũ công phụ họa của bạn liên tục thay đổi điệu nhảy! | Hãy thử thêm nhiều màu sắc và phông nền cho cảnh này nhé! |
 
+      OPD-K5 CS Courses:
+        markdown: "# Lập kế hoạch > Bắt đầu trên Code.org\n\n\n## Bước 1: Chọn khóa
+          học\nTất cả các khóa học của chúng tôi – từ khóa dành cho trẻ chưa biết
+          đọc tới khóa dành cho học sinh trung học – đều có trên **[danh mục khóa
+          học](https://studio.code.org/courses)**. Để tìm các bài học Nguyên tắc cơ
+          bản của KHMT mà bạn đã luyện tập, hãy truy cập **[trang tiểu học](https://code.org/educate/curriculum/elementary-school)**
+          và cuộn xuống phần “Khóa học”. Tất cả khóa học của chúng tôi đều miễn phí.
+          Hãy trò chuyện với đồng nghiệp ở trường bạn để quyết định xem chương trình
+          đào tạo nào có thể tích hợp với nhiều môn học khác nhau.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Bước 2: Thiết lập nhóm đào tạo của bạn\nThiết lập nhóm đào tạo để xem tiến
+          trình của học sinh, in thẻ điểm danh cho học sinh của bạn, quản lý tài khoản
+          của các em và in chứng chỉ để các em có thể mang về nhà khi kết thúc khóa
+          học. Hãy nhấp chuột vào liên kết này để **[xem một đoạn video ngắn](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          minh họa cách thiết lập lớp khoa học máy tính đầu tiên của bạn trên Code.org.
+          Bạn cũng có thể tìm thấy các bước trong **[bài viết hỗ trợ sau](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Bước 3: Chỉ định khóa học cho nhóm của bạn\nNhấp chuột vào khóa học mà bạn
+          đang dạy – bạn sẽ thấy màn hình như dưới đây. Sau đó, bạn có thể nhấp chuột
+          vào “Chỉ định khóa học” và chỉ định khóa học đó cho một trong các nhóm của
+          bạn. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Bước 4: Bắt đầu dạy thôi!\nChỉ cần một bài học duy nhất để mang các khái
+          niệm khoa học máy tính vào lớp học của bạn. Sau khi thấy học sinh của mình
+          nhiệt tình với KHMT, hãy tiếp tục với giáo án hàng ngày để hướng dẫn học
+          sinh của mình, các hoạt động không sử dụng thiết bị điện tử để bạn có thể
+          thực hiện mà không cần máy tính và các diễn đàn để kết nối với các thầy
+          cô giáo khác.\n\n\n"
+      OPD-K5 CS Courses_copy:
+        markdown: "# Bắt đầu trên Code.org\n\n\n## Bước 1: Chọn khóa học\nTất cả các
+          khóa học của chúng tôi – từ khóa dành cho trẻ chưa biết đọc tới khóa dành
+          cho học sinh trung học – đều có trên **<a href=\"https://studio.code.org/courses\"
+          target=\"blank\">danh mục khóa học</a>**. Tất cả khóa học của chúng tôi
+          đều miễn phí. Hãy trò chuyện với đồng nghiệp ở trường bạn để quyết định
+          xem chương trình đào tạo nào có thể tích hợp với nhiều môn học khác nhau.\n\n<table
+          style=\"width:100%; border-style:none;”>\n  <tr>\n    <th style=\"background-color:#ff9900;
+          text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b>Khóa
+          học A</b><br/>\n      <i>Mẫu giáo</i>\n    </th>\n    <th style=\"background-color:#f1c232;
+          text-align:center; border-style:none;\"\"\">\n        Khóa học B<br/>\n
+          \       <i>Lớp 1</i>\n    </th>\n    <th style=\"background-color:#b8bf0d;
+          text-align:center; border-style:none;\"\"\">\n        Khóa học C<br/>\n
+          \       <i>Lớp 2</i>\n    </th>\n    <th style=\"background-color:#53bac2;
+          text-align:center; border-style:none;\"\"\">\n        Khóa học D<br/>\n
+          \       <i>Lớp 3</i>\n    </th>\n    <th style=\"background-color:#0094ca;
+          text-align:center; border-style:none;\"\"\">\n        Khóa học E<br/>\n
+          \       <i>Lớp 4 </i>\n    </th>\n    <th style=\"background-color:#7664a0;
+          text-align:center; border-style:none;\"\"\">\n        Khóa học F<br/>\n
+          \       <i>Lớp 5</i>\n    </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">12 bài, ~12
+          giờ để hoàn thành</td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 bài, ~12 giờ để hoàn
+          thành</td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">18 bài, ~18 giờ để hoàn thành</td>\n    <td
+          style=\"background-color:#68ebf5; color:black; border-style:none; vertical-align:
+          text-top;\"\">18 bài, ~18 giờ để hoàn thành</td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">18 bài, ~18-20
+          giờ để hoàn thành</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 bài, ~20-22 giờ để hoàn
+          thành</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">Khái niệm</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Quyền công dân kỹ thuật số</li>\n
+          \       <li>Sắp xếp thứ tự</li>\n        <li>Vòng lặp</li>\n        <li>Sự
+          kiện</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#ffe599;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Quyền công dân kỹ thuật số</li>\n
+          \       <li>Sắp xếp thứ tự</li>\n        <li>Vòng lặp</li>\n        <li>Tác
+          động của máy tính</li>\n        <li>Sự kiện</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Quyền công dân kỹ thuật số</li>\n        <li>Sắp xếp thứ tự</li>\n
+          \       <li>Nhị phân</li>\n        <li>Vòng lặp</li>\n        <li>Sự kiện</li>\n
+          \       <li>Dữ liệu</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#68ebf5;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Sắp xếp thứ tự</li>\n        <li>Sự
+          kiện</li>\n        <li>Vòng lặp</li>\n        <li>Lệnh điều kiện</li>\n
+          \       <li>Nhị phân</li>\n        <li>Quyền công dân kỹ thuật số</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Nhân vật</li>\n        <li>Quyền công dân kỹ thuật số</li>\n
+          \       <li>Tác động của máy tính</li>\n        <li>Vòng lặp lồng nhau</li>\n
+          \       <li>Hàm</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#c9c1e9;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Biến</li>\n        <li>Dữ liệu</li>\n
+          \       <li>Vòng lặp for</li>\n        <li>Internet</li>\n        <li>Nhân
+          vật</li>\n        <li>Quyền công dân kỹ thuật số</li>\n        </ul>\n    </td>\n
+          \ <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n     <a href=\"https://studio.code.org/s/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Xem khóa
+          học</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>Giáo
+          án</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Xem khóa học</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Giáo án</button>\n
+          \     </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Xem khóa học</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Giáo án</button>\n
+          \     </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Xem khóa học</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Giáo án</button>\n
+          \     </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n    <a
+          href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Xem khóa học</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Giáo án</button>\n
+          \     </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Xem khóa học</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Giáo án</button>\n
+          \     </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n## Bước 2: Thiết
+          lập nhóm đào tạo của bạn\nThiết lập nhóm đào tạo để xem tiến trình của học
+          sinh, in thẻ điểm danh cho học sinh của bạn, quản lý tài khoản của các em
+          và in chứng chỉ để các em có thể mang về nhà khi kết thúc khóa học. Hãy
+          nhấp chuột vào liên kết này để **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\">xem một đoạn video ngắn</a>** minh họa cách thiết lập lớp
+          khoa học máy tính đầu tiên của bạn trên Code.org. Bạn cũng có thể tìm thấy
+          các bước trong **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\">bài viết hỗ trợ sau</a>**.\n\n***\n## Bước 3: Chỉ định
+          khóa học cho nhóm của bạn\nNhấp chuột vào khóa học mà bạn đang dạy. Sau
+          đó, bạn có thể nhấp chuột vào “Chỉ định khóa học” và chỉ định khóa học đó
+          cho một trong các nhóm của bạn. \n***\n## Bước 4: Bắt đầu dạy thôi!\nChỉ
+          cần một bài học duy nhất để mang các khái niệm khoa học máy tính vào lớp
+          học của bạn. Sau khi thấy học sinh của mình nhiệt tình với KHMT, hãy tiếp
+          tục với giáo án hàng ngày để hướng dẫn học sinh của mình, các hoạt động
+          không sử dụng thiết bị điện tử để bạn có thể thực hiện mà không cần máy
+          tính và các diễn đàn để kết nối với các thầy cô giáo khác.\n\n\n"
+      courseE_EOC_2020:
+        display_name: Dự án tổng kết khóa học
+      courseExpress_EOC_2020:
+        display_name: Dự án tổng kết khóa học
+      courseF_EOC_2020:
+        display_name: Dự án tổng kết khóa học
