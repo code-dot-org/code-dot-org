@@ -1675,13 +1675,6 @@ zh-CN:
         text: "{SPRITE} 的x轴坐标"
       Mikelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': 网格
-            '"border"': 边框
-            '"row"': 行
-            '"random"': 随机
       RyanLab_moveForward:
         text: 向前移动
       RyanLab_turnLeft:
