@@ -305,10 +305,6 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': এলোমেলো
       RyanLab_moveForward:
         text: সামনে এগিয়ে যান
       RyanLab_turnLeft:

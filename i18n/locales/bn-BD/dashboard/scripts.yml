@@ -1741,6 +1741,8 @@ bn:
               display_name: চলকগুলো
             csf_for_loops:
               display_name: ফর লুপ
+            lessonGroup-9:
+              display_name: ঘটনাবলী
         pre-express-2021:
           lesson_groups:
             csf_loops:
