@@ -1690,14 +1690,6 @@ es:
         text: los monstruos empiezan a deambular
       Outbreak_beginWearingMasks:
         text: los monstruos empiezan a llevar mascarilla
-      Outbreak_layoutSprites:
-        text: diseñar monstruos como un {FORMAT}
-        options:
-          FORMAT:
-            '"grid"': cuadrícula
-            '"border"': frontera
-            '"row"': fila
-            '"random"': aleatorio
       Outbreak_setSpeed:
         text: ajustar velocidad monstruo a {VAL}
       Outbreak_setupOutbreak:
