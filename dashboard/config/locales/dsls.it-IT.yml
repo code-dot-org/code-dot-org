@@ -6883,8 +6883,6 @@ it-IT:
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
-      CSD U1 Test:
-        title: Computer e Risoluzione dei Problemi - Verifica finale
       Unit 1 Lesson 1 Overview:
         markdown: "# Panoramica\n\nLa classe lavora in gruppi per progettare barche
           con fogli di alluminio che possano imbarcare più centesimi possibili. Alla
@@ -7166,8 +7164,6 @@ it-IT:
           * [rect()](//studio.code.org/docs/gamelab/rect/)
           * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
 
-      CSD User Centered Design Post-Project Test:
-        title: 'Design Incentrato sull''Utente: Test Post-Progetto'
       ConditionalsWithCards-Unplugged:
         markdown: |-
           # Condizionali con le Carte
@@ -7240,15 +7236,11 @@ it-IT:
           \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nVai al piano di lavoro della lezione\n</button>\n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continua</a>"
-      CSD U5 test:
-        title: Test Post-Progetto sui Dati e la Società
       outbreak_freeplay_choice:
         display_name: Tempo di giocare
         description: Hai completato l'esercitazione! Continua ad apportare modifiche
           o miglioramenti al tuo progetto. Puoi scegliere di continuare a lavorare
           con gli stessi blocchi o provare una casetta degli attrezzi ampliata.
-      CSD Physical Computing Post-Project Test:
-        title: Test post-progetto di informatica fisica
       CSD U3 Entertainment_2018_2019:
         markdown: |+
           # Starting Your Search
@@ -7307,8 +7299,6 @@ it-IT:
           * All
 
           [/key]
-      CSD Web Development Post-Project Test:
-        title: Test post-progetto di sviluppo web
       Crowdsourcing-Unplugged:
         markdown: |-
           # Crowdsourcing

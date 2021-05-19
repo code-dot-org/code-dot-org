@@ -10263,6 +10263,8 @@ it:
               name: Progetto di fine corso
             lesson-1:
               name: Ballando col codice
+            lesson-3:
+              name: Personaggi in azione
           lesson_groups:
             csf_warmup:
               display_name: Riscaldamento
@@ -10283,7 +10285,7 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
             lessonGroup-9:
-              display_name: Riscaldamento
+              display_name: Eventi
           student_description: 'Impara le basi dell''informatica e della sicurezza
             su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
             storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
@@ -10482,6 +10484,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -10565,3 +10569,27 @@ it:
           lesson_groups:
             cspSurvey2020:
               display_name: Sondaggio
+        aiml-2021:
+          lessons:
+            lesson2:
+              name: Lezione 2
+            lesson3:
+              name: Lezione 3
+            lesson4:
+              name: Lezione 4
+            lesson5:
+              name: Lezione 5
+            lesson6:
+              name: Lezione 6
+            lesson7:
+              name: Lezione 7
+            lesson8:
+              name: Lezione 8
+            lesson10:
+              name: Lezione 10
+            lesson11:
+              name: Lezione 11
+            lesson12:
+              name: Lezione 12
+            lesson15:
+              name: Lezione 15

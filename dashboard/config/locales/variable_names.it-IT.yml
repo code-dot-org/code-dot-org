@@ -8,6 +8,7 @@ it:
       actor: personaggio
       armlength: lunghezza braccio
       binary: binario
+      birds: uccelli
       bodylength: lunghezza corpo
       cats: tutti i gatti
       color: colore
