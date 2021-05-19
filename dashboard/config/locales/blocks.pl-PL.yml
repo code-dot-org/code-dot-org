@@ -1705,14 +1705,6 @@ pl:
         text: potwory zaczynają wędrować
       Outbreak_beginWearingMasks:
         text: potwory zaczynają nosić maski
-      Outbreak_layoutSprites:
-        text: układ potworów jako {FORMAT}
-        options:
-          FORMAT:
-            '"grid"': siatka
-            '"border"': brzeg
-            '"row"': rząd
-            '"random"': losowy
       Outbreak_setSpeed:
         text: ustaw prędkość potwora na {VAL}
       Outbreak_setupOutbreak:

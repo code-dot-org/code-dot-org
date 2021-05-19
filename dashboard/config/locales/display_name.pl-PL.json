@@ -395,8 +395,8 @@
         "Course F: Artist Project - Revise_2018": "Zaktualizuj \"Projekt artysty\"",
         "Course F: Artist Project_2018": "Kurs F \"Projekt artysty\"",
         "Course F: Artist Project_2019": "Kurs F \"Projekt artysty\"",
-        "CourseE_Project_SpriteLab": "Kurs E - Projekt \"Sprite Lab\"",
-        "CourseE_Project_SpriteLab_2019": "Kurs E - Projekt \"Sprite Lab\"",
+        "CourseE_Project_SpriteLab": "Kurs E - Projekt Sprite Lab",
+        "CourseE_Project_SpriteLab_2019": "Kurs E - Projekt Sprite Lab",
         "CourseE_hoops": "Zajączek",
         "CourseF_Project_Revise_SpriteLab": "Zaktualizuj projekt \"Sprite Lab\"",
         "CourseF_Project_SpriteLab": "Kurs F - Projekt \"Sprite Lab\"",
@@ -465,7 +465,17 @@
         "CourseD_EOC_starwars": "Utwórz grę w klimacie Gwiezdnych Wojen",
         "CourseE_Project_SpriteLab_2020": "Utwórz projekt w Sprite Lab",
         "CourseF_Project_SpriteLab_2020": "Utwórz projekt w Sprite Lab",
-        "outbreak_freeplay_basic": "Standardowy przybornik"
+        "outbreak_freeplay_basic": "Standardowy przybornik",
+        "CSD U2 publish video": "Publikowanie Twojej witryny ",
+        "CSD U4 - Design Mode Project": "Projekt aplikacji: Projekt ekranu ",
+        "CSD U4 - Design Mode Project_2018": "Projekt aplikacji: Projekt ekranu ",
+        "CSD U4 - Design Mode Project_2019": "Projekt aplikacji: Projekt ekranu ",
+        "CSD U6 circuit button map": "Obwody przycisku ",
+        "CSD U6 circuit button map_2018": "Obwody przycisku ",
+        "CSD U6 circuit button map_2019": "Obwody przycisku ",
+        "CSD U6 for loop led bonus 1_2018": "Wyzwanie: dodaj więcej przycisków ",
+        "CSD U6 for loop led bonus 2_2018": "Wyzwanie: układy kolorów",
+        "CSD U6 for loop led bonus 3_2018": "Wyzwanie: Muzyka"
       }
     }
   }

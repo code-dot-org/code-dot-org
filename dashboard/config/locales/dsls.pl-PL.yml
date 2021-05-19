@@ -1238,6 +1238,7 @@ pl-PL:
         - correct: true
         questions:
         - {}
+        title: Przewidzieć coś
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -1246,6 +1247,7 @@ pl-PL:
         - correct: true
         questions:
         - {}
+        title: Przewidzieć coś
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -1254,6 +1256,7 @@ pl-PL:
         - correct: true
         questions:
         - {}
+        title: Przewidzieć coś
       Choosing Good IDs:
         teacher_markdown: |-
           #### Rozwijanie dobrych nawyków programistycznych
@@ -3436,8 +3439,8 @@ pl-PL:
           feedback: Niepoprawnie. Zniwiarka nie wywołuje "sprawdź i podnieś", zanim
             nie dotrze do kukurydzy.
         - text: Żniwiarka zbierze wszystkie dynie.
-          feedback: Niepoprawnie. Pani żniwiarka nie wywołuje "Sprawdź i podnieś",
-            zanim nie dotrze do kukurydzy.
+          feedback: Niepoprawnie. Zniwiarka nie wywołuje "sprawdź i podnieś", zanim
+            nie dotrze do kukurydzy.
         - text: Żniwiarka zbierze sałatę.
           feedback: Niepoprawnie. Żniwiarka wykonuje tylko jeden skręt i kończy przy
             kukurydzy.
@@ -5247,3 +5250,13 @@ pl-PL:
           funkcję `doSomething` funkcji `onEvent` _nie_ wstawiamy nawiasów na końcu.
           Robimy tak dlatego, że przekazujemy samą funkcję jako argument, nie jej
           wynik.\n"
+      CSD Interactive Animations and Games Post-Project Test:
+        title: 'Test po projekcie Interaktywnych animacji i gier '
+      CSD Physical Computing Post-Project Test:
+        title: 'Test po projekcie: Obliczenia fizyczne'
+      CSD U5 test:
+        title: 'Test po projekcie: Dane i społeczeństwo'
+      CSD User Centered Design Post-Project Test:
+        title: 'Test po projekcie: Projektowanie zorientowane na użytkownika'
+      CSD Web Development Post-Project Test:
+        title: 'Test po projekcie: Tworzenie stron internetowych '
