@@ -36,7 +36,7 @@
 
 module Pd::Application
   class TeacherApplication < TeacherApplicationBase
-    include Pd::Teacher2122ApplicationConstants
+    include Pd::TeacherApplicationConstants
 
     PRINCIPAL_APPROVAL_STATE = [
       NOT_REQUIRED = 'Not required',

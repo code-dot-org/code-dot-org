@@ -2,7 +2,7 @@ require 'test_helper'
 
 module Pd::Application
   class Teacher2122ApplicationTest < ActiveSupport::TestCase
-    include Pd::Teacher2122ApplicationConstants
+    include Pd::TeacherApplicationConstants
     include ApplicationConstants
     include RegionalPartnerTeacherconMapping
 
