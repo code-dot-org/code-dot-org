@@ -327,10 +327,6 @@ si:
             '"down"': පහල ඊතලය
             '"left"': වම් ඊතලය
             '"right"': දකුණු ඊතලය
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': අහඹු
       RyanLab_moveForward:
         text: ඉදිරියට යන්න
       RyanLab_turnLeft:

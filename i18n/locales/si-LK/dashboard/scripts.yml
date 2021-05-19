@@ -2619,6 +2619,8 @@ si:
               display_name: විචල්‍යන්
             csf_for_loops:
               display_name: ලූපයන් සඳහා
+            lessonGroup-9:
+              display_name: වැඩසටහන්
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2637,6 +2639,8 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+            lessonGroup-4:
+              display_name: පරීක්ෂාව
         csa2-pilot:
           lesson_groups:
             lesson group:
