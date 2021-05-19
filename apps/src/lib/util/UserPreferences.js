@@ -22,4 +22,20 @@ export default class UserPreferences extends Record({userId: 'me'}) {
       response => response.using_text_mode
     );
   }
+
+  /**
+   * Save the using_dark_mode user preference
+   * @param {boolean} darkMode - Whether or not the user should be in dark mode.
+   */
+  setUsingDarkMode(darkMode) {
+    return $.post(`/api/v1/users/${this.userId}/using_dark_mode`, {
+      using_dark_mode: darkMode
+    });
+  }
+
+  getUsingDarkMode() {
+    return $.getJSON(`/api/v1/users/${this.userId}/using_dark_mode`).then(
+      response => response.using_dark_mode
+    );
+  }
 }

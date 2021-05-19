@@ -13,7 +13,7 @@ level 'courseF_text_choice_color'
 level 'courseF_text_choice_freeplay'
 teacher_markdown <<MARKDOWN
 # Choice Level Overview
-Choice levels provide a menu of additional levels for students to complete. Students must do at least one sub-level to complete the activity but may work through as many as they (or you) like.
+Choice levels provide a menu of additional levels for students to complete. Students must complete at least one of the sub-levels here, but may work through as many as they (or you) like.
 
 You can use the descriptions below to help students self-select choices, or to set expectations around how many sub-levels they should complete.
 

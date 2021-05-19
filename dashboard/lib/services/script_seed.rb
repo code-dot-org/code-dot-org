@@ -712,6 +712,11 @@ module Services
         :seeding_key
       )
 
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
@@ -725,6 +730,11 @@ module Services
         :seeding_key
       )
 
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
@@ -737,6 +747,11 @@ module Services
         :properties,
         :seeding_key
       )
+
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
@@ -755,6 +770,23 @@ module Services
         :seeding_key,
         :level_keys
       )
+
+      def assessment
+        !!object.assessment
+      end
+
+      def properties
+        # sort properties hash by key
+        object.properties.sort.to_h
+      end
+
+      def named_level
+        !!object.named_level
+      end
+
+      def bonus
+        !!object.bonus
+      end
 
       def seeding_key
         # Just in case the data stored in the level_keys property is out of sync somehow,

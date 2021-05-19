@@ -27,10 +27,9 @@ const styles = {
     color: color.white
   },
   titleContainer: {
-    width: '100%',
     display: 'flex',
     alignItems: 'baseline',
-    padding: '20px 20px 15px 20px'
+    padding: '14px 20px 10px 20px'
   },
   title: {
     color: color.white,
