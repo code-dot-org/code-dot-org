@@ -1,10 +1,45 @@
 export const allDatasets = [
   {
+    id: "songs",
+    name: "Top Songs",
+    path: "datasets/songs.csv",
+    metadataPath: "datasets/songs.json",
+    imagePath: "datasets/songs.jpg"
+  },
+  {
+    id: "basketball_shots",
+    name: "NCAA 3-Point Attempts",
+    path: "datasets/basketball_shots.csv",
+    metadataPath: "datasets/basketball_shots.json",
+    imagePath: "datasets/basketball_shots.jpg"
+  },
+  {
     id: "foods",
     name: "Foods",
     path: "datasets/foods.csv",
     metadataPath: "datasets/foods.json",
     imagePath: "datasets/foods.jpg"
+  },
+  {
+    id: "exoplanets",
+    name: "Exoplanets",
+    path: "datasets/exoplanets.csv",
+    metadataPath: "datasets/exoplanets.json",
+    imagePath: "datasets/exoplanets.jpg"
+  },
+  {
+    id: "thanksgiving",
+    name: "Regional Thanksgiving Food Survey",
+    path: "datasets/thanksgiving.csv",
+    metadataPath: "datasets/thanksgiving.json",
+    imagePath: "datasets/thanksgiving.jpg"
+  },
+  {
+    id: "jeans",
+    name: "Jeans Measurements",
+    path: "datasets/jeans.csv",
+    metadataPath: "datasets/jeans.json",
+    imagePath: "datasets/jeans.jpg"
   },
   {
     id: "bike_sharing",
