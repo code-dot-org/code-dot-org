@@ -262,6 +262,15 @@ lt:
             '"x"': x pozicija
             '"y"': y pozicija
             '"speed"': greitis
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': šiek tiek
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -396,9 +405,9 @@ lt:
         text: pasisuk į kairę
       RyanLab_turnRight:
         text: pasisuk į dešinę
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': atsitiktinis
       binary_move:
         options:

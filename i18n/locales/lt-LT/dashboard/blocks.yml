@@ -398,10 +398,6 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': atsitiktinis
       RyanLab_moveForward:
         text: judėk į priekį
       RyanLab_turnLeft:
