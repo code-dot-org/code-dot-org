@@ -735,13 +735,18 @@ class Lesson < ApplicationRecord
     raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
     raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || original_lesson.script.get_course_version.nil?
     raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == original_lesson.script.get_course_version.version_year
-    raise 'Destination script must have at least one lesson group' if destination_script.lesson_groups.blank?
 
     ActiveRecord::Base.transaction do
       copied_lesson = original_lesson.dup
       copied_lesson.key = copied_lesson.name
       copied_lesson.script_id = destination_script.id
-      copied_lesson.lesson_group_id = destination_script.lesson_groups.last.id
+
+      destination_lesson_group = destination_script.lesson_groups.last
+      unless destination_lesson_group
+        destination_lesson_group = LessonGroup.create!(script: destination_script, position: 1, user_facing: true, display_name: 'New Lesson Group', key: 'new-lesson-group')
+        Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_script.name)
+      end
+      copied_lesson.lesson_group_id = destination_lesson_group.id
 
       copied_lesson.absolute_position = destination_script.lessons.count + 1
       copied_lesson.relative_position =
