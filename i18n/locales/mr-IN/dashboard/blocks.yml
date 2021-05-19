@@ -1067,12 +1067,6 @@ mr:
             "{x: 300, y: 200}": उजवा
       Mikelab_whenKeyPressed:
         text: जेव्हा {KEY} दाबली जाते
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ग्रिड
-            '"border"': सीमारेषा
-            '"row"': ओळ
       aalab_layoutSprites:
         options:
           FORMAT:
