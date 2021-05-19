@@ -321,6 +321,16 @@ class Section < ApplicationRecord
     students.distinct(&:id).size + students_to_add > @@section_capacity
   end
 
+  # Hide or unhide a lesson for this section
+  def toggle_hidden_lesson(lesson, should_hide)
+    hidden_lesson = SectionHiddenLesson.find_by(stage_id: lesson.id, section_id: id)
+    if hidden_lesson && !should_hide
+      hidden_lesson.delete
+    elsif hidden_lesson.nil? && should_hide
+      SectionHiddenLesson.create(stage_id: lesson.id, section_id: id)
+    end
+  end
+
   # Hide or unhide a stage for this section
   def toggle_hidden_stage(stage, should_hide)
     hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
