@@ -8,8 +8,6 @@ export default class Neighborhood {
     this.controller = null;
   }
   afterInject(level, skin, config, studioApp) {
-    level.startDirection = Direction.EAST;
-
     this.controller = new MazeController(level, skin, config, {
       methods: {
         playAudio: (sound, options) => {
@@ -34,7 +32,6 @@ export default class Neighborhood {
 
   handleSignal(signal) {
     const type = signal.value;
-    console.log(signal);
     switch (type) {
       case NeighborhoodSignalType.MOVE: {
         const {direction, id} = signal.detail;
