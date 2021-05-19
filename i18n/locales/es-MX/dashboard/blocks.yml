@@ -1676,18 +1676,22 @@ es-MX:
         text: coordenada x de {SPRITE}
       Mikelab_yLocationOf:
         text: coordenada y de {SPRITE}
-      Outbreak_layoutSprites:
-        text: diseñar monstruos como un {FORMAT}
-        options:
-          FORMAT:
-            '"grid"': cuadrícula
-            '"border"': borde
-            '"row"': fila
-            '"random"': al azar
+      Outbreak_beginCongregating:
+        text: los monstruos empiezan a congregarse
+      Outbreak_beginQuarantining:
+        text: los monstruos empiezan la cuarentena cuando enferman
+      Outbreak_beginSocialDistancing:
+        text: los monstruos empiezan el distanciamiento social
+      Outbreak_beginWandering:
+        text: los monstruos empiezan a deambular
+      Outbreak_beginWearingMasks:
+        text: los monstruos empiezan a llevar mascarilla
       Outbreak_setSpeed:
         text: ajustar velocidad monstruo a {VAL}
       Outbreak_setupOutbreak:
         text: Configurar Monster Town con{COUNT}monstruos
+      Outbreak_stopMoving:
+        text: los monstruos dejan de moverse
       RyanLab_moveForward:
         text: avanzar
       RyanLab_turnLeft:

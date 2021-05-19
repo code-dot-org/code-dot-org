@@ -17708,6 +17708,7 @@ es-MX:
             Project - Make a Recommendation:
               key: Proyecto - Hacer una Recomendación
               name: Proyecto - Hacer una Recomendación
+              description_student: Para concluir esta unidad, la clase diseña formas de utilizar los datos para hacer recomendaciones o predicciones que ayuden a resolver un problema. En los primeros pasos, los alumnos hacen un intercambio de ideas, realizan una investigación sencilla y definen un problema de su elección. A continuación, deciden qué tipo de datos quieren recopilar, cómo se podrían recoger y qué uso se les podría dar, antes de intercambiar opiniones y hacer una presentación final.
               description_teacher: Para concluir esta unidad, los estudiantes diseñan un motor de recomendación basado en los datos de sus compañeros de clase que recopilaron y analizaron. Después de ver un ejemplo de una aplicación de recomendación, los estudiantes siguen una guía de proyecto para completar esta actividad de varios días. En los primeros pasos, los estudiantes eligen qué opción quieren ayudar al usuario a elegir y qué datos necesitan para dar una recomendación, crear una encuesta y recopilar información sobre las elecciones de sus compañeros de clase. Luego, interpretan los datos y utilizan lo que han aprendido para crear el algoritmo de recomendación. Por último, usan sus algoritmos para hacer recomendaciones a algunos compañeros de clase. Los estudiantes realizan una revisión en conjunto y hacen las mejoras necesarias en sus proyectos antes de preparar una presentación para la clase.
             Post-Project Test:
               key: Prueba posterior al proyecto
@@ -19587,6 +19588,15 @@ es-MX:
               name: Fiesta de baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su propia fiesta de baile interactiva. Esta actividad requiere el uso de sonido, ya que la herramienta responde a la música.
+            lesson-2:
+              name: Creación de Sprites
+              description_teacher: 'En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de "juego libre" en la que podrán construir lo que quieran. Los alumnos escribirán programas y aprenderán los dos conceptos centrales de Laboratorio de Sprite: los sprites y los comportamientos. '
+            lesson-3:
+              name: Sprites en acción
+              description_student: Trabajarás a través de niveles de programación y terminarás con una tarea abierta de "juego libre" en la que podrás construir lo que quieras.
+              description_teacher: 'En esta lección, los alumnos trabajarán a través de una serie de niveles de programación en el ordenador, terminando con una tarea abierta de "juego libre" en la que podrán construir lo que quieran. Los alumnos escribirán programas que respondan a sucesos cronometrados y a las entradas del usuario. '
+            lesson-4:
+              name: Texto y Comentarios
           lesson_groups:
             csf_warmup:
               display_name: Calentamiento
@@ -19607,7 +19617,7 @@ es-MX:
             end_of_course_project:
               display_name: Proyecto de fin de curso
             lessonGroup-9:
-              display_name: Calentamiento
+              display_name: Eventos
           name: Curso Express - 2021
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
         pre-express-2021:
@@ -19832,7 +19842,7 @@ es-MX:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
             Designing With Empathy:
-              name: Diseñando con Empatía
+              name: Análisis de diseño
             User-Centered Design - Define and Prepare:
               name: Diseño Orientado al Usuario - Definir y Preparar
             User-Centered Design - Try and Reflect:
@@ -20208,6 +20218,8 @@ es-MX:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Prueba
           name: csa1-piloto
         csa2-pilot:
           lessons:
@@ -20499,3 +20511,29 @@ es-MX:
           description_short: Encuesta de fin de curso para estudiantes de CSP
           description: Bienvenido a la encuesta de fin de curso de Principios de Ciencias de la Computación de Code.org. Para completar esta encuesta, demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente, y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración.
           student_description: Bienvenido a la encuesta de fin de curso de Principios de Ciencias de la Computación de Code.org. Para completar esta encuesta, demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente, y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración.
+        aiml-2021:
+          lessons:
+            lesson1:
+              name: Introducción al aprendizaje automático (Machine Learning)
+            lesson2:
+              name: Cómo Aprenden los Ordenadores
+            lesson3:
+              name: Patrones en los Datos
+            lesson4:
+              name: Clasificación con Aprendizaje Automático
+            lesson5:
+              name: Entrenamiento de un Modelo con Características
+            lesson6:
+              name: Importación de un Modelo en Laboratorio de Aplicaciones
+            lesson7:
+              name: La Necesidad de Tarjetas Modelo
+            lesson8:
+              name: Datos Numéricos en el Laboratorio de Inteligencia Artificial
+            lesson10:
+              name: Uso de las Tarjetas Modelo en el Laboratorio de Aplicaciones
+            lesson11:
+              name: Personalizando tu Aplicación
+            lesson12:
+              name: Toma de decisiones sobre datos
+            lesson15:
+              name: Lección 15
