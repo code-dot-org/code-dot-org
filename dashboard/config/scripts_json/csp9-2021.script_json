@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 03:05:09 UTC",
+    "serialized_at": "2021-05-19 00:19:23 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -1923,6 +1923,29 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Making Bar Charts and Histograms"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 1_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms_2021"
         ],
@@ -1944,8 +1967,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 2,
+      "chapter": 5,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -1970,7 +1993,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1996,7 +2019,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2022,7 +2045,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2048,9 +2071,32 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Crosstab and Scatter Charts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 2_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2074,8 +2120,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 2,
+      "chapter": 11,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2100,8 +2146,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 3,
+      "chapter": 12,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2126,7 +2172,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2152,7 +2198,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2178,7 +2224,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2204,7 +2250,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2230,7 +2276,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2256,7 +2302,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2282,7 +2328,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2308,7 +2354,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -2334,7 +2380,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2360,7 +2406,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2386,7 +2432,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2434,6 +2480,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
         "activity_section.key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 1_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
       }
     },
     {
@@ -2494,6 +2552,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
         "activity_section.key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 2_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
       }
     },
     {

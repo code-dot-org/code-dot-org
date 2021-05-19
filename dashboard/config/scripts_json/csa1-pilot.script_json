@@ -10,11 +10,12 @@
       "weekly_instructional_minutes": 225,
       "show_calendar": true,
       "hideable_lessons": true,
-      "include_student_lesson_plans": true
+      "include_student_lesson_plans": true,
+      "pilot_experiment": "csa-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-13 14:46:33 UTC",
+    "serialized_at": "2021-05-19 17:29:54 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }

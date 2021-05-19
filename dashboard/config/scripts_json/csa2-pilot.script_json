@@ -6,11 +6,12 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "csa-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-06 20:12:02 UTC",
+    "serialized_at": "2021-05-19 17:59:42 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -68,6 +69,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "In this lesson, students define variables to represent attributes for an object and use these variables to store values. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.",
+        "preparation": "* Print copies of the Trace Table activity guide (one copy per student)",
+        "student_overview": "One way that software engineers can store information in a computer’s memory is by using variables. In this lesson, you use variables to store information used to create `Painter` objects and also to store information input by a user. "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -313,6 +317,48 @@
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot"
       }
+    },
+    {
+      "key": "1e33cefb-7464-4b82-8efa-f9ec5f832186",
+      "position": 1,
+      "properties": {
+        "duration": 3,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e33cefb-7464-4b82-8efa-f9ec5f832186",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "dbfb0987-e7d7-441b-94dc-cb37896b671a",
+      "position": 2,
+      "properties": {
+        "duration": 37,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "9a770f9d-850f-4212-9a27-6bfdb3996102",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a770f9d-850f-4212-9a27-6bfdb3996102",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -483,6 +529,52 @@
         "activity_section.key": "d7238055-daae-415e-a3ae-1d61decce65a",
         "lesson_activity.key": "1b78fda7-b3b7-49d1-a122-38d373ed220e"
       }
+    },
+    {
+      "key": "6bdad9ad-1da0-4536-9e7d-73245244dd18",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, we learned that we could represent the attributes of an object by defining instance variables in its class. The relationship between an object and its instance variables is called a “has-a” relationship.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6bdad9ad-1da0-4536-9e7d-73245244dd18",
+        "lesson_activity.key": "1e33cefb-7464-4b82-8efa-f9ec5f832186"
+      }
+    },
+    {
+      "key": "370eadde-d06b-49c4-b48b-dd56da84cc2a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *For example, an attribute for a cake could be flavor. Every cake \"has-a\" flavor. What are some attributes that you can use to describe a cake?*\n\n**Discussion Goal:** Students share characteristics of a cake to fill in the blank that can be used as an attribute.\n\n**Do This:** Click through the animated slide to show the three examples. Highlight how the various attributes are represented with values of different types."
+      },
+      "seeding_key": {
+        "activity_section.key": "370eadde-d06b-49c4-b48b-dd56da84cc2a",
+        "lesson_activity.key": "1e33cefb-7464-4b82-8efa-f9ec5f832186"
+      }
+    },
+    {
+      "key": "1ce4639a-de47-4ffc-9b9d-e71fd5f5011f",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Introduce the purpose and functionality of variables:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define a variable using the analogy of a box.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A variable is stored in memory so that it can be accessed and updated later.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is a Variable? video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students where a line should be drawn to match each value to its corresponding type. Click through the animated slide to reveal the answer for each value.",
+        "duration": "5",
+        "name": "Introduction to Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ce4639a-de47-4ffc-9b9d-e71fd5f5011f",
+        "lesson_activity.key": "dbfb0987-e7d7-441b-94dc-cb37896b671a"
+      }
+    },
+    {
+      "key": "f42ba25f-5ae4-409d-b66c-00dcc2306764",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f42ba25f-5ae4-409d-b66c-00dcc2306764",
+        "lesson_activity.key": "9a770f9d-850f-4212-9a27-6bfdb3996102"
+      }
     }
   ],
   "script_levels": [
@@ -541,6 +633,36 @@
       "seeding_key": {
         "lesson.key": "new lesson",
         "objective.key": "d4740c9c-b407-488e-9dc8-8c1c15ffaa61"
+      }
+    },
+    {
+      "key": "2c4451c0-009f-48d9-b7fe-6441e1fe0731",
+      "properties": {
+        "description": "Declare and assign a value of type `int`, `double`, `boolean`, `String`, or `Painter` to a variable"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "2c4451c0-009f-48d9-b7fe-6441e1fe0731"
+      }
+    },
+    {
+      "key": "c616f0f9-487e-4d6b-9473-28d3fb0d37b5",
+      "properties": {
+        "description": "Construct a trace table to track the changing values of variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "c616f0f9-487e-4d6b-9473-28d3fb0d37b5"
+      }
+    },
+    {
+      "key": "558dd9b5-236e-41be-8a56-4e7611195057",
+      "properties": {
+        "description": "Accept user input for different data types using a `Scanner` object"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "558dd9b5-236e-41be-8a56-4e7611195057"
       }
     }
   ],
@@ -606,6 +728,90 @@
         "lesson.key": "new lesson",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.1"
       }
     }
   ],
