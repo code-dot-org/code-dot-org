@@ -1009,6 +1009,8 @@ ms:
               display_name: Pembolehubah
             csf_sprites:
               display_name: Jin
+            lessonGroup-9:
+              display_name: Acara-acara
         pre-express-2021:
           lesson_groups:
             csf_loops:

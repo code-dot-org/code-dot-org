@@ -1482,13 +1482,6 @@ ms:
         text: koordinat x dari {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat dari {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': grid
-            '"border"': sempadan
-            '"row"': baris
-            '"random"': rawak
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:
