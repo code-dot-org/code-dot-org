@@ -196,6 +196,7 @@ th-TH:
   learn_classes: ค้นหาชั้นเรียนในท้องถิ่น
   learn_back_to_minecraft: เรียนรู้ไปด้วยกันกับ Minecraft
   just_did_hoc: 'ฉันเพิ่งเรียน #HourOfCode - เข้าร่วมเรียน! @codeorg'
+  just_did_accelerated: เราเพิ่งเรียนหลักสูตรเร่งรัดเสร็จ - ดูความคืบหน้าได้ที่ @codeorg
   learn_hoc: เข้าร่วมเรียน Hour of Code
   beyond_hoc: เกินหนึ่งชั่วโมง
   what_gender: คุณเพศอะไร
@@ -627,6 +628,7 @@ th-TH:
   dashboard_course2: 'หลักสูตรที่ 2:'
   dashboard_course3: 'หลักสูตรที่ 3:'
   dashboard_course4: 'คอร์ส4 (รุ่นทดลอง): '
+  dashboard_pre-express: 'หลักสูตร Express สำหรับเด็กวัยเรียนรู้:'
   dashboard_curriculum: หลักสูตร
   dashboard_curriculum_overview: ภาพรวมของหลักสูตรประถมศึกษา
   dashboard_overview: ภาพรวม
@@ -755,6 +757,17 @@ th-TH:
   coursee_name: คอร์ส E
   coursef-draft_name: คอร์ส F
   coursef_name: คอร์ส F
+  coursea-2017_name: หลักสูตร A (2017)
+  coursec-2017_name: หลักสูตร C (2017)
+  coursed-2017_name: หลักสูตร D (2017)
+  coursee-2017_name: หลักสูตร E (2017)
+  coursef-2017_name: หลักสูตร F (2017)
+  pre-express-2018_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2018)
+  pre-express-2019_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2019)
+  pre-express-2020_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้ (2020)
+  accelerated_name: หลักสูตรเร่งรัด
+  pre-express_name: หลักสูตร Express สำหรับเด็กวัยเรียนรู้
+  20-hour_name: หลักสูตรเร่งรัด
   iceage_name: ยุคน้ำแข็ง (Ice Age)
   minecraft_name: ไมน์คราฟท์
   starwarsblocks_name: สตาร์วอร์ส (บล็อก)
@@ -913,6 +926,49 @@ th-TH:
   frozen_shortdescription: ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง
   starwars_shortdescription: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
   artist_shortdescription: Draw cool pictures and designs with the ศิลปิน!
+  coursea_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีช่วงอายุที่แตกต่างกันมากขึ้น)
+  coursec_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป การตรงตามเงื่อนไข และอีกมากมาย
+  coursee_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C และ D ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+  coursea-2017_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb-2017_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีช่วงอายุที่แตกต่างกันมากขึ้น)
+  coursec-2017_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed-2017_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป การตรงตามเงื่อนไข และอีกมากมาย
+  coursee-2017_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C และ
+    D ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef-2017_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+  coursea-2018_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb-2018_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีช่วงอายุที่แตกต่างกันมากขึ้น)
+  coursec-2018_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed-2018_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป การตรงตามเงื่อนไข และอีกมากมาย
+  coursee-2018_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C และ
+    D ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef-2018_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+  coursea-2019_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+  courseb-2019_shortdescription_congrats: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+    (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีช่วงอายุที่แตกต่างกันมากขึ้น)
+  coursec-2019_shortdescription_congrats: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+    เรื่องราวและเกมของคุณเอง
+  coursed-2019_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+    ลูปซ้อนลูป การตรงตามเงื่อนไข และอีกมากมาย
+  coursee-2019_shortdescription_congrats: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C และ
+    D ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+  coursef-2019_shortdescription_congrats: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+    ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
   coursea-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
     ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
   courseb-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
@@ -1241,6 +1297,8 @@ th-TH:
   hoc_overview_view_teacher_guide: ดูคำแนะนำสำหรับครู
   hoc2018_creativity_create: สร้าง
   hoc2018_creativity_what_will_you_create: คุณจะสร้างอะไร
+  hoc2018_creativity_courses_link: ก้าวไปอีกขั้นด้วย<a href="https://studio.code.org/courses">หลักสูตรต่าง
+    ๆ ของ Code.org</a>
   hoc2018_mc_page_title: สอนชั่วโมงแห่งโค้ดด้วย Minecraft
   hoc2018_mc_details: หลากหลายภาษา | บราว์เซอร์และแท็บเล็ตรุ่นใหม่ | เกรด 2+
   hoc2018_mc_aquatic_description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งการเขียนโค้ด
