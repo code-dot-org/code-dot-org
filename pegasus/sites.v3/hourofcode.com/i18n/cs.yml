@@ -155,56 +155,56 @@ cs:
   hoc_overview_oceans_tutorial_desc: Učte se o umělé inteligenci (UI), strojovém učení,
     trénovacích datech a zaujatosti, přičemž  zároveň bádejte i nad etickými otázkami
     a nad tím, jak lze UI použít k řešení světových problémů.
-  ai_video_title_what_is_ai: What is AI?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
-  ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
-    and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
+  ai_video_title_what_is_ai: Co je to umělá inteligence?
+  ai_video_title_algorithm_bias: Boj proti podjatosti u algoritmů
+  ai_video_title_phone_knows_dog: Jak Váš telefon pozná, že se jedná o psa?
+  ai_video_title_what_is_ml: Co je to strojové učení?
+  ai_video_title_ml_big_small_prickly: 'Strojové učení: řešení velkých, malých a trnitých
+    problémů'
+  ai_video_title_ethics_of_ai: Etika umělé inteligence
+  ai_video_title_ml_human_bias: Strojové učení a lidská podjatost
+  ai_video_title_seeing_ai: 'Umělá inteligence vidění: udělat vizuální svět přístupnější'
+  activity: Aktivita
   name: Name
-  description: Description
+  description: Popis
   audience: Audience
-  ai_resource_header: Teach and Learn about AI
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
-  ai_resource_ml_for_kids: Machine Learning for Kids
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
+  ai_resource_header: Vyučujte a učte se o umělé inteligenci
+  ai_resource_minecraft: Umělá inteligence Minecraft pro Dobro
+  ai_resource_minecraft_desc: 'Získejte přístup k bezplatným prostředkům, jako například
+    k plánu lekcí, videím, osnovám počítačových věd a školením pro učitele. (Podmínkou
+    je Minecraft: Edice pro školy)'
+  ai_resource_ml_for_kids: Strojové učení pro děti
+  ai_resource_ml_for_kids_desc: Trénujte model strojového učení textem, číslicemi
+    nebo obrázky a používejte jej k hraní her ve Scratch.
+  ai_resource_ibm_ml_for_kids: 'IBM: strojové učení pro děti'
   ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
     learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
-  ai_resource_elements_ai: Elements of AI
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
-  ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
+  ai_resource_ecs: 'ECS: umělá inteligence (AI)'
+  ai_resource_ecs_desc: Nová alternativní jednotka osnov pro osnovy předmětu „Bádání
+    v počítačové vědě“.
+  ai_resource_elements_ai: Prvky umělé inteligence
+  ai_resource_elements_ai_desc: Řada bezplatných online kurzů, které vytvořil Reaktor
+    a Helsinská Univerzita.
+  ai_resource_cognimates: Cognimates (kognitivní protějšky)
+  ai_resource_cognimates_desc: Vzdělávací platforma na výuku umělé inteligence k vytváření
+    her, programování robotů a cvičení.
   ai_audience_k12: K-12 (Reading required)
   ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
-  ai_activity_seeing_ai: Seeing AI
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
-  ai_activity_quick_draw: Quick, Draw!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_header: Aktivity založené na umělé inteligenci a na strojovém učení
+  ai_activity_seeing_ai: Umělá inteligence vidění
+  ai_activity_seeing_ai_desc: Bezplatná aplikace, která mnoha různými jazyky vypráví
+    o světě kolem Vás.
+  ai_activity_quick_draw: Rychle, táhněte!
+  ai_activity_quick_draw_desc: Umí se neuronová síť naučit rozpoznávat čmáranice?
   ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
-  ai_activity_experiments: AI Experiments with Google
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_teachable_desc: Vycvičte počítač tak, aby se naučil rozpoznávat Vaše
+    vlastní obrázky, zvuky a pózy.
+  ai_activity_experiments: Všechny experimenty s Google
+  ai_activity_experiments_desc: Začněte bádat v oblasti strojového učení prostřednictvím
+    obrázků, kreseb, jazyka, hudby a dalšího.
+  ai_activity_zooniverse: Zooniverse - Pořiďte snímek horské zebry
+  ai_activity_zooniverse_desc: Pomáhejte chránit ohroženou kapskou horskou zebru určením
+    různých zvířat na obrázcích.
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -3885,14 +3885,15 @@ cs:
     hra a obsahuje video přednášky Billa Gatese, Marka Zuckerberga, Angry Birds a
     Plants vs. Zombies. Nauč se opakovací smyčky, podmínky a základní algoritmy. Dostupné
     v 37 jazycích.
-  tutorial_itchstop_longdescription: We'll be using Itch to build our own stop frame
-    animation projects. Note that headphones are recommended for this course. We will
-    use some existing sprites that support animations and show the code we need to
-    add to animate our characters. We'll also go over how to create our very own animation
-    effects and drawings. We'll learn how to change a sprite costume in scratch repeatedly
-    for animation effects (similar to a flip-book animation) and the code behind it.
-    All instruction is contained within the Itch environment so there is no need to
-    be switching screens to follow along with the project.
+  tutorial_itchstop_longdescription: Ke kompilaci svých vlastních projektů animací
+    se zastavenými snímky budeme používat Itch. Pamatujte, že na tento kurz jsou doporučena
+    sluchátka. Budeme používat nějaké stávající sprity podporující animace a ukážeme
+    kód, který k animaci našich postaviček potřebujeme. Také probereme, jak můžeme
+    vytvářet své vlastní animační efekty a výkresy. Naučíme se, jak opakovaně od základu
+    změnit kostým postavičky (sprajtu), aby vznikl efekt animace (obdobně jako u animace
+    v leporelu) a kód, na kterém je to založeno. Veškeré instrukce se nacházejí v
+    prostředí Itch, takže k tomu, abyste mohli postupovat podle projektu, není potřeba
+    přepínat obrazovky.
   tutorial_tynkerpn_longdescription: Follow Peep as he explores the big wide world!
     In this project, you'll create an interactive scene in which Peep goes on a nature
     walk and sees lots of interesting items. You'll make different items show up or
@@ -5177,30 +5178,29 @@ cs:
     similar to a very bad player shooting darts at a dart board. The percentage of
     darts that land inside the circle can help us calculate Pi. Then change the colors
     of the points just for fun!
-  tutorial_stemplanetoids_longdescription: Did you know that the code behind the classic
-    Asteroids and Lunar Lander games is simpler than you might think? Did you know
-    that both of these games have accurate physics? In this activity you will fix
-    a broken asteroids game where the ship only moves in a straight line. Then you
-    will add gravity to the game and try to land the ship on the moon! Works with
-    chromebooks and other devices!
-  tutorial_stempong_longdescription: Did you know that the code behind the popular
-    game Bonk.io and the classic Pong game is simpler than you might think? Did you
-    know that both of these games have accurate physics? In this activity you will
-    fix a broken version of the Pong game so that objects bounce like they should.
-    Then you will add gravity to create a Bonk.io clone. Works with chromebooks and
-    other devices!
+  tutorial_stemplanetoids_longdescription: Věděli jste, že kód, na kterém jsou založeny
+    klasické hry „Asteroidy“ a „Měsíční přistávací modul“ je jednodušší, než by vás
+    napadlo? Věděli jste, že obě tyto hry mají přesnou fyziku? V této aktivitě budete
+    opravovat pokaženou hru o asteroidech, kde se kosmická loď pohybuje jen po přímce.
+    Pak do hry přidáte gravitaci a pokusíte se přistát s kosmickou lodí na měsíci!
+    Funguje na zařízeních Chromebook a na jiných zařízeních!
+  tutorial_stempong_longdescription: Znáte kód, na kterém je založena populární hra
+    Bonk.io a klasická hra Pong je jednodušší, než by vás napadlo? Víte, že obě tyto
+    hry mají přesnou fyziku? V této aktivitě opravíte pokaženou verzi hry Pong tak,
+    aby se předměty odrážely tak, jak mají. Pak přidáte gravitaci a vytvoříte tak
+    klon Bonk.io. Funguje na zařízeních Chromebook a na jiných zařízeních!
   tutorial_algobot_longdescription: AlgoBot is a puzzle game that takes place on the
     Europa, a pan-galactic colonisation ship, where a recycling mission goes horribly
     wrong. Players command AlgoBot, a smart little service droid, and learn to use
     a visual programming language to help him contain the crisis!
   tutorial_thunkableapps_longdescription: 'Learn how to build your own apps with blocks-based
     coding! '
-  tutorial_toxicodedot_longdescription: 'Select a card from your deck and interpret
-    its code in order to progress through the world. Use your intuitive abilities
-    to guess the rules and learn from your own mistakes. Made with care by the team
-    behind Compute it and Silent Teacher, with the same fundamentals: trial-and-error
-    instead of verbose explanations, smooth progression, no code to type, accessibility
-    to absolute beginners.'
+  tutorial_toxicodedot_longdescription: 'Vyberte jednu kartu ze svého balíčku a interpretujte
+    její kód, abyste postoupili světem. Využijte svých schopností intuice k uhádnutí
+    pravidel a k poučení se z vlastních chyb. Pečlivě vyrobil tým autorů her „Vypočítej
+    to“ a „Mlčenlivý učitel“, a to na stejných základech: namísto rozsáhlého vysvětlování
+    metoda pokusu a omylu, hladký pokrok, není nutno psát žádný kód, dostupné i pro
+    naprosté začátečníky.'
   tutorial_gcactions_longdescription: Discover actions, one of the key building blocks
     in coding, and use them to code a video game! Explore digital culture and learn
     about robots and what they can actually do.

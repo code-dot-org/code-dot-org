@@ -34,9 +34,7 @@ cn:
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: "  #HourOfCode 是关于 #CSforGood 的。马上开始学习，打造更美好的明天。"
-  social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2020_global_movement: 编程一小时活动是一个全球性的活动，有使用45+种语言的数千万学生参与了这个活动。全年龄都参与这项一小时的教学活动。
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
   hoc2020_ai_subheader: 2020编程一小时即将来临！
@@ -191,7 +189,7 @@ cn:
   cookie_banner_accept: 我同意
   front_header_banner: "%{campaign_date}，加入有史以来最大的学习活动"
   front_intro_default: 编程一小时活动是一个全球性的活动，在全球180多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，你都可以举办一个编程一小时活动。编程一小时活动的课程已经支持超过40种语言。不需要经验。<strong>4岁以上即可参与。</strong>
-  front_intro_default_2: A global movement in 180+ countries.
+  front_intro_default_2: 在180+个国家和地区举办的全球性活动
   front_watch_video: 观看新的视频
   front_watch_regular_video: 观看视频
   front_volunteers: 需要技术志愿者
@@ -411,9 +409,7 @@ cn:
   signup_closed: 编程一小时的注册已停止。请在10月再来查看报名下个编程一小时。
   signup_registration_not_required: 您无需注册，即可参加全年的编程一小时各项活动！ <a href='%{hoc_activities_url}'>尝试活动</a>
     或阅读我们的 <a href='%{howto_guide_url}'>操作指南</a> 为您所在的课堂筹备一次活动。
-  signup_registration_not_required_markdown: You don't need to register to participate!
-    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
-    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
+  signup_registration_not_required_markdown: 您无需注册，即可参加全年的编程一小时各项活动！[体验活动](%{hoc_activities_url})或阅读我们的[操作指南](%{howto_guide_url})，为您所在的课堂筹备一次活动。
   signup_registration_closed: 每年的12月，你的班级都可以加入世界各地数以百万计的学生，一起庆祝计算机科学教育周。我们将在10月开始登记年度庆典活动。
   signup_header: 在%{campaign_date} 期间主持编程一小时，并在这里登记。
   signup_name_label: 您的姓名
@@ -481,9 +477,7 @@ cn:
   social_hoc2018_mc_creativity: Use your creativity and problem solving skills to
     explore and build underwater worlds with code.
   social_hoc2018_what_create: 您会创造什么？
-  social_hoc2018_global_movement: The Hour of Code is a global movement reaching tens
-    of millions of students. One-hour tutorials are available in 45+ languages for
-    all ages.
+  social_hoc2018_global_movement: 编程一小时活动是一个全球性的活动，有使用45+种语言的数千万学生参与了这个活动。全年龄都参与这项一小时的教学活动。
   map_title: 编程一小时地图
   map_header: 世界各地的《编程一小时》活动
   map_header_count_year: "%{year}年已有%{event_count}个已登记的编程一小时活动"
@@ -510,13 +504,7 @@ cn:
   hoc_faq_what_is_hoc_q: 编程一小时是什么？
   hoc_faq_what_is_hoc_a: 编程一小时以一个小时的时间开始，介绍计算机科学，并让人们快速了解编码。让人们轻而易举学习最基本的知识，让人们更加广泛了解计算机科学。这是一个国际运动，从一小时训练营开始到社区运动。查看<a
     href='%{tutorials}'>教程和活动</a>。这草根活动被超过<a href='%{partners}'>400位伙伴</a>和200千全球工作者所支持。
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: 编程一小时以一个小时的时间，介绍计算机科学，并让人们快速了解编程，让人们轻而易举学习最基本的知识，更加广泛地了解计算机科学。这是一项国际性活动，在一小时训练营之外还有各种社区活动。查看我们的[教程和活动](%{tutorials})。感谢[400多位伙伴](%{partners})和20万全球工作者对这项草根活动的支持。
   hoc_faq_last_year: 尝试教程
   hoc_faq_when_is_hoc_q: 编程一小时活动将在什么时候举行？
   hoc_faq_when_is_hoc_a: 编程一小时是每年在 <a href='%{csedweek_url}'> 计算机科学教育周</a> 期间举行的。%{campaign_date_year}
