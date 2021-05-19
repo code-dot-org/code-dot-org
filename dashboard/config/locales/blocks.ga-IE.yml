@@ -1499,13 +1499,6 @@ ga:
         text: comhordanáid x de {SPRITE}
       Mikelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': i ngreille
-            '"border"': ar an imeall
-            '"row"': ina ró
-            '"random"': randamach
       RyanLab_moveForward:
         text: téigh ar aghaidh
       RyanLab_turnLeft:

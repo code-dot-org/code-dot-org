@@ -4137,6 +4137,8 @@ ga:
               name: Peata Fíorúil i Saotharlann na Sprideanna
             lesson-1:
               name: Cóisir Dhamhsa
+            lesson-3:
+              name: Sprideanna ar Obair
           lesson_groups:
             csf_sequencing:
               display_name: Seicheamhú
@@ -4152,6 +4154,8 @@ ga:
               display_name: Lúba "Do Gach"
             csf_sprites:
               display_name: Sprideanna
+            lessonGroup-9:
+              display_name: Teagmhais
         pre-express-2021:
           description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí: scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad bhliain.'
           lesson_groups:
