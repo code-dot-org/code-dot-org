@@ -5,7 +5,7 @@ require_relative '../../../dashboard/config/environment'
 # If they have an accepted teacher application from this year, get the course
 # from the application.
 def course_from_current_teacher_accepted_app(si)
-  app = Pd::Application::Teacher1920Application.find_by(user_id: si.user_id)
+  app = Pd::Application::TeacherApplication.find_by(user_id: si.user_id)
   if app
     return app.course
   end
