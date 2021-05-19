@@ -152,7 +152,7 @@ class FollowersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to '/join'
-    expected = I18n.t('follower.error.full_section', section_code: section.code)
+    expected = I18n.t('follower.error.full_section', section_code: section.code, section_capacity: section.capacity)
     assert_equal(expected, flash[:inline_alert])
   end
 
