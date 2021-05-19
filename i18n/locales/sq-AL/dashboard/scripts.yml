@@ -2756,6 +2756,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            lessonGroup-9:
+              display_name: Ngjarje
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2815,3 +2817,7 @@ sq:
               display_name: Hapat e ardhshme
             Introduction:
               display_name: Hyrja
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lekcioni 15

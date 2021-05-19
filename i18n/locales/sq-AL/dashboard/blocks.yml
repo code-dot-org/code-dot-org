@@ -380,10 +380,6 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': zakonshëm
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:
