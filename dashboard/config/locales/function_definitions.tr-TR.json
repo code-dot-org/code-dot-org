@@ -3272,6 +3272,36 @@
               "length": "uzunluk"
             }
           }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"basit\" çözüm"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "olası çözüm"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "olası çözüm"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "olası çözüm"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "olası çözüm"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "olası çözüm"
+          }
         }
       }
     }
