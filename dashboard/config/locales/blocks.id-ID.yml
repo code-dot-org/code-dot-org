@@ -1591,13 +1591,6 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': Kisi
-            '"border"': batas
-            '"row"': baris
-            '"random"': acak
       RyanLab_moveForward:
         text: Gerak maju
       RyanLab_turnLeft:

@@ -27817,6 +27817,8 @@ id:
               description_teacher: Dalam pelajaran ini, murid akan memprogram pesta
                 dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena
                 alatnya dibuat untuk menanggapi musik.
+            lesson-3:
+              name: Sprite tengah Beraksi
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -27834,6 +27836,8 @@ id:
               display_name: Sprites
             end_of_course_project:
               display_name: Proyek Akhir Kursus
+            lessonGroup-9:
+              display_name: kegiatan
           student_description: Pelajari ilmu komputer dengan mencoba beberapa pelajaran
             di bawah ini semampu Anda! Pelajari cara membuat program komputer, mengembangkan
             keterampilan pemecahan masalah, dan menjawab tantangan seru! Buat permainan
@@ -28277,6 +28281,8 @@ id:
             CS Discoveries Post Course survey:
               key: Survei Pascakursus CS Discoveries
               name: Survei Pascakursus CS Discoveries
+            Designing With Empathy:
+              name: Analisis desain
             Build a Paper Prototype:
               name: Prototipe Kertas
             Digital Mode in App Lab:
@@ -28769,3 +28775,7 @@ id:
             anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda
             dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas
             waktu dan pertimbangan Anda.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Pelajaran ke- 15
