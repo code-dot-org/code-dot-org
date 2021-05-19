@@ -80,14 +80,17 @@ class TeacherFeedbackKeepWorking extends Component {
           id="keep-working"
           ref={ref => (this.checkbox = ref)}
           type="checkbox"
+          style={styles.checkbox}
           checked={this.props.reviewState === reviewStates.keepWorking}
           onChange={this.handleCheckboxChange}
         />
         {/* maureen add to internationalization and check rtl*/}
-        <label htmlFor="keep-working" style={styles.keepWorkingText}>
-          <span>Keep Working</span>
+        <label htmlFor="keep-working" style={styles.label}>
+          <span style={styles.keepWorkingText}>Keep Working</span>
           {this.awaitingTeacherReview() && (
-            <span> - awaiting teacher review</span>
+            <span style={styles.awaitingReviewText}>
+              - awaiting teacher review
+            </span>
           )}
         </label>
       </div>
@@ -98,10 +101,22 @@ class TeacherFeedbackKeepWorking extends Component {
 const styles = {
   keepWorking: {
     display: 'inline-flex',
-    margin: '0 15px'
+    margin: '0 20px'
+  },
+  checkbox: {
+    width: '16px',
+    height: '16px',
+    marginTop: '2px'
+  },
+  label: {
+    fontSize: '13px',
+    margin: '0 8px'
   },
   keepWorkingText: {
-    margin: '0 5px'
+    fontWeight: 'bold'
+  },
+  awaitingReviewText: {
+    fontStyle: 'italic'
   }
 };
 
