@@ -976,7 +976,11 @@ in:
       gamelab_addBehaviorSimple:
         text: crwdns169012:0[SPRITE]crwdnd169012:0[0]crwdnd169012:0[BEHAVIOR]crwdnd169012:0[1]crwdne169012:0
       gamelab_addTarget:
-        text: crwdns2478908:0[SPRITE]crwdnd2478908:0[0]crwdnd2478908:0[TARGET]crwdnd2478908:0[1]crwdne2478908:0
+        text: crwdns2478908:0[SPRITE]crwdnd2478908:0[0]crwdnd2478908:0[TARGET]crwdnd2478908:0[1]crwdnd2478908:0[OPT]crwdnd2478908:0[2]crwdne2478908:0
+        options:
+          OPT:
+            '"follow"': crwdns2486172:0crwdne2486172:0
+            '"avoid"': crwdns2486174:0crwdne2486174:0
       gamelab_allSpritesWithAnimation:
         text: crwdns400992:0[ANIMATION]crwdnd400992:0[0]crwdne400992:0
       gamelab_atTime:
@@ -985,6 +989,8 @@ in:
           UNIT:
             '"seconds"': crwdns2463898:0crwdne2463898:0
             '"frames"': crwdns2463900:0crwdne2463900:0
+      gamelab_avoidingTargets:
+        text: crwdns2486176:0crwdne2486176:0
       gamelab_beginCollectingData:
         text: crwdns2478910:0[BREAK]crwdnd2478910:0[0]crwdnd2478910:0[VALUE]crwdnd2478910:0[1]crwdnd2478910:0[LABEL]crwdnd2478910:0[2]crwdne2478910:0
       gamelab_bounceOff:
@@ -1021,6 +1027,8 @@ in:
         text: crwdns169036:0[THIS]crwdnd169036:0[0]crwdne169036:0
       gamelab_draggable:
         text: crwdns241354:0crwdne241354:0
+      gamelab_drawLine:
+        text: crwdns2486178:0[COLOR]crwdnd2486178:0[0]crwdnd2486178:0[LOC1]crwdnd2486178:0[1]crwdnd2486178:0[LOC2]crwdnd2486178:0[2]crwdne2486178:0
       gamelab_edgesDisplace:
         text: crwdns169039:0[SPRITE]crwdnd169039:0[0]crwdne169039:0
       gamelab_followingTargets:
@@ -1275,6 +1283,16 @@ in:
             '"y"': crwdns169134:0crwdne169134:0
             '"direction"': crwdns169135:0crwdne169135:0
             '"speed"': crwdns2478928:0crwdne2478928:0
+      gamelab_setProp_dropdown:
+        text: crwdns2486180:0[SPRITE]crwdnd2486180:0[0]crwdnd2486180:0[PROPERTY]crwdnd2486180:0[1]crwdnd2486180:0[SIZE]crwdnd2486180:0[2]crwdne2486180:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns2486182:0crwdne2486182:0
+          SIZE:
+            '25': crwdns2486184:0crwdne2486184:0
+            '50': crwdns2486186:0crwdne2486186:0
+            '75': crwdns2486188:0crwdne2486188:0
+            '100': crwdns2486190:0crwdne2486190:0
       gamelab_setSizes:
         text: crwdns169137:0[SPRITE]crwdnd169137:0[0]crwdnd169137:0[PROPERTY]crwdnd169137:0[1]crwdnd169137:0[N]crwdnd169137:0[2]crwdne169137:0
         options:
@@ -1296,8 +1314,16 @@ in:
           CONDITION:
             '"when"': crwdns401128:0crwdne401128:0
             '"while"': crwdns401130:0crwdne401130:0
+      gamelab_startAvoiding:
+        text: crwdns2547466:0[SPRITE]crwdnd2547466:0[0]crwdnd2547466:0[TARGET]crwdnd2547466:0[1]crwdne2547466:0
+      gamelab_startFollowing:
+        text: crwdns2486192:0[SPRITE]crwdnd2486192:0[0]crwdnd2486192:0[TARGET]crwdnd2486192:0[1]crwdne2486192:0
+      gamelab_stopAvoiding:
+        text: crwdns2547468:0[SPRITE]crwdnd2547468:0[0]crwdne2547468:0
       gamelab_stopCollectingData:
         text: crwdns2478930:0crwdne2478930:0
+      gamelab_stopFollowing:
+        text: crwdns2486194:0[SPRITE]crwdnd2486194:0[0]crwdne2486194:0
       gamelab_subjectSpritePointer:
         text: crwdns2375480:0[SPRITE]crwdnd2375480:0[0]crwdne2375480:0
       gamelab_textJoin:
@@ -1314,6 +1340,8 @@ in:
             '"left"': crwdns169174:0crwdne169174:0
       gamelab_updateTitleWithColor:
         text: crwdns2335481:0[BREAK]crwdnd2335481:0[0]crwdnd2335481:0[TITLE]crwdnd2335481:0[1]crwdnd2335481:0[COLOR]crwdnd2335481:0[2]crwdne2335481:0
+      gamelab_whenAllPromptsAnswered:
+        text: crwdns2486196:0crwdne2486196:0
       gamelab_whenDownArrow:
         text: crwdns169175:0crwdne169175:0
       gamelab_whenKey:
@@ -1366,6 +1394,15 @@ in:
         text: crwdns169215:0crwdne169215:0
       gamelab_withPercentChance:
         text: crwdns2471716:0[NUM]crwdnd2471716:0[0]crwdnd2471716:0[STATEMENT]crwdnd2471716:0[1]crwdne2471716:0
+      gamelab_withPercentChanceDropdown:
+        text: crwdns2486198:0[NUM]crwdnd2486198:0[0]crwdnd2486198:0[STATEMENT]crwdnd2486198:0[1]crwdne2486198:0
+        options:
+          NUM:
+            '10': crwdns2486200:0crwdne2486200:0
+            '25': crwdns2486202:0crwdne2486202:0
+            '50': crwdns2486204:0crwdne2486204:0
+            '75': crwdns2486206:0crwdne2486206:0
+            '90': crwdns2486208:0crwdne2486208:0
       gamelab_xLocationOf:
         text: crwdns169216:0[SPRITE]crwdnd169216:0[0]crwdne169216:0
       gamelab_yLocationOf:
@@ -1629,6 +1666,12 @@ in:
             '"direction"': crwdns182433:0crwdne182433:0
       Mikelab_setTint:
         text: crwdns195177:0[SPRITE]crwdnd195177:0[0]crwdnd195177:0[COLOR]crwdnd195177:0[1]crwdne195177:0
+      Mikelab_setupLevel:
+        text: crwdns2546874:0[A1]crwdnd2546874:0[0]crwdnd2546874:0[A2]crwdnd2546874:0[1]crwdnd2546874:0[A3]crwdnd2546874:0[2]crwdnd2546874:0[A4]crwdnd2546874:0[3]crwdnd2546874:0[A5]crwdnd2546874:0[4]crwdnd2546874:0[A6]crwdnd2546874:0[5]crwdnd2546874:0[A7]crwdnd2546874:0[6]crwdnd2546874:0[A8]crwdnd2546874:0[7]crwdnd2546874:0[B1]crwdnd2546874:0[8]crwdnd2546874:0[B2]crwdnd2546874:0[9]crwdnd2546874:0[B3]crwdnd2546874:0[10]crwdnd2546874:0[B4]crwdnd2546874:0[11]crwdnd2546874:0[B5]crwdnd2546874:0[12]crwdnd2546874:0[B6]crwdnd2546874:0[13]crwdnd2546874:0[B7]crwdnd2546874:0[14]crwdnd2546874:0[B8]crwdnd2546874:0[15]crwdne2546874:0
+      Mikelab_setupOutbreak:
+        text: crwdns2547470:0[SPRITE2N]crwdnd2547470:0[0]crwdnd2547470:0[TOGGLE]crwdnd2547470:0[1]crwdne2547470:0
+      Mikelab_setupSim:
+        text: crwdns2486210:0[SPRITE1N]crwdnd2486210:0[0]crwdnd2486210:0[SPRITE1COSTUME]crwdnd2486210:0[1]crwdnd2486210:0[SPRITE1SPEED]crwdnd2486210:0[2]crwdnd2486210:0[SPRITE2N]crwdnd2486210:0[3]crwdnd2486210:0[SPRITE2COSTUME]crwdnd2486210:0[4]crwdnd2486210:0[SPRITE2SPEED]crwdnd2486210:0[5]crwdnd2486210:0[SPRITE3N]crwdnd2486210:0[6]crwdnd2486210:0[SPRITE3COSTUME]crwdnd2486210:0[7]crwdne2486210:0
       Mikelab_showScoreboard:
         text: crwdns195179:0[LABEL]crwdnd195179:0[0]crwdnd195179:0[TEXTCOLOR]crwdnd195179:0[1]crwdnd195179:0[COLOR]crwdnd195179:0[2]crwdnd195179:0[VALUE]crwdnd195179:0[3]crwdnd195179:0[CORNER]crwdnd195179:0[4]crwdne195179:0
         options:
@@ -1714,6 +1757,30 @@ in:
         text: crwdns195253:0[SPRITE]crwdnd195253:0[0]crwdne195253:0
       Mikelab_yLocationOf:
         text: crwdns195255:0[SPRITE]crwdnd195255:0[0]crwdne195255:0
+      Outbreak_beginCongregating:
+        text: crwdns2546956:0crwdne2546956:0
+      Outbreak_beginQuarantining:
+        text: crwdns2546958:0crwdne2546958:0
+      Outbreak_beginSocialDistancing:
+        text: crwdns2546960:0crwdne2546960:0
+      Outbreak_beginWandering:
+        text: crwdns2546962:0crwdne2546962:0
+      Outbreak_beginWearingMasks:
+        text: crwdns2546964:0crwdne2546964:0
+      Outbreak_layoutBorder:
+        text: crwdns2547472:0crwdne2547472:0
+      Outbreak_layoutClusters:
+        text: crwdns2547474:0[NUM]crwdnd2547474:0[0]crwdne2547474:0
+      Outbreak_layoutGrid:
+        text: crwdns2547476:0crwdne2547476:0
+      Outbreak_layoutRandom:
+        text: crwdns2547478:0crwdne2547478:0
+      Outbreak_setSpeed:
+        text: crwdns2546976:0[VAL]crwdnd2546976:0[0]crwdne2546976:0
+      Outbreak_setupOutbreak:
+        text: crwdns2546978:0[COUNT]crwdnd2546978:0[0]crwdne2546978:0
+      Outbreak_stopMoving:
+        text: crwdns2546980:0crwdne2546980:0
       RyanLab_moveForward:
         text: crwdns241356:0crwdne241356:0
       RyanLab_readSound:
@@ -1749,49 +1816,60 @@ in:
         options:
           PROPERTY:
             "'shapeColor'": crwdns169257:0crwdne169257:0
-      aalab_addBehaviorForDuration:
-        text: crwdns391574:0[SPRITE]crwdnd391574:0[0]crwdnd391574:0[BEHAVIOR]crwdnd391574:0[1]crwdnd391574:0[SECONDS]crwdnd391574:0[2]crwdne391574:0
-      aalab_addBehaviorUntilBoolean:
-        text: crwdns391576:0[SPRITE]crwdnd391576:0[0]crwdnd391576:0[BEHAVIOR]crwdnd391576:0[1]crwdnd391576:0[CONDITION]crwdnd391576:0[2]crwdne391576:0
-      aalab_createNewSpriteAnonReturn2:
-        text: crwdns2059996:0[SPRITE_NAME]crwdnd2059996:0[0]crwdnd2059996:0[ANIMATION_NAME]crwdnd2059996:0[1]crwdnd2059996:0[LOCATION]crwdnd2059996:0[2]crwdne2059996:0
-      aalab_goToScene:
-        text: crwdns2059998:0[SCENE]crwdnd2059998:0[0]crwdne2059998:0
+      aalab_layoutSprites:
+        text: crwdns2486212:0[FORMAT]crwdnd2486212:0[0]crwdne2486212:0
         options:
-          SCENE:
-            '1': crwdns2060000:0crwdne2060000:0
-            '2': crwdns2060002:0crwdne2060002:0
-            '3': crwdns2060004:0crwdne2060004:0
-      aalab_moveInDirection:
-        text: crwdns2367518:0[SPRITE]crwdnd2367518:0[0]crwdnd2367518:0[DISTANCE]crwdnd2367518:0[1]crwdnd2367518:0[DIRECTION]crwdnd2367518:0[2]crwdne2367518:0
+          FORMAT:
+            '"grid"': crwdns2486214:0crwdne2486214:0
+            '"border"': crwdns2486216:0crwdne2486216:0
+            '"row"': crwdns2486218:0crwdne2486218:0
+            '"random"': crwdns2486220:0crwdne2486220:0
+      aalab_setSpeed:
+        text: crwdns2486222:0[VAL]crwdnd2486222:0[0]crwdne2486222:0
+      aalab_setupSim:
+        text: crwdns2486224:0[COUNT]crwdnd2486224:0[0]crwdne2486224:0
+      aalab_someGraduallyStartIntervention:
+        text: crwdns2486226:0[PORTION]crwdnd2486226:0[0]crwdnd2486226:0[RATE]crwdnd2486226:0[1]crwdnd2486226:0[BEHAVIOR]crwdnd2486226:0[2]crwdne2486226:0
         options:
-          DIRECTION:
-            '"North"': crwdns2367520:0crwdne2367520:0
-            '"East"': crwdns2367522:0crwdne2367522:0
-            '"South"': crwdns2367524:0crwdne2367524:0
-            '"West"': crwdns2367526:0crwdne2367526:0
-      aalab_prompt:
-        text: crwdns391600:0[MESSAGE]crwdnd391600:0[0]crwdne391600:0
-      aalab_scene:
-        text: crwdns2060006:0[SCENE]crwdnd2060006:0[0]crwdne2060006:0
+          PORTION:
+            '1': crwdns2486228:0crwdne2486228:0
+            '0.75': crwdns2486230:0crwdne2486230:0
+            '0.5': crwdns2486232:0crwdne2486232:0
+            '0.25': crwdns2486234:0crwdne2486234:0
+          RATE:
+            '"immediately"': crwdns2486236:0crwdne2486236:0
+            '"quickly"': crwdns2486238:0crwdne2486238:0
+            '"gradually"': crwdns2486240:0crwdne2486240:0
+            '"slowly"': crwdns2486242:0crwdne2486242:0
+          BEHAVIOR:
+            '"wandering"': crwdns2486244:0crwdne2486244:0
+            '"congregating"': crwdns2486246:0crwdne2486246:0
+            '"quarantining"': crwdns2486248:0crwdne2486248:0
+            '"avoiding"': crwdns2486250:0crwdne2486250:0
+            '"none"': crwdns2486252:0crwdne2486252:0
+      aalab_someStartIntervention:
+        text: crwdns2486254:0[PORTION]crwdnd2486254:0[0]crwdnd2486254:0[BEHAVIOR]crwdnd2486254:0[1]crwdne2486254:0
         options:
-          SCENE:
-            '1': crwdns2060008:0crwdne2060008:0
-            '2': crwdns2060010:0crwdne2060010:0
-            '3': crwdns2060012:0crwdne2060012:0
-      aalab_setupStory:
-        text: crwdns2060014:0crwdne2060014:0
-      aalab_starwars_playSound:
-        text: crwdns2367528:0[OPTION]crwdnd2367528:0[0]crwdne2367528:0
+          PORTION:
+            '1': crwdns2486256:0crwdne2486256:0
+            '0.75': crwdns2486258:0crwdne2486258:0
+            '0.5': crwdns2486260:0crwdne2486260:0
+            '0.25': crwdns2486262:0crwdne2486262:0
+          BEHAVIOR:
+            '"wandering"': crwdns2486264:0crwdne2486264:0
+            '"congregating"': crwdns2486266:0crwdne2486266:0
+            '"quarantining"': crwdns2486268:0crwdne2486268:0
+            '"avoiding"': crwdns2486270:0crwdne2486270:0
+            '"none"': crwdns2486272:0crwdne2486272:0
+      aalab_startIntervention:
+        text: crwdns2486274:0[BEHAVIOR]crwdnd2486274:0[0]crwdne2486274:0
         options:
-          OPTION:
-            '"random"': crwdns2367530:0crwdne2367530:0
-            '"R2-D2 random"': crwdns2367532:0crwdne2367532:0
-            '"R2-D2 1"': crwdns2367534:0crwdne2367534:0
-            '"R2-D2 2"': crwdns2367536:0crwdne2367536:0
-            '"R2-D2 3"': crwdns2367538:0crwdne2367538:0
-            '"R2-D2 4"': crwdns2367540:0crwdne2367540:0
-            '"R2-D2 5"': crwdns2367542:0crwdne2367542:0
+          BEHAVIOR:
+            wandering: crwdns2486276:0crwdne2486276:0
+            '"congregating"': crwdns2486278:0crwdne2486278:0
+            '"quarantining"': crwdns2486280:0crwdne2486280:0
+            '"avoiding"': crwdns2486282:0crwdne2486282:0
+            '"none"': crwdns2486284:0crwdne2486284:0
       binary_drawBin:
         text: crwdns391332:0[BIN]crwdnd391332:0[0]crwdne391332:0
       binary_drawBinScreen:
