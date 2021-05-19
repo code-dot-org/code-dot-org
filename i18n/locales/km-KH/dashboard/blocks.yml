@@ -480,10 +480,6 @@ km:
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': ព្រាវ
       RyanLab_moveForward:
         text: រំកិល​ទៅមុខ
       RyanLab_turnLeft:
