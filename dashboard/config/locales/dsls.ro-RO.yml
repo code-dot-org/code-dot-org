@@ -2398,8 +2398,6 @@ ro-RO:
         - correct: true
         questions:
         - {}
-      CSD U1 Test:
-        title: Test Post-Proiect Computere și Rezolvare de Probleme
       Unit 1 Lesson 1 Overview:
         markdown: |
           #Prezentare generală

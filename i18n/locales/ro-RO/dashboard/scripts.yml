@@ -7335,7 +7335,6 @@ ro:
               display_name: Sondaj
         csd5-2021:
           lessons:
-            Project - Make a Recommendation: {}
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
           lesson_groups:
@@ -8090,6 +8089,8 @@ ro:
               name: Petrecere dansantă
               description_student: A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă.
               description_teacher: În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.
+            lesson-3:
+              name: Spiriduși în acțiune
           lesson_groups:
             csf_sequencing:
               display_name: Secvențiere
@@ -8105,6 +8106,8 @@ ro:
               display_name: Bucle Pentru
             end_of_course_project:
               display_name: Proiect de final de curs
+            lessonGroup-9:
+              display_name: Evenimente
           student_description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
         pre-express-2021:
           description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
@@ -8234,6 +8237,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -8300,3 +8305,8 @@ ro:
           lesson_groups:
             cspSurvey2020:
               display_name: Sondaj
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lecția 15
+        csd7-2021: {}
