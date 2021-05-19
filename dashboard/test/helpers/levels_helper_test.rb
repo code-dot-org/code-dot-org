@@ -32,7 +32,7 @@ class LevelsHelperTest < ActionView::TestCase
     end
   end
 
-  test "should parse maze level with non string array" do
+  test "blockly_options should parse maze level with non string array" do
     @level.properties["maze"] = [[0, 0], [2, 3]]
     options = blockly_options
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
@@ -44,7 +44,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert options[:level]["map"].is_a?(Array), "Maze is not an array"
   end
 
-  test "non-custom level displays localized instruction after locale switch" do
+  test "blockly_options non-custom level displays localized instruction after locale switch" do
     default_locale = 'en-US'
     new_locale = 'es-ES'
     @level.short_instructions = nil
@@ -62,7 +62,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['shortInstructions']
   end
 
-  test "custom level displays english instruction" do
+  test "blockly_options custom level displays english instruction" do
     default_locale = 'en-US'
     @level.short_instructions = "English instructions"
 
@@ -72,7 +72,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal @level.short_instructions, options[:level]['shortInstructions']
   end
 
-  test "custom level displays localized instruction if exists" do
+  test "blockly_options custom level displays localized instruction if exists" do
     @level.short_instructions = "English instructions"
     new_locale = 'es-ES'
     new_instructions = "Spanish instructions"
@@ -96,6 +96,23 @@ class LevelsHelperTest < ActionView::TestCase
     @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
     assert_equal @level.short_instructions, options[:level]['shortInstructions']
+  end
+
+  test "blockly_options 'embed' is true for embed levels" do
+    @level.embed = true
+    assert blockly_options[:embed]
+  end
+
+  test "blockly_options 'embed' is true for widget levels not in start mode" do
+    @level = create(:applab, embed: false, widget_mode: true)
+    @is_start_mode = false
+    assert blockly_options[:embed]
+  end
+
+  test "blockly_options 'embed' is false for widget levels in start mode" do
+    @level = create(:applab, embed: false, widget_mode: true)
+    @is_start_mode = true
+    refute blockly_options[:embed]
   end
 
   test "get video choices" do
@@ -232,6 +249,58 @@ class LevelsHelperTest < ActionView::TestCase
     # different user
     app_options
     assert_equal true, view_options[:readonly_workspace]
+  end
+
+  test 'level_started? should return true if a channel exists for a channel backed level' do
+    user = create :user
+    applab_level = create :applab # is channel backed
+    script = create(:script)
+    create(:script_level, levels: [applab_level], script: script)
+    create :channel_token, level: applab_level, storage_id: storage_id_for_user_id(user.id)
+
+    assert_equal true, level_started?(applab_level, script, user)
+  end
+
+  test 'level_started? should return false if a channel does not exist for a channel backed level' do
+    user = create :user
+    applab_level = create :applab # is channel backed
+    script = create(:script)
+    create(:script_level, levels: [applab_level], script: script)
+
+    assert_equal false, level_started?(applab_level, script, user)
+  end
+
+  test 'level_started? should return true if progress exists for a level that is not channel backed' do
+    user = create :user
+    maze_level = create :maze
+    script = create(:script)
+    create(:script_level, levels: [maze_level], script: script)
+    create :user_level, level: maze_level, user: user, script: script
+
+    assert_equal true, level_started?(maze_level, script, user)
+  end
+
+  test 'level_started? should return false if progress does not exist for a level that is not channel backed' do
+    user = create :user
+    maze_level = create :maze
+    script = create(:script)
+    create(:script_level, levels: [maze_level], script: script)
+
+    assert_equal false, level_started?(maze_level, script, user)
+  end
+
+  test 'a teacher viewing student work should see isStarted value for student' do
+    @user = create :user
+    @level = create :applab
+    @script = script = create(:script)
+    create(:script_level, levels: [@level], script: script)
+
+    teacher = create :teacher
+    sign_in teacher
+    # create progress on level for teacher to ensure we get back student isStarted value
+    create :channel_token, level: @level, storage_id: storage_id_for_user_id(teacher.id)
+
+    assert_equal false, app_options[:level][:isStarted]
   end
 
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 16:32:48 UTC",
+    "serialized_at": "2021-05-18 02:55:18 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -48,11 +48,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "After a short transition from representing information in Unit 1 to communicating information in Unit 2, students take time to think about their knowledge of the Internet and how it works. Following this, students are introduced to a new widget: The Internet Simulator which they will use throughout this unit to explore the inner workings of the Internet. ",
-        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.",
-        "purpose": "This lesson helps transition between representing digital information in Unit 1 to communicating digital information in Unit 2. The stage is set to understand the different layers of the Internet through the sticky notes activity where students record what they know and don't know about how the Internet works. Following this, students are exposed to the Internet Simulator, which will be revisited throughout the unit. Students should leave this lesson primed to know more about the Internet. ",
         "preparation": "* Test out the Internet Simulator. If you open up the level on two different tabs, you can use it by yourself. \r\n* Prepare for the Teacher Demo.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson helps transition between representing digital information in Unit 1 to communicating digital information in Unit 2. The stage is set to understand the different layers of the Internet through the sticky notes activity where students record what they know and don't know about how the Internet works. Following this, students are exposed to the Internet Simulator, which will be revisited throughout the unit. Students should leave this lesson primed to know more about the Internet. ",
+        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks."
       },
       "seeding_key": {
         "lesson.key": "Welcome to the Internet",
@@ -68,11 +68,11 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students are formed into groups of 5-7 and given string so they can connect themselves together to form a computer network. Students are given several specific networks to form, along with several guidelines for how to best form computer networks. Students are also forced to wrestle with conflicting guidelines in determining the ‘best’ way to connect together to form a network, and will need to justify why they chose the networks that they did. ",
-        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.",
-        "purpose": "The physical activity in this lesson helps provide a memorable experience and personal anchor for the rest of the unit - we can refer to the networks created in this activity to help motivate concepts in later lessons. In the final challenge for this lesson, it is important to let students wrestle with how to best balance the 3 network guidelines and refine their reasoning & explanation for decisions they made when creating their network. This is important in setting up later lessons in this unit - in this lesson, the guidelines are based on the physical impacts of creating a network but towards the end of the unit students will examine the societal and economical impacts for creating computer networks and will again think critically about how to balance several factors from a societal and economic lens.",
-        "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \r\n* Decide how you would like students to physically form their networks - standing, in seats, etc.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students are formed into groups of 5-7 and given string so they can connect themselves together to form a computer network. Students are given several specific networks to form, along with several guidelines for how to best form computer networks. Students are also forced to wrestle with conflicting guidelines in determining the ‘best’ way to connect together to form a network, and will need to justify why they chose the networks that they did. ",
+        "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \r\n* Decide how you would like students to physically form their networks - standing, in seats, etc.",
+        "purpose": "The physical activity in this lesson helps provide a memorable experience and personal anchor for the rest of the unit - we can refer to the networks created in this activity to help motivate concepts in later lessons. In the final challenge for this lesson, it is important to let students wrestle with how to best balance the 3 network guidelines and refine their reasoning & explanation for decisions they made when creating their network. This is important in setting up later lessons in this unit - in this lesson, the guidelines are based on the physical impacts of creating a network but towards the end of the unit students will examine the societal and economical impacts for creating computer networks and will again think critically about how to balance several factors from a societal and economic lens.",
+        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.",
         "unplugged": true
       },
       "seeding_key": {
@@ -89,11 +89,11 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
-        "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible.",
-        "purpose": "Now that students have explored what it takes to link devices on a network, they are ready to learn how devices communicate with each other. Prior to this lesson, the Internet Simulator was set up only for point-to-point communication. This new version is setup to “broadcast” every message to every person in the same simulator room. This closely mimics a real life problem that computer scientists had to solve:  With all the bits passing through many computers on a network, how would a computer know if it was the intended recipient?  Which computer should get a reply?  Internet Protocol (IP) solves a portion of this problem by assigning a unique IP address to each device and standardizing how sender and recipient are identified.",
         "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp-unit-2-the-internet/csp/2021]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) ",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Now that students have explored what it takes to link devices on a network, they are ready to learn how devices communicate with each other. Prior to this lesson, the Internet Simulator was set up only for point-to-point communication. This new version is setup to “broadcast” every message to every person in the same simulator room. This closely mimics a real life problem that computer scientists had to solve:  With all the bits passing through many computers on a network, how would a computer know if it was the intended recipient?  Which computer should get a reply?  Internet Protocol (IP) solves a portion of this problem by assigning a unique IP address to each device and standardizing how sender and recipient are identified.",
+        "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible."
       },
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
@@ -109,11 +109,11 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
-        "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network.",
-        "purpose": "After yesterday’s lesson that motivated the need for some kind of addressing system, today’s lesson has students use IP Addresses to send messages to specific people. Today’s focus is on how routers help manage the paths that different messages take. The router logs are an important tool for students to discover the extra work that routers are doing to send messages - they can see that messages are passed between routers and that messages take different paths along the way, all from analyzing the data in the router logs. Importantly, students should make a connection between these observations about multiple pathways and the concept of **fault-tolerance** - because there are multiple pathways, the internet can continue to function even when there may be an issue that the routers need to address.",
         "preparation": "* Read through [r teacher-guide-router/csp/2021] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "After yesterday’s lesson that motivated the need for some kind of addressing system, today’s lesson has students use IP Addresses to send messages to specific people. Today’s focus is on how routers help manage the paths that different messages take. The router logs are an important tool for students to discover the extra work that routers are doing to send messages - they can see that messages are passed between routers and that messages take different paths along the way, all from analyzing the data in the router logs. Importantly, students should make a connection between these observations about multiple pathways and the concept of **fault-tolerance** - because there are multiple pathways, the internet can continue to function even when there may be an issue that the routers need to address.",
+        "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network."
       },
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
@@ -129,11 +129,11 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn that large messages sent over the Internet are actually divided into individual packets and explore the challenges this creates. First students explore a version of the Internet Simulator that breaks messages into packets to get a sense for how it works. Students then use an activity guide that walks them through the challenges that dropped or out-of-order packets create. They then design their own protocol that addresses these challenges. At the end of the lesson students watch a video and learn and the User Datagram Protocol (UDP) and The Transmission Control Protocol (TCP), two different protocols for sending messages broken into packets.",
-        "student_overview": "Learn how information travelling over the Internet is divided into many packets that travel separately through the network as well as the protocols that allow this process to work even when some packets are lost or delayed.",
-        "purpose": "Information on the Internet is not sent all at once, but is instead broken into smaller chunks of data called packets. Each packet is sent through the Internet individually and may actually take different paths or arrive at different times than others. Once they arrive the receiver will use the packets to recreate the original file.\n\nTwo protocols used to send data as packets are UDP and TCP. The User Datagram Protocol (UDP) simply sends all the packets. If some arrive out of order or are entirely missing there's no system to fix the errors. The Transmission Control Protocol (TCP) numbers packets before sending them so that the receiver can correctly reorder the packets and request missing packets be resent. \n\nOnly one of these two protocols will be used, depending on the situation. TCP takes longer than UDP because of the error-checking done to guarantee every packet was received. TCP is used to send information like emails, images, websites, and more where saving fractions of a second is less important than accuracy. In instances like live-streaming television or online gaming where speed is most important, UDP will be used since it is faster and there's less benefit to correcting errors.\n\nThis lesson gives students a hands-on experience with the ideas behind both protocols and helps them understand the implications of splitting large files into packets when sending them online.\n\nNote: UDP is not covered in the video at the end of the lesson.\n",
         "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\r\n* Preview [r the-internet-packets-routing-and-reliability-1/csp/2021].\t\r\n* The previous lesson's [r teacher-guide-router/csp/2021] contains helpful tips on setting up routers and managing student conversations.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "Information on the Internet is not sent all at once, but is instead broken into smaller chunks of data called packets. Each packet is sent through the Internet individually and may actually take different paths or arrive at different times than others. Once they arrive the receiver will use the packets to recreate the original file.\n\nTwo protocols used to send data as packets are UDP and TCP. The User Datagram Protocol (UDP) simply sends all the packets. If some arrive out of order or are entirely missing there's no system to fix the errors. The Transmission Control Protocol (TCP) numbers packets before sending them so that the receiver can correctly reorder the packets and request missing packets be resent. \n\nOnly one of these two protocols will be used, depending on the situation. TCP takes longer than UDP because of the error-checking done to guarantee every packet was received. TCP is used to send information like emails, images, websites, and more where saving fractions of a second is less important than accuracy. In instances like live-streaming television or online gaming where speed is most important, UDP will be used since it is faster and there's less benefit to correcting errors.\n\nThis lesson gives students a hands-on experience with the ideas behind both protocols and helps them understand the implications of splitting large files into packets when sending them online.\n\nNote: UDP is not covered in the video at the end of the lesson.\n",
+        "student_overview": "Learn how information travelling over the Internet is divided into many packets that travel separately through the network as well as the protocols that allow this process to work even when some packets are lost or delayed."
       },
       "seeding_key": {
         "lesson.key": "Packets",
@@ -149,11 +149,11 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students conclude their study of the layers of the Internet by learning about two top-level protocols, HTTP and DNS. The lesson begins with a review of the layers students have already learned, namely the physical Internet, IP, and TCP / UDP. The lesson then dives into the core of the unit which is \"What happens when I type an address into my browser?\" Students will complete two brief activities, one unplugged, and one plugged, that explore how the DNS works. Students then watch videos explaining how both DNS and HTTP work, taking notes in a provided activity guide. The lesson concludes with a review of how the different layers of the Internet work.\r\n",
-        "student_overview": "Learn how websites are shared on the Internet and then examine whether everyone actually has equal access to information on the World Wide Web.",
-        "purpose": "This lesson is designed to wrap up the series on how the Internet works and highlight the main design philosophies of openness, reliability, and scalability.  However, actions taken by governments and organizations challenge some of these design philosophies and may hinder the ability of the World Wide Web to be truly worldwide.  Students will begin thinking about some of the dilemmas caused by these conflicts, which they will explore further after this lesson.",
         "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\r\n* Preview [r the-internet-ip-addresses-and-dns-video/csp/2021].  Specifically the portion starting after 4:09 on DNS. \r\n* Preview [r the-internet-http-and-html-1/csp/2021]",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is designed to wrap up the series on how the Internet works and highlight the main design philosophies of openness, reliability, and scalability.  However, actions taken by governments and organizations challenge some of these design philosophies and may hinder the ability of the World Wide Web to be truly worldwide.  Students will begin thinking about some of the dilemmas caused by these conflicts, which they will explore further after this lesson.",
+        "student_overview": "Learn how websites are shared on the Internet and then examine whether everyone actually has equal access to information on the World Wide Web."
       },
       "seeding_key": {
         "lesson.key": "DNS and HTTP",
@@ -169,12 +169,12 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Students begin working on a two-day project exploring a dilemma at the intersection of the Internet and society. ",
-        "student_overview": "Begin forming your own answer to the question \"Has the Internet made the world better or worse\" by considering your own experiences and then reading articles about the impact of the Internet on the world.",
-        "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. This project addresses the \"so what\" question - why is it important to learn about how the Internet works?",
-        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \r\n* Preview the articles in order to answer student questions. \r\n* [KEY - Internet Dilemmas](https://studio.code.org/s/csp2-2020/stage/7/puzzle/1)",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students begin working on a two-day project exploring a dilemma at the intersection of the Internet and society. ",
+        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \r\n* Preview the articles in order to answer student questions. \r\n* [KEY - Internet Dilemmas](https://studio.code.org/s/csp2-2020/stage/7/puzzle/1)",
+        "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. This project addresses the \"so what\" question - why is it important to learn about how the Internet works?",
+        "student_overview": "Begin forming your own answer to the question \"Has the Internet made the world better or worse\" by considering your own experiences and then reading articles about the impact of the Internet on the world."
       },
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 1",
@@ -190,11 +190,11 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Students finish working on a two-day project exploring a dilemma at the intersection of the Internet and society.",
-        "student_overview": "Share your conclusions on the question \"Has the Internet made the world better or worse\" by discussing the articles you read as well as your own experience.",
-        "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. These project lessons address the \"so what\" question - why is it important to learn about how the Internet works?",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students finish working on a two-day project exploring a dilemma at the intersection of the Internet and society.",
+        "purpose": "In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. These project lessons address the \"so what\" question - why is it important to learn about how the Internet works?",
+        "student_overview": "Share your conclusions on the question \"Has the Internet made the world better or worse\" by discussing the articles you read as well as your own experience."
       },
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas Part 2",
@@ -210,11 +210,11 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Students complete a multiple choice assessment which covers the unit topics.",
-        "student_overview": "Assessment day to conclude the unit.",
-        "preparation": "* Preview the assessment questions",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students complete a multiple choice assessment which covers the unit topics.",
+        "preparation": "* Preview the assessment questions",
+        "student_overview": "Assessment day to conclude the unit."
       },
       "seeding_key": {
         "lesson.key": "Lesson 9: Assessment Day",
@@ -228,8 +228,8 @@
       "key": "3c68d9f8-1ad2-4e9b-8c3b-472cb30f819f",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "3c68d9f8-1ad2-4e9b-8c3b-472cb30f819f",
@@ -242,8 +242,8 @@
       "key": "d0400f34-8c9c-472a-8bed-b69c4c6dbe4c",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d0400f34-8c9c-472a-8bed-b69c4c6dbe4c",
@@ -256,8 +256,8 @@
       "key": "bbc5e633-ded2-4692-a5dd-da57a2e023b4",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "bbc5e633-ded2-4692-a5dd-da57a2e023b4",
@@ -270,8 +270,8 @@
       "key": "7d434dfc-d492-41b8-80ca-291cdeef8f35",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7d434dfc-d492-41b8-80ca-291cdeef8f35",
@@ -284,8 +284,8 @@
       "key": "62ae7f8a-fe75-4097-a72c-5cfc0ba7ddb1",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "62ae7f8a-fe75-4097-a72c-5cfc0ba7ddb1",
@@ -298,8 +298,8 @@
       "key": "58160049-4918-4cfe-8540-3af390c31af7",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "58160049-4918-4cfe-8540-3af390c31af7",
@@ -312,8 +312,8 @@
       "key": "ca609800-322b-4779-b39c-778d2eab2d23",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ca609800-322b-4779-b39c-778d2eab2d23",
@@ -326,8 +326,8 @@
       "key": "70fa70c1-0f3a-4263-b493-6df6057ffbaf",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "70fa70c1-0f3a-4263-b493-6df6057ffbaf",
@@ -340,8 +340,8 @@
       "key": "bfac3a43-daf8-46b4-9038-189732aee8c6",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "bfac3a43-daf8-46b4-9038-189732aee8c6",
@@ -354,8 +354,8 @@
       "key": "33d0b05f-97ee-44c4-9818-6c1aa8c6b170",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "33d0b05f-97ee-44c4-9818-6c1aa8c6b170",
@@ -368,8 +368,8 @@
       "key": "e106f32e-0bcd-4d4d-b253-0616bfcbfe66",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "e106f32e-0bcd-4d4d-b253-0616bfcbfe66",
@@ -382,8 +382,8 @@
       "key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e",
@@ -396,8 +396,8 @@
       "key": "0e878849-ad33-4ce0-8ee3-696839be1d7d",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "0e878849-ad33-4ce0-8ee3-696839be1d7d",
@@ -410,8 +410,8 @@
       "key": "f691d9ca-d24e-429f-9e9e-bc903b0ff629",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "f691d9ca-d24e-429f-9e9e-bc903b0ff629",
@@ -424,8 +424,8 @@
       "key": "ce9c080f-8959-4c32-bda9-dbfe319d6ae4",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ce9c080f-8959-4c32-bda9-dbfe319d6ae4",
@@ -450,8 +450,8 @@
       "key": "c08b9ac9-ba2e-47d3-9864-a30ee887d025",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c08b9ac9-ba2e-47d3-9864-a30ee887d025",
@@ -464,8 +464,8 @@
       "key": "388d0d33-13dd-4c78-b7ad-4b2ba41599a8",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "388d0d33-13dd-4c78-b7ad-4b2ba41599a8",
@@ -478,8 +478,8 @@
       "key": "e4d6a5df-741d-4221-a3c3-6789d6fa032a",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e4d6a5df-741d-4221-a3c3-6789d6fa032a",
@@ -492,8 +492,8 @@
       "key": "1d22d634-2f9a-4ce8-8cea-75580e76fe68",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "1d22d634-2f9a-4ce8-8cea-75580e76fe68",
@@ -506,8 +506,8 @@
       "key": "5ecbd4d0-db59-4ad7-9940-213a76b42fdd",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "5ecbd4d0-db59-4ad7-9940-213a76b42fdd",
@@ -520,8 +520,8 @@
       "key": "1512fde1-f5f8-4726-9fd3-693c01f555a6",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "1512fde1-f5f8-4726-9fd3-693c01f555a6",
@@ -534,8 +534,8 @@
       "key": "06f410ac-58bb-4d84-aae9-4a6fd921bfd7",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "06f410ac-58bb-4d84-aae9-4a6fd921bfd7",
@@ -548,8 +548,8 @@
       "key": "df5a4291-73f7-48bf-bd23-cb57af091bf0",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 39
+        "duration": 39,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "df5a4291-73f7-48bf-bd23-cb57af091bf0",
@@ -562,8 +562,8 @@
       "key": "c208bc4a-2e23-4c57-927a-f0674450c8e4",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 1
+        "duration": 1,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c208bc4a-2e23-4c57-927a-f0674450c8e4",
@@ -576,8 +576,8 @@
       "key": "b227a89d-3e4d-400d-b381-5700a904725e",
       "position": 1,
       "properties": {
-        "name": "Assessment",
-        "duration": 25
+        "duration": 25,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "b227a89d-3e4d-400d-b381-5700a904725e",
@@ -590,8 +590,8 @@
       "key": "e4d5a985-34f4-4c1d-9926-f39a770b08e2",
       "position": 2,
       "properties": {
-        "name": "Assessment Review",
-        "duration": 20
+        "duration": 20,
+        "name": "Assessment Review"
       },
       "seeding_key": {
         "lesson_activity.key": "e4d5a985-34f4-4c1d-9926-f39a770b08e2",
@@ -629,15 +629,15 @@
       "key": "1503cf7b-6cf0-4aad-8883-a86412b2cd07",
       "position": 1,
       "properties": {
-        "name": "What is the Internet?",
+        "description": "**Journal (10 mins):** *Answer each of these prompts in your journal:*\n\n* *What is the Internet?*\n* *What questions do you have about how the Internet works?*",
         "duration": "20",
+        "name": "What is the Internet?",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Give students 10 minutes to write in their journals. It's ok if there are some awkward silences. We want students to have the time to really think deeply about what they know and don't know.\n\nIf students are struggling to come up with things to write down, consider asking the following:\n\n* When you enter a web address in a browser and hit enter, what happens? At some point you see the web page in the browser, but what happens in between? What are all the steps?\n* Write down the series of things that you think (or have heard) happen right after you hit Enter. What happens first, second, third and so on. \n* Don’t worry if you don’t know all the pieces or how they all fit together. If you don't know a step, or you are fuzzy on some details, or there's a gap, that's okay. Just write down the parts that you know."
           }
-        ],
-        "description": "**Journal (10 mins):** *Answer each of these prompts in your journal:*\n\n* *What is the Internet?*\n* *What questions do you have about how the Internet works?*"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1503cf7b-6cf0-4aad-8883-a86412b2cd07",
@@ -700,9 +700,9 @@
       "position": 6,
       "properties": {
         "description": "In this unit, we are going to use a tool to understand how the Internet works, layer by layer. Just like when we talked about layers of abstraction in representing digital information, there are layers to the Internet. \r\n\r\nThis tool is called the Internet Simulator. Let's check it out!",
-        "remarks": true,
+        "duration": "15",
         "name": "Explore the Internet Simulator",
-        "duration": "15"
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "1146f67d-830d-4036-9ef1-a08cef582b5c",
@@ -759,8 +759,8 @@
       "position": 11,
       "properties": {
         "description": "One of the key things you may have noticed is that this version of the Internet Simulator only allows us to connect to one person! This will change as we explore new versions on the Internet Simulator while learning about how the Internet works.",
-        "remarks": true,
-        "progression_name": "Internet Simulator"
+        "progression_name": "Internet Simulator",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "5ad11dce-ef4f-4c1a-8407-e9bab74c4ab5",
@@ -1014,14 +1014,14 @@
       "position": 1,
       "properties": {
         "description": "**Group:** This activity works best with groups of 6, though groups of 5 and 4 are also possible. Rather than a group of 6 and a group of 4, make two groups 5.",
+        "duration": "10",
+        "name": "Scheduling Unplugged - Week 1",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Running Each Week:** This lesson has students completing the same activity three times. Each time students need to create a schedule for the week that allows them to see every other member of their group on one of the days. Each time this activity should take roughly 3 - 5 minutes.\r\n\r\n**Running It Unplugged First:** This first unplugged run of the activity gives students a feel for how it runs. This will make sure that any confusion when they get to the Internet Simulator is caused by the lack of identifying information in the simulator and not simply misunderstanding what to do.\r\n\r\n"
           }
-        ],
-        "name": "Scheduling Unplugged - Week 1",
-        "duration": "10"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c08c56dc-9362-4006-a5ec-15f80b5c24a2",
@@ -1055,8 +1055,8 @@
       "position": 4,
       "properties": {
         "description": "Let's get on the Internet Simulator and try this activity out again. This time, however, all communication is going to have to happen on the Internet Simulator.",
-        "remarks": true,
-        "progression_name": "Internet Simulator"
+        "progression_name": "Internet Simulator",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a0c25a05-f305-40a9-b27d-6944639cbe30",
@@ -1068,14 +1068,14 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students set up their boards for week two in the same way as last time:\n\n* If you're a group of 4 or 5 cross out Saturday and/or Sunday.\n* Randomly cross out a day in Week 2.\n* Once you're ready you can start on Week 2, but no talking is allowed at all.",
+        "duration": "10",
+        "name": "Scheduling on the Internet Simulator - Week 2",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Same Groups:** Students should be in the same set of groups they were in for the Unplugged Activity. When they get to the Simulator click “Add Room” button to make as many rooms as necessary for your class.\r\n\r\n**Week 4:** A fourth week is included on the activity guide in case your classroom wants to run the activitiy another time at some point in the lesson. If not feel free to ignore it.\r\n"
           }
-        ],
-        "name": "Scheduling on the Internet Simulator - Week 2",
-        "duration": "10"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5c1af235-3aab-4855-b834-aa165932ee41",
@@ -1098,8 +1098,8 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Agree with your group on the set of rules you'd like to try this time around for how to communicate. Then complete Week 3 like the previous two weeks. No talking!\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Based on your experience, take 5 minutes to write down in the rules section the collective rules you and your team would advise using going forward.",
-        "name": "Formalizing Rules - Week 3",
-        "duration": "10"
+        "duration": "10",
+        "name": "Formalizing Rules - Week 3"
       },
       "seeding_key": {
         "activity_section.key": "488175c9-abab-4e15-9695-8974ac681079",
@@ -1276,13 +1276,13 @@
       "position": 4,
       "properties": {
         "description": "**Circulate:** Ensure that everyone in the class understands how the widget works before continuing.  Guide students to see how to use the IP Addresses to communicate. If students in the group figure it out quickly, encourage them to share with other group members.",
+        "progression_name": "Internet Simulator",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Responsible Messaging**: This simulator can feel like an anonymous chat program and students may send overly personal or non-school appropriate messages to each other. Here are some strategies to avoid this:\r\n\r\n* Be Proactive & Upfront: let students know their messages are being monitored and can be traced back to their accounts. There is a ‘Teacher View’ button you can use to see the username of who sent individual messages (see below)\r\n\r\n* Avoid Downtime: Unstructured time in the lesson can lead to off-task messages. As best as you can, try to keep the pace of the lesson moving so there is always something for students to do\r\n\r\n* Provide Specific Prompts: This lesson includes several specific types of messages for students to send. There is never a point where students are asked to send ‘whatever you want’ to another student in the class. \r\n\r\n![](https://curriculum.code.org/media/uploads/routers-3.PNG)\r\n"
           }
-        ],
-        "progression_name": "Internet Simulator"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3b28a82e-ff51-42e8-a7ef-7aaddfc70d77",
@@ -1294,8 +1294,8 @@
       "position": 5,
       "properties": {
         "description": "In yesterday’s lesson, everyone was directly connected to everyone else and we could see all of the messages. In today’s lesson, we’re connected to a router which helps decide which messages we receive. We can even take a look inside the router to see the decisions it is making",
-        "remarks": true,
-        "progression_name": "Internet Simulator"
+        "progression_name": "Internet Simulator",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a333f9ed-cdfa-4d54-968d-6842d9863da1",
@@ -1661,13 +1661,13 @@
       "position": 1,
       "properties": {
         "description": "**Distribute:** As students enter class hand each of them a single IP address (precut by teacher from [r ip-address-labels/csp/2021])",
+        "name": "DNS - Unplugged - 5 mins\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Showing the Need for DNS:** This quick unplugged activity helps students understand why the DNS exists in the first place. With devices joining the internet all the time it's impossible for each device to keep track of each other device's IP address. \r\n\r\n**Keep It Short:** This activity can be done very quickly, typically in about 3 minutes, before students start to see the core challenge. If students start running away from you that's a good sign they've seen what makes this activity tricky!\r\n"
           }
-        ],
-        "name": "DNS - Unplugged - 5 mins\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9788ec6c-7468-4e17-8c12-40f96c175649",
@@ -1770,8 +1770,8 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Let's go get on the Internet Simulator one last time to see how all the different pieces we've learned about will fit together.",
-        "remarks": true,
-        "name": "DNS - Internet Simulator - 12 mins\r"
+        "name": "DNS - Internet Simulator - 12 mins\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "a9f013b1-9d54-44d7-8974-0bd0e9a0f838",
@@ -1812,8 +1812,8 @@
       "position": 7,
       "properties": {
         "description": "We've got our heads wrapped around how DNS works. Let's learn about the last piece of the puzzle here, a protocol called HTTP. In this video we'll learn what happens when you actually visit a website and the language used to send those files around.",
-        "remarks": true,
-        "name": "HTTP and the World Wide Web - 10 mins\r"
+        "name": "HTTP and the World Wide Web - 10 mins\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "f26a4fda-7b5b-4884-8b33-058c95218cd4",
@@ -2015,13 +2015,13 @@
       "position": 1,
       "properties": {
         "description": "Yesterday you began researching for your Internet Dilemma Policy One Pager. Today you will write the One Pager and then share what you've learned.",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Get to the Activity:** The warm-up is short today. Continue on to the activity as soon as possible to give students the maximum amount of time to complete their one-pagers. \r\n"
           }
-        ],
-        "remarks": true
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6be04337-19ed-48ca-b82a-6daa223ed5a3",
@@ -2033,13 +2033,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This (30 mins):** Students complete each section of the Internet Dilemma Policy One Pager found in [r internet-dilemmas-2021/csp/2021].",
+        "name": "Policy One Pager\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Role of the Assessment:** In this lesson, students finish a two day project where they  demonstrate their understanding of key issues surrounding the Internet. This project is designed to be used in tandem with the Unit 2 Assessment to evaluate student progress in Unit 2 content. \r\n\r\n"
           }
-        ],
-        "name": "Policy One Pager\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4141c41c-74b4-40d8-a3a0-40f92f15a0a3",
@@ -2051,14 +2051,14 @@
       "position": 2,
       "properties": {
         "description": "Nice work! We are going to take the rest of class to share out what we've learned about these Digital Dilemmas. I'd like to ask for a couple of volunteers for each Dilemma to quickly share what they've learned about their topic and their recommendations.",
+        "name": "Share Out\r",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Keep an eye on the time for the share out. Students only have a minute or two to share their thoughts. The most important thing is that each dilemma should get equal coverage.  \r\n\r\n"
           }
-        ],
-        "remarks": true,
-        "name": "Share Out\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ccd9b2c9-e774-4036-8c11-92c8b54805a8",
@@ -2116,13 +2116,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 2 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 2 Exam",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics2.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n\r\n"
           }
-        ],
-        "progression_name": "Unit 2 Exam"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "23ad5bae-2ba9-4bf6-a562-fa4aa9f33440",
@@ -2148,13 +2148,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator",
         "level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2021"
-        ]
+        ],
+        "progression": "Internet Simulator"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L1 Internet Simulator: Sending Text_2021"
@@ -2174,10 +2174,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2021"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L1 CFU how use internet_2021"
@@ -2197,13 +2200,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L1 CFU paths_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L1 CFU paths_2021"
@@ -2223,13 +2226,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator",
         "level_keys": [
           "U2L2 CSP Internet Simulator Broadcast_2021"
-        ]
+        ],
+        "progression": "Internet Simulator"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP Internet Simulator Broadcast_2021"
@@ -2249,13 +2252,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP Addresses_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP CFU IP Addresses_2021"
@@ -2275,13 +2278,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L2 CSP CFU IP works_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L2 CSP CFU IP works_2021"
@@ -2301,13 +2304,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Internet Simulator",
         "level_keys": [
           "U1L3 CSP Internet Simulator Routers_2021"
-        ]
+        ],
+        "progression": "Internet Simulator"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L3 CSP Internet Simulator Routers_2021"
@@ -2327,13 +2330,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Routers_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L3 CSP CFU Routers_2021"
@@ -2353,13 +2356,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L3 CSP CFU Redundancy_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L3 CSP CFU Redundancy_2021"
@@ -2377,15 +2380,15 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Internet Simulator",
         "level_keys": [
           "U1L4 CSP Internet Simulator Packets 2_2021"
-        ]
+        ],
+        "progression": "Internet Simulator"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L4 CSP Internet Simulator Packets 2_2021"
@@ -2405,13 +2408,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 Multiple Choice packets_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 Multiple Choice packets_2021"
@@ -2431,13 +2434,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U2L4 CSP CFU terms_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 CSP CFU terms_2021"
@@ -2457,9 +2460,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS_2021"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CSP Internet Simulator DNS_2021"
@@ -2479,10 +2485,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU scale_2021"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L4 CSP CFU scale_2021"
@@ -2502,10 +2511,13 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups_2021"
+        ],
         "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L5 CSP CFU subgroups_2021"
@@ -2525,13 +2537,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 2 Exam",
         "level_keys": [
           "CSP Unit 2 MC Assessment _2021"
-        ]
+        ],
+        "progression": "Unit 2 Exam"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 2 MC Assessment _2021"
@@ -2742,16 +2754,15 @@
   ],
   "resources": [
     {
-      "name": "What is the Internet?",
-      "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
-      "key": "what-is-the-internet",
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
       "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/what_is_the_internet.mp4"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "what-is-the-internet"
+        "resource.key": "course_master_vocabulary"
       }
     },
     {
@@ -2764,122 +2775,6 @@
       },
       "seeding_key": {
         "resource.key": "csp-unit-2-the-internet"
-      }
-    },
-    {
-      "name": "The Internet: IP Addresses and DNS",
-      "url": "https://youtu.be/5o8CwafCxnU",
-      "key": "the-internet-ip-addresses-and-dns-1",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "the-internet-ip-addresses-and-dns-1"
-      }
-    },
-    {
-      "name": "U2L03 The Need for Addressing",
-      "url": "https://docs.google.com/document/d/1JbZgvlloovjaV5UfewWj-E1-S5zmwgiv-r8_5cASoPY/edit?usp=sharing",
-      "key": "u2l02-the-need-for-addressing",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "u2l02-the-need-for-addressing"
-      }
-    },
-    {
-      "name": "Teacher Guide - Routers & Redundancy - Unit 2 Lesson 4",
-      "url": "https://docs.google.com/document/d/1-ClLNZfyIyXIw9gJU3wyGaxi6WZdx5ihAEdRzs0QyAQ/view",
-      "key": "teacher-guide-router",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "teacher-guide-router"
-      }
-    },
-    {
-      "name": "The Internet: Packets, Routing, and Reliability",
-      "url": "https://youtu.be/AYdF7b3nMto",
-      "key": "the-internet-packets-routing-and-reliability-1",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "the-internet-packets-routing-and-reliability-1"
-      }
-    },
-    {
-      "name": "U2L05 Packets",
-      "url": "https://docs.google.com/document/d/1A07hKLahrUc4pA4GI_fIYIIA1yH8iAHgdPg9Cokl7iI/edit?usp=sharing",
-      "key": "u2l04-packets",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "u2l04-packets"
-      }
-    },
-    {
-      "name": "The Internet: IP Addresses and DNS - Video",
-      "url": "https://youtu.be/5o8CwafCxnU?t=249",
-      "key": "the-internet-ip-addresses-and-dns-video",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the-internet-ip-addresses-and-dns-video"
-      }
-    },
-    {
-      "name": "Layers of the Internet",
-      "url": "https://docs.google.com/document/d/1EB_y099r7Qwb3SxFhHK9wSaikoHixL85O4_YdsUBJSY/edit",
-      "key": "layers-of-the-internet-activity-guide",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "layers-of-the-internet-activity-guide"
-      }
-    },
-    {
-      "name": "The Internet: HTTP and HTML",
-      "url": "https://youtu.be/kBXQZMmiA4s",
-      "key": "the-internet-http-and-html-1",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_http_html.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "the-internet-http-and-html-1"
-      }
-    },
-    {
-      "name": "Internet Dilemmas",
-      "url": "https://docs.google.com/document/d/1UZ1FJDBnwLARSmP7hqFKnMLkV8c2lC6C3qO5RPulDao/edit?usp=sharing",
-      "key": "internet-dilemmas-2021",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "internet-dilemmas-2021"
       }
     },
     {
@@ -2896,15 +2791,42 @@
       }
     },
     {
-      "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
-      "key": "course_master_vocabulary",
+      "name": "Internet Dilemmas",
+      "url": "https://docs.google.com/document/d/1UZ1FJDBnwLARSmP7hqFKnMLkV8c2lC6C3qO5RPulDao/edit?usp=sharing",
+      "key": "internet-dilemmas-2021",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "type": "Project Guide",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "course_master_vocabulary"
+        "resource.key": "internet-dilemmas-2021"
+      }
+    },
+    {
+      "name": "Layers of the Internet",
+      "url": "https://docs.google.com/document/d/1EB_y099r7Qwb3SxFhHK9wSaikoHixL85O4_YdsUBJSY/edit",
+      "key": "layers-of-the-internet-activity-guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "layers-of-the-internet-activity-guide"
+      }
+    },
+    {
+      "name": "Teacher Guide - Routers & Redundancy - Unit 2 Lesson 4",
+      "url": "https://docs.google.com/document/d/1-ClLNZfyIyXIw9gJU3wyGaxi6WZdx5ihAEdRzs0QyAQ/view",
+      "key": "teacher-guide-router",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "teacher-guide-router"
       }
     },
     {
@@ -2917,6 +2839,108 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Internet: HTTP and HTML",
+      "url": "https://youtu.be/kBXQZMmiA4s",
+      "key": "the-internet-http-and-html-1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2015/csp/concept_http_html.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "the-internet-http-and-html-1"
+      }
+    },
+    {
+      "name": "The Internet: IP Addresses and DNS",
+      "url": "https://youtu.be/5o8CwafCxnU",
+      "key": "the-internet-ip-addresses-and-dns-1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "the-internet-ip-addresses-and-dns-1"
+      }
+    },
+    {
+      "name": "The Internet: IP Addresses and DNS - Video",
+      "url": "https://youtu.be/5o8CwafCxnU?t=249",
+      "key": "the-internet-ip-addresses-and-dns-video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the-internet-ip-addresses-and-dns-video"
+      }
+    },
+    {
+      "name": "The Internet: Packets, Routing, and Reliability",
+      "url": "https://youtu.be/AYdF7b3nMto",
+      "key": "the-internet-packets-routing-and-reliability-1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "the-internet-packets-routing-and-reliability-1"
+      }
+    },
+    {
+      "name": "U2L03 The Need for Addressing",
+      "url": "https://docs.google.com/document/d/1JbZgvlloovjaV5UfewWj-E1-S5zmwgiv-r8_5cASoPY/edit?usp=sharing",
+      "key": "u2l02-the-need-for-addressing",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u2l02-the-need-for-addressing"
+      }
+    },
+    {
+      "name": "U2L05 Packets",
+      "url": "https://docs.google.com/document/d/1A07hKLahrUc4pA4GI_fIYIIA1yH8iAHgdPg9Cokl7iI/edit?usp=sharing",
+      "key": "u2l04-packets",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u2l04-packets"
+      }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
+    },
+    {
+      "name": "What is the Internet?",
+      "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
+      "key": "what-is-the-internet",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/what_is_the_internet.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "what-is-the-internet"
       }
     }
   ],
@@ -3058,6 +3082,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp2-2021"
       }
     }

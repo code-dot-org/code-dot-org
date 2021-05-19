@@ -35,35 +35,6 @@ import Announcements from '@cdo/apps/code-studio/components/progress/Announcemen
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 
-const styles = {
-  main: {
-    width: '100%'
-  },
-  description: {
-    marginBottom: 20
-  },
-  titleWrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end'
-  },
-  title: {
-    display: 'inline-block'
-  },
-  versionWrapper: {
-    display: 'flex',
-    alignItems: 'baseline'
-  },
-  versionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 15,
-    color: color.charcoal
-  },
-  versionDropdown: {
-    marginBottom: 13
-  }
-};
-
 class CourseOverview extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
@@ -228,6 +199,7 @@ class CourseOverview extends Component {
             }}
           />
         )}
+        {showNotification && <VerifiedResourcesNotification />}
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
           {filteredVersions.length > 1 && (
@@ -247,7 +219,6 @@ class CourseOverview extends Component {
               : descriptionTeacher
           }
         />
-        {showNotification && <VerifiedResourcesNotification />}
         <div>
           <CourseOverviewTopRow
             sectionsInfo={sectionsInfo}
@@ -278,6 +249,35 @@ class CourseOverview extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    width: '100%'
+  },
+  description: {
+    marginBottom: 20
+  },
+  titleWrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end'
+  },
+  title: {
+    display: 'inline-block'
+  },
+  versionWrapper: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  versionLabel: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 15,
+    color: color.charcoal
+  },
+  versionDropdown: {
+    marginBottom: 13
+  }
+};
 
 export const UnconnectedCourseOverview = CourseOverview;
 export default connect((state, ownProps) => ({

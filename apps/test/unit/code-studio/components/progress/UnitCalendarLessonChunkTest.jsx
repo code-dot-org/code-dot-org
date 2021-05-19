@@ -3,11 +3,13 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
 import color from '@cdo/apps/util/color';
+import ReactTooltip from 'react-tooltip';
 
 const sampleLessonChunk = {
   id: 1,
+  lessonNumber: 5,
   title: 'test',
-  duration: 10,
+  duration: 100,
   assessment: true,
   unplugged: true,
   isStart: true,
@@ -167,6 +169,33 @@ describe('UnitCalendarLessonChunk', () => {
     expect(
       wrapper.containsMatchingElement(<div>{sampleLessonChunk.title}</div>)
     ).to.be.false;
+  });
+
+  it('shows lesson number with tooltip if small chunk', () => {
+    const wrapper = shallow(
+      <UnitCalendarLessonChunk
+        minuteWidth={1}
+        lessonChunk={{
+          ...sampleLessonChunk,
+          duration: 30
+        }}
+        isHover={false}
+        handleHover={() => console.log('hover')}
+      />
+    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <div>{sampleLessonChunk.lessonNumber}</div>
+      )
+    ).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(
+        <ReactTooltip>
+          <div>{sampleLessonChunk.title}</div>
+        </ReactTooltip>
+      )
+    ).to.be.true;
   });
 
   it('hides assessment icon if not assessment', () => {

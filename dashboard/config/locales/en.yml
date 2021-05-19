@@ -278,10 +278,11 @@ en:
       google_classroom: "Google Classroom"
       clever: "Clever"
   follower:
-    invite_sent: "Invite sent"
-    added_teacher: "%{name} added as your teacher"
-    registered: "You've registered for %{section_name}."
-    captcha_required: "Please fill out the CAPTCHA to join this section."
+    invite_sent: 'Invite sent'
+    added_teacher: '%{name} added as your teacher'
+    registered:  "You have successfully joined %{section_name}."
+    captcha_required: 'Please fill out the CAPTCHA to join this section.'
+    already_exists: 'You have already joined section %{section_name}.'
     error:
       signed_in: "Please signout before proceeding"
       username_not_found: "Username %{username} not found"

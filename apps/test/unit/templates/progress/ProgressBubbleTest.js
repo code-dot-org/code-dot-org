@@ -10,6 +10,7 @@ const defaultProps = {
     id: '1',
     levelNumber: 1,
     status: LevelStatus.perfect,
+    isLocked: false,
     url: '/foo/bar',
     name: 'level_name',
     progression: 'progression_name',
@@ -84,16 +85,6 @@ describe('ProgressBubble', () => {
     const tooltipDiv = wrapper.find('div').at(1);
     const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_submitted);
-  });
-
-  it('has a white background when we are disabled', () => {
-    const wrapper = shallow(
-      <ProgressBubble {...defaultProps} disabled={true} />
-    );
-
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_not_tried);
   });
 
   it('has green border and white background for in progress level', () => {
@@ -238,6 +229,24 @@ describe('ProgressBubble', () => {
     );
   });
 
+  it('uses display name when isSublevel is true', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          display_name: 'Display Name',
+          name: 'display_name',
+          isSublevel: true
+        }}
+      />
+    );
+    assert.equal(
+      wrapper.find('TooltipWithIcon').props().text,
+      '1. Display Name'
+    );
+  });
+
   it('renders a small bubble if smallBubble is true', () => {
     const wrapper = shallow(
       <ProgressBubble {...defaultProps} smallBubble={true} />
@@ -300,6 +309,7 @@ describe('ProgressBubble', () => {
     const unpluggedLevel = {
       id: '1',
       status: LevelStatus.perfect,
+      isLocked: false,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true
@@ -319,6 +329,7 @@ describe('ProgressBubble', () => {
     const unpluggedLevel = {
       id: '1',
       status: LevelStatus.perfect,
+      isLocked: false,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true

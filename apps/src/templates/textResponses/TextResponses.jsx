@@ -26,46 +26,6 @@ const CSV_HEADERS = [
 const DEFAULT_FILTER_KEY = i18n.all();
 const PADDING = 8;
 
-const styles = {
-  header: {
-    marginBottom: 0
-  },
-  scriptSelection: {
-    marginTop: 30
-  },
-  actionRow: {
-    height: 47,
-    padding: PADDING,
-    marginTop: 20,
-    backgroundColor: color.table_header,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between'
-  },
-  dropdownContainer: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  dropdown: {
-    display: 'block',
-    boxSizing: 'border-box',
-    height: 30,
-    paddingLeft: PADDING,
-    paddingRight: PADDING,
-    marginLeft: PADDING
-  },
-  buttonContainer: {
-    display: 'flex',
-    textDecoration: 'none'
-  },
-  table: {
-    paddingTop: PADDING / 4
-  }
-};
-
 class TextResponses extends Component {
   static propTypes = {
     // Provided by redux.
@@ -106,7 +66,7 @@ class TextResponses extends Component {
   renderFilterByStageDropdown = () => {
     const stages = this.getStages();
 
-    // only render filter dropdown if there are 2+ stages
+    // only render filter dropdown if there are 2+ lessons
     if (stages.length <= 1) {
       return null;
     }
@@ -206,6 +166,46 @@ class TextResponses extends Component {
     );
   }
 }
+
+const styles = {
+  header: {
+    marginBottom: 0
+  },
+  scriptSelection: {
+    marginTop: 30
+  },
+  actionRow: {
+    height: 47,
+    padding: PADDING,
+    marginTop: 20,
+    backgroundColor: color.table_header,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  dropdownContainer: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  dropdownLabel: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  dropdown: {
+    display: 'block',
+    boxSizing: 'border-box',
+    height: 30,
+    paddingLeft: PADDING,
+    paddingRight: PADDING,
+    marginLeft: PADDING
+  },
+  buttonContainer: {
+    display: 'flex',
+    textDecoration: 'none'
+  },
+  table: {
+    paddingTop: PADDING / 4
+  }
+};
 
 export const UnconnectedTextResponses = TextResponses;
 

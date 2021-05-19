@@ -13,7 +13,7 @@ const defaultProps = {
 };
 
 const standaloneVideoScriptLevel = {
-  url: '/s/csd2-2021/stage/3/puzzle/6',
+  url: '/s/csd2-2021/lessons/3/levels/6',
   level: {
     type: 'StandaloneVideo',
     longInstructions:
@@ -32,7 +32,7 @@ const standaloneVideoScriptLevel = {
 };
 
 const externalMarkdownScriptLevel = {
-  url: '/s/csd5-2021/stage/10/puzzle/1',
+  url: '/s/csd5-2021/lessons/10/levels/1',
   level: {
     type: 'External',
     markdown:
@@ -41,14 +41,14 @@ const externalMarkdownScriptLevel = {
 };
 
 const levelGroupScriptLevel = {
-  url: '/s/csd6-2020/stage/16/puzzle/9/page/1',
+  url: '/s/csd6-2020/lessons/16/levels/9/page/1',
   level: {
     type: 'LevelGroup'
   }
 };
 
 const bubbleChoiceScriptLevel = {
-  url: '/s/csd6-2020/stage/16/puzzle/9/page/1',
+  url: '/s/csd6-2020/lessons/16/levels/9/page/1',
   levelNumber: 2,
   icon: 'fa-sitemap',
   id: 'scriptlevel',
@@ -88,7 +88,7 @@ const bubbleChoiceScriptLevel = {
 };
 
 const levelWithInstructions = {
-  url: '/s/csd6-2020/stage/16/puzzle/9/page/1',
+  url: '/s/csd6-2020/lessons/16/levels/9/page/1',
   level: {
     type: 'Weblab',
     longInstructions:
@@ -112,7 +112,7 @@ const levelWithInstructions = {
 };
 
 const levelWithContainedLevel = {
-  url: '/s/coursef-2021/stage/2/puzzle/2',
+  url: '/s/coursef-2021/lessons/2/levels/2',
   level: {
     type: 'GamelabJr',
     containedLevels: [

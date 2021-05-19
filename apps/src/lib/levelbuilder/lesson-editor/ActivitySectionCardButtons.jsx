@@ -18,21 +18,6 @@ import {
   removeTip
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
-const styles = {
-  bottomControls: {
-    height: 30,
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  addButton: {
-    fontSize: 14,
-    background: '#eee',
-    border: '1px solid #ddd',
-    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
-    margin: '0 5px 0 0'
-  }
-};
-
 const AddButton = function(props) {
   let className = 'btn';
   if (props.className) {
@@ -298,6 +283,21 @@ class ActivitySectionCardButtons extends Component {
     );
   }
 }
+
+const styles = {
+  bottomControls: {
+    height: 30,
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  addButton: {
+    fontSize: 14,
+    background: '#eee',
+    border: '1px solid #ddd',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.8)',
+    margin: '0 5px 0 0'
+  }
+};
 
 export const UnconnectedActivitySectionCardButtons = ActivitySectionCardButtons;
 

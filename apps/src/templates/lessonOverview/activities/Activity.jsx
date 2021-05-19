@@ -4,12 +4,6 @@ import color from '@cdo/apps/util/color';
 import {activityShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import i18n from '@cdo/locale';
 
-const styles = {
-  activityHeader: {
-    color: color.purple
-  }
-};
-
 export default class Activity extends Component {
   static propTypes = {
     activity: activityShape
@@ -37,3 +31,9 @@ export default class Activity extends Component {
     );
   }
 }
+
+const styles = {
+  activityHeader: {
+    color: color.purple
+  }
+};

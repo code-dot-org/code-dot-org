@@ -47,6 +47,12 @@ const AT_CAPACITY = {
   sectionCapacity: 500
 };
 
+const RESTRICTED_SECTION = {
+  action: 'join',
+  result: 'section_restricted',
+  id: 'ABCDEF'
+};
+
 describe('JoinSectionNotifications', () => {
   it('renders correct component when successfully join a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_JOIN} />);
@@ -84,5 +90,12 @@ describe('JoinSectionNotifications', () => {
     let wrapper = shallow(<JoinSectionNotifications {...AT_CAPACITY} />);
     console.log(wrapper.debug());
     expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(1);
+  });
+
+  it('renders correct component when section is restricted to not allow new joiners', () => {
+    let wrapper = shallow(<JoinSectionNotifications {...RESTRICTED_SECTION} />);
+    expect(wrapper.find('JoinSectionRestrictedNotification')).to.have.lengthOf(
+      1
+    );
   });
 });

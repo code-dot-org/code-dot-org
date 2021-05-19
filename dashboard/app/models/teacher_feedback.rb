@@ -17,6 +17,7 @@
 #  seen_on_feedback_page_at :datetime
 #  script_id                :integer          not null
 #  analytics_section_id     :integer
+#  review_state             :string(255)
 #
 # Indexes
 #

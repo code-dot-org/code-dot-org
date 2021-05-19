@@ -50,12 +50,12 @@ class ScriptsController < ApplicationController
     # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
     if current_user && current_user.levelbuilder?
       notice_text = ""
-      @script.lessons.each do |stage|
-        next unless stage.visible_after && Time.parse(stage.visible_after) > Time.now
+      @script.lessons.each do |lesson|
+        next unless lesson.visible_after && Time.parse(lesson.visible_after) > Time.now
 
-        formatted_time = Time.parse(stage.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
-        num_days_away = ((Time.parse(stage.visible_after) - Time.now) / 1.day).ceil.to_s
-        lesson_visible_after_message = "The lesson #{stage.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
+        formatted_time = Time.parse(lesson.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
+        num_days_away = ((Time.parse(lesson.visible_after) - Time.now) / 1.day).ceil.to_s
+        lesson_visible_after_message = "The lesson #{lesson.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
         notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
       end
       flash[:notice] = notice_text.html_safe
@@ -109,7 +109,7 @@ class ScriptsController < ApplicationController
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
       levelKeyList: @script.is_migrated ? Level.key_list : {},
-      lessonLevelData: @script_file,
+      lessonLevelData: @script_dsl_text,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
       version_year_options: Script.get_version_year_options,
@@ -190,7 +190,7 @@ class ScriptsController < ApplicationController
   private
 
   def set_script_file
-    @script_file = ScriptDSL.serialize_lesson_groups(@script)
+    @script_dsl_text = ScriptDSL.serialize_lesson_groups(@script)
   end
 
   def rake
@@ -226,7 +226,7 @@ class ScriptsController < ApplicationController
 
   def general_params
     h = params.permit(
-      :visible_to_teachers,
+      :hidden,
       :deprecated,
       :curriculum_umbrella,
       :family_name,
@@ -262,9 +262,7 @@ class ScriptsController < ApplicationController
       supported_locales: [],
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
-    h[:hidden] = !h[:visible_to_teachers]
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
-    h.delete(:visible_to_teachers)
     h
   end
 
