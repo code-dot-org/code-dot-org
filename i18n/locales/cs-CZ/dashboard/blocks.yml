@@ -1609,13 +1609,6 @@ cs:
         text: x souřadnice {SPRITE}
       Mikelab_yLocationOf:
         text: y souřadnice {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': mřížka
-            '"border"': hranice
-            '"row"': řádek
-            '"random"': náhodně
       RyanLab_moveForward:
         text: posuň se vpřed
       RyanLab_turnLeft:

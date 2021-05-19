@@ -352,6 +352,7 @@ cs:
         C4_unplugged_forloops: Cykly "For"
         C4_unplugged_parameters: Psaní písniček s parametry
         C4_unplugged_binary: Binární
+        CSF_a_b_artist_loops: Smyčky v Umělci
         CSF_artist_angles: Úhly s Malířem
         CSF_collector_k1_blocks: 'Základy informatiky: Sběračka'
         CSF_collector_repeat_loops: Opakovací cykly se sběratelkou
