@@ -508,7 +508,7 @@ hu-HU:
         markdown: |
           # A nagy esemény
 
-          A számítástechnikában az események a akciók, amit a számítógép kijelez. Ebben a leckében a gép másképp reagál, attól függően, hogy melyik gombot nyomod meg.
+          A számítástechnikában az események olyan akciók, amiket a számítógép kijelez. Ebben a leckében a gép mindenre másképp reagál, attól függően, hogy melyik gombot nyomod meg.
       CSD Header Size MC:
         answers:
         - {}
@@ -2668,3 +2668,8 @@ hu-HU:
           # Gonoszkodás a képernyőn
 
           Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki gonosz veled az interneten
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          # Mozdulj, mozdulj!
+
+          Használj térképet, és adj parancsokat, hogy elérd a célt.
