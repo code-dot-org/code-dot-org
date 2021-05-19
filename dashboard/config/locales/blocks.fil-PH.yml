@@ -1581,13 +1581,6 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': grid
-            '"border"': border
-            '"row"': hilera
-            '"random"': nang hindi pinipili
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:
