@@ -318,10 +318,6 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': կամայական
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:
