@@ -48,7 +48,7 @@ class FollowersController < ApplicationController
             redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
           # Check if the section is already at capacity
           elsif @section.at_capacity?
-            redirect_to root_path, alert: I18n.t('follower.error.full_section', section_code: params[:section_code], section_capacity: Section.section_capacity)
+            redirect_to root_path, alert: I18n.t('follower.error.full_section', section_code: params[:section_code], section_capacity: @section.capacity)
           # Othewise, register user and redirect to course with welcome message
           else
             redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
