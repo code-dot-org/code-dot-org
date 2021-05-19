@@ -1439,13 +1439,6 @@ nn:
         text: x-koordinator til {SPRITE}
       Mikelab_yLocationOf:
         text: y-koordinator til {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': rutenett
-            '"border"': kantlinje
-            '"row"': rad
-            '"random"': tilfeldig
       RyanLab_moveForward:
         text: gå framover
       RyanLab_turnLeft:

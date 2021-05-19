@@ -4367,6 +4367,8 @@ nn:
               display_name: Variablar
             csf_for_loops:
               display_name: For-løkker
+            lessonGroup-9:
+              display_name: Hendingar
         pre-express-2021:
           lessons:
             On the Move with Events:
@@ -4466,3 +4468,7 @@ nn:
           lesson_groups:
             cspSurvey2020:
               display_name: Undersøking
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Leksjon 15
