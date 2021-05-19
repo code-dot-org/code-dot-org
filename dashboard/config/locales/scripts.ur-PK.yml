@@ -704,6 +704,8 @@ ur:
               display_name: شرائط
             csf_variables:
               display_name: متغیرات
+            lessonGroup-9:
+              display_name: ایونٹس/واقعات
         pre-express-2021:
           lesson_groups:
             csf_loops:
