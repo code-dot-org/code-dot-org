@@ -7,13 +7,12 @@ import { styles } from "../constants.js";
 class DataCard extends Component {
   static propTypes = {
     name: PropTypes.string,
-    data: PropTypes.array,
     metadata: PropTypes.object,
     dataLength: PropTypes.number
   };
 
   render() {
-    const { name, metadata, data, dataLength } = this.props;
+    const { name, metadata, dataLength } = this.props;
 
     const card = metadata && metadata.card;
 
@@ -92,6 +91,5 @@ class DataCard extends Component {
 export default connect(state => ({
   name: state.name,
   metadata: state.metadata,
-  data: state.data,
   dataLength: state.data.length
 }))(DataCard);
