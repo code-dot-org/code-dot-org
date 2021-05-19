@@ -153,10 +153,6 @@ en-GB:
             '"a"': A
             '"s"': S
             '"d"': D
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': random
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
