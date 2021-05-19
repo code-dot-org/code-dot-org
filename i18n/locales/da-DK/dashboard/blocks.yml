@@ -1433,13 +1433,6 @@ da:
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': gitter
-            '"border"': grænse
-            '"row"': række
-            '"random"': tilfældig
       RyanLab_moveForward:
         text: flyt fremad
       RyanLab_turnLeft:
