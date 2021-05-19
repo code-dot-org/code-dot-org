@@ -3147,6 +3147,8 @@ et:
               display_name: Muutujad
             csf_for_loops:
               display_name: For tsükkel
+            lessonGroup-9:
+              display_name: Sündmused
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -3183,6 +3185,8 @@ et:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lesson_groups:
             lesson group:
@@ -3220,3 +3224,7 @@ et:
           lesson_groups:
             cspSurvey2020:
               display_name: Uuring
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Õppetund 15
