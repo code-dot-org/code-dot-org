@@ -1698,6 +1698,8 @@ ky:
               display_name: Функциялар
             csf_variables:
               display_name: Өзгөрмөлөр
+            lessonGroup-9:
+              display_name: Окуялар
         pre-express-2021:
           lessons:
             Ocean Scene with Loops:
