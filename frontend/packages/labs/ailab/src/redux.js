@@ -59,6 +59,7 @@ const SET_HISTORIC_RESULT = "SET_HISTORIC_RESULT";
 const SET_SHOW_RESULTS_DETAILS = "SET_SHOW_RESULTS_DETAILS";
 const SET_K_VALUE = "SET_K_VALUE";
 const SET_INSTRUCTIONS_DISMISSED = "SET_INSTRUCTIONS_DISMISSED";
+const SET_RESULTS_TAB = "SET_RESULTS_TAB";
 
 // Action creators
 export function setMode(mode) {
@@ -218,6 +219,10 @@ export function setInstructionsDismissed() {
   return { type: SET_INSTRUCTIONS_DISMISSED };
 }
 
+export function setResultsTab(key) {
+  return { type: SET_RESULTS_TAB, key };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -253,7 +258,8 @@ const initialState = {
   showResultsDetails: false,
   kValue: null,
   viewedPanels: [],
-  instructionsOverlayActive: false
+  instructionsOverlayActive: false,
+  resultsTab: ResultsGrades.CORRECT
 };
 
 // Reducer
@@ -482,7 +488,8 @@ export default function rootReducer(state = initialState, action) {
         currentPanel: action.currentPanel,
         instructionsOverlayActive: showedOverlay,
         testData: {},
-        prediction: {}
+        prediction: {},
+        resultsTab: ResultsGrades.CORRECT
       };
     }
 
@@ -584,7 +591,12 @@ export default function rootReducer(state = initialState, action) {
       instructionsOverlayActive: false
     }
   }
-
+  if (action.type === SET_RESULTS_TAB) {
+    return {
+      ...state,
+      resultsTab: action.key
+    }
+  }
   return state;
 }
 
@@ -1379,6 +1391,32 @@ export function isUserUploadedDataset(state) {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
   return typeof state.csvfile === "object" && state.csvfile !== null;
+}
+
+export function getCorrectResults(state) {
+  return getResultsByGrade(state, ResultsGrades.CORRECT);
+}
+
+export function getIncorrectResults(state) {
+  return getResultsByGrade(state, ResultsGrades.INCORRECT);
+}
+
+function getResultsByGrade(state, grade) {
+  const results = {};
+  const accuracyGrades = getAccuracyGrades(state);
+  const examples = getConvertedAccuracyCheckExamples(state).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  const labels = getConvertedLabels(state, state.accuracyCheckLabels).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  const predictedLabels = getConvertedLabels(state, state.accuracyCheckPredictedLabels).filter((example, index) => {
+    return grade === accuracyGrades[index];
+  });
+  results.examples = examples;
+  results.labels = labels;
+  results.predictedLabels = predictedLabels;
+  return results;
 }
 
 export function isSaveComplete(saveStatus) {

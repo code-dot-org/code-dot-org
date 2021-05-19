@@ -6,16 +6,19 @@ import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
   getSummaryStat,
-  setShowResultsDetails
+  setShowResultsDetails,
+  getCorrectResults,
+  getIncorrectResults
 } from "../redux";
-import { styles } from "../constants";
-import Statement from "./Statement";
+import { ResultsGrades, styles } from "../constants";
+import ResultsToggle from "./ResultsToggle";
 import ResultsTable from "./ResultsTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class ResultsDetails extends Component {
   static propTypes = {
+    resultsTab: PropTypes.string,
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
     percentDataToReserve: PropTypes.number,
@@ -23,7 +26,9 @@ class ResultsDetails extends Component {
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
-    setShowResultsDetails: PropTypes.func
+    setShowResultsDetails: PropTypes.func,
+    correctResults: PropTypes.object,
+    incorrectResults: PropTypes.object,
   };
 
   onClose = () => {
@@ -31,40 +36,19 @@ class ResultsDetails extends Component {
   };
 
   render() {
+    const results =
+      this.props.resultsTab === ResultsGrades.CORRECT
+        ? this.props.correctResults
+        : this.props.incorrectResults;
+
     return (
       <div style={styles.panelPopupContainer}>
         <div id="results-details" style={styles.panelPopup}>
           <div onClick={this.onClose} style={styles.popupClose}>
             <FontAwesomeIcon icon={faTimes} />
           </div>
-
-          <Statement />
-
-          {!isNaN(this.props.summaryStat.stat) && (
-            <div>
-              {this.props.percentDataToReserve}% of the training data was
-              reserved to test the accuracy of the newly trained model.
-            </div>
-          )}
-
-          {!isNaN(this.props.summaryStat.stat) && <ResultsTable />}
-
-          {isNaN(this.props.summaryStat.stat) && (
-            <p>
-              An accuracy score was not calculated because no training data was
-              reserved for testing.
-            </p>
-          )}
-          <div>
-            {!isNaN(this.props.summaryStat.stat) && (
-              <div>
-                <div style={styles.mediumText}>Accuracy</div>
-                <div style={styles.contents}>
-                  {this.props.summaryStat.stat}%
-                </div>
-              </div>
-            )}
-          </div>
+          {!isNaN(this.props.summaryStat.stat) && <ResultsToggle />}
+          <ResultsTable results={results} />
         </div>
       </div>
     );
@@ -73,6 +57,7 @@ class ResultsDetails extends Component {
 
 export default connect(
   state => ({
+    resultsTab: state.resultsTab,
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
     summaryStat: getSummaryStat(state),
@@ -82,7 +67,9 @@ export default connect(
       state,
       state.accuracyCheckPredictedLabels
     ),
-    percentDataToReserve: state.percentDataToReserve
+    percentDataToReserve: state.percentDataToReserve,
+    correctResults: getCorrectResults(state),
+    incorrectResults: getIncorrectResults(state)
   }),
   dispatch => ({
     setShowResultsDetails(show) {

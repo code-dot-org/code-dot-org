@@ -65,6 +65,9 @@ export const styles = {
     fontFamily: '"Gotham 4i", sans-serif'
   },
 
+  correct: {
+    color: "#73be73"
+  },
   error: {
     color: "#e51f68"
   },
@@ -408,6 +411,36 @@ export const styles = {
     borderRadius: 5,
     backgroundColor: "#61d2eb",
     color: "white"
+  },
+
+  resultsToggle: {
+    marginTop: 20,
+    marginBottom: 20,
+    backgroundColor: "#f2f2f2",
+    borderRadius: 5,
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: "white",
+    padding: 10,
+    height: 36
+  },
+  pill: {
+    border: "none",
+    borderRadius: 50,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 20,
+    backgroundColor: "#f2f2f2",
+    margin: "0 0 0 20px",
+    boxShadow: "none",
+    outline: "none",
+    padding: "8px 18px",
+    float: "left",
+    cursor: "pointer"
+  },
+  selectedPill: {
+    backgroundColor: "#61d2eb",
+    color: "white",
+    border: "none"
   },
 
   resultsPreviousHeading: { clear: "both", paddingTop: 18, paddingBottom: 6 },
