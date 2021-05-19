@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-15 01:03:54 UTC",
+    "serialized_at": "2021-05-18 15:36:02 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -10161,6 +10161,19 @@
       }
     },
     {
+      "name": "How Computers Word: Hardware & Software",
+      "url": "https://www.youtube.com/watch?v=xnyFYiK2rSY",
+      "key": "how_computers_word_hardware_software",
+      "properties": {
+        "download_url": "http://videos.code.org/cs-discoveries/concept/06_HardwareSoftware_sm.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
       "name": "Computer Science is Changing Everything",
       "url": "https://youtu.be/1x54GqfL3UY",
       "key": "innovation-video-1-1",
@@ -10196,6 +10209,32 @@
       },
       "seeding_key": {
         "resource.key": "internet-of-things-video"
+      }
+    },
+    {
+      "name": "Introduction to Arrays",
+      "url": "https://youtu.be/seBDTeZmb-k",
+      "key": "introduction_to_arrays",
+      "properties": {
+        "download_url": "http://videos.code.org/cs-discoveries/applab/applab_arrays.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "name": "Loops in App Lab",
+      "url": "https://youtu.be/WqmyVZnMWHY",
+      "key": "loops_in_app_lab",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csdloops-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "loops_in_app_lab"
       }
     },
     {
@@ -10354,6 +10393,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Input Unplugged",
         "resource.key": "input-and-events"
       }
@@ -10392,6 +10437,18 @@
       "seeding_key": {
         "lesson.key": "Project: Make a Game",
         "resource.key": "sample_marked_rubrics_2_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "loops_in_app_lab"
       }
     },
     {
