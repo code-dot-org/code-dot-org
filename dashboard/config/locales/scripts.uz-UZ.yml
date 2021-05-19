@@ -27084,6 +27084,8 @@ uz:
               description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs
                 bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun
                 yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
+            lesson-3:
+              name: Spraytlar amalda
           lesson_groups:
             csf_warmup:
               display_name: Qizdirish
@@ -27104,7 +27106,7 @@ uz:
             end_of_course_project:
               display_name: End of Course Project
             lessonGroup-9:
-              display_name: Qizdirish
+              display_name: Hodisalar
           name: Ekspress 2021
           student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda
             kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni
@@ -27576,6 +27578,8 @@ uz:
             CS Discoveries Post Course survey:
               key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            Designing With Empathy:
+              name: Analysis of Design
             Build a Paper Prototype:
               name: Paper Prototypes
             Digital Mode in App Lab:
@@ -28016,6 +28020,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lessons:
             lesson-15:
@@ -28099,3 +28105,27 @@ uz:
             and anonymous -- your teacher can see anonymous aggregate results for
             the whole class.  The results are vital for your teacher and for Code.org
             to sustain and improve the course.  Thanks for your time and consideration.
+        aiml-2021:
+          lessons:
+            lesson2:
+              name: 2-dars
+            lesson3:
+              name: 3-dars
+            lesson4:
+              name: 4-dars
+            lesson5:
+              name: Model va ma'lumotlar
+            lesson6:
+              name: 6-dars
+            lesson7:
+              name: 7-dars
+            lesson8:
+              name: 8-dars
+            lesson10:
+              name: 10-dars
+            lesson11:
+              name: 11-dars
+            lesson12:
+              name: 12-dars
+            lesson15:
+              name: 15-Dars

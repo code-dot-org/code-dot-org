@@ -1613,13 +1613,6 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': panjara
-            '"border"': chegara
-            '"row"': satr
-            '"random"': tasodifiy
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:
