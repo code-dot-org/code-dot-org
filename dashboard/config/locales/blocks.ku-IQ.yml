@@ -1201,6 +1201,15 @@ ku:
           PROPERTY:
             '"rotation"': سوڕانەوە
             '"direction"': ئاڕاستەی جووڵە
+      Mikelab_setupSim:
+        text: |-
+          جوڵانەوەکە دیاریبکە لەگەڵ
+          {SPRITE1N}[SPRITE1COSTUME]
+          [1]خێرایی{SPRITE1SPEED}
+          {SPRITE2N}[SPRITE2COSTUME]
+          [4]خێرایی{SPRITE2SPEED}
+          کۆکراوەی
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_sprite:
         text: "{COSTUME} ێکی سپڕایتی نوێ لە {LOCATION}"
         options:
@@ -1258,35 +1267,12 @@ ku:
         options:
           PROPERTY:
             "'shapeColor'": ڕەنگ
-      aalab_addBehaviorForDuration:
-        text: سپڕایتی aalab {SPRITE} {BEHAVIOR} دەستپێدەکات بۆ {SECONDS} چرکە
-      aalab_addBehaviorUntilBoolean:
-        text: سپڕایتی {SPRITE} دەست بە {BEHAVIOR} دەکات تا {CONDITION}
-      aalab_goToScene:
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE} بجوڵێنە بەبڕی {DISTANCE} وێنەخاڵ {DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': باکوور
-            '"East"': ڕۆژهەڵات
-            '"South"': باشوور
-            '"West"': ڕۆژئاوا
-      aalab_prompt:
-        text: پرسیار بکە {MESSAGE}
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': هێڵدار
+            '"border"': چوارچێوە
+            '"row"': ڕیز
             '"random"': هەڕەمەکی
       binary_drawBin:
         text: دووانی بکێشە {BIN}
