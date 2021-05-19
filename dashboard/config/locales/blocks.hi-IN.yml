@@ -1576,13 +1576,6 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       Mikelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ग्रिड
-            '"border"': बॉर्डर
-            '"row"': पंक्ति
-            '"random"': यादृच्छिक
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:
