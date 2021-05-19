@@ -966,13 +966,6 @@ bg:
             '"down"': стрелка надолу
             '"left"': лява стрелка
             '"right"': стрелка надясно
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': мрежа
-            '"border"': рамка
-            '"row"': ред
-            '"random"': случаен
       RyanLab_moveForward:
         text: върви напред
       RyanLab_turnLeft:
