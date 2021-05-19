@@ -59,7 +59,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     @teacher_feedback.teacher_id = current_user.id
 
     if @teacher_feedback.save
-      render json: @teacher_feedback, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
+      # reload is called so that the correct created_at date is sent back
+      render json: @teacher_feedback.reload, serializer: Api::V1::TeacherFeedbackSerializer, status: :created
     else
       head :bad_request
     end
