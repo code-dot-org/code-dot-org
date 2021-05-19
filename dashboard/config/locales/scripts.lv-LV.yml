@@ -2239,6 +2239,8 @@ lv:
               display_name: Mainīgie
             csf_for_loops:
               display_name: '"par" cikli'
+            lessonGroup-9:
+              display_name: Pasākumi
         pre-express-2021:
           lesson_groups:
             csf_loops:
