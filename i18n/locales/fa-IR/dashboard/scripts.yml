@@ -2513,6 +2513,8 @@ fa:
               display_name: متغیرها
             csf_for_loops:
               display_name: حلقه های "برای"
+            lessonGroup-9:
+              display_name: رویدادها
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2562,3 +2564,7 @@ fa:
               display_name: مقدمه
             Introduction:
               display_name: مقدمه
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: درس 15
