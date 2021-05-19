@@ -9031,6 +9031,8 @@ ka:
                 თქვენი პროექტის აწყობა.
             lesson-1:
               name: ცეკვა
+            lesson-3:
+              name: სპრაიტები მოქმედებაში
           lesson_groups:
             csf_loops:
               display_name: ციკლები
@@ -9044,6 +9046,8 @@ ka:
               display_name: '"მიზნისთვის" ციკლები'
             csf_sprites:
               display_name: სპრაიტები
+            lessonGroup-9:
+              display_name: მოვლენები
           student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
             გაზიარებასაც შეძლებთ.
@@ -9136,6 +9140,8 @@ ka:
             Testing the App:
               key: აპლიკაციების ტესტირება
               name: აპლიკაციების ტესტირება
+            Designing With Empathy:
+              name: დიზაინის ანალიზი
             Build a Paper Prototype:
               name: ქაღალდის პროტოტიპები
             Digital Mode in App Lab:
@@ -9233,3 +9239,7 @@ ka:
           lesson_groups:
             cspSurvey2020:
               display_name: გამოკითხვა
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: გაკვეთილი 15

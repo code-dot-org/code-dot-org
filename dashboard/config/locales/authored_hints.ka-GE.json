@@ -788,7 +788,7 @@
           "harvey_tictactoe": "თქვენ შეგიძლიათ `ახტომის` ბლოკების გამოყენება სხვა ადგილებზე მოსახვედრად."
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "ამის მსგავსი ბლოკები: <xml>  <block type=\"simple_move_up_left\"/></xml> დაეხმარებიან თქვენს მხატვარს დახრილ ზედაპირებზე მოძრაობაში!",
+          "courseA_artist_loops_challenge2_a": "ამის მსგავსი ბლოკები: <xml>  <block type=\"simple_move_up_right\"/></xml> დაეხმარებიან თქვენს მხატვარს დახრილ ზედაპირებზე მოძრაობაში!",
           "courseA_artist_loops_challenge2_b": "როდესაც დაასრულებთ ერთი ჩიტის სახლის მშენებლობას, `გადახტით` შემდეგზე!",
           "courseA_artist_loops_challenge2_c": "ამ გამოწვევისთვის დაგჭირდებათ ციკლში ძალიან ბევრი ბლოკის განთავსება."
         },
@@ -1279,10 +1279,10 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2018": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2019": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2020": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1297,19 +1297,19 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2018": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2019": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2020": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2018": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2019": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2020": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1510,7 +1510,7 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2020": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1519,7 +1519,7 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2019": {
-          "1": "შენი კოდი უნდა გამოიყურებოს ასე:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2020": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1528,7 +1528,7 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2020": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -1537,7 +1537,7 @@
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
-          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2020": {
           "1": "შენი კოდი ასე უნდა გამოიყურებოდეს:\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
