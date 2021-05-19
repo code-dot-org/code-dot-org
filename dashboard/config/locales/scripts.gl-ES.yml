@@ -2420,6 +2420,8 @@ gl:
               display_name: Variables
             csf_for_loops:
               display_name: Bucles "Para" (For)
+            lessonGroup-9:
+              display_name: Eventos
         pre-express-2021:
           lesson_groups:
             csf_loops:

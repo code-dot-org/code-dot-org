@@ -332,10 +332,6 @@ gl:
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': aleatorio
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:
