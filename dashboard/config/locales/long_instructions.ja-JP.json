@@ -271,7 +271,7 @@
         "Dance Party 6_2020": "エイリアンが走り回っている！ベルを鳴らして、エイリアンを落ち着かせよう。\n\n最初にベルのスプライトを作ります。\n\nベルがクリックされたら、<xml><block type=\"gamelab_removeAllBehaviors\" block-text=\"the stops everything block\"><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml> を使って エイリアンの動きを止めます！",
         "Dance Party 7": "最後に「私のベル」という新しいベルスプライトを追加します。",
         "Dance Party 7_2019": "最後に「私のベル」という新しいベルスプライトを追加します。",
-        "Dance Party 7_2020": "ピンクのエイリアンも楽しくなってきました！だれかにさわってダンスさせるように しましょう！\n\n<xml><block type=\"gamelab_checkTouching\" block-text=\"the when touching event block\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"pink alien\"</title></block></value></block></xml> を使って、ピンクのエイリアンが青いエイリアンにさわったら、青いエイリアンがダンスするようにします。",
+        "Dance Party 7_2020": "最後に「私のベル」という新しいベルスプライトを追加します。",
         "Dance Party Freeplay": "さあ、あなたのエイリアンディスコを作りましょう！ひらめきが欲しいですか？次のアイデアを試してみてください。\n\n-   ベルスプライトを2つ作って、エイリアンにそれぞれ別のダンスの動きをさせる\n-   エイリアンが互いに触れるたびに新しいダンスの動きをさせる",
         "Dance Party Freeplay_2019": "さあ、あなたのエイリアンディスコを作りましょう！ひらめきが欲しいですか？次のアイデアを試してみてください。\n\n-   ベルスプライトを2つ作って、エイリアンにそれぞれ別のダンスの動きをさせる\n-   エイリアンが互いに触れるたびに新しいダンスの動きをさせる",
         "Dance Party Freeplay_2020": "さあ、あなたのエイリアンディスコを作りましょう！ひらめきが欲しいですか？次のアイデアを試してみてください。\n\n-   ベルスプライトを2つ作って、エイリアンにそれぞれ別のダンスの動きをさせる\n-   エイリアンが互いに触れるたびに新しいダンスの動きをさせる",

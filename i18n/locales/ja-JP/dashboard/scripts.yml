@@ -16959,6 +16959,8 @@ ja:
               name: ダンスパーティー
               description_student: お祝いの時間です！このレッスンでは、独自のインタラクティブなダンスパーティーをプログラムします。
               description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
+            lesson-3:
+              name: 実行中のスプライト
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -16974,6 +16976,8 @@ ja:
               display_name: ループ用
             end_of_course_project:
               display_name: コース最後のプロジェクト
+            lessonGroup-9:
+              display_name: イベント
           student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
         pre-express-2021:
           title: 就学前エクスプレス (2020)
@@ -17147,6 +17151,8 @@ ja:
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
               name: CS発見 コース後アンケート
+            Designing With Empathy:
+              name: デザインの分析
             Build a Paper Prototype:
               name: 紙のプロトタイプ
             Digital Mode in App Lab:
@@ -17354,3 +17360,7 @@ ja:
           description_short: CSP生徒向けコース後の調査
           description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
           student_description: Code.org CS原則コース後アンケートへようこそ。このアンケートの所要時間は約15分です。いただいた回答は匿名形式で保存され、公開されることはありません - 先生はクラス全体の匿名の集計結果を見ることができます。結果は、先生とCode.orgがコースを維持および改善するために不可欠です。よろしくお願いします。
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: レッスン15
