@@ -3267,6 +3267,8 @@ sv:
               display_name: variabler
             csf_for_loops:
               display_name: "'För' loopar"
+            lessonGroup-9:
+              display_name: Händelser
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -3346,3 +3348,7 @@ sv:
               display_name: Nästa steg
             Introduction:
               display_name: Introduktion
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lektion 15
