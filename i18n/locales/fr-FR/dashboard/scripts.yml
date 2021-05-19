@@ -16648,6 +16648,8 @@ fr:
               name: Soirée Dansante
               description_student: Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive.
               description_teacher: Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.
+            lesson-3:
+              name: Les Lutins en Action
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -16663,6 +16665,8 @@ fr:
               display_name: Boucles « Pour »
             csf_sprites:
               display_name: Les Lutins
+            lessonGroup-9:
+              display_name: Événements
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         pre-express-2021:
           description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
@@ -16842,6 +16846,8 @@ fr:
             CS Discoveries Post Course survey:
               key: CS Discoveries Enquête Post Cours
               name: CS Discoveries Enquête Post Cours
+            Designing With Empathy:
+              name: L'Analyse de la Conception
             Build a Paper Prototype:
               name: Prototypes Papier
             Digital Mode in App Lab:
@@ -17053,3 +17059,7 @@ fr:
           description_short: Enquête Post-Cours CSP auprès des Étudiants
           description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes -- ton professeur peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta considération.
           student_description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes -- ton professeur peut voir des résultats agrégés anonymes pour toute la classe. Les résultats sont essentiels pour ton professeur et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta considération.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Leçon 15

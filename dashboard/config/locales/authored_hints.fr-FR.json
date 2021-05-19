@@ -1470,7 +1470,7 @@
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "Tu ne sais pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un motif.",
           "courseA_artist_loops7_b": "Écris d’abord le code pour une vague, puis répète-le pour dessiner les deux autres.",
-          "courseA_artist_loops7_c": "N’oublie pas que tu peux mettre plus d’un bloc dans une boucle <xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">???</title>\n</block></xml>."
+          "courseA_artist_loops7_c": "N’oublie pas que tu peux mettre plus d’un bloc dans une boucle <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>"
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Tu ne sais pas où mettre la boucle ? Essaie d’écrire le code étape par étape et cherche un motif.",
@@ -1771,7 +1771,7 @@
           "courseA_harvester_loops3_b": "Pour répéter du code, fais glisser une boucle `répéter` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>), puis mets le bloc que tu veux à l’intérieur. "
         },
         "courseA_harvester_loops3_2020": {
-          "courseA_harvester_loops3_a": "Utilise un bloc ˋrépéter\\` comme celui-ci pour t’aider !\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_a": "Utilise un bloc ˋrépéter\\` comme celui-ci pour t’aider !\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"2-10\">4</title>\n</block></xml>",
           "courseA_harvester_loops3_b": "Pour répéter du code, fais glisser une boucle `répéter` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>), puis mets le bloc que tu veux à l’intérieur. "
         },
         "courseA_harvester_loops4": {
@@ -2015,7 +2015,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3a_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2024,7 +2024,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3b_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp3b_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2033,7 +2033,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp4a_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2042,7 +2042,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseA_maze_ramp5a_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2089,7 +2089,7 @@
         "courseA_maze_seq13_2020": {
           "courseA_maze_seq13_a": "Si le chemin ne te semble pas clair, trace du doigt un chemin de l’oiseau jusqu'au cochon.",
           "courseA_maze_seq13_b": "N’aie pas peur de faire des erreurs ! Essaie d’ajouter des blocs et d’exécuter le code pour voir ce qui se passe.",
-          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n t’aideront à te rapprocher du cochon."
+          "courseA_maze_seq13_c": "Ces blocs <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml> t’aideront à te rapprocher du cochon."
         },
         "courseA_maze_seq1_2018": {
           "courseA_maze_seq1_a": "Si tu as du mal à faire bouger l’oiseau, assure-toi que les blocs sont connectés sous <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -2386,7 +2386,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2395,7 +2395,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp3b_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2404,7 +2404,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveSouth\"/>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp4a_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2413,7 +2413,7 @@
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2019": {
-          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveWest\">\n<next>\n<block type=\"maze_moveWest\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
+          "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2020": {
           "1": "Ton code devrait ressembler à ceci :\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
@@ -2639,11 +2639,11 @@
           "courseB_collector_prog3_b": "N’oublie pas que tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`."
         },
         "courseB_collector_loops3_2019": {
-          "courseB_collector_prog3_a": "Essaie d’utiliser un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> pour ramasser ton trésor.",
+          "courseB_collector_prog3_a": "Essaie d’utiliser un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> pour ramasser le trésor.",
           "courseB_collector_prog3_b": "N’oublie pas que tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`."
         },
         "courseB_collector_loops3_2020": {
-          "courseB_collector_prog3_a": "Essaie d’utiliser un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> pour ramasser ton trésor.",
+          "courseB_collector_prog3_a": "Essaie d’utiliser un bloc <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> pour ramasser le trésor.",
           "courseB_collector_prog3_b": "N’oublie pas que tu peux mettre plus d’un bloc à l’intérieur d’une boucle `répéter`."
         },
         "courseB_collector_loops4": {
@@ -2703,7 +2703,7 @@
         "courseB_collector_loops6_2020": {
           "courseB_collector_loops6_a": "Tu ne vois pas où les choses commencent à mal tourner ? Utilise le bouton « Étape » pour parcourir ton programme bloc par bloc.",
           "courseB_collector_loops6_b": "Tu peux changer le nombre de fois que la boucle répéter s’exécute en cliquant sur « 3 » et en choisissant un autre nombre.",
-          "courseB_collector_loops6_c": "Tu auras besoin d’utiliser 3 boucles `répéter` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> pour résoudre ce casse-tête.",
+          "courseB_collector_loops6_c": "Tu auras besoin d’utiliser 3 boucles `répéter` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml> pour résoudre ce casse-tête.",
           "courseB_collector_loops6_d": "Si tu es confus, essaie de diviser cette énigme en 3 parties."
         },
         "courseB_collector_loops7": {
@@ -2761,14 +2761,14 @@
           "courseB_collector_loops_challenge1_d": "Essaie ceci !\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2019": {
-          "courseB_collector_loops_challenge1_b": "Commence par faire boucler les commandes suivantes :\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Déplace-toi à l’Est deux fois entre chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nTu peux résoudre ceci avec seulement 14 blocs. Clique pour un nouvel indice de plus et voir une solution. ",
-          "courseB_collector_loops_challenge1_d": "Essaie ceci !\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_b": "Commence par faire boucler les commandes suivantes :\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Déplace-toi à l’Est deux fois entre chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nTu peux résoudre ce problème en seulement 14 blocs. Clique de nouveau pour voir une solution.",
+          "courseB_collector_loops_challenge1_d": "Essaie ceci !\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2020": {
-          "courseB_collector_loops_challenge1_b": "Commence par faire boucler les commandes suivantes :\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
-          "courseB_collector_loops_challenge1_c": "Déplace-toi à l’Est deux fois entre chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nTu peux résoudre ceci avec seulement 14 blocs. Clique pour un nouvel indice de plus et voir une solution. ",
-          "courseB_collector_loops_challenge1_d": "Essaie ceci !\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_collector_loops_challenge1_b": "Commence par faire boucler les commandes suivantes :\n\n<xml>\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"></block>\n</next>\n</block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "Déplace-toi à l’Est deux fois entre chaque chemin.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nTu peux résoudre ce problème en seulement 14 blocs. Clique de nouveau pour voir une solution.",
+          "courseB_collector_loops_challenge1_d": "Essaie ceci !\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\">\n<next>\n<block type=\"maze_moveNorth\"/>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"maze_moveEast\">\n<next>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">5</title>\n<statement name=\"DO\">\n<block type=\"maze_moveSouth\">\n<next>\n<block type=\"collector_collect\"/>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_a": "Si un problème survient, n’hésite pas à recommencer. N’abandonne pas !",
@@ -2847,8 +2847,8 @@
           "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, puis mets le bloc que tu veux à l’intérieur."
         },
         "courseB_iceage_loops3_2020": {
-          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, puis mets le bloc que tu veux à l’intérieur."
+          "courseB_iceage_loops3_a": "Utilise ce nouveau bloc !\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "Pour répéter du code, fais glisser une boucle ˋrépéter\\` <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, puis mets le bloc que tu veux à l’intérieur."
         },
         "courseB_iceage_loops4": {
           "courseB_iceage_loops4_a": "Essaie d’écrire les étapes que Scrat devrait suivre pour arriver au gland. Vois-tu un motif ?",
@@ -2965,11 +2965,11 @@
         },
         "courseB_maze_seq4_2019": {
           "courseB_maze_seq4_a": "Essaie d’ajouter une instruction à la fois jusqu’à atteindre le gland.",
-          "courseB_maze_seq4_b": "Tu devras utiliser le <xml><block type=\"maze_moveEast\"/></xml> bloc pour résoudre cette énigme."
+          "courseB_maze_seq4_b": "Tu devras utiliser le bloc <xml><block type=\"maze_moveEast\"/></xml> pour résoudre ce casse-tête."
         },
         "courseB_maze_seq4_2020": {
           "courseB_maze_seq4_a": "Essaie d’ajouter une instruction à la fois jusqu’à atteindre le gland.",
-          "courseB_maze_seq4_b": "Tu devras utiliser le <xml><block type=\"maze_moveEast\"/></xml> bloc pour résoudre cette énigme."
+          "courseB_maze_seq4_b": "Tu devras utiliser le bloc <xml><block type=\"maze_moveEast\"/></xml> pour résoudre ce casse-tête."
         },
         "courseB_maze_seq5": {
           "courseB_maze_seq5_a": "Si tu es bloqué(e), essaie de dessiner le chemin sur du papier.",
@@ -3089,11 +3089,11 @@
         },
         "courseB_maze_seq_challenge1_2019": {
           "courseB_maze_seq_challenge1_a": "Le chemin le plus court pourrait ne pas être le bon, cette fois.",
-          "courseB_maze_seq_challenge1_b": "Essaye d’utiliser le bloc <xml><block type=\"maze_moveWest\"/></xml> pour commencer."
+          "courseB_maze_seq_challenge1_b": "Essayez de vous déplacer vers le Ouest pour commencer."
         },
         "courseB_maze_seq_challenge1_2020": {
           "courseB_maze_seq_challenge1_a": "Le chemin le plus court pourrait ne pas être le bon, cette fois.",
-          "courseB_maze_seq_challenge1_b": "Essaye d’utiliser le bloc <xml><block type=\"maze_moveWest\"/></xml> pour commencer."
+          "courseB_maze_seq_challenge1_b": "Essayez de vous déplacer vers le Ouest pour commencer."
         },
         "courseB_maze_seq_challenge2": {
           "courseB_maze_seq_challenge2_a": "Tu n’as pas besoin d’ajouter ou de retirer des blocs pour résoudre cette énigme.",
@@ -3118,10 +3118,10 @@
           "courseB_playlab_events2_a": "Voici le bloc qui fait dire quelque chose à Daisy :\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events2_2019": {
-          "courseB_playlab_events2_a": "Voici le bloc que tu dois utiliser pour ajouter l’événement :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "Voici le bloc qui fait dire quelque chose à Daisy :\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events2_2020": {
-          "courseB_playlab_events2_a": "Voici le bloc que tu dois utiliser pour ajouter l’événement :\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events2_a": "Voici le bloc qui fait dire quelque chose à Daisy :\n\n<xml>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Hi there.</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events3": {
           "courseB_playlab_events3_a": "Voici le bloc que tu devrais utiliser pour ajouter l’événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
@@ -3132,12 +3132,12 @@
           "courseB_playlab_events3_b": "Voici le bloc dont tu as besoin pour changer l’humeur de Daisy :\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events3_2019": {
-          "courseB_playlab_events3_a": "Voici le bloc que tu devrais utiliser pour ajouter l’événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "Voici le bloc dont tu as besoin pour changer l’humeur de Daisy :\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "Voici le bloc que tu devrais utiliser pour ajouter l’événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
+          "courseB_playlab_events3_b": "Voici le bloc dont tu as besoin pour changer l’humeur de Daisy :\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events3_2020": {
-          "courseB_playlab_events3_a": "Voici le bloc que tu devrais utiliser pour ajouter l’événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events3_b": "Voici le bloc dont tu as besoin pour changer l’humeur de Daisy :\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events3_a": "Voici le bloc que tu devrais utiliser pour ajouter l’événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">0</title>\n</block>\n</xml>",
+          "courseB_playlab_events3_b": "Voici le bloc dont tu as besoin pour changer l’humeur de Daisy :\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">random</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events4": {
           "courseB_playlab_events4_a": "Voici l’événement qui contrôle la flèche gauche :\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n</block>\n</xml>",
@@ -3148,12 +3148,12 @@
           "courseB_playlab_events4_b": "Voici le bloc qui déplace le chevalier à gauche.\n\n<xml>\n<block type=\"studio_move\">\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events4_2019": {
-          "courseB_playlab_events4_a": "Voici le bloc événement qui contrôle la flèche droite :\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "Voici le bloc qui déplace le chevalier vers la gauche.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_a": "Voici l’événement qui contrôle la flèche gauche :\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n</block>\n</xml>",
+          "courseB_playlab_events4_b": "Voici le bloc qui déplace le chevalier à gauche.\n\n<xml>\n<block type=\"studio_move\">\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events4_2020": {
-          "courseB_playlab_events4_a": "Voici le bloc événement qui contrôle la flèche droite :\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events4_b": "Voici le bloc qui déplace le chevalier vers la gauche.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_a": "Voici l’événement qui contrôle la flèche gauche :\n\n<xml>\n<block type=\"studio_whenArrow\">\n<title name=\"VALUE\">left</title>\n</block>\n</xml>",
+          "courseB_playlab_events4_b": "Voici le bloc qui déplace le chevalier à gauche.\n\n<xml>\n<block type=\"studio_move\">\n<title name=\"SPRITE\">1</title>\n<title name=\"DIR\">8</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events5": {
           "courseB_playlab_events5_a": "Voici l’événement qui contrôle la flèche droite :\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
@@ -3164,11 +3164,11 @@
           "courseB_playlab_events5_b": "Voici le bloc qui fait fuir le chevalier. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2019": {
-          "courseB_playlab_events5_a": "Voici l’événement qui contrôle la flèche droite : \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_a": "Voici l’événement qui contrôle la flèche droite :\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
           "courseB_playlab_events5_b": "Voici le bloc qui fait fuir le chevalier. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events5_2020": {
-          "courseB_playlab_events5_a": "Voici l’événement qui contrôle la flèche droite : \n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_a": "Voici l’événement qui contrôle la flèche droite :\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
           "courseB_playlab_events5_b": "Voici le bloc qui fait fuir le chevalier. \n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
         },
         "courseB_playlab_events6": {
@@ -3182,12 +3182,12 @@
           "courseB_playlab_events6_c": "Récupère tous les drapeaux pour réussir !"
         },
         "courseB_playlab_events6_2019": {
-          "courseB_playlab_events6_a": "Tu auras besoin de ces blocs événement :\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_a": "Tu auras besoin de ces blocs d’événement :\n\n<xml>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">up</title>\n</block>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>",
           "courseB_playlab_events6_b": "Utilise les flèches déroulantes sur les blocs événements verts `quand la flèche ___ est appuyée` pour choisir des directions différentes.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Récupère tous les drapeaux pour réussir !"
         },
         "courseB_playlab_events6_2020": {
-          "courseB_playlab_events6_a": "Tu auras besoin de ces blocs événement :\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_a": "Tu auras besoin de ces blocs d’événement :\n\n<xml>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">up</title>\n</block>\n<block type=\"studio_whenArrow\" id=\"callMe\">\n<title name=\"VALUE\">down</title>\n</block>\n</xml>",
           "courseB_playlab_events6_b": "Utilise les flèches déroulantes sur les blocs événements verts `quand la flèche ___ est appuyée` pour choisir des directions différentes.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
           "courseB_playlab_events6_c": "Récupère tous les drapeaux pour réussir !"
         },
@@ -3202,14 +3202,14 @@
           "courseB_playlab_events7_c": "Voici le bloc dont tu as besoin pour faire disparaître le chevalier :\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events7_2019": {
-          "courseB_playlab_events7_a": "Voici le bloc événement dont tu auras besoin :\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "Voici le bloc dont tu as besoin pour jouer un son.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_c": "Voici le bloc dont tu as besoin pour faire disparaître le chevalier :\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+          "courseB_playlab_events7_a": "Voici le bloc événement dont tu auras besoin :\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_b": "Voici le bloc dont tu as besoin pour jouer un son.\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">slap</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_c": "Voici le bloc dont tu as besoin pour faire disparaître le chevalier :\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events7_2020": {
-          "courseB_playlab_events7_a": "Voici le bloc événement dont tu auras besoin :\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_b": "Voici le bloc dont tu as besoin pour jouer un son.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
-          "courseB_playlab_events7_c": "Voici le bloc dont tu as besoin pour faire disparaître le chevalier :\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+          "courseB_playlab_events7_a": "Voici le bloc événement dont tu auras besoin :\n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n<title name=\"SPRITE1\">0</title>\n<title name=\"SPRITE2\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_b": "Voici le bloc dont tu as besoin pour jouer un son.\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">slap</title>\n</block>\n</xml>",
+          "courseB_playlab_events7_c": "Voici le bloc dont tu as besoin pour faire disparaître le chevalier :\n\n<xml>\n<block type=\"studio_vanish\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1": {
           "courseB_playlab_events_challenge1_a": "Déplace les autres animaux vers le bas quand tu appuies sur `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
@@ -3222,14 +3222,14 @@
           "courseB_playlab_events_challenge1_c": "Que dira tout le monde quand la course se terminera ? Fais-les parler avec cet événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2019": {
-          "courseB_playlab_events_challenge1_a": "Fais bouger les autres animaux vers le bas quand tu appuies sur `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "Modifie la vitesse des animaux en utilisant ce bloc :\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "Que dira tout le monde quand la course se terminera ? Fais-les parler avec cet événement :\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_a": "Déplace les autres animaux vers le bas quand tu appuies sur `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Modifie la vitesse des animaux en utilisant ce bloc :\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "Que dira tout le monde quand la course se terminera ? Fais-les parler avec cet événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge1_2020": {
-          "courseB_playlab_events_challenge1_a": "Fais bouger les autres animaux vers le bas quand tu appuies sur `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
-          "courseB_playlab_events_challenge1_b": "Modifie la vitesse des animaux en utilisant ce bloc :\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
-          "courseB_playlab_events_challenge1_c": "Que dira tout le monde quand la course se terminera ? Fais-les parler avec cet événement :\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseB_playlab_events_challenge1_a": "Déplace les autres animaux vers le bas quand tu appuies sur `▼`. \n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "Modifie la vitesse des animaux en utilisant ce bloc :\n\n<xml>\n<block type=\"studio_setSpriteSpeed\">\n<title name=\"SPRITE\">0</title>\n<title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n</block></xml>",
+          "courseB_playlab_events_challenge1_c": "Que dira tout le monde quand la course se terminera ? Fais-les parler avec cet événement :\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">2</title>\n<next>\n<block type=\"studio_saySpriteChoices\">\n<title name=\"SPRITE\">2</title>\n<title name=\"VALUE\">Woo hoo!</title>\n</block>\n</next>\n</block>\n</xml>"
         },
         "courseB_playlab_events_challenge2": {
           "courseB_playlab_events_challenge2_a": "Chaque animal dans le jeu doit disparaître quand on lui clique dessus. Il doit aussi réapparaître après une ou deux secondes !",
@@ -3245,14 +3245,14 @@
         },
         "courseB_playlab_events_challenge2_2019": {
           "courseB_playlab_events_challenge2_a": "Chaque animal dans le jeu doit disparaître quand on lui clique dessus. Il doit aussi réapparaître après une ou deux secondes !",
-          "courseB_playlab_events_challenge2_b": "Utilise d’autres blocs événement pour faire disparaître les autres animaux !\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "Utilise des commandes supplémentaires pour jouer des sons ou marquer des points quand tu cliques sur les animaux !\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "Utilise d’autres blocs événement pour faire disparaître les autres animaux !\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "Utilise des commandes pour jouer des sons ou gagner des points quand on clique sur les animaux !\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "Mélange tout ça ! \n\nFais en sorte que certains animaux donnent plus de points que d’autres.\nUtilise différents sons. \nModifie les humeurs des animaux !"
         },
         "courseB_playlab_events_challenge2_2020": {
           "courseB_playlab_events_challenge2_a": "Chaque animal dans le jeu doit disparaître quand on lui clique dessus. Il doit aussi réapparaître après une ou deux secondes !",
-          "courseB_playlab_events_challenge2_b": "Utilise d’autres blocs événement pour faire disparaître les autres animaux !\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n  </xml>",
-          "courseB_playlab_events_challenge2_c": "Utilise des commandes supplémentaires pour jouer des sons ou marquer des points quand tu cliques sur les animaux !\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_b": "Utilise d’autres blocs événement pour faire disparaître les autres animaux !\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n<title name=\"SPRITE\">1</title>\n</block>\n</xml>",
+          "courseB_playlab_events_challenge2_c": "Utilise des commandes pour jouer des sons ou gagner des points quand on clique sur les animaux !\n\n<xml>\n<block type=\"studio_playSound\">\n<title name=\"SOUND\">slap</title>\n</block>\n<block type=\"studio_changeScore\"/></xml>",
           "courseB_playlab_events_challenge2_d": "Mélange tout ça ! \n\nFais en sorte que certains animaux donnent plus de points que d’autres.\nUtilise différents sons. \nModifie les humeurs des animaux !"
         },
         "courseB_starWars_prog1": {
@@ -3265,11 +3265,11 @@
         },
         "courseB_starWars_prog1_2019": {
           "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
-          "courseB_starWars_prog1_b": "Il faudra te déplacer vers l'Est pour résoudre cette énigme. Jusqu'où as-tu besoin de te déplacer \n?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog1_2020": {
           "courseB_starWars_prog1_a": "Essaie d’ajouter un bloc à la fois, puis clique sur « Exécuter » pour voir ce qui se passe.",
-          "courseB_starWars_prog1_b": "Il faudra te déplacer vers l'Est pour résoudre cette énigme. Jusqu'où as-tu besoin de te déplacer \n?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+          "courseB_starWars_prog1_b": "Tu devras te déplacer à l’Est pour résoudre ce casse-tête.\nÀ quelle distance dois-tu te déplacer ?\n\n<xml><block type=\"studio_moveEast\"/></xml>"
         },
         "courseB_starWars_prog2": {
           "courseB_starWars_prog2_a": "Sépare ce problème en deux parties. Ramasse une pile de ferraille, puis trouve comment atteindre la suivante."
@@ -3309,11 +3309,11 @@
         },
         "courseB_starWars_prog4_2019": {
           "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là.",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog4_2020": {
           "courseB_starWars_prog4_a": "Construis le code un morceau à la fois. Exécute-le pour savoir où aller à partir de là.",
-          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog4_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog5": {
           "courseB_starWars_prog5_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
@@ -3349,11 +3349,11 @@
         },
         "courseB_starWars_prog6_2019": {
           "courseB_starWars_prog6_a": "Ce motif n’est qu’en marche d’escalier avec deux déplacements par direction !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog6_2020": {
           "courseB_starWars_prog6_a": "Ce motif n’est qu’en marche d’escalier avec deux déplacements par direction !",
-          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog6_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour un code plus court.\n\n<xml>  <block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog7": {
           "courseB_starWars_prog7_a": "Ce motif ne ressemble-t-il pas à l’énigme précédente ?",
@@ -3385,11 +3385,11 @@
         },
         "courseB_starWars_prog8_2019": {
           "courseB_starWars_prog8_a": "Ce n’est pas grave de retourner sur des cases que tu as déjà traversées.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu as mis à l’intérieur.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu mets à l’intérieur.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog8_2020": {
           "courseB_starWars_prog8_a": "Ce n’est pas grave de retourner sur des cases que tu as déjà traversées.",
-          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu as mis à l’intérieur.\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+          "courseB_starWars_prog8_b": "Essaie d’utiliser le bloc ˋrépéter\\` pour voir ce qui arrive au code que tu mets à l’intérieur.\n\n<xml>\n<block type=\"controls_repeat_simplified\">\n<title name=\"TIMES\">3</title>\n</block>\n</xml>"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "N’aie pas peur de faire une erreur ! Exécute le code pour voir ce qui se passe, même si tu n’as pas encore résolu l'énigme.",
