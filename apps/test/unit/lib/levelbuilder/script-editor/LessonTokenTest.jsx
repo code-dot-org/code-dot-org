@@ -40,6 +40,7 @@ describe('LessonToken', () => {
     expect(wrapper.contains('Lesson 1')).to.be.true;
     expect(wrapper.find('i').length).to.equal(4);
     expect(wrapper.find('.fa-pencil').length).to.equal(1);
+    expect(wrapper.find('.fa-clone').length).to.equal(1);
     expect(wrapper.contains('assessment')).to.be.true;
   });
 
@@ -57,7 +58,8 @@ describe('LessonToken', () => {
     );
     expect(wrapper.find('Motion').length).to.equal(1);
     expect(wrapper.contains('New Lesson')).to.be.true;
-    expect(wrapper.find('i').length).to.equal(3);
+    expect(wrapper.find('i').length).to.equal(2);
     expect(wrapper.find('.fa-pencil').length).to.equal(0);
+    expect(wrapper.find('.fa-clone').length).to.equal(0);
   });
 });

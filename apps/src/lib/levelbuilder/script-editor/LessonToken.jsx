@@ -101,9 +101,11 @@ export default class LessonToken extends Component {
                 <i className="fa fa-pencil" />
               </div>
             )}
-            <div style={styles.clone} onMouseDown={this.handleClone}>
-              <i className="fa fa-clone" />
-            </div>
+            {this.props.lesson.id && (
+              <div style={styles.clone} onMouseDown={this.handleClone}>
+                <i className="fa fa-clone" />
+              </div>
+            )}
             <div style={styles.remove} onMouseDown={this.handleRemove}>
               <i className="fa fa-times" />
             </div>
