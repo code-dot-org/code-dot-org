@@ -1574,13 +1574,6 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': πλέγμα
-            '"border"': όριο
-            '"row"': γραμμή
-            '"random"': τυχαίο
       RyanLab_moveForward:
         text: προχώρησε μπροστά
       RyanLab_turnLeft:
