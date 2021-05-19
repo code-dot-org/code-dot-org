@@ -7,7 +7,7 @@ import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
-import labBackground from "@public/images/results-background-light.png";
+import background from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
@@ -113,7 +113,7 @@ class TrainModel extends Component {
           ...styles.panel,
           justifyContent: "center",
           backgroundSize: "cover",
-          backgroundImage: "url(" + labBackground + ")"
+          backgroundImage: "url(" + background + ")"
         }}
       >
         <div style={styles.statement}>Training</div>

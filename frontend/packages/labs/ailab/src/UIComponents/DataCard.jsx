@@ -75,19 +75,9 @@ class DataCard extends Component {
               {!card && dataLength > 0 && (
                 <div>
                   <br />
-                  <div style={styles.bold}>Columns:</div>
                   <div style={styles.cardRow}>
                     <div style={styles.bold}>Rows of data:</div>
                     {dataLength}
-                  </div>
-                  <div style={styles.contents}>
-                    {Object.keys(data[0]).map(key => {
-                      return (
-                        <div key={key} style={styles.cardRow}>
-                          <div style={styles.bold}>{key}</div>
-                        </div>
-                      );
-                    })}
                   </div>
                 </div>
               )}

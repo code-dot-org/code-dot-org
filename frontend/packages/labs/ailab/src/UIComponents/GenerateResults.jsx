@@ -7,7 +7,7 @@ import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
 import aiBotClosed from "@public/images/ai-bot/ai-bot-closed.png";
 import blueScanner from "@public/images/ai-bot/blue-scanner.png";
-import resultsBackground from "@public/images/results-background-light.png";
+import background from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
@@ -119,7 +119,7 @@ class GenerateResults extends Component {
           ...styles.panel,
           justifyContent: "center",
           backgroundSize: "cover",
-          backgroundImage: "url(" + resultsBackground + ")"
+          backgroundImage: "url(" + background + ")"
         }}
       >
         <div style={styles.statement}>Testing accuracy</div>
