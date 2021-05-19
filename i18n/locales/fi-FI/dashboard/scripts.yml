@@ -3023,6 +3023,8 @@ fi:
               display_name: Muuttujat
             csf_for_loops:
               display_name: Silmukat
+            lessonGroup-9:
+              display_name: Tapahtumat
         pre-express-2021:
           lesson_groups:
             csf_loops:
