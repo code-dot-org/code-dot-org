@@ -13,6 +13,8 @@ import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedb
 import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
 import experiments from '@cdo/apps/util/experiments';
 import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
+import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
+import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
 
 const ErrorType = {
   NoError: 'NoError',
@@ -81,6 +83,14 @@ export class TeacherFeedback extends Component {
   onCommentChange = value => {
     this.setState({comment: value});
   };
+
+  onReviewStateChange = reviewState =>
+    this.setState({
+      reviewState: reviewState
+    });
+
+  onReviewStateUpdated = isChanged =>
+    this.setState({reviewStateUpdated: isChanged});
 
   onRubricChange = value => {
     //If you click on the currently selected performance level clear the performance level
@@ -197,10 +207,6 @@ export class TeacherFeedback extends Component {
     const displayComment =
       !displayReadonlyRubric && (!!comment || viewAs === ViewType.Teacher);
 
-    const keepWorkingExperiementEnabled = experiments.isEnabled(
-      keepWorkingExperiment
-    );
-
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
     const tabDisplayStyle = visible
@@ -231,14 +237,8 @@ export class TeacherFeedback extends Component {
                 <TeacherFeedbackKeepWorking
                   latestFeedback={latestFeedback}
                   reviewState={this.state.reviewState}
-                  setReviewState={reviewState =>
-                    this.setState({
-                      reviewState: reviewState
-                    })
-                  }
-                  setReviewStateChanged={isChanged =>
-                    this.setState({reviewStateUpdated: isChanged})
-                  }
+                  setReviewState={this.onReviewStateChange}
+                  setReviewStateChanged={this.onReviewStateUpdated}
                 />
               )}
             </div>

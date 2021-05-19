@@ -20,6 +20,17 @@ class TeacherFeedbackStatus extends Component {
     };
   }
 
+  studentUpdatedAttributes(latestFeedback) {
+    return {
+      style: {
+        ...styles.timeTeacher,
+        ...styles.timeTeacherStudentSeen
+      },
+      message: 'Last updated by student',
+      time: this.getFriendlyDate(latestFeedback.student_last_updated)
+    };
+  }
+
   studentSeenAttributes(latestFeedback) {
     return {
       style: {
@@ -60,6 +71,14 @@ class TeacherFeedbackStatus extends Component {
     return !!this.props.latestFeedback.student_seen_feedback;
   }
 
+  hasStudentUpdated() {
+    const {latestFeedback} = this.props;
+    return (
+      latestFeedback.student_last_updated &&
+      latestFeedback.student_last_updated > latestFeedback.created_at
+    );
+  }
+
   render() {
     const {viewAs, latestFeedback} = this.props;
 
@@ -71,7 +90,10 @@ class TeacherFeedbackStatus extends Component {
     if (viewAs === ViewType.Student) {
       attributes = this.studentViewAttributes(latestFeedback);
     } else if (viewAs === ViewType.Teacher) {
-      if (this.hasStudentSeenFeedback()) {
+      if (this.hasStudentUpdated()) {
+        //Teacher view if current teacher left feedback & student updated
+        attributes = this.studentUpdatedAttributes(latestFeedback);
+      } else if (this.hasStudentSeenFeedback()) {
         //Teacher view if current teacher left feedback & student viewed
         attributes = this.studentSeenAttributes(latestFeedback);
       } else {
