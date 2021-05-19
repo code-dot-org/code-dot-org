@@ -652,11 +652,6 @@ az:
             '"down"': aşağıya ox
             '"left"': sola ox
             '"right"': sağa ox
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': kənar
-            '"random"': təsadüfi
       RyanLab_moveForward:
         text: irəli get
       RyanLab_turnLeft:

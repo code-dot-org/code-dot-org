@@ -1,1 +1,5 @@
---- {}
+---
+az:
+  data:
+    shared_functions:
+      moving with arrow keys: işarə düymələri ilə hərəkət edin
