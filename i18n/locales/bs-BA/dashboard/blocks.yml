@@ -1112,13 +1112,6 @@ bs:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': mreža
-            '"border"': ivica
-            '"row"': red
-            '"random"': slučajno odabran
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
