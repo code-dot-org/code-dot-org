@@ -22415,6 +22415,8 @@ en:
               description_teacher: In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.
             lesson-2:
               name: Using Variables
+              description_student: 'One way that software engineers can store information in a computer’s memory is by using variables. In this lesson, you use variables to store information used to create `Painter` objects and also to store information input by a user. '
+              description_teacher: In this lesson, students define variables to represent attributes for an object and use these variables to store values. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
             lesson-3:
               name: Writing Constructors
             lesson-4:
@@ -22450,10 +22452,8 @@ en:
           title: Giving Objects State
           description_audience: ''
           description_short: ''
-          description: 'Students access the Java Lab to explore The Neighborhood and are introduced to the Painter class. Using starter code, students make simple modifications to achieve different outcomes with a Painter object and practice creating a Painter object to identify the relationship between a class and an object.
-
-'
-          student_description: ''
+          description: In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
+          student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
         csa3-pilot:
           lessons: {}
           lesson_groups: {}

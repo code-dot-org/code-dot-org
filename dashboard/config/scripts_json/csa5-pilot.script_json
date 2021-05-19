@@ -6,11 +6,12 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "csa-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-06 19:26:58 UTC",
+    "serialized_at": "2021-05-19 17:29:54 UTC",
     "seeding_key": {
       "script.name": "csa5-pilot"
     }
