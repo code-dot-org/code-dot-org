@@ -224,6 +224,10 @@ th:
           lessons:
             Infinity:
               name: ไม่จำกัด
+        K5PD:
+          lessons:
+            Unplugged lessons:
+              name: บทเรียนออฟไลน์
         netsim:
           title: เครื่องจำลองอินเตอร์เน็ต
         20-hour:
@@ -701,13 +705,26 @@ th:
               name: นักออกแบบชั่วโมงแห่งโค้ดตอนไมน์คราฟท์
           student_description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
         coursea-draft:
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเริ่มอ่านออกเขียนได้
           lessons:
+            'Debugging: Bugs in Codeville':
+              name: 'การดีบัก: บักใน Codeville'
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
+            Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
+            'Programming: Happy Maps':
+              name: 'การเขียนโปรแกรม: แผนที่สุดหรรษา'
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
+            'Loops: Happy Loops':
+              name: 'ลูป: ลูปแสนสนุก'
             Loops in Collector:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
             Going Places Safely:
@@ -715,49 +732,90 @@ th:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
         courseb-draft:
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเริ่มอ่านออกเขียนได้
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             Sequence & Algorithms:
               name: การจัดลำดับก่อนหลัง & อัลกอริทึม
+            Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Collector:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
+            Keep it Private:
+              name: อย่าแพร่งพราย
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
         coursec-draft:
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
           lessons:
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
             'Real-life Algorithms: Paper Planes':
               name: 'อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ'
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Loops in Maze:
+              name: ลูปในเขาวงกต
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
             Building a Foundation:
               name: สร้างพื้นฐาน
+            Screen Out the Mean:
+              name: กันไว้ดีกว่าแก้
             Debugging in Maze:
               name: การหาจุดบกพร่องกับเขาวงกต
             Loops in Harvester:
               name: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
         coursed-draft:
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'อัลกอริทึม: การเขียนโปรแกรมในกระดาษกราฟ'
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
             Nested Loops in Maze:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
             Nested Loops in Artist:
               name: ลูปซ้อนลูป ในเกมศิลปิน
+            'Algorithms: Relay Programming':
+              name: 'อัลกอริทึม: ฝึกเขียนโปรแกรม'
             Debugging in Bee:
               name: 'การดีบั๊ก: กับเรื่องผึ้ง'
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
             Conditionals with Cards:
               name: เงื่อนไข
+            Conditionals with Bee:
+              name: ใช้ผึ้งสร้างเงื่อนไข
+            Conditionals & Loops in Maze:
+              name: เงื่อนไขและลูปในเขาวงกต
             Conditionals & Loops in Farmer:
               name: เงื่อนไขและลูปกับเรื่องเกษตรกร
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
+            Conditionals in Bee:
+              name: การสร้างเงื่อนไขในบทเรียน "ผึ้ง"
             Digital Citizenship:
               name: พลเมืองดิจิทัล
             Artist Binary:
@@ -769,29 +827,95 @@ th:
             Introduction:
               name: บทเกริ่นนำ
             Nested Loops Project in Artist:
-              name: โครงการลูปซ้อนลูป ในเกมศิลปิน
+              name: โปรเจกต์ลูปซ้อนลูปในเกม "ศิลปิน"
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
         coursee-draft:
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            extra_course_content:
+              display_name: เนื้อหาของหลักสูตรพิเศษ
           lessons:
             Digital Citizenship:
               name: พลเมืองดิจิทัล
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions in Farmer:
+              name: ฟังก์ชั่นในบทเรียน "เกษตรกร"
+            Determine the Concept in Bee:
+              name: ระบุถึงแนวคิดในบทเรียน "ผึ้ง"
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Internet:
               name: อินเทอร์เน็ต
+            Determine the Concept:
+              name: ร่างแนวคิด
             Introduction:
               name: บทเกริ่นนำ
             Conditionals:
               name: เงื่อนไข
+            'Algorithms: Dice Race':
+              name: 'อัลกอริทึม: การแข่งลูกเต๋า'
         coursef-draft:
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             Digital Citizenship:
               name: พลเมืองดิจิทัล
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            'Functions with Parameters: Songwriting with Parameters':
+              name: 'ฟังก์ชั่นและพารามิเตอร์: เขียนเพลงด้วยพารามิเตอร์'
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Presentation Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
+            The Power of Words:
+              name: พลังของถ้อยคำ
             Introduction:
               name: บทเกริ่นนำ
+            Conditionals and Functions in Bee:
+              name: เงื่อนไขและฟังก์ชั่นในเกม "ผึ้ง"
+            'Algorithms: Tangrams':
+              name: 'อัลกอริทึม: แทนแกรม'
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -816,6 +940,21 @@ th:
           lessons:
             Welcome!:
               name: ยินดีต้อนรับ!
+        csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          lessons:
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions in Farmer:
+              name: ฟังก์ชั่นในบทเรียน "เกษตรกร"
+            Determine the Concept:
+              name: ร่างแนวคิด
         sciencepd5:
           lessons:
             Welcome!:
@@ -894,8 +1033,14 @@ th:
               name: ไม่ใช่
         coursef-ramp:
           lessons:
+            'Algorithms: Tangrams':
+              name: 'อัลกอริทึม: แทนแกรม'
             Introduction:
               name: บทเกริ่นนำ
+            Functions in Farmer:
+              name: ฟังก์ชั่นในบทเรียน "เกษตรกร"
+            Conditionals and Functions in Bee:
+              name: เงื่อนไขและฟังก์ชั่นในเกม "ผึ้ง"
         csp-post-survey:
           lesson_groups:
             cspSurvey:
@@ -915,6 +1060,7 @@ th:
         coursea-2017:
           title: คอร์ส A
           assignment_family_title: คอร์ส A
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           lessons:
@@ -924,6 +1070,7 @@ th:
                 (debug) นักเรียนจะได้เรียนรู้จากสิ่งที่เรียกได้ว่าเป็นคัมภีร์ว่า:  "เกิดอะไรขึ้น?
                 หรือ อะไรจะเกิดขึ้น? หรือ สิ่งนั้นบอกอะไรให้กับคุณได้บ้าง?"'
             'Persistence & Frustration: Stevie and the Marbles':
+              name: 'ไม่ย่อท้อ: สตีวี่และโปรเจกต์ยักษ์'
               description_teacher: "เมื่อนักเรียนเผชิญกับอุปสรรคในขณะที่กำลังตอบคำถามหรือทำงานอยู่กับโปรเจค
                 ก็เป็นสิ่งที่ธรรมดาที่พวกเขาจะได้รับความผิดหวังและล้มเลิกความตั้งใจ
                 \ บทเรียนนี้จะแนะนำนักเรียนให้รู้ว่าอุปสรรคความยุ่งยากนั้นอาจเป็นส่วนที่สำคัญของการเรียนรู้
@@ -936,24 +1083,29 @@ th:
                 ลงไปในดิน เป้าหมายที่นี่คือการเริ่มต้นการสร้างทักษะในการแปลงสถานการณ์จริงบนโลกให้เป็นเรื่องราวออนไลน์
                 รวมทั้งสามารถทำได้ในทางกลับกันอีกด้วย \r"
             Learn to Drag and Drop:
+              name: การจัดอันดับด้วยการลากและวาง
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             'Programming: Happy Maps':
+              name: 'การเขียนโปรแกรม: แผนที่สุดหรรษา'
               description_teacher: สิ่งที่เชื่อมโยงอัลกอริธึมไปยังการเขียนโปรแกรมนั้น
                 อาจใก้ลเคียงมากๆ ถ้านักเรียนเข้าใจความแตกต่างระหว่างการวางแผนว่าอะไรมาก่อนอะไรมาหลัง
                 และการเขียนโค้ดตามลำดับด้วยภาษาที่เหมาะสม กิจกรรมนี้จะช่วยให้นักเรียนได้รับประสบการณ์การอ่านและการเขียนโค้ดอย่างย่อๆ
             Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
               description_teacher: สำหรับปริศนาออนไลน์ชุดนี้ นักเรียนจะสร้างความเข้าใจเกี่ยวกับอัลกอริทีม
                 การตรวจแก้จุดบกพร่องหรือการดีบั๊ก รวมทั้งความสามารถในการใช้คอมพิวเตอร์ทั่วไป
                 โดยมีตัวละครจากเกม Angry Birds ซึ่งนักเรียนจะพัฒนาอัลกอริทึมที่เป็นขั้นเป็นตอนตามลำดับเพื่อที่จะพาเจ้านกไปจัดการเจ้าหมูนั่นโดยไม่ต้องชนกำแพงหรือลูกระเบิด
                 พร้อมทั้งผสมผสานการดีบั๊กปริศนาเข้าไปในขั้นตอนนี้เพื่อเพิ่มการฝึกฝนการแก้ปัญหาและการให้คิดอย่างมีวิจารณญาณ
             Going Places Safely:
+              name: 'พลเมืองดิจิทัล: ไปในแต่ละที่ได้อย่างปลอดภัย'
               description_teacher: ด้วยความร่วมมือกับ [r common-sense-media] บทเรียนนี้จะช่วยให้นักเรียนได้เรียนรู้ว่าเว็บไซต์จำนวนมากนั้นมีการขอข้อมูลที่เป็นส่วนตัว
                 และอธิบายถึงวิธีการที่จะจัดการกับคำขอดังกล่าวอย่างมีความรับผิดชอบ
                 ผู้เรียนยังพบอีกว่าพวกเขาสามารถท่องไปตามสถานที่น่าตื่นเต้นได้ในแบบออนไลน์
                 แต่พวกเขาต้องปฏิบัติตามกฎบางอย่างเพื่อที่จะคงไว้ซึ่งความปลอดภัย
             'Loops: Happy Loops':
+              name: 'ลูป: ลูปแสนสนุก'
               description_teacher: ลูปเป็นเครื่องมือในการเขียนโปรแกรม ที่มีประโยชน์และมีประสิทธิภาพมาก
                 เพื่อให้เข้าใจว่าลูปสามารถทำประโยชน์ได้มากเพียงใด ผู้เรียนจะต้องได้รับการผลักดันให้มีความต้องการวิธีการแก้ปัญหาที่สุดจะธรรมดานี้
             Loops in Collector:
@@ -967,6 +1119,7 @@ th:
                 โดยที่บทเรียนต่อปลั๊กบทก่อนหน้านี้ ลูปถูกนำมาใช้ในการเดินย้อนเขาวงกตและเก็บรวบรวมสมบัติ
                 ในตอนนี้ลูปกำลังถูกนำมาใช้ในการสร้างรูปแบบ ในตอนท้ายของด่่านนี้ ผู้เรียนจะได้รับโอกาสในการสร้างผลงานที่เป็นรุปภาพของเขาเองโดยการใช้ลูป
             'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
               description_teacher: อีเวนท์เป็นวิธีที่ยอดเยี่ยมในการเพิ่มความหลากหลายให้กับอัลกอริทึมที่เขียนไว้ล่วงหน้า
                 บางครั้งคุณต้องการให้โปรแกรมของคุณสามารถตอบสนองต่อผู้ใช้ได้งานได้อย่างเฉพาะเจาะจงตามที่ผู้ใช้งานต้องการ
                 นั่นคือการที่อีเวนท์มีไว้ใช้เพื่อทำอะไร
@@ -976,30 +1129,56 @@ th:
                 ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          name: หลักสูตร A-2017
         courseb-2017:
           title: คอร์ส B
           assignment_family_title: คอร์ส B
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+            (คล้ายกับหลักสูตร A แต่เด็กนักเรียนจะมีช่วงอายุที่แตกต่างกันมากขึ้น)
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'ไม่ย่อท้อ: สตีวี่และโปรเจกต์ยักษ์'
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
+            Learn to Drag and Drop:
+              name: การจัดอันดับด้วยการลากและวาง
+            Your Digital Footprint:
+              name: 'พลเมืองดิจิทัล: ดิจิทัลฟุตปรินต์ของฉัน'
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Collector:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
+            More Programming in Maze:
+              name: การเขียนโปรแกรมเพิ่มเติมในเขาวงกต
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          name: หลักสูตร B-2017
         coursec-2017:
           title: คอร์ส C
           assignment_family_title: คอร์ส C
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
           lessons:
+            Building a Foundation:
+              name: 'ไม่ย่อท้อ: สร้างฐานราก'
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
             Debugging in Maze:
               name: การหาจุดบกพร่องกับเขาวงกต
             'Real-life Algorithms: Paper Planes':
@@ -1008,16 +1187,54 @@ th:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Loops in Maze:
+              name: ลูปในเขาวงกต
             Loops in Harvester:
               name: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
+            Screen Out the Mean:
+              name: 'พลเมืองดิจิทัล: กันไว้ดีกว่าแก้'
+            Binary Bracelets:
+              name: 'อีกขั้นของการเขียนโปรแกรม: กำไลไบนารี่'
             Loops in Artist:
               name: ลูปกับศิลปิน
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
+          name: หลักสูตร C-2017
         coursed-2017:
           title: คอร์ส D
           assignment_family_title: คอร์ส D
+          description_short: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C ก่อนจะเน้นไปที่เรื่องอัลกอริทึม
+            ลูปซ้อนลูป การตรงตามเงื่อนไข และอีกมากมาย
+          description: ศึกษาแนวคิดใหม่ ๆ ในการเขียนโค้ด รวมถึงอัลกอริทึม ลูปซ้อนลูป,
+            While Loops, เงื่อนไขและเหตุการณ์ พร้อมดูรายละเอียดเบื้องต้นของพลเมืองดิจิทัลก่อนสร้างเกมที่เป็นของคุณเอง
+            หรือเรื่องราวที่คุณนำไปแชร์ได้
           lessons:
+            Introduction:
+              name: รายละเอียดเบื้องต้นของปริศนาออนไลน์
+              description_student: บทเรียนนี้จะให้คุณฝึกทักษะต่าง ๆ ที่ต้องใช้ประกอบหลักสูตรนี้
+              description_teacher: ในปริศนาชุดนี้ นักเรียนจะเริ่มต้นด้วยรายละเอียดเบื้องต้น  (หรือเป็นการทบทวนก็ได้โดยดูจากประสบการณ์ในห้องเรียนของคุณ)
+                ของพื้นที่ทำงานออนไลน์บน Code.org ซึ่งจะมีวิดีโออธิบายถึงฟังก์ชั่นพื้นฐานของพื้นที่ทำงาน
+                ที่ประกอบด้วยปุ่ม `เริ่ม`, `ตั้งค่าใหม่` และ `Step` ภายในวิดีโอยังพูดถึงเรื่องต่าง
+                ๆ ไม่ว่าจะเป็นการลากบล็อก Blockly การลบบล็อก Blockly และการต่อบล็อก
+                Blockly หลังจากนั้น นักเรียนจะได้ฝึกทักษะ _การจัดลำดับ_ และ _การดีบัก_
+                ในเขาวงกต ซึ่งภายในกิจกรรมนี้ นักเรียนจะได้เห็นปริศนาในรูปแบบใหม่
+                ๆ ไม่ว่าจะเป็นนักสะสม ศิลปิน และผู้เก็บเกี่ยวเมื่อนักเรียนได้เรียนเรื่องที่เป็นพื้นฐานมาก
+                ๆ ของ _ลูป_ แล้ว
+            'Algorithms: Graph Paper Programming':
+              name: 'การเขียนโปรแกรม: การเขียนโปรแกรมในกระดาษกราฟ'
+              description_student: ในบทเรียนนี้ คุณจะได้เขียนโปรแกรมเพื่อให้เพื่อนเป็นคนวาดรูป
+              description_teacher: '"การเขียนโปรแกรม" ให้คนหนึ่งเป็นคนวาดรูปนั้นคือจุดที่นักเรียนจะเริ่มต้นเข้าใจว่าจริง
+                ๆ แล้วการเขียนโค้ดเป็นเรื่องของอะไร โดยห้องเรียนจะเริ่มต้นด้วยการให้นักเรียนบอกให้นักเรียนคนอื่นๆ
+                ระบายสีสี่เหลี่ยมจัตุรัสที่อยู่บนกระดาษกราฟเพื่อวาดภาพให้เหมือนกับภาพที่มีอยู่มากที่สุด
+                หากมีเวลาเหลือ แนะนำให้บทเรียนนี้รวมภาพที่นักเรียนวาดขึ้นมาเองด้วย'
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
             Nested Loops:
               name: ลูปซ้อนลูป
             Nested Loops in Artist:
@@ -1027,30 +1244,91 @@ th:
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
             Conditionals in Bee:
+              name: การสร้างเงื่อนไขในบทเรียน "ผึ้ง"
               description_student: 'ตอนนี้ คุณก็เข้าใจเรื่องการใช้เงื่อนไขแล้ว ถึงเวลาที่จะโปรแกรมให้ผึ้งใช้เงื่อนไขเมื่อเก็บน้ำหวานและเกสรดอกไม้ '
+            Conditionals & Loops in Maze:
+              name: เงื่อนไขและลูปในเขาวงกต
             Conditionals & Loops in Farmer:
               name: เงื่อนไขและลูปกับเรื่องเกษตรกร
             Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์หรือเหตุการณ์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว
                 ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างเป็นเกมในเพลย์แลป!
             Nested Loops Project in Artist:
               name: ลูปซ้อนลูป ในเกม Frozen
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+          student_description: ศึกษาแนวคิดใหม่ ๆ ในการเขียนโค้ด รวมถึงอัลกอริทึม ลูปซ้อนลูป,
+            While Loops, เงื่อนไขและเหตุการณ์ พร้อมดูรายละเอียดเบื้องต้นของพลเมืองดิจิทัลก่อนสร้างเกมที่เป็นของคุณเอง
+            หรือเรื่องราวที่คุณนำไปแชร์ได้
         coursee-2017:
           title: คอร์ส E
           assignment_family_title: คอร์ส E
+          description_short: เนื้อหาจะครอบคลุมแนวคิดในหลักสูตร C และ D ก่อนจะเน้นไปที่เรื่องฟังก์ชั่น
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            extra_course_content:
+              display_name: เนื้อหาของหลักสูตรพิเศษ
           lessons:
+            'Algorithms: Tangrams':
+              name: 'อัลกอริทึม: แทนแกรม'
+            Introduction:
+              name: รายละเอียดเบื้องต้นของปริศนาออนไลน์
+            The Power of Words:
+              name: พลังของถ้อยคำ
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            Conditionals and Functions in Bee:
+              name: เงื่อนไขและฟังก์ชั่นในเกม "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            'Algorithms: Dice Race':
+              name: 'อัลกอริทึม: การแข่งลูกเต๋า'
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions in Farmer:
+              name: ฟังก์ชั่นในบทเรียน "เกษตรกร"
+            Determine the Concept:
+              name: ร่างแนวคิด
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
@@ -1064,15 +1342,52 @@ th:
         coursef-2017:
           title: คอร์ส F
           assignment_family_title: คอร์ส F
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
+            'Algorithms: Tangrams':
+              name: 'อัลกอริทึม: แทนแกรม'
+            Introduction:
+              name: รายละเอียดเบื้องต้นของปริศนาออนไลน์
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            Conditionals and Functions in Bee:
+              name: เงื่อนไขและฟังก์ชั่นในเกม "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
@@ -1130,27 +1445,72 @@ th:
         express-2017:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             Introduction:
               name: บทเกริ่นนำ
+            'Algorithms: Graph Paper Programming':
+              name: 'การเขียนโปรแกรม: การเขียนโปรแกรมในกระดาษกราฟ'
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops Project in Artist:
-              name: โครงการลูปซ้อนลูป ในเกมศิลปิน
+              name: โปรเจกต์ลูปซ้อนลูปในเกม "ศิลปิน"
             Internet:
               name: อินเทอร์เน็ต
             Digital Citizenship:
               name: พลเมืองดิจิทัล
+            Screen Out the Mean:
+              name: กันไว้ดีกว่าแก้
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
             Conditionals with Cards:
               name: เงื่อนไข
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
+            Conditionals & Loops in Maze:
+              name: เงื่อนไขและลูปในเขาวงกต
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Nested Loops Project in Frozen:
               name: ลูปซ้อนลูป ในเกม Frozen
+            'Common Sense Education: Screen Out the Mean':
+              name: 'พลเมืองดิจิทัล: กันไว้ดีกว่าแก้'
+            Conditional Loops in Maze:
+              name: เงื่อนไขและลูปในเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Nested Loops:
@@ -1165,12 +1525,26 @@ th:
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'ไม่ย่อท้อ: สตีวี่และโปรเจกต์ยักษ์'
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
+            Learn to Drag and Drop:
+              name: การจัดอันดับด้วยการลากและวาง
+            'Online Safety: Your Digital Footprint':
+              name: 'พลเมืองดิจิทัล: ดิจิทัลฟุตปรินต์ของฉัน'
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Collector:
               name: ใช้ลูปกับนักสะสม
             Loops in Artist:
               name: ลูปกับศิลปิน
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
             Spelling Bee:
@@ -1186,19 +1560,52 @@ th:
             cspSurvey:
               display_name: แบบสำรวจ
         e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            extra_course_content:
+              display_name: เนื้อหาของหลักสูตรพิเศษ
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops:
               name: ลูปซ้อนลูป
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Algorithms: Dice Race':
+              name: 'อัลกอริทึม: การแข่งลูกเต๋า'
             Conditionals:
               name: เงื่อนไข
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions in Farmer:
+              name: ฟังก์ชั่นในบทเรียน "เกษตรกร"
+            Determine the Concept:
+              name: ร่างแนวคิด
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Internet:
               name: อินเทอร์เน็ต
             Nested Loops in Bee:
@@ -1209,22 +1616,34 @@ th:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
         new-d:
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'อัลกอริทึม: การเขียนโปรแกรมในกระดาษกราฟ'
             Introduction:
               name: บทเกริ่นนำ
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
             Nested Loops:
               name: ลูปซ้อนลูป
             Nested Loops in Artist:
               name: ลูปซ้อนลูป ในเกมศิลปิน
             Nested Loops Project in Artist:
-              name: โครงการลูปซ้อนลูป ในเกมศิลปิน
+              name: โปรเจกต์ลูปซ้อนลูปในเกม "ศิลปิน"
+            'Algorithms: Relay Programming':
+              name: 'อัลกอริทึม: ฝึกเขียนโปรแกรม'
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
             Conditionals with Cards:
               name: เงื่อนไข
+            Conditionals in Bee:
+              name: การสร้างเงื่อนไขในบทเรียน "ผึ้ง"
+            Conditionals & Loops in Maze:
+              name: เงื่อนไขและลูปในเขาวงกต
             Digital Citizenship:
               name: พลเมืองดิจิทัล
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
             Building a Foundation:
@@ -1236,17 +1655,52 @@ th:
             Loops in Ice Age:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
         new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'อัลกอริทึม: การเขียนโปรแกรมในกระดาษกราฟ'
             Introduction:
               name: บทเกริ่นนำ
+            'Algorithms: Relay Programming':
+              name: 'อัลกอริทึม: ฝึกเขียนโปรแกรม'
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Building a Foundation:
               name: สร้างพื้นฐาน
             Nested Loops:
@@ -1258,41 +1712,107 @@ th:
             Sequences with Scrat:
               name: การจัดลำดับก่อนหลังกับ Scrat
         new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            extra_course_content:
+              display_name: เนื้อหาของหลักสูตรพิเศษ
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Algorithms: Dice Race':
+              name: 'อัลกอริทึม: การแข่งลูกเต๋า'
             Conditionals:
               name: เงื่อนไข
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Functions in Farmer:
+              name: ฟังก์ชั่นในบทเรียน "เกษตรกร"
+            Determine the Concept:
+              name: ร่างแนวคิด
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Internet:
               name: อินเทอร์เน็ต
         new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Algorithms: Tangrams':
+              name: 'อัลกอริทึม: แทนแกรม'
+            The Power of Words:
+              name: พลังของถ้อยคำ
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
         hero:
           title: 'ไมน์คราฟท์: การผจญภัยของฮีโร่'
           description: การกลับมาของไมน์คราฟท์ในชั่วโมงแห่งโค้ด ที่มาพร้อมกิจกรรมใหม่ล่าสุด!
@@ -1311,47 +1831,113 @@ th:
             cspSurvey:
               display_name: แบบสำรวจ
         course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            extra_course_content:
+              display_name: เนื้อหาของหลักสูตรพิเศษ
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops:
               name: ลูปซ้อนลูป
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Algorithms: Dice Race':
+              name: 'อัลกอริทึม: การแข่งลูกเต๋า'
             Introduction:
               name: บทเกริ่นนำ
             Conditionals:
               name: เงื่อนไข
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions in Farmer:
+              name: ฟังก์ชั่นในบทเรียน "เกษตรกร"
+            Determine the Concept:
+              name: ร่างแนวคิด
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Internet:
               name: อินเทอร์เน็ต
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
         course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Algorithms: Tangrams':
+              name: 'อัลกอริทึม: แทนแกรม'
             Introduction:
               name: บทเกริ่นนำ
+            The Power of Words:
+              name: พลังของถ้อยคำ
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
         csd6-old:
           lessons:
             Lists:
@@ -1401,6 +1987,7 @@ th:
           assignment_family_title: คอร์ส A
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
           lessons:
             'Debugging: Unspotted Bugs':
               name: บั๊กที่รอดหูรอดตาไป
@@ -1421,6 +2008,7 @@ th:
                 ลงไปในดิน เป้าหมายที่นี่คือการเริ่มต้นการสร้างทักษะในการแปลงสถานการณ์จริงบนโลกให้เป็นเรื่องราวออนไลน์
                 รวมทั้งสามารถทำได้ในทางกลับกันอีกด้วย \r"
             Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
@@ -1483,14 +2071,38 @@ th:
               name: สร้างพื้นฐาน
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Nested Loops:
               name: ลูปซ้อนลูป
             'Events: The Big Event':
               name: อีเวนท์ใหญ่
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) กับเกมเกษตรกร
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Conditionals in Bee:
               name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
             Programming in Maze:
@@ -1499,6 +2111,8 @@ th:
               name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':
               name: มาวนลูปกัน
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
             Nested Loops in Bee:
               name: ลูปซ้อนลูป ในเรื่องผึ้ง
             Nested Loops in Frozen:
@@ -1511,6 +2125,16 @@ th:
               name: ฟังก์ชั่นกับไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Screen Out the Mean:
+              name: กันไว้ดีกว่าแก้
+            Determine the Concept:
+              name: ร่างแนวคิด
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
+            The Power of Words:
+              name: พลังของถ้อยคำ
             For Loop Fun:
               name: สนุกกับ For ลูป
             Artist Binary:
@@ -1532,6 +2156,10 @@ th:
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
+            Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Loops in Collector:
@@ -1554,6 +2182,8 @@ th:
               name: สร้างพื้นฐาน
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
             Loops in Artist:
               name: วาดรูปร่างต่างๆ ด้วยลูป
             Nested Loops in Bee:
@@ -1566,6 +2196,8 @@ th:
               name: เงื่อนไข
             Conditionals in Bee:
               name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
+            Conditionals & Loops in Maze:
+              name: เงื่อนไขและลูปในเขาวงกต
             Digital Citizenship:
               name: พลเมืองดิจิทัล
             Artist Binary:
@@ -1580,6 +2212,8 @@ th:
               name: การเขียนกระดาษกราฟ
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
+            Introduction to Online Puzzles:
+              name: รายละเอียดเบื้องต้นของปริศนาออนไลน์
             Nested Loops in Maze:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
           student_description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested
@@ -1587,6 +2221,8 @@ th:
             นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
         coursec-2018:
           assignment_family_title: คอร์ส C
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
           lessons:
             Building a Foundation:
               name: สร้างพื้นฐาน
@@ -1600,10 +2236,16 @@ th:
               name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':
               name: มาวนลูปกัน
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
             Loops in Harvester:
               name: เก็บเกี่ยวพืชผลต่างๆ ด้วยการใช้ลูป
             'Events: The Big Event':
               name: อีเวนท์ใหญ่
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
+            Screen Out the Mean:
+              name: กันไว้ดีกว่าแก้
         csd6-2018:
           lesson_groups:
             cspSurvey:
@@ -1613,6 +2255,11 @@ th:
               name: ฟังก์ชันกับพารามิเตอร์
         coursee-2018:
           assignment_family_title: คอร์ส E
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            extra_course_content:
+              display_name: เนื้อหาของหลักสูตรพิเศษ
           lessons:
             'Programming: My Robotic Friends':
               name: เพื่อนหุ่นยนต์
@@ -1628,10 +2275,26 @@ th:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Algorithms: Dice Race':
+              name: 'อัลกอริทึม: การแข่งลูกเต๋า'
             Introduction:
               name: บทเกริ่นนำ
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            Determine the Concept:
+              name: ร่างแนวคิด
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Internet:
               name: อินเทอร์เน็ต
             Conditionals with Cards:
@@ -1642,6 +2305,11 @@ th:
               name: ฟังก์ชั่นในไมน์คราฟท์
         coursef-2018:
           assignment_family_title: คอร์ส F
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+          lesson_groups:
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             'Programming: My Robotic Friends':
               name: เพื่อนหุ่นยนต์
@@ -1657,12 +2325,36 @@ th:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Algorithms: Tangrams':
+              name: 'อัลกอริทึม: แทนแกรม'
             Introduction:
               name: บทเกริ่นนำ
+            The Power of Words:
+              name: พลังของถ้อยคำ
+            Variables in Artist:
+              name: ตัวแปรในบทเรียนชื่อ "ศิลปิน"
+            Variables in Play Lab:
+              name: ตัวแปรในเพลย์แลป
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Functions in Bee:
+              name: ฟังก์ชั่นในบทเรียน "ผึ้ง"
+            Functions with Parameters in Artist:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ศิลปิน"
+            Functions with Parameters in Bee:
+              name: ฟังก์ชั่นและพารามิเตอร์ในเกม "ผึ้ง"
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Conditionals with Cards:
               name: เงื่อนไข
             Functions in Minecraft:
@@ -1788,6 +2480,10 @@ th:
               name: สตีวี่และโครงการใหญ่
             'Real-life Algorithms: Plant a Seed':
               name: 'อัลกอริธีมในชีวิตจริง: หว่านเมล็ด'
+            Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
             Loops in Collector:
               name: ลูปไปกับลอเรล
             Spelling Bee:
@@ -1858,6 +2554,8 @@ th:
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
           student_description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursef-2019:
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
           lesson_groups:
             csf_variables:
               display_name: ตัวแปร
@@ -1867,13 +2565,19 @@ th:
               display_name: อินเทอร์เน็ต
             csf_digcit:
               display_name: พลเมืองดิจิทัล
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
@@ -1884,14 +2588,28 @@ th:
               name: เงื่อนไข
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
+            The Power of Words:
+              name: พลังของถ้อยคำ
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             The Artist:
               name: ศิลปิน
             Nested Loops in the Maze:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
             Internet:
               name: อินเทอร์เน็ต
         dance-low:
@@ -1913,13 +2631,28 @@ th:
               display_name: เงื่อนไข
             csf_digcit:
               display_name: พลเมืองดิจิทัล
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             'Algorithms: Graph Paper Programming':
               name: การเขียนกระดาษกราฟ
+            Introduction to Online Puzzles:
+              name: รายละเอียดเบื้องต้นของปริศนาออนไลน์
+              description_student: บทเรียนนี้จะให้คุณฝึกทักษะต่าง ๆ ที่ต้องใช้ประกอบหลักสูตรนี้
+              description_teacher: ในปริศนาชุดนี้ นักเรียนจะเริ่มต้นด้วยรายละเอียดเบื้องต้น  (หรือเป็นการทบทวนก็ได้โดยดูจากประสบการณ์ในห้องเรียนของคุณ)
+                ของพื้นที่ทำงานออนไลน์บน Code.org ซึ่งจะมีวิดีโออธิบายถึงฟังก์ชั่นพื้นฐานของพื้นที่ทำงาน
+                ที่ประกอบด้วยปุ่ม `เริ่ม`, `ตั้งค่าใหม่` และ `Step` ภายในวิดีโอยังพูดถึงเรื่องต่าง
+                ๆ ไม่ว่าจะเป็นการลากบล็อก Blockly การลบบล็อก Blockly และการต่อบล็อก
+                Blockly หลังจากนั้น นักเรียนจะได้ฝึกทักษะ _การจัดลำดับ_ และ _การดีบัก_
+                ในเขาวงกต ซึ่งภายในกิจกรรมนี้ นักเรียนจะได้เห็นปริศนาในรูปแบบใหม่
+                ๆ ไม่ว่าจะเป็นนักสะสม ศิลปิน และผู้เก็บเกี่ยวเมื่อนักเรียนได้เรียนเรื่องที่เป็นพื้นฐานมาก
+                ๆ ของ _ลูป_ แล้ว
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
             Loops in Ice Age:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
             Loops in Artist:
@@ -1941,8 +2674,12 @@ th:
               name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
             Digital Citizenship:
               name: พลเมืองดิจิทัล
+            Build a Play Lab Game:
+              name: สร้างเกมเพลย์แลป
             Artist Binary:
               name: ศิลปิน Binary
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
             Dance Party:
               name: Dance Party
           student_description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested
@@ -1956,13 +2693,19 @@ th:
               display_name: ลูปซ้อนลูป
             csf_functions:
               display_name: ฟังก์ชัน
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops:
@@ -1971,10 +2714,22 @@ th:
               name: ลูปซ้อนลูป กับเกม Frozen
             Conditionals with Cards:
               name: เงื่อนไข
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            Determine the Concept:
+              name: ร่างแนวคิด
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Internet:
               name: อินเทอร์เน็ต
             Nested Loops in Bee:
@@ -1983,6 +2738,8 @@ th:
               name: ลูปซ้อนลูป ในเกมศิลปิน
             Nested Loops in Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
         express-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
@@ -2000,6 +2757,8 @@ th:
             csf_for_loops:
               display_name: การวนรอบ
           lessons:
+            'Algorithms: Graph Paper Programming':
+              name: 'อัลกอริทึม: การเขียนโปรแกรมในกระดาษกราฟ'
             Programming in Maze:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Relay Programming:
@@ -2008,6 +2767,8 @@ th:
               name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
             Nested Loops in Bee:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
             Nested Loops in Frozen:
@@ -2020,18 +2781,42 @@ th:
               name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
             Conditionals & Loops in Harvester:
               name: การเก็บเกี่ยวผลิตผลกับเงื่อนไข
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            Screen Out the Mean:
+              name: กันไว้ดีกว่าแก้
+            Determine the Concept:
+              name: ร่างแนวคิด
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
+            The Power of Words:
+              name: พลังของถ้อยคำ
             For Loop Fun:
               name: สนุกกับ For ลูป
             For Loops in Bee:
               name: ลูป For ในเรื่องผึ้ง
+            Explore Project Ideas:
+              name: สำรวจไอเดียของโปรเจกต์
+            The Design Process:
+              name: ขั้นตอนการออกแบบ
+            Build Your Project:
+              name: สร้างโปรเจกต์ของคุณเอง
+            Revise Your Project:
+              name: ทบทวนโปรเจกต์ของคุณ
+            Present Your Project:
+              name: นำเสนอโปรเจกต์ของคุณ
             Artist Binary:
               name: ศิลปินศูนย์หนึ่ง
             Internet:
               name: อินเทอร์เน็ต
+            Build A Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
             Dance Party:
               name: Dance Party
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
@@ -2052,6 +2837,8 @@ th:
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
           student_description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
         coursec-2019:
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -2059,6 +2846,8 @@ th:
               display_name: ลูป
             csf_events:
               display_name: เหตุการณ์
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             Programming in Maze:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
@@ -2070,12 +2859,20 @@ th:
               name: การสร้างศิลปะด้วยโค้ด
             'Loops: Getting Loopy':
               name: 'ลูป: มาวนลูปกัน'
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
             Loops in Artist:
               name: ลูปกับศิลปิน
             Loops in Harvester:
               name: เก็บเกี่ยวพืชผลต่างๆ ด้วยการใช้ลูป
             'Events: The Big Event':
               name: อีเวนท์ใหญ่
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
+            Screen Out the Mean:
+              name: กันไว้ดีกว่าแก้
+            'End of Course Project: Create a Play Lab Game':
+              name: โปรเจกต์ปิดท้ายหลักสูตร
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2085,6 +2882,7 @@ th:
         coursea-2019:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -2099,6 +2897,7 @@ th:
                 อาจใก้ลเคียงมากๆ ถ้านักเรียนเข้าใจความแตกต่างระหว่างการวางแผนว่าอะไรมาก่อนอะไรมาหลัง
                 และการเขียนโค้ดตามลำดับด้วยภาษาที่เหมาะสม กิจกรรมนี้จะช่วยให้นักเรียนได้รับประสบการณ์การอ่านและการเขียนโค้ดอย่างย่อๆ
             Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
               description_teacher: สำหรับปริศนาออนไลน์ชุดนี้ นักเรียนจะสร้างความเข้าใจเกี่ยวกับอัลกอริทีม
                 การตรวจแก้จุดบกพร่องหรือการดีบั๊ก รวมทั้งความสามารถในการใช้คอมพิวเตอร์ทั่วไป
                 โดยมีตัวละครจากเกม Angry Birds ซึ่งนักเรียนจะพัฒนาอัลกอริทึมที่เป็นขั้นเป็นตอนตามลำดับเพื่อที่จะพาเจ้านกไปจัดการเจ้าหมูนั่นโดยไม่ต้องชนกำแพงหรือลูกระเบิด
@@ -2135,6 +2934,7 @@ th:
                 โดยที่บทเรียนต่อปลั๊กบทก่อนหน้านี้ ลูปถูกนำมาใช้ในการเดินย้อนเขาวงกตและเก็บรวบรวมสมบัติ
                 ในตอนนี้ลูปกำลังถูกนำมาใช้ในการสร้างรูปแบบ ในตอนท้ายของด่่านนี้ ผู้เรียนจะได้รับโอกาสในการสร้างผลงานที่เป็นรุปภาพของเขาเองโดยการใช้ลูป
             Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
@@ -2159,8 +2959,12 @@ th:
           lessons:
             Move It, Move It:
               name: ขยับหน่อยสิ ขยับหน่อย
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Ice Age:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
             Loops in Collector:
@@ -2197,14 +3001,22 @@ th:
               name: 'การดีบั๊ก: กับเรื่องบั๊กที่รอดหูรอดตาไป'
             Move It, Move It:
               name: ขยับหน่อยสิ ขยับหน่อย
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Collector:
               name: ลูปไปกับลอเรล
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
             Events in Play Lab:
               name: อีเวนต์กับเพลย์แลป
             Spelling Bee:
               name: ผึ้งนักสะกดคำ
+            Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
             Programming in Maze:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Programming in Harvester:
@@ -2318,22 +3130,38 @@ th:
           lessons:
             Conditionals with Cards:
               name: เงื่อนไข
+            'Programming: My Robotic Friends':
+              name: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Sequence in Maze:
               name: การจัดลำดับก่อนหลังกับเขาวงกต
             Building a Foundation:
               name: สร้างพื้นฐาน
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee/Zombie:
               name: ลูปซ้อนลูป ในเกมผึ้งและซอมบี้
             Nested Loops with Frozen:
               name: ลูปซ้อนลูป กับเกม Frozen
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            Determine the Concept:
+              name: ร่างแนวคิด
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2416,6 +3244,10 @@ th:
           lessons:
             Graph Paper Programming:
               name: การเขียนกระดาษกราฟ
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
         csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
@@ -2484,6 +3316,8 @@ th:
             csf_events:
               display_name: เหตุการณ์
           lessons:
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Loops in Ice Age:
@@ -2543,6 +3377,8 @@ th:
               name: บทเกริ่นนำ
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            'Loops: My Loopy Robotic Friends':
+              name: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops:
@@ -2593,6 +3429,8 @@ th:
           lessons:
             Conditionals:
               name: เงื่อนไข
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -2603,6 +3441,8 @@ th:
               display_name: ลูปซ้อนลูป
             csf_functions:
               display_name: ฟังก์ชัน
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             Conditionals with Cards:
               name: เงื่อนไข
@@ -2612,10 +3452,16 @@ th:
               name: ลูปซ้อนลูป ในเกมศิลปิน
             Nested Loops in Frozen:
               name: ลูปซ้อนลูป ในเกม Frozen
+            'Functions: Songwriting':
+              name: 'ฟังก์ชั่น: เขียนเพลง'
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -2641,6 +3487,8 @@ th:
           lessons:
             Conditionals:
               name: เงื่อนไข
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2654,6 +3502,8 @@ th:
           lessons:
             Conditionals:
               name: เงื่อนไข
+            'Events: The Big Event':
+              name: 'เหตุการณ์: เหตุการณ์สำคัญ'
         csp7-pilot:
           lesson_groups:
             required:
@@ -2719,6 +3569,7 @@ th:
         coursea-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -2734,6 +3585,7 @@ th:
                 ผู้เรียนยังพบอีกว่าพวกเขาสามารถท่องไปตามสถานที่น่าตื่นเต้นได้ในแบบออนไลน์
                 แต่พวกเขาต้องปฏิบัติตามกฎบางอย่างเพื่อที่จะคงไว้ซึ่งความปลอดภัย
             Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
@@ -2805,6 +3657,8 @@ th:
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         coursec-2020:
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -2812,17 +3666,27 @@ th:
               display_name: ลูป
             csf_events:
               display_name: เหตุการณ์
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
+            Screen Out the Mean:
+              name: กันไว้ดีกว่าแก้
             Programming in Maze:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Debugging in Maze:
               name: การหาจุดบกพร่องกับเขาวงกต
             Programming in Artist:
               name: การสร้างศิลปะด้วยโค้ด
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
             Loops in Harvester:
               name: เก็บเกี่ยวพืชผลต่างๆ ด้วยการใช้ลูป
             'Events: The Big Event':
               name: อีเวนท์ใหญ่
+            Build a Flappy Game:
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
+            'End of Course Project: Create a Play Lab Game':
+              name: โปรเจกต์ปิดท้ายหลักสูตร
         coursed-2020:
           description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops)
             ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว
@@ -2836,13 +3700,30 @@ th:
               display_name: เงื่อนไข
             csf_digcit:
               display_name: พลเมืองดิจิทัล
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             'Algorithms: Graph Paper Programming':
               name: การเขียนกระดาษกราฟ
+            Introduction to Online Puzzles:
+              name: รายละเอียดเบื้องต้นของปริศนาออนไลน์
+              description_student: บทเรียนนี้จะให้คุณฝึกทักษะต่าง ๆ ที่ต้องใช้ประกอบหลักสูตรนี้
+              description_teacher: ในปริศนาชุดนี้ นักเรียนจะเริ่มต้นด้วยรายละเอียดเบื้องต้น  (หรือเป็นการทบทวนก็ได้โดยดูจากประสบการณ์ในห้องเรียนของคุณ)
+                ของพื้นที่ทำงานออนไลน์บน Code.org ซึ่งจะมีวิดีโออธิบายถึงฟังก์ชั่นพื้นฐานของพื้นที่ทำงาน
+                ที่ประกอบด้วยปุ่ม `เริ่ม`, `ตั้งค่าใหม่` และ `Step` ภายในวิดีโอยังพูดถึงเรื่องต่าง
+                ๆ ไม่ว่าจะเป็นการลากบล็อก Blockly การลบบล็อก Blockly และการต่อบล็อก
+                Blockly หลังจากนั้น นักเรียนจะได้ฝึกทักษะ _การจัดลำดับ_ และ _การดีบัก_
+                ในเขาวงกต ซึ่งภายในกิจกรรมนี้ นักเรียนจะได้เห็นปริศนาในรูปแบบใหม่
+                ๆ ไม่ว่าจะเป็นนักสะสม ศิลปิน และผู้เก็บเกี่ยวเมื่อนักเรียนได้เรียนเรื่องที่เป็นพื้นฐานมาก
+                ๆ ของ _ลูป_ แล้ว
             Relay Programming:
               name: โปรแกรมการถ่ายทอดข้อมูล
             Debugging in Collector:
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            Events in Bounce:
+              name: มาทำความรู้จักกับ "เหตุการณ์"
+            Build a Star Wars Game:
+              name: สร้างเกมสตาร์วอร์
             Loops in Ice Age:
               name: ใช้ลูปกับยุคน้ำแข็ง(Ice Age)
             Loops in Artist:
@@ -2864,6 +3745,8 @@ th:
               name: พลเมืองดิจิทัล
             Dance Party:
               name: Dance Party
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
           student_description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested
             loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events)
             นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
@@ -2875,6 +3758,8 @@ th:
               display_name: ลูปซ้อนลูป
             csf_functions:
               display_name: ฟังก์ชัน
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             Nested Loops in Bee:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
@@ -2886,7 +3771,11 @@ th:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
         coursef-2020:
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -2894,6 +3783,8 @@ th:
               display_name: ตัวแปร
             csf_for_loops:
               display_name: การวนรอบ
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             Functions in Minecraft:
               name: ฟังก์ชั่นในไมน์คราฟท์
@@ -2905,6 +3796,10 @@ th:
               name: ลูป For ในเรื่องผึ้ง
             Internet:
               name: อินเทอร์เน็ต
+            The Power of Words:
+              name: พลังของถ้อยคำ
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
         express-2020:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
@@ -2921,19 +3816,27 @@ th:
               display_name: ตัวแปร
             csf_for_loops:
               display_name: การวนรอบ
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           lessons:
             Dance Party:
               name: Dance Party
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
             Debugging in Maze:
               name: การหาจุดบกพร่องกับเขาวงกต
             Programming in Artist:
               name: การเขียนโปรแกรมในเรื่องศิลปิน
+            Loops with Rey and BB-8:
+              name: ลูปกับเรย์และ BB-8
             Loops in Artist:
               name: ลูปกับศิลปิน
             Nested Loops in Bee:
               name: ลูปซ้อนลูป ในเรื่องผึ้ง
             Nested Loops in Frozen:
               name: ลูปซ้อนลูป ในเกม Frozen
+            Conditionals in Bee:
+              name: การสร้างเงื่อนไขในบทเรียน "ผึ้ง"
             While Loops in Farmer:
               name: ลูปขณะที่ (while loops) ในเกมเกษตรกร
             Conditionals & Loops in Harvester:
@@ -2942,8 +3845,14 @@ th:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               name: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
+            Functions in Artist:
+              name: ฟังก์ชั่นในบทเรียน "ศิลปิน"
             For Loops in Bee:
-              name: ลูป For ในเรื่องผึ้ง
+              name: For Loops ในเกมผึ้ง
+            For Loops in Artist:
+              name: For Loops ในเกม "ศิลปิน"
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
             Programming with Angry Birds:
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Creating Art with Code:
@@ -2974,6 +3883,7 @@ th:
               display_name: เหตุการณ์
           lessons:
             Learn to Drag and Drop:
+              name: เรียนรู้วิธีการลากและวาง
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
@@ -2981,6 +3891,8 @@ th:
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
+            Programming in Maze:
+              name: การเขียนโปรแกรมในเขาวงกต
             Programming with Rey and BB-8:
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             Spelling Bee:
@@ -3107,6 +4019,8 @@ th:
           lessons:
             Virus Simulation for Code Bytes:
               name: การเข้ารหัสการจำลอง
+            End of Course Project:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
           lesson_groups:
             introduction:
               display_name: บทเกริ่นนำ
@@ -3191,12 +4105,16 @@ th:
         coursea-2021:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
           lessons:
             Learn to Drag and Drop:
+              key: เรียนรู้วิธีการลากและวาง
+              name: เรียนรู้วิธีการลากและวาง
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             'Programming: Happy Maps':
+              key: 'การเขียนโปรแกรม: แผนที่สุดหรรษา'
               name: แผนที่แห่งความสุข
               description_teacher: สิ่งที่เชื่อมโยงอัลกอริธึมไปยังการเขียนโปรแกรมนั้น
                 อาจใก้ลเคียงมากๆ ถ้านักเรียนเข้าใจความแตกต่างระหว่างการวางแผนว่าอะไรมาก่อนอะไรมาหลัง
@@ -3209,6 +4127,7 @@ th:
               key: การเขียนโปรแกรมกับเรย์และบีบี-8
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
             'Loops: Happy Loops':
+              key: 'ลูป: ลูปแสนสนุก'
               description_teacher: ลูปเป็นเครื่องมือในการเขียนโปรแกรม ที่มีประโยชน์และมีประสิทธิภาพมาก
                 เพื่อให้เข้าใจว่าลูปสามารถทำประโยชน์ได้มากเพียงใด ผู้เรียนจะต้องได้รับการผลักดันให้มีความต้องการวิธีการแก้ปัญหาที่สุดจะธรรมดานี้
             Loops in Ice Age:
@@ -3226,6 +4145,7 @@ th:
                 โดยที่บทเรียนต่อปลั๊กบทก่อนหน้านี้ ลูปถูกนำมาใช้ในการเดินย้อนเขาวงกตและเก็บรวบรวมสมบัติ
                 ในตอนนี้ลูปกำลังถูกนำมาใช้ในการสร้างรูปแบบ ในตอนท้ายของด่่านนี้ ผู้เรียนจะได้รับโอกาสในการสร้างผลงานที่เป็นรุปภาพของเขาเองโดยการใช้ลูป
             'Events: The Big Event':
+              key: 'เหตุการณ์: เหตุการณ์สำคัญ'
               description_teacher: อีเวนท์เป็นวิธีที่ยอดเยี่ยมในการเพิ่มความหลากหลายให้กับอัลกอริทึมที่เขียนไว้ล่วงหน้า
                 บางครั้งคุณต้องการให้โปรแกรมของคุณสามารถตอบสนองต่อผู้ใช้ได้งานได้อย่างเฉพาะเจาะจงตามที่ผู้ใช้งานต้องการ
                 นั่นคือการที่อีเวนท์มีไว้ใช้เพื่อทำอะไร
@@ -3233,6 +4153,8 @@ th:
               key: อีเวนต์กับเพลย์แลป
               description_teacher: ในกิจกรรมออนไลน์นั้น ผู้เรียนจะมีโอกาสที่จะเรียนรู้วิธีการใช้อีเวนท์ในส่วนของเพลย์แลปและในการนำทักษะการเขียนโค้ดที่พวกเขาได้เรียนรู้ทั้งหมดมาปรับใช้งานเพื่อที่จะสร้างเกมภาพเคลื่อนไหว
                 ถึงเวลาที่จะใช้ความคิดสร้างสรรค์และสร้างอะไรที่เป็นเรื่องราวในเพลย์แลป!
+            lesson-1:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -3240,6 +4162,8 @@ th:
               display_name: ลูป
             csf_events:
               display_name: เหตุการณ์
+            lessonGroup-5:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         courseb-2021:
@@ -3255,6 +4179,7 @@ th:
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย
             Programming in Maze:
+              key: การเขียนโปรแกรมในเขาวงกต
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Programming in Harvester:
               name: การเขียนโปรแกรมไปกับเกษตรกรผู้เก็บเกี่ยว
@@ -3270,11 +4195,14 @@ th:
             Loops in Artist:
               key: ลูปกับศิลปิน
             'Events: The Big Event':
+              key: 'เหตุการณ์: เหตุการณ์สำคัญ'
               description_teacher: อีเวนท์เป็นวิธีที่ยอดเยี่ยมในการเพิ่มความหลากหลายให้กับอัลกอริทึมที่เขียนไว้ล่วงหน้า
                 บางครั้งคุณต้องการให้โปรแกรมของคุณสามารถตอบสนองต่อผู้ใช้ได้งานได้อย่างเฉพาะเจาะจงตามที่ผู้ใช้งานต้องการ
                 นั่นคือการที่อีเวนท์มีไว้ใช้เพื่อทำอะไร
             Events in Play Lab:
               key: อีเวนต์กับเพลย์แลป
+            lesson-1:
+              name: โปรเจกต์ปิดท้ายหลักสูตร
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -3282,11 +4210,18 @@ th:
               display_name: ลูป
             csf_events:
               display_name: เหตุการณ์
+            lessonGroup-6:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         coursec-2021:
+          description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ
+            เรื่องราวและเกมของคุณเอง
           lessons:
+            'Programming: My Robotic Friends':
+              key: 'การเขียนโปรแกรม: หุ่นยนต์เพื่อนรัก'
             Programming in Maze:
+              key: การเขียนโปรแกรมในเขาวงกต
               name: การเขียนโปรแกรม กับเจ้านกขี้โมโห (Angry Birds)
             Debugging in Maze:
               key: การหาจุดบกพร่องกับเขาวงกต
@@ -3294,13 +4229,24 @@ th:
             Programming in Artist:
               key: การเขียนโปรแกรมในเรื่องศิลปิน
               name: การสร้างศิลปะด้วยโค้ด
+            'Loops: My Loopy Robotic Friends':
+              key: 'ลูป: เพื่อนหุ่นยนต์จอมซ่า'
+            Loops with Rey and BB-8:
+              key: ลูปกับเรย์และ BB-8
+              name: ลูปกับเรย์และ BB-8
             Loops in Harvester:
               key: ลูปต่างๆที่ใช้กับเรื่องเกษตรกร
               name: เก็บเกี่ยวพืชผลต่างๆ ด้วยการใช้ลูป
             'Events: The Big Event':
+              key: 'เหตุการณ์: เหตุการณ์สำคัญ'
               name: อีเวนท์ใหญ่
+            Build a Flappy Game:
+              key: สร้างเกมนกน้อยตะลุยโลกกว้าง
+              name: สร้างเกมนกน้อยตะลุยโลกกว้าง
             Events in Play Lab:
               key: อีเวนต์กับเพลย์แลป
+            'End of Course Project: Create a Play Lab Game':
+              name: โปรเจกต์ปิดท้ายหลักสูตร
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -3308,19 +4254,32 @@ th:
               display_name: ลูป
             csf_events:
               display_name: เหตุการณ์
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
         coursed-2021:
           description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops)
             ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว
             ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
           lessons:
             'Algorithms: Graph Paper Programming':
+              key: 'อัลกอริทึม: การเขียนโปรแกรมในกระดาษกราฟ'
               name: การเขียนกระดาษกราฟ
+            Introduction to Online Puzzles:
+              key: รายละเอียดเบื้องต้นของปริศนาออนไลน์
+              name: รายละเอียดเบื้องต้นของปริศนาออนไลน์
+              description_student: บทเรียนนี้จะให้คุณฝึกทักษะต่าง ๆ ที่ต้องใช้ประกอบหลักสูตรนี้
             Relay Programming:
               key: โปรแกรมการถ่ายทอดข้อมูล
               name: โปรแกรมการถ่ายทอดข้อมูล
             Debugging in Collector:
               key: 'การดีบั๊ก: กับเรื่องนักสะสม'
               name: 'การดีบั๊ก: กับเรื่องนักสะสม'
+            Events in Bounce:
+              key: มาทำความรู้จักกับ "เหตุการณ์"
+              name: มาทำความรู้จักกับ "เหตุการณ์"
+            Build a Star Wars Game:
+              key: สร้างเกมสตาร์วอร์
+              name: สร้างเกมสตาร์วอร์
             Dance Party:
               key: Dance Party
               name: Dance Party
@@ -3337,6 +4296,7 @@ th:
               key: เงื่อนไข
               name: เงื่อนไข
             Conditionals in Bee:
+              key: การสร้างเงื่อนไขในบทเรียน "ผึ้ง"
               name: เงื่อนไข (If/Else) กับเรื่องผึ้ง
               description_student: 'ตอนนี้ คุณก็เข้าใจเรื่องการใช้เงื่อนไขแล้ว ถึงเวลาที่จะโปรแกรมให้ผึ้งใช้เงื่อนไขเมื่อเก็บน้ำหวานและเกสรดอกไม้ '
             While Loops in Farmer:
@@ -3348,6 +4308,11 @@ th:
             Artist Binary:
               key: ศิลปินศูนย์หนึ่ง
               name: ศิลปิน Binary
+            End of Course Project:
+              key: โปรเจกต์ปิดท้ายหลักสูตร
+              name: โปรเจกต์ปิดท้ายหลักสูตร
+            lesson-1:
+              name: พลังของถ้อยคำ
           lesson_groups:
             csf_events:
               display_name: เหตุการณ์
@@ -3357,6 +4322,8 @@ th:
               display_name: เงื่อนไข
             csf_digcit:
               display_name: พลเมืองดิจิทัล
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
             lessonGroup-6:
               display_name: พลเมืองดิจิทัล
           student_description: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested
@@ -3375,12 +4342,19 @@ th:
             Nested Loops in Frozen:
               key: ลูปซ้อนลูป ในเกม Frozen
               name: ลูปซ้อนลูป กับเกม Frozen
+            'Functions: Songwriting':
+              key: 'ฟังก์ชั่น: เขียนเพลง'
             Functions in Minecraft:
               key: ฟังก์ชั่นในไมน์คราฟท์
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions in Harvester:
               key: ฟังก์ชั่นต่างๆ ที่ใช้กับเรื่องเกษตรกร
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+            Functions in Artist:
+              key: ฟังก์ชั่นในบทเรียน "ศิลปิน"
+            End of Course Project:
+              key: โปรเจกต์ปิดท้ายหลักสูตร
+              name: โปรเจกต์ปิดท้ายหลักสูตร
           lesson_groups:
             ramp_up:
               display_name: ลูปซ้อนลูป
@@ -3390,13 +4364,20 @@ th:
               display_name: เงื่อนไข
             csf_functions:
               display_name: ฟังก์ชัน
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
         coursef-2021:
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน
+            ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
           lessons:
             Functions in Minecraft:
               key: ฟังก์ชั่นในไมน์คราฟท์
               name: ฟังก์ชั่นในไมน์คราฟท์
             Nested Loops in the Maze:
               name: ลูปซ้อนลูป ในเกมเขาวงกต
+            The Power of Words:
+              key: พลังของถ้อยคำ
+              name: พลังของถ้อยคำ
             Internet:
               key: อินเทอร์เน็ต
               name: อินเทอร์เน็ต
@@ -3404,8 +4385,15 @@ th:
               key: สนุกกับ For ลูป
               name: สนุกกับ For ลูป
             For Loops in Bee:
-              key: ลูป For ในเรื่องผึ้ง
+              key: For Loops ในเกมผึ้ง
               name: ลูป For ในเรื่องผึ้ง
+            For Loops in Artist:
+              key: For Loops ในเกม "ศิลปิน"
+            End of Course Project:
+              key: โปรเจกต์ปิดท้ายหลักสูตร
+              name: โปรเจกต์ปิดท้ายหลักสูตร
+            lesson-2:
+              name: พลังของถ้อยคำ
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -3413,6 +4401,8 @@ th:
               display_name: การวนรอบ
             csf_for_loops:
               display_name: การวนรอบ
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
             lessonGroup-8:
               display_name: ตัวแปร
             lessonGroup-9:
@@ -3434,6 +4424,9 @@ th:
             Creating Art with Code:
               key: การสร้างศิลปะด้วยโค้ด
               name: การสร้างศิลปะด้วยโค้ด
+            Loops with Rey and BB-8:
+              key: ลูปกับเรย์และ BB-8
+              name: ลูปกับเรย์และ BB-8
             Nested Loops in Maze:
               key: ลูปซ้อนลูป ในเกมเขาวงกต
               name: ลูปซ้อนลูป ในเกมเขาวงกต
@@ -3459,6 +4452,9 @@ th:
             For Loops with Bee:
               key: ลูป For ในเรื่องผึ้ง
               name: ลูป For ในเรื่องผึ้ง
+            End of Course Project:
+              key: โปรเจกต์ปิดท้ายหลักสูตร
+              name: โปรเจกต์ปิดท้ายหลักสูตร
             lesson-1:
               name: Dance Party
           lesson_groups:
@@ -3472,6 +4468,10 @@ th:
               display_name: ตัวแปร
             csf_for_loops:
               display_name: การวนรอบ
+            end_of_course_project:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            lessonGroup-9:
+              display_name: เหตุการณ์
           student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         pre-express-2021:
@@ -3479,6 +4479,8 @@ th:
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
           lessons:
             Learn to Drag and Drop:
+              key: เรียนรู้วิธีการลากและวาง
+              name: เรียนรู้วิธีการลากและวาง
               description_teacher: บทเรียนนี้จะช่วยให้นักเรียนได้เห็นภาพถึงสิ่งที่พวกเขาจะได้พบเจอเมื่อพวกเขามุ่งหน้าไปใช้ห้องปฏิบัติการคอมพิวเตอร์เป็นครั้งแรก
                 มันเริ่มต้นด้วยการสนทนาสั้นๆแนะนำมารยาทในห้องปฏิบัติการคอมพิวเตอร์
                 แล้วต่อด้วยการใช้คอมพิวเตอร์เพื่อทำปริศนาออนไลน์ให้เสร็จสมบูรณ์เรียบร้อย

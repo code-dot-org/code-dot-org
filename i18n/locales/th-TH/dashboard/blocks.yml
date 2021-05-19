@@ -1578,13 +1578,6 @@ th:
         text: x พิกัดของ {SPRITE}
       Mikelab_yLocationOf:
         text: พิกัด y ของ {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': ตาข่าย
-            '"border"': เส้นขอบ
-            '"row"': แถว
-            '"random"': สุ่ม
       RyanLab_moveForward:
         text: ไปข้างหน้า
       RyanLab_turnLeft:

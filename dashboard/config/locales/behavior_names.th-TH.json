@@ -3,8 +3,7 @@
     "data": {
       "behavior_names": {
         "outbreak1": {
-          "recovering": "การรักษาตัว",
-          "wandering": "เคลื่อนที่"
+          "recovering": "การรักษาตัว"
         },
         "outbreak2": {
           "recovering": "การรักษาตัว"
@@ -30,8 +29,7 @@
         "outbreak8": {
           "recovering": "การรักษาตัว",
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
-          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
-          "moving north": "เคลื่อนที่ไปทางเหนือ"
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา"
         },
         "outbreak_freeplay": {
           "recovering": "การรักษาตัว",
