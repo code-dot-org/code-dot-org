@@ -591,10 +591,6 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': naključno
       RyanLab_moveForward:
         text: premakni se naprej
       RyanLab_turnLeft:
