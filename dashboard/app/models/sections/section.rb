@@ -48,7 +48,7 @@ class Section < ApplicationRecord
 
   # Sets a class variable for student limit.
   # Is passed to React and HAML 'add_student' alerts.
-  @@section_capacity = 5
+  @@section_capacity = 500
 
   include Rails.application.routes.url_helpers
   acts_as_paranoid
