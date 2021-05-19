@@ -487,7 +487,7 @@
         },
         "MC_HOC_2017_10_RETRY_2019": {
           "fix long path": {
-            "name": "긴 길 고치기"
+            "name": "긴 경로 고치기"
           },
           "fix short path": {
             "name": "짧은 길 고치기"
@@ -495,7 +495,7 @@
         },
         "MC_HOC_2017_10_RETRY_2020": {
           "fix long path": {
-            "name": "긴 길 고치기"
+            "name": "긴 경로 고치기"
           },
           "fix short path": {
             "name": "짧은 길 고치기"
@@ -2057,6 +2057,36 @@
             "parameters": {
               "length": "length"
             }
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"간단한\" 솔루션"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "잠재적 솔루션"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "잠재적 솔루션"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "잠재적 솔루션"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "잠재적 솔루션"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "잠재적 솔루션"
           }
         }
       }

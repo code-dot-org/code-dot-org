@@ -297,7 +297,7 @@
           "craft_callout_preplaced_house": "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "\"실행\"을 눌러 프로그램을 실행시켜보세요",
+          "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
           "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
         },
         "Overworld Move to Sheep_2019": {
@@ -944,7 +944,7 @@
           "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
         },
         "courseC_maze_programming5": {
-          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다!"
+          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
         "courseC_maze_programming5_2018": {
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
