@@ -46,10 +46,13 @@ class FollowersController < ApplicationController
           # Check for an exiting user, and redirect to course if found
           if is_existing_follower
             redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
+            # Check if section is restricted, and redirect with restricted error if true
+          elsif @section.restricted?
+            redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
           # Check if the section is already at capacity
           elsif @section.at_capacity?
             redirect_to root_path, alert: I18n.t('follower.error.full_section', section_code: params[:section_code], section_capacity: @section.capacity)
-          # Othewise, register user and redirect to course with welcome message
+            # Othewise, register user and redirect to course with welcome message
           else
             redirect_to root_path, notice: I18n.t('follower.registered', section_name: @section.name)
           end
@@ -119,6 +122,12 @@ class FollowersController < ApplicationController
 
       redirect_url = "#{root_url}join" # Keeps user on the join page.
       redirect_to redirect_url, inline_alert: I18n.t('follower.error.full_section', section_code: params[:section_code], section_capacity: @section.capacity)
+    end
+
+    # Redirect and provide an error for restricted sections if the user is not already enrolled in this section.
+    if @section&.restricted? && current_user && !Follower.find_by(section: @section, student_user: current_user)
+      redirect_url = "#{root_url}join" # Keeps user on the join page.
+      redirect_to redirect_url, inline_alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
       return
     end
 

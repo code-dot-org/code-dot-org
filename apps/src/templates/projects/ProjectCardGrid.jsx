@@ -11,15 +11,6 @@ import experiments from '@cdo/apps/util/experiments';
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
 
-const styles = {
-  grid: {
-    width: styleConstants['content-width']
-  },
-  link: {
-    color: color.light_teal
-  }
-};
-
 class ProjectCardGrid extends Component {
   constructor() {
     super();
@@ -332,6 +323,15 @@ class ProjectCardGrid extends Component {
     );
   }
 }
+
+const styles = {
+  grid: {
+    width: styleConstants['content-width']
+  },
+  link: {
+    color: color.light_teal
+  }
+};
 
 export default connect(state => ({
   selectedGallery: state.projects.selectedGallery

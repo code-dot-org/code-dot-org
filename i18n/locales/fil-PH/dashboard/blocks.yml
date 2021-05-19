@@ -1200,6 +1200,15 @@ fil:
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
             '"speed"': bilis
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': sukat
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': katamtaman
+            '100': large
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} sa {N}%
         options:
@@ -1501,6 +1510,13 @@ fil:
             '"x"': x na posisyon
             '"y"': y na posisyon
             '"direction"': direksyon ng galaw
+      Mikelab_setupSim:
+        text: |-
+          setup simulation sa
+          {SPRITE1N}{SPRITE1COSTUME}bilis{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}bilis{SPRITE2SPEED}
+          pagkolekta ng
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1559,6 +1575,13 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': grid
+            '"border"': border
+            '"row"': hilera
+            '"random"': nang hindi pinipili
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:
@@ -1592,42 +1615,27 @@ fil:
         options:
           PROPERTY:
             "'shapeColor'": kulay
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} ay nagsisimula {BEHAVIOR} para sa {SECONDS} segundo
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} ay nagsisimula {BEHAVIOR} hanggang {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: bagong sprite na pinangalanang{SPRITE_NAME} sa kasuutan{ANIMATION_NAME} sa lokasyon{LOCATION}
-      aalab_goToScene:
-        text: pumunta sa eksena {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: ilipat {SPRITE} {DISTANCE} pixels {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': North
-            '"East"': Silangan
-            '"South"': South
-            '"West"': West
-      aalab_prompt:
-        text: magtanong {MESSAGE}
-      aalab_scene:
-        text: tagpo {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: kuwento ng set-ap
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grid
+            '"border"': border
+            '"row"': hilera
             '"random"': nang hindi pinipili
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': lahat
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': lahat
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: Gumuhit ng binary {BIN}
       binary_drawBinScreen:

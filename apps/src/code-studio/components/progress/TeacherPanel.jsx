@@ -16,43 +16,6 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const styles = {
-  scrollable: {
-    overflowY: 'auto',
-    overflowX: 'hidden',
-    maxHeight: '90%'
-  },
-  text: {
-    margin: 10
-  },
-  exclamation: {
-    color: 'red'
-  },
-  dontForget: {
-    display: 'inline',
-    marginLeft: 10,
-    fontSize: 16,
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  sectionHeader: {
-    margin: 10,
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis'
-  },
-  exampleSolutions: {
-    textAlign: 'center',
-    margin: 5
-  },
-  sectionInfo: {
-    textAlign: 'center',
-    padding: '5px 0px'
-  },
-  teacherDashboardLink: {
-    fontSize: 11
-  }
-};
-
 class TeacherPanel extends React.Component {
   static propTypes = {
     onSelectUser: PropTypes.func,
@@ -243,6 +206,43 @@ class TeacherPanel extends React.Component {
   }
 }
 
+const styles = {
+  scrollable: {
+    overflowY: 'auto',
+    overflowX: 'hidden',
+    maxHeight: '90%'
+  },
+  text: {
+    margin: 10
+  },
+  exclamation: {
+    color: 'red'
+  },
+  dontForget: {
+    display: 'inline',
+    marginLeft: 10,
+    fontSize: 16,
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  sectionHeader: {
+    margin: 10,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  exampleSolutions: {
+    textAlign: 'center',
+    margin: 5
+  },
+  sectionInfo: {
+    textAlign: 'center',
+    padding: '5px 0px'
+  },
+  teacherDashboardLink: {
+    fontSize: 11
+  }
+};
+
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(state => {
   const {stagesBySectionId, lockableAuthorized} = state.stageLock;
@@ -265,7 +265,7 @@ export default connect(state => {
     stageNames[stage.id] = stage.name;
   });
 
-  // Pretend we don't have lockable stages if we're not authorized to see them
+  // Pretend we don't have lockable lessons if we're not authorized to see them
   const scriptHasLockableStages =
     lockableAuthorized && hasLockableStages(state.progress);
 

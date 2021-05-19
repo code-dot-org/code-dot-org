@@ -8,6 +8,54 @@ import MarkdownEnabledTextarea, {
   markdownFeaturesShape
 } from './MarkdownEnabledTextarea';
 
+/**
+ * Component for previewing Markdown for a edit field
+ */
+export default class TextareaWithMarkdownPreview extends React.Component {
+  static propTypes = {
+    markdown: PropTypes.string,
+    label: PropTypes.string.isRequired,
+    inputRows: PropTypes.number,
+    helpTip: PropTypes.string,
+    handleMarkdownChange: PropTypes.func.isRequired,
+    features: markdownFeaturesShape
+  };
+
+  render() {
+    return (
+      <label>
+        {this.props.label}
+        {this.props.helpTip && (
+          <HelpTip>
+            <p>{this.props.helpTip}</p>
+          </HelpTip>
+        )}
+        <div style={styles.wrapper}>
+          <div style={styles.container}>
+            <div style={{marginBottom: 5}}>Markdown:</div>
+            <MarkdownEnabledTextarea
+              markdown={this.props.markdown}
+              inputRows={this.props.inputRows || 5}
+              handleMarkdownChange={this.props.handleMarkdownChange}
+              features={this.props.features}
+            />
+          </div>
+          <div style={styles.container}>
+            <div style={{marginBottom: 5}}>Preview:</div>
+            <div style={styles.preview}>
+              <EnhancedSafeMarkdown
+                openExternalLinksInNewTab={true}
+                markdown={this.props.markdown}
+                expandableImages
+              />
+            </div>
+          </div>
+        </div>
+      </label>
+    );
+  }
+}
+
 const styles = {
   wrapper: {
     marginTop: 10,
@@ -30,53 +78,3 @@ const styles = {
     padding: 10
   }
 };
-
-/**
- * Component for previewing Markdown for a edit field
- */
-export default class TextareaWithMarkdownPreview extends React.Component {
-  static propTypes = {
-    markdown: PropTypes.string,
-    label: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    inputRows: PropTypes.number,
-    helpTip: PropTypes.string,
-    handleMarkdownChange: PropTypes.func.isRequired,
-    features: markdownFeaturesShape
-  };
-
-  render() {
-    return (
-      <label>
-        {this.props.label}
-        {this.props.helpTip && (
-          <HelpTip>
-            <p>{this.props.helpTip}</p>
-          </HelpTip>
-        )}
-        <div style={styles.wrapper}>
-          <div style={styles.container}>
-            <div style={{marginBottom: 5}}>Markdown:</div>
-            <MarkdownEnabledTextarea
-              markdown={this.props.markdown}
-              name={this.props.name}
-              inputRows={this.props.inputRows || 5}
-              handleMarkdownChange={this.props.handleMarkdownChange}
-              features={this.props.features}
-            />
-          </div>
-          <div style={styles.container}>
-            <div style={{marginBottom: 5}}>Preview:</div>
-            <div style={styles.preview}>
-              <EnhancedSafeMarkdown
-                openExternalLinksInNewTab={true}
-                markdown={this.props.markdown}
-                expandableImages
-              />
-            </div>
-          </div>
-        </div>
-      </label>
-    );
-  }
-}

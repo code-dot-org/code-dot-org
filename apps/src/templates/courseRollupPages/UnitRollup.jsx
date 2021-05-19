@@ -6,15 +6,6 @@ import {linkWithQueryParams} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 import {unitShape} from './rollupShapes';
 
-const styles = {
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-    margin: '10px 0px'
-  }
-};
-
 export default class UnitRollup extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
@@ -59,3 +50,12 @@ export default class UnitRollup extends Component {
     );
   }
 }
+
+const styles = {
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
+  }
+};

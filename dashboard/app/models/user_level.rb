@@ -42,9 +42,9 @@ class UserLevel < ApplicationRecord
   scope :passing, -> {where('best_result >= ?', ActivityConstants::MINIMUM_PASS_RESULT)}
   scope :perfect, -> {where('best_result > ?', ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT)}
 
-  def self.by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
-    where(script: stage.script, level: levels)
+  def self.by_stage(lesson)
+    levels = lesson.script_levels.map(&:level_ids).flatten
+    where(script: lesson.script, level: levels)
   end
 
   def attempted?
@@ -141,19 +141,18 @@ class UserLevel < ApplicationRecord
     self.unlocked_at = is_locked ? nil : Time.now
   end
 
-  # this is the "locked" value we return to the client. if the lesson isn't
-  # lockable or we are an authorized teacher, we always return `false`.
-  def show_as_locked?(stage)
-    return false unless stage.lockable?
-    return false if user.authorized_teacher?
+  # this is the "locked" value we return to the client.
+  # if the lesson isn't lockable, we always return `false`.
+  def show_as_locked?(lesson)
+    return false unless lesson.lockable?
     locked
   end
 
   # `readonly` and `locked` are mutually exclusive on the client, so we use
   # this helper to override the value of `readonly_answers` when we're supposed
   # to show as locked.
-  def show_as_readonly?(stage)
-    readonly_answers? && !show_as_locked?(stage)
+  def show_as_readonly?(lesson)
+    readonly_answers? && !show_as_locked?(lesson)
   end
 
   # First ScriptLevel in this Script containing this Level.

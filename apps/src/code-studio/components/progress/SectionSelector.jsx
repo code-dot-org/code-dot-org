@@ -10,18 +10,12 @@ import {
   NO_SECTION
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const styles = {
-  select: {
-    width: 180
-  }
-};
-
 class SectionSelector extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     // If false, the first option is "Select Section"
     requireSelection: PropTypes.bool,
-    // If true, we'll show even if we don't have any lockable or hidden stages
+    // If true, we'll show even if we don't have any lockable or hidden lessons
     alwaysShow: PropTypes.bool,
     // If true, changing sections results in us hitting the server
     reloadOnChange: PropTypes.bool,
@@ -91,6 +85,12 @@ class SectionSelector extends React.Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    width: 180
+  }
+};
 
 export const UnconnectedSectionSelector = SectionSelector;
 

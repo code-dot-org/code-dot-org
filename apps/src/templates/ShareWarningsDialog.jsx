@@ -3,35 +3,6 @@ import React, {Component} from 'react';
 import color from '../util/color';
 import ShareWarnings from './ShareWarnings';
 
-const styles = {
-  main: {
-    position: 'absolute',
-    top: 50,
-    left: '50%',
-    transform: 'translate(-50%, 0)',
-    WebkitTransform: 'translate(-50%, 0)',
-    border: '1px solid #ccc',
-    background: '#fff',
-    overflow: 'auto',
-    WebkitOverflowScrolling: 'touch',
-    borderRadius: '4px',
-    outline: 'none',
-    padding: '20px',
-    zIndex: 1050 // based off of behavior in dashboard's dialog.js
-    // width handle in render
-  },
-  overlay: {
-    position: 'fixed',
-    opacity: 0.8,
-    backgroundColor: color.black,
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    zIndex: 1040 // based off of behavior in dashboard's dialog.js
-  }
-};
-
 /**
  * Modal for our SharingWarnings.
  */
@@ -93,5 +64,34 @@ class ShareWarningsDialog extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    position: 'absolute',
+    top: 50,
+    left: '50%',
+    transform: 'translate(-50%, 0)',
+    WebkitTransform: 'translate(-50%, 0)',
+    border: '1px solid #ccc',
+    background: '#fff',
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch',
+    borderRadius: '4px',
+    outline: 'none',
+    padding: '20px',
+    zIndex: 1050 // based off of behavior in dashboard's dialog.js
+    // width handle in render
+  },
+  overlay: {
+    position: 'fixed',
+    opacity: 0.8,
+    backgroundColor: color.black,
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    zIndex: 1040 // based off of behavior in dashboard's dialog.js
+  }
+};
 
 export default ShareWarningsDialog;

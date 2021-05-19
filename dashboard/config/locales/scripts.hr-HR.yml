@@ -556,12 +556,6 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -599,12 +593,6 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -614,12 +602,6 @@ hr:
           description: 'Faza 2 online: Mješoviti ljetni studij'
           description_short: 'Faza 2 online: Mješoviti ljetni studij'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -788,6 +770,10 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
+        allthehiddenthings:
+          lessons:
+            Game Lab:
+              name: Game Lab
         MikeTest:
           lessons:
             Artist Functions:
@@ -850,12 +836,6 @@ hr:
               name: 'Izvanmrežno: Pisanje pjesama s parametrima'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Dobro došli!
             Wrap-up:
@@ -880,6 +860,8 @@ hr:
               name: Funkcije
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Conditionals:
               name: Uvjeti
         grade2:
@@ -918,6 +900,10 @@ hr:
           lessons:
             Welcome!:
               name: Dobro došli!
+        csd1-2017:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         csp-online-test:
           lesson_groups:
             required:
@@ -1060,6 +1046,10 @@ hr:
           lessons:
             Introduction:
               name: Uvod
+            Sprites:
+              name: Likovi
+            Input:
+              name: Ulaz
         coursed-ramp:
           lessons:
             Introduction:
@@ -1084,6 +1074,8 @@ hr:
           lessons:
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Conditionals:
               name: Uvjeti
             Functions:
@@ -1092,14 +1084,24 @@ hr:
           lessons:
             Functions:
               name: Funkcije
+        csd1-old:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         csd2-draft:
           lessons:
             Lists:
               name: Liste
+        csd1-draft:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         csd3-chapters:
           lessons:
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Conditionals:
               name: Uvjeti
             Functions:
@@ -1290,6 +1292,10 @@ hr:
           lessons:
             Creating Functions:
               name: Stvaranje funkcija
+        pwc:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         hero:
           lessons:
             Minecraft Hour of Code:
@@ -1330,6 +1336,8 @@ hr:
           lessons:
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Conditionals:
               name: Uvjeti
             Functions:
@@ -1338,6 +1346,8 @@ hr:
           lessons:
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Conditionals:
               name: Uvjeti
             Functions:
@@ -1462,6 +1472,10 @@ hr:
           lessons:
             The Internet:
               name: Internet
+        csd1-2018:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         csp3-2018:
           lessons:
             Creating Functions:
@@ -1580,6 +1594,8 @@ hr:
               display_name: Petlja brojača
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Likovi
             csf_digcit:
               display_name: Digitalno građanstvo
           lessons:
@@ -1620,6 +1636,8 @@ hr:
               name: Umjetnik binarno
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Likovi
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_nested_loops:
@@ -1653,6 +1671,8 @@ hr:
               display_name: Varijable
             csf_for_loops:
               display_name: Petlja brojača
+            csf_sprites:
+              display_name: Likovi
           lessons:
             Relay Programming:
               name: Odnosno programiranje
@@ -1670,6 +1690,10 @@ hr:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+        csd1-2019:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         andrea-test:
           lesson_groups:
             required:
@@ -1694,6 +1718,8 @@ hr:
               name: Veliki događaj
             Binary Bracelets:
               name: Binarne narukvice
+        gamelab:
+          title: Game Lab
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -1747,6 +1773,8 @@ hr:
           lessons:
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Conditionals:
               name: Uvjeti
             Functions:
@@ -1782,6 +1810,9 @@ hr:
             required:
               display_name: Pregled
         time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Likovi
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -1867,10 +1898,18 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Pregled
+        csd1-pilot:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         csd2-pilot:
           lessons:
             Lists:
@@ -1879,6 +1918,8 @@ hr:
           lessons:
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Conditionals:
               name: Uvjeti
             Functions:
@@ -1936,6 +1977,10 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
+        csd4-pilot:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         csp2-pilot:
           lesson_groups:
             required:
@@ -1999,6 +2044,8 @@ hr:
               display_name: Uvjeti
             csf_events:
               display_name: Događaji
+            csf_sprites:
+              display_name: Likovi
             csf_digcit:
               display_name: Digitalno građanstvo
           lessons:
@@ -2012,6 +2059,8 @@ hr:
               display_name: Uvjeti
             csf_events:
               display_name: Događaji
+            csf_sprites:
+              display_name: Likovi
             csf_digcit:
               display_name: Digitalno građanstvo
           lessons:
@@ -2035,6 +2084,10 @@ hr:
               display_name: Liste
             csp_loops:
               display_name: Petlje
+        csd1-2020:
+          lessons:
+            What is a Computer?:
+              name: Što je računalo?
         csd6-2020:
           lessons:
             Functions with Parameters:
@@ -2049,6 +2102,8 @@ hr:
               name: Funkcije
             Text:
               name: tekst
+            Sprites:
+              name: Likovi
         coursea-2020:
           lesson_groups:
             csf_digcit:
@@ -2117,6 +2172,8 @@ hr:
               name: Digitalno građanstvo
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Likovi
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_nested_loops:
@@ -2134,6 +2191,8 @@ hr:
               display_name: Varijable
             csf_for_loops:
               display_name: Petlja brojača
+            csf_sprites:
+              display_name: Likovi
           lessons:
             For Loop Fun:
               name: For Petlja Zabava
@@ -2153,6 +2212,8 @@ hr:
               display_name: Varijable
             csf_for_loops:
               display_name: Petlja brojača
+            csf_sprites:
+              display_name: Likovi
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -2204,23 +2265,37 @@ hr:
           lessons:
             Variables:
               name: Varijable
+            Sprites:
+              name: Likovi
             Text:
               name: tekst
             Conditionals:
               name: Uvjeti
             Functions:
               name: Funkcije
+        curriculum-sandbox-levels:
+          lessons:
+            CS Discoveries:
+              name: RZ otkrića
         2021drafting:
           lesson_groups:
             introduction:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+        csd1-2021:
+          lessons:
+            What is a Computer?:
+              key: Što je računalo?
+              name: Što je računalo?
         csd3-2021:
           lessons:
             Variables:
               key: Varijable
               name: Varijable
+            Sprites:
+              key: Likovi
+              name: Likovi
             Text:
               key: tekst
               name: tekst
@@ -2327,6 +2402,8 @@ hr:
           lesson_groups:
             ramp_up:
               display_name: Ugniježđene petlje
+            csf_sprites:
+              display_name: Likovi
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_nested_loops:
@@ -2342,6 +2419,8 @@ hr:
               key: For Petlja Zabava
               name: For Petlja Zabava
           lesson_groups:
+            ramp_up:
+              display_name: Likovi
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_variables:
@@ -2366,6 +2445,8 @@ hr:
               display_name: Varijable
             csf_for_loops:
               display_name: Petlja brojača
+            csf_sprites:
+              display_name: Likovi
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2378,6 +2459,8 @@ hr:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+            Sprites:
+              display_name: Likovi
             variables:
               display_name: Varijable
         k5-onlinepd-2021:

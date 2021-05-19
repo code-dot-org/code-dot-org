@@ -153,15 +153,19 @@ en-GB:
             '"a"': A
             '"s"': S
             '"d"': D
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': random
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': random
       binary_whenKey:
         options:

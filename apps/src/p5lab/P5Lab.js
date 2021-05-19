@@ -38,7 +38,7 @@ import {
   setInitialAnimationList,
   saveAnimations,
   withAbsoluteSourceUrls
-} from './animationListModule';
+} from './redux/animationList';
 import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 var reducers = require('./reducers');
@@ -52,7 +52,7 @@ import {
 } from '@cdo/apps/containedLevels';
 import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {addConsoleMessage, clearConsole} from './spritelab/textConsoleModule';
+import {addConsoleMessage, clearConsole} from './redux/textConsole';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
@@ -77,6 +77,7 @@ import {
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
+import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -322,6 +323,17 @@ P5Lab.prototype.init = function(config) {
   config.enableShowLinesCount = false;
 
   const onMount = () => {
+    try {
+      const localeCode = window.appOptions.locale;
+      getStore().dispatch(setLocaleCode(localeCode));
+    } catch (exception) {
+      console.warn(
+        'Unable to retrieve locale code, defaulting to en_us',
+        exception
+      );
+      getStore().dispatch(setLocaleCode('en_us'));
+    }
+
     this.setupReduxSubscribers(getStore());
     if (config.level.watchersPrepopulated) {
       try {

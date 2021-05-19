@@ -23,11 +23,12 @@ describe('SummaryProgressTable', () => {
     fakeLevels(3)
   ];
 
+  const groupedLesson = {lessons, levelsByLesson};
+
   it('has every other row be light and dark', () => {
     const wrapper = shallow(
       <SummaryProgressTable
-        lessons={lessons}
-        levelsByLesson={levelsByLesson}
+        groupedLesson={groupedLesson}
         lessonIsVisible={() => true}
       />
     );
@@ -45,8 +46,7 @@ describe('SummaryProgressTable', () => {
   it('does not show hidden rows when viewing as student', () => {
     const wrapper = shallow(
       <SummaryProgressTable
-        lessons={lessons}
-        levelsByLesson={levelsByLesson}
+        groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs === ViewType.Teacher
         }
@@ -63,8 +63,7 @@ describe('SummaryProgressTable', () => {
   it('marks hidden rows as hidden when viewing as teacher', () => {
     const wrapper = shallow(
       <SummaryProgressTable
-        lessons={lessons}
-        levelsByLesson={levelsByLesson}
+        groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
           lesson.id !== 2 || viewAs !== ViewType.Student
         }

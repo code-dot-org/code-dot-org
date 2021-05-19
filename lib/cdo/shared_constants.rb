@@ -28,8 +28,6 @@ module SharedConstants
     {
       not_tried: "not_tried",
       submitted: "submitted",
-      locked: "locked",
-      readonly: "readonly",
       perfect: "perfect",
       passed: "passed",
       attempted: "attempted",

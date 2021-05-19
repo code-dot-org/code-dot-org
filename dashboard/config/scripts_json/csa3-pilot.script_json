@@ -5,10 +5,12 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSA"
+      "curriculum_umbrella": "CSA",
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-05-06 19:25:16 UTC",
     "seeding_key": {
       "script.name": "csa3-pilot"
     }
@@ -37,13 +39,28 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

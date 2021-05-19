@@ -11,8 +11,13 @@ import javalab, {
 } from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import JavabuilderConnection from './javabuilderConnection';
+import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
+import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import Neighborhood from './Neighborhood';
+import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
+import DefaultVisualization from './DefaultVisualization';
+import {CsaViewMode} from './constants';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -31,6 +36,7 @@ const Javalab = function() {
 
   /** @type {StudioApp} */
   this.studioApp_ = null;
+  this.miniApp = null;
 };
 
 /**
@@ -71,14 +77,31 @@ Javalab.prototype.init = function(config) {
   config.pinWorkspaceToBottom = true;
 
   config.getCode = this.getCode.bind(this);
+  config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
+  const handleVersionHistory = this.studioApp_.getVersionHistoryHandler(config);
+  let visualization;
+  if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
+    this.miniApp = new Neighborhood();
+    config.afterInject = () =>
+      this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+    const iconPath = '/blockly/media/turtle/';
+    visualization = (
+      <NeighborhoodVisualizationColumn iconPath={iconPath} showSpeedSlider />
+    );
+  } else {
+    visualization = <DefaultVisualization />;
+  }
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
     this.studioApp_.setConfigValues_(config);
+    window.addEventListener(RESIZE_VISUALIZATION_EVENT, e => {
+      this.studioApp_.resizeVisualization(e.detail);
+    });
 
     // NOTE: if we called studioApp_.init(), the code here would be executed
     // automatically since pinWorkspaceToBottom is true...
@@ -87,6 +110,8 @@ Javalab.prototype.init = function(config) {
     bodyElement.style.overflow = 'hidden';
     bodyElement.className = bodyElement.className + ' pin_bottom';
     container.className = container.className + ' pin_bottom';
+    this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     // Fixes viewport for small screens.  Also usually done by studioApp_.init().
     var viewport = document.querySelector('meta[name="viewport"]');
@@ -96,14 +121,15 @@ Javalab.prototype.init = function(config) {
         MOBILE_PORTRAIT_WIDTH
       );
     }
+    config.afterInject?.();
   };
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
-    noVisualization: true,
-    visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
+    isEditingStartSources: !!config.level.editBlocks,
+    isResponsive: true
   });
 
   registerReducers({javalab});
@@ -137,6 +163,8 @@ Javalab.prototype.init = function(config) {
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
+        handleVersionHistory={handleVersionHistory}
+        visualization={visualization}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -160,10 +188,12 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  this.miniApp?.reset?.();
   this.javabuilderConnection = new JavabuilderConnection(
     this.channelId,
     this.level.javabuilderUrl,
-    message => getStore().dispatch(appendOutputLog(message))
+    message => getStore().dispatch(appendOutputLog(message)),
+    this.miniApp
   );
   this.javabuilderConnection.connectJavabuilder();
 };
@@ -194,6 +224,11 @@ Javalab.prototype.onContinue = function() {
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
   return getSources(storeState);
+};
+
+Javalab.prototype.afterClearPuzzle = function() {
+  getStore().dispatch(setAllSources(this.level.startSources));
+  project.autosave();
 };
 
 Javalab.prototype.onCommitCode = function() {

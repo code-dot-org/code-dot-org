@@ -1,2 +1,10 @@
 {
+  "sk-SK": {
+    "data": {
+      "bubble_choice_description": {
+        "courseF_extras_sim": "Vytvor si a prispôsob vlastnú simuláciu!",
+        "spritelab_extras_repeat": "Pomocou cyklov vytvor rýchlo veľa podobných sprite objektov!"
+      }
+    }
+  }
 }

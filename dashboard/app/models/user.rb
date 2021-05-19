@@ -1281,7 +1281,7 @@ class User < ApplicationRecord
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   stage ids for that section.
   #   For students this will just be a list of stage ids that are hidden for them.
-  def get_hidden_stage_ids(script_name)
+  def get_hidden_lesson_ids(script_name)
     script = Script.get_from_cache(script_name)
     return [] if script.nil?
 
@@ -2321,7 +2321,7 @@ class User < ApplicationRecord
 
   private
 
-  def hidden_stage_ids(sections)
+  def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
@@ -2341,7 +2341,7 @@ class User < ApplicationRecord
     # a mapping from section id to hidden stages/scripts in that section
     hidden_by_section = {}
     sections.each do |section|
-      hidden_by_section[section.id] = hidden_stages ? hidden_stage_ids([section]) : hidden_script_ids([section])
+      hidden_by_section[section.id] = hidden_stages ? hidden_lesson_ids([section]) : hidden_script_ids([section])
     end
     hidden_by_section
   end
@@ -2363,12 +2363,12 @@ class User < ApplicationRecord
     if assigned_sections.empty?
       # if we have no sections matching this assignment, we consider a stage/script
       # hidden if any of our sections hides it
-      return (hidden_stages ? hidden_stage_ids(sections) : hidden_script_ids(sections)).uniq
+      return (hidden_stages ? hidden_lesson_ids(sections) : hidden_script_ids(sections)).uniq
     else
       # if we do have sections matching this assignment, we consider a stage/script
       # hidden only if it is hidden in every one of the sections the student belongs
       # to that match this assignment
-      all_ids = hidden_stages ? hidden_stage_ids(assigned_sections) : hidden_script_ids(assigned_sections)
+      all_ids = hidden_stages ? hidden_lesson_ids(assigned_sections) : hidden_script_ids(assigned_sections)
 
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys

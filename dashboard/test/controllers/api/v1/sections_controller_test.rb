@@ -133,14 +133,22 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in student
     section = create(:section, login_type: 'email')
 
-    # TODO: Write seeding script to remove slow code from test file.
-    500.times do # yuck...
+    500.times do
       create(:follower, section: section)
     end
 
     post :join, params: {id: section.code}
     assert_response :forbidden
     assert_equal "section_full", returned_json['result']
+  end
+
+  test "join with a restricted section code" do
+    student = create :student
+    sign_in student
+    section = create(:section, login_type: 'email', restrict_section: true)
+    post :join, params: {id: section.code}
+    assert_response :forbidden
+    assert_equal "section_restricted", returned_json['result']
   end
 
   test "join with nobody signed in" do

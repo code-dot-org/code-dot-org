@@ -76,21 +76,21 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
 
   # Verify the three dots in the header all reflect the submission.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
-  And I verify progress in the header of the current page is "perfect_assessment" for level 3
-  And I verify progress in the header of the current page is "perfect_assessment" for level 4
+  And I verify progress in the header of the current page is "not_tried" for level 3
+  And I verify progress in the header of the current page is "attempted_assessment" for level 4
 
   # Open the dropdown and verify the same three dots.
   Then I open the progress drop down of the current page
   And I verify progress in the drop down of the current page is "perfect_assessment" for stage 23 level 2
-  And I verify progress in the drop down of the current page is "perfect_assessment" for stage 23 level 3
-  And I verify progress in the drop down of the current page is "perfect_assessment" for stage 23 level 4
+  And I verify progress in the drop down of the current page is "not_tried" for stage 23 level 3
+  And I verify progress in the drop down of the current page is "attempted_assessment" for stage 23 level 4
 
   # Go to the course page and verify the same three dots.
   Then I navigate to the course page for "allthethings"
   And I wait until jQuery Ajax requests are finished
   And I verify progress for stage 23 level 2 is "perfect_assessment"
-  And I verify progress for stage 23 level 3 is "perfect_assessment"
-  And I verify progress for stage 23 level 4 is "perfect_assessment"
+  And I verify progress for stage 23 level 3 is "not_tried"
+  And I verify progress for stage 23 level 4 is "attempted_assessment"
 
 Scenario: optional free play level
   When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"

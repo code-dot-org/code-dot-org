@@ -1,1 +1,20 @@
 hr:
+  data:
+    shared_functions:
+      driving with arrow keys: vožnja sa strelicama
+      fluttering: lepršanje
+      growing: rastući
+      jittering: treperenje
+      moving east: krećući se prema istoku
+      moving east and looping: krećući se prema istoku i petljajući
+      moving north: krećući se prema sjeveru
+      moving south: krećući se prema jugu
+      moving west: krećući se prema zapadu
+      moving west and looping: krećući se prema zapadu i petljajući
+      moving with arrow keys: vožnja sa strelicama
+      patrolling: patroliranje
+      shrinking: skupljanje
+      spinning left: vrteći se ulijevo
+      spinning right: vrteći se udesno
+      wandering: lutanje
+      wobbling: njihanje

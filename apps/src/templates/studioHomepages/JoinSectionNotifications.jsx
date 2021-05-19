@@ -25,6 +25,8 @@ export default function JoinSectionNotifications({
     return <JoinSectionExistsNotification sectionName={name} />;
   } else if (action === 'join' && result === 'section_owned') {
     return <JoinSectionOwnedNotification sectionId={id} />;
+  } else if (action === 'join' && result === 'section_restricted') {
+    return <JoinSectionRestrictedNotification sectionId={id} />;
   } else if (action === 'join' && result === 'section_full') {
     return (
       <JoinSectionFullNotification
@@ -92,6 +94,18 @@ const JoinSectionFullNotification = ({sectionId, sectionCapacity}) => (
 JoinSectionFullNotification.propTypes = {
   sectionId: PropTypes.string.isRequired,
   sectionCapacity: PropTypes.number.isRequired
+};
+
+const JoinSectionRestrictedNotification = ({sectionId}) => (
+  <Notification
+    type="failure"
+    notice={i18n.sectionsNotificationFailure()}
+    details={i18n.sectionsNotificationJoinRestricted({sectionId})}
+    dismissible={true}
+  />
+);
+JoinSectionRestrictedNotification.propTypes = {
+  sectionId: PropTypes.string.isRequired
 };
 
 const JoinSectionFailNotification = ({sectionId}) => (

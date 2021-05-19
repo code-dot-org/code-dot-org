@@ -4,6 +4,52 @@ import {connect} from 'react-redux';
 import Button from '../Button';
 import color from '../../util/color';
 
+class ImageResourceCard extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    callout: PropTypes.string,
+    description: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
+  };
+
+  getImage() {
+    return require(`@cdo/static/resource_cards/${this.props.image}`);
+  }
+
+  render() {
+    const {title, callout, description, buttonText, link, isRtl} = this.props;
+
+    return (
+      <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
+        <div style={styles.textbox}>
+          <div>
+            <div style={styles.titleContainer}>
+              <div style={styles.title}>{title}</div>
+              {callout && (
+                <div style={styles.callout}>
+                  <i>{callout}</i>
+                </div>
+              )}
+            </div>
+            <div style={styles.description}>{description}</div>
+          </div>
+          <Button
+            __useDeprecatedTag
+            href={link}
+            color={Button.ButtonColor.gray}
+            text={buttonText}
+            style={styles.button}
+          />
+        </div>
+        <img style={styles.image} src={this.getImage()} />
+      </div>
+    );
+  }
+}
+
 const styles = {
   card: {
     display: 'flex',
@@ -59,52 +105,6 @@ const styles = {
     direction: 'rtl'
   }
 };
-
-class ImageResourceCard extends Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    callout: PropTypes.string,
-    description: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
-  };
-
-  getImage() {
-    return require(`@cdo/static/resource_cards/${this.props.image}`);
-  }
-
-  render() {
-    const {title, callout, description, buttonText, link, isRtl} = this.props;
-
-    return (
-      <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
-        <div style={styles.textbox}>
-          <div>
-            <div style={styles.titleContainer}>
-              <div style={styles.title}>{title}</div>
-              {callout && (
-                <div style={styles.callout}>
-                  <i>{callout}</i>
-                </div>
-              )}
-            </div>
-            <div style={styles.description}>{description}</div>
-          </div>
-          <Button
-            __useDeprecatedTag
-            href={link}
-            color={Button.ButtonColor.gray}
-            text={buttonText}
-            style={styles.button}
-          />
-        </div>
-        <img style={styles.image} src={this.getImage()} />
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   isRtl: state.isRtl

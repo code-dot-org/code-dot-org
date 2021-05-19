@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 16:38:53 UTC",
+    "serialized_at": "2021-05-18 03:00:52 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -48,11 +48,11 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students explore and investigate what makes an app an app. They begin by looking at and discussing five different apps. Following this, students watch a video explaining the basics of how computers work. Finally students return to the apps and consider the various inputs and outputs.",
-        "student_overview": "Welcome to the Introduction to App Development! We begin this unit by examining the basics of an app. ",
-        "purpose": "This lesson is an introduction to a unit that introduces programming through the broader context of designing apps that help people. This lesson is designed to build excitement about the skills that students will develop throughout the unit and get them thinking early about the ways programming can help others. This lesson also establishes shared vocabulary for talking about apps in a generic sense, for example its inputs, outputs, and overall user interface.",
         "preparation": "* Preview the How Computers Work Video\r\n* Explore the apps used in this lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is an introduction to a unit that introduces programming through the broader context of designing apps that help people. This lesson is designed to build excitement about the skills that students will develop throughout the unit and get them thinking early about the ways programming can help others. This lesson also establishes shared vocabulary for talking about apps in a generic sense, for example its inputs, outputs, and overall user interface.",
+        "student_overview": "Welcome to the Introduction to App Development! We begin this unit by examining the basics of an app. "
       },
       "seeding_key": {
         "lesson.key": "Introduction to Apps",
@@ -68,11 +68,11 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
-        "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab.",
-        "purpose": "This lesson introduces students to Design Mode in App Lab and the different kinds of screen elements and properties at their disposal in this tool. This lesson not only builds up skills in designing a user interface but also sets students up to begin designing an app of their own in the following lesson.",
         "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson introduces students to Design Mode in App Lab and the different kinds of screen elements and properties at their disposal in this tool. This lesson not only builds up skills in designing a user interface but also sets students up to begin designing an app of their own in the following lesson.",
+        "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab."
       },
       "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
@@ -88,12 +88,12 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "This is the first in a series of lessons where students will make progress on building their own functional app. In this lesson, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab. ",
-        "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
-        "purpose": "This lesson kicks off a project that students will complete throughout the unit. The framing of this project is also important for how programming is presented overall. Students are encouraged to collaboratively design their projects, choose topics of personal interest, and build an app to meet the needs of other people. All of this is important as part of framing programming as a collaborative, creative, and socially situated pursuit.",
-        "preparation": "* Read over the [r app_development_planning_guide/csp/2021]",
-        "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This is the first in a series of lessons where students will make progress on building their own functional app. In this lesson, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab. ",
+        "preparation": "* Read over the [r app_development_planning_guide/csp/2021]",
+        "purpose": "This lesson kicks off a project that students will complete throughout the unit. The framing of this project is also important for how programming is presented overall. Students are encouraged to collaboratively design their projects, choose topics of personal interest, and build an app to meet the needs of other people. All of this is important as part of framing programming as a collaborative, creative, and socially situated pursuit.",
+        "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "unplugged": true
       },
       "seeding_key": {
@@ -110,11 +110,11 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
-        "student_overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
+        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "student_overview": "Students continue working on the unit projects in this lesson that is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab"
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
@@ -130,11 +130,11 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
-        "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
-        "purpose": "This lesson is students' first introduction to the concept of a programming language. It helps them understand why programming languages exist by giving them a first-hand experience with the problems that programming languages are designed to address. Natural language is usually too ambiguous for giving precise instructions that can be followed correctly 100% of the time. We need to create more structured and precise programming languages in order to accomplish this.",
-        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
+        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students",
+        "purpose": "This lesson is students' first introduction to the concept of a programming language. It helps them understand why programming languages exist by giving them a first-hand experience with the problems that programming languages are designed to address. Natural language is usually too ambiguous for giving precise instructions that can be followed correctly 100% of the time. We need to create more structured and precise programming languages in order to accomplish this.",
+        "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "unplugged": true
       },
       "seeding_key": {
@@ -151,11 +151,11 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
-        "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps.",
-        "purpose": "This lesson is written in an Investigate style, a common format of lesson that will be used in the remainder of the programming units. In this kind of lesson students are encouraged to investigate working code and make simple modifications to understand how it works. \r\n\r\nThis lesson introduces a number of concepts and vocabulary around what programs are and how they run that will need to be reinforced in future lessons. ",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\r\n* Review the information covered in the slides at the conclusion of the lesson",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson is written in an Investigate style, a common format of lesson that will be used in the remainder of the programming units. In this kind of lesson students are encouraged to investigate working code and make simple modifications to understand how it works. \r\n\r\nThis lesson introduces a number of concepts and vocabulary around what programs are and how they run that will need to be reinforced in future lessons. ",
+        "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps."
       },
       "seeding_key": {
         "lesson.key": "Intro to Programming",
@@ -171,11 +171,11 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students practice using the different programming concepts that they were introduced to in the last lesson. To begin, however, they are introduced to the concept of debugging and are encouraged to use and reflect on this practice throughout the lesson. At the end of the lesson students share their experiences debugging as well as an new realizations about programming.",
-        "student_overview": "Learn how to identify and fix problems in your code through the debugging process. Then practice using it with a classmate.",
-        "purpose": "This lesson serves a number of roles. Even if students had modified programs in the previous lesson, this continues to be an introduction to many of the skills of programming. Students are also introduced to debugging as a skill they'll need to use and develop as programmers. A huge goal of this lesson, however, is attitudinal.",
         "preparation": "* Review the steps of the debugging process\r\n* Review the levels students will need to complete on Code Studio",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "purpose": "This lesson serves a number of roles. Even if students had modified programs in the previous lesson, this continues to be an introduction to many of the skills of programming. Students are also introduced to debugging as a skill they'll need to use and develop as programmers. A huge goal of this lesson, however, is attitudinal.",
+        "student_overview": "Learn how to identify and fix problems in your code through the debugging process. Then practice using it with a classmate."
       },
       "seeding_key": {
         "lesson.key": "Debugging",
@@ -191,12 +191,12 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Student learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. ",
-        "student_overview": "Start programming your app and learn how to effectively use pair programming to collaborate while writing code.",
-        "purpose": "Pair Programming is an effective collaboration strategy both inside the classroom and in professional setting. As this is the first opportunity students have to program starting from a blank screen, this is a good opportunity to explore the usefulness of Pair Programming. ",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Student learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. ",
+        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "purpose": "Pair Programming is an effective collaboration strategy both inside the classroom and in professional setting. As this is the first opportunity students have to program starting from a blank screen, this is a good opportunity to explore the usefulness of Pair Programming. ",
+        "student_overview": "Start programming your app and learn how to effectively use pair programming to collaborate while writing code."
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
@@ -212,12 +212,12 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.  ",
-        "student_overview": "Continue working on your app and get feedback to make sure you're on the right track.",
-        "purpose": "This lesson reinforces the importance of feedback in the process of developing software. Feedback and testing help make sure that an app actually works for lots of people and in the context in which it will be used. This process also reinforces the importance of making iterative improvements in making software.",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.  ",
+        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "purpose": "This lesson reinforces the importance of feedback in the process of developing software. Feedback and testing help make sure that an app actually works for lots of people and in the context in which it will be used. This process also reinforces the importance of making iterative improvements in making software.",
+        "student_overview": "Continue working on your app and get feedback to make sure you're on the right track."
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 4",
@@ -233,12 +233,12 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
-        "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app.",
-        "purpose": "This lesson concludes the project students have been working on throughout the unit. Students will have a chance to respond to any feedback they received and incorporate that into their project. The reflection prompts in the activity help students synthesize their overall experience with a focus on how collaboration within their team and within their classroom impacted the final projects they designed.",
-        "preparation": "* Make sure students have access to their App Development Planning Guides\r\n* Review the two sample project submissions, available in the \"For Teachers Only\" area on the first level of this lesson on Code Studio",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
+        "preparation": "* Make sure students have access to their App Development Planning Guides\r\n* Review the two sample project submissions, available in the \"For Teachers Only\" area on the first level of this lesson on Code Studio",
+        "purpose": "This lesson concludes the project students have been working on throughout the unit. Students will have a chance to respond to any feedback they received and incorporate that into their project. The reflection prompts in the activity help students synthesize their overall experience with a focus on how collaboration within their team and within their classroom impacted the final projects they designed.",
+        "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app."
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 5",
@@ -254,12 +254,12 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
-        "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app.",
-        "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
-        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment": true
+        "overview": "Students complete the Unit Assessment and then spend the rest of class sharing their projects. ",
+        "preparation": "* Make sure students have access to their App Development Planning Guides",
+        "purpose": "This lesson provides a bookend to Unit 3 where students demonstrate their learning through their projects and a multiple choice assessment. ",
+        "student_overview": "Complete your app and share it with classmates before reflecting on the overall process of designing the app."
       },
       "seeding_key": {
         "lesson.key": "Lesson 11: Assessment Day",
@@ -273,8 +273,8 @@
       "key": "d7f9b27e-f879-43c4-b300-631ce64fb37a",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d7f9b27e-f879-43c4-b300-631ce64fb37a",
@@ -287,8 +287,8 @@
       "key": "b9e3b7e4-186b-4571-8992-df088523a6b0",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "b9e3b7e4-186b-4571-8992-df088523a6b0",
@@ -301,8 +301,8 @@
       "key": "a04fa0df-3746-420e-ba6e-f18831286901",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a04fa0df-3746-420e-ba6e-f18831286901",
@@ -312,23 +312,11 @@
       }
     },
     {
-      "key": "55036830-1321-4a8e-a37e-8928c23f1914",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914",
-        "lesson.key": "Introduction to Apps",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
       "key": "f414eeb9-6684-42cb-8d3f-7688bfa4d976",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f414eeb9-6684-42cb-8d3f-7688bfa4d976",
@@ -341,8 +329,8 @@
       "key": "e53f6522-b019-41fb-94c3-27ca5d089328",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "e53f6522-b019-41fb-94c3-27ca5d089328",
@@ -355,8 +343,8 @@
       "key": "5eed3b99-c28a-4147-b057-ca97b928d8fd",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "5eed3b99-c28a-4147-b057-ca97b928d8fd",
@@ -369,8 +357,8 @@
       "key": "8f2f0ed8-0281-4593-8c9a-2830b0f4f357",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "8f2f0ed8-0281-4593-8c9a-2830b0f4f357",
@@ -383,8 +371,8 @@
       "key": "359ea193-1806-4826-8844-966d2ccd5d2c",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "359ea193-1806-4826-8844-966d2ccd5d2c",
@@ -397,8 +385,8 @@
       "key": "28371efc-696b-45f9-9bf8-f18096045421",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "28371efc-696b-45f9-9bf8-f18096045421",
@@ -411,8 +399,8 @@
       "key": "d62a1a8e-f36a-4983-853e-454dbeb4edbd",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d62a1a8e-f36a-4983-853e-454dbeb4edbd",
@@ -425,8 +413,8 @@
       "key": "4f2f24f3-399f-40eb-9645-2cad55162ff6",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "4f2f24f3-399f-40eb-9645-2cad55162ff6",
@@ -439,8 +427,8 @@
       "key": "ac46cec7-6532-4ec7-8e21-4df5c14702ae",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ac46cec7-6532-4ec7-8e21-4df5c14702ae",
@@ -453,8 +441,8 @@
       "key": "b2014db7-e5c2-4aaf-ac23-7c578f000603",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b2014db7-e5c2-4aaf-ac23-7c578f000603",
@@ -467,8 +455,8 @@
       "key": "09668df8-b019-4a33-9c17-8508fbc287e2",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "09668df8-b019-4a33-9c17-8508fbc287e2",
@@ -481,8 +469,8 @@
       "key": "fe1020bc-d0e6-4435-be19-de318ec56a4b",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "fe1020bc-d0e6-4435-be19-de318ec56a4b",
@@ -520,8 +508,8 @@
       "key": "c9646a01-dac6-46ce-a321-906893945b12",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "c9646a01-dac6-46ce-a321-906893945b12",
@@ -534,8 +522,8 @@
       "key": "f26603a5-2d5c-4c3c-a8b4-df6b31260953",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 15
+        "duration": 15,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "f26603a5-2d5c-4c3c-a8b4-df6b31260953",
@@ -548,8 +536,8 @@
       "key": "c63c366d-6172-4791-b452-4d8509321c34",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "c63c366d-6172-4791-b452-4d8509321c34",
@@ -562,8 +550,8 @@
       "key": "a4cc4a73-59c1-4c6f-87aa-34afb719c5a3",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "a4cc4a73-59c1-4c6f-87aa-34afb719c5a3",
@@ -576,8 +564,8 @@
       "key": "e34f1661-810d-4f17-b846-9e3a548ae185",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e34f1661-810d-4f17-b846-9e3a548ae185",
@@ -602,8 +590,8 @@
       "key": "e17a0358-20ff-4ead-8744-80ca73da29b5",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e17a0358-20ff-4ead-8744-80ca73da29b5",
@@ -616,8 +604,8 @@
       "key": "a55d44ec-65a7-48d7-9c19-c345f5657618",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "a55d44ec-65a7-48d7-9c19-c345f5657618",
@@ -630,8 +618,8 @@
       "key": "6b676ed1-0a6b-43c1-acc2-2abb59284c25",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "6b676ed1-0a6b-43c1-acc2-2abb59284c25",
@@ -656,8 +644,8 @@
       "key": "79d46d7b-f132-4ace-a745-3c6a8534e5bc",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "79d46d7b-f132-4ace-a745-3c6a8534e5bc",
@@ -670,8 +658,8 @@
       "key": "1a50f8ed-259b-4c8f-80a8-c07341ff37c9",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "1a50f8ed-259b-4c8f-80a8-c07341ff37c9",
@@ -684,8 +672,8 @@
       "key": "d549a316-998c-4ae3-8c5f-7071f18569ea",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d549a316-998c-4ae3-8c5f-7071f18569ea",
@@ -698,8 +686,8 @@
       "key": "79cdcae1-6799-473d-abe4-1c8a3c718f56",
       "position": 1,
       "properties": {
-        "name": "Warm Up",
-        "duration": 5
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "79cdcae1-6799-473d-abe4-1c8a3c718f56",
@@ -712,8 +700,8 @@
       "key": "b27e1762-a478-4e02-ad48-bee500825909",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 30
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "b27e1762-a478-4e02-ad48-bee500825909",
@@ -726,8 +714,8 @@
       "key": "7d1b9071-d913-48a7-8e53-9d96be549dff",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7d1b9071-d913-48a7-8e53-9d96be549dff",
@@ -753,8 +741,8 @@
       "key": "2ef4fa0d-6feb-4088-b698-1370efe31599",
       "position": 2,
       "properties": {
-        "name": "Activity",
-        "duration": 35
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "2ef4fa0d-6feb-4088-b698-1370efe31599",
@@ -767,8 +755,8 @@
       "key": "b55eb866-7103-4452-ba05-dfc6804486ee",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 10
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "b55eb866-7103-4452-ba05-dfc6804486ee",
@@ -796,8 +784,8 @@
       "position": 1,
       "properties": {
         "description": "Now that we've learned how to represent information digitally and how the Internet works, it's time to think about creating digital content for others to interact with.",
-        "remarks": true,
-        "name": "Preview the Unit"
+        "name": "Preview the Unit",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "32dfb4a2-fe62-4a94-bc27-6b8e241c2456",
@@ -808,7 +796,7 @@
       "key": "d3ff1f3d-0b24-485b-b251-977501995fd2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n \tApps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n Apps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
       },
       "seeding_key": {
         "activity_section.key": "d3ff1f3d-0b24-485b-b251-977501995fd2",
@@ -820,8 +808,8 @@
       "position": 1,
       "properties": {
         "description": "Today we are going to be looking at some sample apps to explore their purpose and function.",
-        "remarks": true,
-        "name": "App Exploration"
+        "name": "App Exploration",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "615736e3-e447-4490-b34a-d296b8b2294c",
@@ -924,13 +912,13 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 7-11:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
+        "name": "App Investigation",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "After students are finished writing in their journals, discuss as a class or collect the journals to review student answers. \n\n* An input could be a user clicking a button or tapping the screen\n* An output could be an image displayed or a sound played\n"
           }
-        ],
-        "name": "App Investigation"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e41014d8-2c35-4ecc-8799-d5ed6b65fca1",
@@ -987,22 +975,12 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match term with the example.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ca0a7a2a-2d45-4a44-8fba-fc90661c0caf",
         "lesson_activity.key": "a04fa0df-3746-420e-ba6e-f18831286901"
-      }
-    },
-    {
-      "key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
-        "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914"
       }
     },
     {
@@ -1071,8 +1049,8 @@
       "key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
       "position": 4,
       "properties": {
-        "progression_name": "Copy an App",
-        "description": "**Level 7:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson."
+        "description": "**Level 7:** Students work from a given image to recreate the user interface for an app. It's ok if their design does not exactly match the sample. The goal is for students to become comfortable setting up a User Interface before the sketch out plans for their own apps in the next lesson.",
+        "progression_name": "Copy an App"
       },
       "seeding_key": {
         "activity_section.key": "2d35ff13-f24c-4db9-972a-0a9ff1702a76",
@@ -1307,13 +1285,13 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:** On this level, students see a sample app they've looked at before along with the sketches for the screens. Students run the app and compare the screens to the original design.",
+        "progression_name": "Sample Prototype",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Students should explore the app and the prototype for a few minutes, noting how different elements are represented on the prototype. \n\n**Encourage Collaboration:** Reinforce a collaborative classroom environment in which students share responsibilities for designing screens and discuss with one another the choices they're making. Students should be communicating their ideas with one another as they build.\n\n**Waiting for Programming:** Some students may be eager to start programming their apps rather than simply build screens. Let students know that they'll be able to start programming their apps in the coming lessons and that the first half of the unit focuses more heavily on design.\n"
           }
-        ],
-        "progression_name": "Sample Prototype"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9224ac47-9581-419c-977c-393705bb9647",
@@ -1553,14 +1531,14 @@
       "position": 1,
       "properties": {
         "description": "Yesterday we learned that we need to create a new kind of language, a programming language, in order to clearly communicate instructions. Today is a big day. We're going to get our first taste of what programming looks like, and we'll see different ways we can use these tools to communicate our instructions to a computer.",
+        "name": "Get to the Activity\r",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Get to the Activity:** There's a lot to do in this lesson. Get to the main activity as quickly as you can.\r\n\r\n**Prompt Ideas:** If you need a prompt for when students come in consider asking them to list 2-3 differences between a natural language and programming language and why those differences need to exist.\r\n"
           }
-        ],
-        "remarks": true,
-        "name": "Get to the Activity\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9d01dfb1-b52f-4196-8145-26e3323715b3",
@@ -1883,13 +1861,13 @@
       "position": 1,
       "properties": {
         "description": "**Group:** Place students in pairs with their project partner\n\n",
+        "name": "Using Pair Programming\r",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Taking on the Blank Screen:** This is the first time students are adding code to a blank screen. Some students may need assistance. Direct them back to their Planning Guides to help students understand the [`onEvent`(#fff176)](/docs/applab/onEvent/) blocks they need to add to their project. \n\n**Supporting Pair Programming:** Your biggest role in supporting pair programming will be encouraging students to use it early on and helping enforce the switching. Run the timer in the slides and have left and right partners switch roles. You may opt to increase the time to longer periods as time goes on.\n\n![](https://images.code.org/13423c034671a6010f9124a8edc60b1a-image-1611868356240.PNG)\n\n**Debugging Practices:** Students learned a lot of debugging practices in the previous lesson. Encourage students to use these and record bugs they find as they program today. Continue to normalize and celebrate debugging as a normal and fun part of programming.\n\n\n"
           }
-        ],
-        "name": "Using Pair Programming\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "10f13ce0-55e1-45b3-bbb6-4a36f0485893",
@@ -2015,14 +1993,14 @@
       "position": 2,
       "properties": {
         "description": "For the next twenty five minutes, you and your partner will use Pair Programming to continue working on your app. After this is done, you will get feedback from another group.",
+        "name": "Work Time - 25 mins\r",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Review Pair Programming:** You may want to reuse the slides from the previous lesson to remind students of their Pair Programming roles. \r\n\r\n**Encourage Debugging Practices:** Continue to encourage students to use the debugging practices they learned in previous lessons and normalize and celebrate debugging as a part of programming\r\n"
           }
-        ],
-        "remarks": true,
-        "name": "Work Time - 25 mins\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2b7fb07c-d9f0-411b-9160-a89e0d6ca4b3",
@@ -2093,13 +2071,13 @@
       "position": 1,
       "properties": {
         "description": "Your apps are almost done and soon will be ready to share with the world. Let's get back to work.",
+        "remarks": true,
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Get to the Project:** Quickly move the class to the activity where the bulk of their time should be spent today. \r\n   "
           }
-        ],
-        "remarks": true
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8337c699-e3a8-4097-941b-5351820a8e32",
@@ -2122,8 +2100,8 @@
       "position": 2,
       "properties": {
         "description": "For the next thirty minutes, you and your partner will work on finishing your app. Don't forget to consider the suggestions your classmates made. Check the rubric before submitting your app.",
-        "remarks": true,
-        "name": "Finish building apps\r"
+        "name": "Finish building apps\r",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "3f0d2f69-194c-454c-a2b0-2f310d16cf6b",
@@ -2183,8 +2161,8 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
-        "name": "Unit Assessment",
-        "duration": "25"
+        "duration": "25",
+        "name": "Unit Assessment"
       },
       "seeding_key": {
         "activity_section.key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b",
@@ -2196,8 +2174,8 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** One student per group displays their app on the computer. Groups rotate around the room running the different apps. Students can leave comments on sticky notes at each station.",
-        "name": "Gallery Walk",
-        "duration": "10"
+        "duration": "10",
+        "name": "Gallery Walk"
       },
       "seeding_key": {
         "activity_section.key": "42721b5f-7a1b-4bc8-8a79-9cdb8fde6dc2",
@@ -2209,8 +2187,8 @@
       "position": 3,
       "properties": {
         "description": "If you want, your app can be shared with people beyond this classroom. Click the \"Share\" button and then grab the link or type in a phone number to share it with a friend or family member. Congratulations on making your first app!",
-        "remarks": true,
-        "progression_name": "Unit 3 Exam"
+        "progression_name": "Unit 3 Exam",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "c89f64d7-7910-43de-af4f-ab86e3c8357f",
@@ -2247,13 +2225,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration",
         "level_keys": [
           "CSP U3 Water Conservation Sample App_2021"
-        ]
+        ],
+        "progression": "App Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App_2021"
@@ -2273,13 +2251,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration",
         "level_keys": [
           "CSP U3 Bird Quiz App_2021"
-        ]
+        ],
+        "progression": "App Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App_2021"
@@ -2299,13 +2277,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration",
         "level_keys": [
           "CSP U3 Hamilton Township App_2021"
-        ]
+        ],
+        "progression": "App Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App_2021"
@@ -2325,13 +2303,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration",
         "level_keys": [
           "CSP U3 Four Square App_2021"
-        ]
+        ],
+        "progression": "App Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Four Square App_2021"
@@ -2351,13 +2329,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "App Exploration",
         "level_keys": [
           "CSP U3 Monarch Butterfly App_2021"
-        ]
+        ],
+        "progression": "App Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App_2021"
@@ -2377,13 +2355,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "How Computers Work",
         "level_keys": [
           "How Computers Work part 1 CSP_2021"
-        ]
+        ],
+        "progression": "How Computers Work"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "How Computers Work part 1 CSP_2021"
@@ -2403,13 +2381,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation",
         "level_keys": [
           "CSP U3 Water Conservation Sample App Investigate_2021"
-        ]
+        ],
+        "progression": "App Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Water Conservation Sample App Investigate_2021"
@@ -2429,13 +2407,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation",
         "level_keys": [
           "CSP U3 Bird Quiz App Investigation_2021"
-        ]
+        ],
+        "progression": "App Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Bird Quiz App Investigation_2021"
@@ -2455,13 +2433,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation",
         "level_keys": [
           "CSP U3 Hamilton Township App Investigation_2021"
-        ]
+        ],
+        "progression": "App Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Hamilton Township App Investigation_2021"
@@ -2481,13 +2459,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation",
         "level_keys": [
           "CSP U3 Four Square App Investigation_2021"
-        ]
+        ],
+        "progression": "App Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Four Square App Investigation_2021"
@@ -2507,13 +2485,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "App Investigation",
         "level_keys": [
           "CSP U3 Monarch Butterfly App Investigation_2021"
-        ]
+        ],
+        "progression": "App Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Monarch Butterfly App Investigation_2021"
@@ -2533,13 +2511,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "CSP U3 L1 Input Output Matching_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L1 Input Output Matching_2021"
@@ -2547,7 +2525,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "2205e89c-4fca-46c1-95e4-ad99bdffa417"
+        "activity_section.key": "ca0a7a2a-2d45-4a44-8fba-fc90661c0caf"
       },
       "level_keys": [
         "CSP U3 L1 Input Output Matching_2021"
@@ -2559,13 +2537,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration",
         "level_keys": [
           "CSP U3 Hamilton Township Design Mode_2021"
-        ]
+        ],
+        "progression": "Design Mode Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Hamilton Township Design Mode_2021"
@@ -2585,13 +2563,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration",
         "level_keys": [
           "CSP U3 L2 Design Mode Themes_2021"
-        ]
+        ],
+        "progression": "Design Mode Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Themes_2021"
@@ -2611,13 +2589,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration",
         "level_keys": [
           "CSP U3 L2 Design Mode Colors_2021"
-        ]
+        ],
+        "progression": "Design Mode Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Colors_2021"
@@ -2637,13 +2615,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration",
         "level_keys": [
           "CSP U3 L2 Design Mode Images_2021"
-        ]
+        ],
+        "progression": "Design Mode Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Images_2021"
@@ -2663,13 +2641,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration",
         "level_keys": [
           "CSP U3 L2 Design Mode Icons_2021"
-        ]
+        ],
+        "progression": "Design Mode Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode Icons_2021"
@@ -2689,13 +2667,13 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Design Mode Exploration",
         "level_keys": [
           "CSP U3 L2 Design Mode ids_2021"
-        ]
+        ],
+        "progression": "Design Mode Exploration"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Design Mode ids_2021"
@@ -2715,13 +2693,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Copy an App",
         "level_keys": [
           "CSP U3 L2 Copy an App_2021"
-        ]
+        ],
+        "progression": "Copy an App"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L2 Copy an App_2021"
@@ -2741,13 +2719,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U3L2 CSP CFU ID names_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L2 CSP CFU ID names_2021"
@@ -2765,15 +2743,15 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sample Prototype",
         "level_keys": [
           "CSP U3 Bird Quiz Storyboard_2021"
-        ]
+        ],
+        "progression": "Sample Prototype"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 Bird Quiz Storyboard_2021"
@@ -2791,15 +2769,15 @@
       "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Build Your Screens",
         "level_keys": [
           "CSP U3 L4 Design Screens_2021"
-        ]
+        ],
+        "progression": "Build Your Screens"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L4 Design Screens_2021"
@@ -2819,13 +2797,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U3L5 CSP CFU natural language_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L5 CSP CFU natural language_2021"
@@ -2845,13 +2823,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
         "level_keys": [
           "U3 Program Investigate Sequential 1_2021"
-        ]
+        ],
+        "progression": "Code Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 1_2021"
@@ -2871,13 +2849,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
         "level_keys": [
           "U3 Program Investigate Sequential 2_2021"
-        ]
+        ],
+        "progression": "Code Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Sequential 2_2021"
@@ -2897,13 +2875,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
         "level_keys": [
           "U3 Program Investigate Event-Driven 1_2021"
-        ]
+        ],
+        "progression": "Code Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 1_2021"
@@ -2923,13 +2901,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
         "level_keys": [
           "U3 Program Investigate Event-Driven 2_2021"
-        ]
+        ],
+        "progression": "Code Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 2_2021"
@@ -2949,13 +2927,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Code Investigation",
         "level_keys": [
           "U3 Program Investigate Event-Driven 3_2021"
-        ]
+        ],
+        "progression": "Code Investigation"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 3_2021"
@@ -2975,13 +2953,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding",
         "level_keys": [
           "U3L6 CSP CFU Sequential vs Event Driven_2021"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L6 CSP CFU Sequential vs Event Driven_2021"
@@ -2999,15 +2977,15 @@
       "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
         "level_keys": [
           "U3 Program Practice Pt 1_2021"
-        ]
+        ],
+        "progression": "Debugging"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 1_2021"
@@ -3025,15 +3003,15 @@
       "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
         "level_keys": [
           "U3 Program Practice Pt 2_2021"
-        ]
+        ],
+        "progression": "Debugging"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 2_2021"
@@ -3051,15 +3029,15 @@
       "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
         "level_keys": [
           "U3 Program Practice Pt 3_2021"
-        ]
+        ],
+        "progression": "Debugging"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 3_2021"
@@ -3077,15 +3055,15 @@
       "chapter": 33,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
         "level_keys": [
           "U3 Program Practice Pt 4_2021"
-        ]
+        ],
+        "progression": "Debugging"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 4_2021"
@@ -3103,15 +3081,15 @@
       "chapter": 34,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
         "level_keys": [
           "U3 Program Practice Pt 5_2021"
-        ]
+        ],
+        "progression": "Debugging"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 5_2021"
@@ -3129,15 +3107,15 @@
       "chapter": 35,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
         "level_keys": [
           "U3 Program Practice Pt 6_2021"
-        ]
+        ],
+        "progression": "Debugging"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 6_2021"
@@ -3155,15 +3133,15 @@
       "chapter": 36,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Debugging",
         "level_keys": [
           "U3 Program Practice Pt 8_2021"
-        ]
+        ],
+        "progression": "Debugging"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 Program Practice Pt 8_2021"
@@ -3183,13 +3161,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding",
         "level_keys": [
           "U3L7 CSP CFU What was confusing_2021"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3L7 CSP CFU What was confusing_2021"
@@ -3207,15 +3185,15 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Pair Programming",
         "level_keys": [
           "U3 L08 Pair Programming Video_2021"
-        ]
+        ],
+        "progression": "Pair Programming"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U3 L08 Pair Programming Video_2021"
@@ -3233,15 +3211,15 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Add Code",
         "level_keys": [
           "CSP U3 L4 Add Code_2021"
-        ]
+        ],
+        "progression": "Add Code"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L4 Add Code_2021"
@@ -3259,15 +3237,15 @@
       "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Add More Code",
         "level_keys": [
           "CSP U3 L9 Add More Code_2021"
-        ]
+        ],
+        "progression": "Add More Code"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L9 Add More Code_2021"
@@ -3287,13 +3265,13 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit your app",
         "level_keys": [
           "CSP U3 L10 Submit App_2021"
-        ]
+        ],
+        "progression": "Submit your app"
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U3 L10 Submit App_2021"
@@ -3317,8 +3295,8 @@
           "CSP Unit 3 MC Assessment _2021"
         ]
       },
-      "named_level": null,
-      "bonus": null,
+      "named_level": false,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 3 MC Assessment _2021"
@@ -3475,7 +3453,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "2205e89c-4fca-46c1-95e4-ad99bdffa417"
+        "activity_section.key": "ca0a7a2a-2d45-4a44-8fba-fc90661c0caf"
       }
     },
     {
@@ -3841,6 +3819,31 @@
   ],
   "resources": [
     {
+      "name": "App Development Planning Guide",
+      "url": "https://docs.google.com/document/d/1JXIaQGRKzsw9UvZh58yLfkriV2QH7fTE51Omr8OJ1aM/edit?usp=sharing",
+      "key": "app_development_planning_guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
       "name": "CSP Unit 3 - Intro to App Design",
       "url": "https://docs.google.com/presentation/d/1lAs01DpAfG_i-BG641zLahDQ_P3RrsJWnkdpwwmTTFA/edit?usp=sharing",
       "key": "csp-unit-3-intro-to-app-design",
@@ -3862,19 +3865,6 @@
       },
       "seeding_key": {
         "resource.key": "how_computers_work_-_what_makes_a_computer_a_computer"
-      }
-    },
-    {
-      "name": "App Development Planning Guide",
-      "url": "https://docs.google.com/document/d/1JXIaQGRKzsw9UvZh58yLfkriV2QH7fTE51Omr8OJ1aM/edit?usp=sharing",
-      "key": "app_development_planning_guide",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "app_development_planning_guide"
       }
     },
     {
@@ -3902,18 +3892,6 @@
       }
     },
     {
-      "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
-      "key": "course_master_vocabulary",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "course_master_vocabulary"
-      }
-    },
-    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -3923,6 +3901,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
       }
     }
   ],
@@ -4058,6 +4048,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp3-2021"
       }
     }

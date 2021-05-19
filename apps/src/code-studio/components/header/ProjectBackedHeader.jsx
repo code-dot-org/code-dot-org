@@ -6,15 +6,9 @@ import ProjectShare from './ProjectShare';
 import ProjectExport from './ProjectExport';
 import ProjectRemix from './ProjectRemix';
 
-const styles = {
-  projectButtons: {
-    display: 'flex'
-  }
-};
-
 // Project header for script levels that are backed by a project. Shows a Share,
 // Export, and Remix button, and should be used with the version of ScriptName that
-// places a last_modified time below the stage name
+// places a last_modified time below the lesson name
 class ProjectBackedHeader extends React.Component {
   static propTypes = {
     includeExportInProjectHeader: PropTypes.bool.isRequired
@@ -31,6 +25,12 @@ class ProjectBackedHeader extends React.Component {
     );
   }
 }
+
+const styles = {
+  projectButtons: {
+    display: 'flex'
+  }
+};
 
 export const UnconnectedProjectBackedHeader = ProjectBackedHeader;
 export default connect(state => ({
