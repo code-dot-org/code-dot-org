@@ -34,7 +34,7 @@ mt:
         text: kulur bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': bl-addoċċ

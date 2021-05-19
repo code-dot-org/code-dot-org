@@ -34,10 +34,6 @@ mt:
         text: kulur bl-addoċċ
       Mikelab_randomColor:
         text: kulur bl-addoċċ
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"random"': bl-addoċċ
       aalab_layoutSprites:
         options:
           FORMAT:
