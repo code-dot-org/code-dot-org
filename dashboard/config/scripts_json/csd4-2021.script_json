@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-14 16:47:44 UTC",
+    "serialized_at": "2021-05-18 15:04:22 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -7412,6 +7412,19 @@
       }
     },
     {
+      "name": "Intro to Design Mode",
+      "url": "https://youtu.be/tAtvWkYBUoU",
+      "key": "intro_to_design_mode",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/design.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_design_mode"
+      }
+    },
+    {
       "name": "Market Research",
       "url": "https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/edit",
       "key": "market-research",
@@ -8255,6 +8268,12 @@
       "seeding_key": {
         "lesson.key": "Digital Design",
         "resource.key": "model-screen-design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "intro_to_design_mode"
       }
     },
     {
