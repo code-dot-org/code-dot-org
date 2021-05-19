@@ -2297,6 +2297,8 @@ ca:
               display_name: Variables
             csf_for_loops:
               display_name: Per bucles
+            lessonGroup-9:
+              display_name: Esdeveniments
         pre-express-2021:
           lesson_groups:
             csf_loops:
