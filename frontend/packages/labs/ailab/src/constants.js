@@ -155,7 +155,6 @@ export const styles = {
     boxSizing: "border-box",
     display: "flex",
     flexDirection: "column",
-    //opacity: 0.7,
     border: "solid 1px black",
     boxShadow: "-5px 5px 10px black"
   },

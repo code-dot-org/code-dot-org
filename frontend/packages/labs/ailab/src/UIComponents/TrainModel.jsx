@@ -102,7 +102,7 @@ class TrainModel extends Component {
         : 1;
 
     // Let's still show the starting row on our very first frame, because we might
-    // be paused waiting fo the overlay to be dismissed.
+    // be paused waiting for the overlay to be dismissed.
     const startingRow =
       this.state.frame === 0 ? undefined : this.getAnimationStep();
 
@@ -121,7 +121,6 @@ class TrainModel extends Component {
         <div
           style={{
             ...styles.trainModelDataTable,
-            //opacity: this.state.finished ? 0 : 1
             opacity: tableOpacity
           }}
         >
