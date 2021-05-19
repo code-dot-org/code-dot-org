@@ -51,7 +51,9 @@ const sampleModes = {
     datasets: ["zoo"]
   },
 
-  "final-project": {}
+  "final-project": {
+    randomizeTestData: true
+  }
 };
 
 // Look for a ?mode= parameter on the URL
