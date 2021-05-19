@@ -1,2 +1,11 @@
 {
+  "compilerError": "crwdns2547484:0crwdne2547484:0",
+  "illegalMethodAccess": "crwdns2547486:0{cause}crwdne2547486:0",
+  "internalCompilerException": "crwdns2547488:0{connectionId}crwdne2547488:0",
+  "internalException": "crwdns2547490:0{connectionId}crwdne2547490:0",
+  "internalRuntimeException": "crwdns2547492:0{connectionId}crwdne2547492:0",
+  "javaExtensionMissing": "crwdns2547494:0crwdne2547494:0",
+  "noMainMethod": "crwdns2547496:0crwdne2547496:0",
+  "runtimeError": "crwdns2547498:0{cause}crwdne2547498:0",
+  "twoMainMethods": "crwdns2547500:0crwdne2547500:0"
 }

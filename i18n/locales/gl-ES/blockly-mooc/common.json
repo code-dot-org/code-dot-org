@@ -381,6 +381,7 @@
   "nestedForSameVariable": "Estás a usar a mesma variable en dous ou máis bucles anidados. Emprega nomes de variables únicos para evitar bucles infinitos.",
   "newPassword": "novo contrasinal",
   "newSection": "Nova sección",
+  "newSectionUpdated": "Crea un novo grupo",
   "newSectionEllipsis": "Novo grupo...",
   "newSectionAdd": "Engade un novo grupo de aula",
   "newSectionCreate": "Crea un novo grupo",

@@ -88,6 +88,7 @@
   "answerPrompt": "Не забудьте написати щось у свою підказку!",
   "addPrintBlock": "Вам потрібно додати блок друку до свого коду:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
   "addJoinBlocks": "Ви друкуєте той самий текст, який ви ввели. Спробуйте додати якийсь інший текст, використовуючи блоки об’єднання. ",
+  "promptExplore": "Добре! Чи все працює, як ви очікували? Натисніть \"Продовжувати грати\", щоб внести зміни або \"Продовжити\", щоб рухатися далі.",
   "printMoreText": "Хороший початок. Продовжуйте додавати більше тексту, щоб закінчити рівень. ",
   "addTitleScreen": "Вам треба додати заголовок до вашого проекту.",
   "useColorVariable": "Використовуйте змінну, щоб встановити фоновий колір, коли на підказку буде запропоновано відповідь.",
@@ -95,5 +96,7 @@
   "noTitleScreen": "Заголовок не відображається. ",
   "titleVariable": "У вашому заголовку не було тексту з підказки. ",
   "noVarUse": "Вам потрібно використати змінну з вашої підказки в тексті, виведеному на екран.",
-  "addText": "Додайте текст на екран за допомогою блоку друку:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>"
+  "addText": "Додайте текст на екран за допомогою блоку друку:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"/></block></value></block></xml>",
+  "spritelabFeedbackUseFishCostume": "Ви маєте скористатися принаймні одним костюмом риби. ",
+  "spritelabFeedbackCreateTwoDifferentSprites": "Потрібно два спрайта з різними костюмами. "
 }

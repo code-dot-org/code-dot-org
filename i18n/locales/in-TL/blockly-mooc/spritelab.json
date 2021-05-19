@@ -87,6 +87,7 @@
   "behaviorsIncreased": "crwdns2480926:0crwdne2480926:0",
   "eventsWrongBehaviors": "crwdns2480928:0crwdne2480928:0",
   "spinBothWays": "crwdns2480930:0crwdne2480930:0",
+  "moveBothWays": "crwdns2547502:0crwdne2547502:0",
   "didntMoveUp": "crwdns2481348:0crwdne2481348:0",
   "didntMoveDown": "crwdns2481350:0crwdne2481350:0",
   "didntMoveLeft": "crwdns2481352:0crwdne2481352:0",
@@ -167,5 +168,9 @@
   "atLeastOneSpriteStillMoving": "crwdns2486320:0crwdne2486320:0",
   "spritesNotTouch": "crwdns2486322:0crwdne2486322:0",
   "addWhenTouchesEvent": "crwdns2486324:0crwdne2486324:0",
-  "changeSpriteBehaviorsWhenTouch": "crwdns2486326:0crwdne2486326:0"
+  "changeSpriteBehaviorsWhenTouch": "crwdns2486326:0crwdne2486326:0",
+  "moveSpriteLocation": "crwdns2547504:0crwdne2547504:0",
+  "createDraggableSprite": "crwdns2547506:0crwdne2547506:0",
+  "createNotDraggableSPrite": "crwdns2547508:0crwdne2547508:0",
+  "moveSpriteByDrag": "crwdns2547510:0crwdne2547510:0"
 }

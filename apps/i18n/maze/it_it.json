@@ -64,6 +64,7 @@
   "moveBackward": "vai indietro",
   "moveEastTooltip": "Sposta di una casella verso est.",
   "moveNForward": "vai avanti di %1 caselle",
+  "moveNForwardTooltip": "Spostami avanti del numero specificato di spazi.",
   "moveForward": "vai avanti",
   "moveForwardTooltip": "Sposta in avanti di una casella.",
   "moveNorthTooltip": "Sposta di una casella verso nord.",
