@@ -28853,6 +28853,8 @@ de:
               description_teacher: In dieser Lektion programmieren die SchülerInnen
                 ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton,
                 da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.
+            lesson-3:
+              name: Sprites in Aktion
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -28870,6 +28872,8 @@ de:
               display_name: Sprites
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
+            lessonGroup-9:
+              display_name: Ereignisse
           student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen
             in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen,
             Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu
@@ -29332,6 +29336,8 @@ de:
             CS Discoveries Post Course survey:
               key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
               name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            Designing With Empathy:
+              name: Analyse der Planung
             Build a Paper Prototype:
               name: Papier-Prototypen
             Digital Mode in App Lab:
@@ -29740,6 +29746,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Test
         csa2-pilot:
           lessons:
             lesson-15:
@@ -29845,3 +29853,7 @@ de:
             für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer
             und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen
             und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
+        aiml-2021:
+          lessons:
+            lesson15:
+              name: Lektion 15
