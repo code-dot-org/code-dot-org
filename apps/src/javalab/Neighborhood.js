@@ -41,15 +41,25 @@ export default class Neighborhood {
 
   handleSignal(signal) {
     const type = signal.value;
+    console.log(signal);
     switch (type) {
       case NeighborhoodSignalType.MOVE: {
         const {direction, id} = signal.detail;
-        this.controller.animatedMove(Direction[direction.toUpperCase()], id);
+        this.controller.animatedMove(
+          Direction[direction.toUpperCase()],
+          1000,
+          id
+        );
         break;
       }
       case NeighborhoodSignalType.INITIALIZE: {
         const {direction, x, y, id} = signal.detail;
-        this.controller.addPegman(id, x, y, direction);
+        this.controller.addPegman(
+          id,
+          parseInt(x),
+          parseInt(y),
+          Direction[direction.toUpperCase()]
+        );
         break;
       }
       default:
@@ -59,6 +69,6 @@ export default class Neighborhood {
   }
 
   reset() {
-    //this.controller.reset();
+    this.controller.reset();
   }
 }
