@@ -225,21 +225,23 @@ export class TeacherFeedback extends Component {
         )}
         {displayComment && (
           <div style={styles.commentAndFooter}>
-            <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-            {keepWorkingEnabled && (
-              <TeacherFeedbackKeepWorking
-                latestFeedback={latestFeedback}
-                reviewState={this.state.reviewState}
-                setReviewState={reviewState =>
-                  this.setState({
-                    reviewState: reviewState
-                  })
-                }
-                setReviewStateChanged={isChanged =>
-                  this.setState({reviewStateUpdated: isChanged})
-                }
-              />
-            )}
+            <div style={styles.header}>
+              <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
+              {keepWorkingEnabled && (
+                <TeacherFeedbackKeepWorking
+                  latestFeedback={latestFeedback}
+                  reviewState={this.state.reviewState}
+                  setReviewState={reviewState =>
+                    this.setState({
+                      reviewState: reviewState
+                    })
+                  }
+                  setReviewStateChanged={isChanged =>
+                    this.setState({reviewStateUpdated: isChanged})
+                  }
+                />
+              )}
+            </div>
             <CommentArea
               disabledMode={disabledMode}
               comment={comment}
@@ -295,10 +297,14 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start'
   },
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+    marginTop: 8,
+    marginBottom: 8
+  },
   h1: {
     color: color.charcoal,
-    marginTop: 8,
-    marginBottom: 8,
     fontSize: 18,
     lineHeight: '18px',
     fontFamily: '"Gotham 5r", sans-serif',
