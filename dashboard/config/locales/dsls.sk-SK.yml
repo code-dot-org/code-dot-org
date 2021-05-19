@@ -569,22 +569,55 @@ sk-SK:
           V informatike sú udalosti akcie, ktoré počítač monitoruje. V tejto lekcii budeš reagovať inak v závislosti od toho, ktoré tlačidlo stlačíš.
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
+          si z možností  napravo . '
+        title: 'Kontrola nadpisov '
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
+          si z možností  napravo . '
+        title: 'Kontrola nadpisov '
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 'Pozri sa na kód nižšie a odpovedz ,ako bude zobrazený nadpis. Vyber
+          si z možností  napravo . '
+        teacher_markdown: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png\"
+          style=\"width:200px; float:right\">\n\n**Druhy urovní*:** Na otázku, ako
+          budú HTML nadpisy zobrazené na webovej stránke, sú študenti vyzvaní odpovedať
+          výberom správnej odpovedi spomedzi viacerých možností. Ak chcete vidieť,
+          ktorí študenti odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
+          na webovej stránke, vyhľadajte si túto úroveň cez panel pre učiteľov vpravo.
+          Študenti so správnou odpoveďou budú mať zelený gombík. Študenti majú možnosť
+          odpovedať na otázku aj viac ráz, pričom samotné hádanie a následná kontrola
+          môže rovnako viesť k správnej odpovedi. \n\n<div class=\"clear\"></div>"
+        title: 'Kontrola nadpisov '
       CSD U2 image debug match:
         answers:
         - {}
@@ -622,6 +655,7 @@ sk-SK:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         content1: Priraď zoznam ku správnemu kódu
+        title: 'Kontrola zoznamov '
       CSD U2 lists match_2018:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -646,6 +680,7 @@ sk-SK:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         content1: Priraď zoznam ku správnemu kódu
+        title: 'Kontrola zoznamov '
       CSD U2 lists match_2018_2019:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -670,6 +705,7 @@ sk-SK:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         content1: Priraď zoznam ku správnemu kódu
+        title: 'Kontrola zoznamov '
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -4433,7 +4469,7 @@ sk-SK:
       csd-post-survey-levelgroup_2019:
         title: Objavujeme informatiku - Študentský dotazník na konci semestra
       CSD U5 test:
-        title: Spoločnosť a dáta Test po projekte
+        title: 'Záverečný test: Údaje a spoločnosť'
       csd-pre-survey-2017-levelgroup:
         title: Objavujeme Informatiku Študentský dotazník pred kurzom
       csd-pre-survey-2017-levelgroup_2018:
@@ -4891,8 +4927,95 @@ sk-SK:
           **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n* **[Body](//studio.code.org/docs/weblab/body/)**
           - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`"
       CSD U1 Test:
-        title: Počítače a riešenie problémov v postprojektovom testovaní
+        title: 'Záverečný test: Počítače a riešenie problémov'
       CSD User Centered Design Post-Project Test:
-        title: 'Dizajn zameraný na používateľa: Poprojektové testovanie'
+        title: 'Záverečný test: Dizajn zameraný na používateľa'
       CSD Physical Computing Post-Project Test:
         title: 'Záverečný test: Fyzické výpočty'
+      CSD U2 L4 Overview:
+        markdown: "# Prehľad\n\nLekcia pokračuje predstavením ako označiť nadpisy
+          v   HTML.   Trieda skúša používanie nadpisových označení  na vytvorenie
+          stránky alebo jej časti s názvom a zisťuje , ako sú zobrazené rôzne prvky
+          nadpisov v predvolenom režime. Neskôr si trieda naplánuje ako pripraviť
+          obsah svojej stránky, ktorá bude vytvorená v rámci lekcie a začne s úvodnou
+          stránkou svojho projektu . \n\n## Slovník\n\n* **Nadpis** - zhrnutie dokumentu
+          alebo časti dokumentu.\n\n## Úvodný kód \n\n*  **[Nadpis](//studio.code.org/docs/weblab/h/)**
+          - `<h1></h1>`\n"
+      CSD U2 L5 Overview:
+        markdown: "# Prehľad\n\nTáto lekcia trocha odbočí od vytvrárania stránok a
+          zameria sa na to, ako si ľudia vyberajú informácie ,ktoré zdieľajú digitálne
+          . Trieda najprv diskutuje, aké informácie sú vhodné na zdieľanie s ostatnými
+          a potom sa pozrie na niekoľko príkladov zo stránok sociálnych médií. Pokúsia
+          sa identifikovať, ktoré osobné informácie mohli byť zdieľané úmyselne a
+          ktoré neúmyselne. Na záver trieda zostaví príručku ako postupovať pri pridávaní
+          informácií do online priestoru.   \n## Slovník\n\n* **Digitálna stopa* -
+          \ Súbor informácií o určitej osobne  nachádzajúce sa naprieč niekoľkými
+          webovými stránkami. \n\n\n## Zdroje\n\n* [Kedy záleží na tvojom súkromí
+          ? - Sprievodca aktivitami](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)\n*
+          [Sociálny detektív - Sprievodca aktivitami e](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)\n"
+        teacher_markdown: |-
+          * [Kedy záleží na tvojom súkromí ?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Sprievodca aktivitami- Príklad  ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Sociálny detektív](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc)
+      CSD U2 L6 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa trieda oboznám s usporiadanými a
+          neusporiadanými zoznami a súvisiacimi  &lt;ul&gt;, &lt;ol&gt;, a &lt;li&gt;
+          HTML tagmi.  Trieda skúša používanie tagov a potom na projektovej osobnej
+          webevej stránke pridá novú HTML stránku, ktorá obsahuje aj nový tag \n\n##
+          Nový kód\n\n\n*  **[Neusporiadaný zoznamt](//studio.code.org/docs/weblab/ul/)**
+          - `<ul></ul>`\n*  **[Zoznam položiek](//studio.code.org/docs/weblab/li/)**
+          - `<li></li>`\n*  **[Usporiadaný zoznam](//studio.code.org/docs/weblab/ol/)**
+          - `<ol></ol>`"
+      CSD Web Development Post-Project Test:
+        title: 'Záverečný test: Vývoj webových stránok'
+      Social Sleuth_2018_2019:
+        markdown: "# Sociálny detektív\n\nNa ukončenie tejto aktivity je potrebný
+          \ <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
+          Sociálny detektív pracovný zošit </a>.\n\n## Profily\n\nKliknutím na obrázky
+          sa otvoria jednotlivé profily. \n\n### FaceSpace\n\n| FaceSpace: Lizzie
+          Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |\n| ---------  | ------
+          |  ------ |\n| <a href=\"https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11
+          PM.png\" style=\"width:400px\"> </a> | <a href=\"https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/\"
+          target=\"_blank\"><img src=\"https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59
+          PM.png\" style=\"width:400px\"></a>  |<a href=\"https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56
+          PM.png\" style=\"width:400px\"> </a> |\n\n\n### Chirpr\n\n| Chirpr: @johnsnow
+          \ |  Chirpr:@flyinghail | Chirpr: @lillizard |\n| ---------  | ------ |
+          \ ------ |\n| <a href=\"https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59
+          PM.png\" style=\"width:400px\"> </a> | <a href=\"https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37
+          PM.png\" style=\"width:400px\"> </a> |<a href=\"https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52
+          AM.png\" style=\"width:400px\"> </a> |\n\n\n### instantframe\n\n| instantframe:
+          johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |\n|
+          ---------  | ------ |  ------ |\n| <a href=\"https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31
+          PM.png\" style=\"width:400px\"> </a> | <a href=\"https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30
+          PM.png\" style=\"width:400px\"> </a> |<a href=\"https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/\"
+          target=\"_blank\">  <img src=\"https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54
+          PM.png\" style=\"width:400px\"> </a> |\n"
+        teacher_markdown: "#### Sociálny detektív\n\n**1.krok:** Študenti prezrú všetky
+          prístupné stránky sociálných medií na Code Studio. Na stránkach je znázornených
+          zopár jednotlivcov, z ktorých každý jeden má vlastný účet na troch platformách
+          sociálnych medií.  Tie su rozdelené nasledovne (nezdielajte so študentmi):
+          \n\n|               | FaceSpace  | Chirpr     | instantframe |\n| -------------
+          | ---------  | ---------  | ------------ |\n| John Thomas   | John T     |
+          @johnsnow  | johnsnow     |\n| Haley Gutierrez   | Haley G  | @flyinghail
+          | desertrider  |\n| Lizzie Dell    | Lizzie Dell| @lillizard | photolizzie
+          \ |\n\n**Návrh:**\n\nOd študentov sa požaduje, aby si z dostupných profilov
+          vybrali dvoch užívateľov. Avšak ak nemáte dostatok času, môžete študentov
+          požiadať, aby vyplnili iba jednu zo stôp.  \n\n**2.krok:** Po prehliadnutí
+          stránok, študenti sa pokúsia zistiť, kto sú títo dvaja užívatelia a odpovedia
+          na niekoľko otázok. Otázky týkajúce sa stopy sú navrhnuté tak, aby študentov
+          smerovali k pospájaniu detailov získaných z rôznych sociálnych platformov
+          a porozumeniu, že profily spolu zachytia viac detailných informácií, ako
+          by samotní užívatelia prezradili. Niektoré otázky nie sú zodpovedateľné
+          plošne pre všetkých užívateľov, môžu mať rôzne úrovne detailov (celá adresa
+          pri jednom užívateľovi, ale len mesto alebo štát pri inom). \n\n**Zdielaj:**
+          Vyzvite triedu, aby pozdieľala digitálne stopy, ktoré prostredníctvom aktivity
+          vytvorili. \n\n**Diskutujte:**\n\n* Ktoré informácie sa hľadali najťažsie?\n*
+          Ktoré podrobnosti boli samy o sebe neškodné, ale v kombinácii s ďalšími
+          podrobnosťami odhalili súkromné ​​ \n   informácie? \n* Ako ovplyvnia tieto
+          poznatky vaše rozhodovanie, čo zverejňovať online? "
