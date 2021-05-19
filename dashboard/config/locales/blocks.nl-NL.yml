@@ -1584,13 +1584,6 @@ nl:
         text: x coördinaat van {SPRITE}
       Mikelab_yLocationOf:
         text: y coordinaat van {SPRITE}
-      Outbreak_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': raster
-            '"border"': grens
-            '"row"': rij
-            '"random"': willekeurig
       RyanLab_moveForward:
         text: beweeg vooruit
       RyanLab_turnLeft:
