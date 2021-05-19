@@ -25,7 +25,7 @@ export const JavabuilderExceptionType = {
 
 export const NeighborhoodSignalType = {
   MOVE: 'MOVE',
-  INITIALIZE: 'INITIALIZE',
+  INITIALIZE_PAINTER: 'INITIALIZE_PAINTER',
   // Add paint to the current location
   PAINT: 'PAINT',
   // Remove all paint from current location

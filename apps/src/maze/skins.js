@@ -195,13 +195,11 @@ var CONFIGS = {
       'sidewalk.png': 2,
       'wall.png': 3
     },
-    // idlePegmanAnimation: 'idle_avatar.png',
-    // idlePegmanCol: 0,
-    // idlePegmanRow: 0,
-    //movePegmanAnimation: 'move_avatar.png',
-    pegmanHeight: 68,
-    pegmanWidth: 51,
-    pegmanYOffset: -14
+    pegmanHeight: 32,
+    pegmanWidth: 32,
+    pegmanYOffset: 0,
+    pegmanXOffset: 0,
+    pegmanSheetWidth: 512
   }
 };
 

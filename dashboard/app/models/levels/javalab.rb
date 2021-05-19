@@ -33,6 +33,7 @@ class Javalab < Level
     encrypted_examples
     csa_view_mode
     serialized_maze
+    start_direction
   )
 
   before_save :fix_examples, :parse_maze

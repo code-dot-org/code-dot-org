@@ -8,17 +8,6 @@ export default class Neighborhood {
     this.controller = null;
   }
   afterInject(level, skin, config, studioApp) {
-    // Insert some temporary values here until we can populate them from levelbuilder
-    level.map = [
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 2, 1, 1, 3, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ];
     level.startDirection = Direction.EAST;
 
     this.controller = new MazeController(level, skin, config, {
@@ -51,12 +40,12 @@ export default class Neighborhood {
         const {direction, id} = signal.detail;
         this.controller.animatedMove(
           Direction[direction.toUpperCase()],
-          1000,
+          2000,
           id
         );
         break;
       }
-      case NeighborhoodSignalType.INITIALIZE: {
+      case NeighborhoodSignalType.INITIALIZE_PAINTER: {
         const {direction, x, y, id} = signal.detail;
         this.controller.addPegman(
           id,
@@ -70,6 +59,10 @@ export default class Neighborhood {
         console.log(type);
         break;
     }
+  }
+
+  onCompile() {
+    this.controller.hideDefaultPegman();
   }
 
   reset() {
