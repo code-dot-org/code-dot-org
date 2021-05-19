@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import color from '@cdo/apps/util/color';
 
 const reviewStates = {
   completed: 'completed',
@@ -89,7 +90,8 @@ class TeacherFeedbackKeepWorking extends Component {
           <span style={styles.keepWorkingText}>Keep Working</span>
           {this.awaitingTeacherReview() && (
             <span style={styles.awaitingReviewText}>
-              - awaiting teacher review
+              <span style={styles.awaitingReviewSpacer}>-</span>
+              {'awaiting teacher review'}
             </span>
           )}
         </label>
@@ -110,10 +112,15 @@ const styles = {
   },
   label: {
     fontSize: '13px',
+    color: color.charcoal,
     margin: '0 8px'
   },
   keepWorkingText: {
+    fontFamily: '"Gotham 5r", sans-serif',
     fontWeight: 'bold'
+  },
+  awaitingReviewSpacer: {
+    margin: '0 3px'
   },
   awaitingReviewText: {
     fontStyle: 'italic'

@@ -233,7 +233,7 @@ export class TeacherFeedback extends Component {
           <div style={styles.commentAndFooter}>
             <div style={styles.header}>
               <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-              {keepWorkingEnabled && (
+              {keepWorkingEnabled && viewAs === ViewType.Teacher && (
                 <TeacherFeedbackKeepWorking
                   latestFeedback={latestFeedback}
                   reviewState={this.state.reviewState}
