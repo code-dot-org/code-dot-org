@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-18 18:12:11 UTC",
+    "serialized_at": "2021-05-20 18:50:23 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -435,7 +435,7 @@
     },
     {
       "key": "While Loops with the Farmer",
-      "name": "While Loops with the Farmer",
+      "name": "While Loops in Farmer",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1192,20 +1192,8 @@
       }
     },
     {
-      "key": "799dfe1a-eb2a-48ce-a32b-c5fd8e2dab37",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "799dfe1a-eb2a-48ce-a32b-c5fd8e2dab37",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-9",
-        "script.name": "express-2021"
-      }
-    },
-    {
       "key": "2a7b8b85-749e-4574-9b55-ea869f31e600",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -2199,7 +2187,6 @@
       "key": "19367182-a8f0-442e-9a7d-e7852546f961",
       "position": 7,
       "properties": {
-        "name": "Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3328,26 +3315,13 @@
       "key": "93b0085f-79bb-48eb-a786-f20c04016a31",
       "position": 1,
       "properties": {
-        "description": "- Pose a prompt that has multiple answers such as “What is something you enjoyed about today's activity?” or “What is the connection between creativity and computer science?\"",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**- \n\n - What is something you enjoyed about today's activity?\n\n- What is the connection between creativity and computer science?\n\n- What is CS and why does it matter.",
         "duration": "5",
         "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "93b0085f-79bb-48eb-a786-f20c04016a31",
         "lesson_activity.key": "bc6111e2-2d2b-4d09-ba39-ad4f401202c0"
-      }
-    },
-    {
-      "key": "27ea0cc5-96b4-462d-8d1c-7bb30d7e6776",
-      "position": 1,
-      "properties": {
-        "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door. Try to populate the board with lots of great ideas about what CS is and why it matters.",
-        "duration": "2",
-        "name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "27ea0cc5-96b4-462d-8d1c-7bb30d7e6776",
-        "lesson_activity.key": "799dfe1a-eb2a-48ce-a32b-c5fd8e2dab37"
       }
     },
     {
@@ -4024,7 +3998,7 @@
       "key": "23b4fc9a-484e-482b-856b-cb48acb73dcb",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "23b4fc9a-484e-482b-856b-cb48acb73dcb",
@@ -4057,7 +4031,7 @@
       "key": "d1f28a2a-eb91-4271-aeef-7c155109fac4",
       "position": 5,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "d1f28a2a-eb91-4271-aeef-7c155109fac4",
@@ -4138,10 +4112,21 @@
       "properties": {
         "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as _Alex_ or _Steve_ as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming.",
         "name": "Conditionals in Minecraft: Voyage Aquatic",
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4",
+        "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
+      }
+    },
+    {
+      "key": "7064cb92-5320-4d9f-9de2-6de2ca05c5d1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "7064cb92-5320-4d9f-9de2-6de2ca05c5d1",
         "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
       }
     },
@@ -4409,7 +4394,7 @@
       "properties": {
         "description": "####Online Puzzles\n\nWe recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles.",
         "name": "Functions in Minecraft",
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80",
@@ -9799,7 +9784,7 @@
         "level_keys": [
           "courseD_farmer_while1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9825,7 +9810,7 @@
         "level_keys": [
           "courseD_farmer_while2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9851,7 +9836,7 @@
         "level_keys": [
           "courseD_farmer_while3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9929,7 +9914,7 @@
         "level_keys": [
           "courseD_farmer_while4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9955,7 +9940,7 @@
         "level_keys": [
           "courseD_farmer_while5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9981,7 +9966,7 @@
         "level_keys": [
           "courseD_farmer_while6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10007,7 +9992,7 @@
         "level_keys": [
           "courseD_farmer_while7_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10164,7 +10149,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10190,7 +10175,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10216,7 +10201,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10242,7 +10227,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10268,7 +10253,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10294,7 +10279,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10320,7 +10305,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_7a_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10346,7 +10331,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_8_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10372,7 +10357,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_9b_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10398,7 +10383,7 @@
         "level_keys": [
           "CourseE_HOC 2018 Level_10_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10421,10 +10406,7 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_HOC 2018 Level_11_2021"
-        ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -10443,6 +10425,29 @@
     },
     {
       "chapter": 205,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HOC 2018 Level_12_2021"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "7064cb92-5320-4d9f-9de2-6de2ca05c5d1"
+      },
+      "level_keys": [
+        "HOC 2018 Level_12_2021"
+      ]
+    },
+    {
+      "chapter": 206,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10468,7 +10473,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 207,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10494,7 +10499,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 208,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10520,7 +10525,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 209,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10546,7 +10551,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 210,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -10572,7 +10577,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 211,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -10598,7 +10603,7 @@
       ]
     },
     {
-      "chapter": 211,
+      "chapter": 212,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -10624,7 +10629,7 @@
       ]
     },
     {
-      "chapter": 212,
+      "chapter": 213,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -10650,7 +10655,7 @@
       ]
     },
     {
-      "chapter": 213,
+      "chapter": 214,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -10677,7 +10682,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 215,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -10703,7 +10708,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 216,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -10729,7 +10734,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 217,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10755,7 +10760,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 218,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10781,7 +10786,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 219,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -10807,7 +10812,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 220,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -10833,7 +10838,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 221,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -10859,7 +10864,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 222,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -10885,7 +10890,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 223,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -10911,7 +10916,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 224,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -10938,7 +10943,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 225,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -10964,7 +10969,7 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 226,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -10990,7 +10995,7 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 227,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11016,7 +11021,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 228,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -11042,7 +11047,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 229,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -11068,7 +11073,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 230,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11076,7 +11081,7 @@
         "level_keys": [
           "MC_HOC_2017_01_RETRY_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11094,7 +11099,7 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 231,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11102,7 +11107,7 @@
         "level_keys": [
           "MC_HOC_2017_02_Cole_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11120,7 +11125,7 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 232,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11128,7 +11133,7 @@
         "level_keys": [
           "MC_HOC_2017_03_Cole_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11146,7 +11151,7 @@
       ]
     },
     {
-      "chapter": 232,
+      "chapter": 233,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11154,7 +11159,7 @@
         "level_keys": [
           "MC_HOC_2017_04_Cole_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11172,7 +11177,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 234,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -11180,7 +11185,7 @@
         "level_keys": [
           "MC_HOC_2017_04POINT5_RYAN_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11198,7 +11203,7 @@
       ]
     },
     {
-      "chapter": 234,
+      "chapter": 235,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -11206,7 +11211,7 @@
         "level_keys": [
           "MC_HOC_2017_05_Cole_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11224,7 +11229,7 @@
       ]
     },
     {
-      "chapter": 235,
+      "chapter": 236,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -11232,7 +11237,7 @@
         "level_keys": [
           "MC_HOC_2017_06_Cole_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11250,7 +11255,7 @@
       ]
     },
     {
-      "chapter": 236,
+      "chapter": 237,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -11258,7 +11263,7 @@
         "level_keys": [
           "Function intro Ryan_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11276,7 +11281,7 @@
       ]
     },
     {
-      "chapter": 237,
+      "chapter": 238,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -11284,7 +11289,7 @@
         "level_keys": [
           "MC_HOC_2017_07_Cole_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11302,7 +11307,7 @@
       ]
     },
     {
-      "chapter": 238,
+      "chapter": 239,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -11310,7 +11315,7 @@
         "level_keys": [
           "MC_HOC_2017_10_RETRY_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11328,7 +11333,7 @@
       ]
     },
     {
-      "chapter": 239,
+      "chapter": 240,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -11336,7 +11341,7 @@
         "level_keys": [
           "MC_HOC_2017_Ali_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -11354,7 +11359,7 @@
       ]
     },
     {
-      "chapter": 240,
+      "chapter": 241,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -11380,7 +11385,7 @@
       ]
     },
     {
-      "chapter": 241,
+      "chapter": 242,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11406,7 +11411,7 @@
       ]
     },
     {
-      "chapter": 242,
+      "chapter": 243,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11432,7 +11437,7 @@
       ]
     },
     {
-      "chapter": 243,
+      "chapter": 244,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11458,7 +11463,7 @@
       ]
     },
     {
-      "chapter": 244,
+      "chapter": 245,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11484,7 +11489,7 @@
       ]
     },
     {
-      "chapter": 245,
+      "chapter": 246,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -11510,7 +11515,7 @@
       ]
     },
     {
-      "chapter": 246,
+      "chapter": 247,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -11536,7 +11541,7 @@
       ]
     },
     {
-      "chapter": 247,
+      "chapter": 248,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11562,7 +11567,7 @@
       ]
     },
     {
-      "chapter": 248,
+      "chapter": 249,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11588,7 +11593,7 @@
       ]
     },
     {
-      "chapter": 249,
+      "chapter": 250,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11614,7 +11619,7 @@
       ]
     },
     {
-      "chapter": 250,
+      "chapter": 251,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11640,7 +11645,7 @@
       ]
     },
     {
-      "chapter": 251,
+      "chapter": 252,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11667,7 +11672,7 @@
       ]
     },
     {
-      "chapter": 252,
+      "chapter": 253,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -11693,7 +11698,7 @@
       ]
     },
     {
-      "chapter": 253,
+      "chapter": 254,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11719,7 +11724,7 @@
       ]
     },
     {
-      "chapter": 254,
+      "chapter": 255,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11745,7 +11750,7 @@
       ]
     },
     {
-      "chapter": 255,
+      "chapter": 256,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11771,7 +11776,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 257,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11797,7 +11802,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 258,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11823,7 +11828,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 259,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11849,7 +11854,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 260,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -11875,7 +11880,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 261,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -11901,7 +11906,7 @@
       ]
     },
     {
-      "chapter": 261,
+      "chapter": 262,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -11927,7 +11932,7 @@
       ]
     },
     {
-      "chapter": 262,
+      "chapter": 263,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -11953,7 +11958,7 @@
       ]
     },
     {
-      "chapter": 263,
+      "chapter": 264,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11980,7 +11985,7 @@
       ]
     },
     {
-      "chapter": 264,
+      "chapter": 265,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12006,7 +12011,7 @@
       ]
     },
     {
-      "chapter": 265,
+      "chapter": 266,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -12032,7 +12037,7 @@
       ]
     },
     {
-      "chapter": 266,
+      "chapter": 267,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12058,7 +12063,7 @@
       ]
     },
     {
-      "chapter": 267,
+      "chapter": 268,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -12084,7 +12089,7 @@
       ]
     },
     {
-      "chapter": 268,
+      "chapter": 269,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -12110,7 +12115,7 @@
       ]
     },
     {
-      "chapter": 269,
+      "chapter": 270,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12136,7 +12141,7 @@
       ]
     },
     {
-      "chapter": 270,
+      "chapter": 271,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -12162,7 +12167,7 @@
       ]
     },
     {
-      "chapter": 271,
+      "chapter": 272,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12188,7 +12193,7 @@
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 273,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12214,7 +12219,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 274,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12240,7 +12245,7 @@
       ]
     },
     {
-      "chapter": 274,
+      "chapter": 275,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12266,7 +12271,7 @@
       ]
     },
     {
-      "chapter": 275,
+      "chapter": 276,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -12292,7 +12297,7 @@
       ]
     },
     {
-      "chapter": 276,
+      "chapter": 277,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12318,7 +12323,7 @@
       ]
     },
     {
-      "chapter": 277,
+      "chapter": 278,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -12344,7 +12349,7 @@
       ]
     },
     {
-      "chapter": 278,
+      "chapter": 279,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -12370,7 +12375,7 @@
       ]
     },
     {
-      "chapter": 279,
+      "chapter": 280,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -12396,7 +12401,7 @@
       ]
     },
     {
-      "chapter": 280,
+      "chapter": 281,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -12422,7 +12427,7 @@
       ]
     },
     {
-      "chapter": 281,
+      "chapter": 282,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12449,7 +12454,7 @@
       ]
     },
     {
-      "chapter": 282,
+      "chapter": 283,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12475,7 +12480,7 @@
       ]
     },
     {
-      "chapter": 283,
+      "chapter": 284,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12501,7 +12506,7 @@
       ]
     },
     {
-      "chapter": 284,
+      "chapter": 285,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -12527,7 +12532,7 @@
       ]
     },
     {
-      "chapter": 285,
+      "chapter": 286,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -12553,7 +12558,7 @@
       ]
     },
     {
-      "chapter": 286,
+      "chapter": 287,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -12579,7 +12584,7 @@
       ]
     },
     {
-      "chapter": 287,
+      "chapter": 288,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -12605,7 +12610,7 @@
       ]
     },
     {
-      "chapter": 288,
+      "chapter": 289,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12631,7 +12636,7 @@
       ]
     },
     {
-      "chapter": 289,
+      "chapter": 290,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12657,7 +12662,7 @@
       ]
     },
     {
-      "chapter": 290,
+      "chapter": 291,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12683,7 +12688,7 @@
       ]
     },
     {
-      "chapter": 291,
+      "chapter": 292,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -12709,7 +12714,7 @@
       ]
     },
     {
-      "chapter": 292,
+      "chapter": 293,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12735,7 +12740,7 @@
       ]
     },
     {
-      "chapter": 293,
+      "chapter": 294,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -12761,7 +12766,7 @@
       ]
     },
     {
-      "chapter": 294,
+      "chapter": 295,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -12787,7 +12792,7 @@
       ]
     },
     {
-      "chapter": 295,
+      "chapter": 296,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -12813,7 +12818,7 @@
       ]
     },
     {
-      "chapter": 296,
+      "chapter": 297,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -12839,7 +12844,7 @@
       ]
     },
     {
-      "chapter": 297,
+      "chapter": 298,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -12865,7 +12870,7 @@
       ]
     },
     {
-      "chapter": 298,
+      "chapter": 299,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -12891,7 +12896,7 @@
       ]
     },
     {
-      "chapter": 299,
+      "chapter": 300,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12917,7 +12922,7 @@
       ]
     },
     {
-      "chapter": 300,
+      "chapter": 301,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -12943,7 +12948,7 @@
       ]
     },
     {
-      "chapter": 301,
+      "chapter": 302,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12969,7 +12974,7 @@
       ]
     },
     {
-      "chapter": 302,
+      "chapter": 303,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12995,7 +13000,7 @@
       ]
     },
     {
-      "chapter": 303,
+      "chapter": 304,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -13021,7 +13026,7 @@
       ]
     },
     {
-      "chapter": 304,
+      "chapter": 305,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -13047,7 +13052,7 @@
       ]
     },
     {
-      "chapter": 305,
+      "chapter": 306,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -13073,7 +13078,7 @@
       ]
     },
     {
-      "chapter": 306,
+      "chapter": 307,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -13099,7 +13104,7 @@
       ]
     },
     {
-      "chapter": 307,
+      "chapter": 308,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -13125,7 +13130,7 @@
       ]
     },
     {
-      "chapter": 308,
+      "chapter": 309,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -13151,7 +13156,7 @@
       ]
     },
     {
-      "chapter": 309,
+      "chapter": 310,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -13177,7 +13182,7 @@
       ]
     },
     {
-      "chapter": 310,
+      "chapter": 311,
       "position": 10,
       "activity_section_position": 9,
       "assessment": false,
@@ -13203,7 +13208,7 @@
       ]
     },
     {
-      "chapter": 311,
+      "chapter": 312,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -13229,7 +13234,7 @@
       ]
     },
     {
-      "chapter": 312,
+      "chapter": 313,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -13255,7 +13260,7 @@
       ]
     },
     {
-      "chapter": 313,
+      "chapter": 314,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -13281,7 +13286,7 @@
       ]
     },
     {
-      "chapter": 314,
+      "chapter": 315,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -13307,7 +13312,7 @@
       ]
     },
     {
-      "chapter": 315,
+      "chapter": 316,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13333,7 +13338,7 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 317,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -15806,6 +15811,18 @@
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
         "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HOC 2018 Level_12_2021",
+        "script_level.level_keys": [
+          "HOC 2018 Level_12_2021"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "7064cb92-5320-4d9f-9de2-6de2ca05c5d1"
       }
     },
     {

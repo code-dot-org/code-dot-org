@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 20:28:55 UTC",
+    "serialized_at": "2021-05-20 16:41:17 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -4669,6 +4669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video_2021"
+        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "named_level": false,
