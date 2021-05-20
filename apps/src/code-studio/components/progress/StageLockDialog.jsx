@@ -4,7 +4,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
-import {LockStatus, saveLockDialog} from '../../stageLockRedux';
+import {LockStatus, saveLockDialog} from '../../lessonLockRedux';
 import color from '../../../util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
@@ -328,9 +328,9 @@ const styles = {
 export const UnconnectedStageLockDialog = Radium(StageLockDialog);
 export default connect(
   state => ({
-    initialLockStatus: state.stageLock.lockStatus,
-    isOpen: !!state.stageLock.lockDialogStageId,
-    saving: state.stageLock.saving,
+    initialLockStatus: state.lessonLock.lockStatus,
+    isOpen: !!state.lessonLock.lockDialogLessonId,
+    saving: state.lessonLock.saving,
     selectedSectionId: state.teacherSections.selectedSectionId.toString()
   }),
   dispatch => ({

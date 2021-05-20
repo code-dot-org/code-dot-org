@@ -66,7 +66,7 @@ describe('progressHelpers', () => {
     it('returns true for a lockable stage as teacher', () => {
       const localState = {
         ...state,
-        stageLock: {
+        lessonLock: {
           lockableAuthorized: true
         }
       };
@@ -90,7 +90,7 @@ describe('progressHelpers', () => {
       currentUser: {
         userId: 1
       },
-      stageLock: {
+      lessonLock: {
         lockableAuthorized: true
       }
     };
@@ -128,7 +128,7 @@ describe('progressHelpers', () => {
     it('returns true for lockable lesson for non-verified teacher', () => {
       const localState = {
         ...state,
-        stageLock: {
+        lessonLock: {
           lockableAuthorized: false
         }
       };
@@ -164,7 +164,7 @@ describe('progressHelpers', () => {
       teacherSections: {
         selectedSectionId: sectionId
       },
-      stageLock: {
+      lessonLock: {
         lessonsBySectionId: {
           11: {
             [lockedStageId]: [

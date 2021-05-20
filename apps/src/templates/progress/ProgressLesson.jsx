@@ -297,7 +297,7 @@ export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
-  lockableAuthorized: state.stageLock.lockableAuthorized,
+  lockableAuthorized: state.lessonLock.lockableAuthorized,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),

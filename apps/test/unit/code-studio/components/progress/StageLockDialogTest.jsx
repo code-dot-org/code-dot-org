@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedStageLockDialog as StageLockDialog} from '@cdo/apps/code-studio/components/progress/StageLockDialog';
-import {LockStatus} from '@cdo/apps/code-studio/stageLockRedux';
+import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 
 const MINIMUM_PROPS = {
   isOpen: false,
