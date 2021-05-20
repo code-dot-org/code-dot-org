@@ -242,6 +242,7 @@ export const allDatasets = [
 ];
 
 export function getAvailableDatasets(specificDatasets) {
+  return allDatasets;
   // Filter datasets by a specified array (in Levelbuilder) or filter out toy datasets.
   let availableDatasets = (specificDatasets && specificDatasets.length > 1) ?
     allDatasets.filter(dataset => specificDatasets.includes(dataset.id)) :

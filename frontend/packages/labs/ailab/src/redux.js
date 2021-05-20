@@ -1034,7 +1034,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
-  dataToSave.trainedModel = state.trainedModel;
+  dataToSave.trainedModel = state.trainedModel.toJSON();
   dataToSave.kValue = state.kValue;
 
   return dataToSave;
