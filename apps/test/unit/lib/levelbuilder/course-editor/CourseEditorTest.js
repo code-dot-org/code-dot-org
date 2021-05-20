@@ -14,6 +14,7 @@ import {Provider} from 'react-redux';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import $ from 'jquery';
 
 const defaultProps = {
   name: 'test-course',
@@ -131,6 +132,7 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);
     assert.equal(wrapper.find('CollapsibleEditorSection').length, 4);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
+    assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
   });
 
   it('has correct markdown for preview of course teacher and student description', () => {
@@ -152,6 +154,35 @@ describe('CourseEditor', () => {
     ).to.equal(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
+  });
+
+  describe('Publish State', () => {
+    it('published state is beta when visible and isStable are false and there is no pilot experiment', () => {
+      const wrapper = createWrapper({});
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Beta');
+    });
+
+    it('published state is pilot if there is a pilot experiment', () => {
+      const wrapper = createWrapper({initialPilotExperiment: 'my-pilot'});
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Pilot');
+    });
+
+    it('published state is preview if visible is true but isStable is false', () => {
+      const wrapper = createWrapper({initialVisible: true});
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Preview');
+    });
+
+    it('published state is recommended if visible and isStable are true', () => {
+      const wrapper = createWrapper({
+        initialVisible: true,
+        initialIsStable: true
+      });
+      const courseEditor = wrapper.find('CourseEditor');
+      expect(courseEditor.state().publishedState).to.equal('Recommended');
+    });
   });
 
   describe('Saving Course Editor', () => {
@@ -308,25 +339,37 @@ describe('CourseEditor', () => {
 
       server.restore();
     });
-  });
 
-  describe('VisibleInTeacherDashboard', () => {
-    it('is unchecked when visible is false', () => {
+    it('shows error when published state is pilot but no pilot experiment given', () => {
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({});
-      const visibleAndPilotExperiment = wrapper.find(
-        'VisibleAndPilotExperiment'
-      );
-      const checkbox = visibleAndPilotExperiment.find('input[type="checkbox"]');
-      expect(checkbox.prop('checked')).to.be.false;
-    });
 
-    it('is checked when visible is true', () => {
-      const wrapper = createWrapper({initialVisible: true});
-      const visibleAndPilotExperiment = wrapper.find(
-        'VisibleAndPilotExperiment'
+      const courseEditor = wrapper.find('CourseEditor');
+      courseEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(courseEditor.state().isSaving).to.equal(false);
+      expect(courseEditor.state().error).to.equal(
+        'Please provide a pilot experiment in order to save with published state as pilot.'
       );
-      const checkbox = visibleAndPilotExperiment.find('input[type="checkbox"]');
-      expect(checkbox.prop('checked')).to.be.true;
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
     });
   });
 });

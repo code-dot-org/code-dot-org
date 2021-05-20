@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
@@ -14,6 +13,7 @@ import ResourceType, {
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
@@ -77,7 +77,14 @@ class CourseEditor extends Component {
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
       isStable: this.props.initialIsStable,
-      scriptsInCourse: this.props.initialScriptsInCourse
+      scriptsInCourse: this.props.initialScriptsInCourse,
+      publishedState: this.props.initialVisible
+        ? this.props.initialIsStable
+          ? 'Recommended'
+          : 'Preview'
+        : this.props.initialPilotExperiment
+        ? 'Pilot'
+        : 'Beta'
     };
   }
 
@@ -118,6 +125,18 @@ class CourseEditor extends Component {
       );
     }
 
+    if (
+      this.state.publishedState === 'Pilot' &&
+      this.state.pilotExperiment === ''
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a pilot experiment in order to save with published state as pilot.'
+      });
+      return;
+    }
+
     $.ajax({
       url: `/courses/${this.props.name}`,
       method: 'PUT',
@@ -148,12 +167,17 @@ class CourseEditor extends Component {
       title,
       versionTitle,
       descriptionShort,
+      descriptionStudent,
+      descriptionTeacher,
       hasVerifiedResources,
       hasNumberedUnits,
       familyName,
       versionYear,
+      pilotExperiment,
       isStable,
-      scriptsInCourse
+      visible,
+      scriptsInCourse,
+      publishedState
     } = this.state;
     return (
       <div>
@@ -206,7 +230,7 @@ class CourseEditor extends Component {
           />
         </label>
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionStudent}
+          markdown={descriptionStudent}
           label={'Student Description'}
           inputRows={5}
           handleMarkdownChange={e =>
@@ -215,7 +239,7 @@ class CourseEditor extends Component {
           features={{imageUpload: true, resourceLink: true}}
         />
         <TextareaWithMarkdownPreview
-          markdown={this.state.descriptionTeacher}
+          markdown={descriptionTeacher}
           label={'Teacher Description'}
           inputRows={5}
           handleMarkdownChange={e =>
@@ -266,57 +290,26 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Publishing Settings">
-          <label>
-            Family Name
-            <select
-              defaultValue={familyName}
-              style={styles.dropdown}
-              onChange={e => this.setState({familyName: e.target.value})}
-            >
-              <option value="">(None)</option>
-              {courseFamilies.map(familyOption => (
-                <option key={familyOption} value={familyOption}>
-                  {familyOption}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Version Year
-            <select
-              defaultValue={versionYear}
-              style={styles.dropdown}
-              onChange={e => this.setState({versionYear: e.target.value})}
-            >
-              <option value="">(None)</option>
-              {versionYearOptions.map(year => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </label>
-          <VisibleAndPilotExperiment
-            visible={this.state.visible}
-            updateVisible={() => this.setState({visible: !this.state.visible})}
-            pilotExperiment={this.state.pilotExperiment}
+          <CourseVersionPublishingEditor
+            visible={visible}
+            isStable={isStable}
+            pilotExperiment={pilotExperiment}
+            versionYear={versionYear}
+            familyName={familyName}
+            updateVisible={visible => this.setState({visible})}
+            updateIsStable={isStable => this.setState({isStable})}
             updatePilotExperiment={pilotExperiment =>
               this.setState({pilotExperiment})
             }
+            updateFamilyName={familyName => this.setState({familyName})}
+            updateVersionYear={versionYear => this.setState({versionYear})}
+            families={courseFamilies}
+            versionYearOptions={versionYearOptions}
+            publishedState={publishedState}
+            updatePublishedState={publishedState =>
+              this.setState({publishedState})
+            }
           />
-          <label>
-            Can be recommended (aka stable)
-            <input
-              type="checkbox"
-              defaultChecked={isStable}
-              style={styles.checkbox}
-            />
-            <p>
-              If checked, this course will be eligible to be the recommended
-              version of the course. The most recent eligible version will be
-              the recommended version.
-            </p>
-          </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Resources Dropdowns">

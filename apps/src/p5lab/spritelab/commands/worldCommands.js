@@ -1,7 +1,10 @@
 import * as coreLibrary from '../coreLibrary';
 import {getStore} from '@cdo/apps/redux';
-import {addConsoleMessage} from '../textConsoleModule';
-import {addTextPrompt, addMultipleChoicePrompt} from '../spritelabInputModule';
+import {addConsoleMessage} from '../../redux/textConsole';
+import {
+  addTextPrompt,
+  addMultipleChoicePrompt
+} from '../../redux/spritelabInput';
 
 export const commands = {
   comment(text) {

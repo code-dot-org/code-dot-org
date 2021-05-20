@@ -295,8 +295,8 @@ class CoursesControllerTest < ActionController::TestCase
     post :update, params: {
       course_name: 'course',
       scripts: ['unit1', 'unit2'],
-      visible: 'on',
-      is_stable: 'on'
+      visible: true,
+      is_stable: true
     }
     course.reload
     unit1.reload
@@ -356,8 +356,8 @@ class CoursesControllerTest < ActionController::TestCase
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: 'on',
-      visible: 'on',
-      is_stable: 'on'
+      visible: true,
+      is_stable: true
     }
     unit_group.reload
 
