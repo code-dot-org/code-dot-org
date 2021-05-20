@@ -21644,7 +21644,7 @@ en:
               description_teacher: In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
             While Loops with the Farmer:
               key: While Loops with the Farmer
-              name: While Loops with the Farmer
+              name: While Loops in Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
               description_teacher: In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.
             'Conditionals in Minecraft: Voyage Aquatic':

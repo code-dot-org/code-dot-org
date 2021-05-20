@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 22:01:50 UTC",
+    "serialized_at": "2021-05-19 23:46:52 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -1098,6 +1098,7 @@
     {
       "key": "ad92a9d5-f3ef-4766-bfeb-ce4b10a74447",
       "properties": {
+        "description": "Write a class with instance variables and a constructor"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -1107,6 +1108,7 @@
     {
       "key": "0a08efc7-59c0-4fb0-993b-aa1a244da3e9",
       "properties": {
+        "description": "Identify the components of a constructor and its signature"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -1116,6 +1118,7 @@
     {
       "key": "9c80f1a0-f104-4d3b-9a65-f3f3cc4b707a",
       "properties": {
+        "description": "Use input to obtain values to initialize an object"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
