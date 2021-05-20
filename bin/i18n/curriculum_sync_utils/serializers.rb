@@ -1,4 +1,5 @@
 module CurriculumSyncUtils
+  # Define a custom CollectionSerializer subclass, optimized for crowdin compatibility.
   class CrowdinCollectionSerializer < ActiveModel::Serializer::CollectionSerializer
     # @override
     def serializable_hash(adapter_options, options, adapter_instance)
@@ -14,7 +15,8 @@ module CurriculumSyncUtils
     end
   end
 
-  class I18nSerializer < ActiveModel::Serializer
+  # Define a custom Serializer subclass, optimized for crowdin compatibility.
+  class CrowdinSerializer < ActiveModel::Serializer
     config.collection_serializer = CrowdinCollectionSerializer
     config.adapter = :json
 
@@ -27,13 +29,21 @@ module CurriculumSyncUtils
       super.reject {|_, v| v.blank?}
     end
 
+    # Add a 'crowdin_key' attribute to every model. Should return a value that
+    # is both capable of uniquely identifying the object in question, and is
+    # useful for translators to see.
+    #
+    # Note that any subclass which overrides this method will also need some
+    # associated postprocessing in the sync out.
+    #
+    # Required for compatiblity with CrowdinCollectionSerializer
     attribute :crowdin_key
     def crowdin_key
       object.try(:key) || object.id
     end
   end
 
-  class ActivitySectionI18nSerializer < I18nSerializer
+  class ActivitySectionCrowdinSerializer < CrowdinSerializer
     attributes :name, :description, :tips, :progression_name
 
     def tips
@@ -41,29 +51,30 @@ module CurriculumSyncUtils
     end
   end
 
-  class LessonActivityI18nSerializer < I18nSerializer
+  class LessonActivityCrowdinSerializer < CrowdinSerializer
     attribute :name
 
-    has_many :activity_sections, serializer: CurriculumSyncUtils::ActivitySectionI18nSerializer
+    has_many :activity_sections, serializer: CurriculumSyncUtils::ActivitySectionCrowdinSerializer
   end
 
-  class ResourceI18nSerializer < I18nSerializer
+  class ResourceCrowdinSerializer < CrowdinSerializer
     attribute :name
 
+    # override
     def crowdin_key
       object.url
     end
   end
 
-  class VocabularyI18nSerializer < I18nSerializer
+  class VocabularyCrowdinSerializer < CrowdinSerializer
     attributes :word, :definition
   end
 
-  class ObjectiveI18nSerializer < I18nSerializer
+  class ObjectiveCrowdinSerializer < CrowdinSerializer
     attribute :description
   end
 
-  class LessonI18nSerializer < I18nSerializer
+  class LessonCrowdinSerializer < CrowdinSerializer
     # Note that we don't include "name" here, because that's already
     # handled by existing logic. We could in the future consider moving
     # that (and possibly script stuff, too) out of whereever it exists
@@ -75,21 +86,23 @@ module CurriculumSyncUtils
       :student_overview,
     )
 
-    has_many :lesson_activities, serializer: CurriculumSyncUtils::LessonActivityI18nSerializer
-    has_many :objectives, serializer: CurriculumSyncUtils::ObjectiveI18nSerializer
-    has_many :resources, serializer: CurriculumSyncUtils::ResourceI18nSerializer
-    has_many :vocabularies, serializer: CurriculumSyncUtils::VocabularyI18nSerializer
+    has_many :lesson_activities, serializer: CurriculumSyncUtils::LessonActivityCrowdinSerializer
+    has_many :objectives, serializer: CurriculumSyncUtils::ObjectiveCrowdinSerializer
+    has_many :resources, serializer: CurriculumSyncUtils::ResourceCrowdinSerializer
+    has_many :vocabularies, serializer: CurriculumSyncUtils::VocabularyCrowdinSerializer
 
+    # override
     def crowdin_key
       Rails.application.routes.url_helpers.script_lesson_url(object.script, object)
     end
   end
 
-  class ScriptI18nSerializer < I18nSerializer
-    has_many :lessons, serializer: CurriculumSyncUtils::LessonI18nSerializer
-    has_many :resources, serializer: CurriculumSyncUtils::ResourceI18nSerializer
-    has_many :student_resources, serializer: CurriculumSyncUtils::ResourceI18nSerializer
+  class ScriptCrowdinSerializer < CrowdinSerializer
+    has_many :lessons, serializer: CurriculumSyncUtils::LessonCrowdinSerializer
+    has_many :resources, serializer: CurriculumSyncUtils::ResourceCrowdinSerializer
+    has_many :student_resources, serializer: CurriculumSyncUtils::ResourceCrowdinSerializer
 
+    # override
     def crowdin_key
       Rails.application.routes.url_helpers.script_url(object)
     end
