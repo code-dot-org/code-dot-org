@@ -14,7 +14,7 @@ Scenario: Stage Locking Dialog
   And I see no difference for "selected section"
   Then I open the stage lock dialog
   And I see no difference for "stage lock dialog"
-  Then I unlock the stage for students
+  Then I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
   And I scroll our lockable stage into view
   And I see no difference for "course overview for authorized teacher"
@@ -38,7 +38,7 @@ Scenario: Lock settings for students
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
-  And I unlock the stage for students
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not tried for student
@@ -116,7 +116,7 @@ Scenario: Lock settings for students who never submit
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
-  And I unlock the stage for students
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not tried for student
@@ -172,7 +172,7 @@ Scenario: Lock settings for retake not submit scenario
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
-  And I unlock the stage for students
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not tried for student
@@ -212,7 +212,7 @@ Scenario: Lock settings for retake not submit scenario
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
-  And I unlock the stage for students
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now editable, and student can submit
@@ -254,7 +254,7 @@ Scenario: Lock settings for retake after submit scenario
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
-  And I unlock the stage for students
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # student submits
@@ -288,7 +288,7 @@ Scenario: Lock settings for retake after submit scenario
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
-  And I unlock the stage for students
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now editable, and student can see unsubmit button
