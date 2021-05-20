@@ -5,27 +5,29 @@ import sinon from 'sinon';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 describe('SaveBar', () => {
-  let defaultProps, handleSave;
+  let defaultProps, handleSave, handleView;
   beforeEach(() => {
     handleSave = sinon.spy();
+    handleView = sinon.spy();
     defaultProps = {
       isSaving: false,
       error: null,
       lastSaved: null,
-      handleSave
+      handleSave,
+      handleView
     };
   });
 
   it('renders default props', () => {
     const wrapper = mount(<SaveBar {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(2);
+    expect(wrapper.find('button').length).to.equal(3);
     expect(wrapper.find('FontAwesome').length).to.equal(0); //spinner isn't showing
   });
 
   it('can save and keep editing', () => {
     const wrapper = mount(<SaveBar {...defaultProps} />);
 
-    const saveAndKeepEditingButton = wrapper.find('button').at(0);
+    const saveAndKeepEditingButton = wrapper.find('button').at(1);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
       .true;
     saveAndKeepEditingButton.simulate('click');
@@ -61,10 +63,20 @@ describe('SaveBar', () => {
   it('can save and close', () => {
     const wrapper = mount(<SaveBar {...defaultProps} />);
 
-    const saveAndCloseButton = wrapper.find('button').at(1);
+    const saveAndCloseButton = wrapper.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
     expect(handleSave).to.have.been.calledOnce;
+  });
+
+  it('can go to item with show', () => {
+    const wrapper = mount(<SaveBar {...defaultProps} />);
+
+    const saveAndCloseButton = wrapper.find('button').at(0);
+    expect(saveAndCloseButton.contains('Show')).to.be.true;
+    saveAndCloseButton.simulate('click');
+
+    expect(handleView).to.have.been.calledOnce;
   });
 });
