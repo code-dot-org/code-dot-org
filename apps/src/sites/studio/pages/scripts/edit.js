@@ -103,6 +103,7 @@ export default function initPage(scriptEditorData) {
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
+        scriptPath={scriptData.scriptPath}
       />
     </Provider>,
     document.querySelector('.edit_container')
