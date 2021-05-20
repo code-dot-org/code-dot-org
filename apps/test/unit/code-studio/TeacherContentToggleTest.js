@@ -353,8 +353,8 @@ describe('TeacherContentToggle', () => {
     afterEach(() => {
       progressHelpers.lessonIsLockedForAllStudents.restore &&
         progressHelpers.lessonIsLockedForAllStudents.restore();
-      hiddenLessonRedux.isStageHiddenForSection.restore &&
-        hiddenLessonRedux.isStageHiddenForSection.restore();
+      hiddenLessonRedux.isLessonHiddenForSection.restore &&
+        hiddenLessonRedux.isLessonHiddenForSection.restore();
     });
 
     describe('when viewing as student', () => {
@@ -371,7 +371,7 @@ describe('TeacherContentToggle', () => {
         sinon
           .stub(progressHelpers, 'lessonIsLockedForAllStudents')
           .returns(true);
-        sinon.stub(hiddenLessonRedux, 'isStageHiddenForSection').returns(true);
+        sinon.stub(hiddenLessonRedux, 'isLessonHiddenForSection').returns(true);
 
         const props = mapStateToProps(state);
 
@@ -383,7 +383,9 @@ describe('TeacherContentToggle', () => {
         sinon
           .stub(progressHelpers, 'lessonIsLockedForAllStudents')
           .returns(false);
-        sinon.stub(hiddenLessonRedux, 'isStageHiddenForSection').returns(false);
+        sinon
+          .stub(hiddenLessonRedux, 'isLessonHiddenForSection')
+          .returns(false);
 
         const props = mapStateToProps(state);
 
@@ -421,7 +423,7 @@ describe('TeacherContentToggle', () => {
 
       it('sets locked/hidden to false', () => {
         sinon.spy(progressHelpers, 'lessonIsLockedForAllStudents');
-        sinon.spy(hiddenLessonRedux, 'isStageHiddenForSection');
+        sinon.spy(hiddenLessonRedux, 'isLessonHiddenForSection');
 
         const props = mapStateToProps(state);
 
@@ -432,7 +434,7 @@ describe('TeacherContentToggle', () => {
           false
         );
         assert.strictEqual(
-          hiddenLessonRedux.isStageHiddenForSection.called,
+          hiddenLessonRedux.isLessonHiddenForSection.called,
           false
         );
       });

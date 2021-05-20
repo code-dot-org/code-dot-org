@@ -5,7 +5,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import {ViewType} from '../viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
-import {isStageHiddenForSection} from '../hiddenLessonRedux';
+import {isLessonHiddenForSection} from '../hiddenLessonRedux';
 
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
@@ -131,7 +131,7 @@ export const mapStateToProps = state => {
     const {selectedSectionId} = state.teacherSections;
 
     isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
-    isHiddenStage = isStageHiddenForSection(
+    isHiddenStage = isLessonHiddenForSection(
       state.hiddenLesson,
       selectedSectionId,
       currentStageId

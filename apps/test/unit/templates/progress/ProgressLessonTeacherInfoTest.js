@@ -39,7 +39,7 @@ describe('ProgressLessonTeacherInfo', () => {
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
         />
       )
@@ -73,7 +73,7 @@ describe('ProgressLessonTeacherInfo', () => {
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
         />
       )
@@ -106,7 +106,7 @@ describe('ProgressLessonTeacherInfo', () => {
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={true}
         />
       )
@@ -135,7 +135,7 @@ describe('ProgressLessonTeacherInfo', () => {
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
         />
       )
@@ -159,7 +159,7 @@ describe('ProgressLessonTeacherInfo', () => {
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHiddenStage={() => {}}
+        toggleHiddenLesson={() => {}}
         lockableAuthorized={true}
       />
     );
@@ -181,7 +181,7 @@ describe('ProgressLessonTeacherInfo', () => {
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHiddenStage={() => {}}
+        toggleHiddenLesson={() => {}}
         lockableAuthorized={true}
       />
     );
@@ -203,7 +203,7 @@ describe('ProgressLessonTeacherInfo', () => {
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHiddenStage={() => {}}
+        toggleHiddenLesson={() => {}}
         lockableAuthorized={false}
       />
     );
@@ -225,7 +225,7 @@ describe('ProgressLessonTeacherInfo', () => {
             })}
             scriptName="My Script"
             hasNoSections={false}
-            toggleHiddenStage={() => {}}
+            toggleHiddenLesson={() => {}}
             lockableAuthorized={false}
           />
         )
