@@ -175,10 +175,6 @@ export const bubbleStyles = {
   },
   diamondContentTransform: {
     transform: 'rotate(-45deg)'
-  },
-  link: {
-    ...inlineBlock,
-    textDecoration: 'none'
   }
 };
 

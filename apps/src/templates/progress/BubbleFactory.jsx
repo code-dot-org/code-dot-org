@@ -90,7 +90,7 @@ DiamondContainer.propTypes = {
 
 export function BubbleLink({url, onClick, children}) {
   return (
-    <a href={url} onClick={onClick} style={bubbleStyles.link}>
+    <a href={url} onClick={onClick} className=".progress-bubble-link">
       {children}
     </a>
   );
