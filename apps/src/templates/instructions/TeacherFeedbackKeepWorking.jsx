@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import ReactTooltip from 'react-tooltip';
 
 const reviewStates = {
   completed: 'completed',
@@ -52,14 +54,12 @@ class TeacherFeedbackKeepWorking extends Component {
   };
 
   getNewReviewState() {
-    let newReviewState;
+    let newReviewState = null;
 
     if (this.checkbox.checked) {
       newReviewState = reviewStates.keepWorking;
     } else if (this.awaitingTeacherReview()) {
       newReviewState = reviewStates.completed;
-    } else {
-      newReviewState = null;
     }
 
     return newReviewState;
@@ -74,6 +74,13 @@ class TeacherFeedbackKeepWorking extends Component {
     return removedIndeterminateState || reviewStateChanged;
   }
 
+  getTooltipText() {
+    if (this.awaitingTeacherReview()) {
+      return i18n.teacherFeedbackAwaitingReviewTooltip();
+    }
+    return i18n.teacherFeedbackKeepWorkingTooltip();
+  }
+
   render() {
     return (
       <div style={styles.keepWorking}>
@@ -85,16 +92,21 @@ class TeacherFeedbackKeepWorking extends Component {
           checked={this.props.reviewState === reviewStates.keepWorking}
           onChange={this.handleCheckboxChange}
         />
-        {/* maureen add to internationalization and check rtl*/}
-        <label htmlFor="keep-working" style={styles.label}>
-          <span style={styles.keepWorkingText}>Keep Working</span>
-          {this.awaitingTeacherReview() && (
-            <span style={styles.awaitingReviewText}>
-              <span style={styles.awaitingReviewSpacer}>-</span>
-              {'awaiting teacher review'}
-            </span>
-          )}
-        </label>
+        <div data-tip data-place="bottom" data-for="keep-working-tooltip">
+          {/* maureen check rtl*/}
+          <label htmlFor="keep-working" style={styles.label}>
+            <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
+            {this.awaitingTeacherReview() && (
+              <span style={styles.awaitingReviewText}>
+                <span style={styles.awaitingReviewSpacer}>-</span>
+                {i18n.awaitingTeacherReview()}
+              </span>
+            )}
+          </label>
+          <ReactTooltip id="keep-working-tooltip" role="tooltip" effect="solid">
+            <div style={styles.tooltipContent}>{this.getTooltipText()}</div>
+          </ReactTooltip>
+        </div>
       </div>
     );
   }
@@ -124,6 +136,9 @@ const styles = {
   },
   awaitingReviewText: {
     fontStyle: 'italic'
+  },
+  tooltipContent: {
+    maxWidth: '250px'
   }
 };
 
