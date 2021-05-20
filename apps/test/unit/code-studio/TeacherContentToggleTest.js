@@ -399,7 +399,7 @@ describe('TeacherContentToggle', () => {
         viewAs: ViewType.Teacher,
         selectedSectionId: {},
         progress: {
-          currentStageId: 123,
+          currentLessonId: 123,
           stages: [
             {
               id: 123,

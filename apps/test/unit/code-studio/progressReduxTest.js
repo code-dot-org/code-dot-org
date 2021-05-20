@@ -19,10 +19,10 @@ import reducer, {
   levelsForLessonId,
   progressionsFromLevels,
   groupedLessons,
-  processedStages,
-  setCurrentStageId,
+  processedLessons,
+  setCurrentLessonId,
   lessonExtrasUrl,
-  setStageExtrasEnabled,
+  setLessonExtrasEnabled,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -191,10 +191,10 @@ describe('progressReduxTest', () => {
 
       assert.deepEqual(
         nextState.stages,
-        processedStages(initialScriptOverviewProgress.stages)
+        processedLessons(initialScriptOverviewProgress.stages)
       );
       assert.equal(nextState.scriptName, 'course3');
-      assert.equal(nextState.currentStageId, undefined);
+      assert.equal(nextState.currentLessonId, undefined);
     });
 
     it('can initialize progress on puzzle page', () => {
@@ -206,10 +206,10 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.saveAnswersBeforeNavigation, false);
       assert.deepEqual(
         nextState.stages,
-        processedStages(initialPuzzlePageProgress.stages)
+        processedLessons(initialPuzzlePageProgress.stages)
       );
       assert.equal(nextState.scriptName, 'course3');
-      assert.equal(nextState.currentStageId, 265);
+      assert.equal(nextState.currentLessonId, 265);
     });
 
     it('can merge in fresh progress', () => {
@@ -346,7 +346,7 @@ describe('progressReduxTest', () => {
     it('can enable stage extras', () => {
       assert.strictEqual(initialState.stageExtrasEnabled, false);
 
-      const nextState = reducer(initialState, setStageExtrasEnabled(true));
+      const nextState = reducer(initialState, setLessonExtrasEnabled(true));
       assert.strictEqual(nextState.stageExtrasEnabled, true);
     });
 
@@ -384,18 +384,18 @@ describe('progressReduxTest', () => {
       });
     });
 
-    it('can setCurrentStageId', () => {
-      const nextState = reducer(initialState, setCurrentStageId(1234));
-      assert.strictEqual(nextState.currentStageId, 1234);
+    it('can setCurrentLessonId', () => {
+      const nextState = reducer(initialState, setCurrentLessonId(1234));
+      assert.strictEqual(nextState.currentLessonId, 1234);
     });
 
-    it('does not allow setCurrentStageId to replace an existing stage id', () => {
+    it('does not allow setCurrentLessonId to replace an existing stage id', () => {
       const state = {
         ...initialState,
-        currentStageId: 111
+        currentLessonId: 111
       };
-      const nextState = reducer(state, setCurrentStageId(222));
-      assert.strictEqual(nextState.currentStageId, 111);
+      const nextState = reducer(state, setCurrentLessonId(222));
+      assert.strictEqual(nextState.currentLessonId, 111);
     });
   });
 
@@ -446,11 +446,11 @@ describe('progressReduxTest', () => {
 
       assert.deepEqual(
         nextState.stages,
-        processedStages(intialOverviewProgressWithPeerReview.stages, true)
+        processedLessons(intialOverviewProgressWithPeerReview.stages, true)
       );
       assert.deepEqual(nextState.peerReviewLessonInfo, peerReviewLessonInfo);
       assert.equal(nextState.scriptName, 'alltheplcthings');
-      assert.equal(nextState.currentStageId, undefined);
+      assert.equal(nextState.currentLessonId, undefined);
     });
 
     it('can provide progress for peer reviews', () => {
@@ -988,7 +988,7 @@ describe('progressReduxTest', () => {
         stages: [fakeLesson('Lesson Group', 'lesson1', 1)],
         scriptProgress: {},
         levelResults: {},
-        focusAreaStageIds: []
+        focusAreaLessonIds: []
       };
 
       const groups = groupedLessons(state);
@@ -1016,7 +1016,7 @@ describe('progressReduxTest', () => {
         ],
         scriptProgress: {},
         levelResults: {},
-        focusAreaStageIds: []
+        focusAreaLessonIds: []
       };
 
       const groups = groupedLessons(state);
@@ -1050,7 +1050,7 @@ describe('progressReduxTest', () => {
         ],
         scriptProgress: {},
         levelResults: {},
-        focusAreaStageIds: []
+        focusAreaLessonIds: []
       };
 
       let groups = groupedLessons(state, false);
@@ -1066,7 +1066,7 @@ describe('progressReduxTest', () => {
     });
   });
 
-  describe('processedStages', () => {
+  describe('processedLessons', () => {
     it('strips "hidden" field from stages', () => {
       const stages = [
         {
@@ -1081,7 +1081,7 @@ describe('progressReduxTest', () => {
         }
       ];
 
-      const processed = processedStages(stages);
+      const processed = processedLessons(stages);
       assert.strictEqual(processed[0].hidden, undefined);
       assert.strictEqual(processed[1].hidden, undefined);
     });
@@ -1110,7 +1110,7 @@ describe('progressReduxTest', () => {
         }
       ];
 
-      const processed = processedStages(stages);
+      const processed = processedLessons(stages);
       assert.strictEqual(processed[0].stageNumber, 1);
       assert.strictEqual(processed[1].stageNumber, 2);
       assert.strictEqual(processed[2].stageNumber, undefined);
@@ -1124,7 +1124,7 @@ describe('progressReduxTest', () => {
         undefined,
         initProgress(initialPuzzlePageProgress)
       );
-      const state = reducer(stateWithProgress, setStageExtrasEnabled(true));
+      const state = reducer(stateWithProgress, setLessonExtrasEnabled(true));
 
       assert.strictEqual(
         lessonExtrasUrl(state, state.stages[0].id),
@@ -1310,7 +1310,7 @@ describe('progressReduxTest', () => {
         isVerifiedTeacher: true,
         teacherViewingStudent: true,
         professionalLearningCourse: false,
-        focusAreaStageIds: [1, 2],
+        focusAreaLessonIds: [1, 2],
         lockableAuthorized: true,
         completed: true,
         progress: {},
