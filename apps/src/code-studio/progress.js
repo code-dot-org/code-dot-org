@@ -22,7 +22,7 @@ import {
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
-  setStageExtrasEnabled,
+  setLessonExtrasEnabled,
   queryUserProgress as reduxQueryUserProgress,
   useDbProgress
 } from './progressRedux';
@@ -124,7 +124,7 @@ progress.generateStageProgress = function(
   store.dispatch(setIsHocScript(isHocScript));
 
   if (lessonExtrasEnabled) {
-    store.dispatch(setStageExtrasEnabled(true));
+    store.dispatch(setLessonExtrasEnabled(true));
   }
 
   return populateProgress(store, signedIn, progressData, name);

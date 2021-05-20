@@ -26,7 +26,7 @@ class ProgressLesson extends React.Component {
 
     // redux provided
     scriptId: PropTypes.number,
-    currentStageId: PropTypes.number,
+    currentLessonId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
@@ -44,17 +44,17 @@ class ProgressLesson extends React.Component {
       // collapse everything except current lesson
       collapsed:
         props.viewAs !== ViewType.Teacher &&
-        props.currentStageId !== props.lesson.id
+        props.currentLessonId !== props.lesson.id
     };
   }
 
   componentWillReceiveProps(nextProps) {
     // If we're assigned a stageId, and it is for this lesson, uncollapse
-    if (nextProps.currentStageId !== this.props.currentStageId) {
+    if (nextProps.currentLessonId !== this.props.currentLessonId) {
       this.setState({
         collapsed:
           this.state.collapsed &&
-          nextProps.currentStageId !== this.props.lesson.id
+          nextProps.currentLessonId !== this.props.lesson.id
       });
     }
   }
@@ -294,7 +294,7 @@ const styles = {
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  currentStageId: state.progress.currentStageId,
+  currentLessonId: state.progress.currentLessonId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
   lockableAuthorized: state.lessonLock.lockableAuthorized,
